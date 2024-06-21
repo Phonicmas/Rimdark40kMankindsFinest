@@ -35,7 +35,7 @@
     <defName>BEWH_DivineFlight</defName>
     <label>divine flight</label>
     <description>This pawn is granted flight by their wings.</description>
-    <iconPath>UI/Icons/Genes/LivingSaint</iconPath>
+    <iconPath>UI/Abilities/DivineFlight</iconPath>
     <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
     <uiOrder>1</uiOrder>
@@ -48,6 +48,34 @@
       <warmupTime>1</warmupTime>
       <range>80</range>
       <requireLineOfSight>true</requireLineOfSight>
+      <soundCast>Longjump_Jump</soundCast>
+      <soundLanding>Longjump_Land</soundLanding>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+  </AbilityDef>
+
+  <!-- Angelic Flight -->
+  <AbilityDef>
+    <defName>BEWH_AngelicFlight</defName>
+    <label>angelic flight</label>
+    <description>This pawn is granted flight by their wings.</description>
+    <iconPath>UI/Abilities/AngelicFlight</iconPath>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <uiOrder>1</uiOrder>
+    <cooldownTicksRange>100</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityJump</verbClass>
+      <label>angelic flight</label>
+      <violent>false</violent>
+      <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+      <warmupTime>0.5</warmupTime>
+      <range>160</range>
+      <requireLineOfSight>false</requireLineOfSight>
       <soundCast>Longjump_Jump</soundCast>
       <soundLanding>Longjump_Land</soundLanding>
       <targetParams>

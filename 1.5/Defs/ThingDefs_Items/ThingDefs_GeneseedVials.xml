@@ -9,7 +9,7 @@
     <label>thunder warrior geneseed vial</label>
     <description>...</description>
     <graphicData>
-      <texPath>Things/Item/Special/Xenogerm</texPath>
+      <texPath>Things/Item/GeneseedVial/GeneseedVial_ThunderWarrior</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(0.85, 0.85)</drawSize>
     </graphicData>
@@ -36,7 +36,7 @@
     <label>firstborn geneseed vial</label>
     <description>...</description>
     <graphicData>
-      <texPath>Things/Item/Special/Xenogerm</texPath>
+      <texPath>Things/Item/GeneseedVial/GeneseedVial_Firstborn</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(0.85, 0.85)</drawSize>
     </graphicData>
@@ -72,7 +72,7 @@
     <label>primaris geneseed vial</label>
     <description>...</description>
     <graphicData>
-      <texPath>Things/Item/Special/Xenogerm</texPath>
+      <texPath>Things/Item/GeneseedVial/GeneseedVial_Primaris</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(0.85, 0.85)</drawSize>
     </graphicData>
@@ -109,7 +109,7 @@
     <label>custodes geneseed vial</label>
     <description>...</description>
     <graphicData>
-      <texPath>Things/Item/Special/Xenogerm</texPath>
+      <texPath>Things/Item/GeneseedVial/GeneseedVial_Custodes</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(0.85, 0.85)</drawSize>
     </graphicData>
@@ -136,7 +136,7 @@
     <label>primarch geneseed vial</label>
     <description>...</description>
     <graphicData>
-      <texPath>Things/Item/Special/Xenogerm</texPath>
+      <texPath>Things/Item/GeneseedVial/GeneseedVial_Primarch</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(0.85, 0.85)</drawSize>
     </graphicData>

@@ -55,6 +55,7 @@ namespace Genes40k
         public static GeneDef BEWH_OmegaPariah;
 
         public static GeneDef BEWH_LivingSaintBeingOfFaith;
+        public static GeneDef BEWH_LivingSaintHolyRadiance;
 
         public static XenotypeDef BEWH_LivingSaint;
 
@@ -86,6 +87,8 @@ namespace Genes40k
         public static ThingDef BEWH_PrimarchEmbryo;
 
         public static JobDef BEWH_FillGeneGestator;
+
+        public static ThoughtDef BEWH_LivingSaintHolyRadianceThought;
 
         static Genes40kDefOf()
         {

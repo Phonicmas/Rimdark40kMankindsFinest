@@ -6,7 +6,7 @@
         <defName>BEWH_SigmaPariah</defName>
         <label>sigma pariah</label>
         <description>Carriers of this gene have reduced psychic sensitivity. Additionally they reduces the psychic sensitivity and consciousness of others nearby whilst also increasing their pain.</description>
-        <iconPath>UI/Icons/Genes/PariahSigma</iconPath>
+        <iconPath>UI/Genes/PariahSigma</iconPath>
         <displayOrderInCategory>301</displayOrderInCategory>
         <statFactors>
             <PsychicSensitivity>0.55</PsychicSensitivity>
@@ -19,7 +19,7 @@
         <minAgeActive>6</minAgeActive>
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
-                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Pariah</backgroundPathXenogenes>
+                <backgroundPathXenogenes>UI/Genes/GeneBackground_Pariah</backgroundPathXenogenes>
             </li>
             <li Class="Genes40k.DefModExtension_Pariah">
                 <radius>12</radius>
@@ -34,7 +34,7 @@
         <defName>BEWH_UpsilonPariah</defName>
         <label>upsilon pariah</label>
         <description>Carriers of this gene have greatly reduced psychic sensitivity. Additionally they reduces the psychic sensitivity and consciousness of others nearby whilst also increasing their pain.</description>
-        <iconPath>UI/Icons/Genes/PariahUpsilon</iconPath>
+        <iconPath>UI/Genes/PariahUpsilon</iconPath>
         <displayOrderInCategory>302</displayOrderInCategory>
         <statFactors>
             <PsychicSensitivity>0.2</PsychicSensitivity>
@@ -47,7 +47,7 @@
         <minAgeActive>6</minAgeActive>
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
-                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Pariah</backgroundPathXenogenes>
+                <backgroundPathXenogenes>UI/Genes/GeneBackground_Pariah</backgroundPathXenogenes>
             </li>
             <li Class="Genes40k.DefModExtension_Pariah">
                 <radius>16</radius>
@@ -62,7 +62,7 @@
         <defName>BEWH_OmegaPariah</defName>
         <label>omega pariah</label>
         <description>Carriers of this gene have no psychic sensitivity. Additionally they reduces the psychic sensitivity and consciousness of others nearby whilst also increasing their pain.</description>
-        <iconPath>UI/Icons/Genes/PariahOmega</iconPath>
+        <iconPath>UI/Genes/PariahOmega</iconPath>
         <displayOrderInCategory>303</displayOrderInCategory>
         <statFactors>
             <PsychicSensitivity>0</PsychicSensitivity>
@@ -75,7 +75,7 @@
         <minAgeActive>6</minAgeActive>
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
-                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Pariah</backgroundPathXenogenes>
+                <backgroundPathXenogenes>UI/Genes/GeneBackground_Pariah</backgroundPathXenogenes>
             </li>
             <li Class="Genes40k.DefModExtension_Pariah">
                 <radius>20</radius>

@@ -80,6 +80,7 @@
     <Compile Include="PrimarchEmbryo.cs" />
     <Compile Include="GeneseedVial.cs" />
     <Compile Include="Workers\JobDriver_FillGeneGestator.cs" />
+    <Compile Include="Workers\ThoughtWorker_HolyRadiance.cs" />
     <Compile Include="Workers\WorkGiver_HaulToPrimarchVat.cs" />
     <Compile Include="Workers\Recipe_MakePrimarchEmbryo.cs" />
     <Compile Include="Workers\WorkerClass_PhaseDevelopment.cs" />

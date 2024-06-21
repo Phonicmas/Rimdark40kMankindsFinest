@@ -6,7 +6,7 @@
         <defName>BEWH_ChapterVICanisHelix</defName>
         <label>canis helix</label>
         <description>The Canis Helix is a mutation of normal gene-seed that gifts the Wolves with enhanced abilities, including hyper-acute senses of smell and hearing, elongated canines that can dent plasteel, and leathery, resilient skin.</description>
-        <iconPath>UI/Icons/Genes/ChaperVICanisHelix</iconPath>
+        <iconPath>UI/Genes/ChaperVICanisHelix</iconPath>
         <displayOrderInCategory>30</displayOrderInCategory>
         <capMods>
             <li>
@@ -52,14 +52,34 @@
         <defName>BEWH_ChapterIXRedThirst</defName>
         <label>red thirst</label>
         <description>...</description>
-        <iconPath>UI/Icons/Genes/ChaperVICanisHelix</iconPath>
+        <iconPath>UI/Genes/ChapterIXRedThirst</iconPath>
         <displayOrderInCategory>30</displayOrderInCategory>
-        <socialFightChanceFactor>1.25</socialFightChanceFactor>
-        <aggroMentalBreakSelectionChanceFactor>999</aggroMentalBreakSelectionChanceFactor>
-        <customEffectDescriptions>
-            <li>Curse of the Wulfen</li>
-        </customEffectDescriptions>
         <minAgeActive>14</minAgeActive>
+        <geneClass>Gene_Hemogen</geneClass>
+        <resourceGizmoType>GeneGizmo_ResourceHemogen</resourceGizmoType>
+        <resourceLabel>hemogen</resourceLabel>
+        <resourceGizmoThresholds>
+            <li>0.25</li>
+            <li>0.5</li>
+            <li>0.75</li>
+        </resourceGizmoThresholds>
+        <customEffectDescriptions>
+            <li>Gives hemogen supply.</li>
+        </customEffectDescriptions>
+        <showGizmoOnWorldView>true</showGizmoOnWorldView>
+        <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
+        <resourceDescription>A reserve of biological strength which can be gained and spent in a variety of ways.\n\nHemogen can be increased by bloodfeeding from a human or consuming hemogen packs. You can obtain hemogen packs using the 'extract hemogen pack' medical operation on a non-hemogenic human.\n\nIf hemogen reaches zero, {PAWN_nameDef} will become very unhappy.</resourceDescription>
+        <resourceLossPerDay>0.04</resourceLossPerDay>
+        <statOffsets>
+            <MeleeDamageFactor>0.2</MeleeDamageFactor>
+            <MeleeHitChance>3</MeleeHitChance>
+        </statOffsets>
+        <forcedTraits>
+            <li>
+                <def>Bloodlust</def>
+            </li>
+        </forcedTraits>
+        <aggroMentalBreakSelectionChanceFactor>20</aggroMentalBreakSelectionChanceFactor>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene" />
         </modExtensions>

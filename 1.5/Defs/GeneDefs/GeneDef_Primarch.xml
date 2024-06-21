@@ -23,7 +23,7 @@
         <defName>BEWH_PrimarchStature</defName>
         <label>primarch stature</label>
         <description>Carriers of this gene tower over baseliners, standing as tall as the famed primarchs.</description>
-        <iconPath>UI/Icons/Genes/PrimarchStature</iconPath>
+        <iconPath>UI/Genes/PrimarchStature</iconPath>
         <displayOrderInCategory>50</displayOrderInCategory>
 
         <biostatMet>-2</biostatMet>
@@ -76,7 +76,7 @@
         <defName>BEWH_PrimarchToughness</defName>
         <label>primarch toughness</label>
         <description>Carriers of this gene possess toughness equal to that of the famed primarchs.</description>
-        <iconPath>UI/Icons/Genes/PrimarchToughness</iconPath>
+        <iconPath>UI/Genes/PrimarchToughness</iconPath>
         <geneClass>Gene_Clotting</geneClass>
         <displayOrderInCategory>51</displayOrderInCategory>
         <biostatMet>-10</biostatMet>
@@ -126,7 +126,7 @@
         <defName>BEWH_PrimarchResilience</defName>
         <label>primarch resilience</label>
         <description>Carriers of this gene have resilience equal to that of the famed primarchs.</description>
-        <iconPath>UI/Icons/Genes/PrimarchResilience</iconPath>
+        <iconPath>UI/Genes/PrimarchResilience</iconPath>
         <displayOrderInCategory>52</displayOrderInCategory>
         <biostatMet>-10</biostatMet>
 
@@ -204,7 +204,7 @@
         <defName>BEWH_PrimarchStrength</defName>
         <label>primarch strength</label>
         <description>Carriers of this gene possess strength equal to that of the famed primarch.</description>
-        <iconPath>UI/Icons/Genes/PrimarchStrength</iconPath>
+        <iconPath>UI/Genes/PrimarchStrength</iconPath>
         <displayOrderInCategory>53</displayOrderInCategory>
         <biostatMet>-8</biostatMet>
 
@@ -240,7 +240,7 @@
         <defName>BEWH_PrimarchExpertise</defName>
         <label>primarch expertise</label>
         <description>Carriers of this gene possess an innate expertise for combat equal to that of the famed primarchs.</description>
-        <iconPath>UI/Icons/Genes/PrimarchExpertise</iconPath>
+        <iconPath>UI/Genes/PrimarchExpertise</iconPath>
         <displayOrderInCategory>54</displayOrderInCategory>
         <biostatMet>-10</biostatMet>
 
@@ -292,7 +292,7 @@
         <defName>BEWH_PrimarchAnatomy</defName>
         <label>primarch anatomy</label>
         <description>Carriers of the gene anatomy resemble that of the famed primarchs.</description>
-        <iconPath>UI/Icons/Genes/PrimarchAnatomy</iconPath>
+        <iconPath>UI/Genes/PrimarchAnatomy</iconPath>
         <displayOrderInCategory>55</displayOrderInCategory>
         <biostatMet>50</biostatMet>
 

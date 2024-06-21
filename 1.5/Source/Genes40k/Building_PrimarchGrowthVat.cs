@@ -54,9 +54,9 @@ namespace Genes40k
 
         private const float EmbryoBirthQuality = 0.7f;
 
-        public const int EmbryoGestationTicks = 540000;
+        public const int EmbryoGestationTicks = 600000;
 
-        private const int EmbryoLateStageGraphicTicksRemaining = 540000;
+        private const int EmbryoLateStageGraphicTicksRemaining = 600000;
 
         private const float FetusMinSize = 0.4f;
 
@@ -623,13 +623,6 @@ namespace Genes40k
         {
             selectedEmbryo = embryo;
             embryo.implantTarget = this;
-        }
-
-        //Was pawn related
-        public override void DynamicDrawPhaseAt(DrawPhase phase, Vector3 drawLoc, bool flip = false)
-        {
-            //Was pawn related
-            base.DynamicDrawPhaseAt(phase, drawLoc, flip);
         }
 
         protected override void DrawAt(Vector3 drawLoc, bool flip = false)

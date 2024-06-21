@@ -16,4 +16,31 @@
         </stages>
     </ThoughtDef>
 
+    <!-- Holy Radiance -->
+    <ThoughtDef>
+        <defName>BEWH_LivingSaintHolyRadiance</defName>
+        <thoughtClass>Thought_SituationalSocial</thoughtClass>
+        <workerClass>Genes40k.ThoughtWorker_HolyRadiance</workerClass>
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+            <li>
+                <label>holy radiance</label>
+                <baseOpinionOffset>15</baseOpinionOffset>
+            </li>
+        </stages>
+    </ThoughtDef>
+    <ThoughtDef>
+        <defName>BEWH_LivingSaintHolyRadianceThought</defName>
+        <durationDays>0.2</durationDays>
+        <stackLimit>1</stackLimit>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <label>holy radiance</label>
+                <description>The holy radiance fills me with joy</description>
+                <baseMoodEffect>10</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
 </Defs>

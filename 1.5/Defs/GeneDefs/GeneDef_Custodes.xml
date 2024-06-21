@@ -23,7 +23,7 @@
         <defName>BEWH_CustodesStature</defName>
         <label>custodian stature</label>
         <description>Carriers of this gene tower over baseliners, standing as tall as the famed custodes.</description>
-        <iconPath>UI/Icons/Genes/CustodesStature</iconPath>
+        <iconPath>UI/Genes/CustodesStature</iconPath>
         <displayOrderInCategory>100</displayOrderInCategory>
 
         <biostatMet>-1</biostatMet>
@@ -78,7 +78,7 @@
         <defName>BEWH_CustodesToughness</defName>
         <label>custodian toughness</label>
         <description>Carriers of this gene possess toughness equal to that of the famed custodes.</description>
-        <iconPath>UI/Icons/Genes/CustodesToughness</iconPath>
+        <iconPath>UI/Genes/CustodesToughness</iconPath>
         <geneClass>Gene_Clotting</geneClass>
         <displayOrderInCategory>101</displayOrderInCategory>
         <biostatMet>-5</biostatMet>
@@ -128,7 +128,7 @@
         <defName>BEWH_CustodesResilience</defName>
         <label>custodian resilience</label>
         <description>Carriers of this gene have resilience equal to that of the famed custodes.</description>
-        <iconPath>UI/Icons/Genes/CustodesResilience</iconPath>
+        <iconPath>UI/Genes/CustodesResilience</iconPath>
         <displayOrderInCategory>102</displayOrderInCategory>
         <biostatMet>-5</biostatMet>
 
@@ -206,7 +206,7 @@
         <defName>BEWH_CustodesStrength</defName>
         <label>custodian strength</label>
         <description>Carriers of this gene possess strength equal to that of the famed custodes.</description>
-        <iconPath>UI/Icons/Genes/CustodesStrength</iconPath>
+        <iconPath>UI/Genes/CustodesStrength</iconPath>
         <displayOrderInCategory>103</displayOrderInCategory>
         <biostatMet>-4</biostatMet>
 
@@ -242,7 +242,7 @@
         <defName>BEWH_CustodesExpertise</defName>
         <label>custodian expertise</label>
         <description>Carriers of this gene possess an innate expertise for combat equal to that of the famed custodes.</description>
-        <iconPath>UI/Icons/Genes/CustodesExpertise</iconPath>
+        <iconPath>UI/Genes/CustodesExpertise</iconPath>
         <displayOrderInCategory>104</displayOrderInCategory>
         <biostatMet>-5</biostatMet>
 
@@ -293,7 +293,7 @@
         <defName>BEWH_CustodesAnatomy</defName>
         <label>custodian anatomy</label>
         <description>Carriers of the gene anatomy resemble that of the famed custodes.</description>
-        <iconPath>UI/Icons/Genes/CustodesAnatomy</iconPath>
+        <iconPath>UI/Genes/CustodesAnatomy</iconPath>
         <displayOrderInCategory>105</displayOrderInCategory>
         <biostatMet>25</biostatMet>
 

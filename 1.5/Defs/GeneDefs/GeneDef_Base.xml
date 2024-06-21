@@ -10,6 +10,46 @@
     </GeneCategoryDef>
 
     <!-- Parent Genes -->
+
+    <!-- Space Marine -->
+    <GeneDef Name="BEWH_SpaceMarineParent" Abstract="True">
+        <displayCategory>BEWH_ImperialGenes</displayCategory>
+        <marketValueFactor>1.1</marketValueFactor>
+        <biostatCpx>2</biostatCpx>
+        <canGenerateInGeneSet>false</canGenerateInGeneSet>
+    </GeneDef>
+
+    <!-- Space Marine Chapter -->
+    <GeneDef ParentName="BEWH_SpaceMarineParent" Name="BEWH_ChapterGeneParent" Abstract="True">
+        <displayCategory>BEWH_ImperialGenes</displayCategory>
+        <marketValueFactor>1.05</marketValueFactor>
+        <biostatCpx>1</biostatCpx>
+        <canGenerateInGeneSet>false</canGenerateInGeneSet>
+        <exclusionTags>
+            <li>BEWH_ChapterGene</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <!-- Primaris Marine -->
+    <GeneDef Name="BEWH_PrimarisSpaceMarineParent" Abstract="True">
+        <displayCategory>BEWH_ImperialGenes</displayCategory>
+        <marketValueFactor>1.4</marketValueFactor>
+        <biostatCpx>3</biostatCpx>
+        <canGenerateInGeneSet>false</canGenerateInGeneSet>
+    </GeneDef>
+
+    <!-- Primarch Specific -->
+    <GeneDef Name="BEWH_PrimarchSpecific" Abstract="True">
+        <displayCategory>BEWH_ImperialGenes</displayCategory>
+        <marketValueFactor>1.8</marketValueFactor>
+        <biostatCpx>1</biostatCpx>
+        <biostatArc>1</biostatArc>
+        <canGenerateInGeneSet>false</canGenerateInGeneSet>
+        <exclusionTags>
+            <li>BEWH_PrimarchSpecific</li>
+        </exclusionTags>
+    </GeneDef>
+
     <!-- Pariah -->
     <GeneDef Name="BEWH_PariahParent" Abstract="True">
         <displayCategory>BEWH_ImperialGenes</displayCategory>
@@ -33,7 +73,7 @@
             <li>Pariah</li>
         </exclusionTags>
     </GeneDef>
-    
+
     <!-- Psyker -->
     <GeneDef Name="BEWH_PsykerParent" Abstract="True">
         <displayCategory>BEWH_ImperialGenes</displayCategory>
@@ -66,37 +106,10 @@
                 </abilityDefs>
             </li>
             <li Class="VanillaGenesExpanded.GeneExtension">
-                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Psyker</backgroundPathXenogenes>
+                <backgroundPathXenogenes>UI/Genes/GeneBackground_Psyker</backgroundPathXenogenes>
             </li>
             <li Class="Genes40k.DefModExtension_Psyker"/>
         </modExtensions>
-    </GeneDef>
-
-    <!-- Space Marine -->
-    <GeneDef Name="BEWH_SpaceMarineParent" Abstract="True">
-        <displayCategory>BEWH_ImperialGenes</displayCategory>
-        <marketValueFactor>1.1</marketValueFactor>
-        <biostatCpx>2</biostatCpx>
-        <canGenerateInGeneSet>false</canGenerateInGeneSet>
-    </GeneDef>
-
-    <!-- Space Marine Chapter -->
-    <GeneDef ParentName="BEWH_SpaceMarineParent" Name="BEWH_ChapterGeneParent" Abstract="True">
-        <displayCategory>BEWH_ImperialGenes</displayCategory>
-        <marketValueFactor>1.05</marketValueFactor>
-        <biostatCpx>1</biostatCpx>
-        <canGenerateInGeneSet>false</canGenerateInGeneSet>
-        <exclusionTags>
-            <li>BEWH_ChapterGene</li>
-        </exclusionTags>
-    </GeneDef>
-
-    <!-- Primaris Marine -->
-    <GeneDef Name="BEWH_PrimarisSpaceMarineParent" Abstract="True">
-        <displayCategory>BEWH_ImperialGenes</displayCategory>
-        <marketValueFactor>1.4</marketValueFactor>
-        <biostatCpx>3</biostatCpx>
-        <canGenerateInGeneSet>false</canGenerateInGeneSet>
     </GeneDef>
 
 </Defs>

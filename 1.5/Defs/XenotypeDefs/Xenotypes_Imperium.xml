@@ -114,7 +114,7 @@
     <label>thunder warrior</label>
     <description>...</description>
     <descriptionShort>...</descriptionShort>
-    <iconPath>UI/Xenotypes/CustodesXenoIcon</iconPath>
+    <iconPath>UI/Xenotypes/ThunderWarriorXenoIcon</iconPath>
     <combatPowerFactor>1.3</combatPowerFactor>
     <genes>
       <li>BEWH_CustodesAnatomy</li>

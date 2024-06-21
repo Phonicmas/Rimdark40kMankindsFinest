@@ -8,7 +8,7 @@
     <description>...</description>
     <thingClass>Genes40k.PrimarchEmbryo</thingClass>
     <graphicData>
-      <texPath>Things/Item/Special/Embryo</texPath>
+      <texPath>Things/Item/PrimarchEmbryo</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>

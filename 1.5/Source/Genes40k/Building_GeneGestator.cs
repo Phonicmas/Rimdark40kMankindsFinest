@@ -44,15 +44,9 @@ namespace Genes40k
         [Unsaved(false)]
         private Effecter progressBar;
 
-        public const int MaxCapacity = 25;
-
-        private static readonly Vector2 BarSize = new Vector2(0.55f, 0.1f);
-
-        private static readonly Color BarZeroProgressColor = new Color(0.4f, 0.27f, 0.22f);
-
-        private static readonly Color BarFermentedColor = new Color(0.9f, 0.85f, 0.2f);
-
         private static readonly Texture2D CancelIcon = ContentFinder<Texture2D>.Get("UI/Designators/Cancel");
+
+        private static readonly Texture2D EmptyMaterialIcon = ContentFinder<Texture2D>.Get("Things/Item/GeneMatrix/GeneMatrix_Empty");
 
         [Unsaved(false)]
         private Texture2D cachedMatrixSelectionTex;
@@ -63,7 +57,7 @@ namespace Genes40k
             {
                 if (cachedMatrixSelectionTex == null)
                 {
-                    cachedMatrixSelectionTex = ContentFinder<Texture2D>.Get("UI/Abilities/StasisIcon");
+                    cachedMatrixSelectionTex = ContentFinder<Texture2D>.Get("Things/Item/GeneMatrix/GeneMatrix_Empty");
                 }
                 return cachedMatrixSelectionTex;
             }
@@ -301,7 +295,7 @@ namespace Genes40k
 
                         if (selectedMaterial == null)
                         {
-                            command_Action10.icon = matrixSelectionTex;
+                            command_Action10.icon = EmptyMaterialIcon;
                         }
                         else
                         {
@@ -370,7 +364,15 @@ namespace Genes40k
                     Command_Action command_Action1 = new Command_Action();
                     command_Action1.defaultLabel = "BEWH.SelectMatrix".Translate() + "...";
                     command_Action1.defaultDesc = "BEWH.SelectMatrixDesc".Translate();
-                    command_Action1.icon = matrixSelectionTex;
+                    if (selectedMatrix == null)
+                    {
+                        command_Action1.icon = matrixSelectionTex;
+                    }
+                    else
+                    {
+                        command_Action1.icon = selectedMatrix.uiIcon;
+                    }
+                    
                     List<ThingDef> gestatablesAvailable = new List<ThingDef>();
                     gestatablesAvailable.AddRange(AvailableGestatables());
                     command_Action1.action = delegate

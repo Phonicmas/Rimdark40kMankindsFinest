@@ -10,20 +10,14 @@
         <marketValueFactor>3</marketValueFactor>
         <minAgeActive>3</minAgeActive>
         <selectionWeight>0</selectionWeight>
-        <modExtensions>
-            <li Class="Core40k.DefModExtension_SlaveabilityRecruitability">
-                <canBeEnslaved>false</canBeEnslaved>
-                <canBeRecruited>false</canBeRecruited>
-            </li>
-        </modExtensions>
     </GeneDef>
 
-    <!-- Being of faith - this gene is responsible for; should it die, it will resurrect-->
+    <!-- Being of faith -->
     <GeneDef ParentName="BEWH_LivingSaintBase">
         <defName>BEWH_LivingSaintBeingOfFaith</defName>
         <label>being of faith</label>
         <description>A Living Saint is an extraordinarily devout servant of the Emperor of Mankind, who displays seemingly miraculous, supernatural abilities derived from potent faith in the God-Emperor during his or her lifetime.</description>
-        <iconPath>UI/Icons/Genes/BeingOfFaith</iconPath>
+        <iconPath>UI/Genes/LivingSaint_BeingOfFaith</iconPath>
         <displayOrderInCategory>500</displayOrderInCategory>
         <immuneToToxGasExposure>true</immuneToToxGasExposure>
         <geneClass>Genes40k.Gene_LivingSaint</geneClass>
@@ -58,28 +52,68 @@
                 <postFactor>1.3</postFactor>
             </li>
         </capMods>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_SlaveabilityRecruitability">
+                <canBeEnslaved>false</canBeEnslaved>
+                <canBeRecruited>false</canBeRecruited>
+            </li>
+        </modExtensions>
     </GeneDef>
 
-
-    <!-- Divine Flight - grants flight ability and hover -->
+    <!-- Divine Flight -->
     <GeneDef ParentName="BEWH_LivingSaintBase">
         <defName>BEWH_LivingSaintDivineFlight</defName>
         <label>divine flight</label>
-        <description>...</description>
-        <iconPath>UI/Icons/Genes/DivineFlight</iconPath>
+        <description>Immense faith have conjured forth ethereal wings of warp energy, resembling that of an angels. These wings allows for short flights.</description>
+        <iconPath>UI/Genes/LivingSaint_DivineFlight</iconPath>
         <displayOrderInCategory>501</displayOrderInCategory>
-        <statOffsets>
-            <MeleeDodgeChance>5</MeleeDodgeChance>
-        </statOffsets>
         <statFactors>
             <MoveSpeed>1.2</MoveSpeed>
         </statFactors>
+        <statOffsets>
+            <MeleeDodgeChance>5</MeleeDodgeChance>
+        </statOffsets>
+        <abilities>
+            <li>BEWH_DivineFlight</li>
+        </abilities>
         <capMods>
             <li>
                 <capacity>Moving</capacity>
                 <postFactor>1.15</postFactor>
             </li>
         </capMods>
+        <exclusionTags>
+            <li>Wing</li>
+            <li>Wings</li>
+        </exclusionTags>
+        <renderNodeProperties>
+            <li>
+                <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+                <texPath>Things/Pawn/Humanlike/BodyAttachments/DivineWings/DivineWings_Aethereal</texPath>
+                <drawSize>1.4</drawSize>
+                <parentTagDef>Body</parentTagDef>
+                <color>(255, 255, 255, 200)</color>
+                <drawData>
+                    <defaultData>
+                        <layer>-1</layer>
+                    </defaultData>
+                    <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+                    <dataNorth>
+                        <layer>90</layer>
+                        <offset>(0, 0.1, -0.2)</offset>
+                    </dataNorth>
+                    <dataSouth>
+                        <offset>(0, -0.1, -0.2)</offset>
+                    </dataSouth>
+                    <dataEast>
+                        <offset>(0, -0.1, -0.05)</offset>
+                    </dataEast>
+                    <dataWest>
+                        <offset>(0, -0.1, -0.05)</offset>
+                    </dataWest>
+                </drawData>
+            </li>
+        </renderNodeProperties>
     </GeneDef>
 
     <!-- Sacred Regeneration -->
@@ -87,7 +121,7 @@
         <defName>BEWH_LivingSaintSacredRegeneration</defName>
         <label>sacred regeneration</label>
         <description>...</description>
-        <iconPath>UI/Icons/Genes/SacredRegeneration</iconPath>
+        <iconPath>UI/Genes/LivingSaint_SacredRegeneration</iconPath>
         <geneClass>Gene_Clotting</geneClass>
         <displayOrderInCategory>501</displayOrderInCategory>
         <painFactor>0.4</painFactor>
@@ -104,7 +138,7 @@
         <defName>BEWH_LivingSaintFuryOfTheEmperor</defName>
         <label>fury of the emperor</label>
         <description>...</description>
-        <iconPath>UI/Icons/Genes/FuryOfTheEmperor</iconPath>
+        <iconPath>UI/Genes/LivingSaint_FuryOfTheEmperor</iconPath>
         <geneClass>Gene_Clotting</geneClass>
         <displayOrderInCategory>501</displayOrderInCategory>
         <statOffsets>
@@ -125,7 +159,7 @@
         <defName>BEWH_LivingSaintMartyrsEndurance</defName>
         <label>martyr's endurance</label>
         <description>...</description>
-        <iconPath>UI/Icons/Genes/MartyrsEndurance</iconPath>
+        <iconPath>UI/Genes/LivingSaint_MartyrsEndurance</iconPath>
         <geneClass>Gene_Clotting</geneClass>
         <displayOrderInCategory>501</displayOrderInCategory>
         <statOffsets>
@@ -150,12 +184,12 @@
         </suppressedTraits>
     </GeneDef>
 
-    <!-- Holy Radiance - increases mood of all nearby pawns and gives halo -->
+    <!-- Holy Radiance -->
     <GeneDef ParentName="BEWH_LivingSaintBase">
         <defName>BEWH_LivingSaintHolyRadiance</defName>
         <label>holy radiance</label>
-        <description>...</description>
-        <iconPath>UI/Icons/Genes/HolyRadiance</iconPath>
+        <description>Immense faith have conjured forth an ethereal halo of warp energy, resembling that of an angels. This halo radiates a blissful energy for anyone around them.</description>
+        <iconPath>UI/Genes/LivingSaint_HolyRadiance</iconPath>
         <geneClass>Gene_Clotting</geneClass>
         <displayOrderInCategory>501</displayOrderInCategory>
         <preventPermanentWounds>true</preventPermanentWounds>
@@ -181,6 +215,40 @@
                 <degree>-2</degree>
             </li>
         </suppressedTraits>
+        <renderNodeProperties>
+            <li>
+                <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+                <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+                <texPath>Things/Pawn/Humanlike/HeadAttachments/HolyRadiance/HolyRadiance</texPath>
+                <drawSize>1</drawSize>
+                <parentTagDef>Head</parentTagDef>
+                <!--<shaderTypeDef>TransparentPostLight</shaderTypeDef>-->
+                <color>(255, 255, 255, 200)</color>
+                <colorType>Custom</colorType>
+                <rotDrawMode>Fresh</rotDrawMode>
+                <drawData>
+                    <defaultData>
+                        <layer>81</layer>
+                        <offset>(0, -0.5, 0)</offset>
+                    </defaultData>
+
+                    <dataNorth>
+                        <layer>10</layer>
+                        <offset>(0, 0.3, 0.2)</offset>
+                    </dataNorth>
+                    <dataSouth>
+                        <offset>(0, -0.1, 0.2)</offset>
+                    </dataSouth>
+
+                    <dataEast>
+                        <offset>(-0.4, -0.3, -0)</offset>
+                    </dataEast>
+                    <dataWest>
+                        <offset>(0.4, -0.3, -0)</offset>
+                    </dataWest>
+                </drawData>
+            </li>
+        </renderNodeProperties>
     </GeneDef>
 
 </Defs>

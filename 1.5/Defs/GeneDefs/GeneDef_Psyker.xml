@@ -6,7 +6,7 @@
         <defName>BEWH_IotaPsyker</defName>
         <label>iota psyker</label>
         <description>Carriers of this gene are able to unlock their true psychic potential.</description>
-        <iconPath>UI/Icons/Genes/GenePsykerIota</iconPath>
+        <iconPath>UI/Genes/GenePsykerIota</iconPath>
         <displayOrderInCategory>201</displayOrderInCategory>
         <statFactors>
             <PsychicSensitivity>1.15</PsychicSensitivity>
@@ -27,7 +27,7 @@
         <defName>BEWH_Psyker</defName>
         <label>epsilon psyker</label>
         <description>Carriers of this gene are able to unlock their true psychic potential.</description>
-        <iconPath>UI/Icons/Genes/GenePsyker</iconPath>
+        <iconPath>UI/Genes/GenePsyker</iconPath>
         <displayOrderInCategory>202</displayOrderInCategory>
         <statFactors>
             <PsychicSensitivity>1.3</PsychicSensitivity>
@@ -48,7 +48,7 @@
         <defName>BEWH_DeltaPsyker</defName>
         <label>delta psyker</label>
         <description>Carriers of this gene are able to unlock their true psychic potential.</description>
-        <iconPath>UI/Icons/Genes/GenePsykerDelta</iconPath>
+        <iconPath>UI/Genes/GenePsykerDelta</iconPath>
         <displayOrderInCategory>203</displayOrderInCategory>
         <statFactors>
             <PsychicSensitivity>2</PsychicSensitivity>
@@ -69,7 +69,7 @@
         <defName>BEWH_BetaPsyker</defName>
         <label>beta psyker</label>
         <description>Carriers of this gene are able to unlock their true psychic potential.</description>
-        <iconPath>UI/Icons/Genes/GenePsykerBeta</iconPath>
+        <iconPath>UI/Genes/GenePsykerBeta</iconPath>
         <displayOrderInCategory>204</displayOrderInCategory>
         <statFactors>
             <PsychicSensitivity>4</PsychicSensitivity>
