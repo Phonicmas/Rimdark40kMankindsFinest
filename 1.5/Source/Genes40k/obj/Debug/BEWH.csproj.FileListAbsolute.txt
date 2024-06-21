@@ -1,0 +1,8 @@
+C:\Steam\steamapps\common\RimWorld\Mods\BiotechExpansionWarhammer40k\1.4\Source\GeneProgenoid\obj\Debug\BEWH.csproj.AssemblyReference.cache
+C:\Steam\steamapps\common\RimWorld\Mods\BiotechExpansionWarhammer40k\1.4\Source\GeneProgenoid\obj\Debug\BEWH.csproj.CoreCompileInputs.cache
+C:\Steam\steamapps\common\RimWorld\Mods\BiotechExpansionWarhammer40k\1.4\Assemblies\BEWH.dll
+C:\Steam\steamapps\common\RimWorld\Mods\BiotechExpansionWarhammer40k\1.4\Source\GeneProgenoid\obj\Debug\BEWH.dll
+C:\Steam\steamapps\common\RimWorld\Mods\Warhammer40kGenesAndPsycasts\1.4\Assemblies\BEWH.dll
+C:\Steam\steamapps\common\RimWorld\Mods\Warhammer40kGenesAndPsycasts\1.4\Source\GeneProgenoid\obj\Debug\BEWH.csproj.AssemblyReference.cache
+C:\Steam\steamapps\common\RimWorld\Mods\Warhammer40kGenesAndPsycasts\1.4\Source\GeneProgenoid\obj\Debug\BEWH.csproj.CoreCompileInputs.cache
+C:\Steam\steamapps\common\RimWorld\Mods\Warhammer40kGenesAndPsycasts\1.4\Source\GeneProgenoid\obj\Debug\BEWH.dll

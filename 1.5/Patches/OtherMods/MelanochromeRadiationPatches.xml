@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- ===== Crash Landing Radiation ===== -->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Crash Landing</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/HediffDef[defName = "BEWH_Melanochrome"]</xpath>
+            <value>
+                <makeImmuneTo>
+                    <li>Rad</li>
+                </makeImmuneTo>
+                <hediffGiversCannotGive>
+                    <li>Rad</li>
+                </hediffGiversCannotGive>
+            </value>
+        </match>
+    </Operation>
+
+    <!-- ===== Dubs Rimatomics Radiation ===== -->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Dubs Rimatomics</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/GeneDef[defName = "BEWH_Melanochrome"]/statFactors</xpath>
+            <value>
+                <Radiation>0</Radiation>
+            </value>
+        </match>
+    </Operation>
+
+</Patch>

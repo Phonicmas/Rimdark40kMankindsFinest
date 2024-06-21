@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Primarch Embryo -->
+    <RecipeDef>
+        <defName>BEWH_MakePrimarchEmbryo</defName>
+        <label>make primarch embryo</label>
+        <description>Make a primarch embryo.</description>
+        <jobString>Making primarch embryo.</jobString>
+        <workerClass>Genes40k.Recipe_MakePrimarchEmbryo</workerClass>
+        <workAmount>45000</workAmount>
+        <researchPrerequisite>BEWH_PrimarchProject</researchPrerequisite>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+        <recipeUsers>
+            <li>BEWH_GeneManipulationTable</li>
+        </recipeUsers>
+        <workSkill>Intellectual</workSkill>
+        <displayPriority>0</displayPriority>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>HumanEmbryo</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>BEWH_GeneseedVialPrimarch</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>BEWH_GeneseedVialPrimarch</li>
+                <li>HumanEmbryo</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <BEWH_PrimarchEmbryo>1</BEWH_PrimarchEmbryo>
+        </products>
+        <skillRequirements>
+            <Medicine>10</Medicine>
+            <Intellectual>14</Intellectual>
+        </skillRequirements>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_DontPlaceProduct" />
+        </modExtensions>
+    </RecipeDef>
+
+</Defs>

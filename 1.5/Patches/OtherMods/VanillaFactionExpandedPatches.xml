@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Factions Expanded - Empire</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/FactionDef[defName="Empire"]/xenotypeSet</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/FactionDef[defName="Empire"]</xpath>
+                        <value>
+                            <xenotypeSet />
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/FactionDef[defName="Empire"]/xenotypeSet/xenotypeChances</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/FactionDef[defName="Empire"]/xenotypeSet</xpath>
+                        <value>
+                            <xenotypeChances />
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/FactionDef[defName = "Empire"]/xenotypeSet/xenotypeChances</xpath>
+                    <value>
+                        <BEWH_SpaceMarine>0.2</BEWH_SpaceMarine>
+                        <BEWH_PrimarisSpaceMarine>0.07</BEWH_PrimarisSpaceMarine>
+                        <BEWH_SpaceMarinePsyker>0.015</BEWH_SpaceMarinePsyker>
+                        <BEWH_Custodes>0.005</BEWH_Custodes>
+                        <BEWH_Pariah>0.015</BEWH_Pariah>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Sigma Pariah -->
+    <ThoughtDef>
+        <defName>BEWH_SigmaPariah</defName>
+        <workerClass>ThoughtWorker_AlwaysActive</workerClass>
+        <stackLimit>1</stackLimit>
+        <requiredGenes>
+            <li>BEWH_SigmaPariah</li>
+        </requiredGenes>
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+            <li>
+                <label>Sigma Pariah</label>
+                <description>Calm...</description>
+                <baseMoodEffect>10</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+    <!-- Sigma Pariah Social -->
+    <ThoughtDef>
+        <defName>BEWH_SigmaPariahSocial</defName>
+        <thoughtClass>Thought_SituationalSocial</thoughtClass>
+        <workerClass>Genes40k.ThoughtWorker_Pariah</workerClass>
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+            <li>
+                <label>Pariah</label>
+                <baseOpinionOffset>-6</baseOpinionOffset>
+            </li>
+        </stages>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_Pariah">
+                <pariahGene>BEWH_SigmaPariah</pariahGene>
+            </li>
+        </modExtensions>
+    </ThoughtDef>
+
+
+    <!-- Upsilon Pariah -->
+    <ThoughtDef>
+        <defName>BEWH_UpsilonPariah</defName>
+        <workerClass>ThoughtWorker_AlwaysActive</workerClass>
+        <stackLimit>1</stackLimit>
+        <requiredGenes>
+            <li>BEWH_UpsilonPariah</li>
+        </requiredGenes>
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+            <li>
+                <label>Upsilon Pariah</label>
+                <description>Calm...</description>
+                <baseMoodEffect>25</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+    <!-- Upsilon Pariah Social -->
+    <ThoughtDef>
+        <defName>BEWH_UpsilonPariahSocial</defName>
+        <thoughtClass>Thought_SituationalSocial</thoughtClass>
+        <workerClass>Genes40k.ThoughtWorker_Pariah</workerClass>
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+            <li>
+                <label>Pariah</label>
+                <baseOpinionOffset>-18</baseOpinionOffset>
+            </li>
+        </stages>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_Pariah">
+                <pariahGene>BEWH_UpsilonPariah</pariahGene>
+            </li>
+        </modExtensions>
+    </ThoughtDef>
+
+
+    <!-- Omega Pariah -->
+    <ThoughtDef>
+        <defName>BEWH_OmegaPariah</defName>
+        <workerClass>ThoughtWorker_AlwaysActive</workerClass>
+        <stackLimit>1</stackLimit>
+        <requiredGenes>
+            <li>BEWH_OmegaPariah</li>
+        </requiredGenes>
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+            <li>
+                <label>Omega Pariah</label>
+                <description>Calm...</description>
+                <baseMoodEffect>500</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+    <!-- Omega Pariah Social -->
+    <ThoughtDef>
+        <defName>BEWH_OmegaPariahSocial</defName>
+        <thoughtClass>Thought_SituationalSocial</thoughtClass>
+        <workerClass>Genes40k.ThoughtWorker_Pariah</workerClass>
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+            <li>
+                <label>Pariah</label>
+                <baseOpinionOffset>-35</baseOpinionOffset>
+            </li>
+        </stages>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_Pariah">
+                <pariahGene>BEWH_OmegaPariah</pariahGene>
+            </li>
+        </modExtensions>
+    </ThoughtDef>
+
+</Defs>

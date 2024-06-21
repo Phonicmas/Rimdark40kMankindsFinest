@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Genetic Matrix Base -->
+    <RecipeDef Name="BEWH_RecipeGeneseedVialBase" Abstract="True">
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+        <workerClass>Genes40k.WorkerClass_ImplantGeneseed</workerClass>
+        <recipeUsers>
+            <li>BEWH_GeneManipulationTable</li>
+        </recipeUsers>
+        <workSkill>Crafting</workSkill>
+        <displayPriority>0</displayPriority>
+    </RecipeDef>
+
+    <!-- Thunder Warrior -->
+    <RecipeDef ParentName="BEWH_RecipeGeneseedVialBase">
+        <defName>BEWH_MakeThunderWarrior</defName>
+        <label>make thunder warrior</label>
+        <description>Make a thunder warrior.</description>
+        <jobString>Making thunder warrior.</jobString>
+        <workAmount>45000</workAmount>
+        <researchPrerequisite>BEWH_GeneseedCreation</researchPrerequisite>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>MedicineUltratech</li>
+                    </thingDefs>
+                </filter>
+                <count>4</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>BEWH_GeneseedVialThunderWarrior</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>7</Medicine>
+        </skillRequirements>
+        <!--<modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
+                <geneseedVial>BEWH_GeneseedVialThunderWarrior</geneseedVial>
+            </li>
+        </modExtensions>-->
+    </RecipeDef>
+
+    <!-- Firstborn -->
+    <RecipeDef ParentName="BEWH_RecipeGeneseedVialBase">
+        <defName>BEWH_MakeFirstborn</defName>
+        <label>make firstborn</label>
+        <description>Make a firstborn.</description>
+        <jobString>Making firstborn.</jobString>
+        <workAmount>45000</workAmount>
+        <researchPrerequisite>BEWH_GeneseedPurification</researchPrerequisite>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>MedicineUltratech</li>
+                    </thingDefs>
+                </filter>
+                <count>8</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>BEWH_GeneseedVialFirstborn</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>8</Medicine>
+        </skillRequirements>
+        <!--<modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
+                <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
+            </li>
+        </modExtensions>-->
+    </RecipeDef>
+
+    <!-- Primaris -->
+    <RecipeDef ParentName="BEWH_RecipeGeneseedVialBase">
+        <defName>BEWH_MakePrimaris</defName>
+        <label>make primaris</label>
+        <description>Make a primaris.</description>
+        <jobString>Making primaris.</jobString>
+        <workAmount>45000</workAmount>
+        <researchPrerequisite>BEWH_GeneseedPerfection</researchPrerequisite>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>MedicineUltratech</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>BEWH_GeneseedVialPrimaris</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>10</Medicine>
+        </skillRequirements>
+        <!--<modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
+                <geneseedVial>BEWH_GeneseedVialPrimaris</geneseedVial>
+            </li>
+        </modExtensions>-->
+    </RecipeDef>
+
+    <!-- Custodes -->
+    <RecipeDef ParentName="BEWH_RecipeGeneseedVialBase">
+        <defName>BEWH_MakeCustodes</defName>
+        <label>make custodes</label>
+        <description>Make a custodes.</description>
+        <jobString>Making custodes.</jobString>
+        <workAmount>45000</workAmount>
+        <researchPrerequisite>BEWH_CustodesCreation</researchPrerequisite>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>MedicineUltratech</li>
+                    </thingDefs>
+                </filter>
+                <count>15</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>BEWH_GeneseedVialCustodes</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>13</Medicine>
+        </skillRequirements>
+        <!--<modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
+                <geneseedVial>BEWH_GeneseedVialCustodes</geneseedVial>
+            </li>
+        </modExtensions>-->
+    </RecipeDef>
+
+    <!-- Primarch -->
+    <!--<RecipeDef ParentName="BEWH_RecipeGeneseedVialBase">
+        <defName>BEWH_MakePrimarch</defName>
+        <label>make primarch</label>
+        <description>Make a primarch.</description>
+        <jobString>Making primarch.</jobString>
+        <workAmount>45000</workAmount>
+        <researchPrerequisite>BEWH_PrimarchProject</researchPrerequisite>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>MedicineUltratech</li>
+                    </thingDefs>
+                </filter>
+                <count>20</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>BEWH_GeneseedVialPrimarch</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>15</Medicine>
+        </skillRequirements>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
+                <geneseedVial>BEWH_GeneseedVialPrimarch</geneseedVial>
+            </li>
+        </modExtensions>
+    </RecipeDef>-->
+
+</Defs>

@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Custodes: Base -->
+    <GeneDef Name="BEWH_CustodesBase" Abstract="True">
+        <displayCategory>BEWH_ImperialGenes</displayCategory>
+        <canGenerateInGeneSet>false</canGenerateInGeneSet>
+        <biostatCpx>8</biostatCpx>
+        <biostatArc>2</biostatArc>
+        <marketValueFactor>5</marketValueFactor>
+        <minAgeActive>3</minAgeActive>
+        <selectionWeight>0</selectionWeight>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_SlaveabilityRecruitability">
+                <canBeEnslaved>false</canBeEnslaved>
+                <canBeRecruited>false</canBeRecruited>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Custodes: Stature -->
+    <GeneDef ParentName="BEWH_CustodesBase">
+        <defName>BEWH_CustodesStature</defName>
+        <label>custodian stature</label>
+        <description>Carriers of this gene tower over baseliners, standing as tall as the famed custodes.</description>
+        <iconPath>UI/Icons/Genes/CustodesStature</iconPath>
+        <displayOrderInCategory>100</displayOrderInCategory>
+
+        <biostatMet>-1</biostatMet>
+
+        <bodyType>Hulk</bodyType>
+
+        <statFactors>
+            <LeatherAmount>1.45</LeatherAmount>
+            <MeatAmount>1.45</MeatAmount>
+            <Mass>1.45</Mass>
+            <VEF_CosmeticBodySize_Multiplier>1.22</VEF_CosmeticBodySize_Multiplier>
+        </statFactors>
+
+        <forcedTraits>
+            <li>
+                <def>BEWH_Genes</def>
+                <degree>3</degree>
+            </li>
+        </forcedTraits>
+
+        <suppressedTraits>
+            <li>
+                <def>Industriousness</def>
+                <degree>-1</degree>
+            </li>
+            <li>
+                <def>Industriousness</def>
+                <degree>-2</degree>
+            </li>
+            <li>
+                <def>Beauty</def>
+                <degree>-1</degree>
+            </li>
+            <li>
+                <def>Beauty</def>
+                <degree>-2</degree>
+            </li>
+        </suppressedTraits>
+
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+            </li>
+            <li Class="Genes40k.DefModExtension_Custodes" />
+        </modExtensions>
+        <exclusionTags>
+            <li>SupremeSize</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <!-- Custodes: Toughness -->
+    <GeneDef ParentName="BEWH_CustodesBase">
+        <defName>BEWH_CustodesToughness</defName>
+        <label>custodian toughness</label>
+        <description>Carriers of this gene possess toughness equal to that of the famed custodes.</description>
+        <iconPath>UI/Icons/Genes/CustodesToughness</iconPath>
+        <geneClass>Gene_Clotting</geneClass>
+        <displayOrderInCategory>101</displayOrderInCategory>
+        <biostatMet>-5</biostatMet>
+
+        <preventPermanentWounds>true</preventPermanentWounds>
+        <painFactor>0.15</painFactor>
+
+        <statOffsets>
+            <ArmorRating_Blunt>0.75</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+            <ArmorRating_Heat>0.75</ArmorRating_Heat>
+        </statOffsets>
+
+        <statFactors>
+            <InjuryHealingFactor>10</InjuryHealingFactor>
+            <StaggerDurationFactor>0</StaggerDurationFactor>
+            <IncomingDamageFactor>0.4</IncomingDamageFactor>
+        </statFactors>
+
+        <suppressedTraits>
+            <li>
+                <def>Delicate</def>
+            </li>
+            <li>
+                <def>Wimp</def>
+            </li>
+        </suppressedTraits>
+
+        <customEffectDescriptions>
+            <li>Bleeding wounds close very quickly.</li>
+            <li>Can survive loss of lungs</li>
+            <li>Can survive loss of heart</li>
+        </customEffectDescriptions>
+
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_LostLungSurvival" />
+            <li Class="Core40k.DefModExtension_LostHeartSurvival" />
+            <li Class="Genes40k.DefModExtension_Custodes" />
+        </modExtensions>
+        <exclusionTags>
+            <li>SupremeToughness</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <!-- Custodes: Resilience -->
+    <GeneDef ParentName="BEWH_CustodesBase">
+        <defName>BEWH_CustodesResilience</defName>
+        <label>custodian resilience</label>
+        <description>Carriers of this gene have resilience equal to that of the famed custodes.</description>
+        <iconPath>UI/Icons/Genes/CustodesResilience</iconPath>
+        <displayOrderInCategory>102</displayOrderInCategory>
+        <biostatMet>-5</biostatMet>
+
+        <foodPoisoningChanceFactor>0</foodPoisoningChanceFactor>
+        <immuneToToxGasExposure>true</immuneToToxGasExposure>
+        <overdoseChanceFactor>0</overdoseChanceFactor>
+
+        <statOffsets>
+            <ToxicEnvironmentResistance>2</ToxicEnvironmentResistance>
+            <ToxicResistance>2</ToxicResistance>
+            <MentalBreakThreshold>-0.5</MentalBreakThreshold>
+            <ComfyTemperatureMin>-80</ComfyTemperatureMin>
+            <ComfyTemperatureMax>80</ComfyTemperatureMax>
+        </statOffsets>
+
+        <statFactors>
+            <RestFallRateFactor>0.4</RestFallRateFactor>
+            <ImmunityGainSpeed>6</ImmunityGainSpeed>
+        </statFactors>
+
+        <makeImmuneTo>
+            <li>Flu</li>
+            <li>Malaria</li>
+            <li>SleepingSickness</li>
+            <li>Plague</li>
+            <li>WoundInfection</li>
+            <li>LungRot</li>
+            <li>GutWorms</li>
+            <li>MuscleParasites</li>
+            <li>LungRotExposure</li>
+        </makeImmuneTo>
+
+        <hediffGiversCannotGive>
+            <li>Carcinoma</li>
+            <li>HeartAttack</li>
+            <li>BadBack</li>
+            <li>Frail</li>
+            <li>Cataract</li>
+            <li>Dementia</li>
+            <li>Alzheimers</li>
+            <li>Asthma</li>
+            <li>HeartArteryBlockage</li>
+            <li>Cirrhosis</li>
+            <li>DrugOverdose</li>
+        </hediffGiversCannotGive>
+
+        <suppressedTraits>
+            <li>
+                <def>Immunity</def>
+                <degree>-1</degree>
+            </li>
+            <li>
+                <def>Nerves</def>
+                <degree>-1</degree>
+            </li>
+            <li>
+                <def>Nerves</def>
+                <degree>-2</degree>
+            </li>
+        </suppressedTraits>
+
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <diseaseProgressionFactor>0.1</diseaseProgressionFactor>
+            </li>
+            <li Class="Genes40k.DefModExtension_Custodes" />
+        </modExtensions>
+        <exclusionTags>
+            <li>SupremeResilience</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <!-- Custodes: Strength -->
+    <GeneDef ParentName="BEWH_CustodesBase">
+        <defName>BEWH_CustodesStrength</defName>
+        <label>custodian strength</label>
+        <description>Carriers of this gene possess strength equal to that of the famed custodes.</description>
+        <iconPath>UI/Icons/Genes/CustodesStrength</iconPath>
+        <displayOrderInCategory>103</displayOrderInCategory>
+        <biostatMet>-4</biostatMet>
+
+        <aptitudes>
+            <Melee>10</Melee>
+        </aptitudes>
+
+        <statOffsets>
+            <CarryingCapacity>300</CarryingCapacity>
+        </statOffsets>
+
+        <statFactors>
+            <MeleeDamageFactor>3.5</MeleeDamageFactor>
+        </statFactors>
+
+        <customEffectDescriptions>
+            <li>No loss in melee skill</li>
+        </customEffectDescriptions>
+
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <noSkillLoss>Melee</noSkillLoss>
+            </li>
+            <li Class="Genes40k.DefModExtension_Custodes" />
+        </modExtensions>
+        <exclusionTags>
+            <li>SupremeStrength</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <!-- Custodes: Expertise -->
+    <GeneDef ParentName="BEWH_CustodesBase">
+        <defName>BEWH_CustodesExpertise</defName>
+        <label>custodian expertise</label>
+        <description>Carriers of this gene possess an innate expertise for combat equal to that of the famed custodes.</description>
+        <iconPath>UI/Icons/Genes/CustodesExpertise</iconPath>
+        <displayOrderInCategory>104</displayOrderInCategory>
+        <biostatMet>-5</biostatMet>
+
+        <suppressedTraits>
+            <li>
+                <def>Kind</def>
+            </li>
+            <li>
+                <def>SpeedOffset</def>
+                <degree>-1</degree>
+            </li>
+        </suppressedTraits>
+
+        <aptitudes>
+            <Shooting>10</Shooting>
+            <Intellectual>10</Intellectual>
+        </aptitudes>
+
+        <statOffsets>
+            <MeleeDodgeChance>15</MeleeDodgeChance>
+        </statOffsets>
+
+        <statFactors>
+            <MeleeWeapon_CooldownMultiplier>0.6</MeleeWeapon_CooldownMultiplier>
+            <MeleeHitChance>1.8</MeleeHitChance>
+            <AimingDelayFactor>0.6</AimingDelayFactor>
+            <RangedCooldownFactor>0.6</RangedCooldownFactor>
+            <GlobalLearningFactor>2</GlobalLearningFactor>
+        </statFactors>
+
+        <customEffectDescriptions>
+            <li>No loss in shooting skill</li>
+        </customEffectDescriptions>
+
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <noSkillLoss>Shooting</noSkillLoss>
+            </li>
+            <li Class="Genes40k.DefModExtension_Custodes" />
+        </modExtensions>
+        <exclusionTags>
+            <li>SupremeExpertise</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <!-- Custodes: Anatomy -->
+    <GeneDef ParentName="BEWH_CustodesBase">
+        <defName>BEWH_CustodesAnatomy</defName>
+        <label>custodian anatomy</label>
+        <description>Carriers of the gene anatomy resemble that of the famed custodes.</description>
+        <iconPath>UI/Icons/Genes/CustodesAnatomy</iconPath>
+        <displayOrderInCategory>105</displayOrderInCategory>
+        <biostatMet>25</biostatMet>
+
+        <dontMindRawFood>true</dontMindRawFood>
+
+        <sterilize>true</sterilize>
+
+        <abilities>
+            <li>BEWH_WarpShield</li>
+            <li>BEWH_CatalepseanNodeUnsleeping</li>
+            <li>BEWH_OmophageaCorpseEat</li>
+            <li>BEWH_Sus_anMembraneStasis</li>
+            <li>BEWH_BetchersSpit</li>
+        </abilities>
+
+        <descriptionHyperlinks>
+            <AbilityDef>BEWH_CatalepseanNodeUnsleeping</AbilityDef>
+            <AbilityDef>BEWH_OmophageaCorpseEat</AbilityDef>
+            <AbilityDef>BEWH_Sus_anMembraneStasis</AbilityDef>
+            <AbilityDef>BEWH_BetchersSpit</AbilityDef>
+        </descriptionHyperlinks>
+
+        <statFactors>
+            <Fertility>0</Fertility>
+            <RawNutritionFactor>4</RawNutritionFactor>
+        </statFactors>
+
+        <biologicalAgeTickFactorFromAgeCurve>
+            <points>
+                <li>(0, 1)</li>
+                <li>(20, 1)</li>
+                <li>(21, 0)</li>
+            </points>
+        </biologicalAgeTickFactorFromAgeCurve>
+
+        <capMods>
+            <li>
+                <capacity>Consciousness</capacity>
+                <postFactor>1.85</postFactor>
+            </li>
+            <li>
+                <capacity>BloodPumping</capacity>
+                <postFactor>2.5</postFactor>
+            </li>
+            <li>
+                <capacity>Manipulation</capacity>
+                <postFactor>2.5</postFactor>
+            </li>
+            <li>
+                <capacity>Breathing</capacity>
+                <postFactor>2.5</postFactor>
+            </li>
+            <li>
+                <capacity>Sight</capacity>
+                <postFactor>2.5</postFactor>
+            </li>
+            <li>
+                <capacity>Hearing</capacity>
+                <postFactor>2.5</postFactor>
+            </li>
+            <li>
+                <capacity>BloodFiltration</capacity>
+                <postFactor>2.5</postFactor>
+            </li>
+            <li>
+                <capacity>Eating</capacity>
+                <postFactor>1.5</postFactor>
+            </li>
+            <li>
+                <capacity>Talking</capacity>
+                <postFactor>2</postFactor>
+            </li>
+        </capMods>
+
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <hediffsToBodyParts>
+                    <li>
+                        <hediff>BEWH_WarpShield</hediff>
+                        <bodyparts>
+                            <li>Brain</li>
+                        </bodyparts>
+                    </li>
+                </hediffsToBodyParts>
+            </li>
+            <li Class="Genes40k.DefModExtension_Custodes" />
+        </modExtensions>
+        <exclusionTags>
+            <li>SupremeAnatomy</li>
+            <li>SM1</li>
+            <li>SM2</li>
+            <li>SM3</li>
+            <li>SM4</li>
+            <li>SM5</li>
+            <li>SM6</li>
+            <li>SM7</li>
+            <li>SM8</li>
+            <li>SM9</li>
+            <li>SM10</li>
+            <li>SM11</li>
+            <li>SM12</li>
+            <li>SM13</li>
+            <li>SM14</li>
+            <li>SM15</li>
+            <li>SM16</li>
+            <li>SM17</li>
+            <li>SM18</li>
+            <li>SM19</li>
+            <li>PM1</li>
+            <li>PM2</li>
+            <li>PM3</li>
+        </exclusionTags>
+    </GeneDef>
+
+</Defs>

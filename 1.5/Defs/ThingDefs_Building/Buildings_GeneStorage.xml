@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Base -->
+  <ThingDef ParentName="BuildingBase" Name="BEWH_GeneticStorage" Abstract="True">
+    <thingClass>Genes40k.Building_GeneStorage</thingClass>
+    <statBases>
+      <WorkToBuild>2000</WorkToBuild>
+      <Flammability>0.5</Flammability>
+      <Beauty>0</Beauty>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>10</Mass>
+    </statBases>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <designationCategory>Misc</designationCategory>
+    <building>
+      <destroySound>BuildingDestroyed_Metal_Small</destroySound>
+      <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+      <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+      <maxItemsInCell>1</maxItemsInCell>
+    </building>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>22</pathCost>
+    <blockWind>false</blockWind>
+    <fillPercent>0.5</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <neverMultiSelect>false</neverMultiSelect>
+    <rotatable>false</rotatable>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <surfaceType>None</surfaceType>
+    <inspectorTabs>
+      <li>ITab_Storage</li>
+      <li>Genes40k.ITab_ContentsGeneStorage</li>
+    </inspectorTabs>
+    <comps>
+      <li Class="CompProperties_Flickable" />
+    </comps>
+  </ThingDef>
+
+  <!-- Sangprimus Portum -->
+  <ThingDef ParentName="BEWH_GeneticStorage">
+    <defName>BEWH_SangprimusPortum</defName>
+    <label>sangprimus portum</label>
+    <description>...</description>
+    <graphicData>
+      <texPath>Things/Building/Geneseed/GeneseedGenetor</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shadowData>
+        <volume>(0.9,0.2,0.9)</volume>
+      </shadowData>
+      <drawSize>(3, 1)</drawSize>
+    </graphicData>
+    <size>(3, 1)</size>
+    <researchPrerequisites>
+      <li>BEWH_GeneseedCreation</li>
+    </researchPrerequisites>
+    <costList>
+      <Plasteel>50</Plasteel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+      <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+    <building>
+      <maxItemsInCell>20</maxItemsInCell>
+      <fixedStorageSettings>
+        <filter>
+          <categories>
+            <li>BEWH_PrimarchMaterial</li>
+            <li>BEWH_ChapterMaterial</li>
+          </categories>
+        </filter>
+      </fixedStorageSettings>
+      <defaultStorageSettings>
+        <priority>Important</priority>
+        <filter>
+          <categories>
+            <li>BEWH_PrimarchMaterial</li>
+            <li>BEWH_ChapterMaterial</li>
+          </categories>
+        </filter>
+      </defaultStorageSettings>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+      <li>Core40k.PlaceWorker_OnlyOnePerMap</li>
+    </placeWorkers>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>500</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Facility">
+        <maxSimultaneous>1</maxSimultaneous>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_SangprimusPortum" />
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Genetic template storage -->
+  <ThingDef ParentName="BEWH_GeneticStorage">
+    <defName>BEWH_GeneticCryostaticStorage</defName>
+    <label>genetic cryostatic storage</label>
+    <description>...</description>
+    <graphicData>
+      <texPath>Things/Building/Geneseed/GeneseedGenetor</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shadowData>
+        <volume>(0.9,0.2,0.9)</volume>
+      </shadowData>
+      <drawSize>(3, 3)</drawSize>
+    </graphicData>
+    <size>(3, 3)</size>
+    <researchPrerequisites>
+      <li>BEWH_GeneseedPerfection</li>
+    </researchPrerequisites>
+    <costList>
+      <Plasteel>50</Plasteel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+      <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+    <building>
+      <fixedStorageSettings>
+        <filter>
+          <categories>
+            <li>BEWH_GeneticMatrix</li>
+          </categories>
+        </filter>
+      </fixedStorageSettings>
+      <defaultStorageSettings>
+        <priority>Important</priority>
+        <filter>
+          <categories>
+            <li>BEWH_GeneticMatrix</li>
+          </categories>
+        </filter>
+      </defaultStorageSettings>
+    </building>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>500</basePowerConsumption>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- Geneseed vial storage -->
+  <ThingDef ParentName="BEWH_GeneticStorage">
+    <defName>BEWH_GeneseedVialStorage</defName>
+    <label>geneseed vial storage</label>
+    <description>...</description>
+    <graphicData>
+      <texPath>Things/Building/Geneseed/GeneseedGenetor</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shadowData>
+        <volume>(0.9,0.2,0.9)</volume>
+      </shadowData>
+      <drawSize>(2, 2)</drawSize>
+    </graphicData>
+    <size>(2, 2)</size>
+    <researchPrerequisites>
+      <li>BEWH_GeneseedPurification</li>
+    </researchPrerequisites>
+    <costList>
+      <Plasteel>50</Plasteel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+      <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+    <building>
+      <fixedStorageSettings>
+        <filter>
+          <categories>
+            <li>BEWH_GeneseedVial</li>
+          </categories>
+        </filter>
+      </fixedStorageSettings>
+      <defaultStorageSettings>
+        <priority>Important</priority>
+        <filter>
+          <categories>
+            <li>BEWH_GeneseedVial</li>
+          </categories>
+        </filter>
+      </defaultStorageSettings>
+    </building>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>500</basePowerConsumption>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- Primarch embryo container -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>BEWH_PrimarchEmbryoContainer</defName>
+    <label>primarch embryo container</label>
+    <thingClass>Building_Storage</thingClass>
+    <description>...</description>
+    <graphicData>
+      <texPath>Things/Building/Geneseed/GeneseedGenetor</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shadowData>
+        <volume>(0.9,0.2,0.9)</volume>
+      </shadowData>
+      <drawSize>(1, 1)</drawSize>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>22</pathCost>
+    <blockWind>false</blockWind>
+    <fillPercent>0.5</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <neverMultiSelect>false</neverMultiSelect>
+    <rotatable>true</rotatable>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <statBases>
+      <WorkToBuild>2000</WorkToBuild>
+      <Flammability>0.5</Flammability>
+      <Beauty>0</Beauty>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Mass>10</Mass>
+    </statBases>
+    <size>(1,1)</size>
+    <costList>
+      <Plasteel>20</Plasteel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+      <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+    <building>
+      <destroySound>BuildingDestroyed_Metal_Small</destroySound>
+      <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+      <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+      <fixedStorageSettings>
+        <filter>
+          <thingDefs>
+            <li>BEWH_PrimarchEmbryo</li>
+          </thingDefs>
+        </filter>
+      </fixedStorageSettings>
+      <defaultStorageSettings>
+        <priority>Important</priority>
+        <filter>
+          <thingDefs>
+            <li>BEWH_PrimarchEmbryo</li>
+          </thingDefs>
+        </filter>
+      </defaultStorageSettings>
+    </building>
+    <surfaceType>Item</surfaceType>
+    <inspectorTabs>
+      <li>ITab_Storage</li>
+    </inspectorTabs>
+    <placeWorkers Inherit="False" />
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>300</basePowerConsumption>
+      </li>
+    </comps>
+    <defaultPlacingRot>South</defaultPlacingRot>
+  </ThingDef>
+
+</Defs>

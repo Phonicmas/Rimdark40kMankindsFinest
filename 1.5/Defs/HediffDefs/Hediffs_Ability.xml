@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!-- Progenoid Gland -->
+	<HediffDef>
+		<defName>BEWH_ProgenoidGlandsGrowth</defName>
+		<label>progenoid glands</label>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>Your progenoid glands are currently producing germ cells for new gene-seeds.</description>
+		<everCurableByItem>false</everCurableByItem>
+		<initialSeverity>0.004 </initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<label>Growing</label>
+			</li>
+			<li>
+				<minSeverity>1</minSeverity>
+				<label>Done growing</label>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>0.0166</severityPerDay>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<!-- Sus-an Membrane Stasis -->
+	<HediffDef>
+		<defName>BEWH_Sus_anMembraneStasis</defName>
+		<label>sus-an membrane stasis</label>
+		<description>Suspended in sus-an membrane stasis, requires advanced medical procedure to awaken.</description>
+		<everCurableByItem>false</everCurableByItem>
+		<disablesNeeds>
+			<li>Food</li>
+			<li>Rest</li>
+			<li>Joy</li>
+		</disablesNeeds>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.20</setMax>
+					</li>
+				</capMods>
+				<statFactors>
+					<IncomingDamageFactor>0</IncomingDamageFactor>
+				</statFactors>
+				<totalBleedFactor>0</totalBleedFactor>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<!-- Catalepsean Node Unsleeping -->
+	<HediffDef>
+		<defName>BEWH_CatalepseanNodeUnsleeping</defName>
+		<label>catalepsean node unsleeping</label>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>Awake and alert!</description>
+		<everCurableByItem>false</everCurableByItem>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.10</offset>
+					</li>
+				</capMods>
+				<statFactors>
+					<RestFallRateFactor>0.05</RestFallRateFactor>
+				</statFactors>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>True</showRemainingTime>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<!-- Belisarian Furnace Boost -->
+	<HediffDef>
+		<defName>BEWH_BelisarianFurnaceBoost</defName>
+		<label>belisarian furnace boost</label>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>A hyper-cocktail aiding in the rapid regrowth of tissue, bone and muscle.</description>
+		<everCurableByItem>false</everCurableByItem>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.20</offset>
+					</li>
+				</capMods>
+				<statFactors>
+					<InjuryHealingFactor>2000</InjuryHealingFactor>
+					<IncomingDamageFactor>0.5</IncomingDamageFactor>
+				</statFactors>
+				<painFactor>0</painFactor>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>True</showRemainingTime>
+			</li>
+		</comps>
+	</HediffDef>
+
+</Defs>

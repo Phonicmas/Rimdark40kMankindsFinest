@@ -1,0 +1,4 @@
+C:\Steam\steamapps\common\RimWorld\Mods\BiotechExpansionWarhammer40k\1.4\Assemblies\GeneProgenoid.dll
+C:\Steam\steamapps\common\RimWorld\Mods\BiotechExpansionWarhammer40k\1.4\Source\GeneProgenoid\obj\Debug\GeneProgenoid.csproj.AssemblyReference.cache
+C:\Steam\steamapps\common\RimWorld\Mods\BiotechExpansionWarhammer40k\1.4\Source\GeneProgenoid\obj\Debug\GeneProgenoid.csproj.CoreCompileInputs.cache
+C:\Steam\steamapps\common\RimWorld\Mods\BiotechExpansionWarhammer40k\1.4\Source\GeneProgenoid\obj\Debug\GeneProgenoid.dll

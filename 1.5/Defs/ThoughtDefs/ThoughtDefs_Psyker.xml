@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Iota Psyker -->
+    <ThoughtDef>
+        <defName>BEWH_IotaPsyker</defName>
+        <workerClass>ThoughtWorker_AlwaysActive</workerClass>
+        <stackLimit>1</stackLimit>
+        <requiredGenes>
+            <li>BEWH_IotaPsyker</li>
+        </requiredGenes>
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+            <li>
+                <label>Iota Psyker</label>
+                <description>I can feel the warp...</description>
+                <baseMoodEffect>-2</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <!-- Epsilon Psyker -->
+    <ThoughtDef>
+        <defName>BEWH_EpsilonPsyker</defName>
+        <workerClass>ThoughtWorker_AlwaysActive</workerClass>
+        <stackLimit>1</stackLimit>
+        <requiredGenes>
+            <li>BEWH_Psyker</li>
+        </requiredGenes>
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+            <li>
+                <label>Epsilon Psyker</label>
+                <description>I can feel the warp...</description>
+                <baseMoodEffect>-4</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <!-- Delta Psyker -->
+    <ThoughtDef>
+        <defName>BEWH_DeltaPsyker</defName>
+        <workerClass>ThoughtWorker_AlwaysActive</workerClass>
+        <stackLimit>1</stackLimit>
+        <requiredGenes>
+            <li>BEWH_DeltaPsyker</li>
+        </requiredGenes>
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+            <li>
+                <label>Delta Psyker</label>
+                <description>I can feel the warp...</description>
+                <baseMoodEffect>-8</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+
+    <!-- Beta Psyker -->
+    <ThoughtDef>
+        <defName>BEWH_BetaPsyker</defName>
+        <workerClass>ThoughtWorker_AlwaysActive</workerClass>
+        <stackLimit>1</stackLimit>
+        <requiredGenes>
+            <li>BEWH_BetaPsyker</li>
+        </requiredGenes>
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+            <li>
+                <label>Beta Psyker</label>
+                <description>I can feel the warp...</description>
+                <baseMoodEffect>-14</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+</Defs>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <JobDef>
+        <defName>BEWH_FillGeneGestator</defName>
+        <driverClass>Genes40k.JobDriver_FillGeneGestator</driverClass>
+        <reportString>filling TargetA with TargetB.</reportString>
+        <suspendable>false</suspendable>
+        <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+    </JobDef>
+
+</Defs>

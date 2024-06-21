@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Genetic Matrix Base -->
+    <RecipeDef Name="BEWH_RecipeGeneticMatrixBase" Abstract="True">
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+        <!--<workerClass>Genes40k.WorkerClass_GeneticMatrix</workerClass>-->
+        <recipeUsers>
+            <li>BEWH_GeneManipulationTable</li>
+        </recipeUsers>
+        <workSkill>Crafting</workSkill>
+        <displayPriority>0</displayPriority>
+    </RecipeDef>
+
+    <!-- Thunder Warrior -->
+    <RecipeDef ParentName="BEWH_RecipeGeneticMatrixBase">
+        <defName>BEWH_MakeThunderWarriorMatrix</defName>
+        <label>make thunder warrior genetic matrix</label>
+        <description>Make a thunder warrior genetic matrix.</description>
+        <jobString>Making thunder warrior genetic matrix.</jobString>
+        <workAmount>45000</workAmount>
+        <researchPrerequisite>BEWH_GeneseedCreation</researchPrerequisite>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>MedicineUltratech</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Luciferium</li>
+                    </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Meat_Human</li>
+                    </thingDefs>
+                </filter>
+                <count>100</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Neutroamine</li>
+                    </thingDefs>
+                </filter>
+                <count>75</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>7</Medicine>
+            <Intellectual>7</Intellectual>
+            <Crafting>5</Crafting>
+        </skillRequirements>
+        <products>
+            <BEWH_GeneseedMatrixThunderWarrior>1</BEWH_GeneseedMatrixThunderWarrior>
+        </products>
+    </RecipeDef>
+
+    <!-- Firstborn -->
+    <RecipeDef ParentName="BEWH_RecipeGeneticMatrixBase">
+        <defName>BEWH_MakeFirstbornMatrix</defName>
+        <label>make firstborn genetic matrix</label>
+        <description>Make a firstborn genetic matrix.</description>
+        <jobString>Making firstborn genetic matrix.</jobString>
+        <workAmount>100000</workAmount>
+        <researchPrerequisite>BEWH_GeneseedPurification</researchPrerequisite>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>MedicineUltratech</li>
+                    </thingDefs>
+                </filter>
+                <count>7</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Luciferium</li>
+                    </thingDefs>
+                </filter>
+                <count>3</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Meat_Human</li>
+                    </thingDefs>
+                </filter>
+                <count>75</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Neutroamine</li>
+                    </thingDefs>
+                </filter>
+                <count>50</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>8</Medicine>
+            <Intellectual>8</Intellectual>
+            <Crafting>6</Crafting>
+        </skillRequirements>
+        <products>
+            <BEWH_GeneseedMatrixFirstborn>1</BEWH_GeneseedMatrixFirstborn>
+        </products>
+    </RecipeDef>
+
+    <!-- Primaris -->
+    <RecipeDef ParentName="BEWH_RecipeGeneticMatrixBase">
+        <defName>BEWH_MakePrimarisMatrix</defName>
+        <label>make primaris genetic matrix</label>
+        <description>Make a primaris genetic matrix.</description>
+        <jobString>Making primaris genetic matrix.</jobString>
+        <workAmount>150000</workAmount>
+        <researchPrerequisite>BEWH_GeneseedPerfection</researchPrerequisite>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>MedicineUltratech</li>
+                    </thingDefs>
+                </filter>
+                <count>15</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Luciferium</li>
+                    </thingDefs>
+                </filter>
+                <count>7</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Meat_Human</li>
+                    </thingDefs>
+                </filter>
+                <count>150</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Neutroamine</li>
+                    </thingDefs>
+                </filter>
+                <count>115</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>10</Medicine>
+            <Intellectual>10</Intellectual>
+            <Crafting>8</Crafting>
+        </skillRequirements>
+        <products>
+            <BEWH_GeneseedMatrixPrimaris>1</BEWH_GeneseedMatrixPrimaris>
+        </products>
+    </RecipeDef>
+
+    <!-- Custodes -->
+    <RecipeDef ParentName="BEWH_RecipeGeneticMatrixBase">
+        <defName>BEWH_MakeCustodesMatrix</defName>
+        <label>make custodes genetic matrix</label>
+        <description>Make a custodes genetic matrix.</description>
+        <jobString>Making custodes genetic matrix.</jobString>
+        <workAmount>200000</workAmount>
+        <researchPrerequisite>BEWH_CustodesCreation</researchPrerequisite>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>MedicineUltratech</li>
+                    </thingDefs>
+                </filter>
+                <count>20</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Luciferium</li>
+                    </thingDefs>
+                </filter>
+                <count>50</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Meat_Human</li>
+                    </thingDefs>
+                </filter>
+                <count>200</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Neutroamine</li>
+                    </thingDefs>
+                </filter>
+                <count>130</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>13</Medicine>
+            <Intellectual>13</Intellectual>
+            <Crafting>10</Crafting>
+        </skillRequirements>
+        <products>
+            <BEWH_GeneseedMatrixCustodes>1</BEWH_GeneseedMatrixCustodes>
+        </products>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneMatrixRecipe">
+                <drainsUserWhenMaking>true</drainsUserWhenMaking>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!-- Primarch -->
+    <RecipeDef ParentName="BEWH_RecipeGeneticMatrixBase">
+        <defName>BEWH_MakePrimarchMatrix</defName>
+        <label>make primarch genetic matrix</label>
+        <description>Make a primarch genetic matrix.</description>
+        <jobString>Making primarch genetic matrix.</jobString>
+        <workAmount>150000</workAmount>
+        <researchPrerequisite>BEWH_PrimarchProject</researchPrerequisite>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>MedicineUltratech</li>
+                    </thingDefs>
+                </filter>
+                <count>50</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Luciferium</li>
+                    </thingDefs>
+                </filter>
+                <count>100</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Meat_Human</li>
+                    </thingDefs>
+                </filter>
+                <count>1000</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Neutroamine</li>
+                    </thingDefs>
+                </filter>
+                <count>500</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>15</Medicine>
+            <Intellectual>15</Intellectual>
+            <Crafting>12</Crafting>
+        </skillRequirements>
+        <products>
+            <BEWH_GeneseedMatrixPrimarch>1</BEWH_GeneseedMatrixPrimarch>
+        </products>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneMatrixRecipe">
+                <drainsUserWhenMaking>true</drainsUserWhenMaking>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+</Defs>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <TraitDef>
+    <defName>BEWH_Genes</defName>
+    <commonality>0</commonality>
+    <degreeDatas>
+      <li>
+        <label>space marine</label>
+        <description>{PAWN_nameDef} genes have been perfected, and is now a fully fledged space marine.</description>
+        <degree>1</degree>
+        <statFactors>
+          <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.15</CertaintyLossFactor>
+        </statFactors>
+      </li>
+      <li>
+        <label>primaris marine</label>
+        <description>{PAWN_nameDef} genes have been perfected, and is now a fully fledged primaris marine.</description>
+        <degree>2</degree>
+        <statFactors>
+          <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.05</CertaintyLossFactor>
+        </statFactors>
+      </li>
+      <li>
+        <label>custodes</label>
+        <description>{PAWN_nameDef} genes have been perfected, and is now a fully fledged custodes.</description>
+        <degree>3</degree>
+        <statFactors>
+          <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0</CertaintyLossFactor>
+        </statFactors>
+      </li>
+      <li>
+        <label>primarch</label>
+        <description>{PAWN_nameDef} genes have been perfected, and is now a fully fledged primarch.</description>
+        <degree>4</degree>
+        <statFactors>
+          <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0</CertaintyLossFactor>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+</Defs>

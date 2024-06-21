@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Iota Psyker -->
+    <GeneDef ParentName="BEWH_PsykerParent">
+        <defName>BEWH_IotaPsyker</defName>
+        <label>iota psyker</label>
+        <description>Carriers of this gene are able to unlock their true psychic potential.</description>
+        <iconPath>UI/Icons/Genes/GenePsykerIota</iconPath>
+        <displayOrderInCategory>201</displayOrderInCategory>
+        <statFactors>
+            <PsychicSensitivity>1.15</PsychicSensitivity>
+            <MeditationFocusGain>1.05</MeditationFocusGain>
+            <PsychicEntropyRecoveryRate>1.05</PsychicEntropyRecoveryRate>
+        </statFactors>
+        <capMods>
+            <li>
+                <capacity>Consciousness</capacity>
+                <postFactor>1.05</postFactor>
+            </li>
+        </capMods>
+        <marketValueFactor>2</marketValueFactor>
+    </GeneDef>
+
+    <!-- Epsilon Psyker -->
+    <GeneDef ParentName="BEWH_PsykerParent">
+        <defName>BEWH_Psyker</defName>
+        <label>epsilon psyker</label>
+        <description>Carriers of this gene are able to unlock their true psychic potential.</description>
+        <iconPath>UI/Icons/Genes/GenePsyker</iconPath>
+        <displayOrderInCategory>202</displayOrderInCategory>
+        <statFactors>
+            <PsychicSensitivity>1.3</PsychicSensitivity>
+            <MeditationFocusGain>1.15</MeditationFocusGain>
+            <PsychicEntropyRecoveryRate>1.2</PsychicEntropyRecoveryRate>
+        </statFactors>
+        <capMods>
+            <li>
+                <capacity>Consciousness</capacity>
+                <postFactor>1.15</postFactor>
+            </li>
+        </capMods>
+        <marketValueFactor>1.5</marketValueFactor>
+    </GeneDef>
+
+    <!-- Delta Psyker -->
+    <GeneDef ParentName="BEWH_PsykerParent">
+        <defName>BEWH_DeltaPsyker</defName>
+        <label>delta psyker</label>
+        <description>Carriers of this gene are able to unlock their true psychic potential.</description>
+        <iconPath>UI/Icons/Genes/GenePsykerDelta</iconPath>
+        <displayOrderInCategory>203</displayOrderInCategory>
+        <statFactors>
+            <PsychicSensitivity>2</PsychicSensitivity>
+            <MeditationFocusGain>1.4</MeditationFocusGain>
+            <PsychicEntropyRecoveryRate>1.7</PsychicEntropyRecoveryRate>
+        </statFactors>
+        <capMods>
+            <li>
+                <capacity>Consciousness</capacity>
+                <postFactor>1.25</postFactor>
+            </li>
+        </capMods>
+        <marketValueFactor>3.5</marketValueFactor>
+    </GeneDef>
+
+    <!-- Beta Psyker -->
+    <GeneDef ParentName="BEWH_PsykerParent">
+        <defName>BEWH_BetaPsyker</defName>
+        <label>beta psyker</label>
+        <description>Carriers of this gene are able to unlock their true psychic potential.</description>
+        <iconPath>UI/Icons/Genes/GenePsykerBeta</iconPath>
+        <displayOrderInCategory>204</displayOrderInCategory>
+        <statFactors>
+            <PsychicSensitivity>4</PsychicSensitivity>
+            <MeditationFocusGain>2</MeditationFocusGain>
+            <PsychicEntropyRecoveryRate>2.5</PsychicEntropyRecoveryRate>
+        </statFactors>
+        <capMods>
+            <li>
+                <capacity>Consciousness</capacity>
+                <postFactor>1.55</postFactor>
+            </li>
+        </capMods>
+        <marketValueFactor>6</marketValueFactor>
+    </GeneDef>
+
+</Defs>

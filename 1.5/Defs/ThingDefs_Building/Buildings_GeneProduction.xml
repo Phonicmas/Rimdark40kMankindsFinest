@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Gene manipulation table -->
+  <ThingDef ParentName="BenchBase">
+    <defName>BEWH_GeneManipulationTable</defName>
+    <label>gene manipulation table</label>
+    <description>...</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <WorkToBuild>5000</WorkToBuild>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <minifiedDef />
+    <thingCategories Inherit="false" />
+    <size>(5,2)</size>
+    <costList>
+      <Steel>200</Steel>
+      <ComponentIndustrial>12</ComponentIndustrial>
+      <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>250</basePowerConsumption>
+        <shortCircuitInRain>true</shortCircuitInRain>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Breakdownable"/>
+    </comps>
+    <graphicData>
+      <texPath>Things/Building/Production/FabricationBench</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(7,4)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+    </building>
+    <fillPercent>0.5</fillPercent>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <designationCategory>Production</designationCategory>
+    <uiOrder>2530</uiOrder>
+    <surfaceType>Item</surfaceType>
+    <designationHotKey>Misc12</designationHotKey>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>BEWH_GeneseedCreation</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+  <!-- Geneseed gestator -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>BEWH_GeneseedGestator</defName>
+    <label>geneseed gestator</label>
+    <description>...</description>
+    <thingClass>Genes40k.Building_GeneGestator</thingClass>
+    <containedPawnsSelectable>true</containedPawnsSelectable>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.4</fillPercent>
+    <castEdgeShadows>true</castEdgeShadows>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Building/Geneseed/GeneseedGenetor</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3, 2)</drawSize>
+      <shadowData>
+        <volume>(1.7, 0.8, 1.7)</volume>
+      </shadowData>
+    </graphicData>
+    <size>(3, 2)</size>
+    <canOverlapZones>false</canOverlapZones>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0, 0, 2)</interactionCellOffset>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <designationCategory>Production</designationCategory>
+    <uiOrder>2100</uiOrder>
+    <researchPrerequisites>
+      <li>BEWH_GeneseedCreation</li>
+    </researchPrerequisites>
+    <statBases>
+      <MaxHitPoints>350</MaxHitPoints>
+      <WorkToBuild>9000</WorkToBuild>
+      <Mass>85</Mass>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <costList>
+      <Steel>300</Steel>
+      <Plasteel>30</Plasteel>
+      <Gold>5</Gold>
+      <ComponentIndustrial>10</ComponentIndustrial>
+      <ComponentSpacer>6</ComponentSpacer>
+    </costList>
+    <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>1500</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>BEWH_SangprimusPortum</li>
+        </linkableFacilities>
+      </li>
+      <li Class="CompProperties_Flickable" />
+    </comps>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_GeneGestator">
+        <gestatableThings>
+          <li>BEWH_GeneseedMatrixThunderWarrior</li>
+          <li>BEWH_GeneseedMatrixFirstborn</li>
+          <li>BEWH_GeneseedMatrixPrimaris</li>
+          <li>BEWH_GeneseedMatrixCustodes</li>
+          <li>BEWH_GeneseedMatrixPrimarch</li>
+        </gestatableThings>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Primarch growth vat -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>BEWH_PrimarchGrowthVat</defName>
+    <label>primarch growth vat</label>
+    <description>...</description>
+    <thingClass>Genes40k.Building_PrimarchGrowthVat</thingClass>
+    <containedPawnsSelectable>true</containedPawnsSelectable>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Building/Misc/GrowthVat/GrowthVat</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(1,2)</drawSize>
+      <shadowData>
+        <volume>(0.85, 0.3, 1.7)</volume>
+      </shadowData>
+    </graphicData>
+    <castEdgeShadows>true</castEdgeShadows>
+    <defaultPlacingRot>East</defaultPlacingRot>
+    <size>(1,2)</size>
+    <statBases>
+      <MaxHitPoints>500</MaxHitPoints>
+      <WorkToBuild>8000</WorkToBuild>
+      <Mass>30</Mass>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <costList>
+      <Steel>150</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <blockWind>true</blockWind>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <fillPercent>0.5</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
+    <designationCategory>Misc</designationCategory>
+    <uiOrder>2200</uiOrder>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <inspectorTabs>
+      <li>ITab_BiosculpterNutritionStorage</li>
+      <li>ITab_Genes</li>
+    </inspectorTabs>
+    <researchPrerequisites>
+      <li>BEWH_PrimarchProject</li>
+    </researchPrerequisites>
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+      <haulToContainerDuration>120</haulToContainerDuration>
+      <fixedStorageSettings>
+        <filter>
+          <thingDefs>
+            <li>BEWH_RawGestationalSlurry</li>
+          </thingDefs>
+        </filter>
+      </fixedStorageSettings>
+      <defaultStorageSettings>
+        <filter>
+          <thingDefs>
+            <li>BEWH_RawGestationalSlurry</li>
+          </thingDefs>
+        </filter>
+      </defaultStorageSettings>
+    </building>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>2000</basePowerConsumption>
+        <idlePowerDraw>80</idlePowerDraw>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+    </comps>
+  </ThingDef>
+
+</Defs>

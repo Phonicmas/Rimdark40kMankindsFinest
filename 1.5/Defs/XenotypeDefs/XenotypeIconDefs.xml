@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <XenotypeIconDef>
+        <defName>BEWH_ThunderWarriorIcon</defName>
+        <texPath>UI/Xenotypes/SpaceMarineXenoIcon</texPath>
+    </XenotypeIconDef>
+
+    <XenotypeIconDef>
+        <defName>BEWH_AstartesIcon</defName>
+        <texPath>UI/Xenotypes/SpaceMarineXenoIcon</texPath>
+    </XenotypeIconDef>
+
+    <XenotypeIconDef>
+        <defName>BEWH_PrimarisIcon</defName>
+        <texPath>UI/Xenotypes/SpaceMarinePrimarisXenoIcon</texPath>
+    </XenotypeIconDef>
+
+    <XenotypeIconDef>
+        <defName>BEWH_CustodesIcon</defName>
+        <texPath>UI/Xenotypes/CustodesXenoIcon</texPath>
+    </XenotypeIconDef>
+
+    <XenotypeIconDef>
+        <defName>BEWH_PrimarchIcon</defName>
+        <texPath>UI/Xenotypes/PrimarchXenoIcon</texPath>
+    </XenotypeIconDef>
+
+
+    <XenotypeIconDef>
+        <defName>BEWH_LivingSaintIcon</defName>
+        <texPath>UI/Xenotypes/LivingSaint</texPath>
+    </XenotypeIconDef>
+
+    <XenotypeIconDef>
+        <defName>BEWH_PsykerIcon</defName>
+        <texPath>UI/Xenotypes/SpaceMarinePsykerXenoIcon</texPath>
+    </XenotypeIconDef>
+
+    <XenotypeIconDef>
+        <defName>BEWH_PariahIcon</defName>
+        <texPath>UI/Xenotypes/PariahXenoIcon</texPath>
+    </XenotypeIconDef>
+
+</Defs>

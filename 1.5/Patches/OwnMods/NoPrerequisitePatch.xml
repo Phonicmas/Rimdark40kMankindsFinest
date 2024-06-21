@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="VFECore.PatchOperationToggableSequence">
+        <enabled>False</enabled>
+        <mods>
+            <li>Warhammer 40.000 - Genes</li>
+        </mods>
+        <label>Genes have no prerequisites:</label>
+        <operations>
+            <li Class="PatchOperationRemove">
+                <xpath>Defs/GeneDef[defName = "BEWH_Ossmodula"]/prerequisite</xpath>
+            </li>
+            <li Class="PatchOperationRemove">
+                <xpath>Defs/GeneDef[defName = "BEWH_Biscopea"]/prerequisite</xpath>
+            </li>
+            <li Class="PatchOperationRemove">
+                <xpath>Defs/GeneDef[defName = "BEWH_Haemastamen"]/prerequisite</xpath>
+            </li>
+            <li Class="PatchOperationRemove">
+                <xpath>Defs/GeneDef[defName = "BEWH_LarramansOrgan"]/prerequisite</xpath>
+            </li>
+            <li Class="PatchOperationRemove">
+                <xpath>Defs/GeneDef[defName = "BEWH_CatalepseanNode"]/prerequisite</xpath>
+            </li>
+            <li Class="PatchOperationRemove">
+                <xpath>Defs/GeneDef[defName = "BEWH_Preomnor"]/prerequisite</xpath>
+            </li>
+            <li Class="PatchOperationRemove">
+                <xpath>Defs/GeneDef[defName = "BEWH_Omophagea"]/prerequisite</xpath>
+            </li>
+            <li Class="PatchOperationRemove">
+                <xpath>Defs/GeneDef[defName = "BEWH_MultiLung"]/prerequisite</xpath>
+            </li>
+            <li Class="PatchOperationRemove">
+                <xpath>Defs/GeneDef[defName = "BEWH_Occulobe"]/prerequisite</xpath>
+            </li>
+            <li Class="PatchOperationRemove">
+                <xpath>Defs/GeneDef[defName = "BEWH_LymansEar"]/prerequisite</xpath>
+            </li>
+            <li Class="PatchOperationRemove">
+                <xpath>Defs/GeneDef[defName = "BEWH_SusAnMembrane"]/prerequisite</xpath>
+            </li>
+            <li Class="PatchOperationRemove">
+                <xpath>Defs/GeneDef[defName = "BEWH_Melanochrome"]/prerequisite</xpath>
+            </li>
+            <li Class="PatchOperationRemove">
+                <xpath>Defs/GeneDef[defName = "BEWH_OoliticKidney"]/prerequisite</xpath>
+            </li>
+            <li Class="PatchOperationRemove">
+                <xpath>Defs/GeneDef[defName = "BEWH_Neuroglottis"]/prerequisite</xpath>
+            </li>
+            <li Class="PatchOperationRemove">
+                <xpath>Defs/GeneDef[defName = "BEWH_Mucranoid"]/prerequisite</xpath>
+            </li>
+            <li Class="PatchOperationRemove">
+                <xpath>Defs/GeneDef[defName = "BEWH_BetchersGland"]/prerequisite</xpath>
+            </li>
+            <li Class="PatchOperationRemove">
+                <xpath>Defs/GeneDef[defName = "BEWH_ProgenoidGlands"]/prerequisite</xpath>
+            </li>
+            <li Class="PatchOperationRemove">
+                <xpath>Defs/GeneDef[defName = "BEWH_BlackCarapace"]/prerequisite</xpath>
+            </li>
+            <li Class="PatchOperationRemove">
+                <xpath>Defs/GeneDef[defName = "BEWH_SinewCoil"]/prerequisite</xpath>
+            </li>
+            <li Class="PatchOperationRemove">
+                <xpath>Defs/GeneDef[defName = "BEWH_Magnificat"]/prerequisite</xpath>
+            </li>
+            <li Class="PatchOperationRemove">
+                <xpath>Defs/GeneDef[defName = "BEWH_BelisarianFurnace"]/prerequisite</xpath>
+            </li>
+        </operations>
+    </Operation>
+</Patch>

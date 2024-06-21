@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="VFECore.PatchOperationToggableSequence">
+        <enabled>False</enabled>
+        <mods>
+            <li>Warhammer 40.000 - Genes</li>
+        </mods>
+        <label>Reduce psyker mood debuff:</label>
+        <operations>
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThoughtDef[defName = "BEWH_IotaPsyker"]</xpath>
+                <value>
+                    <stages>
+                        <li>
+                            <label>Iota Psyker</label>
+                            <description>I can feel the warp...</description>
+                            <baseMoodEffect>-1</baseMoodEffect>
+                        </li>
+                    </stages>
+                </value>
+            </li>
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThoughtDef[defName = "BEWH_EpsilonPsyker"]</xpath>
+                <value>
+                    <stages>
+                        <li>
+                            <label>Epsilon Psyker</label>
+                            <description>I can feel the warp...</description>
+                            <baseMoodEffect>-2</baseMoodEffect>
+                        </li>
+                    </stages>
+                </value>
+            </li>
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThoughtDef[defName = "BEWH_DeltaPsyker"]</xpath>
+                <value>
+                    <stages>
+                        <li>
+                            <label>Delta Psyker</label>
+                            <description>I can feel the warp...</description>
+                            <baseMoodEffect>-4</baseMoodEffect>
+                        </li>
+                    </stages>
+                </value>
+            </li>
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThoughtDef[defName = "BEWH_BetaPsyker"]</xpath>
+                <value>
+                    <stages>
+                        <li>
+                            <label>Beta Psyker</label>
+                            <description>I can feel the warp...</description>
+                            <baseMoodEffect>-7</baseMoodEffect>
+                        </li>
+                    </stages>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+</Patch>

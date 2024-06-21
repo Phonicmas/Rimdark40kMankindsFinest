@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Chaper VI - Space Wolves -->
+    <GeneDef ParentName="BEWH_ChapterGeneParent">
+        <defName>BEWH_ChapterVICanisHelix</defName>
+        <label>canis helix</label>
+        <description>The Canis Helix is a mutation of normal gene-seed that gifts the Wolves with enhanced abilities, including hyper-acute senses of smell and hearing, elongated canines that can dent plasteel, and leathery, resilient skin.</description>
+        <iconPath>UI/Icons/Genes/ChaperVICanisHelix</iconPath>
+        <displayOrderInCategory>30</displayOrderInCategory>
+        <capMods>
+            <li>
+                <capacity>Hearing</capacity>
+                <postFactor>1.4</postFactor>
+            </li>
+            <li>
+                <capacity>Sight</capacity>
+                <postFactor>1.15</postFactor>
+            </li>
+        </capMods>
+        <statFactors>
+            <IncomingDamageFactor>0.95</IncomingDamageFactor>
+        </statFactors>
+        <statOffsets>
+            <ComfyTemperatureMin>-15</ComfyTemperatureMin>
+        </statOffsets>
+        <hairColorOverride>(0.65, 0.65, 0.65)</hairColorOverride>
+        <socialFightChanceFactor>1.25</socialFightChanceFactor>
+        <aggroMentalBreakSelectionChanceFactor>999</aggroMentalBreakSelectionChanceFactor>
+        <customEffectDescriptions>
+            <li>Curse of the Wulfen</li>
+        </customEffectDescriptions>
+        <minAgeActive>14</minAgeActive>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_ChapterGene" />
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <hediffsToBodyParts>
+                    <li>
+                        <hediff>BEWH_CanisHelixCanines</hediff>
+                        <bodyparts>
+                            <li>Head</li>
+                        </bodyparts>
+                    </li>
+                </hediffsToBodyParts>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+
+    <!-- Chaper IX - Blood Angels -->
+    <GeneDef ParentName="BEWH_ChapterGeneParent">
+        <defName>BEWH_ChapterIXRedThirst</defName>
+        <label>red thirst</label>
+        <description>...</description>
+        <iconPath>UI/Icons/Genes/ChaperVICanisHelix</iconPath>
+        <displayOrderInCategory>30</displayOrderInCategory>
+        <socialFightChanceFactor>1.25</socialFightChanceFactor>
+        <aggroMentalBreakSelectionChanceFactor>999</aggroMentalBreakSelectionChanceFactor>
+        <customEffectDescriptions>
+            <li>Curse of the Wulfen</li>
+        </customEffectDescriptions>
+        <minAgeActive>14</minAgeActive>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_ChapterGene" />
+        </modExtensions>
+    </GeneDef>
+
+</Defs>

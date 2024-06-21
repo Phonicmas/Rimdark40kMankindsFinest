@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="PatchOperationSequence">
+        <operations>
+            
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName = "Human"]/recipes</xpath>
+                <value>
+                    <li>BEWH_StasisWake</li>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName = "Human"]/recipes</xpath>
+                <value>
+                    <li>BEWH_AstartesPack</li>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName = "Human"]/recipes</xpath>
+                <value>
+                    <li>BEWH_PrimarisPack</li>
+                </value>
+            </li>
+            
+        </operations>
+    </Operation>
+</Patch>

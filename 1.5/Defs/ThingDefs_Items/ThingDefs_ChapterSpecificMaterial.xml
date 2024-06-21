@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThingDef Name="BEWH_ChapterGeneticMaterial" Abstract="True">
+        <thingClass>ThingWithComps</thingClass>
+        <statBases>
+            <MaxHitPoints>200</MaxHitPoints>
+            <MarketValue>3500</MarketValue>
+            <Mass>0.5</Mass>
+            <Flammability>0</Flammability>
+        </statBases>
+        <thingCategories>
+            <li>BEWH_ChapterMaterial</li>
+        </thingCategories>
+        <tradeTags>
+            <li>BEWH_ChapterMaterial</li>
+        </tradeTags>
+        <stackLimit>1</stackLimit>
+        <category>Item</category>
+        <drawerType>MapMeshOnly</drawerType>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <selectable>true</selectable>
+        <altitudeLayer>Item</altitudeLayer>
+        <alwaysHaulable>true</alwaysHaulable>
+        <drawGUIOverlay>true</drawGUIOverlay>
+        <rotatable>false</rotatable>
+        <pathCost>14</pathCost>
+        <thingSetMakerTags>
+            <li>RewardStandardHighFreq</li>
+        </thingSetMakerTags>
+        <comps>
+            <li Class="CompProperties_Forbiddable"/>
+        </comps>
+    </ThingDef>
+
+    <!-- Space Wolves -->
+    <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
+        <defName>BEWH_ChapterMaterialVI</defName>
+        <label>chapter material VI - the space wolves</label>
+        <description>...</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/ArchiteCapsule</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_ChapterMaterial" />
+            <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+                <addedGene>BEWH_ChapterVICanisHelix</addedGene>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <!-- Blood Angels -->
+    <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
+        <defName>BEWH_ChapterMaterialIX</defName>
+        <label>chapter material IX - the blood angels</label>
+        <description>...</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/ArchiteCapsule</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_ChapterMaterial" />
+            <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+                <addedGene>BEWH_ChapterIXRedThirst</addedGene>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+</Defs>

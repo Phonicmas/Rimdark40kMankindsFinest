@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!-- 2nd Geneseed Harvested -->
+	<HediffDef>
+		<defName>BEWH_SecondGeneseedHarvest</defName>
+		<label>secondary geneseed harvested</label>
+		<description>This pawn has had their second geneseed harvested after death.</description>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<everCurableByItem>false</everCurableByItem>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+	</HediffDef>
+
+	<!-- Warp Shield-->
+	<HediffDef>
+		<defName>BEWH_WarpShield</defName>
+		<label>Warp Influence</label>
+		<description>This pawn can open and close their senses to the warp at will.</description>
+		<initialSeverity>1</initialSeverity>
+		<minSeverity>0</minSeverity>
+		<maxSeverity>2</maxSeverity>
+		<isBad>false</isBad>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<everCurableByItem>false</everCurableByItem>
+		<stages>
+			<li>
+				<label>Shielded</label>
+				<minSeverity>1</minSeverity>
+				<statFactors>
+					<PsychicSensitivity>0</PsychicSensitivity>
+				</statFactors>
+			</li>
+			<li>
+				<label>Unshielded</label>
+				<minSeverity>2</minSeverity>
+			</li>
+		</stages>
+		<modExtensions>
+			<li Class="Genes40k.DefModExtension_WarpShield"/>
+		</modExtensions>
+	</HediffDef>
+
+
+	<!-- Geneseed Vial Related -->
+	<!-- Firstborn Phase Base -->
+	<HediffDef Name="BEWH_FirstbornPhaseHediffBase" Abstract="True">
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>Undergoing a grueling process to become a firstborn.</description>
+		<everCurableByItem>false</everCurableByItem>
+		<initialSeverity>0.01</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<label>In progress</label>
+			</li>
+			<li>
+				<minSeverity>1</minSeverity>
+				<label>Completed</label>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>0.33</severityPerDay>
+			</li>
+		</comps>
+	</HediffDef>
+	<!-- Firstborn Phase 1 -->
+	<HediffDef ParentName="BEWH_FirstbornPhaseHediffBase">
+		<defName>BEWH_FirstbornPhaseOne</defName>
+		<label>firstborn development phase 1</label>
+		<comps>
+			<li Class="Core40k.HediffCompProperties_SendLetterAtSeverity">
+				<letter>Firstborn Phase Completed</letter>
+				<message>First phase of the firstborn development has been completed and can now be advanced to the second phase</message>
+				<letterDef>PositiveEvent</letterDef>
+			</li>
+		</comps>
+	</HediffDef>
+	<!-- Firstborn Phase 2 -->
+	<HediffDef ParentName="BEWH_FirstbornPhaseHediffBase">
+		<defName>BEWH_FirstbornPhaseTwo</defName>
+		<label>firstborn development phase 2</label>
+		<comps>
+			<li Class="Core40k.HediffCompProperties_SendLetterAtSeverity">
+				<letter>Firstborn Phase Completed</letter>
+				<message>Second phase of the firstborn development has been completed and can now be advanced to the third phase</message>
+				<letterDef>PositiveEvent</letterDef>
+			</li>
+		</comps>
+	</HediffDef>
+	<!-- Firstborn Phase 3 -->
+	<HediffDef ParentName="BEWH_FirstbornPhaseHediffBase">
+		<defName>BEWH_FirstbornPhaseThree</defName>
+		<label>firstborn development phase 3</label>
+		<comps>
+			<li Class="Core40k.HediffCompProperties_SendLetterAtSeverity">
+				<letter>Firstborn Phase Completed</letter>
+				<message>Third phase of the firstborn development has been completed and can now be advanced to the final phase, should you be in posession of a chapters genetic material, then these can be added now.</message>
+				<letterDef>PositiveEvent</letterDef>
+			</li>
+		</comps>
+	</HediffDef>
+
+
+	<!-- Primaris Phase Base -->
+	<HediffDef Name="BEWH_PrimarisPhaseHediffBase" Abstract="True">
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>Undergoing a grueling process to become a primaris.</description>
+		<everCurableByItem>false</everCurableByItem>
+		<initialSeverity>0.04</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<label>In progress</label>
+			</li>
+			<li>
+				<minSeverity>1</minSeverity>
+				<label>Completed</label>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>0.24</severityPerDay>
+			</li>
+		</comps>
+	</HediffDef>
+	<!-- Primaris Phase 1 -->
+	<HediffDef ParentName="BEWH_PrimarisPhaseHediffBase">
+		<defName>BEWH_PrimarisPhaseOne</defName>
+		<label>primaris development phase 1</label>
+		<comps>
+			<li Class="Core40k.HediffCompProperties_SendLetterAtSeverity">
+				<letter>Primaris Phase Completed</letter>
+				<message>First phase of the primaris development has been completed and can now be advanced to the second phase</message>
+				<letterDef>PositiveEvent</letterDef>
+			</li>
+		</comps>
+	</HediffDef>
+	<!-- Primaris Phase 2 -->
+	<HediffDef ParentName="BEWH_PrimarisPhaseHediffBase">
+		<defName>BEWH_PrimarisPhaseTwo</defName>
+		<label>primaris development phase 2</label>
+		<comps>
+			<li Class="Core40k.HediffCompProperties_SendLetterAtSeverity">
+				<letter>Primaris Phase Completed</letter>
+				<message>Second phase of the primaris development has been completed and can now be advanced to the second phase</message>
+				<letterDef>PositiveEvent</letterDef>
+			</li>
+		</comps>
+	</HediffDef>
+	<!-- Primaris Phase 3 -->
+	<HediffDef ParentName="BEWH_PrimarisPhaseHediffBase">
+		<defName>BEWH_PrimarisPhaseThree</defName>
+		<label>primaris development phase 3</label>
+		<comps>
+			<li Class="Core40k.HediffCompProperties_SendLetterAtSeverity">
+				<letter>Primaris Phase Completed</letter>
+				<message>Third phase of the primaris development has been completed and can now be advanced to the final phase, should you be in posession of a chapters genetic material, then these can be added now.</message>
+				<letterDef>PositiveEvent</letterDef>
+			</li>
+		</comps>
+	</HediffDef>
+
+</Defs>

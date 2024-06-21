@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="VFECore.PatchOperationToggableSequence">
+        <enabled>False</enabled>
+        <mods>
+            <li>Warhammer 40.000 - Genes</li>
+        </mods>
+        <label>Force male on geneseeds:</label>
+        <operations>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/GeneDef[defName = "BEWH_SecondaryHeart"]</xpath>
+                <value>
+                    <modExtensions>
+                        <li Class="VanillaGenesExpanded.GeneExtension">
+                            <forceMale>true</forceMale>
+                        </li>
+                    </modExtensions>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+</Patch>

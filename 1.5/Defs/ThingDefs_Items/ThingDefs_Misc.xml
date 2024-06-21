@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Primarch Embryo -->
+  <ThingDef>
+    <defName>BEWH_PrimarchEmbryo</defName>
+    <label>primarch embryo</label>
+    <description>...</description>
+    <thingClass>Genes40k.PrimarchEmbryo</thingClass>
+    <graphicData>
+      <texPath>Things/Item/Special/Embryo</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Mass>0.5</Mass>
+      <MarketValue>50000</MarketValue>
+      <DeteriorationRate>25</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>ItemsMisc</li>
+    </thingCategories>
+    <category>Item</category>
+    <alwaysHaulable>true</alwaysHaulable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <useHitPoints>true</useHitPoints>
+    <selectable>true</selectable>
+    <rotatable>false</rotatable>
+    <pathCost>14</pathCost>
+    <comps>
+      <li Class="CompProperties_HasPawnSources"/>
+      <li Class="Genes40k.CompProperties_DeteriorateOutsideBuilding">
+        <antiDeteriorateContainers>
+          <li>BEWH_PrimarchEmbryoContainer</li>
+        </antiDeteriorateContainers>
+      </li>
+    </comps>
+    <inspectorTabs>
+      <li>ITab_Genes</li>
+    </inspectorTabs>
+  </ThingDef>
+
+  <!-- Raw Gestational Slurry -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>BEWH_RawGestationalSlurry</defName>
+    <label>Raw gestational slurry</label>
+    <description>...</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Neutroamine</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.90</drawSize>
+    </graphicData>
+    <stackLimit>150</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <MarketValue>6</MarketValue>
+      <Mass>0.02</Mass>
+      <Flammability>0.7</Flammability>
+      <DeteriorationRate>1.0</DeteriorationRate>
+      <Nutrition>1</Nutrition>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <ingestible>
+      <foodType>Corpse</foodType>
+      <showIngestFloatOption>false</showIngestFloatOption>
+      <preferability>DesperateOnly</preferability>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <defaultNumToIngestAtOnce>1</defaultNumToIngestAtOnce>
+      <optimalityOffsetHumanlikes>-5</optimalityOffsetHumanlikes>
+      <optimalityOffsetFeedingAnimals>-10</optimalityOffsetFeedingAnimals>
+      <ingestSound>Meal_Eat</ingestSound>
+    </ingestible>
+    <!-- ===== Recipe ===== -->
+    <costList>
+      <Meat_Human>20</Meat_Human>
+      <Luciferium>1</Luciferium>
+    </costList>
+    <recipeMaker>
+      <productCount>10</productCount>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <effectWorking>CutStone</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <recipeUsers>
+        <li>BEWH_GeneManipulationTable</li>
+      </recipeUsers>
+      <researchPrerequisite>BEWH_PrimarchProject</researchPrerequisite>
+      <workSkill>Crafting</workSkill>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+    </recipeMaker>
+  </ThingDef>
+
+</Defs>

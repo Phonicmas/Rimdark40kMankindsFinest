@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Make geneseed base -->
+    <RecipeDef ParentName="SurgeryFlesh" Name="BEWH_GeneseedFromProgenoid" Abstract="True">
+        <hideBodyPartNames>true</hideBodyPartNames>
+        <removesHediff>BEWH_ProgenoidGlandsGrowth</removesHediff>
+        <targetsBodyPart>false</targetsBodyPart>
+        <surgerySuccessChanceFactor>2</surgerySuccessChanceFactor>
+    </RecipeDef>
+
+    <!-- Make space marine geneseed -->
+    <RecipeDef ParentName="BEWH_GeneseedFromProgenoid">
+        <defName>BEWH_AstartesPack</defName>
+        <label>Make astartes genepack</label>
+        <description>Remove fully grown germ cells from progenoid glands to make all gene-seeds of an astartes.</description>
+        <jobString>creating gene-seed from progenoid glands</jobString>
+        <successfullyRemovedHediffMessage>{0} has successfully created gene-seed from {1}'s progenoid glands.</successfullyRemovedHediffMessage>
+        <workAmount>2200</workAmount>
+        <researchPrerequisite>BEWH_GeneseedExtractionFirstborn</researchPrerequisite>
+        <workerClass>Genes40k.WorkerClass_GeneProgenoidRemovalSpaceMarine</workerClass>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>MedicineUltratech</li>
+                    </thingDefs>
+                </filter>
+                <count>20</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>8</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentSpacer</li>
+                    </thingDefs>
+                </filter>
+                <count>2</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>MedicineUltratech</li>
+                <li>ComponentIndustrial</li>
+                <li>ComponentSpacer</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <skillRequirements>
+            <Medicine>14</Medicine>
+        </skillRequirements>
+    </RecipeDef>
+
+    <!-- Make primaris geneseed -->
+    <RecipeDef ParentName="BEWH_GeneseedFromProgenoid">
+        <defName>BEWH_PrimarisPack</defName>
+        <label>Make primaris genepack</label>
+        <description>Remove fully grown germ cells from progenoid glands to make all gene-seeds of a primaris.</description>
+        <jobString>creating primaris gene-seed from progenoid glands</jobString>
+        <successfullyRemovedHediffMessage>{0} has successfully created primaris gene-seed from {1}'s progenoid glands.</successfullyRemovedHediffMessage>
+        <workAmount>4200</workAmount>
+        <researchPrerequisite>BEWH_GeneseedExtractionPrimaris</researchPrerequisite>
+        <workerClass>Genes40k.WorkerClass_GeneProgenoidRemovalPrimarisMarine</workerClass>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>MedicineUltratech</li>
+                    </thingDefs>
+                </filter>
+                <count>30</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>12</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentSpacer</li>
+                    </thingDefs>
+                </filter>
+                <count>3</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>MedicineUltratech</li>
+                <li>ComponentIndustrial</li>
+                <li>ComponentSpacer</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <skillRequirements>
+            <Medicine>16</Medicine>
+        </skillRequirements>
+    </RecipeDef>
+
+    <!-- Stasis Resurrection -->
+    <RecipeDef ParentName="SurgeryFlesh">
+        <defName>BEWH_StasisWake</defName>
+        <label>resurrect from stasis</label>
+        <description>Ressurects pawn from self-induced stasis</description>
+        <workerClass>Recipe_RemoveHediff</workerClass>
+        <jobString>resurrecting {0} from stasis</jobString>
+        <successfullyRemovedHediffMessage>{0} has successfully awoken {1} from stasis.</successfullyRemovedHediffMessage>
+        <workAmount>2200</workAmount>
+        <hideBodyPartNames>true</hideBodyPartNames>
+        <removesHediff>BEWH_Sus_anMembraneStasis</removesHediff>
+        <targetsBodyPart>false</targetsBodyPart>
+        <surgerySuccessChanceFactor>1</surgerySuccessChanceFactor>
+        <researchPrerequisite>BEWH_StasisResurrection</researchPrerequisite>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>MedicineUltratech</li>
+                    </thingDefs>
+                </filter>
+                <count>3</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>14</Medicine>
+        </skillRequirements>
+    </RecipeDef>
+
+</Defs>

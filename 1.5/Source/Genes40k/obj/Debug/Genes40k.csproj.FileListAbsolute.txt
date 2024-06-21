@@ -1,0 +1,12 @@
+C:\Steam\steamapps\common\RimWorld\Mods\Warhammer40kGenes\1.4\Assemblies\Genes40k.dll
+C:\Steam\steamapps\common\RimWorld\Mods\Warhammer40kGenes\1.4\Source\Genes40k\obj\Debug\Genes40k.csproj.AssemblyReference.cache
+C:\Steam\steamapps\common\RimWorld\Mods\Warhammer40kGenes\1.4\Source\Genes40k\obj\Debug\Genes40k.csproj.CoreCompileInputs.cache
+C:\Steam\steamapps\common\RimWorld\Mods\Warhammer40kGenes\1.4\Source\Genes40k\obj\Debug\Genes40k.dll
+C:\Steam\steamapps\common\RimWorld\Mods\Warhammer40kGenes\1.5\Assemblies\Genes40k.dll
+C:\Steam\steamapps\common\RimWorld\Mods\Warhammer40kGenes\1.5\Source\Genes40k\obj\Debug\Genes40k.csproj.AssemblyReference.cache
+C:\Steam\steamapps\common\RimWorld\Mods\Warhammer40kGenes\1.5\Source\Genes40k\obj\Debug\Genes40k.csproj.CoreCompileInputs.cache
+C:\Steam\steamapps\common\RimWorld\Mods\Warhammer40kGenes\1.5\Source\Genes40k\obj\Debug\Genes40k.dll
+C:\Steam\steamapps\common\RimWorld\Mods\Warhammer40kImperialGenes\1.5\Source\Genes40k\obj\Debug\Genes40k.csproj.AssemblyReference.cache
+C:\Steam\steamapps\common\RimWorld\Mods\Warhammer40kImperialGenes\1.5\Source\Genes40k\obj\Debug\Genes40k.csproj.CoreCompileInputs.cache
+C:\Steam\steamapps\common\RimWorld\Mods\Warhammer40kImperialGenes\1.5\Source\Genes40k\obj\Debug\Genes40k.dll
+C:\Steam\steamapps\common\RimWorld\Mods\Warhammer40kImperialGenes\1.5\Assemblies\Genes40k.dll

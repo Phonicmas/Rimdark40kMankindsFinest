@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7FED8F4B-10DB-4B7A-8C0E-6824A55CF2C7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Genes40k</RootNamespace>
+    <AssemblyName>Genes40k</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\..\..\..\..\workshop\content\294100\2009463077\Current\Assemblies\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Core40k">
+      <HintPath>..\..\..\..\Warhammer40kFramework\1.5\Assemblies\Core40k.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VFECore">
+      <HintPath>..\..\..\..\..\..\..\workshop\content\294100\2023507013\1.4\Assemblies\VFECore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Building_GeneGestator.cs" />
+    <Compile Include="Building_PrimarchGrowthVat.cs" />
+    <Compile Include="Building_GeneStorage.cs" />
+    <Compile Include="DefModExtensions\DefModExtension_ChapterGene.cs" />
+    <Compile Include="DefModExtensions\DefModExtension_GeneFromMaterial.cs" />
+    <Compile Include="DefModExtensions\DefModExtension_SangprimusPortum.cs" />
+    <Compile Include="DefModExtensions\DefModExtension_PhaseDevelopment.cs" />
+    <Compile Include="DefModExtensions\DefModExtension_GeneseedVial.cs" />
+    <Compile Include="DefModExtensions\DefModExtension_ChapterMaterial.cs" />
+    <Compile Include="DefModExtensions\DefModExtension_PrimarchMaterial.cs" />
+    <Compile Include="DefModExtensions\DefModExtension_GeneMatrixRecipe.cs" />
+    <Compile Include="DefModExtensions\DefModExtension_GeneMatrix.cs" />
+    <Compile Include="DefModExtensions\DefModExtension_GeneGestator.cs" />
+    <Compile Include="Comps\GameComponent_LivingSaint.cs" />
+    <Compile Include="Gene_LivingSaint.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_LivingSaintResurrection.cs" />
+    <Compile Include="PrimarchEmbryo.cs" />
+    <Compile Include="GeneseedVial.cs" />
+    <Compile Include="Workers\JobDriver_FillGeneGestator.cs" />
+    <Compile Include="Workers\WorkGiver_HaulToPrimarchVat.cs" />
+    <Compile Include="Workers\Recipe_MakePrimarchEmbryo.cs" />
+    <Compile Include="Workers\WorkerClass_PhaseDevelopment.cs" />
+    <Compile Include="Workers\WorkerClass_ImplantGeneseed.cs" />
+    <Compile Include="Workers\WorkGiver_FillGeneGestator.cs" />
+    <Compile Include="ITab_ContentsGeneStorage.cs" />
+    <Compile Include="Comps\CompProperties_DeteriorateOutsideBuilding.cs" />
+    <Compile Include="Comps\Comp_DeteriorateOutsideBuilding.cs" />
+    <Compile Include="Comps\CompAbilityEffect_WarpShield.cs" />
+    <Compile Include="Comps\CompProperties_AbilityWarpShield.cs" />
+    <Compile Include="Comps\CompProperties_GivesAbility.cs" />
+    <Compile Include="DefModExtensions\DefModExtension_WarpShield.cs" />
+    <Compile Include="DefModExtensions\DefModExtension_Primarch.cs" />
+    <Compile Include="DefModExtensions\DefModExtension_Custodes.cs" />
+    <Compile Include="DefModExtensions\DefModExtension_Psyker.cs" />
+    <Compile Include="Comps\CompGivesAbility.cs" />
+    <Compile Include="Ability_UpdateGizmo.cs" />
+    <Compile Include="Gene_Pariah.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_StopDeterioation.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_MentalBreakdownPsyker.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_NaturalBirthPsykerPariah.cs" />
+    <Compile Include="RoleRequirement_MustBeSpaceMarine.cs" />
+    <Compile Include="Comps\CompAbilityEffect_GeneseedHarvest.cs" />
+    <Compile Include="Comps\CompProperties_AbilityGeneseedHarvest.cs" />
+    <Compile Include="DefModExtensions\DefModExtension_PotentialHarvest.cs" />
+    <Compile Include="DefModExtensions\DefModExtension_Pariah.cs" />
+    <Compile Include="Genes40kMod.cs" />
+    <Compile Include="Genes40kModSettings.cs" />
+    <Compile Include="Workers\ThoughtWorker_Precept_Psyker_Social.cs" />
+    <Compile Include="Workers\ThoughtWorker_Precept_Psyker.cs" />
+    <Compile Include="Workers\WorkerClass_GeneProgenoidRemovalPrimarisMarine.cs" />
+    <Compile Include="Workers\WorkerClass_GeneProgenoidRemovalSpaceMarine.cs" />
+    <Compile Include="Workers\WorkerClass_GeneProgenoidRemovalBase.cs" />
+    <Compile Include="Workers\ThoughtWorker_Pariah.cs" />
+    <Compile Include="Genes40kUtils.cs" />
+    <Compile Include="Genes40kDefOf.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_Carapace.cs" />
+    <Compile Include="Comps\CompProperties_AbilityRemembrance.cs" />
+    <Compile Include="Comps\CompAbilityEffect_Remembrance.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

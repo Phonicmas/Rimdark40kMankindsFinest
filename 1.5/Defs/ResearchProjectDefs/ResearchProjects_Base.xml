@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Imperium Research Base -->
+    <ResearchProjectDef Name="BEWH_ImperiumResearchBase" Abstract="True">
+        <techLevel>Spacer</techLevel>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
+        <tab>BEWH_WH40kTab</tab>
+    </ResearchProjectDef>
+
+</Defs>

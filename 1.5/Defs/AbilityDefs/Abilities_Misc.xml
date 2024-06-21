@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Warp Shield -->
+  <AbilityDef>
+    <defName>BEWH_WarpShield</defName>
+    <label>Toggle warp shield</label>
+    <description>Toggle warp shield on and off.</description>
+    <iconPath>UI/Abilities/MindShieldOff</iconPath>
+    <abilityClass>Genes40k.Ability_UpdateGizmo</abilityClass>
+    <cooldownTicksRange>0</cooldownTicksRange>
+    <targetRequired>False</targetRequired>
+    <casterMustBeCapableOfViolence>False</casterMustBeCapableOfViolence>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <hostile>false</hostile>
+    <category>SpaceMarine</category>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>0</range>
+      <drawAimPie>False</drawAimPie>
+      <requireLineOfSight>False</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="Genes40k.CompProperties_AbilityWarpShield"/>
+    </comps>
+  </AbilityDef>
+
+
+  <!-- Divine Flight -->
+  <AbilityDef>
+    <defName>BEWH_DivineFlight</defName>
+    <label>divine flight</label>
+    <description>This pawn is granted flight by their wings.</description>
+    <iconPath>UI/Icons/Genes/LivingSaint</iconPath>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <uiOrder>1</uiOrder>
+    <cooldownTicksRange>200</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityJump</verbClass>
+      <label>divine flight</label>
+      <violent>false</violent>
+      <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+      <warmupTime>1</warmupTime>
+      <range>80</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <soundCast>Longjump_Jump</soundCast>
+      <soundLanding>Longjump_Land</soundLanding>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+  </AbilityDef>
+
+</Defs>

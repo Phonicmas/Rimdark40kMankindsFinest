@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Living Saint: Base -->
+    <GeneDef Name="BEWH_LivingSaintBase" Abstract="True">
+        <displayCategory>BEWH_ImperialGenes</displayCategory>
+        <canGenerateInGeneSet>false</canGenerateInGeneSet>
+        <biostatCpx>4</biostatCpx>
+        <biostatArc>1</biostatArc>
+        <marketValueFactor>3</marketValueFactor>
+        <minAgeActive>3</minAgeActive>
+        <selectionWeight>0</selectionWeight>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_SlaveabilityRecruitability">
+                <canBeEnslaved>false</canBeEnslaved>
+                <canBeRecruited>false</canBeRecruited>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Being of faith - this gene is responsible for; should it die, it will resurrect-->
+    <GeneDef ParentName="BEWH_LivingSaintBase">
+        <defName>BEWH_LivingSaintBeingOfFaith</defName>
+        <label>being of faith</label>
+        <description>A Living Saint is an extraordinarily devout servant of the Emperor of Mankind, who displays seemingly miraculous, supernatural abilities derived from potent faith in the God-Emperor during his or her lifetime.</description>
+        <iconPath>UI/Icons/Genes/BeingOfFaith</iconPath>
+        <displayOrderInCategory>500</displayOrderInCategory>
+        <immuneToToxGasExposure>true</immuneToToxGasExposure>
+        <geneClass>Genes40k.Gene_LivingSaint</geneClass>
+        <customEffectDescriptions>
+            <li>This pawn is truly never lost upon death, they may upon times of great need return to the colony to help.</li>
+        </customEffectDescriptions>
+        <statOffsets>
+            <ToxicEnvironmentResistance>3</ToxicEnvironmentResistance>
+            <ToxicResistance>3</ToxicResistance>
+            <PsychicSensitivity>4</PsychicSensitivity>
+        </statOffsets>
+        <statFactors>
+            <RestFallRateFactor>0.4</RestFallRateFactor>
+            <MeditationFocusGain>1.4</MeditationFocusGain>
+            <PsychicEntropyRecoveryRate>1.7</PsychicEntropyRecoveryRate>
+        </statFactors>
+        <capMods>
+            <li>
+                <capacity>Manipulation</capacity>
+                <postFactor>1.5</postFactor>
+            </li>
+            <li>
+                <capacity>Sight</capacity>
+                <postFactor>1.8</postFactor>
+            </li>
+            <li>
+                <capacity>Hearing</capacity>
+                <postFactor>1.8</postFactor>
+            </li>
+            <li>
+                <capacity>Consciousness</capacity>
+                <postFactor>1.3</postFactor>
+            </li>
+        </capMods>
+    </GeneDef>
+
+
+    <!-- Divine Flight - grants flight ability and hover -->
+    <GeneDef ParentName="BEWH_LivingSaintBase">
+        <defName>BEWH_LivingSaintDivineFlight</defName>
+        <label>divine flight</label>
+        <description>...</description>
+        <iconPath>UI/Icons/Genes/DivineFlight</iconPath>
+        <displayOrderInCategory>501</displayOrderInCategory>
+        <statOffsets>
+            <MeleeDodgeChance>5</MeleeDodgeChance>
+        </statOffsets>
+        <statFactors>
+            <MoveSpeed>1.2</MoveSpeed>
+        </statFactors>
+        <capMods>
+            <li>
+                <capacity>Moving</capacity>
+                <postFactor>1.15</postFactor>
+            </li>
+        </capMods>
+    </GeneDef>
+
+    <!-- Sacred Regeneration -->
+    <GeneDef ParentName="BEWH_LivingSaintBase">
+        <defName>BEWH_LivingSaintSacredRegeneration</defName>
+        <label>sacred regeneration</label>
+        <description>...</description>
+        <iconPath>UI/Icons/Genes/SacredRegeneration</iconPath>
+        <geneClass>Gene_Clotting</geneClass>
+        <displayOrderInCategory>501</displayOrderInCategory>
+        <painFactor>0.4</painFactor>
+        <statOffsets>
+            <ImmunityGainSpeed>5</ImmunityGainSpeed>
+        </statOffsets>
+        <statFactors>
+            <InjuryHealingFactor>8</InjuryHealingFactor>
+        </statFactors>
+    </GeneDef>
+
+    <!-- Fury of the Emperor -->
+    <GeneDef ParentName="BEWH_LivingSaintBase">
+        <defName>BEWH_LivingSaintFuryOfTheEmperor</defName>
+        <label>fury of the emperor</label>
+        <description>...</description>
+        <iconPath>UI/Icons/Genes/FuryOfTheEmperor</iconPath>
+        <geneClass>Gene_Clotting</geneClass>
+        <displayOrderInCategory>501</displayOrderInCategory>
+        <statOffsets>
+            <MeleeHitChance>4</MeleeHitChance>
+        </statOffsets>
+        <statFactors>
+            <MeleeDamageFactor>2.25</MeleeDamageFactor>
+        </statFactors>
+        <suppressedTraits>
+            <li>
+                <def>Wimp</def>
+            </li>
+        </suppressedTraits>
+    </GeneDef>
+
+    <!-- Martyr's Endurance -->
+    <GeneDef ParentName="BEWH_LivingSaintBase">
+        <defName>BEWH_LivingSaintMartyrsEndurance</defName>
+        <label>martyr's endurance</label>
+        <description>...</description>
+        <iconPath>UI/Icons/Genes/MartyrsEndurance</iconPath>
+        <geneClass>Gene_Clotting</geneClass>
+        <displayOrderInCategory>501</displayOrderInCategory>
+        <statOffsets>
+            <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.4</ArmorRating_Sharp>
+            <ArmorRating_Heat>0.4</ArmorRating_Heat>
+            <ComfyTemperatureMin>-30</ComfyTemperatureMin>
+            <ComfyTemperatureMax>30</ComfyTemperatureMax>
+        </statOffsets>
+        <statFactors>
+            <StaggerDurationFactor>0.35</StaggerDurationFactor>
+            <IncomingDamageFactor>0.65</IncomingDamageFactor>
+        </statFactors>
+        <suppressedTraits>
+            <li>
+                <def>Immunity</def>
+                <degree>-1</degree>
+            </li>
+            <li>
+                <def>Delicate</def>
+            </li>
+        </suppressedTraits>
+    </GeneDef>
+
+    <!-- Holy Radiance - increases mood of all nearby pawns and gives halo -->
+    <GeneDef ParentName="BEWH_LivingSaintBase">
+        <defName>BEWH_LivingSaintHolyRadiance</defName>
+        <label>holy radiance</label>
+        <description>...</description>
+        <iconPath>UI/Icons/Genes/HolyRadiance</iconPath>
+        <geneClass>Gene_Clotting</geneClass>
+        <displayOrderInCategory>501</displayOrderInCategory>
+        <preventPermanentWounds>true</preventPermanentWounds>
+        <statOffsets>
+            <MentalBreakThreshold>0.35</MentalBreakThreshold>
+            <PawnBeauty>2</PawnBeauty>
+        </statOffsets>
+        <suppressedTraits>
+            <li>
+                <def>Nerves</def>
+                <degree>-1</degree>
+            </li>
+            <li>
+                <def>Nerves</def>
+                <degree>-2</degree>
+            </li>
+            <li>
+                <def>Beauty</def>
+                <degree>-1</degree>
+            </li>
+            <li>
+                <def>Beauty</def>
+                <degree>-2</degree>
+            </li>
+        </suppressedTraits>
+    </GeneDef>
+
+</Defs>

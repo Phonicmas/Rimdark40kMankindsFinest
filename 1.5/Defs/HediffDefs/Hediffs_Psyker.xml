@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!-- Psychic Coma-->
+	<HediffDef ParentName="DiseaseBase">
+		<defName>BEWH_PsychicComa</defName>
+		<label>psychic coma</label>
+		<description>This pawn has been exposed to a great deal of warp energy and as a result has fallen into a coma.</description>
+		<isBad>false</isBad>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>120000</disappearsAfterTicks>
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>1</minSeverity>
+				<label>psychic coma</label>
+				<painFactor>0</painFactor>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.01</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<!-- Psychic Connection Severed-->
+	<HediffDef ParentName="DiseaseBase">
+		<defName>BEWH_PsychicConnectionSevered</defName>
+		<label>psychic connection severed</label>
+		<description>This pawn has suddenly lost all connection to the warp.</description>
+		<isBad>false</isBad>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>60000</disappearsAfterTicks>
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>1</minSeverity>
+				<label>psychic connection severed</label>
+				<statFactors>
+					<PsychicSensitivity>0</PsychicSensitivity>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
+</Defs>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Sinew Coil -->
+    <GeneDef ParentName="BEWH_PrimarisSpaceMarineParent">
+        <defName>BEWH_SinewCoil</defName>
+        <label>sinew coil</label>
+        <description>Carriers sinews are reinforced with durametallic coil-cables that can contract with incredible force, magnifying his strength as well as giving his body another layer of defence.</description>
+        <iconPath>UI/Icons/Genes/SinewCoilIcon</iconPath>
+        <displayOrderInCategory>21</displayOrderInCategory>
+        <prerequisite>BEWH_Biscopea</prerequisite>
+        <statOffsets>
+            <CarryingCapacity>100</CarryingCapacity>
+        </statOffsets>
+        <statFactors>
+            <MeleeDamageFactor>1.25</MeleeDamageFactor>
+            <IncomingDamageFactor>0.95</IncomingDamageFactor>
+            <StaggerDurationFactor>0</StaggerDurationFactor>
+        </statFactors>
+        <suppressedTraits>
+            <li>
+                <def>Beauty</def>
+                <degree>-1</degree>
+            </li>
+            <li>
+                <def>Beauty</def>
+                <degree>-2</degree>
+            </li>
+        </suppressedTraits>
+        <minAgeActive>13</minAgeActive>
+        <exclusionTags>
+            <li>PM1</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <!-- Magnificat -->
+    <GeneDef ParentName="BEWH_PrimarisSpaceMarineParent">
+        <defName>BEWH_Magnificat</defName>
+        <label>magnificat</label>
+        <description>Carriers possess a small, thumbnail-sized lobe in the brain's cortex that make them physically even larger, stronger and with faster reaction times than his non-Primaris brethren.</description>
+        <iconPath>UI/Icons/Genes/MagnificatIcon</iconPath>
+        <displayOrderInCategory>22</displayOrderInCategory>
+        <prerequisite>BEWH_Biscopea</prerequisite>
+        <statOffsets>
+            <MeleeDodgeChance>10</MeleeDodgeChance>
+        </statOffsets>
+        <statFactors>
+            <AimingDelayFactor>0.85</AimingDelayFactor>
+            <MeleeWeapon_CooldownMultiplier>0.85</MeleeWeapon_CooldownMultiplier>
+            <RangedCooldownFactor>0.85</RangedCooldownFactor>
+            <MeleeHitChance>1.2</MeleeHitChance>
+            <LeatherAmount>1.15</LeatherAmount>
+            <MeatAmount>1.15</MeatAmount>
+            <Mass>1.15</Mass>
+            <VEF_CosmeticBodySize_Multiplier>1.05</VEF_CosmeticBodySize_Multiplier>
+        </statFactors>
+        <minAgeActive>13</minAgeActive>
+        <exclusionTags>
+            <li>PM2</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <!-- Belisarian Furnace -->
+    <GeneDef ParentName="BEWH_PrimarisSpaceMarineParent">
+        <defName>BEWH_BelisarianFurnace</defName>
+        <label>belisarian furnace</label>
+        <description>Carriers possess a dormant organ that connects to both Astartes hearts. In times of extreme stress, or should the warrior's body undergo violent, damaging trauma, it expels great blurts of self-synthesized chemicals - a hyper-cocktail that simulates the biological action of combat stimms while also aiding in the rapid regrowth of tissue, bone and muscle</description>
+        <iconPath>UI/Icons/Genes/BelisarianFurnaceIcon</iconPath>
+        <displayOrderInCategory>23</displayOrderInCategory>
+        <prerequisite>BEWH_Biscopea</prerequisite>
+        <forcedTraits>
+            <li>
+                <def>BEWH_Genes</def>
+                <degree>2</degree>
+            </li>
+        </forcedTraits>
+        <abilities>
+            <li>BEWH_BelisarianFurnaceBoost</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>BEWH_BelisarianFurnaceBoost</AbilityDef>
+        </descriptionHyperlinks>
+        <minAgeActive>13</minAgeActive>
+        <exclusionTags>
+            <li>PM3</li>
+        </exclusionTags>
+    </GeneDef>
+
+</Defs>

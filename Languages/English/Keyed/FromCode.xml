@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Mod Setting related-->
+  <BEWH.ModSettingsNameGenes>Warhammer 40k - Genes</BEWH.ModSettingsNameGenes>
+
+  <BEWH.PsychicPhenomena>Enabling this will make psykers who are experiencing mental breakdowns create a psychic phenoma.</BEWH.PsychicPhenomena>
+  <BEWH.PsykerPariahBirth>Enabling this will allow children to be rarely and randomly born as psykers and pariahs.</BEWH.PsykerPariahBirth>
+  <BEWH.PsykerPariahBirthChance>Chance that newly born children will either be a psyker or pariah: {0}%</BEWH.PsykerPariahBirthChance>
+
+
+  <!-- Code Event related-->
+  <BEWH.PsychicPhenomenaLetter>Psychic Phenomena</BEWH.PsychicPhenomenaLetter>
+  <BEWH.PerilsOfTheWarpLetter>Perils of the Warp</BEWH.PerilsOfTheWarpLetter>
+
+  <BEWH.Annihilation>A psychic blast surged through {0} and into the world, causing a warp explosion completely annihilating {0} and severely damaging everything around them.</BEWH.Annihilation>
+  <BEWH.DaemonHost>A strong link was established between {0} and one of the chaos gods, allowing them to send in some daemons.</BEWH.DaemonHost>
+  <BEWH.UncontrollablePowers>In a temporary loss of control over their powers, {0} caused a warp explosion, causing damage to everyone near them.</BEWH.UncontrollablePowers>
+  <BEWH.PsychicComa>Overwhelmed by the warp made {0} fall into a psychic coma.</BEWH.PsychicComa>
+  <BEWH.PsychicConnectionSevered>In an instant {0} no longer felt any connection to the warp, as if completely cut off.</BEWH.PsychicConnectionSevered>
+  <BEWH.BloodRain>As if a cruel joke, blood suddenly starts raining.</BEWH.BloodRain>
+  <BEWH.PlantRot>All plant life seems to rot in {0} presence, leaving it lifeless.</BEWH.PlantRot>
+
+  <BEWH.NaturalBornXLetter>Natural Born {0}</BEWH.NaturalBornXLetter>
+  <BEWH.NaturalBornXMessage>From the moment {0} became pregnant something felt off, something that has finally come to light. It seems that {1} has been born as a natural {2}.</BEWH.NaturalBornXMessage>
+
+  <!-- Building-->
+  <!-- Gestator-->
+  <BEWH.SelectMatrix>Select matrix</BEWH.SelectMatrix>
+  <BEWH.SelectMatrixDesc>Select matrix to gestate from among your matrices</BEWH.SelectMatrixDesc>
+  <BEWH.MissingGestateResearch>You have not researched any gestatable geneitc matrices projects</BEWH.MissingGestateResearch>
+
+  <BEWH.NoGeneMatrix>No gene matrices</BEWH.NoGeneMatrix>
+  <BEWH.ContainsGeneMatrix>contains matrix: {0}</BEWH.ContainsGeneMatrix>
+
+  <BEWH.ContainsExtraMaterial>contains material: {0}</BEWH.ContainsExtraMaterial>
+
+  <BEWH.EjectGeneMatrix>Eject {0}</BEWH.EjectGeneMatrix>
+  <BEWH.EjectGeneMatrixDesc>Ejects {0} from the gene gestator, allowing you to insert another</BEWH.EjectGeneMatrixDesc>
+
+  <BEWH.StartGeneGestating>Start gestating</BEWH.StartGeneGestating>
+  <BEWH.StartGeneGestatingDesc>Starts the gestating process, once started it cannot be stopped</BEWH.StartGeneGestatingDesc>
+
+  <BEWH.GeneVialFinished>Gene vial can be extracted</BEWH.GeneVialFinished>
+  <BEWH.GeneVialFinishesIn>Gene vial finishes in {0}{1}</BEWH.GeneVialFinishesIn>
+  <BEWH.ContainsNoGeneMatrix>Contains no gene matrix</BEWH.ContainsNoGeneMatrix>
+
+
+  <BEWH.GestateFinishLetter>Matrix Gestated</BEWH.GestateFinishLetter>
+  <BEWH.GestateFinishMessage>{0} has been gestated into {1} and can now be implanted into a suitable pawn</BEWH.GestateFinishMessage>
+
+  <BEWH.NoAvailableMaterial>No extra genetic material available</BEWH.NoAvailableMaterial>
+
+  <BEWH.SelectXMaterial>Select {0} material</BEWH.SelectXMaterial>
+  <BEWH.SelectXMaterialDesc>Select {0} material from among your availables materials, if you have any</BEWH.SelectXMaterialDesc>
+
+  <BEWH.Primarch>primarch</BEWH.Primarch>
+  <BEWH.Chapter>chapter</BEWH.Chapter>
+
+  <BEWH.NoSlurry>No genetic slurry</BEWH.NoSlurry>
+
+  <!-- Geneseed Vial-->
+  <BEWH.ImplantGeneseedDesc>You are about to implant {0}, making them into a {1}</BEWH.ImplantGeneseedDesc>
+  <BEWH.OutsideOptimalAgeRange>{0} is outside the optimal age range {1}~{2} resulting in a failure chance of {3}%, failure will result in death and loss of geneseed vial</BEWH.OutsideOptimalAgeRange>
+
+
+  <!-- Misc-->
+  <!-- Ideology-->
+  <BEWH.MustBeSpaceMarine>Must be a Space Marine</BEWH.MustBeSpaceMarine>
+  <BEWH.ItemDeterioratingNotInContainer>not in safe container</BEWH.ItemDeterioratingNotInContainer>
+
+  <BEWH.NoProgenoidGlands>Does not have any progenoid glands</BEWH.NoProgenoidGlands>
+  <BEWH.SecondaryGlandsAlreadyHarvested>Secondary progenoid glands already harvested</BEWH.SecondaryGlandsAlreadyHarvested>
+  <BEWH.SMGeneseedExtractionNotResearched>Space Marine geneseed extraction not researched</BEWH.SMGeneseedExtractionNotResearched>
+  <BEWH.PMGeneseedExtractionNotResearched>Primaris Marine geneseed extraction not researched</BEWH.PMGeneseedExtractionNotResearched>
+
+  <BEWH.CurrentToggle>Warp shield is currently toggled {0}</BEWH.CurrentToggle>
+  <BEWH.On>on</BEWH.On>
+  <BEWH.Off>off</BEWH.Off>
+
+</LanguageData>

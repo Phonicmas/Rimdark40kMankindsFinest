@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <VFECore.Abilities.AbilityDef>
+    <defName>BEWH_PsykerBolt</defName>
+    <label>psychic bolt</label>
+    <description>A bolt made of raw warp energy, able to pierce even the toughest armor. The stronger the psyker, the stronger the bolt.</description>
+    <iconPath>UI/Abilities/PsychicBolt</iconPath>
+    <abilityClass>VFECore.Abilities.Ability_ShootProjectile</abilityClass>
+    <cooldownTime>2500</cooldownTime>
+    <castTime>20</castTime>
+    <range>20.9</range>
+    <targetingParameters>
+      <canTargetPawns>true</canTargetPawns>
+      <canTargetBuildings>true</canTargetBuildings>
+    </targetingParameters>
+    <targetMode>Pawn</targetMode>
+    <castSound>Psycast_Skip_Pulse</castSound>
+    <power>10</power>
+    <powerStatFactors>
+      <PsychicSensitivity>1.5</PsychicSensitivity>
+    </powerStatFactors>
+    <rangeStatFactors>
+      <PsychicSensitivity>0.5</PsychicSensitivity>
+    </rangeStatFactors>
+    <modExtensions>
+      <li Class="VFECore.Abilities.AbilityExtension_Projectile">
+        <projectile>BEWH_PsykerBolt</projectile>
+        <accuracyStatFactors>
+          <PsychicSensitivity>0.8</PsychicSensitivity>
+        </accuracyStatFactors>
+      </li>
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>BEWH_PsykerBolt</defName>
+    <label>psyker bolt</label>
+    <description>A ball of psychic energy launched by a psyker</description>
+    <thingClass>VFECore.Abilities.AbilityProjectile</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData Class="VFECore.GraphicData_Animated">
+      <texPath>Effects/Psyker/PsykerBolt</texPath>
+      <ticksPerFrame>5</ticksPerFrame>
+      <graphicClass>VFECore.Graphic_Animated</graphicClass>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+    <drawOffscreen>true</drawOffscreen>
+    <drawerType>RealtimeOnly</drawerType>
+    <projectile>
+      <damageDef>BEWH_WarpEnergy</damageDef> <!-- Is in Core -->
+      <speed>50</speed>
+      <damageAmountBase>12</damageAmountBase>
+      <armorPenetrationBase>2</armorPenetrationBase>
+      <stoppingPower>1.5</stoppingPower>
+      <shadowSize>0.6</shadowSize>
+    </projectile>
+  </ThingDef>  
+
+</Defs>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- Wulfen Canines -->
+    <HediffDef>
+        <defName>BEWH_CanisHelixCanines</defName>
+        <label>wulfen canines</label>
+        <description>These elongated canines can dent plasteel, and leathery, resilient skin and is a result of the canis helix.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_VerbGiver">
+                <tools>
+                    <li>
+                        <label>wulfen canines</label>
+                        <capacities>
+                            <li>Stab</li>
+                        </capacities>
+                        <power>19</power>
+                        <cooldownTime>1.8</cooldownTime>
+                    </li>
+                </tools>
+            </li>
+        </comps>
+    </HediffDef>
+
+</Defs>

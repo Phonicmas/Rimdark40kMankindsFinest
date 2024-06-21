@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <WorkGiverDef>
+    <defName>BEWH_FillGeneGestator</defName>
+    <label>fill gene gestator</label>
+    <giverClass>Genes40k.WorkGiver_FillGeneGestator</giverClass>
+    <workType>Hauling</workType>
+    <verb>fill</verb>
+    <gerund>filling</gerund>
+    <priorityInType>10</priorityInType>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <canBeDoneByMechs>false</canBeDoneByMechs>
+    <canBeDoneByMutants>false</canBeDoneByMutants>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>BEWH_HaulToPrimarchVat</defName>
+    <label>haul to primarch vat</label>
+    <giverClass>Genes40k.WorkGiver_HaulToPrimarchVat</giverClass>
+    <workType>Hauling</workType>
+    <verb>fill</verb>
+    <gerund>filling</gerund>
+    <priorityInType>10</priorityInType>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>BEWH_DoBillsGeneManipulationTable</defName>
+    <label>fabricate things</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Research</workType>
+    <priorityInType>35</priorityInType>
+    <fixedBillGiverDefs>
+      <li>BEWH_GeneManipulationTable</li>
+    </fixedBillGiverDefs>
+    <verb>fabricate</verb>
+    <gerund>fabricating things at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+
+</Defs>
