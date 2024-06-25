@@ -95,15 +95,6 @@ namespace Genes40k
             base.DeSpawn(mode);
         }
 
-
-        /*public override string GetInspectString()
-        {
-            string s = base.GetInspectString();
-            s += "\n";
-            s += "ContainsXSouls".Translate(GeneAmount.Count());
-            return s;
-        }*/
-
         public ThingOwner GetDirectlyHeldThings()
         {
             return innerContainer;
@@ -130,14 +121,15 @@ namespace Genes40k
             }
         }
 
-        public void Notify_ItemAdded(Thing newItem)
+        public virtual void Notify_ItemAdded(Thing newItem)
         {
             newItem.HitPoints = MaxHitPoints;
             return;
         }
 
-        public void Notify_ItemRemoved(Thing newItem)
+        public virtual void Notify_ItemRemoved(Thing newItem)
         {
+            newItem.HitPoints = MaxHitPoints;
             return;
         }
 

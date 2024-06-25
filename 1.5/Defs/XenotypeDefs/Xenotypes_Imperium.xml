@@ -112,17 +112,17 @@
   <XenotypeDef ParentName="BEWH_ImperiumEliteBase">
     <defName>BEWH_ThunderWarrior</defName>
     <label>thunder warrior</label>
-    <description>...</description>
-    <descriptionShort>...</descriptionShort>
+    <description>Gene-enhanced warriors created by the Emperor to be living weapons, the Thunder Warriors were known to be physically stronger, more savage, more resilient and more potent in combat than the later Firstborn, though they were not as long-lived and suffered from often dangerous mental instability and early metabolic collapse when their bodies began to reject their augmentations.</description>
+    <descriptionShort>Gene-enhanced warriors created by the Emperor to be living weapons, the Thunder Warriors were known to be physically stronger, more savage, more resilient and more potent in combat than the later Firstborn, though they were not as long-lived and suffered from often dangerous mental instability and early metabolic collapse when their bodies began to reject their augmentations.</descriptionShort>
     <iconPath>UI/Xenotypes/ThunderWarriorXenoIcon</iconPath>
     <combatPowerFactor>1.3</combatPowerFactor>
     <genes>
-      <li>BEWH_CustodesAnatomy</li>
-      <li>BEWH_CustodesExpertise</li>
-      <li>BEWH_CustodesStrength</li>
-      <li>BEWH_PrimarchResilience</li>
-      <li>BEWH_PrimarchToughness</li>
-      <li>BEWH_PrimarchStature</li>
+      <li>BEWH_ProtoOssmodula</li>
+      <li>BEWH_Musculeator</li>
+      <li>BEWH_Mentanifex</li>
+      <li>BEWH_Vigoranis</li>
+      <li>BEWH_Hyperanatomica</li>
+      <li>BEWH_Furybound</li>
     </genes>
   </XenotypeDef>
 
@@ -153,12 +153,13 @@
     <iconPath>UI/Xenotypes/PrimarchXenoIcon</iconPath>
     <combatPowerFactor>8</combatPowerFactor>
     <genes>
-      <li>BEWH_PrimarchAnatomy</li>
-      <li>BEWH_PrimarchExpertise</li>
-      <li>BEWH_PrimarchStrength</li>
-      <li>BEWH_PrimarchResilience</li>
-      <li>BEWH_PrimarchToughness</li>
-      <li>BEWH_PrimarchStature</li>
+      <li>BEWH_ImmortisGland</li>
+      <li>BEWH_TempestusOcularium</li>
+      <li>BEWH_ThalaxCortex</li>
+      <li>BEWH_HelixomeArray</li>
+      <li>BEWH_VermillionCache</li>
+      <li>BEWH_CelerityNexus</li>
+      <li>BEWH_HyperionMuscleStrands</li>
     </genes>
   </XenotypeDef>
 

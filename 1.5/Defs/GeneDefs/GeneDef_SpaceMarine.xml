@@ -111,6 +111,9 @@
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <noSkillLoss>Melee</noSkillLoss>
             </li>
+            <li Class="Core40k.DefModExtension_GeneExtension">
+                <addedWorldCarryCapacity>80</addedWorldCarryCapacity>
+            </li>
         </modExtensions>
         <minAgeActive>12</minAgeActive>
         <exclusionTags>
@@ -234,6 +237,7 @@
         <displayOrderInCategory>8</displayOrderInCategory>
         <prerequisite>BEWH_Preomnor</prerequisite>
         <statFactors>
+            <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.15</CertaintyLossFactor>
             <GlobalLearningFactor>1.2</GlobalLearningFactor>
         </statFactors>
         <abilities>
@@ -287,7 +291,6 @@
         <iconPath>UI/Genes/Firstborn_OcculobeIcon</iconPath>
         <displayOrderInCategory>10</displayOrderInCategory>
         <prerequisite>BEWH_MultiLung</prerequisite>
-        <ignoreDarkness>true</ignoreDarkness>
         <statFactors>
             <AimingDelayFactor>0.9</AimingDelayFactor>
         </statFactors>
@@ -497,12 +500,6 @@
         <iconPath>UI/Genes/Firstborn_ProgenoidsIcon</iconPath>
         <displayOrderInCategory>18</displayOrderInCategory>
         <prerequisite>BEWH_BetchersGland</prerequisite>
-        <forcedTraits>
-            <li>
-                <def>BEWH_Genes</def>
-                <degree>1</degree>
-            </li>
-        </forcedTraits>
         <makeImmuneTo>
             <li>Flu</li>
             <li>Malaria</li>

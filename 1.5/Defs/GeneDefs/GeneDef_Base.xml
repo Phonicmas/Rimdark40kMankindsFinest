@@ -11,50 +11,68 @@
 
     <!-- Parent Genes -->
 
-    <!-- Space Marine -->
-    <GeneDef Name="BEWH_SpaceMarineParent" Abstract="True">
+    <GeneDef Name="BEWH_GenesOverallParent" Abstract="True">
         <displayCategory>BEWH_ImperialGenes</displayCategory>
+        <canGenerateInGeneSet>false</canGenerateInGeneSet>
+        <selectionWeight>0</selectionWeight>
+    </GeneDef>
+
+    <!-- Thunder Warrior -->
+    <GeneDef ParentName="BEWH_GenesOverallParent" Name="BEWH_ThunderWarriorParent" Abstract="True">
+        <marketValueFactor>1.1</marketValueFactor>
+        <statOffsets>
+            <MentalBreakThreshold>0.05</MentalBreakThreshold>
+            <CancerRate>0.20</CancerRate>
+        </statOffsets>
+        <statFactors>
+            <LifespanFactor>0.85</LifespanFactor>
+        </statFactors>
+    </GeneDef>
+
+    <!-- Space Marine -->
+    <GeneDef ParentName="BEWH_GenesOverallParent" Name="BEWH_SpaceMarineParent" Abstract="True">
         <marketValueFactor>1.1</marketValueFactor>
         <biostatCpx>2</biostatCpx>
-        <canGenerateInGeneSet>false</canGenerateInGeneSet>
     </GeneDef>
 
     <!-- Space Marine Chapter -->
     <GeneDef ParentName="BEWH_SpaceMarineParent" Name="BEWH_ChapterGeneParent" Abstract="True">
-        <displayCategory>BEWH_ImperialGenes</displayCategory>
         <marketValueFactor>1.05</marketValueFactor>
         <biostatCpx>1</biostatCpx>
-        <canGenerateInGeneSet>false</canGenerateInGeneSet>
         <exclusionTags>
             <li>BEWH_ChapterGene</li>
         </exclusionTags>
     </GeneDef>
 
     <!-- Primaris Marine -->
-    <GeneDef Name="BEWH_PrimarisSpaceMarineParent" Abstract="True">
-        <displayCategory>BEWH_ImperialGenes</displayCategory>
+    <GeneDef ParentName="BEWH_GenesOverallParent" Name="BEWH_PrimarisSpaceMarineParent" Abstract="True">
         <marketValueFactor>1.4</marketValueFactor>
         <biostatCpx>3</biostatCpx>
-        <canGenerateInGeneSet>false</canGenerateInGeneSet>
     </GeneDef>
 
+
+    <!-- Primarch: Base -->
+    <GeneDef ParentName="BEWH_GenesOverallParent" Name="BEWH_PrimarchBase" Abstract="True">
+        <marketValueFactor>10</marketValueFactor>
+        <minAgeActive>8</minAgeActive>
+    </GeneDef>
+
+
     <!-- Primarch Specific -->
-    <GeneDef Name="BEWH_PrimarchSpecific" Abstract="True">
-        <displayCategory>BEWH_ImperialGenes</displayCategory>
+    <GeneDef ParentName="BEWH_GenesOverallParent" Name="BEWH_PrimarchSpecific" Abstract="True">
         <marketValueFactor>1.8</marketValueFactor>
         <biostatCpx>1</biostatCpx>
         <biostatArc>1</biostatArc>
-        <canGenerateInGeneSet>false</canGenerateInGeneSet>
         <exclusionTags>
             <li>BEWH_PrimarchSpecific</li>
         </exclusionTags>
     </GeneDef>
 
+
+
+
     <!-- Pariah -->
-    <GeneDef Name="BEWH_PariahParent" Abstract="True">
-        <displayCategory>BEWH_ImperialGenes</displayCategory>
-        <biostatCpx>5</biostatCpx>
-        <biostatMet>-2</biostatMet>
+    <GeneDef ParentName="BEWH_GenesOverallParent" Name="BEWH_PariahParent" Abstract="True">
         <marketValueFactor>2</marketValueFactor>
         <geneClass>Genes40k.Gene_Pariah</geneClass>
         <suppressedTraits>
@@ -75,10 +93,7 @@
     </GeneDef>
 
     <!-- Psyker -->
-    <GeneDef Name="BEWH_PsykerParent" Abstract="True">
-        <displayCategory>BEWH_ImperialGenes</displayCategory>
-        <biostatCpx>5</biostatCpx>
-        <biostatMet>-2</biostatMet>
+    <GeneDef ParentName="BEWH_GenesOverallParent" Name="BEWH_PsykerParent" Abstract="True">
         <suppressedTraits>
             <li>
                 <def>PsychicSensitivity</def>

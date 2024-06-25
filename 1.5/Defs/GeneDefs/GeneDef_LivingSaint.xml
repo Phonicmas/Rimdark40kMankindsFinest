@@ -2,21 +2,18 @@
 <Defs>
 
     <!-- Living Saint: Base -->
-    <GeneDef Name="BEWH_LivingSaintBase" Abstract="True">
-        <displayCategory>BEWH_ImperialGenes</displayCategory>
-        <canGenerateInGeneSet>false</canGenerateInGeneSet>
+    <GeneDef ParentName="BEWH_GenesOverallParent" Name="BEWH_LivingSaintBase" Abstract="True">
         <biostatCpx>4</biostatCpx>
         <biostatArc>1</biostatArc>
         <marketValueFactor>3</marketValueFactor>
         <minAgeActive>3</minAgeActive>
-        <selectionWeight>0</selectionWeight>
     </GeneDef>
 
     <!-- Being of faith -->
     <GeneDef ParentName="BEWH_LivingSaintBase">
         <defName>BEWH_LivingSaintBeingOfFaith</defName>
         <label>being of faith</label>
-        <description>A Living Saint is an extraordinarily devout servant of the Emperor of Mankind, who displays seemingly miraculous, supernatural abilities derived from potent faith in the God-Emperor during his or her lifetime.</description>
+        <description>A Living Saint is an extraordinarily devout servant of the Emperor of Mankind, who displays seemingly miraculous, supernatural abilities derived from potent faith in the God-Emperor during his or her lifetime.\nShould the carrier of this gene fall in battle they will vanish, and in time of need, they will return to defend their colony.</description>
         <iconPath>UI/Genes/LivingSaint_BeingOfFaith</iconPath>
         <displayOrderInCategory>500</displayOrderInCategory>
         <immuneToToxGasExposure>true</immuneToToxGasExposure>
@@ -114,13 +111,18 @@
                 </drawData>
             </li>
         </renderNodeProperties>
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <hediffToWholeBody>BEWH_WingsHover</hediffToWholeBody>
+            </li>
+        </modExtensions>
     </GeneDef>
 
     <!-- Sacred Regeneration -->
     <GeneDef ParentName="BEWH_LivingSaintBase">
         <defName>BEWH_LivingSaintSacredRegeneration</defName>
         <label>sacred regeneration</label>
-        <description>...</description>
+        <description>Immense faith and connection to the warp allows the carrier of this gene to quickly regenerate their wounds.</description>
         <iconPath>UI/Genes/LivingSaint_SacredRegeneration</iconPath>
         <geneClass>Gene_Clotting</geneClass>
         <displayOrderInCategory>501</displayOrderInCategory>
@@ -137,7 +139,7 @@
     <GeneDef ParentName="BEWH_LivingSaintBase">
         <defName>BEWH_LivingSaintFuryOfTheEmperor</defName>
         <label>fury of the emperor</label>
-        <description>...</description>
+        <description>Filled with the fury of the emperor, carriers of this gene can feel the power of the emperor surge through them as they fight his enemies</description>
         <iconPath>UI/Genes/LivingSaint_FuryOfTheEmperor</iconPath>
         <geneClass>Gene_Clotting</geneClass>
         <displayOrderInCategory>501</displayOrderInCategory>
@@ -158,14 +160,13 @@
     <GeneDef ParentName="BEWH_LivingSaintBase">
         <defName>BEWH_LivingSaintMartyrsEndurance</defName>
         <label>martyr's endurance</label>
-        <description>...</description>
+        <description>Having already died once, carriers of this gene have steeled themselves to damage, greatly reducing incoming damage.</description>
         <iconPath>UI/Genes/LivingSaint_MartyrsEndurance</iconPath>
-        <geneClass>Gene_Clotting</geneClass>
         <displayOrderInCategory>501</displayOrderInCategory>
         <statOffsets>
-            <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
-            <ArmorRating_Sharp>0.4</ArmorRating_Sharp>
-            <ArmorRating_Heat>0.4</ArmorRating_Heat>
+            <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.3</ArmorRating_Sharp>
+            <ArmorRating_Heat>0.5</ArmorRating_Heat>
             <ComfyTemperatureMin>-30</ComfyTemperatureMin>
             <ComfyTemperatureMax>30</ComfyTemperatureMax>
         </statOffsets>
@@ -190,7 +191,6 @@
         <label>holy radiance</label>
         <description>Immense faith have conjured forth an ethereal halo of warp energy, resembling that of an angels. This halo radiates a blissful energy for anyone around them.</description>
         <iconPath>UI/Genes/LivingSaint_HolyRadiance</iconPath>
-        <geneClass>Gene_Clotting</geneClass>
         <displayOrderInCategory>501</displayOrderInCategory>
         <preventPermanentWounds>true</preventPermanentWounds>
         <statOffsets>

@@ -51,9 +51,9 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterIXRedThirst</defName>
         <label>red thirst</label>
-        <description>...</description>
+        <description>The Red Thirst causes warriors to suffer an unusual bloodlust, instilling them with a thirst for the blood of their enemies</description>
         <iconPath>UI/Genes/ChapterIXRedThirst</iconPath>
-        <displayOrderInCategory>30</displayOrderInCategory>
+        <displayOrderInCategory>31</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <geneClass>Gene_Hemogen</geneClass>
         <resourceGizmoType>GeneGizmo_ResourceHemogen</resourceGizmoType>

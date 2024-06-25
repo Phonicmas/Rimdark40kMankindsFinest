@@ -5,7 +5,7 @@
   <ThingDef ParentName="BenchBase">
     <defName>BEWH_GeneManipulationTable</defName>
     <label>gene manipulation table</label>
-    <description>...</description>
+    <description>This table contains all the needed tools and machines to create thing needed to make enhanced superhumen.</description>
     <thingClass>Building_WorkTable</thingClass>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
@@ -33,7 +33,7 @@
       <li Class="CompProperties_Breakdownable"/>
     </comps>
     <graphicData>
-      <texPath>Things/Building/Production/FabricationBench</texPath>
+      <texPath>Things/Building/GeneCraftingTable/GeneCraftingTable</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <shaderType>CutoutComplex</shaderType>
       <drawSize>(7,4)</drawSize>
@@ -73,7 +73,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>BEWH_GeneseedGestator</defName>
     <label>geneseed gestator</label>
-    <description>...</description>
+    <description>This gestator is able to create implant ready geneseed vials, by transforming genetic matrices.</description>
     <thingClass>Genes40k.Building_GeneGestator</thingClass>
     <containedPawnsSelectable>true</containedPawnsSelectable>
     <passability>PassThroughOnly</passability>
@@ -82,9 +82,9 @@
     <drawerType>MapMeshAndRealTime</drawerType>
     <tickerType>Normal</tickerType>
     <graphicData>
-      <texPath>Things/Building/Geneseed/GeneseedGenetor</texPath>
+      <texPath>Things/Building/GeneseedGestator/GeneseedGestator</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
-      <drawSize>(3, 2)</drawSize>
+      <drawSize>(3, 3)</drawSize>
       <shadowData>
         <volume>(1.7, 0.8, 1.7)</volume>
       </shadowData>
@@ -146,21 +146,21 @@
   <ThingDef ParentName="BuildingBase">
     <defName>BEWH_PrimarchGrowthVat</defName>
     <label>primarch growth vat</label>
-    <description>...</description>
+    <description>This growth vat is a modified version of the normal Growth Vat, allowing the articial growth of Primarchs by supplying extra needed power and Raw Gestational Slurry</description>
     <thingClass>Genes40k.Building_PrimarchGrowthVat</thingClass>
     <containedPawnsSelectable>true</containedPawnsSelectable>
     <tickerType>Normal</tickerType>
     <graphicData>
-      <texPath>Things/Building/Misc/GrowthVat/GrowthVat</texPath>
+      <texPath>Things/Building/PrimarchGrowthVat/PrimarchGrowthVat</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
-      <drawSize>(1,2)</drawSize>
+      <drawSize>(2,2)</drawSize>
       <shadowData>
         <volume>(0.85, 0.3, 1.7)</volume>
       </shadowData>
     </graphicData>
     <castEdgeShadows>true</castEdgeShadows>
-    <defaultPlacingRot>East</defaultPlacingRot>
-    <size>(1,2)</size>
+    <defaultPlacingRot>North</defaultPlacingRot>
+    <size>(2,2)</size>
     <statBases>
       <MaxHitPoints>500</MaxHitPoints>
       <WorkToBuild>8000</WorkToBuild>

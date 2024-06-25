@@ -63,6 +63,7 @@
   <BEWH.ImplantGeneseedDesc>You are about to implant {0}, making them into a {1}</BEWH.ImplantGeneseedDesc>
   <BEWH.OutsideOptimalAgeRange>{0} is outside the optimal age range {1}~{2} resulting in a failure chance of {3}%, failure will result in death and loss of geneseed vial</BEWH.OutsideOptimalAgeRange>
 
+  <BEWH.AlreadySuperHuman>{0} is already a superhuman and cannot be enhanced again</BEWH.AlreadySuperHuman>
 
   <!-- Misc-->
   <!-- Ideology-->

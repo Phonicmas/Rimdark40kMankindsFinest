@@ -5,7 +5,7 @@
     <thingClass>ThingWithComps</thingClass>
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
-      <MarketValue>8500</MarketValue>
+      <MarketValue>8000</MarketValue>
       <Mass>0.5</Mass>
       <Flammability>0</Flammability>
     </statBases>
@@ -34,33 +34,33 @@
   </ThingDef>
 
   <ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
-    <defName>BEWH_PrimarchMaterialI</defName>
-    <label>primarch material I</label>
-    <description>...</description>
+    <defName>BEWH_PrimarchMaterialXV</defName>
+    <label>primarch material XV - Magnus the Red</label>
+    <description>This containers holds the genetic material of Primarch XI - Magnus the Red</description>
     <graphicData>
-      <texPath>Things/Item/Resource/ArchiteCapsule</texPath>
+      <texPath>Things/Item/PrimarchMaterial/PrimarchMaterial_XI</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <modExtensions>
       <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
       <li Class="Genes40k.DefModExtension_GeneFromMaterial">
-        <addedGene>BEWH_BetaPsyker</addedGene>
+        <addedGene>BEWH_PrimarchXVMagnusTheRed</addedGene>
       </li>
     </modExtensions>
   </ThingDef>
 
   <ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
-    <defName>BEWH_PrimarchMaterialII</defName>
-    <label>primarch material II</label>
-    <description>...</description>
+    <defName>BEWH_PrimarchMaterialIX</defName>
+    <label>primarch material IX - Sanguinius</label>
+    <description>This containers holds the genetic material of Primarch IX - Sanguinius</description>
     <graphicData>
-      <texPath>Things/Item/Resource/ArchiteCapsule</texPath>
+      <texPath>Things/Item/PrimarchMaterial/PrimarchMaterial_IX</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <modExtensions>
       <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
       <li Class="Genes40k.DefModExtension_GeneFromMaterial">
-        <addedGene>BEWH_BetaPsyker</addedGene>
+        <addedGene>BEWH_PrimarchIXSanguinius</addedGene>
       </li>
     </modExtensions>
   </ThingDef>

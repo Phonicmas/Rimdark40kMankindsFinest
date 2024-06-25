@@ -1,5 +1,6 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
+using System.Linq;
 using Verse;
 
 
@@ -7,9 +8,17 @@ namespace Genes40k
 {
     public class Genes40kUtils
     {
-        public static List<GeneDef> SpaceMarineGenes()
-        {
-            List<GeneDef> genedef = new List<GeneDef>
+        public static List<GeneDef> ThunderWarriorGenes => new List<GeneDef>
+            {
+                Genes40kDefOf.BEWH_ProtoOssmodula,
+                Genes40kDefOf.BEWH_Musculeator,
+                Genes40kDefOf.BEWH_Mentanifex,
+                Genes40kDefOf.BEWH_Vigoranis,
+                Genes40kDefOf.BEWH_Hyperanatomica,
+                Genes40kDefOf.BEWH_Furybound,
+            };
+
+        public static List<GeneDef> SpaceMarineGenes => new List<GeneDef>
             {
                 Genes40kDefOf.BEWH_SecondaryHeart,
                 Genes40kDefOf.BEWH_Ossmodula,
@@ -31,23 +40,15 @@ namespace Genes40k
                 Genes40kDefOf.BEWH_ProgenoidGlands,
                 Genes40kDefOf.BEWH_BlackCarapace
             };
-            return genedef;
-        }
 
-        public static List<GeneDef> PrimarisGenes()
-        {
-            List<GeneDef> genedef = new List<GeneDef>
+        public static List<GeneDef> PrimarisGenes => new List<GeneDef>
             {
                 Genes40kDefOf.BEWH_SinewCoil,
                 Genes40kDefOf.BEWH_Magnificat,
                 Genes40kDefOf.BEWH_BelisarianFurnace
             };
-            return genedef;
-        }
 
-        public static List<GeneDef> CustodesGenes()
-        {
-            List<GeneDef> genedef = new List<GeneDef>
+        public static List<GeneDef> CustodesGenes => new List<GeneDef>
             {
                 Genes40kDefOf.BEWH_CustodesStature,
                 Genes40kDefOf.BEWH_CustodesResilience,
@@ -56,28 +57,33 @@ namespace Genes40k
                 Genes40kDefOf.BEWH_CustodesStrength,
                 Genes40kDefOf.BEWH_CustodesAnatomy
             };
-            return genedef;
-        }
 
-        public static List<GeneDef> PrimarchGenes()
-        {
-            List<GeneDef> genedef = new List<GeneDef>
+        public static List<GeneDef> PrimarchGenes => new List<GeneDef>
             {
-                Genes40kDefOf.BEWH_PrimarchStature,
-                Genes40kDefOf.BEWH_PrimarchResilience,
-                Genes40kDefOf.BEWH_PrimarchToughness,
-                Genes40kDefOf.BEWH_PrimarchExpertise,
-                Genes40kDefOf.BEWH_PrimarchStrength,
-                Genes40kDefOf.BEWH_PrimarchAnatomy
+                Genes40kDefOf.BEWH_ImmortisGland,
+                Genes40kDefOf.BEWH_TempestusOcularium,
+                Genes40kDefOf.BEWH_ThalaxCortex,
+                Genes40kDefOf.BEWH_HelixomeArray,
+                Genes40kDefOf.BEWH_VermillionCache,
+                Genes40kDefOf.BEWH_CelerityNexus,
+                Genes40kDefOf.BEWH_HyperionMuscleStrands
             };
-            return genedef;
+
+        public static bool IsThunderWarrior(Pawn pawn)
+        {
+            foreach (GeneDef geneDef in ThunderWarriorGenes)
+            {
+                if (!pawn.genes.HasActiveGene(geneDef))
+                {
+                    return false;
+                }
+            }
+            return true;
         }
-
-
 
         public static bool IsSpaceMarine(Pawn pawn)
         {
-            foreach (GeneDef geneDef in SpaceMarineGenes())
+            foreach (GeneDef geneDef in SpaceMarineGenes)
             {
                 if (!pawn.genes.HasActiveGene(geneDef))
                 {
@@ -89,7 +95,7 @@ namespace Genes40k
 
         public static bool IsPrimaris(Pawn pawn)
         {
-            foreach (GeneDef geneDef in PrimarisGenes())
+            foreach (GeneDef geneDef in PrimarisGenes)
             {
                 if (!pawn.genes.HasActiveGene(geneDef))
                 {
@@ -98,7 +104,38 @@ namespace Genes40k
             }
             return IsSpaceMarine(pawn);
         }
-    
+
+        public static bool IsCustodes(Pawn pawn)
+        {
+            foreach (GeneDef geneDef in CustodesGenes)
+            {
+                if (!pawn.genes.HasActiveGene(geneDef))
+                {
+                    return false;
+                }
+            }
+            return IsSpaceMarine(pawn);
+        }
+
+        public static bool IsPrimarch(Pawn pawn)
+        {
+            foreach (GeneDef geneDef in PrimarchGenes)
+            {
+                if (!pawn.genes.HasActiveGene(geneDef))
+                {
+                    return false;
+                }
+            }
+            return IsSpaceMarine(pawn);
+        }
+
+
+        public static bool IsSuperHuman(Pawn pawn)
+        {
+            return IsThunderWarrior(pawn) || IsSpaceMarine(pawn) || IsPrimaris(pawn) || IsCustodes(pawn) || IsPrimarch(pawn);
+        }
+
+
         public static bool IsPsyker(Pawn pawn)
         {
             if (pawn.genes.HasActiveGene(Genes40kDefOf.BEWH_IotaPsyker) || pawn.genes.HasActiveGene(Genes40kDefOf.BEWH_Psyker) || pawn.genes.HasActiveGene(Genes40kDefOf.BEWH_DeltaPsyker) || pawn.genes.HasActiveGene(Genes40kDefOf.BEWH_BetaPsyker))
@@ -116,7 +153,6 @@ namespace Genes40k
             }
             return false;
         }
-
 
 
         public static void MakeGeneseedVial(Pawn pawn, bool isPrimaris)

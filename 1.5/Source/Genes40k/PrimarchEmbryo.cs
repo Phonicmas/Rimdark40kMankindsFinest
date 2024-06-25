@@ -135,13 +135,19 @@ namespace Genes40k
                 {
                     geneSet = new GeneSet();
                 }
-                foreach (GeneDef gene in birthGenes.GenesListForReading)
+                if (birthGenes != null)
                 {
-                    geneSet.AddGene(gene);
+                    foreach (GeneDef gene in birthGenes.GenesListForReading)
+                    {
+                        geneSet.AddGene(gene);
+                    }
                 }
-                foreach (GeneDef gene in primarchGenes.GenesListForReading)
+                if (primarchGenes != null)
                 {
-                    geneSet.AddGene(gene);
+                    foreach (GeneDef gene in primarchGenes.GenesListForReading)
+                    {
+                        geneSet.AddGene(gene);
+                    }
                 }
             }
         }

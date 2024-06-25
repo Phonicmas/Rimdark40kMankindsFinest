@@ -7,13 +7,13 @@
   <ThingDef ParentName="BEWH_GeneticMatrixBase">
     <defName>BEWH_GeneseedMatrixThunderWarrior</defName>
     <label>thunder warrior genetic matrix</label>
-    <description>...</description>
+    <description>This genetic matrix contains the template for making Thunder Warriors.\n\nThis item rapidly deteriorates outside containment.</description>
     <graphicData>
       <texPath>Things/Item/GeneMatrix/GeneMatrix_ThunderWarrior</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-      <MarketValue>3500</MarketValue>
+      <MarketValue>3250</MarketValue>
     </statBases>
     <descriptionHyperlinks>
       <XenotypeDef>BEWH_ThunderWarrior</XenotypeDef>
@@ -31,13 +31,13 @@
   <ThingDef ParentName="BEWH_GeneticMatrixBase">
     <defName>BEWH_GeneseedMatrixFirstborn</defName>
     <label>firstborn genetic matrix</label>
-    <description>...</description>
+    <description>This genetic matrix contains the template for making Firstborn marines.\n\nIt seems that this template has room for additions.\n\nThis item rapidly deteriorates outside containment.</description>
     <graphicData>
       <texPath>Things/Item/GeneMatrix/GeneMatrix_Firstborn</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-      <MarketValue>4500</MarketValue>
+      <MarketValue>5000</MarketValue>
     </statBases>
     <descriptionHyperlinks>
       <XenotypeDef>BEWH_SpaceMarine</XenotypeDef>
@@ -56,13 +56,13 @@
   <ThingDef ParentName="BEWH_GeneticMatrixBase">
     <defName>BEWH_GeneseedMatrixPrimaris</defName>
     <label>primaris genetic matrix</label>
-    <description>...</description>
+    <description>This genetic matrix contains the template for making Primaris marines.\n\nIt seems that this template has room for additions.\n\nThis item rapidly deteriorates outside containment.</description>
     <graphicData>
       <texPath>Things/Item/GeneMatrix/GeneMatrix_Primaris</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-      <MarketValue>5000</MarketValue>
+      <MarketValue>7000</MarketValue>
     </statBases>
     <descriptionHyperlinks>
       <XenotypeDef>BEWH_PrimarisSpaceMarine</XenotypeDef>
@@ -81,13 +81,13 @@
   <ThingDef ParentName="BEWH_GeneticMatrixBase">
     <defName>BEWH_GeneseedMatrixCustodes</defName>
     <label>custodes genetic matrix</label>
-    <description>...</description>
+    <description>This genetic matrix contains the template for making Custodes.\n\nThis item rapidly deteriorates outside containment.</description>
     <graphicData>
       <texPath>Things/Item/GeneMatrix/GeneMatrix_Custodes</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-      <MarketValue>7000</MarketValue>
+      <MarketValue>10000</MarketValue>
     </statBases>
     <descriptionHyperlinks>
       <XenotypeDef>BEWH_Custodes</XenotypeDef>
@@ -105,13 +105,13 @@
   <ThingDef ParentName="BEWH_GeneticMatrixBase">
     <defName>BEWH_GeneseedMatrixPrimarch</defName>
     <label>primarch genetic matrix</label>
-    <description>...</description>
+    <description>This genetic matrix contains the template for making Primarchs.\n\nIt seems that this template has room for additions.\n\nThis item rapidly deteriorates outside containment.</description>
     <graphicData>
       <texPath>Things/Item/GeneMatrix/GeneMatrix_Primarch</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-      <MarketValue>9500</MarketValue>
+      <MarketValue>15000</MarketValue>
     </statBases>
     <descriptionHyperlinks>
       <XenotypeDef>BEWH_Primarch</XenotypeDef>

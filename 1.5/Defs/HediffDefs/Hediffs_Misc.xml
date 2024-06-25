@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <HediffDef>
+		<defName>BEWH_WingsHover</defName>
+		<label>wings</label>
+		<description>A set of wings growing from this person's shoulderblades. They are capable of flight and will not be slowed down by any obstacles.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="AnimalBehaviours.HediffCompProperties_Floating" />
+		</comps>
+	</HediffDef>
+
+</Defs>

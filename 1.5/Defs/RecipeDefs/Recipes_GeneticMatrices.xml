@@ -7,7 +7,6 @@
         <effectWorking>Cook</effectWorking>
         <soundWorking>Recipe_Machining</soundWorking>
         <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
-        <!--<workerClass>Genes40k.WorkerClass_GeneticMatrix</workerClass>-->
         <recipeUsers>
             <li>BEWH_GeneManipulationTable</li>
         </recipeUsers>

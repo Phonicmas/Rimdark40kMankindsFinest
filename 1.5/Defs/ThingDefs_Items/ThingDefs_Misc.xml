@@ -5,21 +5,26 @@
   <ThingDef>
     <defName>BEWH_PrimarchEmbryo</defName>
     <label>primarch embryo</label>
-    <description>...</description>
+    <description>An embryo of a primarch placed in a special container, ready to be artificially grown.\n\nThis item rapidly deteriorates outside containment.</description>
     <thingClass>Genes40k.PrimarchEmbryo</thingClass>
     <graphicData>
       <texPath>Things/Item/PrimarchEmbryo</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.9, 0.9)</drawSize>
     </graphicData>
     <statBases>
-      <MaxHitPoints>50</MaxHitPoints>
+      <MaxHitPoints>100</MaxHitPoints>
       <Mass>0.5</Mass>
-      <MarketValue>50000</MarketValue>
-      <DeteriorationRate>25</DeteriorationRate>
+      <MarketValue>100000</MarketValue>
+      <DeteriorationRate>50</DeteriorationRate>
     </statBases>
+    <canDeteriorateUnspawned>false</canDeteriorateUnspawned>
     <thingCategories>
-      <li>ItemsMisc</li>
+      <li>Manufactured</li>
     </thingCategories>
+    <descriptionHyperlinks>
+      <ThingDef>BEWH_PrimarchGrowthVat</ThingDef>
+    </descriptionHyperlinks>
     <category>Item</category>
     <alwaysHaulable>true</alwaysHaulable>
     <drawGUIOverlay>true</drawGUIOverlay>
@@ -33,6 +38,7 @@
         <antiDeteriorateContainers>
           <li>BEWH_PrimarchEmbryoContainer</li>
         </antiDeteriorateContainers>
+        <deteriorationRateOutside>50</deteriorationRateOutside>
       </li>
     </comps>
     <inspectorTabs>
@@ -44,7 +50,7 @@
   <ThingDef ParentName="ResourceBase">
     <defName>BEWH_RawGestationalSlurry</defName>
     <label>Raw gestational slurry</label>
-    <description>...</description>
+    <description>This slurry, made from human tissue strengthened by luciferium, is used to in the creation of primarch.</description>
     <graphicData>
       <texPath>Things/Item/Resource/Neutroamine</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -63,6 +69,10 @@
     <thingCategories>
       <li>Manufactured</li>
     </thingCategories>
+    <descriptionHyperlinks>
+      <ThingDef>BEWH_PrimarchEmbryo</ThingDef>
+      <ThingDef>BEWH_PrimarchGrowthVat</ThingDef>
+    </descriptionHyperlinks>
     <ingestible>
       <foodType>Corpse</foodType>
       <showIngestFloatOption>false</showIngestFloatOption>

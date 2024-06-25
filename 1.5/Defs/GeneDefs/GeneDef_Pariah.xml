@@ -5,9 +5,11 @@
     <GeneDef ParentName="BEWH_PariahParent">
         <defName>BEWH_SigmaPariah</defName>
         <label>sigma pariah</label>
-        <description>Carriers of this gene have reduced psychic sensitivity. Additionally they reduces the psychic sensitivity and consciousness of others nearby whilst also increasing their pain.</description>
+        <description>Carriers of this gene have reduced psychic sensitivity. Additionally they slightly reduces the psychic sensitivity and consciousness of others nearby whilst also slightly increasing their pain.</description>
         <iconPath>UI/Genes/PariahSigma</iconPath>
         <displayOrderInCategory>301</displayOrderInCategory>
+        <biostatCpx>1</biostatCpx>
+        <biostatMet>-1</biostatMet>
         <statFactors>
             <PsychicSensitivity>0.55</PsychicSensitivity>
             <MeditationFocusGain>0.55</MeditationFocusGain>
@@ -36,6 +38,8 @@
         <description>Carriers of this gene have greatly reduced psychic sensitivity. Additionally they reduces the psychic sensitivity and consciousness of others nearby whilst also increasing their pain.</description>
         <iconPath>UI/Genes/PariahUpsilon</iconPath>
         <displayOrderInCategory>302</displayOrderInCategory>
+        <biostatCpx>3</biostatCpx>
+        <biostatMet>-1</biostatMet>
         <statFactors>
             <PsychicSensitivity>0.2</PsychicSensitivity>
             <MeditationFocusGain>0.2</MeditationFocusGain>
@@ -61,9 +65,11 @@
     <GeneDef ParentName="BEWH_PariahParent">
         <defName>BEWH_OmegaPariah</defName>
         <label>omega pariah</label>
-        <description>Carriers of this gene have no psychic sensitivity. Additionally they reduces the psychic sensitivity and consciousness of others nearby whilst also increasing their pain.</description>
+        <description>Carriers of this gene have no psychic sensitivity. Additionally they nullify the psychic sensitivity and consciousness of others nearby whilst also greatly increasing their pain.</description>
         <iconPath>UI/Genes/PariahOmega</iconPath>
         <displayOrderInCategory>303</displayOrderInCategory>
+        <biostatCpx>5</biostatCpx>
+        <biostatMet>-2</biostatMet>
         <statFactors>
             <PsychicSensitivity>0</PsychicSensitivity>
             <MeditationFocusGain>0</MeditationFocusGain>

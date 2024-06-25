@@ -8,7 +8,7 @@
       <WorkToBuild>2000</WorkToBuild>
       <Flammability>0.5</Flammability>
       <Beauty>0</Beauty>
-      <MaxHitPoints>100</MaxHitPoints>
+      <MaxHitPoints>150</MaxHitPoints>
       <Mass>10</Mass>
     </statBases>
     <defaultPlacingRot>South</defaultPlacingRot>
@@ -20,7 +20,7 @@
       <maxItemsInCell>1</maxItemsInCell>
     </building>
     <drawerType>MapMeshAndRealTime</drawerType>
-    <drawGUIOverlay>true</drawGUIOverlay>
+    <drawGUIOverlay>true</drawGUIOverlay> 
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>22</pathCost>
@@ -48,16 +48,17 @@
   <ThingDef ParentName="BEWH_GeneticStorage">
     <defName>BEWH_SangprimusPortum</defName>
     <label>sangprimus portum</label>
-    <description>...</description>
+    <description>The Sangprimus Portum is able to store Chapter and Primarch material. Whilst near a gestator it is able to duplicate the material within to complete the matrices of Firstborn, Primaris and Primarchs.</description>
     <graphicData>
-      <texPath>Things/Building/Geneseed/GeneseedGenetor</texPath>
+      <texPath>Things/Building/SangprimusPortum/SangprimusPortum</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <shadowData>
         <volume>(0.9,0.2,0.9)</volume>
       </shadowData>
-      <drawSize>(3, 1)</drawSize>
+      <drawSize>(4, 4)</drawSize>
     </graphicData>
     <size>(3, 1)</size>
+    <rotatable>true</rotatable>
     <researchPrerequisites>
       <li>BEWH_GeneseedCreation</li>
     </researchPrerequisites>
@@ -104,20 +105,21 @@
     </modExtensions>
   </ThingDef>
 
-  <!-- Genetic template storage -->
+  <!-- Genetic matrix storage -->
   <ThingDef ParentName="BEWH_GeneticStorage">
     <defName>BEWH_GeneticCryostaticStorage</defName>
     <label>genetic cryostatic storage</label>
-    <description>...</description>
+    <description>Able to holster 24 genetic matrices, keeping them safe and preventing deterioration.</description>
     <graphicData>
-      <texPath>Things/Building/Geneseed/GeneseedGenetor</texPath>
-      <graphicClass>Graphic_Multi</graphicClass>
+      <texPath>Things/Building/GeneticMatrixStorage/GeneticMatrixStorage</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
       <shadowData>
         <volume>(0.9,0.2,0.9)</volume>
       </shadowData>
-      <drawSize>(3, 3)</drawSize>
+      <drawSize>(2, 2)</drawSize>
     </graphicData>
-    <size>(3, 3)</size>
+    <defaultPlacingRot>North</defaultPlacingRot>
+    <size>(2, 2)</size>
     <researchPrerequisites>
       <li>BEWH_GeneseedPerfection</li>
     </researchPrerequisites>
@@ -142,6 +144,7 @@
           </categories>
         </filter>
       </defaultStorageSettings>
+      <maxItemsInCell>6</maxItemsInCell>
     </building>
     <comps>
       <li Class="CompProperties_Power">
@@ -155,15 +158,16 @@
   <ThingDef ParentName="BEWH_GeneticStorage">
     <defName>BEWH_GeneseedVialStorage</defName>
     <label>geneseed vial storage</label>
-    <description>...</description>
+    <description>Able to holster 4 geneseed vials, keeping them safe and preventing deterioration.</description>
     <graphicData>
-      <texPath>Things/Building/Geneseed/GeneseedGenetor</texPath>
-      <graphicClass>Graphic_Multi</graphicClass>
+      <texPath>Things/Building/GeneseedVialStorage/GeneseedVialStorage</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
       <shadowData>
         <volume>(0.9,0.2,0.9)</volume>
       </shadowData>
       <drawSize>(2, 2)</drawSize>
     </graphicData>
+    <defaultPlacingRot>North</defaultPlacingRot>
     <size>(2, 2)</size>
     <researchPrerequisites>
       <li>BEWH_GeneseedPurification</li>
@@ -199,40 +203,28 @@
   </ThingDef>
 
   <!-- Primarch embryo container -->
-  <ThingDef ParentName="BuildingBase">
+  <ThingDef ParentName="BEWH_GeneticStorage">
     <defName>BEWH_PrimarchEmbryoContainer</defName>
     <label>primarch embryo container</label>
-    <thingClass>Building_Storage</thingClass>
-    <description>...</description>
+    <thingClass Inherit="False">Genes40k.Building_PrimarchEmbryo</thingClass>
+    <inspectorTabs Inherit="False">
+      <li>ITab_Storage</li>
+      <li>Genes40k.ITab_ContentsGeneStorage</li>
+    </inspectorTabs>
+    <surfaceType Inherit="False">Item</surfaceType>
+    <description>Able to holster 1 primarc embryo, keeping it safe and preventing deterioration.</description>
     <graphicData>
-      <texPath>Things/Building/Geneseed/GeneseedGenetor</texPath>
+      <texPath>Things/Building/PrimarchEmbryoContainer/PrimarchEmbryoContainerBase</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <shadowData>
         <volume>(0.9,0.2,0.9)</volume>
       </shadowData>
       <drawSize>(1, 1)</drawSize>
     </graphicData>
-    <drawerType>MapMeshAndRealTime</drawerType>
-    <drawGUIOverlay>true</drawGUIOverlay>
-    <altitudeLayer>Building</altitudeLayer>
-    <passability>PassThroughOnly</passability>
-    <pathCost>22</pathCost>
-    <blockWind>false</blockWind>
-    <fillPercent>0.5</fillPercent>
-    <canOverlapZones>false</canOverlapZones>
-    <minifiedDef>MinifiedThing</minifiedDef>
-    <neverMultiSelect>false</neverMultiSelect>
-    <rotatable>true</rotatable>
-    <thingCategories>
-      <li>BuildingsMisc</li>
-    </thingCategories>
-    <statBases>
-      <WorkToBuild>2000</WorkToBuild>
-      <Flammability>0.5</Flammability>
-      <Beauty>0</Beauty>
-      <MaxHitPoints>50</MaxHitPoints>
-      <Mass>10</Mass>
-    </statBases>
+    <defaultPlacingRot>North</defaultPlacingRot>
+    <researchPrerequisites>
+      <li>BEWH_PrimarchProject</li>
+    </researchPrerequisites>
     <size>(1,1)</size>
     <costList>
       <Plasteel>20</Plasteel>
@@ -240,9 +232,6 @@
       <ComponentSpacer>2</ComponentSpacer>
     </costList>
     <building>
-      <destroySound>BuildingDestroyed_Metal_Small</destroySound>
-      <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
-      <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
       <fixedStorageSettings>
         <filter>
           <thingDefs>
@@ -251,7 +240,7 @@
         </filter>
       </fixedStorageSettings>
       <defaultStorageSettings>
-        <priority>Important</priority>
+        <priority>Critical</priority>
         <filter>
           <thingDefs>
             <li>BEWH_PrimarchEmbryo</li>
@@ -259,10 +248,6 @@
         </filter>
       </defaultStorageSettings>
     </building>
-    <surfaceType>Item</surfaceType>
-    <inspectorTabs>
-      <li>ITab_Storage</li>
-    </inspectorTabs>
     <placeWorkers Inherit="False" />
     <comps>
       <li Class="CompProperties_Power">
@@ -270,7 +255,6 @@
         <basePowerConsumption>300</basePowerConsumption>
       </li>
     </comps>
-    <defaultPlacingRot>South</defaultPlacingRot>
   </ThingDef>
 
 </Defs>

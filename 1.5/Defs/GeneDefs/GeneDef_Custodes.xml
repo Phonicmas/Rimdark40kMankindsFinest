@@ -23,7 +23,7 @@
         <defName>BEWH_CustodesStature</defName>
         <label>custodian stature</label>
         <description>Carriers of this gene tower over baseliners, standing as tall as the famed custodes.</description>
-        <iconPath>UI/Genes/CustodesStature</iconPath>
+        <iconPath>Placeholder</iconPath>
         <displayOrderInCategory>100</displayOrderInCategory>
 
         <biostatMet>-1</biostatMet>
@@ -31,18 +31,12 @@
         <bodyType>Hulk</bodyType>
 
         <statFactors>
+            <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0</CertaintyLossFactor>
             <LeatherAmount>1.45</LeatherAmount>
             <MeatAmount>1.45</MeatAmount>
             <Mass>1.45</Mass>
             <VEF_CosmeticBodySize_Multiplier>1.22</VEF_CosmeticBodySize_Multiplier>
         </statFactors>
-
-        <forcedTraits>
-            <li>
-                <def>BEWH_Genes</def>
-                <degree>3</degree>
-            </li>
-        </forcedTraits>
 
         <suppressedTraits>
             <li>
@@ -66,11 +60,7 @@
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
             </li>
-            <li Class="Genes40k.DefModExtension_Custodes" />
         </modExtensions>
-        <exclusionTags>
-            <li>SupremeSize</li>
-        </exclusionTags>
     </GeneDef>
 
     <!-- Custodes: Toughness -->
@@ -78,7 +68,7 @@
         <defName>BEWH_CustodesToughness</defName>
         <label>custodian toughness</label>
         <description>Carriers of this gene possess toughness equal to that of the famed custodes.</description>
-        <iconPath>UI/Genes/CustodesToughness</iconPath>
+        <iconPath>Placeholder</iconPath>
         <geneClass>Gene_Clotting</geneClass>
         <displayOrderInCategory>101</displayOrderInCategory>
         <biostatMet>-5</biostatMet>
@@ -116,11 +106,7 @@
         <modExtensions>
             <li Class="Core40k.DefModExtension_LostLungSurvival" />
             <li Class="Core40k.DefModExtension_LostHeartSurvival" />
-            <li Class="Genes40k.DefModExtension_Custodes" />
         </modExtensions>
-        <exclusionTags>
-            <li>SupremeToughness</li>
-        </exclusionTags>
     </GeneDef>
 
     <!-- Custodes: Resilience -->
@@ -128,7 +114,7 @@
         <defName>BEWH_CustodesResilience</defName>
         <label>custodian resilience</label>
         <description>Carriers of this gene have resilience equal to that of the famed custodes.</description>
-        <iconPath>UI/Genes/CustodesResilience</iconPath>
+        <iconPath>Placeholder</iconPath>
         <displayOrderInCategory>102</displayOrderInCategory>
         <biostatMet>-5</biostatMet>
 
@@ -194,11 +180,7 @@
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <diseaseProgressionFactor>0.1</diseaseProgressionFactor>
             </li>
-            <li Class="Genes40k.DefModExtension_Custodes" />
         </modExtensions>
-        <exclusionTags>
-            <li>SupremeResilience</li>
-        </exclusionTags>
     </GeneDef>
 
     <!-- Custodes: Strength -->
@@ -206,7 +188,7 @@
         <defName>BEWH_CustodesStrength</defName>
         <label>custodian strength</label>
         <description>Carriers of this gene possess strength equal to that of the famed custodes.</description>
-        <iconPath>UI/Genes/CustodesStrength</iconPath>
+        <iconPath>Placeholder</iconPath>
         <displayOrderInCategory>103</displayOrderInCategory>
         <biostatMet>-4</biostatMet>
 
@@ -230,11 +212,10 @@
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <noSkillLoss>Melee</noSkillLoss>
             </li>
-            <li Class="Genes40k.DefModExtension_Custodes" />
+            <li Class="Core40k.DefModExtension_GeneExtension">
+                <addedWorldCarryCapacity>80</addedWorldCarryCapacity>
+            </li>
         </modExtensions>
-        <exclusionTags>
-            <li>SupremeStrength</li>
-        </exclusionTags>
     </GeneDef>
 
     <!-- Custodes: Expertise -->
@@ -242,7 +223,7 @@
         <defName>BEWH_CustodesExpertise</defName>
         <label>custodian expertise</label>
         <description>Carriers of this gene possess an innate expertise for combat equal to that of the famed custodes.</description>
-        <iconPath>UI/Genes/CustodesExpertise</iconPath>
+        <iconPath>Placeholder</iconPath>
         <displayOrderInCategory>104</displayOrderInCategory>
         <biostatMet>-5</biostatMet>
 
@@ -281,11 +262,7 @@
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <noSkillLoss>Shooting</noSkillLoss>
             </li>
-            <li Class="Genes40k.DefModExtension_Custodes" />
         </modExtensions>
-        <exclusionTags>
-            <li>SupremeExpertise</li>
-        </exclusionTags>
     </GeneDef>
 
     <!-- Custodes: Anatomy -->
@@ -293,7 +270,7 @@
         <defName>BEWH_CustodesAnatomy</defName>
         <label>custodian anatomy</label>
         <description>Carriers of the gene anatomy resemble that of the famed custodes.</description>
-        <iconPath>UI/Genes/CustodesAnatomy</iconPath>
+        <iconPath>Placeholder</iconPath>
         <displayOrderInCategory>105</displayOrderInCategory>
         <biostatMet>25</biostatMet>
 
@@ -306,14 +283,12 @@
             <li>BEWH_CatalepseanNodeUnsleeping</li>
             <li>BEWH_OmophageaCorpseEat</li>
             <li>BEWH_Sus_anMembraneStasis</li>
-            <li>BEWH_BetchersSpit</li>
         </abilities>
 
         <descriptionHyperlinks>
             <AbilityDef>BEWH_CatalepseanNodeUnsleeping</AbilityDef>
             <AbilityDef>BEWH_OmophageaCorpseEat</AbilityDef>
             <AbilityDef>BEWH_Sus_anMembraneStasis</AbilityDef>
-            <AbilityDef>BEWH_BetchersSpit</AbilityDef>
         </descriptionHyperlinks>
 
         <statFactors>
@@ -379,33 +354,7 @@
                     </li>
                 </hediffsToBodyParts>
             </li>
-            <li Class="Genes40k.DefModExtension_Custodes" />
         </modExtensions>
-        <exclusionTags>
-            <li>SupremeAnatomy</li>
-            <li>SM1</li>
-            <li>SM2</li>
-            <li>SM3</li>
-            <li>SM4</li>
-            <li>SM5</li>
-            <li>SM6</li>
-            <li>SM7</li>
-            <li>SM8</li>
-            <li>SM9</li>
-            <li>SM10</li>
-            <li>SM11</li>
-            <li>SM12</li>
-            <li>SM13</li>
-            <li>SM14</li>
-            <li>SM15</li>
-            <li>SM16</li>
-            <li>SM17</li>
-            <li>SM18</li>
-            <li>SM19</li>
-            <li>PM1</li>
-            <li>PM2</li>
-            <li>PM3</li>
-        </exclusionTags>
     </GeneDef>
 
 </Defs>

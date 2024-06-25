@@ -330,7 +330,7 @@ namespace Genes40k
                 }
                 if (this.IsHashIntervalTick(GlowIntervalTicks))
                 {
-                    MoteMaker.MakeStaticMote(DrawPos, base.MapHeld, GlowMotePerRotation[base.Rotation]);
+                    MoteMaker.MakeStaticMote(DrawPos + OffsetFromRotation(base.Rotation), base.MapHeld, GlowMotePerRotation[base.Rotation]);
                 }
                 if (bubbleEffecter == null)
                 {
@@ -625,24 +625,53 @@ namespace Genes40k
             embryo.implantTarget = this;
         }
 
+        public Vector3 OffsetFromRotation(Rot4 rotation)
+        {
+            Vector3 vect;
+            if (rotation == Rot4.South)
+            {
+                vect = new Vector3(-0.5f, 0, 0);
+            }
+            else if (rotation == Rot4.North)
+            {
+                vect = new Vector3(0.5f, 0, 0);
+            }
+            else if (rotation == Rot4.West)
+            {
+                vect = new Vector3(0, 0, 0.5f);
+            }
+            else
+            {
+                vect = new Vector3(0, 0, -0.5f);
+            }
+
+            return vect;
+        }
+
         protected override void DrawAt(Vector3 drawLoc, bool flip = false)
         {
             base.DrawAt(drawLoc, flip);
             if (base.Working && selectedEmbryo != null && innerContainer.Contains(selectedEmbryo))
             {
                 Vector2 drawSize = Vector2.one * Mathf.Lerp(FetusMinSize, FetusMaxSize, EmbryoGestationPct);
+                Vector3 drawPos1 = DrawPos + PawnDrawOffset + Altitudes.AltIncVect * 0.25f;
+                drawPos1 += OffsetFromRotation(base.Rotation);
+
                 if (EmbryoGestationTicksRemaining > EmbryoLateStageGraphicTicksRemaining)
                 {
                     FetusEarlyStage.drawSize = drawSize;
-                    FetusEarlyStage.DrawFromDef(DrawPos + PawnDrawOffset + Altitudes.AltIncVect * 0.25f, base.Rotation, null);
+                    FetusEarlyStage.DrawFromDef(drawPos1, base.Rotation, null);
                 }
                 else
                 {
                     FetusLateStage.drawSize = drawSize;
-                    FetusLateStage.DrawFromDef(DrawPos + PawnDrawOffset + Altitudes.AltIncVect * 0.25f, base.Rotation, null);
+                    FetusLateStage.DrawFromDef(drawPos1, base.Rotation, null);
                 }
             }
-            TopGraphic.Draw(DrawPos + Altitudes.AltIncVect * 2f, base.Rotation, this);
+            TopGraphic.drawSize = new Vector2(1, 2);
+            Vector3 drawPos2 = DrawPos + Altitudes.AltIncVect * 2f;
+            drawPos2 += OffsetFromRotation(base.Rotation);
+            TopGraphic.Draw(drawPos2, base.Rotation, this);
         }
 
         private Color EmbryoColor()

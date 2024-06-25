@@ -1,16 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <!-- Primarch: Base -->
-    <GeneDef Name="BEWH_PrimarchBase" Abstract="True">
-        <displayCategory>BEWH_ImperialGenes</displayCategory>
-        <canGenerateInGeneSet>false</canGenerateInGeneSet>
-        <biostatCpx>12</biostatCpx>
-        <biostatArc>4</biostatArc>
-        <marketValueFactor>10</marketValueFactor>
-        <minAgeActive>3</minAgeActive>
-        <selectionWeight>0</selectionWeight>
+    <!-- Immortis Gland -->
+    <GeneDef ParentName="BEWH_PrimarchBase">
+        <defName>BEWH_ImmortisGland</defName>
+        <label>immortis gland</label>
+        <description>The Immortis gland, or the "God-Maker", is a small thumbnail-sized lobe, that is inserted directly into the brain's core. The implant secretes hormones that increases the body's growth functions while also intensifying its advanced systems, adjusting their shape and function to suit the primarch's advanced physiology. Two parts of this gland, i.e. the "dextrophic" lobe (right half) and "sintarius" (left half) both are present in the organ, that is provided by this gene. This gene has the unfortunate side effect of practically sterilizing the carrier.</description>
+        <iconPath>UI/Genes/PrimarchImmortisGland</iconPath>
+        <displayOrderInCategory>50</displayOrderInCategory>
+
+        <biostatCpx>18</biostatCpx>
+        <biostatArc>8</biostatArc>
+        <biostatMet>8</biostatMet>
+
+        <bodyType>Hulk</bodyType>
+
+        <sterilize>true</sterilize>
+
+        <suppressedTraits>
+            <li>
+                <def>Beauty</def>
+                <degree>-1</degree>
+            </li>
+            <li>
+                <def>Beauty</def>
+                <degree>-2</degree>
+            </li>
+            <li>
+                <def>Delicate</def>
+            </li>
+        </suppressedTraits>
+
+        <statFactors>
+            <LeatherAmount>2</LeatherAmount>
+            <MeatAmount>2</MeatAmount>
+            <Mass>2</Mass>
+            <VEF_CosmeticBodySize_Multiplier>1.3</VEF_CosmeticBodySize_Multiplier>
+            <StaggerDurationFactor>0</StaggerDurationFactor>
+            <Fertility>0</Fertility>
+        </statFactors>
+
+        <statOffsets>
+            <CarryingCapacity>500</CarryingCapacity>
+        </statOffsets>
+
         <modExtensions>
+            <li Class="Core40k.DefModExtension_GeneExtension">
+                <addedWorldCarryCapacity>500</addedWorldCarryCapacity>
+            </li>
             <li Class="Core40k.DefModExtension_SlaveabilityRecruitability">
                 <canBeEnslaved>false</canBeEnslaved>
                 <canBeRecruited>false</canBeRecruited>
@@ -18,134 +55,147 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Primarch: Stature -->
+    <!-- Tempestus Ocularium -->
     <GeneDef ParentName="BEWH_PrimarchBase">
-        <defName>BEWH_PrimarchStature</defName>
-        <label>primarch stature</label>
-        <description>Carriers of this gene tower over baseliners, standing as tall as the famed primarchs.</description>
-        <iconPath>UI/Genes/PrimarchStature</iconPath>
-        <displayOrderInCategory>50</displayOrderInCategory>
-
-        <biostatMet>-2</biostatMet>
-
-        <bodyType>Hulk</bodyType>
-
-        <statFactors>
-            <LeatherAmount>2</LeatherAmount>
-            <MeatAmount>2</MeatAmount>
-            <Mass>2</Mass>
-            <VEF_CosmeticBodySize_Multiplier>1.3</VEF_CosmeticBodySize_Multiplier>
-        </statFactors>
-
-        <forcedTraits>
-            <li>
-                <def>BEWH_Genes</def>
-                <degree>4</degree>
-            </li>
-        </forcedTraits>
-
-        <suppressedTraits>
-            <li>
-                <def>Industriousness</def>
-                <degree>-1</degree>
-            </li>
-            <li>
-                <def>Industriousness</def>
-                <degree>-2</degree>
-            </li>
-            <li>
-                <def>Beauty</def>
-                <degree>-1</degree>
-            </li>
-            <li>
-                <def>Beauty</def>
-                <degree>-2</degree>
-            </li>
-        </suppressedTraits>
-
-        <modExtensions>
-            <li Class="Genes40k.DefModExtension_Primarch" />
-        </modExtensions>
-        <exclusionTags>
-            <li>SupremeSize</li>
-        </exclusionTags>
-    </GeneDef>
-
-    <!-- Primarch: Toughness -->
-    <GeneDef ParentName="BEWH_PrimarchBase">
-        <defName>BEWH_PrimarchToughness</defName>
-        <label>primarch toughness</label>
-        <description>Carriers of this gene possess toughness equal to that of the famed primarchs.</description>
-        <iconPath>UI/Genes/PrimarchToughness</iconPath>
-        <geneClass>Gene_Clotting</geneClass>
+        <defName>BEWH_TempestusOcularium</defName>
+        <label>tempestus ocularium</label>
+        <description>The Tempestus Ocularium is a sophisticated enhancement to the carriers vision, as well as the source of a carriers dormant psychic abilities. Tempestus Ocularium is essentially an enchanced version of the Occulobe and Lyman's ear, a hearing and sight-enhancing implant, located at the base of the brain. Key diffierence between these organs consists in Tempestus Ocularium being sligthly larger and having a thin pearlescent membrane covering the entire organ. It allows the carrier to have perfect sight in the most tenebrous places, or resist the exposure to the brightest light and are able to hear even teh faintest sound. Apart from that, it acts as a natural psychic focal device, that increases the carriers psychic potential, making the carriers soul glow brightly in the Immaterium. As a side-effect, it also gives the carrier the ability to "read" people around them, giving them an edge in social situations and increasing their overall social impact. </description>
+        <iconPath>UI/Genes/PrimarchTempestusOcularium</iconPath>
         <displayOrderInCategory>51</displayOrderInCategory>
-        <biostatMet>-10</biostatMet>
 
-        <preventPermanentWounds>true</preventPermanentWounds>
-        <painFactor>0</painFactor>
+        <biostatCpx>8</biostatCpx>
+        <biostatArc>3</biostatArc>
 
         <statOffsets>
-            <ArmorRating_Blunt>1</ArmorRating_Blunt>
-            <ArmorRating_Sharp>1</ArmorRating_Sharp>
-            <ArmorRating_Heat>1</ArmorRating_Heat>
+            <PsychicSensitivity>3</PsychicSensitivity>
         </statOffsets>
-
         <statFactors>
-            <InjuryHealingFactor>16</InjuryHealingFactor>
-            <StaggerDurationFactor>0</StaggerDurationFactor>
-            <IncomingDamageFactor>0.2</IncomingDamageFactor>
+            <AimingDelayFactor>0.35</AimingDelayFactor>
+            <RangedCooldownFactor>0.35</RangedCooldownFactor>
         </statFactors>
 
-        <suppressedTraits>
+        <abilities>
+            <li>BEWH_WarpShield</li>
+        </abilities>
+
+        <aptitudes>
+            <Shooting>12</Shooting>
+            <Social>8</Social>
+        </aptitudes>
+
+        <capMods>
             <li>
-                <def>Delicate</def>
+                <capacity>Consciousness</capacity>
+                <postFactor>2.25</postFactor>
             </li>
             <li>
-                <def>Wimp</def>
+                <capacity>Sight</capacity>
+                <postFactor>4</postFactor>
             </li>
-        </suppressedTraits>
+            <li>
+                <capacity>Hearing</capacity>
+                <postFactor>3.5</postFactor>
+            </li>
+            <li>
+                <capacity>Talking</capacity>
+                <postFactor>2.45</postFactor>
+            </li>
+        </capMods>
 
         <customEffectDescriptions>
-            <li>Bleeding wounds close very quickly.</li>
-            <li>Can survive loss of lungs</li>
-            <li>Can survive loss of heart</li>
+            <li>No loss in shooting skill</li>
+            <li>Gives the ability to turn</li>
         </customEffectDescriptions>
 
         <modExtensions>
-            <li Class="Core40k.DefModExtension_LostLungSurvival" />
-            <li Class="Core40k.DefModExtension_LostHeartSurvival" />
-            <li Class="Genes40k.DefModExtension_Primarch" />
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <noSkillLoss>Shooting</noSkillLoss>
+                <hediffsToBodyParts>
+                    <li>
+                        <hediff>BEWH_WarpShield</hediff>
+                        <bodyparts>
+                            <li>Brain</li>
+                        </bodyparts>
+                    </li>
+                </hediffsToBodyParts>
+            </li>
         </modExtensions>
-        <exclusionTags>
-            <li>SupremeToughness</li>
-        </exclusionTags>
     </GeneDef>
 
-    <!-- Primarch: Resilience -->
+    <!-- Thalax Cortex -->
     <GeneDef ParentName="BEWH_PrimarchBase">
-        <defName>BEWH_PrimarchResilience</defName>
-        <label>primarch resilience</label>
-        <description>Carriers of this gene have resilience equal to that of the famed primarchs.</description>
-        <iconPath>UI/Genes/PrimarchResilience</iconPath>
+        <defName>BEWH_ThalaxCortex</defName>
+        <label>thalax cortex</label>
+        <description>This advanced neural network is basically a direct upgrade over Sus-an membrane, which merges with the recipient's cortex, providing them with an ability to go into the state of suspended animation. Thalax Cortex, however, comes with several additional benefits, most notable ones being - giving the recipient the absolute eidetic memory, i.e. the ability to preserve the entirety of details about an object for an indefinite amount of time. Second such benefit is that this enchancement of Sus-an membrane greatly increases the intellectual properties of the recipient.</description>
+        <iconPath>UI/Genes/PrimarchThalaxCortex</iconPath>
         <displayOrderInCategory>52</displayOrderInCategory>
-        <biostatMet>-10</biostatMet>
 
-        <foodPoisoningChanceFactor>0</foodPoisoningChanceFactor>
-        <immuneToToxGasExposure>true</immuneToToxGasExposure>
-        <overdoseChanceFactor>0</overdoseChanceFactor>
+        <biostatCpx>11</biostatCpx>
+        <biostatArc>4</biostatArc>
+
+        <ignoreDarkness>true</ignoreDarkness>
 
         <statOffsets>
-            <ToxicEnvironmentResistance>2</ToxicEnvironmentResistance>
-            <ToxicResistance>2</ToxicResistance>
             <MentalBreakThreshold>-0.75</MentalBreakThreshold>
-            <ComfyTemperatureMin>-100</ComfyTemperatureMin>
-            <ComfyTemperatureMax>100</ComfyTemperatureMax>
         </statOffsets>
+        <statFactors>
+            <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0</CertaintyLossFactor>
+            <GlobalLearningFactor>2.5</GlobalLearningFactor>
+        </statFactors>
+
+        <suppressedTraits>
+            <li>
+                <def>Nerves</def>
+                <degree>-1</degree>
+            </li>
+            <li>
+                <def>Nerves</def>
+                <degree>-2</degree>
+            </li>
+            <li>
+                <def>Kind</def>
+            </li>
+        </suppressedTraits>
+        <aptitudes>
+            <Intellectual>8</Intellectual>
+        </aptitudes>
+
+        <abilities>
+            <li>BEWH_OmophageaCorpseEat</li>
+            <li>BEWH_Sus_anMembraneStasis</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>BEWH_OmophageaCorpseEat</AbilityDef>
+            <AbilityDef>BEWH_Sus_anMembraneStasis</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <!-- Helixome Array -->
+    <GeneDef ParentName="BEWH_PrimarchBase">
+        <defName>BEWH_HelixomeArray</defName>
+        <label>helixome array</label>
+        <description>A complex array of nodules and vessels, doubling the lymphatic system and weaving around all the major organs and systems in helix-like fashion, hence the name. It greatly increases the healing potential, allowing the carrier to shrug off wounds capable of killing a space marine, let alone a mortal human. </description>
+        <iconPath>UI/Genes/PrimarchHelixomeArray</iconPath>
+        <displayOrderInCategory>53</displayOrderInCategory>
+        <geneClass>Gene_Clotting</geneClass>
+
+        <biostatCpx>10</biostatCpx>
+        <biostatArc>4</biostatArc>
+
+        <preventPermanentWounds>true</preventPermanentWounds>
 
         <statFactors>
-            <RestFallRateFactor>0.25</RestFallRateFactor>
             <ImmunityGainSpeed>10</ImmunityGainSpeed>
+            <InjuryHealingFactor>16</InjuryHealingFactor>
         </statFactors>
+
+        <biologicalAgeTickFactorFromAgeCurve>
+            <points>
+                <li>(0, 1.5)</li>
+                <li>(20, 1.5)</li>
+                <li>(21, 0)</li>
+            </points>
+        </biologicalAgeTickFactorFromAgeCurve>
 
         <makeImmuneTo>
             <li>Flu</li>
@@ -158,7 +208,6 @@
             <li>MuscleParasites</li>
             <li>LungRotExposure</li>
         </makeImmuneTo>
-
         <hediffGiversCannotGive>
             <li>Carcinoma</li>
             <li>HeartAttack</li>
@@ -173,92 +222,92 @@
             <li>DrugOverdose</li>
         </hediffGiversCannotGive>
 
+        <customEffectDescriptions>
+            <li>Bleeding wounds close very quickly.</li>
+            <li>Can survive loss of lungs</li>
+            <li>Can survive loss of heart</li>
+        </customEffectDescriptions>
+
         <suppressedTraits>
             <li>
                 <def>Immunity</def>
                 <degree>-1</degree>
             </li>
-            <li>
-                <def>Nerves</def>
-                <degree>-1</degree>
-            </li>
-            <li>
-                <def>Nerves</def>
-                <degree>-2</degree>
-            </li>
         </suppressedTraits>
-
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <diseaseProgressionFactor>0.05</diseaseProgressionFactor>
             </li>
-            <li Class="Genes40k.DefModExtension_Primarch" />
+            <li Class="Core40k.DefModExtension_LostLungSurvival" />
+            <li Class="Core40k.DefModExtension_LostHeartSurvival" />
         </modExtensions>
-        <exclusionTags>
-            <li>SupremeResilience</li>
-        </exclusionTags>
     </GeneDef>
 
-    <!-- Primarch: Strength -->
+    <!-- Vermillion Cache -->
     <GeneDef ParentName="BEWH_PrimarchBase">
-        <defName>BEWH_PrimarchStrength</defName>
-        <label>primarch strength</label>
-        <description>Carriers of this gene possess strength equal to that of the famed primarch.</description>
-        <iconPath>UI/Genes/PrimarchStrength</iconPath>
-        <displayOrderInCategory>53</displayOrderInCategory>
-        <biostatMet>-8</biostatMet>
+        <defName>BEWH_VermillionCache</defName>
+        <label>vermillion cache</label>
+        <description>The Vermillion Cache is an advanced circulatory enhancement that significantly boosts the carriers blood composition and it's oxygen-carrying capacity. This modification includes additional, specialized blood vessels that store and rapidly deploy hyper-oxygenated, nutrient-rich blood to critical areas during intense physical activity or injury. The enhanced blood allows the carrier to sustain themselves for prolonged periods of time without the need for sustenance or sleep. Additionally it allows the carrier to survive the vacuum of space without any protection, if needed.</description>
+        <iconPath>UI/Genes/PrimarchVermillionCache</iconPath>
+        <displayOrderInCategory>51</displayOrderInCategory>
 
-        <aptitudes>
-            <Melee>15</Melee>
-        </aptitudes>
+        <biostatCpx>6</biostatCpx>
+        <biostatArc>2</biostatArc>
 
-        <statOffsets>
-            <CarryingCapacity>500</CarryingCapacity>
-        </statOffsets>
+        <foodPoisoningChanceFactor>0</foodPoisoningChanceFactor>
+        <dontMindRawFood>true</dontMindRawFood>
+        <immuneToToxGasExposure>true</immuneToToxGasExposure>
+        <overdoseChanceFactor>0</overdoseChanceFactor>
 
         <statFactors>
-            <MeleeDamageFactor>8</MeleeDamageFactor>
+            <RawNutritionFactor>3.5</RawNutritionFactor>
+            <RestFallRateFactor>0.25</RestFallRateFactor>
         </statFactors>
+        <statOffsets>
+            <ToxicEnvironmentResistance>2</ToxicEnvironmentResistance>
+            <ToxicResistance>2</ToxicResistance>
+            <ComfyTemperatureMin>-100</ComfyTemperatureMin>
+            <ComfyTemperatureMax>100</ComfyTemperatureMax>
+        </statOffsets>
 
-        <customEffectDescriptions>
-            <li>No loss in melee skill</li>
-        </customEffectDescriptions>
+        <abilities>
+            <li>BEWH_CatalepseanNodeUnsleeping</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>BEWH_CatalepseanNodeUnsleeping</AbilityDef>
+        </descriptionHyperlinks>
 
-        <modExtensions>
-            <li Class="VanillaGenesExpanded.GeneExtension">
-                <noSkillLoss>Melee</noSkillLoss>
+        <capMods>
+            <li>
+                <capacity>BloodPumping</capacity>
+                <postFactor>3.75</postFactor>
             </li>
-            <li Class="Genes40k.DefModExtension_Primarch" />
-        </modExtensions>
-        <exclusionTags>
-            <li>SupremeStrength</li>
-        </exclusionTags>
+            <li>
+                <capacity>BloodFiltration</capacity>
+                <postFactor>3.5</postFactor>
+            </li>
+            <li>
+                <capacity>Breathing</capacity>
+                <postFactor>4.5</postFactor>
+            </li>
+            <li>
+                <capacity>Eating</capacity>
+                <postFactor>2</postFactor>
+            </li>
+        </capMods>
     </GeneDef>
 
-    <!-- Primarch: Expertise -->
+    <!-- Celerity Nexus -->
     <GeneDef ParentName="BEWH_PrimarchBase">
-        <defName>BEWH_PrimarchExpertise</defName>
-        <label>primarch expertise</label>
-        <description>Carriers of this gene possess an innate expertise for combat equal to that of the famed primarchs.</description>
-        <iconPath>UI/Genes/PrimarchExpertise</iconPath>
-        <displayOrderInCategory>54</displayOrderInCategory>
-        <biostatMet>-10</biostatMet>
+        <defName>BEWH_CelerityNexus</defName>
+        <label>celerity nexus</label>
+        <description>The Celerity Nexus is a complex network of bio-engineered neural nodes and enhanced myelin sheaths, which are interwoven with the carriers's existing nervous system, it runs parallel to the spinal cord, enhancing the central nervous system’s ability to transmit signals rapidly between the brain and the rest of the body. This significantly increasing their reaction time and movement speed, and allows the carrier to move with blinding speed, dodge attacks, close distances and strike enemies in the blink of an eye.</description>
+        <iconPath>UI/Genes/PrimarchCelerityNexus</iconPath>
+        <displayOrderInCategory>51</displayOrderInCategory>
 
-        <suppressedTraits>
-            <li>
-                <def>Kind</def>
-            </li>
-            <li>
-                <def>SpeedOffset</def>
-                <degree>-1</degree>
-            </li>
-        </suppressedTraits>
+        <biostatCpx>7</biostatCpx>
+        <biostatArc>3</biostatArc>
 
-        <aptitudes>
-            <Shooting>15</Shooting>
-            <Intellectual>15</Intellectual>
-            <Social>10</Social>
-        </aptitudes>
 
         <statOffsets>
             <MeleeDodgeChance>25</MeleeDodgeChance>
@@ -267,148 +316,69 @@
         <statFactors>
             <MeleeWeapon_CooldownMultiplier>0.35</MeleeWeapon_CooldownMultiplier>
             <MeleeHitChance>2.5</MeleeHitChance>
-            <AimingDelayFactor>0.35</AimingDelayFactor>
-            <RangedCooldownFactor>0.35</RangedCooldownFactor>
-            <GlobalLearningFactor>2.5</GlobalLearningFactor>
         </statFactors>
-
-        <customEffectDescriptions>
-            <li>No loss in shooting skill</li>
-        </customEffectDescriptions>
-
-        <modExtensions>
-            <li Class="VanillaGenesExpanded.GeneExtension">
-                <noSkillLoss>Shooting</noSkillLoss>
-            </li>
-            <li Class="Genes40k.DefModExtension_Primarch" />
-        </modExtensions>
-        <exclusionTags>
-            <li>SupremeExpertise</li>
-        </exclusionTags>
-    </GeneDef>
-
-    <!-- Primarch: Anatomy -->
-    <GeneDef ParentName="BEWH_PrimarchBase">
-        <defName>BEWH_PrimarchAnatomy</defName>
-        <label>primarch anatomy</label>
-        <description>Carriers of the gene anatomy resemble that of the famed primarchs.</description>
-        <iconPath>UI/Genes/PrimarchAnatomy</iconPath>
-        <displayOrderInCategory>55</displayOrderInCategory>
-        <biostatMet>50</biostatMet>
-
-        <dontMindRawFood>true</dontMindRawFood>
-
-        <sterilize>true</sterilize>
-
-        <abilities>
-            <li>BEWH_WarpShield</li>
-            <li>BEWH_CatalepseanNodeUnsleeping</li>
-            <li>BEWH_OmophageaCorpseEat</li>
-            <li>BEWH_Sus_anMembraneStasis</li>
-            <li>BEWH_BetchersSpit</li>
-        </abilities>
-
-        <descriptionHyperlinks>
-            <AbilityDef>BEWH_CatalepseanNodeUnsleeping</AbilityDef>
-            <AbilityDef>BEWH_OmophageaCorpseEat</AbilityDef>
-            <AbilityDef>BEWH_Sus_anMembraneStasis</AbilityDef>
-            <AbilityDef>BEWH_BetchersSpit</AbilityDef>
-        </descriptionHyperlinks>
-
-        <statOffsets>
-            <PsychicSensitivity>3</PsychicSensitivity>
-        </statOffsets>
-
-        <statFactors>
-            <Fertility>0</Fertility>
-            <RawNutritionFactor>4</RawNutritionFactor>
-        </statFactors>
-
-        <biologicalAgeTickFactorFromAgeCurve>
-            <points>
-                <li>(0, 1)</li>
-                <li>(20, 1)</li>
-                <li>(21, 0)</li>
-            </points>
-        </biologicalAgeTickFactorFromAgeCurve>
 
         <capMods>
             <li>
-                <capacity>Consciousness</capacity>
-                <postFactor>2.25</postFactor>
-            </li>
-            <li>
-                <capacity>BloodPumping</capacity>
-                <postFactor>4</postFactor>
-            </li>
-            <li>
                 <capacity>Manipulation</capacity>
-                <postFactor>4</postFactor>
-            </li>
-            <li>
-                <capacity>Breathing</capacity>
-                <postFactor>4</postFactor>
-            </li>
-            <li>
-                <capacity>Sight</capacity>
-                <postFactor>4</postFactor>
-            </li>
-            <li>
-                <capacity>Hearing</capacity>
-                <postFactor>4</postFactor>
-            </li>
-            <li>
-                <capacity>BloodFiltration</capacity>
-                <postFactor>4</postFactor>
-            </li>
-            <li>
-                <capacity>Eating</capacity>
-                <postFactor>3</postFactor>
-            </li>
-            <li>
-                <capacity>Talking</capacity>
-                <postFactor>3</postFactor>
+                <postFactor>4.5</postFactor>
             </li>
         </capMods>
+        <suppressedTraits>
+            <li>
+                <def>SpeedOffset</def>
+                <degree>-1</degree>
+            </li>
+            <li>
+                <def>Industriousness</def>
+                <degree>-1</degree>
+            </li>
+            <li>
+                <def>Industriousness</def>
+                <degree>-2</degree>
+            </li>
+        </suppressedTraits>
+    </GeneDef>
 
+    <!-- Hyperion Muscle Strands -->
+    <GeneDef ParentName="BEWH_PrimarchBase">
+        <defName>BEWH_HyperionMuscleStrands</defName>
+        <label>hyperion muscle strands</label>
+        <description>The Hyperion Muscle Strands gene reinforces the carriers tendons and ligaments with advanced bio-polymers generated from this implant. This enhancement significantly increases the strength and elasticity of these connective tissues, allowing them to support and transmit the enormous forces generated by the enhanced muscles. Due to its elasticity it allows tendons and ligaments to stretch and flex without tearing and abosrb blows, ultimate increasing the carriers survivability to physical attacks.</description>
+        <iconPath>UI/Genes/PrimarchHyperionMuscleStrand</iconPath>
+        <displayOrderInCategory>51</displayOrderInCategory>
+
+        <biostatCpx>9</biostatCpx>
+        <biostatArc>3</biostatArc>
+
+        <painFactor>0</painFactor>
+        <statOffsets>
+            <ArmorRating_Blunt>0.75</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+            <ArmorRating_Heat>0.45</ArmorRating_Heat>
+        </statOffsets>
+        <statFactors>
+            <IncomingDamageFactor>0.2</IncomingDamageFactor>
+            <MeleeDamageFactor>8</MeleeDamageFactor>
+        </statFactors>
+
+        <suppressedTraits>
+            <li>
+                <def>Wimp</def>
+            </li>
+        </suppressedTraits>
+        <aptitudes>
+            <Melee>12</Melee>
+        </aptitudes>
+        <customEffectDescriptions>
+            <li>No loss in melee skill</li>
+        </customEffectDescriptions>
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
-                <hediffsToBodyParts>
-                    <li>
-                        <hediff>BEWH_WarpShield</hediff>
-                        <bodyparts>
-                            <li>Brain</li>
-                        </bodyparts>
-                    </li>
-                </hediffsToBodyParts>
+                <noSkillLoss>Melee</noSkillLoss>
             </li>
-            <li Class="Genes40k.DefModExtension_Primarch" />
         </modExtensions>
-        <exclusionTags>
-            <li>SupremeAnatomy</li>
-            <li>SM1</li>
-            <li>SM2</li>
-            <li>SM3</li>
-            <li>SM4</li>
-            <li>SM5</li>
-            <li>SM6</li>
-            <li>SM7</li>
-            <li>SM8</li>
-            <li>SM9</li>
-            <li>SM10</li>
-            <li>SM11</li>
-            <li>SM12</li>
-            <li>SM13</li>
-            <li>SM14</li>
-            <li>SM15</li>
-            <li>SM16</li>
-            <li>SM17</li>
-            <li>SM18</li>
-            <li>SM19</li>
-            <li>PM1</li>
-            <li>PM2</li>
-            <li>PM3</li>
-        </exclusionTags>
     </GeneDef>
+
 
 </Defs>

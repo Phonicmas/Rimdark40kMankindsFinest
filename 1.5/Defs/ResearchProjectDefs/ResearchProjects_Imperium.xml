@@ -6,7 +6,7 @@
   <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
     <defName>BEWH_GeneseedCreation</defName>
     <label>Geneseed creation</label>
-    <description>Allows the creation of genetic augmentations, suitable for creation of Proto-Astartes.</description>
+    <description>Unlocks the creation of genetic augmentations, suitable for creation of Proto-Astartes.</description>
     <prerequisites>
       <li>FertilityProcedures</li>
       <li>Xenogermination</li>
@@ -34,7 +34,7 @@
   <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
     <defName>BEWH_CustodesCreation</defName>
     <label>Custodes creation</label>
-    <description>...</description>
+    <description>Unlocks the creation of custodes a long costly process</description>
     <prerequisites>
       <li>BEWH_GeneseedCreation</li>
     </prerequisites>
@@ -47,7 +47,7 @@
   <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
     <defName>BEWH_GeneseedPurification</defName>
     <label>Geneseed purification</label>
-    <description>...</description>
+    <description>Unlocks the creation of more stable astartes, by purifying and futher developing geneseed creation process.</description>
     <prerequisites>
       <li>BEWH_GeneseedCreation</li>
     </prerequisites>
@@ -60,7 +60,7 @@
   <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
     <defName>BEWH_GeneseedExtractionFirstborn</defName>
     <label>Firstborn geneseed extraction</label>
-    <description>Unlocks the surgery to be able to extract geneseeds from grown progenoid glands of space marines.</description>
+    <description>Unlocks the surgery to extract geneseeds from a fully grown progenoid gland of a space marine.</description>
     <prerequisites>
       <li>BEWH_GeneseedPurification</li>
     </prerequisites>
@@ -73,7 +73,7 @@
   <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
     <defName>BEWH_GeneseedPerfection</defName>
     <label>Geneseed perfection</label>
-    <description>...</description>
+    <description>Unlocks the creation of enhanced astartes, by futher improving and refining the geneseed creation process</description>
     <prerequisites>
       <li>BEWH_GeneseedPurification</li>
     </prerequisites>
@@ -86,7 +86,7 @@
   <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
     <defName>BEWH_GeneseedExtractionPrimaris</defName>
     <label>Primaris geneseed extracton</label>
-    <description>Unlocks the surgery to be able to extract geneseeds from grown progenoid glands of primaris marines.</description>
+    <description>Unlocks the surgery to extract geneseeds from a fully grown progenoid gland of a primaris marine.</description>
     <prerequisites>
       <li>BEWH_GeneseedPerfection</li>
     </prerequisites>
@@ -99,7 +99,7 @@
   <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
     <defName>BEWH_PrimarchProject</defName>
     <label>Primarch Project</label>
-    <description>...</description>
+    <description>Unlocks the creation of primarchs, a very long and costly process.</description>
     <prerequisites>
       <li>BEWH_CustodesCreation</li>
       <li>Archogenetics</li>

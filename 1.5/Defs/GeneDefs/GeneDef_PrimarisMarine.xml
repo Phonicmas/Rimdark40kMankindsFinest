@@ -31,6 +31,11 @@
         <exclusionTags>
             <li>PM1</li>
         </exclusionTags>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_GeneExtension">
+                <addedWorldCarryCapacity>80</addedWorldCarryCapacity>
+            </li>
+        </modExtensions>
     </GeneDef>
 
     <!-- Magnificat -->
@@ -53,6 +58,7 @@
             <MeatAmount>1.15</MeatAmount>
             <Mass>1.15</Mass>
             <VEF_CosmeticBodySize_Multiplier>1.05</VEF_CosmeticBodySize_Multiplier>
+            <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.05</CertaintyLossFactor>
         </statFactors>
         <minAgeActive>13</minAgeActive>
         <exclusionTags>
@@ -68,12 +74,6 @@
         <iconPath>UI/Genes/Primaris_BelisarianFurnaceIcon</iconPath>
         <displayOrderInCategory>23</displayOrderInCategory>
         <prerequisite>BEWH_Biscopea</prerequisite>
-        <forcedTraits>
-            <li>
-                <def>BEWH_Genes</def>
-                <degree>2</degree>
-            </li>
-        </forcedTraits>
         <abilities>
             <li>BEWH_BelisarianFurnaceBoost</li>
         </abilities>

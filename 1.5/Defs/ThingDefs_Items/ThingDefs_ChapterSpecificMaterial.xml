@@ -5,7 +5,7 @@
         <thingClass>ThingWithComps</thingClass>
         <statBases>
             <MaxHitPoints>200</MaxHitPoints>
-            <MarketValue>3500</MarketValue>
+            <MarketValue>4000</MarketValue>
             <Mass>0.5</Mass>
             <Flammability>0</Flammability>
         </statBases>
@@ -15,6 +15,9 @@
         <tradeTags>
             <li>BEWH_ChapterMaterial</li>
         </tradeTags>
+        <graphicData>
+            <drawSize>(1.5, 1.5)</drawSize>
+        </graphicData>
         <stackLimit>1</stackLimit>
         <category>Item</category>
         <drawerType>MapMeshOnly</drawerType>
@@ -36,10 +39,10 @@
     <!-- Space Wolves -->
     <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
         <defName>BEWH_ChapterMaterialVI</defName>
-        <label>chapter material VI - the space wolves</label>
-        <description>...</description>
+        <label>chapter material VI - Space Wolves</label>
+        <description>This containers holds the genetic mutation material of Chapter VI - Space Wolves</description>
         <graphicData>
-            <texPath>Things/Item/Resource/ArchiteCapsule</texPath>
+            <texPath>Things/Item/ChapterMaterial/ChapterMaterial_VI</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <modExtensions>
@@ -53,10 +56,10 @@
     <!-- Blood Angels -->
     <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
         <defName>BEWH_ChapterMaterialIX</defName>
-        <label>chapter material IX - the blood angels</label>
-        <description>...</description>
+        <label>chapter material IX - Blood Angels</label>
+        <description>This containers holds the genetic mutation material of Chapter IX - Blood Angels</description>
         <graphicData>
-            <texPath>Things/Item/Resource/ArchiteCapsule</texPath>
+            <texPath>Things/Item/ChapterMaterial/ChapterMaterial_IX</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <modExtensions>

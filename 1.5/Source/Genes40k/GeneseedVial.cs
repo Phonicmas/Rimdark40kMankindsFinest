@@ -60,6 +60,11 @@ namespace Genes40k
             Initialize();
         }
 
+        private bool IsAlreadySuperHuman(Pawn pawn)
+        {
+            return Genes40kUtils.IsSuperHuman(pawn);
+        }
+
         public void AddExtraGene(GeneDef gene)
         {
             geneSet.AddGene(gene);
@@ -162,6 +167,11 @@ namespace Genes40k
             {
                 yield break;
             }
+            if (IsAlreadySuperHuman(selPawn))
+            {
+                yield return new FloatMenuOption("BEWH.AlreadySuperHuman".Translate(selPawn.Named("PAWN")), null);
+                yield break;
+            }
             int num = GeneUtility.MetabolismAfterImplanting(selPawn, geneSet);
             if (num < GeneTuning.BiostatRange.TrueMin)
             {
@@ -185,6 +195,10 @@ namespace Genes40k
                 yield break;
             }
             if (geneSet == null)
+            {
+                yield break;
+            }
+            if (IsAlreadySuperHuman(targetPawn))
             {
                 yield break;
             }

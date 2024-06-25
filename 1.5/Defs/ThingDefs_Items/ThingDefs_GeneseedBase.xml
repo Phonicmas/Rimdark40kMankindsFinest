@@ -5,11 +5,12 @@
   <ThingDef Name="BEWH_GeneticBase" Abstract="True">
     <thingClass>ThingWithComps</thingClass>
     <statBases>
-      <MaxHitPoints>200</MaxHitPoints>
+      <MaxHitPoints>100</MaxHitPoints>
       <Mass>0.6</Mass>
       <Flammability>0</Flammability>
-      <DeteriorationRate>0</DeteriorationRate>
+      <DeteriorationRate>50</DeteriorationRate>
     </statBases>
+    <canDeteriorateUnspawned>false</canDeteriorateUnspawned>
     <thingCategories>
       <li>Manufactured</li>
     </thingCategories>
@@ -44,6 +45,7 @@
         <antiDeteriorateContainers>
           <li>BEWH_GeneticCryostaticStorage</li>
         </antiDeteriorateContainers>
+        <deteriorationRateOutside>50</deteriorationRateOutside>
       </li>
     </comps>
   </ThingDef>
@@ -58,6 +60,7 @@
         <antiDeteriorateContainers>
           <li>BEWH_GeneseedVialStorage</li>
         </antiDeteriorateContainers>
+        <deteriorationRateOutside>50</deteriorationRateOutside>
       </li>
     </comps>
   </ThingDef>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Proto-Ossmodula -->
+    <GeneDef ParentName="BEWH_ThunderWarriorParent">
+        <defName>BEWH_ProtoOssmodula</defName>
+        <label>proto-ossmodula</label>
+        <description>Proto-Ossmodula is the early prototype of an organ, that is capable of rapidly increasing one's bone mass, as well as the density of bone tissue itself. Implanted adjacent to hypophysis, Proto-Ossmodula injects growth hormones into recipient's body, thus making them significantly bulkier and more resistant to damage.</description>
+        <iconPath>UI/Genes/Firstborn_SecondaryHeartIcon</iconPath>
+        <displayOrderInCategory>-100</displayOrderInCategory>
+        <biostatCpx>3</biostatCpx>
+        <biostatMet>-1</biostatMet>
+        <statFactors>
+            <LeatherAmount>1.5</LeatherAmount>
+            <MeatAmount>1.5</MeatAmount>
+            <Mass>1.5</Mass>
+            <VEF_CosmeticBodySize_Multiplier>1.25</VEF_CosmeticBodySize_Multiplier>
+        </statFactors>
+        <statOffsets>
+            <ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+            <ArmorRating_Heat>0.1</ArmorRating_Heat>
+        </statOffsets>
+        <suppressedTraits>
+            <li>
+                <def>Kind</def>
+            </li>
+            <li>
+                <def>Delicate</def>
+            </li>
+        </suppressedTraits>
+        <minAgeActive>10</minAgeActive>
+    </GeneDef>
+
+    <!-- Musculeator -->
+    <GeneDef ParentName="BEWH_ThunderWarriorParent">
+        <defName>BEWH_Musculeator</defName>
+        <label>musculeator</label>
+        <description>A liver-like membraneous organ, placed behind the recipient's heart, is designed to provide the recipient's muscular structure with a significant growth boost. The improved muscles exceed the normal ones in terms of regeneration speed, their overal strength and density.</description>
+        <iconPath>UI/Genes/Firstborn_SecondaryHeartIcon</iconPath>
+        <displayOrderInCategory>-99</displayOrderInCategory>
+        <biostatCpx>3</biostatCpx>
+        <biostatMet>-2</biostatMet>
+        <capMods>
+            <li>
+                <capacity>Manipulation</capacity>
+                <postFactor>1.25</postFactor>
+            </li>
+        </capMods>
+        <statOffsets>
+            <CarryingCapacity>100</CarryingCapacity>
+        </statOffsets>
+        <statFactors>
+            <MeleeDamageFactor>1.75</MeleeDamageFactor>
+            <StaggerDurationFactor>0.4</StaggerDurationFactor>
+            <IncomingDamageFactor>0.85</IncomingDamageFactor>
+        </statFactors>
+        <aptitudes>
+            <Melee>7</Melee>
+        </aptitudes>
+        <minAgeActive>10</minAgeActive>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_GeneExtension">
+                <addedWorldCarryCapacity>100</addedWorldCarryCapacity>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Mentanifex -->
+    <GeneDef ParentName="BEWH_ThunderWarriorParent">
+        <defName>BEWH_Mentanifex</defName>
+        <label>mentanifex</label>
+        <description>A T-shaped organ, implanted right next to the brain stem. It stimulates the growth of nerve tissues, improving the recipient's reaction and situational awareness, but due to the very specific chemical compounds released into the bloodstream, as a bi-product of this organ, it also notably increases one's aggression. Yet, this implant proves it's necessity, simply due to the fact that increased reaction is required to fully utilize the Thunder Warrior's enchanced biology.</description>
+        <iconPath>UI/Genes/Firstborn_SecondaryHeartIcon</iconPath>
+        <displayOrderInCategory>-98</displayOrderInCategory>
+        <biostatCpx>4</biostatCpx>
+        <biostatMet>-3</biostatMet>
+        <painFactor>0.75</painFactor>
+        <capMods>
+            <li>
+                <capacity>Manipulation</capacity>
+                <postFactor>1.25</postFactor>
+            </li>
+            <li>
+                <capacity>Consciousness</capacity>
+                <postFactor>1.1</postFactor>
+            </li>
+        </capMods>
+        <aggroMentalBreakSelectionChanceFactor>999</aggroMentalBreakSelectionChanceFactor>
+        <statFactors>
+            <MoveSpeed>1.2</MoveSpeed>
+        </statFactors>
+        <suppressedTraits>
+            <li>
+                <def>Kind</def>
+            </li>
+            <li>
+                <def>SpeedOffset</def>
+                <degree>-1</degree>
+            </li>
+        </suppressedTraits>
+        <minAgeActive>10</minAgeActive>
+    </GeneDef>
+
+    <!-- Vigoranis -->
+    <GeneDef ParentName="BEWH_ThunderWarriorParent">
+        <defName>BEWH_Vigoranis</defName>
+        <label>vigoranis</label>
+        <description>The Vigoranis imbues the gene carrier with an extraordinary capacity for sustained combat and rapid recovery. This gene optimizes their cellular metabolism, allowing for quick healing of minor injuries and significantly reducing fatigue.</description>
+        <iconPath>UI/Genes/Firstborn_SecondaryHeartIcon</iconPath>
+        <displayOrderInCategory>-97</displayOrderInCategory>
+        <geneClass>Gene_Clotting</geneClass>
+        <biostatCpx>4</biostatCpx>
+        <biostatMet>-2</biostatMet>
+        <capMods>
+            <li>
+                <capacity>BloodPumping</capacity>
+                <offset>0.4</offset>
+            </li>
+            <li>
+                <capacity>BloodPumping</capacity>
+                <offset>0.4</offset>
+            </li>
+        </capMods>
+        <statFactors>
+            <InjuryHealingFactor>1.5</InjuryHealingFactor>
+            <RestFallRateFactor>0.8</RestFallRateFactor>
+            <ImmunityGainSpeed>0.9</ImmunityGainSpeed>
+        </statFactors>
+        <minAgeActive>10</minAgeActive>
+    </GeneDef>
+
+    <!-- Hyperanatomica -->
+    <GeneDef ParentName="BEWH_ThunderWarriorParent">
+        <defName>BEWH_Hyperanatomica</defName>
+        <label>hyperanatomica</label>
+        <description>The Hyperanatomica Framework bestows the gene carrier with an exceptionally respiratory efficiency, visual acuity, auditory sensitivity, and digestive capabilities. Additionally, it enables the carrier to endure extreme temperatures, both hot and cold, far beyond the limits of ordinary baseliners.</description>
+        <iconPath>UI/Genes/Firstborn_SecondaryHeartIcon</iconPath>
+        <displayOrderInCategory>-96</displayOrderInCategory>
+        <biostatCpx>3</biostatCpx>
+        <biostatMet>-2</biostatMet>
+        <capMods>
+            <li>
+                <capacity>Breathing</capacity>
+                <offset>0.4</offset>
+            </li>
+            <li>
+                <capacity>Sight</capacity>
+                <offset>0.35</offset>
+            </li>
+            <li>
+                <capacity>Hearing</capacity>
+                <offset>0.45</offset>
+            </li>
+            <li>
+                <capacity>Eating</capacity>
+                <postFactor>0.85</postFactor>
+            </li>
+        </capMods>
+        <statOffsets>
+            <ComfyTemperatureMin>-55</ComfyTemperatureMin>
+            <ComfyTemperatureMax>55</ComfyTemperatureMax>
+        </statOffsets>
+        <aptitudes>
+            <Shooting>5</Shooting>
+            <Social>-2</Social>
+        </aptitudes>
+        <minAgeActive>10</minAgeActive>
+    </GeneDef>
+
+    <!-- Furybound -->
+    <GeneDef ParentName="BEWH_ThunderWarriorParent">
+        <defName>BEWH_Furybound</defName>
+        <label>furybound</label>
+        <description>The Furybound gene introduces a volatile element to the carriers psyche, making them prone to bouts of extreme aggression and berserk behavior. This gene increases their susceptibility to mental instability, causing them to occasionally lose control in the heat of battle. While this can lead to devastatingly effective combat prowess, it also poses a risk of unpredictability and loss of strategic coherence.</description>
+        <iconPath>UI/Genes/Firstborn_SecondaryHeartIcon</iconPath>
+        <displayOrderInCategory>-95</displayOrderInCategory>
+        <biostatCpx>3</biostatCpx>
+        <biostatMet>7</biostatMet>
+        <statFactors>
+            <PsychicSensitivity>0</PsychicSensitivity>
+        </statFactors>
+        <socialFightChanceFactor>2.5</socialFightChanceFactor>
+        <mentalBreakMtbDays>4</mentalBreakMtbDays>
+        <mentalBreakDef>Berserk</mentalBreakDef>
+        <customEffectDescriptions>
+            <li>Prone to go beserk randomly.</li>
+        </customEffectDescriptions>
+        <aptitudes>
+            <Intellectual>-2</Intellectual>
+        </aptitudes>
+        <minAgeActive>10</minAgeActive>
+    </GeneDef>
+
+</Defs>

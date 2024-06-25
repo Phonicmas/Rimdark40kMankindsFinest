@@ -7,20 +7,15 @@ namespace Genes40k
     [DefOf]
     public static class Genes40kDefOf
     {
-        public static GeneDef BEWH_CustodesStature;
-        public static GeneDef BEWH_CustodesExpertise;
-        public static GeneDef BEWH_CustodesStrength;
-        public static GeneDef BEWH_CustodesResilience;
-        public static GeneDef BEWH_CustodesToughness;
-        public static GeneDef BEWH_CustodesAnatomy;
+        //Thunder warrior genes
+        public static GeneDef BEWH_ProtoOssmodula;
+        public static GeneDef BEWH_Musculeator;
+        public static GeneDef BEWH_Mentanifex;
+        public static GeneDef BEWH_Vigoranis;
+        public static GeneDef BEWH_Hyperanatomica;
+        public static GeneDef BEWH_Furybound;
 
-        public static GeneDef BEWH_PrimarchStature;
-        public static GeneDef BEWH_PrimarchExpertise;
-        public static GeneDef BEWH_PrimarchStrength;
-        public static GeneDef BEWH_PrimarchResilience;
-        public static GeneDef BEWH_PrimarchToughness;
-        public static GeneDef BEWH_PrimarchAnatomy;
-
+        //Space marine genes
         public static GeneDef BEWH_SecondaryHeart;
         public static GeneDef BEWH_Ossmodula;
         public static GeneDef BEWH_Biscopea;
@@ -41,19 +36,40 @@ namespace Genes40k
         public static GeneDef BEWH_ProgenoidGlands;
         public static GeneDef BEWH_BlackCarapace;
 
+        //Primaris genes
         public static GeneDef BEWH_SinewCoil;
         public static GeneDef BEWH_Magnificat;
         public static GeneDef BEWH_BelisarianFurnace;
 
+        //Custodes genes
+        public static GeneDef BEWH_CustodesStature;
+        public static GeneDef BEWH_CustodesExpertise;
+        public static GeneDef BEWH_CustodesStrength;
+        public static GeneDef BEWH_CustodesResilience;
+        public static GeneDef BEWH_CustodesToughness;
+        public static GeneDef BEWH_CustodesAnatomy;
+
+        //Priamrch genes
+        public static GeneDef BEWH_ImmortisGland;
+        public static GeneDef BEWH_TempestusOcularium;
+        public static GeneDef BEWH_ThalaxCortex;
+        public static GeneDef BEWH_HelixomeArray;
+        public static GeneDef BEWH_VermillionCache;
+        public static GeneDef BEWH_CelerityNexus;
+        public static GeneDef BEWH_HyperionMuscleStrands;
+
+        //Psyker genes
         public static GeneDef BEWH_IotaPsyker;
         public static GeneDef BEWH_Psyker;
         public static GeneDef BEWH_DeltaPsyker;
         public static GeneDef BEWH_BetaPsyker;
-
+        
+        //Pariah genes
         public static GeneDef BEWH_SigmaPariah;
         public static GeneDef BEWH_UpsilonPariah;
         public static GeneDef BEWH_OmegaPariah;
 
+        //Living saint genes
         public static GeneDef BEWH_LivingSaintBeingOfFaith;
         public static GeneDef BEWH_LivingSaintHolyRadiance;
 
@@ -65,8 +81,6 @@ namespace Genes40k
         public static HediffDef BEWH_SecondGeneseedHarvest;
         public static HediffDef BEWH_PsychicComa;
         public static HediffDef BEWH_PsychicConnectionSevered;
-
-        public static TraitDef BEWH_Genes;
 
         public static LetterDef BEWH_NaturalBornX;
 

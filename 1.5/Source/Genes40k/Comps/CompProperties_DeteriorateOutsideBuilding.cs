@@ -7,6 +7,8 @@ namespace Genes40k
     {
         public List<ThingDef> antiDeteriorateContainers;
 
+        public int deteriorationRateOutside;
+
         public CompProperties_DeteriorateOutsideBuilding()
         {
             compClass = typeof(Comp_DeteriorateOutsideBuilding);
