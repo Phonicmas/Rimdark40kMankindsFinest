@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- ===== IMPERIUM ===== -->
+    <!-- Power Armor Imperium -->
+    <ThingDef ParentName="BEWH_PowerArmorBase">
+        <defName>BEWH_ImperiumPowerArmor</defName>
+        <label>Imperium Power Armor</label>
+        <description>Power armor of Imperium Space Marines</description>
+        <recipeMaker>
+            <researchPrerequisite>BEWH_PowerArmor</researchPrerequisite>
+        </recipeMaker>
+        <graphicData>
+            <texPath>Things/Armor/Imperium/PowerArmor/ImperiumPowerArmor</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+        </graphicData>
+        <apparel>
+            <wornGraphicPath>Things/Armor/Imperium/PowerArmor/ImperiumPowerArmor</wornGraphicPath>
+            <tags>
+                <li>ImperiumPowerArmor</li>
+            </tags>
+        </apparel>
+    </ThingDef>
+
+    <!-- Power Armor Helmet Imperium -->
+    <ThingDef ParentName="BEWH_PowerArmorHelmetBase">
+        <defName>BEWH_ImperiumPowerArmorHelmet</defName>
+        <label>Imperium Power Helmet</label>
+        <description>Standard issue helmet of Imperium Space Marines</description>
+        <recipeMaker>
+            <researchPrerequisite>BEWH_PowerArmor</researchPrerequisite>
+        </recipeMaker>
+        <graphicData>
+            <texPath>Things/Headgear/Imperium/PowerArmor/ImperiumHelmet</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+        </graphicData>
+        <apparel>
+            <wornGraphicPath>Things/Headgear/Imperium/PowerArmor/ImperiumHelmet</wornGraphicPath>
+            <tags>
+                <li>ImperiumPowerArmorHelmet</li>
+            </tags>
+        </apparel>
+    </ThingDef>
+
+    <!-- Power Armor Primaris Helmet Imperium -->
+    <ThingDef ParentName="BEWH_PowerArmorHelmetBase">
+        <defName>BEWH_ImperiumPrimarisPowerArmorHelmet</defName>
+        <label>Imperium Primaris Power Helmet</label>
+        <description>Standard issue helmet of Imperium Primaris Space Marines</description>
+        <recipeMaker>
+            <researchPrerequisite>BEWH_PowerArmor</researchPrerequisite>
+        </recipeMaker>
+        <graphicData>
+            <texPath>Things/Headgear/Imperium/PowerArmorPrimaris/ImperiumHelmetAlt</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+        </graphicData>
+        <apparel>
+            <wornGraphicPath>Things/Headgear/Imperium/PowerArmorPrimaris/ImperiumHelmetAlt</wornGraphicPath>
+            <tags>
+                <li>ImperiumPowerArmorHelmet</li>
+                <li>EVA</li>
+            </tags>
+        </apparel>
+    </ThingDef>
+
+
+</Defs>

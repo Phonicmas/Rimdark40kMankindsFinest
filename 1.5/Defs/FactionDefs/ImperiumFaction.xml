@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <FactionDef ParentName="FactionBase">
+        <defName>BEWH_ImperiumFaction</defName>
+        <label>Imperium</label>
+        <description>A company of the emperors finest warriors, the Adeptus Astartes, charged with purging heresy from this backwater rimworld.</description>
+        <pawnSingular>Human</pawnSingular>
+        <pawnsPlural>Humen</pawnsPlural>
+        <fixedLeaderKinds>
+            <li>BEWH_LordCommander</li>
+        </fixedLeaderKinds>
+        <fixedName>Imperium of Mankind</fixedName>
+        <settlementGenerationWeight>1</settlementGenerationWeight>
+        <requiredCountAtGameStart>1</requiredCountAtGameStart>
+        <allowedArrivalTemperatureRange>-100~200</allowedArrivalTemperatureRange>
+        <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+        <configurationListOrderPriority>90</configurationListOrderPriority>
+        <canSiege>true</canSiege>
+        <canStageAttacks>true</canStageAttacks>
+        <permanentEnemy>false</permanentEnemy>
+        <leaderTitle>Lord Commander</leaderTitle>
+        <techLevel>Ultra</techLevel>
+        <rescueesCanJoin>false</rescueesCanJoin>
+        <factionNameMaker>BEWH_FactionNameMaker</factionNameMaker>
+        <settlementNameMaker>BEWH_SettlementNameMaker</settlementNameMaker>
+        <factionIconPath>UI/Icons/Imperium/ImperiumIcon</factionIconPath>
+        <settlementTexturePath>UI/Icons/Imperium/ImperiumIcon</settlementTexturePath>
+        <xenotypeSet Inherit="False">
+            <xenotypeChances>
+                <BEWH_SpaceMarine>0.40</BEWH_SpaceMarine>
+                <BEWH_PrimarisSpaceMarine>0.10</BEWH_PrimarisSpaceMarine>
+                <BEWH_Custodes>0.02</BEWH_Custodes>
+            </xenotypeChances>
+        </xenotypeSet>
+        <backstoryFilters>
+            <li>
+                <categoriesAdulthood>
+                    <li>ImperialFighter</li>
+                    <li>Offworld</li>
+                </categoriesAdulthood>
+            </li>
+        </backstoryFilters>
+        <earliestRaidDays>45</earliestRaidDays>
+        <autoFlee>false</autoFlee>
+        <raidCommonalityFromPointsCurve>
+            <points>
+                <li>(0, 1)</li>
+            </points>
+        </raidCommonalityFromPointsCurve>
+        <maxPawnCostPerTotalPointsCurve>
+            <points>
+                <li>(0,0)</li>
+                <li>(400, 60)</li>
+                <li>(1000, 90)</li>
+                <li>(2000, 200)</li>
+                <li>(5000, 600)</li>
+                <li>(10000, 2000)</li>
+                <li>(100000, 5000)</li>
+            </points>
+        </maxPawnCostPerTotalPointsCurve>
+        <pawnGroupMakers>
+            <li>
+                <!-- Normal fights -->
+                <kindDef>Combat</kindDef>
+                <commonality>100</commonality>
+                <options>
+                    <BEWH_ImperiumGuardman>20</BEWH_ImperiumGuardman>
+                    <BEWH_SpaceMarine>10</BEWH_SpaceMarine>
+                    <BEWH_SpaceMarinePsyker>2</BEWH_SpaceMarinePsyker>
+                </options>
+            </li>
+            <li>
+                <!-- Primaris fights -->
+                <kindDef>Combat</kindDef>
+                <commonality>20</commonality>
+                <options>
+                    <BEWH_PrimarisSpaceMarine>10</BEWH_PrimarisSpaceMarine>
+                    <BEWH_SpaceMarinePsyker>2</BEWH_SpaceMarinePsyker>
+                </options>
+            </li>
+            <li>
+                <!-- Base defense -->
+                <kindDef>Settlement</kindDef>
+                <options>
+                    <BEWH_ImperiumGuardman>20</BEWH_ImperiumGuardman>
+                    <BEWH_SpaceMarine>14</BEWH_SpaceMarine>
+                    <BEWH_SpaceMarinePsyker>4</BEWH_SpaceMarinePsyker>
+                    <BEWH_PrimarisSpaceMarine>4</BEWH_PrimarisSpaceMarine>
+                    <BEWH_Custodes>10</BEWH_Custodes>
+                </options>
+            </li>
+            <li>
+                <kindDef>Trader</kindDef>
+                <traders>
+                    <BEWH_ImperiumTrader>1</BEWH_ImperiumTrader>
+                </traders>
+                <carriers>
+                    <Muffalo>10</Muffalo>
+                </carriers>
+                <guards>
+                    <BEWH_ImperiumGuardman>20</BEWH_ImperiumGuardman>
+                    <BEWH_SpaceMarine>2</BEWH_SpaceMarine>
+                </guards>
+            </li>
+            <li>
+                <kindDef>Peaceful</kindDef>
+                <options>
+                    <BEWH_ImperiumGuardman>16</BEWH_ImperiumGuardman>
+                    <BEWH_SpaceMarine>4</BEWH_SpaceMarine>
+                </options>
+            </li>
+        </pawnGroupMakers>
+        <!-- Traders -->
+        <caravanTraderKinds>
+            <li>BEWH_ImperiumTraderCaravan</li>
+        </caravanTraderKinds>
+        <visitorTraderKinds>
+            <li>BEWH_ImperiumTraderCaravan</li>
+        </visitorTraderKinds>
+        <baseTraderKinds>
+            <li>BEWH_ImperiumTraderBase</li>
+        </baseTraderKinds>
+        <disallowedRaidAgeRestrictions>
+            <li>Children</li>
+        </disallowedRaidAgeRestrictions>
+    </FactionDef>
+
+
+    <!-- Name of Imperium Faction -->
+    <RulePackDef>
+        <defName>BEWH_FactionNameMaker</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_name->The Imperium</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <!-- Name of Imperium settlements -->
+    <RulePackDef>
+        <defName>BEWH_SettlementNameMaker</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_name->Outpost [Letters]</li>
+            </rulesStrings>
+            <rulesRaw>
+                <li Class="Rule_File">
+                    <keyword>Letters</keyword>
+                    <path>NameBanks/BEWH_SettlementNames</path>
+                </li>
+            </rulesRaw>
+        </rulePack>
+    </RulePackDef>
+
+</Defs>

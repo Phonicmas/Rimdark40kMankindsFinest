@@ -109,4 +109,21 @@
     <researchViewY>0</researchViewY>
   </ResearchProjectDef>
 
+
+
+  <!-- Imperium Power Armor-->
+  <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
+    <defName>BEWH_PowerArmor</defName>
+    <label>Imperium Power Armor</label>
+    <description>Unlocks recipes for creating Imperium power armor.</description>
+    <researchViewX>0</researchViewX>
+    <researchViewY>2</researchViewY>
+    <baseCost>12000</baseCost>
+    <prerequisites>
+      <li>AdvancedFabrication</li>
+      <li>PoweredArmor</li>
+      <li MayRequire="Ludeon.RimWorld.Royalty">CataphractArmor</li>
+    </prerequisites>
+  </ResearchProjectDef>
+
 </Defs>

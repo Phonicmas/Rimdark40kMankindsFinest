@@ -66,6 +66,7 @@
     <Compile Include="Building_GeneStorage.cs" />
     <Compile Include="DefModExtensions\DefModExtension_ChapterGene.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneFromMaterial.cs" />
+    <Compile Include="DefModExtensions\DefModExtension_KeepPrerequisitePermit.cs" />
     <Compile Include="DefModExtensions\DefModExtension_SangprimusPortum.cs" />
     <Compile Include="DefModExtensions\DefModExtension_PhaseDevelopment.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneseedVial.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="DefModExtensions\DefModExtension_GeneGestator.cs" />
     <Compile Include="Comps\GameComponent_LivingSaint.cs" />
     <Compile Include="Gene_LivingSaint.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_KeepPrerequisitePermit.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_LivingSaintResurrection.cs" />
     <Compile Include="Building_PrimarchEmbryo.cs" />
     <Compile Include="PrimarchEmbryo.cs" />
@@ -94,8 +96,6 @@
     <Compile Include="Comps\CompProperties_AbilityWarpShield.cs" />
     <Compile Include="Comps\CompProperties_GivesAbility.cs" />
     <Compile Include="DefModExtensions\DefModExtension_WarpShield.cs" />
-    <Content Include="DefModExtensions\DefModExtension_Primarch.cs.txt" />
-    <Content Include="DefModExtensions\DefModExtension_Custodes.cs.txt" />
     <Compile Include="DefModExtensions\DefModExtension_Psyker.cs" />
     <Compile Include="Comps\CompGivesAbility.cs" />
     <Compile Include="Ability_UpdateGizmo.cs" />
