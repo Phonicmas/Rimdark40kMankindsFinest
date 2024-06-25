@@ -35,7 +35,7 @@ namespace Genes40k
 
         public static float ChangeValueIfNeeded(float val, Thing gear, StatDef stat)
         {
-            if (stat == StatDefOf.MoveSpeed && val < 0f && gear.ParentHolder is Pawn_ApparelTracker pawn_ApparelTracker && pawn_ApparelTracker.pawn.genes != null && (pawn_ApparelTracker.pawn.genes.HasActiveGene(Genes40kDefOf.BEWH_BlackCarapace) || pawn_ApparelTracker.pawn.genes.HasActiveGene(Genes40kDefOf.BEWH_ImmortisGland) || pawn_ApparelTracker.pawn.genes.HasActiveGene(Genes40kDefOf.BEWH_CustodesAnatomy)))
+            if (stat == StatDefOf.MoveSpeed && val < 0f && gear.ParentHolder is Pawn_ApparelTracker pawn_ApparelTracker && pawn_ApparelTracker.pawn.genes != null && (pawn_ApparelTracker.pawn.genes.HasActiveGene(Genes40kDefOf.BEWH_BlackCarapace) || pawn_ApparelTracker.pawn.genes.HasActiveGene(Genes40kDefOf.BEWH_ImmortisGland) || pawn_ApparelTracker.pawn.genes.HasActiveGene(Genes40kDefOf.BEWH_AtlasMorphogen)))
             {
                 return 0f;
             }

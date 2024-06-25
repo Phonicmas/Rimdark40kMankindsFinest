@@ -50,6 +50,11 @@
         <biostatCpx>3</biostatCpx>
     </GeneDef>
 
+    <!-- Custodes: Base -->
+    <GeneDef ParentName="BEWH_GenesOverallParent" Name="BEWH_CustodesBase" Abstract="True">
+        <marketValueFactor>5</marketValueFactor>
+        <minAgeActive>8</minAgeActive>
+    </GeneDef>
 
     <!-- Primarch: Base -->
     <GeneDef ParentName="BEWH_GenesOverallParent" Name="BEWH_PrimarchBase" Abstract="True">

@@ -42,12 +42,12 @@ namespace Genes40k
         public static GeneDef BEWH_BelisarianFurnace;
 
         //Custodes genes
-        public static GeneDef BEWH_CustodesStature;
-        public static GeneDef BEWH_CustodesExpertise;
-        public static GeneDef BEWH_CustodesStrength;
-        public static GeneDef BEWH_CustodesResilience;
-        public static GeneDef BEWH_CustodesToughness;
-        public static GeneDef BEWH_CustodesAnatomy;
+        public static GeneDef BEWH_ImmunisLeucocyte;
+        public static GeneDef BEWH_AthanaticVitae;
+        public static GeneDef BEWH_FulguriteNervePlexus;
+        public static GeneDef BEWH_AtlasMorphogen;
+        public static GeneDef BEWH_MnemosyneMindshield;
+        public static GeneDef BEWH_FulgurVitaliumstrand;
 
         //Priamrch genes
         public static GeneDef BEWH_ImmortisGland;

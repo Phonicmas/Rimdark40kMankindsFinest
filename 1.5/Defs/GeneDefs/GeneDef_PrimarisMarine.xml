@@ -48,6 +48,7 @@
         <prerequisite>BEWH_Biscopea</prerequisite>
         <statOffsets>
             <MeleeDodgeChance>10</MeleeDodgeChance>
+            <VEF_CosmeticBodySize_Multiplier>0.1</VEF_CosmeticBodySize_Multiplier>
         </statOffsets>
         <statFactors>
             <AimingDelayFactor>0.85</AimingDelayFactor>
@@ -57,7 +58,6 @@
             <LeatherAmount>1.15</LeatherAmount>
             <MeatAmount>1.15</MeatAmount>
             <Mass>1.15</Mass>
-            <VEF_CosmeticBodySize_Multiplier>1.05</VEF_CosmeticBodySize_Multiplier>
             <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.05</CertaintyLossFactor>
         </statFactors>
         <minAgeActive>13</minAgeActive>

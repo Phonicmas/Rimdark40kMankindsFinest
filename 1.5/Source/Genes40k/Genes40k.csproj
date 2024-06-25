@@ -40,7 +40,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Core40k">
-      <HintPath>..\..\..\..\Warhammer40kFramework\1.5\Assemblies\Core40k.dll</HintPath>
+      <HintPath>..\..\..\..\Rimdark40kFramework\1.5\Assemblies\Core40k.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />

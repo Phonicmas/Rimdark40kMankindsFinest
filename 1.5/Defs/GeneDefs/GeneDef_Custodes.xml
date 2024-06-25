@@ -1,91 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <!-- Custodes: Base -->
-    <GeneDef Name="BEWH_CustodesBase" Abstract="True">
-        <displayCategory>BEWH_ImperialGenes</displayCategory>
-        <canGenerateInGeneSet>false</canGenerateInGeneSet>
-        <biostatCpx>8</biostatCpx>
-        <biostatArc>2</biostatArc>
-        <marketValueFactor>5</marketValueFactor>
-        <minAgeActive>3</minAgeActive>
-        <selectionWeight>0</selectionWeight>
-        <modExtensions>
-            <li Class="Core40k.DefModExtension_SlaveabilityRecruitability">
-                <canBeEnslaved>false</canBeEnslaved>
-                <canBeRecruited>false</canBeRecruited>
-            </li>
-        </modExtensions>
-    </GeneDef>
-
-    <!-- Custodes: Stature -->
+    <!-- Atlas Morphogen -->
     <GeneDef ParentName="BEWH_CustodesBase">
-        <defName>BEWH_CustodesStature</defName>
-        <label>custodian stature</label>
-        <description>Carriers of this gene tower over baseliners, standing as tall as the famed custodes.</description>
+        <defName>BEWH_AtlasMorphogen</defName>
+        <label>atlas morphogen</label>
+        <description>The Invictus Morphogen gene fundamentally reprograms the cellular architecture of carrier, enhancing both their physical and structural attributes to superhuman levels. This gene promotes accelerated growth and fortification of muscle tissues, bone density, and connective tissues, resulting in a nearly indestructible physique. Carrier of this gene exhibit remarkable strength, and an extraordinary capacity for sustained physical exertion, embodying the epitome of invincibility and resilience.</description>
         <iconPath>Placeholder</iconPath>
         <displayOrderInCategory>100</displayOrderInCategory>
 
-        <biostatMet>-1</biostatMet>
+        <biostatCpx>8</biostatCpx>
+        <biostatArc>3</biostatArc>
 
-        <bodyType>Hulk</bodyType>
+        <overdoseChanceFactor>0</overdoseChanceFactor>
+        <sterilize>true</sterilize>
 
+        <statOffsets>
+            <CarryingCapacity>300</CarryingCapacity>
+            <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.5</ArmorRating_Sharp>
+            <ArmorRating_Heat>0.3</ArmorRating_Heat>
+            <ComfyTemperatureMin>-80</ComfyTemperatureMin>
+            <ComfyTemperatureMax>80</ComfyTemperatureMax>
+        </statOffsets>
         <statFactors>
-            <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0</CertaintyLossFactor>
             <LeatherAmount>1.45</LeatherAmount>
             <MeatAmount>1.45</MeatAmount>
             <Mass>1.45</Mass>
-            <VEF_CosmeticBodySize_Multiplier>1.22</VEF_CosmeticBodySize_Multiplier>
-        </statFactors>
-
-        <suppressedTraits>
-            <li>
-                <def>Industriousness</def>
-                <degree>-1</degree>
-            </li>
-            <li>
-                <def>Industriousness</def>
-                <degree>-2</degree>
-            </li>
-            <li>
-                <def>Beauty</def>
-                <degree>-1</degree>
-            </li>
-            <li>
-                <def>Beauty</def>
-                <degree>-2</degree>
-            </li>
-        </suppressedTraits>
-
-        <modExtensions>
-            <li Class="VanillaGenesExpanded.GeneExtension">
-            </li>
-        </modExtensions>
-    </GeneDef>
-
-    <!-- Custodes: Toughness -->
-    <GeneDef ParentName="BEWH_CustodesBase">
-        <defName>BEWH_CustodesToughness</defName>
-        <label>custodian toughness</label>
-        <description>Carriers of this gene possess toughness equal to that of the famed custodes.</description>
-        <iconPath>Placeholder</iconPath>
-        <geneClass>Gene_Clotting</geneClass>
-        <displayOrderInCategory>101</displayOrderInCategory>
-        <biostatMet>-5</biostatMet>
-
-        <preventPermanentWounds>true</preventPermanentWounds>
-        <painFactor>0.15</painFactor>
-
-        <statOffsets>
-            <ArmorRating_Blunt>0.75</ArmorRating_Blunt>
-            <ArmorRating_Sharp>0.75</ArmorRating_Sharp>
-            <ArmorRating_Heat>0.75</ArmorRating_Heat>
-        </statOffsets>
-
-        <statFactors>
-            <InjuryHealingFactor>10</InjuryHealingFactor>
+            <VEF_CosmeticBodySize_Multiplier>1.45</VEF_CosmeticBodySize_Multiplier>
+            <Fertility>0</Fertility>
             <StaggerDurationFactor>0</StaggerDurationFactor>
             <IncomingDamageFactor>0.4</IncomingDamageFactor>
+            <MeleeDamageFactor>3.5</MeleeDamageFactor>
         </statFactors>
 
         <suppressedTraits>
@@ -95,45 +41,156 @@
             <li>
                 <def>Wimp</def>
             </li>
+            <li>
+                <def>Beauty</def>
+                <degree>-1</degree>
+            </li>
+            <li>
+                <def>Beauty</def>
+                <degree>-2</degree>
+            </li>
         </suppressedTraits>
+
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_GeneExtension">
+                <addedWorldCarryCapacity>300</addedWorldCarryCapacity>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Athanatic Vitae -->
+    <GeneDef ParentName="BEWH_CustodesBase">
+        <defName>BEWH_AthanaticVitae</defName>
+        <label>athanatic vitae</label>
+        <description>The Athanatic Vitae gene significantly extends the natural lifespan of carrier, slowing the aging process and enhancing cellular repair mechanisms. This gene allows carrier to maintain peak physical and mental condition for centuries, ensuring their effectiveness over long periods.</description>
+        <iconPath>Placeholder</iconPath>
+        <displayOrderInCategory>101</displayOrderInCategory>
+        <geneClass>Gene_Clotting</geneClass>
+
+        <biostatCpx>8</biostatCpx>
+        <biostatArc>3</biostatArc>
+
+        <preventPermanentWounds>true</preventPermanentWounds>
+        <painFactor>0.15</painFactor>
+        <immuneToToxGasExposure>true</immuneToToxGasExposure>
+
+        <statOffsets>
+            <ToxicEnvironmentResistance>2</ToxicEnvironmentResistance>
+            <ToxicResistance>2</ToxicResistance>
+        </statOffsets>
+        <statFactors>
+            <InjuryHealingFactor>10</InjuryHealingFactor>
+        </statFactors>
+
+        <biologicalAgeTickFactorFromAgeCurve>
+            <points>
+                <li>(0, 1)</li>
+                <li>(20, 1)</li>
+                <li>(21, 0)</li>
+            </points>
+        </biologicalAgeTickFactorFromAgeCurve>
 
         <customEffectDescriptions>
             <li>Bleeding wounds close very quickly.</li>
             <li>Can survive loss of lungs</li>
             <li>Can survive loss of heart</li>
         </customEffectDescriptions>
-
         <modExtensions>
             <li Class="Core40k.DefModExtension_LostLungSurvival" />
             <li Class="Core40k.DefModExtension_LostHeartSurvival" />
         </modExtensions>
     </GeneDef>
 
-    <!-- Custodes: Resilience -->
+    <!-- Fulgurite Nerve Plexus -->
     <GeneDef ParentName="BEWH_CustodesBase">
-        <defName>BEWH_CustodesResilience</defName>
-        <label>custodian resilience</label>
-        <description>Carriers of this gene have resilience equal to that of the famed custodes.</description>
+        <defName>BEWH_FulguriteNervePlexus</defName>
+        <label>fulgurite nerve plexus</label>
+        <description>The Fulgurite Nerve Plexus gene enhances the sensory perception of carrier, allowing them to detect subtle changes in their environment. This gene sharpens all five senses to superhuman levels, providing carrier with heightened awareness and the ability to anticipate and counter threats with uncanny accuracy.</description>
         <iconPath>Placeholder</iconPath>
         <displayOrderInCategory>102</displayOrderInCategory>
-        <biostatMet>-5</biostatMet>
 
-        <foodPoisoningChanceFactor>0</foodPoisoningChanceFactor>
-        <immuneToToxGasExposure>true</immuneToToxGasExposure>
-        <overdoseChanceFactor>0</overdoseChanceFactor>
+        <biostatCpx>8</biostatCpx>
+        <biostatArc>3</biostatArc>
+
+        <dontMindRawFood>true</dontMindRawFood>
 
         <statOffsets>
-            <ToxicEnvironmentResistance>2</ToxicEnvironmentResistance>
-            <ToxicResistance>2</ToxicResistance>
-            <MentalBreakThreshold>-0.5</MentalBreakThreshold>
-            <ComfyTemperatureMin>-80</ComfyTemperatureMin>
-            <ComfyTemperatureMax>80</ComfyTemperatureMax>
+            <MeleeDodgeChance>15</MeleeDodgeChance>
         </statOffsets>
+        <statFactors>
+            <MeleeWeapon_CooldownMultiplier>0.6</MeleeWeapon_CooldownMultiplier>
+            <AimingDelayFactor>0.6</AimingDelayFactor>
+            <RangedCooldownFactor>0.6</RangedCooldownFactor>
+            <RawNutritionFactor>2.5</RawNutritionFactor>
+        </statFactors>
+
+        <suppressedTraits>
+            <li>
+                <def>SpeedOffset</def>
+                <degree>-1</degree>
+            </li>
+        </suppressedTraits>
+
+        <aptitudes>
+            <Shooting>8</Shooting>
+        </aptitudes>
+
+        <abilities>
+            <li>BEWH_OmophageaCorpseEat</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>BEWH_OmophageaCorpseEat</AbilityDef>
+        </descriptionHyperlinks>
+        <customEffectDescriptions>
+            <li>No loss in shooting skill</li>
+        </customEffectDescriptions>
+
+        <capMods>
+            <li>
+                <capacity>Sight</capacity>
+                <postFactor>2.5</postFactor>
+            </li>
+            <li>
+                <capacity>Hearing</capacity>
+                <postFactor>2.5</postFactor>
+            </li>
+            <li>
+                <capacity>Talking</capacity>
+                <postFactor>1.8</postFactor>
+            </li>
+            <li>
+                <capacity>Eating</capacity>
+                <postFactor>1.25</postFactor>
+            </li>
+        </capMods>
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <noSkillLoss>Shooting</noSkillLoss>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Immunis Leucocyte -->
+    <GeneDef ParentName="BEWH_CustodesBase">
+        <defName>BEWH_ImmunisLeucocyte</defName>
+        <label>immunis leucocyte</label>
+        <description>The Immunis Leucocyte gene fortifies the carriers immune response, making them highly resistant to diseases, infections, and poisons. This gene boosts the production of specialized immune cells and antibodies, ensuring that carriers can withstand biological threats that would incapacitate ordinary humans.</description>
+        <iconPath>Placeholder</iconPath>
+        <displayOrderInCategory>103</displayOrderInCategory>
+
+        <biostatCpx>8</biostatCpx>
+        <biostatArc>3</biostatArc>
 
         <statFactors>
-            <RestFallRateFactor>0.4</RestFallRateFactor>
-            <ImmunityGainSpeed>6</ImmunityGainSpeed>
+            <ImmunityGainSpeed>7</ImmunityGainSpeed>
         </statFactors>
+
+        <capMods>
+            <li>
+                <capacity>BloodFiltration</capacity>
+                <postFactor>2.5</postFactor>
+            </li>
+        </capMods>
 
         <makeImmuneTo>
             <li>Flu</li>
@@ -166,6 +223,52 @@
                 <def>Immunity</def>
                 <degree>-1</degree>
             </li>
+        </suppressedTraits>
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <diseaseProgressionFactor>0.1</diseaseProgressionFactor>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Mnemosyne Mindshield -->
+    <GeneDef ParentName="BEWH_CustodesBase">
+        <defName>BEWH_MnemosyneMindshield</defName>
+        <label>mnemosyne mindshield</label>
+        <description>The Mnemosyne Mindshield gene enhances the carriers mental fortitude and cognitive resilience to unprecedented levels. This gene creates a neural network that shields their consciousness from psychic intrusion and mental attacks, granting them unmatched clarity of thought and unwavering focus in the face of adversity. Carriers of this gene possess an indomitable willpower and exceptional mental acuity, enabling them to maintain calm under pressure, strategize with precision, and resist even the most potent psychic assaults. Additionally it allows the carrier to stay awake for extended periods of time without suffering exhaustion.</description>
+        <iconPath>Placeholder</iconPath>
+        <displayOrderInCategory>104</displayOrderInCategory>
+
+        <biostatCpx>8</biostatCpx>
+        <biostatArc>3</biostatArc>
+
+
+        <statOffsets>
+            <MentalBreakThreshold>-0.5</MentalBreakThreshold>
+        </statOffsets>
+        <statFactors>
+            <GlobalLearningFactor>2</GlobalLearningFactor>
+            <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0</CertaintyLossFactor>
+            <RestFallRateFactor>0.4</RestFallRateFactor>
+        </statFactors>
+
+        <abilities>
+            <li>BEWH_WarpShield</li>
+            <li>BEWH_CatalepseanNodeUnsleeping</li>
+        </abilities>
+
+        <descriptionHyperlinks>
+            <AbilityDef>BEWH_CatalepseanNodeUnsleeping</AbilityDef>
+        </descriptionHyperlinks>
+
+
+        <aptitudes>
+            <Intellectual>6</Intellectual>
+        </aptitudes>
+        <suppressedTraits>
+            <li>
+                <def>Kind</def>
+            </li>
             <li>
                 <def>Nerves</def>
                 <degree>-1</degree>
@@ -176,170 +279,10 @@
             </li>
         </suppressedTraits>
 
-        <modExtensions>
-            <li Class="VanillaGenesExpanded.GeneExtension">
-                <diseaseProgressionFactor>0.1</diseaseProgressionFactor>
-            </li>
-        </modExtensions>
-    </GeneDef>
-
-    <!-- Custodes: Strength -->
-    <GeneDef ParentName="BEWH_CustodesBase">
-        <defName>BEWH_CustodesStrength</defName>
-        <label>custodian strength</label>
-        <description>Carriers of this gene possess strength equal to that of the famed custodes.</description>
-        <iconPath>Placeholder</iconPath>
-        <displayOrderInCategory>103</displayOrderInCategory>
-        <biostatMet>-4</biostatMet>
-
-        <aptitudes>
-            <Melee>10</Melee>
-        </aptitudes>
-
-        <statOffsets>
-            <CarryingCapacity>300</CarryingCapacity>
-        </statOffsets>
-
-        <statFactors>
-            <MeleeDamageFactor>3.5</MeleeDamageFactor>
-        </statFactors>
-
-        <customEffectDescriptions>
-            <li>No loss in melee skill</li>
-        </customEffectDescriptions>
-
-        <modExtensions>
-            <li Class="VanillaGenesExpanded.GeneExtension">
-                <noSkillLoss>Melee</noSkillLoss>
-            </li>
-            <li Class="Core40k.DefModExtension_GeneExtension">
-                <addedWorldCarryCapacity>80</addedWorldCarryCapacity>
-            </li>
-        </modExtensions>
-    </GeneDef>
-
-    <!-- Custodes: Expertise -->
-    <GeneDef ParentName="BEWH_CustodesBase">
-        <defName>BEWH_CustodesExpertise</defName>
-        <label>custodian expertise</label>
-        <description>Carriers of this gene possess an innate expertise for combat equal to that of the famed custodes.</description>
-        <iconPath>Placeholder</iconPath>
-        <displayOrderInCategory>104</displayOrderInCategory>
-        <biostatMet>-5</biostatMet>
-
-        <suppressedTraits>
-            <li>
-                <def>Kind</def>
-            </li>
-            <li>
-                <def>SpeedOffset</def>
-                <degree>-1</degree>
-            </li>
-        </suppressedTraits>
-
-        <aptitudes>
-            <Shooting>10</Shooting>
-            <Intellectual>10</Intellectual>
-        </aptitudes>
-
-        <statOffsets>
-            <MeleeDodgeChance>15</MeleeDodgeChance>
-        </statOffsets>
-
-        <statFactors>
-            <MeleeWeapon_CooldownMultiplier>0.6</MeleeWeapon_CooldownMultiplier>
-            <MeleeHitChance>1.8</MeleeHitChance>
-            <AimingDelayFactor>0.6</AimingDelayFactor>
-            <RangedCooldownFactor>0.6</RangedCooldownFactor>
-            <GlobalLearningFactor>2</GlobalLearningFactor>
-        </statFactors>
-
-        <customEffectDescriptions>
-            <li>No loss in shooting skill</li>
-        </customEffectDescriptions>
-
-        <modExtensions>
-            <li Class="VanillaGenesExpanded.GeneExtension">
-                <noSkillLoss>Shooting</noSkillLoss>
-            </li>
-        </modExtensions>
-    </GeneDef>
-
-    <!-- Custodes: Anatomy -->
-    <GeneDef ParentName="BEWH_CustodesBase">
-        <defName>BEWH_CustodesAnatomy</defName>
-        <label>custodian anatomy</label>
-        <description>Carriers of the gene anatomy resemble that of the famed custodes.</description>
-        <iconPath>Placeholder</iconPath>
-        <displayOrderInCategory>105</displayOrderInCategory>
-        <biostatMet>25</biostatMet>
-
-        <dontMindRawFood>true</dontMindRawFood>
-
-        <sterilize>true</sterilize>
-
-        <abilities>
-            <li>BEWH_WarpShield</li>
-            <li>BEWH_CatalepseanNodeUnsleeping</li>
-            <li>BEWH_OmophageaCorpseEat</li>
-            <li>BEWH_Sus_anMembraneStasis</li>
-        </abilities>
-
-        <descriptionHyperlinks>
-            <AbilityDef>BEWH_CatalepseanNodeUnsleeping</AbilityDef>
-            <AbilityDef>BEWH_OmophageaCorpseEat</AbilityDef>
-            <AbilityDef>BEWH_Sus_anMembraneStasis</AbilityDef>
-        </descriptionHyperlinks>
-
-        <statFactors>
-            <Fertility>0</Fertility>
-            <RawNutritionFactor>4</RawNutritionFactor>
-        </statFactors>
-
-        <biologicalAgeTickFactorFromAgeCurve>
-            <points>
-                <li>(0, 1)</li>
-                <li>(20, 1)</li>
-                <li>(21, 0)</li>
-            </points>
-        </biologicalAgeTickFactorFromAgeCurve>
-
         <capMods>
             <li>
                 <capacity>Consciousness</capacity>
                 <postFactor>1.85</postFactor>
-            </li>
-            <li>
-                <capacity>BloodPumping</capacity>
-                <postFactor>2.5</postFactor>
-            </li>
-            <li>
-                <capacity>Manipulation</capacity>
-                <postFactor>2.5</postFactor>
-            </li>
-            <li>
-                <capacity>Breathing</capacity>
-                <postFactor>2.5</postFactor>
-            </li>
-            <li>
-                <capacity>Sight</capacity>
-                <postFactor>2.5</postFactor>
-            </li>
-            <li>
-                <capacity>Hearing</capacity>
-                <postFactor>2.5</postFactor>
-            </li>
-            <li>
-                <capacity>BloodFiltration</capacity>
-                <postFactor>2.5</postFactor>
-            </li>
-            <li>
-                <capacity>Eating</capacity>
-                <postFactor>1.5</postFactor>
-            </li>
-            <li>
-                <capacity>Talking</capacity>
-                <postFactor>2</postFactor>
             </li>
         </capMods>
 
@@ -356,5 +299,68 @@
             </li>
         </modExtensions>
     </GeneDef>
+
+
+    <!-- Fulgur Vitaliumstrand -->
+    <GeneDef ParentName="BEWH_CustodesBase">
+        <defName>BEWH_FulgurVitaliumstrand</defName>
+        <label>fulgur vitaliumstrand</label>
+        <description>The Fulgur Vitaliumstrand binds itself to the carriers sinew and some vital organs such as the lungs and heart, enhancing them in various ways. The Fulgur Vitaliumstrand allows great flexibility and enhaces functionality for bound tissue, this results in faster manipulation, better breathing and blood pumping. The Fulgur Vitaliumstrand also seems to have it own memory, allowing the carrier to quickly learn combat forms. Additionally it allows the carrier to secrete a thick fluid from their pores that forms around their entire body, putting them into a stasis.</description>
+        <iconPath>Placeholder</iconPath>
+        <displayOrderInCategory>105</displayOrderInCategory>
+
+        <biostatCpx>8</biostatCpx>
+        <biostatArc>3</biostatArc>
+
+        <statFactors>
+            <MeleeHitChance>1.8</MeleeHitChance>
+        </statFactors>
+
+        <abilities>
+            <li>BEWH_Sus_anMembraneStasis</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>BEWH_Sus_anMembraneStasis</AbilityDef>
+        </descriptionHyperlinks>
+
+        <capMods>
+            <li>
+                <capacity>BloodPumping</capacity>
+                <postFactor>2.5</postFactor>
+            </li>
+            <li>
+                <capacity>Manipulation</capacity>
+                <postFactor>2.5</postFactor>
+            </li>
+            <li>
+                <capacity>Breathing</capacity>
+                <postFactor>2.5</postFactor>
+            </li>
+        </capMods>
+
+        <suppressedTraits>
+            <li>
+                <def>Industriousness</def>
+                <degree>-1</degree>
+            </li>
+            <li>
+                <def>Industriousness</def>
+                <degree>-2</degree>
+            </li>
+        </suppressedTraits>
+        <aptitudes>
+            <Melee>8</Melee>
+        </aptitudes>
+        <customEffectDescriptions>
+            <li>No loss in melee skill</li>
+        </customEffectDescriptions>
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <noSkillLoss>Melee</noSkillLoss>
+            </li>
+        </modExtensions>
+
+    </GeneDef>
+
 
 </Defs>

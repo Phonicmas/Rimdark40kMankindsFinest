@@ -50,12 +50,12 @@ namespace Genes40k
 
         public static List<GeneDef> CustodesGenes => new List<GeneDef>
             {
-                Genes40kDefOf.BEWH_CustodesStature,
-                Genes40kDefOf.BEWH_CustodesResilience,
-                Genes40kDefOf.BEWH_CustodesToughness,
-                Genes40kDefOf.BEWH_CustodesExpertise,
-                Genes40kDefOf.BEWH_CustodesStrength,
-                Genes40kDefOf.BEWH_CustodesAnatomy
+                Genes40kDefOf.BEWH_ImmunisLeucocyte,
+                Genes40kDefOf.BEWH_AthanaticVitae,
+                Genes40kDefOf.BEWH_FulguriteNervePlexus,
+                Genes40kDefOf.BEWH_AtlasMorphogen,
+                Genes40kDefOf.BEWH_MnemosyneMindshield,
+                Genes40kDefOf.BEWH_FulgurVitaliumstrand
             };
 
         public static List<GeneDef> PrimarchGenes => new List<GeneDef>

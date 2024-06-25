@@ -59,7 +59,7 @@
             <MeatAmount>1.25</MeatAmount>
             <Mass>1.25</Mass>
             <IncomingDamageFactor>0.95</IncomingDamageFactor>
-            <VEF_CosmeticBodySize_Multiplier>1.15</VEF_CosmeticBodySize_Multiplier>
+            <VEF_CosmeticBodySize_Multiplier>1.3</VEF_CosmeticBodySize_Multiplier>
         </statFactors>
         <suppressedTraits>
             <li>

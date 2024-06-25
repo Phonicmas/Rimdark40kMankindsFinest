@@ -135,12 +135,12 @@
     <iconPath>UI/Xenotypes/CustodesXenoIcon</iconPath>
     <combatPowerFactor>4</combatPowerFactor>
     <genes>
-      <li>BEWH_CustodesAnatomy</li>
-      <li>BEWH_CustodesExpertise</li>
-      <li>BEWH_CustodesStrength</li>
-      <li>BEWH_CustodesResilience</li>
-      <li>BEWH_CustodesToughness</li>
-      <li>BEWH_CustodesStature</li>
+      <li>BEWH_ImmunisLeucocyte</li>
+      <li>BEWH_AthanaticVitae</li>
+      <li>BEWH_FulguriteNervePlexus</li>
+      <li>BEWH_AtlasMorphogen</li>
+      <li>BEWH_MnemosyneMindshield</li>
+      <li>BEWH_FulgurVitaliumstrand</li>
     </genes>
   </XenotypeDef>
 

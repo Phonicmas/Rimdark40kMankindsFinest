@@ -14,3 +14,7 @@ C:\Steam\steamapps\common\RimWorld\Mods\Warhammer40kMankindsFinest\1.5\Assemblie
 C:\Steam\steamapps\common\RimWorld\Mods\Warhammer40kMankindsFinest\1.5\Source\Genes40k\obj\Debug\Genes40k.csproj.AssemblyReference.cache
 C:\Steam\steamapps\common\RimWorld\Mods\Warhammer40kMankindsFinest\1.5\Source\Genes40k\obj\Debug\Genes40k.csproj.CoreCompileInputs.cache
 C:\Steam\steamapps\common\RimWorld\Mods\Warhammer40kMankindsFinest\1.5\Source\Genes40k\obj\Debug\Genes40k.dll
+C:\Steam\steamapps\common\RimWorld\Mods\Rimdark40kMankindsFinest\1.5\Source\Genes40k\obj\Debug\Genes40k.csproj.AssemblyReference.cache
+C:\Steam\steamapps\common\RimWorld\Mods\Rimdark40kMankindsFinest\1.5\Source\Genes40k\obj\Debug\Genes40k.csproj.CoreCompileInputs.cache
+C:\Steam\steamapps\common\RimWorld\Mods\Rimdark40kMankindsFinest\1.5\Source\Genes40k\obj\Debug\Genes40k.dll
+C:\Steam\steamapps\common\RimWorld\Mods\Rimdark40kMankindsFinest\1.5\Assemblies\Genes40k.dll
