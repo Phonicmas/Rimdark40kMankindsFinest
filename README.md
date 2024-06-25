@@ -1,10 +1,8 @@
 # TODO
 
-Patch trade tags with primacrh and chapter material into existing traders
-
 When crafting, give conscious reducing hediff or reduce psycasting focus with royalty
 
-Move faction to this mod aswell, and clean it up
+New custodes genes and art for them.
 
 
 # NEW ADDITIONS TO MAKE
