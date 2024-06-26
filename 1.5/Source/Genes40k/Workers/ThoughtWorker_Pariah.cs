@@ -24,7 +24,7 @@ namespace Genes40k
                     {
                         if (gene.def.GetModExtension<DefModExtension_Pariah>().pariahGene == def.GetModExtension<DefModExtension_Pariah>().pariahGene)
                         {
-                            if (Genes40kUtils.IsPariah(pawn))
+                            if (Genes40kUtils.IsPariah(pawn) || pawn.genes.HasActiveGene(Genes40kDefOf.BEWH_MnemosyneMindshield))
                             {
                                 return false;
                             }

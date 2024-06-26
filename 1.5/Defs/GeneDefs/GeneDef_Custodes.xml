@@ -286,6 +286,9 @@
             </li>
         </capMods>
 
+        <customEffectDescriptions>
+            <li>Will never have mental breaks when drafted.</li>
+        </customEffectDescriptions>
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <hediffsToBodyParts>

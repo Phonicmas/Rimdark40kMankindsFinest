@@ -2,7 +2,7 @@
 
 When crafting, give conscious reducing hediff or reduce psycasting focus with royalty
 
-New custodes genes and art for them.
+New custodes genes art.
 
 
 # NEW ADDITIONS TO MAKE

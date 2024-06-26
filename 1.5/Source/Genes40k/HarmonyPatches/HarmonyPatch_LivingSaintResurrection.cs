@@ -1,44 +1,19 @@
-﻿using Core40k;
-using HarmonyLib;
+﻿using HarmonyLib;
 using RimWorld;
-using System;
-using System.Collections.Generic;
 using Verse;
-using Verse.AI;
 
 namespace Genes40k
 {
-    [HarmonyPatch(typeof(Pawn), "Kill")]
+    [HarmonyPatch(typeof(IncidentWorker), "TryExecute")]
     public class LivingSaintResurrection
     {
-        public static bool Prefix(Pawn __instance)
+        public static void Prefix(IncidentWorker __instance)
         {
-            if (__instance.genes == null || !__instance.genes.HasActiveGene(Genes40kDefOf.BEWH_LivingSaintBeingOfFaith))
+            GameComponent_LivingSaint gameComponent = Current.Game.GetComponent<GameComponent_LivingSaint>();
+            if (gameComponent != null)
             {
-                Random rand = new Random();
-                int resurrectionChance = 1;
-
-                if (__instance.gender == Gender.Female)
-                {
-                    resurrectionChance = 2;
-                }
-
-                if (rand.Next(0, 100) > resurrectionChance)
-                {
-                    return true;
-                }
-
-                __instance.genes.SetXenotypeDirect(Genes40kDefOf.BEWH_LivingSaint);
-                foreach (GeneDef gene in Genes40kDefOf.BEWH_LivingSaint.genes)
-                {
-                    __instance.genes.AddGene(gene, true);
-                }
-
-                __instance.health.Notify_Resurrected();
-
-                return false;
+                gameComponent.TrySpawnSaint(__instance.def.category);
             }
-            return true;
         }    
     }
 }

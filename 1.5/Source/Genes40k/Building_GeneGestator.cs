@@ -150,7 +150,6 @@ namespace Genes40k
                     }
                 }
             }
-            //At end, eject the gene vial and make a letter to notify the user.
         }
 
         private void TickEffects()

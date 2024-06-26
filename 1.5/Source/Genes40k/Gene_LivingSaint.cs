@@ -10,6 +10,7 @@ namespace Genes40k
             base.Notify_PawnDied(dinfo, culprit);
             GameComponent_LivingSaint gComp = Current.Game.GetComponent<GameComponent_LivingSaint>();
             gComp.AddSaintToSpawnable(pawn);
+            pawn.Corpse.DeSpawn();
         }
     }
 }

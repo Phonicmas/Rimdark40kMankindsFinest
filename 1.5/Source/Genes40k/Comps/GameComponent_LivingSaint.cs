@@ -1,10 +1,7 @@
-﻿using Core40k;
-using HarmonyLib;
-using RimWorld;
+﻿using RimWorld;
 using System;
 using System.Collections.Generic;
 using Verse;
-using Verse.Noise;
 
 namespace Genes40k
 {
@@ -16,16 +13,49 @@ namespace Genes40k
         {
         }
 
-        public override void GameComponentTick()
+        public void TrySpawnSaint(IncidentCategoryDef categoryDef)
         {
-            //Check if raid in progress, if so spawn a living saint with some % chance (50%?) maybe scale of severity of raid
+            int chance;
+            if (categoryDef == IncidentCategoryDefOf.ThreatBig)
+            {
+                chance = 65;
+            }
+            else if (categoryDef == IncidentCategoryDefOf.ThreatSmall)
+            {
+                chance = 35;
+            }
+            else
+            {
+                return;
+            }
+            if (Prefs.DevMode && DebugSettings.godMode)
+            {
+                chance = 200;
+            }
+            Random rand = new Random();
+            if (rand.Next(0, 100) <= chance)
+            {
+                SpawmSaint();
+            }
+        }
 
-            /*Pawn toSpawn = livingSaints.RandomElement();
+        private void SpawmSaint()
+        {
+            Pawn toSpawn = livingSaints.RandomElement();
 
             Map map = Find.CurrentMap;
 
-            GenPlace.TryPlaceThing(toSpawn, CellFinder.RandomEdgeCell(map), map, ThingPlaceMode.Near);
-            livingSaints.Remove(toSpawn);*/
+            ResurrectionUtility.TryResurrect(toSpawn);
+
+            if (!GenPlace.TryPlaceThing(toSpawn, CellFinder.RandomEdgeCell(map), map, ThingPlaceMode.Near))
+            {
+                return;
+            }
+            
+            livingSaints.Remove(toSpawn);
+
+            ChoiceLetter letter = LetterMaker.MakeLetter("BEWH.LivingSaintReturn".Translate(), "BEWH.LivingSaintReturnMessage".Translate(toSpawn), Genes40kDefOf.BEWH_GoldenPositive, toSpawn);
+            Find.LetterStack.ReceiveLetter(letter);
         }
 
         public void AddSaintToSpawnable(Pawn pawn)

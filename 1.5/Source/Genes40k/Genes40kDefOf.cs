@@ -83,6 +83,7 @@ namespace Genes40k
         public static HediffDef BEWH_PsychicConnectionSevered;
 
         public static LetterDef BEWH_NaturalBornX;
+        public static LetterDef BEWH_GoldenPositive;
 
         public static DamageDef BEWH_WarpEnergy;
 

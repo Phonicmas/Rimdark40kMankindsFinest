@@ -65,6 +65,14 @@
 
   <BEWH.AlreadySuperHuman>{0} is already a superhuman and cannot be enhanced again</BEWH.AlreadySuperHuman>
 
+
+  <!-- Living Saint-->
+  <BEWH.LivingSaint>Living Saint</BEWH.LivingSaint>
+  <BEWH.LivingSaintMessage>In {0}'s final moments they felt a surge of energy surging through them, invigorating and strengthening them. {0} was born anew as a living saint, stronger, faster and evermore loyal.</BEWH.LivingSaintMessage>
+
+  <BEWH.LivingSaintReturn>Living Saint Returns</BEWH.LivingSaintReturn>
+  <BEWH.LivingSaintReturnMessage>Though thought dead, {0}'s miracles keeps coming. It seem {0} sensed our situation from their afterlife and manifested themselves to help</BEWH.LivingSaintReturnMessage>
+
   <!-- Misc-->
   <!-- Ideology-->
   <BEWH.MustBeSpaceMarine>Must be a Space Marine</BEWH.MustBeSpaceMarine>

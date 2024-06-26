@@ -76,9 +76,11 @@
     <Compile Include="DefModExtensions\DefModExtension_GeneMatrix.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneGestator.cs" />
     <Compile Include="Comps\GameComponent_LivingSaint.cs" />
+    <Compile Include="Gene_EternalWatch.cs" />
     <Compile Include="Gene_LivingSaint.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_KeepPrerequisitePermit.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_LivingSaintResurrection.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_LivingSaintDeath.cs" />
     <Compile Include="Building_PrimarchEmbryo.cs" />
     <Compile Include="PrimarchEmbryo.cs" />
     <Compile Include="GeneseedVial.cs" />
