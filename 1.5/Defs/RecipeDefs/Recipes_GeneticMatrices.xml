@@ -233,7 +233,7 @@
         <label>make primarch genetic matrix</label>
         <description>Make a primarch genetic matrix.</description>
         <jobString>Making primarch genetic matrix.</jobString>
-        <workAmount>150000</workAmount>
+        <workAmount>250000</workAmount>
         <researchPrerequisite>BEWH_PrimarchProject</researchPrerequisite>
         <ingredients>
             <li>

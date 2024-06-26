@@ -6,7 +6,7 @@
     <defName>BEWH_GeneManipulationTable</defName>
     <label>gene manipulation table</label>
     <description>This table contains all the needed tools and machines to create thing needed to make enhanced superhumen.</description>
-    <thingClass>Building_WorkTable</thingClass>
+    <thingClass>Genes40k.Building_GeneTable</thingClass>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>50</pathCost>

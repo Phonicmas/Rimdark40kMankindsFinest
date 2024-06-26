@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-    <HediffDef>
+	<HediffDef>
 		<defName>BEWH_WingsHover</defName>
 		<label>wings</label>
 		<description>A set of wings growing from this person's shoulderblades. They are capable of flight and will not be slowed down by any obstacles.</description>
@@ -12,6 +12,121 @@
 		<comps>
 			<li Class="AnimalBehaviours.HediffCompProperties_Floating" />
 		</comps>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>BEWH_PsychicCrafting</defName>
+		<label>psychic exhaustion</label>
+		<labelNoun>psychic exhaustion</labelNoun>
+		<description>This pawn is exhausted by all the psychic energy needed to craft gene matrices</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<makesSickThought>false</makesSickThought>
+		<everCurableByItem>false</everCurableByItem>
+		<isBad>true</isBad>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>3</maxSeverity>
+		<stages>
+			<li>
+				<minSeverity>1</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.1</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>1.2</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.2</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>1.4</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.3</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>1.6</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.35</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>1.8</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.4</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>2</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.45</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>2.2</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.5</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>2.4</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.55</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>2.6</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.6</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>2.8</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.65</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>3</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.05</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
 	</HediffDef>
 
 </Defs>

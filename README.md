@@ -1,11 +1,10 @@
 # TODO
-
-When crafting, give conscious reducing hediff or reduce psycasting focus with royalty
-
 New custodes genes art.
 
 
 # NEW ADDITIONS TO MAKE
+
+Patch eltex to recipies if VPE is present, do it from inside the royalty folder
 
 Make frostblade xml
 

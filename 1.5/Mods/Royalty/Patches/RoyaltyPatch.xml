@@ -24,5 +24,37 @@
             </royalTitleTags>
         </value>
     </Operation>
-    
+
+    <Operation Class="PatchOperationAddModExtension">
+        <xpath>Defs/GeneDef[defName = "BEWH_IotaPsyker" or defName = "BEWH_Psyker" or defName = "BEWH_DeltaPsyker" or defName = "BEWH_BetaPsyker"]</xpath>
+        <value>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <hediffsToBodyParts>
+                    <li>
+                        <hediff>PsychicAmplifier</hediff>
+                        <bodyparts>
+                            <li>Brain</li>
+                        </bodyparts>
+                    </li>
+                </hediffsToBodyParts>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAddModExtension">
+        <xpath>Defs/GeneDef[defName = "BEWH_PrimarchXVMagnusTheRed"]</xpath>
+        <value>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <hediffsToBodyParts>
+                    <li>
+                        <hediff>PsychicAmplifier</hediff>
+                        <bodyparts>
+                            <li>Brain</li>
+                        </bodyparts>
+                    </li>
+                </hediffsToBodyParts>
+            </li>
+        </value>
+    </Operation>
+
 </Patch>

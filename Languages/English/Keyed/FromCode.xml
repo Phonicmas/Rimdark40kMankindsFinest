@@ -87,4 +87,6 @@
   <BEWH.On>on</BEWH.On>
   <BEWH.Off>off</BEWH.Off>
 
+  <BEWH.NotEnoughPsyfocus>{0} does not have enough psyfocus to craft</BEWH.NotEnoughPsyfocus>
+
 </LanguageData>

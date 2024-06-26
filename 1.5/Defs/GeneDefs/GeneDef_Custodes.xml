@@ -238,6 +238,7 @@
         <description>The Mnemosyne Mindshield gene enhances the carriers mental fortitude and cognitive resilience to unprecedented levels. This gene creates a neural network that shields their consciousness from psychic intrusion and mental attacks, granting them unmatched clarity of thought and unwavering focus in the face of adversity. Carriers of this gene possess an indomitable willpower and exceptional mental acuity, enabling them to maintain calm under pressure, strategize with precision, and resist even the most potent psychic assaults. Additionally it allows the carrier to stay awake for extended periods of time without suffering exhaustion.</description>
         <iconPath>Placeholder</iconPath>
         <displayOrderInCategory>104</displayOrderInCategory>
+        <geneClass>Genes40k.Gene_EternalWatch</geneClass>
 
         <biostatCpx>8</biostatCpx>
         <biostatArc>3</biostatArc>

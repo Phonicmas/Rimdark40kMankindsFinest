@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Building_GeneGestator.cs" />
+    <Compile Include="Building_GeneTable.cs" />
     <Compile Include="Building_PrimarchGrowthVat.cs" />
     <Compile Include="Building_GeneStorage.cs" />
     <Compile Include="DefModExtensions\DefModExtension_ChapterGene.cs" />
@@ -78,7 +79,11 @@
     <Compile Include="Comps\GameComponent_LivingSaint.cs" />
     <Compile Include="Gene_EternalWatch.cs" />
     <Compile Include="Gene_LivingSaint.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_BillPsycost.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_EternalWatchStopMentalBreak.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_EternalWatchStartMentalUndraft.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_KeepPrerequisitePermit.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_EternalWatchStopMentalState.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_LivingSaintResurrection.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_LivingSaintDeath.cs" />
     <Compile Include="Building_PrimarchEmbryo.cs" />
