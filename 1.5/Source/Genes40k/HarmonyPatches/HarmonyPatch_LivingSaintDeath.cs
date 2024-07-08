@@ -13,8 +13,18 @@ namespace Genes40k
     {
         public static void Postfix(Pawn __instance)
         {
-            if (__instance.genes == null || !__instance.genes.HasActiveGene(Genes40kDefOf.BEWH_LivingSaintBeingOfFaith))
+            if (__instance.Faction == Faction.OfPlayer && __instance.genes == null)
             {
+                List<GeneDef> forbiddenGenes = Genes40kDefOf.BEWH_LivingSaintBeingOfFaith.GetModExtension<DefModExtension_LivingSaint>().cantHaveGenes;
+
+                foreach (Gene gene in __instance.genes.GenesListForReading)
+                {
+                    if (forbiddenGenes.Contains(gene.def))
+                    {
+                        return;
+                    }
+                }
+
                 Random rand = new Random();
                 int resurrectionChance = 1;
 

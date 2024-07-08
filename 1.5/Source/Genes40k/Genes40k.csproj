@@ -68,6 +68,7 @@
     <Compile Include="DefModExtensions\DefModExtension_ChapterGene.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneFromMaterial.cs" />
     <Compile Include="DefModExtensions\DefModExtension_KeepPrerequisitePermit.cs" />
+    <Compile Include="DefModExtensions\DefModExtension_LivingSaint.cs" />
     <Compile Include="DefModExtensions\DefModExtension_SangprimusPortum.cs" />
     <Compile Include="DefModExtensions\DefModExtension_PhaseDevelopment.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneseedVial.cs" />

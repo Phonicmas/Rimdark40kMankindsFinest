@@ -147,7 +147,7 @@
             <rulesRaw>
                 <li Class="Rule_File">
                     <keyword>Letters</keyword>
-                    <path>BEWH_SettlementNames</path>
+                    <path>NameBanks/BEWH_SettlementNames</path>
                 </li>
             </rulesRaw>
         </rulePack>

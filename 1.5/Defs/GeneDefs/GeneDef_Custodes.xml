@@ -5,7 +5,7 @@
     <GeneDef ParentName="BEWH_CustodesBase">
         <defName>BEWH_AtlasMorphogen</defName>
         <label>atlas morphogen</label>
-        <description>The Invictus Morphogen gene fundamentally reprograms the cellular architecture of carrier, enhancing both their physical and structural attributes to superhuman levels. This gene promotes accelerated growth and fortification of muscle tissues, bone density, and connective tissues, resulting in a nearly indestructible physique. Carrier of this gene exhibit remarkable strength, and an extraordinary capacity for sustained physical exertion, embodying the epitome of invincibility and resilience.</description>
+        <description>The Atlas Morphogen gene fundamentally reprograms the cellular architecture of carrier, enhancing both their physical and structural attributes to superhuman levels. This gene promotes accelerated growth and fortification of muscle tissues, bone density, and connective tissues, resulting in a nearly indestructible physique. Carrier of this gene exhibit remarkable strength, and an extraordinary capacity for sustained physical exertion, embodying the epitome of invincibility and resilience.</description>
         <iconPath>Placeholder</iconPath>
         <displayOrderInCategory>100</displayOrderInCategory>
 

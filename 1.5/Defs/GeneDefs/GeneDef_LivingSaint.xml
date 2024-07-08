@@ -66,6 +66,11 @@
                 <canBeEnslaved>false</canBeEnslaved>
                 <canBeRecruited>false</canBeRecruited>
             </li>
+            <li Class="Genes40k.DefModExtension_LivingSaint">
+                <cantHaveGenes>
+                    <li>BEWH_LivingSaintBeingOfFaith</li>
+                </cantHaveGenes>
+            </li>
         </modExtensions>
     </GeneDef>
 

@@ -15,6 +15,7 @@
     <!-- Firstborn phase base -->
     <RecipeDef ParentName="BEWH_PhaseRecipeBase" Name="BEWH_FirstbornPhaseRecipeBase" Abstract="True">
         <workAmount>5000</workAmount>
+        <researchPrerequisite>BEWH_GeneseedPurification</researchPrerequisite>
         <ingredients>
             <li>
                 <filter>
@@ -85,6 +86,7 @@
     <!-- Primaris phase base -->
     <RecipeDef ParentName="BEWH_PhaseRecipeBase" Name="BEWH_PrimarisPhaseRecipeBase" Abstract="True">
         <workAmount>6500</workAmount>
+        <researchPrerequisite>BEWH_GeneseedPerfection</researchPrerequisite>
         <ingredients>
             <li>
                 <filter>
