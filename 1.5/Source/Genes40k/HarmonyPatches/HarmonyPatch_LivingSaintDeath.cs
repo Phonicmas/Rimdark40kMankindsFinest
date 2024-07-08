@@ -13,45 +13,52 @@ namespace Genes40k
     {
         public static void Postfix(Pawn __instance)
         {
-            if (__instance.Faction == Faction.OfPlayer && __instance.genes == null)
+            if (__instance.Faction != Faction.OfPlayer)
             {
-                List<GeneDef> forbiddenGenes = Genes40kDefOf.BEWH_LivingSaintBeingOfFaith.GetModExtension<DefModExtension_LivingSaint>().cantHaveGenes;
+                return;
+            }
+            if (__instance.genes == null)
+            {
+                return;
+            }
 
-                foreach (Gene gene in __instance.genes.GenesListForReading)
+            List<GeneDef> forbiddenGenes = Genes40kDefOf.BEWH_LivingSaintBeingOfFaith.GetModExtension<DefModExtension_LivingSaint>().cantHaveGenes;
+
+            foreach (Gene gene in __instance.genes.GenesListForReading)
+            {
+                if (forbiddenGenes.Contains(gene.def))
                 {
-                    if (forbiddenGenes.Contains(gene.def))
-                    {
-                        return;
-                    }
-                }
-
-                Random rand = new Random();
-                int resurrectionChance = 1;
-
-                if (__instance.gender == Gender.Female)
-                {
-                    resurrectionChance = 2;
-                }
-
-                if (Prefs.DevMode && DebugSettings.godMode)
-                {
-                    resurrectionChance = 200;
-                }
-
-                if (rand.Next(0, 100) <= resurrectionChance)
-                {
-                    __instance.genes.SetXenotypeDirect(Genes40kDefOf.BEWH_LivingSaint);
-                    foreach (GeneDef gene in Genes40kDefOf.BEWH_LivingSaint.genes)
-                    {
-                        __instance.genes.AddGene(gene, true);
-                    }
-
-                    ResurrectionUtility.TryResurrect(__instance);
-
-                    ChoiceLetter letter = LetterMaker.MakeLetter("BEWH.LivingSaint".Translate(), "BEWH.LivingSaintMessage".Translate(__instance), Genes40kDefOf.BEWH_GoldenPositive, __instance);
-                    Find.LetterStack.ReceiveLetter(letter);
+                    return;
                 }
             }
+
+            Random rand = new Random();
+            int resurrectionChance = 1;
+
+            if (__instance.gender == Gender.Female)
+            {
+                resurrectionChance = 2;
+            }
+
+            if (Prefs.DevMode && DebugSettings.godMode)
+            {
+                resurrectionChance = 200;
+            }
+
+            if (rand.Next(0, 100) <= resurrectionChance)
+            {
+                __instance.genes.SetXenotypeDirect(Genes40kDefOf.BEWH_LivingSaint);
+                foreach (GeneDef gene in Genes40kDefOf.BEWH_LivingSaint.genes)
+                {
+                    __instance.genes.AddGene(gene, true);
+                }
+
+                ResurrectionUtility.TryResurrect(__instance);
+
+                ChoiceLetter letter = LetterMaker.MakeLetter("BEWH.LivingSaint".Translate(), "BEWH.LivingSaintMessage".Translate(__instance), Genes40kDefOf.BEWH_GoldenPositive, __instance);
+                Find.LetterStack.ReceiveLetter(letter);
+            }
+
         }    
     }
 }
