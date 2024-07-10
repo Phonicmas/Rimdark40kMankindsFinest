@@ -214,7 +214,7 @@
     <RoyalTitlePermitDef>
         <defName>BEWH_CallLocalExterminatus</defName>
         <label>call local exterminatus</label>
-        <description>Call a last resort, devastating bombardment salvo at target location</description>
+        <description>Call a last resort, devastating bombardment salvo at target location.</description>
         <workerClass>RoyalTitlePermitWorker_OrbitalStrike</workerClass>
         <minTitle>BEWH_Title7</minTitle>
         <faction>BEWH_ImperiumFaction</faction>
@@ -241,8 +241,7 @@
     <RoyalTitlePermitDef>
         <defName>BEWH_CallTransportShuttle</defName>
         <label>call transport shuttle</label>
-        <description>Call a shuttle for your own use. It will transport colonists, items, and
-            animals anywhere you like within 70 world tiles.</description>
+        <description>Call a shuttle for your own use. It will transport colonists, items, and animals anywhere you like within 70 world tiles.</description>
         <workerClass>RoyalTitlePermitWorker_CallShuttle</workerClass>
         <minTitle>BEWH_Title4</minTitle>
         <faction>BEWH_ImperiumFaction</faction>
