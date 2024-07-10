@@ -194,7 +194,7 @@
     <RoyalTitleDef ParentName="BaseImperiumTitleNPC">
         <defName>BEWH_NPCTitle4</defName>
         <label>Emperor</label>
-        <description>The God Emperor himself</description>
+        <description>The God Emperor himself.</description>
         <seniority>2600</seniority>
         <commonality>0</commonality>
     </RoyalTitleDef>
