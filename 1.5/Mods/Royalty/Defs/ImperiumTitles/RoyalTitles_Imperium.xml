@@ -34,7 +34,7 @@
     <RoyalTitleDef ParentName="BaseImperiumTitle">
         <defName>BEWH_Title2</defName>
         <label>Honorary Citizen</label>
-        <description>The title of honorary citizen is used by the Imperium to signify a fully-respected individual with trading right within the Imperium. The title is offered to outsiders who act with honor in the eyes of the Imperium.</description>
+        <description>The title of honorary citizen is used by the Imperium to signify a fully-respected individual with trading rights within the Imperium. The title is offered to outsiders who act with honor in the eyes of the Imperium.</description>
         <seniority>100</seniority>
         <favorCost>6</favorCost>
         <changeHeirQuestPoints>1000</changeHeirQuestPoints>
@@ -44,8 +44,8 @@
     <!--===== Honorary Sergeant =====-->
     <RoyalTitleDef ParentName="BaseImperiumTitle">
         <defName>BEWH_Title3</defName>
-        <label>Honorary Citizen</label>
-        <description>The title of honorary citizen is used by the Imperium to signify a fully-respected individual with trading right within the Imperium. The title is offered to outsiders who act with honor in the eyes of the Imperium.</description>
+        <label>Honorary Sergeant</label>
+        <description>The title of honorary Sergeant is used by the Imperium to signify a fully-respected individual with trading and military rights within the Imperium. The title is offered to outsiders who act with honor in the eyes of the Imperium.</description>
         <seniority>200</seniority>
         <favorCost>6</favorCost>
         <minExpectation>Moderate</minExpectation>
@@ -56,8 +56,8 @@
     <!--===== Honorary Lieutenant =====-->
     <RoyalTitleDef ParentName="BaseImperiumTitle">
         <defName>BEWH_Title4</defName>
-        <label>Honorary Citizen</label>
-        <description>The title of honorary citizen is used by the Imperium to signify a fully-respected individual with trading right within the Imperium. The title is offered to outsiders who act with honor in the eyes of the Imperium.</description>
+        <label>Honorary Lieutenant</label>
+        <description>The title of honorary citizen is used by the Imperium to signify an individual whose military and economic prowess has been noticed and subsequently wanted by the Imperium. The title is offered to outsiders who act with honor in the eyes of the Imperium.</description>
         <seniority>300</seniority>
         <favorCost>8</favorCost>
         <minExpectation>Moderate</minExpectation>
@@ -74,7 +74,7 @@
     <RoyalTitleDef ParentName="BaseImperiumTitle">
         <defName>BEWH_Title5</defName>
         <label>Honorary Captain</label>
-        <description>The title of honorary captain is used by the Imperium to signify an individual whose military and economic prowess has been noticed and subsequently wanted by the Imperium. The title is offered to outsiders who act with honor in the eyes of the Imperium.</description>
+        <description>The title of honorary captain is used by the Imperium to signify an individual whose military and economic prowess has seen its usefulness. The title is offered to outsiders who act with honor in the eyes of the Imperium.</description>
         <seniority>400</seniority>
         <favorCost>10</favorCost>
         <minExpectation>High</minExpectation>
@@ -117,7 +117,7 @@
     <RoyalTitleDef ParentName="BaseImperiumTitle">
         <defName>BEWH_Title7</defName>
         <label>Honorary General</label>
-        <description>The title of honorary major is used by the Imperium to signify an individual whose military and economic prowess has proven important to the Imperium and has warranted a promotion. The title is offered to outsiders who act with honor in the eyes of the Imperium.</description>
+        <description>The title of honorary General is used by the Imperium to signify an individual whose military and economic prowess has proven important to the Imperium and has warranted a promotion. The title is offered to outsiders who act with honor in the eyes of the Imperium.</description>
         <seniority>600</seniority>
         <favorCost>30</favorCost>
         <minExpectation>Noble</minExpectation>
