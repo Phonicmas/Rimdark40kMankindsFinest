@@ -1,5 +1,4 @@
 # TODO
-New custodes genes art.
 
 Check descriptions
 
