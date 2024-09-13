@@ -61,7 +61,6 @@
             <wornGraphicPath>Things/Headgear/Imperium/PowerArmorPrimaris/ImperiumHelmetAlt</wornGraphicPath>
             <tags>
                 <li>ImperiumPowerArmorHelmet</li>
-                <li>EVA</li>
             </tags>
         </apparel>
     </ThingDef>

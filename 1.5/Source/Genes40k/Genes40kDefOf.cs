@@ -73,25 +73,35 @@ namespace Genes40k
         public static GeneDef BEWH_LivingSaintBeingOfFaith;
         public static GeneDef BEWH_LivingSaintHolyRadiance;
 
+        //Chapter specific genes
+        public static GeneDef BEWH_ChapterXVThousandSons;
+
+        //Xenotype
         public static XenotypeDef BEWH_LivingSaint;
 
+        //Researchprojects
         public static ResearchProjectDef BEWH_GeneseedExtractionFirstborn;
         public static ResearchProjectDef BEWH_GeneseedExtractionPrimaris;
 
+        //Heddifs
         public static HediffDef BEWH_SecondGeneseedHarvest;
         public static HediffDef BEWH_PsychicComa;
         public static HediffDef BEWH_PsychicConnectionSevered;
         public static HediffDef BEWH_PsychicCrafting;
 
+        public static HediffDef BEWH_PariahEffecter;
+
+        //Letters
         public static LetterDef BEWH_NaturalBornX;
         public static LetterDef BEWH_GoldenPositive;
 
+        //DamageDefs
         public static DamageDef BEWH_WarpEnergy;
 
+        //WeatherDefs
         public static WeatherDef BEWH_BloodRain;
 
-        public static HediffDef BEWH_PariahEffecter;
-
+        //ThingDefs
         public static ThingDef BEWH_GeneseedGestator;
         public static ThingDef BEWH_GeneticCryostaticStorage;
         public static ThingDef BEWH_SangprimusPortum;
@@ -102,8 +112,10 @@ namespace Genes40k
 
         public static ThingDef BEWH_PrimarchEmbryo;
 
+        //JobDefs
         public static JobDef BEWH_FillGeneGestator;
 
+        //ThoughtDefs
         public static ThoughtDef BEWH_LivingSaintHolyRadianceThought;
 
         static Genes40kDefOf()

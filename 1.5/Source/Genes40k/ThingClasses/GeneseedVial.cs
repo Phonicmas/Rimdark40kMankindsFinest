@@ -104,25 +104,70 @@ namespace Genes40k
             {
                 return;
             }
-            int trueMax = HediffDefOf.XenogerminationComa.CompProps<HediffCompProperties_Disappears>().disappearsAfterTicks.TrueMax;
             TaggedString text = "BEWH.ImplantGeneseedDesc".Translate(newTarget, xenotypeName);
             DefModExtension_GeneseedVial defMod = def.GetModExtension<DefModExtension_GeneseedVial>();
+            List<string> failChanceCausedBy = new List<string>();
+            var failChance = 0;
             if (!(defMod.minAgeImplant <= newTarget.ageTracker.AgeBiologicalYears && defMod.maxAgeImplant >= newTarget.ageTracker.AgeBiologicalYears))
             {
-                int num1 = newTarget.ageTracker.AgeBiologicalYears - defMod.minAgeImplant;
-                int num2 = newTarget.ageTracker.AgeBiologicalYears - defMod.maxAgeImplant;
-                if (num1 < num2)
+                var minAgeCheck = newTarget.ageTracker.AgeBiologicalYears - defMod.minAgeImplant;
+                var maxAgeCheck = newTarget.ageTracker.AgeBiologicalYears - defMod.maxAgeImplant;
+                if (minAgeCheck < maxAgeCheck)
                 {
-                    num1 = num2;
+                    minAgeCheck = maxAgeCheck;
                 }
-                int failureChance = num1 * defMod.failureChancePerAgePast;
-                if (failureChance > defMod.failChanceCap)
-                {
-                    failureChance = defMod.failChanceCap;
-                }
-                text += "\n\n" + "BEWH.OutsideOptimalAgeRange".Translate(newTarget, defMod.minAgeImplant, defMod.maxAgeImplant, failureChance);
+                var failChanceAgeOffset = minAgeCheck * defMod.failureChancePerAgePast;
+                failChance += failChanceAgeOffset;
+                
+                failChanceCausedBy.Add("\t- " + "BEWH.FailureChanceCause".Translate(failChanceAgeOffset, "BEWH.OutsideOptimalAgeRange".Translate(newTarget, defMod.minAgeImplant, defMod.maxAgeImplant)));
             }
-            
+
+            var failChanceGeneOffset = 0;
+
+            var failCapChance = defMod.failChanceCap;
+            var failChanceCapGeneOffset = 0;
+
+            if (extraGeneFromMaterial != null && extraGeneFromMaterial.HasModExtension<DefModExtension_GeneseedPurity>())
+            {
+                var geneDefMod = extraGeneFromMaterial.GetModExtension<DefModExtension_GeneseedPurity>();
+                failChanceCapGeneOffset += geneDefMod.additionalChanceCapOffset;
+                failChanceGeneOffset += geneDefMod.additionalChanceOffset;
+                failChanceCausedBy.Add("\t- " + "BEWH.FailureChanceCause".Translate(geneDefMod.additionalChanceOffset, extraGeneFromMaterial.label));
+            }
+
+            failCapChance += failChanceCapGeneOffset;
+            failChance += failChanceGeneOffset;
+
+            if (failCapChance > 100)
+            {
+                failCapChance = 100;
+            }
+
+            var wasCapped = false;
+
+            if (failChance > failCapChance)
+            {
+                failChance = failCapChance;
+                wasCapped = true;
+            }
+
+            if (failChance > 0)
+            {
+                text += "\n\n" + "BEWH.CurrentFailureChance".Translate(failChance);
+
+                text += "\n\n" + "BEWH.FailureChanceCausedBy".Translate();
+
+                foreach (var failChanceCause in failChanceCausedBy)
+                {
+                    text += "\n" + failChanceCause;
+                }
+
+                if (wasCapped)
+                {
+                    text += "\n\n" + "BEWH.FailureChanceCapped".Translate(failCapChance);
+                }
+            }
+
             text += "\n\n" + "WouldYouLikeToContinue".Translate();
             Find.WindowStack.Add(Dialog_MessageBox.CreateConfirmation(text, delegate
             {

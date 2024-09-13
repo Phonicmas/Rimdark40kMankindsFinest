@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
+    <!-- ALL OF THESE GENES SHOULD FOLLOW THE SAME NAME AND DESCRIPTION AS THOUSAND SONS CURRENTLY DOES -->
+    <!-- RED THIRST AND CURSE OF WOLVES AND OTHER SECOND FLAWS LIKE SO SHOULD BE ADDED FROM THE CHAPTER GENE AND SHOULD BE ITS OWN THING, NOT INCORPORATED -->
+
+    <!-- move curse of wulfen into its own gene -->
     <!-- Chaper VI - Space Wolves -->
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterVICanisHelix</defName>
         <label>canis helix</label>
         <description>The Canis Helix is a mutation of normal gene-seed that gifts the Wolves with enhanced abilities, including hyper-acute senses of smell and hearing, elongated canines that can dent plasteel, and leathery, resilient skin.</description>
-        <iconPath>UI/Genes/ChaperVICanisHelix</iconPath>
-        <displayOrderInCategory>30</displayOrderInCategory>
+        <iconPath>UI/Genes/ChaperVISpaceWolves</iconPath>
+        <displayOrderInCategory>36</displayOrderInCategory>
         <capMods>
             <li>
                 <capacity>Hearing</capacity>
@@ -47,14 +51,75 @@
     </GeneDef>
 
 
+    <!-- Chaper XV - Thousand Sons -->
+    <GeneDef ParentName="BEWH_ChapterGeneParent">
+        <defName>BEWH_ChapterXVThousandSons</defName>
+        <label>Geneseed Material: Thousand Sons</label>
+        <description>Your geneseeds comes from the Magnus the Red, the Crimson King, and as such you have inherited some of his psychic potential.</description>
+        <iconPath>UI/Genes/ChaperXVThousandSons</iconPath>
+        <displayOrderInCategory>45</displayOrderInCategory>
+        <minAgeActive>14</minAgeActive>
+        <geneClass>Genes40k.Gene_AddGeneByChance</geneClass>
+        <customEffectDescriptions>
+            <li>Gives a psyker gene</li>
+        </customEffectDescriptions>
+        <statFactors>
+            <PsychicSensitivity>1.2</PsychicSensitivity>
+            <MeditationFocusGain>1.2</MeditationFocusGain>
+            <PsychicEntropyRecoveryRate>1.2</PsychicEntropyRecoveryRate>
+        </statFactors>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_ChapterGene" />
+            <li Class="Genes40k.DefModExtension_AddGeneByChance">
+                <possibleGenesToGive>
+                    <li>
+                        <key>BEWH_Psyker</key>
+                        <value>100</value>
+                    </li>
+                    <li>
+                        <key>BEWH_DeltaPsyker</key>
+                        <value>10</value>
+                    </li>
+                    <li>
+                        <key>BEWH_BetaPsyker</key>
+                        <value>1</value>
+                    </li>
+                </possibleGenesToGive>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+
+    <!-- Chaper XIII - Ultramarines -->
+    <GeneDef ParentName="BEWH_ChapterGeneParent">
+        <defName>BEWH_ChapterXIIIUltramarines</defName>
+        <label>???</label>
+        <description>???</description>
+        <iconPath>UI/Genes/ChaperIIIUltramarines</iconPath>
+        <displayOrderInCategory>45</displayOrderInCategory>
+        <minAgeActive>14</minAgeActive>
+        <customEffectDescriptions>
+            <li>Decreased chance of geneseed implantation failure</li>
+        </customEffectDescriptions>
+        <!-- Add slightly increased mood and global work speed?-->
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_ChapterGene" />
+            <li Class="Genes40k.DefModExtension_GeneseedPurity">
+                <additionalChanceOffset>-15</additionalChanceOffset>
+                <additionalChanceCapOffset>-10</additionalChanceCapOffset>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!-- move red thirst into its own gene -->
     <!-- Chaper IX - Blood Angels -->
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterIXRedThirst</defName>
         <label>red thirst</label>
-        <description>The Red Thirst causes warriors to suffer an unusual bloodlust, instilling them with a thirst for the blood of their enemies</description>
-        <iconPath>UI/Genes/ChapterIXRedThirst</iconPath>
-        <displayOrderInCategory>31</displayOrderInCategory>
-        <minAgeActive>14</minAgeActive>
+        <description>The Red Thirst causes warriors to suffer an unusual bloodlust, instilling them with a thirst for the blood of their enemies.</description>
+        <iconPath>UI/Genes/ChapterIXBloodAngels</iconPath>
+        <displayOrderInCategory>32</displayOrderInCategory>
+        <minAgeActive>49</minAgeActive>
         <geneClass>Gene_Hemogen</geneClass>
         <resourceGizmoType>GeneGizmo_ResourceHemogen</resourceGizmoType>
         <resourceLabel>hemogen</resourceLabel>

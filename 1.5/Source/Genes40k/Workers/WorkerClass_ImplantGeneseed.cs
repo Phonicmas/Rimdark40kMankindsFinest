@@ -41,10 +41,12 @@ namespace Genes40k
                     GeneseedVial geneseedVial = (GeneseedVial)ingredients.Where(x => x is GeneseedVial).First();
                     ImplantGeneseed(pawn, geneseedVial);
                 }
+
                 if (IsViolationOnPawn(pawn, part, Faction.OfPlayer))
                 {
                     ReportViolation(pawn, billDoer, pawn.HomeFaction, -70);
                 }
+
                 if (ModsConfig.IdeologyActive)
                 {
                     Find.HistoryEventsManager.RecordEvent(new HistoryEvent(HistoryEventDefOf.InstalledProsthetic, billDoer.Named(HistoryEventArgsNames.Doer)));
@@ -56,19 +58,42 @@ namespace Genes40k
         {
             DefModExtension_GeneseedVial defMod = geneseedVial.def.GetModExtension<DefModExtension_GeneseedVial>();
 
-            int num1 = pawn.ageTracker.AgeBiologicalYears - defMod.minAgeImplant;
-            int num2 = pawn.ageTracker.AgeBiologicalYears - defMod.maxAgeImplant;
-            if (num1 < num2)
+            var minAgeCheck = pawn.ageTracker.AgeBiologicalYears - defMod.minAgeImplant;
+            var maxAgeCheck = pawn.ageTracker.AgeBiologicalYears - defMod.maxAgeImplant;
+            if (minAgeCheck < maxAgeCheck)
             {
-                num1 = num2;
+                minAgeCheck = maxAgeCheck;
             }
-            int failureChance = num1 * defMod.failureChancePerAgePast;
-            if (failureChance > defMod.failChanceCap)
+            var failChanceAgeOffset = minAgeCheck * defMod.failureChancePerAgePast;
+
+            var failChance = 0;
+            var failChanceGeneOffset = 0;
+
+            var failCapChance = defMod.failChanceCap;
+            var failChanceCapGeneOffset = 0;
+
+            if (geneseedVial.extraGeneFromMaterial != null && geneseedVial.extraGeneFromMaterial.HasModExtension<DefModExtension_GeneseedPurity>())
             {
-                failureChance = defMod.failChanceCap;
+                var geneDefMod = geneseedVial.extraGeneFromMaterial.GetModExtension<DefModExtension_GeneseedPurity>();
+                failChanceCapGeneOffset += geneDefMod.additionalChanceCapOffset;
+                failChanceGeneOffset += geneDefMod.additionalChanceOffset;
             }
+
+            failCapChance += failChanceCapGeneOffset;
+            failChance += (failChanceAgeOffset + failChanceGeneOffset);
+
+            if (failCapChance > 100)
+            {
+                failCapChance = 100;
+            }
+
+            if (failChance > failCapChance)
+            {
+                failChance = failCapChance;
+            }
+
             Random rand = new Random();
-            if (rand.Next(0, 100) < failureChance)
+            if (rand.Next(0, 100) < failChance)
             {
                 pawn.Kill(null);
             }
@@ -76,6 +101,7 @@ namespace Genes40k
             {
                 pawn.genes.SetXenotypeDirect(defMod.xenotype);
             }
+
             if (defMod.overrideXenotypeGenesGiven)
             {
                 foreach (GeneDef gene in defMod.overridenAddedGenes)
@@ -96,16 +122,17 @@ namespace Genes40k
                     }
                 }
             }
+
             if (geneseedVial.extraGeneFromMaterial != null)
             {
                 pawn.genes.AddGene(geneseedVial.extraGeneFromMaterial, true);
             }
+
             if (defMod.appliesHediff != null)
             {
                 pawn.health.AddHediff(defMod.appliesHediff);
             }
             
         }
-    
     }
 }

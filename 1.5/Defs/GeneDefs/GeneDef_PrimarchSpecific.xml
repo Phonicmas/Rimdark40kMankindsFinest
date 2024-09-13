@@ -1,38 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <!-- Chaper XV - Magnus the Red -->
-    <GeneDef ParentName="BEWH_PrimarchSpecific">
-        <defName>BEWH_PrimarchXVMagnusTheRed</defName>
-        <label>magnus the red</label>
-        <description>The genetic material of Magnus the Red, when implanted, greatly improves psychic capabilities</description>
-        <iconPath>UI/Genes/MPrimarchXVMagnusTheRed</iconPath>
-        <displayOrderInCategory>30</displayOrderInCategory>
-        <statFactors>
-            <PsychicSensitivity>8</PsychicSensitivity>
-            <MeditationFocusGain>4.5</MeditationFocusGain>
-            <PsychicEntropyRecoveryRate>4</PsychicEntropyRecoveryRate>
-        </statFactors>
-        <capMods>
-            <li>
-                <capacity>Consciousness</capacity>
-                <postFactor>1.5</postFactor>
-            </li>
-        </capMods>
-        <skinColorOverride>(150, 62, 62)</skinColorOverride>
-        <minAgeActive>14</minAgeActive>
-        <modExtensions>
-            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
-        </modExtensions>
-    </GeneDef>
-
     <!-- Chaper IX - Sanguinius -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
         <defName>BEWH_PrimarchIXSanguinius</defName>
         <label>sanguinius</label>
         <description>The genetic material of Sanguinius, when implanted, grows a set of featered wings, allow for greater speed and flight.</description>
         <iconPath>UI/Genes/MPrimarchIXSanguinius</iconPath>
-        <displayOrderInCategory>30</displayOrderInCategory>
+        <displayOrderInCategory>59</displayOrderInCategory>
         <customEffectDescriptions>
             <li>Ignores speed penalty from obstacles.</li>
         </customEffectDescriptions>
@@ -88,6 +63,40 @@
             <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <hediffToWholeBody>BEWH_WingsHover</hediffToWholeBody>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Chaper XV - Magnus the Red -->
+    <GeneDef ParentName="BEWH_PrimarchSpecific">
+        <defName>BEWH_PrimarchXVMagnusTheRed</defName>
+        <label>magnus the red</label>
+        <description>The genetic material of Magnus the Red, when implanted, greatly improves psychic capabilities</description>
+        <iconPath>UI/Genes/MPrimarchXVMagnusTheRed</iconPath>
+        <displayOrderInCategory>65</displayOrderInCategory>
+        <geneClass>Genes40k.Gene_AddGeneByChance</geneClass>
+        <statFactors>
+            <PsychicSensitivity>8</PsychicSensitivity>
+            <MeditationFocusGain>4.5</MeditationFocusGain>
+            <PsychicEntropyRecoveryRate>4</PsychicEntropyRecoveryRate>
+        </statFactors>
+        <capMods>
+            <li>
+                <capacity>Consciousness</capacity>
+                <postFactor>1.5</postFactor>
+            </li>
+        </capMods>
+        <skinColorOverride>(150, 62, 62)</skinColorOverride>
+        <minAgeActive>14</minAgeActive>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="Genes40k.DefModExtension_AddGeneByChance">
+                <possibleGenesToGive>
+                    <li>
+                        <key>BEWH_BetaPsyker</key>
+                        <value>100</value>
+                    </li>
+                </possibleGenesToGive>
             </li>
         </modExtensions>
     </GeneDef>

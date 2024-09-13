@@ -53,6 +53,40 @@
         </modExtensions>
     </ThingDef>
 
+    <!-- Ultramarines -->
+    <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
+        <defName>BEWH_ChapterMaterialXIII</defName>
+        <label>chapter material XIII - Ultramarines</label>
+        <description>This containers holds the genetic mutation material of Chapter XIII - Ultramarines</description>
+        <graphicData>
+            <texPath>Things/Item/ChapterMaterial/ChapterMaterial_XIII</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_ChapterMaterial" />
+            <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+                <addedGene>BEWH_ChapterXIIIUltramarines</addedGene>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <!-- Thousand Sons -->
+    <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
+        <defName>BEWH_ChapterMaterialXV</defName>
+        <label>chapter material XV - Thousand Sons</label>
+        <description>This containers holds the genetic mutation material of Chapter XV - Thousand Sons</description>
+        <graphicData>
+            <texPath>Things/Item/ChapterMaterial/ChapterMaterial_XV</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_ChapterMaterial" />
+            <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+                <addedGene>BEWH_ChapterXVThousandSons</addedGene>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
     <!-- Blood Angels -->
     <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
         <defName>BEWH_ChapterMaterialIX</defName>

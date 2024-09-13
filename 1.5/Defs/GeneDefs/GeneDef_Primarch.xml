@@ -67,16 +67,12 @@
         <biostatArc>3</biostatArc>
 
         <statOffsets>
-            <PsychicSensitivity>3</PsychicSensitivity>
+            <PsychicSensitivity>2</PsychicSensitivity>
         </statOffsets>
         <statFactors>
             <AimingDelayFactor>0.35</AimingDelayFactor>
             <RangedCooldownFactor>0.35</RangedCooldownFactor>
         </statFactors>
-
-        <abilities>
-            <li>BEWH_WarpShield</li>
-        </abilities>
 
         <aptitudes>
             <Shooting>12</Shooting>

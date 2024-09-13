@@ -61,13 +61,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Building_GeneGestator.cs" />
-    <Compile Include="Building_GeneTable.cs" />
-    <Compile Include="Building_PrimarchGrowthVat.cs" />
-    <Compile Include="Building_GeneStorage.cs" />
+    <Compile Include="ThingClasses\Building_GeneGestator.cs" />
+    <Compile Include="ThingClasses\Building_GeneTable.cs" />
+    <Compile Include="ThingClasses\Building_PrimarchGrowthVat.cs" />
+    <Compile Include="ThingClasses\Building_GeneStorage.cs" />
+    <Compile Include="DefModExtensions\DefModExtension_GeneseedPurity.cs" />
     <Compile Include="DefModExtensions\DefModExtension_ChapterGene.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneFromMaterial.cs" />
     <Compile Include="DefModExtensions\DefModExtension_KeepPrerequisitePermit.cs" />
+    <Compile Include="DefModExtensions\DefModExtension_AddGeneByChance.cs" />
     <Compile Include="DefModExtensions\DefModExtension_LivingSaint.cs" />
     <Compile Include="DefModExtensions\DefModExtension_SangprimusPortum.cs" />
     <Compile Include="DefModExtensions\DefModExtension_PhaseDevelopment.cs" />
@@ -78,8 +80,9 @@
     <Compile Include="DefModExtensions\DefModExtension_GeneMatrix.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneGestator.cs" />
     <Compile Include="Comps\GameComponent_LivingSaint.cs" />
-    <Compile Include="Gene_EternalWatch.cs" />
-    <Compile Include="Gene_LivingSaint.cs" />
+    <Compile Include="GeneClasses\Gene_EternalWatch.cs" />
+    <Compile Include="GeneClasses\Gene_AddGeneByChance.cs" />
+    <Compile Include="GeneClasses\Gene_LivingSaint.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_BillPsycost.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_EternalWatchStopMentalBreak.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_EternalWatchStartMentalUndraft.cs" />
@@ -87,9 +90,9 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_EternalWatchStopMentalState.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_LivingSaintResurrection.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_LivingSaintDeath.cs" />
-    <Compile Include="Building_PrimarchEmbryo.cs" />
-    <Compile Include="PrimarchEmbryo.cs" />
-    <Compile Include="GeneseedVial.cs" />
+    <Compile Include="ThingClasses\Building_PrimarchEmbryo.cs" />
+    <Compile Include="ThingClasses\PrimarchEmbryo.cs" />
+    <Compile Include="ThingClasses\GeneseedVial.cs" />
     <Compile Include="Workers\JobDriver_FillGeneGestator.cs" />
     <Compile Include="Workers\ThoughtWorker_HolyRadiance.cs" />
     <Compile Include="Workers\WorkGiver_HaulToPrimarchVat.cs" />
@@ -107,7 +110,7 @@
     <Compile Include="DefModExtensions\DefModExtension_Psyker.cs" />
     <Compile Include="Comps\CompGivesAbility.cs" />
     <Compile Include="Ability_UpdateGizmo.cs" />
-    <Compile Include="Gene_Pariah.cs" />
+    <Compile Include="GeneClasses\Gene_Pariah.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_StopDeterioation.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_MentalBreakdownPsyker.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_NaturalBirthPsykerPariah.cs" />
