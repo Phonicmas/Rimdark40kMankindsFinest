@@ -44,6 +44,15 @@
         </exclusionTags>
     </GeneDef>
 
+    <!-- Space Marine Chapter Flaw -->
+    <GeneDef ParentName="BEWH_SpaceMarineParent" Name="BEWH_ChapterGeneFlawParent" Abstract="True">
+        <marketValueFactor>1</marketValueFactor>
+        <biostatCpx>1</biostatCpx>
+        <exclusionTags>
+            <li>BEWH_ChapterGeneFlaw</li>
+        </exclusionTags>
+    </GeneDef>
+
     <!-- Primaris Marine -->
     <GeneDef ParentName="BEWH_GenesOverallParent" Name="BEWH_PrimarisSpaceMarineParent" Abstract="True">
         <marketValueFactor>1.4</marketValueFactor>

@@ -101,7 +101,7 @@
       <skillRequirements>
         <Crafting>6</Crafting>
       </skillRequirements>
-      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
     </recipeMaker>
   </ThingDef>
 

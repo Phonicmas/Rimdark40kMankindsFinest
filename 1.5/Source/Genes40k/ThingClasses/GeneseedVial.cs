@@ -40,11 +40,12 @@ namespace Genes40k
         {
             get
             {
+                DefModExtension_GeneseedVial defMod = def.GetModExtension<DefModExtension_GeneseedVial>();
                 int num = 0;
-                for (int i = 0; i < RecipeDefOf.ImplantXenogerm.ingredients.Count; i++)
+                for (int i = 0; i < defMod.recipe.ingredients.Count; i++)
                 {
-                    IngredientCount ingredientCount = RecipeDefOf.ImplantXenogerm.ingredients[i];
-                    if (ingredientCount.filter.Allows(ThingDefOf.MedicineIndustrial))
+                    IngredientCount ingredientCount = defMod.recipe.ingredients[i];
+                    if (ingredientCount.filter.Allows(ThingDefOf.MedicineUltratech) || ingredientCount.filter.Allows(ThingDefOf.MedicineIndustrial))
                     {
                         num += (int)ingredientCount.GetBaseCount();
                     }
@@ -187,15 +188,15 @@ namespace Genes40k
             string arg = string.Empty;
             if (!targetPawn.InBed() && !targetPawn.Map.listerBuildings.allBuildingsColonist.Any((Building x) => x is Building_Bed && RestUtility.CanUseBedEver(targetPawn, x.def) && ((Building_Bed)x).Medical))
             {
-                arg = "XenogermOrderedImplantedBedNeeded".Translate(targetPawn.Named("PAWN"));
+                arg = "BEWH.GeneseedOrderedImplantedBedNeeded".Translate(targetPawn.Named("PAWN"));
             }
             int requiredMedicineForImplanting = RequiredMedicineForImplanting;
             string arg2 = string.Empty;
             if (targetPawn.Map.listerThings.ThingsInGroup(ThingRequestGroup.Medicine).Sum((Thing x) => x.stackCount) < requiredMedicineForImplanting)
             {
-                arg2 = "XenogermOrderedImplantedMedicineNeeded".Translate(requiredMedicineForImplanting.Named("MEDICINENEEDED"));
+                arg2 = "BEWH.GeneseedOrderedImplantedMedicineNeeded".Translate(requiredMedicineForImplanting.Named("MEDICINENEEDED"));
             }
-            Find.LetterStack.ReceiveLetter("LetterLabelXenogermOrderedImplanted".Translate(), "LetterXenogermOrderedImplanted".Translate(targetPawn.Named("PAWN"), requiredMedicineForImplanting.Named("MEDICINENEEDED"), arg.Named("BEDINFO"), arg2.Named("MEDICINEINFO")), LetterDefOf.NeutralEvent);
+            Find.LetterStack.ReceiveLetter("BEWH.LetterLabelGeneseedOrderedImplanted".Translate(), "BEWH.LetterGeneseedOrderedImplanted".Translate(targetPawn.Named("PAWN"), requiredMedicineForImplanting.Named("MEDICINENEEDED"), arg.Named("BEDINFO"), arg2.Named("MEDICINEINFO")), LetterDefOf.NeutralEvent);
         }
 
         public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Pawn selPawn)
@@ -243,16 +244,12 @@ namespace Genes40k
             {
                 yield break;
             }
-            if (IsAlreadySuperHuman(targetPawn))
-            {
-                yield break;
-            }
             if (targetPawn == null)
             {
                 yield return new Command_Action
                 {
-                    defaultLabel = "ImplantXenogerm".Translate() + "...",
-                    defaultDesc = "ImplantXenogermDesc".Translate(RequiredMedicineForImplanting.Named("MEDICINEAMOUNT")),
+                    defaultLabel = "BEWH.OrderImplantGeneseed".Translate() + "...",
+                    defaultDesc = "BEWH.OrderImplantGeneseedDesc".Translate(RequiredMedicineForImplanting.Named("MEDICINEAMOUNT")),
                     icon = ImplantTex.Texture,
                     action = delegate
                     {
@@ -260,7 +257,7 @@ namespace Genes40k
                         foreach (Pawn item in base.Map.mapPawns.AllPawnsSpawned)
                         {
                             Pawn pawn = item;
-                            if (!pawn.IsQuestLodger() && pawn.genes != null && (pawn.IsColonistPlayerControlled || pawn.IsPrisonerOfColony || pawn.IsSlaveOfColony || (pawn.IsColonyMutant && pawn.IsGhoul)))
+                            if (!pawn.IsQuestLodger() && pawn.genes != null && (pawn.IsColonistPlayerControlled || IsAlreadySuperHuman(pawn) || pawn.IsPrisonerOfColony || pawn.IsSlaveOfColony || (pawn.IsColonyMutant && pawn.IsGhoul)))
                             {
                                 int num = GeneUtility.MetabolismAfterImplanting(pawn, geneSet);
                                 if (num < GeneTuning.BiostatRange.TrueMin)
@@ -292,6 +289,7 @@ namespace Genes40k
                 icon = CancelIcon,
                 action = delegate
                 {
+                    Log.Message("Cancel implant message");
                     Bill bill = targetPawn?.BillStack?.Bills?.FirstOrDefault((Bill x) => x.recipe == def.GetModExtension<DefModExtension_GeneseedVial>().recipe);
                     if (bill != null)
                     {
@@ -310,6 +308,14 @@ namespace Genes40k
         {
             if (!target.IsValid || target.Pawn == null)
             {
+                return false;
+            }
+            if (IsAlreadySuperHuman(target.Pawn))
+            {
+                if (showMessages)
+                {
+                    Messages.Message("BEWH.AlreadySuperHuman".Translate(target.Pawn.Named("PAWN")), null);
+                }
                 return false;
             }
             if (target.Pawn.IsQuestLodger())

@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <!-- Genetic Matrix Base -->
-    <RecipeDef Name="BEWH_RecipeGeneseedVialBase" Abstract="True">
-        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-        <effectWorking>Cook</effectWorking>
-        <soundWorking>Recipe_Machining</soundWorking>
-        <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+    <!-- Base Implant Recipe -->
+    <RecipeDef Name="BEWH_RecipeGeneseedVialBase" ParentName="SurgeryFlesh" Abstract="True">
         <workerClass>Genes40k.WorkerClass_ImplantGeneseed</workerClass>
-        <recipeUsers>
-            <li>BEWH_GeneManipulationTable</li>
-        </recipeUsers>
-        <workSkill>Crafting</workSkill>
-        <displayPriority>0</displayPriority>
+        <hideBodyPartNames>true</hideBodyPartNames>
+        <targetsBodyPart>false</targetsBodyPart>
+        <surgeryOutcomeEffect>ImplantXenogerm</surgeryOutcomeEffect>
+        <uiIconThing>Xenogerm</uiIconThing>
+        <isViolation>true</isViolation>
+        <workSkill>Medicine</workSkill>
+        <fixedIngredientFilter>
+            <categories>
+              <li>Medicine</li>
+            </categories>
+          </fixedIngredientFilter>
     </RecipeDef>
 
     <!-- Thunder Warrior -->

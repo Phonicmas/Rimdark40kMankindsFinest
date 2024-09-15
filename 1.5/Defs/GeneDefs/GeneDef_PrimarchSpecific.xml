@@ -7,7 +7,7 @@
         <label>sanguinius</label>
         <description>The genetic material of Sanguinius, when implanted, grows a set of featered wings, allow for greater speed and flight.</description>
         <iconPath>UI/Genes/MPrimarchIXSanguinius</iconPath>
-        <displayOrderInCategory>59</displayOrderInCategory>
+        <displayOrderInCategory>409</displayOrderInCategory>
         <customEffectDescriptions>
             <li>Ignores speed penalty from obstacles.</li>
         </customEffectDescriptions>
@@ -73,7 +73,7 @@
         <label>magnus the red</label>
         <description>The genetic material of Magnus the Red, when implanted, greatly improves psychic capabilities</description>
         <iconPath>UI/Genes/MPrimarchXVMagnusTheRed</iconPath>
-        <displayOrderInCategory>65</displayOrderInCategory>
+        <displayOrderInCategory>415</displayOrderInCategory>
         <geneClass>Genes40k.Gene_AddGeneByChance</geneClass>
         <statFactors>
             <PsychicSensitivity>8</PsychicSensitivity>

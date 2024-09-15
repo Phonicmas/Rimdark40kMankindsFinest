@@ -69,7 +69,13 @@
 
   <BEWH.AlreadySuperHuman>{0} is already a superhuman and cannot be enhanced again</BEWH.AlreadySuperHuman>
 
+  <BEWH.OrderImplantGeneseed>Order geneseed implantation...</BEWH.OrderImplantGeneseed>
+  <BEWH.OrderImplantGeneseedDesc>Implant this geneseed into a person to partially override their genetic code.\n\nThis is a surgical operation, so it requires a doctor, medical bed and {MEDICINEAMOUNT} medicine.</BEWH.OrderImplantGeneseedDesc>
 
+  <BEWH.LetterLabelGeneseedOrderedImplanted>Geneseed implantation ordered</BEWH.LetterLabelGeneseedOrderedImplanted>
+  <BEWH.LetterGeneseedOrderedImplanted>You have ordered a geneseed be implanted in {PAWN_nameDef}. This procedure requires a medical bed and {MEDICINENEEDED} medicine.{BEDINFO}{MEDICINEINFO}\n\nYou can cancel this procedure by going to {PAWN_nameDef}'s health -> operations tab.</BEWH.LetterGeneseedOrderedImplanted>
+  <BEWH.GeneseedOrderedImplantedBedNeeded>\n\nYou do not have any medical beds available for {PAWN_nameDef}. Consider marking a bed as medical.</BEWH.GeneseedOrderedImplantedBedNeeded>
+  <BEWH.GeneseedOrderedImplantedMedicineNeeded>\n\nYou do not have enough medicine to implant the geneseed. Implanting cannot begin until you get {MEDICINENEEDED} medicine.</BEWH.GeneseedOrderedImplantedMedicineNeeded>
   <!-- Living Saint-->
   <BEWH.LivingSaint>Living Saint</BEWH.LivingSaint>
   <BEWH.LivingSaintMessage>In {0}'s final moments they felt a surge of energy surging through them, invigorating and strengthening them. {0} was born anew as a living saint, stronger, faster and evermore loyal.</BEWH.LivingSaintMessage>

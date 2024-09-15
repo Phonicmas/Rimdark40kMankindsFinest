@@ -132,7 +132,6 @@ namespace Genes40k
 
         public static bool IsSuperHuman(Pawn pawn)
         {
-            Log.Message(pawn);
             return (IsThunderWarrior(pawn) || IsSpaceMarine(pawn) || IsPrimaris(pawn) || IsCustodes(pawn) || IsPrimarch(pawn));
         }
 

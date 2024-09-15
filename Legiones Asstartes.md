@@ -123,7 +123,7 @@ Luna Wolves/Sons of Horus: ¯\_(ツ)_/¯
 
 Lorgar Aurelian: Conversion strength +150%, can use conversion power without the role. Has lowered physical stats compared to other primarchs. Has psychic potential, but not nearly as strong as Magnus' one
 
-Word Bearers: Conversion strength +20%, increased meditation efficiency.
+World Bearers: Conversion strength +20%, increased meditation efficiency.
 
 # ++++ XVIII Legio ++++
 

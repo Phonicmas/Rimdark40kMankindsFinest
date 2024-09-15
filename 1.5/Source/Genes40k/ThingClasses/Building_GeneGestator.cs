@@ -169,12 +169,14 @@ namespace Genes40k
 
         private void Finish()
         {
-            GeneseedVial geneseedVial = (GeneseedVial)GenSpawn.Spawn(containedMatrix.def.GetModExtension<DefModExtension_GeneMatrix>().makesGeneVial, InteractionCell, Map);
+            var geneseedVial = (GeneseedVial)ThingMaker.MakeThing(containedMatrix.def.GetModExtension<DefModExtension_GeneMatrix>().makesGeneVial);
 
             if (selectedMaterial != null)
             {
                 geneseedVial.AddExtraGene(selectedMaterial.GetModExtension<DefModExtension_GeneFromMaterial>().addedGene);
             }
+
+            GenSpawn.Spawn(geneseedVial, InteractionCell, Map);
 
             ChoiceLetter letter = LetterMaker.MakeLetter("BEWH.GestateFinishLetter".Translate(), "BEWH.GestateFinishMessage".Translate(selectedMatrix.label, geneseedVial.Label), LetterDefOf.PositiveEvent, geneseedVial);
 

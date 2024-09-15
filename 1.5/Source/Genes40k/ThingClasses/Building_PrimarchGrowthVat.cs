@@ -544,6 +544,14 @@ namespace Genes40k
                                 Finish();
                             }
                         };
+                        yield return new Command_Action
+                        {
+                            defaultLabel = "DEV: Embryo almost done",
+                            action = delegate
+                            {
+                                startTick = Find.TickManager.TicksGame + 2500;
+                            }
+                        };
                     }
                 }
             }
