@@ -6,15 +6,15 @@
         <workerClass>Genes40k.WorkerClass_ImplantGeneseed</workerClass>
         <hideBodyPartNames>true</hideBodyPartNames>
         <targetsBodyPart>false</targetsBodyPart>
-        <surgeryOutcomeEffect>ImplantXenogerm</surgeryOutcomeEffect>
+        <surgeryOutcomeEffect Inherit = "False" />
         <uiIconThing>Xenogerm</uiIconThing>
         <isViolation>true</isViolation>
         <workSkill>Medicine</workSkill>
         <fixedIngredientFilter>
             <categories>
-              <li>Medicine</li>
+                <li>Medicine</li>
             </categories>
-          </fixedIngredientFilter>
+        </fixedIngredientFilter>
     </RecipeDef>
 
     <!-- Thunder Warrior -->
@@ -23,8 +23,8 @@
         <label>make thunder warrior</label>
         <description>Make a thunder warrior.</description>
         <jobString>Making thunder warrior.</jobString>
-        <workAmount>45000</workAmount>
         <researchPrerequisite>BEWH_GeneseedCreation</researchPrerequisite>
+        <workAmount>10000</workAmount>
         <ingredients>
             <li>
                 <filter>
@@ -46,6 +46,11 @@
         <skillRequirements>
             <Medicine>7</Medicine>
         </skillRequirements>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
+                <geneseedVial>BEWH_GeneseedVialThunderWarrior</geneseedVial>
+            </li>
+        </modExtensions>
     </RecipeDef>
 
     <!-- Firstborn -->
@@ -54,8 +59,8 @@
         <label>make firstborn</label>
         <description>Make a firstborn.</description>
         <jobString>Making firstborn.</jobString>
-        <workAmount>45000</workAmount>
         <researchPrerequisite>BEWH_GeneseedPurification</researchPrerequisite>
+        <workAmount>5000</workAmount>
         <ingredients>
             <li>
                 <filter>
@@ -77,6 +82,11 @@
         <skillRequirements>
             <Medicine>8</Medicine>
         </skillRequirements>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
+                <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
+            </li>
+        </modExtensions>
     </RecipeDef>
 
     <!-- Primaris -->
@@ -85,8 +95,8 @@
         <label>make primaris</label>
         <description>Make a primaris.</description>
         <jobString>Making primaris.</jobString>
-        <workAmount>45000</workAmount>
         <researchPrerequisite>BEWH_GeneseedPerfection</researchPrerequisite>
+        <workAmount>6500</workAmount>
         <ingredients>
             <li>
                 <filter>
@@ -108,6 +118,11 @@
         <skillRequirements>
             <Medicine>10</Medicine>
         </skillRequirements>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
+                <geneseedVial>BEWH_GeneseedVialPrimaris</geneseedVial>
+            </li>
+        </modExtensions>
     </RecipeDef>
 
     <!-- Custodes -->
@@ -116,8 +131,8 @@
         <label>make custodes</label>
         <description>Make a custodes.</description>
         <jobString>Making custodes.</jobString>
-        <workAmount>45000</workAmount>
         <researchPrerequisite>BEWH_CustodesCreation</researchPrerequisite>
+        <workAmount>15000</workAmount>
         <ingredients>
             <li>
                 <filter>
@@ -139,6 +154,11 @@
         <skillRequirements>
             <Medicine>13</Medicine>
         </skillRequirements>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
+                <geneseedVial>BEWH_GeneseedVialCustodes</geneseedVial>
+            </li>
+        </modExtensions>
     </RecipeDef>
 
 </Defs>

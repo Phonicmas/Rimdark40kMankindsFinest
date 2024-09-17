@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DefModExtensions\DefModExtension_GeneseedVialRecipe.cs" />
     <Compile Include="ThingClasses\Building_GeneGestator.cs" />
     <Compile Include="ThingClasses\Building_GeneTable.cs" />
     <Compile Include="ThingClasses\Building_PrimarchGrowthVat.cs" />

@@ -73,7 +73,7 @@
   <!-- Space Marine -->
   <XenotypeDef ParentName="SpaceMarineBase">
     <defName>BEWH_SpaceMarine</defName>
-    <label>space marine</label>
+    <label>firstborn marine</label>
     <description>Barely human, but instead superhuman; having been made superior in all respects to a normal man by a harsh regime of genetic modification. These men, untouched by plague or any natural disease are able to suffer wounds that would kill any ordinary man and still live to fight another day.</description>
     <descriptionShort>Barely human, but instead superhuman; having been made superior in all respects to a normal man by a harsh regime of genetic modification.</descriptionShort>
     <iconPath>UI/Xenotypes/SpaceMarineXenoIcon</iconPath>
@@ -83,7 +83,7 @@
   <!-- Primaris Space Marine -->
   <XenotypeDef ParentName="SpaceMarineBase">
     <defName>BEWH_PrimarisSpaceMarine</defName>
-    <label>primaris space marine</label>
+    <label>primaris marine</label>
     <description>Barely human, but instead superhuman; having been made superior in all respects to a normal man by a harsh regime of genetic modification. These men, untouched by plague or any natural disease are able to suffer wounds that would kill any ordinary man and still live to fight another day. These primaris stand above and are stronger than the standard space marine.</description>
     <descriptionShort>Barely human, but instead superhuman; having been made superior in all respects to a normal man by a harsh regime of genetic modification. These primaris stand above and are stronger than the standard space marine.</descriptionShort>
     <iconPath>UI/Xenotypes/SpaceMarinePrimarisXenoIcon</iconPath>
@@ -98,7 +98,7 @@
   <!-- Space Marine Psyker -->
   <XenotypeDef ParentName="SpaceMarineBase">
     <defName>BEWH_SpaceMarinePsyker</defName>
-    <label>space marine psyker</label>
+    <label>firstborn marine psyker</label>
     <description>Barely human, but instead superhuman; having been made superior in all respects to a normal man by a harsh regime of genetic modification. These men, untouched by plague or any natural disease are able to suffer wounds that would kill any ordinary man and still live to fight another day. These space marine carries the psyker gene giving them unatural abilities.</description>
     <descriptionShort>Barely human, but instead superhuman; having been made superior in all respects to a normal man by a harsh regime of genetic modification. These space marine carries the psyker gene giving them unatural abilities.</descriptionShort>
     <iconPath>UI/Xenotypes/SpaceMarinePsykerXenoIcon</iconPath>

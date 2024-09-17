@@ -97,6 +97,7 @@
         <li>BEWH_GeneManipulationTable</li>
       </recipeUsers>
       <researchPrerequisite>BEWH_PrimarchProject</researchPrerequisite>
+      <workAmount>1250</workAmount>
       <workSkill>Crafting</workSkill>
       <skillRequirements>
         <Crafting>6</Crafting>

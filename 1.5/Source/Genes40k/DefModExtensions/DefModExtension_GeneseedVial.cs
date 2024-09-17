@@ -19,6 +19,7 @@ namespace Genes40k
 
         public int minAgeImplant = 0;
         public int maxAgeImplant = 0;
+        public int baseFailureChance = 0;
         public int failureChancePerAgePast = 0;
         public int failChanceCap = 0;
 

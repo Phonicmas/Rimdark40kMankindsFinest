@@ -8,9 +8,11 @@ using Verse;
 namespace Genes40k
 {
     [StaticConstructorOnStartup]
-    public class GeneseedVial : GeneSetHolderBase
+    public class GeneseedVial : ThingWithComps
     {
         private Pawn targetPawn;
+
+        protected GeneSet geneSet;
 
         public string xenotypeName;
 
@@ -24,6 +26,36 @@ namespace Genes40k
 
         private static readonly Texture2D CancelIcon = ContentFinder<Texture2D>.Get("UI/Designators/Cancel");
 
+        private const int MaxGeneLabels = 5;
+
+        private List<string> tmpGeneLabelsDesc = new List<string>();
+
+        private List<string> tmpGeneLabels = new List<string>();
+
+        public GeneSet GeneSet => geneSet;
+
+        public override string DescriptionDetailed
+        {
+            get
+            {
+                tmpGeneLabelsDesc.Clear();
+                string text = base.DescriptionDetailed;
+                if (geneSet == null || !geneSet.GenesListForReading.Any())
+                {
+                    return text;
+                }
+                if (!text.NullOrEmpty())
+                {
+                    text += "\n\n";
+                }
+                for (int i = 0; i < geneSet.GenesListForReading.Count; i++)
+                {
+                    tmpGeneLabelsDesc.Add(geneSet.GenesListForReading[i].label);
+                }
+                return text + ("Genes".Translate().CapitalizeFirst() + ":\n" + tmpGeneLabelsDesc.ToLineList("  - ", capitalizeItems: true));
+            }
+        }
+
         public override string LabelNoCount
         {
             get
@@ -32,7 +64,7 @@ namespace Genes40k
                 {
                     return base.LabelNoCount;
                 }
-                return "NamedXenogerm".Translate(xenotypeName.Named("NAME"));
+                return "BEWH.NamedGeneseedVial".Translate(xenotypeName.Named("NAME"));
             }
         }
 
@@ -108,7 +140,8 @@ namespace Genes40k
             TaggedString text = "BEWH.ImplantGeneseedDesc".Translate(newTarget, xenotypeName);
             DefModExtension_GeneseedVial defMod = def.GetModExtension<DefModExtension_GeneseedVial>();
             List<string> failChanceCausedBy = new List<string>();
-            var failChance = 0;
+            var failChance = defMod.baseFailureChance;
+            failChanceCausedBy.Add("\t- " + "BEWH.FailureChanceCause".Translate(defMod.baseFailureChance, "BEWH.BaseFailureChance".Translate()));
             if (!(defMod.minAgeImplant <= newTarget.ageTracker.AgeBiologicalYears && defMod.maxAgeImplant >= newTarget.ageTracker.AgeBiologicalYears))
             {
                 var minAgeCheck = newTarget.ageTracker.AgeBiologicalYears - defMod.minAgeImplant;
@@ -346,6 +379,57 @@ namespace Genes40k
             }
         }
 
+        public override string GetInspectString()
+        {
+            string text = base.GetInspectString();
+            tmpGeneLabels.Clear();
+            if (geneSet != null && geneSet.GenesListForReading.Any())
+            {
+                if (!text.NullOrEmpty())
+                {
+                    text += "\n";
+                }
+                List<GeneDef> genesListForReading = geneSet.GenesListForReading;
+                int num = Mathf.Min(MaxGeneLabels, genesListForReading.Count);
+                for (int i = 0; i < num; i++)
+                {
+                    string text2 = genesListForReading[i].label;
+                    if (geneSet.IsOverridden(genesListForReading[i]))
+                    {
+                        text2 += " (" + "Overridden".Translate() + ")";
+                    }
+                    tmpGeneLabels.Add(text2);
+                }
+                if (genesListForReading.Count > num)
+                {
+                    tmpGeneLabels.Add("Etc".Translate() + "...");
+                }
+                text += "Genes".Translate().CapitalizeFirst() + ":\n" + tmpGeneLabels.ToLineList("  - ", capitalizeItems: true);
+            }
+            return text;
+        }
+
+        public override IEnumerable<StatDrawEntry> SpecialDisplayStats()
+        {
+            foreach (StatDrawEntry item in base.SpecialDisplayStats())
+            {
+                yield return item;
+            }
+            if (geneSet == null)
+            {
+                yield break;
+            }
+            Dialog_InfoCard.Hyperlink? inspectGenesHyperlink = null;
+            if (ThingSelectionUtility.SelectableByMapClick(this))
+            {
+                inspectGenesHyperlink = new Dialog_InfoCard.Hyperlink(this, -1, thingIsGeneOwner: true);
+            }
+            foreach (StatDrawEntry item2 in geneSet.SpecialDisplayStats(inspectGenesHyperlink))
+            {
+                yield return item2;
+            }
+        }
+
         public override void ExposeData()
         {
             base.ExposeData();
@@ -353,6 +437,7 @@ namespace Genes40k
             Scribe_Values.Look(ref xenotypeName, "xenotypeName");
             Scribe_Defs.Look(ref iconDef, "iconDef");
             Scribe_Defs.Look(ref extraGeneFromMaterial, "extraGeneFromMaterial");
+            Scribe_Deep.Look(ref geneSet, "geneSet");
             if (iconDef == null && Scribe.mode == LoadSaveMode.PostLoadInit)
             {
                 iconDef = XenotypeIconDefOf.Basic;

@@ -18,7 +18,7 @@ namespace Genes40k
             {
                 return false;
             }
-            /*List<Thing> list = pawn.Map.listerThings.ThingsOfDef(recipe.GetModExtension<DefModExtension_GeneseedVialRecipe>().geneseedVial);
+            List<Thing> list = pawn.Map.listerThings.ThingsOfDef(recipe.GetModExtension<DefModExtension_GeneseedVialRecipe>().geneseedVial);
             if (list.Any())
             {
                 foreach (Thing item in list)
@@ -28,7 +28,7 @@ namespace Genes40k
                         return true;
                     }
                 }
-            }*/
+            }
             return true;
         }
 
@@ -36,11 +36,8 @@ namespace Genes40k
         {
             if (!CheckSurgeryFail(billDoer, pawn, ingredients, part, bill))
             {
-                if (bill.xenogerm != null)
-                {
-                    GeneseedVial geneseedVial = (GeneseedVial)ingredients.Where(x => x is GeneseedVial).First();
-                    ImplantGeneseed(pawn, geneseedVial);
-                }
+                GeneseedVial geneseedVial = (GeneseedVial)ingredients.Where(x => x is GeneseedVial).First();
+                ImplantGeneseed(pawn, geneseedVial);
 
                 if (IsViolationOnPawn(pawn, part, Faction.OfPlayer))
                 {
@@ -58,15 +55,19 @@ namespace Genes40k
         {
             DefModExtension_GeneseedVial defMod = geneseedVial.def.GetModExtension<DefModExtension_GeneseedVial>();
 
-            var minAgeCheck = pawn.ageTracker.AgeBiologicalYears - defMod.minAgeImplant;
-            var maxAgeCheck = pawn.ageTracker.AgeBiologicalYears - defMod.maxAgeImplant;
-            if (minAgeCheck < maxAgeCheck)
+            var failChanceAgeOffset = 0;
+            if (!(defMod.minAgeImplant <= pawn.ageTracker.AgeBiologicalYears && defMod.maxAgeImplant >= pawn.ageTracker.AgeBiologicalYears))
             {
-                minAgeCheck = maxAgeCheck;
+                var minAgeCheck = pawn.ageTracker.AgeBiologicalYears - defMod.minAgeImplant;
+                var maxAgeCheck = pawn.ageTracker.AgeBiologicalYears - defMod.maxAgeImplant;
+                if (minAgeCheck < maxAgeCheck)
+                {
+                    minAgeCheck = maxAgeCheck;
+                }
+                failChanceAgeOffset = minAgeCheck * defMod.failureChancePerAgePast;
             }
-            var failChanceAgeOffset = minAgeCheck * defMod.failureChancePerAgePast;
 
-            var failChance = 0;
+            var failChance = defMod.baseFailureChance;
             var failChanceGeneOffset = 0;
 
             var failCapChance = defMod.failChanceCap;
@@ -96,6 +97,7 @@ namespace Genes40k
             if (rand.Next(0, 100) < failChance)
             {
                 pawn.Kill(null);
+                return;
             }
             else
             {

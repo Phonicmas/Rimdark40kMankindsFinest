@@ -25,6 +25,7 @@
         <maxAgeImplant>21</maxAgeImplant>
         <failureChancePerAgePast>3</failureChancePerAgePast>
         <failChanceCap>80</failChanceCap>
+        <baseFailureChance>5</baseFailureChance>
       </li>
     </modExtensions>
   </ThingDef>
@@ -60,6 +61,7 @@
         <maxAgeImplant>12</maxAgeImplant>
         <failureChancePerAgePast>5</failureChancePerAgePast>
         <failChanceCap>85</failChanceCap>
+        <baseFailureChance>10</baseFailureChance>
       </li>
     </modExtensions>
   </ThingDef>
@@ -96,6 +98,7 @@
         <maxAgeImplant>12</maxAgeImplant>
         <failureChancePerAgePast>9</failureChancePerAgePast>
         <failChanceCap>90</failChanceCap>
+        <baseFailureChance>10</baseFailureChance>
       </li>
     </modExtensions>
   </ThingDef>
@@ -122,6 +125,7 @@
         <maxAgeImplant>4</maxAgeImplant>
         <failureChancePerAgePast>19</failureChancePerAgePast>
         <failChanceCap>95</failChanceCap>
+        <baseFailureChance>20</baseFailureChance>
       </li>
     </modExtensions>
   </ThingDef>

@@ -63,6 +63,7 @@
   <BEWH.ImplantGeneseedDesc>You are about to implant {0}, making them into a {1}</BEWH.ImplantGeneseedDesc>
   <BEWH.OutsideOptimalAgeRange>{0} being outside the optimal age range {1}~{2} for this procedure</BEWH.OutsideOptimalAgeRange>
   <BEWH.CurrentFailureChance>Current failure chance is {0}%, failure will result in death and loss of geneseed vial</BEWH.CurrentFailureChance>
+  <BEWH.BaseFailureChance>base failure chance</BEWH.BaseFailureChance>
   <BEWH.FailureChanceCausedBy>Current failure chance is caused by:</BEWH.FailureChanceCausedBy>
   <BEWH.FailureChanceCause>{0}%: caused by {1}</BEWH.FailureChanceCause>
   <BEWH.FailureChanceCapped>Procedure failure chance was capped at {0}%</BEWH.FailureChanceCapped>
@@ -76,6 +77,9 @@
   <BEWH.LetterGeneseedOrderedImplanted>You have ordered a geneseed be implanted in {PAWN_nameDef}. This procedure requires a medical bed and {MEDICINENEEDED} medicine.{BEDINFO}{MEDICINEINFO}\n\nYou can cancel this procedure by going to {PAWN_nameDef}'s health -> operations tab.</BEWH.LetterGeneseedOrderedImplanted>
   <BEWH.GeneseedOrderedImplantedBedNeeded>\n\nYou do not have any medical beds available for {PAWN_nameDef}. Consider marking a bed as medical.</BEWH.GeneseedOrderedImplantedBedNeeded>
   <BEWH.GeneseedOrderedImplantedMedicineNeeded>\n\nYou do not have enough medicine to implant the geneseed. Implanting cannot begin until you get {MEDICINENEEDED} medicine.</BEWH.GeneseedOrderedImplantedMedicineNeeded>
+  
+  <BEWH.NamedGeneseedVial>{0} geneseed vial</BEWH.NamedGeneseedVial>
+  
   <!-- Living Saint-->
   <BEWH.LivingSaint>Living Saint</BEWH.LivingSaint>
   <BEWH.LivingSaintMessage>In {0}'s final moments they felt a surge of energy surging through them, invigorating and strengthening them. {0} was born anew as a living saint, stronger, faster and evermore loyal.</BEWH.LivingSaintMessage>
