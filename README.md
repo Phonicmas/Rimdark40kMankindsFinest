@@ -4,7 +4,8 @@ Check descriptions
 
 Compile list of features
 
-Make steam workshop info graphics for genes and some buildings
+Make Thunder Warrior gene art
+Gestational flurry unfinished art
 
 
 # NEW ADDITIONS TO MAKE AT SOME POINT
