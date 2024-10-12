@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<HediffDef>
+		<defName>BEWH_DeniedWitch</defName>
+		<label>Denied Witch</label>
+		<description>...</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<initialSeverity>1.0 </initialSeverity>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<minSeverity>0</minSeverity>
+				<statFactors>
+					<PsychicSensitivity>0.1</PsychicSensitivity>
+					<PsychicEntropyRecoveryRate>0.1</PsychicEntropyRecoveryRate>
+				</statFactors>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-2</severityPerDay>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<!-- Angron Berserk -->
+	<HediffDef>
+		<defName>BEWH_AngronBerserk</defName>
+		<label>berserk</label>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>...</description>
+		<everCurableByItem>false</everCurableByItem>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<statFactors>
+					<MeleeHitChance>1.5</MeleeHitChance>
+					<MeleeDamageFactor>2</MeleeDamageFactor>
+					<MeleeDodgeChance>0.75</MeleeDodgeChance>
+					<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.5</ArmorRating_Sharp>
+					<ArmorRating_Heat>0.5</ArmorRating_Heat>
+				</statFactors>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>True</showRemainingTime>
+			</li>
+			<li Class="Core40k.HediffCompProperties_RemoveMentalStateOnHediffEnd">
+				<specificMentalState>Berserk</specificMentalState>
+			</li>
+		</comps>
+	</HediffDef>
+
+</Defs>

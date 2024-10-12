@@ -88,6 +88,7 @@ namespace Genes40k
         public static HediffDef BEWH_PsychicComa;
         public static HediffDef BEWH_PsychicConnectionSevered;
         public static HediffDef BEWH_PsychicCrafting;
+        public static HediffDef BEWH_DeniedWitch;
 
         public static HediffDef BEWH_PariahEffecter;
 

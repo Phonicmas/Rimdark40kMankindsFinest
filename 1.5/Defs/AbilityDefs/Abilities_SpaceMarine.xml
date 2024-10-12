@@ -2,7 +2,7 @@
 <Defs>
 
   <AbilityCategoryDef>
-    <defName>SpaceMarine</defName>
+    <defName>BEWH_SpaceMarine</defName>
     <displayOrder>999</displayOrder>
   </AbilityCategoryDef>
 
@@ -14,7 +14,7 @@
     <iconPath>UI/Abilities/AcidSpray</iconPath>
     <cooldownTicksRange>60000</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
-    <category>SpaceMarine</category>
+    <category>BEWH_SpaceMarine</category>
     <warmupStartSound>AcidSpray_Warmup</warmupStartSound>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
@@ -77,7 +77,7 @@
     <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
     <cooldownTicksRange>180000</cooldownTicksRange>
-    <category>SpaceMarine</category>
+    <category>BEWH_SpaceMarine</category>
     <uiOrder>2</uiOrder>
     <warmupStartSound>BEWH_NoSound</warmupStartSound>
     <statBases>
@@ -121,7 +121,7 @@
     <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
     <cooldownTicksRange>240000</cooldownTicksRange>
-    <category>SpaceMarine</category>
+    <category>BEWH_SpaceMarine</category>
     <uiOrder>3</uiOrder>
     <warmupStartSound>BEWH_NoSound</warmupStartSound>
     <verbProperties>
@@ -153,7 +153,7 @@
     <iconPath>UI/Abilities/OmophageaRemembrance</iconPath>
     <showPsycastEffects>False</showPsycastEffects>
     <cooldownTicksRange>240000</cooldownTicksRange>
-    <category>SpaceMarine</category>
+    <category>BEWH_SpaceMarine</category>
     <uiOrder>4</uiOrder>
     <warmupStartSound>BEWH_NoSound</warmupStartSound>
     <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
@@ -190,7 +190,7 @@
     <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
     <cooldownTicksRange>240000</cooldownTicksRange>
-    <category>SpaceMarine</category>
+    <category>BEWH_SpaceMarine</category>
     <uiOrder>5</uiOrder>
     <warmupStartSound>BEWH_NoSound</warmupStartSound>
     <statBases>

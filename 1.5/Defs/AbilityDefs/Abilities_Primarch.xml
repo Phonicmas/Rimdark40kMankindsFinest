@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <AbilityCategoryDef>
+    <defName>BEWH_Primarch</defName>
+    <displayOrder>900</displayOrder>
+  </AbilityCategoryDef>
+
+  <!-- Deny the Witch -->
+  <AbilityDef>
+    <defName>BEWH_DenyTheWitch</defName>
+    <label>Deny the Witch</label>
+    <description>...</description>
+    <iconPath>UI/Abilities/AcidSpray</iconPath>
+    <cooldownTicksRange>30000</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <category>BEWH_Primarch</category>
+    <showPsycastEffects>False</showPsycastEffects>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>46</range>
+      <warmupTime>0.5</warmupTime>
+      <targetParams>
+        <canTargetLocations>false</canTargetLocations>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetMechs>false</canTargetMechs>
+        <canTargetMutants>false</canTargetMutants>
+        <canTargetAnimals>false</canTargetAnimals>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="Genes40k.CompProperties_DenyTheWitch">
+        <range>46</range>
+        <hediffDef>BEWH_DeniedWitch</hediffDef>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Angron Berserk -->
+  <AbilityDef>
+    <defName>BEWH_AngronBerserk</defName>
+    <label>Berserk</label>
+    <description>...</description>
+    <iconPath>UI/Abilities/AcidSpray</iconPath>
+    <cooldownTicksRange>30000</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <category>BEWH_Primarch</category>
+    <showPsycastEffects>False</showPsycastEffects>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityTouch</verbClass>
+      <warmupTime>1</warmupTime>
+      <drawAimPie>False</drawAimPie>
+      <requireLineOfSight>False</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <statBases>
+      <Ability_Duration>1250</Ability_Duration>
+    </statBases>
+    <comps>
+      <li Class="Core40k.CompProperties_AbilityGiveHediffAndMental">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>BEWH_AngronBerserk</hediffDef>
+        <mentalStateDef>Berserk</mentalStateDef>
+        <onlyApplyToSelf>True</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>

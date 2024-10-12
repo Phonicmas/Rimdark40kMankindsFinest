@@ -78,7 +78,7 @@
         <biostatArc>3</biostatArc>
 
         <preventPermanentWounds>true</preventPermanentWounds>
-        <painFactor>0.15</painFactor>
+        <painFactor>0.2</painFactor>
         <immuneToToxGasExposure>true</immuneToToxGasExposure>
 
         <statOffsets>
@@ -266,6 +266,7 @@
         </abilities>
 
         <descriptionHyperlinks>
+            <AbilityDef>BEWH_WarpShield</AbilityDef>
             <AbilityDef>BEWH_CatalepseanNodeUnsleeping</AbilityDef>
         </descriptionHyperlinks>
 

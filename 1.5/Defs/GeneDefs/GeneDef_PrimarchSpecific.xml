@@ -1,7 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <!-- Chaper IX - Sanguinius -->
+    <!-- Chapter I - Lion El'Jonson -->
+    <GeneDef ParentName="BEWH_PrimarchSpecific">
+        <defName>BEWH_PrimarchILionElJonson</defName>
+        <label>Lion El'Jonson</label>
+        <description>The genetic material of Lion El'Jonson</description>
+        <iconPath>UI/Genes/MPrimarchXVMagnusTheRed</iconPath>
+        <displayOrderInCategory>401</displayOrderInCategory>
+        <minAgeActive>14</minAgeActive>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Chapter I - ??? -->
+    <!--<GeneDef ParentName="BEWH_PrimarchSpecific">
+        <defName>BEWH_PrimarchII</defName>
+        <label>???</label>
+        <description>The genetic material of ???</description>
+        <iconPath>UI/Genes/MPrimarchXVMagnusTheRed</iconPath>
+        <displayOrderInCategory>402</displayOrderInCategory>
+        <minAgeActive>14</minAgeActive>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+        </modExtensions>
+    </GeneDef>-->
+
+    <!-- Chapter III - Fulgrim -->
+    <GeneDef ParentName="BEWH_PrimarchSpecific">
+        <defName>BEWH_PrimarchIIIFulgrim</defName>
+        <label>Fulgrim</label>
+        <description>The genetic material of Fulgrim</description>
+        <iconPath>UI/Genes/MPrimarchXVMagnusTheRed</iconPath>
+        <displayOrderInCategory>403</displayOrderInCategory>
+        <minAgeActive>14</minAgeActive>
+        <statFactors>
+            <SocialImpact>2.5</SocialImpact>
+            <ConversionPower MayRequire="Ludeon.RimWorld.Ideology">2</ConversionPower>
+        </statFactors>
+        <forcedTraits>
+            <li>
+                <def>Beauty</def>
+                <degree>2</degree>
+            </li>
+        </forcedTraits>
+        <passionMod>
+            <skill>Artistic</skill>
+            <modType>AddOneLevel</modType>
+        </passionMod>
+        <customEffectDescriptions>
+            <li>Increase quality of artistic creations by 1</li>
+        </customEffectDescriptions>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="Core40k.DefModExtension_BoostQualityCreatedByPawn">
+                <qualityBoostLevel>
+                    <li>
+                        <key>Artistic</key>
+                        <value>1</value>
+                    </li>
+                </qualityBoostLevel>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Chapter IV - Perturabo -->
+    <GeneDef ParentName="BEWH_PrimarchSpecific">
+        <defName>BEWH_PrimarchIVPerturabo</defName>
+        <label>Perturabo</label>
+        <description>The genetic material of Perturabo</description>
+        <iconPath>UI/Genes/MPrimarchXVMagnusTheRed</iconPath>
+        <displayOrderInCategory>404</displayOrderInCategory>
+        <minAgeActive>14</minAgeActive>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Chapter V - Jaghatai Khan -->
+    <GeneDef ParentName="BEWH_PrimarchSpecific">
+        <defName>BEWH_PrimarchVJaghataiKhan</defName>
+        <label>Jaghatai Khan</label>
+        <description>The genetic material of Jaghatai Khan</description>
+        <iconPath>UI/Genes/MPrimarchXVMagnusTheRed</iconPath>
+        <displayOrderInCategory>405</displayOrderInCategory>
+        <minAgeActive>14</minAgeActive>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Chapter VI - Leman Russ -->
+    <GeneDef ParentName="BEWH_PrimarchSpecific">
+        <defName>BEWH_PrimarchVILemanRuss</defName>
+        <label>Leman Russ</label>
+        <description>The genetic material of Leman Russ</description>
+        <iconPath>UI/Genes/MPrimarchXVMagnusTheRed</iconPath>
+        <displayOrderInCategory>406</displayOrderInCategory>
+        <minAgeActive>14</minAgeActive>
+        <abilities>
+            <li>BEWH_WarpShield</li>
+            <li MayRequire="Ludeon.RimWorld.Royalty">BEWH_DenyTheWitch</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>BEWH_WarpShield</AbilityDef>
+            <AbilityDef MayRequire="Ludeon.RimWorld.Royalty">BEWH_DenyTheWitch</AbilityDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Chapter VII - Rogal Dorn -->
+    <GeneDef ParentName="BEWH_PrimarchSpecific">
+        <defName>BEWH_PrimarchVIIRogalDorn</defName>
+        <label>Rogal Dorn</label>
+        <description>The genetic material of Rogal Dorn</description>
+        <iconPath>UI/Genes/MPrimarchXVMagnusTheRed</iconPath>
+        <displayOrderInCategory>407</displayOrderInCategory>
+        <minAgeActive>14</minAgeActive>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Chapter VIII - Konrad Curze -->
+    <GeneDef ParentName="BEWH_PrimarchSpecific">
+        <defName>BEWH_PrimarchVIIIKonradCurze</defName>
+        <label>Conrad Curze</label>
+        <description>The genetic material of Conrad Curze</description>
+        <iconPath>UI/Genes/MPrimarchXVMagnusTheRed</iconPath>
+        <displayOrderInCategory>408</displayOrderInCategory>
+        <minAgeActive>14</minAgeActive>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Chapter IX - Sanguinius -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
         <defName>BEWH_PrimarchIXSanguinius</defName>
         <label>sanguinius</label>
@@ -67,14 +204,129 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chaper XV - Magnus the Red -->
+    <!-- Chapter X - Ferrus Manus -->
+    <GeneDef ParentName="BEWH_PrimarchSpecific">
+        <defName>BEWH_PrimarchXFerrusManus</defName>
+        <label>Ferrus Manus</label>
+        <description>The genetic material of Ferrus Manus</description>
+        <iconPath>UI/Genes/MPrimarchXVMagnusTheRed</iconPath>
+        <displayOrderInCategory>410</displayOrderInCategory>
+        <minAgeActive>14</minAgeActive>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Chapter XI - ??? -->
+    <GeneDef ParentName="BEWH_PrimarchSpecific">
+        <defName>BEWH_PrimarchXI</defName>
+        <label>???</label>
+        <description>The genetic material of ???</description>
+        <iconPath>UI/Genes/MPrimarchXVMagnusTheRed</iconPath>
+        <displayOrderInCategory>411</displayOrderInCategory>
+        <minAgeActive>14</minAgeActive>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Chapter XII - Angron -->
+    <GeneDef ParentName="BEWH_PrimarchSpecific">
+        <defName>BEWH_PrimarchXIIAngron</defName>
+        <label>Angron</label>
+        <description>The genetic material of Angron</description>
+        <iconPath>UI/Genes/MPrimarchXVMagnusTheRed</iconPath>
+        <displayOrderInCategory>412</displayOrderInCategory>
+        <minAgeActive>14</minAgeActive>
+        <forcedTraits>
+            <li>
+                <def>Bloodlust</def>
+            </li>
+            <li>
+                <def>Brawler</def>
+            </li>
+            <li>
+                <def>Psychopath</def>
+            </li>
+        </forcedTraits>
+        <painFactor>0</painFactor>
+        <abilities>
+            <li>BEWH_AngronBerserk</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>BEWH_AngronBerserk</AbilityDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Chapter XIII - Roboute Guilliman -->
+    <GeneDef ParentName="BEWH_PrimarchSpecific">
+        <defName>BEWH_PrimarchXIIIRobouteGuilliman</defName>
+        <label>Roboute Guilliman</label>
+        <description>The genetic material of Roboute Guilliman</description>
+        <iconPath>UI/Genes/MPrimarchXVMagnusTheRed</iconPath>
+        <displayOrderInCategory>413</displayOrderInCategory>
+        <minAgeActive>14</minAgeActive>
+        <forcedTraits>
+            <li>
+                <def>Industriousness</def>
+                <degree>2</degree>
+            </li>
+        </forcedTraits>
+        <statOffsets>
+            <TradePriceImprovement>1</TradePriceImprovement>
+            <NegotiationAbility>1</NegotiationAbility>
+        </statOffsets>
+        <statFactors>
+            <WorkSpeedGlobal>1.35</WorkSpeedGlobal>
+        </statFactors>
+        <aptitudes>
+            <Social>5</Social>
+        </aptitudes>
+        <passionMod>
+            <skill>Social</skill>
+            <modType>AddOneLevel</modType>
+        </passionMod>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Chapter XIV - Mortarion -->
+    <GeneDef ParentName="BEWH_PrimarchSpecific">
+        <defName>BEWH_PrimarchXIVMortarion</defName>
+        <label>Mortarion</label>
+        <description>The genetic material of Mortarion</description>
+        <iconPath>UI/Genes/MPrimarchXVMagnusTheRed</iconPath>
+        <displayOrderInCategory>414</displayOrderInCategory>
+        <minAgeActive>14</minAgeActive>
+        <statFactors>
+            <ImmunityGainSpeed>100</ImmunityGainSpeed>
+        </statFactors>
+        <statOffsets>
+            <ToxicResistance>4</ToxicResistance>
+        </statOffsets>
+        <forcedTraits>
+            <li>
+                <def>Nerves</def>
+                <degree>2</degree>
+            </li>
+        </forcedTraits>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Chapter XV - Magnus the Red -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
         <defName>BEWH_PrimarchXVMagnusTheRed</defName>
         <label>magnus the red</label>
         <description>The genetic material of Magnus the Red, when implanted, greatly improves psychic capabilities</description>
         <iconPath>UI/Genes/MPrimarchXVMagnusTheRed</iconPath>
         <displayOrderInCategory>415</displayOrderInCategory>
-        <geneClass>Genes40k.Gene_AddGeneByChance</geneClass>
+        <geneClass>Core40k.Gene_AddRandomGeneAndOrTraitByWeight</geneClass>
         <statFactors>
             <PsychicSensitivity>8</PsychicSensitivity>
             <MeditationFocusGain>4.5</MeditationFocusGain>
@@ -90,7 +342,7 @@
         <minAgeActive>14</minAgeActive>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
-            <li Class="Genes40k.DefModExtension_AddGeneByChance">
+            <li Class="Core40k.DefModExtension_AddRandomGeneByWeight">
                 <possibleGenesToGive>
                     <li>
                         <key>BEWH_BetaPsyker</key>
@@ -98,6 +350,89 @@
                     </li>
                 </possibleGenesToGive>
             </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Chapter XVI - Horus -->
+    <GeneDef ParentName="BEWH_PrimarchSpecific">
+        <defName>BEWH_PrimarchXVIHorus</defName>
+        <label>Horus</label>
+        <description>The genetic material of Horus</description>
+        <iconPath>UI/Genes/MPrimarchXVMagnusTheRed</iconPath>
+        <displayOrderInCategory>416</displayOrderInCategory>
+        <minAgeActive>14</minAgeActive>
+        <statFactors>
+            <ArrestSuccessChance>2</ArrestSuccessChance>
+            <SocialImpact>1.5</SocialImpact>
+            <ConversionPower MayRequire="Ludeon.RimWorld.Ideology">1.6</ConversionPower>
+        </statFactors>
+        <statOffsets>
+            <MeleeDodgeChance>15</MeleeDodgeChance>
+        </statOffsets>
+        <aptitudes>
+            <Social>3</Social>
+        </aptitudes>
+        <passionMod>
+            <skill>Social</skill>
+            <modType>AddOneLevel</modType>
+        </passionMod>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Chapter XVII - Lorgar -->
+    <GeneDef ParentName="BEWH_PrimarchSpecific">
+        <defName>BEWH_PrimarchXVIILorgar</defName>
+        <label>Lorgar</label>
+        <description>The genetic material of Lorgar</description>
+        <iconPath>UI/Genes/MPrimarchXVMagnusTheRed</iconPath>
+        <displayOrderInCategory>410</displayOrderInCategory>
+        <minAgeActive>14</minAgeActive>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Chapter XVIII - Vulkan -->
+    <GeneDef ParentName="BEWH_PrimarchSpecific">
+        <defName>BEWH_PrimarchXVIIIVulkan</defName>
+        <label>Vulkan</label>
+        <description>The genetic material of Vulkan</description>
+        <iconPath>UI/Genes/MPrimarchXVMagnusTheRed</iconPath>
+        <displayOrderInCategory>418</displayOrderInCategory>
+        <minAgeActive>14</minAgeActive>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Chapter XIX - Corax -->
+    <GeneDef ParentName="BEWH_PrimarchSpecific">
+        <defName>BEWH_PrimarchXIXCorax</defName>
+        <label>Corax</label>
+        <description>The genetic material of Corax</description>
+        <iconPath>UI/Genes/MPrimarchXVMagnusTheRed</iconPath>
+        <displayOrderInCategory>419</displayOrderInCategory>
+        <minAgeActive>14</minAgeActive>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Chapter XX - Alpharius Omegon -->
+    <GeneDef ParentName="BEWH_PrimarchSpecific">
+        <defName>BEWH_PrimarchXXAlphariusOmegon</defName>
+        <label>Alpharius/Omegon</label>
+        <description>The genetic material of Alpharius/Omegon</description>
+        <iconPath>UI/Genes/MPrimarchXVMagnusTheRed</iconPath>
+        <displayOrderInCategory>420</displayOrderInCategory>
+        <minAgeActive>14</minAgeActive>
+        <customEffectDescriptions>
+            <li>You have a twin!</li>
+        </customEffectDescriptions>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
         </modExtensions>
     </GeneDef>
 

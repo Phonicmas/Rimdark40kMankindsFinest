@@ -61,7 +61,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Comps\CompAbilityEffect_DenyTheWitch.cs" />
+    <Compile Include="Comps\CompProperties_DenyTheWitch.cs" />
+    <Compile Include="DefModExtensions\DefModExtension_IncreasedJoyFromArt.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneseedVialRecipe.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_BlockedPsycasting.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_MoreArtJoy.cs" />
     <Compile Include="ThingClasses\Building_GeneGestator.cs" />
     <Compile Include="ThingClasses\Building_GeneTable.cs" />
     <Compile Include="ThingClasses\Building_PrimarchGrowthVat.cs" />
@@ -70,7 +75,6 @@
     <Compile Include="DefModExtensions\DefModExtension_ChapterGene.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneFromMaterial.cs" />
     <Compile Include="DefModExtensions\DefModExtension_KeepPrerequisitePermit.cs" />
-    <Compile Include="DefModExtensions\DefModExtension_AddGeneByChance.cs" />
     <Compile Include="DefModExtensions\DefModExtension_LivingSaint.cs" />
     <Compile Include="DefModExtensions\DefModExtension_SangprimusPortum.cs" />
     <Compile Include="DefModExtensions\DefModExtension_PhaseDevelopment.cs" />
@@ -82,7 +86,6 @@
     <Compile Include="DefModExtensions\DefModExtension_GeneGestator.cs" />
     <Compile Include="Comps\GameComponent_LivingSaint.cs" />
     <Compile Include="GeneClasses\Gene_EternalWatch.cs" />
-    <Compile Include="GeneClasses\Gene_AddGeneByChance.cs" />
     <Compile Include="GeneClasses\Gene_LivingSaint.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_BillPsycost.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_EternalWatchStopMentalBreak.cs" />

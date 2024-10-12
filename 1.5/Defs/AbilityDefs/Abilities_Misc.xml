@@ -14,7 +14,7 @@
     <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
     <hostile>false</hostile>
-    <category>SpaceMarine</category>
+    <category>BEWH_SpaceMarine</category>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
       <range>0</range>

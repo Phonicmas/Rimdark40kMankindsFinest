@@ -103,4 +103,6 @@
 
   <BEWH.NotEnoughPsyfocus>{0} does not have enough psyfocus to craft</BEWH.NotEnoughPsyfocus>
 
+  <BEWH.DeniedWitch>{0} psychic powers have been severed (Deny the Witch)</BEWH.DeniedWitch>
+
 </LanguageData>

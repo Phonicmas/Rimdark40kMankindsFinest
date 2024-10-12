@@ -7,6 +7,15 @@ Compile list of features
 Make Thunder Warrior gene art
 Gestational flurry unfinished art
 
+Make it so the matrix and geneseed storage changes texture after filled half and then full.
+
+Finish chapter and primarch gene seeds, initial versionw ill have :Thousand Sons, Emperor's children, World Eaters, Death Guard, Sons of Horus, Ultramarines, Blood Angels and Space Wolves
+
+DONE: Emperor's Children, Space Wolves, Blood Angels, 
+
+
+With psyker perils of warp, make the sever connection function similar to deny the witch
+
 
 # NEW ADDITIONS TO MAKE AT SOME POINT
 
@@ -29,21 +38,12 @@ https://warhammer40k.fandom.com/wiki/Primarch
 
 
 Specific Chapter Genes;
-Blood Angels; Bloodlust trait, hemogen resevoir, slightly better melee
-Space Wolves; Increase senses, tougher, higher chance to start social fight
 Iron Hand(WIP); Give transhumanist trait, and increase global work speed when one or more prostethics is present? 
-World Eaters(WIP); Increased melee stuff, decreased shooting and intellect stuff
 Raven Guard(WIP); Increased hunting stealth and shooting stuff
-Thousand Sons(WIP); Will get a random psyker gene, with epsilon being the norm with slight chance for delta or miniscule chance for beta.
 
 Specific Primarch Genes;
-Magnus the Red; Grants beta psyker trait, and will futher increase psychic potential and give some psychic abilities to use
-Sanguinius; Wings that grants flight and ignores terrain penalties, moving speed and dodge buff
 Corvus(WIP); Ability to go invis, hunting stealth increase
-Horus(WIP); Great social and diplomatic boost
 Konrad Cruze(WIP); Teleport at will in low light area, and other boosts in low light?
-Fulgrim(WIP); Aura that boosts mood and maybe productivity slightly?
-Leman Russ(WIP); Melee power, and like the custodes can set psy sens to 0% to ward off psychic attacks
 Ferrus Manus(WIP); Crafting and quality boost, and also slightly for building
 Dorn(WIP); Increase defense?
 Vulkan(WIP); Thought of making 2 perpetual genes, one lesser and one "normal". Vulkan gets the lesser version, making carriers almost immortal

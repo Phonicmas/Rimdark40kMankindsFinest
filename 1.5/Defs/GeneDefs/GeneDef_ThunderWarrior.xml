@@ -90,6 +90,11 @@
         <statFactors>
             <MoveSpeed>1.2</MoveSpeed>
         </statFactors>
+        <forcedTraits>
+            <li>
+                <def>Psychopath</def>
+            </li>
+        </forcedTraits>
         <suppressedTraits>
             <li>
                 <def>Kind</def>

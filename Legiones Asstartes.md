@@ -84,7 +84,7 @@ Forced "Transhumanist" and "Abrasive" traits. +7% research speed.
 
 ANGER MANAGEMENT
 
-Angron: Forced "bloodlust", "brawler" and "psychopath" traits. Random "berserk" mental breakdown. Can enter the berserk state in combat. 
+Angron: Forced "bloodlust", "brawler" and "psychopath" traits. Random "berserk" mental breakdown. Can enter the berserk state in combat, pain factor 0. 
 
 World Eaters: Always has a "brawler" trait, along with a either "bloodlust" or "psychopath" being a forced trait, with a relatively high chance of having both at the same time. Slight penalty on intellectual work.
 
@@ -99,7 +99,6 @@ The Ultramarines: Dunno what to do with them. relatively pure geneseed?
 # ++++ XIV Legio ++++
 
 *zombie noises*
-
 
 Mortarion: complete immunity to infections, diseases, rot stink, tox buildup, poison, etc.
 
