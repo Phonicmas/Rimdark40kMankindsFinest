@@ -20,7 +20,7 @@
       <maxItemsInCell>1</maxItemsInCell>
     </building>
     <drawerType>MapMeshAndRealTime</drawerType>
-    <drawGUIOverlay>true</drawGUIOverlay> 
+    <drawGUIOverlay>true</drawGUIOverlay>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>22</pathCost>
@@ -110,8 +110,9 @@
     <defName>BEWH_GeneticCryostaticStorage</defName>
     <label>genetic cryostatic storage</label>
     <description>Able to holster 24 genetic matrices, keeping them safe and preventing deterioration.</description>
+    <thingClass Inherit="False">Genes40k.Building_GeneStorageGraphicProgression</thingClass>
     <graphicData>
-      <texPath>Things/Building/GeneticMatrixStorage/GeneticMatrixStorage</texPath>
+      <texPath>Things/Building/GeneticMatrixStorage/BEWH_MatrixStorage_Empty</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shadowData>
         <volume>(0.9,0.2,0.9)</volume>
@@ -144,8 +145,14 @@
           </categories>
         </filter>
       </defaultStorageSettings>
-      <maxItemsInCell>6</maxItemsInCell>
+      <maxItemsInCell>2</maxItemsInCell>
     </building>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_GeneStorageGraphicProgression">
+        <halfFullGraphic>Things/Building/GeneticMatrixStorage/BEWH_MatrixStorage_Half</halfFullGraphic>
+        <fullGraphic>Things/Building/GeneticMatrixStorage/BEWH_MatrixStorage_Full</fullGraphic>
+      </li>
+    </modExtensions>
     <comps>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
@@ -159,8 +166,9 @@
     <defName>BEWH_GeneseedVialStorage</defName>
     <label>geneseed vial storage</label>
     <description>Able to holster 4 geneseed vials, keeping them safe and preventing deterioration.</description>
+    <thingClass Inherit="False">Genes40k.Building_GeneStorageGraphicProgression</thingClass>
     <graphicData>
-      <texPath>Things/Building/GeneseedVialStorage/GeneseedVialStorage</texPath>
+      <texPath>Things/Building/GeneseedVialStorage/BEWH_GeneseedVialStorage_Empty</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shadowData>
         <volume>(0.9,0.2,0.9)</volume>
@@ -194,6 +202,12 @@
         </filter>
       </defaultStorageSettings>
     </building>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_GeneStorageGraphicProgression">
+        <halfFullGraphic>Things/Building/GeneseedVialStorage/BEWH_GeneseedVialStorage_Half</halfFullGraphic>
+        <fullGraphic>Things/Building/GeneseedVialStorage/BEWH_GeneseedVialStorage_Full</fullGraphic>
+      </li>
+    </modExtensions>
     <comps>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
@@ -206,7 +220,7 @@
   <ThingDef ParentName="BEWH_GeneticStorage">
     <defName>BEWH_PrimarchEmbryoContainer</defName>
     <label>primarch embryo container</label>
-    <thingClass Inherit="False">Genes40k.Building_PrimarchEmbryo</thingClass>
+    <thingClass Inherit="False">Genes40k.Building_PrimarchEmbryoStorage</thingClass>
     <inspectorTabs Inherit="False">
       <li>ITab_Storage</li>
       <li>Genes40k.ITab_ContentsGeneStorage</li>

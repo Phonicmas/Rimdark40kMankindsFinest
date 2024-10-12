@@ -63,12 +63,14 @@
   <ItemGroup>
     <Compile Include="Comps\CompAbilityEffect_DenyTheWitch.cs" />
     <Compile Include="Comps\CompProperties_DenyTheWitch.cs" />
+    <Compile Include="DefModExtensions\DefModExtension_GeneStorageGraphicProgression.cs" />
     <Compile Include="DefModExtensions\DefModExtension_IncreasedJoyFromArt.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneseedVialRecipe.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_BlockedPsycasting.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_MoreArtJoy.cs" />
     <Compile Include="ThingClasses\Building_GeneGestator.cs" />
     <Compile Include="ThingClasses\Building_GeneTable.cs" />
+    <Compile Include="ThingClasses\Building_GeneStorageGraphicProgression.cs" />
     <Compile Include="ThingClasses\Building_PrimarchGrowthVat.cs" />
     <Compile Include="ThingClasses\Building_GeneStorage.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneseedPurity.cs" />
@@ -94,7 +96,7 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_EternalWatchStopMentalState.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_LivingSaintResurrection.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_LivingSaintDeath.cs" />
-    <Compile Include="ThingClasses\Building_PrimarchEmbryo.cs" />
+    <Compile Include="ThingClasses\Building_PrimarchEmbryoStorage.cs" />
     <Compile Include="ThingClasses\PrimarchEmbryo.cs" />
     <Compile Include="ThingClasses\GeneseedVial.cs" />
     <Compile Include="Workers\JobDriver_FillGeneGestator.cs" />

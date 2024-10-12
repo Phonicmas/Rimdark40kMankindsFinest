@@ -1,18 +1,12 @@
 # TODO
 
 Check descriptions
-
 Compile list of features
 
 Make Thunder Warrior gene art
 Gestational flurry unfinished art
 
 Make it so the matrix and geneseed storage changes texture after filled half and then full.
-
-Finish chapter and primarch gene seeds, initial versionw ill have :Thousand Sons, Emperor's children, World Eaters, Death Guard, Sons of Horus, Ultramarines, Blood Angels and Space Wolves
-
-DONE: Emperor's Children, Space Wolves, Blood Angels, 
-
 
 With psyker perils of warp, make the sever connection function similar to deny the witch
 

@@ -1,14 +1,12 @@
-﻿using RimWorld;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using UnityEngine;
 using Verse;
 
 namespace Genes40k
 {
-    public class Building_PrimarchEmbryo : Building_GeneStorage
+    public class Building_PrimarchEmbryoStorage : Building_GeneStorage
     {
-        public Building_PrimarchEmbryo()
+        public Building_PrimarchEmbryoStorage()
         {
         }
 
