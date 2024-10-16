@@ -19,7 +19,7 @@ namespace Genes40k
             {
                 if (cachedTopGraphic == null)
                 {
-                    cachedTopGraphic = GraphicDatabase.Get<Graphic_Multi>("Things/Building/PrimarchEmbryoContainer/PrimarchEmbryoContainerTop", ShaderDatabase.Transparent, def.graphicData.drawSize, Color.white);
+                    cachedTopGraphic = GraphicDatabase.Get<Graphic_Multi>("Things/Building/PrimarchEmbryoContainer/BEWH_PrimarchEmbryoContainerTop", ShaderDatabase.Transparent, def.graphicData.drawSize, Color.white);
                 }
                 return cachedTopGraphic;
             }
@@ -33,7 +33,7 @@ namespace Genes40k
             {
                 if (cachedFullTopGraphic == null)
                 {
-                    cachedFullTopGraphic = GraphicDatabase.Get<Graphic_Multi>("Things/Item/PrimarchEmbryo", ShaderDatabase.DefaultShader, def.graphicData.drawSize, Color.white);
+                    cachedFullTopGraphic = GraphicDatabase.Get<Graphic_Multi>("Things/Item/BEWH_PrimarchEmbryo", ShaderDatabase.DefaultShader, def.graphicData.drawSize, Color.white);
                 }
                 return cachedFullTopGraphic;
             }

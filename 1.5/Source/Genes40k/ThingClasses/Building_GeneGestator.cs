@@ -46,7 +46,7 @@ namespace Genes40k
 
         private static readonly Texture2D CancelIcon = ContentFinder<Texture2D>.Get("UI/Designators/Cancel");
 
-        private static readonly Texture2D EmptyMaterialIcon = ContentFinder<Texture2D>.Get("Things/Item/GeneMatrix/GeneMatrix_Empty");
+        private static readonly Texture2D EmptyMaterialIcon = ContentFinder<Texture2D>.Get("Things/Item/GeneMatrix/BEWH_GeneMatrix_Empty");
 
         [Unsaved(false)]
         private Texture2D cachedMatrixSelectionTex;
@@ -57,7 +57,7 @@ namespace Genes40k
             {
                 if (cachedMatrixSelectionTex == null)
                 {
-                    cachedMatrixSelectionTex = ContentFinder<Texture2D>.Get("Things/Item/GeneMatrix/GeneMatrix_Empty");
+                    cachedMatrixSelectionTex = ContentFinder<Texture2D>.Get("Things/Item/GeneMatrix/BEWH_GeneMatrix_Empty");
                 }
                 return cachedMatrixSelectionTex;
             }
@@ -112,7 +112,6 @@ namespace Genes40k
             }
             return result;
         }
-
 
         public override void DeSpawn(DestroyMode mode = DestroyMode.Vanish)
         {
@@ -378,7 +377,6 @@ namespace Genes40k
                     gestatablesAvailable.AddRange(AvailableGestatables());
                     command_Action1.action = delegate
                     {
-                        //Make a float menu for slection specialization just like when selecting a pawn to insert
                         List<FloatMenuOption> list = new List<FloatMenuOption>();
                         string text;
                         foreach (ThingDef gestatables in gestatablesAvailable)

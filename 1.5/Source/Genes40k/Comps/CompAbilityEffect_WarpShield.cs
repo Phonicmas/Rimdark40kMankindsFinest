@@ -10,8 +10,8 @@ namespace Genes40k
     {
         public new CompProperties_AbilityWarpShield Props => (CompProperties_AbilityWarpShield)props;
 
-        private static readonly Texture2D MindShieldOffIcon = ContentFinder<Texture2D>.Get("UI/Abilities/MindShieldOff");
-        private static readonly Texture2D MindShieldOnIcon = ContentFinder<Texture2D>.Get("UI/Abilities/MindShieldOn");
+        private static readonly Texture2D MindShieldOffIcon = ContentFinder<Texture2D>.Get("UI/Abilities/BEWH_MindShieldOff");
+        private static readonly Texture2D MindShieldOnIcon = ContentFinder<Texture2D>.Get("UI/Abilities/BEWH_MindShieldOn");
 
         private string tooltipExtra = "CurrentToggle".Translate("Off".Translate());
 

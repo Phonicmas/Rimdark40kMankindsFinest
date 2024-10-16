@@ -106,7 +106,7 @@
     <Compile Include="Workers\WorkerClass_PhaseDevelopment.cs" />
     <Compile Include="Workers\WorkerClass_ImplantGeneseed.cs" />
     <Compile Include="Workers\WorkGiver_FillGeneGestator.cs" />
-    <Compile Include="ITab_ContentsGeneStorage.cs" />
+    <Compile Include="Misc\ITab_ContentsGeneStorage.cs" />
     <Compile Include="Comps\CompProperties_DeteriorateOutsideBuilding.cs" />
     <Compile Include="Comps\Comp_DeteriorateOutsideBuilding.cs" />
     <Compile Include="Comps\CompAbilityEffect_WarpShield.cs" />
@@ -115,12 +115,12 @@
     <Compile Include="DefModExtensions\DefModExtension_WarpShield.cs" />
     <Compile Include="DefModExtensions\DefModExtension_Psyker.cs" />
     <Compile Include="Comps\CompGivesAbility.cs" />
-    <Compile Include="Ability_UpdateGizmo.cs" />
+    <Compile Include="Misc\Ability_UpdateGizmo.cs" />
     <Compile Include="GeneClasses\Gene_Pariah.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_StopDeterioation.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_MentalBreakdownPsyker.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_NaturalBirthPsykerPariah.cs" />
-    <Compile Include="RoleRequirement_MustBeSpaceMarine.cs" />
+    <Compile Include="Misc\RoleRequirement_MustBeSpaceMarine.cs" />
     <Compile Include="Comps\CompAbilityEffect_GeneseedHarvest.cs" />
     <Compile Include="Comps\CompProperties_AbilityGeneseedHarvest.cs" />
     <Compile Include="DefModExtensions\DefModExtension_PotentialHarvest.cs" />

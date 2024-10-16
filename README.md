@@ -5,6 +5,7 @@ Compile list of features
 
 Make Thunder Warrior gene art
 Gestational flurry unfinished art
+Make icon for when starting geneseed gestator and maybe for when ejecting (althrough the standard cross thingy might be fine)
 
 
 # NEW ADDITIONS TO MAKE AT SOME POINT
