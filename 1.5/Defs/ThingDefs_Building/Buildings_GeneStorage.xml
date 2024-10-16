@@ -122,7 +122,7 @@
     <defaultPlacingRot>North</defaultPlacingRot>
     <size>(2, 2)</size>
     <researchPrerequisites>
-      <li>BEWH_GeneseedPerfection</li>
+      <li>BEWH_GeneseedPurification</li>
     </researchPrerequisites>
     <costList>
       <Plasteel>50</Plasteel>
@@ -178,7 +178,7 @@
     <defaultPlacingRot>North</defaultPlacingRot>
     <size>(2, 2)</size>
     <researchPrerequisites>
-      <li>BEWH_GeneseedPurification</li>
+      <li>BEWH_GeneseedPerfection</li>
     </researchPrerequisites>
     <costList>
       <Plasteel>50</Plasteel>

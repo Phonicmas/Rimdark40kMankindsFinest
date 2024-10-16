@@ -6,12 +6,10 @@ Compile list of features
 Make Thunder Warrior gene art
 Gestational flurry unfinished art
 
-Make it so the matrix and geneseed storage changes texture after filled half and then full.
-
-With psyker perils of warp, make the sever connection function similar to deny the witch
-
 
 # NEW ADDITIONS TO MAKE AT SOME POINT
+
+With psyker perils of warp, make the sever connection function similar to deny the witch
 
 Patch eltex to recipies if VPE is present, do it from inside the royalty folder
 
