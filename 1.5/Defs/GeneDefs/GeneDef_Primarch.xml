@@ -98,9 +98,16 @@
             </li>
         </capMods>
 
+        <abilities>
+            <li>BEWH_WarpShield</li>
+        </abilities>
+
+        <descriptionHyperlinks>
+            <AbilityDef>BEWH_WarpShield</AbilityDef>
+        </descriptionHyperlinks>
+
         <customEffectDescriptions>
             <li>No loss in shooting skill</li>
-            <li>Gives the ability to turn</li>
         </customEffectDescriptions>
 
         <modExtensions>
