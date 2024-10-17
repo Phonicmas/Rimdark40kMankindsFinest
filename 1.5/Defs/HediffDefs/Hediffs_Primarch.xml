@@ -4,7 +4,7 @@
 	<HediffDef>
 		<defName>BEWH_DeniedWitch</defName>
 		<label>Denied Witch</label>
-		<description>...</description>
+		<description>This pawn has had their psychic and mental capabilities dampened. They can no longer cast psycasts.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<scenarioCanAdd>false</scenarioCanAdd>
 		<initialSeverity>1.0 </initialSeverity>
@@ -17,6 +17,12 @@
 					<PsychicSensitivity>0.1</PsychicSensitivity>
 					<PsychicEntropyRecoveryRate>0.1</PsychicEntropyRecoveryRate>
 				</statFactors>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.85</setMax>
+					</li>
+				</capMods>
 			</li>
 		</stages>
 		<comps>
@@ -31,7 +37,7 @@
 		<defName>BEWH_AngronBerserk</defName>
 		<label>berserk</label>
 		<hediffClass>HediffWithComps</hediffClass>
-		<description>...</description>
+		<description>RAAAAGGGEEEEE INCAAAARNATEEEEE</description>
 		<everCurableByItem>false</everCurableByItem>
 		<isBad>false</isBad>
 		<stages>

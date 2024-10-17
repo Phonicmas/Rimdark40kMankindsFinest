@@ -5,7 +5,7 @@
   <AbilityDef>
     <defName>BEWH_WarpShield</defName>
     <label>Toggle warp shield</label>
-    <description>Toggle warp shield on and off.</description>
+    <description>Toggle warp shield on and off. This will affect the psychic sensitivity of this pawn.</description>
     <iconPath>UI/Abilities/MindShieldOff</iconPath>
     <abilityClass>Genes40k.Ability_UpdateGizmo</abilityClass>
     <cooldownTicksRange>0</cooldownTicksRange>

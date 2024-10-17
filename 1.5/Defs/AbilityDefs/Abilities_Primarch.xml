@@ -10,7 +10,7 @@
   <AbilityDef>
     <defName>BEWH_DenyTheWitch</defName>
     <label>Deny the Witch</label>
-    <description>...</description>
+    <description>Blocks target from using psycasts and dampens both their psychic and mental capabilities.</description>
     <iconPath>UI/Abilities/AcidSpray</iconPath>
     <cooldownTicksRange>30000</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
@@ -42,7 +42,7 @@
   <AbilityDef>
     <defName>BEWH_AngronBerserk</defName>
     <label>Berserk</label>
-    <description>...</description>
+    <description>Pawn flies into a frenzied rage, gaining increased damage and hit chance, but losing survivability and control.</description>
     <iconPath>UI/Abilities/AcidSpray</iconPath>
     <cooldownTicksRange>30000</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
