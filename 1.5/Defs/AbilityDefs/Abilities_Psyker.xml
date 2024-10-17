@@ -5,7 +5,7 @@
     <defName>BEWH_PsykerBolt</defName>
     <label>psychic bolt</label>
     <description>A bolt made of raw warp energy, able to pierce even the toughest armor. The stronger the psyker, the stronger the bolt.</description>
-    <iconPath>UI/Abilities/PsychicBolt</iconPath>
+    <iconPath>UI/Abilities/BEWH_PsychicBolt</iconPath>
     <abilityClass>VFECore.Abilities.Ability_ShootProjectile</abilityClass>
     <cooldownTime>2500</cooldownTime>
     <castTime>20</castTime>
@@ -40,7 +40,7 @@
     <thingClass>VFECore.Abilities.AbilityProjectile</thingClass>
     <tickerType>Normal</tickerType>
     <graphicData Class="VFECore.GraphicData_Animated">
-      <texPath>Effects/Psyker/PsykerBolt</texPath>
+      <texPath>Effects/Psyker/BEWH_PsykerBolt</texPath>
       <ticksPerFrame>5</ticksPerFrame>
       <graphicClass>VFECore.Graphic_Animated</graphicClass>
       <shaderType>MoteGlow</shaderType>

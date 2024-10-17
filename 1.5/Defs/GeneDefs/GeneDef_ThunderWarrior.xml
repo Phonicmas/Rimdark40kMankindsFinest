@@ -6,7 +6,7 @@
         <defName>BEWH_ProtoOssmodula</defName>
         <label>proto-ossmodula</label>
         <description>Proto-Ossmodula is the early prototype of an organ, that is capable of rapidly increasing one's bone mass, as well as the density of bone tissue itself. Implanted adjacent to hypophysis, Proto-Ossmodula injects growth hormones into recipient's body, thus making them significantly bulkier and more resistant to damage.</description>
-        <iconPath>UI/Genes/Firstborn_SecondaryHeartIcon</iconPath>
+        <iconPath>UI/Genes/BEWH_Firstborn_SecondaryHeartIcon</iconPath>
         <displayOrderInCategory>-100</displayOrderInCategory>
         <biostatCpx>3</biostatCpx>
         <biostatMet>-1</biostatMet>
@@ -37,7 +37,7 @@
         <defName>BEWH_Musculeator</defName>
         <label>musculeator</label>
         <description>A liver-like membraneous organ, placed behind the recipient's heart, is designed to provide the recipient's muscular structure with a significant growth boost. The improved muscles exceed the normal ones in terms of regeneration speed, their overal strength and density.</description>
-        <iconPath>UI/Genes/Firstborn_SecondaryHeartIcon</iconPath>
+        <iconPath>UI/Genes/BEWH_Firstborn_SecondaryHeartIcon</iconPath>
         <displayOrderInCategory>-99</displayOrderInCategory>
         <biostatCpx>3</biostatCpx>
         <biostatMet>-2</biostatMet>
@@ -71,7 +71,7 @@
         <defName>BEWH_Mentanifex</defName>
         <label>mentanifex</label>
         <description>A T-shaped organ, implanted right next to the brain stem. It stimulates the growth of nerve tissues, improving the recipient's reaction and situational awareness, but due to the very specific chemical compounds released into the bloodstream, as a bi-product of this organ, it also notably increases one's aggression. Yet, this implant proves it's necessity, simply due to the fact that increased reaction is required to fully utilize the Thunder Warrior's enchanced biology.</description>
-        <iconPath>UI/Genes/Firstborn_SecondaryHeartIcon</iconPath>
+        <iconPath>UI/Genes/BEWH_Firstborn_SecondaryHeartIcon</iconPath>
         <displayOrderInCategory>-98</displayOrderInCategory>
         <biostatCpx>4</biostatCpx>
         <biostatMet>-3</biostatMet>
@@ -112,7 +112,7 @@
         <defName>BEWH_Vigoranis</defName>
         <label>vigoranis</label>
         <description>The Vigoranis imbues the gene carrier with an extraordinary capacity for sustained combat and rapid recovery. This gene optimizes their cellular metabolism, allowing for quick healing of minor injuries and significantly reducing fatigue.</description>
-        <iconPath>UI/Genes/Firstborn_SecondaryHeartIcon</iconPath>
+        <iconPath>UI/Genes/BEWH_Firstborn_SecondaryHeartIcon</iconPath>
         <displayOrderInCategory>-97</displayOrderInCategory>
         <geneClass>Gene_Clotting</geneClass>
         <biostatCpx>4</biostatCpx>
@@ -140,7 +140,7 @@
         <defName>BEWH_Hyperanatomica</defName>
         <label>hyperanatomica</label>
         <description>The Hyperanatomica Framework bestows the gene carrier with an exceptionally respiratory efficiency, visual acuity, auditory sensitivity, and digestive capabilities. Additionally, it enables the carrier to endure extreme temperatures, both hot and cold, far beyond the limits of ordinary baseliners.</description>
-        <iconPath>UI/Genes/Firstborn_SecondaryHeartIcon</iconPath>
+        <iconPath>UI/Genes/BEWH_Firstborn_SecondaryHeartIcon</iconPath>
         <displayOrderInCategory>-96</displayOrderInCategory>
         <biostatCpx>3</biostatCpx>
         <biostatMet>-2</biostatMet>
@@ -178,7 +178,7 @@
         <defName>BEWH_Furybound</defName>
         <label>furybound</label>
         <description>The Furybound gene introduces a volatile element to the carriers psyche, making them prone to bouts of extreme aggression and berserk behavior. This gene increases their susceptibility to mental instability, causing them to occasionally lose control in the heat of battle. While this can lead to devastatingly effective combat prowess, it also poses a risk of unpredictability and loss of strategic coherence.</description>
-        <iconPath>UI/Genes/Firstborn_SecondaryHeartIcon</iconPath>
+        <iconPath>UI/Genes/BEWH_Firstborn_SecondaryHeartIcon</iconPath>
         <displayOrderInCategory>-95</displayOrderInCategory>
         <biostatCpx>3</biostatCpx>
         <biostatMet>7</biostatMet>

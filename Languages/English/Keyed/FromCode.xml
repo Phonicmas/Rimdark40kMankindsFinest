@@ -4,7 +4,7 @@
   <!-- Mod Setting related-->
   <BEWH.ModSettingsNameGenes>Warhammer 40k - Genes</BEWH.ModSettingsNameGenes>
 
-  <BEWH.PsychicPhenomena>Enabling this will make psykers who are experiencing mental breakdowns create a psychic phenoma.</BEWH.PsychicPhenomena>
+  <BEWH.PsychicPhenomena>Enabling this will make psykers who are experiencing mental breakdowns create a psychic phenomena.</BEWH.PsychicPhenomena>
   <BEWH.PsykerPariahBirth>Enabling this will allow children to be rarely and randomly born as psykers and pariahs.</BEWH.PsykerPariahBirth>
   <BEWH.PsykerPariahBirthChance>Chance that newly born children will either be a psyker or pariah: {0}%</BEWH.PsykerPariahBirthChance>
 
@@ -28,7 +28,7 @@
   <!-- Gestator-->
   <BEWH.SelectMatrix>Select matrix</BEWH.SelectMatrix>
   <BEWH.SelectMatrixDesc>Select matrix to gestate from among your matrices</BEWH.SelectMatrixDesc>
-  <BEWH.MissingGestateResearch>You have not researched any gestatable geneitc matrices projects</BEWH.MissingGestateResearch>
+  <BEWH.MissingGestateResearch>You have not researched any gestatable genetic matrices projects</BEWH.MissingGestateResearch>
 
   <BEWH.NoGeneMatrix>No gene matrices</BEWH.NoGeneMatrix>
   <BEWH.ContainsGeneMatrix>contains matrix: {0}</BEWH.ContainsGeneMatrix>
@@ -52,7 +52,7 @@
   <BEWH.NoAvailableMaterial>No extra genetic material available</BEWH.NoAvailableMaterial>
 
   <BEWH.SelectXMaterial>Select {0} material</BEWH.SelectXMaterial>
-  <BEWH.SelectXMaterialDesc>Select {0} material from among your availables materials, if you have any</BEWH.SelectXMaterialDesc>
+  <BEWH.SelectXMaterialDesc>Select {0} material from among your available materials, if you have any</BEWH.SelectXMaterialDesc>
 
   <BEWH.Primarch>primarch</BEWH.Primarch>
   <BEWH.Chapter>chapter</BEWH.Chapter>

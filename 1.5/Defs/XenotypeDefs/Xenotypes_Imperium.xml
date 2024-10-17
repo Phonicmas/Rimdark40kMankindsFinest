@@ -16,7 +16,7 @@
     <label>pariah</label>
     <description>With no presence in the warp these beings are resistant to psychic attack.</description>
     <descriptionShort>With no presence in the warp these beings are resistant to psychic attack.</descriptionShort>
-    <iconPath>UI/Xenotypes/PariahXenoIcon</iconPath>
+    <iconPath>UI/Xenotypes/BEWH_PariahXenoIcon</iconPath>
     <inheritable>false</inheritable>
     <canGenerateAsCombatant>true</canGenerateAsCombatant>
     <combatPowerFactor>1.2</combatPowerFactor>
@@ -31,7 +31,7 @@
     <label>living saint</label>
     <description>A Living Saint is an extraordinarily devout servant of the Emperor of Mankind, who displays seemingly miraculous, supernatural abilities derived from potent faith in the God-Emperor during his or her lifetime.</description>
     <descriptionShort>A Living Saint is an extraordinarily devout servant of the Emperor of Mankind, who displays seemingly miraculous, supernatural abilities derived from potent faith in the God-Emperor during his or her lifetime.</descriptionShort>
-    <iconPath>UI/Xenotypes/LivingSaint</iconPath>
+    <iconPath>UI/Xenotypes/BEWH_LivingSaint</iconPath>
     <combatPowerFactor>5</combatPowerFactor>
     <genes>
       <li>BEWH_LivingSaintBeingOfFaith</li>
@@ -76,7 +76,7 @@
     <label>firstborn marine</label>
     <description>Barely human, but instead superhuman; having been made superior in all respects to a normal man by a harsh regime of genetic modification. These men, untouched by plague or any natural disease are able to suffer wounds that would kill any ordinary man and still live to fight another day.</description>
     <descriptionShort>Barely human, but instead superhuman; having been made superior in all respects to a normal man by a harsh regime of genetic modification.</descriptionShort>
-    <iconPath>UI/Xenotypes/SpaceMarineXenoIcon</iconPath>
+    <iconPath>UI/Xenotypes/BEWH_SpaceMarineXenoIcon</iconPath>
     <combatPowerFactor>1.25</combatPowerFactor>
   </XenotypeDef>
 
@@ -86,7 +86,7 @@
     <label>primaris marine</label>
     <description>Barely human, but instead superhuman; having been made superior in all respects to a normal man by a harsh regime of genetic modification. These men, untouched by plague or any natural disease are able to suffer wounds that would kill any ordinary man and still live to fight another day. These primaris stand above and are stronger than the standard space marine.</description>
     <descriptionShort>Barely human, but instead superhuman; having been made superior in all respects to a normal man by a harsh regime of genetic modification. These primaris stand above and are stronger than the standard space marine.</descriptionShort>
-    <iconPath>UI/Xenotypes/SpaceMarinePrimarisXenoIcon</iconPath>
+    <iconPath>UI/Xenotypes/BEWH_SpaceMarinePrimarisXenoIcon</iconPath>
     <combatPowerFactor>1.5</combatPowerFactor>
     <genes>
       <li>BEWH_SinewCoil</li>
@@ -101,7 +101,7 @@
     <label>firstborn marine psyker</label>
     <description>Barely human, but instead superhuman; having been made superior in all respects to a normal man by a harsh regime of genetic modification. These men, untouched by plague or any natural disease are able to suffer wounds that would kill any ordinary man and still live to fight another day. These space marine carries the psyker gene giving them unatural abilities.</description>
     <descriptionShort>Barely human, but instead superhuman; having been made superior in all respects to a normal man by a harsh regime of genetic modification. These space marine carries the psyker gene giving them unatural abilities.</descriptionShort>
-    <iconPath>UI/Xenotypes/SpaceMarinePsykerXenoIcon</iconPath>
+    <iconPath>UI/Xenotypes/BEWH_SpaceMarinePsykerXenoIcon</iconPath>
     <combatPowerFactor>1.5</combatPowerFactor>
     <genes>
       <li>BEWH_Psyker</li>
@@ -114,7 +114,7 @@
     <label>thunder warrior</label>
     <description>Gene-enhanced warriors created by the Emperor to be living weapons, the Thunder Warriors were known to be physically stronger, more savage, more resilient and more potent in combat than the later Firstborn, though they were not as long-lived and suffered from often dangerous mental instability and early metabolic collapse when their bodies began to reject their augmentations.</description>
     <descriptionShort>Gene-enhanced warriors created by the Emperor to be living weapons, the Thunder Warriors were known to be physically stronger, more savage, more resilient and more potent in combat than the later Firstborn, though they were not as long-lived and suffered from often dangerous mental instability and early metabolic collapse when their bodies began to reject their augmentations.</descriptionShort>
-    <iconPath>UI/Xenotypes/ThunderWarriorXenoIcon</iconPath>
+    <iconPath>UI/Xenotypes/BEWH_ThunderWarriorXenoIcon</iconPath>
     <combatPowerFactor>1.3</combatPowerFactor>
     <genes>
       <li>BEWH_ProtoOssmodula</li>
@@ -132,7 +132,7 @@
     <label>custodes</label>
     <description>Created by the Master of Mankind personally, these beings are what primarch are to a space marine, beings of immense power and skill.</description>
     <descriptionShort>Created by the Master of Mankind personally, these beings are what primarch are to a space marine, beings of immense power and skill.</descriptionShort>
-    <iconPath>UI/Xenotypes/CustodesXenoIcon</iconPath>
+    <iconPath>UI/Xenotypes/BEWH_CustodesXenoIcon</iconPath>
     <combatPowerFactor>4</combatPowerFactor>
     <genes>
       <li>BEWH_ImmunisLeucocyte</li>
@@ -150,7 +150,7 @@
     <label>primarch</label>
     <description>Bred to be perfect generals, warriors and statesmen; larger, stronger, faster, and smarter than any normal Human could ever hope to be. They possessed a potent charisma and martial prowess that made them like the mythical gods of old, untouchable by disease, old age or supposedly the petty failings of lesser men.</description>
     <descriptionShort>Bred to be perfect generals, warriors and statesmen; larger, stronger, faster, and smarter than any normal Human could ever hope to be. They possessed a potent charisma and martial prowess that made them like the mythical gods of old, untouchable by disease, old age or supposedly the petty failings of lesser men.</descriptionShort>
-    <iconPath>UI/Xenotypes/PrimarchXenoIcon</iconPath>
+    <iconPath>UI/Xenotypes/BEWH_PrimarchXenoIcon</iconPath>
     <combatPowerFactor>8</combatPowerFactor>
     <genes>
       <li>BEWH_ImmortisGland</li>

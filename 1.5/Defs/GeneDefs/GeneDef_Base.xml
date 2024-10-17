@@ -135,7 +135,7 @@
                 </abilityDefs>
             </li>
             <li Class="VanillaGenesExpanded.GeneExtension">
-                <backgroundPathXenogenes>UI/Genes/GeneBackground_Psyker</backgroundPathXenogenes>
+                <backgroundPathXenogenes>UI/Genes/BEWH_GeneBackground_Psyker</backgroundPathXenogenes>
             </li>
             <li Class="Genes40k.DefModExtension_Psyker"/>
         </modExtensions>

@@ -18,7 +18,7 @@
 		<defName>BEWH_PsychicCrafting</defName>
 		<label>psychic exhaustion</label>
 		<labelNoun>psychic exhaustion</labelNoun>
-		<description>This pawn is exhausted by all the psychic energy needed to craft gene matrices</description>
+		<description>This pawn is exhausted by all the psychic energy needed to craft gene matrices.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<scenarioCanAdd>false</scenarioCanAdd>
 		<makesSickThought>false</makesSickThought>

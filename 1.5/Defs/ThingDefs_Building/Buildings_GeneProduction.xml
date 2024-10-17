@@ -5,7 +5,7 @@
   <ThingDef ParentName="BenchBase">
     <defName>BEWH_GeneManipulationTable</defName>
     <label>gene manipulation table</label>
-    <description>This table contains all the needed tools and machines to create thing needed to make enhanced superhumen.</description>
+    <description>This table contains all the needed tools and machines to create thing needed to make enhanced superhumans.</description>
     <thingClass>Genes40k.Building_GeneTable</thingClass>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
@@ -33,7 +33,7 @@
       <li Class="CompProperties_Breakdownable"/>
     </comps>
     <graphicData>
-      <texPath>Things/Building/GeneCraftingTable/GeneCraftingTable</texPath>
+      <texPath>Things/Building/GeneCraftingTable/BEWH_GeneCraftingTable</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <shaderType>CutoutComplex</shaderType>
       <drawSize>(7,4)</drawSize>
@@ -82,9 +82,9 @@
     <drawerType>MapMeshAndRealTime</drawerType>
     <tickerType>Normal</tickerType>
     <graphicData>
-      <texPath>Things/Building/GeneseedGestator/GeneseedGestator</texPath>
+      <texPath>Things/Building/GeneseedGestator/BEWH_GeneseedGestator</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
-      <drawSize>(3, 3)</drawSize>
+      <drawSize>(4, 4)</drawSize>
       <shadowData>
         <volume>(1.7, 0.8, 1.7)</volume>
       </shadowData>
@@ -92,8 +92,8 @@
     <size>(3, 2)</size>
     <canOverlapZones>false</canOverlapZones>
     <hasInteractionCell>true</hasInteractionCell>
-    <interactionCellOffset>(0, 0, 2)</interactionCellOffset>
-    <defaultPlacingRot>South</defaultPlacingRot>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <defaultPlacingRot>North</defaultPlacingRot>
     <designationCategory>Production</designationCategory>
     <uiOrder>2100</uiOrder>
     <researchPrerequisites>
@@ -146,12 +146,12 @@
   <ThingDef ParentName="BuildingBase">
     <defName>BEWH_PrimarchGrowthVat</defName>
     <label>primarch growth vat</label>
-    <description>This growth vat is a modified version of the normal Growth Vat, allowing the articial growth of Primarchs by supplying extra needed power and Raw Gestational Slurry</description>
+    <description>This growth vat is a modified version of the normal Growth Vat, allowing the articial growth of Primarchs by supplying extra needed power and raw gestational slurry.</description>
     <thingClass>Genes40k.Building_PrimarchGrowthVat</thingClass>
     <containedPawnsSelectable>true</containedPawnsSelectable>
     <tickerType>Normal</tickerType>
     <graphicData>
-      <texPath>Things/Building/PrimarchGrowthVat/PrimarchGrowthVat</texPath>
+      <texPath>Things/Building/PrimarchGrowthVat/BEWH_PrimarchGrowthVat</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(2,2)</drawSize>
       <shadowData>

@@ -4,15 +4,14 @@ Check descriptions
 Compile list of features
 
 Make Thunder Warrior gene art
-Gestational flurry unfinished art
-Make icon for when starting geneseed gestator and maybe for when ejecting (althrough the standard cross thingy might be fine)
+Make icon for when starting geneseed gestator and maybe for when ejecting (although the standard cross thingy might be fine)
 
 
 # NEW ADDITIONS TO MAKE AT SOME POINT
 
 With psyker perils of warp, make the sever connection function similar to deny the witch
 
-Patch eltex to recipies if VPE is present, do it from inside the royalty folder
+Patch eltex to recipes if VPE is present, do it from inside the royalty folder
 
 Make frostblade xml
 
@@ -31,12 +30,12 @@ https://warhammer40k.fandom.com/wiki/Primarch
 
 
 Specific Chapter Genes;
-Iron Hand(WIP); Give transhumanist trait, and increase global work speed when one or more prostethics is present? 
+Iron Hand(WIP); Give transhumanist trait, and increase global work speed when one or more prosthetics is present? 
 Raven Guard(WIP); Increased hunting stealth and shooting stuff
 
 Specific Primarch Genes;
 Corvus(WIP); Ability to go invis, hunting stealth increase
-Konrad Cruze(WIP); Teleport at will in low light area, and other boosts in low light?
+Konrad Curze(WIP); Teleport at will in low light area, and other boosts in low light?
 Ferrus Manus(WIP); Crafting and quality boost, and also slightly for building
 Dorn(WIP); Increase defense?
 Vulkan(WIP); Thought of making 2 perpetual genes, one lesser and one "normal". Vulkan gets the lesser version, making carriers almost immortal

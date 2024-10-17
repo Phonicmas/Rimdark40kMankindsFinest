@@ -14,7 +14,7 @@
         <label>harvest geneseed</label>
         <description>Harvest the geneseed of a fallen brother.</description>
         <cooldownTicksRange>15000</cooldownTicksRange>
-        <iconPath>UI/Abilities/ApothecaryGeneseedHarvestIcon</iconPath>
+        <iconPath>UI/Abilities/BEWH_ApothecaryGeneseedHarvestIcon</iconPath>
         <jobDef>CastAbilityOnThingMelee</jobDef>
         <verbProperties>
             <verbClass>Verb_CastAbilityTouch</verbClass>
