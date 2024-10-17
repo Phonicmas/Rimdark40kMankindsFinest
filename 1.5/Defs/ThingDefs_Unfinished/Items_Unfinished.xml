@@ -9,7 +9,21 @@
       <Flammability>0.5</Flammability>
     </statBases>
     <graphicData>
-      <texPath>Things/Item/Unfinished/BEWH_</texPath>
+      <texPath>Things/Item/Unfinished/BEWH_RawGestationalSlurry_Unfinished</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stuffCategories Inherit="false" />
+  </ThingDef>
+  
+  <ThingDef ParentName="UnfinishedBase">
+    <defName>BEWH_UnfinishedGeneMatrix</defName>
+    <label>unfinished gene matrix</label>
+    <description>An unfinished gene matrix.</description>
+    <statBases>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Item/GeneMatrix/BEWH_GeneMatrix_Empty</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <stuffCategories Inherit="false" />

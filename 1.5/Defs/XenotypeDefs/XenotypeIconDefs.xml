@@ -3,43 +3,43 @@
 
     <XenotypeIconDef>
         <defName>BEWH_ThunderWarriorIcon</defName>
-        <texPath>UI/Xenotypes/ThunderWarriorXenoIcon</texPath>
+        <texPath>UI/Xenotypes/BEWH_ThunderWarriorXenoIcon</texPath>
     </XenotypeIconDef>
 
     <XenotypeIconDef>
         <defName>BEWH_AstartesIcon</defName>
-        <texPath>UI/Xenotypes/SpaceMarineXenoIcon</texPath>
+        <texPath>UI/Xenotypes/BEWH_SpaceMarineXenoIcon</texPath>
     </XenotypeIconDef>
 
     <XenotypeIconDef>
         <defName>BEWH_PrimarisIcon</defName>
-        <texPath>UI/Xenotypes/SpaceMarinePrimarisXenoIcon</texPath>
+        <texPath>UI/Xenotypes/BEWH_SpaceMarinePrimarisXenoIcon</texPath>
     </XenotypeIconDef>
 
     <XenotypeIconDef>
         <defName>BEWH_CustodesIcon</defName>
-        <texPath>UI/Xenotypes/CustodesXenoIcon</texPath>
+        <texPath>UI/Xenotypes/BEWH_CustodesXenoIcon</texPath>
     </XenotypeIconDef>
 
     <XenotypeIconDef>
         <defName>BEWH_PrimarchIcon</defName>
-        <texPath>UI/Xenotypes/PrimarchXenoIcon</texPath>
+        <texPath>UI/Xenotypes/BEWH_PrimarchXenoIcon</texPath>
     </XenotypeIconDef>
 
 
     <XenotypeIconDef>
         <defName>BEWH_LivingSaintIcon</defName>
-        <texPath>UI/Xenotypes/LivingSaint</texPath>
+        <texPath>UI/Xenotypes/BEWH_LivingSaint</texPath>
     </XenotypeIconDef>
 
     <XenotypeIconDef>
         <defName>BEWH_PsykerIcon</defName>
-        <texPath>UI/Xenotypes/SpaceMarinePsykerXenoIcon</texPath>
+        <texPath>UI/Xenotypes/BEWH_SpaceMarinePsykerXenoIcon</texPath>
     </XenotypeIconDef>
 
     <XenotypeIconDef>
         <defName>BEWH_PariahIcon</defName>
-        <texPath>UI/Xenotypes/PariahXenoIcon</texPath>
+        <texPath>UI/Xenotypes/BEWH_PariahXenoIcon</texPath>
     </XenotypeIconDef>
 
 </Defs>

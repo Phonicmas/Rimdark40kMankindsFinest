@@ -6,7 +6,7 @@
         <defName>BEWH_ImmortisGland</defName>
         <label>immortis gland</label>
         <description>The Immortis gland, or the "God-Maker", is a small thumbnail-sized lobe, that is inserted directly into the brain's core. The implant secretes hormones that increases the body's growth functions while also intensifying its advanced systems, adjusting their shape and function to suit the primarch's advanced physiology. Two parts of this gland, i.e. the "dextrophic" lobe (right half) and "sintarius" (left half) both are present in the organ, that is provided by this gene. This gene has the unfortunate side effect of practically sterilizing the carrier.</description>
-        <iconPath>UI/Genes/PrimarchImmortisGland</iconPath>
+        <iconPath>UI/Genes/BEWH_PrimarchImmortisGland</iconPath>
         <displayOrderInCategory>300</displayOrderInCategory>
 
         <biostatCpx>18</biostatCpx>
@@ -59,8 +59,8 @@
     <GeneDef ParentName="BEWH_PrimarchBase">
         <defName>BEWH_TempestusOcularium</defName>
         <label>tempestus ocularium</label>
-        <description>The Tempestus Ocularium is a sophisticated enhancement to the carriers vision, as well as the source of a carriers dormant psychic abilities. Tempestus Ocularium is essentially an enchanced version of the Occulobe and Lyman's ear, a hearing and sight-enhancing implant, located at the base of the brain. Key diffierence between these organs consists in Tempestus Ocularium being sligthly larger and having a thin pearlescent membrane covering the entire organ. It allows the carrier to have perfect sight in the most tenebrous places, or resist the exposure to the brightest light and are able to hear even teh faintest sound. Apart from that, it acts as a natural psychic focal device, that increases the carriers psychic potential, making the carriers soul glow brightly in the Immaterium. As a side-effect, it also gives the carrier the ability to "read" people around them, giving them an edge in social situations and increasing their overall social impact. </description>
-        <iconPath>UI/Genes/PrimarchTempestusOcularium</iconPath>
+        <description>The Tempestus Ocularium is a sophisticated enhancement to the carriers vision, as well as the source of a carriers dormant psychic abilities. Tempestus Ocularium is essentially an enchanced version of the Occulobe and Lyman's ear — a hearing and sight-enhancing implant, located at the base of the brain. Key diffierence between these organs consists in Tempestus Ocularium being sligthly larger and having a thin pearlescent membrane covering the entire organ. It allows the carrier to have perfect sight in the most tenebrous places, or resist the exposure to the brightest light and to be able to hear even the faintest sound. Apart from that, it acts as a natural psychic focal device, that increases the carriers psychic potential, making the carriers soul glow brightly in the Immaterium. As a side-effect, it also gives the carrier the ability to "read" people around them, giving them an edge in social situations and increasing their overall social impact.</description>
+        <iconPath>UI/Genes/BEWH_PrimarchTempestusOcularium</iconPath>
         <displayOrderInCategory>301</displayOrderInCategory>
 
         <biostatCpx>8</biostatCpx>
@@ -97,17 +97,17 @@
                 <postFactor>2.45</postFactor>
             </li>
         </capMods>
-
-        <abilities>
+		
+		<abilities>
             <li>BEWH_WarpShield</li>
         </abilities>
 
         <descriptionHyperlinks>
             <AbilityDef>BEWH_WarpShield</AbilityDef>
         </descriptionHyperlinks>
-
+		
         <customEffectDescriptions>
-            <li>No loss in shooting skill</li>
+            <li>No loss in shooting skill.</li>
         </customEffectDescriptions>
 
         <modExtensions>
@@ -130,7 +130,7 @@
         <defName>BEWH_ThalaxCortex</defName>
         <label>thalax cortex</label>
         <description>This advanced neural network is basically a direct upgrade over Sus-an membrane, which merges with the recipient's cortex, providing them with an ability to go into the state of suspended animation. Thalax Cortex, however, comes with several additional benefits, most notable ones being - giving the recipient the absolute eidetic memory, i.e. the ability to preserve the entirety of details about an object for an indefinite amount of time. Second such benefit is that this enchancement of Sus-an membrane greatly increases the intellectual properties of the recipient.</description>
-        <iconPath>UI/Genes/PrimarchThalaxCortex</iconPath>
+        <iconPath>UI/Genes/BEWH_PrimarchThalaxCortex</iconPath>
         <displayOrderInCategory>302</displayOrderInCategory>
 
         <biostatCpx>11</biostatCpx>
@@ -178,7 +178,7 @@
         <defName>BEWH_HelixomeArray</defName>
         <label>helixome array</label>
         <description>A complex array of nodules and vessels, doubling the lymphatic system and weaving around all the major organs and systems in helix-like fashion, hence the name. It greatly increases the healing potential, allowing the carrier to shrug off wounds capable of killing a space marine, let alone a mortal human. </description>
-        <iconPath>UI/Genes/PrimarchHelixomeArray</iconPath>
+        <iconPath>UI/Genes/BEWH_PrimarchHelixomeArray</iconPath>
         <displayOrderInCategory>303</displayOrderInCategory>
         <geneClass>Gene_Clotting</geneClass>
 
@@ -234,8 +234,8 @@
 
         <customEffectDescriptions>
             <li>Bleeding wounds close very quickly.</li>
-            <li>Can survive loss of lungs</li>
-            <li>Can survive loss of heart</li>
+            <li>Can survive loss of lungs.</li>
+            <li>Can survive loss of heart.</li>
         </customEffectDescriptions>
 
         <suppressedTraits>
@@ -258,7 +258,7 @@
         <defName>BEWH_VermillionCache</defName>
         <label>vermillion cache</label>
         <description>The Vermillion Cache is an advanced circulatory enhancement that significantly boosts the carriers blood composition and it's oxygen-carrying capacity. This modification includes additional, specialized blood vessels that store and rapidly deploy hyper-oxygenated, nutrient-rich blood to critical areas during intense physical activity or injury. The enhanced blood allows the carrier to sustain themselves for prolonged periods of time without the need for sustenance or sleep. Additionally it allows the carrier to survive the vacuum of space without any protection, if needed.</description>
-        <iconPath>UI/Genes/PrimarchVermillionCache</iconPath>
+        <iconPath>UI/Genes/BEWH_PrimarchVermillionCache</iconPath>
         <displayOrderInCategory>304</displayOrderInCategory>
 
         <biostatCpx>6</biostatCpx>
@@ -312,7 +312,7 @@
         <defName>BEWH_CelerityNexus</defName>
         <label>celerity nexus</label>
         <description>The Celerity Nexus is a complex network of bio-engineered neural nodes and enhanced myelin sheaths, which are interwoven with the carriers's existing nervous system, it runs parallel to the spinal cord, enhancing the central nervous system’s ability to transmit signals rapidly between the brain and the rest of the body. This significantly increasing their reaction time and movement speed, and allows the carrier to move with blinding speed, dodge attacks, close distances and strike enemies in the blink of an eye.</description>
-        <iconPath>UI/Genes/PrimarchCelerityNexus</iconPath>
+        <iconPath>UI/Genes/BEWH_PrimarchCelerityNexus</iconPath>
         <displayOrderInCategory>305</displayOrderInCategory>
 
         <biostatCpx>7</biostatCpx>
@@ -355,7 +355,7 @@
         <defName>BEWH_HyperionMuscleStrands</defName>
         <label>hyperion muscle strands</label>
         <description>The Hyperion Muscle Strands gene reinforces the carriers tendons and ligaments with advanced bio-polymers generated from this implant. This enhancement significantly increases the strength and elasticity of these connective tissues, allowing them to support and transmit the enormous forces generated by the enhanced muscles. Due to its elasticity it allows tendons and ligaments to stretch and flex without tearing and abosrb blows, ultimate increasing the carriers survivability to physical attacks.</description>
-        <iconPath>UI/Genes/PrimarchHyperionMuscleStrand</iconPath>
+        <iconPath>UI/Genes/BEWH_PrimarchHyperionMuscleStrand</iconPath>
         <displayOrderInCategory>306</displayOrderInCategory>
 
         <biostatCpx>9</biostatCpx>
@@ -381,7 +381,7 @@
             <Melee>12</Melee>
         </aptitudes>
         <customEffectDescriptions>
-            <li>No loss in melee skill</li>
+            <li>No loss in melee skill.</li>
         </customEffectDescriptions>
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">

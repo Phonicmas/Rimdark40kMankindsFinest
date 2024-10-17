@@ -36,9 +36,9 @@
   <ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
     <defName>BEWH_PrimarchMaterialXV</defName>
     <label>primarch material XV - Magnus the Red</label>
-    <description>This containers holds the genetic material of Primarch XI - Magnus the Red</description>
+    <description>This containers holds the genetic material of Primarch XI - Magnus the Red.</description>
     <graphicData>
-      <texPath>Things/Item/PrimarchMaterial/PrimarchMaterial_XI</texPath>
+      <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_XI</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <modExtensions>
@@ -52,9 +52,9 @@
   <ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
     <defName>BEWH_PrimarchMaterialIX</defName>
     <label>primarch material IX - Sanguinius</label>
-    <description>This containers holds the genetic material of Primarch IX - Sanguinius</description>
+    <description>This containers holds the genetic material of Primarch IX - Sanguinius.</description>
     <graphicData>
-      <texPath>Things/Item/PrimarchMaterial/PrimarchMaterial_IX</texPath>
+      <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_IX</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <modExtensions>

@@ -6,17 +6,17 @@
     <ThingDef ParentName="BEWH_PowerArmorBase">
         <defName>BEWH_ImperiumPowerArmor</defName>
         <label>Imperium Power Armor</label>
-        <description>Power armor of Imperium Space Marines</description>
+        <description>Power armor of Imperium Space Marines.</description>
         <recipeMaker>
             <researchPrerequisite>BEWH_PowerArmor</researchPrerequisite>
         </recipeMaker>
         <graphicData>
-            <texPath>Things/Armor/Imperium/PowerArmor/ImperiumPowerArmor</texPath>
+            <texPath>Things/Armor/Imperium/PowerArmor/BEWH_ImperiumPowerArmor</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <shaderType>CutoutComplex</shaderType>
         </graphicData>
         <apparel>
-            <wornGraphicPath>Things/Armor/Imperium/PowerArmor/ImperiumPowerArmor</wornGraphicPath>
+            <wornGraphicPath>Things/Armor/Imperium/PowerArmor/BEWH_ImperiumPowerArmor</wornGraphicPath>
             <tags>
                 <li>ImperiumPowerArmor</li>
             </tags>
@@ -27,17 +27,17 @@
     <ThingDef ParentName="BEWH_PowerArmorHelmetBase">
         <defName>BEWH_ImperiumPowerArmorHelmet</defName>
         <label>Imperium Power Helmet</label>
-        <description>Standard issue helmet of Imperium Space Marines</description>
+        <description>Standard issue helmet of Imperium Space Marines.</description>
         <recipeMaker>
             <researchPrerequisite>BEWH_PowerArmor</researchPrerequisite>
         </recipeMaker>
         <graphicData>
-            <texPath>Things/Headgear/Imperium/PowerArmor/ImperiumHelmet</texPath>
+            <texPath>Things/Headgear/Imperium/PowerArmor/BEWH_ImperiumHelmet</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <shaderType>CutoutComplex</shaderType>
         </graphicData>
         <apparel>
-            <wornGraphicPath>Things/Headgear/Imperium/PowerArmor/ImperiumHelmet</wornGraphicPath>
+            <wornGraphicPath>Things/Headgear/Imperium/PowerArmor/BEWH_ImperiumHelmet</wornGraphicPath>
             <tags>
                 <li>ImperiumPowerArmorHelmet</li>
             </tags>
@@ -48,17 +48,17 @@
     <ThingDef ParentName="BEWH_PowerArmorHelmetBase">
         <defName>BEWH_ImperiumPrimarisPowerArmorHelmet</defName>
         <label>Imperium Primaris Power Helmet</label>
-        <description>Standard issue helmet of Imperium Primaris Space Marines</description>
+        <description>Standard issue helmet of Imperium Primaris Space Marines.</description>
         <recipeMaker>
             <researchPrerequisite>BEWH_PowerArmor</researchPrerequisite>
         </recipeMaker>
         <graphicData>
-            <texPath>Things/Headgear/Imperium/PowerArmorPrimaris/ImperiumHelmetAlt</texPath>
+            <texPath>Things/Headgear/Imperium/PowerArmorPrimaris/BEWH_ImperiumHelmetAlt</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <shaderType>CutoutComplex</shaderType>
         </graphicData>
         <apparel>
-            <wornGraphicPath>Things/Headgear/Imperium/PowerArmorPrimaris/ImperiumHelmetAlt</wornGraphicPath>
+            <wornGraphicPath>Things/Headgear/Imperium/PowerArmorPrimaris/BEWH_ImperiumHelmetAlt</wornGraphicPath>
             <tags>
                 <li>ImperiumPowerArmorHelmet</li>
             </tags>

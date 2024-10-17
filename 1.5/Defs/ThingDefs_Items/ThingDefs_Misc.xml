@@ -8,7 +8,7 @@
     <description>An embryo of a primarch placed in a special container, ready to be artificially grown.\n\nThis item rapidly deteriorates outside containment.</description>
     <thingClass>Genes40k.PrimarchEmbryo</thingClass>
     <graphicData>
-      <texPath>Things/Item/PrimarchEmbryo</texPath>
+      <texPath>Things/Item/BEWH_PrimarchEmbryo</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(0.9, 0.9)</drawSize>
     </graphicData>
@@ -49,10 +49,10 @@
   <!-- Raw Gestational Slurry -->
   <ThingDef ParentName="ResourceBase">
     <defName>BEWH_RawGestationalSlurry</defName>
-    <label>Raw gestational slurry</label>
+    <label>raw gestational slurry</label>
     <description>This slurry, made from human tissue strengthened by luciferium, is used to in the creation of primarch.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/Neutroamine</texPath>
+      <texPath>Things/Item/RawGestationalSlurry</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
       <drawSize>0.90</drawSize>
     </graphicData>
@@ -102,7 +102,7 @@
       <skillRequirements>
         <Crafting>6</Crafting>
       </skillRequirements>
-      <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+      <unfinishedThingDef>BEWH_UnfinishedGestationSlurry</unfinishedThingDef>
     </recipeMaker>
   </ThingDef>
 

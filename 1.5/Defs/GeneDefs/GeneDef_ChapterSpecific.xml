@@ -6,12 +6,12 @@
         <defName>BEWH_ChapterIDarkAngels</defName>
         <label>Geneseed Material: Dark Angels</label>
         <description>Your geneseeds comes from</description>
-        <iconPath>UI/Genes/ChaperIDarkAngels</iconPath>
+        <iconPath>UI/Genes/BEWH_ChaperIDarkAngels</iconPath>
         <displayOrderInCategory>100</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <customEffectDescriptions>
-            <li>15% decrease to geneseed implantation failure chance</li>
-            <li>15% decrease to geneseed implantation failure chance cap</li>
+            <li>15% decrease to geneseed implantation failure chance.</li>
+            <li>15% decrease to geneseed implantation failure chance cap.</li>
         </customEffectDescriptions>
         <!-- Maybe Add More? -->
         <modExtensions>
@@ -28,7 +28,7 @@
         <defName>BEWH_ChapterII</defName>
         <label>Geneseed Material: </label>
         <description>Your geneseeds comes from</description>
-        <iconPath>UI/Genes/ChaperIDarkAngels</iconPath>
+        <iconPath>UI/Genes/BEWH_ChaperIDarkAngels</iconPath>
         <displayOrderInCategory>103</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
@@ -41,7 +41,7 @@
         <defName>BEWH_ChapterIIIEmperorsChildren</defName>
         <label>Geneseed Material: Emperor's Children</label>
         <description>Your geneseeds comes from</description>
-        <iconPath>UI/Genes/ChaperIIIEmperorsChildren</iconPath>
+        <iconPath>UI/Genes/BEWH_ChaperIIIEmperorsChildren</iconPath>
         <displayOrderInCategory>106</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <statOffsets>
@@ -53,7 +53,7 @@
             </li>
         </forcedTraits>
         <customEffectDescriptions>
-            <li>Increased joy from viewing art</li>
+            <li>Increased joy from viewing art.</li>
         </customEffectDescriptions>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene" />
@@ -68,7 +68,7 @@
         <defName>BEWH_ChapterIVIronWarriors</defName>
         <label>Geneseed Material: Iron Warriors</label>
         <description>Your geneseeds comes from</description>
-        <iconPath>UI/Genes/ChaperIVIronWarriors</iconPath>
+        <iconPath>UI/Genes/BEWH_ChaperIVIronWarriors</iconPath>
         <displayOrderInCategory>109</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
@@ -81,7 +81,7 @@
         <defName>BEWH_ChapterVWhiteScars</defName>
         <label>Geneseed Material: White Scars</label>
         <description>Your geneseeds comes from</description>
-        <iconPath>UI/Genes/ChaperVWhiteScars</iconPath>
+        <iconPath>UI/Genes/BEWH_ChaperVWhiteScars</iconPath>
         <displayOrderInCategory>112</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
@@ -94,7 +94,7 @@
         <defName>BEWH_ChapterVISpaceWolves</defName>
         <label>Geneseed Material: Space Wolves</label>
         <description>Your geneseeds comes from</description>
-        <iconPath>UI/Genes/ChaperVISpaceWolves</iconPath>
+        <iconPath>UI/Genes/BEWH_ChaperVISpaceWolves</iconPath>
         <displayOrderInCategory>115</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <geneClass>Core40k.Gene_AddRandomGeneAndOrTraitByWeight</geneClass>
@@ -102,7 +102,7 @@
             <MeleeDamageFactor>1.05</MeleeDamageFactor>
         </statFactors>
         <customEffectDescriptions>
-            <li>75% chance to have either Brawler or Abrasive trait</li>
+            <li>75% chance to have either Brawler or Abrasive trait.</li>
         </customEffectDescriptions>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene" />
@@ -144,7 +144,7 @@
         <defName>BEWH_ChapterVIFlaw</defName>
         <label>Canis Helix</label>
         <description>The Canis Helix is a mutation of normal gene-seed that gifts the Wolves with enhanced abilities, including hyper-acute senses of smell and hearing, elongated canines that can dent plasteel, and leathery, resilient skin.</description>
-        <iconPath>UI/Genes/ChaperVISpaceWolvesFlaw</iconPath>
+        <iconPath>UI/Genes/BEWH_ChaperVISpaceWolvesFlaw</iconPath>
         <displayOrderInCategory>116</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <capMods>
@@ -163,7 +163,7 @@
         <socialFightChanceFactor>1.25</socialFightChanceFactor>
         <aggroMentalBreakSelectionChanceFactor>999</aggroMentalBreakSelectionChanceFactor>
         <customEffectDescriptions>
-            <li>Curse of the Wulfen</li>
+            <li>Curse of the Wulfen.</li>
         </customEffectDescriptions>
         <hairColorOverride>(0.65, 0.65, 0.65)</hairColorOverride>
         <modExtensions>
@@ -185,7 +185,7 @@
         <defName>BEWH_ChapterVIIImperialFists</defName>
         <label>Geneseed Material: Imperial Fists</label>
         <description>Your geneseeds comes from</description>
-        <iconPath>UI/Genes/ChaperVIIImperialFists</iconPath>
+        <iconPath>UI/Genes/BEWH_ChaperVIIImperialFists</iconPath>
         <displayOrderInCategory>118</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
@@ -198,7 +198,7 @@
         <defName>BEWH_ChapterVIIINightLords</defName>
         <label>Geneseed Material: Night Lords</label>
         <description>Your geneseeds comes from</description>
-        <iconPath>UI/Genes/ChaperVIIINightLords</iconPath>
+        <iconPath>UI/Genes/BEWH_ChaperVIIINightLords</iconPath>
         <displayOrderInCategory>121</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
@@ -211,7 +211,7 @@
         <defName>BEWH_ChapterIXBloodAngels</defName>
         <label>Geneseed Material: Blood Angels</label>
         <description>Your geneseeds comes from</description>
-        <iconPath>UI/Genes/ChapterIXBloodAngels</iconPath>
+        <iconPath>UI/Genes/BEWH_ChapterIXBloodAngels</iconPath>
         <displayOrderInCategory>124</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <geneClass>Core40k.Gene_AddRandomGeneAndOrTraitByWeight</geneClass>
@@ -241,7 +241,7 @@
         <defName>BEWH_ChapterIXFlaw</defName>
         <label>Red Thirst</label>
         <description>The Red Thirst causes warriors to suffer an unusual bloodlust, instilling them with a thirst for the blood of their enemies.</description>
-        <iconPath>UI/Genes/ChapterIXBloodAngelsFlaw</iconPath>
+        <iconPath>UI/Genes/BEWH_ChapterIXBloodAngelsFlaw</iconPath>
         <displayOrderInCategory>125</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <geneClass>Gene_Hemogen</geneClass>
@@ -279,7 +279,7 @@
         <defName>BEWH_ChapterXIronHands</defName>
         <label>Geneseed Material: Iron Hands</label>
         <description>Your geneseeds comes from</description>
-        <iconPath>UI/Genes/ChaperXIronHands</iconPath>
+        <iconPath>UI/Genes/BEWH_ChaperXIronHands</iconPath>
         <displayOrderInCategory>127</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
@@ -292,7 +292,7 @@
         <defName>BEWH_ChapterXI</defName>
         <label>Geneseed Material: </label>
         <description>Your geneseeds comes from</description>
-        <iconPath>UI/Genes/ChaperXIronHands</iconPath>
+        <iconPath>UI/Genes/BEWH_ChaperXIronHands</iconPath>
         <displayOrderInCategory>130</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
@@ -305,7 +305,7 @@
         <defName>BEWH_ChapterXIIWorldEaters</defName>
         <label>Geneseed Material: World Eaters</label>
         <description>Your geneseeds comes from</description>
-        <iconPath>UI/Genes/ChaperXIIWorldEaters</iconPath>
+        <iconPath>UI/Genes/BEWH_ChaperXIIWorldEaters</iconPath>
         <displayOrderInCategory>133</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <forcedTraits>
@@ -314,7 +314,7 @@
             </li>
         </forcedTraits>
         <customEffectDescriptions>
-            <li>Will have either Bloodlust or Psychopath trait</li>
+            <li>Will have either Bloodlust or Psychopath trait.</li>
         </customEffectDescriptions>
         <statFactors>
             <MeleeHitChance>1.1</MeleeHitChance>
@@ -354,12 +354,12 @@
         <defName>BEWH_ChapterXIIIUltramarines</defName>
         <label>Geneseed Material: Ultramarines</label>
         <description>Your geneseeds comes from</description>
-        <iconPath>UI/Genes/ChaperXIIIUltramarines</iconPath>
+        <iconPath>UI/Genes/BEWH_ChaperXIIIUltramarines</iconPath>
         <displayOrderInCategory>136</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <customEffectDescriptions>
-            <li>10% decrease to geneseed implantation failure chance</li>
-            <li>5% decrease to geneseed implantation failure chance cap</li>
+            <li>10% decrease to geneseed implantation failure chance.</li>
+            <li>5% decrease to geneseed implantation failure chance cap.</li>
         </customEffectDescriptions>
         <statFactors>
             <WorkSpeedGlobal>1.2</WorkSpeedGlobal>
@@ -378,7 +378,7 @@
         <defName>BEWH_ChapterXIVDeathGuard</defName>
         <label>Geneseed Material: Death Guard</label>
         <description>Your geneseeds comes from</description>
-        <iconPath>UI/Genes/ChaperXIVDeathGuard</iconPath>
+        <iconPath>UI/Genes/BEWH_ChaperXIVDeathGuard</iconPath>
         <displayOrderInCategory>139</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <statFactors>
@@ -403,12 +403,12 @@
         <defName>BEWH_ChapterXVThousandSons</defName>
         <label>Geneseed Material: Thousand Sons</label>
         <description>Your geneseeds comes from Magnus the Red, the Crimson King, and as such you have inherited some of his psychic potential.</description>
-        <iconPath>UI/Genes/ChaperXVThousandSons</iconPath>
+        <iconPath>UI/Genes/BEWH_ChaperXVThousandSons</iconPath>
         <displayOrderInCategory>142</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <geneClass>Core40k.Gene_AddRandomGeneAndOrTraitByWeight</geneClass>
         <customEffectDescriptions>
-            <li>Gives a psyker gene</li>
+            <li>Gives a psyker gene.</li>
         </customEffectDescriptions>
         <statFactors>
             <PsychicSensitivity>1.2</PsychicSensitivity>
@@ -441,7 +441,7 @@
         <defName>BEWH_ChapterXVISonsOfHorus</defName>
         <label>Geneseed Material: Sons of Horus</label>
         <description>Your geneseeds comes from</description>
-        <iconPath>UI/Genes/ChaperXVISonsOfHorus</iconPath>
+        <iconPath>UI/Genes/BEWH_ChaperXVISonsOfHorus</iconPath>
         <displayOrderInCategory>145</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <statFactors>
@@ -454,12 +454,12 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chaper XVII - World Bearers -->
+    <!-- Chaper XVII - Word Bearers -->
     <GeneDef ParentName="BEWH_ChapterGeneParent">
-        <defName>BEWH_ChapterXVIIWorldBearers</defName>
-        <label>Geneseed Material: World Bearers</label>
+        <defName>BEWH_ChapterXVIIWordBearers</defName>
+        <label>Geneseed Material: Word Bearers</label>
         <description>Your geneseeds comes from</description>
-        <iconPath>UI/Genes/ChaperXVIIWorldBearers</iconPath>
+        <iconPath>UI/Genes/BEWH_ChaperXVIIWordBearers</iconPath>
         <displayOrderInCategory>148</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
@@ -472,7 +472,7 @@
         <defName>BEWH_ChapterXVIIISalamanders</defName>
         <label>Geneseed Material: Salamanders</label>
         <description>Your geneseeds comes from</description>
-        <iconPath>UI/Genes/ChaperXVIIISalamanders</iconPath>
+        <iconPath>UI/Genes/BEWH_ChaperXVIIISalamanders</iconPath>
         <displayOrderInCategory>151</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
@@ -485,7 +485,7 @@
         <defName>BEWH_ChapterXIXRavenGuard</defName>
         <label>Geneseed Material: Raven Guard</label>
         <description>Your geneseeds comes from</description>
-        <iconPath>UI/Genes/ChaperXIXRavenGuard</iconPath>
+        <iconPath>UI/Genes/BEWH_ChaperXIXRavenGuard</iconPath>
         <displayOrderInCategory>154</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
@@ -498,7 +498,7 @@
         <defName>BEWH_ChapterXXAlphaLegion</defName>
         <label>Geneseed Material: Alpha Legion</label>
         <description>Your geneseeds comes from</description>
-        <iconPath>UI/Genes/ChaperXXAlphaLegion</iconPath>
+        <iconPath>UI/Genes/BEWH_ChaperXXAlphaLegion</iconPath>
         <displayOrderInCategory>157</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
