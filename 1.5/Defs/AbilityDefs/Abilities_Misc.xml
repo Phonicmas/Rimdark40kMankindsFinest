@@ -35,7 +35,7 @@
     <defName>BEWH_DivineFlight</defName>
     <label>divine flight</label>
     <description>This pawn is granted flight by their wings.</description>
-    <iconPath>UI/Abilities/DivineFlight</iconPath>
+    <iconPath>UI/Abilities/BEWH_DivineFlight</iconPath>
     <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
     <uiOrder>1</uiOrder>
@@ -63,7 +63,7 @@
     <defName>BEWH_AngelicFlight</defName>
     <label>angelic flight</label>
     <description>This pawn is granted flight by their wings.</description>
-    <iconPath>UI/Abilities/AngelicFlight</iconPath>
+    <iconPath>UI/Abilities/BEWH_AngelicFlight</iconPath>
     <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
     <uiOrder>1</uiOrder>

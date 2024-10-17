@@ -6,7 +6,7 @@
         <defName>BEWH_SinewCoil</defName>
         <label>sinew coil</label>
         <description>Carriers sinews are reinforced with durametallic coil-cables that can contract with incredible force, magnifying his strength as well as giving his body another layer of defence.</description>
-        <iconPath>UI/Genes/Primaris_SinewCoilIcon</iconPath>
+        <iconPath>UI/Genes/BEWH_Primaris_SinewCoilIcon</iconPath>
         <displayOrderInCategory>21</displayOrderInCategory>
         <prerequisite>BEWH_Biscopea</prerequisite>
         <statOffsets>
@@ -43,7 +43,7 @@
         <defName>BEWH_Magnificat</defName>
         <label>magnificat</label>
         <description>Carriers possess a small, thumbnail-sized lobe in the brain's cortex that make them physically even larger, stronger and with faster reaction times than his non-Primaris brethren.</description>
-        <iconPath>UI/Genes/Primaris_MagnificatIcon</iconPath>
+        <iconPath>UI/Genes/BEWH_Primaris_MagnificatIcon</iconPath>
         <displayOrderInCategory>22</displayOrderInCategory>
         <prerequisite>BEWH_Biscopea</prerequisite>
         <statOffsets>
@@ -70,8 +70,8 @@
     <GeneDef ParentName="BEWH_PrimarisSpaceMarineParent">
         <defName>BEWH_BelisarianFurnace</defName>
         <label>belisarian furnace</label>
-        <description>Carriers possess a dormant organ that connects to both Astartes hearts. In times of extreme stress, or should the warrior's body undergo violent, damaging trauma, it expels great blurts of self-synthesized chemicals - a hyper-cocktail that simulates the biological action of combat stimms while also aiding in the rapid regrowth of tissue, bone and muscle</description>
-        <iconPath>UI/Genes/Primaris_BelisarianFurnaceIcon</iconPath>
+        <description>Carriers possess a dormant organ that connects to both Astartes hearts. In times of extreme stress, or should the warrior's body undergo violent, damaging trauma, it expels great blurts of self-synthesized chemicals — a hyper-cocktail that simulates the biological action of combat stimms while also aiding in the rapid regrowth of tissue, bone and muscle.</description>
+        <iconPath>UI/Genes/BEWH_Primaris_BelisarianFurnaceIcon</iconPath>
         <displayOrderInCategory>23</displayOrderInCategory>
         <prerequisite>BEWH_Biscopea</prerequisite>
         <abilities>

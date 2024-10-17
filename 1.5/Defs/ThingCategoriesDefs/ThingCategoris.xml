@@ -9,7 +9,7 @@
 
     <ThingCategoryDef>
         <defName>BEWH_ChapterMaterial</defName>
-        <label>Chapter material</label>
+        <label>chapter material</label>
         <parent>Items</parent>
     </ThingCategoryDef>
 

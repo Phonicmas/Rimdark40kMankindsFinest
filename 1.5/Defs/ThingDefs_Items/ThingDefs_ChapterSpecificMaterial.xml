@@ -41,9 +41,9 @@
     <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
         <defName>BEWH_ChapterMaterialI</defName>
         <label>chapter material I - Dark Angels</label>
-        <description>This containers holds the genetic mutation material of Chapter I - Dark Angels</description>
+        <description>This containers holds the genetic mutation material of Chapter I - Dark Angels.</description>
         <graphicData>
-            <texPath>Things/Item/ChapterMaterial/ChapterMaterial_I</texPath>
+            <texPath>Things/Item/ChapterMaterial/BEWH_ChapterMaterial_I</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <modExtensions>
@@ -75,9 +75,9 @@
     <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
         <defName>BEWH_ChapterMaterialIII</defName>
         <label>chapter material III - Emperor's Children</label>
-        <description>This containers holds the genetic mutation material of Chapter III - Emperor's Children</description>
+        <description>This containers holds the genetic mutation material of Chapter III - Emperor's Children.</description>
         <graphicData>
-            <texPath>Things/Item/ChapterMaterial/ChapterMaterial_III</texPath>
+            <texPath>Things/Item/ChapterMaterial/BEWH_ChapterMaterial_III</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <modExtensions>
@@ -92,9 +92,9 @@
     <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
         <defName>BEWH_ChapterMaterialIV</defName>
         <label>chapter material IV - Iron Warriors</label>
-        <description>This containers holds the genetic mutation material of Chapter IV - Iron Warriors</description>
+        <description>This containers holds the genetic mutation material of Chapter IV - Iron Warriors.</description>
         <graphicData>
-            <texPath>Things/Item/ChapterMaterial/ChapterMaterial_IV</texPath>
+            <texPath>Things/Item/ChapterMaterial/BEWH_ChapterMaterial_IV</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <modExtensions>
@@ -109,9 +109,9 @@
     <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
         <defName>BEWH_ChapterMaterialV</defName>
         <label>chapter material V - White Scars</label>
-        <description>This containers holds the genetic mutation material of Chapter V - White Scars</description>
+        <description>This containers holds the genetic mutation material of Chapter V - White Scars.</description>
         <graphicData>
-            <texPath>Things/Item/ChapterMaterial/ChapterMaterial_V</texPath>
+            <texPath>Things/Item/ChapterMaterial/BEWH_ChapterMaterial_V</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <modExtensions>
@@ -126,9 +126,9 @@
     <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
         <defName>BEWH_ChapterMaterialVI</defName>
         <label>chapter material VI - Space Wolves</label>
-        <description>This containers holds the genetic mutation material of Chapter VI - Space Wolves</description>
+        <description>This containers holds the genetic mutation material of Chapter VI - Space Wolves.</description>
         <graphicData>
-            <texPath>Things/Item/ChapterMaterial/ChapterMaterial_VI</texPath>
+            <texPath>Things/Item/ChapterMaterial/BEWH_ChapterMaterial_VI</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <modExtensions>
@@ -143,9 +143,9 @@
     <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
         <defName>BEWH_ChapterMaterialVII</defName>
         <label>chapter material VII - Imperial Fists</label>
-        <description>This containers holds the genetic mutation material of Chapter VII - Imperial Fists</description>
+        <description>This containers holds the genetic mutation material of Chapter VII - Imperial Fists.</description>
         <graphicData>
-            <texPath>Things/Item/ChapterMaterial/ChapterMaterial_VII</texPath>
+            <texPath>Things/Item/ChapterMaterial/BEWH_ChapterMaterial_VII</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <modExtensions>
@@ -160,9 +160,9 @@
     <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
         <defName>BEWH_ChapterMaterialVIII</defName>
         <label>chapter material VIII - Night Lords</label>
-        <description>This containers holds the genetic mutation material of Chapter VIII - Night Lords</description>
+        <description>This containers holds the genetic mutation material of Chapter VIII - Night Lords.</description>
         <graphicData>
-            <texPath>Things/Item/ChapterMaterial/ChapterMaterial_VIII</texPath>
+            <texPath>Things/Item/ChapterMaterial/BEWH_ChapterMaterial_VIII</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <modExtensions>
@@ -177,9 +177,9 @@
     <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
         <defName>BEWH_ChapterMaterialIX</defName>
         <label>chapter material IX - Blood Angels</label>
-        <description>This containers holds the genetic mutation material of Chapter IX - Blood Angels</description>
+        <description>This containers holds the genetic mutation material of Chapter IX - Blood Angels.</description>
         <graphicData>
-            <texPath>Things/Item/ChapterMaterial/ChapterMaterial_IX</texPath>
+            <texPath>Things/Item/ChapterMaterial/BEWH_ChapterMaterial_IX</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <modExtensions>
@@ -194,9 +194,9 @@
     <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
         <defName>BEWH_ChapterMaterialX</defName>
         <label>chapter material X - Iron Hands</label>
-        <description>This containers holds the genetic mutation material of Chapter X - Iron Hands</description>
+        <description>This containers holds the genetic mutation material of Chapter X - Iron Hands.</description>
         <graphicData>
-            <texPath>Things/Item/ChapterMaterial/ChapterMaterial_X</texPath>
+            <texPath>Things/Item/ChapterMaterial/BEWH_ChapterMaterial_X</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <modExtensions>
@@ -211,9 +211,9 @@
     <!--<ThingDef ParentName="BEWH_ChapterGeneticMaterial">
         <defName>BEWH_ChapterMaterialXI</defName>
         <label>chapter material XI</label>
-        <description>This containers holds the genetic mutation material of Chapter XI</description>
+        <description>This containers holds the genetic mutation material of Chapter XI.</description>
         <graphicData>
-            <texPath>Things/Item/ChapterMaterial/ChapterMaterial_XI</texPath>
+            <texPath>Things/Item/ChapterMaterial/BEWH_ChapterMaterial_XI</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <modExtensions>
@@ -228,9 +228,9 @@
     <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
         <defName>BEWH_ChapterMaterialXII</defName>
         <label>chapter material XII - World Eaters</label>
-        <description>This containers holds the genetic mutation material of Chapter XII - World Eaters</description>
+        <description>This containers holds the genetic mutation material of Chapter XII - World Eaters.</description>
         <graphicData>
-            <texPath>Things/Item/ChapterMaterial/ChapterMaterial_XII</texPath>
+            <texPath>Things/Item/ChapterMaterial/BEWH_ChapterMaterial_XII</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <modExtensions>
@@ -245,9 +245,9 @@
     <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
         <defName>BEWH_ChapterMaterialXIII</defName>
         <label>chapter material XIII - Ultramarines</label>
-        <description>This containers holds the genetic mutation material of Chapter XIII - Ultramarines</description>
+        <description>This containers holds the genetic mutation material of Chapter XIII - Ultramarines.</description>
         <graphicData>
-            <texPath>Things/Item/ChapterMaterial/ChapterMaterial_XIII</texPath>
+            <texPath>Things/Item/ChapterMaterial/BEWH_ChapterMaterial_XIII</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <modExtensions>
@@ -262,9 +262,9 @@
     <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
         <defName>BEWH_ChapterMaterialXIV</defName>
         <label>chapter material XIV - Death Guard</label>
-        <description>This containers holds the genetic mutation material of Chapter XIV - Death Guard</description>
+        <description>This containers holds the genetic mutation material of Chapter XIV - Death Guard.</description>
         <graphicData>
-            <texPath>Things/Item/ChapterMaterial/ChapterMaterial_XIV</texPath>
+            <texPath>Things/Item/ChapterMaterial/BEWH_ChapterMaterial_XIV</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <modExtensions>
@@ -279,9 +279,9 @@
     <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
         <defName>BEWH_ChapterMaterialXV</defName>
         <label>chapter material XV - Thousand Sons</label>
-        <description>This containers holds the genetic mutation material of Chapter XV - Thousand Sons</description>
+        <description>This containers holds the genetic mutation material of Chapter XV - Thousand Sons.</description>
         <graphicData>
-            <texPath>Things/Item/ChapterMaterial/ChapterMaterial_XV</texPath>
+            <texPath>Things/Item/ChapterMaterial/BEWH_ChapterMaterial_XV</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <modExtensions>
@@ -296,9 +296,9 @@
     <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
         <defName>BEWH_ChapterMaterialXVI</defName>
         <label>chapter material XVI - Sons of Horus</label>
-        <description>This containers holds the genetic mutation material of Chapter XVI - Sons of Horus</description>
+        <description>This containers holds the genetic mutation material of Chapter XVI - Sons of Horus.</description>
         <graphicData>
-            <texPath>Things/Item/ChapterMaterial/ChapterMaterial_XVI</texPath>
+            <texPath>Things/Item/ChapterMaterial/BEWH_ChapterMaterial_XVI</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <modExtensions>
@@ -309,19 +309,19 @@
         </modExtensions>
     </ThingDef>
 
-    <!-- Chapter XVII - World Bearers -->
+    <!-- Chapter XVII - Word Bearers -->
     <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
         <defName>BEWH_ChapterMaterialXVII</defName>
-        <label>chapter material XVII - World Bearers</label>
-        <description>This containers holds the genetic mutation material of Chapter XVII - World Bearers</description>
+        <label>chapter material XVII - Word Bearers</label>
+        <description>This containers holds the genetic mutation material of Chapter XVII - Word Bearers.</description>
         <graphicData>
-            <texPath>Things/Item/ChapterMaterial/ChapterMaterial_XVII</texPath>
+            <texPath>Things/Item/ChapterMaterial/BEWH_ChapterMaterial_XVII</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterMaterial" />
             <li Class="Genes40k.DefModExtension_GeneFromMaterial">
-                <addedGene>BEWH_ChapterXVIIWorldBearers</addedGene>
+                <addedGene>BEWH_ChapterXVIIWordBearers</addedGene>
             </li>
         </modExtensions>
     </ThingDef>
@@ -330,9 +330,9 @@
     <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
         <defName>BEWH_ChapterMaterialXVIII</defName>
         <label>chapter material XVIII - Salamanders</label>
-        <description>This containers holds the genetic mutation material of Chapter XVIII - Salamanders</description>
+        <description>This containers holds the genetic mutation material of Chapter XVIII - Salamanders.</description>
         <graphicData>
-            <texPath>Things/Item/ChapterMaterial/ChapterMaterial_XVIII</texPath>
+            <texPath>Things/Item/ChapterMaterial/BEWH_ChapterMaterial_XVIII</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <modExtensions>
@@ -347,9 +347,9 @@
     <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
         <defName>BEWH_ChapterMaterialXIX</defName>
         <label>chapter material XIX - Raven Guard</label>
-        <description>This containers holds the genetic mutation material of Chapter XIX - Raven Guard</description>
+        <description>This containers holds the genetic mutation material of Chapter XIX - Raven Guard.</description>
         <graphicData>
-            <texPath>Things/Item/ChapterMaterial/ChapterMaterial_XIX</texPath>
+            <texPath>Things/Item/ChapterMaterial/BEWH_ChapterMaterial_XIX</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <modExtensions>
@@ -364,9 +364,9 @@
     <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
         <defName>BEWH_ChapterMaterialXX</defName>
         <label>chapter material XX - Alpha Legion</label>
-        <description>This containers holds the genetic mutation material of Chapter XX - Alpha Legion</description>
+        <description>This containers holds the genetic mutation material of Chapter XX - Alpha Legion.</description>
         <graphicData>
-            <texPath>Things/Item/ChapterMaterial/ChapterMaterial_XX</texPath>
+            <texPath>Things/Item/ChapterMaterial/BEWH_ChapterMaterial_XX</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <modExtensions>

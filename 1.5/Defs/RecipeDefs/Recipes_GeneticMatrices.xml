@@ -6,7 +6,7 @@
         <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
         <effectWorking>Cook</effectWorking>
         <soundWorking>Recipe_Machining</soundWorking>
-        <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+        <unfinishedThingDef>BEWH_UnfinishedGeneMatrix</unfinishedThingDef>
         <recipeUsers>
             <li>BEWH_GeneManipulationTable</li>
         </recipeUsers>

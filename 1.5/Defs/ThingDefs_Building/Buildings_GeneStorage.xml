@@ -11,7 +11,7 @@
       <MaxHitPoints>150</MaxHitPoints>
       <Mass>10</Mass>
     </statBases>
-    <defaultPlacingRot>South</defaultPlacingRot>
+    <defaultPlacingRot>North</defaultPlacingRot>
     <designationCategory>Misc</designationCategory>
     <building>
       <destroySound>BuildingDestroyed_Metal_Small</destroySound>
@@ -50,7 +50,7 @@
     <label>sangprimus portum</label>
     <description>The Sangprimus Portum is able to store Chapter and Primarch material. Whilst near a gestator it is able to duplicate the material within to complete the matrices of Firstborn, Primaris and Primarchs.</description>
     <graphicData>
-      <texPath>Things/Building/SangprimusPortum/SangprimusPortum</texPath>
+      <texPath>Things/Building/SangprimusPortum/BEWH_SangprimusPortum</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <shadowData>
         <volume>(0.9,0.2,0.9)</volume>
@@ -68,7 +68,7 @@
       <ComponentSpacer>2</ComponentSpacer>
     </costList>
     <building>
-      <maxItemsInCell>20</maxItemsInCell>
+      <maxItemsInCell>10</maxItemsInCell>
       <fixedStorageSettings>
         <filter>
           <categories>
@@ -108,7 +108,7 @@
   <!-- Genetic matrix storage -->
   <ThingDef ParentName="BEWH_GeneticStorage">
     <defName>BEWH_GeneticCryostaticStorage</defName>
-    <label>genetic cryostatic storage</label>
+    <label>genetic matrix storage</label>
     <description>Able to holster 24 genetic matrices, keeping them safe and preventing deterioration.</description>
     <thingClass Inherit="False">Genes40k.Building_GeneStorageGraphicProgression</thingClass>
     <graphicData>
@@ -118,9 +118,10 @@
         <volume>(0.9,0.2,0.9)</volume>
       </shadowData>
       <drawSize>(2, 2)</drawSize>
+      <drawOffset>(0, 0, 0.45)</drawOffset>
     </graphicData>
     <defaultPlacingRot>North</defaultPlacingRot>
-    <size>(2, 2)</size>
+    <size>(2, 1)</size>
     <researchPrerequisites>
       <li>BEWH_GeneseedPurification</li>
     </researchPrerequisites>
@@ -145,7 +146,7 @@
           </categories>
         </filter>
       </defaultStorageSettings>
-      <maxItemsInCell>2</maxItemsInCell>
+      <maxItemsInCell>3</maxItemsInCell>
     </building>
     <modExtensions>
       <li Class="Genes40k.DefModExtension_GeneStorageGraphicProgression">
@@ -173,10 +174,11 @@
       <shadowData>
         <volume>(0.9,0.2,0.9)</volume>
       </shadowData>
-      <drawSize>(2, 2)</drawSize>
+      <drawSize>(2, 2.5)</drawSize>
+      <drawOffset>(0, 0, 0.7)</drawOffset>
     </graphicData>
     <defaultPlacingRot>North</defaultPlacingRot>
-    <size>(2, 2)</size>
+    <size>(1, 1)</size>
     <researchPrerequisites>
       <li>BEWH_GeneseedPerfection</li>
     </researchPrerequisites>
@@ -201,6 +203,7 @@
           </categories>
         </filter>
       </defaultStorageSettings>
+      <maxItemsInCell>6</maxItemsInCell>
     </building>
     <modExtensions>
       <li Class="Genes40k.DefModExtension_GeneStorageGraphicProgression">
@@ -228,7 +231,7 @@
     <surfaceType Inherit="False">Item</surfaceType>
     <description>Able to holster 1 primarc embryo, keeping it safe and preventing deterioration.</description>
     <graphicData>
-      <texPath>Things/Building/PrimarchEmbryoContainer/PrimarchEmbryoContainerBase</texPath>
+      <texPath>Things/Building/PrimarchEmbryoContainer/BEWH_PrimarchEmbryoContainerBase</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <shadowData>
         <volume>(0.9,0.2,0.9)</volume>
