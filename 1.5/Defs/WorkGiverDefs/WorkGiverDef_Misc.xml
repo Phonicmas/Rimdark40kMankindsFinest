@@ -3,12 +3,27 @@
 
   <WorkGiverDef>
     <defName>BEWH_FillGeneGestator</defName>
-    <label>fill gene gestator</label>
+    <label>fill gene gestator with matrix</label>
     <giverClass>Genes40k.WorkGiver_FillGeneGestator</giverClass>
     <workType>Hauling</workType>
     <verb>fill</verb>
     <gerund>filling</gerund>
     <priorityInType>10</priorityInType>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <canBeDoneByMechs>false</canBeDoneByMechs>
+    <canBeDoneByMutants>false</canBeDoneByMutants>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>BEWH_FillPrimarchGrowthVat</defName>
+    <label>fill primarch growth vat with embryo</label>
+    <giverClass>Genes40k.WorkGiver_FillPrimarchGrowthVat</giverClass>
+    <workType>Hauling</workType>
+    <verb>fill</verb>
+    <gerund>filling</gerund>
+    <priorityInType>9</priorityInType>
     <requiredCapacities>
       <li>Manipulation</li>
     </requiredCapacities>

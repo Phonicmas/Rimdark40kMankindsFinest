@@ -105,6 +105,7 @@ namespace Genes40k
         //ThingDefs
         public static ThingDef BEWH_GeneseedGestator;
         public static ThingDef BEWH_GeneticCryostaticStorage;
+        public static ThingDef BEWH_PrimarchEmbryoContainer;
         public static ThingDef BEWH_SangprimusPortum;
         public static ThingDef BEWH_PrimarchGrowthVat;
 
@@ -115,6 +116,7 @@ namespace Genes40k
 
         //JobDefs
         public static JobDef BEWH_FillGeneGestator;
+        public static JobDef BEWH_FillPrimarchGrowthVat;
 
         //ThoughtDefs
         public static ThoughtDef BEWH_LivingSaintHolyRadianceThought;

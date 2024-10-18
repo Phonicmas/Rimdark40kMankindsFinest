@@ -268,7 +268,7 @@
     <placeWorkers Inherit="False" />
     <modExtensions>
       <li Class="Genes40k.DefModExtension_GeneStorageGraphicProgression">
-        <fullGraphic>Things/Building/GeneseedVialStorage/BEWH_PrimarchEmbryoContainerFull</fullGraphic>
+        <fullGraphic>Things/Building/PrimarchEmbryoContainer/BEWH_PrimarchEmbryoContainerFull</fullGraphic>
       </li>
     </modExtensions>
     <comps>

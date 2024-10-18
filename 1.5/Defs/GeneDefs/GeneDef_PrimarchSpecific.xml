@@ -322,7 +322,7 @@
     <!-- Chapter XV - Magnus the Red -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
         <defName>BEWH_PrimarchXVMagnusTheRed</defName>
-        <label>magnus the red</label>
+        <label>Magnus the Red</label>
         <description>The genetic material of Magnus the Red, when implanted, greatly improves psychic capabilities.</description>
         <iconPath>UI/Genes/BEWH_MPrimarchXVMagnusTheRed</iconPath>
         <displayOrderInCategory>415</displayOrderInCategory>

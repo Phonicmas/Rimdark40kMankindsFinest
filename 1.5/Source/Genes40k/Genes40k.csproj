@@ -96,11 +96,13 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_EternalWatchStopMentalState.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_LivingSaintResurrection.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_LivingSaintDeath.cs" />
-    <Compile Include="ThingClasses\Building_PrimarchEmbryoStorage.cs" />
+    <Compile Include="ThingClasses\Building_PrimarchEmbryoStorage-DELETE.cs" />
     <Compile Include="ThingClasses\PrimarchEmbryo.cs" />
     <Compile Include="ThingClasses\GeneseedVial.cs" />
+    <Compile Include="Workers\JobDriver_FillPrimarchGrowthVat.cs" />
     <Compile Include="Workers\JobDriver_FillGeneGestator.cs" />
     <Compile Include="Workers\ThoughtWorker_HolyRadiance.cs" />
+    <Compile Include="Workers\WorkGiver_FillPrimarchGrowthVat.cs" />
     <Compile Include="Workers\WorkGiver_HaulToPrimarchVat.cs" />
     <Compile Include="Workers\Recipe_MakePrimarchEmbryo.cs" />
     <Compile Include="Workers\WorkerClass_PhaseDevelopment.cs" />

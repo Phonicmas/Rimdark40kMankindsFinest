@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using UnityEngine;
 using Verse;
@@ -15,6 +16,14 @@ namespace Genes40k
     public class Building_PrimarchGrowthVat : Building_Enterable, IStoreSettingsParent, IThingHolderWithDrawnPawn, IThingHolder
     {
         public PrimarchEmbryo selectedEmbryo;
+
+        public PrimarchEmbryo containedEmbryo;
+
+        public bool haulJobStarted = false;
+
+        public bool hasBeenStarted = false;
+
+        public Pawn jobDoer = null;
 
         private float embryoStarvation;
 
@@ -40,7 +49,9 @@ namespace Genes40k
         [Unsaved(false)]
         private Effecter bubbleEffecter;
 
-        private static readonly Texture2D CancelLoadingIcon = ContentFinder<Texture2D>.Get("UI/Designators/Cancel");
+        private static readonly Texture2D CancelIcon = ContentFinder<Texture2D>.Get("UI/Designators/Cancel");
+
+        private static readonly Texture2D StartIcon = ContentFinder<Texture2D>.Get("UI/Designators/Cancel");
 
         public static readonly CachedTexture InsertPawnIcon = new CachedTexture("UI/Gizmos/InsertPawn");
 
@@ -258,7 +269,7 @@ namespace Genes40k
                     innerContainer.TryDrop(item, InteractionCell, base.Map, ThingPlaceMode.Near, 1, out var _);
                 }
             }
-            if (base.Working)
+            if (hasBeenStarted && base.Working)
             {
                 if (selectedEmbryo != null)
                 {
@@ -418,6 +429,9 @@ namespace Genes40k
             startTick = -1;
             embryoStarvation = 0f;
             sustainerWorking = null;
+            hasBeenStarted = false;
+            haulJobStarted = false;
+            jobDoer = null;
         }
 
         private void DestroyEmbryo(bool biostarvation = false)
@@ -493,9 +507,23 @@ namespace Genes40k
             {
                 yield return item;
             }
-            if (base.Working)
+            if (!hasBeenStarted)
             {
-                Command_Action command_Action = new Command_Action();
+                //STARTS MACHINE
+                Command_Action command_Action4 = new Command_Action();
+                command_Action4.defaultLabel = "BEWH.StartGeneGestating".Translate();
+                command_Action4.defaultDesc = "BEWH.StartGeneGestatingDesc".Translate();
+                command_Action4.icon = StartIcon;
+                command_Action4.activateSound = SoundDefOf.Designate_Cancel;
+                command_Action4.action = delegate
+                {
+                    hasBeenStarted = true;
+                };
+                yield return command_Action4;
+            }
+            else if (base.Working)
+            {
+                /*Command_Action command_Action = new Command_Action();
                 command_Action.defaultLabel = "CommandCancelGrowth".Translate();
                 command_Action.defaultDesc = "CommandCancelGrowthDesc".Translate();
                 command_Action.icon = CancelLoadingIcon;
@@ -507,9 +535,9 @@ namespace Genes40k
                         Finish();
                         innerContainer.TryDropAll(InteractionCell, base.Map, ThingPlaceMode.Near);
                     };
-                    if (startTick > Find.TickManager.TicksGame && selectedEmbryo != null && innerContainer.Contains(selectedEmbryo))
+                    if (startTick > Find.TickManager.TicksGame && containedEmbryo != null && innerContainer.Contains(containedEmbryo))
                     {
-                        Dialog_MessageBox window = Dialog_MessageBox.CreateConfirmation("ImplantEmbryoCancelVat".Translate(selectedEmbryo.Label), action, destructive: true);
+                        Dialog_MessageBox window = Dialog_MessageBox.CreateConfirmation("ImplantEmbryoCancelVat".Translate(containedEmbryo.Label), action, destructive: true);
                         Find.WindowStack.Add(window);
                     }
                     else
@@ -517,9 +545,10 @@ namespace Genes40k
                         action();
                     }
                 };
-                yield return command_Action;
-                if (selectedEmbryo != null)
+                yield return command_Action;*/
+                if (containedEmbryo != null)
                 {
+                    //INSPECT GENES
                     yield return new Command_Action
                     {
                         defaultLabel = "InspectGenes".Translate() + "...",
@@ -533,7 +562,7 @@ namespace Genes40k
                 }
                 if (DebugSettings.ShowDevGizmos)
                 {
-                    if (selectedEmbryo != null && innerContainer.Contains(selectedEmbryo))
+                    if (containedEmbryo != null && innerContainer.Contains(containedEmbryo))
                     {
                         yield return new Command_Action
                         {
@@ -555,26 +584,12 @@ namespace Genes40k
                     }
                 }
             }
-            else
+            if (containedEmbryo == null)
             {
-                if (selectedEmbryo != null)
+                if (!haulJobStarted)
                 {
-                    Command_Action command_Action2 = new Command_Action();
-                    command_Action2.defaultLabel = "CommandCancelLoad".Translate();
-                    command_Action2.defaultDesc = "CommandCancelLoadDesc".Translate();
-                    command_Action2.icon = CancelLoadingIcon;
-                    command_Action2.activateSound = SoundDefOf.Designate_Cancel;
-                    command_Action2.action = delegate
-                    {
-                        DestroyEmbryo();
-                        innerContainer.TryDropAll(InteractionCell, base.Map, ThingPlaceMode.Near);
-                        OnStop();
-                    };
-                    yield return command_Action2;
-                }
-                if (selectedEmbryo == null && Find.Storyteller.difficulty.ChildrenAllowed)
-                {
-                    List<Thing> embryos = base.Map.listerThings.ThingsOfDef(Genes40kDefOf.BEWH_PrimarchEmbryo);
+                    //START HAUL JOB
+                    List<PrimarchEmbryo> embryos = AvailableEmbryo();
                     Command_Action command_Action4 = new Command_Action();
                     command_Action4.defaultLabel = "ImplantEmbryo".Translate() + "...";
                     command_Action4.defaultDesc = "InsertEmbryoGrowthVatDesc".Translate(EmbryoGestationTicks.ToStringTicksToPeriod()).Resolve();
@@ -582,11 +597,24 @@ namespace Genes40k
                     command_Action4.action = delegate
                     {
                         List<FloatMenuOption> list = new List<FloatMenuOption>();
-                        foreach (Thing embryo in embryos)
+                        foreach (PrimarchEmbryo embryo in embryos)
                         {
-                            list.Add(new FloatMenuOption(embryo.LabelCap, delegate
+                            PrimarchEmbryo primarchEmbryo = embryo;
+                            var embryoName = "Mother: " + primarchEmbryo.mother.Name.ToStringFull;
+                            var primarchChapterGenes = primarchEmbryo.primarchGenes.GenesListForReading.Where(gene => gene.HasModExtension<DefModExtension_PrimarchMaterial>());
+                            if (primarchChapterGenes.Any())
                             {
-                                SelectEmbryo(embryo as PrimarchEmbryo);
+                                embryoName += "\nPrimarch Father: " + primarchChapterGenes.First().label;
+                            }
+                            list.Add(new FloatMenuOption(embryoName, delegate
+                            {
+                                SelectEmbryo(embryo);
+                                haulJobStarted = true;
+                                if (containedEmbryo != null)
+                                {
+                                    GenPlace.TryPlaceThing(containedEmbryo, InteractionCell, Map, ThingPlaceMode.Direct);
+                                    containedEmbryo = null;
+                                }
                             }, embryo, Color.white));
                         }
                         Find.WindowStack.Add(new FloatMenu(list));
@@ -604,6 +632,37 @@ namespace Genes40k
                         command_Action4.Disable("NoPower".Translate().CapitalizeFirst());
                     }
                     yield return command_Action4;
+                }
+                else
+                {
+                    //CANCEL HAUL JOB
+                    Command_Action command_Action2 = new Command_Action();
+                    command_Action2.defaultLabel = "CommandCancelLoad".Translate();
+                    command_Action2.defaultDesc = "CommandCancelLoadDesc".Translate();
+                    command_Action2.icon = CancelIcon;
+                    command_Action2.activateSound = SoundDefOf.Designate_Cancel;
+                    command_Action2.action = delegate
+                    {
+                        haulJobStarted = false;
+                        if (jobDoer != null)
+                        {
+                            foreach (Job job in jobDoer.jobs.AllJobs())
+                            {
+                                if (job.def == Genes40kDefOf.BEWH_FillGeneGestator)
+                                {
+                                    jobDoer.jobs.EndCurrentOrQueuedJob(job, JobCondition.InterruptForced);
+                                    haulJobStarted = false;
+                                    hasBeenStarted = false;
+                                    jobDoer = null;
+                                    break;
+                                }
+                            }
+                        }
+                        /*DestroyEmbryo();
+                        innerContainer.TryDropAll(InteractionCell, base.Map, ThingPlaceMode.Near);*/
+                        OnStop();
+                    };
+                    yield return command_Action2;
                 }
             }
             if (DebugSettings.ShowDevGizmos)
@@ -627,10 +686,48 @@ namespace Genes40k
             }
         }
 
+        private List<PrimarchEmbryo> AvailableEmbryo()
+        {
+            List<PrimarchEmbryo> availableEmbryos = new List<PrimarchEmbryo>();
+
+            List<Thing> embryos = new List<Thing>();
+            embryos.AddRange(Map.listerThings.ThingsOfDef(Genes40kDefOf.BEWH_PrimarchEmbryo));
+
+            foreach (Building_GeneStorageGraphicProgression building in Map.listerBuildings.AllBuildingsColonistOfDef(Genes40kDefOf.BEWH_PrimarchEmbryoContainer).Cast<Building_GeneStorageGraphicProgression>())
+            {
+                foreach (var item in building.GeneAmount)
+                {
+                    embryos.Add(item);
+                }
+            }
+
+            foreach (var item in embryos)
+            {
+                PrimarchEmbryo primarchEmbryo = (PrimarchEmbryo)item;
+                availableEmbryos.Add(primarchEmbryo);
+            }
+
+            return availableEmbryos;
+        }
+
         public void SelectEmbryo(PrimarchEmbryo embryo)
         {
             selectedEmbryo = embryo;
             embryo.implantTarget = this;
+        }
+
+        public void AddPrimarcEmbryo(Thing primarchEmbryo)
+        {
+            if (primarchEmbryo.stackCount > 1)
+            {
+                containedEmbryo = (PrimarchEmbryo)primarchEmbryo.SplitOff(1);
+            }
+            else
+            {
+                containedEmbryo = (PrimarchEmbryo)primarchEmbryo;
+            }
+            haulJobStarted = false;
+            primarchEmbryo.Destroy();
         }
 
         public Vector3 OffsetFromRotation(Rot4 rotation)
@@ -768,9 +865,13 @@ namespace Genes40k
         {
             base.ExposeData();
             Scribe_References.Look(ref selectedEmbryo, "selectedEmbryo");
+            Scribe_References.Look(ref containedEmbryo, "containedEmbryo");
             Scribe_Values.Look(ref embryoStarvation, "embryoStarvation", 0f);
             Scribe_Values.Look(ref containedNutrition, "containedNutrition", 0f);
+            Scribe_Values.Look(ref haulJobStarted, "haulJobStarted", false);
+            Scribe_Values.Look(ref hasBeenStarted, "hasBeenStarted", false);
             Scribe_Deep.Look(ref allowedNutritionSettings, "allowedNutritionSettings", this);
+            Scribe_References.Look(ref jobDoer, "jobDoer");
             if (allowedNutritionSettings == null)
             {
                 allowedNutritionSettings = new StorageSettings(this);

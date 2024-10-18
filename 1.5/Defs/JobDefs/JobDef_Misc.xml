@@ -9,4 +9,12 @@
         <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
     </JobDef>
 
+    <JobDef>
+        <defName>BEWH_FillPrimarchGrowthVat</defName>
+        <driverClass>Genes40k.JobDriver_FillPrimarchGrowthVat</driverClass>
+        <reportString>filling TargetA with TargetB.</reportString>
+        <suspendable>false</suspendable>
+        <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+    </JobDef>
+
 </Defs>

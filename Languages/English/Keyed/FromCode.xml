@@ -44,6 +44,7 @@
   <BEWH.GeneVialFinished>Gene vial can be extracted</BEWH.GeneVialFinished>
   <BEWH.GeneVialFinishesIn>Gene vial finishes in {0}{1}</BEWH.GeneVialFinishesIn>
   <BEWH.ContainsNoGeneMatrix>Contains no gene matrix</BEWH.ContainsNoGeneMatrix>
+  <BEWH.NoPrimarchEmbryo>No primarch embryo</BEWH.NoPrimarchEmbryo>
 
 
   <BEWH.GestateFinishLetter>Matrix Gestated</BEWH.GestateFinishLetter>

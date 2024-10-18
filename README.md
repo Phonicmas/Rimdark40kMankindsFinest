@@ -4,6 +4,7 @@ Check descriptions
 Compile list of features
 
 Make Thunder Warrior gene art
+Eject loaded matrix icon (icon of empty matrix with like a red drop arrow thingy?)
 Make icon for when starting geneseed gestator and maybe for when ejecting (although the standard cross thingy might be fine)
 
 

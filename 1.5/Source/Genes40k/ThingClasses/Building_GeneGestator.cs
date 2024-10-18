@@ -46,6 +46,8 @@ namespace Genes40k
 
         private static readonly Texture2D CancelIcon = ContentFinder<Texture2D>.Get("UI/Designators/Cancel");
 
+        private static readonly Texture2D StartIcon = ContentFinder<Texture2D>.Get("UI/Designators/Cancel");
+
         private static readonly Texture2D EmptyMaterialIcon = ContentFinder<Texture2D>.Get("Things/Item/GeneMatrix/BEWH_GeneMatrix_Empty");
 
         [Unsaved(false)]
@@ -335,7 +337,7 @@ namespace Genes40k
                 Command_Action command_Action4 = new Command_Action();
                 command_Action4.defaultLabel = "BEWH.StartGeneGestating".Translate();
                 command_Action4.defaultDesc = "BEWH.StartGeneGestatingDesc".Translate();
-                command_Action4.icon = CancelIcon;
+                command_Action4.icon = StartIcon;
                 command_Action4.activateSound = SoundDefOf.Designate_Cancel;
                 command_Action4.action = delegate
                 {
@@ -360,7 +362,7 @@ namespace Genes40k
             {
                 if (!haulJobStarted)
                 {
-                    //SELECTS MATRIX TO LOAD
+                    //SELECTS MATRIX TO LOAD AND START HAUL JOB
                     Command_Action command_Action1 = new Command_Action();
                     command_Action1.defaultLabel = "BEWH.SelectMatrix".Translate() + "...";
                     command_Action1.defaultDesc = "BEWH.SelectMatrixDesc".Translate();
@@ -436,7 +438,6 @@ namespace Genes40k
                     };
                     yield return command_Action3;
                 }
-                
             }
         }
 

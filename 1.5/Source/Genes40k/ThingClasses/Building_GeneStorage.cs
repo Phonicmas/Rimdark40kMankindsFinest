@@ -1,7 +1,6 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
 using Verse;
 
 namespace Genes40k
@@ -12,7 +11,6 @@ namespace Genes40k
         public int MaximumItems => def.building.maxItemsInCell * def.size.Area;
 
         public IEnumerable<Thing> GeneAmount => innerContainer.InnerListForReading;
-
 
         private ThingOwner<Thing> innerContainer;
 
