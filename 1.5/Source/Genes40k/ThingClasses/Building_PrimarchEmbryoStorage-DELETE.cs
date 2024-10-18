@@ -33,7 +33,7 @@ namespace Genes40k
             {
                 if (cachedFullTopGraphic == null)
                 {
-                    cachedFullTopGraphic = GraphicDatabase.Get<Graphic_Multi>("Things/Item/BEWH_PrimarchEmbryo", ShaderDatabase.DefaultShader, def.graphicData.drawSize, Color.white);
+                    cachedFullTopGraphic = GraphicDatabase.Get<Graphic_Multi>("Things/Building/PrimarchEmbryoContainer/BEWH_PrimarchEmbryoContainerTopFull", ShaderDatabase.Transparent, def.graphicData.drawSize, Color.white);
                 }
                 return cachedFullTopGraphic;
             }
@@ -44,11 +44,9 @@ namespace Genes40k
             base.DrawAt(drawLoc, flip);
             if (GeneAmount.Count() > 0)
             {
-                FullTopGraphic.drawSize = new Vector2(0.6f, 0.6f);
-                FullTopGraphic.Draw(DrawPos + new Vector3(0, 1, 0.08f), base.Rotation, this);
+                FullTopGraphic.Draw(DrawPos + new Vector3(0, 2, 0), base.Rotation, this);
             }
             TopGraphic.Draw(DrawPos + new Vector3(0, 2, 0), base.Rotation, this);
         }
-
     }
 }

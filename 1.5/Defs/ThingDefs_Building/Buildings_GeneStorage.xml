@@ -19,7 +19,7 @@
       <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
       <maxItemsInCell>1</maxItemsInCell>
     </building>
-    <drawerType>MapMeshAndRealTime</drawerType>
+    <drawerType>RealtimeOnly</drawerType>
     <drawGUIOverlay>true</drawGUIOverlay>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
@@ -109,7 +109,7 @@
   <ThingDef ParentName="BEWH_GeneticStorage">
     <defName>BEWH_GeneticCryostaticStorage</defName>
     <label>genetic matrix storage</label>
-    <description>Able to holster 24 genetic matrices, keeping them safe and preventing deterioration.</description>
+    <description>Able to holster 6 genetic matrices, keeping them safe and preventing deterioration.</description>
     <thingClass Inherit="False">Genes40k.Building_GeneStorageGraphicProgression</thingClass>
     <graphicData>
       <texPath>Things/Building/GeneticMatrixStorage/BEWH_MatrixStorage_Empty</texPath>
@@ -166,7 +166,7 @@
   <ThingDef ParentName="BEWH_GeneticStorage">
     <defName>BEWH_GeneseedVialStorage</defName>
     <label>geneseed vial storage</label>
-    <description>Able to holster 4 geneseed vials, keeping them safe and preventing deterioration.</description>
+    <description>Able to holster 6 geneseed vials, keeping them safe and preventing deterioration.</description>
     <thingClass Inherit="False">Genes40k.Building_GeneStorageGraphicProgression</thingClass>
     <graphicData>
       <texPath>Things/Building/GeneseedVialStorage/BEWH_GeneseedVialStorage_Empty</texPath>
@@ -223,7 +223,7 @@
   <ThingDef ParentName="BEWH_GeneticStorage">
     <defName>BEWH_PrimarchEmbryoContainer</defName>
     <label>primarch embryo container</label>
-    <thingClass Inherit="False">Genes40k.Building_PrimarchEmbryoStorage</thingClass>
+    <thingClass Inherit="False">Genes40k.Building_GeneStorageGraphicProgression</thingClass>
     <inspectorTabs Inherit="False">
       <li>ITab_Storage</li>
       <li>Genes40k.ITab_ContentsGeneStorage</li>
@@ -231,7 +231,7 @@
     <surfaceType Inherit="False">Item</surfaceType>
     <description>Able to holster 1 primarc embryo, keeping it safe and preventing deterioration.</description>
     <graphicData>
-      <texPath>Things/Building/PrimarchEmbryoContainer/BEWH_PrimarchEmbryoContainerBase</texPath>
+      <texPath>Things/Building/PrimarchEmbryoContainer/BEWH_PrimarchEmbryoContainerEmpty</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <shadowData>
         <volume>(0.9,0.2,0.9)</volume>
@@ -266,6 +266,11 @@
       </defaultStorageSettings>
     </building>
     <placeWorkers Inherit="False" />
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_GeneStorageGraphicProgression">
+        <fullGraphic>Things/Building/GeneseedVialStorage/BEWH_PrimarchEmbryoContainerFull</fullGraphic>
+      </li>
+    </modExtensions>
     <comps>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>

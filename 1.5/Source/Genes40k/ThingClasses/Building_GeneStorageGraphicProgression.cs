@@ -36,7 +36,7 @@ namespace Genes40k
             {
                 if (cachedHalfFullGraphic == null)
                 {
-                    cachedHalfFullGraphic = GraphicDatabase.Get<Graphic_Multi>(DefMod.halfFullGraphic, ShaderDatabase.DefaultShader, def.graphicData.drawSize, Color.white);
+                    cachedHalfFullGraphic = GraphicDatabase.Get<Graphic_Multi>(DefMod.halfFullGraphic, ShaderDatabase.DefaultShader, def.graphicData.drawSize, Color.white, Color.white, DefaultGraphic.data);
                 }
                 return cachedHalfFullGraphic;
             }
@@ -51,7 +51,8 @@ namespace Genes40k
             {
                 if (cachedFullGraphic == null)
                 {
-                    cachedFullGraphic = GraphicDatabase.Get<Graphic_Multi>(DefMod.fullGraphic, ShaderDatabase.DefaultShader, def.graphicData.drawSize, Color.white);
+                    cachedFullGraphic = GraphicDatabase.Get<Graphic_Multi>(DefMod.fullGraphic, ShaderDatabase.DefaultShader, def.graphicData.drawSize, Color.white, Color.white, DefaultGraphic.data);
+                    cachedFullGraphic.data = DefaultGraphic.data;
                 }
                 return cachedFullGraphic;
             }
@@ -61,32 +62,34 @@ namespace Genes40k
         {
             get
             {
-                float filledPercent = (float)GeneAmount.Count() / MaximumItems;
-                if (filledPercent < 0.5f)
+                if (DefMod.halfFullGraphic.NullOrEmpty())
                 {
-                    return DefaultGraphic;
-                }
-                else if (filledPercent < 1)
-                {
-                    return HalfFullGraphic;
+                    if (GeneAmount.Count() == MaximumItems)
+                    {
+                        return FullGraphic;
+                    }
+                    else
+                    {
+                        return DefaultGraphic;
+                    }
                 }
                 else
                 {
-                    return FullGraphic;
+                    float filledPercent = (float)GeneAmount.Count() / MaximumItems;
+                    if (filledPercent < 0.5f)
+                    {
+                        return DefaultGraphic;
+                    }
+                    else if (filledPercent < 1)
+                    {
+                        return HalfFullGraphic;
+                    }
+                    else
+                    {
+                        return FullGraphic;
+                    }
                 }
             }
-        }
-
-        public override void Notify_ItemRemoved(Thing newItem)
-        {
-            DrawAt(Position.ToVector3());
-            base.Notify_ItemRemoved(newItem);
-        }
-
-        public override void Notify_ItemAdded(Thing newItem)
-        {
-            DrawAt(Position.ToVector3());
-            base.Notify_ItemAdded(newItem);
         }
     }
 }

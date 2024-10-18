@@ -83,7 +83,6 @@ namespace Genes40k
             }
         }
 
-
         public override void ExposeData()
         {
             base.ExposeData();
