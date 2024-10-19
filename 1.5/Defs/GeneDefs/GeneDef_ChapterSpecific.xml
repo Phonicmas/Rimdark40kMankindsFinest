@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <!-- Chaper I - Dark Angels -->
+    <!-- Chapter I - Dark Angels -->
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterIDarkAngels</defName>
         <label>Geneseed Material: Dark Angels</label>
         <description>Your geneseeds comes from Lion El'Jonson</description>
-        <iconPath>UI/Genes/BEWH_ChaperIDarkAngels</iconPath>
+        <iconPath>UI/Genes/BEWH_ChapterIDarkAngels</iconPath>
         <displayOrderInCategory>100</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <customEffectDescriptions>
@@ -23,12 +23,12 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chaper II - ??? -->
+    <!-- Chapter II - ??? -->
     <!--<GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterII</defName>
         <label>Geneseed Material: </label>
         <description>Your geneseeds comes from</description>
-        <iconPath>UI/Genes/BEWH_ChaperIDarkAngels</iconPath>
+        <iconPath>UI/Genes/BEWH_ChapterIDarkAngels</iconPath>
         <displayOrderInCategory>103</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
@@ -36,12 +36,12 @@
         </modExtensions>
     </GeneDef>-->
 
-    <!-- Chaper III - Emperor's Children -->
+    <!-- Chapter III - Emperor's Children -->
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterIIIEmperorsChildren</defName>
         <label>Geneseed Material: Emperor's Children</label>
         <description>Your geneseeds comes from Fulgrim,</description>
-        <iconPath>UI/Genes/BEWH_ChaperIIIEmperorsChildren</iconPath>
+        <iconPath>UI/Genes/BEWH_ChapterIIIEmperorsChildren</iconPath>
         <displayOrderInCategory>106</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <statOffsets>
@@ -63,12 +63,12 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chaper IV - Iron Warriors -->
+    <!-- Chapter IV - Iron Warriors -->
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterIVIronWarriors</defName>
         <label>Geneseed Material: Iron Warriors</label>
         <description>Your geneseeds comes from</description>
-        <iconPath>UI/Genes/BEWH_ChaperIVIronWarriors</iconPath>
+        <iconPath>UI/Genes/BEWH_ChapterIVIronWarriors</iconPath>
         <displayOrderInCategory>109</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
@@ -76,12 +76,12 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chaper V - White Scars -->
+    <!-- Chapter V - White Scars -->
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterVWhiteScars</defName>
         <label>Geneseed Material: White Scars</label>
         <description>Your geneseeds comes from</description>
-        <iconPath>UI/Genes/BEWH_ChaperVWhiteScars</iconPath>
+        <iconPath>UI/Genes/BEWH_ChapterVWhiteScars</iconPath>
         <displayOrderInCategory>112</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
@@ -89,12 +89,12 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chaper VI - Space Wolves -->
+    <!-- Chapter VI - Space Wolves -->
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterVISpaceWolves</defName>
         <label>Geneseed Material: Space Wolves</label>
         <description>Your geneseeds comes from</description>
-        <iconPath>UI/Genes/BEWH_ChaperVISpaceWolves</iconPath>
+        <iconPath>UI/Genes/BEWH_ChapterVISpaceWolves</iconPath>
         <displayOrderInCategory>115</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <geneClass>Core40k.Gene_AddRandomGeneAndOrTraitByWeight</geneClass>
@@ -144,7 +144,7 @@
         <defName>BEWH_ChapterVIFlaw</defName>
         <label>Canis Helix</label>
         <description>The Canis Helix is a mutation of normal gene-seed that gifts the Wolves with enhanced abilities, including hyper-acute senses of smell and hearing, elongated canines that can dent plasteel, and leathery, resilient skin.</description>
-        <iconPath>UI/Genes/BEWH_ChaperVISpaceWolvesFlaw</iconPath>
+        <iconPath>UI/Genes/BEWH_ChapterVISpaceWolvesFlaw</iconPath>
         <displayOrderInCategory>116</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <capMods>
@@ -180,12 +180,12 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chaper VII - Imperial Fists -->
+    <!-- Chapter VII - Imperial Fists -->
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterVIIImperialFists</defName>
         <label>Geneseed Material: Imperial Fists</label>
         <description>Your geneseeds comes from</description>
-        <iconPath>UI/Genes/BEWH_ChaperVIIImperialFists</iconPath>
+        <iconPath>UI/Genes/BEWH_ChapterVIIImperialFists</iconPath>
         <displayOrderInCategory>118</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
@@ -193,12 +193,12 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chaper VIII - Night Lords -->
+    <!-- Chapter VIII - Night Lords -->
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterVIIINightLords</defName>
         <label>Geneseed Material: Night Lords</label>
         <description>Your geneseeds comes from</description>
-        <iconPath>UI/Genes/BEWH_ChaperVIIINightLords</iconPath>
+        <iconPath>UI/Genes/BEWH_ChapterVIIINightLords</iconPath>
         <displayOrderInCategory>121</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
@@ -206,7 +206,7 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chaper IX - Blood Angels -->
+    <!-- Chapter IX - Blood Angels -->
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterIXBloodAngels</defName>
         <label>Geneseed Material: Blood Angels</label>
@@ -274,12 +274,12 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chaper X - Iron Hands -->
+    <!-- Chapter X - Iron Hands -->
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXIronHands</defName>
         <label>Geneseed Material: Iron Hands</label>
         <description>Your geneseeds comes from</description>
-        <iconPath>UI/Genes/BEWH_ChaperXIronHands</iconPath>
+        <iconPath>UI/Genes/BEWH_ChapterXIronHands</iconPath>
         <displayOrderInCategory>127</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
@@ -287,12 +287,12 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chaper XI - ??? -->
+    <!-- Chapter XI - ??? -->
     <!--<GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXI</defName>
         <label>Geneseed Material: </label>
         <description>Your geneseeds comes from</description>
-        <iconPath>UI/Genes/BEWH_ChaperXIronHands</iconPath>
+        <iconPath>UI/Genes/BEWH_ChapterXIronHands</iconPath>
         <displayOrderInCategory>130</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
@@ -300,12 +300,12 @@
         </modExtensions>
     </GeneDef>-->
 
-    <!-- Chaper XII - World Eaters -->
+    <!-- Chapter XII - World Eaters -->
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXIIWorldEaters</defName>
         <label>Geneseed Material: World Eaters</label>
         <description>Your geneseeds comes from</description>
-        <iconPath>UI/Genes/BEWH_ChaperXIIWorldEaters</iconPath>
+        <iconPath>UI/Genes/BEWH_ChapterXIIWorldEaters</iconPath>
         <displayOrderInCategory>133</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <forcedTraits>
@@ -349,12 +349,12 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chaper XIII - Ultramarines -->
+    <!-- Chapter XIII - Ultramarines -->
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXIIIUltramarines</defName>
         <label>Geneseed Material: Ultramarines</label>
         <description>Your geneseeds comes from</description>
-        <iconPath>UI/Genes/BEWH_ChaperXIIIUltramarines</iconPath>
+        <iconPath>UI/Genes/BEWH_ChapterXIIIUltramarines</iconPath>
         <displayOrderInCategory>136</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <customEffectDescriptions>
@@ -373,12 +373,12 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chaper XIV - Death Guard -->
+    <!-- Chapter XIV - Death Guard -->
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXIVDeathGuard</defName>
         <label>Geneseed Material: Death Guard</label>
         <description>Your geneseeds comes from</description>
-        <iconPath>UI/Genes/BEWH_ChaperXIVDeathGuard</iconPath>
+        <iconPath>UI/Genes/BEWH_ChapterXIVDeathGuard</iconPath>
         <displayOrderInCategory>139</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <statFactors>
@@ -398,12 +398,12 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chaper XV - Thousand Sons -->
+    <!-- Chapter XV - Thousand Sons -->
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXVThousandSons</defName>
         <label>Geneseed Material: Thousand Sons</label>
         <description>Your geneseeds comes from Magnus the Red, the Crimson King, and as such you have inherited some of his psychic potential.</description>
-        <iconPath>UI/Genes/BEWH_ChaperXVThousandSons</iconPath>
+        <iconPath>UI/Genes/BEWH_ChapterXVThousandSons</iconPath>
         <displayOrderInCategory>142</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <geneClass>Core40k.Gene_AddRandomGeneAndOrTraitByWeight</geneClass>
@@ -436,12 +436,12 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chaper XVI - Sons of Horus -->
+    <!-- Chapter XVI - Sons of Horus -->
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXVISonsOfHorus</defName>
         <label>Geneseed Material: Sons of Horus</label>
         <description>Your geneseeds comes from</description>
-        <iconPath>UI/Genes/BEWH_ChaperXVISonsOfHorus</iconPath>
+        <iconPath>UI/Genes/BEWH_ChapterXVISonsOfHorus</iconPath>
         <displayOrderInCategory>145</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <statFactors>
@@ -454,12 +454,12 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chaper XVII - Word Bearers -->
+    <!-- Chapter XVII - Word Bearers -->
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXVIIWordBearers</defName>
         <label>Geneseed Material: Word Bearers</label>
         <description>Your geneseeds comes from</description>
-        <iconPath>UI/Genes/BEWH_ChaperXVIIWordBearers</iconPath>
+        <iconPath>UI/Genes/BEWH_ChapterXVIIWordBearers</iconPath>
         <displayOrderInCategory>148</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
@@ -467,12 +467,12 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chaper XVIII - Salamanders -->
+    <!-- Chapter XVIII - Salamanders -->
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXVIIISalamanders</defName>
         <label>Geneseed Material: Salamanders</label>
         <description>Your geneseeds comes from</description>
-        <iconPath>UI/Genes/BEWH_ChaperXVIIISalamanders</iconPath>
+        <iconPath>UI/Genes/BEWH_ChapterXVIIISalamanders</iconPath>
         <displayOrderInCategory>151</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
@@ -480,12 +480,12 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chaper XIX - Raven Guard -->
+    <!-- Chapter XIX - Raven Guard -->
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXIXRavenGuard</defName>
         <label>Geneseed Material: Raven Guard</label>
         <description>Your geneseeds comes from</description>
-        <iconPath>UI/Genes/BEWH_ChaperXIXRavenGuard</iconPath>
+        <iconPath>UI/Genes/BEWH_ChapterXIXRavenGuard</iconPath>
         <displayOrderInCategory>154</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
@@ -493,12 +493,12 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chaper XX - Alpha Legion -->
+    <!-- Chapter XX - Alpha Legion -->
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXXAlphaLegion</defName>
         <label>Geneseed Material: Alpha Legion</label>
         <description>Your geneseeds comes from</description>
-        <iconPath>UI/Genes/BEWH_ChaperXXAlphaLegion</iconPath>
+        <iconPath>UI/Genes/BEWH_ChapterXXAlphaLegion</iconPath>
         <displayOrderInCategory>157</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
