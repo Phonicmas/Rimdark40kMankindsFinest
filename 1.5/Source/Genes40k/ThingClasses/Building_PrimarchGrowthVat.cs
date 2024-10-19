@@ -523,6 +523,7 @@ namespace Genes40k
             }
             else if (base.Working)
             {
+                //CANCEL GROWTH
                 /*Command_Action command_Action = new Command_Action();
                 command_Action.defaultLabel = "CommandCancelGrowth".Translate();
                 command_Action.defaultDesc = "CommandCancelGrowthDesc".Translate();
@@ -658,8 +659,6 @@ namespace Genes40k
                                 }
                             }
                         }
-                        /*DestroyEmbryo();
-                        innerContainer.TryDropAll(InteractionCell, base.Map, ThingPlaceMode.Near);*/
                         OnStop();
                     };
                     yield return command_Action2;

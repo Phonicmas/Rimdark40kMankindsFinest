@@ -5,7 +5,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterIDarkAngels</defName>
         <label>Geneseed Material: Dark Angels</label>
-        <description>Your geneseeds comes from</description>
+        <description>Your geneseeds comes from Lion El'Jonson</description>
         <iconPath>UI/Genes/BEWH_ChaperIDarkAngels</iconPath>
         <displayOrderInCategory>100</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
@@ -40,7 +40,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterIIIEmperorsChildren</defName>
         <label>Geneseed Material: Emperor's Children</label>
-        <description>Your geneseeds comes from</description>
+        <description>Your geneseeds comes from Fulgrim,</description>
         <iconPath>UI/Genes/BEWH_ChaperIIIEmperorsChildren</iconPath>
         <displayOrderInCategory>106</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
