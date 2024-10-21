@@ -5,7 +5,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterIDarkAngels</defName>
         <label>Geneseed Material: Dark Angels</label>
-        <description>Your geneseeds comes from Lion El'Jonson</description>
+        <description>Your geneseeds comes from Lion El'Jonson and is relatively pure, allowing for more succesful and less deadly implantation of the geneseed.</description>
         <iconPath>UI/Genes/BEWH_ChapterIDarkAngels</iconPath>
         <displayOrderInCategory>100</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
@@ -40,7 +40,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterIIIEmperorsChildren</defName>
         <label>Geneseed Material: Emperor's Children</label>
-        <description>Your geneseeds comes from Fulgrim,</description>
+        <description>Your geneseeds comes from Fulgrim, like him you enjoy the fine art of this world but rather not share it with others.</description>
         <iconPath>UI/Genes/BEWH_ChapterIIIEmperorsChildren</iconPath>
         <displayOrderInCategory>106</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
@@ -67,7 +67,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterIVIronWarriors</defName>
         <label>Geneseed Material: Iron Warriors</label>
-        <description>Your geneseeds comes from</description>
+        <description>Your geneseeds comes from Perturabo, </description>
         <iconPath>UI/Genes/BEWH_ChapterIVIronWarriors</iconPath>
         <displayOrderInCategory>109</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
@@ -80,7 +80,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterVWhiteScars</defName>
         <label>Geneseed Material: White Scars</label>
-        <description>Your geneseeds comes from</description>
+        <description>Your geneseeds comes from Jaghatai Khan, </description>
         <iconPath>UI/Genes/BEWH_ChapterVWhiteScars</iconPath>
         <displayOrderInCategory>112</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
@@ -93,7 +93,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterVISpaceWolves</defName>
         <label>Geneseed Material: Space Wolves</label>
-        <description>Your geneseeds comes from</description>
+        <description>Your geneseeds comes from Leman Russ, you've inherited his ruthfulness and wolf-like attributes.</description>
         <iconPath>UI/Genes/BEWH_ChapterVISpaceWolves</iconPath>
         <displayOrderInCategory>115</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
@@ -184,7 +184,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterVIIImperialFists</defName>
         <label>Geneseed Material: Imperial Fists</label>
-        <description>Your geneseeds comes from</description>
+        <description>Your geneseeds comes from Rogal Dorn, </description>
         <iconPath>UI/Genes/BEWH_ChapterVIIImperialFists</iconPath>
         <displayOrderInCategory>118</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
@@ -197,7 +197,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterVIIINightLords</defName>
         <label>Geneseed Material: Night Lords</label>
-        <description>Your geneseeds comes from</description>
+        <description>Your geneseeds comes from Konrad Curze, </description>
         <iconPath>UI/Genes/BEWH_ChapterVIIINightLords</iconPath>
         <displayOrderInCategory>121</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
@@ -210,7 +210,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterIXBloodAngels</defName>
         <label>Geneseed Material: Blood Angels</label>
-        <description>Your geneseeds comes from</description>
+        <description>Your geneseeds comes from Sanguinis, </description>
         <iconPath>UI/Genes/BEWH_ChapterIXBloodAngels</iconPath>
         <displayOrderInCategory>124</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
@@ -278,7 +278,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXIronHands</defName>
         <label>Geneseed Material: Iron Hands</label>
-        <description>Your geneseeds comes from</description>
+        <description>Your geneseeds comes from Ferrus Manus, </description>
         <iconPath>UI/Genes/BEWH_ChapterXIronHands</iconPath>
         <displayOrderInCategory>127</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
@@ -304,7 +304,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXIIWorldEaters</defName>
         <label>Geneseed Material: World Eaters</label>
-        <description>Your geneseeds comes from</description>
+        <description>Your geneseeds comes from Angron, </description>
         <iconPath>UI/Genes/BEWH_ChapterXIIWorldEaters</iconPath>
         <displayOrderInCategory>133</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
@@ -353,7 +353,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXIIIUltramarines</defName>
         <label>Geneseed Material: Ultramarines</label>
-        <description>Your geneseeds comes from</description>
+        <description>Your geneseeds comes from Roboute Guilliman, </description>
         <iconPath>UI/Genes/BEWH_ChapterXIIIUltramarines</iconPath>
         <displayOrderInCategory>136</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
@@ -377,7 +377,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXIVDeathGuard</defName>
         <label>Geneseed Material: Death Guard</label>
-        <description>Your geneseeds comes from</description>
+        <description>Your geneseeds comes from Mortarion, </description>
         <iconPath>UI/Genes/BEWH_ChapterXIVDeathGuard</iconPath>
         <displayOrderInCategory>139</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
@@ -440,7 +440,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXVISonsOfHorus</defName>
         <label>Geneseed Material: Sons of Horus</label>
-        <description>Your geneseeds comes from</description>
+        <description>Your geneseeds comes from Horus, </description>
         <iconPath>UI/Genes/BEWH_ChapterXVISonsOfHorus</iconPath>
         <displayOrderInCategory>145</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
@@ -458,7 +458,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXVIIWordBearers</defName>
         <label>Geneseed Material: Word Bearers</label>
-        <description>Your geneseeds comes from</description>
+        <description>Your geneseeds comes from Lorgar Aurelian, </description>
         <iconPath>UI/Genes/BEWH_ChapterXVIIWordBearers</iconPath>
         <displayOrderInCategory>148</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
@@ -471,7 +471,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXVIIISalamanders</defName>
         <label>Geneseed Material: Salamanders</label>
-        <description>Your geneseeds comes from</description>
+        <description>Your geneseeds comes from Vulkan, </description>
         <iconPath>UI/Genes/BEWH_ChapterXVIIISalamanders</iconPath>
         <displayOrderInCategory>151</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
@@ -484,7 +484,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXIXRavenGuard</defName>
         <label>Geneseed Material: Raven Guard</label>
-        <description>Your geneseeds comes from</description>
+        <description>Your geneseeds comes from Corvus Corax, </description>
         <iconPath>UI/Genes/BEWH_ChapterXIXRavenGuard</iconPath>
         <displayOrderInCategory>154</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
@@ -497,7 +497,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXXAlphaLegion</defName>
         <label>Geneseed Material: Alpha Legion</label>
-        <description>Your geneseeds comes from</description>
+        <description>Your geneseeds comes from Alpharius/Omegon, </description>
         <iconPath>UI/Genes/BEWH_ChapterXXAlphaLegion</iconPath>
         <displayOrderInCategory>157</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>

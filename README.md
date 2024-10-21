@@ -1,42 +1,16 @@
-# TODO
+# RimDark 40k - Mankinds Finest
+A WIP mod that includes imperium stuff
 
-Check descriptions
-Compile list of features
+## Current features;
+Imperium genes: Thunder warrios, Firstborn, Primaris, Custodes, Primarch and living saint + genes for psykers and blanks
 
-Make Thunder Warrior gene art
-Eject loaded matrix icon (icon of empty matrix with like a red drop arrow thingy?)
-Make icon for when starting geneseed gestator and maybe for when ejecting (although the standard cross thingy might be fine)
+Geneseed creation, allowing the creation of geneseeds to implant into pawn making strong space marines or better.
+Also includes chapter and primarch specific genes
 
+Includes research for most things
 
-# NEW ADDITIONS TO MAKE AT SOME POINT
+Some basic power armor
 
-With psyker perils of warp, make the sever connection function similar to deny the witch
+1 Imperial faction, containing xenotypes and using armor from this mod
 
-Patch eltex to recipes if VPE is present, do it from inside the royalty folder
-
-Make frostblade xml
-
-Make Fenrisian Wolves (Art also, maybe just take vanilla wolf and change it? Maybe ask someone who made a wolf like create for it and then change some of it)
-These can then be found by a quest or by an event where they wander by. https://wh40k.lexicanum.com/wiki/Fenrisian_Wolf 
-Should spawn one alpha and a couple of other ones, if alpha is slain, other ones immediately become tamed under the killer
-
-
-Make Blood Chalice art and xml, an exotic item that when ingested by pawns with the red thirst, will completely fill essentially all need and restore all wounds. - https://wh40k.lexicanum.com/wiki/Blood_Chalice 
-
-
-https://wh40k.lexicanum.com/wiki/Gene-seed#Chapters_with_known_gene-seed_flaws
-
-
-https://warhammer40k.fandom.com/wiki/Primarch 
-
-
-Specific Chapter Genes;
-Iron Hand(WIP); Give transhumanist trait, and increase global work speed when one or more prosthetics is present? 
-Raven Guard(WIP); Increased hunting stealth and shooting stuff
-
-Specific Primarch Genes;
-Corvus(WIP); Ability to go invis, hunting stealth increase
-Konrad Curze(WIP); Teleport at will in low light area, and other boosts in low light?
-Ferrus Manus(WIP); Crafting and quality boost, and also slightly for building
-Dorn(WIP); Increase defense?
-Vulkan(WIP); Thought of making 2 perpetual genes, one lesser and one "normal". Vulkan gets the lesser version, making carriers almost immortal
+If royalty is installed players can gai favor for the imperial faction
