@@ -6,11 +6,7 @@ namespace Genes40k
     {
         public override bool AvailableOnNow(Thing thing, BodyPartRecord part = null)
         {
-            if (base.AvailableOnNow(thing, part))
-            {
-                return Genes40kUtils.IsPrimaris((Pawn)thing);
-            }
-            return false;
+            return base.AvailableOnNow(thing, part) && Genes40kUtils.IsPrimaris((Pawn)thing);
         }
 
     }

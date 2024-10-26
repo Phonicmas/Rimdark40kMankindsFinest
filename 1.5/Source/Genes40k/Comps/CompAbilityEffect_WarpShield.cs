@@ -22,7 +22,7 @@ namespace Genes40k
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
-            Hediff hediff = parent.pawn.health.hediffSet.hediffs.Find(x => x.def.HasModExtension<DefModExtension_WarpShield>());
+            var hediff = parent.pawn.health.hediffSet.hediffs.Find(x => x.def.HasModExtension<DefModExtension_WarpShield>());
             if (hediff == null)
             {
                 return;

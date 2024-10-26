@@ -16,21 +16,17 @@ namespace Genes40k
             {
                 return false;
             }
-            if (other.genes != null)
+
+            if (other.genes == null) return false;
+            
+            foreach (var gene in other.genes.GenesListForReading)
             {
-                foreach (Gene gene in other.genes.GenesListForReading)
+                if (!gene.def.HasModExtension<DefModExtension_Pariah>() ||
+                    !def.HasModExtension<DefModExtension_Pariah>()) continue;
+                
+                if (gene.def.GetModExtension<DefModExtension_Pariah>().pariahGene == def.GetModExtension<DefModExtension_Pariah>().pariahGene)
                 {
-                    if (gene.def.HasModExtension<DefModExtension_Pariah>() && def.HasModExtension<DefModExtension_Pariah>())
-                    {
-                        if (gene.def.GetModExtension<DefModExtension_Pariah>().pariahGene == def.GetModExtension<DefModExtension_Pariah>().pariahGene)
-                        {
-                            if (Genes40kUtils.IsPariah(pawn) || pawn.genes.HasActiveGene(Genes40kDefOf.BEWH_MnemosyneMindshield))
-                            {
-                                return false;
-                            }
-                            return true;
-                        }
-                    }
+                    return !Genes40kUtils.IsPariah(pawn) && !pawn.genes.HasActiveGene(Genes40kDefOf.BEWH_MnemosyneMindshield);
                 }
             }
             return false;

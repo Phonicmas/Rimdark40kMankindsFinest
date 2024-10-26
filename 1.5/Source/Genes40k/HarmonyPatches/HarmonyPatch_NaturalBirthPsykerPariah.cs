@@ -2,6 +2,7 @@
 using HarmonyLib;
 using RimWorld;
 using System;
+using System.Linq;
 using Verse;
 
 namespace Genes40k
@@ -16,33 +17,30 @@ namespace Genes40k
 
 		public static void Postfix(ref Thing __result, Pawn geneticMother)
         {
-            Genes40kModSettings modSettings = LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>();
+            var modSettings = LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>();
             if (!modSettings.psykerPariahBirth)
             {
                 return;
             }
-            Pawn pawn = (Pawn)__result;
+            var pawn = (Pawn)__result;
             if (pawn.Faction != Faction.OfPlayer)
             {
                 return;
             }
 
-            int unnaturalChance = modSettings.psykerPariahBirthChance;
-            Random rand = new Random();
+            var unnaturalChance = modSettings.psykerPariahBirthChance;
+            var rand = new Random();
             if (rand.Next(0, 100) > unnaturalChance)
             {
                 return;
             }
 
-            foreach (Gene gene in pawn.genes.GenesListForReading)
+            if (Enumerable.Any(pawn.genes.GenesListForReading, gene => gene.def.HasModExtension<DefModExtension_Pariah>() || gene.def.HasModExtension<DefModExtension_Psyker>()))
             {
-                if (gene.def.HasModExtension<DefModExtension_Pariah>() || gene.def.HasModExtension<DefModExtension_Psyker>())
-                {
-                    return;
-                }
+                return;
             }
             
-            WeightedSelection<GeneDef> weightedSelection = new WeightedSelection<GeneDef>();
+            var weightedSelection = new WeightedSelection<GeneDef>();
             //Psyker genes
             weightedSelection.AddEntry(Genes40kDefOf.BEWH_IotaPsyker, 40);
             weightedSelection.AddEntry(Genes40kDefOf.BEWH_Psyker, 20);
@@ -53,13 +51,14 @@ namespace Genes40k
             weightedSelection.AddEntry(Genes40kDefOf.BEWH_UpsilonPariah, 10);
             weightedSelection.AddEntry(Genes40kDefOf.BEWH_OmegaPariah, 2);
             
-            GeneDef chosenGene = weightedSelection.GetRandomUnique();
-            string typeBorn = "Psyker";
+            var chosenGene = weightedSelection.GetRandomUnique();
+            var typeBorn = "Psyker";
             if (chosenGene.HasModExtension<DefModExtension_Pariah>())
             {
                 typeBorn = "Pariah";
             }
-            Letter_JumpTo letter = new Letter_JumpTo
+            
+            var letter = new Letter_JumpTo
             {
                 lookTargets = pawn,
                 def = Genes40kDefOf.BEWH_NaturalBornX,

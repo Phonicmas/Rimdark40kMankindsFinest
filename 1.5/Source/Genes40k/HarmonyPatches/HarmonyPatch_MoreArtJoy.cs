@@ -17,15 +17,10 @@ namespace Genes40k
 
             var genes = pawn.genes.GenesListForReading.Where(gene => gene.def.HasModExtension<DefModExtension_IncreasedJoyFromArt>());
 
-            if (genes.Any())
-            {
-                var multiplier = 1f;
-                foreach (var gene in genes)
-                {
-                    multiplier *= gene.def.GetModExtension<DefModExtension_IncreasedJoyFromArt>().joyFromArtFactor;
-                }
-                extraJoyGainFactor = multiplier;
-            }
+            if (!genes.Any()) return;
+            
+            var multiplier = genes.Aggregate(1f, (current, gene) => current * gene.def.GetModExtension<DefModExtension_IncreasedJoyFromArt>().joyFromArtFactor);
+            extraJoyGainFactor = multiplier;
         }
     }
 }

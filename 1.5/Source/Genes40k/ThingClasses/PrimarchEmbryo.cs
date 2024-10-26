@@ -36,11 +36,11 @@ namespace Genes40k
 
         public override void Notify_DebugSpawned()
         {
-            if (base.Map.mapPawns.AllPawns.Where((Pawn x) => x.RaceProps.Humanlike && x.gender == Gender.Male).TryRandomElement(out var result))
+            if (Map.mapPawns.AllPawns.Where(x => x.RaceProps.Humanlike && x.gender == Gender.Male).TryRandomElement(out var result))
             {
                 father = result;
             }
-            if (base.Map.mapPawns.AllPawns.Where((Pawn x) => x.RaceProps.Humanlike && x.gender == Gender.Female).TryRandomElement(out var result2))
+            if (Map.mapPawns.AllPawns.Where( x => x.RaceProps.Humanlike && x.gender == Gender.Female).TryRandomElement(out var result2))
             {
                 mother = result2;
             }
@@ -55,11 +55,11 @@ namespace Genes40k
             this.birthGenes = birthGenes;
             this.iconDef = iconDef;
             this.xenotype = xenotype;
-            foreach (GeneDef gene in birthGenes.GenesListForReading)
+            foreach (var gene in birthGenes.GenesListForReading)
             {
                 geneSet.AddGene(gene);
             }
-            foreach (GeneDef gene in primarchGenes.GenesListForReading)
+            foreach (var gene in primarchGenes.GenesListForReading)
             {
                 geneSet.AddGene(gene);
             }            
@@ -67,13 +67,13 @@ namespace Genes40k
 
         private Building_PrimarchGrowthVat BestAvailableGrowthVat()
         {
-            if (base.MapHeld == null)
+            if (MapHeld == null)
             {
                 return null;
             }
-            List<Building> list = base.MapHeld.listerBuildings.AllBuildingsColonistOfDef(Genes40kDefOf.BEWH_PrimarchGrowthVat);
+            var list = MapHeld.listerBuildings.AllBuildingsColonistOfDef(Genes40kDefOf.BEWH_PrimarchGrowthVat);
             tmpEligibleVats.Clear();
-            foreach (Building item in list)
+            foreach (var item in list)
             {
                 if (item is Building_PrimarchGrowthVat building_GrowthVat && !building_GrowthVat.Working && building_GrowthVat.selectedEmbryo == null && building_GrowthVat.SelectedPawn == null)
                 {
@@ -90,7 +90,7 @@ namespace Genes40k
 
         public override IEnumerable<Gizmo> GetGizmos()
         {
-            foreach (Gizmo gizmo in base.GetGizmos())
+            foreach (var gizmo in base.GetGizmos())
             {
                 yield return gizmo;
             }
@@ -99,8 +99,8 @@ namespace Genes40k
                 yield break;
             }
 
-            Building_PrimarchGrowthVat bestVat = BestAvailableGrowthVat();
-            Command_Action command_Action2 = new Command_Action
+            var bestVat = BestAvailableGrowthVat();
+            var command_Action2 = new Command_Action
             {
                 defaultLabel = "InsertGrowthVatLabel".Translate() + "...",
                 defaultDesc = "InsertEmbryoGrowthVatDesc".Translate(EmbryoGestationTicks.ToStringTicksToPeriod()).Resolve(),
@@ -129,26 +129,26 @@ namespace Genes40k
             Scribe_Defs.Look(ref iconDef, "iconDef");
             Scribe_Deep.Look(ref primarchGenes, "primarchGenes");
             Scribe_Deep.Look(ref birthGenes, "birthGenes");
-            if (Scribe.mode == LoadSaveMode.PostLoadInit)
+            
+            if (Scribe.mode != LoadSaveMode.PostLoadInit) return;
+            
+            if (geneSet == null)
             {
-                if (geneSet == null)
+                geneSet = new GeneSet();
+            }
+            if (birthGenes != null)
+            {
+                foreach (var gene in birthGenes.GenesListForReading)
                 {
-                    geneSet = new GeneSet();
+                    geneSet.AddGene(gene);
                 }
-                if (birthGenes != null)
-                {
-                    foreach (GeneDef gene in birthGenes.GenesListForReading)
-                    {
-                        geneSet.AddGene(gene);
-                    }
-                }
-                if (primarchGenes != null)
-                {
-                    foreach (GeneDef gene in primarchGenes.GenesListForReading)
-                    {
-                        geneSet.AddGene(gene);
-                    }
-                }
+            }
+
+            if (primarchGenes == null) return;
+            
+            foreach (var gene in primarchGenes.GenesListForReading)
+            {
+                geneSet.AddGene(gene);
             }
         }
     }

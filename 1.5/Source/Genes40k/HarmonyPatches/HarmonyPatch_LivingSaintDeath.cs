@@ -3,6 +3,7 @@ using HarmonyLib;
 using RimWorld;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Verse;
 using Verse.AI;
 
@@ -13,27 +14,20 @@ namespace Genes40k
     {
         public static void Postfix(Pawn __instance)
         {
-            if (__instance.Faction != Faction.OfPlayer)
-            {
-                return;
-            }
-            if (__instance.genes == null)
+            if (__instance.Faction != Faction.OfPlayer || __instance.genes == null)
             {
                 return;
             }
 
-            List<GeneDef> forbiddenGenes = Genes40kDefOf.BEWH_LivingSaintBeingOfFaith.GetModExtension<DefModExtension_LivingSaint>().cantHaveGenes;
+            var forbiddenGenes = Genes40kDefOf.BEWH_LivingSaintBeingOfFaith.GetModExtension<DefModExtension_LivingSaint>().cantHaveGenes;
 
-            foreach (Gene gene in __instance.genes.GenesListForReading)
+            if (Enumerable.Any(__instance.genes.GenesListForReading, gene => forbiddenGenes.Contains(gene.def)))
             {
-                if (forbiddenGenes.Contains(gene.def))
-                {
-                    return;
-                }
+                return;
             }
 
-            Random rand = new Random();
-            int resurrectionChance = 1;
+            var rand = new Random();
+            var resurrectionChance = 1;
 
             if (__instance.gender == Gender.Female)
             {
@@ -48,14 +42,14 @@ namespace Genes40k
             if (rand.Next(0, 100) <= resurrectionChance)
             {
                 __instance.genes.SetXenotypeDirect(Genes40kDefOf.BEWH_LivingSaint);
-                foreach (GeneDef gene in Genes40kDefOf.BEWH_LivingSaint.genes)
+                foreach (var gene in Genes40kDefOf.BEWH_LivingSaint.genes)
                 {
                     __instance.genes.AddGene(gene, true);
                 }
 
                 ResurrectionUtility.TryResurrect(__instance);
 
-                ChoiceLetter letter = LetterMaker.MakeLetter("BEWH.LivingSaint".Translate(), "BEWH.LivingSaintMessage".Translate(__instance), Genes40kDefOf.BEWH_GoldenPositive, __instance);
+                var letter = LetterMaker.MakeLetter("BEWH.LivingSaint".Translate(), "BEWH.LivingSaintMessage".Translate(__instance), Genes40kDefOf.BEWH_GoldenPositive, __instance);
                 Find.LetterStack.ReceiveLetter(letter);
             }
 

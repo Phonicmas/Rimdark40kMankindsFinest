@@ -21,13 +21,8 @@ namespace Genes40k
             {
                 return false;
             }
-            Hediff hediff = pawn.health.hediffSet.GetFirstHediffOfDef(recipe.removesHediff);
-            if (hediff.Severity != hediff.def.maxSeverity)
-            {
-                return false;
-            }
-
-            return true;
+            var hediff = pawn.health.hediffSet.GetFirstHediffOfDef(recipe.removesHediff);
+            return hediff.Severity == hediff.def.maxSeverity;
         }
 
         public override void ApplyOnPawn(Pawn pawn, BodyPartRecord part, Pawn billDoer, List<Thing> ingredients, Bill bill)
@@ -40,10 +35,10 @@ namespace Genes40k
                 }
                 TaleRecorder.RecordTale(TaleDefOf.DidSurgery, billDoer, pawn);
             }
-            DefModExtension_PhaseDevelopment defMod = recipe.GetModExtension<DefModExtension_PhaseDevelopment>();
+            var defMod = recipe.GetModExtension<DefModExtension_PhaseDevelopment>();
             if (!defMod.addsGenes.NullOrEmpty() && pawn.genes != null)
             {
-                foreach (GeneDef gene in defMod.addsGenes)
+                foreach (var gene in defMod.addsGenes)
                 {
                     pawn.genes.AddGene(gene, true);
                 }

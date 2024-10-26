@@ -71,62 +71,27 @@ namespace Genes40k
 
         public static bool IsThunderWarrior(Pawn pawn)
         {
-            foreach (GeneDef geneDef in ThunderWarriorGenes)
-            {
-                if (!pawn.genes.HasActiveGene(geneDef))
-                {
-                    return false;
-                }
-            }
-            return true;
+            return ThunderWarriorGenes.All(geneDef => pawn.genes.HasActiveGene(geneDef));
         }
 
         public static bool IsSpaceMarine(Pawn pawn)
         {
-            foreach (GeneDef geneDef in SpaceMarineGenes)
-            {
-                if (!pawn.genes.HasActiveGene(geneDef))
-                {
-                    return false;
-                }
-            }
-            return true;
+            return SpaceMarineGenes.All(geneDef => pawn.genes.HasActiveGene(geneDef));
         }
 
         public static bool IsPrimaris(Pawn pawn)
         {
-            foreach (GeneDef geneDef in PrimarisGenes)
-            {
-                if (!pawn.genes.HasActiveGene(geneDef))
-                {
-                    return false;
-                }
-            }
-            return IsSpaceMarine(pawn);
+            return PrimarisGenes.All(geneDef => pawn.genes.HasActiveGene(geneDef)) && IsSpaceMarine(pawn);
         }
 
         public static bool IsCustodes(Pawn pawn)
         {
-            foreach (GeneDef geneDef in CustodesGenes)
-            {
-                if (!pawn.genes.HasActiveGene(geneDef))
-                {
-                    return false;
-                }
-            }
-            return IsSpaceMarine(pawn);
+            return CustodesGenes.All(geneDef => pawn.genes.HasActiveGene(geneDef));
         }
 
         public static bool IsPrimarch(Pawn pawn)
         {
-            foreach (GeneDef geneDef in PrimarchGenes)
-            {
-                if (!pawn.genes.HasActiveGene(geneDef))
-                {
-                    return false;
-                }
-            }
-            return IsSpaceMarine(pawn);
+            return PrimarchGenes.All(geneDef => pawn.genes.HasActiveGene(geneDef));
         }
 
 
@@ -138,20 +103,12 @@ namespace Genes40k
 
         public static bool IsPsyker(Pawn pawn)
         {
-            if (pawn.genes.HasActiveGene(Genes40kDefOf.BEWH_IotaPsyker) || pawn.genes.HasActiveGene(Genes40kDefOf.BEWH_Psyker) || pawn.genes.HasActiveGene(Genes40kDefOf.BEWH_DeltaPsyker) || pawn.genes.HasActiveGene(Genes40kDefOf.BEWH_BetaPsyker))
-            {
-                return true;
-            }
-            return false;
+            return pawn.genes.HasActiveGene(Genes40kDefOf.BEWH_IotaPsyker) || pawn.genes.HasActiveGene(Genes40kDefOf.BEWH_Psyker) || pawn.genes.HasActiveGene(Genes40kDefOf.BEWH_DeltaPsyker) || pawn.genes.HasActiveGene(Genes40kDefOf.BEWH_BetaPsyker);
         }
 
         public static bool IsPariah(Pawn pawn)
         {
-            if (pawn.genes.HasActiveGene(Genes40kDefOf.BEWH_OmegaPariah) || pawn.genes.HasActiveGene(Genes40kDefOf.BEWH_SigmaPariah) || pawn.genes.HasActiveGene(Genes40kDefOf.BEWH_UpsilonPariah))
-            {
-                return true;
-            }
-            return false;
+            return pawn.genes.HasActiveGene(Genes40kDefOf.BEWH_OmegaPariah) || pawn.genes.HasActiveGene(Genes40kDefOf.BEWH_SigmaPariah) || pawn.genes.HasActiveGene(Genes40kDefOf.BEWH_UpsilonPariah);
         }
 
 
@@ -168,17 +125,11 @@ namespace Genes40k
                 geneseedVial = (GeneseedVial)ThingMaker.MakeThing(Genes40kDefOf.BEWH_GeneseedVialFirstborn);
             }
 
-            List<GeneDef> extraGenes = new List<GeneDef>();
+            var extraGenes = new List<GeneDef>();
 
             if (pawn.genes != null)
             {
-                foreach (Gene gene in pawn.genes.GenesListForReading)
-                {
-                    if (gene.def.HasModExtension<DefModExtension_ChapterGene>())
-                    {
-                        extraGenes.Add(gene.def);
-                    }
-                }
+                extraGenes.AddRange(from gene in pawn.genes.GenesListForReading where gene.def.HasModExtension<DefModExtension_ChapterGene>() select gene.def);
             }
 
             if (!extraGenes.NullOrEmpty())

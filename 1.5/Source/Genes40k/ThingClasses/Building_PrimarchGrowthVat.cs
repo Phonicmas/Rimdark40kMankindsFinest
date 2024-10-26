@@ -91,23 +91,13 @@ namespace Genes40k
 
         public override Vector3 PawnDrawOffset => CompBiosculpterPod.FloatingOffset(Find.TickManager.TicksGame);
 
-        private CompPowerTrader PowerTraderComp
-        {
-            get
-            {
-                if (cachedPowerComp == null)
-                {
-                    cachedPowerComp = this.TryGetComp<CompPowerTrader>();
-                }
-                return cachedPowerComp;
-            }
-        }
+        private CompPowerTrader PowerTraderComp => cachedPowerComp ?? (cachedPowerComp = this.TryGetComp<CompPowerTrader>());
 
         public float BiostarvationDailyOffset
         {
             get
             {
-                if (!base.Working)
+                if (!Working)
                 {
                     return 0f;
                 }
@@ -119,28 +109,17 @@ namespace Genes40k
             }
         }
 
-        private float BiostarvationSeverityPercent
-        {
-            get
-            {
-                if (selectedEmbryo != null)
-                {
-                    return embryoStarvation;
-                }
-                return 0f;
-            }
-        }
+        private float BiostarvationSeverityPercent => selectedEmbryo != null ? embryoStarvation : 0f;
 
         public float NutritionConsumedPerDay
         {
             get
             {
-                float num = ((selectedEmbryo != null) ? BaseEmbryoConsumedNutritionPerDay : 3f);
-                if (BiostarvationSeverityPercent > 0f)
-                {
-                    float num2 = 1.1f;
-                    num *= num2;
-                }
+                var num = ((selectedEmbryo != null) ? BaseEmbryoConsumedNutritionPerDay : 3f);
+                
+                if (!(BiostarvationSeverityPercent > 0f)) return num;
+                var num2 = 1.1f;
+                num *= num2;
                 return num;
             }
         }
@@ -149,67 +128,35 @@ namespace Genes40k
         {
             get
             {
-                float num = containedNutrition;
-                for (int i = 0; i < innerContainer.Count; i++)
+                var num = containedNutrition;
+                foreach (var thing in innerContainer)
                 {
-                    Thing thing = innerContainer[i];
                     num += (float)thing.stackCount * thing.GetStatValue(StatDefOf.Nutrition);
                 }
                 return num;
             }
         }
 
-        public float NutritionNeeded
-        {
-            get
-            {
-                if (selectedEmbryo == null)
-                {
-                    return 0f;
-                }
-                return 10f - NutritionStored;
-            }
-        }
+        public float NutritionNeeded => selectedEmbryo == null ? 0f : 10f - NutritionStored;
 
         public int EmbryoGestationTicksRemaining => startTick - Find.TickManager.TicksGame;
 
         public float EmbryoGestationPct => 1f - Mathf.Clamp01((float)EmbryoGestationTicksRemaining / EmbryoGestationTicks);
 
-        private Graphic TopGraphic
-        {
-            get
-            {
-                if (cachedTopGraphic == null)
-                {
-                    cachedTopGraphic = GraphicDatabase.Get<Graphic_Multi>("Things/Building/Misc/GrowthVat/GrowthVatTop", ShaderDatabase.Transparent, def.graphicData.drawSize, Color.white);
-                }
-                return cachedTopGraphic;
-            }
-        }
+        private Graphic TopGraphic =>
+            cachedTopGraphic ?? (cachedTopGraphic = GraphicDatabase.Get<Graphic_Multi>(
+                "Things/Building/Misc/GrowthVat/GrowthVatTop", ShaderDatabase.Transparent, def.graphicData.drawSize,
+                Color.white));
 
-        private Graphic FetusEarlyStage
-        {
-            get
-            {
-                if (fetusEarlyStageGraphic == null)
-                {
-                    fetusEarlyStageGraphic = GraphicDatabase.Get<Graphic_Single>("Other/VatGrownFetus_EarlyStage", ShaderDatabase.Cutout, Vector2.one, Color.white);
-                }
-                return fetusEarlyStageGraphic;
-            }
-        }
+        private Graphic FetusEarlyStage =>
+            fetusEarlyStageGraphic ?? (fetusEarlyStageGraphic =
+                GraphicDatabase.Get<Graphic_Single>("Other/VatGrownFetus_EarlyStage", ShaderDatabase.Cutout,
+                    Vector2.one, Color.white));
 
-        private Graphic FetusLateStage
-        {
-            get
-            {
-                if (fetusLateStageGraphic == null)
-                {
-                    fetusLateStageGraphic = GraphicDatabase.Get<Graphic_Single>("Other/VatGrownFetus_LateStage", ShaderDatabase.Cutout, Vector2.one, Color.white);
-                }
-                return fetusLateStageGraphic;
-            }
-        }
+        private Graphic FetusLateStage =>
+            fetusLateStageGraphic ?? (fetusLateStageGraphic =
+                GraphicDatabase.Get<Graphic_Single>("Other/VatGrownFetus_LateStage", ShaderDatabase.Cutout,
+                    Vector2.one, Color.white));
 
         public override void PostMake()
         {
@@ -228,7 +175,7 @@ namespace Genes40k
             {
                 LongEventHandler.ExecuteWhenFinished(delegate
                 {
-                    Color color = EmbryoColor();
+                    var color = EmbryoColor();
                     fetusEarlyStageGraphic = FetusEarlyStage.GetColoredVersion(ShaderDatabase.Cutout, color, color);
                     fetusLateStageGraphic = FetusLateStage.GetColoredVersion(ShaderDatabase.Cutout, color, color);
                 });
@@ -250,19 +197,18 @@ namespace Genes40k
             {
                 PowerTraderComp.PowerOutput = (base.Working ? (0f - base.PowerComp.Props.PowerConsumption) : (0f - base.PowerComp.Props.idlePowerDraw));
             }
-            Pawn pawn = selectedPawn;
+            var pawn = selectedPawn;
             if (pawn == null || !pawn.Destroyed)
             {
-                PrimarchEmbryo humanEmbryo = selectedEmbryo;
+                var humanEmbryo = selectedEmbryo;
                 if (humanEmbryo == null || !humanEmbryo.Destroyed)
                 {
                     goto IL_0084;
                 }
             }
             OnStop();
-            goto IL_0084;
         IL_0084:
-            foreach (Thing item in (IEnumerable<Thing>)innerContainer)
+            foreach (var item in innerContainer)
             {
                 if (item is PrimarchEmbryo humanEmbryo2 && humanEmbryo2 != selectedEmbryo)
                 {
@@ -364,43 +310,39 @@ namespace Genes40k
 
         public override void TryAcceptPawn(Pawn pawn)
         {
-            return;
         }
 
         private void TryGrowEmbryo()
         {
-            if (!base.Working && PowerOn && selectedEmbryo != null && innerContainer.Contains(selectedEmbryo))
+            if (Working || !PowerOn || selectedEmbryo == null || !innerContainer.Contains(selectedEmbryo)) return;
+            
+            SoundDefOf.GrowthVat_Close.PlayOneShot(SoundInfo.InMap(this));
+            startTick = Find.TickManager.TicksGame + EmbryoGestationTicks;
+            LongEventHandler.ExecuteWhenFinished(delegate
             {
-                SoundDefOf.GrowthVat_Close.PlayOneShot(SoundInfo.InMap(this));
-                startTick = Find.TickManager.TicksGame + EmbryoGestationTicks;
-                LongEventHandler.ExecuteWhenFinished(delegate
-                {
-                    Color color = EmbryoColor();
-                    fetusEarlyStageGraphic = FetusEarlyStage.GetColoredVersion(ShaderDatabase.Cutout, color, color);
-                    fetusLateStageGraphic = FetusLateStage.GetColoredVersion(ShaderDatabase.Cutout, color, color);
-                });
-                if (selectedPawn != null)
-                {
-                    Log.Error("Growing embryo while pawn was somehow marked as selected");
-                    selectedPawn = null;
-                }
-            }
+                var color = EmbryoColor();
+                fetusEarlyStageGraphic = FetusEarlyStage.GetColoredVersion(ShaderDatabase.Cutout, color, color);
+                fetusLateStageGraphic = FetusLateStage.GetColoredVersion(ShaderDatabase.Cutout, color, color);
+            });
+            if (selectedPawn == null) return;
+                
+            Log.Error("Growing embryo while pawn was somehow marked as selected");
+            selectedPawn = null;
         }
 
         private void TryAbsorbNutritiousThing()
         {
-            for (int i = 0; i < innerContainer.Count; i++)
+            foreach (var thing in innerContainer)
             {
-                if (innerContainer[i].def != ThingDefOf.Xenogerm && innerContainer[i].def != Genes40kDefOf.BEWH_PrimarchEmbryo)
-                {
-                    float statValue = innerContainer[i].GetStatValue(StatDefOf.Nutrition);
-                    if (statValue > 0f)
-                    {
-                        containedNutrition += statValue;
-                        innerContainer[i].SplitOff(1).Destroy();
-                        break;
-                    }
-                }
+                if (thing.def == ThingDefOf.Xenogerm ||
+                    thing.def == Genes40kDefOf.BEWH_PrimarchEmbryo) continue;
+                
+                var statValue = thing.GetStatValue(StatDefOf.Nutrition);
+                if (!(statValue > 0f)) continue;
+                    
+                containedNutrition += statValue;
+                thing.SplitOff(1).Destroy();
+                break;
             }
         }
 
@@ -442,14 +384,11 @@ namespace Genes40k
             }
             if (startTick > Find.TickManager.TicksGame)
             {
-                if (biostarvation)
-                {
-                    Messages.Message("EmbryoEjectedFromGrowthVatBiostarvation".Translate(selectedEmbryo.Label), this, MessageTypeDefOf.NegativeEvent);
-                }
-                else
-                {
-                    Messages.Message("EmbryoEjectedFromGrowthVat".Translate(selectedEmbryo.Label), this, MessageTypeDefOf.NegativeEvent);
-                }
+                Messages.Message(
+                    biostarvation
+                        ? "EmbryoEjectedFromGrowthVatBiostarvation".Translate(selectedEmbryo.Label)
+                        : "EmbryoEjectedFromGrowthVat".Translate(selectedEmbryo.Label), this,
+                    MessageTypeDefOf.NegativeEvent);
             }
             innerContainer.Remove(selectedEmbryo);
             selectedEmbryo.Destroy();
@@ -458,24 +397,22 @@ namespace Genes40k
 
         private void EmbryoBirth()
         {
-            if (selectedEmbryo != null && innerContainer.Contains(selectedEmbryo) && startTick <= Find.TickManager.TicksGame)
+            if (selectedEmbryo == null || !innerContainer.Contains(selectedEmbryo) || startTick > Find.TickManager.TicksGame) return;
+            
+            var ritual = Faction.OfPlayer.ideos.PrimaryIdeo.GetPrecept(PreceptDefOf.ChildBirth) as Precept_Ritual;
+            var thing = PregnancyUtility.ApplyBirthOutcome(((RitualOutcomeEffectWorker_ChildBirth)RitualOutcomeEffectDefOf.ChildBirth.GetInstance()).GetOutcome(EmbryoBirthQuality, null), EmbryoBirthQuality, ritual, selectedEmbryo?.GeneSet?.GenesListForReading, selectedEmbryo.mother, this, selectedEmbryo.father);
+            var pawn2 = (Pawn)thing;
+            foreach (var gene in selectedEmbryo.primarchGenes.GenesListForReading)
             {
-                Precept_Ritual ritual = Faction.OfPlayer.ideos.PrimaryIdeo.GetPrecept(PreceptDefOf.ChildBirth) as Precept_Ritual;
-                Thing thing = PregnancyUtility.ApplyBirthOutcome(((RitualOutcomeEffectWorker_ChildBirth)RitualOutcomeEffectDefOf.ChildBirth.GetInstance()).GetOutcome(EmbryoBirthQuality, null), EmbryoBirthQuality, ritual, selectedEmbryo?.GeneSet?.GenesListForReading, selectedEmbryo.mother, this, selectedEmbryo.father);
-                Pawn pawn2 = (Pawn)thing;
-                foreach (GeneDef gene in selectedEmbryo.primarchGenes.GenesListForReading)
-                {
-                    pawn2.genes.AddGene(gene, true);
-                }
-                pawn2.genes.SetXenotypeDirect(selectedEmbryo.xenotype);
-                if (thing != null && embryoStarvation > 0f)
-                {
-                    Pawn pawn = ((thing is Corpse corpse) ? corpse.InnerPawn : ((Pawn)thing));
-                    Hediff hediff = HediffMaker.MakeHediff(HediffDefOf.BioStarvation, pawn);
-                    hediff.Severity = Mathf.Lerp(0f, HediffDefOf.BioStarvation.maxSeverity, embryoStarvation);
-                    pawn.health.AddHediff(hediff);
-                }
+                pawn2.genes.AddGene(gene, true);
             }
+            pawn2.genes.SetXenotypeDirect(selectedEmbryo.xenotype);
+            if (thing == null || !(embryoStarvation > 0f)) return;
+            
+            var pawn = ((thing is Corpse corpse) ? corpse.InnerPawn : (Pawn)thing);
+            var hediff = HediffMaker.MakeHediff(HediffDefOf.BioStarvation, pawn);
+            hediff.Severity = Mathf.Lerp(0f, HediffDefOf.BioStarvation.maxSeverity, embryoStarvation);
+            pawn.health.AddHediff(hediff);
         }
 
         public bool CanAcceptNutrition(Thing thing)
@@ -499,18 +436,18 @@ namespace Genes40k
 
         public override IEnumerable<Gizmo> GetGizmos()
         {
-            foreach (Gizmo gizmo in base.GetGizmos())
+            foreach (var gizmo in base.GetGizmos())
             {
                 yield return gizmo;
             }
-            foreach (Gizmo item in StorageSettingsClipboard.CopyPasteGizmosFor(allowedNutritionSettings))
+            foreach (var item in StorageSettingsClipboard.CopyPasteGizmosFor(allowedNutritionSettings))
             {
                 yield return item;
             }
             if (!hasBeenStarted)
             {
                 //STARTS MACHINE
-                Command_Action command_Action4 = new Command_Action();
+                var command_Action4 = new Command_Action();
                 command_Action4.defaultLabel = "BEWH.StartGeneGestating".Translate();
                 command_Action4.defaultDesc = "BEWH.StartGeneGestatingDesc".Translate();
                 command_Action4.icon = StartIcon;
@@ -521,7 +458,7 @@ namespace Genes40k
                 };
                 yield return command_Action4;
             }
-            else if (base.Working)
+            else if (Working)
             {
                 //CANCEL GROWTH
                 /*Command_Action command_Action = new Command_Action();
@@ -590,17 +527,17 @@ namespace Genes40k
                 if (!haulJobStarted)
                 {
                     //START HAUL JOB
-                    List<PrimarchEmbryo> embryos = AvailableEmbryo();
-                    Command_Action command_Action4 = new Command_Action();
+                    var embryos = AvailableEmbryo();
+                    var command_Action4 = new Command_Action();
                     command_Action4.defaultLabel = "ImplantEmbryo".Translate() + "...";
                     command_Action4.defaultDesc = "InsertEmbryoGrowthVatDesc".Translate(EmbryoGestationTicks.ToStringTicksToPeriod()).Resolve();
                     command_Action4.icon = InsertEmbryoIcon.Texture;
                     command_Action4.action = delegate
                     {
-                        List<FloatMenuOption> list = new List<FloatMenuOption>();
-                        foreach (PrimarchEmbryo embryo in embryos)
+                        var list = new List<FloatMenuOption>();
+                        foreach (var embryo in embryos)
                         {
-                            PrimarchEmbryo primarchEmbryo = embryo;
+                            var primarchEmbryo = embryo;
                             var embryoName = "Mother: " + primarchEmbryo.mother.Name.ToStringFull;
                             var primarchChapterGenes = primarchEmbryo.primarchGenes.GenesListForReading.Where(gene => gene.HasModExtension<DefModExtension_PrimarchMaterial>());
                             if (primarchChapterGenes.Any())
@@ -637,7 +574,7 @@ namespace Genes40k
                 else
                 {
                     //CANCEL HAUL JOB
-                    Command_Action command_Action2 = new Command_Action();
+                    var command_Action2 = new Command_Action();
                     command_Action2.defaultLabel = "CommandCancelLoad".Translate();
                     command_Action2.defaultDesc = "CommandCancelLoadDesc".Translate();
                     command_Action2.icon = CancelIcon;
@@ -647,16 +584,15 @@ namespace Genes40k
                         haulJobStarted = false;
                         if (jobDoer != null)
                         {
-                            foreach (Job job in jobDoer.jobs.AllJobs())
+                            foreach (var job in jobDoer.jobs.AllJobs())
                             {
-                                if (job.def == Genes40kDefOf.BEWH_FillGeneGestator)
-                                {
-                                    jobDoer.jobs.EndCurrentOrQueuedJob(job, JobCondition.InterruptForced);
-                                    haulJobStarted = false;
-                                    hasBeenStarted = false;
-                                    jobDoer = null;
-                                    break;
-                                }
+                                if (job.def != Genes40kDefOf.BEWH_FillGeneGestator) continue;
+                                
+                                jobDoer.jobs.EndCurrentOrQueuedJob(job, JobCondition.InterruptForced);
+                                haulJobStarted = false;
+                                hasBeenStarted = false;
+                                jobDoer = null;
+                                break;
                             }
                         }
                         OnStop();
@@ -664,49 +600,38 @@ namespace Genes40k
                     yield return command_Action2;
                 }
             }
-            if (DebugSettings.ShowDevGizmos)
+
+            if (!DebugSettings.ShowDevGizmos) yield break;
+            
+            yield return new Command_Action
             {
-                yield return new Command_Action
+                defaultLabel = "DEV: Fill nutrition",
+                action = delegate
                 {
-                    defaultLabel = "DEV: Fill nutrition",
-                    action = delegate
-                    {
-                        containedNutrition = 10f;
-                    }
-                };
-                yield return new Command_Action
+                    containedNutrition = 10f;
+                }
+            };
+            yield return new Command_Action
+            {
+                defaultLabel = "DEV: Empty nutrition",
+                action = delegate
                 {
-                    defaultLabel = "DEV: Empty nutrition",
-                    action = delegate
-                    {
-                        containedNutrition = 0f;
-                    }
-                };
-            }
+                    containedNutrition = 0f;
+                }
+            };
         }
 
         private List<PrimarchEmbryo> AvailableEmbryo()
         {
-            List<PrimarchEmbryo> availableEmbryos = new List<PrimarchEmbryo>();
-
-            List<Thing> embryos = new List<Thing>();
+            var embryos = new List<Thing>();
             embryos.AddRange(Map.listerThings.ThingsOfDef(Genes40kDefOf.BEWH_PrimarchEmbryo));
 
-            foreach (Building_GeneStorageGraphicProgression building in Map.listerBuildings.AllBuildingsColonistOfDef(Genes40kDefOf.BEWH_PrimarchEmbryoContainer).Cast<Building_GeneStorageGraphicProgression>())
+            foreach (var building in Map.listerBuildings.AllBuildingsColonistOfDef(Genes40kDefOf.BEWH_PrimarchEmbryoContainer).Cast<Building_GeneStorageGraphicProgression>())
             {
-                foreach (var item in building.GeneAmount)
-                {
-                    embryos.Add(item);
-                }
+                embryos.AddRange(building.GeneAmount);
             }
 
-            foreach (var item in embryos)
-            {
-                PrimarchEmbryo primarchEmbryo = (PrimarchEmbryo)item;
-                availableEmbryos.Add(primarchEmbryo);
-            }
-
-            return availableEmbryos;
+            return embryos.Cast<PrimarchEmbryo>().ToList();
         }
 
         public void SelectEmbryo(PrimarchEmbryo embryo)
@@ -757,8 +682,8 @@ namespace Genes40k
             base.DrawAt(drawLoc, flip);
             if (base.Working && selectedEmbryo != null && innerContainer.Contains(selectedEmbryo))
             {
-                Vector2 drawSize = Vector2.one * Mathf.Lerp(FetusMinSize, FetusMaxSize, EmbryoGestationPct);
-                Vector3 drawPos1 = DrawPos + PawnDrawOffset + Altitudes.AltIncVect * 0.25f;
+                var drawSize = Vector2.one * Mathf.Lerp(FetusMinSize, FetusMaxSize, EmbryoGestationPct);
+                var drawPos1 = DrawPos + PawnDrawOffset + Altitudes.AltIncVect * 0.25f;
                 drawPos1 += OffsetFromRotation(base.Rotation);
 
                 if (EmbryoGestationTicksRemaining > EmbryoLateStageGraphicTicksRemaining)
@@ -773,28 +698,26 @@ namespace Genes40k
                 }
             }
             TopGraphic.drawSize = new Vector2(1, 2);
-            Vector3 drawPos2 = DrawPos + Altitudes.AltIncVect * 2f;
+            var drawPos2 = DrawPos + Altitudes.AltIncVect * 2f;
             drawPos2 += OffsetFromRotation(base.Rotation);
             TopGraphic.Draw(drawPos2, base.Rotation, this);
         }
 
         private Color EmbryoColor()
         {
-            Color result = PawnSkinColors.GetSkinColor(0.5f);
-            if (selectedEmbryo?.GeneSet != null)
+            var result = PawnSkinColors.GetSkinColor(0.5f);
+            if (selectedEmbryo?.GeneSet == null) return result;
+            
+            foreach (var item in selectedEmbryo.GeneSet.GenesListForReading)
             {
-                foreach (GeneDef item in selectedEmbryo.GeneSet.GenesListForReading)
+                if (item.skinColorOverride.HasValue)
                 {
-                    if (item.skinColorOverride.HasValue)
-                    {
-                        return item.skinColorOverride.Value;
-                    }
-                    if (item.skinColorBase.HasValue)
-                    {
-                        result = item.skinColorBase.Value;
-                    }
+                    return item.skinColorOverride.Value;
                 }
-                return result;
+                if (item.skinColorBase.HasValue)
+                {
+                    result = item.skinColorBase.Value;
+                }
             }
             return result;
         }
@@ -810,9 +733,9 @@ namespace Genes40k
 
         public override string GetInspectString()
         {
-            StringBuilder stringBuilder = new StringBuilder();
+            var stringBuilder = new StringBuilder();
             stringBuilder.Append(base.GetInspectString());
-            if (base.Working)
+            if (Working)
             {
                 if (selectedEmbryo != null && innerContainer.Contains(selectedEmbryo))
                 {
@@ -820,16 +743,16 @@ namespace Genes40k
                     stringBuilder.AppendLineTagged("EmbryoTimeUntilBirth".Translate() + ": " + EmbryoGestationTicksRemaining.ToStringTicksToDays().Colorize(ColoredText.DateTimeColor));
                     stringBuilder.Append("EmbryoBirthQuality".Translate() + ": " + 0.7f.ToStringPercent());
                 }
-                float biostarvationSeverityPercent = BiostarvationSeverityPercent;
+                var biostarvationSeverityPercent = BiostarvationSeverityPercent;
                 if (biostarvationSeverityPercent > 0f)
                 {
-                    string text = ((BiostarvationDailyOffset >= 0f) ? "+" : string.Empty);
+                    var text = ((BiostarvationDailyOffset >= 0f) ? "+" : string.Empty);
                     stringBuilder.AppendLineIfNotEmpty().Append(string.Format("{0}: {1} ({2})", "Biostarvation".Translate(), biostarvationSeverityPercent.ToStringPercent(), "PerDay".Translate(text + BiostarvationDailyOffset.ToStringPercent())));
                 }
             }
             stringBuilder.AppendLineIfNotEmpty().Append("Nutrition".Translate()).Append(": ")
                 .Append(NutritionStored.ToStringByStyle(ToStringStyle.FloatMaxOne));
-            if (base.Working)
+            if (Working)
             {
                 stringBuilder.Append(" (-").Append("PerDay".Translate(NutritionConsumedPerDay.ToString("F1"))).Append(")");
             }
@@ -843,7 +766,7 @@ namespace Genes40k
             {
                 yield break;
             }
-            if (base.SelectedPawn != null)
+            if (SelectedPawn != null)
             {
                 yield return new FloatMenuOption("CannotInsertEmbryo".Translate() + ": " + "Occupied".Translate(), null);
             }
@@ -871,13 +794,12 @@ namespace Genes40k
             Scribe_Values.Look(ref hasBeenStarted, "hasBeenStarted", false);
             Scribe_Deep.Look(ref allowedNutritionSettings, "allowedNutritionSettings", this);
             Scribe_References.Look(ref jobDoer, "jobDoer");
-            if (allowedNutritionSettings == null)
+            if (allowedNutritionSettings != null) return;
+            
+            allowedNutritionSettings = new StorageSettings(this);
+            if (def.building.defaultStorageSettings != null)
             {
-                allowedNutritionSettings = new StorageSettings(this);
-                if (def.building.defaultStorageSettings != null)
-                {
-                    allowedNutritionSettings.CopyFrom(def.building.defaultStorageSettings);
-                }
+                allowedNutritionSettings.CopyFrom(def.building.defaultStorageSettings);
             }
         }
 

@@ -9,11 +9,8 @@ namespace Genes40k
     {
         public static void Prefix(IncidentWorker __instance)
         {
-            GameComponent_LivingSaint gameComponent = Current.Game.GetComponent<GameComponent_LivingSaint>();
-            if (gameComponent != null)
-            {
-                gameComponent.TrySpawnSaint(__instance.def.category);
-            }
+            var gameComponent = Current.Game.GetComponent<GameComponent_LivingSaint>();
+            gameComponent?.TrySpawnSaint(__instance.def.category);
         }    
     }
 }

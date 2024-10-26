@@ -10,10 +10,10 @@ namespace Genes40k
     {
         public override void Notify_IterationCompleted(Pawn billDoer, List<Thing> ingredients)
         {
-            PrimarchEmbryo embryo = (PrimarchEmbryo)ThingMaker.MakeThing(Genes40kDefOf.BEWH_PrimarchEmbryo);
+            var embryo = (PrimarchEmbryo)ThingMaker.MakeThing(Genes40kDefOf.BEWH_PrimarchEmbryo);
 
-            HumanEmbryo hEmbryo = (HumanEmbryo)ingredients.Where(x => x is HumanEmbryo).First();
-            GeneseedVial geneseedVial = (GeneseedVial)ingredients.Where(x => x is GeneseedVial).First();
+            var hEmbryo = (HumanEmbryo)ingredients.First(x => x is HumanEmbryo);
+            var geneseedVial = (GeneseedVial)ingredients.First(x => x is GeneseedVial);
 
             embryo.Initialize(hEmbryo.Mother, hEmbryo.Father, geneseedVial.GeneSet, hEmbryo.GeneSet, geneseedVial.iconDef, geneseedVial.xenotype);
 

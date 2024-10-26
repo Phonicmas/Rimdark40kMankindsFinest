@@ -32,18 +32,18 @@ namespace Genes40k
             {
                 chance = 200;
             }
-            Random rand = new Random();
+            var rand = new Random();
             if (rand.Next(0, 100) <= chance)
             {
-                SpawmSaint();
+                SpawnSaint();
             }
         }
 
-        private void SpawmSaint()
+        private void SpawnSaint()
         {
-            Pawn toSpawn = livingSaints.RandomElement();
+            var toSpawn = livingSaints.RandomElement();
 
-            Map map = Find.CurrentMap;
+            var map = Find.CurrentMap;
 
             ResurrectionUtility.TryResurrect(toSpawn);
 
@@ -54,7 +54,7 @@ namespace Genes40k
             
             livingSaints.Remove(toSpawn);
 
-            ChoiceLetter letter = LetterMaker.MakeLetter("BEWH.LivingSaintReturn".Translate(), "BEWH.LivingSaintReturnMessage".Translate(toSpawn), Genes40kDefOf.BEWH_GoldenPositive, toSpawn);
+            var letter = LetterMaker.MakeLetter("BEWH.LivingSaintReturn".Translate(), "BEWH.LivingSaintReturnMessage".Translate(toSpawn), Genes40kDefOf.BEWH_GoldenPositive, toSpawn);
             Find.LetterStack.ReceiveLetter(letter);
         }
 

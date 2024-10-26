@@ -14,11 +14,7 @@ namespace Genes40k
 
         public override string GetLabel(Precept_Role role)
         {
-            if (labelCached == null)
-            {
-                labelCached = "BEWH.MustBeSpaceMarine".Translate();
-            }
-            return labelCached;
+            return labelCached ?? (labelCached = "BEWH.MustBeSpaceMarine".Translate());
         }
 
         public override bool Met(Pawn p, Precept_Role role)
@@ -27,9 +23,9 @@ namespace Genes40k
             {
                 return false;
             }
-            foreach (List<GeneDef> list in genes)
+            foreach (var list in genes)
             {
-                for (int i = 0; i < list.Count; i++)
+                for (var i = 0; i < list.Count; i++)
                 {
                     if (!p.genes.HasActiveGene(list[i]))
                     {

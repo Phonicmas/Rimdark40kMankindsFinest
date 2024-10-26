@@ -17,15 +17,11 @@ namespace Genes40k
 
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
-            if (pawn.Reserve(GeneGestator, job, 1, 1, null, errorOnFailed))
-            {
-                if (pawn.Reserve(GeneMatrix, job, 1, 1, null, errorOnFailed))
-                {
-                    GeneGestator.jobDoer = pawn;
-                    return true;
-                }
-            }
-            return false;
+            if (!pawn.Reserve(GeneGestator, job, 1, 1, null, errorOnFailed)) return false;
+            if (!pawn.Reserve(GeneMatrix, job, 1, 1, null, errorOnFailed)) return false;
+            
+            GeneGestator.jobDoer = pawn;
+            return true;
         }
 
         protected override IEnumerable<Toil> MakeNewToils()
@@ -33,7 +29,7 @@ namespace Genes40k
             this.FailOnDespawnedNullOrForbidden(TargetIndex.A);
             this.FailOnBurningImmobile(TargetIndex.A);
             job.count = 1;
-            Toil reserveGeneMatrix = Toils_Reserve.Reserve(TargetIndex.B, 1, 1);
+            var reserveGeneMatrix = Toils_Reserve.Reserve(TargetIndex.B, 1, 1);
             yield return reserveGeneMatrix;
             yield return Toils_Goto.GotoThing(TargetIndex.B, PathEndMode.ClosestTouch).FailOnDespawnedNullOrForbidden(TargetIndex.B).FailOnSomeonePhysicallyInteracting(TargetIndex.B);
             yield return Toils_Haul.StartCarryThing(TargetIndex.B).FailOnDestroyedNullOrForbidden(TargetIndex.B);
@@ -42,7 +38,7 @@ namespace Genes40k
             yield return Toils_General.Wait(Duration).FailOnDestroyedNullOrForbidden(TargetIndex.B).FailOnDestroyedNullOrForbidden(TargetIndex.A)
                 .FailOnCannotTouch(TargetIndex.A, PathEndMode.Touch)
                 .WithProgressBarToilDelay(TargetIndex.A);
-            Toil toil = ToilMaker.MakeToil("MakeNewToils");
+            var toil = ToilMaker.MakeToil("MakeNewToils");
             toil.initAction = delegate
             {
                 GeneGestator.AddGeneMatrix(GeneMatrix);

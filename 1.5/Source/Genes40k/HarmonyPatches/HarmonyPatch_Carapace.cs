@@ -15,11 +15,10 @@ namespace Genes40k
     {
         public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> codeInstructions)
         {
-            bool patched = false;
-            List<CodeInstruction> codes = codeInstructions.ToList();
-            for (int i = 0; i < codes.Count; i++)
+            var patched = false;
+            var codes = codeInstructions.ToList();
+            foreach (var code in codes)
             {
-                CodeInstruction code = codes[i];
                 yield return code;
                 if (!patched && code.opcode == OpCodes.Stloc_0)
                 {

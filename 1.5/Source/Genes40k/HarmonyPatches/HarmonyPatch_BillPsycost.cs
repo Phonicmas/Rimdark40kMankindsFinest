@@ -10,8 +10,8 @@ namespace Genes40k
     {
         public static void Postfix(Pawn p, Bill __instance)
         {
-            DefModExtension_GeneMatrixRecipe defMod = __instance.recipe.GetModExtension<DefModExtension_GeneMatrixRecipe>();
-            if (defMod != null && defMod.drainsUserWhenMaking && __instance.billStack != null && __instance.billStack.billGiver is Building_GeneTable geneTable)
+            var defMod = __instance.recipe.GetModExtension<DefModExtension_GeneMatrixRecipe>();
+            if (defMod != null && defMod.drainsUserWhenMaking && __instance.billStack?.billGiver is Building_GeneTable geneTable)
             {
                 geneTable.PawnDidWork(p);
             }

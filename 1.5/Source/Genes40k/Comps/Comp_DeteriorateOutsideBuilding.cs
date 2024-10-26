@@ -14,17 +14,15 @@ namespace Genes40k
         {
             get
             {
-                Thing thing = parent.StoringThing();
-                if (thing != null && Props.antiDeteriorateContainers.Contains(thing.def))
+                var thing = parent.StoringThing();
+                if (thing == null || !Props.antiDeteriorateContainers.Contains(thing.def)) return true;
+                
+                var comp = thing.TryGetComp<CompPowerTrader>();
+                if (comp != null)
                 {
-                    CompPowerTrader comp = thing.TryGetComp<CompPowerTrader>();
-                    if (comp != null)
-                    {
-                        return !comp.PowerOn;
-                    }
-                    return false;
+                    return !comp.PowerOn;
                 }
-                return true;
+                return false;
             }
         }
     }

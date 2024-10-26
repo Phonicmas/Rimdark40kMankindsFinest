@@ -33,41 +33,38 @@ namespace Genes40k
             {
                 return false;
             }
-            if (FindGeneMatrix(pawn, building_GeneGestator) == null)
-            {
-                JobFailReason.Is(NoGeneMatrix);
-                return false;
-            }
-            if (t.IsBurning())
-            {
-                return false;
-            }
-            return true;
+
+            if (FindGeneMatrix(pawn, building_GeneGestator) != null) return !t.IsBurning();
+            
+            JobFailReason.Is(NoGeneMatrix);
+            return false;
+
         }
 
         public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
-            Building_GeneGestator building_GeneGestator = (Building_GeneGestator)t;
-            Thing thing = FindGeneMatrix(pawn, building_GeneGestator);
+            var building_GeneGestator = (Building_GeneGestator)t;
+            var thing = FindGeneMatrix(pawn, building_GeneGestator);
             return JobMaker.MakeJob(Genes40kDefOf.BEWH_FillGeneGestator, t, thing);
         }
 
         private Thing FindGeneMatrix(Pawn pawn, Building_GeneGestator gestator)
         {
-            Predicate<Thing> validator = (Thing x) => (!x.IsForbidden(pawn) && pawn.CanReserve(x)) ? true : false;
-            Thing thing = GenClosest.ClosestThingReachable_NewTemp(pawn.Position, pawn.Map, ThingRequest.ForDef(gestator.selectedMatrix), PathEndMode.ClosestTouch, TraverseParms.For(pawn), 9999f, validator, lookInHaulSources: true);
-            if (thing == null && gestator.Map.listerBuildings.ColonistsHaveBuilding(Genes40kDefOf.BEWH_GeneticCryostaticStorage))
+            Predicate<Thing> validator = x => !x.IsForbidden(pawn) && pawn.CanReserve(x);
+            var thing = GenClosest.ClosestThingReachable_NewTemp(pawn.Position, pawn.Map, ThingRequest.ForDef(gestator.selectedMatrix), PathEndMode.ClosestTouch, TraverseParms.For(pawn), 9999f, validator, lookInHaulSources: true);
+            if (thing != null ||
+                !gestator.Map.listerBuildings.ColonistsHaveBuilding(Genes40kDefOf.BEWH_GeneticCryostaticStorage))
+                return thing;
+            
+            foreach (Building_GeneStorage building in gestator.Map.listerBuildings.AllBuildingsColonistOfDef(Genes40kDefOf.BEWH_GeneticCryostaticStorage))
             {
-                foreach (Building_GeneStorage building in gestator.Map.listerBuildings.AllBuildingsColonistOfDef(Genes40kDefOf.BEWH_GeneticCryostaticStorage))
-                {
-                    thing = building.SearchableContents.Where(x => x.def == gestator.selectedMatrix).FirstOrDefault();
-                    if (thing != null)
-                    {
-                        building.DropThingToReserve(thing);
-                        break;
-                    }
-                }
+                thing = building.SearchableContents.FirstOrDefault(x => x.def == gestator.selectedMatrix);
+                if (thing == null) continue;
+                
+                building.DropThingToReserve(thing);
+                break;
             }
+            
             return thing;
         }
     }

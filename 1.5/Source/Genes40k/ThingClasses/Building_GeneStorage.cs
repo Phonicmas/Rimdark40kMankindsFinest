@@ -30,21 +30,15 @@ namespace Genes40k
 
         StorageGroup IStorageGroupMember.Group
         {
-            get
-            {
-                return storageGroup;
-            }
-            set
-            {
-                storageGroup = value;
-            }
+            get => storageGroup;
+            set => storageGroup = value;
         }
 
         bool IStorageGroupMember.DrawStorageTab => true;
 
-        bool IStorageGroupMember.ShowRenameButton => base.Faction == Faction.OfPlayer;
+        bool IStorageGroupMember.ShowRenameButton => Faction == Faction.OfPlayer;
 
-        bool IStorageGroupMember.DrawConnectionOverlay => base.Spawned;
+        bool IStorageGroupMember.DrawConnectionOverlay => Spawned;
 
         string IStorageGroupMember.StorageGroupTag => def.building.storageGroupTag;
 
@@ -63,13 +57,12 @@ namespace Genes40k
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
-            if (storageGroup != null && map != storageGroup.Map)
-            {
-                StorageSettings storeSettings = storageGroup.GetStoreSettings();
-                storageGroup.RemoveMember(this);
-                storageGroup = null;
-                settings.CopyFrom(storeSettings);
-            }
+            if (storageGroup == null || map == storageGroup.Map) return;
+            
+            var storeSettings = storageGroup.GetStoreSettings();
+            storageGroup.RemoveMember(this);
+            storageGroup = null;
+            settings.CopyFrom(storeSettings);
         }
 
         public override void PostMake()
@@ -122,29 +115,20 @@ namespace Genes40k
         public virtual void Notify_ItemAdded(Thing newItem)
         {
             newItem.HitPoints = MaxHitPoints;
-            return;
         }
 
         public virtual void Notify_ItemRemoved(Thing newItem)
         {
             newItem.HitPoints = MaxHitPoints;
-            return;
         }
 
         public bool Accepts(Thing t)
         {
-            if (GetStoreSettings().AllowedToAccept(t))
-            {
-                if (def.HasModExtension<DefModExtension_SangprimusPortum>())
-                {
-                    if (!SearchableContents.Where(x => x.def == t.def).EnumerableNullOrEmpty())
-                    {
-                        return false;
-                    }
-                }
-                return innerContainer.CanAcceptAnyOf(t);
-            }
-            return false;
+            if (!GetStoreSettings().AllowedToAccept(t)) return false;
+
+            if (!def.HasModExtension<DefModExtension_SangprimusPortum>()) return innerContainer.CanAcceptAnyOf(t);
+            
+            return SearchableContents.Where(x => x.def == t.def).EnumerableNullOrEmpty() && innerContainer.CanAcceptAnyOf(t);
         }
 
         public int SpaceRemainingFor(ThingDef _)
@@ -154,11 +138,7 @@ namespace Genes40k
 
         public StorageSettings GetStoreSettings()
         {
-            if (storageGroup != null)
-            {
-                return storageGroup.GetStoreSettings();
-            }
-            return settings;
+            return storageGroup != null ? storageGroup.GetStoreSettings() : settings;
         }
 
         public StorageSettings GetParentStoreSettings()

@@ -30,15 +30,9 @@ namespace Genes40k
 
         private float progressInt = 0;
 
-        public bool InProgress
-        {
-            get { return totalTime - progressInt > 0 && hasBeenStarted; }
-        }
+        public bool InProgress => totalTime - progressInt > 0 && hasBeenStarted;
 
-        public bool Finished
-        {
-            get { return totalTime - progressInt <= 0 && containedMatrix != null; }
-        }
+        public bool Finished => totalTime - progressInt <= 0 && containedMatrix != null;
 
 
         [Unsaved(false)]
@@ -70,28 +64,12 @@ namespace Genes40k
         [Unsaved(false)]
         private CompPowerTrader cachedPowerComp;
 
-        private CompPowerTrader PowerTraderComp
-        {
-            get
-            {
-                if (cachedPowerComp == null)
-                {
-                    cachedPowerComp = this.TryGetComp<CompPowerTrader>();
-                }
-                return cachedPowerComp;
-            }
-        }
+        private CompPowerTrader PowerTraderComp => cachedPowerComp ?? (cachedPowerComp = this.TryGetComp<CompPowerTrader>());
 
         public void AddGeneMatrix(Thing geneMatrix)
         {
-            if (geneMatrix.stackCount > 1)
-            {
-                containedMatrix = geneMatrix.SplitOff(1);
-            }
-            else
-            {
-                containedMatrix = geneMatrix;
-            }
+            containedMatrix = geneMatrix.stackCount > 1 ? geneMatrix.SplitOff(1) : geneMatrix;
+            
             totalTime = containedMatrix.def.GetModExtension<DefModExtension_GeneMatrix>().ticksToGestate;
             progressInt = 0;
             haulJobStarted = false;
@@ -100,18 +78,11 @@ namespace Genes40k
 
         private List<ThingDef> AvailableGestatables()
         {
-            DefModExtension_GeneGestator defMod = def.GetModExtension<DefModExtension_GeneGestator>();
-            List<ThingDef> result = new List<ThingDef>();
-            if (!defMod.gestatableThings.NullOrEmpty())
-            {
-                foreach (ThingDef thing in defMod.gestatableThings)
-                {
-                    if (thing.GetModExtension<DefModExtension_GeneMatrix>().researchNeeded.IsFinished)
-                    {
-                        result.Add(thing);
-                    }
-                }
-            }
+            var defMod = def.GetModExtension<DefModExtension_GeneGestator>();
+            var result = new List<ThingDef>();
+            if (defMod.gestatableThings.NullOrEmpty()) return result;
+
+            result.AddRange(defMod.gestatableThings.Where(thing => thing.GetModExtension<DefModExtension_GeneMatrix>().researchNeeded.IsFinished));
             return result;
         }
 
@@ -128,28 +99,26 @@ namespace Genes40k
         public override void Tick()
         {
             base.Tick();
-            if (hasBeenStarted)
+            if (!hasBeenStarted) return;
+            
+            if (PowerOn)
             {
-                if (PowerOn)
+                if (Finished)
                 {
-                    if (Finished)
-                    {
-                        Finish();
-                    }
-                    else
-                    {
-                        TickEffects();
-                        progressInt++;
-                    }
+                    Finish();
                 }
                 else
                 {
-                    if (progressBar != null)
-                    {
-                        progressBar.Cleanup();
-                        progressBar = null;
-                    }
+                    TickEffects();
+                    progressInt++;
                 }
+            }
+            else
+            {
+                if (progressBar == null) return;
+                
+                progressBar.Cleanup();
+                progressBar = null;
             }
         }
 
@@ -159,13 +128,12 @@ namespace Genes40k
             {
                 progressBar = EffecterDefOf.ProgressBarAlwaysVisible.Spawn();
             }
-            progressBar.EffectTick(new TargetInfo(this.TrueCenter().ToIntVec3(), base.Map), TargetInfo.Invalid);
-            MoteProgressBar mote = ((SubEffecter_ProgressBar)progressBar.children[0]).mote;
-            if (mote != null)
-            {
-                mote.progress = Mathf.Clamp01((float)progressInt / totalTime);
-                mote.offsetZ = ((base.Rotation == Rot4.North) ? 0.5f : (-0.5f));
-            }
+            progressBar.EffectTick(new TargetInfo(this.TrueCenter().ToIntVec3(), Map), TargetInfo.Invalid);
+            var mote = ((SubEffecter_ProgressBar)progressBar.children[0]).mote;
+            if (mote == null) return;
+            
+            mote.progress = Mathf.Clamp01((float)progressInt / totalTime);
+            mote.offsetZ = ((Rotation == Rot4.North) ? 0.5f : (-0.5f));
         }
 
         private void Finish()
@@ -179,7 +147,7 @@ namespace Genes40k
 
             GenSpawn.Spawn(geneseedVial, InteractionCell, Map);
 
-            ChoiceLetter letter = LetterMaker.MakeLetter("BEWH.GestateFinishLetter".Translate(), "BEWH.GestateFinishMessage".Translate(selectedMatrix.label, geneseedVial.Label), LetterDefOf.PositiveEvent, geneseedVial);
+            var letter = LetterMaker.MakeLetter("BEWH.GestateFinishLetter".Translate(), "BEWH.GestateFinishMessage".Translate(selectedMatrix.label, geneseedVial.Label), LetterDefOf.PositiveEvent, geneseedVial);
 
             Find.LetterStack.ReceiveLetter(letter);
             Reset();
@@ -204,18 +172,13 @@ namespace Genes40k
 
         public override string GetInspectString()
         {
-            StringBuilder stringBuilder = new StringBuilder();
+            var stringBuilder = new StringBuilder();
             stringBuilder.Append(base.GetInspectString());
             stringBuilder.Append("\n");
 
-            if (containedMatrix == null)
-            {
-                stringBuilder.Append("BEWH.ContainsNoGeneMatrix".Translate());
-            }
-            else
-            {
-                stringBuilder.Append("BEWH.ContainsGeneMatrix".Translate(containedMatrix.Label));
-            }
+            stringBuilder.Append(containedMatrix == null
+                ? "BEWH.ContainsNoGeneMatrix".Translate()
+                : "BEWH.ContainsGeneMatrix".Translate(containedMatrix.Label));
 
             if (selectedMaterial != null)
             {
@@ -223,27 +186,26 @@ namespace Genes40k
                 stringBuilder.Append("BEWH.ContainsExtraMaterial".Translate(selectedMaterial.label));
             }
 
-            if (InProgress)
+            if (!InProgress) return stringBuilder.ToString();
+            
+            stringBuilder.Append("\n");
+            if (Finished)
             {
-                stringBuilder.Append("\n");
-                if (Finished)
-                {
-                    stringBuilder.Append("BEWH.GeneVialFinished".Translate());
-                }
-                else
-                {
-                    float divider = 60000f;
-                    string timeDenoter = "LetterDay".Translate();
+                stringBuilder.Append("BEWH.GeneVialFinished".Translate());
+            }
+            else
+            {
+                var divider = 60000f;
+                string timeDenoter = "LetterDay".Translate();
 
-                    float timeLeft = totalTime - progressInt;
+                var timeLeft = totalTime - progressInt;
 
-                    if (timeLeft < 60000)
-                    {
-                        divider = 2500f;
-                        timeDenoter = "LetterHour".Translate();
-                    }
-                    stringBuilder.Append("BEWH.GeneVialFinishesIn".Translate(Math.Round(timeLeft / divider, 2), timeDenoter));
+                if (timeLeft < 60000)
+                {
+                    divider = 2500f;
+                    timeDenoter = "LetterHour".Translate();
                 }
+                stringBuilder.Append("BEWH.GeneVialFinishesIn".Translate(Math.Round(timeLeft / divider, 2), timeDenoter));
             }
 
             return stringBuilder.ToString();
@@ -251,7 +213,7 @@ namespace Genes40k
 
         public override IEnumerable<Gizmo> GetGizmos()
         {
-            foreach (Gizmo gizmo in base.GetGizmos())
+            foreach (var gizmo in base.GetGizmos())
             {
                 yield return gizmo;
             }
@@ -260,7 +222,7 @@ namespace Genes40k
                 if (hasBeenStarted)
                 {
                     //ALMOST FINISHES PROCEDURE
-                    Command_Action command_Action5 = new Command_Action();
+                    var command_Action5 = new Command_Action();
                     command_Action5.defaultLabel = "DEV: ALMOST FINISH".Translate();
                     command_Action5.icon = CancelIcon;
                     command_Action5.activateSound = SoundDefOf.Designate_Cancel;
@@ -275,11 +237,11 @@ namespace Genes40k
             {
                 if (this.HasComp<CompAffectedByFacilities>() && (containedMatrix.def.HasModExtension<DefModExtension_PrimarchMaterial>() || containedMatrix.def.HasModExtension<DefModExtension_ChapterMaterial>()))
                 {
-                    CompAffectedByFacilities comp = GetComp<CompAffectedByFacilities>();
+                    var comp = GetComp<CompAffectedByFacilities>();
                     if (!comp.LinkedFacilitiesListForReading.Where(x => x.def == Genes40kDefOf.BEWH_SangprimusPortum).EnumerableNullOrEmpty())
                     {
-                        Building_GeneStorage sangprimus = (Building_GeneStorage)comp.LinkedFacilitiesListForReading.First();
-                        List<Thing> availableMaterial = new List<Thing>();
+                        var sangprimus = (Building_GeneStorage)comp.LinkedFacilitiesListForReading.First();
+                        var availableMaterial = new List<Thing>();
                         string geneticType;
                         if (containedMatrix.def.HasModExtension<DefModExtension_PrimarchMaterial>())
                         {
@@ -291,30 +253,23 @@ namespace Genes40k
                             availableMaterial.AddRange(sangprimus.SearchableContents.Where(x => x.def.HasModExtension<DefModExtension_ChapterMaterial>()));
                             geneticType = "BEWH.Chapter".Translate();
                         }
-                        Command_Action command_Action10 = new Command_Action();
+                        //SELECT PRIMARCH OR CHAPTER MATERIAL
+                        var command_Action10 = new Command_Action();
                         command_Action10.defaultLabel = "BEWH.SelectXMaterial".Translate(geneticType);
                         command_Action10.defaultDesc = "BEWH.SelectXMaterialDesc".Translate(geneticType);
 
-                        if (selectedMaterial == null)
-                        {
-                            command_Action10.icon = EmptyMaterialIcon;
-                        }
-                        else
-                        {
-                            command_Action10.icon = selectedMaterial.GetModExtension<DefModExtension_GeneFromMaterial>().addedGene.Icon;
-                        }
+                        command_Action10.icon = selectedMaterial == null ? EmptyMaterialIcon : selectedMaterial.GetModExtension<DefModExtension_GeneFromMaterial>().addedGene.Icon;
                        
                         command_Action10.action = delegate
                         {
-                            List<FloatMenuOption> list = new List<FloatMenuOption>();
-                            string text;
-                            foreach (Thing material in availableMaterial)
+                            var list = new List<FloatMenuOption>();
+                            foreach (var material in availableMaterial)
                             {
                                 if (selectedMaterial == material.def)
                                 {
                                     continue;
                                 }
-                                text = material.Label;
+                                var text = material.Label;
                                 list.Add(new FloatMenuOption(text, delegate
                                 {
                                     selectedMaterial = material.def;
@@ -334,7 +289,7 @@ namespace Genes40k
                     }
                 }
                 //STARTS MACHINE
-                Command_Action command_Action4 = new Command_Action();
+                var command_Action4 = new Command_Action();
                 command_Action4.defaultLabel = "BEWH.StartGeneGestating".Translate();
                 command_Action4.defaultDesc = "BEWH.StartGeneGestatingDesc".Translate();
                 command_Action4.icon = StartIcon;
@@ -346,7 +301,7 @@ namespace Genes40k
                 yield return command_Action4;
 
                 //EJECT LOADED MATRIX
-                Command_Action command_Action2 = new Command_Action();
+                var command_Action2 = new Command_Action();
                 command_Action2.defaultLabel = "BEWH.EjectGeneMatrix".Translate(containedMatrix.Label);
                 command_Action2.defaultDesc = "BEWH.EjectGeneMatrixDesc".Translate(containedMatrix.Label);
                 command_Action2.icon = CancelIcon;
@@ -363,36 +318,27 @@ namespace Genes40k
                 if (!haulJobStarted)
                 {
                     //SELECTS MATRIX TO LOAD AND START HAUL JOB
-                    Command_Action command_Action1 = new Command_Action();
+                    var command_Action1 = new Command_Action();
                     command_Action1.defaultLabel = "BEWH.SelectMatrix".Translate() + "...";
                     command_Action1.defaultDesc = "BEWH.SelectMatrixDesc".Translate();
-                    if (selectedMatrix == null)
-                    {
-                        command_Action1.icon = matrixSelectionTex;
-                    }
-                    else
-                    {
-                        command_Action1.icon = selectedMatrix.uiIcon;
-                    }
+                    command_Action1.icon = selectedMatrix == null ? matrixSelectionTex : selectedMatrix.uiIcon;
                     
-                    List<ThingDef> gestatablesAvailable = new List<ThingDef>();
+                    var gestatablesAvailable = new List<ThingDef>();
                     gestatablesAvailable.AddRange(AvailableGestatables());
                     command_Action1.action = delegate
                     {
-                        List<FloatMenuOption> list = new List<FloatMenuOption>();
-                        string text;
-                        foreach (ThingDef gestatables in gestatablesAvailable)
+                        var list = new List<FloatMenuOption>();
+                        foreach (var gestatables in gestatablesAvailable)
                         {
-                            text = gestatables.label;
+                            var text = gestatables.label;
                             list.Add(new FloatMenuOption(text, delegate
                             {
                                 selectedMatrix = gestatables;
                                 haulJobStarted = true;
-                                if (containedMatrix != null)
-                                {
-                                    GenPlace.TryPlaceThing(containedMatrix, InteractionCell, Map, ThingPlaceMode.Direct);
-                                    containedMatrix = null;
-                                }
+                                if (containedMatrix == null) return;
+                                
+                                GenPlace.TryPlaceThing(containedMatrix, InteractionCell, Map, ThingPlaceMode.Direct);
+                                containedMatrix = null;
                             }));
                         }
                         if (!list.Any())
@@ -415,7 +361,7 @@ namespace Genes40k
                 else
                 {
                     //STOPS HAUL JOB
-                    Command_Action command_Action3 = new Command_Action();
+                    var command_Action3 = new Command_Action();
                     command_Action3.defaultLabel = "CommandCancelLoad".Translate();
                     command_Action3.defaultDesc = "CommandCancelLoadDesc".Translate();
                     command_Action3.icon = CancelIcon;
@@ -423,17 +369,15 @@ namespace Genes40k
                     command_Action3.action = delegate
                     {
                         haulJobStarted = false;
-                        if (jobDoer != null)
+                        if (jobDoer == null) return;
+                        
+                        foreach (var job in jobDoer.jobs.AllJobs())
                         {
-                            foreach (Job job in jobDoer.jobs.AllJobs())
-                            {
-                                if (job.def == Genes40kDefOf.BEWH_FillGeneGestator)
-                                {
-                                    jobDoer.jobs.EndCurrentOrQueuedJob(job, JobCondition.InterruptForced);
-                                    Reset();
-                                    break;
-                                }
-                            }
+                            if (job.def != Genes40kDefOf.BEWH_FillGeneGestator) continue;
+                            
+                            jobDoer.jobs.EndCurrentOrQueuedJob(job, JobCondition.InterruptForced);
+                            Reset();
+                            break;
                         }
                     };
                     yield return command_Action3;

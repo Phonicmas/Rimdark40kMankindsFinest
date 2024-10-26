@@ -17,16 +17,15 @@ namespace Genes40k
                 return false;
             }
                 
-            List<Hediff> hediffs = pawn.health.hediffSet.hediffs;
-            for (int index = 0; index < hediffs.Count; ++index)
+            var hediffs = pawn.health.hediffSet.hediffs;
+            foreach (var hediff in hediffs)
             {
-                if ((!recipe.targetsBodyPart || hediffs[index].Part != null) && hediffs[index].def == recipe.removesHediff && hediffs[index].Visible)
+                if ((recipe.targetsBodyPart && hediff.Part == null) ||
+                    hediff.def != recipe.removesHediff || !hediff.Visible) continue;
+                
+                if (hediff.Severity < 1f)
                 {
-                    if (hediffs[index].Severity < 1f)
-                    {
-                        return false;
-                    }
-                        
+                    return false;
                 }
             }
             return true;
@@ -43,16 +42,15 @@ namespace Genes40k
                 TaleRecorder.RecordTale(TaleDefOf.DidSurgery, billDoer, pawn);
                 if (PawnUtility.ShouldSendNotificationAbout(pawn) || PawnUtility.ShouldSendNotificationAbout(billDoer))
                 {
-                    string text = (recipe.successfullyRemovedHediffMessage.NullOrEmpty() ? ((string)"MessageSuccessfullyRemovedHediff".Translate(billDoer.LabelShort, pawn.LabelShort, recipe.removesHediff.label.Named("HEDIFF"), billDoer.Named("SURGEON"), pawn.Named("PATIENT"))) : ((string)recipe.successfullyRemovedHediffMessage.Formatted(billDoer.LabelShort, pawn.LabelShort)));
+                    var text = (recipe.successfullyRemovedHediffMessage.NullOrEmpty() ? ((string)"MessageSuccessfullyRemovedHediff".Translate(billDoer.LabelShort, pawn.LabelShort, recipe.removesHediff.label.Named("HEDIFF"), billDoer.Named("SURGEON"), pawn.Named("PATIENT"))) : ((string)recipe.successfullyRemovedHediffMessage.Formatted(billDoer.LabelShort, pawn.LabelShort)));
                     Messages.Message(text, pawn, MessageTypeDefOf.PositiveEvent);
                 }
             }
-            Hediff hediff = pawn.health.hediffSet.hediffs.Find((Hediff x) => x.def == recipe.removesHediff && x.Part == part && x.Visible);
-            if (hediff != null)
-            {
-                pawn.health.RemoveHediff(hediff);
-                OnSurgerySuccess(pawn, part, billDoer, ingredients, bill);
-            }
+            var hediff = pawn.health.hediffSet.hediffs.Find((Hediff x) => x.def == recipe.removesHediff && x.Part == part && x.Visible);
+            if (hediff == null) return;
+            
+            pawn.health.RemoveHediff(hediff);
+            OnSurgerySuccess(pawn, part, billDoer, ingredients, bill);
         }
 
         protected override void OnSurgerySuccess(Pawn pawn, BodyPartRecord part, Pawn billDoer, List<Thing> ingredients, Bill bill)

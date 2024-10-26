@@ -20,7 +20,7 @@ namespace Genes40k
 
         public override void DoSettingsWindowContents(Rect inRect)
         {
-            Listing_Standard listingStandard = new Listing_Standard();
+            var listingStandard = new Listing_Standard();
             listingStandard.Begin(inRect);
 
             listingStandard.CheckboxLabeled("BEWH.PsychicPhenomena".Translate(), ref settings.psychicPhenomena);

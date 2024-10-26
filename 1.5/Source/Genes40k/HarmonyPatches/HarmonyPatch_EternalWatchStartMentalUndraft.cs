@@ -10,17 +10,10 @@ namespace Genes40k
     {
         public static void Postfix(Pawn ___pawn, ref bool value)
         {
-            if (!value)
-            {
-                if (___pawn.genes != null)
-                {
-                    Gene_EternalWatch gene_EternalWatch = ___pawn.genes.GetFirstGeneOfType<Gene_EternalWatch>();
-                    if (gene_EternalWatch != null)
-                    {
-                        gene_EternalWatch.TryDoMentalBreak();
-                    }
-                }
-            }
+            if (value || ___pawn.genes == null) return;
+            
+            var gene_EternalWatch = ___pawn.genes.GetFirstGeneOfType<Gene_EternalWatch>();
+            gene_EternalWatch?.TryDoMentalBreak();
         }
     }
 }

@@ -8,11 +8,7 @@ namespace Genes40k
     {
         protected override ThoughtState ShouldHaveThought(Pawn p, Pawn otherPawn)
         {
-            if (otherPawn.genes != null)
-            {
-                return Genes40kUtils.IsPsyker(otherPawn);
-            }
-            return false;
+            return otherPawn.genes != null && Genes40kUtils.IsPsyker(otherPawn);
         }
     }
 }

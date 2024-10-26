@@ -10,13 +10,13 @@ namespace Genes40k
 
         private int tickAmount = 0;
 
-        private readonly int tickAmountDrain = 1000;
+        private const int tickAmountDrain = 1000;
 
         private Pawn workingPawn = null;
 
-        private readonly float psyfocusDrain = -0.05f;
+        private const float psyfocusDrain = -0.05f;
 
-        private readonly float severityAdd = 0.1f;
+        private const float severityAdd = 0.1f;
 
         public Building_GeneTable()
         {
@@ -39,26 +39,25 @@ namespace Genes40k
                 return;
             }
             tickAmount++;
-            if (tickAmount >= tickAmountDrain)
+            if (tickAmount < tickAmountDrain) return;
+            
+            if (ModsConfig.RoyaltyActive)
             {
-                if (ModsConfig.RoyaltyActive)
+                if (workingPawn.psychicEntropy.CurrentPsyfocus >= Math.Abs(psyfocusDrain))
                 {
-                    if (workingPawn.psychicEntropy.CurrentPsyfocus >= Math.Abs(psyfocusDrain))
-                    {
-                        workingPawn.psychicEntropy.OffsetPsyfocusDirectly(psyfocusDrain);
-                    }
-                    else
-                    {
-                        workingPawn.psychicEntropy.OffsetPsyfocusDirectly(workingPawn.psychicEntropy.CurrentPsyfocus * -1);
-                        DoComaHediff();
-                    }
+                    workingPawn.psychicEntropy.OffsetPsyfocusDirectly(psyfocusDrain);
                 }
                 else
                 {
+                    workingPawn.psychicEntropy.OffsetPsyfocusDirectly(workingPawn.psychicEntropy.CurrentPsyfocus * -1);
                     DoComaHediff();
                 }
-                tickAmount = 0;
             }
+            else
+            {
+                DoComaHediff();
+            }
+            tickAmount = 0;
         }
 
         private void DoComaHediff()
@@ -67,7 +66,7 @@ namespace Genes40k
             {
                 return;
             }
-            Hediff hediff = workingPawn.health.hediffSet.GetFirstHediffOfDef(Genes40kDefOf.BEWH_PsychicCrafting);
+            var hediff = workingPawn.health.hediffSet.GetFirstHediffOfDef(Genes40kDefOf.BEWH_PsychicCrafting);
             if (hediff == null)
             {
                 workingPawn.health.AddHediff(Genes40kDefOf.BEWH_PsychicCrafting);

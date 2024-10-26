@@ -9,19 +9,9 @@ namespace Genes40k
     {
         public override IList<Thing> container => GeneStorage.GetDirectlyHeldThings();
 
-        public override bool IsVisible
-        {
-            get
-            {
-                if (base.SelThing != null)
-                {
-                    return base.IsVisible;
-                }
-                return false;
-            }
-        }
+        public override bool IsVisible => SelThing != null && base.IsVisible;
 
-        public Building_GeneStorage GeneStorage => base.SelThing as Building_GeneStorage;
+        public Building_GeneStorage GeneStorage => SelThing as Building_GeneStorage;
 
         public override bool VisibleInBlueprintMode => false;
 

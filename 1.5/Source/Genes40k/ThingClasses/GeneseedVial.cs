@@ -39,7 +39,7 @@ namespace Genes40k
             get
             {
                 tmpGeneLabelsDesc.Clear();
-                string text = base.DescriptionDetailed;
+                var text = base.DescriptionDetailed;
                 if (geneSet == null || !geneSet.GenesListForReading.Any())
                 {
                     return text;
@@ -48,9 +48,9 @@ namespace Genes40k
                 {
                     text += "\n\n";
                 }
-                for (int i = 0; i < geneSet.GenesListForReading.Count; i++)
+                foreach (var t in geneSet.GenesListForReading)
                 {
-                    tmpGeneLabelsDesc.Add(geneSet.GenesListForReading[i].label);
+                    tmpGeneLabelsDesc.Add(t.label);
                 }
                 return text + ("Genes".Translate().CapitalizeFirst() + ":\n" + tmpGeneLabelsDesc.ToLineList("  - ", capitalizeItems: true));
             }
@@ -72,11 +72,10 @@ namespace Genes40k
         {
             get
             {
-                DefModExtension_GeneseedVial defMod = def.GetModExtension<DefModExtension_GeneseedVial>();
-                int num = 0;
-                for (int i = 0; i < defMod.recipe.ingredients.Count; i++)
+                var defMod = def.GetModExtension<DefModExtension_GeneseedVial>();
+                var num = 0;
+                foreach (var ingredientCount in defMod.recipe.ingredients)
                 {
-                    IngredientCount ingredientCount = defMod.recipe.ingredients[i];
                     if (ingredientCount.filter.Allows(ThingDefOf.MedicineUltratech) || ingredientCount.filter.Allows(ThingDefOf.MedicineIndustrial))
                     {
                         num += (int)ingredientCount.GetBaseCount();
@@ -105,22 +104,21 @@ namespace Genes40k
 
         public void AddExtraGenes(List<GeneDef> genes)
         {
-            if (!genes.NullOrEmpty())
+            if (genes.NullOrEmpty()) return;
+            
+            foreach (var gene in genes)
             {
-                foreach (GeneDef gene in genes)
-                {
-                    geneSet.AddGene(gene);
-                }
+                geneSet.AddGene(gene);
             }
         }
 
         public void Initialize()
         {
-            DefModExtension_GeneseedVial defMod = def.GetModExtension<DefModExtension_GeneseedVial>();
+            var defMod = def.GetModExtension<DefModExtension_GeneseedVial>();
 
             if (!defMod.xenotype.genes.NullOrEmpty())
             {
-                foreach (GeneDef gene in defMod.xenotype.genes)
+                foreach (var gene in defMod.xenotype.genes)
                 {
                     geneSet.AddGene(gene);
                 }
@@ -137,9 +135,9 @@ namespace Genes40k
             {
                 return;
             }
-            TaggedString text = "BEWH.ImplantGeneseedDesc".Translate(newTarget, xenotypeName);
-            DefModExtension_GeneseedVial defMod = def.GetModExtension<DefModExtension_GeneseedVial>();
-            List<string> failChanceCausedBy = new List<string>();
+            var text = "BEWH.ImplantGeneseedDesc".Translate(newTarget, xenotypeName);
+            var defMod = def.GetModExtension<DefModExtension_GeneseedVial>();
+            var failChanceCausedBy = new List<string>();
             var failChance = defMod.baseFailureChance;
             failChanceCausedBy.Add("\t- " + "BEWH.FailureChanceCause".Translate(defMod.baseFailureChance, "BEWH.BaseFailureChance".Translate()));
             if (!(defMod.minAgeImplant <= newTarget.ageTracker.AgeBiologicalYears && defMod.maxAgeImplant >= newTarget.ageTracker.AgeBiologicalYears))
@@ -205,7 +203,7 @@ namespace Genes40k
             text += "\n\n" + "WouldYouLikeToContinue".Translate();
             Find.WindowStack.Add(Dialog_MessageBox.CreateConfirmation(text, delegate
             {
-                Bill bill = targetPawn?.BillStack?.Bills?.FirstOrDefault((Bill x) => x.recipe == def.GetModExtension<DefModExtension_GeneseedVial>().recipe);
+                var bill = targetPawn?.BillStack?.Bills?.FirstOrDefault((Bill x) => x.recipe == def.GetModExtension<DefModExtension_GeneseedVial>().recipe);
                 if (bill != null)
                 {
                     targetPawn.BillStack.Delete(bill);
@@ -218,13 +216,13 @@ namespace Genes40k
 
         private void SendImplantationLetter(Pawn targetPawn)
         {
-            string arg = string.Empty;
+            var arg = string.Empty;
             if (!targetPawn.InBed() && !targetPawn.Map.listerBuildings.allBuildingsColonist.Any((Building x) => x is Building_Bed && RestUtility.CanUseBedEver(targetPawn, x.def) && ((Building_Bed)x).Medical))
             {
                 arg = "BEWH.GeneseedOrderedImplantedBedNeeded".Translate(targetPawn.Named("PAWN"));
             }
-            int requiredMedicineForImplanting = RequiredMedicineForImplanting;
-            string arg2 = string.Empty;
+            var requiredMedicineForImplanting = RequiredMedicineForImplanting;
+            var arg2 = string.Empty;
             if (targetPawn.Map.listerThings.ThingsInGroup(ThingRequestGroup.Medicine).Sum((Thing x) => x.stackCount) < requiredMedicineForImplanting)
             {
                 arg2 = "BEWH.GeneseedOrderedImplantedMedicineNeeded".Translate(requiredMedicineForImplanting.Named("MEDICINENEEDED"));
@@ -251,7 +249,7 @@ namespace Genes40k
                 yield return new FloatMenuOption("BEWH.AlreadySuperHuman".Translate(selPawn.Named("PAWN")), null);
                 yield break;
             }
-            int num = GeneUtility.MetabolismAfterImplanting(selPawn, geneSet);
+            var num = GeneUtility.MetabolismAfterImplanting(selPawn, geneSet);
             if (num < GeneTuning.BiostatRange.TrueMin)
             {
                 yield return new FloatMenuOption("CannotGenericWorkCustom".Translate((string)("OrderImplantationIntoPawn".Translate(selPawn.Named("PAWN")).Resolve().UncapitalizeFirst() + ": " + "ResultingMetTooLow".Translate() + " (") + num + ")"), null);
@@ -265,7 +263,7 @@ namespace Genes40k
 
         public override IEnumerable<Gizmo> GetGizmos()
         {
-            foreach (Gizmo gizmo in base.GetGizmos())
+            foreach (var gizmo in base.GetGizmos())
             {
                 yield return gizmo;
             }
@@ -286,24 +284,28 @@ namespace Genes40k
                     icon = ImplantTex.Texture,
                     action = delegate
                     {
-                        List<FloatMenuOption> list = new List<FloatMenuOption>();
-                        foreach (Pawn item in base.Map.mapPawns.AllPawnsSpawned)
+                        var list = new List<FloatMenuOption>();
+                        foreach (var item in base.Map.mapPawns.AllPawnsSpawned)
                         {
-                            Pawn pawn = item;
-                            if (!pawn.IsQuestLodger() && pawn.genes != null && (pawn.IsColonistPlayerControlled || IsAlreadySuperHuman(pawn) || pawn.IsPrisonerOfColony || pawn.IsSlaveOfColony || (pawn.IsColonyMutant && pawn.IsGhoul)))
+                            var pawn = item;
+                            if (pawn.IsQuestLodger() || pawn.genes == null || (!pawn.IsColonistPlayerControlled &&
+                                                                               !IsAlreadySuperHuman(pawn) &&
+                                                                               !pawn.IsPrisonerOfColony &&
+                                                                               !pawn.IsSlaveOfColony &&
+                                                                               (!pawn.IsColonyMutant || !pawn.IsGhoul)))
+                                continue;
+                            
+                            var num = GeneUtility.MetabolismAfterImplanting(pawn, geneSet);
+                            if (num < GeneTuning.BiostatRange.TrueMin)
                             {
-                                int num = GeneUtility.MetabolismAfterImplanting(pawn, geneSet);
-                                if (num < GeneTuning.BiostatRange.TrueMin)
+                                list.Add(new FloatMenuOption((string)(pawn.LabelShortCap + ": " + "ResultingMetTooLow".Translate() + " (") + num + ")", null, pawn, Color.white));
+                            }
+                            else
+                            {
+                                list.Add(new FloatMenuOption(pawn.LabelShortCap + ", " + pawn.genes.XenotypeLabelCap, delegate
                                 {
-                                    list.Add(new FloatMenuOption((string)(pawn.LabelShortCap + ": " + "ResultingMetTooLow".Translate() + " (") + num + ")", null, pawn, Color.white));
-                                }
-                                else
-                                {
-                                    list.Add(new FloatMenuOption(pawn.LabelShortCap + ", " + pawn.genes.XenotypeLabelCap, delegate
-                                    {
-                                        SetTargetPawn(pawn);
-                                    }, pawn, Color.white));
-                                }
+                                    SetTargetPawn(pawn);
+                                }, pawn, Color.white));
                             }
                         }
                         if (!list.Any())
@@ -323,7 +325,7 @@ namespace Genes40k
                 action = delegate
                 {
                     Log.Message("Cancel implant message");
-                    Bill bill = targetPawn?.BillStack?.Bills?.FirstOrDefault((Bill x) => x.recipe == def.GetModExtension<DefModExtension_GeneseedVial>().recipe);
+                    var bill = targetPawn?.BillStack?.Bills?.FirstOrDefault((Bill x) => x.recipe == def.GetModExtension<DefModExtension_GeneseedVial>().recipe);
                     if (bill != null)
                     {
                         targetPawn.BillStack.Delete(bill);
@@ -359,15 +361,14 @@ namespace Genes40k
                 }
                 return false;
             }
-            if (!target.Pawn.IsColonist && !target.Pawn.IsPrisonerOfColony && !target.Pawn.IsSlaveOfColony)
+
+            if (target.Pawn.IsColonist || target.Pawn.IsPrisonerOfColony || target.Pawn.IsSlaveOfColony) return true;
+            
+            if (showMessages)
             {
-                if (showMessages)
-                {
-                    Messages.Message("MessageCanOnlyTargetColonistsPrisonersAndSlaves".Translate(), target.Pawn, MessageTypeDefOf.RejectInput, historical: false);
-                }
-                return false;
+                Messages.Message("MessageCanOnlyTargetColonistsPrisonersAndSlaves".Translate(), target.Pawn, MessageTypeDefOf.RejectInput, historical: false);
             }
-            return true;
+            return false;
         }
 
         public override void DrawExtraSelectionOverlays()
@@ -381,37 +382,37 @@ namespace Genes40k
 
         public override string GetInspectString()
         {
-            string text = base.GetInspectString();
+            var text = base.GetInspectString();
             tmpGeneLabels.Clear();
-            if (geneSet != null && geneSet.GenesListForReading.Any())
+            if (geneSet == null || !geneSet.GenesListForReading.Any()) return text;
+            
+            if (!text.NullOrEmpty())
             {
-                if (!text.NullOrEmpty())
-                {
-                    text += "\n";
-                }
-                List<GeneDef> genesListForReading = geneSet.GenesListForReading;
-                int num = Mathf.Min(MaxGeneLabels, genesListForReading.Count);
-                for (int i = 0; i < num; i++)
-                {
-                    string text2 = genesListForReading[i].label;
-                    if (geneSet.IsOverridden(genesListForReading[i]))
-                    {
-                        text2 += " (" + "Overridden".Translate() + ")";
-                    }
-                    tmpGeneLabels.Add(text2);
-                }
-                if (genesListForReading.Count > num)
-                {
-                    tmpGeneLabels.Add("Etc".Translate() + "...");
-                }
-                text += "Genes".Translate().CapitalizeFirst() + ":\n" + tmpGeneLabels.ToLineList("  - ", capitalizeItems: true);
+                text += "\n";
             }
+            var genesListForReading = geneSet.GenesListForReading;
+            var num = Mathf.Min(MaxGeneLabels, genesListForReading.Count);
+            
+            for (var i = 0; i < num; i++)
+            {
+                var text2 = genesListForReading[i].label;
+                if (geneSet.IsOverridden(genesListForReading[i]))
+                {
+                    text2 += " (" + "Overridden".Translate() + ")";
+                }
+                tmpGeneLabels.Add(text2);
+            }
+            if (genesListForReading.Count > num)
+            {
+                tmpGeneLabels.Add("Etc".Translate() + "...");
+            }
+            text += "Genes".Translate().CapitalizeFirst() + ":\n" + tmpGeneLabels.ToLineList("  - ", capitalizeItems: true);
             return text;
         }
 
         public override IEnumerable<StatDrawEntry> SpecialDisplayStats()
         {
-            foreach (StatDrawEntry item in base.SpecialDisplayStats())
+            foreach (var item in base.SpecialDisplayStats())
             {
                 yield return item;
             }
@@ -424,7 +425,7 @@ namespace Genes40k
             {
                 inspectGenesHyperlink = new Dialog_InfoCard.Hyperlink(this, -1, thingIsGeneOwner: true);
             }
-            foreach (StatDrawEntry item2 in geneSet.SpecialDisplayStats(inspectGenesHyperlink))
+            foreach (var item2 in geneSet.SpecialDisplayStats(inspectGenesHyperlink))
             {
                 yield return item2;
             }

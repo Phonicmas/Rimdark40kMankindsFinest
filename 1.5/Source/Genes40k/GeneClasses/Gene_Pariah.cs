@@ -7,7 +7,7 @@ namespace Genes40k
 {
     public class Gene_Pariah : Gene
     {
-        private readonly int tickInterval = 501;
+        private const int tickInterval = 501;
 
         public override void Tick()
         {
@@ -18,12 +18,12 @@ namespace Genes40k
             }
             if (pawn.Spawned)
             {
-                List<Pawn> pawnsT = (List<Pawn>)pawn.Map.mapPawns.AllPawnsSpawned;
-                List<Pawn> pawns = pawnsT.FindAll(x => pawn.Position.DistanceTo(x.Position) <= def.GetModExtension<DefModExtension_Pariah>().radius);
+                var pawnsT = (List<Pawn>)pawn.Map.mapPawns.AllPawnsSpawned;
+                var pawns = pawnsT.FindAll(x => pawn.Position.DistanceTo(x.Position) <= def.GetModExtension<DefModExtension_Pariah>().radius);
                 AffectPawns(pawn, pawns);
                 return;
             }
-            Caravan caravan = pawn.GetCaravan();
+            var caravan = pawn.GetCaravan();
             if (caravan != null)
             {
                 AffectPawns(pawn, caravan.pawns.InnerListForReading);
@@ -36,20 +36,20 @@ namespace Genes40k
             {
                 return;
             }
-            foreach (Pawn pawn in pawns)
+            foreach (var pawn in pawns)
             {
                 if (pawn == null || p == pawn || !p.RaceProps.Humanlike || pawn.needs == null || pawn.needs.mood == null || pawn.needs.mood.thoughts == null || pawn.genes == null || Genes40kUtils.IsPariah(pawn))
                 {
                     continue;
                 }
-                DefModExtension_Pariah defMod = def.GetModExtension<DefModExtension_Pariah>();
-                Hediff hediff = pawn.health.hediffSet.hediffs.Find(x => x.def.HasModExtension<DefModExtension_Pariah>());
+                var defMod = def.GetModExtension<DefModExtension_Pariah>();
+                var hediff = pawn.health.hediffSet.hediffs.Find(x => x.def.HasModExtension<DefModExtension_Pariah>());
                 if (hediff != null)
                 {
                     if (hediff.Severity < defMod.tier)
                     {
                         hediff.Severity = defMod.tier;
-                        HediffComp_Disappears disappears = hediff.TryGetComp<HediffComp_Disappears>();
+                        var disappears = hediff.TryGetComp<HediffComp_Disappears>();
                         if (disappears != null)
                         {
                             disappears.ticksToDisappear = disappears.disappearsAfterTicks;
@@ -57,7 +57,7 @@ namespace Genes40k
                     }
                     else if (hediff.Severity == defMod.tier)
                     {
-                        HediffComp_Disappears disappears = hediff.TryGetComp<HediffComp_Disappears>();
+                        var disappears = hediff.TryGetComp<HediffComp_Disappears>();
                         if (disappears != null)
                         {
                             disappears.ticksToDisappear = disappears.disappearsAfterTicks;

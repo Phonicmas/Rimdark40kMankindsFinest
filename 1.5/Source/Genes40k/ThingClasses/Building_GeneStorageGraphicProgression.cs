@@ -8,55 +8,26 @@ namespace Genes40k
 {
     public class Building_GeneStorageGraphicProgression : Building_GeneStorage
     {
-        public Building_GeneStorageGraphicProgression()
-        {
-        }
-
         [Unsaved(false)]
         private DefModExtension_GeneStorageGraphicProgression cachedDefMod;
 
-        private DefModExtension_GeneStorageGraphicProgression DefMod
-        {
-            get
-            {
-                if (cachedDefMod == null)
-                {
-                    cachedDefMod = def.GetModExtension<DefModExtension_GeneStorageGraphicProgression>();
-                }
-                return cachedDefMod;
-            }
-        }
+        private DefModExtension_GeneStorageGraphicProgression DefMod => cachedDefMod ?? (cachedDefMod = def.GetModExtension<DefModExtension_GeneStorageGraphicProgression>());
 
         [Unsaved(false)]
         private Graphic cachedHalfFullGraphic;
 
-        private Graphic HalfFullGraphic
-        {
-            get
-            {
-                if (cachedHalfFullGraphic == null)
-                {
-                    cachedHalfFullGraphic = GraphicDatabase.Get<Graphic_Multi>(DefMod.halfFullGraphic, ShaderDatabase.DefaultShader, def.graphicData.drawSize, Color.white, Color.white, DefaultGraphic.data);
-                }
-                return cachedHalfFullGraphic;
-            }
-        }
+        private Graphic HalfFullGraphic =>
+            cachedHalfFullGraphic ?? (cachedHalfFullGraphic =
+                GraphicDatabase.Get<Graphic_Multi>(DefMod.halfFullGraphic, ShaderDatabase.DefaultShader,
+                    def.graphicData.drawSize, Color.white, Color.white, DefaultGraphic.data));
 
         [Unsaved(false)]
         private Graphic cachedFullGraphic;
 
-        private Graphic FullGraphic
-        {
-            get
-            {
-                if (cachedFullGraphic == null)
-                {
-                    cachedFullGraphic = GraphicDatabase.Get<Graphic_Multi>(DefMod.fullGraphic, ShaderDatabase.DefaultShader, def.graphicData.drawSize, Color.white, Color.white, DefaultGraphic.data);
-                    cachedFullGraphic.data = DefaultGraphic.data;
-                }
-                return cachedFullGraphic;
-            }
-        }
+        private Graphic FullGraphic =>
+            cachedFullGraphic ?? (cachedFullGraphic = GraphicDatabase.Get<Graphic_Multi>(DefMod.fullGraphic,
+                ShaderDatabase.DefaultShader, def.graphicData.drawSize, Color.white, Color.white,
+                DefaultGraphic.data));
 
         public override Graphic Graphic
         {
@@ -64,31 +35,15 @@ namespace Genes40k
             {
                 if (DefMod.halfFullGraphic.NullOrEmpty())
                 {
-                    if (GeneAmount.Count() == MaximumItems)
-                    {
-                        return FullGraphic;
-                    }
-                    else
-                    {
-                        return DefaultGraphic;
-                    }
+                    return GeneAmount.Count() == MaximumItems ? FullGraphic : DefaultGraphic;
                 }
-                else
+                
+                var filledPercent = (float)GeneAmount.Count() / MaximumItems;
+                if (filledPercent < 0.5f)
                 {
-                    float filledPercent = (float)GeneAmount.Count() / MaximumItems;
-                    if (filledPercent < 0.5f)
-                    {
-                        return DefaultGraphic;
-                    }
-                    else if (filledPercent < 1)
-                    {
-                        return HalfFullGraphic;
-                    }
-                    else
-                    {
-                        return FullGraphic;
-                    }
+                    return DefaultGraphic;
                 }
+                return filledPercent < 1 ? HalfFullGraphic : FullGraphic;
             }
         }
     }

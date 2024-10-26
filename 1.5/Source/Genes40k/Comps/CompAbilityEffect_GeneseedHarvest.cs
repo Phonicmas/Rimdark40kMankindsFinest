@@ -10,8 +10,8 @@ namespace Genes40k
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
-            Corpse corpse = target.Thing as Corpse;
-            Pawn pawn = corpse.InnerPawn;
+            var corpse = target.Thing as Corpse;
+            var pawn = corpse.InnerPawn;
 
             Genes40kUtils.MakeGeneseedVial(pawn, Genes40kUtils.IsPrimaris(pawn));
 
@@ -31,17 +31,13 @@ namespace Genes40k
             {
                 return false;
             }
-            Corpse corpse = target.Thing as Corpse;
+            var corpse = target.Thing as Corpse;
 
             if (corpse.InnerPawn.genes == null || !corpse.InnerPawn.genes.HasActiveGene(Genes40kDefOf.BEWH_ProgenoidGlands) || corpse.InnerPawn.health.hediffSet.HasHediff(Genes40kDefOf.BEWH_SecondGeneseedHarvest) || !Genes40kDefOf.BEWH_GeneseedExtractionFirstborn.IsFinished)
             {
                 return false;
             }
-            if (corpse.InnerPawn.genes.HasActiveGene(Genes40kDefOf.BEWH_BelisarianFurnace) && !Genes40kDefOf.BEWH_GeneseedExtractionPrimaris.IsFinished)
-            {
-                return false;
-            }
-            return true;
+            return !corpse.InnerPawn.genes.HasActiveGene(Genes40kDefOf.BEWH_BelisarianFurnace) || Genes40kDefOf.BEWH_GeneseedExtractionPrimaris.IsFinished;
         }
 
         public override string ExtraLabelMouseAttachment(LocalTargetInfo target)

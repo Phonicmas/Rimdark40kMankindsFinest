@@ -18,42 +18,32 @@ namespace Genes40k
             {
                 return false;
             }
-            List<Thing> list = pawn.Map.listerThings.ThingsOfDef(recipe.GetModExtension<DefModExtension_GeneseedVialRecipe>().geneseedVial);
-            if (list.Any())
-            {
-                foreach (Thing item in list)
-                {
-                    if (!item.IsForbidden(pawn) && !item.Position.Fogged(pawn.Map))
-                    {
-                        return true;
-                    }
-                }
-            }
-            return true;
+            var list = pawn.Map.listerThings.ThingsOfDef(recipe.GetModExtension<DefModExtension_GeneseedVialRecipe>().geneseedVial);
+            
+            return !list.Any() || Enumerable.Any(list, item => !item.IsForbidden(pawn) && !item.Position.Fogged(pawn.Map));
         }
 
         public override void ApplyOnPawn(Pawn pawn, BodyPartRecord part, Pawn billDoer, List<Thing> ingredients, Bill bill)
         {
-            if (!CheckSurgeryFail(billDoer, pawn, ingredients, part, bill))
+            if (CheckSurgeryFail(billDoer, pawn, ingredients, part, bill)) return;
+            
+            var geneseedVial = (GeneseedVial)ingredients.First(x => x is GeneseedVial);
+            ImplantGeneseed(pawn, geneseedVial);
+
+            if (IsViolationOnPawn(pawn, part, Faction.OfPlayer))
             {
-                GeneseedVial geneseedVial = (GeneseedVial)ingredients.Where(x => x is GeneseedVial).First();
-                ImplantGeneseed(pawn, geneseedVial);
+                ReportViolation(pawn, billDoer, pawn.HomeFaction, -70);
+            }
 
-                if (IsViolationOnPawn(pawn, part, Faction.OfPlayer))
-                {
-                    ReportViolation(pawn, billDoer, pawn.HomeFaction, -70);
-                }
-
-                if (ModsConfig.IdeologyActive)
-                {
-                    Find.HistoryEventsManager.RecordEvent(new HistoryEvent(HistoryEventDefOf.InstalledProsthetic, billDoer.Named(HistoryEventArgsNames.Doer)));
-                }
+            if (ModsConfig.IdeologyActive)
+            {
+                Find.HistoryEventsManager.RecordEvent(new HistoryEvent(HistoryEventDefOf.InstalledProsthetic, billDoer.Named(HistoryEventArgsNames.Doer)));
             }
         }
 
-        private void ImplantGeneseed(Pawn pawn, GeneseedVial geneseedVial)
+        private static void ImplantGeneseed(Pawn pawn, GeneseedVial geneseedVial)
         {
-            DefModExtension_GeneseedVial defMod = geneseedVial.def.GetModExtension<DefModExtension_GeneseedVial>();
+            var defMod = geneseedVial.def.GetModExtension<DefModExtension_GeneseedVial>();
 
             var failChanceAgeOffset = 0;
             if (!(defMod.minAgeImplant <= pawn.ageTracker.AgeBiologicalYears && defMod.maxAgeImplant >= pawn.ageTracker.AgeBiologicalYears))
@@ -93,7 +83,7 @@ namespace Genes40k
                 failChance = failCapChance;
             }
 
-            Random rand = new Random();
+            var rand = new Random();
             if (rand.Next(0, 100) < failChance)
             {
                 pawn.Kill(null);
@@ -106,22 +96,16 @@ namespace Genes40k
 
             if (defMod.overrideXenotypeGenesGiven)
             {
-                foreach (GeneDef gene in defMod.overridenAddedGenes)
+                foreach (var gene in defMod.overridenAddedGenes.Where(gene => !pawn.genes.HasActiveGene(gene)))
                 {
-                    if (!pawn.genes.HasActiveGene(gene))
-                    {
-                        pawn.genes.AddGene(gene, true);
-                    }
+                    pawn.genes.AddGene(gene, true);
                 }
             }
             else
             {
-                foreach (GeneDef gene in defMod.xenotype.genes)
+                foreach (var gene in defMod.xenotype.genes.Where(gene => !pawn.genes.HasActiveGene(gene)))
                 {
-                    if (!pawn.genes.HasActiveGene(gene))
-                    {
-                        pawn.genes.AddGene(gene, true);
-                    }
+                    pawn.genes.AddGene(gene, true);
                 }
             }
 
