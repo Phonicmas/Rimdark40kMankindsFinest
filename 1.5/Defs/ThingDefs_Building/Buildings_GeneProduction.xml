@@ -36,7 +36,7 @@
       <texPath>Things/Building/GeneCraftingTable/BEWH_GeneCraftingTable</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <shaderType>CutoutComplex</shaderType>
-      <drawSize>(7,4)</drawSize>
+      <drawSize>(6,3)</drawSize>
       <damageData>
         <cornerTL>Damage/Corner</cornerTL>
         <cornerTR>Damage/Corner</cornerTR>
@@ -77,6 +77,7 @@
     <thingClass>Genes40k.Building_GeneGestator</thingClass>
     <containedPawnsSelectable>true</containedPawnsSelectable>
     <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
     <fillPercent>0.4</fillPercent>
     <castEdgeShadows>true</castEdgeShadows>
     <drawerType>MapMeshAndRealTime</drawerType>
@@ -85,9 +86,6 @@
       <texPath>Things/Building/GeneseedGestator/BEWH_GeneseedGestator</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(4, 4)</drawSize>
-      <shadowData>
-        <volume>(1.7, 0.8, 1.7)</volume>
-      </shadowData>
     </graphicData>
     <size>(3, 2)</size>
     <canOverlapZones>false</canOverlapZones>

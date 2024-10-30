@@ -229,14 +229,14 @@
       <li>Genes40k.ITab_ContentsGeneStorage</li>
     </inspectorTabs>
     <surfaceType Inherit="False">Item</surfaceType>
-    <description>Able to holster 1 primarc embryo, keeping it safe and preventing deterioration.</description>
+    <description>Able to holster 1 primarch embryo, keeping it safe and preventing deterioration.</description>
     <graphicData>
       <texPath>Things/Building/PrimarchEmbryoContainer/BEWH_PrimarchEmbryoContainerEmpty</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <shadowData>
-        <volume>(0.9,0.2,0.9)</volume>
+        <volume>(0.6,0.2,0.6)</volume>
       </shadowData>
-      <drawSize>(1, 1)</drawSize>
+      <drawSize>(1.05, 1.05)</drawSize>
     </graphicData>
     <defaultPlacingRot>North</defaultPlacingRot>
     <researchPrerequisites>
