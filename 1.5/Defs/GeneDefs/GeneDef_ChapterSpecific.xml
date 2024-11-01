@@ -240,7 +240,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneFlawParent">
         <defName>BEWH_ChapterIXFlaw</defName>
         <label>Red Thirst</label>
-        <description>The Red Thirst causes warriors to suffer an unusual bloodlust, instilling them with a thirst for the blood of their enemies.</description>
+        <description>The Red Thirst causes warriors to suffer an unusual bloodlust, instilling them with a thirst for the blood of their enemies. They also possess elongated teeth and pale skin.</description>
         <iconPath>UI/Genes/BEWH_ChapterIXBloodAngelsFlaw</iconPath>
         <displayOrderInCategory>125</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
@@ -260,6 +260,7 @@
         <resourceDescription>A reserve of biological strength which can be gained and spent in a variety of ways.\n\nHemogen can be increased by bloodfeeding from a human or consuming hemogen packs. You can obtain hemogen packs using the 'extract hemogen pack' medical operation on a non-hemogenic human.\n\nIf hemogen reaches zero, {PAWN_nameDef} will become very unhappy.</resourceDescription>
         <resourceLossPerDay>0.04</resourceLossPerDay>
         <aggroMentalBreakSelectionChanceFactor>20</aggroMentalBreakSelectionChanceFactor>
+        <skinColorOverride>(252, 225, 194)</skinColorOverride>
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <hediffsToBodyParts>

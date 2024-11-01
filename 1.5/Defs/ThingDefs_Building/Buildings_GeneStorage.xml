@@ -19,7 +19,7 @@
       <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
       <maxItemsInCell>1</maxItemsInCell>
     </building>
-    <drawerType>RealtimeOnly</drawerType>
+    <drawerType>MapMeshAndRealTime</drawerType>
     <drawGUIOverlay>true</drawGUIOverlay>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
