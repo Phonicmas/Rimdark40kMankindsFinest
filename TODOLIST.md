@@ -1,18 +1,24 @@
 # TODO
 
+## Text
 Check descriptions
 Compile list of features
 
-Make Thunder Warrior gene art
-Eject loaded matrix icon (icon of empty matrix with like a red drop arrow thingy?)
-Make icon for when starting geneseed gestator and maybe for when ejecting (although the standard cross thingy might be fine)
+## Art
+Primarch Growth Vat Building
 
+Sangprimus Portus Building
 
-# NEW ADDITIONS TO MAKE AT SOME POINT
+Primarch Specific Icons (Not sure what excatly to do here) (Maybe flip the helix of the Chapter ones and add some bedazzle? Or just make something that would remind you of them, like red skin and psyker thing i made for Magnus, and the wings for Sanguinius) (The helix should stay i feel)
 
-With psyker perils of warp, make the sever connection function similar to deny the witch
+Chapter and Primarch material icons?
+
+## Code and XML
+General Bugfixing here and there
 
 Patch eltex to recipes if VPE is present, do it from inside the royalty folder
+
+# NEW ADDITIONS TO MAKE AT SOME POINT
 
 Make frostblade xml
 
@@ -20,23 +26,7 @@ Make Fenrisian Wolves (Art also, maybe just take vanilla wolf and change it? May
 These can then be found by a quest or by an event where they wander by. https://wh40k.lexicanum.com/wiki/Fenrisian_Wolf 
 Should spawn one alpha and a couple of other ones, if alpha is slain, other ones immediately become tamed under the killer
 
-
 Make Blood Chalice art and xml, an exotic item that when ingested by pawns with the red thirst, will completely fill essentially all need and restore all wounds. - https://wh40k.lexicanum.com/wiki/Blood_Chalice 
 
 
 https://wh40k.lexicanum.com/wiki/Gene-seed#Chapters_with_known_gene-seed_flaws
-
-
-https://warhammer40k.fandom.com/wiki/Primarch 
-
-
-Specific Chapter Genes;
-Iron Hand(WIP); Give transhumanist trait, and increase global work speed when one or more prosthetics is present? 
-Raven Guard(WIP); Increased hunting stealth and shooting stuff
-
-Specific Primarch Genes;
-Corvus(WIP); Ability to go invis, hunting stealth increase
-Konrad Curze(WIP); Teleport at will in low light area, and other boosts in low light?
-Ferrus Manus(WIP); Crafting and quality boost, and also slightly for building
-Dorn(WIP); Increase defense?
-Vulkan(WIP); Thought of making 2 perpetual genes, one lesser and one "normal". Vulkan gets the lesser version, making carriers almost immortal

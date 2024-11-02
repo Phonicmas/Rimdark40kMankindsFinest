@@ -210,7 +210,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterIXBloodAngels</defName>
         <label>Geneseed Material: Blood Angels</label>
-        <description>Your geneseeds comes from Sanguinis, </description>
+        <description>Your geneseeds comes from Sanguinis, you carry the same wrath to those who would threaten your people.</description>
         <iconPath>UI/Genes/BEWH_ChapterIXBloodAngels</iconPath>
         <displayOrderInCategory>124</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
@@ -305,7 +305,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXIIWorldEaters</defName>
         <label>Geneseed Material: World Eaters</label>
-        <description>Your geneseeds comes from Angron, </description>
+        <description>Your geneseeds comes from Angron, you have an innate lust for fighting and brawling.</description>
         <iconPath>UI/Genes/BEWH_ChapterXIIWorldEaters</iconPath>
         <displayOrderInCategory>133</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
@@ -323,6 +323,8 @@
         <aptitudes>
             <Intellectual>-2</Intellectual>
         </aptitudes>
+        <socialFightChanceFactor>2</socialFightChanceFactor>
+        <aggroMentalBreakSelectionChanceFactor>999</aggroMentalBreakSelectionChanceFactor>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene" />
             <li Class="Core40k.DefModExtension_AddRandomTraitByWeight">
@@ -354,7 +356,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXIIIUltramarines</defName>
         <label>Geneseed Material: Ultramarines</label>
-        <description>Your geneseeds comes from Roboute Guilliman, </description>
+        <description>Your geneseeds comes from Roboute Guilliman, you've inherited his industriousness. Additionally your geneseed stock is relatively pure, allowing for easier implantation.</description>
         <iconPath>UI/Genes/BEWH_ChapterXIIIUltramarines</iconPath>
         <displayOrderInCategory>136</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
@@ -378,7 +380,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXIVDeathGuard</defName>
         <label>Geneseed Material: Death Guard</label>
-        <description>Your geneseeds comes from Mortarion, </description>
+        <description>Your geneseeds comes from Mortarion, you share the same resillience to diseases and toxins.</description>
         <iconPath>UI/Genes/BEWH_ChapterXIVDeathGuard</iconPath>
         <displayOrderInCategory>139</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
@@ -441,7 +443,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXVISonsOfHorus</defName>
         <label>Geneseed Material: Sons of Horus</label>
-        <description>Your geneseeds comes from Horus, </description>
+        <description>Your geneseeds comes from Horus, you have a keen understanding of striking at close range.</description>
         <iconPath>UI/Genes/BEWH_ChapterXVISonsOfHorus</iconPath>
         <displayOrderInCategory>145</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>

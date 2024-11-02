@@ -53,10 +53,10 @@
         <statFactors>
             <MeleeDamageFactor>1.75</MeleeDamageFactor>
             <StaggerDurationFactor>0.4</StaggerDurationFactor>
-            <IncomingDamageFactor>0.85</IncomingDamageFactor>
+            <IncomingDamageFactor>0.8</IncomingDamageFactor>
         </statFactors>
         <aptitudes>
-            <Melee>7</Melee>
+            <Melee>6</Melee>
         </aptitudes>
         <minAgeActive>10</minAgeActive>
         <modExtensions>
@@ -167,7 +167,7 @@
             <ComfyTemperatureMax>55</ComfyTemperatureMax>
         </statOffsets>
         <aptitudes>
-            <Shooting>5</Shooting>
+            <Shooting>4</Shooting>
             <Social>-2</Social>
         </aptitudes>
         <minAgeActive>10</minAgeActive>
@@ -189,7 +189,7 @@
         <mentalBreakMtbDays>4</mentalBreakMtbDays>
         <mentalBreakDef>Berserk</mentalBreakDef>
         <customEffectDescriptions>
-            <li>Prone to go beserk randomly.</li>
+            <li>Prone to go beserk.</li>
         </customEffectDescriptions>
         <aptitudes>
             <Intellectual>-2</Intellectual>

@@ -83,8 +83,6 @@
     </GeneDef>
 
 
-
-
     <!-- Pariah -->
     <GeneDef ParentName="BEWH_GenesOverallParent" Name="BEWH_PariahParent" Abstract="True">
         <marketValueFactor>2</marketValueFactor>

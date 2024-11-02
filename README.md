@@ -13,4 +13,4 @@ Some basic power armor
 
 1 Imperial faction, containing xenotypes and using armor from this mod
 
-If royalty is installed players can gai favor for the imperial faction
+If royalty is installed players can gain favor for the imperial faction

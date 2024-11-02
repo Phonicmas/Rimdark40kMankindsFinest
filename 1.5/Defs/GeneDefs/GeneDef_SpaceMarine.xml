@@ -14,9 +14,6 @@
                 <postFactor>1.25</postFactor>
             </li>
         </capMods>
-        <statFactors>
-            <IncomingDamageFactor>0.95</IncomingDamageFactor>
-        </statFactors>
         <customEffectDescriptions>
             <li>Can survive loss of heart.</li>
         </customEffectDescriptions>
@@ -89,7 +86,6 @@
         <statFactors>
             <MeleeDamageFactor>1.55</MeleeDamageFactor>
             <StaggerDurationFactor>0.5</StaggerDurationFactor>
-            <IncomingDamageFactor>0.95</IncomingDamageFactor>
         </statFactors>
         <capMods>
             <li>
@@ -98,7 +94,7 @@
             </li>
         </capMods>
         <aptitudes>
-            <Melee>5</Melee>
+            <Melee>4</Melee>
         </aptitudes>
         <passionMod>
             <skill>Melee</skill>
@@ -301,7 +297,7 @@
             </li>
         </capMods>
         <aptitudes>
-            <Shooting>5</Shooting>
+            <Shooting>4</Shooting>
         </aptitudes>
         <passionMod>
             <skill>Shooting</skill>
@@ -401,7 +397,7 @@
         <displayOrderInCategory>14</displayOrderInCategory>
         <prerequisite>BEWH_Melanochrome</prerequisite>
         <statOffsets>
-            <ToxicResistance>0.75</ToxicResistance>
+            <ToxicResistance>0.6</ToxicResistance>
         </statOffsets>
         <statFactors>
             <ImmunityGainSpeed>1.35</ImmunityGainSpeed>
@@ -434,7 +430,7 @@
         <displayOrderInCategory>15</displayOrderInCategory>
         <prerequisite>BEWH_OoliticKidney</prerequisite>
         <statOffsets>
-            <ToxicResistance>0.75</ToxicResistance>
+            <ToxicResistance>0.6</ToxicResistance>
         </statOffsets>
         <capMods>
             <li>
@@ -477,15 +473,15 @@
         <abilities>
             <li>BEWH_BetchersSpit</li>
         </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>BEWH_BetchersSpit</AbilityDef>
+        </descriptionHyperlinks>
         <capMods>
             <li>
                 <capacity>Talking</capacity>
                 <postFactor>1.1</postFactor>
             </li>
         </capMods>
-        <descriptionHyperlinks>
-            <AbilityDef>BEWH_BetchersSpit</AbilityDef>
-        </descriptionHyperlinks>
         <minAgeActive>17</minAgeActive>
         <exclusionTags>
             <li>SM17</li>
@@ -538,7 +534,7 @@
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <hediffToWholeBody>BEWH_ProgenoidGlandsGrowth</hediffToWholeBody>
-                <diseaseProgressionFactor>0.35</diseaseProgressionFactor>
+                <diseaseProgressionFactor>0.55</diseaseProgressionFactor>
             </li>
         </modExtensions>
         <exclusionTags>

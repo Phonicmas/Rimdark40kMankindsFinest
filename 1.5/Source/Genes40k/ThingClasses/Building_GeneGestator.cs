@@ -39,8 +39,10 @@ namespace Genes40k
         private Effecter progressBar;
 
         private static readonly Texture2D CancelIcon = ContentFinder<Texture2D>.Get("UI/Designators/Cancel");
+        
+        private static readonly Texture2D EjectIcon = ContentFinder<Texture2D>.Get("UI/Gizmos/BEWH_EjectMatrixIcon");
 
-        private static readonly Texture2D StartIcon = ContentFinder<Texture2D>.Get("UI/Designators/Cancel");
+        private static readonly Texture2D StartIcon = ContentFinder<Texture2D>.Get("UI/Gizmos/BEWH_GestationStartIcon");
 
         private static readonly Texture2D EmptyMaterialIcon = ContentFinder<Texture2D>.Get("Things/Item/GeneMatrix/BEWH_GeneMatrix_Empty");
 
@@ -304,7 +306,7 @@ namespace Genes40k
                 var command_Action2 = new Command_Action();
                 command_Action2.defaultLabel = "BEWH.EjectGeneMatrix".Translate(containedMatrix.Label);
                 command_Action2.defaultDesc = "BEWH.EjectGeneMatrixDesc".Translate(containedMatrix.Label);
-                command_Action2.icon = CancelIcon;
+                command_Action2.icon = EjectIcon;
                 command_Action2.activateSound = SoundDefOf.Designate_Cancel;
                 command_Action2.action = delegate
                 {
