@@ -76,11 +76,11 @@
     <description>This gestator is able to create implant ready geneseed vials, by transforming genetic matrices.</description>
     <thingClass>Genes40k.Building_GeneGestator</thingClass>
     <containedPawnsSelectable>true</containedPawnsSelectable>
+    <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>50</pathCost>
     <fillPercent>0.4</fillPercent>
     <castEdgeShadows>true</castEdgeShadows>
-    <drawerType>MapMeshAndRealTime</drawerType>
     <tickerType>Normal</tickerType>
     <graphicData>
       <texPath>Things/Building/GeneseedGestator/BEWH_GeneseedGestator</texPath>
