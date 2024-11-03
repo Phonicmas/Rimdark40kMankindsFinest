@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Psycasts Expanded</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defName = "BEWH_MakeCustodesMatrix"]/ingredients</xpath>
+					<value>
+						<li>
+                            <filter>
+                                <thingDefs>
+                                    <li>VPE_Eltex</li>
+                                </thingDefs>
+                            </filter>
+                            <count>50</count>
+                        </li>
+					</value>
+				</li>
+
+
+                <li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defName = "BEWH_MakePrimarchMatrix"]/ingredients</xpath>
+					<value>
+						<li>
+                            <filter>
+                                <thingDefs>
+                                    <li>VPE_Eltex</li>
+                                </thingDefs>
+                            </filter>
+                            <count>200</count>
+                        </li>
+					</value>
+				</li>
+                
+			</operations>
+		</match>
+	</Operation>
+</Patch>
