@@ -177,6 +177,9 @@
       <drawSize>(2, 2.5)</drawSize>
       <drawOffset>(0, 0, 0.7)</drawOffset>
     </graphicData>
+    <uiIconOffset>(0, 0.05)</uiIconOffset>
+    <uiIconScale>0.76</uiIconScale>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
     <defaultPlacingRot>North</defaultPlacingRot>
     <size>(1, 1)</size>
     <researchPrerequisites>
