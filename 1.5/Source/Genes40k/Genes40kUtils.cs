@@ -74,14 +74,14 @@ namespace Genes40k
             return ThunderWarriorGenes.All(geneDef => pawn.genes.HasActiveGene(geneDef));
         }
 
-        public static bool IsSpaceMarine(Pawn pawn)
+        public static bool IsFirstborn(Pawn pawn)
         {
             return SpaceMarineGenes.All(geneDef => pawn.genes.HasActiveGene(geneDef));
         }
 
         public static bool IsPrimaris(Pawn pawn)
         {
-            return PrimarisGenes.All(geneDef => pawn.genes.HasActiveGene(geneDef)) && IsSpaceMarine(pawn);
+            return PrimarisGenes.All(geneDef => pawn.genes.HasActiveGene(geneDef)) && IsFirstborn(pawn);
         }
 
         public static bool IsCustodes(Pawn pawn)
@@ -97,7 +97,7 @@ namespace Genes40k
 
         public static bool IsSuperHuman(Pawn pawn)
         {
-            return (IsThunderWarrior(pawn) || IsSpaceMarine(pawn) || IsPrimaris(pawn) || IsCustodes(pawn) || IsPrimarch(pawn));
+            return (IsThunderWarrior(pawn) || IsFirstborn(pawn) || IsPrimaris(pawn) || IsCustodes(pawn) || IsPrimarch(pawn));
         }
 
 

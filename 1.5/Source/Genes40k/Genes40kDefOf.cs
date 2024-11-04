@@ -84,7 +84,6 @@ namespace Genes40k
         public static ResearchProjectDef BEWH_GeneseedExtractionPrimaris;
 
         //Heddifs
-        public static HediffDef BEWH_SecondGeneseedHarvest;
         public static HediffDef BEWH_PsychicComa;
         public static HediffDef BEWH_PsychicConnectionSevered;
         public static HediffDef BEWH_PsychicCrafting;

@@ -13,59 +13,73 @@ namespace Genes40k
             var corpse = target.Thing as Corpse;
             var pawn = corpse.InnerPawn;
 
+            var progenoidGlands = (Gene_ProgenoidGlands)pawn.genes.GetGene(Genes40kDefOf.BEWH_ProgenoidGlands);
+            
+            if (!progenoidGlands.HarvestSecondProgenoidGland())
+            {
+                return;
+            }
+            
             Genes40kUtils.MakeGeneseedVial(pawn, Genes40kUtils.IsPrimaris(pawn));
-
-            pawn.health.AddHediff(Genes40kDefOf.BEWH_SecondGeneseedHarvest, null);
-
+            
             base.Apply(target, dest);
         }
 
         public override bool Valid(LocalTargetInfo target, bool throwMessages = false)
         {
             base.Valid(target, throwMessages);
-            if (throwMessages)
-            {
-
-            }
-            if (!(target.Thing is Corpse))
+            if (!Genes40kDefOf.BEWH_GeneseedExtractionFirstborn.IsFinished)
             {
                 return false;
             }
-            var corpse = target.Thing as Corpse;
-
-            if (corpse.InnerPawn.genes == null || !corpse.InnerPawn.genes.HasActiveGene(Genes40kDefOf.BEWH_ProgenoidGlands) || corpse.InnerPawn.health.hediffSet.HasHediff(Genes40kDefOf.BEWH_SecondGeneseedHarvest) || !Genes40kDefOf.BEWH_GeneseedExtractionFirstborn.IsFinished)
+            if (!(target.Thing is Corpse corpse))
             {
                 return false;
             }
-            return !corpse.InnerPawn.genes.HasActiveGene(Genes40kDefOf.BEWH_BelisarianFurnace) || Genes40kDefOf.BEWH_GeneseedExtractionPrimaris.IsFinished;
+            if (corpse.InnerPawn.genes == null)
+            {
+                return false;
+            }
+            if (Genes40kUtils.IsPrimaris(corpse.InnerPawn) && !Genes40kDefOf.BEWH_GeneseedExtractionPrimaris.IsFinished)
+            {
+                return false;
+            }
+            if (!corpse.InnerPawn.genes.HasActiveGene(Genes40kDefOf.BEWH_ProgenoidGlands))
+            {
+                return false;
+            }
+
+            return !((Gene_ProgenoidGlands)corpse.InnerPawn.genes.GetGene(Genes40kDefOf.BEWH_ProgenoidGlands)).SecondProgenoidGlandHarvested;
         }
 
         public override string ExtraLabelMouseAttachment(LocalTargetInfo target)
         {
-            if (target.Thing != null && target.Thing is Corpse corpse && corpse.InnerPawn != null)
+            if (!(target.Thing is Corpse corpse) || corpse.InnerPawn == null)
             {
-                if (corpse.InnerPawn.genes == null)
-                {
-                    return null;
-                }
-                if (!Genes40kDefOf.BEWH_GeneseedExtractionFirstborn.IsFinished)
-                {
-                    return "BEWH.SMGeneseedExtractionNotResearched".Translate();
-                }
-                if (!corpse.InnerPawn.genes.HasActiveGene(Genes40kDefOf.BEWH_ProgenoidGlands))
-                {
-                    return "BEWH.NoProgenoidGlands".Translate();
-                }
-                if (corpse.InnerPawn.health.hediffSet.HasHediff(Genes40kDefOf.BEWH_SecondGeneseedHarvest))
-                {
-                    return "BEWH.SecondaryGlandsAlreadyHarvested".Translate();
-                }
-                if (corpse.InnerPawn.genes.HasActiveGene(Genes40kDefOf.BEWH_BelisarianFurnace) && !Genes40kDefOf.BEWH_GeneseedExtractionPrimaris.IsFinished)
-                {
-                    return "BEWH.PMGeneseedExtractionNotResearched".Translate();
-                }
-
+                return null;
             }
+            
+            if (corpse.InnerPawn.genes == null)
+            {
+                return null;
+            }
+            if (!Genes40kDefOf.BEWH_GeneseedExtractionFirstborn.IsFinished)
+            {
+                return "BEWH.SMGeneseedExtractionNotResearched".Translate();
+            }
+            if (Genes40kUtils.IsPrimaris(corpse.InnerPawn) && !Genes40kDefOf.BEWH_GeneseedExtractionPrimaris.IsFinished)
+            {
+                return "BEWH.PMGeneseedExtractionNotResearched".Translate();
+            }
+            if (!corpse.InnerPawn.genes.HasActiveGene(Genes40kDefOf.BEWH_ProgenoidGlands))
+            {
+                return "BEWH.NoProgenoidGlands".Translate();
+            }
+            if (corpse.InnerPawn.genes.GetGene(Genes40kDefOf.BEWH_ProgenoidGlands) is Gene_ProgenoidGlands progenoidGlands && progenoidGlands.SecondProgenoidGlandHarvested)
+            {
+                return "BEWH.SecondaryGlandsAlreadyHarvested".Translate();
+            }
+            
             return null;
         }
 

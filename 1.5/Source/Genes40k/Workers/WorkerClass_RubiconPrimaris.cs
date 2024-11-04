@@ -1,10 +1,11 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
+using System.Linq;
 using Verse;
 
 namespace Genes40k
 {
-    public class WorkerClass_GeneProgenoidRemovalBase : Recipe_Surgery
+    public class WorkerClass_RubiconPrimaris : Recipe_Surgery
     {
         public override bool AvailableOnNow(Thing thing, BodyPartRecord part = null)
         {
@@ -12,15 +13,13 @@ namespace Genes40k
             {
                 return false;
             }
-            
-            if (pawn.genes == null || !pawn.genes.HasActiveGene(Genes40kDefOf.BEWH_ProgenoidGlands))
+
+            if (pawn.genes == null)
             {
                 return false;
             }
 
-            if (!(pawn.genes.GetGene(Genes40kDefOf.BEWH_ProgenoidGlands) is Gene_ProgenoidGlands progenoidGlands)) return false;
-
-            return progenoidGlands.CanHarvestFirstProgenoidGland();
+            return Genes40kUtils.IsFirstborn(pawn) && !Genes40kUtils.IsPrimaris(pawn);
         }
 
         public override void ApplyOnPawn(Pawn pawn, BodyPartRecord part, Pawn billDoer, List<Thing> ingredients, Bill bill)
@@ -32,19 +31,21 @@ namespace Genes40k
                     return;
                 }
                 TaleRecorder.RecordTale(TaleDefOf.DidSurgery, billDoer, pawn);
+                if (PawnUtility.ShouldSendNotificationAbout(pawn) || PawnUtility.ShouldSendNotificationAbout(billDoer))
+                {
+                    var text = (recipe.successfullyRemovedHediffMessage.NullOrEmpty() ? ((string)"MessageSuccessfullyRemovedHediff".Translate(billDoer.LabelShort, pawn.LabelShort, recipe.removesHediff.label.Named("HEDIFF"), billDoer.Named("SURGEON"), pawn.Named("PATIENT"))) : ((string)recipe.successfullyRemovedHediffMessage.Formatted(billDoer.LabelShort, pawn.LabelShort)));
+                    Messages.Message(text, pawn, MessageTypeDefOf.PositiveEvent);
+                }
             }
-            
             OnSurgerySuccess(pawn, part, billDoer, ingredients, bill);
         }
 
         protected override void OnSurgerySuccess(Pawn pawn, BodyPartRecord part, Pawn billDoer, List<Thing> ingredients, Bill bill)
         {
-            var progenoidGlands = (Gene_ProgenoidGlands)pawn.genes.GetGene(Genes40kDefOf.BEWH_ProgenoidGlands);
-            if (!progenoidGlands.HarvestFirstProgenoidGland())
+            foreach (var gene in Genes40kUtils.PrimarisGenes.Where(gene => !pawn.genes.HasActiveGene(gene)))
             {
-                return;
+                pawn.genes.AddGene(gene, true);
             }
-            Genes40kUtils.MakeGeneseedVial(pawn, Genes40kUtils.IsPrimaris(pawn));
         }
 
     }

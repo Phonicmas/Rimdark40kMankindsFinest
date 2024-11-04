@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Stasis Resurrection -->
+    <RecipeDef ParentName="SurgeryFlesh">
+        <defName>BEWH_StasisWake</defName>
+        <label>resurrect from stasis</label>
+        <description>Ressurects pawn from self-induced stasis</description>
+        <workerClass>Recipe_RemoveHediff</workerClass>
+        <jobString>resurrecting {0} from stasis</jobString>
+        <successfullyRemovedHediffMessage>{0} has successfully awoken {1} from stasis.</successfullyRemovedHediffMessage>
+        <workAmount>2200</workAmount>
+        <hideBodyPartNames>true</hideBodyPartNames>
+        <removesHediff>BEWH_Sus_anMembraneStasis</removesHediff>
+        <targetsBodyPart>false</targetsBodyPart>
+        <surgerySuccessChanceFactor>1</surgerySuccessChanceFactor>
+        <researchPrerequisite>BEWH_StasisResurrection</researchPrerequisite>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>MedicineUltratech</li>
+                    </thingDefs>
+                </filter>
+                <count>3</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>14</Medicine>
+        </skillRequirements>
+    </RecipeDef>
+
+    <!-- Rubicon Surgery -->
+    <RecipeDef ParentName="SurgeryFlesh">
+        <defName>BEWH_RubiconSurgery</defName>
+        <label>rubicon surgery</label>
+        <description>Extensive surgery to rebirth a Firstborn as a Primaris</description>
+        <workerClass>Genes40k.WorkerClass_RubiconPrimaris</workerClass>
+        <jobString>rebirthing {0} into a Primaris</jobString>
+        <successfullyRemovedHediffMessage>{1} has been reborn as a Primaris.</successfullyRemovedHediffMessage>
+        <workAmount>5000</workAmount>
+        <hideBodyPartNames>true</hideBodyPartNames>
+        <targetsBodyPart>false</targetsBodyPart>
+        <surgerySuccessChanceFactor>0.5</surgerySuccessChanceFactor>
+        <researchPrerequisite>BEWH_RubiconSurgery</researchPrerequisite>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>MedicineUltratech</li>
+                    </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>BEWH_GeneseedVialPrimaris</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>16</Medicine>
+        </skillRequirements>
+    </RecipeDef>
+
+</Defs>

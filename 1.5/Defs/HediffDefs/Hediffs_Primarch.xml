@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
+	<!-- Leman Russ - Denied Witch-->
 	<HediffDef>
 		<defName>BEWH_DeniedWitch</defName>
 		<label>Denied Witch</label>

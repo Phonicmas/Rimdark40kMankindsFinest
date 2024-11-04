@@ -1,32 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-	<!-- Progenoid Gland -->
-	<HediffDef>
-		<defName>BEWH_ProgenoidGlandsGrowth</defName>
-		<label>progenoid glands</label>
-		<hediffClass>HediffWithComps</hediffClass>
-		<description>Your progenoid glands are currently producing germ cells for new gene-seeds.</description>
-		<everCurableByItem>false</everCurableByItem>
-		<initialSeverity>0.004 </initialSeverity>
-		<maxSeverity>1</maxSeverity>
-		<isBad>false</isBad>
-		<stages>
-			<li>
-				<label>Growing</label>
-			</li>
-			<li>
-				<minSeverity>1</minSeverity>
-				<label>Done growing</label>
-			</li>
-		</stages>
-		<comps>
-			<li Class="HediffCompProperties_SeverityPerDay">
-				<severityPerDay>0.0166</severityPerDay>
-			</li>
-		</comps>
-	</HediffDef>
-
 	<!-- Sus-an Membrane Stasis -->
 	<HediffDef>
 		<defName>BEWH_Sus_anMembraneStasis</defName>

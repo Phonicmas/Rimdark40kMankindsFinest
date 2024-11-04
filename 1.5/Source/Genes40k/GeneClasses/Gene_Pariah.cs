@@ -38,7 +38,7 @@ namespace Genes40k
             }
             foreach (var pawn in pawns)
             {
-                if (pawn == null || p == pawn || !p.RaceProps.Humanlike || pawn.needs == null || pawn.needs.mood == null || pawn.needs.mood.thoughts == null || pawn.genes == null || Genes40kUtils.IsPariah(pawn))
+                if (pawn == null || p == pawn || !p.RaceProps.Humanlike || pawn.needs?.mood?.thoughts == null || pawn.genes == null || Genes40kUtils.IsPariah(pawn))
                 {
                     continue;
                 }

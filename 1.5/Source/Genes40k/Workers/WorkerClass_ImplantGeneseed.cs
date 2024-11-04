@@ -20,6 +20,8 @@ namespace Genes40k
             }
             var list = pawn.Map.listerThings.ThingsOfDef(recipe.GetModExtension<DefModExtension_GeneseedVialRecipe>().geneseedVial);
             
+            //might need add here to also search geneseed vial storage for some.
+            
             return !list.Any() || Enumerable.Any(list, item => !item.IsForbidden(pawn) && !item.Position.Fogged(pawn.Map));
         }
 
@@ -89,10 +91,8 @@ namespace Genes40k
                 pawn.Kill(null);
                 return;
             }
-            else
-            {
-                pawn.genes.SetXenotypeDirect(defMod.xenotype);
-            }
+            
+            pawn.genes.SetXenotypeDirect(defMod.xenotype);
 
             if (defMod.overrideXenotypeGenesGiven)
             {

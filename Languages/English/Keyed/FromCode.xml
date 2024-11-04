@@ -88,15 +88,23 @@
   <BEWH.LivingSaintReturn>Living Saint Returns</BEWH.LivingSaintReturn>
   <BEWH.LivingSaintReturnMessage>Though thought dead, {0}'s miracles keeps coming. It seem {0} sensed our situation from their afterlife and manifested themselves to help</BEWH.LivingSaintReturnMessage>
 
-  <!-- Misc-->
-  <!-- Ideology-->
-  <BEWH.MustBeSpaceMarine>Must be a Space Marine</BEWH.MustBeSpaceMarine>
-  <BEWH.ItemDeterioratingNotInContainer>not in safe container</BEWH.ItemDeterioratingNotInContainer>
-
+  <!-- Progenoid Gland -->
   <BEWH.NoProgenoidGlands>Does not have any progenoid glands</BEWH.NoProgenoidGlands>
   <BEWH.SecondaryGlandsAlreadyHarvested>Secondary progenoid glands already harvested</BEWH.SecondaryGlandsAlreadyHarvested>
   <BEWH.SMGeneseedExtractionNotResearched>Space Marine geneseed extraction not researched</BEWH.SMGeneseedExtractionNotResearched>
   <BEWH.PMGeneseedExtractionNotResearched>Primaris Marine geneseed extraction not researched</BEWH.PMGeneseedExtractionNotResearched>
+
+  <BEWH.FirstGeneseedsHarvested>Geneseeds have already been harvested.</BEWH.FirstGeneseedsHarvested>
+  <BEWH.FirstGeneseedsHarvestable>Geneseeds ready to be harvested.</BEWH.FirstGeneseedsHarvestable>
+  <BEWH.FirstGeneseedsHarvestableIn>Geneseeds can be harvested in {0} days.</BEWH.FirstGeneseedsHarvestableIn>
+
+  <BEWH.SecondGeneseedsHarvested>Geneseeds have already been harvested.</BEWH.SecondGeneseedsHarvested>
+  <BEWH.SecondGeneseedsHarvestable>Geneseeds ready to be harvested.</BEWH.SecondGeneseedsHarvestable>
+
+  <!-- Misc-->
+  <!-- Ideology-->
+  <BEWH.MustBeSpaceMarine>Must be a Space Marine</BEWH.MustBeSpaceMarine>
+  <BEWH.ItemDeterioratingNotInContainer>not in safe container</BEWH.ItemDeterioratingNotInContainer>
 
   <BEWH.CurrentToggle>Warp shield is currently toggled {0}</BEWH.CurrentToggle>
   <BEWH.On>on</BEWH.On>

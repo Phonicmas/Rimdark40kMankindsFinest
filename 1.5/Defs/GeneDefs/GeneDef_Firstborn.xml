@@ -496,6 +496,7 @@
         <iconPath>UI/Genes/Firstborn/BEWH_Firstborn_ProgenoidsIcon</iconPath>
         <displayOrderInCategory>18</displayOrderInCategory>
         <prerequisite>BEWH_BetchersGland</prerequisite>
+        <geneClass>Genes40k.Gene_ProgenoidGlands</geneClass>
         <makeImmuneTo>
             <li>Flu</li>
             <li>Malaria</li>
@@ -533,7 +534,6 @@
         <minAgeActive>18</minAgeActive>
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
-                <hediffToWholeBody>BEWH_ProgenoidGlandsGrowth</hediffToWholeBody>
                 <diseaseProgressionFactor>0.55</diseaseProgressionFactor>
             </li>
         </modExtensions>

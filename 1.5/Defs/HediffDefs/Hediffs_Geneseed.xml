@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-	<!-- 2nd Geneseed Harvested -->
-	<HediffDef>
-		<defName>BEWH_SecondGeneseedHarvest</defName>
-		<label>secondary geneseed harvested</label>
-		<description>This pawn has had their second geneseed harvested after death.</description>
-		<scenarioCanAdd>false</scenarioCanAdd>
-		<everCurableByItem>false</everCurableByItem>
-		<maxSeverity>1.0</maxSeverity>
-		<isBad>false</isBad>
-	</HediffDef>
-
 	<!-- Warp Shield-->
 	<HediffDef>
 		<defName>BEWH_WarpShield</defName>
