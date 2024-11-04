@@ -12,6 +12,7 @@
         <customEffectDescriptions>
             <li>15% decrease to geneseed implantation failure chance.</li>
             <li>15% decrease to geneseed implantation failure chance cap.</li>
+            <li>Increased chance for rubicon surgery survival.</li>
         </customEffectDescriptions>
         <!-- Maybe Add More? -->
         <modExtensions>
@@ -19,6 +20,7 @@
             <li Class="Genes40k.DefModExtension_GeneseedPurity">
                 <additionalChanceOffset>-15</additionalChanceOffset>
                 <additionalChanceCapOffset>-15</additionalChanceCapOffset>
+                <rubiconAdditionalChanceOffset>0.4</rubiconAdditionalChanceOffset>
             </li>
         </modExtensions>
     </GeneDef>

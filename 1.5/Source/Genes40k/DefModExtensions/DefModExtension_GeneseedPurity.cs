@@ -6,5 +6,6 @@ namespace Genes40k
     {
         public int additionalChanceOffset = 0;
         public int additionalChanceCapOffset = 0;
+        public int rubiconAdditionalChanceOffset = 0;
     }
 }

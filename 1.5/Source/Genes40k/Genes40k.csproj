@@ -70,6 +70,7 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_BlockedPsycasting.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_MoreArtJoy.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_FirstProgenoidGlandProgress.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_RubiconSurgeryChanceIncrease.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_SecondProgenoidGlandProgress.cs" />
     <Compile Include="ThingClasses\Building_GeneGestator.cs" />
     <Compile Include="ThingClasses\Building_GeneTable.cs" />

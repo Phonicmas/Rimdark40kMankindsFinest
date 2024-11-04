@@ -73,9 +73,6 @@ namespace Genes40k
         public static GeneDef BEWH_LivingSaintBeingOfFaith;
         public static GeneDef BEWH_LivingSaintHolyRadiance;
 
-        //Chapter specific genes
-        public static GeneDef BEWH_ChapterXVThousandSons;
-
         //Xenotype
         public static XenotypeDef BEWH_LivingSaint;
 
@@ -119,6 +116,9 @@ namespace Genes40k
 
         //ThoughtDefs
         public static ThoughtDef BEWH_LivingSaintHolyRadianceThought;
+
+        //RecipeDefs
+        public static RecipeDef BEWH_RubiconSurgery;
 
         static Genes40kDefOf()
         {

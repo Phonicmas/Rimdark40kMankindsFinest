@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Linq;
+using System.Text;
 using HarmonyLib;
 using RimWorld;
 using Verse;
@@ -6,35 +7,23 @@ using Verse.AI;
 
 namespace Genes40k
 {
-    [HarmonyPatch(typeof(Pawn), "GetInspectString")]
-    public class FirstProgenoidGlandProgress
+    [HarmonyPatch(typeof(SurgeryOutcomeEffectDef), "GetQuality")]
+    public class RubiconSurgeryChanceIncrease
     {
-        public static void Postfix(ref string __result, Pawn __instance)
+        public static void Postfix(ref float __result, RecipeDef recipe, Pawn patient)
         {
-            if (__instance.genes == null || !__instance.genes.HasActiveGene(Genes40kDefOf.BEWH_ProgenoidGlands))
+            if (recipe != Genes40kDefOf.BEWH_RubiconSurgery)
             {
                 return;
             }
-            
-            var stringBuilder = new StringBuilder(__result);
-
-            var progenoidGlands = (Gene_ProgenoidGlands)__instance.genes.GetGene(Genes40kDefOf.BEWH_ProgenoidGlands);
-
-            stringBuilder.AppendLine("\n");
-            
-            if (progenoidGlands.FirstProgenoidGlandHarvested)
+            if (patient.genes == null)
             {
-                stringBuilder.AppendLine("BEWH.FirstGeneseedsHarvested".Translate());
+                return;
             }
-            else
-            {
-                float ticksLeft = progenoidGlands.TicksUntilHarvestable;
-                stringBuilder.AppendLine(ticksLeft > 0
-                    ? "BEWH.FirstGeneseedsHarvestableIn".Translate((ticksLeft / 60000).ToString("0.00"))
-                    : "BEWH.FirstGeneseedsHarvestable".Translate());
-            }
+
+            var extraOffset = patient.genes.GenesListForReading.Where(gene => gene.def.HasModExtension<DefModExtension_GeneseedPurity>()).Sum(gene => gene.def.GetModExtension<DefModExtension_GeneseedPurity>().rubiconAdditionalChanceOffset);
             
-            __result = stringBuilder.ToString().TrimEndNewlines();
+            __result += extraOffset;
         }
     }
 }
