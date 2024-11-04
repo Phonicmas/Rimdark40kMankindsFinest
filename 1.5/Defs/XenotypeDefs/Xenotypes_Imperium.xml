@@ -33,6 +33,7 @@
     <descriptionShort>A Living Saint is an extraordinarily devout servant of the Emperor of Mankind, who displays seemingly miraculous, supernatural abilities derived from potent faith in the God-Emperor during his or her lifetime.</descriptionShort>
     <iconPath>UI/Xenotypes/BEWH_LivingSaint</iconPath>
     <combatPowerFactor>5</combatPowerFactor>
+    <canGenerateAsCombatant>false</canGenerateAsCombatant>
     <genes>
       <li>BEWH_LivingSaintBeingOfFaith</li>
       <li>BEWH_LivingSaintDivineFlight</li>

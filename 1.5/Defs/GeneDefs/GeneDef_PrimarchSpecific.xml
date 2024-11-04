@@ -3,10 +3,10 @@
 
     <!-- Chapter I - Lion El'Jonson -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
-        <defName>BEWH_PrimarchILionElJonson</defName>
+        <defName>BEWH_PrimarchSpecificGeneI</defName>
         <label>Lion El'Jonson</label>
         <description>The genetic material of Lion El'Jonson.</description>
-        <iconPath>UI/Genes/BEWH_MPrimarchXVMagnusTheRed</iconPath>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>401</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
@@ -14,12 +14,12 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chapter I - ??? -->
+    <!-- Chapter II - ??? -->
     <!--<GeneDef ParentName="BEWH_PrimarchSpecific">
-        <defName>BEWH_PrimarchII</defName>
+        <defName>BEWH_PrimarchSpecificGeneII</defName>
         <label>???</label>
         <description>The genetic material of ???</description>
-        <iconPath>UI/Genes/BEWH_MPrimarchXVMagnusTheRed</iconPath>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>402</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
@@ -29,10 +29,10 @@
 
     <!-- Chapter III - Fulgrim -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
-        <defName>BEWH_PrimarchIIIFulgrim</defName>
+        <defName>BEWH_PrimarchSpecificGeneIII</defName>
         <label>Fulgrim</label>
         <description>The genetic material of Fulgrim.</description>
-        <iconPath>UI/Genes/BEWH_MPrimarchXVMagnusTheRed</iconPath>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>403</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <statFactors>
@@ -67,10 +67,10 @@
 
     <!-- Chapter IV - Perturabo -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
-        <defName>BEWH_PrimarchIVPerturabo</defName>
+        <defName>BEWH_PrimarchSpecificGeneIV</defName>
         <label>Perturabo</label>
         <description>The genetic material of Perturabo.</description>
-        <iconPath>UI/Genes/BEWH_MPrimarchXVMagnusTheRed</iconPath>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>404</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
@@ -80,10 +80,10 @@
 
     <!-- Chapter V - Jaghatai Khan -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
-        <defName>BEWH_PrimarchVJaghataiKhan</defName>
+        <defName>BEWH_PrimarchSpecificGeneV</defName>
         <label>Jaghatai Khan</label>
         <description>The genetic material of Jaghatai Khan.</description>
-        <iconPath>UI/Genes/BEWH_MPrimarchXVMagnusTheRed</iconPath>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>405</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
@@ -93,10 +93,10 @@
 
     <!-- Chapter VI - Leman Russ -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
-        <defName>BEWH_PrimarchVILemanRuss</defName>
+        <defName>BEWH_PrimarchSpecificGeneVI</defName>
         <label>Leman Russ</label>
         <description>The genetic material of Leman Russ.</description>
-        <iconPath>UI/Genes/BEWH_MPrimarchXVMagnusTheRed</iconPath>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>406</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <abilities>
@@ -114,10 +114,10 @@
 
     <!-- Chapter VII - Rogal Dorn -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
-        <defName>BEWH_PrimarchVIIRogalDorn</defName>
+        <defName>BEWH_PrimarchSpecificGeneVII</defName>
         <label>Rogal Dorn</label>
         <description>The genetic material of Rogal Dorn</description>
-        <iconPath>UI/Genes/BEWH_MPrimarchXVMagnusTheRed</iconPath>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>407</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
@@ -127,10 +127,10 @@
 
     <!-- Chapter VIII - Konrad Curze -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
-        <defName>BEWH_PrimarchVIIIKonradCurze</defName>
+        <defName>BEWH_PrimarchSpecificGeneVIII</defName>
         <label>Conrad Curze</label>
         <description>The genetic material of Conrad Curze.</description>
-        <iconPath>UI/Genes/BEWH_MPrimarchXVMagnusTheRed</iconPath>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>408</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
@@ -140,10 +140,10 @@
 
     <!-- Chapter IX - Sanguinius -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
-        <defName>BEWH_PrimarchIXSanguinius</defName>
+        <defName>BEWH_PrimarchSpecificGeneIX</defName>
         <label>sanguinius</label>
         <description>The genetic material of Sanguinius, when implanted, grows a set of featered wings, allow for greater speed and flight.</description>
-        <iconPath>UI/Genes/BEWH_MPrimarchIXSanguinius</iconPath>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificIX</iconPath>
         <displayOrderInCategory>409</displayOrderInCategory>
         <customEffectDescriptions>
             <li>Ignores speed penalty from obstacles.</li>
@@ -206,10 +206,10 @@
 
     <!-- Chapter X - Ferrus Manus -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
-        <defName>BEWH_PrimarchXFerrusManus</defName>
+        <defName>BEWH_PrimarchSpecificGeneX</defName>
         <label>Ferrus Manus</label>
         <description>The genetic material of Ferrus Manus.</description>
-        <iconPath>UI/Genes/BEWH_MPrimarchXVMagnusTheRed</iconPath>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>410</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
@@ -218,24 +218,24 @@
     </GeneDef>
 
     <!-- Chapter XI - ??? -->
-    <GeneDef ParentName="BEWH_PrimarchSpecific">
-        <defName>BEWH_PrimarchXI</defName>
+    <!--<GeneDef ParentName="BEWH_PrimarchSpecific">
+        <defName>BEWH_PrimarchSpecificGeneXI</defName>
         <label>???</label>
         <description>The genetic material of ???</description>
-        <iconPath>UI/Genes/BEWH_MPrimarchXVMagnusTheRed</iconPath>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>411</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
         </modExtensions>
-    </GeneDef>
+    </GeneDef>-->
 
     <!-- Chapter XII - Angron -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
-        <defName>BEWH_PrimarchXIIAngron</defName>
+        <defName>BEWH_PrimarchSpecificGeneXII</defName>
         <label>Angron</label>
         <description>The genetic material of Angron.</description>
-        <iconPath>UI/Genes/BEWH_MPrimarchXVMagnusTheRed</iconPath>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>412</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <forcedTraits>
@@ -263,10 +263,10 @@
 
     <!-- Chapter XIII - Roboute Guilliman -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
-        <defName>BEWH_PrimarchXIIIRobouteGuilliman</defName>
+        <defName>BEWH_PrimarchSpecificGeneXIII</defName>
         <label>Roboute Guilliman</label>
         <description>The genetic material of Roboute Guilliman.</description>
-        <iconPath>UI/Genes/BEWH_MPrimarchXVMagnusTheRed</iconPath>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>413</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <forcedTraits>
@@ -296,10 +296,10 @@
 
     <!-- Chapter XIV - Mortarion -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
-        <defName>BEWH_PrimarchXIVMortarion</defName>
+        <defName>BEWH_PrimarchSpecificGeneXIV</defName>
         <label>Mortarion</label>
         <description>The genetic material of Mortarion.</description>
-        <iconPath>UI/Genes/BEWH_MPrimarchXVMagnusTheRed</iconPath>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>414</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <statFactors>
@@ -321,10 +321,10 @@
 
     <!-- Chapter XV - Magnus the Red -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
-        <defName>BEWH_PrimarchXVMagnusTheRed</defName>
+        <defName>BEWH_PrimarchSpecificGeneXV</defName>
         <label>Magnus the Red</label>
         <description>The genetic material of Magnus the Red, when implanted, greatly improves psychic capabilities.</description>
-        <iconPath>UI/Genes/BEWH_MPrimarchXVMagnusTheRed</iconPath>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>415</displayOrderInCategory>
         <geneClass>Core40k.Gene_AddRandomGeneAndOrTraitByWeight</geneClass>
         <statFactors>
@@ -353,12 +353,12 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chapter XVI - Horus -->
+    <!-- Chapter XVI - Horus Lupercal -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
-        <defName>BEWH_PrimarchXVIHorus</defName>
-        <label>Horus</label>
-        <description>The genetic material of Horus.</description>
-        <iconPath>UI/Genes/BEWH_MPrimarchXVMagnusTheRed</iconPath>
+        <defName>BEWH_PrimarchSpecificGeneXVI</defName>
+        <label>Horus Lupercal</label>
+        <description>The genetic material of Horus Lupercal.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>416</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <statFactors>
@@ -383,10 +383,10 @@
 
     <!-- Chapter XVII - Lorgar -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
-        <defName>BEWH_PrimarchXVIILorgar</defName>
+        <defName>BEWH_PrimarchSpecificGeneXVII</defName>
         <label>Lorgar</label>
         <description>The genetic material of Lorgar.</description>
-        <iconPath>UI/Genes/BEWH_MPrimarchXVMagnusTheRed</iconPath>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>410</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
@@ -396,10 +396,10 @@
 
     <!-- Chapter XVIII - Vulkan -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
-        <defName>BEWH_PrimarchXVIIIVulkan</defName>
+        <defName>BEWH_PrimarchSpecificGeneXVIII</defName>
         <label>Vulkan</label>
         <description>The genetic material of Vulkan.</description>
-        <iconPath>UI/Genes/BEWH_MPrimarchXVMagnusTheRed</iconPath>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>418</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
@@ -407,12 +407,12 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chapter XIX - Corax -->
+    <!-- Chapter XIX - Corvus Corax -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
-        <defName>BEWH_PrimarchXIXCorax</defName>
-        <label>Corax</label>
-        <description>The genetic material of Corax.</description>
-        <iconPath>UI/Genes/BEWH_MPrimarchXVMagnusTheRed</iconPath>
+        <defName>BEWH_PrimarchSpecificGeneXIX</defName>
+        <label>Corvus Corax</label>
+        <description>The genetic material of Corvus Corax.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>419</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
@@ -420,12 +420,12 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chapter XX - Alpharius Omegon -->
+    <!-- Chapter XX - Alpharius/Omegon -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
-        <defName>BEWH_PrimarchXXAlphariusOmegon</defName>
+        <defName>BEWH_PrimarchSpecificGeneXX</defName>
         <label>Alpharius/Omegon</label>
         <description>The genetic material of Alpharius/Omegon.</description>
-        <iconPath>UI/Genes/BEWH_MPrimarchXVMagnusTheRed</iconPath>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>420</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <customEffectDescriptions>

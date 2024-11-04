@@ -130,7 +130,7 @@ PROMOTIONAL MATERIAL IF THEY WERE BLACK
 
 Vulkan: A Perpetual. Burning (HAHA!) passion for crafting. "Kind" trait. Charcoal-black skin, red eyes
 
-Salamanders: Charcoal-black skin, red eyes, high chance of "Kind" trait, bonus to crafting, with a high chance of minor passion in it. 
+Salamanders: Charcoal-black skin, red eyes, high chance of "Kind" trait, bonus to crafting, with a minor passion in it. Heat resistance, some minor boost to darkvision stuff?
 
 # ++++ XIX Legio ++++
 

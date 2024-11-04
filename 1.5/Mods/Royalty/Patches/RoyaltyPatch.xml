@@ -42,7 +42,7 @@
     </Operation>
 
     <Operation Class="PatchOperationAddModExtension">
-        <xpath>Defs/GeneDef[defName = "BEWH_PrimarchXVMagnusTheRed"]</xpath>
+        <xpath>Defs/GeneDef[defName = "BEWH_PrimarchSpecificGeneXV"]</xpath>
         <value>
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <hediffsToBodyParts>

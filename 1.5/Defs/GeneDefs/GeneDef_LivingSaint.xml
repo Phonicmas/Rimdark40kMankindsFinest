@@ -14,12 +14,12 @@
         <defName>BEWH_LivingSaintBeingOfFaith</defName>
         <label>being of faith</label>
         <description>A Living Saint is an extraordinarily devout servant of the Emperor of Mankind, who displays seemingly miraculous, supernatural abilities derived from potent faith in the God-Emperor during his or her lifetime.\nShould the carrier of this gene fall in battle they will vanish, and in time of need, they will return to defend their colony.</description>
-        <iconPath>UI/Genes/BEWH_LivingSaint_BeingOfFaith</iconPath>
+        <iconPath>UI/Genes/LivingSaint/BEWH_LivingSaint_BeingOfFaith</iconPath>
         <displayOrderInCategory>500</displayOrderInCategory>
         <immuneToToxGasExposure>true</immuneToToxGasExposure>
         <geneClass>Genes40k.Gene_LivingSaint</geneClass>
         <customEffectDescriptions>
-            <li>This pawn is truly never lost upon death, they may upon times of great need return to the colony to help.</li>
+            <li>This pawn is truly never lost upon death. They may, upon times of great need, return to the colony to help.</li>
         </customEffectDescriptions>
         <statOffsets>
             <ToxicEnvironmentResistance>3</ToxicEnvironmentResistance>
@@ -79,7 +79,7 @@
         <defName>BEWH_LivingSaintDivineFlight</defName>
         <label>divine flight</label>
         <description>Immense faith have conjured forth ethereal wings of warp energy, resembling that of an angels. These wings allows for short flights.</description>
-        <iconPath>UI/Genes/BEWH_LivingSaint_DivineFlight</iconPath>
+        <iconPath>UI/Genes/LivingSaint/BEWH_LivingSaint_DivineFlight</iconPath>
         <displayOrderInCategory>501</displayOrderInCategory>
         <statFactors>
             <MoveSpeed>1.2</MoveSpeed>
@@ -140,7 +140,7 @@
         <defName>BEWH_LivingSaintSacredRegeneration</defName>
         <label>sacred regeneration</label>
         <description>Immense faith and connection to the warp allows the carrier of this gene to quickly regenerate their wounds.</description>
-        <iconPath>UI/Genes/BEWH_LivingSaint_SacredRegeneration</iconPath>
+        <iconPath>UI/Genes/LivingSaint/BEWH_LivingSaint_SacredRegeneration</iconPath>
         <geneClass>Gene_Clotting</geneClass>
         <displayOrderInCategory>501</displayOrderInCategory>
         <painFactor>0.4</painFactor>
@@ -167,7 +167,7 @@
         <defName>BEWH_LivingSaintFuryOfTheEmperor</defName>
         <label>fury of the emperor</label>
         <description>Filled with the fury of the emperor, carriers of this gene can feel the power of the emperor surge through them as they fight his enemies.</description>
-        <iconPath>UI/Genes/BEWH_LivingSaint_FuryOfTheEmperor</iconPath>
+        <iconPath>UI/Genes/LivingSaint/BEWH_LivingSaint_FuryOfTheEmperor</iconPath>
         <geneClass>Gene_Clotting</geneClass>
         <displayOrderInCategory>501</displayOrderInCategory>
         <statOffsets>
@@ -188,7 +188,7 @@
         <defName>BEWH_LivingSaintMartyrsEndurance</defName>
         <label>martyr's endurance</label>
         <description>Having already died once, carriers of this gene have steeled themselves to damage, greatly reducing incoming damage.</description>
-        <iconPath>UI/Genes/BEWH_LivingSaint_MartyrsEndurance</iconPath>
+        <iconPath>UI/Genes/LivingSaint/BEWH_LivingSaint_MartyrsEndurance</iconPath>
         <displayOrderInCategory>501</displayOrderInCategory>
         <statOffsets>
             <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
@@ -217,7 +217,7 @@
         <defName>BEWH_LivingSaintHolyRadiance</defName>
         <label>holy radiance</label>
         <description>Immense faith have conjured forth an ethereal halo of warp energy, resembling that of an angels. This halo radiates a blissful energy for anyone around them.</description>
-        <iconPath>UI/Genes/BEWH_LivingSaint_HolyRadiance</iconPath>
+        <iconPath>UI/Genes/LivingSaint/BEWH_LivingSaint_HolyRadiance</iconPath>
         <displayOrderInCategory>501</displayOrderInCategory>
         <preventPermanentWounds>true</preventPermanentWounds>
         <statOffsets>

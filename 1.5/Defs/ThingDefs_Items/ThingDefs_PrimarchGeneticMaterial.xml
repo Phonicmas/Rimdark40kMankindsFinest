@@ -33,22 +33,143 @@
     </comps>
   </ThingDef>
 
+  <!-- Chapter I - Lion El'Jonson -->
   <ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
-    <defName>BEWH_PrimarchMaterialXV</defName>
-    <label>primarch material XV - Magnus the Red</label>
-    <description>This containers holds the genetic material of Primarch XI - Magnus the Red.</description>
+    <defName>BEWH_PrimarchMaterialI</defName>
+    <label>primarch material I - Lion El'Jonson</label>
+    <description>This containers holds the genetic material of Primarch I - Lion El'Jonson.</description>
     <graphicData>
-      <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_XI</texPath>
+      <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_I</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <modExtensions>
       <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
       <li Class="Genes40k.DefModExtension_GeneFromMaterial">
-        <addedGene>BEWH_PrimarchXVMagnusTheRed</addedGene>
+        <addedGene>BEWH_PrimarchSpecificGeneI</addedGene>
       </li>
     </modExtensions>
   </ThingDef>
 
+  <!-- Chapter II - ??? -->
+  <!--<ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
+    <defName>BEWH_PrimarchMaterialII</defName>
+    <label>primarch material II - ???</label>
+    <description>This containers holds the genetic material of Primarch II - ???.</description>
+    <graphicData>
+      <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_II</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+      <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+        <addedGene>BEWH_PrimarchSpecificGeneII</addedGene>
+      </li>
+    </modExtensions>
+  </ThingDef>-->
+
+  <!-- Chapter III - Fulgrim -->
+  <ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
+    <defName>BEWH_PrimarchMaterialIII</defName>
+    <label>primarch material III - Fulgrim</label>
+    <description>This containers holds the genetic material of Primarch III - Fulgrim.</description>
+    <graphicData>
+      <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_III</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+      <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+        <addedGene>BEWH_PrimarchSpecificGeneIII</addedGene>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Chapter IV - Perturabo -->
+  <ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
+    <defName>BEWH_PrimarchMaterialIV</defName>
+    <label>primarch material IV - Perturabo</label>
+    <description>This containers holds the genetic material of Primarch IV - Perturabo.</description>
+    <graphicData>
+      <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_IV</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+      <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+        <addedGene>BEWH_PrimarchSpecificGeneIV</addedGene>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Chapter V - Jaghatai Khan -->
+  <ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
+    <defName>BEWH_PrimarchMaterialV</defName>
+    <label>primarch material V - Jaghatai Khan</label>
+    <description>This containers holds the genetic material of Primarch V - Jaghatai Khan.</description>
+    <graphicData>
+      <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_V</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+      <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+        <addedGene>BEWH_PrimarchSpecificGeneV</addedGene>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Chapter VI - Leman Russ -->
+  <ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
+    <defName>BEWH_PrimarchMaterialVI</defName>
+    <label>primarch material VI - Leman Russ</label>
+    <description>This containers holds the genetic material of Primarch VI - Leman Russ.</description>
+    <graphicData>
+      <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_VI</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+      <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+        <addedGene>BEWH_PrimarchSpecificGeneVI</addedGene>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Chapter VII - Rogal Dorn -->
+  <ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
+    <defName>BEWH_PrimarchMaterialVII</defName>
+    <label>primarch material VII - Rogal Dorn</label>
+    <description>This containers holds the genetic material of Primarch VII - Rogal Dorn.</description>
+    <graphicData>
+      <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_VII</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+      <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+        <addedGene>BEWH_PrimarchSpecificGeneVII</addedGene>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Chapter VIII - Konrad Curze -->
+  <ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
+    <defName>BEWH_PrimarchMaterialVIII</defName>
+    <label>primarch material VIII - Konrad Curze</label>
+    <description>This containers holds the genetic material of Primarch VIII - Konrad Curze.</description>
+    <graphicData>
+      <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_VIII</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+      <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+        <addedGene>BEWH_PrimarchSpecificGeneVIII</addedGene>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Chapter IX - Sanguinius -->
   <ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
     <defName>BEWH_PrimarchMaterialIX</defName>
     <label>primarch material IX - Sanguinius</label>
@@ -60,7 +181,194 @@
     <modExtensions>
       <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
       <li Class="Genes40k.DefModExtension_GeneFromMaterial">
-        <addedGene>BEWH_PrimarchIXSanguinius</addedGene>
+        <addedGene>BEWH_PrimarchSpecificGeneIX</addedGene>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Chapter X - Ferrus Manus -->
+  <ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
+    <defName>BEWH_PrimarchMaterialX</defName>
+    <label>primarch material X - Ferrus Manus</label>
+    <description>This containers holds the genetic material of Primarch X - Ferrus Manus.</description>
+    <graphicData>
+      <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_X</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+      <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+        <addedGene>BEWH_PrimarchSpecificGeneX</addedGene>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Chapter XI - ??? -->
+  <!--<ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
+    <defName>BEWH_PrimarchMaterialXI</defName>
+    <label>primarch material XI - ???</label>
+    <description>This containers holds the genetic material of Primarch XI - ???.</description>
+    <graphicData>
+      <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_XI</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+      <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+        <addedGene>BEWH_PrimarchSpecificGeneXI</addedGene>
+      </li>
+    </modExtensions>
+  </ThingDef>-->
+
+  <!-- Chapter XII - Angron -->
+  <ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
+    <defName>BEWH_PrimarchMaterialXII</defName>
+    <label>primarch material XII - Angron</label>
+    <description>This containers holds the genetic material of Primarch XII - Angron.</description>
+    <graphicData>
+      <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_XII</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+      <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+        <addedGene>BEWH_PrimarchSpecificGeneXII</addedGene>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Chapter XIII - Roboute Guilliman -->
+  <ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
+    <defName>BEWH_PrimarchMaterialXIII</defName>
+    <label>primarch material XIII - Roboute Guilliman</label>
+    <description>This containers holds the genetic material of Primarch XIII - Roboute Guilliman.</description>
+    <graphicData>
+      <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_XIII</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+      <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+        <addedGene>BEWH_PrimarchSpecificGeneXIII</addedGene>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Chapter XIV - Mortarion -->
+  <ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
+    <defName>BEWH_PrimarchMaterialXIV</defName>
+    <label>primarch material XIV - Mortarion</label>
+    <description>This containers holds the genetic material of Primarch XIV - Mortarion.</description>
+    <graphicData>
+      <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_XIV</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+      <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+        <addedGene>BEWH_PrimarchSpecificGeneXIV</addedGene>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Chapter XV - Magnus the Red -->
+  <ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
+    <defName>BEWH_PrimarchMaterialXV</defName>
+    <label>primarch material XV - Magnus the Red</label>
+    <description>This containers holds the genetic material of Primarch XV - Magnus the Red.</description>
+    <graphicData>
+      <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_XV</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+      <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+        <addedGene>BEWH_PrimarchSpecificGeneXV</addedGene>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Chapter XVI - Horus Lupercal -->
+  <ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
+    <defName>BEWH_PrimarchMaterialXVI</defName>
+    <label>primarch material XVI - Horus Lupercal</label>
+    <description>This containers holds the genetic material of Primarch XVI - Horus Lupercal.</description>
+    <graphicData>
+      <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_XVI</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+      <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+        <addedGene>BEWH_PrimarchSpecificGeneXVI</addedGene>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Chapter XVII - Lorgar -->
+  <ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
+    <defName>BEWH_PrimarchMaterialXVII</defName>
+    <label>primarch material XVII - Lorgar</label>
+    <description>This containers holds the genetic material of Primarch XVII - Lorgar.</description>
+    <graphicData>
+      <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_XVII</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+      <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+        <addedGene>BEWH_PrimarchSpecificGeneXVII</addedGene>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Chapter XVIII - Vulkan -->
+  <ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
+    <defName>BEWH_PrimarchMaterialXVIII</defName>
+    <label>primarch material XVIII - Vulkan</label>
+    <description>This containers holds the genetic material of Primarch XVIII - Vulkan.</description>
+    <graphicData>
+      <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_XVIII</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+      <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+        <addedGene>BEWH_PrimarchSpecificGeneXVIII</addedGene>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Chapter XIX - Corvus Corax -->
+  <ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
+    <defName>BEWH_PrimarchMaterialXIX</defName>
+    <label>primarch material XIX - Corvus Corax</label>
+    <description>This containers holds the genetic material of Primarch XIX - Corvus Corax.</description>
+    <graphicData>
+      <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_XIX</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+      <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+        <addedGene>BEWH_PrimarchSpecificGeneXIX</addedGene>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Chapter XX - Alpharius/Omegon -->
+  <ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
+    <defName>BEWH_PrimarchMaterialXX</defName>
+    <label>primarch material XX - Alpharius Omegon</label>
+    <description>This containers holds the genetic material of Primarch XX - Alpharius Omegon.</description>
+    <graphicData>
+      <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_XX</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+      <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+        <addedGene>BEWH_PrimarchSpecificGeneXX</addedGene>
       </li>
     </modExtensions>
   </ThingDef>

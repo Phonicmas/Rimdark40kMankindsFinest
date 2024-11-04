@@ -6,7 +6,7 @@
         <defName>BEWH_ChapterIDarkAngels</defName>
         <label>Geneseed Material: Dark Angels</label>
         <description>Your geneseeds comes from Lion El'Jonson and is relatively pure, allowing for more succesful and less deadly implantation of the geneseed.</description>
-        <iconPath>UI/Genes/BEWH_ChapterIDarkAngels</iconPath>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterIDarkAngels</iconPath>
         <displayOrderInCategory>100</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <customEffectDescriptions>
@@ -28,7 +28,7 @@
         <defName>BEWH_ChapterII</defName>
         <label>Geneseed Material: </label>
         <description>Your geneseeds comes from</description>
-        <iconPath>UI/Genes/BEWH_ChapterIDarkAngels</iconPath>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterIDarkAngels</iconPath>
         <displayOrderInCategory>103</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
@@ -41,7 +41,7 @@
         <defName>BEWH_ChapterIIIEmperorsChildren</defName>
         <label>Geneseed Material: Emperor's Children</label>
         <description>Your geneseeds comes from Fulgrim, like him you enjoy the fine art of this world but rather not share it with others.</description>
-        <iconPath>UI/Genes/BEWH_ChapterIIIEmperorsChildren</iconPath>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterIIIEmperorsChildren</iconPath>
         <displayOrderInCategory>106</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <statOffsets>
@@ -68,7 +68,7 @@
         <defName>BEWH_ChapterIVIronWarriors</defName>
         <label>Geneseed Material: Iron Warriors</label>
         <description>Your geneseeds comes from Perturabo, </description>
-        <iconPath>UI/Genes/BEWH_ChapterIVIronWarriors</iconPath>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterIVIronWarriors</iconPath>
         <displayOrderInCategory>109</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
@@ -81,7 +81,7 @@
         <defName>BEWH_ChapterVWhiteScars</defName>
         <label>Geneseed Material: White Scars</label>
         <description>Your geneseeds comes from Jaghatai Khan, </description>
-        <iconPath>UI/Genes/BEWH_ChapterVWhiteScars</iconPath>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterVWhiteScars</iconPath>
         <displayOrderInCategory>112</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
@@ -94,7 +94,7 @@
         <defName>BEWH_ChapterVISpaceWolves</defName>
         <label>Geneseed Material: Space Wolves</label>
         <description>Your geneseeds comes from Leman Russ, you've inherited his ruthfulness and wolf-like attributes.</description>
-        <iconPath>UI/Genes/BEWH_ChapterVISpaceWolves</iconPath>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterVISpaceWolves</iconPath>
         <displayOrderInCategory>115</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <geneClass>Core40k.Gene_AddRandomGeneAndOrTraitByWeight</geneClass>
@@ -144,7 +144,7 @@
         <defName>BEWH_ChapterVIFlaw</defName>
         <label>Canis Helix</label>
         <description>The Canis Helix is a mutation of normal gene-seed that gifts the Wolves with enhanced abilities, including hyper-acute senses of smell and hearing, elongated canines that can dent plasteel, and leathery, resilient skin.</description>
-        <iconPath>UI/Genes/BEWH_ChapterVISpaceWolvesFlaw</iconPath>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterVISpaceWolvesFlaw</iconPath>
         <displayOrderInCategory>116</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <capMods>
@@ -185,7 +185,7 @@
         <defName>BEWH_ChapterVIIImperialFists</defName>
         <label>Geneseed Material: Imperial Fists</label>
         <description>Your geneseeds comes from Rogal Dorn, </description>
-        <iconPath>UI/Genes/BEWH_ChapterVIIImperialFists</iconPath>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterVIIImperialFists</iconPath>
         <displayOrderInCategory>118</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
@@ -198,7 +198,7 @@
         <defName>BEWH_ChapterVIIINightLords</defName>
         <label>Geneseed Material: Night Lords</label>
         <description>Your geneseeds comes from Konrad Curze, </description>
-        <iconPath>UI/Genes/BEWH_ChapterVIIINightLords</iconPath>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterVIIINightLords</iconPath>
         <displayOrderInCategory>121</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
@@ -211,7 +211,7 @@
         <defName>BEWH_ChapterIXBloodAngels</defName>
         <label>Geneseed Material: Blood Angels</label>
         <description>Your geneseeds comes from Sanguinis, you carry the same wrath to those who would threaten your people.</description>
-        <iconPath>UI/Genes/BEWH_ChapterIXBloodAngels</iconPath>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterIXBloodAngels</iconPath>
         <displayOrderInCategory>124</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <geneClass>Core40k.Gene_AddRandomGeneAndOrTraitByWeight</geneClass>
@@ -241,7 +241,7 @@
         <defName>BEWH_ChapterIXFlaw</defName>
         <label>Red Thirst</label>
         <description>The Red Thirst causes warriors to suffer an unusual bloodlust, instilling them with a thirst for the blood of their enemies. They also possess elongated teeth and pale skin.</description>
-        <iconPath>UI/Genes/BEWH_ChapterIXBloodAngelsFlaw</iconPath>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterIXBloodAngelsFlaw</iconPath>
         <displayOrderInCategory>125</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <geneClass>Gene_Hemogen</geneClass>
@@ -280,7 +280,7 @@
         <defName>BEWH_ChapterXIronHands</defName>
         <label>Geneseed Material: Iron Hands</label>
         <description>Your geneseeds comes from Ferrus Manus, </description>
-        <iconPath>UI/Genes/BEWH_ChapterXIronHands</iconPath>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXIronHands</iconPath>
         <displayOrderInCategory>127</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
@@ -293,7 +293,7 @@
         <defName>BEWH_ChapterXI</defName>
         <label>Geneseed Material: </label>
         <description>Your geneseeds comes from</description>
-        <iconPath>UI/Genes/BEWH_ChapterXIronHands</iconPath>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXIronHands</iconPath>
         <displayOrderInCategory>130</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
@@ -306,7 +306,7 @@
         <defName>BEWH_ChapterXIIWorldEaters</defName>
         <label>Geneseed Material: World Eaters</label>
         <description>Your geneseeds comes from Angron, you have an innate lust for fighting and brawling.</description>
-        <iconPath>UI/Genes/BEWH_ChapterXIIWorldEaters</iconPath>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXIIWorldEaters</iconPath>
         <displayOrderInCategory>133</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <forcedTraits>
@@ -357,7 +357,7 @@
         <defName>BEWH_ChapterXIIIUltramarines</defName>
         <label>Geneseed Material: Ultramarines</label>
         <description>Your geneseeds comes from Roboute Guilliman, you've inherited his industriousness. Additionally your geneseed stock is relatively pure, allowing for easier implantation.</description>
-        <iconPath>UI/Genes/BEWH_ChapterXIIIUltramarines</iconPath>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXIIIUltramarines</iconPath>
         <displayOrderInCategory>136</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <customEffectDescriptions>
@@ -381,7 +381,7 @@
         <defName>BEWH_ChapterXIVDeathGuard</defName>
         <label>Geneseed Material: Death Guard</label>
         <description>Your geneseeds comes from Mortarion, you share the same resillience to diseases and toxins.</description>
-        <iconPath>UI/Genes/BEWH_ChapterXIVDeathGuard</iconPath>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXIVDeathGuard</iconPath>
         <displayOrderInCategory>139</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <statFactors>
@@ -406,7 +406,7 @@
         <defName>BEWH_ChapterXVThousandSons</defName>
         <label>Geneseed Material: Thousand Sons</label>
         <description>Your geneseeds comes from Magnus the Red, the Crimson King, and as such you have inherited some of his psychic potential.</description>
-        <iconPath>UI/Genes/BEWH_ChapterXVThousandSons</iconPath>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXVThousandSons</iconPath>
         <displayOrderInCategory>142</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <geneClass>Core40k.Gene_AddRandomGeneAndOrTraitByWeight</geneClass>
@@ -444,7 +444,7 @@
         <defName>BEWH_ChapterXVISonsOfHorus</defName>
         <label>Geneseed Material: Sons of Horus</label>
         <description>Your geneseeds comes from Horus, you have a keen understanding of striking at close range.</description>
-        <iconPath>UI/Genes/BEWH_ChapterXVISonsOfHorus</iconPath>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXVISonsOfHorus</iconPath>
         <displayOrderInCategory>145</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <statFactors>
@@ -462,7 +462,7 @@
         <defName>BEWH_ChapterXVIIWordBearers</defName>
         <label>Geneseed Material: Word Bearers</label>
         <description>Your geneseeds comes from Lorgar Aurelian, </description>
-        <iconPath>UI/Genes/BEWH_ChapterXVIIWordBearers</iconPath>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXVIIWordBearers</iconPath>
         <displayOrderInCategory>148</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
@@ -475,7 +475,7 @@
         <defName>BEWH_ChapterXVIIISalamanders</defName>
         <label>Geneseed Material: Salamanders</label>
         <description>Your geneseeds comes from Vulkan, </description>
-        <iconPath>UI/Genes/BEWH_ChapterXVIIISalamanders</iconPath>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXVIIISalamanders</iconPath>
         <displayOrderInCategory>151</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
@@ -488,7 +488,7 @@
         <defName>BEWH_ChapterXIXRavenGuard</defName>
         <label>Geneseed Material: Raven Guard</label>
         <description>Your geneseeds comes from Corvus Corax, </description>
-        <iconPath>UI/Genes/BEWH_ChapterXIXRavenGuard</iconPath>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXIXRavenGuard</iconPath>
         <displayOrderInCategory>154</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>
@@ -501,7 +501,7 @@
         <defName>BEWH_ChapterXXAlphaLegion</defName>
         <label>Geneseed Material: Alpha Legion</label>
         <description>Your geneseeds comes from Alpharius/Omegon, </description>
-        <iconPath>UI/Genes/BEWH_ChapterXXAlphaLegion</iconPath>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXXAlphaLegion</iconPath>
         <displayOrderInCategory>157</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
         <modExtensions>

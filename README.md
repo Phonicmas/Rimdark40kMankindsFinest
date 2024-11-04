@@ -11,6 +11,8 @@ Includes research for most things
 
 Some basic power armor
 
+Reductor and nathecium (def butchered the last one)
+
 1 Imperial faction, containing xenotypes and using armor from this mod
 
 If royalty is installed players can gain favor for the imperial faction
