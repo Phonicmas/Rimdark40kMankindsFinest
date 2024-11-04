@@ -18,8 +18,6 @@ General Bugfixing here and there
 
 Make rest of primarch and chapter specific genes
 
-Make progrenoid gland growth not be a hediff, and istead show it as a thingy on the pawn box thingy, just like animals have their milk percent and whatnot, possibly look at Biotech expansion series for how they do it.
-
 ## Other
 Should the Primarch specific genes be renamed? (currently the name is of the Primarch)
 
