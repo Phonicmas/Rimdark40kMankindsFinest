@@ -98,14 +98,6 @@
             </li>
         </capMods>
 		
-		<abilities>
-            <li>BEWH_WarpShield</li>
-        </abilities>
-
-        <descriptionHyperlinks>
-            <AbilityDef>BEWH_WarpShield</AbilityDef>
-        </descriptionHyperlinks>
-		
         <customEffectDescriptions>
             <li>No loss in shooting skill.</li>
         </customEffectDescriptions>
@@ -163,14 +155,6 @@
             <Intellectual>8</Intellectual>
         </aptitudes>
 
-        <abilities>
-            <li>BEWH_OmophageaCorpseEat</li>
-            <li>BEWH_Sus_anMembraneStasis</li>
-        </abilities>
-        <descriptionHyperlinks>
-            <AbilityDef>BEWH_OmophageaCorpseEat</AbilityDef>
-            <AbilityDef>BEWH_Sus_anMembraneStasis</AbilityDef>
-        </descriptionHyperlinks>
     </GeneDef>
 
     <!-- Helixome Array -->
@@ -186,13 +170,6 @@
         <biostatArc>4</biostatArc>
 
         <preventPermanentWounds>true</preventPermanentWounds>
-
-        <abilities>
-            <li>BEWH_BelisarianFurnaceBoost</li>
-        </abilities>
-        <descriptionHyperlinks>
-            <AbilityDef>BEWH_BelisarianFurnaceBoost</AbilityDef>
-        </descriptionHyperlinks>
 
         <statFactors>
             <ImmunityGainSpeed>10</ImmunityGainSpeed>
@@ -279,13 +256,6 @@
             <ComfyTemperatureMin>-100</ComfyTemperatureMin>
             <ComfyTemperatureMax>100</ComfyTemperatureMax>
         </statOffsets>
-
-        <abilities>
-            <li>BEWH_CatalepseanNodeUnsleeping</li>
-        </abilities>
-        <descriptionHyperlinks>
-            <AbilityDef>BEWH_CatalepseanNodeUnsleeping</AbilityDef>
-        </descriptionHyperlinks>
 
         <capMods>
             <li>

@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
+	<!-- Jaghatai Khan: Alakh Geh -->
+	<HediffDef>
+		<defName>BEWH_AlakhGeh</defName>
+		<label>Alakh Geh</label>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>Thought will and intention alone, the Khan is able to move unimpeded and swiftly.</description>
+		<everCurableByItem>false</everCurableByItem>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<statFactors>
+					<MoveSpeed>2</MoveSpeed>
+					<MeleeCooldownFactor>0.5</MeleeCooldownFactor>
+					<MeleeDodgeChance>2</MeleeDodgeChance>
+				</statFactors>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>True</showRemainingTime>
+			</li>
+		</comps>
+	</HediffDef>
+
 	<!-- Leman Russ - Denied Witch-->
 	<HediffDef>
 		<defName>BEWH_DeniedWitch</defName>

@@ -36,6 +36,7 @@
     <targetCount>2</targetCount>
     <castTime>30</castTime>
     <needsTicking>true</needsTicking>
+    <requireLineOfSight>false</requireLineOfSight>
     <cooldownTime>1250</cooldownTime>
     <range>9999</range>
     <radius>4.9</radius>    <!-- Pawns within this radius of the caster is teleported with him -->
@@ -52,6 +53,46 @@
       </li>
     </targetingParametersList>
   </VFECore.Abilities.AbilityDef>
+
+
+  <!-- Jaghatai Khan: Alakh Geh -->
+  <AbilityDef>
+    <defName>BEWH_AlakhGeh</defName>
+    <label>Alakh Geh</label>
+    <description>The thought and will alone to kill is enough to kill.</description>
+    <jobDef>CastAbilityOnThing</jobDef>
+    <casterMustBeCapableOfViolence>False</casterMustBeCapableOfViolence>
+    <targetRequired>False</targetRequired>
+    <iconPath>UI/Abilities/BEWH_BelisarianFurnaceBoost</iconPath>
+    <stunTargetWhileCasting>false</stunTargetWhileCasting>
+    <showPsycastEffects>False</showPsycastEffects>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <cooldownTicksRange>60000</cooldownTicksRange>
+    <category>BEWH_SpaceMarine</category>
+    <uiOrder>5</uiOrder>
+    <warmupStartSound>BEWH_NoSound</warmupStartSound>
+    <statBases>
+      <Ability_Duration>500</Ability_Duration>
+    </statBases>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityTouch</verbClass>
+      <warmupTime>0</warmupTime>
+      <drawAimPie>False</drawAimPie>
+      <requireLineOfSight>False</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>BEWH_AlakhGeh</hediffDef>
+        <onlyApplyToSelf>True</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+  </AbilityDef>
 
 
   <!-- Leman Russ: Deny the Witch -->
@@ -85,6 +126,22 @@
       </li>
     </comps>
   </AbilityDef>
+
+
+  <!-- Rogal Dorn: Raise Bastion -->
+  <VFECore.Abilities.AbilityDef>
+    <defName>BEWH_RaiseBastion</defName>
+    <label>Raise Bastion</label>
+    <description>???.</description>
+    <iconPath>UI/Abilities/AcidSpray</iconPath>
+    <abilityClass>Genes40k.Ability_RaiseBastion</abilityClass>
+    <needsTicking>true</needsTicking>
+    <requireLineOfSight>false</requireLineOfSight>
+    <cooldownTime>120000</cooldownTime>
+    <range>25</range>
+    <castTime>60</castTime>
+    <targetMode>Location</targetMode>
+  </VFECore.Abilities.AbilityDef>
 
 
   <!-- Angron: Frenzied Berserk -->

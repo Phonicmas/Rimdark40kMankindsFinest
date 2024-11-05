@@ -15,7 +15,7 @@
             <li>Increased chance for rubicon surgery survival.</li>
         </customEffectDescriptions>
         <statFactors>
-            <WorkSpeedGlobal>1.075</WorkSpeedGlobal>
+            <WorkSpeedGlobal>1.1</WorkSpeedGlobal>
         </statFactors>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene" />
@@ -75,8 +75,44 @@
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterIVIronWarriors</iconPath>
         <displayOrderInCategory>109</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
+        <statOffsets>
+            <ConstructionSpeed>0.5</ConstructionSpeed>
+            <ConstructSuccessChance>0.5</ConstructSuccessChance>
+        </statOffsets>
+        <customEffectDescriptions>
+            <li>Chance to have either Psychopath or Transhumanist trait.</li>
+            <li>7% decrease to geneseed implantation failure chance.</li>
+            <li>7% decrease to geneseed implantation failure chance cap.</li>
+        </customEffectDescriptions>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene" />
+            <li Class="Genes40k.DefModExtension_GeneseedPurity">
+                <additionalChanceOffset>-7</additionalChanceOffset>
+                <additionalChanceCapOffset>-7</additionalChanceCapOffset>
+            </li>
+            <li Class="Core40k.DefModExtension_AddRandomTraitByWeight">
+                <possibleTraitsToGive>
+                    <li>
+                        <key>
+                            <li>
+                                <key>Psychopath</key>
+                                <value>0</value>
+                            </li>
+                        </key>
+                        <value>100</value>
+                    </li>
+                    <li>
+                        <key>
+                            <li>
+                                <key>Transhumanist</key>
+                                <value>0</value>
+                            </li>
+                        </key>
+                        <value>100</value>
+                    </li>
+                </possibleTraitsToGive>
+                <chanceToGrantTrait>60</chanceToGrantTrait>
+            </li>
         </modExtensions>
     </GeneDef>
 
@@ -84,10 +120,18 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterVWhiteScars</defName>
         <label>Geneseed Material: White Scars</label>
-        <description>Your geneseeds comes from Jaghatai Khan, </description>
+        <description>Your geneseeds comes from Jaghatai Khan, you've inherited some of his unmatched speed.</description>
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterVWhiteScars</iconPath>
         <displayOrderInCategory>112</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
+        <statFactors>
+            <CaravanRidingSpeedFactor>1.75</CaravanRidingSpeedFactor>
+            <MeleeDodgeChance>1.15</MeleeDodgeChance>
+        </statFactors>
+        <statOffsets>
+            <MoveSpeed>0.8</MoveSpeed>
+            <CrawlSpeed>0.4</CrawlSpeed>
+        </statOffsets>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene" />
         </modExtensions>
@@ -106,7 +150,7 @@
             <MeleeDamageFactor>1.05</MeleeDamageFactor>
         </statFactors>
         <customEffectDescriptions>
-            <li>75% chance to have either Brawler or Abrasive trait.</li>
+            <li>Chance to have either Brawler or Abrasive trait.</li>
         </customEffectDescriptions>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene" />
@@ -192,6 +236,12 @@
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterVIIImperialFists</iconPath>
         <displayOrderInCategory>118</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
+        <statOffsets>
+            <ConstructionSpeed>0.5</ConstructionSpeed>
+            <ConstructSuccessChance>0.5</ConstructSuccessChance>
+            <MentalBreakThreshold>-0.05</MentalBreakThreshold>
+        </statOffsets>
+        <painFactor>0.7</painFactor>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene" />
         </modExtensions>

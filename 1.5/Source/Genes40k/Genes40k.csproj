@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Abilities\Ability_ForeswalkLong.cs" />
     <Compile Include="Abilities\Ability_ForeswalkShort.cs" />
+    <Compile Include="Abilities\Ability_RaiseBastion.cs" />
     <Compile Include="Abilities\Ability_UpdateGizmo.cs" />
     <Compile Include="Comps\CompAbilityEffect_DenyTheWitch.cs" />
     <Compile Include="Comps\CompProperties_DenyTheWitch.cs" />

@@ -67,18 +67,11 @@
         <displayOrderInCategory>201</displayOrderInCategory>
         <geneClass>Gene_Clotting</geneClass>
 
-        <abilities>
-            <li>BEWH_BelisarianFurnaceBoost</li>
-        </abilities>
-        <descriptionHyperlinks>
-            <AbilityDef>BEWH_BelisarianFurnaceBoost</AbilityDef>
-        </descriptionHyperlinks>
-
         <biostatCpx>8</biostatCpx>
         <biostatArc>3</biostatArc>
 
         <preventPermanentWounds>true</preventPermanentWounds>
-        <painFactor>0.2</painFactor>
+        <painFactor>0.3</painFactor>
         <immuneToToxGasExposure>true</immuneToToxGasExposure>
 
         <statOffsets>
@@ -142,12 +135,6 @@
             <Shooting>8</Shooting>
         </aptitudes>
 
-        <abilities>
-            <li>BEWH_OmophageaCorpseEat</li>
-        </abilities>
-        <descriptionHyperlinks>
-            <AbilityDef>BEWH_OmophageaCorpseEat</AbilityDef>
-        </descriptionHyperlinks>
         <customEffectDescriptions>
             <li>No loss in shooting skill.</li>
         </customEffectDescriptions>
@@ -262,12 +249,10 @@
 
         <abilities>
             <li>BEWH_WarpShield</li>
-            <li>BEWH_CatalepseanNodeUnsleeping</li>
         </abilities>
 
         <descriptionHyperlinks>
             <AbilityDef>BEWH_WarpShield</AbilityDef>
-            <AbilityDef>BEWH_CatalepseanNodeUnsleeping</AbilityDef>
         </descriptionHyperlinks>
 
 
@@ -328,13 +313,6 @@
         <statFactors>
             <MeleeHitChance>1.8</MeleeHitChance>
         </statFactors>
-
-        <abilities>
-            <li>BEWH_Sus_anMembraneStasis</li>
-        </abilities>
-        <descriptionHyperlinks>
-            <AbilityDef>BEWH_Sus_anMembraneStasis</AbilityDef>
-        </descriptionHyperlinks>
 
         <capMods>
             <li>

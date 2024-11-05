@@ -110,6 +110,10 @@ namespace Genes40k
 
         public static ThingDef BEWH_PrimarchEmbryo;
 
+        public static ThingDef BEWH_RaisedWall;
+        public static ThingDef BEWH_RaisedBarricade;
+        public static ThingDef BEWH_RaisedTurret;
+
         //JobDefs
         public static JobDef BEWH_FillGeneGestator;
         public static JobDef BEWH_FillPrimarchGrowthVat;

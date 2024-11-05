@@ -83,6 +83,12 @@
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>404</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
+        <statOffsets>
+            <ResearchSpeed>3</ResearchSpeed>
+            <AimingDelayFactor>-0.4</AimingDelayFactor>
+            <ConstructionSpeed>0.35</ConstructionSpeed>
+            <ConstructSuccessChance>0.35</ConstructSuccessChance>
+        </statOffsets>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
         </modExtensions>
@@ -96,6 +102,15 @@
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>405</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
+        <statFactors>
+            <CaravanRidingSpeedFactor>2</CaravanRidingSpeedFactor>
+        </statFactors>
+        <abilities>
+            <li>BEWH_AlakhGeh</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>BEWH_AlakhGeh</AbilityDef>
+        </descriptionHyperlinks>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
         </modExtensions>
@@ -130,8 +145,22 @@
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>407</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
+        <hairColorOverride>(0.65, 0.65, 0.65)</hairColorOverride>
+        <statOffsets>
+            <ConstructionSpeed>0.35</ConstructionSpeed>
+            <ConstructSuccessChance>0.35</ConstructSuccessChance>
+        </statOffsets>
+        <geneClass>Core40k.Gene_GiveVFECoreAbility</geneClass>
+        <customEffectDescriptions>
+            <li>Gives the power to raise a temporary bastion to hold back attackers.</li>
+        </customEffectDescriptions>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="Core40k.DefModExtension_GivesVFEAbility">
+                <abilityDefs>
+                    <li>BEWH_RaiseBastion</li>
+                </abilityDefs>
+            </li>
         </modExtensions>
     </GeneDef>
 

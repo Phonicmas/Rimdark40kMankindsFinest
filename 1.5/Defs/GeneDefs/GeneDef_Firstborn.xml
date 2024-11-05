@@ -357,7 +357,7 @@
         <displayOrderInCategory>12</displayOrderInCategory>
         <prerequisite>BEWH_LymansEar</prerequisite>
         <statOffsets>
-            <MentalBreakThreshold>-0.3</MentalBreakThreshold>
+            <MentalBreakThreshold>-0.25</MentalBreakThreshold>
         </statOffsets>
         <minAgeActive>16</minAgeActive>
         <abilities>
