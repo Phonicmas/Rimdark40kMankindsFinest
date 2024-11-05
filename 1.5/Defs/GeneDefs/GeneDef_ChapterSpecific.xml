@@ -14,7 +14,9 @@
             <li>15% decrease to geneseed implantation failure chance cap.</li>
             <li>Increased chance for rubicon surgery survival.</li>
         </customEffectDescriptions>
-        <!-- Maybe Add More? -->
+        <statFactors>
+            <WorkSpeedGlobal>1.075</WorkSpeedGlobal>
+        </statFactors>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene" />
             <li Class="Genes40k.DefModExtension_GeneseedPurity">
@@ -367,7 +369,7 @@
             <li>5% decrease to geneseed implantation failure chance cap.</li>
         </customEffectDescriptions>
         <statFactors>
-            <WorkSpeedGlobal>1.2</WorkSpeedGlobal>
+            <WorkSpeedGlobal>1.3</WorkSpeedGlobal>
         </statFactors>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene" />

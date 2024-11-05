@@ -9,8 +9,18 @@
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>401</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
+        <geneClass>Core40k.Gene_GiveVFECoreAbility</geneClass>
+        <customEffectDescriptions>
+            <li>Enables Forestwalking.</li>
+        </customEffectDescriptions>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="Core40k.DefModExtension_GivesVFEAbility">
+                <abilityDefs>
+                    <li>BEWH_ForestWalkLong</li>
+                    <li>BEWH_ForestWalkShort</li>
+                </abilityDefs>
+            </li>
         </modExtensions>
     </GeneDef>
 

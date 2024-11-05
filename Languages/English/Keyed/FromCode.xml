@@ -96,8 +96,9 @@
 
   <BEWH.FirstGeneseedsHarvested>Geneseeds have already been harvested.</BEWH.FirstGeneseedsHarvested>
   <BEWH.FirstGeneseedsHarvestable>Geneseeds ready to be harvested.</BEWH.FirstGeneseedsHarvestable>
-  <BEWH.FirstGeneseedsHarvestableIn>Geneseeds can be harvested in {0} days.</BEWH.FirstGeneseedsHarvestableIn>
+  <BEWH.FirstGeneseedsHarvestableIn>Geneseeds can be harvested in {0} days{1}.</BEWH.FirstGeneseedsHarvestableIn>
 
+  <BEWH.SecondGeneseedsHarvestableUponDeath>and upon death</BEWH.SecondGeneseedsHarvestableUponDeath>
   <BEWH.SecondGeneseedsHarvested>Geneseeds have already been harvested.</BEWH.SecondGeneseedsHarvested>
   <BEWH.SecondGeneseedsHarvestable>Geneseeds ready to be harvested.</BEWH.SecondGeneseedsHarvestable>
 

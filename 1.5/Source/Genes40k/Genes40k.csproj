@@ -61,6 +61,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abilities\Ability_ForeswalkLong.cs" />
+    <Compile Include="Abilities\Ability_ForeswalkShort.cs" />
+    <Compile Include="Abilities\Ability_UpdateGizmo.cs" />
     <Compile Include="Comps\CompAbilityEffect_DenyTheWitch.cs" />
     <Compile Include="Comps\CompProperties_DenyTheWitch.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneStorageGraphicProgression.cs" />
@@ -122,7 +125,6 @@
     <Compile Include="DefModExtensions\DefModExtension_WarpShield.cs" />
     <Compile Include="DefModExtensions\DefModExtension_Psyker.cs" />
     <Compile Include="Comps\CompGivesAbility.cs" />
-    <Compile Include="Misc\Ability_UpdateGizmo.cs" />
     <Compile Include="GeneClasses\Gene_Pariah.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_StopDeterioation.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_MentalBreakdownPsyker.cs" />

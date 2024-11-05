@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
 using HarmonyLib;
 using RimWorld;
 using Verse;
@@ -28,10 +29,15 @@ namespace Genes40k
             }
             else
             {
+                var secondProgenoid = !progenoidGlands.SecondProgenoidGlandHarvested
+                    ? " " + (string)"BEWH.SecondGeneseedsHarvestableUponDeath".Translate()
+                    : string.Empty;
+
                 float ticksLeft = progenoidGlands.TicksUntilHarvestable;
                 stringBuilder.AppendLine(ticksLeft > 0
-                    ? "BEWH.FirstGeneseedsHarvestableIn".Translate((ticksLeft / 60000).ToString("0.00"))
+                    ? "BEWH.FirstGeneseedsHarvestableIn".Translate((ticksLeft / 60000).ToString("0.00"), secondProgenoid)
                     : "BEWH.FirstGeneseedsHarvestable".Translate());
+                
             }
             
             __result = stringBuilder.ToString().TrimEndNewlines();

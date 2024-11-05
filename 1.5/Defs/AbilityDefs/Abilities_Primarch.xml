@@ -6,7 +6,55 @@
     <displayOrder>900</displayOrder>
   </AbilityCategoryDef>
 
-  <!-- Deny the Witch -->
+  <!-- Lion El'Jonson: Forestwalk longrange -->
+  <VFECore.Abilities.AbilityDef>
+    <defName>BEWH_ForestWalkLong</defName>
+    <label>Forestwalk Longrange</label>
+    <description>???.</description>
+    <iconPath>UI/Abilities/AcidSpray</iconPath>
+    <abilityClass>Genes40k.Ability_ForeswalkLong</abilityClass>
+    <cooldownTime>15000</cooldownTime>
+    <castTime>625</castTime>
+    <range>14.9</range>
+    <rangeStatFactors>
+      <PsychicSensitivity>2</PsychicSensitivity>
+    </rangeStatFactors>
+    <radius>4.9</radius>    <!-- Pawns within this radius of the caster is teleported with him -->
+    <targetMode>Tile</targetMode>
+    <worldTargeting>true</worldTargeting>
+    <needsTicking>true</needsTicking>
+    <showGizmoOnWorldView>true</showGizmoOnWorldView>
+  </VFECore.Abilities.AbilityDef>
+
+  <!-- Lion El'Jonson: Forestwalk shortrange -->
+  <VFECore.Abilities.AbilityDef>
+    <defName>BEWH_ForestWalkShort</defName>
+    <label>Forestwalk Shortrange</label>
+    <description>???.</description>
+    <iconPath>UI/Abilities/AcidSpray</iconPath>
+    <abilityClass>Genes40k.Ability_ForeswalkShort</abilityClass>
+    <targetCount>2</targetCount>
+    <castTime>30</castTime>
+    <needsTicking>true</needsTicking>
+    <cooldownTime>1250</cooldownTime>
+    <range>9999</range>
+    <radius>4.9</radius>    <!-- Pawns within this radius of the caster is teleported with him -->
+    <targetModes>
+      <li>Self</li>
+      <li>Location</li>
+    </targetModes>
+    <targetingParametersList>
+      <li>
+        <canTargetSelf>True</canTargetSelf>
+        <canTargetPawns>True</canTargetPawns>
+        <canTargetBuildings>False</canTargetBuildings>
+        <canTargetItems>true</canTargetItems>
+      </li>
+    </targetingParametersList>
+  </VFECore.Abilities.AbilityDef>
+
+
+  <!-- Leman Russ: Deny the Witch -->
   <AbilityDef>
     <defName>BEWH_DenyTheWitch</defName>
     <label>Deny the Witch</label>
@@ -38,18 +86,19 @@
     </comps>
   </AbilityDef>
 
-  <!-- Angron Berserk -->
+
+  <!-- Angron: Frenzied Berserk -->
   <AbilityDef>
     <defName>BEWH_AngronBerserk</defName>
-    <label>Berserk</label>
+    <label>Frenzied Berserk</label>
     <description>Pawn flies into a frenzied rage, gaining increased damage and hit chance, but losing survivability and control.</description>
     <iconPath>UI/Abilities/AcidSpray</iconPath>
     <cooldownTicksRange>30000</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
     <category>BEWH_Primarch</category>
     <showPsycastEffects>False</showPsycastEffects>
-    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
-    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <displayGizmoWhileUndrafted>False</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>True</disableGizmoWhileUndrafted>
     <verbProperties>
       <verbClass>Verb_CastAbilityTouch</verbClass>
       <warmupTime>1</warmupTime>

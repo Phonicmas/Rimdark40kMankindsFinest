@@ -12,6 +12,8 @@ Sangprimus Portus Building
 Primarch Specific Icons (Not sure what excatly to do here) (Maybe flip the helix of the Chapter ones and add some bedazzle? Or just make something that would remind you of them, like red skin and psyker thing i made for Magnus, and the wings for Sanguinius) (The helix should stay i feel) (I think i learn towards just flipping the helix and adding some bedazzle)
 
 Chapter and Primarch material icons?
+
+Ability Icons for primarch abilities
     
 ## Code and XML
 General Bugfixing here and there
