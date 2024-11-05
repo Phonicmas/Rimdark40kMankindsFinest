@@ -117,12 +117,16 @@ namespace Genes40k
         //JobDefs
         public static JobDef BEWH_FillGeneGestator;
         public static JobDef BEWH_FillPrimarchGrowthVat;
+        public static JobDef BEWH_InducedFearJob;
 
         //ThoughtDefs
         public static ThoughtDef BEWH_LivingSaintHolyRadianceThought;
 
         //RecipeDefs
         public static RecipeDef BEWH_RubiconSurgery;
+        
+        //MentalStateDefs
+        public static MentalStateDef BEWH_InducedFear;
 
         static Genes40kDefOf()
         {

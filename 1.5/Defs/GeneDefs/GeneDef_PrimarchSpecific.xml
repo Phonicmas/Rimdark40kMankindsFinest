@@ -172,8 +172,30 @@
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>408</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
+        <geneClass>Core40k.Gene_GiveVFECoreAbility</geneClass>
+        <hairColorOverride>(1, 1, 1)</hairColorOverride>
+        <ignoreDarkness>true</ignoreDarkness>
+        <statFactors>
+            <MeleeDodgeChance>1.15</MeleeDodgeChance>
+        </statFactors>
+        <customEffectDescriptions>
+            <li>Gives the power to summon forth darkness til envelop the pawn.</li>
+        </customEffectDescriptions>
+        <conditionalStatAffecters>
+            <li Class="VanillaGenesExpanded.ConditionalStatAffecter_Darkness">
+                <statFactors>
+                    <MoveSpeed>1.25</MoveSpeed>
+                    <MeleeHitChance>1.5</MeleeHitChance>
+                </statFactors>
+            </li>
+        </conditionalStatAffecters>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="Core40k.DefModExtension_GivesVFEAbility">
+                <abilityDefs>
+                    <li>BEWH_VeilOfDarkness</li>
+                </abilityDefs>
+            </li>
         </modExtensions>
     </GeneDef>
 

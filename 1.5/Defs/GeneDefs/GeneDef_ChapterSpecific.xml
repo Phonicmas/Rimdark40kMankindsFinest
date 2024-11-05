@@ -255,8 +255,26 @@
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterVIIINightLords</iconPath>
         <displayOrderInCategory>121</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
+        <geneClass>Genes40k.Gene_InduceFear</geneClass>
+        <customEffectDescriptions>
+            <li>Chance to induce fear in enemies, causing them to flee.</li>
+        </customEffectDescriptions>
+        <ignoreDarkness>true</ignoreDarkness>
+        <forcedTraits>
+            <li>
+                <def>Psychopath</def>
+            </li>
+        </forcedTraits>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene" />
+            <li Class="Genes40k.DefModExtension_GeneInducedFear">
+                <genesCausesImmunityToFear>
+                    <li>BEWH_ChapterVIIINightLords</li>
+                    <li>BEWH_MnemosyneMindshield</li>
+                    <li>BEWH_ThalaxCortex</li>
+                    <li>BEWH_LivingSaintBeingOfFaith</li>
+                </genesCausesImmunityToFear>
+            </li>
         </modExtensions>
     </GeneDef>
 

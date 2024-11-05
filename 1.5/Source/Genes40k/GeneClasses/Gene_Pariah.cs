@@ -12,7 +12,7 @@ namespace Genes40k
         public override void Tick()
         {
             base.Tick();
-            if (!pawn.IsHashIntervalTick(tickInterval) || pawn.needs == null || pawn.needs.mood == null || pawn.Faction == null)
+            if (!pawn.IsHashIntervalTick(tickInterval) || pawn.needs?.mood == null || pawn.Faction == null)
             {
                 return;
             }

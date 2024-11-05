@@ -132,7 +132,7 @@
   <VFECore.Abilities.AbilityDef>
     <defName>BEWH_RaiseBastion</defName>
     <label>Raise Bastion</label>
-    <description>???.</description>
+    <description>Raise a temporary sturdy bastion, outfitted with gun and holding points.</description>
     <iconPath>UI/Abilities/AcidSpray</iconPath>
     <abilityClass>Genes40k.Ability_RaiseBastion</abilityClass>
     <needsTicking>true</needsTicking>
@@ -141,6 +141,23 @@
     <range>25</range>
     <castTime>60</castTime>
     <targetMode>Location</targetMode>
+  </VFECore.Abilities.AbilityDef>
+
+
+  <!-- Konrad Curze: Veil of Darkness -->
+  <VFECore.Abilities.AbilityDef>
+    <defName>BEWH_VeilOfDarkness</defName>
+    <label>Veil of Darkness</label>
+    <description>Summon forth darkness to enshroud the pawn.</description>
+    <iconPath>UI/Abilities/AcidSpray</iconPath>
+    <abilityClass>Genes40k.Ability_SummonDarkness</abilityClass>
+    <needsTicking>true</needsTicking>
+    <requireLineOfSight>false</requireLineOfSight>
+    <cooldownTime>30000</cooldownTime>
+    <durationTime>5000</durationTime>
+    <range>25</range>
+    <castTime>30</castTime>
+    <targetMode>Self</targetMode>
   </VFECore.Abilities.AbilityDef>
 
 

@@ -17,4 +17,12 @@
         <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
     </JobDef>
 
+    <JobDef>
+        <defName>BEWH_InducedFearJob</defName>
+        <driverClass>Genes40k.JobDriver_FleeInducedFear</driverClass>
+        <reportString>fleeing.</reportString>
+        <checkOverrideOnDamage>OnlyIfInstigatorNotJobTarget</checkOverrideOnDamage>
+        <isIdle>true</isIdle>
+    </JobDef>
+
 </Defs>

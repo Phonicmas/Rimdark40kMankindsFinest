@@ -54,7 +54,7 @@ Imperial Fists. Lowered mental break threshold. Heightened pain resistance. 50% 
 
 # ++++ VIII Legio ++++
 
-Konrad Curze. Forced black hair colour. Ability to project an area of darkness around him, reducing light to 0%, gaining +25% movement speed and critical hit chance when in dark.
+Konrad Curze. Forced black hair colour. Ability to project an large area of darkness on a location, reducing light to 0%, gaining +25% movement speed and critical hit chance or hit chance when in dark.
 
 Night lords. Forced psychopath trait. Has a random chance of inducing fear in the enemy, forcing them to go for "cowering" behaviour.
 

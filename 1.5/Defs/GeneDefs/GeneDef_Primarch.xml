@@ -128,8 +128,6 @@
         <biostatCpx>11</biostatCpx>
         <biostatArc>4</biostatArc>
 
-        <ignoreDarkness>true</ignoreDarkness>
-
         <statOffsets>
             <MentalBreakThreshold>-0.75</MentalBreakThreshold>
         </statOffsets>
