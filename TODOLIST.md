@@ -13,7 +13,7 @@ Primarch Specific Icons (Not sure what excatly to do here) (Maybe flip the helix
 
 Chapter and Primarch material thing icons?
 
-Ability Icons for primarch abilities (Forestwalk long and short, Alakh Geh, Deny the Witch, Raise Bastion, Veil of Darkness, Angron Beserk)
+Ability Icons for primarch abilities (Forestwalk long and short, Alakh Geh, Deny the Witch, Raise Bastion, Veil of Darkness, Angron Beserk, Conceal)
 
 Maybe some different backgrounds for the different genes? (Maybe keep the recoloured one psyker and pariah and then make some new type for the different super human, with increasing golden stuff and purity seals n stuff) (im just cooking here, this is not important)
     

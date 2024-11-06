@@ -554,6 +554,22 @@
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>419</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
+        <conditionalStatAffecters>
+            <li Class="VanillaGenesExpanded.ConditionalStatAffecter_Darkness">
+                <statFactors>
+                    <MoveSpeed>1.35</MoveSpeed>
+                    <ShootingAccuracyPawn>1.5</ShootingAccuracyPawn>
+                    <MeleeHitChance>1.5</MeleeHitChance>
+                    <HuntingStealth>3</HuntingStealth>
+                </statFactors>
+            </li>
+        </conditionalStatAffecters>
+        <abilities>
+            <li>BEWH_Conceal</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>BEWH_Conceal</AbilityDef>
+        </descriptionHyperlinks>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
         </modExtensions>
@@ -570,8 +586,12 @@
         <customEffectDescriptions>
             <li>You have a twin!</li>
         </customEffectDescriptions>
+        <!-- Ability to buff firstborn or primaris with the alpha legion gene? -->
         <modExtensions>
             <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="Genes40k.DefModExtension_PrimarchVatExtras">
+                <childAmount>2</childAmount>
+            </li>
         </modExtensions>
     </GeneDef>
 

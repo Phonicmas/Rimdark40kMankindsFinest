@@ -197,4 +197,43 @@
     </comps>
   </AbilityDef>
 
+  <!-- Corvus Corax: Conceal -->
+  <AbilityDef>
+    <defName>BEWH_Conceal</defName>
+    <label>Conceal</label>
+    <description>???.</description>
+    <jobDef>CastAbilityOnThing</jobDef>
+    <casterMustBeCapableOfViolence>False</casterMustBeCapableOfViolence>
+    <targetRequired>False</targetRequired>
+    <iconPath>UI/Abilities/BEWH_BelisarianFurnaceBoost</iconPath>
+    <stunTargetWhileCasting>false</stunTargetWhileCasting>
+    <showPsycastEffects>False</showPsycastEffects>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <cooldownTicksRange>5000</cooldownTicksRange>
+    <category>BEWH_SpaceMarine</category>
+    <uiOrder>5</uiOrder>
+    <warmupStartSound>BEWH_NoSound</warmupStartSound>
+    <statBases>
+      <Ability_Duration>2500</Ability_Duration>
+    </statBases>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityTouch</verbClass>
+      <warmupTime>0</warmupTime>
+      <drawAimPie>False</drawAimPie>
+      <requireLineOfSight>False</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>BEWH_Concealed</hediffDef>
+        <onlyApplyToSelf>True</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+  </AbilityDef>
+
 </Defs>

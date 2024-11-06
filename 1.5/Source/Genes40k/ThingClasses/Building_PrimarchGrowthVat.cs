@@ -397,22 +397,36 @@ namespace Genes40k
 
         private void EmbryoBirth()
         {
-            if (selectedEmbryo == null || !innerContainer.Contains(selectedEmbryo) || startTick > Find.TickManager.TicksGame) return;
-            
-            var ritual = Faction.OfPlayer.ideos.PrimaryIdeo.GetPrecept(PreceptDefOf.ChildBirth) as Precept_Ritual;
-            var thing = PregnancyUtility.ApplyBirthOutcome(((RitualOutcomeEffectWorker_ChildBirth)RitualOutcomeEffectDefOf.ChildBirth.GetInstance()).GetOutcome(EmbryoBirthQuality, null), EmbryoBirthQuality, ritual, selectedEmbryo?.GeneSet?.GenesListForReading, selectedEmbryo.mother, this, selectedEmbryo.father);
-            var pawn2 = (Pawn)thing;
-            foreach (var gene in selectedEmbryo.primarchGenes.GenesListForReading)
+            if (selectedEmbryo == null || !innerContainer.Contains(selectedEmbryo) || startTick > Find.TickManager.TicksGame)
             {
-                pawn2.genes.AddGene(gene, true);
+                return;
             }
-            pawn2.genes.SetXenotypeDirect(selectedEmbryo.xenotype);
-            if (thing == null || !(embryoStarvation > 0f)) return;
+
+            var geneDef = selectedEmbryo.primarchGenes.GenesListForReading.FirstOrDefault(g => g.HasModExtension<DefModExtension_PrimarchVatExtras>());
+            var childAmount = geneDef == null
+                ? 1
+                : geneDef.GetModExtension<DefModExtension_PrimarchVatExtras>().childAmount;
+
+            var ritual = Faction.OfPlayer.ideos.PrimaryIdeo.GetPrecept(PreceptDefOf.ChildBirth) as Precept_Ritual;
+            for (var i = 0; i < childAmount; i++)
+            {
+                var thing = PregnancyUtility.ApplyBirthOutcome(((RitualOutcomeEffectWorker_ChildBirth)RitualOutcomeEffectDefOf.ChildBirth.GetInstance()).GetOutcome(EmbryoBirthQuality, null), EmbryoBirthQuality, ritual, selectedEmbryo?.GeneSet?.GenesListForReading, selectedEmbryo.mother, this, selectedEmbryo.father);
+                var pawn2 = (Pawn)thing;
+                foreach (var gene in selectedEmbryo.primarchGenes.GenesListForReading)
+                {
+                    pawn2.genes.AddGene(gene, true);
+                }
+                pawn2.genes.SetXenotypeDirect(selectedEmbryo.xenotype);
+                if (thing == null || !(embryoStarvation > 0f))
+                {
+                    continue;
+                }
             
-            var pawn = ((thing is Corpse corpse) ? corpse.InnerPawn : (Pawn)thing);
-            var hediff = HediffMaker.MakeHediff(HediffDefOf.BioStarvation, pawn);
-            hediff.Severity = Mathf.Lerp(0f, HediffDefOf.BioStarvation.maxSeverity, embryoStarvation);
-            pawn.health.AddHediff(hediff);
+                var pawn = thing is Corpse corpse ? corpse.InnerPawn : (Pawn)thing;
+                var hediff = HediffMaker.MakeHediff(HediffDefOf.BioStarvation, pawn);
+                hediff.Severity = Mathf.Lerp(0f, HediffDefOf.BioStarvation.maxSeverity, embryoStarvation);
+                pawn.health.AddHediff(hediff);
+            }
         }
 
         public bool CanAcceptNutrition(Thing thing)

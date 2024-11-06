@@ -58,31 +58,31 @@
 	</HediffDef>
 
 	<!-- Necrodermite Arm -->
-    <HediffDef>
-        <defName>BEWH_NecrodermiteArm</defName>
-        <label>necrodermite arm</label>
-        <description>???</description>
-        <hediffClass>HediffWithComps</hediffClass>
-        <scenarioCanAdd>false</scenarioCanAdd>
-        <everCurableByItem>false</everCurableByItem>
-        <maxSeverity>1.0</maxSeverity>
-        <isBad>false</isBad>
-        <defaultLabelColor>(0.5, 0.05, 0.05)</defaultLabelColor>
-        <comps>
-            <li Class="HediffCompProperties_VerbGiver">
-                <tools>
-                    <li>
-                        <label>necrodermite hand</label>
-                        <capacities>
-                            <li>Blunt</li>
-                        </capacities>
-                        <power>25</power>
-                        <cooldownTime>1</cooldownTime>
-                    </li>
-                </tools>
-            </li>
-        </comps>
-    </HediffDef>
+	<HediffDef>
+		<defName>BEWH_NecrodermiteArm</defName>
+		<label>necrodermite arm</label>
+		<description>???</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<everCurableByItem>false</everCurableByItem>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<defaultLabelColor>(0.5, 0.05, 0.05)</defaultLabelColor>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>necrodermite hand</label>
+						<capacities>
+							<li>Blunt</li>
+						</capacities>
+						<power>25</power>
+						<cooldownTime>1</cooldownTime>
+					</li>
+				</tools>
+			</li>
+		</comps>
+	</HediffDef>
 
 	<!-- Angron Berserk -->
 	<HediffDef>
@@ -110,6 +110,25 @@
 			</li>
 			<li Class="Core40k.HediffCompProperties_RemoveMentalStateOnHediffEnd">
 				<specificMentalState>Berserk</specificMentalState>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>BEWH_Concealed</defName>
+		<label>concealed</label>
+		<description>Concealed and undetectable to almost everything.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_DisappearsOnDeath" />
+			<li>
+				<compClass>HediffComp_Invisibility</compClass>
+			</li>
+		</comps>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>True</showRemainingTime>
 			</li>
 		</comps>
 	</HediffDef>

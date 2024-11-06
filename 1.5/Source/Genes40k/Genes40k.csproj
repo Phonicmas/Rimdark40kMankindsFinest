@@ -72,6 +72,7 @@
     <Compile Include="DefModExtensions\DefModExtension_GeneStorageGraphicProgression.cs" />
     <Compile Include="DefModExtensions\DefModExtension_IncreasedJoyFromArt.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneseedVialRecipe.cs" />
+    <Compile Include="DefModExtensions\DefModExtension_PrimarchVatExtras.cs" />
     <Compile Include="GeneClasses\Gene_InduceFear.cs" />
     <Compile Include="GeneClasses\Gene_ProgenoidGlands.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_BlockedPsycasting.cs" />
@@ -108,7 +109,6 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_EternalWatchStopMentalState.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_LivingSaintResurrection.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_LivingSaintDeath.cs" />
-    <Compile Include="ThingClasses\Building_PrimarchEmbryoStorage-DELETE.cs" />
     <Compile Include="ThingClasses\PrimarchEmbryo.cs" />
     <Compile Include="ThingClasses\GeneseedVial.cs" />
     <Compile Include="Workers\JobDriver_FillPrimarchGrowthVat.cs" />
