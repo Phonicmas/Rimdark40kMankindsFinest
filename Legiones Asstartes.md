@@ -145,15 +145,3 @@ IDENTITY CRISIS
 Alpharius/Omegon: Two primarchs for the price of one
 
 They all look the fucking same.
-
-
-## Own ideas
-
-Specific Chapter Genes;
-Iron Hand(WIP); Give transhumanist trait, and increase global work speed when one or more prosthetics is present? 
-Raven Guard(WIP); Increased hunting stealth and shooting stuff
-
-Specific Primarch Genes;
-Corvus(WIP); Ability to go invis, hunting stealth increase
-Ferrus Manus(WIP); Crafting and quality boost, and also slightly for building
-Vulkan(WIP); Thought of making 2 perpetual genes, one lesser and one "normal". Vulkan gets the lesser version, making carriers almost immortal
