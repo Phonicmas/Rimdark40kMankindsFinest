@@ -155,7 +155,5 @@ Raven Guard(WIP); Increased hunting stealth and shooting stuff
 
 Specific Primarch Genes;
 Corvus(WIP); Ability to go invis, hunting stealth increase
-Konrad Curze(WIP); Teleport at will in low light area, and other boosts in low light?
 Ferrus Manus(WIP); Crafting and quality boost, and also slightly for building
-Dorn(WIP); Increase defense?
 Vulkan(WIP); Thought of making 2 perpetual genes, one lesser and one "normal". Vulkan gets the lesser version, making carriers almost immortal

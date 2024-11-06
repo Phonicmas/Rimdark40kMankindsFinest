@@ -273,8 +273,42 @@
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>410</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
+        <passionMod>
+            <skill>Crafting</skill>
+            <modType>AddOneLevel</modType>
+        </passionMod>
+        <statOffsets>
+            <WorkSpeedGlobal>0.1</WorkSpeedGlobal>
+        </statOffsets>
+        <forcedTraits>
+            <li>
+                <def>Abrasive</def>
+            </li>
+        </forcedTraits>
+        <customEffectDescriptions>
+            <li>Increase quality of crafting creations by 2.</li>
+        </customEffectDescriptions>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <hediffsToBodyParts>
+                    <li>
+                        <hediff>BEWH_NecrodermiteArm</hediff>
+                        <bodyparts>
+                            <li>Arm</li>
+                            <li>Arm</li>
+                        </bodyparts>
+                    </li>
+                </hediffsToBodyParts>
+            </li>
+            <li Class="Core40k.DefModExtension_BoostQualityCreatedByPawn">
+                <qualityBoostLevel>
+                    <li>
+                        <key>Crafting</key>
+                        <value>2</value>
+                    </li>
+                </qualityBoostLevel>
+            </li>
         </modExtensions>
     </GeneDef>
 

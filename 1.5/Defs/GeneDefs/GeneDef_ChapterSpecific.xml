@@ -355,6 +355,18 @@
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXIronHands</iconPath>
         <displayOrderInCategory>127</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
+        <forcedTraits>
+            <li>
+                <def>Transhumanist</def>
+            </li>
+            <li>
+                <def>Abrasive</def>
+            </li>
+        </forcedTraits>
+        <statOffsets>
+            <WorkSpeedGlobal>0.05</WorkSpeedGlobal>
+            <ResearchSpeed>0.1</ResearchSpeed>
+        </statOffsets>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene" />
         </modExtensions>
