@@ -167,7 +167,7 @@
     <!-- Chapter VIII - Konrad Curze -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
         <defName>BEWH_PrimarchSpecificGeneVIII</defName>
-        <label>Conrad Curze</label>
+        <label>Konrad Curze</label>
         <description>The genetic material of Conrad Curze.</description>
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>408</displayOrderInCategory>
@@ -179,7 +179,7 @@
             <MeleeDodgeChance>1.15</MeleeDodgeChance>
         </statFactors>
         <customEffectDescriptions>
-            <li>Gives the power to summon forth darkness til envelop the pawn.</li>
+            <li>Able to let out a psychic scream, destroying lighting sources and stunning enemies.</li>
         </customEffectDescriptions>
         <conditionalStatAffecters>
             <li Class="VanillaGenesExpanded.ConditionalStatAffecter_Darkness">
@@ -193,7 +193,7 @@
             <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
             <li Class="Core40k.DefModExtension_GivesVFEAbility">
                 <abilityDefs>
-                    <li>BEWH_VeilOfDarkness</li>
+                    <li>BEWH_PsychicEmp</li>
                 </abilityDefs>
             </li>
         </modExtensions>

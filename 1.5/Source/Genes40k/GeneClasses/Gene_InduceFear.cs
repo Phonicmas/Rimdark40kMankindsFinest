@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -9,27 +10,24 @@ namespace Genes40k
 {
     public class Gene_InduceFear : Gene
     {
-        //private const int tickInterval = 625;
-        private const int tickInterval = 180;
+        private const int tickInterval = 625;
         private const float effectRadius = 7.9f;
         private const int chanceToFear = 50;
-        private const int duration = 300;
         
         public override void Tick()
         {
             base.Tick();
-            if (!pawn.IsHashIntervalTick(tickInterval) || pawn.needs?.mood == null || pawn.Faction == null)
+            if (!pawn.IsHashIntervalTick(tickInterval) || pawn.Faction == null)
             {
                 return;
             }
 
-            if (!pawn.Spawned)
+            if (!pawn.Spawned || pawn.Downed || pawn.InMentalState || pawn.Crawling)
             {
                 return;
             }
             
-            var pawnsOnMap = (List<Pawn>)pawn.Map.mapPawns.AllPawnsSpawned;
-            var pawns = pawnsOnMap.FindAll(x => pawn.Position.DistanceTo(x.Position) <= effectRadius);
+            var pawns = GenRadial.RadialDistinctThingsAround(pawn.Position, pawn.Map, effectRadius, useCenter: true).OfType<Pawn>().ToList();
             AffectPawns(pawn, pawns);
         }
         

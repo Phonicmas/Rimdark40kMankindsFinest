@@ -146,16 +146,17 @@
 
   <!-- Konrad Curze: Veil of Darkness -->
   <VFECore.Abilities.AbilityDef>
-    <defName>BEWH_VeilOfDarkness</defName>
-    <label>Veil of Darkness</label>
-    <description>Summon forth darkness to enshroud the pawn.</description>
+    <defName>BEWH_PsychicEmp</defName>
+    <label>Psychic Emp</label>
+    <description>Let out a psychic scream, destroying all light and temporary stunning nearby enemies.</description>
     <iconPath>UI/Abilities/AcidSpray</iconPath>
-    <abilityClass>Genes40k.Ability_SummonDarkness</abilityClass>
+    <abilityClass>Genes40k.Ability_PsychicEmp</abilityClass>
     <needsTicking>true</needsTicking>
     <requireLineOfSight>false</requireLineOfSight>
     <cooldownTime>30000</cooldownTime>
     <durationTime>5000</durationTime>
-    <range>25</range>
+    <range>9.9</range>
+    <radius>9.9</radius>
     <castTime>30</castTime>
     <targetMode>Self</targetMode>
   </VFECore.Abilities.AbilityDef>
