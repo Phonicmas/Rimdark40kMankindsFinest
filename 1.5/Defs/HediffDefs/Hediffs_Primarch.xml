@@ -125,8 +125,6 @@
 			<li>
 				<compClass>HediffComp_Invisibility</compClass>
 			</li>
-		</comps>
-		<comps>
 			<li Class="HediffCompProperties_Disappears">
 				<showRemainingTime>True</showRemainingTime>
 			</li>
