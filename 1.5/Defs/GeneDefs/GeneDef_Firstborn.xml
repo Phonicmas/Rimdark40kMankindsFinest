@@ -20,9 +20,6 @@
         <minAgeActive>14</minAgeActive>
         <suppressedTraits>
             <li>
-                <def>Kind</def>
-            </li>
-            <li>
                 <def>SpeedOffset</def>
                 <degree>-1</degree>
             </li>

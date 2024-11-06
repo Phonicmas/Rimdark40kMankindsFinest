@@ -549,6 +549,14 @@
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXVIIWordBearers</iconPath>
         <displayOrderInCategory>148</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
+        <statOffsets>
+            <ConversionPower MayRequire="Ludeon.RimWorld.Ideology">0.2</ConversionPower>
+            <PawnBeauty>0.5</PawnBeauty>
+        </statOffsets>
+        <aptitudes>
+            <Social>2</Social>
+        </aptitudes>
+        <painFactor>0.9</painFactor>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene" />
         </modExtensions>
@@ -562,8 +570,42 @@
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXVIIISalamanders</iconPath>
         <displayOrderInCategory>151</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
+        <skinColorOverride>(55, 55, 55)</skinColorOverride>
+        <aptitudes>
+            <Crafting>2</Crafting>
+        </aptitudes>
+        <passionMod>
+            <skill>Crafting</skill>
+            <modType>AddOneLevel</modType>
+        </passionMod>
+        <statOffsets>
+            <ComfyTemperatureMax>30</ComfyTemperatureMax>
+        </statOffsets>
+        <statFactors>
+            <Flammability>0.5</Flammability>
+        </statFactors>
+        <capMods>
+            <li>
+                <capacity>Sight</capacity>
+                <offset>0.35</offset>
+            </li>
+        </capMods>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene" />
+            <li Class="Core40k.DefModExtension_AddRandomTraitByWeight">
+                <possibleTraitsToGive>
+                    <li>
+                        <key>
+                            <li>
+                                <key>Kind</key>
+                                <value>0</value>
+                            </li>
+                        </key>
+                        <value>100</value>
+                    </li>
+                </possibleTraitsToGive>
+                <chanceToGrantTrait>60</chanceToGrantTrait>
+            </li>
         </modExtensions>
     </GeneDef>
 

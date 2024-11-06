@@ -83,6 +83,17 @@
     </GeneDef>
 
 
+    <!-- Perpetual -->
+    <GeneDef ParentName="BEWH_GenesOverallParent" Name="BEWH_Perpetual" Abstract="True">
+        <marketValueFactor>1.8</marketValueFactor>
+        <biostatCpx>7</biostatCpx>
+        <biostatArc>7</biostatArc>
+        <exclusionTags>
+            <li>BEWH_Perpetual</li>
+        </exclusionTags>
+    </GeneDef>
+
+
     <!-- Pariah -->
     <GeneDef ParentName="BEWH_GenesOverallParent" Name="BEWH_PariahParent" Abstract="True">
         <marketValueFactor>2</marketValueFactor>

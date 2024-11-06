@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    
+    <GeneDef ParentName="BEWH_Perpetual">
+        <defName>BEWH_PerpetualGreater</defName>
+        <label>Greater Perpetual</label>
+        <description>Perpetual.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
+        <displayOrderInCategory>418</displayOrderInCategory>
+        <minAgeActive>0</minAgeActive>
+    </GeneDef>
+
+
+    <GeneDef ParentName="BEWH_Perpetual">
+        <defName>BEWH_PerpetualLesser</defName>
+        <label>Lesser Perpetual</label>
+        <description>Perpetual.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
+        <displayOrderInCategory>418</displayOrderInCategory>
+        <minAgeActive>0</minAgeActive>
+    </GeneDef>
 
 </Defs>

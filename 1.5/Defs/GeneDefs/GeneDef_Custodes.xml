@@ -261,9 +261,6 @@
         </aptitudes>
         <suppressedTraits>
             <li>
-                <def>Kind</def>
-            </li>
-            <li>
                 <def>Nerves</def>
                 <degree>-1</degree>
             </li>

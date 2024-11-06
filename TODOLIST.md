@@ -24,6 +24,8 @@ Make rest of primarch and chapter specific genes
 
 Fill nightlord chapter gene with additional gene that might resist its effect
 
+Create perpetual genes
+
 ## Other
 Should the Primarch specific genes be renamed? (currently the name is of the Primarch)
 

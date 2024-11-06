@@ -277,6 +277,9 @@
             <skill>Crafting</skill>
             <modType>AddOneLevel</modType>
         </passionMod>
+        <aptitudes>
+            <Crafting>6</Crafting>
+        </aptitudes>
         <statOffsets>
             <WorkSpeedGlobal>0.1</WorkSpeedGlobal>
         </statOffsets>
@@ -399,10 +402,15 @@
         <minAgeActive>14</minAgeActive>
         <statFactors>
             <ImmunityGainSpeed>100</ImmunityGainSpeed>
+            <IncomingDamageFactor>0.75</IncomingDamageFactor>
         </statFactors>
         <statOffsets>
             <ToxicResistance>4</ToxicResistance>
+            <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+            <ArmorRating_Heat>0.20</ArmorRating_Heat>
         </statOffsets>
+        <painFactor>0.5</painFactor>
         <forcedTraits>
             <li>
                 <def>Nerves</def>
@@ -458,14 +466,11 @@
         <minAgeActive>14</minAgeActive>
         <statFactors>
             <ArrestSuccessChance>2</ArrestSuccessChance>
-            <SocialImpact>1.5</SocialImpact>
-            <ConversionPower MayRequire="Ludeon.RimWorld.Ideology">1.6</ConversionPower>
+            <SocialImpact>1.4</SocialImpact>
+            <ShootingAccuracyFactor_Short>1.25</ShootingAccuracyFactor_Short>
         </statFactors>
-        <statOffsets>
-            <MeleeDodgeChance>15</MeleeDodgeChance>
-        </statOffsets>
         <aptitudes>
-            <Social>3</Social>
+            <Social>2</Social>
         </aptitudes>
         <passionMod>
             <skill>Social</skill>
@@ -484,6 +489,29 @@
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>410</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
+        <statFactors>
+            <ArrestSuccessChance>2</ArrestSuccessChance>
+            <SocialImpact>1.5</SocialImpact>
+            <PsychicSensitivity>3</PsychicSensitivity>
+            <MeditationFocusGain>1.5</MeditationFocusGain>
+            <PsychicEntropyRecoveryRate>1.5</PsychicEntropyRecoveryRate>
+        </statFactors>
+        <statOffsets>
+            <ConversionPower MayRequire="Ludeon.RimWorld.Ideology">1.5</ConversionPower>
+        </statOffsets>
+        <capMods>
+            <li>
+                <capacity>Consciousness</capacity>
+                <postFactor>1.1</postFactor>
+            </li>
+        </capMods>
+        <aptitudes>
+            <Social>5</Social>
+        </aptitudes>
+        <passionMod>
+            <skill>Social</skill>
+            <modType>AddOneLevel</modType>
+        </passionMod>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
         </modExtensions>
@@ -497,8 +525,24 @@
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>418</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
+        <geneClass>Core40k.Gene_AddRandomGeneAndOrTraitByWeight</geneClass>
+        <forcedTraits>
+            <li>
+                <def>Kind</def>
+                <degree>0</degree>
+            </li>
+        </forcedTraits>
+        <skinColorOverride>(55, 55, 55)</skinColorOverride>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="Core40k.DefModExtension_AddRandomGeneByWeight">
+                <possibleGenesToGive>
+                    <li>
+                        <key>BEWH_PerpetualLesser</key>
+                        <value>100</value>
+                    </li>
+                </possibleGenesToGive>
+            </li>
         </modExtensions>
     </GeneDef>
 
