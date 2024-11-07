@@ -119,15 +119,16 @@
 		<label>concealed</label>
 		<description>Concealed and undetectable to almost everything.</description>
 		<hediffClass>HediffWithComps</hediffClass>
+		<everCurableByItem>false</everCurableByItem>
 		<isBad>false</isBad>
 		<comps>
-			<li Class="HediffCompProperties_DisappearsOnDeath" />
-			<li>
-				<compClass>HediffComp_Invisibility</compClass>
+			<li Class="HediffCompProperties_Invisibility">
+				<visibleToPlayer>true</visibleToPlayer>
 			</li>
+			<!--<li Class="HediffCompProperties_DisappearsOnDeath" />
 			<li Class="HediffCompProperties_Disappears">
 				<showRemainingTime>True</showRemainingTime>
-			</li>
+			</li>-->
 		</comps>
 	</HediffDef>
 
