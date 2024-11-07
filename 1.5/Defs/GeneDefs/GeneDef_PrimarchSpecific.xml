@@ -141,7 +141,7 @@
     <GeneDef ParentName="BEWH_PrimarchSpecific">
         <defName>BEWH_PrimarchSpecificGeneVII</defName>
         <label>Rogal Dorn</label>
-        <description>The genetic material of Rogal Dorn</description>
+        <description>The genetic material of Rogal Dorn.</description>
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>407</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
@@ -168,7 +168,7 @@
     <GeneDef ParentName="BEWH_PrimarchSpecific">
         <defName>BEWH_PrimarchSpecificGeneVIII</defName>
         <label>Konrad Curze</label>
-        <description>The genetic material of Conrad Curze.</description>
+        <description>The genetic material of Konrad Curze.</description>
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>408</displayOrderInCategory>
         <minAgeActive>14</minAgeActive>
