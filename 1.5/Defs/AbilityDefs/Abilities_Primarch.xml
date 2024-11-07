@@ -133,7 +133,7 @@
     <defName>BEWH_RaiseBastion</defName>
     <label>Raise Bastion</label>
     <description>Raise a temporary sturdy bastion, outfitted with gun and holding points.</description>
-    <iconPath>UI/Abilities/AcidSpray</iconPath>
+    <iconPath>UI/Abilities/BEWH_Ability_RogalDornFortify</iconPath>
     <abilityClass>Genes40k.Ability_RaiseBastion</abilityClass>
     <needsTicking>true</needsTicking>
     <requireLineOfSight>false</requireLineOfSight>
