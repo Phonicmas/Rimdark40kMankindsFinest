@@ -7,13 +7,11 @@ Compile list of features
 ## Art
 Primarch Growth Vat Building
 
-Sangprimus Portus Building
-
 Primarch Specific Icons (Not sure what excatly to do here) (Maybe flip the helix of the Chapter ones and add some bedazzle? Or just make something that would remind you of them, like red skin and psyker thing i made for Magnus, and the wings for Sanguinius) (The helix should stay i feel) (I think i learn towards just flipping the helix and adding some bedazzle)
 
 Chapter and Primarch material thing icons?
 
-Ability Icons for primarch abilities (Forestwalk long and short, Alakh Geh, Deny the Witch, Raise Bastion, Veil of Darkness, Angron Beserk, Conceal)
+Ability Icons for primarch abilities (Forestwalk long and short, Alakh Geh, Deny the Witch, Veil of Darkness, Angron Beserk, Conceal)
 
 Maybe some different backgrounds for the different genes? (Maybe keep the recoloured one psyker and pariah and then make some new type for the different super human, with increasing golden stuff and purity seals n stuff) (im just cooking here, this is not important)
     

@@ -211,16 +211,16 @@
     <showPsycastEffects>False</showPsycastEffects>
     <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
-    <cooldownTicksRange>5000</cooldownTicksRange>
+    <cooldownTicksRange>2500</cooldownTicksRange>
     <category>BEWH_Primarch</category>
     <uiOrder>5</uiOrder>
     <warmupStartSound>BEWH_NoSound</warmupStartSound>
     <statBases>
-      <Ability_Duration>2500</Ability_Duration>
+      <Ability_Duration>625</Ability_Duration>
     </statBases>
     <verbProperties>
       <verbClass>Verb_CastAbilityTouch</verbClass>
-      <warmupTime>15</warmupTime>
+      <warmupTime>0</warmupTime>
       <drawAimPie>False</drawAimPie>
       <requireLineOfSight>False</requireLineOfSight>
       <targetParams>
