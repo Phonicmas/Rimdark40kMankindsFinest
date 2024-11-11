@@ -14,7 +14,7 @@ namespace Genes40k
             
             var blockingHediffs = new List<HediffDef> { Genes40kDefOf.BEWH_DeniedWitch, Genes40kDefOf.BEWH_PsychicConnectionSevered};
 
-            for (int i = 0; i < blockingHediffs.Count; i++)
+            for (var i = 0; i < blockingHediffs.Count; i++)
             {
                 var hediff = blockingHediffs[i];
                 if (__instance.CasterPawn.health.hediffSet.HasHediff(hediff))

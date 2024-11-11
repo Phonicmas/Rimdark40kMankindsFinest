@@ -52,11 +52,7 @@ namespace Genes40k
             weightedSelection.AddEntry(Genes40kDefOf.BEWH_OmegaPariah, 2);
             
             var chosenGene = weightedSelection.GetRandomUnique();
-            var typeBorn = "Psyker";
-            if (chosenGene.HasModExtension<DefModExtension_Pariah>())
-            {
-                typeBorn = "Pariah";
-            }
+            var typeBorn = chosenGene.HasModExtension<DefModExtension_Pariah>() ? "Pariah".Translate() : "Psyker".Translate();
             
             var letter = new Letter_JumpTo
             {

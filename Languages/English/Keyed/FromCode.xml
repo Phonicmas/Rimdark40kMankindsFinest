@@ -24,6 +24,9 @@
   <BEWH.NaturalBornXLetter>Natural Born {0}</BEWH.NaturalBornXLetter>
   <BEWH.NaturalBornXMessage>From the moment {0} became pregnant something felt off, something that has finally come to light. It seems that {1} has been born as a natural {2}.</BEWH.NaturalBornXMessage>
 
+  <BEWH.Psyker>psyker</BEWH.Psyker>
+  <BEWH.Pariah>pariah</BEWH.Pariah>
+
   <!-- Building-->
   <!-- Gestator-->
   <BEWH.SelectMatrix>Select matrix</BEWH.SelectMatrix>

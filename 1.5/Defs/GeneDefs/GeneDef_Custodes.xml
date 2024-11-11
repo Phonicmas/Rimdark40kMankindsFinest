@@ -79,7 +79,7 @@
             <ToxicResistance>2</ToxicResistance>
         </statOffsets>
         <statFactors>
-            <InjuryHealingFactor>10</InjuryHealingFactor>
+            <InjuryHealingFactor>8</InjuryHealingFactor>
         </statFactors>
 
         <biologicalAgeTickFactorFromAgeCurve>
@@ -176,7 +176,7 @@
         <biostatArc>3</biostatArc>
 
         <statFactors>
-            <ImmunityGainSpeed>7</ImmunityGainSpeed>
+            <ImmunityGainSpeed>6</ImmunityGainSpeed>
         </statFactors>
 
         <capMods>

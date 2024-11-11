@@ -18,11 +18,9 @@ Maybe some different backgrounds for the different genes? (Maybe keep the recolo
 ## Code and XML
 General Bugfixing here and there
 
-Make rest of primarch and chapter specific genes
-
 Fill nightlord chapter gene with additional gene that might resist its effect
 
-Create perpetual genes
+Balance primarch genes
 
 ## Other
 Should the Primarch specific genes be renamed? (currently the name is of the Primarch)

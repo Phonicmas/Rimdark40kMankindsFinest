@@ -69,6 +69,7 @@ namespace Genes40k
 
         public override void ExposeData()
         {
+            base.ExposeData();
             Scribe_Collections.Look(ref livingSaints, "livingSaints", LookMode.Reference);
         }
     }

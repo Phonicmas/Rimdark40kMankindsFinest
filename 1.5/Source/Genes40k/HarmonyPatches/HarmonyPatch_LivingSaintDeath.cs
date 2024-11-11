@@ -34,25 +34,28 @@ namespace Genes40k
                 resurrectionChance = 2;
             }
 
-            if (Prefs.DevMode && DebugSettings.godMode)
+            /*if (Prefs.DevMode && DebugSettings.godMode)
             {
                 resurrectionChance = 200;
-            }
+            }*/
 
-            if (rand.Next(0, 100) <= resurrectionChance)
+            const int chanceMax = 200;
+
+            if (rand.Next(0, chanceMax) > resurrectionChance)
             {
-                __instance.genes.SetXenotypeDirect(Genes40kDefOf.BEWH_LivingSaint);
-                foreach (var gene in Genes40kDefOf.BEWH_LivingSaint.genes)
-                {
-                    __instance.genes.AddGene(gene, true);
-                }
-
-                ResurrectionUtility.TryResurrect(__instance);
-
-                var letter = LetterMaker.MakeLetter("BEWH.LivingSaint".Translate(), "BEWH.LivingSaintMessage".Translate(__instance), Genes40kDefOf.BEWH_GoldenPositive, __instance);
-                Find.LetterStack.ReceiveLetter(letter);
+                return;
+            }
+            
+            __instance.genes.SetXenotypeDirect(Genes40kDefOf.BEWH_LivingSaint);
+            foreach (var gene in Genes40kDefOf.BEWH_LivingSaint.genes)
+            {
+                __instance.genes.AddGene(gene, true);
             }
 
+            ResurrectionUtility.TryResurrect(__instance);
+
+            var letter = LetterMaker.MakeLetter("BEWH.LivingSaint".Translate(), "BEWH.LivingSaintMessage".Translate(__instance), Genes40kDefOf.BEWH_GoldenPositive, __instance);
+            Find.LetterStack.ReceiveLetter(letter);
         }    
     }
 }

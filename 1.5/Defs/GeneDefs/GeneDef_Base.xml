@@ -39,6 +39,7 @@
     <GeneDef ParentName="BEWH_SpaceMarineParent" Name="BEWH_ChapterGeneParent" Abstract="True">
         <marketValueFactor>1.05</marketValueFactor>
         <biostatCpx>1</biostatCpx>
+        <minAgeActive>18</minAgeActive>
         <exclusionTags>
             <li>BEWH_ChapterGene</li>
         </exclusionTags>
@@ -48,6 +49,7 @@
     <GeneDef ParentName="BEWH_SpaceMarineParent" Name="BEWH_ChapterGeneFlawParent" Abstract="True">
         <marketValueFactor>1</marketValueFactor>
         <biostatCpx>1</biostatCpx>
+        <minAgeActive>18</minAgeActive>
         <exclusionTags>
             <li>BEWH_ChapterGeneFlaw</li>
         </exclusionTags>
@@ -74,9 +76,10 @@
 
     <!-- Primarch Specific -->
     <GeneDef ParentName="BEWH_GenesOverallParent" Name="BEWH_PrimarchSpecific" Abstract="True">
-        <marketValueFactor>1.8</marketValueFactor>
+        <marketValueFactor>3</marketValueFactor>
         <biostatCpx>1</biostatCpx>
         <biostatArc>1</biostatArc>
+        <minAgeActive>0</minAgeActive>
         <exclusionTags>
             <li>BEWH_PrimarchSpecific</li>
         </exclusionTags>
@@ -85,9 +88,9 @@
 
     <!-- Perpetual -->
     <GeneDef ParentName="BEWH_GenesOverallParent" Name="BEWH_Perpetual" Abstract="True">
-        <marketValueFactor>1.8</marketValueFactor>
-        <biostatCpx>7</biostatCpx>
-        <biostatArc>7</biostatArc>
+        <marketValueFactor>10</marketValueFactor>
+        <geneClass>Genes40k.Gene_Perpetual</geneClass>
+        <minAgeActive>0</minAgeActive>
         <exclusionTags>
             <li>BEWH_Perpetual</li>
         </exclusionTags>

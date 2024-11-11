@@ -2,22 +2,85 @@
 <Defs>
 
     <GeneDef ParentName="BEWH_Perpetual">
-        <defName>BEWH_PerpetualGreater</defName>
-        <label>Greater Perpetual</label>
+        <defName>BEWH_PerpetualGamma</defName>
+        <label>Gamma Perpetual</label>
         <description>Perpetual.</description>
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
-        <displayOrderInCategory>418</displayOrderInCategory>
-        <minAgeActive>0</minAgeActive>
+        <displayOrderInCategory>800</displayOrderInCategory>
+    
+        <biostatCpx>10</biostatCpx>
+        <biostatArc>4</biostatArc>
+
+        <customEffectDescriptions>
+            <li>Will resurrect from most lethal injuries after 3-4 days</li>
+            <li>Self healing capabilities, including restoration of lost limbs.</li>
+        </customEffectDescriptions>
+
+        <statFactors>
+            <ImmunityGainSpeed>2</ImmunityGainSpeed>
+            <InjuryHealingFactor>4</InjuryHealingFactor>
+        </statFactors>
+
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PerpetualGene">
+                <perpetualTier>1</perpetualTier>
+                <perpetualRessurectionRange>180000~240000</perpetualRessurectionRange>
+            </li>
+        </modExtensions>
     </GeneDef>
 
-
     <GeneDef ParentName="BEWH_Perpetual">
-        <defName>BEWH_PerpetualLesser</defName>
-        <label>Lesser Perpetual</label>
+        <defName>BEWH_PerpetualBeta</defName>
+        <label>Beta Perpetual</label>
         <description>Perpetual.</description>
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
-        <displayOrderInCategory>418</displayOrderInCategory>
-        <minAgeActive>0</minAgeActive>
+        <displayOrderInCategory>801</displayOrderInCategory>
+        <biostatCpx>13</biostatCpx>
+        <biostatArc>5</biostatArc>
+
+        <customEffectDescriptions>
+            <li>Will resurrect from most lethal injuries after 1-2 days</li>
+            <li>Enhanced self healing capabilities, including restoration of lost limbs.</li>
+        </customEffectDescriptions>
+
+        <statFactors>
+            <ImmunityGainSpeed>2</ImmunityGainSpeed>
+            <InjuryHealingFactor>8</InjuryHealingFactor>
+        </statFactors>
+
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PerpetualGene">
+                <perpetualTier>2</perpetualTier>
+                <perpetualRessurectionRange>60000~120000</perpetualRessurectionRange>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="BEWH_Perpetual">
+        <defName>BEWH_PerpetualAlpha</defName>
+        <label>Alpha Perpetual</label>
+        <description>Perpetual.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
+        <displayOrderInCategory>802</displayOrderInCategory>
+        <biostatCpx>18</biostatCpx>
+        <biostatArc>7</biostatArc>
+
+        <customEffectDescriptions>
+            <li>Will resurrect from most lethal injuries within half a day</li>
+            <li>Greatly enhanced self healing capabilities, including restoration of lost limbs.</li>
+        </customEffectDescriptions>
+
+        <statFactors>
+            <ImmunityGainSpeed>3</ImmunityGainSpeed>
+            <InjuryHealingFactor>20</InjuryHealingFactor>
+        </statFactors>
+
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PerpetualGene">
+                <perpetualTier>3</perpetualTier>
+                <perpetualRessurectionRange>20000~30000</perpetualRessurectionRange>
+            </li>
+        </modExtensions>
     </GeneDef>
 
 </Defs>

@@ -167,8 +167,8 @@
         <preventPermanentWounds>true</preventPermanentWounds>
 
         <statFactors>
-            <ImmunityGainSpeed>10</ImmunityGainSpeed>
-            <InjuryHealingFactor>16</InjuryHealingFactor>
+            <ImmunityGainSpeed>8</ImmunityGainSpeed>
+            <InjuryHealingFactor>14</InjuryHealingFactor>
         </statFactors>
 
         <biologicalAgeTickFactorFromAgeCurve>

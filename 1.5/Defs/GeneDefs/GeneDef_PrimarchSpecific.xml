@@ -8,7 +8,6 @@
         <description>The genetic material of Lion El'Jonson.</description>
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>401</displayOrderInCategory>
-        <minAgeActive>14</minAgeActive>
         <geneClass>Core40k.Gene_GiveVFECoreAbility</geneClass>
         <customEffectDescriptions>
             <li>Enables Forestwalking.</li>
@@ -31,7 +30,6 @@
         <description>The genetic material of ???</description>
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>402</displayOrderInCategory>
-        <minAgeActive>14</minAgeActive>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
         </modExtensions>
@@ -44,7 +42,6 @@
         <description>The genetic material of Fulgrim.</description>
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>403</displayOrderInCategory>
-        <minAgeActive>14</minAgeActive>
         <statFactors>
             <SocialImpact>2.5</SocialImpact>
             <ConversionPower MayRequire="Ludeon.RimWorld.Ideology">2</ConversionPower>
@@ -82,7 +79,6 @@
         <description>The genetic material of Perturabo.</description>
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>404</displayOrderInCategory>
-        <minAgeActive>14</minAgeActive>
         <statOffsets>
             <ResearchSpeed>3</ResearchSpeed>
             <AimingDelayFactor>-0.4</AimingDelayFactor>
@@ -101,7 +97,6 @@
         <description>The genetic material of Jaghatai Khan.</description>
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>405</displayOrderInCategory>
-        <minAgeActive>14</minAgeActive>
         <statFactors>
             <CaravanRidingSpeedFactor>2</CaravanRidingSpeedFactor>
         </statFactors>
@@ -123,7 +118,6 @@
         <description>The genetic material of Leman Russ.</description>
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>406</displayOrderInCategory>
-        <minAgeActive>14</minAgeActive>
         <abilities>
             <li>BEWH_WarpShield</li>
             <li MayRequire="Ludeon.RimWorld.Royalty">BEWH_DenyTheWitch</li>
@@ -144,7 +138,6 @@
         <description>The genetic material of Rogal Dorn.</description>
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>407</displayOrderInCategory>
-        <minAgeActive>14</minAgeActive>
         <hairColorOverride>(0.65, 0.65, 0.65)</hairColorOverride>
         <statOffsets>
             <ConstructionSpeed>0.35</ConstructionSpeed>
@@ -171,7 +164,6 @@
         <description>The genetic material of Konrad Curze.</description>
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>408</displayOrderInCategory>
-        <minAgeActive>14</minAgeActive>
         <geneClass>Core40k.Gene_GiveVFECoreAbility</geneClass>
         <hairColorOverride>(1, 1, 1)</hairColorOverride>
         <ignoreDarkness>true</ignoreDarkness>
@@ -256,7 +248,6 @@
                 </drawData>
             </li>
         </renderNodeProperties>
-        <minAgeActive>14</minAgeActive>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
             <li Class="VanillaGenesExpanded.GeneExtension">
@@ -272,7 +263,6 @@
         <description>The genetic material of Ferrus Manus.</description>
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>410</displayOrderInCategory>
-        <minAgeActive>14</minAgeActive>
         <passionMod>
             <skill>Crafting</skill>
             <modType>AddOneLevel</modType>
@@ -322,7 +312,6 @@
         <description>The genetic material of ???</description>
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>411</displayOrderInCategory>
-        <minAgeActive>14</minAgeActive>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
         </modExtensions>
@@ -335,7 +324,6 @@
         <description>The genetic material of Angron.</description>
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>412</displayOrderInCategory>
-        <minAgeActive>14</minAgeActive>
         <forcedTraits>
             <li>
                 <def>Bloodlust</def>
@@ -366,7 +354,6 @@
         <description>The genetic material of Roboute Guilliman.</description>
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>413</displayOrderInCategory>
-        <minAgeActive>14</minAgeActive>
         <forcedTraits>
             <li>
                 <def>Industriousness</def>
@@ -399,7 +386,6 @@
         <description>The genetic material of Mortarion.</description>
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>414</displayOrderInCategory>
-        <minAgeActive>14</minAgeActive>
         <statFactors>
             <ImmunityGainSpeed>100</ImmunityGainSpeed>
             <IncomingDamageFactor>0.75</IncomingDamageFactor>
@@ -442,7 +428,6 @@
             </li>
         </capMods>
         <skinColorOverride>(150, 62, 62)</skinColorOverride>
-        <minAgeActive>14</minAgeActive>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
             <li Class="Core40k.DefModExtension_AddRandomGeneByWeight">
@@ -463,7 +448,6 @@
         <description>The genetic material of Horus Lupercal.</description>
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>416</displayOrderInCategory>
-        <minAgeActive>14</minAgeActive>
         <statFactors>
             <ArrestSuccessChance>2</ArrestSuccessChance>
             <SocialImpact>1.4</SocialImpact>
@@ -488,7 +472,6 @@
         <description>The genetic material of Lorgar.</description>
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>410</displayOrderInCategory>
-        <minAgeActive>14</minAgeActive>
         <statFactors>
             <ArrestSuccessChance>2</ArrestSuccessChance>
             <SocialImpact>1.5</SocialImpact>
@@ -524,7 +507,6 @@
         <description>The genetic material of Vulkan.</description>
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>418</displayOrderInCategory>
-        <minAgeActive>14</minAgeActive>
         <geneClass>Core40k.Gene_AddRandomGeneAndOrTraitByWeight</geneClass>
         <forcedTraits>
             <li>
@@ -538,7 +520,7 @@
             <li Class="Core40k.DefModExtension_AddRandomGeneByWeight">
                 <possibleGenesToGive>
                     <li>
-                        <key>BEWH_PerpetualLesser</key>
+                        <key>BEWH_PerpetualBeta</key>
                         <value>100</value>
                     </li>
                 </possibleGenesToGive>
@@ -553,7 +535,6 @@
         <description>The genetic material of Corvus Corax.</description>
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>419</displayOrderInCategory>
-        <minAgeActive>14</minAgeActive>
         <conditionalStatAffecters>
             <li Class="VanillaGenesExpanded.ConditionalStatAffecter_Darkness">
                 <statFactors>
@@ -582,7 +563,6 @@
         <description>The genetic material of Alpharius/Omegon.</description>
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>420</displayOrderInCategory>
-        <minAgeActive>14</minAgeActive>
         <customEffectDescriptions>
             <li>You have a twin!</li>
         </customEffectDescriptions>
