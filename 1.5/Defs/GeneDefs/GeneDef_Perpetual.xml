@@ -13,7 +13,7 @@
 
         <customEffectDescriptions>
             <li>Will resurrect from most lethal injuries after 3-4 days</li>
-            <li>Self healing capabilities, including restoration of lost limbs.</li>
+            <li>Self healing capabilities, including healing permanent wouds and restoration of lost limbs.</li>
         </customEffectDescriptions>
 
         <statFactors>
@@ -40,7 +40,7 @@
 
         <customEffectDescriptions>
             <li>Will resurrect from most lethal injuries after 1-2 days</li>
-            <li>Enhanced self healing capabilities, including restoration of lost limbs.</li>
+            <li>Enhanced self healing capabilities, including healing permanent wouds and restoration of lost limbs.</li>
         </customEffectDescriptions>
 
         <statFactors>
@@ -67,7 +67,7 @@
 
         <customEffectDescriptions>
             <li>Will resurrect from most lethal injuries within half a day</li>
-            <li>Greatly enhanced self healing capabilities, including restoration of lost limbs.</li>
+            <li>Greatly enhanced self healing capabilities, including healing permanent wouds and restoration of lost limbs.</li>
         </customEffectDescriptions>
 
         <statFactors>

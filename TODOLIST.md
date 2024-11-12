@@ -16,11 +16,11 @@ Ability Icons for primarch abilities (Forestwalk long and short, Alakh Geh, Deny
 Maybe some different backgrounds for the different genes? (Maybe keep the recoloured one psyker and pariah and then make some new type for the different super human, with increasing golden stuff and purity seals n stuff) (im just cooking here, this is not important)
     
 ## Code and XML
-General Bugfixing here and there
+General Bugfixing here and there and code cleaning
 
 Fill nightlord chapter gene with additional gene that might resist its effect
 
-Balance primarch genes
+Balance primarch specific genes
 
 ## Other
 Should the Primarch specific genes be renamed? (currently the name is of the Primarch)
