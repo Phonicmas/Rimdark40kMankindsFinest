@@ -55,6 +55,18 @@
                     </stages>
                 </value>
             </li>
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThoughtDef[defName = "BEWH_AlphaPsyker"]</xpath>
+                <value>
+                    <stages>
+                        <li>
+                            <label>Alpha Psyker</label>
+                            <description>I can feel the warp...</description>
+                            <baseMoodEffect>-11</baseMoodEffect>
+                        </li>
+                    </stages>
+                </value>
+            </li>
         </operations>
     </Operation>
 </Patch>

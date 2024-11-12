@@ -81,6 +81,7 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_BlockedPsycasting.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_MoreArtJoy.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_FirstProgenoidGlandProgress.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_NaturalBirthPerpetual.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_PerpetualNoDestroy.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_ReactToMelee.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_RubiconSurgeryChanceIncrease.cs" />

@@ -68,6 +68,22 @@ namespace Genes40k
                 Genes40kDefOf.BEWH_CelerityNexus,
                 Genes40kDefOf.BEWH_HyperionMuscleStrands
             };
+        
+        public static List<GeneDef> PsykerGenes => new List<GeneDef>
+            {
+                Genes40kDefOf.BEWH_IotaPsyker,
+                Genes40kDefOf.BEWH_Psyker,
+                Genes40kDefOf.BEWH_DeltaPsyker,
+                Genes40kDefOf.BEWH_BetaPsyker,
+                Genes40kDefOf.BEWH_AlphaPsyker
+            };
+        
+        public static List<GeneDef> PariahGenes => new List<GeneDef>
+            {
+                Genes40kDefOf.BEWH_OmegaPariah,
+                Genes40kDefOf.BEWH_SigmaPariah,
+                Genes40kDefOf.BEWH_UpsilonPariah,
+            };
 
         public static bool IsThunderWarrior(Pawn pawn)
         {
@@ -93,22 +109,21 @@ namespace Genes40k
         {
             return PrimarchGenes.All(geneDef => pawn.genes.HasActiveGene(geneDef));
         }
-
-
+        
         public static bool IsSuperHuman(Pawn pawn)
         {
-            return (IsThunderWarrior(pawn) || IsFirstborn(pawn) || IsPrimaris(pawn) || IsCustodes(pawn) || IsPrimarch(pawn));
+            //Primaris not check, as if they are primaris, then they are by extension also firstborn
+            return IsThunderWarrior(pawn) || IsFirstborn(pawn) || IsCustodes(pawn) || IsPrimarch(pawn);
         }
-
-
+        
         public static bool IsPsyker(Pawn pawn)
         {
-            return pawn.genes.HasActiveGene(Genes40kDefOf.BEWH_IotaPsyker) || pawn.genes.HasActiveGene(Genes40kDefOf.BEWH_Psyker) || pawn.genes.HasActiveGene(Genes40kDefOf.BEWH_DeltaPsyker) || pawn.genes.HasActiveGene(Genes40kDefOf.BEWH_BetaPsyker);
+            return Enumerable.Any(PsykerGenes, gene => pawn.genes.HasActiveGene(gene));
         }
 
         public static bool IsPariah(Pawn pawn)
         {
-            return pawn.genes.HasActiveGene(Genes40kDefOf.BEWH_OmegaPariah) || pawn.genes.HasActiveGene(Genes40kDefOf.BEWH_SigmaPariah) || pawn.genes.HasActiveGene(Genes40kDefOf.BEWH_UpsilonPariah);
+            return Enumerable.Any(PariahGenes, gene => pawn.genes.HasActiveGene(gene));
         }
 
 

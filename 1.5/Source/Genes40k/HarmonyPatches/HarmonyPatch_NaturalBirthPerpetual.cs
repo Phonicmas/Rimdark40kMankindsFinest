@@ -8,9 +8,9 @@ using Verse;
 namespace Genes40k
 {
 	[StaticConstructorOnStartup]
-    public static class NaturalBirthPsykerPariah
+    public static class NaturalBirthPerpetual
     {
-		static NaturalBirthPsykerPariah()
+		static NaturalBirthPerpetual()
 		{
 			Genes40kMod.harmony.Patch(AccessTools.Method(typeof(PregnancyUtility), "ApplyBirthOutcome"), null, new HarmonyMethod(AccessTools.Method(typeof(NaturalBirthPsykerPariah), "Postfix")));
 		}
@@ -18,7 +18,7 @@ namespace Genes40k
 		public static void Postfix(ref Thing __result, Pawn geneticMother)
         {
             var modSettings = LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>();
-            if (!modSettings.psykerPariahBirth)
+            if (!modSettings.perpetualBirth)
             {
                 return;
             }
@@ -27,33 +27,27 @@ namespace Genes40k
             {
                 return;
             }
+            
+            if (pawn.genes == null || Enumerable.Any(pawn.genes.GenesListForReading, gene => gene.def.HasModExtension<DefModExtension_PerpetualGene>()))
+            {
+                return;
+            }
 
-            var unnaturalChance = modSettings.psykerPariahBirthChance;
+            var unnaturalChance = modSettings.perpetualBirthChance;
             var rand = new Random();
             if (rand.Next(0, 100) > unnaturalChance)
             {
                 return;
             }
-
-            if (pawn.genes == null || Enumerable.Any(pawn.genes.GenesListForReading, gene => gene.def.HasModExtension<DefModExtension_Pariah>() || gene.def.HasModExtension<DefModExtension_Psyker>()))
-            {
-                return;
-            }
             
             var weightedSelection = new WeightedSelection<GeneDef>();
-            //Psyker genes
-            weightedSelection.AddEntry(Genes40kDefOf.BEWH_IotaPsyker, 60);
-            weightedSelection.AddEntry(Genes40kDefOf.BEWH_Psyker, 40);
-            weightedSelection.AddEntry(Genes40kDefOf.BEWH_DeltaPsyker, 12);
-            weightedSelection.AddEntry(Genes40kDefOf.BEWH_BetaPsyker, 4);
-            weightedSelection.AddEntry(Genes40kDefOf.BEWH_AlphaPsyker, 1);
-            //Pariah Genes
-            weightedSelection.AddEntry(Genes40kDefOf.BEWH_SigmaPariah, 40);
-            weightedSelection.AddEntry(Genes40kDefOf.BEWH_UpsilonPariah, 12);
-            weightedSelection.AddEntry(Genes40kDefOf.BEWH_OmegaPariah, 4);
+            //Perpetual genes
+            weightedSelection.AddEntry(Genes40kDefOf.BEWH_PerpetualGamma, 50);
+            weightedSelection.AddEntry(Genes40kDefOf.BEWH_PerpetualBeta, 10);
+            weightedSelection.AddEntry(Genes40kDefOf.BEWH_PerpetualAlpha, 1);
             
             var chosenGene = weightedSelection.GetRandomUnique();
-            var typeBorn = chosenGene.HasModExtension<DefModExtension_Pariah>() ? "BEWH.Pariah".Translate() : "BEWH.Psyker".Translate();
+            var typeBorn = "BEWH.Perpetual".Translate();
             
             var letter = new Letter_JumpTo
             {

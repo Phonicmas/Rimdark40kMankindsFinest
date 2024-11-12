@@ -10,7 +10,7 @@ namespace Genes40k
     {
         private Dictionary<Pawn ,int> perpetuals = new Dictionary<Pawn, int>();
         
-        private const int CheckInterval = 2500;
+        private const int CheckInterval = 5000;
         private int currentTick;
 
         public GameComponent_Perpetual(Game game)
@@ -31,7 +31,7 @@ namespace Genes40k
             
             foreach (var perpetual in perpetuals.Where(perpetual => perpetual.Key.Dead && Find.TickManager.TicksGame >= perpetual.Value))
             {
-                if (!perpetual.Key.Spawned && (perpetual.Key.Corpse != null && !perpetual.Key.Corpse.Spawned))
+                if (!perpetual.Key.Spawned && perpetual.Key.Corpse != null && !perpetual.Key.Corpse.Spawned && perpetual.Key.Corpse.MapHeld == null)
                 {
                     var map = GetMapToSpawnIn(perpetual.Key);
                     CellFinder.TryFindRandomCell(map, cell => cell.Walkable(map), out var cell2);

@@ -74,4 +74,23 @@
         </stages>
     </ThoughtDef>
 
+
+    <!-- Alpha Psyker -->
+    <ThoughtDef>
+        <defName>BEWH_AlphaPsyker</defName>
+        <workerClass>ThoughtWorker_AlwaysActive</workerClass>
+        <stackLimit>1</stackLimit>
+        <requiredGenes>
+            <li>BEWH_AlphaPsyker</li>
+        </requiredGenes>
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+            <li>
+                <label>Alpha Psyker</label>
+                <description>I can feel the warp...</description>
+                <baseMoodEffect>-22</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
 </Defs>

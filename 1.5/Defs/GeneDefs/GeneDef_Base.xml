@@ -133,7 +133,7 @@
         <aggroMentalBreakSelectionChanceFactor>999</aggroMentalBreakSelectionChanceFactor>
         <geneClass>Core40k.Gene_GiveVFECoreAbility</geneClass>
         <customEffectDescriptions>
-            <li>Gives a psychic bolt ability.</li>
+            <li>Gives the ability to fire psychic bolts.</li>
         </customEffectDescriptions>
         <exclusionTags>
             <li>Psyker</li>

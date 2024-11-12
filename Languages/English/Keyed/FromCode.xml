@@ -8,6 +8,9 @@
   <BEWH.PsykerPariahBirth>Enabling this will allow children to be rarely and randomly born as psykers and pariahs.</BEWH.PsykerPariahBirth>
   <BEWH.PsykerPariahBirthChance>Chance that newly born children will either be a psyker or pariah: {0}%</BEWH.PsykerPariahBirthChance>
 
+  <BEWH.PerpetualBirth>Enabling this will allow children to be rarely and randomly born as perpetuals.</BEWH.PerpetualBirth>
+  <BEWH.PerpetualBirthChance>Chance that newly born children will be a perpetual: {0}%</BEWH.PerpetualBirthChance>
+
 
   <!-- Code Event related-->
   <BEWH.PsychicPhenomenaLetter>Psychic Phenomena</BEWH.PsychicPhenomenaLetter>
@@ -22,10 +25,11 @@
   <BEWH.PlantRot>All plant life seems to rot in {0} presence, leaving it lifeless.</BEWH.PlantRot>
 
   <BEWH.NaturalBornXLetter>Natural Born {0}</BEWH.NaturalBornXLetter>
-  <BEWH.NaturalBornXMessage>From the moment {0} became pregnant something felt off, something that has finally come to light. It seems that {1} has been born as a natural {2}.</BEWH.NaturalBornXMessage>
+  <BEWH.NaturalBornXMessage>From the moment {0} became pregnant something felt off, something that has finally come to light. It seems that {1} has been born as a {2}.</BEWH.NaturalBornXMessage>
 
   <BEWH.Psyker>psyker</BEWH.Psyker>
   <BEWH.Pariah>pariah</BEWH.Pariah>
+  <BEWH.Perpetual>perpetual</BEWH.Perpetual>
 
   <!-- Building-->
   <!-- Gestator-->

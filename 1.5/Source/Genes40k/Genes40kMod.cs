@@ -32,6 +32,14 @@ namespace Genes40k
                 listingStandard.Label("BEWH.PsykerPariahBirthChance".Translate(settings.psykerPariahBirthChance));
                 settings.psykerPariahBirthChance = (int)listingStandard.Slider(settings.psykerPariahBirthChance, 0, 100);
             }
+            
+            listingStandard.CheckboxLabeled("BEWH.PerpetualBirth".Translate(), ref settings.perpetualBirth);
+            
+            if (settings.perpetualBirth)
+            {
+                listingStandard.Label("BEWH.PerpetualBirthChance".Translate(settings.perpetualBirthChance));
+                settings.perpetualBirthChance = (int)listingStandard.Slider(settings.perpetualBirthChance, 0, 100);
+            }
 
             listingStandard.Label("\n" + "BEWH.CheckVEFPatches".Translate());
 

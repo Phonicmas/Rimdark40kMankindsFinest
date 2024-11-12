@@ -63,11 +63,17 @@ namespace Genes40k
         public static GeneDef BEWH_Psyker;
         public static GeneDef BEWH_DeltaPsyker;
         public static GeneDef BEWH_BetaPsyker;
+        public static GeneDef BEWH_AlphaPsyker;
         
         //Pariah genes
         public static GeneDef BEWH_SigmaPariah;
         public static GeneDef BEWH_UpsilonPariah;
         public static GeneDef BEWH_OmegaPariah;
+        
+        //Perpetual genes
+        public static GeneDef BEWH_PerpetualGamma;
+        public static GeneDef BEWH_PerpetualBeta;
+        public static GeneDef BEWH_PerpetualAlpha;
 
         //Living saint genes
         public static GeneDef BEWH_LivingSaintBeingOfFaith;
