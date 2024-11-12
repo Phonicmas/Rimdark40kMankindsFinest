@@ -175,7 +175,7 @@
             <points>
                 <li>(0, 1.5)</li>
                 <li>(20, 1.5)</li>
-                <li>(21, 0)</li>
+                <li>(21, 0.01)</li>
             </points>
         </biologicalAgeTickFactorFromAgeCurve>
 

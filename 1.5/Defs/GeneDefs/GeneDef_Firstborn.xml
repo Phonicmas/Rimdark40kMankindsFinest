@@ -522,7 +522,7 @@
             <points>
                 <li>(0, 1)</li>
                 <li>(20, 1)</li>
-                <li>(21, 0)</li>
+                <li>(21, 0.25)</li>
             </points>
         </biologicalAgeTickFactorFromAgeCurve>
         <customEffectDescriptions>
