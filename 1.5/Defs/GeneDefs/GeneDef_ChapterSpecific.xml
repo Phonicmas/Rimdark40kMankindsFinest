@@ -527,7 +527,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXVIIWordBearers</defName>
         <label>Geneseed Material: Word Bearers</label>
-        <description>Your geneseeds comes from Lorgar Aurelian, </description>
+        <description>Your geneseeds comes from Lorgar Aurelian, like him your words are one of your strongest suits.</description>
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXVIIWordBearers</iconPath>
         <displayOrderInCategory>148</displayOrderInCategory>
         <statOffsets>
@@ -547,7 +547,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXVIIISalamanders</defName>
         <label>Geneseed Material: Salamanders</label>
-        <description>Your geneseeds comes from Vulkan, </description>
+        <description>Your geneseeds comes from Vulkan, you share his passion for crafting. Additionally your geneseed contains flaws, giving you black skin and red eyes.</description>
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXVIIISalamanders</iconPath>
         <displayOrderInCategory>151</displayOrderInCategory>
         <skinColorOverride>(55, 55, 55)</skinColorOverride>
@@ -593,7 +593,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXIXRavenGuard</defName>
         <label>Geneseed Material: Raven Guard</label>
-        <description>Your geneseeds comes from Corvus Corax, </description>
+        <description>Your geneseeds comes from Corvus Corax, you've a knack for using the shadows to your advantage.</description>
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXIXRavenGuard</iconPath>
         <displayOrderInCategory>154</displayOrderInCategory>
         <statOffsets>
@@ -617,7 +617,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXXAlphaLegion</defName>
         <label>Geneseed Material: Alpha Legion</label>
-        <description>Your geneseeds comes from Alpharius/Omegon, </description>
+        <description>Your geneseeds comes from Alpharius/Omegon, you've a sense for deception and manipulation.</description>
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXXAlphaLegion</iconPath>
         <displayOrderInCategory>157</displayOrderInCategory>
         <statOffsets>
