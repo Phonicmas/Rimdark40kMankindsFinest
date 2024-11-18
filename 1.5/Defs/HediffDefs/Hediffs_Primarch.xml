@@ -71,7 +71,9 @@
 		<stages>
 			<li>
 				<statFactors>
-					<MeleeDodgeChance>2</MeleeDodgeChance> <!-- Damage mult + heat resistance?-->
+					<Flammability>0</Flammability>
+					<ArmorRating_Heat>0.2</ArmorRating_Heat>
+					<MeleeDamageFactor>1.2</MeleeDamageFactor>
 				</statFactors>
 			</li>
 		</stages>

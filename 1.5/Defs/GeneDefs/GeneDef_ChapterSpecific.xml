@@ -68,7 +68,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterIVIronWarriors</defName>
         <label>Geneseed Material: Iron Warriors</label>
-        <description>Your geneseeds comes from Perturabo, </description>
+        <description>Your geneseeds comes from Perturabo and is somewhat pure, you're able to quickly setup seige armaments or fortifications.</description>
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterIVIronWarriors</iconPath>
         <displayOrderInCategory>109</displayOrderInCategory>
         <statOffsets>
@@ -225,7 +225,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterVIIImperialFists</defName>
         <label>Geneseed Material: Imperial Fists</label>
-        <description>Your geneseeds comes from Rogal Dorn, </description>
+        <description>Your geneseeds comes from Rogal Dorn, you have great fortitude and know how to set up a great defense.</description>
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterVIIImperialFists</iconPath>
         <displayOrderInCategory>118</displayOrderInCategory>
         <statOffsets>
@@ -243,7 +243,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterVIIINightLords</defName>
         <label>Geneseed Material: Night Lords</label>
-        <description>Your geneseeds comes from Konrad Curze, </description>
+        <description>Your geneseeds comes from Konrad Curze, you know how to induce fear into your enemies and don't mind the darkness</description>
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterVIIINightLords</iconPath>
         <displayOrderInCategory>121</displayOrderInCategory>
         <geneClass>Genes40k.Gene_InduceFear</geneClass>
@@ -340,7 +340,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXIronHands</defName>
         <label>Geneseed Material: Iron Hands</label>
-        <description>Your geneseeds comes from Ferrus Manus, </description>
+        <description>Your geneseeds comes from Ferrus Manus, you have a urge to replace yourself with artificial parts to further enhance yourself.</description>
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXIronHands</iconPath>
         <displayOrderInCategory>127</displayOrderInCategory>
         <forcedTraits>
@@ -352,7 +352,7 @@
             </li>
         </forcedTraits>
         <statOffsets>
-            <WorkSpeedGlobal>0.05</WorkSpeedGlobal>
+            <WorkSpeedGlobal>0.05</WorkSpeedGlobal> <!-- Replace this with increase based on bionic amount, or something else based on bionic amount-->
             <ResearchSpeed>0.1</ResearchSpeed>
         </statOffsets>
         <modExtensions>

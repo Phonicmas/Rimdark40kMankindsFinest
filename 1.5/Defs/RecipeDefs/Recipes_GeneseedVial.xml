@@ -9,7 +9,6 @@
         <surgeryOutcomeEffect Inherit = "False" />
         <uiIconThing>Xenogerm</uiIconThing>
         <isViolation>true</isViolation>
-        <workSkill>Medicine</workSkill>
         <fixedIngredientFilter>
             <categories>
                 <li>Medicine</li>

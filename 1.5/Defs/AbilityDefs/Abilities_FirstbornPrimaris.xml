@@ -63,41 +63,17 @@
   </ThingDef>
 
   <!-- Catalepsean Node Unsleeping -->
-  <AbilityDef>
+  <AbilityDef ParentName="BEWH_SelfTargetAbilities">
     <defName>BEWH_CatalepseanNodeUnsleeping</defName>
     <label>unsleeping</label>
     <description>Carriers of the catalepsean node can consciously "switch off" sections of the brain sequentially, while remaining awake and alert.</description>
     <jobDef>CastAbilityOnThing</jobDef>
-    <casterMustBeCapableOfViolence>False</casterMustBeCapableOfViolence>
-    <targetRequired>False</targetRequired>
-    <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
     <iconPath>UI/Abilities/BEWH_CatalepseanNodeUnsleeping</iconPath>
-    <stunTargetWhileCasting>True</stunTargetWhileCasting>
-    <showPsycastEffects>False</showPsycastEffects>
-    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
-    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
     <cooldownTicksRange>180000</cooldownTicksRange>
     <category>BEWH_SpaceMarine</category>
-    <uiOrder>2</uiOrder>
-    <warmupStartSound>BEWH_NoSound</warmupStartSound>
     <statBases>
       <Ability_Duration>600</Ability_Duration>
     </statBases>
-    <verbProperties>
-      <verbClass>Verb_CastAbility</verbClass>
-      <range>0</range>
-      <warmupTime>2</warmupTime>
-      <drawAimPie>False</drawAimPie>
-      <requireLineOfSight>False</requireLineOfSight>
-      <targetParams>
-        <canTargetSelf>true</canTargetSelf>
-        <canTargetPawns>false</canTargetPawns>
-        <canTargetBuildings>false</canTargetBuildings>
-        <canTargetAnimals>false</canTargetAnimals>
-        <canTargetHumans>false</canTargetHumans>
-        <canTargetMechs>false</canTargetMechs>
-      </targetParams>
-    </verbProperties>
     <comps>
       <li Class="CompProperties_AbilityGiveHediff">
         <compClass>CompAbilityEffect_GiveHediff</compClass>
@@ -109,30 +85,13 @@
   </AbilityDef>
 
   <!-- Sus-an Membrane Stasis -->
-  <AbilityDef>
+  <AbilityDef ParentName="BEWH_SelfTargetAbilities">
     <defName>BEWH_Sus_anMembraneStasis</defName>
     <label>stasis</label>
     <description>Carriers of the sus-an membrane can enter a state of suspended animation, keeping the them alive for years, even if they has suffered otherwise mortal wounds.</description>
-    <targetRequired>False</targetRequired>
-    <casterMustBeCapableOfViolence>False</casterMustBeCapableOfViolence>
     <iconPath>UI/Abilities/BEWH_StasisIcon</iconPath>
-    <stunTargetWhileCasting>True</stunTargetWhileCasting>
-    <showPsycastEffects>False</showPsycastEffects>
-    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
-    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
     <cooldownTicksRange>240000</cooldownTicksRange>
     <category>BEWH_SpaceMarine</category>
-    <uiOrder>3</uiOrder>
-    <warmupStartSound>BEWH_NoSound</warmupStartSound>
-    <verbProperties>
-      <verbClass>Verb_CastAbility</verbClass>
-      <range>0</range>
-      <drawAimPie>False</drawAimPie>
-      <requireLineOfSight>False</requireLineOfSight>
-      <targetParams>
-        <canTargetSelf>true</canTargetSelf>
-      </targetParams>
-    </verbProperties>
     <comps>
       <li Class="CompProperties_AbilityGiveHediff">
         <compClass>CompAbilityEffect_GiveHediff</compClass>
@@ -154,8 +113,6 @@
     <showPsycastEffects>False</showPsycastEffects>
     <cooldownTicksRange>240000</cooldownTicksRange>
     <category>BEWH_SpaceMarine</category>
-    <uiOrder>4</uiOrder>
-    <warmupStartSound>BEWH_NoSound</warmupStartSound>
     <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
     <verbProperties>
@@ -177,34 +134,16 @@
   </AbilityDef>
 
   <!-- Belisarian Furnace -->
-  <AbilityDef>
+  <AbilityDef ParentName="BEWH_SelfTargetAbilities">
     <defName>BEWH_BelisarianFurnaceBoost</defName>
     <label>revitaliser</label>
     <description>Carriers of the belisarian furnace can produce a hyper-cocktail to boost their regrowth of tissue, bone and muscle.</description>
-    <jobDef>CastAbilityOnThing</jobDef>
-    <casterMustBeCapableOfViolence>False</casterMustBeCapableOfViolence>
-    <targetRequired>False</targetRequired>
     <iconPath>UI/Abilities/BEWH_BelisarianFurnaceBoost</iconPath>
-    <stunTargetWhileCasting>True</stunTargetWhileCasting>
-    <showPsycastEffects>False</showPsycastEffects>
-    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
-    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
     <cooldownTicksRange>240000</cooldownTicksRange>
     <category>BEWH_SpaceMarine</category>
-    <uiOrder>5</uiOrder>
-    <warmupStartSound>BEWH_NoSound</warmupStartSound>
     <statBases>
       <Ability_Duration>120</Ability_Duration>
     </statBases>
-    <verbProperties>
-      <verbClass>Verb_CastAbilityTouch</verbClass>
-      <warmupTime>1</warmupTime>
-      <drawAimPie>False</drawAimPie>
-      <requireLineOfSight>False</requireLineOfSight>
-      <targetParams>
-        <canTargetSelf>true</canTargetSelf>
-      </targetParams>
-    </verbProperties>
     <comps>
       <li Class="CompProperties_AbilityGiveHediff">
         <compClass>CompAbilityEffect_GiveHediff</compClass>
