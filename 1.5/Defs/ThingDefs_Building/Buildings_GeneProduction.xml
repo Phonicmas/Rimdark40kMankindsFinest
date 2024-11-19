@@ -149,16 +149,19 @@
     <containedPawnsSelectable>true</containedPawnsSelectable>
     <tickerType>Normal</tickerType>
     <graphicData>
-      <texPath>Things/Building/PrimarchGrowthVat/BEWH_PrimarchGrowthVat</texPath>
+      <texPath>Things/Building/PrimarchGrowthVat/BEWH_PrimarchVat</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
-      <drawSize>(2,2)</drawSize>
+      <drawSize>(6, 5)</drawSize>
       <shadowData>
-        <volume>(0.85, 0.3, 1.7)</volume>
+        <volume>(3.8, 3, 2.7)</volume>
       </shadowData>
     </graphicData>
+    <uiIconPath>Things/Building/PrimarchGrowthVat/BEWH_PrimarchVat_MenuIcon</uiIconPath>
+    <uiIconScale>1.5</uiIconScale>
+    <interactionCellOffset>(2,0,2)</interactionCellOffset>
     <castEdgeShadows>true</castEdgeShadows>
     <defaultPlacingRot>North</defaultPlacingRot>
-    <size>(2,2)</size>
+    <size>(4,3)</size>
     <statBases>
       <MaxHitPoints>500</MaxHitPoints>
       <WorkToBuild>8000</WorkToBuild>
@@ -179,7 +182,6 @@
     <designationCategory>Misc</designationCategory>
     <uiOrder>2200</uiOrder>
     <hasInteractionCell>true</hasInteractionCell>
-    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
     <inspectorTabs>
       <li>ITab_BiosculpterNutritionStorage</li>
       <li>ITab_Genes</li>
@@ -204,6 +206,59 @@
           </thingDefs>
         </filter>
       </defaultStorageSettings>
+      <barDrawData>
+        <north>
+          <preRotationOffset>(-1.59, 1.4)</preRotationOffset>
+          <size>(0.72, 0.12)</size>
+        </north>
+        <south>
+          <preRotationOffset>(-1.59, 1.33)</preRotationOffset>
+          <size>(0.72, 0.12)</size>
+        </south>
+        <east>
+          <preRotationOffset>(1.59, -1.4)</preRotationOffset>
+          <size>(0.72, 0.12)</size>
+        </east>
+        <west>
+          <preRotationOffset>(-1.59, -1.4)</preRotationOffset>
+          <size>(0.72, 0.12)</size>
+        </west>
+      </barDrawData>
+      <formingMechPerRotationOffset>
+        <li>(0, 0, 0.225)</li>
+        <li>(-0.15, 0, 0.225)</li>
+        <li>(0, 0, 0.225)</li>
+        <li>(0.15, 0, 0.225)</li>
+      </formingMechPerRotationOffset>
+      <mechGestatorCylinderGraphic>
+        <texPath>Things/Building/PrimarchGrowthVat/BEWH_PrimarchVatGlass</texPath>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <drawSize>(6, 5)</drawSize>
+        <shaderType>Transparent</shaderType>
+      </mechGestatorCylinderGraphic>
+      <mechGestatorTopGraphic>
+        <texPath>Things/Building/PrimarchGrowthVat/BEWH_PrimarchVatTop</texPath>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <drawSize>(6, 5)</drawSize>
+      </mechGestatorTopGraphic>
+      <gestatorFormingMote>
+        <north>BEWH_PrimarchVatForming_North</north>
+        <east>BEWH_PrimarchVatForming_East</east>
+        <west>BEWH_PrimarchVatForming_West</west>
+        <south>BEWH_PrimarchVatForming_South</south>
+      </gestatorFormingMote>
+      <gestatorCycleCompleteMote>
+        <north>BEWH_PrimarchVatCycleComplete_North</north>
+        <east>BEWH_PrimarchVatCycleComplete_East</east>
+        <west>BEWH_PrimarchVatCycleComplete_West</west>
+        <south>BEWH_PrimarchVatCycleComplete_South</south>
+      </gestatorCycleCompleteMote>
+      <gestatorFormedMote>
+        <north>BEWH_PrimarchVatFormed_North</north>
+        <east>BEWH_PrimarchVatFormed_North</east>
+        <west>BEWH_PrimarchVatFormed_West</west>
+        <south>BEWH_PrimarchVatFormed_South</south>
+      </gestatorFormedMote>
     </building>
     <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
     <comps>

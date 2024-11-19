@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="MoteBase" Name="BEWH_PrimarchVatFormingBase" Abstract="True">
+        <thingClass>MoteAttached</thingClass>
+        <altitudeLayer>MoteOverhead</altitudeLayer>
+        <mote>
+            <fadeInTime>0.35</fadeInTime>
+            <fadeOutTime>0.35</fadeOutTime>
+            <solidTime>999999</solidTime>
+            <needsMaintenance>True</needsMaintenance>
+            <fadeOutUnmaintained>True</fadeOutUnmaintained>
+        </mote>
+        <graphicData>
+            <graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
+            <color>(1.0, 0.2, 0.15)</color>
+            <shaderType>MoteMechGestatorGlow</shaderType>
+            <shaderParameters>
+                <_MistTex>/Things/Mote/SmokeTiled</_MistTex>
+                <_MistScrollSpeed>0.2</_MistScrollSpeed>
+            </shaderParameters>
+        </graphicData>
+    </ThingDef>
+
+    <!-- Primarch Vat - Forming -->
+    <ThingDef Name="BEWH_PrimarchVatFormingLargeSouth" ParentName="BEWH_PrimarchVatFormingBase">
+        <defName>BEWH_PrimarchVatForming_South</defName>
+        <graphicData>
+            <texPath>Things/Building/PrimarchGrowthVat/BEWH_PrimarchVatGlassGlow_south</texPath>
+            <shaderParameters>
+                <_MistOpacityTex>/Things/Building/PrimarchGrowthVat/BEWH_PrimarchVatGlassGlowSoft_south</_MistOpacityTex>
+                <_ScanOffset>-0.09</_ScanOffset>
+                <_ScanScale>12</_ScanScale>
+            </shaderParameters>
+            <drawSize>(5.7, 4.275)</drawSize>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef Name="BEWH_PrimarchVatFormingLargeEast" ParentName="BEWH_PrimarchVatFormingBase">
+        <defName>BEWH_PrimarchVatForming_East</defName>
+        <graphicData>
+            <texPath>Things/Building/PrimarchGrowthVat/BEWH_PrimarchVatGlassGlow_east</texPath>
+            <shaderParameters>
+                <_MistOpacityTex>/Things/Building/PrimarchGrowthVat/BEWH_PrimarchVatGlassGlowSoft_east</_MistOpacityTex>
+                <_ScanOffset>-0.05</_ScanOffset>
+                <_ScanScale>11.25</_ScanScale>
+            </shaderParameters>
+            <drawSize>(4.275, 5.7)</drawSize>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef Name="BEWH_PrimarchVatFormingLargeWest" ParentName="BEWH_PrimarchVatFormingLargeEast">
+        <defName>BEWH_PrimarchVatForming_West</defName>
+        <graphicData>
+            <texPath>Things/Building/PrimarchGrowthVat/BEWH_PrimarchVatGlassGlow_west</texPath>
+            <shaderParameters>
+                <_MistOpacityTex>/Things/Building/PrimarchGrowthVat/BEWH_PrimarchVatGlassGlowSoft_west</_MistOpacityTex>
+            </shaderParameters>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef Name="BEWH_PrimarchVatFormingLargeNorth" ParentName="BEWH_PrimarchVatFormingBase">
+        <defName>BEWH_PrimarchVatForming_North</defName>
+        <graphicData>
+            <texPath>Things/Building/PrimarchGrowthVat/BEWH_PrimarchVatGlassGlow_north</texPath>
+            <shaderParameters>
+                <_MistOpacityTex>/Things/Building/PrimarchGrowthVat/BEWH_PrimarchVatGlassGlowSoft_north</_MistOpacityTex>
+                <_ScanOffset>-0.09</_ScanOffset>
+                <_ScanScale>12</_ScanScale>
+            </shaderParameters>
+            <drawSize>(5.7, 4.275)</drawSize>
+        </graphicData>
+    </ThingDef>
+
+    <!-- Primarch Vat - Cycle complete -->
+    <ThingDef ParentName="BEWH_PrimarchVatFormingLargeSouth">
+        <defName>BEWH_PrimarchVatCycleComplete_South</defName>
+        <graphicData>
+            <color>(1, 0.36, 0)</color>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName="BEWH_PrimarchVatFormingLargeEast">
+        <defName>BEWH_PrimarchVatCycleComplete_East</defName>
+        <graphicData>
+            <color>(1, 0.36, 0)</color>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName="BEWH_PrimarchVatFormingLargeWest">
+        <defName>BEWH_PrimarchVatCycleComplete_West</defName>
+        <graphicData>
+            <color>(1, 0.36, 0)</color>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName="BEWH_PrimarchVatFormingLargeNorth">
+        <defName>BEWH_PrimarchVatCycleComplete_North</defName>
+        <graphicData>
+            <color>(1, 0.36, 0)</color>
+        </graphicData>
+    </ThingDef>
+
+    <!-- LPrimarch Vat - Formed -->
+    <ThingDef ParentName="BEWH_PrimarchVatFormingLargeSouth">
+        <defName>BEWH_PrimarchVatFormed_South</defName>
+        <graphicData>
+            <color>(0.2, 1, 0.15)</color>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName="BEWH_PrimarchVatFormingLargeEast">
+        <defName>BEWH_PrimarchVatFormed_East</defName>
+        <graphicData>
+            <color>(0.2, 1, 0.15)</color>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName="BEWH_PrimarchVatFormingLargeWest">
+        <defName>BEWH_PrimarchVatFormed_West</defName>
+        <graphicData>
+            <color>(0.2, 1, 0.15)</color>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName="BEWH_PrimarchVatFormingLargeNorth">
+        <defName>BEWH_PrimarchVatFormed_North</defName>
+        <graphicData>
+            <color>(0.2, 1, 0.15)</color>
+        </graphicData>
+    </ThingDef>
+
+</Defs>

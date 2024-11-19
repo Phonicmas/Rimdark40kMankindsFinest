@@ -13,7 +13,7 @@ using Verse.Sound;
 namespace Genes40k
 {
     [StaticConstructorOnStartup]
-    public class Building_PrimarchGrowthVat : Building_Enterable, IStoreSettingsParent, IThingHolderWithDrawnPawn, IThingHolder
+    public class Building_PrimarchGrowthVat : Building_Enterable, IStoreSettingsParent, IThingHolderWithDrawnPawn
     {
         public PrimarchEmbryo selectedEmbryo;
 
@@ -53,20 +53,22 @@ namespace Genes40k
 
         private static readonly Texture2D StartIcon = ContentFinder<Texture2D>.Get("UI/Designators/Cancel");
 
-        public static readonly CachedTexture InsertPawnIcon = new CachedTexture("UI/Gizmos/InsertPawn");
-
         public static readonly CachedTexture InsertEmbryoIcon = new CachedTexture("UI/Gizmos/InsertEmbryo");
+        
+        private static Material FormingCycleBarFilledMat = SolidColorMaterials.SimpleSolidColorMaterial(new Color(0.98f, 0.46f, 0f));
+
+        private static Material FormingCycleUnfilledMat = SolidColorMaterials.SimpleSolidColorMaterial(new Color(0f, 0f, 0f, 0f));
+        
+        public GenDraw.FillableBarRequest BarDrawData => def.building.BarDrawDataFor(Rotation);
 
         private const float BaseEmbryoConsumedNutritionPerDay = 6f;
 
         public const float NutritionBuffer = 10f;
 
-        public const int AgeTicksPerTickInGrowthVat = 20;
-
         private const float EmbryoBirthQuality = 0.7f;
 
         public const int EmbryoGestationTicks = 600000;
-
+        
         private const int EmbryoLateStageGraphicTicksRemaining = 600000;
 
         private const float FetusMinSize = 0.4f;
@@ -78,12 +80,14 @@ namespace Genes40k
         private static Dictionary<Rot4, ThingDef> GlowMotePerRotation;
 
         private static Dictionary<Rot4, EffecterDef> BubbleEffecterPerRotation;
+        
+        public float EmbryoGestationPct => 1f - Mathf.Clamp01((float)EmbryoGestationTicksRemaining / EmbryoGestationTicks);
 
         public bool StorageTabVisible => true;
 
         public float HeldPawnDrawPos_Y => DrawPos.y + 1f / 26f;
 
-        public float HeldPawnBodyAngle => base.Rotation.AsAngle;
+        public float HeldPawnBodyAngle => Rotation.AsAngle;
 
         public PawnPosture HeldPawnPosture => PawnPosture.LayingOnGroundFaceUp;
 
@@ -137,16 +141,18 @@ namespace Genes40k
             }
         }
 
-        public float NutritionNeeded => selectedEmbryo == null ? 0f : 10f - NutritionStored;
+        public float NutritionNeeded => selectedEmbryo == null ? 0f : NutritionBuffer - NutritionStored;
 
         public int EmbryoGestationTicksRemaining => startTick - Find.TickManager.TicksGame;
 
-        public float EmbryoGestationPct => 1f - Mathf.Clamp01((float)EmbryoGestationTicksRemaining / EmbryoGestationTicks);
+        private Graphic cylinderGraphic;
 
-        private Graphic TopGraphic =>
+        private Graphic topGraphic;
+        
+        /*private Graphic TopGraphic =>
             cachedTopGraphic ?? (cachedTopGraphic = GraphicDatabase.Get<Graphic_Multi>(
                 "Things/Building/Misc/GrowthVat/GrowthVatTop", ShaderDatabase.Transparent, def.graphicData.drawSize,
-                Color.white));
+                Color.white));*/
 
         private Graphic FetusEarlyStage =>
             fetusEarlyStageGraphic ?? (fetusEarlyStageGraphic =
@@ -195,7 +201,7 @@ namespace Genes40k
             innerContainer.ThingOwnerTick();
             if (this.IsHashIntervalTick(250))
             {
-                PowerTraderComp.PowerOutput = (base.Working ? (0f - base.PowerComp.Props.PowerConsumption) : (0f - base.PowerComp.Props.idlePowerDraw));
+                PowerTraderComp.PowerOutput = (Working ? (0f - PowerComp.Props.PowerConsumption) : (0f - PowerComp.Props.idlePowerDraw));
             }
             var pawn = selectedPawn;
             if (pawn == null || !pawn.Destroyed)
@@ -212,10 +218,10 @@ namespace Genes40k
             {
                 if (item is PrimarchEmbryo humanEmbryo2 && humanEmbryo2 != selectedEmbryo)
                 {
-                    innerContainer.TryDrop(item, InteractionCell, base.Map, ThingPlaceMode.Near, 1, out var _);
+                    innerContainer.TryDrop(item, InteractionCell, Map, ThingPlaceMode.Near, 1, out _);
                 }
             }
-            if (hasBeenStarted && base.Working)
+            if (hasBeenStarted && Working)
             {
                 if (selectedEmbryo != null)
                 {
@@ -287,11 +293,11 @@ namespace Genes40k
                 }
                 if (this.IsHashIntervalTick(GlowIntervalTicks))
                 {
-                    MoteMaker.MakeStaticMote(DrawPos + OffsetFromRotation(base.Rotation), base.MapHeld, GlowMotePerRotation[base.Rotation]);
+                    MoteMaker.MakeStaticMote(DrawPos + OffsetFromRotation(Rotation), MapHeld, GlowMotePerRotation[Rotation]);
                 }
                 if (bubbleEffecter == null)
                 {
-                    bubbleEffecter = BubbleEffecterPerRotation[base.Rotation].SpawnAttached(this, base.MapHeld);
+                    bubbleEffecter = BubbleEffecterPerRotation[Rotation].SpawnAttached(this, MapHeld);
                 }
                 bubbleEffecter.EffectTick(this, this);
             }
@@ -622,7 +628,7 @@ namespace Genes40k
                 defaultLabel = "DEV: Fill nutrition",
                 action = delegate
                 {
-                    containedNutrition = 10f;
+                    containedNutrition = NutritionBuffer;
                 }
             };
             yield return new Command_Action
@@ -694,7 +700,51 @@ namespace Genes40k
         protected override void DrawAt(Vector3 drawLoc, bool flip = false)
         {
             base.DrawAt(drawLoc, flip);
-            if (base.Working && selectedEmbryo != null && innerContainer.Contains(selectedEmbryo))
+            if (Working && selectedEmbryo != null && innerContainer.Contains(selectedEmbryo))
+            {
+                var loc = drawLoc + def.building.formingMechPerRotationOffset[Rotation.AsInt];
+                loc.y += 1f / 52f;
+                loc.z += Mathf.PingPong((float)Find.TickManager.TicksGame * def.building.formingMechBobSpeed, def.building.formingMechYBobDistance);
+                
+                var drawSize = Vector2.one * Mathf.Lerp(FetusMinSize, FetusMaxSize, EmbryoGestationPct);
+                
+                if (EmbryoGestationTicksRemaining > EmbryoLateStageGraphicTicksRemaining)
+                {
+                    FetusEarlyStage.drawSize = drawSize;
+                    FetusEarlyStage.DrawFromDef(loc, Rotation, null);
+                }
+                else
+                {
+                    FetusLateStage.drawSize = drawSize;
+                    FetusLateStage.DrawFromDef(loc, Rotation, null);
+                }
+            }
+            
+            GenDraw.FillableBarRequest barDrawData = BarDrawData;  
+            barDrawData.center = drawLoc;
+            barDrawData.fillPercent = EmbryoGestationPct;
+            barDrawData.filledMat = FormingCycleBarFilledMat;
+            barDrawData.unfilledMat = FormingCycleUnfilledMat;
+            barDrawData.rotation = Rotation;
+            GenDraw.DrawFillableBar(barDrawData);
+            
+            if (topGraphic == null)
+            {
+                topGraphic = def.building.mechGestatorTopGraphic.GraphicColoredFor(this);
+            }
+            if (cylinderGraphic == null)
+            {
+                cylinderGraphic = def.building.mechGestatorCylinderGraphic.GraphicColoredFor(this);
+            }
+            
+            var loc2 = new Vector3(drawLoc.x, AltitudeLayer.BuildingBelowTop.AltitudeFor(), drawLoc.z);
+            cylinderGraphic.Draw(loc2, Rotation, this);
+            
+            var loc3 = new Vector3(drawLoc.x, AltitudeLayer.BuildingOnTop.AltitudeFor(), drawLoc.z);
+            topGraphic.Draw(loc3, Rotation, this);
+            
+            /*base.DrawAt(drawLoc, flip);
+            if (Working && selectedEmbryo != null && innerContainer.Contains(selectedEmbryo))
             {
                 var drawSize = Vector2.one * Mathf.Lerp(FetusMinSize, FetusMaxSize, EmbryoGestationPct);
                 var drawPos1 = DrawPos + PawnDrawOffset + Altitudes.AltIncVect * 0.25f;
@@ -703,18 +753,18 @@ namespace Genes40k
                 if (EmbryoGestationTicksRemaining > EmbryoLateStageGraphicTicksRemaining)
                 {
                     FetusEarlyStage.drawSize = drawSize;
-                    FetusEarlyStage.DrawFromDef(drawPos1, base.Rotation, null);
+                    FetusEarlyStage.DrawFromDef(drawPos1, Rotation, null);
                 }
                 else
                 {
                     FetusLateStage.drawSize = drawSize;
-                    FetusLateStage.DrawFromDef(drawPos1, base.Rotation, null);
+                    FetusLateStage.DrawFromDef(drawPos1, Rotation, null);
                 }
             }
             TopGraphic.drawSize = new Vector2(1, 2);
             var drawPos2 = DrawPos + Altitudes.AltIncVect * 2f;
             drawPos2 += OffsetFromRotation(base.Rotation);
-            TopGraphic.Draw(drawPos2, base.Rotation, this);
+            TopGraphic.Draw(drawPos2, base.Rotation, this);*/
         }
 
         private Color EmbryoColor()
@@ -739,7 +789,7 @@ namespace Genes40k
         public override void DrawExtraSelectionOverlays()
         {
             base.DrawExtraSelectionOverlays();
-            if (selectedEmbryo != null && selectedEmbryo.Map == base.Map)
+            if (selectedEmbryo != null && selectedEmbryo.Map == Map)
             {
                 GenDraw.DrawLineBetween(this.TrueCenter(), selectedEmbryo.TrueCenter());
             }

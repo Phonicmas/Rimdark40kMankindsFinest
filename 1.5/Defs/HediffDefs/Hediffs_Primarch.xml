@@ -61,7 +61,7 @@
 	<HediffDef>
 		<defName>BEWH_NecrodermiteArm</defName>
 		<label>necrodermite arm</label>
-		<description>???</description>
+		<description>Arm made from necrodermite, durable, heat resistant and strong.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<scenarioCanAdd>false</scenarioCanAdd>
 		<everCurableByItem>false</everCurableByItem>

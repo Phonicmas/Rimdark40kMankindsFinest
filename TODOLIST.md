@@ -22,6 +22,10 @@ Fill nightlord chapter gene with additional gene that might resist its effect
 
 Balance primarch specific genes
 
+Check cost list for various things - if they're balance and/or hard enough to aquire
+
+Geneseed Vial Storage icon off center
+
 ## Other
 Should the Primarch specific genes be renamed? (currently the name is of the Primarch)
 

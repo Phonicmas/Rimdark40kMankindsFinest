@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
+<!-- Change descriptions to something like: undergo surgery to transform into x or whatever. Jobstring too.-->
+
     <!-- Base Implant Recipe -->
     <RecipeDef Name="BEWH_RecipeGeneseedVialBase" ParentName="SurgeryFlesh" Abstract="True">
         <workerClass>Genes40k.WorkerClass_ImplantGeneseed</workerClass>
