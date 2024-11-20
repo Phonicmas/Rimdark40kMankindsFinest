@@ -13,7 +13,7 @@
         </mote>
         <graphicData>
             <graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
-            <color>(1.0, 0.2, 0.15)</color>
+            <color>(1, 0.921, 0.016)</color>
             <shaderType>MoteMechGestatorGlow</shaderType>
             <shaderParameters>
                 <_MistTex>/Things/Mote/SmokeTiled</_MistTex>

@@ -12,6 +12,7 @@
         <biostatCpx>18</biostatCpx>
         <biostatArc>8</biostatArc>
         <biostatMet>8</biostatMet>
+        <minAgeActive>3</minAgeActive>
 
         <bodyType>Hulk</bodyType>
 
@@ -65,6 +66,7 @@
 
         <biostatCpx>8</biostatCpx>
         <biostatArc>3</biostatArc>
+        <minAgeActive>2</minAgeActive>
 
         <statOffsets>
             <PsychicSensitivity>2</PsychicSensitivity>
@@ -127,6 +129,7 @@
 
         <biostatCpx>11</biostatCpx>
         <biostatArc>4</biostatArc>
+        <minAgeActive>1</minAgeActive>
 
         <statOffsets>
             <MentalBreakThreshold>-0.75</MentalBreakThreshold>
@@ -163,6 +166,7 @@
 
         <biostatCpx>10</biostatCpx>
         <biostatArc>4</biostatArc>
+        <minAgeActive>4</minAgeActive>
 
         <preventPermanentWounds>true</preventPermanentWounds>
 
@@ -235,6 +239,7 @@
 
         <biostatCpx>6</biostatCpx>
         <biostatArc>2</biostatArc>
+        <minAgeActive>4</minAgeActive>
 
         <foodPoisoningChanceFactor>0</foodPoisoningChanceFactor>
         <dontMindRawFood>true</dontMindRawFood>

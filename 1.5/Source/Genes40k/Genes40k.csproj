@@ -86,6 +86,7 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_ReactToMelee.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_RubiconSurgeryChanceIncrease.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_SecondProgenoidGlandProgress.cs" />
+    <Compile Include="Misc\Window_PrimarchEmbryoGenes.cs" />
     <Compile Include="ThingClasses\Building_GeneGestator.cs" />
     <Compile Include="ThingClasses\Building_GeneTable.cs" />
     <Compile Include="ThingClasses\Building_GeneStorageGraphicProgression.cs" />

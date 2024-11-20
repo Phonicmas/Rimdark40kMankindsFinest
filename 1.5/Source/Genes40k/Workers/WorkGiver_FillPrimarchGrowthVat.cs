@@ -25,16 +25,19 @@ namespace Genes40k
             {
                 return false;
             }
-            if (t.IsForbidden(pawn) || !pawn.CanReserve(t, 1, 1, null, forced))
+            if (building_PrimarchGrowthVat.IsForbidden(pawn) || !pawn.CanReserve(building_PrimarchGrowthVat, 1, 1, null, forced))
             {
                 return false;
             }
-            if (pawn.Map.designationManager.DesignationOn(t, DesignationDefOf.Deconstruct) != null)
+            if (pawn.Map.designationManager.DesignationOn(building_PrimarchGrowthVat, DesignationDefOf.Deconstruct) != null)
             {
                 return false;
             }
 
-            if (FindPrimarchEmbryo(pawn, building_PrimarchGrowthVat) != null) return !t.IsBurning();
+            if (FindPrimarchEmbryo(pawn, building_PrimarchGrowthVat) != null)
+            {
+                return !building_PrimarchGrowthVat.IsBurning();
+            }
             
             JobFailReason.Is(NoPrimarchEmbryo);
             return false;
@@ -58,7 +61,11 @@ namespace Genes40k
             foreach (Building_GeneStorage building in building_PrimarchGrowthVat.Map.listerBuildings.AllBuildingsColonistOfDef(Genes40kDefOf.BEWH_PrimarchEmbryoContainer))
             {
                 thing = building.SearchableContents.FirstOrDefault(x => x == building_PrimarchGrowthVat.selectedEmbryo);
-                if (thing == null) continue;
+                
+                if (thing == null)
+                {
+                    continue;
+                }
                     
                 building.DropThingToReserve(thing);
                 break;

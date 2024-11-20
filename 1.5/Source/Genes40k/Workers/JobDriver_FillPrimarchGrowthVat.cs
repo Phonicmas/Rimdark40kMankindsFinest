@@ -13,12 +13,19 @@ namespace Genes40k
 
         protected Building_PrimarchGrowthVat PrimarchGrowthVat => (Building_PrimarchGrowthVat)job.GetTarget(TargetIndex.A).Thing;
 
-        protected Thing PriamrchEmbryo => job.GetTarget(TargetIndex.B).Thing;
+        protected Thing PrimarchEmbryo => job.GetTarget(TargetIndex.B).Thing;
 
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
-            if (!pawn.Reserve(PrimarchGrowthVat, job, 1, 1, null, errorOnFailed)) return false;
-            if (!pawn.Reserve(PriamrchEmbryo, job, 1, 1, null, errorOnFailed)) return false;
+            if (!pawn.Reserve(PrimarchGrowthVat, job, 1, 1, null, errorOnFailed))
+            {
+                return false;
+            }
+
+            if (!pawn.Reserve(PrimarchEmbryo, job, 1, 1, null, errorOnFailed))
+            {
+                return false;
+            }
             
             PrimarchGrowthVat.jobDoer = pawn;
             return true;
@@ -41,7 +48,7 @@ namespace Genes40k
             var toil = ToilMaker.MakeToil("MakeNewToils");
             toil.initAction = delegate
             {
-                PrimarchGrowthVat.AddPrimarcEmbryo(PriamrchEmbryo);
+                PrimarchGrowthVat.AddPrimarchEmbryo(PrimarchEmbryo, pawn);
             };
             toil.defaultCompleteMode = ToilCompleteMode.Instant;
             yield return toil;

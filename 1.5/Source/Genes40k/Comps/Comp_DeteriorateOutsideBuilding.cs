@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using System.Text;
+using RimWorld;
 using UnityEngine;
 using UnityEngine.Diagnostics;
 using Verse;
@@ -25,5 +26,26 @@ namespace Genes40k
                 return false;
             }
         }
+        
+        public override string CompInspectStringExtra()
+        {
+            var stringBuilder = new StringBuilder();
+            stringBuilder.Append("BEWH.DeterioratingOutsideContainer".Translate(parent.Label));
+            return stringBuilder.ToString();
+        }
+        
+        public override string GetDescriptionPart()
+        {
+            var stringBuilder = new StringBuilder();
+            stringBuilder.Append("BEWH.SuitableContainers".Translate());
+            foreach (var container in Props.antiDeteriorateContainers)
+            {
+                stringBuilder.Append("\n");
+                stringBuilder.Append(" - " + container.label.CapitalizeFirst());
+            }
+            return stringBuilder.ToString();
+        }
+
+        
     }
 }

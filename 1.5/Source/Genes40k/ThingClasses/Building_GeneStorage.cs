@@ -42,8 +42,7 @@ namespace Genes40k
 
         string IStorageGroupMember.StorageGroupTag => def.building.storageGroupTag;
 
-
-
+        
         public Building_GeneStorage()
         {
             innerContainer = new ThingOwner<Thing>(this, oneStackOnly: false);
@@ -106,9 +105,9 @@ namespace Genes40k
 
         public void Notify_SettingsChanged()
         {
-            if (base.Spawned)
+            if (Spawned)
             {
-                base.MapHeld.listerHaulables.Notify_HaulSourceChanged(this);
+                MapHeld.listerHaulables.Notify_HaulSourceChanged(this);
             }
         }
 
@@ -124,9 +123,15 @@ namespace Genes40k
 
         public bool Accepts(Thing t)
         {
-            if (!GetStoreSettings().AllowedToAccept(t)) return false;
+            if (!GetStoreSettings().AllowedToAccept(t))
+            {
+                return false;
+            }
 
-            if (!def.HasModExtension<DefModExtension_SangprimusPortum>()) return innerContainer.CanAcceptAnyOf(t);
+            if (!def.HasModExtension<DefModExtension_SangprimusPortum>())
+            {
+                return innerContainer.CanAcceptAnyOf(t);
+            }
             
             return SearchableContents.Where(x => x.def == t.def).EnumerableNullOrEmpty() && innerContainer.CanAcceptAnyOf(t);
         }

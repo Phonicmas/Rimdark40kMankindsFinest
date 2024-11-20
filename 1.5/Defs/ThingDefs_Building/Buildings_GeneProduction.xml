@@ -158,7 +158,7 @@
     </graphicData>
     <uiIconPath>Things/Building/PrimarchGrowthVat/BEWH_PrimarchVat_MenuIcon</uiIconPath>
     <uiIconScale>1.5</uiIconScale>
-    <interactionCellOffset>(2,0,2)</interactionCellOffset>
+    <interactionCellOffset>(-1,0,-2)</interactionCellOffset>
     <castEdgeShadows>true</castEdgeShadows>
     <defaultPlacingRot>North</defaultPlacingRot>
     <size>(4,3)</size>
@@ -206,24 +206,6 @@
           </thingDefs>
         </filter>
       </defaultStorageSettings>
-      <barDrawData>
-        <north>
-          <preRotationOffset>(-1.59, 1.4)</preRotationOffset>
-          <size>(0.72, 0.12)</size>
-        </north>
-        <south>
-          <preRotationOffset>(-1.59, 1.33)</preRotationOffset>
-          <size>(0.72, 0.12)</size>
-        </south>
-        <east>
-          <preRotationOffset>(1.59, -1.4)</preRotationOffset>
-          <size>(0.72, 0.12)</size>
-        </east>
-        <west>
-          <preRotationOffset>(-1.59, -1.4)</preRotationOffset>
-          <size>(0.72, 0.12)</size>
-        </west>
-      </barDrawData>
       <formingMechPerRotationOffset>
         <li>(0, 0, 0.225)</li>
         <li>(-0.15, 0, 0.225)</li>

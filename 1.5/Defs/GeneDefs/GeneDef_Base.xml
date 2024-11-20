@@ -79,7 +79,7 @@
         <marketValueFactor>3</marketValueFactor>
         <biostatCpx>1</biostatCpx>
         <biostatArc>1</biostatArc>
-        <minAgeActive>0</minAgeActive>
+        <minAgeActive>1</minAgeActive>
         <exclusionTags>
             <li>BEWH_PrimarchSpecific</li>
         </exclusionTags>

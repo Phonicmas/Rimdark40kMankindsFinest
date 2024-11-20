@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
-  <!-- Mod Setting related-->
+  <!-- Mod Setting related -->
   <BEWH.ModSettingsNameGenes>Warhammer 40k - Genes</BEWH.ModSettingsNameGenes>
 
   <BEWH.PsychicPhenomena>Enabling this will make psykers who are experiencing mental breakdowns create a psychic phenomena.</BEWH.PsychicPhenomena>
@@ -12,7 +12,7 @@
   <BEWH.PerpetualBirthChance>Chance that newly born children will be a perpetual: {0}%</BEWH.PerpetualBirthChance>
 
 
-  <!-- Code Event related-->
+  <!-- Code Event related -->
   <BEWH.PsychicPhenomenaLetter>Psychic Phenomena</BEWH.PsychicPhenomenaLetter>
   <BEWH.PerilsOfTheWarpLetter>Perils of the Warp</BEWH.PerilsOfTheWarpLetter>
 
@@ -31,8 +31,8 @@
   <BEWH.Pariah>pariah</BEWH.Pariah>
   <BEWH.Perpetual>perpetual</BEWH.Perpetual>
 
-  <!-- Building-->
-  <!-- Gestator-->
+  <!-- Building -->
+  <!-- Gestator -->
   <BEWH.SelectMatrix>Select matrix</BEWH.SelectMatrix>
   <BEWH.SelectMatrixDesc>Select matrix to gestate from among your matrices</BEWH.SelectMatrixDesc>
   <BEWH.MissingGestateResearch>You have not researched any gestatable genetic matrices projects</BEWH.MissingGestateResearch>
@@ -65,9 +65,21 @@
   <BEWH.Primarch>primarch</BEWH.Primarch>
   <BEWH.Chapter>chapter</BEWH.Chapter>
 
-  <BEWH.NoSlurry>No genetic slurry</BEWH.NoSlurry>
+  <!-- Priamrch Vat -->
 
-  <!-- Geneseed Vial-->
+  <BEWH.NoSlurry>No genetic slurry</BEWH.NoSlurry>
+  <BEWH.ContainsNoEmbryo>Contains no embryo</BEWH.ContainsNoEmbryo>
+  <BEWH.PrimarchFather>Primarch Father: {0}</BEWH.PrimarchFather>
+  <BEWH.PrimarchMother>Mother: {0}</BEWH.PrimarchMother>
+  <BEWH.PrimarchVatStartConfirmation>Are you sure you want to start this process?\n\nYou cannot stop this machine once started, and destruction of it will lead to loss of embryo.</BEWH.PrimarchVatStartConfirmation>
+
+  <BEWH.EjectPrimarchEmbryo>Eject Embryo</BEWH.EjectPrimarchEmbryo>
+  <BEWH.EjectPrimarchEmbryoDesc>Eject currently loaded primarch embryo.</BEWH.EjectPrimarchEmbryoDesc>
+
+  <BEWH.DeterioratingOutsideContainer>Will deteriorate due to being outside suitable container.</BEWH.DeterioratingOutsideContainer>
+  <BEWH.SuitableContainers>Suiteable containers:</BEWH.SuitableContainers>
+
+  <!-- Geneseed Vial -->
   <BEWH.ImplantGeneseedDesc>You are about to implant {0}, making them into a {1}</BEWH.ImplantGeneseedDesc>
   <BEWH.OutsideOptimalAgeRange>{0} being outside the optimal age range {1}~{2} for this procedure</BEWH.OutsideOptimalAgeRange>
   <BEWH.CurrentFailureChance>Current failure chance is {0}%, failure will result in death and loss of geneseed vial</BEWH.CurrentFailureChance>
@@ -85,10 +97,10 @@
   <BEWH.LetterGeneseedOrderedImplanted>You have ordered a geneseed be implanted in {PAWN_nameDef}. This procedure requires a medical bed and {MEDICINENEEDED} medicine.{BEDINFO}{MEDICINEINFO}\n\nYou can cancel this procedure by going to {PAWN_nameDef}'s health -> operations tab.</BEWH.LetterGeneseedOrderedImplanted>
   <BEWH.GeneseedOrderedImplantedBedNeeded>\n\nYou do not have any medical beds available for {PAWN_nameDef}. Consider marking a bed as medical.</BEWH.GeneseedOrderedImplantedBedNeeded>
   <BEWH.GeneseedOrderedImplantedMedicineNeeded>\n\nYou do not have enough medicine to implant the geneseed. Implanting cannot begin until you get {MEDICINENEEDED} medicine.</BEWH.GeneseedOrderedImplantedMedicineNeeded>
-  
+
   <BEWH.NamedGeneseedVial>{0} geneseed vial</BEWH.NamedGeneseedVial>
-  
-  <!-- Living Saint-->
+
+  <!-- Living Saint -->
   <BEWH.LivingSaint>Living Saint</BEWH.LivingSaint>
   <BEWH.LivingSaintMessage>In {0}'s final moments they felt a surge of energy surging through them, invigorating and strengthening them. {0} was born anew as a living saint, stronger, faster and evermore loyal.</BEWH.LivingSaintMessage>
 
@@ -109,8 +121,8 @@
   <BEWH.SecondGeneseedsHarvested>Geneseeds have already been harvested.</BEWH.SecondGeneseedsHarvested>
   <BEWH.SecondGeneseedsHarvestable>Geneseeds ready to be harvested.</BEWH.SecondGeneseedsHarvestable>
 
-  <!-- Misc-->
-  <!-- Ideology-->
+  <!-- Misc -->
+  <!-- Ideology -->
   <BEWH.MustBeSpaceMarine>Must be a Space Marine</BEWH.MustBeSpaceMarine>
   <BEWH.ItemDeterioratingNotInContainer>not in safe container</BEWH.ItemDeterioratingNotInContainer>
 

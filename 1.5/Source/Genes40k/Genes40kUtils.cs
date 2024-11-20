@@ -1,6 +1,7 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 using Verse;
 
 
@@ -159,5 +160,9 @@ namespace Genes40k
             Log.Error("Could not drop item near " + pawn.PositionHeld);
         }
 
+        public static void InspectPrimarchEmbryoGenes(PrimarchEmbryo embryo)
+        {
+            Find.WindowStack.Add(new Window_PrimarchEmbryoGenes(embryo));
+        }
     }
 }

@@ -25,7 +25,7 @@
     </genes>
   </XenotypeDef>
 
-  <!-- LivingSaint -->
+  <!-- Living Saint -->
   <XenotypeDef ParentName="BEWH_ImperiumEliteBase">
     <defName>BEWH_LivingSaint</defName>
     <label>living saint</label>
@@ -47,7 +47,6 @@
   <!-- Space Marine Base -->
   <XenotypeDef ParentName="BEWH_ImperiumEliteBase" Name="SpaceMarineBase" Abstract="True">
     <factionlessGenerationWeight>0.1</factionlessGenerationWeight>
-    <combatPowerFactor>1.5</combatPowerFactor>
     <genes>
       <li>BEWH_SecondaryHeart</li>
       <li>BEWH_Ossmodula</li>
@@ -103,7 +102,7 @@
     <description>Rare Space Marine psykers who tap into the tumultuous energies of the warp, channeling its power to elevate their combat prowess. Trained as both warriors and seers, they unleash psychic might upon their foes, weaving spells of destruction while dancing on the precipice of corruption, ever vigilant against the dark whispers that seek to ensnare their souls.</description>
     <descriptionShort>Barely human, but instead superhuman; genetically engineered to be superior to normal humans in every way. These space marines carry the psyker gene, which gives them unnatural abilities.</descriptionShort>
     <iconPath>UI/Xenotypes/BEWH_SpaceMarinePsykerXenoIcon</iconPath>
-    <combatPowerFactor>1.5</combatPowerFactor>
+    <combatPowerFactor>1.45</combatPowerFactor>
     <genes>
       <li>BEWH_Psyker</li>
     </genes>
@@ -116,7 +115,7 @@
     <description>The Thunder Warriors were the Emperor’s first creations, towering and brutal warriors forged for the unification of Terra. Unmatched in raw strength and fury, they were designed to crush all opposition, embodying the Emperor's wrath on the battlefield. But their power came at a cost — engineered for short, violent lives, they burned brightly and briefly, knowing only war before being cast aside as the Imperium's dark, forgotten foundation.</description>
     <descriptionShort>Gene-enhanced warriors created by the Emperor to be living weapons, the Thunder Warriors were known to be physically stronger, more savage, more resilient and more potent in combat than the later Firstborn, though they were not as long-lived and suffered from often dangerous mental instability and early metabolic collapse when their bodies began to reject their augmentations.</descriptionShort>
     <iconPath>UI/Xenotypes/BEWH_ThunderWarriorXenoIcon</iconPath>
-    <combatPowerFactor>1.3</combatPowerFactor>
+    <combatPowerFactor>1.35</combatPowerFactor>
     <genes>
       <li>BEWH_ProtoOssmodula</li>
       <li>BEWH_Musculeator</li>

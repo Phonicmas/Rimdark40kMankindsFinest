@@ -81,6 +81,7 @@ namespace Genes40k
 
         //Xenotype
         public static XenotypeDef BEWH_LivingSaint;
+        public static XenotypeDef BEWH_Primarch;
 
         //Researchprojects
         public static ResearchProjectDef BEWH_GeneseedExtractionFirstborn;
