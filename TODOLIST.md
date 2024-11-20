@@ -32,11 +32,7 @@ Geneseed Vial Storage icon off center
 
 Make traits and trait upgrade system
 
-Code for inspecting primarch embryo genes
-
 Fix glowing eagle mote to be placed under the tube above glass but under other thingy
-
-Make link in items that uses storage to stop deteriorating, to the items they stop deteriorating in.
 
 ## Other
 Should the Primarch specific genes be renamed? (currently the name is of the Primarch)
