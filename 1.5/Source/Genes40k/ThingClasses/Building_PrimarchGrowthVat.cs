@@ -223,7 +223,7 @@ namespace Genes40k
             if (workingMote == null || workingMote.Destroyed || workingMote.def != thingDef)
             {
                 var vec = Vector3.zero;
-                vec.y = AltitudeLayer.BuildingBelowTop.AltitudeFor() - 0.01f;
+                vec.y = AltitudeLayer.Building.AltitudeFor();
                 workingMote = MoteMaker.MakeAttachedOverlay(this, thingDef, vec);
             }
             workingMote.Maintain();

@@ -29,7 +29,7 @@
                 <def>Delicate</def>
             </li>
         </suppressedTraits>
-        <minAgeActive>10</minAgeActive>
+        <minAgeActive>9</minAgeActive>
     </GeneDef>
 
     <!-- Musculeator -->
@@ -104,7 +104,7 @@
                 <degree>-1</degree>
             </li>
         </suppressedTraits>
-        <minAgeActive>10</minAgeActive>
+        <minAgeActive>6</minAgeActive>
     </GeneDef>
 
     <!-- Vigoranis -->
@@ -170,7 +170,7 @@
             <Shooting>4</Shooting>
             <Social>-2</Social>
         </aptitudes>
-        <minAgeActive>10</minAgeActive>
+        <minAgeActive>5</minAgeActive>
     </GeneDef>
 
     <!-- Furybound -->
@@ -194,7 +194,7 @@
         <aptitudes>
             <Intellectual>-2</Intellectual>
         </aptitudes>
-        <minAgeActive>10</minAgeActive>
+        <minAgeActive>9</minAgeActive>
     </GeneDef>
 
 </Defs>

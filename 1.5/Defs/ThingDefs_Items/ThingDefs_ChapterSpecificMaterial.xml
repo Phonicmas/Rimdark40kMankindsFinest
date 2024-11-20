@@ -32,6 +32,9 @@
         <thingSetMakerTags>
             <li>RewardStandardHighFreq</li>
         </thingSetMakerTags>
+        <descriptionHyperlinks>
+            <ThingDef>BEWH_SangprimusPortum</ThingDef>
+        </descriptionHyperlinks>
         <comps>
             <li Class="CompProperties_Forbiddable"/>
         </comps>

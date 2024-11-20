@@ -162,7 +162,28 @@ namespace Genes40k
 
         public static void InspectPrimarchEmbryoGenes(PrimarchEmbryo embryo)
         {
-            Find.WindowStack.Add(new Window_PrimarchEmbryoGenes(embryo));
+            var pawn = PawnGenerator.GeneratePawn(PawnKindDefOf.Colonist);
+            
+            foreach (var gene in pawn.genes.GenesListForReading)
+            {
+                pawn.genes.RemoveGene(gene);
+            }
+            
+            foreach (var gene in embryo.birthGenes.GenesListForReading)
+            {
+                pawn.genes.AddGene(gene, false);
+            }
+            
+            foreach (var gene in embryo.primarchGenes.GenesListForReading)
+            {
+                pawn.genes.AddGene(gene, true);
+            }
+
+            pawn.genes.SetXenotypeDirect(Genes40kDefOf.BEWH_Primarch);
+            
+            Find.WindowStack.Add(new Dialog_ViewGenes(pawn));
+            
+            pawn.Discard();
         }
     }
 }

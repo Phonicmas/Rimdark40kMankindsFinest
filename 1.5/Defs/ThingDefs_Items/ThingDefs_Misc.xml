@@ -24,6 +24,7 @@
     </thingCategories>
     <descriptionHyperlinks>
       <ThingDef>BEWH_PrimarchGrowthVat</ThingDef>
+      <ThingDef>BEWH_PrimarchEmbryoContainer</ThingDef>
     </descriptionHyperlinks>
     <category>Item</category>
     <alwaysHaulable>true</alwaysHaulable>

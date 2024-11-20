@@ -63,6 +63,31 @@ namespace Genes40k
                 geneSet.AddGene(gene);
             }
         }
+        
+        public override IEnumerable<Gizmo> GetGizmos()
+        {
+            foreach (var gizmo in base.GetGizmos())
+            {
+                if (gizmo.ToString().Contains("InspectGenes".Translate() + "..."))
+                {
+                    continue;
+                }
+                yield return gizmo;
+            }
+            if (geneSet != null)
+            {
+                yield return new Command_Action
+                {
+                    defaultLabel = "InspectGenes".Translate() + "...",
+                    defaultDesc = InspectGeneDescription,
+                    icon = GeneticInfoTex.Texture,
+                    action = delegate
+                    {
+                        Genes40kUtils.InspectPrimarchEmbryoGenes(this);
+                    }
+                };
+            }
+        }
 
         public override void ExposeData()
         {
