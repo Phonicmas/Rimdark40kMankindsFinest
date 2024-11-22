@@ -31,8 +31,6 @@ And icon for starting for primarch vat
 
 Make sangprimus spit out materials when destryoed (apparently i wont spawn the items, even though they're created, reeeee)
 
-Make StockGenerator for chapter materials that check if they have already been bought
-
 ## Bugs
 
 
