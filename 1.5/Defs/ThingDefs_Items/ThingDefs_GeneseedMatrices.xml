@@ -47,8 +47,9 @@
         <ticksToGestate>900000</ticksToGestate>
         <makesGeneVial>BEWH_GeneseedVialFirstborn</makesGeneVial>
         <researchNeeded>BEWH_GeneseedPurification</researchNeeded>
+        <canUseChapterMaterial>true</canUseChapterMaterial>
       </li>
-      <li Class="Genes40k.DefModExtension_ChapterMaterial" />
+      <!--<li Class="Genes40k.DefModExtension_ChapterMaterial" />-->
     </modExtensions>
   </ThingDef>
 
@@ -72,8 +73,9 @@
         <ticksToGestate>1200000</ticksToGestate>
         <makesGeneVial>BEWH_GeneseedVialPrimaris</makesGeneVial>
         <researchNeeded>BEWH_GeneseedPerfection</researchNeeded>
+        <canUseChapterMaterial>true</canUseChapterMaterial>
       </li>
-      <li Class="Genes40k.DefModExtension_ChapterMaterial" />
+      <!--<li Class="Genes40k.DefModExtension_ChapterMaterial" />-->
     </modExtensions>
   </ThingDef>
 
@@ -121,8 +123,9 @@
         <ticksToGestate>4800000</ticksToGestate>
         <makesGeneVial>BEWH_GeneseedVialPrimarch</makesGeneVial>
         <researchNeeded>BEWH_PrimarchProject</researchNeeded>
+        <canUsePrimarchMaterial>true</canUsePrimarchMaterial>
       </li>
-      <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+      <!--<li Class="Genes40k.DefModExtension_PrimarchMaterial" />-->
     </modExtensions>
   </ThingDef>
 

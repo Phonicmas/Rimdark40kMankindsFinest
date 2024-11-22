@@ -162,7 +162,13 @@ namespace Genes40k
 
         public static void InspectPrimarchEmbryoGenes(PrimarchEmbryo embryo)
         {
+            if (embryo == null)
+            {
+                return;
+            }
+            
             var pawn = PawnGenerator.GeneratePawn(PawnKindDefOf.Colonist);
+            pawn.ageTracker.AgeBiologicalTicks = 3600000 * 25;
             
             foreach (var gene in pawn.genes.GenesListForReading)
             {
@@ -183,7 +189,171 @@ namespace Genes40k
             
             Find.WindowStack.Add(new Dialog_ViewGenes(pawn));
             
-            pawn.Discard();
+            pawn.Destroy();
         }
+        
+        public static void InspectGeneseedVialGenes(GeneseedVial geneseedVial)
+        {
+            if (geneseedVial == null)
+            {
+                return;
+            }
+            
+            var pawn = PawnGenerator.GeneratePawn(PawnKindDefOf.Colonist);
+            pawn.ageTracker.AgeBiologicalTicks = 3600000 * 25;
+            
+            foreach (var gene in pawn.genes.GenesListForReading)
+            {
+                pawn.genes.RemoveGene(gene);
+            }
+            
+            foreach (var gene in geneseedVial.GeneSet.GenesListForReading)
+            {
+                pawn.genes.AddGene(gene, true);
+            }
+
+            var xenotypeDef = XenotypeDefOf.Baseliner;
+            
+            if (geneseedVial.xenotype == Genes40kDefOf.BEWH_ThunderWarrior)
+            {
+                xenotypeDef = Genes40kDefOf.BEWH_ThunderWarrior;
+            }
+            if (geneseedVial.xenotype == Genes40kDefOf.BEWH_SpaceMarine)
+            {
+                xenotypeDef = Genes40kDefOf.BEWH_SpaceMarine;
+            }
+            if (geneseedVial.xenotype == Genes40kDefOf.BEWH_PrimarisSpaceMarine)
+            {
+                xenotypeDef = Genes40kDefOf.BEWH_PrimarisSpaceMarine;
+            }
+            if (geneseedVial.xenotype == Genes40kDefOf.BEWH_Custodes)
+            {
+                xenotypeDef = Genes40kDefOf.BEWH_Custodes;
+            }
+
+            pawn.genes.SetXenotypeDirect(xenotypeDef);
+            
+            Find.WindowStack.Add(new Dialog_ViewGenes(pawn));
+            
+            pawn.Destroy();
+        }
+
+        public static int GetGeneseedImplantationSuccessChance(Pawn pawn, GeneseedVial geneseedVial)
+        {
+            var defMod = geneseedVial.def.GetModExtension<DefModExtension_GeneseedVial>();
+
+            var failChanceAgeOffset = 0;
+            if (!(defMod.minAgeImplant <= pawn.ageTracker.AgeBiologicalYears && defMod.maxAgeImplant >= pawn.ageTracker.AgeBiologicalYears))
+            {
+                var minAgeCheck = pawn.ageTracker.AgeBiologicalYears - defMod.minAgeImplant;
+                var maxAgeCheck = pawn.ageTracker.AgeBiologicalYears - defMod.maxAgeImplant;
+                if (minAgeCheck < maxAgeCheck)
+                {
+                    minAgeCheck = maxAgeCheck;
+                }
+                failChanceAgeOffset = minAgeCheck * defMod.failureChancePerAgePast;
+            }
+
+            var failChance = defMod.baseFailureChance;
+            var failChanceGeneOffset = 0;
+
+            var failCapChance = defMod.failChanceCap;
+            var failChanceCapGeneOffset = 0;
+
+            if (geneseedVial.extraGeneFromMaterial != null && geneseedVial.extraGeneFromMaterial.HasModExtension<DefModExtension_GeneseedPurity>())
+            {
+                var geneDefMod = geneseedVial.extraGeneFromMaterial.GetModExtension<DefModExtension_GeneseedPurity>();
+                failChanceCapGeneOffset += geneDefMod.additionalChanceCapOffset;
+                failChanceGeneOffset += geneDefMod.additionalChanceOffset;
+            }
+
+            failCapChance += failChanceCapGeneOffset;
+            failChance += (failChanceAgeOffset + failChanceGeneOffset);
+
+            if (failCapChance > 100)
+            {
+                failCapChance = 100;
+            }
+
+            if (failChance > failCapChance)
+            {
+                failChance = failCapChance;
+            }
+
+            return failChance;
+        }
+
+        public static string GetGeneseedImplantationSuccessChanceDesc(Pawn pawn, GeneseedVial geneseedVial)
+        {
+            var text = "BEWH.ImplantGeneseedDesc".Translate(pawn, geneseedVial.xenotypeName);
+            var defMod = geneseedVial.def.GetModExtension<DefModExtension_GeneseedVial>();
+            var failChanceCausedBy = new List<string>();
+            var failChance = defMod.baseFailureChance;
+            failChanceCausedBy.Add("\t- " + "BEWH.FailureChanceCause".Translate(defMod.baseFailureChance, "BEWH.BaseFailureChance".Translate()));
+            if (!(defMod.minAgeImplant <= pawn.ageTracker.AgeBiologicalYears && defMod.maxAgeImplant >= pawn.ageTracker.AgeBiologicalYears))
+            {
+                var minAgeCheck = pawn.ageTracker.AgeBiologicalYears - defMod.minAgeImplant;
+                var maxAgeCheck = pawn.ageTracker.AgeBiologicalYears - defMod.maxAgeImplant;
+                if (minAgeCheck < maxAgeCheck)
+                {
+                    minAgeCheck = maxAgeCheck;
+                }
+                var failChanceAgeOffset = minAgeCheck * defMod.failureChancePerAgePast;
+                failChance += failChanceAgeOffset;
+                
+                failChanceCausedBy.Add("\t- " + "BEWH.FailureChanceCause".Translate(failChanceAgeOffset, "BEWH.OutsideOptimalAgeRange".Translate(pawn, defMod.minAgeImplant, defMod.maxAgeImplant)));
+            }
+
+            var failChanceGeneOffset = 0;
+
+            var failCapChance = defMod.failChanceCap;
+            var failChanceCapGeneOffset = 0;
+
+            if (geneseedVial.extraGeneFromMaterial != null && geneseedVial.extraGeneFromMaterial.HasModExtension<DefModExtension_GeneseedPurity>())
+            {
+                var geneDefMod = geneseedVial.extraGeneFromMaterial.GetModExtension<DefModExtension_GeneseedPurity>();
+                failChanceCapGeneOffset += geneDefMod.additionalChanceCapOffset;
+                failChanceGeneOffset += geneDefMod.additionalChanceOffset;
+                failChanceCausedBy.Add("\t- " + "BEWH.FailureChanceCause".Translate(geneDefMod.additionalChanceOffset, geneseedVial.extraGeneFromMaterial.label));
+            }
+
+            failCapChance += failChanceCapGeneOffset;
+            failChance += failChanceGeneOffset;
+
+            if (failCapChance > 100)
+            {
+                failCapChance = 100;
+            }
+
+            var wasCapped = false;
+
+            if (failChance > failCapChance)
+            {
+                failChance = failCapChance;
+                wasCapped = true;
+            }
+
+            if (failChance > 0)
+            {
+                text += "\n\n" + "BEWH.CurrentFailureChance".Translate(failChance);
+
+                text += "\n\n" + "BEWH.FailureChanceCausedBy".Translate();
+
+                foreach (var failChanceCause in failChanceCausedBy)
+                {
+                    text += "\n" + failChanceCause;
+                }
+
+                if (wasCapped)
+                {
+                    text += "\n\n" + "BEWH.FailureChanceCapped".Translate(failCapChance);
+                }
+            }
+
+            text += "\n\n" + "WouldYouLikeToContinue".Translate();
+
+            return text;
+        }
+        
     }
 }

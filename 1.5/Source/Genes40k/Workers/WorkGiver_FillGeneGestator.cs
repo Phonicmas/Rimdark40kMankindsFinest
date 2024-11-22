@@ -34,7 +34,10 @@ namespace Genes40k
                 return false;
             }
 
-            if (FindGeneMatrix(pawn, building_GeneGestator) != null) return !t.IsBurning();
+            if (FindGeneMatrix(pawn, building_GeneGestator) != null)
+            {
+                return !t.IsBurning();
+            }
             
             JobFailReason.Is(NoGeneMatrix);
             return false;
@@ -48,23 +51,11 @@ namespace Genes40k
             return JobMaker.MakeJob(Genes40kDefOf.BEWH_FillGeneGestator, t, thing);
         }
 
-        private Thing FindGeneMatrix(Pawn pawn, Building_GeneGestator gestator)
+        private static Thing FindGeneMatrix(Pawn pawn, Building_GeneGestator gestator)
         {
             Predicate<Thing> validator = x => !x.IsForbidden(pawn) && pawn.CanReserve(x);
             var thing = GenClosest.ClosestThingReachable_NewTemp(pawn.Position, pawn.Map, ThingRequest.ForDef(gestator.selectedMatrix), PathEndMode.ClosestTouch, TraverseParms.For(pawn), 9999f, validator, lookInHaulSources: true);
-            if (thing != null ||
-                !gestator.Map.listerBuildings.ColonistsHaveBuilding(Genes40kDefOf.BEWH_GeneticCryostaticStorage))
-                return thing;
-            
-            foreach (Building_GeneStorage building in gestator.Map.listerBuildings.AllBuildingsColonistOfDef(Genes40kDefOf.BEWH_GeneticCryostaticStorage))
-            {
-                thing = building.SearchableContents.FirstOrDefault(x => x.def == gestator.selectedMatrix);
-                if (thing == null) continue;
-                
-                building.DropThingToReserve(thing);
-                break;
-            }
-            
+
             return thing;
         }
     }

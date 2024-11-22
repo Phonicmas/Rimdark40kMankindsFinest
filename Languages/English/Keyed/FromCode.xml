@@ -38,9 +38,9 @@
   <BEWH.MissingGestateResearch>You have not researched any gestatable genetic matrices projects</BEWH.MissingGestateResearch>
 
   <BEWH.NoGeneMatrix>No gene matrices</BEWH.NoGeneMatrix>
-  <BEWH.ContainsGeneMatrix>contains matrix: {0}</BEWH.ContainsGeneMatrix>
+  <BEWH.ContainsGeneMatrix>Contains matrix: {0}</BEWH.ContainsGeneMatrix>
 
-  <BEWH.ContainsExtraMaterial>contains material: {0}</BEWH.ContainsExtraMaterial>
+  <BEWH.ContainsExtraMaterial>Contains material: {0}</BEWH.ContainsExtraMaterial>
 
   <BEWH.EjectGeneMatrix>Eject {0}</BEWH.EjectGeneMatrix>
   <BEWH.EjectGeneMatrixDesc>Ejects {0} from the gene gestator, allowing you to insert another</BEWH.EjectGeneMatrixDesc>
@@ -76,8 +76,11 @@
   <BEWH.EjectPrimarchEmbryo>Eject Embryo</BEWH.EjectPrimarchEmbryo>
   <BEWH.EjectPrimarchEmbryoDesc>Eject currently loaded primarch embryo.</BEWH.EjectPrimarchEmbryoDesc>
 
+  <!-- Misc -->
   <BEWH.DeterioratingOutsideContainer>Will deteriorate due to being outside suitable container.</BEWH.DeterioratingOutsideContainer>
   <BEWH.SuitableContainers>Suiteable containers:</BEWH.SuitableContainers>
+
+  <BEWH.SangprimusPortumAcquired>Materials</BEWH.SangprimusPortumAcquired>
 
   <!-- Geneseed Vial -->
   <BEWH.ImplantGeneseedDesc>You are about to implant {0}, making them into a {1}</BEWH.ImplantGeneseedDesc>

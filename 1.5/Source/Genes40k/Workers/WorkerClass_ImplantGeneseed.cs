@@ -18,18 +18,51 @@ namespace Genes40k
             {
                 return false;
             }
-            var list = pawn.Map.listerThings.ThingsOfDef(recipe.GetModExtension<DefModExtension_GeneseedVialRecipe>().geneseedVial);
+            if (Genes40kUtils.IsSuperHuman(pawn))
+            {
+                return false;
+            }
+
+            var defMod = recipe.GetModExtension<DefModExtension_GeneseedVialRecipe>();
+
+            var list = pawn.Map.listerThings.ThingsOfDef(defMod.geneseedVial);
+
+            var result = false;
+
+            foreach (var item in list)
+            {
+                if (!(item is GeneseedVial geneseedVial))
+                {
+                    continue;
+                }
+
+                if (defMod.geneFromMaterial == null && geneseedVial.extraGeneFromMaterial == null)
+                {
+                    result = true;
+                    break;
+                }
+
+                if (!geneseedVial.GeneSet.GenesListForReading.Contains(defMod.geneFromMaterial))
+                {
+                    continue;
+                }
+                
+                result = true;
+                break;
+            }
             
-            //might need add here to also search geneseed vial storage for some.
-            
-            return !list.Any() || Enumerable.Any(list, item => !item.IsForbidden(pawn) && !item.Position.Fogged(pawn.Map));
+            return result;
         }
 
         public override void ApplyOnPawn(Pawn pawn, BodyPartRecord part, Pawn billDoer, List<Thing> ingredients, Bill bill)
         {
-            if (CheckSurgeryFail(billDoer, pawn, ingredients, part, bill)) return;
+            if (CheckSurgeryFail(billDoer, pawn, ingredients, part, bill))
+            {
+                return;
+            }
             
             var geneseedVial = (GeneseedVial)ingredients.First(x => x is GeneseedVial);
+            
             ImplantGeneseed(pawn, geneseedVial);
 
             if (IsViolationOnPawn(pawn, part, Faction.OfPlayer))
@@ -47,43 +80,7 @@ namespace Genes40k
         {
             var defMod = geneseedVial.def.GetModExtension<DefModExtension_GeneseedVial>();
 
-            var failChanceAgeOffset = 0;
-            if (!(defMod.minAgeImplant <= pawn.ageTracker.AgeBiologicalYears && defMod.maxAgeImplant >= pawn.ageTracker.AgeBiologicalYears))
-            {
-                var minAgeCheck = pawn.ageTracker.AgeBiologicalYears - defMod.minAgeImplant;
-                var maxAgeCheck = pawn.ageTracker.AgeBiologicalYears - defMod.maxAgeImplant;
-                if (minAgeCheck < maxAgeCheck)
-                {
-                    minAgeCheck = maxAgeCheck;
-                }
-                failChanceAgeOffset = minAgeCheck * defMod.failureChancePerAgePast;
-            }
-
-            var failChance = defMod.baseFailureChance;
-            var failChanceGeneOffset = 0;
-
-            var failCapChance = defMod.failChanceCap;
-            var failChanceCapGeneOffset = 0;
-
-            if (geneseedVial.extraGeneFromMaterial != null && geneseedVial.extraGeneFromMaterial.HasModExtension<DefModExtension_GeneseedPurity>())
-            {
-                var geneDefMod = geneseedVial.extraGeneFromMaterial.GetModExtension<DefModExtension_GeneseedPurity>();
-                failChanceCapGeneOffset += geneDefMod.additionalChanceCapOffset;
-                failChanceGeneOffset += geneDefMod.additionalChanceOffset;
-            }
-
-            failCapChance += failChanceCapGeneOffset;
-            failChance += (failChanceAgeOffset + failChanceGeneOffset);
-
-            if (failCapChance > 100)
-            {
-                failCapChance = 100;
-            }
-
-            if (failChance > failCapChance)
-            {
-                failChance = failCapChance;
-            }
+            var failChance = Genes40kUtils.GetGeneseedImplantationSuccessChance(pawn, geneseedVial);
 
             var rand = new Random();
             if (rand.Next(0, 100) < failChance)

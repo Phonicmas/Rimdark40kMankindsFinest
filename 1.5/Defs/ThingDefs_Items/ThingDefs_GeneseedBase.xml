@@ -37,6 +37,7 @@
   </ThingDef>
 
   <ThingDef Name="BEWH_GeneticMatrixBase" ParentName="BEWH_GeneticBase" Abstract="True">
+    <thingClass>Genes40k.GeneticMatrix</thingClass>
     <thingCategories>
       <li>BEWH_GeneticMatrix</li>
     </thingCategories>

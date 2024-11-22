@@ -81,6 +81,10 @@ namespace Genes40k
 
         //Xenotype
         public static XenotypeDef BEWH_LivingSaint;
+        public static XenotypeDef BEWH_ThunderWarrior;
+        public static XenotypeDef BEWH_SpaceMarine;
+        public static XenotypeDef BEWH_PrimarisSpaceMarine;
+        public static XenotypeDef BEWH_Custodes;
         public static XenotypeDef BEWH_Primarch;
 
         //Researchprojects
@@ -108,6 +112,7 @@ namespace Genes40k
         //ThingDefs
         public static ThingDef BEWH_GeneseedGestator;
         public static ThingDef BEWH_GeneticCryostaticStorage;
+        public static ThingDef BEWH_GeneseedVialStorage;
         public static ThingDef BEWH_PrimarchEmbryoContainer;
         public static ThingDef BEWH_SangprimusPortum;
         public static ThingDef BEWH_PrimarchGrowthVat;

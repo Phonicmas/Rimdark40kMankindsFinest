@@ -3,7 +3,7 @@
 
   <!-- Base -->
   <ThingDef ParentName="BuildingBase" Name="BEWH_GeneticStorage" Abstract="True">
-    <thingClass>Genes40k.Building_GeneStorage</thingClass>
+    <thingClass>Genes40k.Building_GeneticStorage</thingClass>
     <statBases>
       <WorkToBuild>2000</WorkToBuild>
       <Flammability>0.5</Flammability>
@@ -34,10 +34,10 @@
     <thingCategories>
       <li>BuildingsMisc</li>
     </thingCategories>
-    <surfaceType>None</surfaceType>
+    <surfaceType>Item</surfaceType>
     <inspectorTabs>
       <li>ITab_Storage</li>
-      <li>Genes40k.ITab_ContentsGeneStorage</li>
+      <li>Genes40k.ITab_ContentsGeneticStorage</li>
     </inspectorTabs>
     <comps>
       <li Class="CompProperties_Flickable" />
@@ -48,7 +48,8 @@
   <ThingDef ParentName="BEWH_GeneticStorage">
     <defName>BEWH_SangprimusPortum</defName>
     <label>sangprimus portum</label>
-    <description>The Sangprimus Portum is able to store Chapter and Primarch material. Whilst near a gestator it is able to duplicate the material within to complete the matrices of Firstborn, Primaris and Primarchs.</description>
+    <description>The Sangprimus Portum is able to store Chapter and Primarch material. Whilst near a gestator it is able to duplicate the material within to complete the matrices of Firstborn, Primaris and Primarchs.\nCan only store one of each material.</description>
+    <thingClass>Genes40k.Building_SangprimusPortum</thingClass>
     <graphicData>
       <texPath>Things/Building/SangprimusPortum/BEWH_SangprimusPortum</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
@@ -67,8 +68,11 @@
       <ComponentIndustrial>4</ComponentIndustrial>
       <ComponentSpacer>2</ComponentSpacer>
     </costList>
+    <inspectorTabs Inherit="False">
+      <li>Genes40k.ITab_SangprimusPortum</li>
+    </inspectorTabs>
     <building>
-      <maxItemsInCell>10</maxItemsInCell>
+      <maxItemsInCell>20</maxItemsInCell>
       <fixedStorageSettings>
         <filter>
           <categories>
@@ -78,7 +82,7 @@
         </filter>
       </fixedStorageSettings>
       <defaultStorageSettings>
-        <priority>Important</priority>
+        <priority>Critical</priority>
         <filter>
           <categories>
             <li>BEWH_PrimarchMaterial</li>
@@ -110,7 +114,6 @@
     <defName>BEWH_GeneticCryostaticStorage</defName>
     <label>genetic matrix storage</label>
     <description>Able to holster 6 genetic matrices, keeping them safe and preventing deterioration.</description>
-    <thingClass Inherit="False">Genes40k.Building_GeneStorageGraphicProgression</thingClass>
     <graphicData>
       <texPath>Things/Building/GeneticMatrixStorage/BEWH_MatrixStorage_Empty</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -139,7 +142,7 @@
         </filter>
       </fixedStorageSettings>
       <defaultStorageSettings>
-        <priority>Important</priority>
+        <priority>Critical</priority>
         <filter>
           <categories>
             <li>BEWH_GeneticMatrix</li>
@@ -167,7 +170,6 @@
     <defName>BEWH_GeneseedVialStorage</defName>
     <label>geneseed vial storage</label>
     <description>Able to holster 6 geneseed vials, keeping them safe and preventing deterioration.</description>
-    <thingClass Inherit="False">Genes40k.Building_GeneStorageGraphicProgression</thingClass>
     <graphicData>
       <texPath>Things/Building/GeneseedVialStorage/BEWH_GeneseedVialStorage_Empty</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -177,8 +179,8 @@
       <drawSize>(2, 2.5)</drawSize>
       <drawOffset>(0, 0, 0.7)</drawOffset>
     </graphicData>
-    <uiIconOffset>(0, 0.05)</uiIconOffset>
-    <uiIconScale>0.76</uiIconScale>
+    <uiIconOffset>(0, -0.12)</uiIconOffset>
+    <uiIconScale>0.65</uiIconScale>
     <altitudeLayer>BuildingOnTop</altitudeLayer>
     <defaultPlacingRot>North</defaultPlacingRot>
     <size>(1, 1)</size>
@@ -199,7 +201,7 @@
         </filter>
       </fixedStorageSettings>
       <defaultStorageSettings>
-        <priority>Important</priority>
+        <priority>Critical</priority>
         <filter>
           <categories>
             <li>BEWH_GeneseedVial</li>
@@ -226,12 +228,6 @@
   <ThingDef ParentName="BEWH_GeneticStorage">
     <defName>BEWH_PrimarchEmbryoContainer</defName>
     <label>primarch embryo container</label>
-    <thingClass Inherit="False">Genes40k.Building_GeneStorageGraphicProgression</thingClass>
-    <inspectorTabs Inherit="False">
-      <li>ITab_Storage</li>
-      <li>Genes40k.ITab_ContentsGeneStorage</li>
-    </inspectorTabs>
-    <surfaceType Inherit="False">Item</surfaceType>
     <description>Able to holster 1 primarch embryo, keeping it safe and preventing deterioration.</description>
     <graphicData>
       <texPath>Things/Building/PrimarchEmbryoContainer/BEWH_PrimarchEmbryoContainerEmpty</texPath>

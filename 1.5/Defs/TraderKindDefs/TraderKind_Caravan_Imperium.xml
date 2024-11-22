@@ -83,12 +83,12 @@
             </li>
 
             <!-- Chapter/Primarch Material -->
-            <li Class="StockGenerator_Tag">
+            <li Class="Genes40k.StockGenerator_TagSangprimusMaterialNoDupe">
                 <tradeTag>BEWH_ChapterMaterial</tradeTag>
                 <thingDefCountRange>-1~2</thingDefCountRange>
                 <countRange>1</countRange>
             </li>
-            <li Class="StockGenerator_Tag">
+            <li Class="Genes40k.StockGenerator_TagSangprimusMaterialNoDupe">
                 <tradeTag>BEWH_PrimarchMaterial</tradeTag>
                 <thingDefCountRange>-1~1</thingDefCountRange>
                 <countRange>1</countRange>

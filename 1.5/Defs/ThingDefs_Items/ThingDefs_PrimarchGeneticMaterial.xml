@@ -2,7 +2,7 @@
 <Defs>
 
   <ThingDef Name="BEWH_PrimarchGeneticMaterial" Abstract="True">
-    <thingClass>ThingWithComps</thingClass>
+    <thingClass>Genes40k.GeneMaterialExtra</thingClass>
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
       <MarketValue>8000</MarketValue>
@@ -43,7 +43,10 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <modExtensions>
-      <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+      <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+        <orderInt>1</orderInt>
+        <shownMaterialName>Lion El'Jonson</shownMaterialName>
+      </li>
       <li Class="Genes40k.DefModExtension_GeneFromMaterial">
         <addedGene>BEWH_PrimarchSpecificGeneI</addedGene>
       </li>
@@ -60,7 +63,10 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <modExtensions>
-      <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+      <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+        <orderInt>2</orderInt>
+        <shownMaterialName>???</shownMaterialName>
+      </li>
       <li Class="Genes40k.DefModExtension_GeneFromMaterial">
         <addedGene>BEWH_PrimarchSpecificGeneII</addedGene>
       </li>
@@ -77,7 +83,10 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <modExtensions>
-      <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+      <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+        <orderInt>3</orderInt>
+        <shownMaterialName>Fulgrim</shownMaterialName>
+      </li>
       <li Class="Genes40k.DefModExtension_GeneFromMaterial">
         <addedGene>BEWH_PrimarchSpecificGeneIII</addedGene>
       </li>
@@ -94,7 +103,10 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <modExtensions>
-      <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+      <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+        <orderInt>4</orderInt>
+        <shownMaterialName>Perturabo</shownMaterialName>
+      </li>
       <li Class="Genes40k.DefModExtension_GeneFromMaterial">
         <addedGene>BEWH_PrimarchSpecificGeneIV</addedGene>
       </li>
@@ -111,7 +123,10 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <modExtensions>
-      <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+      <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+        <orderInt>5</orderInt>
+        <shownMaterialName>Jaghatai Khan</shownMaterialName>
+      </li>
       <li Class="Genes40k.DefModExtension_GeneFromMaterial">
         <addedGene>BEWH_PrimarchSpecificGeneV</addedGene>
       </li>
@@ -128,7 +143,10 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <modExtensions>
-      <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+      <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+        <orderInt>6</orderInt>
+        <shownMaterialName>Leman Russ</shownMaterialName>
+      </li>
       <li Class="Genes40k.DefModExtension_GeneFromMaterial">
         <addedGene>BEWH_PrimarchSpecificGeneVI</addedGene>
       </li>
@@ -145,7 +163,10 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <modExtensions>
-      <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+      <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+        <orderInt>7</orderInt>
+        <shownMaterialName>Rogal Dorn</shownMaterialName>
+      </li>
       <li Class="Genes40k.DefModExtension_GeneFromMaterial">
         <addedGene>BEWH_PrimarchSpecificGeneVII</addedGene>
       </li>
@@ -162,7 +183,10 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <modExtensions>
-      <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+      <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+        <orderInt>8</orderInt>
+        <shownMaterialName>Konrad Curze</shownMaterialName>
+      </li>
       <li Class="Genes40k.DefModExtension_GeneFromMaterial">
         <addedGene>BEWH_PrimarchSpecificGeneVIII</addedGene>
       </li>
@@ -179,7 +203,10 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <modExtensions>
-      <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+      <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+        <orderInt>9</orderInt>
+        <shownMaterialName>Sanguinius</shownMaterialName>
+      </li>
       <li Class="Genes40k.DefModExtension_GeneFromMaterial">
         <addedGene>BEWH_PrimarchSpecificGeneIX</addedGene>
       </li>
@@ -196,7 +223,10 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <modExtensions>
-      <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+      <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+        <orderInt>10</orderInt>
+        <shownMaterialName>Ferrus Manus</shownMaterialName>
+      </li>
       <li Class="Genes40k.DefModExtension_GeneFromMaterial">
         <addedGene>BEWH_PrimarchSpecificGeneX</addedGene>
       </li>
@@ -213,7 +243,10 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <modExtensions>
-      <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+      <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+        <orderInt>11</orderInt>
+        <shownMaterialName>???</shownMaterialName>
+      </li>
       <li Class="Genes40k.DefModExtension_GeneFromMaterial">
         <addedGene>BEWH_PrimarchSpecificGeneXI</addedGene>
       </li>
@@ -230,7 +263,10 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <modExtensions>
-      <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+      <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+        <orderInt>12</orderInt>
+        <shownMaterialName>Angron</shownMaterialName>
+      </li>
       <li Class="Genes40k.DefModExtension_GeneFromMaterial">
         <addedGene>BEWH_PrimarchSpecificGeneXII</addedGene>
       </li>
@@ -247,7 +283,10 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <modExtensions>
-      <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+      <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+        <orderInt>13</orderInt>
+        <shownMaterialName>Roboute Guilliman</shownMaterialName>
+      </li>
       <li Class="Genes40k.DefModExtension_GeneFromMaterial">
         <addedGene>BEWH_PrimarchSpecificGeneXIII</addedGene>
       </li>
@@ -264,7 +303,10 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <modExtensions>
-      <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+      <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+        <orderInt>14</orderInt>
+        <shownMaterialName>Mortarion</shownMaterialName>
+      </li>
       <li Class="Genes40k.DefModExtension_GeneFromMaterial">
         <addedGene>BEWH_PrimarchSpecificGeneXIV</addedGene>
       </li>
@@ -281,9 +323,13 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <modExtensions>
-      <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+      <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+        <orderInt>15</orderInt>
+        <shownMaterialName>Magnus the Red</shownMaterialName>
+      </li>
       <li Class="Genes40k.DefModExtension_GeneFromMaterial">
         <addedGene>BEWH_PrimarchSpecificGeneXV</addedGene>
+        <extraAddedGeneForDescription>BEWH_BetaPsyker</extraAddedGeneForDescription>
       </li>
     </modExtensions>
   </ThingDef>
@@ -298,7 +344,10 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <modExtensions>
-      <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+      <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+        <orderInt>16</orderInt>
+        <shownMaterialName>Horus Lupercal</shownMaterialName>
+      </li>
       <li Class="Genes40k.DefModExtension_GeneFromMaterial">
         <addedGene>BEWH_PrimarchSpecificGeneXVI</addedGene>
       </li>
@@ -315,7 +364,10 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <modExtensions>
-      <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+      <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+        <orderInt>17</orderInt>
+        <shownMaterialName>Lorgar</shownMaterialName>
+      </li>
       <li Class="Genes40k.DefModExtension_GeneFromMaterial">
         <addedGene>BEWH_PrimarchSpecificGeneXVII</addedGene>
       </li>
@@ -332,9 +384,13 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <modExtensions>
-      <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+      <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+        <orderInt>18</orderInt>
+        <shownMaterialName>Vulkan</shownMaterialName>
+      </li>
       <li Class="Genes40k.DefModExtension_GeneFromMaterial">
         <addedGene>BEWH_PrimarchSpecificGeneXVIII</addedGene>
+        <extraAddedGeneForDescription>BEWH_PerpetualBeta</extraAddedGeneForDescription>
       </li>
     </modExtensions>
   </ThingDef>
@@ -349,7 +405,10 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <modExtensions>
-      <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+      <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+        <orderInt>19</orderInt>
+        <shownMaterialName>Corvus Corax</shownMaterialName>
+      </li>
       <li Class="Genes40k.DefModExtension_GeneFromMaterial">
         <addedGene>BEWH_PrimarchSpecificGeneXIX</addedGene>
       </li>
@@ -366,7 +425,10 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <modExtensions>
-      <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+      <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+        <orderInt>20</orderInt>
+        <shownMaterialName>Alpharius Omegon</shownMaterialName>
+      </li>
       <li Class="Genes40k.DefModExtension_GeneFromMaterial">
         <addedGene>BEWH_PrimarchSpecificGeneXX</addedGene>
       </li>

@@ -13,8 +13,6 @@ namespace Genes40k
         public bool overrideXenotypeGenesGiven = false;
         public List<GeneDef> overridenAddedGenes = new List<GeneDef>();
 
-        public RecipeDef recipe = null;
-
         public HediffDef appliesHediff = null;
 
         public int minAgeImplant = 0;
@@ -22,7 +20,5 @@ namespace Genes40k
         public int baseFailureChance = 0;
         public int failureChancePerAgePast = 0;
         public int failChanceCap = 0;
-
-        public bool primarch = false;
     }
 }

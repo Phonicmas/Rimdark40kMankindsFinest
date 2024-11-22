@@ -32,9 +32,6 @@ namespace Genes40k
         private CompPowerTrader cachedPowerComp;
 
         [Unsaved(false)]
-        private Graphic cachedTopGraphic;
-
-        [Unsaved(false)]
         private Graphic fetusEarlyStageGraphic;
 
         [Unsaved(false)]
@@ -185,7 +182,6 @@ namespace Genes40k
                 {
                     if (EmbryoGestationTicksRemaining <= 0)
                     {
-                        //thingDef = def.building.gestatorCycleCompleteMote.GetForRotation(Rotation);
                         Finish();
                         return;
                     }
@@ -222,10 +218,10 @@ namespace Genes40k
             
             if (workingMote == null || workingMote.Destroyed || workingMote.def != thingDef)
             {
-                var vec = Vector3.zero;
-                vec.y = AltitudeLayer.Building.AltitudeFor();
-                workingMote = MoteMaker.MakeAttachedOverlay(this, thingDef, vec);
+                workingMote = MoteMaker.MakeAttachedOverlay(this, thingDef, Vector3.zero);
             }
+            
+            workingMote.yOffset = -4.9f;
             workingMote.Maintain();
         }
 
@@ -582,9 +578,9 @@ namespace Genes40k
             var embryos = new List<Thing>();
             embryos.AddRange(Map.listerThings.ThingsOfDef(Genes40kDefOf.BEWH_PrimarchEmbryo));
 
-            foreach (var building in Map.listerBuildings.AllBuildingsColonistOfDef(Genes40kDefOf.BEWH_PrimarchEmbryoContainer).Cast<Building_GeneStorageGraphicProgression>())
+            foreach (var building in Map.listerBuildings.AllBuildingsColonistOfDef(Genes40kDefOf.BEWH_PrimarchEmbryoContainer).Cast<Building_GeneticStorage>())
             {
-                embryos.AddRange(building.GeneAmount);
+                embryos.AddRange(building.slotGroup.HeldThings);
             }
 
             return embryos.Cast<PrimarchEmbryo>().ToList();
@@ -627,19 +623,19 @@ namespace Genes40k
             {
                 var loc = drawLoc + def.building.formingMechPerRotationOffset[Rotation.AsInt];
                 loc.y += 1f / 52f;
-                loc.z += Mathf.PingPong((float)Find.TickManager.TicksGame * def.building.formingMechBobSpeed, def.building.formingMechYBobDistance);
+                loc.z += Mathf.PingPong(Find.TickManager.TicksGame * def.building.formingMechBobSpeed, def.building.formingMechYBobDistance);
                 
                 var drawSize = Vector2.one * Mathf.Lerp(FetusMinSize, FetusMaxSize, EmbryoGestationPct);
                 
                 if (EmbryoGestationTicksRemaining > EmbryoLateStageGraphicTicksRemaining)
                 {
                     FetusEarlyStage.drawSize = drawSize;
-                    FetusEarlyStage.DrawFromDef(loc, Rotation, null);
+                    FetusEarlyStage.DrawFromDef(loc, Rot4.North, null);
                 }
                 else
                 {
                     FetusLateStage.drawSize = drawSize;
-                    FetusLateStage.DrawFromDef(loc, Rotation, null);
+                    FetusLateStage.DrawFromDef(loc, Rot4.North, null);
                 }
             }
 

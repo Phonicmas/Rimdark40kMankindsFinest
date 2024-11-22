@@ -10,8 +10,6 @@ namespace Genes40k
     [StaticConstructorOnStartup]
     public class PrimarchEmbryo : GeneSetHolderBase
     {
-        protected override string InspectGeneDescription => "InspectGenesEmbryoDesc".Translate();
-
         public XenotypeIconDef iconDef;
         public XenotypeDef xenotype;
 
@@ -20,6 +18,20 @@ namespace Genes40k
 
         public GeneSet primarchGenes;
         public GeneSet birthGenes;
+        
+        private bool invisible = false;
+        
+        public override Graphic Graphic
+        {
+            get
+            {
+                var graphic = DefaultGraphic.GetCopy(def.graphicData.drawSize, null);
+                
+                graphic.drawSize = !invisible ? def.graphicData.drawSize : Vector2.zero;
+                
+                return graphic;
+            }
+        }
 
         public override void PostMake()
         {
@@ -64,6 +76,11 @@ namespace Genes40k
             }
         }
         
+        public void ChangeVisibility(bool newValue)
+        {
+            invisible = newValue;
+        }
+        
         public override IEnumerable<Gizmo> GetGizmos()
         {
             foreach (var gizmo in base.GetGizmos())
@@ -79,13 +96,34 @@ namespace Genes40k
                 yield return new Command_Action
                 {
                     defaultLabel = "InspectGenes".Translate() + "...",
-                    defaultDesc = InspectGeneDescription,
+                    defaultDesc = "InspectGenesEmbryoDesc".Translate(),
                     icon = GeneticInfoTex.Texture,
                     action = delegate
                     {
                         Genes40kUtils.InspectPrimarchEmbryoGenes(this);
                     }
                 };
+            }
+        }
+        
+        public override IEnumerable<StatDrawEntry> SpecialDisplayStats()
+        {
+            foreach (var item in base.SpecialDisplayStats())
+            {
+                yield return item;
+            }
+            if (geneSet == null)
+            {
+                yield break;
+            }
+            Dialog_InfoCard.Hyperlink? inspectGenesHyperlink = null;
+            if (ThingSelectionUtility.SelectableByMapClick(this))
+            {
+                inspectGenesHyperlink = new Dialog_InfoCard.Hyperlink(this, -1, thingIsGeneOwner: true);
+            }
+            foreach (var item3 in primarchGenes.SpecialDisplayStats(inspectGenesHyperlink))
+            {
+                yield return item3;
             }
         }
 
@@ -98,6 +136,7 @@ namespace Genes40k
             Scribe_Defs.Look(ref iconDef, "iconDef");
             Scribe_Deep.Look(ref primarchGenes, "primarchGenes");
             Scribe_Deep.Look(ref birthGenes, "birthGenes");
+            Scribe_Values.Look(ref invisible, "invisible");
 
             if (Scribe.mode != LoadSaveMode.PostLoadInit)
             {

@@ -3,7 +3,7 @@
 
     <!-- Base -->
     <ThingDef Name="BEWH_ChapterGeneticMaterial" Abstract="True">
-        <thingClass>ThingWithComps</thingClass>
+        <thingClass>Genes40k.GeneMaterialExtra</thingClass>
         <statBases>
             <MaxHitPoints>200</MaxHitPoints>
             <MarketValue>4000</MarketValue>
@@ -50,7 +50,10 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_ChapterMaterial" />
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>1</orderInt>
+                <shownMaterialName>Dark Angels</shownMaterialName>
+            </li>
             <li Class="Genes40k.DefModExtension_GeneFromMaterial">
                 <addedGene>BEWH_ChapterIDarkAngels</addedGene>
             </li>
@@ -67,7 +70,10 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_ChapterMaterial" />
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>2</orderInt>
+                <shownMaterialName>???</shownMaterialName>
+            </li>
             <li Class="Genes40k.DefModExtension_GeneFromMaterial">
                 <addedGene>BEWH_ChapterII</addedGene>
             </li>
@@ -84,7 +90,10 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_ChapterMaterial" />
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>3</orderInt>
+                <shownMaterialName>Emperor's Children</shownMaterialName>
+            </li>
             <li Class="Genes40k.DefModExtension_GeneFromMaterial">
                 <addedGene>BEWH_ChapterIIIEmperorsChildren</addedGene>
             </li>
@@ -101,7 +110,10 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_ChapterMaterial" />
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>4</orderInt>
+                <shownMaterialName>Iron Warriors</shownMaterialName>
+            </li>
             <li Class="Genes40k.DefModExtension_GeneFromMaterial">
                 <addedGene>BEWH_ChapterIVIronWarriors</addedGene>
             </li>
@@ -118,7 +130,10 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_ChapterMaterial" />
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>5</orderInt>
+                <shownMaterialName>White Scars</shownMaterialName>
+            </li>
             <li Class="Genes40k.DefModExtension_GeneFromMaterial">
                 <addedGene>BEWH_ChapterVWhiteScars</addedGene>
             </li>
@@ -135,9 +150,13 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_ChapterMaterial" />
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>6</orderInt>
+                <shownMaterialName>Space Wolves</shownMaterialName>
+            </li>
             <li Class="Genes40k.DefModExtension_GeneFromMaterial">
                 <addedGene>BEWH_ChapterVISpaceWolves</addedGene>
+                <extraAddedGeneForDescription>BEWH_ChapterVIFlaw</extraAddedGeneForDescription>
             </li>
         </modExtensions>
     </ThingDef>
@@ -152,7 +171,10 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_ChapterMaterial" />
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>7</orderInt>
+                <shownMaterialName>Imperial Fists</shownMaterialName>
+            </li>
             <li Class="Genes40k.DefModExtension_GeneFromMaterial">
                 <addedGene>BEWH_ChapterVIIImperialFists</addedGene>
             </li>
@@ -169,7 +191,10 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_ChapterMaterial" />
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>8</orderInt>
+                <shownMaterialName>Night Lords</shownMaterialName>
+            </li>
             <li Class="Genes40k.DefModExtension_GeneFromMaterial">
                 <addedGene>BEWH_ChapterVIIINightLords</addedGene>
             </li>
@@ -186,9 +211,13 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_ChapterMaterial" />
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>9</orderInt>
+                <shownMaterialName>Blood Angels</shownMaterialName>
+            </li>
             <li Class="Genes40k.DefModExtension_GeneFromMaterial">
                 <addedGene>BEWH_ChapterIXBloodAngels</addedGene>
+                <extraAddedGeneForDescription>BEWH_ChapterIXFlaw</extraAddedGeneForDescription>
             </li>
         </modExtensions>
     </ThingDef>
@@ -203,7 +232,10 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_ChapterMaterial" />
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>10</orderInt>
+                <shownMaterialName>Iron Hands</shownMaterialName>
+            </li>
             <li Class="Genes40k.DefModExtension_GeneFromMaterial">
                 <addedGene>BEWH_ChapterXIronHands</addedGene>
             </li>
@@ -220,7 +252,10 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_ChapterMaterial" />
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>11</orderInt>
+                <shownMaterialName>???</shownMaterialName>
+            </li>
             <li Class="Genes40k.DefModExtension_GeneFromMaterial">
                 <addedGene>BEWH_ChapterXI</addedGene>
             </li>
@@ -237,7 +272,10 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_ChapterMaterial" />
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>12</orderInt>
+                <shownMaterialName>World Eaters</shownMaterialName>
+            </li>
             <li Class="Genes40k.DefModExtension_GeneFromMaterial">
                 <addedGene>BEWH_ChapterXIIWorldEaters</addedGene>
             </li>
@@ -254,7 +292,10 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_ChapterMaterial" />
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>13</orderInt>
+                <shownMaterialName>Ultramarines</shownMaterialName>
+            </li>
             <li Class="Genes40k.DefModExtension_GeneFromMaterial">
                 <addedGene>BEWH_ChapterXIIIUltramarines</addedGene>
             </li>
@@ -271,7 +312,10 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_ChapterMaterial" />
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>14</orderInt>
+                <shownMaterialName>Death Guard</shownMaterialName>
+            </li>
             <li Class="Genes40k.DefModExtension_GeneFromMaterial">
                 <addedGene>BEWH_ChapterXIVDeathGuard</addedGene>
             </li>
@@ -288,7 +332,10 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_ChapterMaterial" />
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>15</orderInt>
+                <shownMaterialName>Thousand Sons</shownMaterialName>
+            </li>
             <li Class="Genes40k.DefModExtension_GeneFromMaterial">
                 <addedGene>BEWH_ChapterXVThousandSons</addedGene>
             </li>
@@ -305,7 +352,10 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_ChapterMaterial" />
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>16</orderInt>
+                <shownMaterialName>Sons of Horus</shownMaterialName>
+            </li>
             <li Class="Genes40k.DefModExtension_GeneFromMaterial">
                 <addedGene>BEWH_ChapterXVISonsOfHorus</addedGene>
             </li>
@@ -322,7 +372,10 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_ChapterMaterial" />
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>17</orderInt>
+                <shownMaterialName>Word Bearers</shownMaterialName>
+            </li>
             <li Class="Genes40k.DefModExtension_GeneFromMaterial">
                 <addedGene>BEWH_ChapterXVIIWordBearers</addedGene>
             </li>
@@ -339,7 +392,10 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_ChapterMaterial" />
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>18</orderInt>
+                <shownMaterialName>Salamanders</shownMaterialName>
+            </li>
             <li Class="Genes40k.DefModExtension_GeneFromMaterial">
                 <addedGene>BEWH_ChapterXVIIISalamanders</addedGene>
             </li>
@@ -356,7 +412,10 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_ChapterMaterial" />
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>19</orderInt>
+                <shownMaterialName>Raven Guard</shownMaterialName>
+            </li>
             <li Class="Genes40k.DefModExtension_GeneFromMaterial">
                 <addedGene>BEWH_ChapterXIXRavenGuard</addedGene>
             </li>
@@ -373,7 +432,10 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_ChapterMaterial" />
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>20</orderInt>
+                <shownMaterialName>Alpha Legion</shownMaterialName>
+            </li>
             <li Class="Genes40k.DefModExtension_GeneFromMaterial">
                 <addedGene>BEWH_ChapterXXAlphaLegion</addedGene>
             </li>

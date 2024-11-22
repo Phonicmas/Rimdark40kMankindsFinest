@@ -58,6 +58,9 @@
     <Reference Include="UnityEngine.IMGUIModule">
       <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
     <Reference Include="VFECore">
       <HintPath>..\..\..\..\..\..\..\workshop\content\294100\2023507013\1.4\Assemblies\VFECore.dll</HintPath>
       <Private>False</Private>
@@ -82,6 +85,7 @@
     <Compile Include="GeneClasses\Gene_Perpetual.cs" />
     <Compile Include="GeneClasses\Gene_ProgenoidGlands.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_BlockedPsycasting.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_ImplantGeneseedCorrectIngredient.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_MoreArtJoy.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_FirstProgenoidGlandProgress.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_NaturalBirthPerpetual.cs" />
@@ -89,11 +93,13 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_ReactToMelee.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_RubiconSurgeryChanceIncrease.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_SecondProgenoidGlandProgress.cs" />
+    <Compile Include="Misc\ITab_ContentsGeneticStorage.cs" />
+    <Compile Include="Misc\ITab_SangprimusPortum.cs" />
+    <Compile Include="Misc\StockGenerator_TagSangprimusMaterialNoDupe.cs" />
     <Compile Include="ThingClasses\Building_GeneGestator.cs" />
     <Compile Include="ThingClasses\Building_GeneTable.cs" />
-    <Compile Include="ThingClasses\Building_GeneStorageGraphicProgression.cs" />
+    <Compile Include="ThingClasses\Building_GeneticStorage.cs" />
     <Compile Include="ThingClasses\Building_PrimarchGrowthVat.cs" />
-    <Compile Include="ThingClasses\Building_GeneStorage.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneseedPurity.cs" />
     <Compile Include="DefModExtensions\DefModExtension_ChapterGene.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneFromMaterial.cs" />
@@ -117,6 +123,9 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_EternalWatchStopMentalState.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_LivingSaintResurrection.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_LivingSaintDeath.cs" />
+    <Compile Include="ThingClasses\Building_SangprimusPortum.cs" />
+    <Compile Include="ThingClasses\GeneMaterialExtra.cs" />
+    <Compile Include="ThingClasses\GeneticMatrix.cs" />
     <Compile Include="ThingClasses\PrimarchEmbryo.cs" />
     <Compile Include="ThingClasses\GeneseedVial.cs" />
     <Compile Include="Workers\JobDriver_FillPrimarchGrowthVat.cs" />
@@ -130,7 +139,6 @@
     <Compile Include="Workers\WorkerClass_PhaseDevelopment.cs" />
     <Compile Include="Workers\WorkerClass_ImplantGeneseed.cs" />
     <Compile Include="Workers\WorkGiver_FillGeneGestator.cs" />
-    <Compile Include="Misc\ITab_ContentsGeneStorage.cs" />
     <Compile Include="Comps\CompProperties_DeteriorateOutsideBuilding.cs" />
     <Compile Include="Comps\Comp_DeteriorateOutsideBuilding.cs" />
     <Compile Include="Comps\CompAbilityEffect_WarpShield.cs" />

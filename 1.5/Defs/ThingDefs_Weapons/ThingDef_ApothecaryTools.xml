@@ -6,7 +6,6 @@
     <techLevel>Spacer</techLevel>
     <soundInteract>Interact_ChargeRifle</soundInteract>
     <recipeMaker>
-      <researchPrerequisite>BEWH_GeneseedExtractionPrimaris</researchPrerequisite>
       <skillRequirements>
         <Crafting>10</Crafting>
       </skillRequirements>
@@ -35,6 +34,9 @@
       <texPath>Things/Weapons/BEWH_Narthecium</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+    <recipeMaker>
+      <researchPrerequisite>BEWH_GeneseedExtractionFirstborn</researchPrerequisite>
+    </recipeMaker>
     <statBases>
       <WorkToMake>40000</WorkToMake>
       <Mass>3.5</Mass>
@@ -81,6 +83,9 @@
       <texPath>Things/Weapons/BEWH_Reductor</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+    <recipeMaker>
+      <researchPrerequisite>BEWH_GeneseedExtractionPrimaris</researchPrerequisite>
+    </recipeMaker>
     <statBases>
       <WorkToMake>35000</WorkToMake>
       <Mass>2.1</Mass>

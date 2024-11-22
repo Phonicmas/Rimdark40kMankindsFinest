@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Firstborn -->
+    <RecipeDef ParentName="BEWH_RecipeGeneseedVialBase" Name="BEWH_FirstbornVialInsertion" Abstract="True">
+        <description>Make a firstborn.</description>
+        <jobString>Making firstborn.</jobString>
+        <researchPrerequisite>BEWH_GeneseedPurification</researchPrerequisite>
+        <workAmount>5000</workAmount>
+        <uiIconThing>BEWH_GeneseedVialFirstborn</uiIconThing>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>MedicineUltratech</li>
+                    </thingDefs>
+                </filter>
+                <count>8</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>BEWH_GeneseedVialFirstborn</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>8</Medicine>
+        </skillRequirements>
+    </RecipeDef>
+
+    <!-- No Chapter -->
+    <RecipeDef ParentName="BEWH_FirstbornVialInsertion">
+        <defName>BEWH_MakeFirstborn</defName>
+        <label>make chapterless firstborn </label>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
+                <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!-- Chapter I -->
+    <RecipeDef ParentName="BEWH_FirstbornVialInsertion">
+        <defName>BEWH_MakeFirstbornChapterI</defName>
+        <label>make dark angel firstborn</label>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
+                <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
+                <geneFromMaterial>BEWH_ChapterIDarkAngels</geneFromMaterial>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!-- Chapter II -->
+    <!--<RecipeDef ParentName="BEWH_FirstbornVialInsertion">
+        <defName>BEWH_MakeFirstbornChapterII</defName>
+        <label>make ?? firstborn</label>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
+                <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
+                <geneFromMaterial>BEWH_ChapterII</geneFromMaterial>
+            </li>
+        </modExtensions>
+    </RecipeDef>-->
+
+    <!-- Chapter III -->
+    <RecipeDef ParentName="BEWH_FirstbornVialInsertion">
+        <defName>BEWH_MakeFirstbornChapterIII</defName>
+        <label>make emperor's children firstborn</label>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
+                <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
+                <geneFromMaterial>BEWH_ChapterIIIEmperorsChildren</geneFromMaterial>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!-- Chapter IV -->
+    <RecipeDef ParentName="BEWH_FirstbornVialInsertion">
+        <defName>BEWH_MakeFirstbornChapterIV</defName>
+        <label>make iron warriors firstborn</label>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
+                <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
+                <geneFromMaterial>BEWH_ChapterIVIronWarriors</geneFromMaterial>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!-- Chapter V -->
+    <RecipeDef ParentName="BEWH_FirstbornVialInsertion">
+        <defName>BEWH_MakeFirstbornChapterV</defName>
+        <label>make white scars firstborn</label>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
+                <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
+                <geneFromMaterial>BEWH_ChapterVWhiteScars</geneFromMaterial>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!-- Chapter VI -->
+    <RecipeDef ParentName="BEWH_FirstbornVialInsertion">
+        <defName>BEWH_MakeFirstbornChapterVI</defName>
+        <label>make space wolves firstborn</label>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
+                <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
+                <geneFromMaterial>BEWH_ChapterVISpaceWolves</geneFromMaterial>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!-- Chapter VII -->
+    <RecipeDef ParentName="BEWH_FirstbornVialInsertion">
+        <defName>BEWH_MakeFirstbornChapterVII</defName>
+        <label>make imperial fists firstborn</label>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
+                <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
+                <geneFromMaterial>BEWH_ChapterVIIImperialFists</geneFromMaterial>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!-- Chapter VIII -->
+    <RecipeDef ParentName="BEWH_FirstbornVialInsertion">
+        <defName>BEWH_MakeFirstbornChapterVIII</defName>
+        <label>make night lords firstborn</label>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
+                <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
+                <geneFromMaterial>BEWH_ChapterVIIINightLords</geneFromMaterial>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!-- Chapter IX -->
+    <RecipeDef ParentName="BEWH_FirstbornVialInsertion">
+        <defName>BEWH_MakeFirstbornChapterIX</defName>
+        <label>make blood angels firstborn</label>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
+                <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
+                <geneFromMaterial>BEWH_ChapterIXBloodAngels</geneFromMaterial>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!-- Chapter X -->
+    <RecipeDef ParentName="BEWH_FirstbornVialInsertion">
+        <defName>BEWH_MakeFirstbornChapterX</defName>
+        <label>make iron hands firstborn</label>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
+                <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
+                <geneFromMaterial>BEWH_ChapterXIronHands</geneFromMaterial>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!-- Chapter XI -->
+    <!--<RecipeDef ParentName="BEWH_FirstbornVialInsertion">
+        <defName>BEWH_MakeFirstbornChapterXI</defName>
+        <label>make ?? firstborn</label>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
+                <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
+                <geneFromMaterial>BEWH_ChapterXI</geneFromMaterial>
+            </li>
+        </modExtensions>
+    </RecipeDef>-->
+
+    <!-- Chapter XII -->
+    <RecipeDef ParentName="BEWH_FirstbornVialInsertion">
+        <defName>BEWH_MakeFirstbornChapterXII</defName>
+        <label>make world eaters firstborn</label>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
+                <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
+                <geneFromMaterial>BEWH_ChapterXIIWorldEaters</geneFromMaterial>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!-- Chapter XIII -->
+    <RecipeDef ParentName="BEWH_FirstbornVialInsertion">
+        <defName>BEWH_MakeFirstbornChapterXIII</defName>
+        <label>make ultramarine firstborn</label>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
+                <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
+                <geneFromMaterial>BEWH_ChapterXIIIUltramarines</geneFromMaterial>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!-- Chapter XIV -->
+    <RecipeDef ParentName="BEWH_FirstbornVialInsertion">
+        <defName>BEWH_MakeFirstbornChapterXIV</defName>
+        <label>make death guard firstborn</label>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
+                <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
+                <geneFromMaterial>BEWH_ChapterXIVDeathGuard</geneFromMaterial>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!-- Chapter XV -->
+    <RecipeDef ParentName="BEWH_FirstbornVialInsertion">
+        <defName>BEWH_MakeFirstbornChapterXV</defName>
+        <label>make thousand sons firstborn</label>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
+                <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
+                <geneFromMaterial>BEWH_ChapterXVThousandSons</geneFromMaterial>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!-- Chapter XVI -->
+    <RecipeDef ParentName="BEWH_FirstbornVialInsertion">
+        <defName>BEWH_MakeFirstbornChapterXVI</defName>
+        <label>make sons of horus firstborn</label>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
+                <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
+                <geneFromMaterial>BEWH_ChapterXVISonsOfHorus</geneFromMaterial>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!-- Chapter XVII -->
+    <RecipeDef ParentName="BEWH_FirstbornVialInsertion">
+        <defName>BEWH_MakeFirstbornChapterXVII</defName>
+        <label>make word bearer firstborn</label>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
+                <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
+                <geneFromMaterial>BEWH_ChapterXVIIWordBearers</geneFromMaterial>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!-- Chapter XVIII -->
+    <RecipeDef ParentName="BEWH_FirstbornVialInsertion">
+        <defName>BEWH_MakeFirstbornChapterXVIII</defName>
+        <label>make salamanders firstborn</label>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
+                <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
+                <geneFromMaterial>BEWH_ChapterXVIIISalamanders</geneFromMaterial>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!-- Chapter XIX -->
+    <RecipeDef ParentName="BEWH_FirstbornVialInsertion">
+        <defName>BEWH_MakeFirstbornChapterXIX</defName>
+        <label>make raven guard firstborn</label>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
+                <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
+                <geneFromMaterial>BEWH_ChapterXIXRavenGuard</geneFromMaterial>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!-- Chapter XX -->
+    <RecipeDef ParentName="BEWH_FirstbornVialInsertion">
+        <defName>BEWH_MakeFirstbornChapterXX</defName>
+        <label>make alpha legion firstborn</label>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
+                <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
+                <geneFromMaterial>BEWH_ChapterXXAlphaLegion</geneFromMaterial>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+</Defs>

@@ -82,7 +82,10 @@ namespace Genes40k
         {
             var defMod = def.GetModExtension<DefModExtension_GeneGestator>();
             var result = new List<ThingDef>();
-            if (defMod.gestatableThings.NullOrEmpty()) return result;
+            if (defMod.gestatableThings.NullOrEmpty())
+            {
+                return result;
+            }
 
             result.AddRange(defMod.gestatableThings.Where(thing => thing.GetModExtension<DefModExtension_GeneMatrix>().researchNeeded.IsFinished));
             return result;
@@ -134,8 +137,8 @@ namespace Genes40k
             var mote = ((SubEffecter_ProgressBar)progressBar.children[0]).mote;
             if (mote == null) return;
             
-            mote.progress = Mathf.Clamp01((float)progressInt / totalTime);
-            mote.offsetZ = ((Rotation == Rot4.North) ? 0.5f : (-0.5f));
+            mote.progress = Mathf.Clamp01(progressInt / totalTime);
+            mote.offsetZ = Rotation == Rot4.North ? 0.5f : -0.5f;
         }
 
         private void Finish()
@@ -178,9 +181,7 @@ namespace Genes40k
             stringBuilder.Append(base.GetInspectString());
             stringBuilder.Append("\n");
 
-            stringBuilder.Append(containedMatrix == null
-                ? "BEWH.ContainsNoGeneMatrix".Translate()
-                : "BEWH.ContainsGeneMatrix".Translate(containedMatrix.Label));
+            stringBuilder.Append(containedMatrix == null ? "BEWH.ContainsNoGeneMatrix".Translate() : "BEWH.ContainsGeneMatrix".Translate(containedMatrix.Label));
 
             if (selectedMaterial != null)
             {
@@ -223,36 +224,36 @@ namespace Genes40k
             {
                 if (hasBeenStarted)
                 {
-                    //ALMOST FINISHES PROCEDURE
+                    //DEV: ALMOST FINISH
                     var command_Action5 = new Command_Action();
                     command_Action5.defaultLabel = "DEV: ALMOST FINISH".Translate();
                     command_Action5.icon = CancelIcon;
                     command_Action5.activateSound = SoundDefOf.Designate_Cancel;
                     command_Action5.action = delegate
                     {
-                        progressInt = totalTime - 100;
+                        progressInt = totalTime - 2500;
                     };
                     yield return command_Action5;
                 }
             }
             if (!hasBeenStarted && containedMatrix != null)
             {
-                if (this.HasComp<CompAffectedByFacilities>() && (containedMatrix.def.HasModExtension<DefModExtension_PrimarchMaterial>() || containedMatrix.def.HasModExtension<DefModExtension_ChapterMaterial>()))
+                if (this.HasComp<CompAffectedByFacilities>() && (containedMatrix.def.GetModExtension<DefModExtension_GeneMatrix>().canUsePrimarchMaterial || containedMatrix.def.GetModExtension<DefModExtension_GeneMatrix>().canUseChapterMaterial))
                 {
                     var comp = GetComp<CompAffectedByFacilities>();
                     if (!comp.LinkedFacilitiesListForReading.Where(x => x.def == Genes40kDefOf.BEWH_SangprimusPortum).EnumerableNullOrEmpty())
                     {
-                        var sangprimus = (Building_GeneStorage)comp.LinkedFacilitiesListForReading.First();
+                        var sangprimus = (Building_SangprimusPortum)comp.LinkedFacilitiesListForReading.First(b => b is Building_SangprimusPortum);
                         var availableMaterial = new List<Thing>();
                         string geneticType;
-                        if (containedMatrix.def.HasModExtension<DefModExtension_PrimarchMaterial>())
+                        if (containedMatrix.def.GetModExtension<DefModExtension_GeneMatrix>().canUsePrimarchMaterial)
                         {
-                            availableMaterial.AddRange(sangprimus.SearchableContents.Where(x => x.def.HasModExtension<DefModExtension_PrimarchMaterial>()));
+                            availableMaterial.AddRange(sangprimus.SearchableContentsPrimarch.Where(x => x.def.HasModExtension<DefModExtension_PrimarchMaterial>()));
                             geneticType = "BEWH.Primarch".Translate();
                         }
                         else
                         {
-                            availableMaterial.AddRange(sangprimus.SearchableContents.Where(x => x.def.HasModExtension<DefModExtension_ChapterMaterial>()));
+                            availableMaterial.AddRange(sangprimus.SearchableContentsChapter.Where(x => x.def.HasModExtension<DefModExtension_ChapterMaterial>()));
                             geneticType = "BEWH.Chapter".Translate();
                         }
                         //SELECT PRIMARCH OR CHAPTER MATERIAL
@@ -337,7 +338,10 @@ namespace Genes40k
                             {
                                 selectedMatrix = gestatables;
                                 haulJobStarted = true;
-                                if (containedMatrix == null) return;
+                                if (containedMatrix == null)
+                                {
+                                    return;
+                                }
                                 
                                 GenPlace.TryPlaceThing(containedMatrix, InteractionCell, Map, ThingPlaceMode.Direct);
                                 containedMatrix = null;
@@ -375,7 +379,10 @@ namespace Genes40k
                         
                         foreach (var job in jobDoer.jobs.AllJobs())
                         {
-                            if (job.def != Genes40kDefOf.BEWH_FillGeneGestator) continue;
+                            if (job.def != Genes40kDefOf.BEWH_FillGeneGestator)
+                            {
+                                continue;
+                            }
                             
                             jobDoer.jobs.EndCurrentOrQueuedJob(job, JobCondition.InterruptForced);
                             Reset();

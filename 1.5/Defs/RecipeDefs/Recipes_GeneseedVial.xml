@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-<!-- Change descriptions to something like: undergo surgery to transform into x or whatever. Jobstring too.-->
+    <!-- Change descriptions to something like: undergo surgery to transform into x or whatever. Jobstring too.-->
 
     <!-- Base Implant Recipe -->
     <RecipeDef Name="BEWH_RecipeGeneseedVialBase" ParentName="SurgeryFlesh" Abstract="True">
@@ -9,13 +9,16 @@
         <hideBodyPartNames>true</hideBodyPartNames>
         <targetsBodyPart>false</targetsBodyPart>
         <surgeryOutcomeEffect Inherit = "False" />
-        <uiIconThing>Xenogerm</uiIconThing>
         <isViolation>true</isViolation>
         <fixedIngredientFilter>
             <categories>
                 <li>Medicine</li>
+                <li>BEWH_GeneseedVial</li>
             </categories>
         </fixedIngredientFilter>
+        <recipeUsers>
+            <li>Human</li>
+        </recipeUsers>
     </RecipeDef>
 
     <!-- Thunder Warrior -->
@@ -26,6 +29,7 @@
         <jobString>Making thunder warrior.</jobString>
         <researchPrerequisite>BEWH_GeneseedCreation</researchPrerequisite>
         <workAmount>10000</workAmount>
+        <uiIconThing>BEWH_GeneseedVialThunderWarrior</uiIconThing>
         <ingredients>
             <li>
                 <filter>
@@ -54,78 +58,6 @@
         </modExtensions>
     </RecipeDef>
 
-    <!-- Firstborn -->
-    <RecipeDef ParentName="BEWH_RecipeGeneseedVialBase">
-        <defName>BEWH_MakeFirstborn</defName>
-        <label>make firstborn</label>
-        <description>Make a firstborn.</description>
-        <jobString>Making firstborn.</jobString>
-        <researchPrerequisite>BEWH_GeneseedPurification</researchPrerequisite>
-        <workAmount>5000</workAmount>
-        <ingredients>
-            <li>
-                <filter>
-                    <thingDefs>
-                        <li>MedicineUltratech</li>
-                    </thingDefs>
-                </filter>
-                <count>8</count>
-            </li>
-            <li>
-                <filter>
-                    <thingDefs>
-                        <li>BEWH_GeneseedVialFirstborn</li>
-                    </thingDefs>
-                </filter>
-                <count>1</count>
-            </li>
-        </ingredients>
-        <skillRequirements>
-            <Medicine>8</Medicine>
-        </skillRequirements>
-        <modExtensions>
-            <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
-                <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
-            </li>
-        </modExtensions>
-    </RecipeDef>
-
-    <!-- Primaris -->
-    <RecipeDef ParentName="BEWH_RecipeGeneseedVialBase">
-        <defName>BEWH_MakePrimaris</defName>
-        <label>make primaris</label>
-        <description>Make a primaris.</description>
-        <jobString>Making primaris.</jobString>
-        <researchPrerequisite>BEWH_GeneseedPerfection</researchPrerequisite>
-        <workAmount>6500</workAmount>
-        <ingredients>
-            <li>
-                <filter>
-                    <thingDefs>
-                        <li>MedicineUltratech</li>
-                    </thingDefs>
-                </filter>
-                <count>10</count>
-            </li>
-            <li>
-                <filter>
-                    <thingDefs>
-                        <li>BEWH_GeneseedVialPrimaris</li>
-                    </thingDefs>
-                </filter>
-                <count>1</count>
-            </li>
-        </ingredients>
-        <skillRequirements>
-            <Medicine>10</Medicine>
-        </skillRequirements>
-        <modExtensions>
-            <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
-                <geneseedVial>BEWH_GeneseedVialPrimaris</geneseedVial>
-            </li>
-        </modExtensions>
-    </RecipeDef>
-
     <!-- Custodes -->
     <RecipeDef ParentName="BEWH_RecipeGeneseedVialBase">
         <defName>BEWH_MakeCustodes</defName>
@@ -134,6 +66,7 @@
         <jobString>Making custodes.</jobString>
         <researchPrerequisite>BEWH_CustodesCreation</researchPrerequisite>
         <workAmount>15000</workAmount>
+        <uiIconThing>BEWH_GeneseedVialCustodes</uiIconThing>
         <ingredients>
             <li>
                 <filter>

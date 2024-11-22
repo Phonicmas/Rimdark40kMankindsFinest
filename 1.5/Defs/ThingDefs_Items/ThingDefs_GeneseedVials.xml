@@ -20,7 +20,6 @@
       <li Class="Genes40k.DefModExtension_GeneseedVial">
         <xenotype>BEWH_ThunderWarrior</xenotype>
         <xenotypeIcon>BEWH_ThunderWarriorIcon</xenotypeIcon>
-        <recipe>BEWH_MakeThunderWarrior</recipe>
         <minAgeImplant>12</minAgeImplant>
         <maxAgeImplant>21</maxAgeImplant>
         <failureChancePerAgePast>3</failureChancePerAgePast>
@@ -47,7 +46,6 @@
       <li Class="Genes40k.DefModExtension_GeneseedVial">
         <xenotype>BEWH_SpaceMarine</xenotype>
         <xenotypeIcon>BEWH_AstartesIcon</xenotypeIcon>
-        <recipe>BEWH_MakeFirstborn</recipe>
         <overrideXenotypeGenesGiven>true</overrideXenotypeGenesGiven>
         <overridenAddedGenes>
           <li>BEWH_SecondaryHeart</li>
@@ -83,7 +81,6 @@
       <li Class="Genes40k.DefModExtension_GeneseedVial">
         <xenotype>BEWH_PrimarisSpaceMarine</xenotype>
         <xenotypeIcon>BEWH_PrimarisIcon</xenotypeIcon>
-        <recipe>BEWH_MakePrimaris</recipe>
         <overrideXenotypeGenesGiven>true</overrideXenotypeGenesGiven>
         <overridenAddedGenes>
           <li>BEWH_SecondaryHeart</li>
@@ -120,7 +117,6 @@
       <li Class="Genes40k.DefModExtension_GeneseedVial">
         <xenotype>BEWH_Custodes</xenotype>
         <xenotypeIcon>BEWH_CustodesIcon</xenotypeIcon>
-        <recipe>BEWH_MakeCustodes</recipe>
         <minAgeImplant>0</minAgeImplant>
         <maxAgeImplant>4</maxAgeImplant>
         <failureChancePerAgePast>19</failureChancePerAgePast>
@@ -151,7 +147,6 @@
       <li Class="Genes40k.DefModExtension_GeneseedVial">
         <xenotype>BEWH_Primarch</xenotype>
         <xenotypeIcon>BEWH_PrimarchIcon</xenotypeIcon>
-        <primarch>true</primarch>
       </li>
     </modExtensions>
   </ThingDef>
