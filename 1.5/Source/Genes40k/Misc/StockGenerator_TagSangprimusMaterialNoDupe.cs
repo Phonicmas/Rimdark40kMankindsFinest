@@ -16,15 +16,23 @@ namespace Genes40k
 
         public override IEnumerable<Thing> GenerateThings(int forTile, Faction faction = null)
         {
-            List<ThingDef> generatedDefs = new List<ThingDef>();
-            int numThingDefsToUse = thingDefCountRange.RandomInRange;
-            for (int i = 0; i < numThingDefsToUse; i++)
+            var generatedDefs = new List<ThingDef>();
+            var numThingDefsToUse = thingDefCountRange.RandomInRange;
+            var maps = Find.Maps.Where(m => m.listerBuildings.ColonistsHaveBuilding(Genes40kDefOf.BEWH_SangprimusPortum));
+            var excludedMaterials = new List<ThingDef>();
+            //In case it is ever a problem; count amount of maps with a sangprimus then make that the limit of the amount of materials
+            foreach (var map in maps)
             {
-                if (!DefDatabase<ThingDef>.AllDefs.Where((ThingDef d) => HandlesThingDef(d) && d.tradeability.TraderCanSell() && d.PlayerAcquirable && (excludedThingDefs == null || !excludedThingDefs.Contains(d)) && !generatedDefs.Contains(d)).TryRandomElementByWeight(SelectionWeight, out var chosenThingDef))
+                var building = (Building_SangprimusPortum)map.listerBuildings.AllBuildingsColonistOfDef(Genes40kDefOf.BEWH_SangprimusPortum).First();
+                excludedMaterials.AddRange(building.SearchableContents.Select(material => material.def));
+            }
+            for (var i = 0; i < numThingDefsToUse; i++)
+            {
+                if (!DefDatabase<ThingDef>.AllDefs.Where(d => HandlesThingDef(d) && d.tradeability.TraderCanSell() && d.PlayerAcquirable && !excludedMaterials.Contains(d) && (excludedThingDefs == null || !excludedThingDefs.Contains(d)) && !generatedDefs.Contains(d)).TryRandomElementByWeight(SelectionWeight, out var chosenThingDef))
                 {
                     break;
                 }
-                foreach (Thing item in StockGeneratorUtility.TryMakeForStock(chosenThingDef, RandomCountOf(chosenThingDef), faction))
+                foreach (var item in StockGeneratorUtility.TryMakeForStock(chosenThingDef, RandomCountOf(chosenThingDef), faction))
                 {
                     yield return item;
                 }

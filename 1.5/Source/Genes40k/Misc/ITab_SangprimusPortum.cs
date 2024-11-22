@@ -19,8 +19,11 @@ namespace Genes40k
         private Building_SangprimusPortum SangprimusPortum => SelThing as Building_SangprimusPortum;
 
         private static readonly Color ThingLabelColor = ITab_Pawn_Gear.ThingLabelColor;
+        private static readonly Color ThingLabelColorMissing = new Color(0.5f, 0.5f, 0.5f, 1f);
 
         private static readonly Color ThingHighlightColor = ITab_Pawn_Gear.HighlightColor;
+        
+        private static readonly Color LineColour = new Color(0.3f, 0.3f, 0.3f, 1f);
 
         public override bool VisibleInBlueprintMode => false;
         
@@ -29,7 +32,7 @@ namespace Genes40k
         private float lastDrawnHeight;
         
         private Vector2 scrollPosition;
-
+        
         public ITab_SangprimusPortum()
         {
 	        size = new Vector2(460f, 450f);
@@ -77,8 +80,7 @@ namespace Genes40k
 	            }
 	            
 	            curY += 28f;
-	            var c = new Color(0.3f, 0.3f, 0.3f, 1f);
-	            Widgets.DrawBoxSolid(new Rect(0f, curY, inRect.width, 1f), c);
+	            Widgets.DrawBoxSolid(new Rect(0f, curY, inRect.width, 1f), LineColour);
             }
             if (!flag)
             {
@@ -90,7 +92,8 @@ namespace Genes40k
         private void ThingRow(ThingDef thingDef, float width, ref float curY, float xOffset, string label)
 		{
 			var rect = new Rect(0f + xOffset, curY, width, 28f);
-			if (Container.Any(t => t.def == thingDef))
+			var acquired = Container.Any(t => t.def == thingDef);
+			if (acquired)
 			{
 				GUI.color = ThingHighlightColor;
 				GUI.DrawTexture(rect, TexUI.HighlightTex);
@@ -105,9 +108,13 @@ namespace Genes40k
 				//Widgets.ThingIcon(rect2, thingDef);
 			}
 			Text.Anchor = TextAnchor.MiddleLeft;
-			GUI.color = ThingLabelColor;
+			GUI.color = acquired ? ThingLabelColor : ThingLabelColorMissing;
 			var rect3 = new Rect(36f + xOffset, curY, rect.width - 36f, rect.height);
 			Text.WordWrap = false;
+			if (!acquired)
+			{
+				Widgets.DrawBoxSolid(new Rect(26f + xOffset, curY+14, rect.width - 56f, 1), LineColour);
+			}
 			Widgets.Label(rect3, label.Truncate(rect3.width));
 			Text.WordWrap = true;
 			Text.Anchor = TextAnchor.UpperLeft;

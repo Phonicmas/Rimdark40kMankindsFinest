@@ -64,6 +64,9 @@
         <skillRequirements>
             <Medicine>16</Medicine>
         </skillRequirements>
+        <recipeUsers>
+            <li>Human</li>
+        </recipeUsers>
     </RecipeDef>
 
 </Defs>

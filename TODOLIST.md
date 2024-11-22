@@ -29,9 +29,7 @@ And icon for starting for primarch vat
 
 ## Code and XML
 
-Make sangprimus spit out materials when destryoed
-
-For sangprimus material tab, make unacquired materials have a strike through them by using the rect used to print the text and setting its ylevel at half the height of it
+Make sangprimus spit out materials when destryoed (apparently i wont spawn the items, even though they're created, reeeee)
 
 Make StockGenerator for chapter materials that check if they have already been bought
 
