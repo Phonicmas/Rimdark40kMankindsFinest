@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- Astartes -->
+    <Core40k.RankDef>
+        <defName>BEWH_AstartesRankScout</defName>
+        <label>Scout</label>
+        <description>Scout Marine.</description>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <diplayPosition>(0,0)</diplayPosition>
+        <diplayPosition>(0,0)</diplayPosition>
+    </Core40k.RankDef>
+
+
+    <Core40k.RankDef>
+        <defName>BEWH_AstartesRankMarine</defName>
+        <label>Space Marine</label>
+        <description>Space Marine.</description>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <diplayPosition>(1,0)</diplayPosition>
+        <rankRequirements>
+            <li>BEWH_AstartesRankScout</li>
+        </rankRequirements>
+    </Core40k.RankDef>
+
+</Defs>
