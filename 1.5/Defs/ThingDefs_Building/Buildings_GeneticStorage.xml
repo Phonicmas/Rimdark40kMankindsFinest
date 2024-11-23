@@ -120,8 +120,7 @@
       <shadowData>
         <volume>(0.9,0.2,0.9)</volume>
       </shadowData>
-      <drawSize>(2, 2)</drawSize>
-      <drawOffset>(0, 0, 0.45)</drawOffset>
+      <drawSize>(2, 2.5)</drawSize>
     </graphicData>
     <defaultPlacingRot>North</defaultPlacingRot>
     <size>(2, 1)</size>
@@ -176,11 +175,11 @@
       <shadowData>
         <volume>(0.9,0.2,0.9)</volume>
       </shadowData>
-      <drawSize>(2, 2.5)</drawSize>
-      <drawOffset>(0, 0, 0.7)</drawOffset>
+      <drawSize>(2, 2)</drawSize>
+      <drawOffset>(0, 0, 0.45)</drawOffset>
     </graphicData>
-    <uiIconOffset>(0, -0.12)</uiIconOffset>
-    <uiIconScale>0.65</uiIconScale>
+    <uiIconOffset>(0, 0.05)</uiIconOffset>
+    <uiIconScale>0.6</uiIconScale>
     <altitudeLayer>BuildingOnTop</altitudeLayer>
     <defaultPlacingRot>North</defaultPlacingRot>
     <size>(1, 1)</size>
