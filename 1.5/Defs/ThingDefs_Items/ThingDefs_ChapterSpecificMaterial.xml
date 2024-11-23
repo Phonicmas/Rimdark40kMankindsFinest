@@ -16,9 +16,6 @@
         <tradeTags>
             <li>BEWH_ChapterMaterial</li>
         </tradeTags>
-        <graphicData>
-            <drawSize>(1.5, 1.5)</drawSize>
-        </graphicData>
         <stackLimit>1</stackLimit>
         <category>Item</category>
         <drawerType>MapMeshOnly</drawerType>
