@@ -8,4 +8,11 @@
         <description>Ranks of the astartes.</description>
     </Core40k.RankCategoryDef>
 
+    <!-- Test -->
+    <Core40k.RankCategoryDef>
+        <defName>BEWH_Test1</defName>
+        <label>test</label>
+        <description>Ranks of the astartes.</description>
+    </Core40k.RankCategoryDef>
+
 </Defs>

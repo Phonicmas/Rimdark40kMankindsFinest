@@ -2,16 +2,16 @@
 <Defs>
 
     <!-- Astartes -->
+    <!-- Scout Marine -->
     <Core40k.RankDef>
         <defName>BEWH_AstartesRankScout</defName>
-        <label>Scout</label>
+        <label>Scout Marine</label>
         <description>Scout Marine.</description>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <diplayPosition>(0,0)</diplayPosition>
-        <diplayPosition>(0,0)</diplayPosition>
     </Core40k.RankDef>
 
-
+    <!-- Space Marine -->
     <Core40k.RankDef>
         <defName>BEWH_AstartesRankMarine</defName>
         <label>Space Marine</label>
