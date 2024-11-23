@@ -12,7 +12,7 @@
     <defName>BEWH_ForestWalkLong</defName>
     <label>Forestwalk Longrange</label>
     <description>By focusing on where you want to go, you're able to manifest yourself there, by striding through the forests of Caliban until you reach your destination.</description>
-    <iconPath>UI/Abilities/AcidSpray</iconPath>
+    <iconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Long</iconPath>
     <abilityClass>Genes40k.Ability_ForeswalkLong</abilityClass>
     <cooldownTime>15000</cooldownTime>
     <castTime>625</castTime>
@@ -32,7 +32,7 @@
     <defName>BEWH_ForestWalkShort</defName>
     <label>Forestwalk Shortrange</label>
     <description>By focusing on where you want to go, you're able to manifest yourself there, by striding through the forests of Caliban until you reach your destination.</description>
-    <iconPath>UI/Abilities/AcidSpray</iconPath>
+    <iconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</iconPath>
     <abilityClass>Genes40k.Ability_ForeswalkShort</abilityClass>
     <targetCount>2</targetCount>
     <castTime>30</castTime>
@@ -61,7 +61,7 @@
     <defName>BEWH_AlakhGeh</defName>
     <label>Alakh Geh</label>
     <description>The thought and will alone to kill is enough to kill.</description>
-    <iconPath>UI/Abilities/BEWH_BelisarianFurnaceBoost</iconPath>
+    <iconPath>UI/Abilities/BEWH_Ability_JaghataiKhanAlakhGeh</iconPath>
     <cooldownTicksRange>60000</cooldownTicksRange>
     <category>BEWH_Primarch</category>
     <statBases>
@@ -83,7 +83,7 @@
     <defName>BEWH_DenyTheWitch</defName>
     <label>Deny the Witch</label>
     <description>Blocks target from using psycasts and dampens both their psychic and mental capabilities.</description>
-    <iconPath>UI/Abilities/AcidSpray</iconPath>
+    <iconPath>UI/Abilities/BEWH_Ability_LemanRussDTW</iconPath>
     <cooldownTicksRange>30000</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
     <category>BEWH_Primarch</category>
@@ -130,9 +130,9 @@
   <!-- Konrad Curze: Veil of Darkness -->
   <VFECore.Abilities.AbilityDef>
     <defName>BEWH_PsychicEmp</defName>
-    <label>Psychic Emp</label>
+    <label>Veil of Darkness</label>
     <description>Let out a psychic scream, destroying all light and temporary stunning nearby enemies.</description>
-    <iconPath>UI/Abilities/AcidSpray</iconPath>
+    <iconPath>UI/Abilities/BEWH_Ability_KonradCurzeVOD</iconPath>
     <abilityClass>Genes40k.Ability_PsychicEmp</abilityClass>
     <needsTicking>true</needsTicking>
     <requireLineOfSight>false</requireLineOfSight>
@@ -150,7 +150,7 @@
     <defName>BEWH_AngronBerserk</defName>
     <label>Frenzied Berserk</label>
     <description>Fly into a frenzied rage, gaining increased damage and hit chance, but losing survivability and control.</description>
-    <iconPath>UI/Abilities/AcidSpray</iconPath>
+    <iconPath>UI/Abilities/BEWH_Ability_AngronBerserk</iconPath>
     <cooldownTicksRange>30000</cooldownTicksRange>
     <category>BEWH_Primarch</category>
     <statBases>
@@ -172,7 +172,7 @@
     <defName>BEWH_Conceal</defName>
     <label>Conceal</label>
     <description>Become one with your surroundings, allowing you to move unnoticed.</description>
-    <iconPath>UI/Abilities/BEWH_BelisarianFurnaceBoost</iconPath>
+    <iconPath>UI/Abilities/BEWH_Ability_CorvusCoraxConceal</iconPath>
     <cooldownTicksRange>2500</cooldownTicksRange>
     <category>BEWH_Primarch</category>
     <statBases>
