@@ -10,8 +10,11 @@ namespace Genes40k
     public class Building_SangprimusPortum : Building_Storage
     {
         private List<Thing> innerContainerChapter = new List<Thing>();
+        
         private List<Thing> innerContainerPrimarch = new List<Thing>();
+        
         public List<Thing> SearchableContentsChapter => innerContainerChapter;
+        
         public List<Thing> SearchableContentsPrimarch => innerContainerPrimarch;
 
         public List<Thing> SearchableContents
@@ -26,9 +29,11 @@ namespace Genes40k
         }
 
         private List<ThingDef> allChapterMaterials;
+        
         private List<ThingDef> allPrimarchMaterials;
 
         private SortedList<int, (ThingDef chapter, ThingDef primarch)> allMaterialsPaired;
+        
         public SortedList<int, (ThingDef chapter, ThingDef primarch)> AllMaterialsPaired
         {
             get
@@ -45,36 +50,6 @@ namespace Genes40k
         public Building_SangprimusPortum()
         {
             UpdateMaterialList();
-        }
-
-        public override void DeSpawn(DestroyMode mode = DestroyMode.Vanish)
-        {
-            DropAllItem();
-            base.DeSpawn(mode);
-        }
-
-        private void DropAllItem()
-        {
-            for (var i = innerContainerChapter.Count - 1; i >= 0; i--)
-            {
-                var t = ThingMaker.MakeThing(innerContainerChapter[i].def);
-                if (GenPlace.TryPlaceThing(t, Position, Map, ThingPlaceMode.Near))
-                {
-                    continue;
-                }
-                Log.Error("Could not drop item near " + Position);
-            }
-            
-            for (var i = innerContainerPrimarch.Count - 1; i >= 0; i--)
-            {
-                var t = ThingMaker.MakeThing(innerContainerPrimarch[i].def);
-                if (GenPlace.TryPlaceThing(t, Position, Map, ThingPlaceMode.Near))
-                {
-                    Log.Message(t + " - " + t.Position + " - " + t.Spawned);
-                    continue;
-                }
-                Log.Error("Could not drop item near " + Position);
-            }
         }
 
         private void UpdateMaterialList()

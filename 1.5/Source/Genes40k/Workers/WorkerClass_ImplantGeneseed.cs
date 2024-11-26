@@ -8,6 +8,7 @@ namespace Genes40k
 {
     public class WorkerClass_ImplantGeneseed : Recipe_Surgery
     {
+        private GeneseedVial geneseedVialForText = null;
         public override bool AvailableOnNow(Thing thing, BodyPartRecord part = null)
         {
             if (!base.AvailableOnNow(thing, part))
@@ -39,19 +40,24 @@ namespace Genes40k
                 if (defMod.geneFromMaterial == null && geneseedVial.extraGeneFromMaterial == null)
                 {
                     result = true;
+                    geneseedVialForText = geneseedVial;
                     break;
                 }
 
-                if (!geneseedVial.GeneSet.GenesListForReading.Contains(defMod.geneFromMaterial))
+                if (defMod.geneFromMaterial != null && defMod.geneFromMaterial == geneseedVial.extraGeneFromMaterial)
                 {
-                    continue;
+                    result = true;
+                    geneseedVialForText = geneseedVial;
+                    break;
                 }
-                
-                result = true;
-                break;
             }
             
             return result;
+        }
+
+        public override TaggedString GetConfirmation(Pawn pawn)
+        {
+            return Genes40kUtils.GetGeneseedImplantationSuccessChanceDesc(pawn, geneseedVialForText);
         }
 
         public override void ApplyOnPawn(Pawn pawn, BodyPartRecord part, Pawn billDoer, List<Thing> ingredients, Bill bill)

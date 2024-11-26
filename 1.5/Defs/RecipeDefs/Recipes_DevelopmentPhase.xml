@@ -73,6 +73,7 @@
                     <li>BEWH_Neuroglottis</li>
                     <li>BEWH_Mucranoid</li>
                     <li>BEWH_BetchersGland</li>
+                    <li>BEWH_ProgenoidGlands</li>
                 </addsGenes>
             </li>
         </modExtensions>
@@ -85,7 +86,6 @@
         <modExtensions>
             <li Class="Genes40k.DefModExtension_PhaseDevelopment">
                 <addsGenes>
-                    <li>BEWH_ProgenoidGlands</li>
                     <li>BEWH_BlackCarapace</li>
                 </addsGenes>
             </li>
@@ -145,6 +145,7 @@
                     <li>BEWH_Neuroglottis</li>
                     <li>BEWH_Mucranoid</li>
                     <li>BEWH_BetchersGland</li>
+                    <li>BEWH_ProgenoidGlands</li>
                 </addsGenes>
             </li>
         </modExtensions>
@@ -157,7 +158,6 @@
         <modExtensions>
             <li Class="Genes40k.DefModExtension_PhaseDevelopment">
                 <addsGenes>
-                    <li>BEWH_ProgenoidGlands</li>
                     <li>BEWH_BlackCarapace</li>
                     <li>BEWH_BelisarianFurnace</li>
                 </addsGenes>

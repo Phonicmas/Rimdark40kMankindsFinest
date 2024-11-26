@@ -145,7 +145,11 @@
         </statFactors>
         <customEffectDescriptions>
             <li>Chance to have either Brawler or Abrasive trait.</li>
+            <li>Gives the Canis Helix gene</li>
         </customEffectDescriptions>
+        <descriptionHyperlinks>
+            <GeneDef>BEWH_ChapterIXFlaw</GeneDef>
+        </descriptionHyperlinks>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene" />
             <li Class="Core40k.DefModExtension_AddRandomGeneByWeight">
@@ -286,6 +290,12 @@
                 <def>Bloodlust</def>
             </li>
         </forcedTraits>
+        <customEffectDescriptions>
+            <li>Gives the Red Thirst gene</li>
+        </customEffectDescriptions>
+        <descriptionHyperlinks>
+            <GeneDef>BEWH_ChapterIXFlaw</GeneDef>
+        </descriptionHyperlinks>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene" />
             <li Class="Core40k.DefModExtension_AddRandomGeneByWeight">
@@ -352,7 +362,7 @@
             </li>
         </forcedTraits>
         <statOffsets>
-            <WorkSpeedGlobal>0.05</WorkSpeedGlobal> <!-- Replace this with increase based on bionic amount, or something else based on bionic amount-->
+            <WorkSpeedGlobal>0.05</WorkSpeedGlobal>            <!-- Replace this with increase based on bionic amount, or something else based on bionic amount-->
             <ResearchSpeed>0.1</ResearchSpeed>
         </statOffsets>
         <modExtensions>
@@ -480,6 +490,11 @@
         <customEffectDescriptions>
             <li>Gives a psyker gene.</li>
         </customEffectDescriptions>
+        <descriptionHyperlinks>
+            <GeneDef>BEWH_Psyker</GeneDef>
+            <GeneDef>BEWH_DeltaPsyker</GeneDef>
+            <GeneDef>BEWH_BetaPsyker</GeneDef>
+        </descriptionHyperlinks>
         <statFactors>
             <PsychicSensitivity>1.2</PsychicSensitivity>
             <MeditationFocusGain>1.2</MeditationFocusGain>

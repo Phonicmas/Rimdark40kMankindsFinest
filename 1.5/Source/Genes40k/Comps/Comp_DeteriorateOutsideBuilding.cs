@@ -16,7 +16,10 @@ namespace Genes40k
             get
             {
                 var thing = parent.StoringThing();
-                if (thing == null || !Props.antiDeteriorateContainers.Contains(thing.def)) return true;
+                if (thing == null || !Props.antiDeteriorateContainers.Contains(thing.def))
+                {
+                    return true;
+                }
                 
                 var comp = thing.TryGetComp<CompPowerTrader>();
                 if (comp != null)

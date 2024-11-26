@@ -428,6 +428,12 @@
             </li>
         </capMods>
         <skinColorOverride>(150, 62, 62)</skinColorOverride>
+        <customEffectDescriptions>
+            <li>Gives the Beta Psyker gene.</li>
+        </customEffectDescriptions>
+        <descriptionHyperlinks>
+            <GeneDef>BEWH_BetaPsyker</GeneDef>
+        </descriptionHyperlinks>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
             <li Class="Core40k.DefModExtension_AddRandomGeneByWeight">
@@ -515,6 +521,12 @@
             </li>
         </forcedTraits>
         <skinColorOverride>(55, 55, 55)</skinColorOverride>
+        <customEffectDescriptions>
+            <li>Gives the Beta Perpetual gene.</li>
+        </customEffectDescriptions>
+        <descriptionHyperlinks>
+            <GeneDef>BEWH_PerpetualBeta</GeneDef>
+        </descriptionHyperlinks>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
             <li Class="Core40k.DefModExtension_AddRandomGeneByWeight">

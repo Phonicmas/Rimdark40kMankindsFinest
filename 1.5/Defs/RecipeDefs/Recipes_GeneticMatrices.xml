@@ -29,7 +29,7 @@
                         <li>MedicineUltratech</li>
                     </thingDefs>
                 </filter>
-                <count>10</count>
+                <count>4</count>
             </li>
             <li>
                 <filter>
@@ -37,7 +37,7 @@
                         <li>Luciferium</li>
                     </thingDefs>
                 </filter>
-                <count>5</count>
+                <count>2</count>
             </li>
             <li>
                 <filter>
@@ -45,7 +45,7 @@
                         <li>Meat_Human</li>
                     </thingDefs>
                 </filter>
-                <count>100</count>
+                <count>80</count>
             </li>
             <li>
                 <filter>
@@ -53,7 +53,7 @@
                         <li>Neutroamine</li>
                     </thingDefs>
                 </filter>
-                <count>75</count>
+                <count>60</count>
             </li>
         </ingredients>
         <skillRequirements>

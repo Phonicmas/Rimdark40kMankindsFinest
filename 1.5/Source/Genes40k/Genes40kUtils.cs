@@ -212,23 +212,16 @@ namespace Genes40k
                 pawn.genes.AddGene(gene, true);
             }
 
+            if (geneseedVial.extraGeneFromMaterial != null)
+            {
+                pawn.genes.AddGene(geneseedVial.extraGeneFromMaterial, true);
+            }
+
             var xenotypeDef = XenotypeDefOf.Baseliner;
-            
-            if (geneseedVial.xenotype == Genes40kDefOf.BEWH_ThunderWarrior)
+
+            if (geneseedVial.xenotype != null)
             {
-                xenotypeDef = Genes40kDefOf.BEWH_ThunderWarrior;
-            }
-            if (geneseedVial.xenotype == Genes40kDefOf.BEWH_SpaceMarine)
-            {
-                xenotypeDef = Genes40kDefOf.BEWH_SpaceMarine;
-            }
-            if (geneseedVial.xenotype == Genes40kDefOf.BEWH_PrimarisSpaceMarine)
-            {
-                xenotypeDef = Genes40kDefOf.BEWH_PrimarisSpaceMarine;
-            }
-            if (geneseedVial.xenotype == Genes40kDefOf.BEWH_Custodes)
-            {
-                xenotypeDef = Genes40kDefOf.BEWH_Custodes;
+                xenotypeDef = geneseedVial.xenotype;
             }
 
             pawn.genes.SetXenotypeDirect(xenotypeDef);
@@ -285,6 +278,10 @@ namespace Genes40k
 
         public static string GetGeneseedImplantationSuccessChanceDesc(Pawn pawn, GeneseedVial geneseedVial)
         {
+            if (geneseedVial == null)
+            {
+                return string.Empty;
+            }
             var text = "BEWH.ImplantGeneseedDesc".Translate(pawn, geneseedVial.xenotypeName);
             var defMod = geneseedVial.def.GetModExtension<DefModExtension_GeneseedVial>();
             var failChanceCausedBy = new List<string>();

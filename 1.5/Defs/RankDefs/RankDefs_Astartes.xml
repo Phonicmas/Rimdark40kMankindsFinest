@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!--<statOffsets>
+        <MoveSpeed>5</MoveSpeed>
+    </statOffsets>
+    <statFactors>
+        <MoveSpeed>10</MoveSpeed>
+    </statFactors>-->
+
+    <!-- ====Astartes==== -->
+    <!-- ==Non-Specialist Ranks== -->
+    <!-- Neophyte -->
+    <Core40k.RankDef>
+        <defName>BEWH_AstartesRankNeophyte</defName>
+        <label>Neophyte</label>
+        <description>Neophyte are the newest recruits of a Chapter. Neophytes are usually employed along a Chapter's Scout Squads as part of their training.</description>
+        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(0, 0)</displayPosition>
+        <defaultFirstRank>True</defaultFirstRank>
+
+        <requiredSkills>
+            <Shooting>6</Shooting>
+            <Melee>6</Melee>
+        </requiredSkills>
+
+    </Core40k.RankDef>
+    <!-- Battle-Brother -->
+    <Core40k.RankDef>
+        <defName>BEWH_AstartesRankBattleBrother</defName>
+        <label>Battle-Brother</label>
+        <description>Battle-Brother description</description>
+        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(2, 0)</displayPosition>
+
+        <rankRequirements>
+            <li>BEWH_AstartesRankNeophyte</li>
+        </rankRequirements>
+        <requiredSkills>
+            <Shooting>8</Shooting>
+            <Melee>8</Melee>
+        </requiredSkills>
+        <requiredGenesAll>
+            <li>BEWH_BlackCarapace</li>
+        </requiredGenesAll>
+    </Core40k.RankDef>
+    <!-- Sergeant -->
+    <Core40k.RankDef>
+        <defName>BEWH_AstartesRankSeargeant</defName>
+        <label>Sergeant</label>
+        <description>Sergeant description.</description>
+        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(4, 0)</displayPosition>
+        <colonyLimitOfRank>(2, 4)</colonyLimitOfRank>
+
+        <rankRequirements>
+            <li>BEWH_AstartesRankBattleBrother</li>
+        </rankRequirements>
+        <requiredSkills>
+            <Shooting>10</Shooting>
+            <Melee>10</Melee>
+        </requiredSkills>
+    </Core40k.RankDef>
+    <!-- Lieutenant -->
+    <Core40k.RankDef>
+        <defName>BEWH_AstartesRankLieutenant</defName>
+        <label>Lieutenant</label>
+        <description>Lieutenant description.</description>
+        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(6, 0)</displayPosition>
+        <colonyLimitOfRank>(1, 6)</colonyLimitOfRank>
+
+        <rankRequirements>
+            <li>BEWH_AstartesRankSeargeant</li>
+        </rankRequirements>
+        <requiredSkills>
+            <Shooting>12</Shooting>
+            <Melee>12</Melee>
+            <Social>5</Social>
+            <Intellectual>7</Intellectual>
+        </requiredSkills>
+    </Core40k.RankDef>
+    <!-- Captain -->
+    <Core40k.RankDef>
+        <defName>BEWH_AstartesRankCaptain</defName>
+        <label>Captain</label>
+        <description>Captain description.</description>
+        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(8, 0)</displayPosition>
+        <colonyLimitOfRank>(1, 8)</colonyLimitOfRank>
+
+        <rankRequirements>
+            <li>BEWH_AstartesRankLieutenant</li>
+        </rankRequirements>
+        <requiredSkills>
+            <Shooting>14</Shooting>
+            <Melee>14</Melee>
+            <Social>7</Social>
+            <Intellectual>9</Intellectual>
+        </requiredSkills>
+    </Core40k.RankDef>
+    <!-- Chapter Master -->
+    <Core40k.RankDef>
+        <defName>BEWH_AstartesRankChapterMaster</defName>
+        <label>Chapter Master</label>
+        <description>Chapter Master description.</description>
+        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(10, 0)</displayPosition>
+        <colonyLimitOfRank>(1, 0)</colonyLimitOfRank>
+
+        <rankRequirements>
+            <li>BEWH_AstartesRankCaptain</li>
+        </rankRequirements>
+        <requiredSkills>
+            <Shooting>15</Shooting>
+            <Melee>15</Melee>
+            <Social>8</Social>
+            <Intellectual>12</Intellectual>
+        </requiredSkills>
+    </Core40k.RankDef>
+
+    <!-- ==Specialist Ranks== -->
+    <!-- =Vanguard= -->
+    <Core40k.RankDef>
+        <defName>BEWH_AstartesRankVanguard</defName>
+        <label>Vanguard</label>
+        <description>Vanguard description.</description>
+        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(3, -1)</displayPosition>
+
+        <rankRequirements>
+            <li>BEWH_AstartesRankBattleBrother</li>
+        </rankRequirements>
+        <requiredSkills>
+            <Intellectual>6</Intellectual>
+        </requiredSkills>
+        <requiredTraitsOneAmong>
+            <Nimble />
+            <SpeedOffset>1</SpeedOffset>
+            <SpeedOffset>2</SpeedOffset>
+        </requiredTraitsOneAmong>
+
+        <statOffsets>
+            <MoveSpeed>0.05</MoveSpeed>
+            <HuntingStealth>0.1</HuntingStealth>
+        </statOffsets>
+    </Core40k.RankDef>
+
+    <!-- =Chapter Ancient= -->
+    <Core40k.RankDef>
+        <defName>BEWH_AstartesRankChapterAncient</defName>
+        <label>Chapter Ancient</label>
+        <description>Chapter Ancient description.</description>
+        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(7, -1)</displayPosition>
+
+        <rankRequirements>
+            <li>BEWH_AstartesRankLieutenant</li>
+        </rankRequirements>
+        <requiredSkills>
+            <Social>10</Social>
+        </requiredSkills>
+        <requiredTraitsAll>
+            <GreatMemory />
+        </requiredTraitsAll>
+        <requiredTraitsOneAmong>
+            <Nerves>2</Nerves>
+            <Nerves>1</Nerves>
+        </requiredTraitsOneAmong>
+
+        <!-- Ability to that essentially places a battle standard, and gives the pawn a movespeed factor 0 so they cant move. Standard buffs allies within area -->
+    </Core40k.RankDef>
+
+    <!-- =Librarian= -->
+    <!-- Acolytum -->
+    <Core40k.RankDef>
+        <defName>BEWH_AstartesRankAcolytum</defName>
+        <label>Acolytum</label>
+        <description>Acolytum description.</description>
+        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(3, 1)</displayPosition>
+
+        <rankRequirements>
+            <li>BEWH_AstartesRankBattleBrother</li>
+        </rankRequirements>
+        <requiredGenesOneAmong>
+            <li>BEWH_IotaPsyker</li>
+            <li>BEWH_Psyker</li>
+            <li>BEWH_DeltaPsyker</li>
+            <li>BEWH_BetaPsyker</li>
+            <li>BEWH_AlphaPsyker</li>
+        </requiredGenesOneAmong>
+        <requiredSkills>
+            <Intellectual>10</Intellectual>
+        </requiredSkills>
+    </Core40k.RankDef>
+    <!-- Epistolary -->
+    <Core40k.RankDef>
+        <defName>BEWH_AstartesRankEpistolary</defName>
+        <label>Epistolary</label>
+        <description>Epistolary description.</description>
+        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(5, 1)</displayPosition>
+
+        <rankRequirements>
+            <li>BEWH_AstartesRankAcolytum</li>
+        </rankRequirements>
+        <requiredSkills>
+            <Intellectual>15</Intellectual>
+        </requiredSkills>
+    </Core40k.RankDef>
+    <!-- Chief Librarian -->
+    <Core40k.RankDef>
+        <defName>BEWH_AstartesRankChiefLibrarian</defName>
+        <label>Chief Librarian</label>
+        <description>Chief Librarian description.</description>
+        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(8, 1)</displayPosition>
+        <colonyLimitOfRank>(1, 0)</colonyLimitOfRank>
+
+        <rankRequirements>
+            <li>BEWH_AstartesRankEpistolary</li>
+        </rankRequirements>
+        <requiredSkills>
+            <Intellectual>19</Intellectual>
+        </requiredSkills>
+    </Core40k.RankDef>
+
+    <!-- =Apothecary= -->
+    <!-- Helix Adept -->
+    <Core40k.RankDef>
+        <defName>BEWH_AstartesRankHelixAdept</defName>
+        <label>Helix Adept</label>
+        <description>Helix Adept description.</description>
+        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(3, 2)</displayPosition>
+
+        <rankRequirements>
+            <li>BEWH_AstartesRankBattleBrother</li>
+        </rankRequirements>
+        <requiredTraitsOneAmong>
+            <BEWH_FieldMedic />
+            <BEWH_Surgeon />
+            <Kind />
+        </requiredTraitsOneAmong>
+        <requiredSkills>
+            <Medicine>9</Medicine>
+        </requiredSkills>
+    </Core40k.RankDef>
+    <!-- Apothecary -->
+    <Core40k.RankDef>
+        <defName>BEWH_AstartesRankApothecary</defName>
+        <label>Apothecary</label>
+        <description>Apothecary description.</description>
+        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(5, 2)</displayPosition>
+
+        <rankRequirements>
+            <li>BEWH_AstartesRankHelixAdept</li>
+        </rankRequirements>
+        <requiredSkills>
+            <Medicine>14</Medicine>
+        </requiredSkills>
+    </Core40k.RankDef>
+    <!-- Master of the Apothecarion -->
+    <Core40k.RankDef>
+        <defName>BEWH_AstartesRankMasterOfTheApothecarion</defName>
+        <label>Master of the Apothecarion</label>
+        <description>Master of the Apothecarion description.</description>
+        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(8, 2)</displayPosition>
+        <colonyLimitOfRank>(1, 0)</colonyLimitOfRank>
+
+        <rankRequirements>
+            <li>BEWH_AstartesRankApothecary</li>
+        </rankRequirements>
+        <requiredSkills>
+            <Medicine>18</Medicine>
+        </requiredSkills>
+    </Core40k.RankDef>
+
+    <!-- =Techmarine= -->
+    <!-- Techmarine Novitiate -->
+    <Core40k.RankDef>
+        <defName>BEWH_AstartesRankTechmarineNovitiate</defName>
+        <label>Techmarine Novitiate</label>
+        <description>Techmarine Novitiate description.</description>
+        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(3, 3)</displayPosition>
+
+        <rankRequirements>
+            <li>BEWH_AstartesRankBattleBrother</li>
+        </rankRequirements>
+        <requiredTraitsOneAmong>
+            <Transhumanist />
+            <Pyromaniac />
+            <Industriousness>2</Industriousness>
+            <Industriousness>1</Industriousness>
+        </requiredTraitsOneAmong>
+        <requiredSkills>
+            <Crafting>8</Crafting>
+        </requiredSkills>
+    </Core40k.RankDef>
+    <!-- Techmarine -->
+    <Core40k.RankDef>
+        <defName>BEWH_AstartesRankTechmarine</defName>
+        <label>Techmarine</label>
+        <description>Techmarine description.</description>
+        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(5, 3)</displayPosition>
+
+        <rankRequirements>
+            <li>BEWH_AstartesRankTechmarineNovitiate</li>
+        </rankRequirements>
+        <requiredSkills>
+            <Crafting>12</Crafting>
+        </requiredSkills>
+    </Core40k.RankDef>
+    <!-- Master of the Forge -->
+    <Core40k.RankDef>
+        <defName>BEWH_AstartesRankMasterOfTheForge</defName>
+        <label>Master of the Forge</label>
+        <description>Master of the Forge description.</description>
+        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(8, 3)</displayPosition>
+        <colonyLimitOfRank>(1, 0)</colonyLimitOfRank>
+
+        <rankRequirements>
+            <li>BEWH_AstartesRankTechmarine</li>
+        </rankRequirements>
+        <requiredSkills>
+            <Crafting>16</Crafting>
+        </requiredSkills>
+    </Core40k.RankDef>
+
+    <!-- =Chaplain= -->
+    <!-- Judiciar -->
+    <Core40k.RankDef>
+        <defName>BEWH_AstartesRankJudiciar</defName>
+        <label>Judiciar</label>
+        <description>Judiciar description.</description>
+        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(3, -3)</displayPosition>
+
+        <rankRequirements>
+            <li>BEWH_AstartesRankBattleBrother</li>
+        </rankRequirements>
+        <requiredTraitsOneAmong>
+            <NaturalMood>2</NaturalMood>
+            <NaturalMood>1</NaturalMood>
+            <Nerves>2</Nerves>
+            <Nerves>1</Nerves>
+        </requiredTraitsOneAmong>
+        <requiredSkills>
+            <Social>9</Social>
+        </requiredSkills>
+    </Core40k.RankDef>
+    <!-- Chaplain -->
+    <Core40k.RankDef>
+        <defName>BEWH_AstartesRankChaplain</defName>
+        <label>Chaplain</label>
+        <description>Chaplain description.</description>
+        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(5, -3)</displayPosition>
+
+        <rankRequirements>
+            <li>BEWH_AstartesRankJudiciar</li>
+        </rankRequirements>
+        <requiredSkills>
+            <Social>14</Social>
+        </requiredSkills>
+    </Core40k.RankDef>
+    <!-- Master of Sanctity  -->
+    <Core40k.RankDef>
+        <defName>BEWH_AstartesRankMasterOfSanctity</defName>
+        <label>Master of Sanctity</label>
+        <description>Master of Sanctity description.</description>
+        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(8, -3)</displayPosition>
+        <colonyLimitOfRank>(1, 0)</colonyLimitOfRank>
+
+        <rankRequirements>
+            <li>BEWH_AstartesRankJudiciar</li>
+        </rankRequirements>
+        <requiredSkills>
+            <Social>18</Social>
+        </requiredSkills>
+    </Core40k.RankDef>
+
+
+    <!-- Also maybe devastator and assault??? -->
+
+</Defs>

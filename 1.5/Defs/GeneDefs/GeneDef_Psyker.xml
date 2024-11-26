@@ -99,7 +99,7 @@
         <label>alpha psyker</label>
         <description>Carriers of this gene are able to unlock their true psychic potential, these beings are extremely dangerous, being able to crumble whole planets if powers are trained properly.</description>
         <iconPath>UI/Genes/Psyker/BEWH_GenePsykerBeta</iconPath>
-        <displayOrderInCategory>603</displayOrderInCategory>
+        <displayOrderInCategory>604</displayOrderInCategory>
         <biostatCpx>6</biostatCpx>
         <biostatMet>-3</biostatMet>
         <statFactors>

@@ -13,13 +13,13 @@ Check cost list for various things - if they're balance and/or hard enough to aq
 Check descriptions
 Compile list of features
 
+use stuff like {PAWN_nameDef} and {PAWN_pronoun} in description texts instead of "Your" "Pawn" or other ways pawns are reffered too.
+
 ## Art
 
 Primarch Specific Icons (Not sure what excatly to do here) (Maybe flip the helix of the Chapter ones and add some bedazzle? Or just make something that would remind you of them, like red skin and psyker thing i made for Magnus, and the wings for Sanguinius) (The helix should stay i feel) (I think i learn towards just flipping the helix and adding some bedazzle)
 
-Chapter and Primarch material thing icons?
-
-Ability Icons for primarch abilities (Forestwalk long and short, Alakh Geh, Deny the Witch, Veil of Darkness, Angron Beserk, Conceal)
+primarch material thing icons
 
 Maybe some different backgrounds (the blue hexagon for xenotype or white circle thingy for endogenes) for the different genes? (Maybe keep the recoloured one psyker and pariah and then make some new type for the different super human, with increasing golden stuff and purity seals n stuff) (im just cooking here, this is not important)
     
@@ -29,19 +29,19 @@ And icon for starting for primarch vat
 
 ## Code and XML
 
-Make sangprimus spit out materials when destryoed (apparently i wont spawn the items, even though they're created, reeeee)
+Add Grey Knight genetic material? possibly also a rankCategory for them along with their ranks?? https://wh40k.lexicanum.com/wiki/Grey_Knights
+
+Find out how to make the rank tree box scrollable both ways, or dragable around.
+^^ Would enable finer control of size and rank pos, and making it more friendly for low res.
 
 ## Bugs
 
+When moving matrices from storage to gestator, pawn may take more than one matrix and use both. mod incomp? Cannot reproduce!!
 
 ## Other
 Should the Primarch specific genes be renamed? (currently the name is of the Primarch)
 
 # NEW ADDITIONS TO MAKE AT SOME POINT
-
-Make rank/specialization upgrade system
-^^Make rank system in framework instead, also make def for ranks there, and a def for different categories that can be toggled between
-Category def from above should have heddifdef and genedef field required, which will be used to tell whether it can be shown
 
 Make frostblade xml?
 

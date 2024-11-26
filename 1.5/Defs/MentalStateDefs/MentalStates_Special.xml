@@ -19,4 +19,19 @@
     <recoverFromSleep>true</recoverFromSleep>
   </MentalStateDef>
 
+
+  <MentalBreakDef>
+    <defName>BEWH_ThunderWarriorBerserk</defName>
+    <label>berserk</label>
+    <mentalState>BEWH_ThunderWarriorBerserk</mentalState>
+    <baseCommonality>0</baseCommonality>
+    <intensity>Extreme</intensity>
+  </MentalBreakDef>
+  <MentalStateDef ParentName="Berserk" Name="BerserkShort">
+    <defName>BEWH_ThunderWarriorBerserk</defName>
+    <minTicksBeforeRecovery>5000</minTicksBeforeRecovery>
+    <maxTicksBeforeRecovery>10000</maxTicksBeforeRecovery>
+    <recoveryMtbDays>0.13</recoveryMtbDays>
+  </MentalStateDef>
+
 </Defs>

@@ -11,8 +11,6 @@ namespace Genes40k
         public bool perpetualBirth = true;
         public int perpetualBirthChance = 3;
 
-
-
         public override void ExposeData()
         {
             Scribe_Values.Look(ref psychicPhenomena, "psychicPhenomena", true);

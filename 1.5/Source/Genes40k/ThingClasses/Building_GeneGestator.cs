@@ -44,22 +44,9 @@ namespace Genes40k
 
         private static readonly Texture2D StartIcon = ContentFinder<Texture2D>.Get("UI/Gizmos/BEWH_GestationStartIcon");
 
-        private static readonly Texture2D EmptyMaterialIcon = ContentFinder<Texture2D>.Get("Things/Item/GeneMatrix/BEWH_GeneMatrix_Empty");
-
-        [Unsaved(false)]
-        private Texture2D cachedMatrixSelectionTex;
-
-        public Texture2D matrixSelectionTex
-        {
-            get
-            {
-                if (cachedMatrixSelectionTex == null)
-                {
-                    cachedMatrixSelectionTex = ContentFinder<Texture2D>.Get("Things/Item/GeneMatrix/BEWH_GeneMatrix_Empty");
-                }
-                return cachedMatrixSelectionTex;
-            }
-        }
+        private static readonly Texture2D EmptyMaterialIcon = ContentFinder<Texture2D>.Get("Things/Item/ChapterMaterial/BEWH_ChapterMaterial_None");
+        
+        private static readonly Texture2D MatrixSelectionTex = ContentFinder<Texture2D>.Get("Things/Item/GeneMatrix/BEWH_GeneMatrix_Empty");
 
         public bool PowerOn => PowerTraderComp.PowerOn;
 
@@ -70,12 +57,13 @@ namespace Genes40k
 
         public void AddGeneMatrix(Thing geneMatrix)
         {
-            containedMatrix = geneMatrix.stackCount > 1 ? geneMatrix.SplitOff(1) : geneMatrix;
+            var singleGeneMatrix = geneMatrix.stackCount > 1 ? geneMatrix.SplitOff(1) : geneMatrix;
+            containedMatrix = singleGeneMatrix;
             
             totalTime = containedMatrix.def.GetModExtension<DefModExtension_GeneMatrix>().ticksToGestate;
             progressInt = 0;
             haulJobStarted = false;
-            geneMatrix.Destroy();
+            singleGeneMatrix.Destroy();
         }
 
         private List<ThingDef> AvailableGestatables()
@@ -147,7 +135,8 @@ namespace Genes40k
 
             if (selectedMaterial != null)
             {
-                geneseedVial.AddExtraGene(selectedMaterial.GetModExtension<DefModExtension_GeneFromMaterial>().addedGene);
+                geneseedVial.extraGeneFromMaterial = selectedMaterial.GetModExtension<DefModExtension_GeneFromMaterial>().addedGene;
+                //geneseedVial.AddExtraGene(selectedMaterial.GetModExtension<DefModExtension_GeneFromMaterial>().addedGene);
             }
 
             GenSpawn.Spawn(geneseedVial, InteractionCell, Map);
@@ -231,7 +220,7 @@ namespace Genes40k
                     command_Action5.activateSound = SoundDefOf.Designate_Cancel;
                     command_Action5.action = delegate
                     {
-                        progressInt = totalTime - 2500;
+                        progressInt = totalTime - 250;
                     };
                     yield return command_Action5;
                 }
@@ -324,7 +313,7 @@ namespace Genes40k
                     var command_Action1 = new Command_Action();
                     command_Action1.defaultLabel = "BEWH.SelectMatrix".Translate() + "...";
                     command_Action1.defaultDesc = "BEWH.SelectMatrixDesc".Translate();
-                    command_Action1.icon = selectedMatrix == null ? matrixSelectionTex : selectedMatrix.uiIcon;
+                    command_Action1.icon = selectedMatrix == null ? MatrixSelectionTex : selectedMatrix.uiIcon;
                     
                     var gestatablesAvailable = new List<ThingDef>();
                     gestatablesAvailable.AddRange(AvailableGestatables());

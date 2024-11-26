@@ -185,9 +185,9 @@
         <statFactors>
             <PsychicSensitivity>0</PsychicSensitivity>
         </statFactors>
-        <socialFightChanceFactor>2.5</socialFightChanceFactor>
-        <mentalBreakMtbDays>4</mentalBreakMtbDays>
-        <mentalBreakDef>Berserk</mentalBreakDef>
+        <socialFightChanceFactor>3.5</socialFightChanceFactor>
+        <mentalBreakMtbDays>7</mentalBreakMtbDays>
+        <mentalBreakDef>BEWH_ThunderWarriorBerserk</mentalBreakDef>
         <customEffectDescriptions>
             <li>Prone to go beserk.</li>
         </customEffectDescriptions>

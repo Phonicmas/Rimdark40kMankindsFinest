@@ -26,7 +26,10 @@ namespace Genes40k
         public static void Postfix(ref float __result, Thing t, List<string> reasons)
         {
             var comp = t.TryGetComp<Comp_DeteriorateOutsideBuilding>();
-            if (comp == null) return;
+            if (comp == null)
+            {
+                return;
+            }
             
             if (comp.ShouldDeteriorate)
             {
