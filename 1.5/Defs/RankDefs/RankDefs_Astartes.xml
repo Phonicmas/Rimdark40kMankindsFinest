@@ -24,6 +24,13 @@
             <Shooting>6</Shooting>
             <Melee>6</Melee>
         </requiredSkills>
+        <requiredGenesAll>
+            <li>BEWH_SecondaryHeart</li>
+            <li>BEWH_Ossmodula</li>
+            <li>BEWH_Biscopea</li>
+            <li>BEWH_Haemastamen</li>
+            <li>BEWH_LarramansOrgan</li>
+        </requiredGenesAll>
 
     </Core40k.RankDef>
     <!-- Battle-Brother -->
