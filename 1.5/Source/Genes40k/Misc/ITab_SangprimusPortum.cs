@@ -42,9 +42,9 @@ namespace Genes40k
         
         protected override void FillTab()
         {
-	        var outRect = new Rect(default(Vector2), size).ContractedBy(10f);
+	        var outRect = new Rect(default, size).ContractedBy(10f);
 	        outRect.yMin += 20f;
-	        var rect = new Rect(0f, 0f, outRect.width - 16f, Mathf.Max(lastDrawnHeight, outRect.height));
+	        var rect = new Rect(0f, 0f, outRect.width-20f, Mathf.Max(lastDrawnHeight, outRect.height));
 	        Text.Font = GameFont.Small;
 	        Widgets.BeginScrollView(outRect, ref scrollPosition, rect);
 	        var curY = 0f;
@@ -67,19 +67,28 @@ namespace Genes40k
             foreach (var t in list)
             {
 	            flag = true;
+	            var singleEntity = false;
+	            var width = inRect.width / 2f;
+	            var offset = width;
 	            
-	            var width = inRect.width / 2;
+	            if (t.Value.chapter == null || t.Value.primarch == null)
+	            {
+		            width *= 2f;
+		            offset = 0f;
+		            singleEntity = true;
+	            }
 	            if (t.Value.chapter != null)
 	            {
-		            ThingRow(t.Value.chapter, width, ref curY, 0, t.Value.chapter.GetModExtension<DefModExtension_ChapterMaterial>().shownMaterialName);
+		            ThingRow(t.Value.chapter, width, ref curY, 0, t.Value.chapter.GetModExtension<DefModExtension_ChapterMaterial>().shownMaterialName, singleEntity);
 	            }
 
 	            if (t.Value.primarch != null)
 	            {
-		            ThingRow(t.Value.primarch, width, ref curY, width, t.Value.primarch.GetModExtension<DefModExtension_PrimarchMaterial>().shownMaterialName);
+		            ThingRow(t.Value.primarch, width, ref curY, offset, t.Value.primarch.GetModExtension<DefModExtension_PrimarchMaterial>().shownMaterialName, singleEntity);
 	            }
 	            
 	            curY += 28f;
+	            //Seperates each row of materials
 	            Widgets.DrawBoxSolid(new Rect(0f, curY, inRect.width, 1f), LineColour);
             }
             if (!flag)
@@ -89,36 +98,34 @@ namespace Genes40k
             Widgets.EndGroup();
         }
         
-        private void ThingRow(ThingDef thingDef, float width, ref float curY, float xOffset, string label)
-		{
-			var rect = new Rect(0f + xOffset, curY, width, 28f);
+        private void ThingRow(ThingDef thingDef, float width, ref float curY, float xOffset, string label, bool singleEntity)
+        {
+	        var height = 28f;
+			var rect = new Rect(0f + xOffset, curY, width, height);
 			var acquired = Container.Any(t => t.def == thingDef);
 			if (acquired)
 			{
 				GUI.color = ThingHighlightColor;
 				GUI.DrawTexture(rect, TexUI.HighlightTex);
 			}
-			if (Mouse.IsOver(rect))
-			{
-				
-			}
-			if (thingDef.DrawMatSingle != null && thingDef.DrawMatSingle.mainTexture != null)
-			{
-				var rect2 = new Rect(4f + xOffset, curY, 28f, 28f);
-				//Widgets.ThingIcon(rect2, thingDef);
-			}
-			Text.Anchor = TextAnchor.MiddleLeft;
+			Text.Anchor = TextAnchor.MiddleCenter;
 			GUI.color = acquired ? ThingLabelColor : ThingLabelColorMissing;
-			var rect3 = new Rect(36f + xOffset, curY, rect.width - 36f, rect.height);
+			var rect3 = new Rect(xOffset, curY, rect.width, rect.height);
 			Text.WordWrap = false;
 			if (!acquired)
 			{
-				Widgets.DrawBoxSolid(new Rect(26f + xOffset, curY+14, rect.width - 56f, 1), LineColour);
+				var strikethroughWidth = rect.width;
+				if (singleEntity)
+				{
+					strikethroughWidth /= 2;
+					xOffset += strikethroughWidth / 2;
+				}
+				Widgets.DrawBoxSolid(new Rect(xOffset+30f, curY + height/2, strikethroughWidth-60f, 1), LineColour);
 			}
 			Widgets.Label(rect3, label.Truncate(rect3.width));
 			Text.WordWrap = true;
 			Text.Anchor = TextAnchor.UpperLeft;
-			TooltipHandler.TipRegion(rect, label.Truncate(rect3.width));
+			TooltipHandler.TipRegion(rect, thingDef.description.Truncate(rect3.width));
 		}
     }
 }

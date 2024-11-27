@@ -44,6 +44,7 @@ namespace Genes40k
             {
                 return;
             }
+            
             Genes40kUtils.MakeGeneseedVial(pawn, Genes40kUtils.IsPrimaris(pawn));
         }
 

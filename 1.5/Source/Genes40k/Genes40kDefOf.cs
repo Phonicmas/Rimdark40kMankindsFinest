@@ -98,6 +98,14 @@ namespace Genes40k
         public static HediffDef BEWH_DeniedWitch;
 
         public static HediffDef BEWH_PariahEffecter;
+        
+        public static HediffDef BEWH_FirstbornPhaseOne;
+        public static HediffDef BEWH_FirstbornPhaseTwo;
+        public static HediffDef BEWH_FirstbornPhaseThree;
+        
+        public static HediffDef BEWH_PrimarisPhaseOne;
+        public static HediffDef BEWH_PrimarisPhaseTwo;
+        public static HediffDef BEWH_PrimarisPhaseThree;
 
         //Letters
         public static LetterDef BEWH_NaturalBornX;

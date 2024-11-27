@@ -86,6 +86,17 @@ namespace Genes40k
                 Genes40kDefOf.BEWH_UpsilonPariah,
             };
 
+        public static List<HediffDef> DevelopmentPhases => new List<HediffDef>
+            {
+                Genes40kDefOf.BEWH_FirstbornPhaseOne,
+                Genes40kDefOf.BEWH_FirstbornPhaseTwo,
+                Genes40kDefOf.BEWH_FirstbornPhaseThree,
+                
+                Genes40kDefOf.BEWH_PrimarisPhaseOne,
+                Genes40kDefOf.BEWH_PrimarisPhaseTwo,
+                Genes40kDefOf.BEWH_PrimarisPhaseThree,
+            };
+
         public static bool IsThunderWarrior(Pawn pawn)
         {
             return ThunderWarriorGenes.All(geneDef => pawn.genes.HasActiveGene(geneDef));
@@ -127,6 +138,11 @@ namespace Genes40k
             return Enumerable.Any(PariahGenes, gene => pawn.genes.HasActiveGene(gene));
         }
 
+        public static bool UndergoingPhaseDevelopment(Pawn pawn)
+        {
+            return Enumerable.Any(DevelopmentPhases, hediff => pawn.health.hediffSet.HasHediff(hediff));
+        }
+
 
         public static void MakeGeneseedVial(Pawn pawn, bool isPrimaris)
         {
@@ -141,16 +157,16 @@ namespace Genes40k
                 geneseedVial = (GeneseedVial)ThingMaker.MakeThing(Genes40kDefOf.BEWH_GeneseedVialFirstborn);
             }
 
-            var extraGenes = new List<GeneDef>();
+            GeneDef extraGeneFromMaterial = null;
 
             if (pawn.genes != null)
             {
-                extraGenes.AddRange(from gene in pawn.genes.GenesListForReading where gene.def.HasModExtension<DefModExtension_ChapterGene>() select gene.def);
+                extraGeneFromMaterial = pawn.genes.GenesListForReading.First(gene => gene.Active && gene.def.HasModExtension<DefModExtension_ChapterGene>()).def;
             }
 
-            if (!extraGenes.NullOrEmpty())
+            if (extraGeneFromMaterial != null)
             {
-                geneseedVial.AddExtraGenes(extraGenes);
+                geneseedVial.extraGeneFromMaterial = extraGeneFromMaterial;
             }
 
             if (GenPlace.TryPlaceThing(geneseedVial, pawn.PositionHeld, pawn.MapHeld, ThingPlaceMode.Near))

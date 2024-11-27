@@ -56,3 +56,25 @@ Make Blood Chalice art and xml, an exotic item that when ingested by pawns with 
 https://wh40k.lexicanum.com/wiki/Gene-seed#Chapters_with_known_gene-seed_flaws
 
 SOS2 integration?
+
+# Grey Knight
+
+<!-- Chapter DCLXVI - Grey Knights-->
+    <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
+        <defName>BEWH_ChapterMaterialDCLXVI</defName>
+        <label>chapter material DCLXVI - Grey Knights</label>
+        <description>This containers holds the genetic mutation material of Chapter DCLXVI - Grey Knights.</description>
+        <graphicData>
+            <texPath>Things/Item/ChapterMaterial/BEWH_ChapterMaterial_XX</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>666</orderInt>
+                <shownMaterialName>Grey Knight</shownMaterialName>
+            </li>
+            <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+                <addedGene>BEWH_ChapterXXAlphaLegion</addedGene>
+            </li>
+        </modExtensions>
+    </ThingDef>

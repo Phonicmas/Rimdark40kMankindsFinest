@@ -45,6 +45,7 @@ namespace Genes40k
             foreach (var gene in Genes40kUtils.PrimarisGenes.Where(gene => !pawn.genes.HasActiveGene(gene)))
             {
                 pawn.genes.AddGene(gene, true);
+                pawn.genes.SetXenotypeDirect(Genes40kDefOf.BEWH_PrimarisSpaceMarine);
             }
         }
 

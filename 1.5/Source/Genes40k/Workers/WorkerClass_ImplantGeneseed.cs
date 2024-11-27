@@ -23,6 +23,10 @@ namespace Genes40k
             {
                 return false;
             }
+            if (Genes40kUtils.UndergoingPhaseDevelopment(pawn))
+            {
+                return false;
+            }
 
             var defMod = recipe.GetModExtension<DefModExtension_GeneseedVialRecipe>();
 
