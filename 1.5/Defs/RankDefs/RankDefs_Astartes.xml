@@ -157,7 +157,7 @@
         <description>Vanguard description.</description>
         <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
-        <displayPosition>(1, -7)</displayPosition>
+        <displayPosition>(1, -1)</displayPosition>
 
         <rankRequirements>
             <BEWH_AstartesRankBattleBrother>7</BEWH_AstartesRankBattleBrother>
