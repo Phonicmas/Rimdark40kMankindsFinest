@@ -15,7 +15,7 @@
         <defName>BEWH_AstartesRankNeophyte</defName>
         <label>Neophyte</label>
         <description>Neophyte are the newest recruits of a Chapter. Neophytes are usually employed along a Chapter's Scout Squads as part of their training.</description>
-        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankIconPath>UI/Ranks/Astartes/Neophyte</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(0, 0)</displayPosition>
         <defaultFirstRank>True</defaultFirstRank>
@@ -38,7 +38,7 @@
         <defName>BEWH_AstartesRankBattleBrother</defName>
         <label>Battle-Brother</label>
         <description>Battle-Brother description</description>
-        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankIconPath>UI/Ranks/Astartes/BattleBrother</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(2, 0)</displayPosition>
 
@@ -58,7 +58,7 @@
         <defName>BEWH_AstartesRankVeteran</defName>
         <label>Veteran</label>
         <description>Veteran description.</description>
-        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankIconPath>UI/Ranks/Astartes/Veteran</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(3, -2)</displayPosition>
 
@@ -77,7 +77,7 @@
         <defName>BEWH_AstartesRankSergeant</defName>
         <label>Sergeant</label>
         <description>Sergeant description.</description>
-        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankIconPath>UI/Ranks/Astartes/Sergeant</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(5, -2)</displayPosition>
         <colonyLimitOfRank>(2, 4)</colonyLimitOfRank>
@@ -91,7 +91,7 @@
         <defName>BEWH_AstartesRankLieutenant</defName>
         <label>Lieutenant</label>
         <description>Lieutenant description.</description>
-        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankIconPath>UI/Ranks/Astartes/Lieutenant</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(8, 0)</displayPosition>
         <colonyLimitOfRank>(1, 6)</colonyLimitOfRank>
@@ -111,7 +111,7 @@
         <defName>BEWH_AstartesRankCaptain</defName>
         <label>Captain</label>
         <description>Captain description.</description>
-        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankIconPath>UI/Ranks/Astartes/Captain</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(10, 0)</displayPosition>
         <colonyLimitOfRank>(1, 8)</colonyLimitOfRank>
@@ -131,7 +131,7 @@
         <defName>BEWH_AstartesRankChapterMaster</defName>
         <label>Chapter Master</label>
         <description>Chapter Master description.</description>
-        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankIconPath>UI/Ranks/Astartes/ChapterMaster</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(14, 0)</displayPosition>
         <colonyLimitOfRank>(1, 0)</colonyLimitOfRank>
@@ -155,7 +155,7 @@
         <defName>BEWH_AstartesRankVanguard</defName>
         <label>Vanguard</label>
         <description>Vanguard description.</description>
-        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankIconPath>UI/Ranks/Astartes/Vanguard</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(1, -1)</displayPosition>
 
@@ -182,7 +182,7 @@
         <defName>BEWH_AstartesRankChapterAncient</defName>
         <label>Chapter Ancient</label>
         <description>Chapter Ancient description.</description>
-        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankIconPath>UI/Ranks/Astartes/Ancient</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(9, -1)</displayPosition>
         <colonyLimitOfRank>(1, 0)</colonyLimitOfRank>
@@ -207,7 +207,7 @@
         <defName>BEWH_AstartesRankHelixAdept</defName>
         <label>Helix Adept</label>
         <description>Helix Adept description.</description>
-        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankIconPath>UI/Ranks/Astartes/HelixAdept</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(4, 1)</displayPosition>
 
@@ -234,7 +234,7 @@
         <defName>BEWH_AstartesRankApothecary</defName>
         <label>Apothecary</label>
         <description>Apothecary description.</description>
-        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankIconPath>UI/Ranks/Astartes/Apothecary</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(6, 1)</displayPosition>
 
@@ -250,7 +250,7 @@
         <defName>BEWH_AstartesRankMasterOfTheApothecarion</defName>
         <label>Master of the Apothecarion</label>
         <description>Master of the Apothecarion description.</description>
-        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankIconPath>UI/Ranks/Astartes/MasterOfTheApothecarion</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(9, 1)</displayPosition>
         <colonyLimitOfRank>(1, 0)</colonyLimitOfRank>
@@ -269,7 +269,7 @@
         <defName>BEWH_AstartesRankTechmarineNovitiate</defName>
         <label>Techmarine Novitiate</label>
         <description>Techmarine Novitiate description.</description>
-        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankIconPath>UI/Ranks/Astartes/TechmarineNovitiate</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(4, 2)</displayPosition>
 
@@ -296,7 +296,7 @@
         <defName>BEWH_AstartesRankTechmarine</defName>
         <label>Techmarine</label>
         <description>Techmarine description.</description>
-        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankIconPath>UI/Ranks/Astartes/Techmarine</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(6, 2)</displayPosition>
 
@@ -312,7 +312,7 @@
         <defName>BEWH_AstartesRankMasterOfTheForge</defName>
         <label>Master of the Forge</label>
         <description>Master of the Forge description.</description>
-        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankIconPath>UI/Ranks/Astartes/MasterOfTheForge</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(9, 2)</displayPosition>
         <colonyLimitOfRank>(1, 0)</colonyLimitOfRank>
@@ -331,7 +331,7 @@
         <defName>BEWH_AstartesRankAcolytum</defName>
         <label>Acolytum</label>
         <description>Acolytum description.</description>
-        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankIconPath>UI/Ranks/Astartes/Acolytum</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(4, 3)</displayPosition>
 
@@ -359,7 +359,7 @@
         <defName>BEWH_AstartesRankLibrarian</defName>
         <label>Librarian</label>
         <description>Librarian description.</description>
-        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankIconPath>UI/Ranks/Astartes/Librarian</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(6, 3)</displayPosition>
 
@@ -375,7 +375,7 @@
         <defName>BEWH_AstartesRankChiefLibrarian</defName>
         <label>Chief Librarian</label>
         <description>Chief Librarian description.</description>
-        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankIconPath>UI/Ranks/Astartes/ChiefLibrarian</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(9, 3)</displayPosition>
         <colonyLimitOfRank>(1, 0)</colonyLimitOfRank>
@@ -394,7 +394,7 @@
         <defName>BEWH_AstartesRankJudiciar</defName>
         <label>Judiciar</label>
         <description>Judiciar description.</description>
-        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankIconPath>UI/Ranks/Astartes/Judiciar</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(4, -3)</displayPosition>
 
@@ -421,7 +421,7 @@
         <defName>BEWH_AstartesRankChaplain</defName>
         <label>Chaplain</label>
         <description>Chaplain description.</description>
-        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankIconPath>UI/Ranks/Astartes/Chaplain</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(6, -3)</displayPosition>
 
@@ -437,7 +437,7 @@
         <defName>BEWH_AstartesRankMasterOfSanctity</defName>
         <label>Master of Sanctity</label>
         <description>Master of Sanctity description.</description>
-        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankIconPath>UI/Ranks/Astartes/MasterOfSanctity</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(9, -3)</displayPosition>
         <colonyLimitOfRank>(1, 0)</colonyLimitOfRank>
@@ -456,7 +456,7 @@
         <defName>BEWH_AstartesRankDevastator</defName>
         <label>Devastator</label>
         <description>Devastator description.</description>
-        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankIconPath>UI/Ranks/Astartes/FireSupport</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(3, -1)</displayPosition>
 
@@ -472,7 +472,7 @@
         <defName>BEWH_AstartesRankDevastatorSergeant</defName>
         <label>Devastator Sergeant</label>
         <description>Devastator Sergeant description.</description>
-        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankIconPath>UI/Ranks/Astartes/FireSupportSergeant</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(5, -1)</displayPosition>
         <colonyLimitOfRank>(2, 4)</colonyLimitOfRank>
@@ -491,7 +491,7 @@
         <defName>BEWH_AstartesRankAssault</defName>
         <label>Assault</label>
         <description>Assault description.</description>
-        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankIconPath>UI/Ranks/Astartes/CloseSupport</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(3, 0)</displayPosition>
 
@@ -507,7 +507,7 @@
         <defName>BEWH_AstartesRankAssaultSergeant</defName>
         <label>Assault Sergeant</label>
         <description>Assault Sergeant description.</description>
-        <rankIconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</rankIconPath>
+        <rankIconPath>UI/Ranks/Astartes/CloseSupportSergeant</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(5, 0)</displayPosition>
         <colonyLimitOfRank>(2, 4)</colonyLimitOfRank>

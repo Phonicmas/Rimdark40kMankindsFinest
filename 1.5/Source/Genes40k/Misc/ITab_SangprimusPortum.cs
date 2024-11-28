@@ -19,6 +19,7 @@ namespace Genes40k
         private Building_SangprimusPortum SangprimusPortum => SelThing as Building_SangprimusPortum;
 
         private static readonly Color ThingLabelColor = ITab_Pawn_Gear.ThingLabelColor;
+        
         private static readonly Color ThingLabelColorMissing = new Color(0.5f, 0.5f, 0.5f, 1f);
 
         private static readonly Color ThingHighlightColor = ITab_Pawn_Gear.HighlightColor;

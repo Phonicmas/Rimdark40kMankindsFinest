@@ -29,16 +29,15 @@ And icon for starting for primarch vat
 
 ## Code and XML
 
-Add Grey Knight genetic material? possibly also a rankCategory for them along with their ranks?? https://wh40k.lexicanum.com/wiki/Grey_Knights
-
-Find out how to make the rank tree box scrollable both ways, or dragable around.
-^^ Would enable finer control of size and rank pos, and making it more friendly for low res.
+Rubicon marine surgery should not use primaris geneseed vial, instead another item, like "Rubicon surgery kit", made at the same place a matrices.
+Cost the difference of the firstborn and primaris matrix + some more probably and, takes the difference in firstborn and primaris in geneseed gestator, time to make or slightly more.
 
 ## Bugs
 
 When moving matrices from storage to gestator, pawn may take more than one matrix and use both. mod incomp? Cannot reproduce!!
 
 ## Other
+
 Should the Primarch specific genes be renamed? (currently the name is of the Primarch)
 
 # NEW ADDITIONS TO MAKE AT SOME POINT
@@ -58,6 +57,10 @@ https://wh40k.lexicanum.com/wiki/Gene-seed#Chapters_with_known_gene-seed_flaws
 SOS2 integration?
 
 # Grey Knight
+
+Add Grey Knight genetic material? possibly also a rankCategory for them along with their ranks?? https://wh40k.lexicanum.com/wiki/Grey_Knights
+
+Will most likely be added as addon in seperate mod.
 
 <!-- Chapter DCLXVI - Grey Knights-->
     <ThingDef ParentName="BEWH_ChapterGeneticMaterial">

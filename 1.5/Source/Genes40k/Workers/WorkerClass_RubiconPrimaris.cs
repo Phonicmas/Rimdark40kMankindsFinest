@@ -13,7 +13,6 @@ namespace Genes40k
             {
                 return false;
             }
-
             if (pawn.genes == null)
             {
                 return false;
