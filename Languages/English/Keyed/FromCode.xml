@@ -124,6 +124,9 @@
   <BEWH.SecondGeneseedsHarvested>Geneseeds have already been harvested.</BEWH.SecondGeneseedsHarvested>
   <BEWH.SecondGeneseedsHarvestable>Geneseeds ready to be harvested.</BEWH.SecondGeneseedsHarvestable>
 
+  <!-- Thunder Warrior -->
+  <BEWH.WarriorChanceToBerserk>{0}% chance to go berserk within half a day.</BEWH.WarriorChanceToBerserk>
+
   <!-- Misc -->
   <!-- Ideology -->
   <BEWH.MustBeSpaceMarine>Must be a Space Marine</BEWH.MustBeSpaceMarine>

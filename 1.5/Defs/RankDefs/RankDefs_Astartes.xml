@@ -237,6 +237,7 @@
         <rankIconPath>UI/Ranks/Astartes/Apothecary</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(6, 1)</displayPosition>
+        <colonyLimitOfRank>(1, 4)</colonyLimitOfRank>
 
         <rankRequirements>
             <BEWH_AstartesRankHelixAdept>15</BEWH_AstartesRankHelixAdept>
@@ -299,6 +300,7 @@
         <rankIconPath>UI/Ranks/Astartes/Techmarine</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(6, 2)</displayPosition>
+        <colonyLimitOfRank>(1, 4)</colonyLimitOfRank>
 
         <rankRequirements>
             <BEWH_AstartesRankTechmarineNovitiate>15</BEWH_AstartesRankTechmarineNovitiate>
@@ -362,6 +364,7 @@
         <rankIconPath>UI/Ranks/Astartes/Librarian</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(6, 3)</displayPosition>
+        <colonyLimitOfRank>(1, 4)</colonyLimitOfRank>
 
         <rankRequirements>
             <BEWH_AstartesRankAcolytum>15</BEWH_AstartesRankAcolytum>
@@ -424,6 +427,7 @@
         <rankIconPath>UI/Ranks/Astartes/Chaplain</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(6, -3)</displayPosition>
+        <colonyLimitOfRank>(1, 4)</colonyLimitOfRank>
 
         <rankRequirements>
             <BEWH_AstartesRankJudiciar>15</BEWH_AstartesRankJudiciar>

@@ -55,7 +55,7 @@
             <li>
                 <filter>
                     <thingDefs>
-                        <li>BEWH_GeneseedVialPrimaris</li>
+                        <li>BEWH_RubiconSurgeryKit</li>
                     </thingDefs>
                 </filter>
                 <count>1</count>

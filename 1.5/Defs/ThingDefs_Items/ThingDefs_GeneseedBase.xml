@@ -28,9 +28,6 @@
     <drawGUIOverlay>false</drawGUIOverlay>
     <rotatable>false</rotatable>
     <pathCost>14</pathCost>
-    <thingSetMakerTags>
-      <li>RewardStandardHighFreq</li>
-    </thingSetMakerTags>
     <comps>
       <li Class="CompProperties_Forbiddable"/>
     </comps>

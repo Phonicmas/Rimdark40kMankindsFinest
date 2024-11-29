@@ -107,4 +107,75 @@
     </recipeMaker>
   </ThingDef>
 
+  <!-- Rubicon Surgery Kit -->
+  <ThingDef>
+    <defName>BEWH_RubiconSurgeryKit</defName>
+    <label>rubicon surgery kit</label>
+    <description>Rubicon surgery kit.</description>
+    <graphicData>
+      <texPath>Things/Item/RawGestationalSlurry</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.90</drawSize>
+    </graphicData>
+    <descriptionHyperlinks>
+      <RecipeDef>BEWH_RubiconSurgery</RecipeDef>
+    </descriptionHyperlinks>
+    <thingClass>ThingWithComps</thingClass>
+    <statBases>
+      <MarketValue>4000</MarketValue>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>0.6</Mass>
+      <Flammability>0</Flammability>
+      <DeteriorationRate>50</DeteriorationRate>
+    </statBases>
+    <canDeteriorateUnspawned>false</canDeteriorateUnspawned>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <tradeability>Buyable</tradeability>
+    <category>Item</category>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <intricate>true</intricate>
+    <drawerType>MapMeshOnly</drawerType>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>true</alwaysHaulable>
+    <drawGUIOverlay>false</drawGUIOverlay>
+    <rotatable>false</rotatable>
+    <pathCost>14</pathCost>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+    <!-- ===== Recipe ===== -->
+    <!--<costList>
+      <MedicineUltratech>8</MedicineUltratech>
+      <Luciferium>4</Luciferium>
+      <Meat_Human>75</Meat_Human>
+      <Neutroamine>65</Neutroamine>
+    </costList>
+    <recipeMaker>
+      <productCount>1</productCount>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <effectWorking>CutStone</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <recipeUsers>
+        <li>BEWH_GeneManipulationTable</li>
+      </recipeUsers>
+      <researchPrerequisite>BEWH_PrimarchProject</researchPrerequisite>
+      <workAmount>300000</workAmount>
+      <workSkill>Crafting</workSkill>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+        <Medicine>10</Medicine>
+      </skillRequirements>
+      <unfinishedThingDef>BEWH_UnfinishedGestationSlurry</unfinishedThingDef>
+    </recipeMaker>-->
+  </ThingDef>
+
 </Defs>

@@ -182,12 +182,11 @@
         <displayOrderInCategory>-95</displayOrderInCategory>
         <biostatCpx>3</biostatCpx>
         <biostatMet>7</biostatMet>
+        <geneClass>Genes40k.Gene_Furybound</geneClass>
         <statFactors>
             <PsychicSensitivity>0</PsychicSensitivity>
         </statFactors>
         <socialFightChanceFactor>3.5</socialFightChanceFactor>
-        <mentalBreakMtbDays>7</mentalBreakMtbDays>
-        <mentalBreakDef>BEWH_ThunderWarriorBerserk</mentalBreakDef>
         <customEffectDescriptions>
             <li>Prone to go beserk.</li>
         </customEffectDescriptions>

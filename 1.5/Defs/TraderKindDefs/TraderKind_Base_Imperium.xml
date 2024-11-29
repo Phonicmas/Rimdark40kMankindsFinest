@@ -175,7 +175,7 @@
             <li MayRequire="Ludeon.RimWorld.Royalty" Class="StockGenerator_Slaves">
                 <respectPopulationIntent>true</respectPopulationIntent>
                 <countRange>2~5</countRange>
-                <slaveKindDef >Slave_Empire</slaveKindDef>
+                <slaveKindDef>Slave_Empire</slaveKindDef>
             </li>
 
             <!-- Chapter/Primarch Material -->
@@ -229,10 +229,10 @@
                 <tag>Art</tag>
             </li>
             <li Class="StockGenerator_BuyTradeTag">
-                <tag>MusicalInstrument</tag>
+                <tag>PsylinkNeuroformer</tag>
             </li>
             <li Class="StockGenerator_BuyTradeTag">
-                <tag>PsylinkNeuroformer</tag>
+                <tag>ExoticMisc</tag>
             </li>
 
         </stockGenerators>

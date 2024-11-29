@@ -1,14 +1,11 @@
-﻿using System;
-using System.Text;
+﻿using System.Text;
 using HarmonyLib;
-using RimWorld;
 using Verse;
-using Verse.AI;
 
 namespace Genes40k
 {
     [HarmonyPatch(typeof(Pawn), "GetInspectString")]
-    public class FirstProgenoidGlandProgress
+    public class ProgenoidGlandProgress
     {
         public static void Postfix(ref string __result, Pawn __instance)
         {

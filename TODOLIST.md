@@ -9,6 +9,8 @@ Try and balance the more powerful genes. Still having them powerful, but not dow
 
 Check cost list for various things - if they're balance and/or hard enough to aquire
 
+Check market price for items as well.
+
 ## Text
 Check descriptions
 Compile list of features
@@ -29,12 +31,9 @@ And icon for starting for primarch vat
 
 ## Code and XML
 
-Rubicon marine surgery should not use primaris geneseed vial, instead another item, like "Rubicon surgery kit", made at the same place a matrices.
-Cost the difference of the firstborn and primaris matrix + some more probably and, takes the difference in firstborn and primaris in geneseed gestator, time to make or slightly more.
+add stat offsets and factor and abilities to ranks. possibly add more?
 
 ## Bugs
-
-When moving matrices from storage to gestator, pawn may take more than one matrix and use both. mod incomp? Cannot reproduce!!
 
 ## Other
 

@@ -44,9 +44,9 @@ namespace Genes40k
 
         private static readonly Texture2D StartIcon = ContentFinder<Texture2D>.Get("UI/Designators/Cancel");
         
-        public static readonly Texture2D EjectEmbryoIcon = ContentFinder<Texture2D>.Get("UI/Gizmos/InsertEmbryo");
+        private static readonly Texture2D EjectEmbryoIcon = ContentFinder<Texture2D>.Get("UI/Gizmos/InsertEmbryo");
 
-        public static readonly CachedTexture InsertEmbryoIcon = new CachedTexture("UI/Gizmos/InsertEmbryo");
+        private static readonly CachedTexture InsertEmbryoIcon = new CachedTexture("UI/Gizmos/InsertEmbryo");
         
         private Mote workingMote;
 
