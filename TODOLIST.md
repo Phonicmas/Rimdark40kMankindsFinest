@@ -33,6 +33,8 @@ And icon for starting for primarch vat
 
 add stat offsets and factor and abilities to ranks. possibly add more?
 
+Make inspect windows for embryo and vial not create a temp pawn, instead reproduce window, or create temp geneset for the 
+
 ## Bugs
 
 ## Other

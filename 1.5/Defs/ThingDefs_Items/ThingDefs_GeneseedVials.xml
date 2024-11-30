@@ -56,7 +56,7 @@
         </overridenAddedGenes>
         <appliesHediff>BEWH_FirstbornPhaseOne</appliesHediff>
         <minAgeImplant>10</minAgeImplant>
-        <maxAgeImplant>12</maxAgeImplant>
+        <maxAgeImplant>14</maxAgeImplant>
         <failureChancePerAgePast>5</failureChancePerAgePast>
         <failChanceCap>85</failChanceCap>
         <baseFailureChance>10</baseFailureChance>
@@ -92,7 +92,7 @@
         </overridenAddedGenes>
         <appliesHediff>BEWH_PrimarisPhaseOne</appliesHediff>
         <minAgeImplant>10</minAgeImplant>
-        <maxAgeImplant>12</maxAgeImplant>
+        <maxAgeImplant>13</maxAgeImplant>
         <failureChancePerAgePast>9</failureChancePerAgePast>
         <failChanceCap>90</failChanceCap>
         <baseFailureChance>10</baseFailureChance>
@@ -118,7 +118,7 @@
         <xenotype>BEWH_Custodes</xenotype>
         <xenotypeIcon>BEWH_CustodesIcon</xenotypeIcon>
         <minAgeImplant>0</minAgeImplant>
-        <maxAgeImplant>4</maxAgeImplant>
+        <maxAgeImplant>3</maxAgeImplant>
         <failureChancePerAgePast>19</failureChancePerAgePast>
         <failChanceCap>95</failChanceCap>
         <baseFailureChance>20</baseFailureChance>

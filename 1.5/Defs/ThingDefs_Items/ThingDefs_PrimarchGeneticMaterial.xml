@@ -42,6 +42,9 @@
       <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_I</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+    <descriptionHyperlinks>
+      <GeneDef>BEWH_PrimarchSpecificGeneI</GeneDef>
+    </descriptionHyperlinks>
     <modExtensions>
       <li Class="Genes40k.DefModExtension_PrimarchMaterial">
         <orderInt>1</orderInt>
@@ -62,6 +65,9 @@
       <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_II</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+    <descriptionHyperlinks>
+      <GeneDef>BEWH_PrimarchSpecificGeneII</GeneDef>
+    </descriptionHyperlinks>
     <modExtensions>
       <li Class="Genes40k.DefModExtension_PrimarchMaterial">
         <orderInt>2</orderInt>
@@ -82,6 +88,9 @@
       <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_III</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+    <descriptionHyperlinks>
+      <GeneDef>BEWH_PrimarchSpecificGeneIII</GeneDef>
+    </descriptionHyperlinks>
     <modExtensions>
       <li Class="Genes40k.DefModExtension_PrimarchMaterial">
         <orderInt>3</orderInt>
@@ -102,6 +111,9 @@
       <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_IV</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+    <descriptionHyperlinks>
+      <GeneDef>BEWH_PrimarchSpecificGeneIV</GeneDef>
+    </descriptionHyperlinks>
     <modExtensions>
       <li Class="Genes40k.DefModExtension_PrimarchMaterial">
         <orderInt>4</orderInt>
@@ -122,6 +134,9 @@
       <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_V</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+    <descriptionHyperlinks>
+      <GeneDef>BEWH_PrimarchSpecificGeneV</GeneDef>
+    </descriptionHyperlinks>
     <modExtensions>
       <li Class="Genes40k.DefModExtension_PrimarchMaterial">
         <orderInt>5</orderInt>
@@ -142,6 +157,9 @@
       <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_VI</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+    <descriptionHyperlinks>
+      <GeneDef>BEWH_PrimarchSpecificGeneVI</GeneDef>
+    </descriptionHyperlinks>
     <modExtensions>
       <li Class="Genes40k.DefModExtension_PrimarchMaterial">
         <orderInt>6</orderInt>
@@ -162,6 +180,9 @@
       <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_VII</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+    <descriptionHyperlinks>
+      <GeneDef>BEWH_PrimarchSpecificGeneVII</GeneDef>
+    </descriptionHyperlinks>
     <modExtensions>
       <li Class="Genes40k.DefModExtension_PrimarchMaterial">
         <orderInt>7</orderInt>
@@ -182,6 +203,9 @@
       <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_VIII</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+    <descriptionHyperlinks>
+      <GeneDef>BEWH_PrimarchSpecificGeneVIII</GeneDef>
+    </descriptionHyperlinks>
     <modExtensions>
       <li Class="Genes40k.DefModExtension_PrimarchMaterial">
         <orderInt>8</orderInt>
@@ -202,6 +226,9 @@
       <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_IX</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+    <descriptionHyperlinks>
+      <GeneDef>BEWH_PrimarchSpecificGeneIX</GeneDef>
+    </descriptionHyperlinks>
     <modExtensions>
       <li Class="Genes40k.DefModExtension_PrimarchMaterial">
         <orderInt>9</orderInt>
@@ -222,6 +249,9 @@
       <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_X</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+    <descriptionHyperlinks>
+      <GeneDef>BEWH_PrimarchSpecificGeneX</GeneDef>
+    </descriptionHyperlinks>
     <modExtensions>
       <li Class="Genes40k.DefModExtension_PrimarchMaterial">
         <orderInt>10</orderInt>
@@ -242,6 +272,9 @@
       <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_XI</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+    <descriptionHyperlinks>
+      <GeneDef>BEWH_PrimarchSpecificGeneXI</GeneDef>
+    </descriptionHyperlinks>
     <modExtensions>
       <li Class="Genes40k.DefModExtension_PrimarchMaterial">
         <orderInt>11</orderInt>
@@ -262,6 +295,9 @@
       <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_XII</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+    <descriptionHyperlinks>
+      <GeneDef>BEWH_PrimarchSpecificGeneXII</GeneDef>
+    </descriptionHyperlinks>
     <modExtensions>
       <li Class="Genes40k.DefModExtension_PrimarchMaterial">
         <orderInt>12</orderInt>
@@ -282,6 +318,9 @@
       <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_XIII</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+    <descriptionHyperlinks>
+      <GeneDef>BEWH_PrimarchSpecificGeneXIII</GeneDef>
+    </descriptionHyperlinks>
     <modExtensions>
       <li Class="Genes40k.DefModExtension_PrimarchMaterial">
         <orderInt>13</orderInt>
@@ -302,6 +341,9 @@
       <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_XIV</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+    <descriptionHyperlinks>
+      <GeneDef>BEWH_PrimarchSpecificGeneXIV</GeneDef>
+    </descriptionHyperlinks>
     <modExtensions>
       <li Class="Genes40k.DefModExtension_PrimarchMaterial">
         <orderInt>14</orderInt>
@@ -322,6 +364,9 @@
       <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_XV</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+    <descriptionHyperlinks>
+      <GeneDef>BEWH_PrimarchSpecificGeneXV</GeneDef>
+    </descriptionHyperlinks>
     <modExtensions>
       <li Class="Genes40k.DefModExtension_PrimarchMaterial">
         <orderInt>15</orderInt>
@@ -343,6 +388,9 @@
       <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_XVI</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+    <descriptionHyperlinks>
+      <GeneDef>BEWH_PrimarchSpecificGeneXVI</GeneDef>
+    </descriptionHyperlinks>
     <modExtensions>
       <li Class="Genes40k.DefModExtension_PrimarchMaterial">
         <orderInt>16</orderInt>
@@ -363,6 +411,9 @@
       <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_XVII</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+    <descriptionHyperlinks>
+      <GeneDef>BEWH_PrimarchSpecificGeneXVII</GeneDef>
+    </descriptionHyperlinks>
     <modExtensions>
       <li Class="Genes40k.DefModExtension_PrimarchMaterial">
         <orderInt>17</orderInt>
@@ -383,6 +434,9 @@
       <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_XVIII</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+    <descriptionHyperlinks>
+      <GeneDef>BEWH_PrimarchSpecificGeneXVIII</GeneDef>
+    </descriptionHyperlinks>
     <modExtensions>
       <li Class="Genes40k.DefModExtension_PrimarchMaterial">
         <orderInt>18</orderInt>
@@ -404,6 +458,9 @@
       <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_XIX</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+    <descriptionHyperlinks>
+      <GeneDef>BEWH_PrimarchSpecificGeneXIX</GeneDef>
+    </descriptionHyperlinks>
     <modExtensions>
       <li Class="Genes40k.DefModExtension_PrimarchMaterial">
         <orderInt>19</orderInt>
@@ -424,6 +481,9 @@
       <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_XX</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+    <descriptionHyperlinks>
+      <GeneDef>BEWH_PrimarchSpecificGeneXX</GeneDef>
+    </descriptionHyperlinks>
     <modExtensions>
       <li Class="Genes40k.DefModExtension_PrimarchMaterial">
         <orderInt>20</orderInt>

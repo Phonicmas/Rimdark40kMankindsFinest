@@ -4,7 +4,7 @@
     <GeneDef ParentName="BEWH_Perpetual">
         <defName>BEWH_PerpetualGamma</defName>
         <label>Gamma Perpetual</label>
-        <description>Perpetual.</description>
+        <description>Carriers of this gene are known to be effectively immortal, never aging and capable of ultimately healing almost any injury as a result of their extraordinarily rapid and efficient cellular regeneration.</description>
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>800</displayOrderInCategory>
     
@@ -32,7 +32,7 @@
     <GeneDef ParentName="BEWH_Perpetual">
         <defName>BEWH_PerpetualBeta</defName>
         <label>Beta Perpetual</label>
-        <description>Perpetual.</description>
+        <description>Carriers of this gene are known to be effectively immortal, never aging and capable of ultimately healing almost any injury as a result of their extraordinarily rapid and efficient cellular regeneration.</description>
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>801</displayOrderInCategory>
         <biostatCpx>13</biostatCpx>
@@ -59,7 +59,7 @@
     <GeneDef ParentName="BEWH_Perpetual">
         <defName>BEWH_PerpetualAlpha</defName>
         <label>Alpha Perpetual</label>
-        <description>Perpetual.</description>
+        <description>Carriers of this gene are known to be effectively immortal, never aging and capable of ultimately healing almost any injury as a result of their extraordinarily rapid and efficient cellular regeneration.</description>
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>802</displayOrderInCategory>
         <biostatCpx>18</biostatCpx>
