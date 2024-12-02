@@ -21,19 +21,30 @@ use stuff like {PAWN_nameDef} and {PAWN_pronoun} in description texts instead of
 
 Primarch Specific Icons (Not sure what excatly to do here) (Maybe flip the helix of the Chapter ones and add some bedazzle? Or just make something that would remind you of them, like red skin and psyker thing i made for Magnus, and the wings for Sanguinius) (The helix should stay i feel) (I think i learn towards just flipping the helix and adding some bedazzle)
 
-primarch material thing icons
-
 Maybe some different backgrounds (the blue hexagon for xenotype or white circle thingy for endogenes) for the different genes? (Maybe keep the recoloured one psyker and pariah and then make some new type for the different super human, with increasing golden stuff and purity seals n stuff) (im just cooking here, this is not important)
     
 Insert and Eject primarch Embryo icon
 
 And icon for starting for primarch vat
 
+Perpetual gene icon
+
+Icons for new abilities (Roboute, Horus, Angron)
+
 ## Code and XML
 
 add stat offsets and factor and abilities to ranks. possibly add more?
 
 Make inspect windows for embryo and vial not create a temp pawn, instead reproduce window, or create temp geneset for the 
+
+give leman russ wulfen gene either the flaw gene or its own version on him?
+
+
+Perturabo: Summons The Iron Circle + has an innate mechlink https://wh40k.lexicanum.com/wiki/Iron_Circle (iron circle will just be 6 mechs called down, will be unique to him)
+
+Mortarion: can create a wide area of pollution, rotstink and toxic gas (if it is a thing) within his sight. With 24h cooldown
+
+Lorgar: Instantly recruit any prisoner (Long cooldown). Can instantly make a pawn switch ideoligion to his own (if ideology is installed) 
 
 ## Bugs
 
@@ -82,3 +93,53 @@ Will most likely be added as addon in seperate mod.
             </li>
         </modExtensions>
     </ThingDef>
+
+# Cybernetics
+
+<!-- Angron: Frenzied Berserk -->  <!-- Should instead be transferred to butcher's nail implant (with reduced power on the hediff itself) -->
+  <AbilityDef ParentName="BEWH_SelfTargetAbilities">
+    <defName>BEWH_AngronBerserk</defName>
+    <label>Frenzied Berserk</label>
+    <description>Fly into a frenzied rage, gaining increased damage and hit chance, but losing survivability and control.</description>
+    <iconPath>UI/Abilities/BEWH_Ability_AngronBerserk</iconPath>
+    <cooldownTicksRange>30000</cooldownTicksRange>
+    <category>BEWH_Primarch</category>
+    <statBases>
+      <Ability_Duration>1250</Ability_Duration>
+    </statBases>
+    <comps>
+      <li Class="Core40k.CompProperties_AbilityGiveHediffAndMental">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>BEWH_AngronBerserk</hediffDef>
+        <mentalStateDef>Berserk</mentalStateDef>
+        <onlyApplyToSelf>True</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Angron: Berserk -->
+	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
+		<defName>BEWH_AngronBerserk</defName>
+		<label>berserk</label>
+		<description>RAAAAGGGEEEEE INCAAAARNATEEEEE</description>
+		<stages>
+			<li>
+				<statFactors>
+					<MeleeHitChance>1.5</MeleeHitChance>
+					<MeleeDamageFactor>2</MeleeDamageFactor>
+					<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.5</ArmorRating_Sharp>
+					<ArmorRating_Heat>0.5</ArmorRating_Heat>
+				</statFactors>
+				<statOffsets>
+					<MeleeDodgeChance>-30</MeleeDodgeChance>
+				</statOffsets>
+			</li>
+		</stages>
+		<comps>
+			<li Class="Core40k.HediffCompProperties_RemoveMentalStateOnHediffEnd">
+				<specificMentalState>Berserk</specificMentalState>
+			</li>
+		</comps>
+	</HediffDef>

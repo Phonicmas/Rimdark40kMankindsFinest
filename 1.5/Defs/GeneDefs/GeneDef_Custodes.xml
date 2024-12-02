@@ -79,7 +79,7 @@
             <ToxicResistance>2</ToxicResistance>
         </statOffsets>
         <statFactors>
-            <InjuryHealingFactor>8</InjuryHealingFactor>
+            <InjuryHealingFactor>7</InjuryHealingFactor>
         </statFactors>
 
         <biologicalAgeTickFactorFromAgeCurve>
@@ -115,12 +115,12 @@
         <dontMindRawFood>true</dontMindRawFood>
 
         <statOffsets>
-            <MeleeDodgeChance>15</MeleeDodgeChance>
+            <MeleeDodgeChance>10</MeleeDodgeChance>
         </statOffsets>
         <statFactors>
-            <MeleeWeapon_CooldownMultiplier>0.6</MeleeWeapon_CooldownMultiplier>
-            <AimingDelayFactor>0.6</AimingDelayFactor>
-            <RangedCooldownFactor>0.6</RangedCooldownFactor>
+            <MeleeWeapon_CooldownMultiplier>0.8</MeleeWeapon_CooldownMultiplier>
+            <AimingDelayFactor>0.8</AimingDelayFactor>
+            <RangedCooldownFactor>0.8</RangedCooldownFactor>
             <RawNutritionFactor>2.5</RawNutritionFactor>
         </statFactors>
 
@@ -177,7 +177,7 @@
         <minAgeActive>4</minAgeActive>
 
         <statFactors>
-            <ImmunityGainSpeed>6</ImmunityGainSpeed>
+            <ImmunityGainSpeed>3.5</ImmunityGainSpeed>
         </statFactors>
 
         <capMods>
@@ -240,7 +240,7 @@
         <minAgeActive>3</minAgeActive>
 
         <statOffsets>
-            <MentalBreakThreshold>-0.5</MentalBreakThreshold>
+            <MentalBreakThreshold>-0.15</MentalBreakThreshold>
         </statOffsets>
         <statFactors>
             <GlobalLearningFactor>2</GlobalLearningFactor>

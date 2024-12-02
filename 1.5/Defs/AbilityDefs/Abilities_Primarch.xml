@@ -50,7 +50,7 @@
         <canTargetSelf>True</canTargetSelf>
         <canTargetPawns>True</canTargetPawns>
         <canTargetBuildings>False</canTargetBuildings>
-        <canTargetItems>true</canTargetItems>
+        <canTargetItems>True</canTargetItems>
       </li>
     </targetingParametersList>
   </VFECore.Abilities.AbilityDef>
@@ -145,25 +145,34 @@
   </VFECore.Abilities.AbilityDef>
 
 
-  <!-- Angron: Frenzied Berserk -->
-  <AbilityDef ParentName="BEWH_SelfTargetAbilities">
-    <defName>BEWH_AngronBerserk</defName>
-    <label>Frenzied Berserk</label>
-    <description>Fly into a frenzied rage, gaining increased damage and hit chance, but losing survivability and control.</description>
-    <iconPath>UI/Abilities/BEWH_Ability_AngronBerserk</iconPath>
-    <cooldownTicksRange>30000</cooldownTicksRange>
-    <category>BEWH_Primarch</category>
-    <statBases>
-      <Ability_Duration>1250</Ability_Duration>
-    </statBases>
+  <!-- Angron: Shared burden -->
+  <AbilityDef>
+    <defName>BEWH_ChillgronEmpathy</defName>
+    <label>Shared Burden</label>
+    <description>By psychially tapping into the recipients mind, you're able to feel and share their emotion, taking the burden of negative thoughts they might have onto yourself.</description>
+    <cooldownTicksRange>15000</cooldownTicksRange>
+    <iconPath>UI/Abilities/BEWH_ApothecaryGeneseedHarvestIcon</iconPath>
+    <jobDef>CastAbilityOnThingMelee</jobDef>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <targetRequired>true</targetRequired>
+    <showWhenDrafted>true</showWhenDrafted>
+    <hostile>false</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityTouch</verbClass>
+      <range>-1</range>
+      <warmupTime>0.25</warmupTime>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetAnimals>false</canTargetAnimals>
+        <canTargetMechs>false</canTargetMechs>
+        <canTargetBloodfeeders>false</canTargetBloodfeeders>
+        <canTargetCorpses>false</canTargetCorpses>
+      </targetParams>
+    </verbProperties>
     <comps>
-      <li Class="Core40k.CompProperties_AbilityGiveHediffAndMental">
-        <compClass>CompAbilityEffect_GiveHediff</compClass>
-        <hediffDef>BEWH_AngronBerserk</hediffDef>
-        <mentalStateDef>Berserk</mentalStateDef>
-        <onlyApplyToSelf>True</onlyApplyToSelf>
-        <replaceExisting>true</replaceExisting>
-      </li>
+      <li Class="Genes40k.CompProperties_AbilitySharedBurden" />
     </comps>
   </AbilityDef>
 
@@ -187,5 +196,48 @@
       </li>
     </comps>
   </AbilityDef>
+
+
+  <!-- Roboute: Opus Maxima -->
+  <VFECore.Abilities.AbilityDef>
+    <defName>BEWH_OpusMaxima</defName>
+    <label>Opus Maxima</label>
+    <description>By meticulous planning, you're able to temporarily increase productivity of other colonists on the map.</description>
+    <iconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</iconPath>
+    <abilityClass>Core40k.Ability_MapWideHediff</abilityClass>
+    <castTime>30</castTime>
+    <needsTicking>true</needsTicking>
+    <requireLineOfSight>false</requireLineOfSight>
+    <cooldownTime>60000</cooldownTime>
+    <durationTime>7500</durationTime>
+    <targetMode>Self</targetMode>
+    <modExtensions>
+      <li Class="Core40k.DefModExtension_MapWideHediff">
+        <affectPlayerColonists>True</affectPlayerColonists>
+        <hediffDef>BEWH_OpusMaxima</hediffDef>
+      </li>
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+
+  <!-- Horus: War Planning -->
+  <VFECore.Abilities.AbilityDef>
+    <defName>BEWH_WarPlanning</defName>
+    <label>War Planning</label>
+    <description>By tactical and strategic planning, you're able to form a war plan, increasing combat effectiveness of other colonists on the map.</description>
+    <iconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</iconPath>
+    <abilityClass>Core40k.Ability_MapWideHediff</abilityClass>
+    <castTime>30</castTime>
+    <needsTicking>true</needsTicking>
+    <requireLineOfSight>false</requireLineOfSight>
+    <cooldownTime>60000</cooldownTime>
+    <durationTime>7500</durationTime>
+    <targetMode>Self</targetMode>
+    <modExtensions>
+      <li Class="Core40k.DefModExtension_MapWideHediff">
+        <affectPlayerColonists>True</affectPlayerColonists>
+        <hediffDef>BEWH_WarPlanning</hediffDef>
+      </li>
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
 
 </Defs>

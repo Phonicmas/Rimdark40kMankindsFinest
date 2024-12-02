@@ -44,7 +44,9 @@ namespace Genes40k
 
         private static readonly Texture2D StartIcon = ContentFinder<Texture2D>.Get("UI/Gizmos/BEWH_GestationStartIcon");
 
-        private static readonly Texture2D EmptyMaterialIcon = ContentFinder<Texture2D>.Get("Things/Item/ChapterMaterial/BEWH_ChapterMaterial_None");
+        private static readonly Texture2D EmptyChapterMaterialIcon = ContentFinder<Texture2D>.Get("Things/Item/ChapterMaterial/BEWH_ChapterMaterial_None");
+        
+        private static readonly Texture2D EmptyPrimarchMaterialIcon = ContentFinder<Texture2D>.Get("Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_None");
         
         private static readonly Texture2D MatrixSelectionTex = ContentFinder<Texture2D>.Get("Things/Item/GeneMatrix/BEWH_GeneMatrix_Empty");
 
@@ -235,22 +237,26 @@ namespace Genes40k
                         var sangprimus = (Building_SangprimusPortum)comp.LinkedFacilitiesListForReading.First(b => b is Building_SangprimusPortum);
                         var availableMaterial = new List<Thing>();
                         string geneticType;
+
+                        Texture2D emptyMaterialIcon = null;
                         if (containedMatrix.def.GetModExtension<DefModExtension_GeneMatrix>().canUsePrimarchMaterial)
                         {
                             availableMaterial.AddRange(sangprimus.SearchableContentsPrimarch.Where(x => x.def.HasModExtension<DefModExtension_PrimarchMaterial>()));
                             geneticType = "BEWH.Primarch".Translate();
+                            emptyMaterialIcon = EmptyPrimarchMaterialIcon;
                         }
                         else
                         {
                             availableMaterial.AddRange(sangprimus.SearchableContentsChapter.Where(x => x.def.HasModExtension<DefModExtension_ChapterMaterial>()));
                             geneticType = "BEWH.Chapter".Translate();
+                            emptyMaterialIcon = EmptyChapterMaterialIcon;
                         }
                         //SELECT PRIMARCH OR CHAPTER MATERIAL
                         var command_Action10 = new Command_Action();
                         command_Action10.defaultLabel = "BEWH.SelectXMaterial".Translate(geneticType);
                         command_Action10.defaultDesc = "BEWH.SelectXMaterialDesc".Translate(geneticType);
 
-                        command_Action10.icon = selectedMaterial == null ? EmptyMaterialIcon : selectedMaterial.GetModExtension<DefModExtension_GeneFromMaterial>().addedGene.Icon;
+                        command_Action10.icon = selectedMaterial == null ? emptyMaterialIcon : selectedMaterial.GetModExtension<DefModExtension_GeneFromMaterial>().addedGene.Icon;
                        
                         command_Action10.action = delegate
                         {

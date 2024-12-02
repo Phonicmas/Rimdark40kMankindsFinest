@@ -190,6 +190,12 @@
                 <countRange>1</countRange>
             </li>
 
+            <!-- Rubicon Kit -->
+            <li Class="StockGenerator_SingleDef">
+                <thingDef>BEWH_RubiconSurgeryKit</thingDef>
+                <countRange>1~2</countRange>                <!-- 50% chance for 1~2 -->
+            </li>
+
             <!-- Animals -->
             <li Class="StockGenerator_Animals">
                 <tradeTagsSell>

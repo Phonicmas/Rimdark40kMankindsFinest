@@ -186,6 +186,9 @@
         <statFactors>
             <PsychicSensitivity>0</PsychicSensitivity>
         </statFactors>
+        <statOffsets>
+            <MentalBreakThreshold>0.2</MentalBreakThreshold>
+        </statOffsets>
         <socialFightChanceFactor>3.5</socialFightChanceFactor>
         <customEffectDescriptions>
             <li>Prone to go beserk.</li>

@@ -32,6 +32,7 @@ namespace Genes40k
         public override void Cast(params GlobalTargetInfo[] targets)
         {
             AffectThings();
+            base.Cast(targets);
         }
         
         public override void GizmoUpdateOnMouseover()

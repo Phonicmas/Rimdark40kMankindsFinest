@@ -11,14 +11,18 @@ namespace Genes40k
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             var pawn = parent.pawn;
-            var corpse = target.Thing as Corpse;
+
+            if (!(target.Thing is Corpse corpse))
+            {
+                return;
+            }
 
             foreach (var allDef in DefDatabase<SkillDef>.AllDefs)
             {
                 var pawnSkill = pawn.skills.GetSkill(allDef);
                 var corpseSkill = corpse.InnerPawn.skills.GetSkill(allDef);
 
-                float xpToGive = (float) ((corpseSkill.XpTotalEarned) * 0.1);
+                var xpToGive = (corpseSkill.XpTotalEarned * 0.1f);
 
                 pawnSkill.Learn(xpToGive);
             }
@@ -28,7 +32,7 @@ namespace Genes40k
         public override bool CanApplyOn(LocalTargetInfo target, LocalTargetInfo dest)
         {
             var corpse = target.Thing as Corpse;
-            return corpse.InnerPawn.RaceProps.Humanlike;
+            return corpse != null && corpse.InnerPawn.RaceProps.Humanlike;
         }
 
     }

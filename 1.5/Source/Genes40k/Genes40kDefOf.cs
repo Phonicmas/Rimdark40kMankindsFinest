@@ -141,6 +141,7 @@ namespace Genes40k
 
         //ThoughtDefs
         public static ThoughtDef BEWH_LivingSaintHolyRadianceThought;
+        public static ThoughtDef BEWH_PrimarchSpecificXIIMood;
 
         //RecipeDefs
         public static RecipeDef BEWH_RubiconSurgery;

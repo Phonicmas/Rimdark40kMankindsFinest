@@ -47,7 +47,7 @@
         <displayOrderInCategory>22</displayOrderInCategory>
         <prerequisite>BEWH_Biscopea</prerequisite>
         <statOffsets>
-            <MeleeDodgeChance>10</MeleeDodgeChance>
+            <MeleeDodgeChance>5</MeleeDodgeChance>
             <VEF_CosmeticBodySize_Multiplier>0.1</VEF_CosmeticBodySize_Multiplier>
         </statOffsets>
         <statFactors>

@@ -1,21 +1,38 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <ThoughtDef>
-        <defName>BEWH_PrimarchSpecificIVMood</defName>
-        <workerClass>ThoughtWorker_AlwaysActive</workerClass>
-        <validWhileDespawned>true</validWhileDespawned>
-        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
-        <requiredGenes>
-          <li>BEWH_PrimarchSpecificGeneIV</li>
-        </requiredGenes>
-        <stages>
-          <li>
-            <label>Flawed world</label>
-            <description>No matter where your eyes gaze, they only see flaws.</description>
-            <baseMoodEffect>-5</baseMoodEffect>
-          </li>
-        </stages>
-      </ThoughtDef>
+  <!-- Perturabo -->
+  <ThoughtDef>
+    <defName>BEWH_PrimarchSpecificIVMood</defName>
+    <workerClass>ThoughtWorker_AlwaysActive</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <requiredGenes>
+      <li>BEWH_PrimarchSpecificGeneIV</li>
+    </requiredGenes>
+    <stages>
+      <li>
+        <label>Flawed world</label>
+        <description>No matter where your eyes gaze, they only see flaws.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- Angron -->
+  <ThoughtDef>
+    <defName>BEWH_PrimarchSpecificXIIMood</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stackLimit>99</stackLimit>
+    <stages>
+      <li>
+        <label>Shared Burden</label>
+        <description>You have shared the burden of a fellow brother, as such you feel his emotion and what he's been going through.</description>
+        <baseMoodEffect>0</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
 
 </Defs>

@@ -94,6 +94,12 @@
                 <countRange>1</countRange>
             </li>
 
+            <!-- Rubicon Kit -->
+            <li Class="StockGenerator_SingleDef">
+                <thingDef>BEWH_RubiconSurgeryKit</thingDef>
+                <countRange>-1~1</countRange>                <!-- 50% chance for 1~2 -->
+            </li>
+
             <!-- Buying -->
             <li Class="StockGenerator_BuyExpensiveSimple" />
             <li Class="StockGenerator_BuyTradeTag">

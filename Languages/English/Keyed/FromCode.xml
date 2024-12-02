@@ -82,6 +82,8 @@
 
   <BEWH.SangprimusPortumAcquired>Materials</BEWH.SangprimusPortumAcquired>
 
+  <BEWH.ChillgronAbility>{0} is not in mental state or have any negative thoughts or memories</BEWH.ChillgronAbility>
+
   <!-- Geneseed Vial -->
   <BEWH.ImplantGeneseedDesc>You are about to implant {0}, making them into a {1}</BEWH.ImplantGeneseedDesc>
   <BEWH.OutsideOptimalAgeRange>{0} being outside the optimal age range {1}~{2} for this procedure</BEWH.OutsideOptimalAgeRange>

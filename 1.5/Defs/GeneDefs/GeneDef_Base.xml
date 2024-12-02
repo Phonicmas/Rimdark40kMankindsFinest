@@ -21,7 +21,6 @@
     <GeneDef ParentName="BEWH_GenesOverallParent" Name="BEWH_ThunderWarriorParent" Abstract="True">
         <marketValueFactor>1.1</marketValueFactor>
         <statOffsets>
-            <MentalBreakThreshold>0.05</MentalBreakThreshold>
             <CancerRate>0.20</CancerRate>
         </statOffsets>
         <statFactors>

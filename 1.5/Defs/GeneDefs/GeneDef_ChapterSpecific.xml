@@ -121,9 +121,9 @@
         <displayOrderInCategory>112</displayOrderInCategory>
         <statFactors>
             <CaravanRidingSpeedFactor>1.75</CaravanRidingSpeedFactor>
-            <MeleeDodgeChance>1.15</MeleeDodgeChance>
         </statFactors>
         <statOffsets>
+            <MeleeDodgeChance>5</MeleeDodgeChance>
             <MoveSpeed>0.8</MoveSpeed>
             <CrawlSpeed>0.4</CrawlSpeed>
         </statOffsets>
@@ -395,16 +395,13 @@
             </li>
         </forcedTraits>
         <customEffectDescriptions>
-            <li>Will have either Bloodlust or Psychopath trait.</li>
+            <li>Chance to have either Bloodlust or Psychopath trait.</li>
         </customEffectDescriptions>
         <statFactors>
             <MeleeHitChance>1.1</MeleeHitChance>
         </statFactors>
-        <aptitudes>
-            <Intellectual>-2</Intellectual>
-        </aptitudes>
         <socialFightChanceFactor>2</socialFightChanceFactor>
-        <aggroMentalBreakSelectionChanceFactor>999</aggroMentalBreakSelectionChanceFactor>
+        <aggroMentalBreakSelectionChanceFactor>3</aggroMentalBreakSelectionChanceFactor>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene" />
             <li Class="Core40k.DefModExtension_AddRandomTraitByWeight">
@@ -425,9 +422,10 @@
                                 <value>0</value>
                             </li>
                         </key>
-                        <value>100</value>
+                        <value>80</value>
                     </li>
                 </possibleTraitsToGive>
+                <chanceToGrantTrait>60</chanceToGrantTrait>
             </li>
         </modExtensions>
     </GeneDef>

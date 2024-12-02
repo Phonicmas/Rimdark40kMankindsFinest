@@ -73,6 +73,8 @@
     <Compile Include="Abilities\Ability_PsychicEmp.cs" />
     <Compile Include="Abilities\Ability_UpdateGizmo.cs" />
     <Compile Include="Comps\CompAbilityEffect_DenyTheWitch.cs" />
+    <Compile Include="Comps\CompAbilityEffect_SharedBurden.cs" />
+    <Compile Include="Comps\CompProperties_AbilitySharedBurden.cs" />
     <Compile Include="Comps\CompProperties_DenyTheWitch.cs" />
     <Compile Include="Comps\GameComponent_Perpetual.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneInducedFear.cs" />

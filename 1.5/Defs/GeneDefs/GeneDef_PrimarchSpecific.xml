@@ -167,9 +167,9 @@
         <geneClass>Core40k.Gene_GiveVFECoreAbility</geneClass>
         <hairColorOverride>(1, 1, 1)</hairColorOverride>
         <ignoreDarkness>true</ignoreDarkness>
-        <statFactors>
-            <MeleeDodgeChance>1.15</MeleeDodgeChance>
-        </statFactors>
+        <statOffsets>
+            <MeleeDodgeChance>10</MeleeDodgeChance>
+        </statOffsets>
         <customEffectDescriptions>
             <li>Able to let out a psychic scream, destroying lighting sources and stunning enemies.</li>
         </customEffectDescriptions>
@@ -326,21 +326,18 @@
         <displayOrderInCategory>412</displayOrderInCategory>
         <forcedTraits>
             <li>
-                <def>Bloodlust</def>
-            </li>
-            <li>
                 <def>Brawler</def>
             </li>
-            <li>
-                <def>Psychopath</def>
-            </li>
         </forcedTraits>
+        <statOffsets>
+            <MentalBreakThreshold>-0.1</MentalBreakThreshold>
+        </statOffsets>
         <painFactor>0</painFactor>
         <abilities>
-            <li>BEWH_AngronBerserk</li>
+            <li>BEWH_ChillgronEmpathy</li>
         </abilities>
         <descriptionHyperlinks>
-            <AbilityDef>BEWH_AngronBerserk</AbilityDef>
+            <AbilityDef>BEWH_ChillgronEmpathy</AbilityDef>
         </descriptionHyperlinks>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
@@ -354,6 +351,10 @@
         <description>The genetic material of Roboute Guilliman.</description>
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>413</displayOrderInCategory>
+        <geneClass>Core40k.Gene_GiveVFECoreAbility</geneClass>
+        <customEffectDescriptions>
+            <li>Ability to increase productivity of colony pawns.</li>
+        </customEffectDescriptions>
         <forcedTraits>
             <li>
                 <def>Industriousness</def>
@@ -376,6 +377,11 @@
         </passionMod>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="Core40k.DefModExtension_GivesVFEAbility">
+                <abilityDefs>
+                    <li>BEWH_OpusMaxima</li>
+                </abilityDefs>
+            </li>
         </modExtensions>
     </GeneDef>
 
@@ -454,6 +460,10 @@
         <description>The genetic material of Horus Lupercal.</description>
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>416</displayOrderInCategory>
+        <geneClass>Core40k.Gene_GiveVFECoreAbility</geneClass>
+        <customEffectDescriptions>
+            <li>Ability to increase combat usefulness of colony pawns.</li>
+        </customEffectDescriptions>
         <statFactors>
             <ArrestSuccessChance>2</ArrestSuccessChance>
             <SocialImpact>1.4</SocialImpact>
@@ -468,6 +478,11 @@
         </passionMod>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="Core40k.DefModExtension_GivesVFEAbility">
+                <abilityDefs>
+                    <li>BEWH_WarPlanning</li>
+                </abilityDefs>
+            </li>
         </modExtensions>
     </GeneDef>
 
