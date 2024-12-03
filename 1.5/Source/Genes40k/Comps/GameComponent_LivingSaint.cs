@@ -15,6 +15,10 @@ namespace Genes40k
 
         public void TrySpawnSaint(IncidentCategoryDef categoryDef)
         {
+            if (livingSaints.Count <= 0)
+            {
+                return;
+            }
             int chance;
             if (categoryDef == IncidentCategoryDefOf.ThreatBig)
             {

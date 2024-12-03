@@ -142,4 +142,8 @@
 
   <BEWH.DeniedWitch>{0} psychic powers have been severed (Deny the Witch)</BEWH.DeniedWitch>
 
+  <BEWH.LorgarAuthority>{0} is already part of {1} faction</BEWH.LorgarAuthority>
+  <BEWH.LorgarDivination>{0} is already part of {1} ideology</BEWH.LorgarDivination>
+  <BEWH.LorgarDivinationNoIdeo>{0} is not part of any ideology</BEWH.LorgarDivinationNoIdeo>
+
 </LanguageData>

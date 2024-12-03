@@ -176,6 +176,40 @@
     </comps>
   </AbilityDef>
 
+
+  <!-- Lorgar: Word of Authority -->
+  <AbilityDef>
+    <defName>BEWH_LorgarWordOfAuthority</defName>
+    <label>Word of Authority</label>
+    <description>Your words carry great meaning, able to persuade people to join your cause.</description>
+    <cooldownTicksRange>900000	</cooldownTicksRange>
+    <iconPath>UI/Abilities/BEWH_ApothecaryGeneseedHarvestIcon</iconPath>
+    <jobDef>CastAbilityOnThingMelee</jobDef>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <targetRequired>true</targetRequired>
+    <showWhenDrafted>true</showWhenDrafted>
+    <hostile>false</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityTouch</verbClass>
+      <range>-1</range>
+      <warmupTime>3</warmupTime>
+      <targetParams>
+        <onlyTargetPrisonersOfColony>True</onlyTargetPrisonersOfColony>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetAnimals>false</canTargetAnimals>
+        <canTargetMechs>false</canTargetMechs>
+        <canTargetBloodfeeders>false</canTargetBloodfeeders>
+        <canTargetCorpses>false</canTargetCorpses>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="Genes40k.CompProperties_AbilityWordOfAuthority" />
+    </comps>
+  </AbilityDef>
+
+
   <!-- Corvus Corax: Conceal -->
   <AbilityDef ParentName="BEWH_SelfTargetAbilities">
     <defName>BEWH_Conceal</defName>

@@ -126,8 +126,22 @@
             <AbilityDef>BEWH_WarpShield</AbilityDef>
             <AbilityDef MayRequire="Ludeon.RimWorld.Royalty">BEWH_DenyTheWitch</AbilityDef>
         </descriptionHyperlinks>
+        <socialFightChanceFactor>1.25</socialFightChanceFactor>
+        <statOffsets>
+            <ComfyTemperatureMin>-25</ComfyTemperatureMin>
+        </statOffsets>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <hediffsToBodyParts>
+                    <li>
+                        <hediff>BEWH_CanisHelixCanines</hediff>
+                        <bodyparts>
+                            <li>Head</li>
+                        </bodyparts>
+                    </li>
+                </hediffsToBodyParts>
+            </li>
         </modExtensions>
     </GeneDef>
 
@@ -493,6 +507,12 @@
         <description>The genetic material of Lorgar.</description>
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>410</displayOrderInCategory>
+        <abilities>
+            <li>BEWH_LorgarWordOfAuthority</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>BEWH_LorgarWordOfAuthority</AbilityDef>
+        </descriptionHyperlinks>
         <statFactors>
             <ArrestSuccessChance>2</ArrestSuccessChance>
             <SocialImpact>1.5</SocialImpact>
@@ -503,14 +523,8 @@
         <statOffsets>
             <ConversionPower MayRequire="Ludeon.RimWorld.Ideology">1.5</ConversionPower>
         </statOffsets>
-        <capMods>
-            <li>
-                <capacity>Consciousness</capacity>
-                <postFactor>1.1</postFactor>
-            </li>
-        </capMods>
         <aptitudes>
-            <Social>5</Social>
+            <Social>3</Social>
         </aptitudes>
         <passionMod>
             <skill>Social</skill>

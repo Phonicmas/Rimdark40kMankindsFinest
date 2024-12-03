@@ -15,7 +15,7 @@ Check market price for items as well.
 Check descriptions
 Compile list of features
 
-use stuff like {PAWN_nameDef} and {PAWN_pronoun} in description texts instead of "Your" "Pawn" or other ways pawns are reffered too.
+use stuff like {PAWN_nameDef} and {PAWN_pronoun} in description texts instead of "Your" "Pawn" or other ways pawns are reffered too. (Where applicable)
 
 ## Art
 
@@ -29,7 +29,7 @@ And icon for starting for primarch vat
 
 Perpetual gene icon
 
-Icons for new abilities (Roboute, Horus, Angron)
+Icons for new abilities (Roboute, Horus, Angron, Lorgar)
 
 ## Code and XML
 
@@ -37,14 +37,9 @@ add stat offsets and factor and abilities to ranks. possibly add more?
 
 Make inspect windows for embryo and vial not create a temp pawn, instead reproduce window, or create temp geneset for the 
 
-give leman russ wulfen gene either the flaw gene or its own version on him?
-
-
 Perturabo: Summons The Iron Circle + has an innate mechlink https://wh40k.lexicanum.com/wiki/Iron_Circle (iron circle will just be 6 mechs called down, will be unique to him)
 
 Mortarion: can create a wide area of pollution, rotstink and toxic gas (if it is a thing) within his sight. With 24h cooldown
-
-Lorgar: Instantly recruit any prisoner (Long cooldown). Can instantly make a pawn switch ideoligion to his own (if ideology is installed) 
 
 ## Bugs
 
