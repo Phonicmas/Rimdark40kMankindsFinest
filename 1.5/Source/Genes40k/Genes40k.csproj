@@ -74,14 +74,18 @@
     <Compile Include="Abilities\Ability_UpdateGizmo.cs" />
     <Compile Include="Comps\CompAbilityEffect_DenyTheWitch.cs" />
     <Compile Include="Comps\CompAbilityEffect_SharedBurden.cs" />
+    <Compile Include="Comps\CompAbilityEffect_SummonMechsForCaster.cs" />
     <Compile Include="Comps\CompAbilityEffect_WordOfAuthority.cs" />
     <Compile Include="Comps\CompAbilityEffect_WordOfDivination.cs" />
     <Compile Include="Comps\CompProperties_AbilitySharedBurden.cs" />
     <Compile Include="Comps\CompProperties_AbilityWordOfAuthority.cs" />
     <Compile Include="Comps\CompProperties_AbilityWordOfDivination.cs" />
     <Compile Include="Comps\CompProperties_DenyTheWitch.cs" />
+    <Compile Include="Comps\CompProperties_SummonMechsForCaster.cs" />
     <Compile Include="Comps\GameComponent_Perpetual.cs" />
+    <Compile Include="DefModExtensions\DefModExtension_ExclusiveMech.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneInducedFear.cs" />
+    <Compile Include="DefModExtensions\DefModExtension_GeneseedHarvest.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneStorageGraphicProgression.cs" />
     <Compile Include="DefModExtensions\DefModExtension_IncreasedJoyFromArt.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneseedVialRecipe.cs" />
@@ -92,6 +96,7 @@
     <Compile Include="GeneClasses\Gene_Perpetual.cs" />
     <Compile Include="GeneClasses\Gene_ProgenoidGlands.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_BlockedPsycasting.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_DomitarMechExclusive.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_FuryboundPawnText.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_ImplantGeneseedCorrectIngredient.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_MoreArtJoy.cs" />

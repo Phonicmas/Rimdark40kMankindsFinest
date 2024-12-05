@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="BaseBullet">
+        <defName>BEWH_BolterRound</defName>
+        <label>Bolter Round</label>
+        <graphicData>
+            <texPath>Things/Projectiles/BEWH_BolterRound</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>25</damageAmountBase>
+            <armorPenetrationBase>0.75</armorPenetrationBase>
+            <explosionRadius>1.9</explosionRadius>
+            <speed>90</speed>
+        </projectile>
+    </ThingDef>
+
+</Defs>

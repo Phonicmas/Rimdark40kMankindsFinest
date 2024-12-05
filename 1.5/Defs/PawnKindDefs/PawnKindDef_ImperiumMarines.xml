@@ -35,8 +35,8 @@
             <li>BEWH_ImperiumPowerArmorHelmet</li>
         </apparelRequired>
         <weaponTags>
-            <li>SpacerGun</li>
-            <li>UltratechMelee</li>
+            <li>BEWH_AstartesBolter</li>
+            <li>BEWH_AstartesChainsword</li>
         </weaponTags>
         <disallowedTraits>
             <li>Brawler</li>

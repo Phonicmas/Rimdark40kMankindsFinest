@@ -1,4 +1,7 @@
-﻿using RimWorld;
+﻿using System;
+using System.Linq;
+using Core40k;
+using RimWorld;
 using Verse;
 
 
@@ -10,6 +13,8 @@ namespace Genes40k
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
+            base.Apply(target, dest);
+            
             var corpse = target.Thing as Corpse;
             var pawn = corpse.InnerPawn;
 
@@ -20,9 +25,26 @@ namespace Genes40k
                 return;
             }
             
+            var random = new Random();
+
+            var caster = parent.pawn;
+
+            var chance = 0;
+
+            if (caster.HasComp<CompRankInfo>())
+            {
+                chance += caster.GetComp<CompRankInfo>().UnlockedRanks.Where(rank => rank.HasModExtension<DefModExtension_GeneseedHarvest>()).Sum(rank => rank.GetModExtension<DefModExtension_GeneseedHarvest>().chanceOffset);
+            }
+
+            chance += caster.equipment.AllEquipmentListForReading.Where(equipment => equipment.def.HasModExtension<DefModExtension_GeneseedHarvest>()).Sum(equipment => equipment.def.GetModExtension<DefModExtension_GeneseedHarvest>().chanceOffset);
+
+
+            if (random.Next(0, 100) > chance)
+            {
+                return;
+            }
+
             Genes40kUtils.MakeGeneseedVial(pawn, Genes40kUtils.IsPrimaris(pawn));
-            
-            base.Apply(target, dest);
         }
 
         public override bool Valid(LocalTargetInfo target, bool throwMessages = false)

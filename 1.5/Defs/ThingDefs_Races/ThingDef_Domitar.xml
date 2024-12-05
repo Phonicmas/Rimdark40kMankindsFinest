@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Make sure it can only be controlled by one with perturabo gene -->
+
+    <!-- Iron Circle-->
+    <ThingDef ParentName="HeavyMechanoid">
+        <defName>BEWH_PerturaboDomitar</defName>
+        <label>Domitar Battle-Automata</label>
+        <statBases>
+            <MoveSpeed>3.6</MoveSpeed>
+            <ArmorRating_Blunt>1.1</ArmorRating_Blunt>
+            <ArmorRating_Sharp>1.1</ArmorRating_Sharp>
+            <PsychicSensitivity>1</PsychicSensitivity>
+
+            <BandwidthCost>0</BandwidthCost>
+            <WastepacksPerRecharge>0</WastepacksPerRecharge>
+        </statBases>
+
+        <butcherProducts />
+
+        <race>
+            <body>Scyther</body>
+            <baseHealthScale>2.5</baseHealthScale>
+
+            <maxMechEnergy>500</maxMechEnergy>
+
+            <lifeStageAges>
+                <li>
+                    <def>MechanoidFullyFormed</def>
+                    <minAge>0</minAge>
+                    <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+                    <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+                    <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+                </li>
+            </lifeStageAges>
+            <detritusLeavings>
+                <li>
+                    <def>ChunkMechanoidSlag</def>
+                    <texOverrideIndex>0</texOverrideIndex>
+                    <spawnChance>0.5</spawnChance>
+                </li>
+                <li>
+                    <def>ChunkMechanoidSlag</def>
+                    <texOverrideIndex>3</texOverrideIndex>
+                    <spawnChance>0.5</spawnChance>
+                </li>
+                <li>
+                    <def>ChunkMechanoidSlag</def>
+                    <texOverrideIndex>1</texOverrideIndex>
+                    <spawnChance>0.5</spawnChance>
+                </li>
+            </detritusLeavings>
+        </race>
+
+        <tools>
+            <li>
+                <label>left fist</label>
+                <labelNoLocation>fist</labelNoLocation>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>16.0</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+                <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+            </li>
+            <li>
+                <label>right fist</label>
+                <labelNoLocation>fist</labelNoLocation>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>16.0</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+                <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+            </li>
+            <li>
+                <label>head</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>10</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                <chanceFactor>0.2</chanceFactor>
+            </li>
+        </tools>
+
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <label>Olympia Bolter</label>
+                <defaultProjectile>BEWH_BolterRound</defaultProjectile>
+                <warmupTime>0</warmupTime>
+                <range>35.9</range>
+                <hasStandardCommand>true</hasStandardCommand>
+                <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+                <burstShotCount>3</burstShotCount>
+                <soundCast>GunShotA</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>12</muzzleFlashScale>
+            </li>
+        </verbs>
+
+        <comps>
+            <li Class="MVCF.Comps.CompProperties_VerbGiver">
+                <verbProps>
+                    <li>
+                        <label>Olympia Bolter</label>
+                        <visualLabel>Olympia Bolter</visualLabel>
+                        <description>Olympia Bolter mounted on the shoulder.</description>
+                        <canBeToggled>true</canBeToggled>
+                        <comps>
+                            <li Class="MVCF.VerbComps.VerbCompProperties_Turret">
+                                <compClass>MVCF.VerbComps.VerbComp_Turret</compClass>
+                                <graphic>
+                                    <texPath>Things/Building/Security/TurretMini_Top</texPath>
+                                    <graphicClass>Graphic_Single</graphicClass>
+                                </graphic>
+                                <drawScale>3</drawScale>
+                            </li>
+                        </comps>
+                    </li>
+                </verbProps>
+            </li>
+        </comps>
+
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_ExclusiveMech">
+                <requiredGeneToControl>BEWH_PrimarchSpecificGeneIV</requiredGeneToControl>
+                <totalAmountAllowedToHave>6</totalAmountAllowedToHave>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <PawnKindDef ParentName="HeavyMechanoidKind">
+        <defName>BEWH_PerturaboDomitar</defName>
+        <label>Domitar Battle-Automata</label>
+        <race>BEWH_PerturaboDomitar</race>
+
+        <defaultFactionType Inherit = "False" />
+        <weaponTags>
+            <li>BEWH_DomitarMelee</li>
+        </weaponTags>
+        <forceNormalGearQuality>false</forceNormalGearQuality>
+        <forceWeaponQuality>Excellent</forceWeaponQuality>
+
+        <allowInMechClusters>false</allowInMechClusters>
+
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Things/Pawn/Mechs/Domitar/Domitar</texPath>
+                    <shaderType>CutoutWithOverlay</shaderType>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>1.5</drawSize>
+                    <shadowData>
+                        <volume>(0.4, 0.8, 0.4)</volume>
+                    </shadowData>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+    </PawnKindDef>
+
+
+    <!-- Graviton Maul-->
+    <ThingDef ParentName="MeleeWeaponUltratech">
+        <defName>BEWH_GravitonMaul</defName>
+        <label>graviton maul</label>
+        <description>A maul used by the Domitar Battle-Automata.</description>
+        <soundInteract>Interact_ZeusHammer</soundInteract>
+        <meleeHitSound>MeleeHit_ZeusHammer</meleeHitSound>
+        <equippedAngleOffset>-45</equippedAngleOffset>
+        <relicChance>0</relicChance>
+        <destroyOnDrop>true</destroyOnDrop>
+        <smeltable>false</smeltable>
+        <burnableByRecipe>true</burnableByRecipe>
+        <tradeability>None</tradeability>
+        <weaponClasses>
+            <li>MeleeBlunt</li>
+        </weaponClasses>
+        <weaponTags Inherit = "False">
+            <li>BEWH_DomitarMelee</li>
+        </weaponTags>
+        <tradeTags Inherit = "False" />
+        <thingSetMakerTags Inherit = "False" />
+        <graphicData>
+            <texPath>Things/Weapons/BEWH_GravitonMaul</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <tools>
+            <li>
+                <label>handle</label>
+                <capacities>
+                    <li>Poke</li>
+                </capacities>
+                <power>15</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>head</label>
+                <labelUsedInLogging>false</labelUsedInLogging>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>33</power>
+                <armorPenetration>1.45</armorPenetration>
+                <cooldownTime>2.5</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+
+</Defs>

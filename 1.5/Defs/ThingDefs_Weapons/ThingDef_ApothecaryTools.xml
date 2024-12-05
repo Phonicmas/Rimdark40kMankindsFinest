@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-
   <ThingDef ParentName="BaseHumanMakeableGun" Name="BEWH_ApothecaryToolGeneseed" Abstract="True">
     <techLevel>Spacer</techLevel>
     <soundInteract>Interact_ChargeRifle</soundInteract>
@@ -19,11 +18,11 @@
       <Plasteel>30</Plasteel>
       <ComponentSpacer>2</ComponentSpacer>
     </costList>
-    <comps>
-      <li Class="Genes40k.CompProperties_GivesAbility">
-        <ability>BEWH_HarvestGeneseedsFromDead</ability>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_GeneseedHarvest">
+        <chanceOffset>50</chanceOffset>
       </li>
-    </comps>
+    </modExtensions>
   </ThingDef>
 
   <ThingDef ParentName="BEWH_ApothecaryToolGeneseed">

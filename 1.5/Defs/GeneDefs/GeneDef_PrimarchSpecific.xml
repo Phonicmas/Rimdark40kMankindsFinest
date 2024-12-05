@@ -80,13 +80,33 @@
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>404</displayOrderInCategory>
         <statOffsets>
-            <ResearchSpeed>3</ResearchSpeed>
-            <AimingDelayFactor>-0.4</AimingDelayFactor>
-            <ConstructionSpeed>0.35</ConstructionSpeed>
-            <ConstructSuccessChance>0.35</ConstructSuccessChance>
+            <ResearchSpeed>2</ResearchSpeed>
+            <MechControlGroups>1</MechControlGroups>
         </statOffsets>
+        <statFactors>
+            <ConstructionSpeed>1.2</ConstructionSpeed>
+        </statFactors>
+        <abilities>
+            <li>BEWH_IronCircle</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>BEWH_IronCircle</AbilityDef>
+        </descriptionHyperlinks>
+        <customEffectDescriptions>
+            <li>Innate mechlink.</li>
+        </customEffectDescriptions>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <hediffsToBodyParts>
+                    <li>
+                        <hediff>MechlinkImplant</hediff>
+                        <bodyparts>
+                            <li>Brain</li>
+                        </bodyparts>
+                    </li>
+                </hediffsToBodyParts>
+            </li>
         </modExtensions>
     </GeneDef>
 

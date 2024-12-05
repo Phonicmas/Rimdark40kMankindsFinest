@@ -228,6 +228,14 @@
         <requiredSkills>
             <Medicine>9</Medicine>
         </requiredSkills>
+        <givesAbilities>
+            <li>BEWH_HarvestGeneseedsFromDead</li>
+        </givesAbilities>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneseedHarvest">
+                <chanceOffset>25</chanceOffset>
+            </li>
+        </modExtensions>
     </Core40k.RankDef>
     <!-- Apothecary -->
     <Core40k.RankDef>
@@ -245,6 +253,11 @@
         <requiredSkills>
             <Medicine>14</Medicine>
         </requiredSkills>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneseedHarvest">
+                <chanceOffset>50</chanceOffset>
+            </li>
+        </modExtensions>
     </Core40k.RankDef>
     <!-- Master of the Apothecarion -->
     <Core40k.RankDef>
@@ -262,6 +275,11 @@
         <requiredSkills>
             <Medicine>18</Medicine>
         </requiredSkills>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneseedHarvest">
+                <chanceOffset>80</chanceOffset>
+            </li>
+        </modExtensions>
     </Core40k.RankDef>
 
     <!-- =Techmarine= -->

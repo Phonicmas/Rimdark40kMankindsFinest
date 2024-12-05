@@ -30,19 +30,6 @@
     <researchViewY>0</researchViewY>
   </ResearchProjectDef>
 
-  <!-- Custodes creation -->
-  <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
-    <defName>BEWH_CustodesCreation</defName>
-    <label>Custodes creation</label>
-    <description>Unlocks the creation of custodes a long costly process.</description>
-    <prerequisites>
-      <li>BEWH_GeneseedCreation</li>
-    </prerequisites>
-    <baseCost>15000</baseCost>
-    <researchViewX>0</researchViewX>
-    <researchViewY>0</researchViewY>
-  </ResearchProjectDef>
-
   <!-- Geneseed purification -->
   <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
     <defName>BEWH_GeneseedPurification</defName>
@@ -54,19 +41,6 @@
     <baseCost>6000</baseCost>
     <researchViewX>1</researchViewX>
     <researchViewY>1</researchViewY>
-  </ResearchProjectDef>
-
-  <!-- Geneseed Extraction (Space Marine) -->
-  <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
-    <defName>BEWH_GeneseedExtractionFirstborn</defName>
-    <label>Firstborn geneseed extraction</label>
-    <description>Unlocks the surgery to extract geneseeds from a fully grown progenoid gland of a space marine.</description>
-    <prerequisites>
-      <li>BEWH_GeneseedPurification</li>
-    </prerequisites>
-    <baseCost>2500</baseCost>
-    <researchViewX>1</researchViewX>
-    <researchViewY>2</researchViewY>
   </ResearchProjectDef>
 
   <!-- Geneseed perfection -->
@@ -82,6 +56,33 @@
     <researchViewY>1</researchViewY>
   </ResearchProjectDef>
 
+  <!-- Geneseed Extraction (Space Marine) -->
+  <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
+    <defName>BEWH_GeneseedExtractionFirstborn</defName>
+    <label>Firstborn geneseed extraction</label>
+    <description>Unlocks the surgery to extract geneseeds from a fully grown progenoid gland of a space marine.</description>
+    <prerequisites>
+      <li>BEWH_GeneseedPurification</li>
+    </prerequisites>
+    <baseCost>2500</baseCost>
+    <researchViewX>2</researchViewX>
+    <researchViewY>2</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- Geneseed Extraction (Priamris Marine) -->
+  <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
+    <defName>BEWH_GeneseedExtractionPrimaris</defName>
+    <label>Primaris geneseed extracton</label>
+    <description>Unlocks the surgery to extract geneseeds from a fully grown progenoid gland of a primaris marine.</description>
+    <prerequisites>
+      <li>BEWH_GeneseedPerfection</li>
+      <li>BEWH_GeneseedExtractionFirstborn</li>
+    </prerequisites>
+    <baseCost>2500</baseCost>
+    <researchViewX>3</researchViewX>
+    <researchViewY>2</researchViewY>
+  </ResearchProjectDef>
+
   <!-- Rubicon Primaris -->
   <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
     <defName>BEWH_RubiconSurgery</defName>
@@ -95,18 +96,17 @@
     <researchViewY>1</researchViewY>
   </ResearchProjectDef>
 
-  <!-- Geneseed Extraction (Priamris Marine) -->
+  <!-- Custodes creation -->
   <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
-    <defName>BEWH_GeneseedExtractionPrimaris</defName>
-    <label>Primaris geneseed extracton</label>
-    <description>Unlocks the surgery to extract geneseeds from a fully grown progenoid gland of a primaris marine.</description>
+    <defName>BEWH_CustodesCreation</defName>
+    <label>Custodes creation</label>
+    <description>Unlocks the creation of custodes a long costly process.</description>
     <prerequisites>
-      <li>BEWH_GeneseedPerfection</li>
-      <li>BEWH_GeneseedExtractionFirstborn</li>
+      <li>BEWH_GeneseedCreation</li>
     </prerequisites>
-    <baseCost>2500</baseCost>
-    <researchViewX>2</researchViewX>
-    <researchViewY>2</researchViewY>
+    <baseCost>15000</baseCost>
+    <researchViewX>0</researchViewX>
+    <researchViewY>0</researchViewY>
   </ResearchProjectDef>
 
   <!-- Primarch Project -->
@@ -127,9 +127,9 @@
 
   <!-- Imperium Power Armor-->
   <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
-    <defName>BEWH_PowerArmor</defName>
-    <label>Imperium Power Armor</label>
-    <description>Unlocks recipes for creating Imperium power armor.</description>
+    <defName>BEWH_AstartesPowerArmor</defName>
+    <label>Astartes Power Armor</label>
+    <description>Unlocks recipes for creating Astartes power armor.</description>
     <researchViewX>0</researchViewX>
     <researchViewY>2</researchViewY>
     <baseCost>10000</baseCost>
@@ -137,6 +137,19 @@
       <li>AdvancedFabrication</li>
       <li>PoweredArmor</li>
       <li MayRequire="Ludeon.RimWorld.Royalty">CataphractArmor</li>
+    </prerequisites>
+  </ResearchProjectDef>
+
+  <!-- Imperium Weapons-->
+  <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
+    <defName>BEWH_AstartesWeapons</defName>
+    <label>Astartes Weapons</label>
+    <description>Unlocks recipes for creating Astartes Weapons.</description>
+    <researchViewX>1</researchViewX>
+    <researchViewY>2</researchViewY>
+    <baseCost>10000</baseCost>
+    <prerequisites>
+      <li>AdvancedFabrication</li>
     </prerequisites>
   </ResearchProjectDef>
 

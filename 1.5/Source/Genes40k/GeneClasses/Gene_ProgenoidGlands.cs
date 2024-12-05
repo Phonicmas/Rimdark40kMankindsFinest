@@ -18,7 +18,10 @@ namespace Genes40k
         
         public bool HarvestFirstProgenoidGland()
         {
-            if (firstProgenoidGlandHarvested) return false;
+            if (firstProgenoidGlandHarvested)
+            {
+                return false;
+            }
             
             firstProgenoidGlandHarvested = true;
             return true;
@@ -26,7 +29,10 @@ namespace Genes40k
 
         public bool HarvestSecondProgenoidGland()
         {
-            if (secondProgenoidGlandHarvested) return false;
+            if (secondProgenoidGlandHarvested)
+            {
+                return false;
+            }
             
             secondProgenoidGlandHarvested = true;
             return true;

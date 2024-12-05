@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Bolter -->
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>BEWH_AstartesBolter</defName>
+    <label>Bolter</label>
+    <description>The Bolter, also called a Boltgun, and its variants are some of the most powerful, hand-held, ballistic anti-personnel weaponry in use by the military forces of the Imperium of Man. It is a powerful assault weapon that fires explosive kinetic rounds colloquially referred to as bolts.</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Weapons/BEWH_Bolter</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_ChargeRifle</soundInteract>
+    <smeltable>false</smeltable>
+    <burnableByRecipe>true</burnableByRecipe>
+    <tradeability>None</tradeability>
+    <tradeTags Inherit="False" />
+    <statBases>
+      <WorkToMake>45000</WorkToMake>
+      <Mass>4.6</Mass>
+      <AccuracyTouch>0.6</AccuracyTouch>
+      <AccuracyShort>0.7</AccuracyShort>
+      <AccuracyMedium>0.6</AccuracyMedium>
+      <AccuracyLong>0.4</AccuracyLong>
+      <RangedWeapon_Cooldown>2.00</RangedWeapon_Cooldown>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>BEWH_AstartesWeapons</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <costList>
+      <Steel>40</Steel>
+      <Plasteel>55</Plasteel>
+      <ComponentSpacer>3</ComponentSpacer>
+    </costList>
+    <thingSetMakerTags Inherit="False" />
+    <weaponTags Inherit="False">
+      <li>BEWH_AstartesBolter</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>BEWH_BolterRound</defaultProjectile>
+        <warmupTime>1.0</warmupTime>
+        <range>35.9</range>
+        <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+        <burstShotCount>3</burstShotCount>
+        <soundCast>Shot_ChargeRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>12</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <!-- Chainsword -->
+  <ThingDef ParentName="MeleeWeaponUltratech">
+    <defName>BEWH_AstartesChainsword</defName>
+    <label>chainsword</label>
+    <description>A vicious and brutal weapon, the chainsword is an iconic tool of the adeptus astartes. It can carve flesh with absolute easy and is relatively inexpensive to make. The downside is that it lacks the armor penetration of power weapons.</description>
+    <soundInteract>Interact_MonoSword</soundInteract>
+    <meleeHitSound>MeleeHit_MonoSword</meleeHitSound>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <relicChance>0</relicChance>
+    <smeltable>false</smeltable>
+    <burnableByRecipe>true</burnableByRecipe>
+    <tradeability>None</tradeability>
+    <tradeTags Inherit="False" />
+    <thingSetMakerTags Inherit="False" />
+    <weaponTags Inherit="False">
+      <li>BEWH_AstartesChainsword</li>
+    </weaponTags>
+    <recipeMaker>
+      <researchPrerequisite>BEWH_AstartesWeapons</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <costList>
+      <Steel>65</Steel>
+      <Plasteel>10</Plasteel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+      <ComponentSpacer>1</ComponentSpacer>
+    </costList>
+    <graphicData>
+      <texPath>Things/Weapons/BEWH_Chainsword</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>28</power>
+        <cooldownTime>1.8</cooldownTime>
+        <armorPenetration>0.65</armorPenetration>
+      </li>
+    </tools>
+  </ThingDef>
+
+</Defs>

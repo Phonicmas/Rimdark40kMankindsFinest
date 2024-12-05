@@ -29,17 +29,21 @@ And icon for starting for primarch vat
 
 Perpetual gene icon
 
-Icons for new abilities (Roboute, Horus, Angron, Lorgar)
+Icons for new abilities (Roboute, Horus, Angron, Lorgar, Perturabo)
 
 ## Code and XML
 
 add stat offsets and factor and abilities to ranks. possibly add more?
 
-Make inspect windows for embryo and vial not create a temp pawn, instead reproduce window, or create temp geneset for the 
-
-Perturabo: Summons The Iron Circle + has an innate mechlink https://wh40k.lexicanum.com/wiki/Iron_Circle (iron circle will just be 6 mechs called down, will be unique to him)
-
 Mortarion: can create a wide area of pollution, rotstink and toxic gas (if it is a thing) within his sight. With 24h cooldown
+
+Rank removal ability, call it “Strip rank” or similar and maybe use the tier to deduct what can be demoted (Maybe just add to framework?, or at least the ability comp)
+
+
+
+And when a rank is given if it is higher or equal to current ones importance then change the pawns rank in their info (the place where you can insert a custome one) (Maybe)
+
+In spect window code, call discard on pawn???
 
 ## Bugs
 
@@ -62,6 +66,9 @@ Make Blood Chalice art and xml, an exotic item that when ingested by pawns with 
 https://wh40k.lexicanum.com/wiki/Gene-seed#Chapters_with_known_gene-seed_flaws
 
 SOS2 integration?
+
+
+
 
 # Grey Knight
 

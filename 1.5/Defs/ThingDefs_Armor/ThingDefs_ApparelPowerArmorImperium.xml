@@ -8,7 +8,7 @@
         <label>Imperium Power Armor</label>
         <description>Power armor of Imperium Space Marines.</description>
         <recipeMaker>
-            <researchPrerequisite>BEWH_PowerArmor</researchPrerequisite>
+            <researchPrerequisite>BEWH_AstartesPowerArmor</researchPrerequisite>
         </recipeMaker>
         <graphicData>
             <texPath>Things/Armor/Imperium/PowerArmor/BEWH_ImperiumPowerArmor</texPath>
@@ -29,7 +29,7 @@
         <label>Imperium Power Helmet</label>
         <description>Standard issue helmet of Imperium Space Marines.</description>
         <recipeMaker>
-            <researchPrerequisite>BEWH_PowerArmor</researchPrerequisite>
+            <researchPrerequisite>BEWH_AstartesPowerArmor</researchPrerequisite>
         </recipeMaker>
         <graphicData>
             <texPath>Things/Headgear/Imperium/PowerArmor/BEWH_ImperiumHelmet</texPath>
@@ -50,7 +50,7 @@
         <label>Imperium Primaris Power Helmet</label>
         <description>Standard issue helmet of Imperium Primaris Space Marines.</description>
         <recipeMaker>
-            <researchPrerequisite>BEWH_PowerArmor</researchPrerequisite>
+            <researchPrerequisite>BEWH_AstartesPowerArmor</researchPrerequisite>
         </recipeMaker>
         <graphicData>
             <texPath>Things/Headgear/Imperium/PowerArmorPrimaris/BEWH_ImperiumHelmetAlt</texPath>
