@@ -37,7 +37,7 @@ add stat offsets and factor and abilities to ranks. possibly add more?
 
 Mortarion: can create a wide area of pollution, rotstink and toxic gas (if it is a thing) within his sight. With 24h cooldown
 
-Rank removal ability, call it “Strip rank” or similar and maybe use the tier to deduct what can be demoted (Maybe just add to framework?, or at least the ability comp)
+Rank removal ability, call it “Strip rank” or similar and maybe use the tier to deduct what can be demoted
 
 
 

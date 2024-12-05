@@ -149,4 +149,6 @@
   <BEWH.PawnDoesNotHaveGeneToControl>{0} does not have the {1} gene which is required to control this mech</BEWH.PawnDoesNotHaveGeneToControl>
   <BEWH.PawnCannotControlMoreMechsOfType>{0} cannot control anymore {1} mechs, limit is {2}</BEWH.PawnCannotControlMoreMechsOfType>
 
+  <BEWH.WillNotSummonAny>Will not summon any {0} as limit has been reached</BEWH.WillNotSummonAny>
+
 </LanguageData>

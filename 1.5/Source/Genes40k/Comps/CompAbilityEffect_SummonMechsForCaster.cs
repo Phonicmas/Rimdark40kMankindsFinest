@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using RimWorld;
 using Verse;
 
@@ -18,8 +19,10 @@ namespace Genes40k
 
             if (Props.cannotHaveMoreThanAmount)
             {
-                var alreadyControlled = caster.mechanitor.ControlledPawns.Count(pawn => pawn.kindDef == Props.mechKind);
-                amountToSpawn -= alreadyControlled;
+                var tmpMechsInAssignedOrder = new List<Pawn>();
+
+                MechanitorUtility.GetMechsInAssignedOrder(caster, ref tmpMechsInAssignedOrder);
+                amountToSpawn -= tmpMechsInAssignedOrder.Count;
             }
 
             for (var i = 0; i < amountToSpawn; i++)

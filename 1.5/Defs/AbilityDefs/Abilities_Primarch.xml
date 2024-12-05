@@ -239,9 +239,7 @@
     <iconPath>UI/Abilities/BEWH_Ability_CorvusCoraxConceal</iconPath>
     <cooldownTicksRange>60000</cooldownTicksRange>
     <category>BEWH_Primarch</category>
-    <statBases>
-      <Ability_Duration>625</Ability_Duration>
-    </statBases>
+    <abilityClass>Genes40k.Ability_IronCircle</abilityClass>
     <comps>
       <li Class="Genes40k.CompProperties_SummonMechsForCaster">
         <mechKind>BEWH_PerturaboDomitar</mechKind>
