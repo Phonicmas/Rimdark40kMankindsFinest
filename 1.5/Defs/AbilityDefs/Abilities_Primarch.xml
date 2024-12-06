@@ -150,7 +150,7 @@
     <label>Shared Burden</label>
     <description>By psychially tapping into the recipients mind, you're able to feel and share their emotion, taking the burden of negative thoughts they might have onto yourself.</description>
     <cooldownTicksRange>15000</cooldownTicksRange>
-    <iconPath>UI/Abilities/BEWH_ApothecaryGeneseedHarvestIcon</iconPath>
+    <iconPath>UI/Abilities/BEWH_Ability_ChillgronShareBurden</iconPath>
     <jobDef>CastAbilityOnThingMelee</jobDef>
     <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
@@ -181,7 +181,7 @@
     <defName>BEWH_LorgarWordOfAuthority</defName>
     <label>Word of Authority</label>
     <description>Your words carry great meaning, able to persuade people to join your cause.</description>
-    <cooldownTicksRange>900000	</cooldownTicksRange>
+    <cooldownTicksRange>900000</cooldownTicksRange>
     <iconPath>UI/Abilities/BEWH_ApothecaryGeneseedHarvestIcon</iconPath>
     <jobDef>CastAbilityOnThingMelee</jobDef>
     <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>

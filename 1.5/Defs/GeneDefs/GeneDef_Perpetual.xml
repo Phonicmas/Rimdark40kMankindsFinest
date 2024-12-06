@@ -5,15 +5,15 @@
         <defName>BEWH_PerpetualGamma</defName>
         <label>Gamma Perpetual</label>
         <description>Carriers of this gene are known to be effectively immortal, never aging and capable of ultimately healing almost any injury as a result of their extraordinarily rapid and efficient cellular regeneration.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
+        <iconPath>UI/Genes/Perpetual/BEWH_GeneIcon_PerpetualGamma</iconPath>
         <displayOrderInCategory>800</displayOrderInCategory>
     
         <biostatCpx>10</biostatCpx>
         <biostatArc>4</biostatArc>
 
         <customEffectDescriptions>
-            <li>Will resurrect from most lethal injuries after 3-4 days</li>
-            <li>Self healing capabilities, including healing permanent wouds and restoration of lost limbs.</li>
+            <li>Will resurrect from most lethal injuries after 3-4 days.</li>
+            <li>Self healing capabilities, including healing permanent wounds and restoration of lost limbs.</li>
         </customEffectDescriptions>
 
         <statFactors>
@@ -33,14 +33,14 @@
         <defName>BEWH_PerpetualBeta</defName>
         <label>Beta Perpetual</label>
         <description>Carriers of this gene are known to be effectively immortal, never aging and capable of ultimately healing almost any injury as a result of their extraordinarily rapid and efficient cellular regeneration.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
+        <iconPath>UI/Genes/Perpetual/BEWH_GeneIcon_PerpetualBeta</iconPath>
         <displayOrderInCategory>801</displayOrderInCategory>
         <biostatCpx>13</biostatCpx>
         <biostatArc>5</biostatArc>
 
         <customEffectDescriptions>
-            <li>Will resurrect from most lethal injuries after 1-2 days</li>
-            <li>Enhanced self healing capabilities, including healing permanent wouds and restoration of lost limbs.</li>
+            <li>Will resurrect from most lethal injuries after 1-2 days.</li>
+            <li>Enhanced self healing capabilities, including healing permanent wounds and restoration of lost limbs.</li>
         </customEffectDescriptions>
 
         <statFactors>
@@ -60,14 +60,14 @@
         <defName>BEWH_PerpetualAlpha</defName>
         <label>Alpha Perpetual</label>
         <description>Carriers of this gene are known to be effectively immortal, never aging and capable of ultimately healing almost any injury as a result of their extraordinarily rapid and efficient cellular regeneration.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
+        <iconPath>UI/Genes/Perpetual/BEWH_GeneIcon_PerpetualAlpha</iconPath>
         <displayOrderInCategory>802</displayOrderInCategory>
         <biostatCpx>18</biostatCpx>
         <biostatArc>7</biostatArc>
 
         <customEffectDescriptions>
-            <li>Will resurrect from most lethal injuries within half a day</li>
-            <li>Greatly enhanced self healing capabilities, including healing permanent wouds and restoration of lost limbs.</li>
+            <li>Will resurrect from most lethal injuries within half a day.</li>
+            <li>Greatly enhanced self healing capabilities, including healing permanent wounds and restoration of lost limbs.</li>
         </customEffectDescriptions>
 
         <statFactors>
