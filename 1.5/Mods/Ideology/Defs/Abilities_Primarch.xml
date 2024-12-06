@@ -7,7 +7,7 @@
     <label>Word of Divination</label>
     <description>By speaking the words of your Lecticio Divinitatus you're able to open your targets mind to the truth of your belief.</description>
     <cooldownTicksRange>120000</cooldownTicksRange>
-    <iconPath>UI/Abilities/BEWH_ApothecaryGeneseedHarvestIcon</iconPath>
+    <iconPath>UI/Abilities/BEWH_Ability_LorgarBONK</iconPath>
     <jobDef>CastAbilityOnThingMelee</jobDef>
     <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
