@@ -5,7 +5,7 @@ Fill nightlord chapter gene with additional gene that might resist its effect
 
 Balance primarch specific genes
 
-Try and balance the more powerful genes. Still having them powerful, but not downright invicible regardig taking damage.
+Try and balance the more powerful genes. Still having them powerful, but not downright invicible, especially regardig taking damage.
 
 Check cost list for various things - if they're balance and/or hard enough to aquire
 
@@ -51,7 +51,9 @@ In spect window code, call discard on pawn???
 
 Should the Primarch specific genes be renamed? (currently the name is of the Primarch)
 
-# NEW ADDITIONS TO MAKE AT SOME POINT
+
+
+# NEW ADDITIONS TO MAKE AT SOME POINT (Not for first release most likely)
 
 Make frostblade xml?
 

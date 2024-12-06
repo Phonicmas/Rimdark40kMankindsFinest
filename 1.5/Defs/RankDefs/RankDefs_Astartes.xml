@@ -32,6 +32,8 @@
             <li>BEWH_LarramansOrgan</li>
         </requiredGenesAll>
 
+        <rankTier>0</rankTier>
+
     </Core40k.RankDef>
     <!-- Battle-Brother -->
     <Core40k.RankDef>
@@ -52,6 +54,9 @@
         <requiredGenesAll>
             <li>BEWH_BlackCarapace</li>
         </requiredGenesAll>
+
+        <rankTier>1</rankTier>
+
     </Core40k.RankDef>
     <!-- Veteran -->
     <Core40k.RankDef>
@@ -69,6 +74,9 @@
             <Shooting>10</Shooting>
             <Melee>10</Melee>
         </requiredSkills>
+
+        <rankTier>2</rankTier>
+
     </Core40k.RankDef>
 
     <!-- =Tactical Marine= -->
@@ -85,6 +93,9 @@
         <rankRequirements>
             <BEWH_AstartesRankVeteran>10</BEWH_AstartesRankVeteran>
         </rankRequirements>
+
+        <rankTier>3</rankTier>
+
     </Core40k.RankDef>
     <!-- Lieutenant -->
     <Core40k.RankDef>
@@ -105,6 +116,9 @@
             <Social>5</Social>
             <Intellectual>7</Intellectual>
         </requiredSkills>
+
+        <rankTier>4</rankTier>
+
     </Core40k.RankDef>
     <!-- Captain -->
     <Core40k.RankDef>
@@ -125,6 +139,9 @@
             <Social>7</Social>
             <Intellectual>9</Intellectual>
         </requiredSkills>
+
+        <rankTier>6</rankTier>
+
     </Core40k.RankDef>
     <!-- Chapter Master -->
     <Core40k.RankDef>
@@ -148,6 +165,13 @@
             <Social>14</Social>
             <Intellectual>12</Intellectual>
         </requiredSkills>
+
+        <givesAbilities>
+            <li>BEWH_StripRanks</li>
+        </givesAbilities>
+
+        <rankTier>10</rankTier>
+
     </Core40k.RankDef>
 
     <!-- =Vanguard= -->
@@ -175,6 +199,9 @@
             <MoveSpeed>0.05</MoveSpeed>
             <HuntingStealth>0.1</HuntingStealth>
         </statOffsets>
+
+        <rankTier>3</rankTier>
+
     </Core40k.RankDef>
 
     <!-- =Chapter Ancient= -->
@@ -197,6 +224,8 @@
             <Nerves>2</Nerves>
             <Nerves>1</Nerves>
         </requiredTraitsOneAmong>
+
+        <rankTier>6</rankTier>
 
         <!-- Ability to that essentially places a battle standard, and gives the pawn a movespeed factor 0 so they cant move. Standard buffs allies within area -->
     </Core40k.RankDef>
@@ -228,6 +257,7 @@
         <requiredSkills>
             <Medicine>9</Medicine>
         </requiredSkills>
+
         <givesAbilities>
             <li>BEWH_HarvestGeneseedsFromDead</li>
         </givesAbilities>
@@ -236,6 +266,9 @@
                 <chanceOffset>25</chanceOffset>
             </li>
         </modExtensions>
+
+        <rankTier>2</rankTier>
+
     </Core40k.RankDef>
     <!-- Apothecary -->
     <Core40k.RankDef>
@@ -258,6 +291,9 @@
                 <chanceOffset>50</chanceOffset>
             </li>
         </modExtensions>
+
+        <rankTier>4</rankTier>
+
     </Core40k.RankDef>
     <!-- Master of the Apothecarion -->
     <Core40k.RankDef>
@@ -280,6 +316,9 @@
                 <chanceOffset>80</chanceOffset>
             </li>
         </modExtensions>
+
+        <rankTier>7</rankTier>
+
     </Core40k.RankDef>
 
     <!-- =Techmarine= -->
@@ -309,6 +348,9 @@
         <requiredSkills>
             <Crafting>8</Crafting>
         </requiredSkills>
+
+        <rankTier>2</rankTier>
+
     </Core40k.RankDef>
     <!-- Techmarine -->
     <Core40k.RankDef>
@@ -326,6 +368,9 @@
         <requiredSkills>
             <Crafting>12</Crafting>
         </requiredSkills>
+
+        <rankTier>4</rankTier>
+
     </Core40k.RankDef>
     <!-- Master of the Forge -->
     <Core40k.RankDef>
@@ -343,6 +388,9 @@
         <requiredSkills>
             <Crafting>16</Crafting>
         </requiredSkills>
+
+        <rankTier>7</rankTier>
+
     </Core40k.RankDef>
 
     <!-- =Librarian= -->
@@ -373,6 +421,9 @@
         <requiredSkills>
             <Intellectual>10</Intellectual>
         </requiredSkills>
+
+        <rankTier>2</rankTier>
+
     </Core40k.RankDef>
     <!-- Librarian -->
     <Core40k.RankDef>
@@ -390,6 +441,9 @@
         <requiredSkills>
             <Intellectual>15</Intellectual>
         </requiredSkills>
+
+        <rankTier>4</rankTier>
+
     </Core40k.RankDef>
     <!-- Chief Librarian -->
     <Core40k.RankDef>
@@ -407,6 +461,9 @@
         <requiredSkills>
             <Intellectual>19</Intellectual>
         </requiredSkills>
+
+        <rankTier>7</rankTier>
+
     </Core40k.RankDef>
 
     <!-- =Chaplain= -->
@@ -436,6 +493,13 @@
         <requiredSkills>
             <Social>9</Social>
         </requiredSkills>
+
+        <givesAbilities>
+            <li>BEWH_StripRanks</li>
+        </givesAbilities>
+
+        <rankTier>3</rankTier>
+
     </Core40k.RankDef>
     <!-- Chaplain -->
     <Core40k.RankDef>
@@ -453,6 +517,9 @@
         <requiredSkills>
             <Social>14</Social>
         </requiredSkills>
+
+        <rankTier>6</rankTier>
+
     </Core40k.RankDef>
     <!-- Master of Sanctity  -->
     <Core40k.RankDef>
@@ -470,6 +537,9 @@
         <requiredSkills>
             <Social>18</Social>
         </requiredSkills>
+
+        <rankTier>9</rankTier>
+
     </Core40k.RankDef>
 
     <!-- =Devastator= -->
@@ -488,6 +558,9 @@
         <requiredSkills>
             <Shooting>9</Shooting>
         </requiredSkills>
+
+        <rankTier>2</rankTier>
+
     </Core40k.RankDef>
     <!-- Devastator Sergeant -->
     <Core40k.RankDef>
@@ -505,6 +578,9 @@
         <requiredSkills>
             <Shooting>12</Shooting>
         </requiredSkills>
+
+        <rankTier>3</rankTier>
+
     </Core40k.RankDef>
 
     <!-- =Assault= -->
@@ -523,6 +599,9 @@
         <requiredSkills>
             <Melee>9</Melee>
         </requiredSkills>
+
+        <rankTier>2</rankTier>
+
     </Core40k.RankDef>
     <!-- Assault Sergeant -->
     <Core40k.RankDef>
@@ -540,6 +619,9 @@
         <requiredSkills>
             <Melee>12</Melee>
         </requiredSkills>
+
+        <rankTier>3</rankTier>
+
     </Core40k.RankDef>
 
 </Defs>

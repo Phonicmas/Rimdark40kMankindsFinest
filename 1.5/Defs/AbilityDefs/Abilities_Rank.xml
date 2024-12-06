@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  
+    <!-- Remove rank ability -->
+    <AbilityDef>
+        <defName>BEWH_StripRanks</defName>
+        <label>Strip ranks</label>
+        <description>...</description>
+        <cooldownTicksRange>15000</cooldownTicksRange>
+        <iconPath>UI/Abilities/BEWH_ApothecaryGeneseedHarvestIcon</iconPath>
+        <jobDef>CastAbilityOnThingMelee</jobDef>
+        <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <targetRequired>true</targetRequired>
+        <showWhenDrafted>true</showWhenDrafted>
+        <hostile>false</hostile>
+        <verbProperties>
+            <verbClass>Verb_CastAbilityTouch</verbClass>
+            <range>-1</range>
+            <warmupTime>0.25</warmupTime>
+            <targetParams>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetAnimals>false</canTargetAnimals>
+                <canTargetMechs>false</canTargetMechs>
+                <canTargetBloodfeeders>false</canTargetBloodfeeders>
+                <canTargetCorpses>false</canTargetCorpses>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="Core40k.CompProperties_ResetRanks">
+                <rankCategoryDef>BEWH_AstartesRankCategory</rankCategoryDef>
+                <ownRankAsTier>true</ownRankAsTier>
+            </li>
+        </comps>
+    </AbilityDef>
 
 </Defs>
