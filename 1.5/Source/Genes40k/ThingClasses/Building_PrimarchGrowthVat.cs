@@ -42,11 +42,11 @@ namespace Genes40k
 
         private static readonly Texture2D CancelIcon = ContentFinder<Texture2D>.Get("UI/Designators/Cancel");
 
-        private static readonly Texture2D StartIcon = ContentFinder<Texture2D>.Get("UI/Designators/Cancel");
+        private static readonly Texture2D StartIcon = ContentFinder<Texture2D>.Get("UI/Gizmos/BEWH_PrimarchVatStart");
         
-        private static readonly Texture2D EjectEmbryoIcon = ContentFinder<Texture2D>.Get("UI/Gizmos/InsertEmbryo");
+        private static readonly Texture2D EjectEmbryoIcon = ContentFinder<Texture2D>.Get("UI/Gizmos/BEWH_EjectPrimarchEmbryo");
 
-        private static readonly CachedTexture InsertEmbryoIcon = new CachedTexture("UI/Gizmos/InsertEmbryo");
+        private static readonly CachedTexture InsertEmbryoIcon = new CachedTexture("UI/Gizmos/BEWH_InsertPrimarchEmbryo");
         
         private Mote workingMote;
 

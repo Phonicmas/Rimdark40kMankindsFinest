@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using System;
+using RimWorld;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -252,16 +253,15 @@ namespace Genes40k
             var defMod = geneseedVial.def.GetModExtension<DefModExtension_GeneseedVial>();
 
             var failChanceAgeOffset = 0;
-            if (!(defMod.minAgeImplant <= pawn.ageTracker.AgeBiologicalYears && defMod.maxAgeImplant >= pawn.ageTracker.AgeBiologicalYears))
+            if (pawn.ageTracker.AgeBiologicalYears < defMod.minAgeImplant)
             {
-                var minAgeCheck = pawn.ageTracker.AgeBiologicalYears - defMod.minAgeImplant;
-                var maxAgeCheck = pawn.ageTracker.AgeBiologicalYears - defMod.maxAgeImplant;
-                if (minAgeCheck < maxAgeCheck)
-                {
-                    minAgeCheck = maxAgeCheck;
-                }
-                failChanceAgeOffset = minAgeCheck * defMod.failureChancePerAgePast;
+                failChanceAgeOffset = defMod.minAgeImplant - pawn.ageTracker.AgeBiologicalYears;
             }
+            else if (pawn.ageTracker.AgeBiologicalYears > defMod.maxAgeImplant)
+            {
+                failChanceAgeOffset = pawn.ageTracker.AgeBiologicalYears - defMod.minAgeImplant;
+            }
+            failChanceAgeOffset *= defMod.failureChancePerAgePast;
 
             var failChance = defMod.baseFailureChance;
             var failChanceGeneOffset = 0;
@@ -275,10 +275,11 @@ namespace Genes40k
                 failChanceCapGeneOffset += geneDefMod.additionalChanceCapOffset;
                 failChanceGeneOffset += geneDefMod.additionalChanceOffset;
             }
+            
+            failChance += failChanceAgeOffset + failChanceGeneOffset;
 
             failCapChance += failChanceCapGeneOffset;
-            failChance += (failChanceAgeOffset + failChanceGeneOffset);
-
+            
             if (failCapChance > 100)
             {
                 failCapChance = 100;

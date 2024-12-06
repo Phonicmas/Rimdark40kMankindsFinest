@@ -55,6 +55,11 @@
             <li>BEWH_BlackCarapace</li>
         </requiredGenesAll>
 
+        <statOffsets>
+            <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">-0.05</CertaintyLossFactor>
+            <MeleeDodgeChance>0.05</MeleeDodgeChance>
+        </statOffsets>
+
         <rankTier>1</rankTier>
 
     </Core40k.RankDef>
@@ -75,6 +80,11 @@
             <Melee>10</Melee>
         </requiredSkills>
 
+        <statOffsets>
+            <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">-0.075</CertaintyLossFactor>
+            <MeleeDodgeChance>0.075</MeleeDodgeChance>
+        </statOffsets>
+
         <rankTier>2</rankTier>
 
     </Core40k.RankDef>
@@ -93,6 +103,11 @@
         <rankRequirements>
             <BEWH_AstartesRankVeteran>10</BEWH_AstartesRankVeteran>
         </rankRequirements>
+
+        <statOffsets>
+            <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">-0.1</CertaintyLossFactor>
+            <MeleeDodgeChance>1</MeleeDodgeChance>
+        </statOffsets>
 
         <rankTier>3</rankTier>
 
@@ -117,6 +132,18 @@
             <Intellectual>7</Intellectual>
         </requiredSkills>
 
+        <statOffsets>
+            <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">-0.1</CertaintyLossFactor>
+            <MeleeDodgeChance>1</MeleeDodgeChance>
+            <RangedCooldownFactor>-0.03</RangedCooldownFactor>
+            <MeleeCooldownFactor>-0.03</MeleeCooldownFactor>
+        </statOffsets>
+
+        <statFactors>
+            <ShootingAccuracyPawn>1.04</ShootingAccuracyPawn>
+            <MeleeHitChance>1.04</MeleeHitChance>
+        </statFactors>
+
         <rankTier>4</rankTier>
 
     </Core40k.RankDef>
@@ -139,6 +166,11 @@
             <Social>7</Social>
             <Intellectual>9</Intellectual>
         </requiredSkills>
+
+        <statOffsets>
+            <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">-0.1</CertaintyLossFactor>
+            <SocialImpact>0.2</SocialImpact>
+        </statOffsets>
 
         <rankTier>6</rankTier>
 
@@ -165,6 +197,11 @@
             <Social>14</Social>
             <Intellectual>12</Intellectual>
         </requiredSkills>
+
+        <statOffsets>
+            <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">-0.5</CertaintyLossFactor>
+            <SocialImpact>0.4</SocialImpact>
+        </statOffsets>
 
         <givesAbilities>
             <li>BEWH_StripRanks</li>
@@ -200,6 +237,10 @@
             <HuntingStealth>0.1</HuntingStealth>
         </statOffsets>
 
+        <statFactors>
+            <PawnTrapSpringChance>0.5</PawnTrapSpringChance>
+        </statFactors>
+
         <rankTier>3</rankTier>
 
     </Core40k.RankDef>
@@ -224,6 +265,11 @@
             <Nerves>2</Nerves>
             <Nerves>1</Nerves>
         </requiredTraitsOneAmong>
+
+        <statFactors>
+            <SocialImpact>1.15</SocialImpact>
+            <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0</CertaintyLossFactor>
+        </statFactors>
 
         <rankTier>6</rankTier>
 
@@ -258,6 +304,10 @@
             <Medicine>9</Medicine>
         </requiredSkills>
 
+        <statOffsets>
+            <MedicalTendQuality>0.1</MedicalTendQuality>
+        </statOffsets>
+
         <givesAbilities>
             <li>BEWH_HarvestGeneseedsFromDead</li>
         </givesAbilities>
@@ -286,6 +336,12 @@
         <requiredSkills>
             <Medicine>14</Medicine>
         </requiredSkills>
+
+        <statOffsets>
+            <MedicalTendQuality>0.2</MedicalTendQuality>
+            <MedicalSurgerySuccessChance>0.2</MedicalSurgerySuccessChance>
+        </statOffsets>
+
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedHarvest">
                 <chanceOffset>50</chanceOffset>
@@ -311,6 +367,12 @@
         <requiredSkills>
             <Medicine>18</Medicine>
         </requiredSkills>
+
+        <statOffsets>
+            <MedicalTendQuality>0.4</MedicalTendQuality>
+            <MedicalOperationSpeed>0.3</MedicalOperationSpeed>
+        </statOffsets>
+
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedHarvest">
                 <chanceOffset>80</chanceOffset>
@@ -349,6 +411,12 @@
             <Crafting>8</Crafting>
         </requiredSkills>
 
+        <statOffsets>
+            <DeepDrillingSpeed>0.4</DeepDrillingSpeed>
+            <WorkSpeedGlobal>0.05</WorkSpeedGlobal>
+            <HackingSpeed MayRequire="Ludeon.RimWorld.Ideology">0.05</HackingSpeed>
+        </statOffsets>
+
         <rankTier>2</rankTier>
 
     </Core40k.RankDef>
@@ -369,6 +437,15 @@
             <Crafting>12</Crafting>
         </requiredSkills>
 
+        <statOffsets>
+            <ConstructionSpeed>0.2</ConstructionSpeed>
+            <FixBrokenDownBuildingSuccessChance>0.25</FixBrokenDownBuildingSuccessChance>
+            <WorkSpeedGlobal>0.05</WorkSpeedGlobal>
+            <MechBandwidth>1</MechBandwidth>
+            <MechFormingSpeed>0.2</MechFormingSpeed>
+            <HackingSpeed MayRequire="Ludeon.RimWorld.Ideology">0.05</HackingSpeed>
+        </statOffsets>
+
         <rankTier>4</rankTier>
 
     </Core40k.RankDef>
@@ -388,6 +465,17 @@
         <requiredSkills>
             <Crafting>16</Crafting>
         </requiredSkills>
+
+        <statOffsets>
+            <ConstructionSpeed>0.1</ConstructionSpeed>
+            <ConstructSuccessChance>0.4</ConstructSuccessChance>
+            <WorkSpeedGlobal>0.1</WorkSpeedGlobal>
+            <MechBandwidth>2</MechBandwidth>
+        </statOffsets>
+
+        <statFactors>
+            <HackingSpeed MayRequire="Ludeon.RimWorld.Ideology">2</HackingSpeed>
+        </statFactors>
 
         <rankTier>7</rankTier>
 
@@ -422,6 +510,15 @@
             <Intellectual>10</Intellectual>
         </requiredSkills>
 
+        <statOffsets>
+            <ResearchSpeed>0.1</ResearchSpeed>
+            <PsychicSensitivity>0.2</PsychicSensitivity>
+        </statOffsets>
+
+        <statFactors>
+            <GlobalLearningFactor>1.02</GlobalLearningFactor>
+        </statFactors>
+
         <rankTier>2</rankTier>
 
     </Core40k.RankDef>
@@ -442,6 +539,16 @@
             <Intellectual>15</Intellectual>
         </requiredSkills>
 
+        <statOffsets>
+            <ResearchSpeed>0.15</ResearchSpeed>
+            <PsychicSensitivity>0.3</PsychicSensitivity>
+            <ReadingSpeed>0.1</ReadingSpeed>
+        </statOffsets>
+
+        <statFactors>
+            <GlobalLearningFactor>1.03</GlobalLearningFactor>
+        </statFactors>
+
         <rankTier>4</rankTier>
 
     </Core40k.RankDef>
@@ -461,6 +568,16 @@
         <requiredSkills>
             <Intellectual>19</Intellectual>
         </requiredSkills>
+
+        <statOffsets>
+            <ResearchSpeed>0.25</ResearchSpeed>
+            <PsychicSensitivity>0.5</PsychicSensitivity>
+            <ReadingSpeed>0.3</ReadingSpeed>
+        </statOffsets>
+
+        <statFactors>
+            <GlobalLearningFactor>1.05</GlobalLearningFactor>
+        </statFactors>
 
         <rankTier>7</rankTier>
 
@@ -494,6 +611,13 @@
             <Social>9</Social>
         </requiredSkills>
 
+        <statOffsets>
+            <SocialImpact>0.05</SocialImpact>
+            <SocialIdeoSpreadFrequencyFactor MayRequire="Ludeon.RimWorld.Ideology">0.5</SocialIdeoSpreadFrequencyFactor>
+            <ConversionPower MayRequire="Ludeon.RimWorld.Ideology">0.5</ConversionPower>
+            <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">-0.5</CertaintyLossFactor>
+        </statOffsets>
+
         <givesAbilities>
             <li>BEWH_StripRanks</li>
         </givesAbilities>
@@ -518,6 +642,17 @@
             <Social>14</Social>
         </requiredSkills>
 
+        <statOffsets>
+            <SocialImpact>0.1</SocialImpact>
+            <NegotiationAbility>0.3</NegotiationAbility>
+            <ConversionPower MayRequire="Ludeon.RimWorld.Ideology">0.5</ConversionPower>
+            <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">-1</CertaintyLossFactor>
+        </statOffsets>
+
+        <statFactors>
+            <SocialIdeoSpreadFrequencyFactor MayRequire="Ludeon.RimWorld.Ideology">2</SocialIdeoSpreadFrequencyFactor>
+        </statFactors>
+
         <rankTier>6</rankTier>
 
     </Core40k.RankDef>
@@ -537,6 +672,17 @@
         <requiredSkills>
             <Social>18</Social>
         </requiredSkills>
+
+        <statOffsets>
+            <SocialImpact>0.35</SocialImpact>
+            <SocialIdeoSpreadFrequencyFactor MayRequire="Ludeon.RimWorld.Ideology">1</SocialIdeoSpreadFrequencyFactor>
+        </statOffsets>
+
+        <statFactors>
+            <NegotiationAbility>1.5</NegotiationAbility>
+            <ConversionPower MayRequire="Ludeon.RimWorld.Ideology">2</ConversionPower>
+            <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0</CertaintyLossFactor>
+        </statFactors>
 
         <rankTier>9</rankTier>
 
@@ -559,6 +705,14 @@
             <Shooting>9</Shooting>
         </requiredSkills>
 
+        <statOffsets>
+            <RangedCooldownFactor>-0.01</RangedCooldownFactor>
+        </statOffsets>
+
+        <statFactors>
+            <ShootingAccuracyPawn>1.02</ShootingAccuracyPawn>
+        </statFactors>
+
         <rankTier>2</rankTier>
 
     </Core40k.RankDef>
@@ -578,6 +732,14 @@
         <requiredSkills>
             <Shooting>12</Shooting>
         </requiredSkills>
+
+        <statOffsets>
+            <RangedCooldownFactor>-0.02</RangedCooldownFactor>
+        </statOffsets>
+
+        <statFactors>
+            <ShootingAccuracyPawn>1.03</ShootingAccuracyPawn>
+        </statFactors>
 
         <rankTier>3</rankTier>
 
@@ -600,6 +762,14 @@
             <Melee>9</Melee>
         </requiredSkills>
 
+        <statOffsets>
+            <MeleeCooldownFactor>-0.01</MeleeCooldownFactor>
+        </statOffsets>
+
+        <statFactors>
+            <MeleeHitChance>1.02</MeleeHitChance>
+        </statFactors>
+
         <rankTier>2</rankTier>
 
     </Core40k.RankDef>
@@ -619,6 +789,14 @@
         <requiredSkills>
             <Melee>12</Melee>
         </requiredSkills>
+
+        <statOffsets>
+            <MeleeCooldownFactor>-0.02</MeleeCooldownFactor>
+        </statOffsets>
+
+        <statFactors>
+            <MeleeHitChance>1.03</MeleeHitChance>
+        </statFactors>
 
         <rankTier>3</rankTier>
 

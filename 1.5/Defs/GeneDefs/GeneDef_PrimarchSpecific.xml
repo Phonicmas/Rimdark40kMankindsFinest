@@ -42,6 +42,9 @@
         <description>The genetic material of Fulgrim.</description>
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>403</displayOrderInCategory>
+        <statOffsets>
+            <PawnBeauty>2</PawnBeauty>
+        </statOffsets>
         <statFactors>
             <SocialImpact>2.5</SocialImpact>
             <ConversionPower MayRequire="Ludeon.RimWorld.Ideology">2</ConversionPower>

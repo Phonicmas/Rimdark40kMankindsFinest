@@ -20,14 +20,8 @@ use stuff like {PAWN_nameDef} and {PAWN_pronoun} in description texts instead of
 ## Art
 
 Primarch Specific Icons (Not sure what excatly to do here) (Maybe flip the helix of the Chapter ones and add some bedazzle? Or just make something that would remind you of them, like red skin and psyker thing i made for Magnus, and the wings for Sanguinius) (The helix should stay i feel) (I think i learn towards just flipping the helix and adding some bedazzle)
-    
-Insert and Eject primarch Embryo icon
 
-And icon for starting for primarch vat
-
-Perpetual gene icon
-
-Icons for new abilities (Roboute, Horus, Angron, Lorgar, Perturabo)
+Icons for new abilities (Roboute, Horus, Lorgar (recruit one), Perturabo)
 
 
 
@@ -36,8 +30,6 @@ Maybe some different backgrounds (the blue hexagon for xenotype or white circle 
 ## Code and XML
 
 add stat offsets and factor and abilities to ranks. possibly add more?
-
-Rank removal ability, call it “Strip rank” or similar and maybe use the tier to deduct what can be demoted
 
 
 
