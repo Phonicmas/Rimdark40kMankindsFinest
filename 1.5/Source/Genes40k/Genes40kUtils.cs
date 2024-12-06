@@ -299,25 +299,27 @@ namespace Genes40k
             {
                 return string.Empty;
             }
+            
             var text = "BEWH.ImplantGeneseedDesc".Translate(pawn, geneseedVial.xenotypeName);
             var defMod = geneseedVial.def.GetModExtension<DefModExtension_GeneseedVial>();
             var failChanceCausedBy = new List<string>();
-            var failChance = defMod.baseFailureChance;
+            
             failChanceCausedBy.Add("\t- " + "BEWH.FailureChanceCause".Translate(defMod.baseFailureChance, "BEWH.BaseFailureChance".Translate()));
-            if (!(defMod.minAgeImplant <= pawn.ageTracker.AgeBiologicalYears && defMod.maxAgeImplant >= pawn.ageTracker.AgeBiologicalYears))
+            
+            var failChanceAgeOffset = 0;
+            if (pawn.ageTracker.AgeBiologicalYears < defMod.minAgeImplant)
             {
-                var minAgeCheck = pawn.ageTracker.AgeBiologicalYears - defMod.minAgeImplant;
-                var maxAgeCheck = pawn.ageTracker.AgeBiologicalYears - defMod.maxAgeImplant;
-                if (minAgeCheck < maxAgeCheck)
-                {
-                    minAgeCheck = maxAgeCheck;
-                }
-                var failChanceAgeOffset = minAgeCheck * defMod.failureChancePerAgePast;
-                failChance += failChanceAgeOffset;
-                
+                failChanceAgeOffset = defMod.minAgeImplant - pawn.ageTracker.AgeBiologicalYears;
                 failChanceCausedBy.Add("\t- " + "BEWH.FailureChanceCause".Translate(failChanceAgeOffset, "BEWH.OutsideOptimalAgeRange".Translate(pawn, defMod.minAgeImplant, defMod.maxAgeImplant)));
             }
+            else if (pawn.ageTracker.AgeBiologicalYears > defMod.maxAgeImplant)
+            {
+                failChanceAgeOffset = pawn.ageTracker.AgeBiologicalYears - defMod.minAgeImplant;
+                failChanceCausedBy.Add("\t- " + "BEWH.FailureChanceCause".Translate(failChanceAgeOffset, "BEWH.OutsideOptimalAgeRange".Translate(pawn, defMod.minAgeImplant, defMod.maxAgeImplant)));
+            }
+            failChanceAgeOffset *= defMod.failureChancePerAgePast;
 
+            var failChance = defMod.baseFailureChance;
             var failChanceGeneOffset = 0;
 
             var failCapChance = defMod.failChanceCap;
@@ -332,7 +334,7 @@ namespace Genes40k
             }
 
             failCapChance += failChanceCapGeneOffset;
-            failChance += failChanceGeneOffset;
+            failChance += failChanceGeneOffset + failChanceAgeOffset;
 
             if (failCapChance > 100)
             {

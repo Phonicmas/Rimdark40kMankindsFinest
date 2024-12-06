@@ -79,11 +79,6 @@ namespace Genes40k
             {
                 ReportViolation(pawn, billDoer, pawn.HomeFaction, -70);
             }
-
-            if (ModsConfig.IdeologyActive)
-            {
-                Find.HistoryEventsManager.RecordEvent(new HistoryEvent(HistoryEventDefOf.InstalledProsthetic, billDoer.Named(HistoryEventArgsNames.Doer)));
-            }
         }
 
         private static void ImplantGeneseed(Pawn pawn, GeneseedVial geneseedVial)
@@ -91,7 +86,7 @@ namespace Genes40k
             var defMod = geneseedVial.def.GetModExtension<DefModExtension_GeneseedVial>();
 
             var failChance = Genes40kUtils.GetGeneseedImplantationSuccessChance(pawn, geneseedVial);
-
+            
             var rand = new Random();
             if (rand.Next(0, 100) < failChance)
             {
