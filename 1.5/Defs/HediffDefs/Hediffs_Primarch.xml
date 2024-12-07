@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-	<!-- Base -->
-	<HediffDef Name="BEWH_StatAlteringHediffDef" Abstract="True">
-		<hediffClass>HediffWithComps</hediffClass>
-		<scenarioCanAdd>false</scenarioCanAdd>
-		<everCurableByItem>false</everCurableByItem>
-		<isBad>false</isBad>
-		<comps>
-			<li Class="HediffCompProperties_DisappearsOnDeath" />
-			<li Class="HediffCompProperties_Disappears">
-				<showRemainingTime>True</showRemainingTime>
-			</li>
-		</comps>
-	</HediffDef>
-
 	<!-- Jaghatai Khan: Alakh Geh -->
 	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
 		<defName>BEWH_AlakhGeh</defName>

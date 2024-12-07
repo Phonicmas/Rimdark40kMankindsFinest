@@ -133,6 +133,8 @@ namespace Genes40k
         public static ThingDef BEWH_RaisedWall;
         public static ThingDef BEWH_RaisedBarricade;
         public static ThingDef BEWH_RaisedTurret;
+        
+        public static ThingDef BEWH_AncientChapterBanner;
 
         //JobDefs
         public static JobDef BEWH_FillGeneGestator;

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>BEWH_AncientChapterBanner</defName>
+    <label>Chapter Banner</label>
+    <description>...</description>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Building/Misc/SacrificialFlag/SacrificialFlag</texPath>
+      <drawSize>(1,1)</drawSize>
+      <shadowData>
+        <volume>(0.3, 0.3 ,0.3)</volume>
+        <offset>(0, 0, -0.2)</offset>
+      </shadowData>
+    </graphicData>
+    <size>(1,1)</size>
+    <useHitPoints>false</useHitPoints>
+    <drawerType>RealtimeOnly</drawerType>
+    <rotatable>false</rotatable>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <passability>PassThroughOnly</passability>
+    <altitudeLayer>Building</altitudeLayer>
+    <pathCost>42</pathCost>
+    <canOverlapZones>false</canOverlapZones>
+    <fillPercent>0.25</fillPercent>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>6000</WorkToBuild>
+      <Mass>20</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <building>
+      <deconstructible>false</deconstructible>
+    </building>
+    <tickerType>Normal</tickerType>
+
+    <canGenerateDefaultDesignator>false</canGenerateDefaultDesignator>
+    <designationCategory Inherit="False" />
+    <minifiedDef Inherit="False" />
+    <thingCategories Inherit="False" />
+
+    <comps>
+      <li Class="CompProperties_Lifespan">
+        <lifespanTicks>10000</lifespanTicks>
+        <expireEffect>RaisedRock_Collapse</expireEffect>
+      </li>
+      <li Class="Genes40k.CompProperties_Lifespan">
+        <givesHediff>BEWH_ChapterBannerBuff</givesHediff>
+        <durationOutsideRange>750</durationOutsideRange>
+        <range>20</range>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+</Defs>

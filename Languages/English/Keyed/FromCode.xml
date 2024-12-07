@@ -87,7 +87,7 @@
   <!-- Geneseed Vial -->
   <BEWH.ImplantGeneseedDesc>You are about to implant {0}, making them into a {1}</BEWH.ImplantGeneseedDesc>
   <BEWH.OutsideOptimalAgeRange>{0} being outside the optimal age range {1}~{2} for this procedure</BEWH.OutsideOptimalAgeRange>
-  <BEWH.CurrentFailureChance>Current failure chance is {0}%, failure will result in death and loss of geneseed vial</BEWH.CurrentFailureChance>
+  <BEWH.CurrentFailureChance>Current failure chance is {0}%, failure will result in death and loss of geneseed vial. This fail chance is a second check after a succesfull surgery.</BEWH.CurrentFailureChance>
   <BEWH.BaseFailureChance>base failure chance</BEWH.BaseFailureChance>
   <BEWH.FailureChanceCausedBy>Current failure chance is caused by:</BEWH.FailureChanceCausedBy>
   <BEWH.FailureChanceCause>{0}%: caused by {1}</BEWH.FailureChanceCause>

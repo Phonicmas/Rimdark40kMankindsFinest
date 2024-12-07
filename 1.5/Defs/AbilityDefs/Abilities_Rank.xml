@@ -36,7 +36,21 @@
     </AbilityDef>
 
 
-    <!-- Ancient: Place Banner -->
+    <!-- Ancient: Raise Chapter Banner -->
     <!-- Places banner in range of like 2.9. gives aura that buffs mental treshold and painfactor and maybe small increase to shooting and melee hit chance -->
+    <!-- Maybe like a small warcry thingy when banner is placed?-->
+    <VFECore.Abilities.AbilityDef>
+        <defName>BEWH_RaiseChapterBanner</defName>
+        <label>Raise Chapter Banner</label>
+        <description>Raise your chapters banner, showing it proudly, inspiring your chapter.</description>
+        <iconPath>UI/Abilities/BEWH_Ability_RogalDornFortify</iconPath>
+        <abilityClass>Genes40k.Ability_ChapterBanner</abilityClass>
+        <needsTicking>true</needsTicking>
+        <requireLineOfSight>true</requireLineOfSight>
+        <cooldownTime>60000</cooldownTime>
+        <range>2.9</range>
+        <castTime>60</castTime>
+        <targetMode>Location</targetMode>
+    </VFECore.Abilities.AbilityDef>
 
 </Defs>

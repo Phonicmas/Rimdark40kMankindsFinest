@@ -266,6 +266,10 @@
             <Nerves>1</Nerves>
         </requiredTraitsOneAmong>
 
+        <givesVFEAbilities>
+            <li>BEWH_RaiseChapterBanner</li>
+        </givesVFEAbilities>
+
         <statFactors>
             <SocialImpact>1.15</SocialImpact>
             <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0</CertaintyLossFactor>

@@ -167,14 +167,6 @@ namespace Genes40k
                 }
                 return false;
             }
-            /*if (TotalAffectedCells(target, pawn.Map, affectCellsBarricade.Concat(affectCellsWalls).Concat(affectCellsTurrets)).Any(c => !c.Standable(pawn.Map)))
-            {
-                if (showMessages)
-                {
-                    Messages.Message("AbilityUnwalkable".Translate(def.LabelCap), target.ToTargetInfo(pawn.Map), MessageTypeDefOf.RejectInput, historical: false);
-                }
-                return false;
-            }*/
             return true;
         }
     }

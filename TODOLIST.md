@@ -23,7 +23,9 @@ Primarch Specific Icons (Not sure what excatly to do here) (Maybe flip the helix
 
 Icons for new abilities (Roboute, Horus, Lorgar (recruit one), Perturabo)
 
+Icon for ancient place banner ability
 
+Banner drawing, only south dimension
 
 Maybe some different backgrounds (the blue hexagon for xenotype or white circle thingy for endogenes) for the different genes? (Maybe keep the recoloured one psyker and pariah and then make some new type for the different super human, with increasing golden stuff and purity seals n stuff) (im just cooking here, this is not important)
 

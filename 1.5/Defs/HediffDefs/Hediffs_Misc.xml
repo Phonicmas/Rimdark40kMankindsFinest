@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
+	<!-- Wings Hover -->
 	<HediffDef>
 		<defName>BEWH_WingsHover</defName>
 		<label>wings</label>
@@ -14,6 +15,7 @@
 		</comps>
 	</HediffDef>
 
+	<!-- Psychic Crafting -->
 	<HediffDef>
 		<defName>BEWH_PsychicCrafting</defName>
 		<label>psychic exhaustion</label>
@@ -125,6 +127,23 @@
 						<setMax>0.05</setMax>
 					</li>
 				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<!-- Chapter Banner -->
+	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
+		<defName>BEWH_ChapterBannerBuff</defName>
+		<label>Chapter Banner</label>
+		<description>The nearby banner of my chapter inspires me to do better!</description>
+		<stages>
+			<li>
+				<statOffsets>
+					<MeleeHitChance>2</MeleeHitChance>
+					<ShootingAccuracyPawn>2</ShootingAccuracyPawn>
+					<MentalBreakThreshold>-0.1</MentalBreakThreshold>
+				</statOffsets>
+				<painFactor>0.15</painFactor>
 			</li>
 		</stages>
 	</HediffDef>
