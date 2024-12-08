@@ -266,6 +266,10 @@
             <Nerves>1</Nerves>
         </requiredTraitsOneAmong>
 
+        <incompatibleRanks>
+            <li>BEWH_AstartesRankChapterMaster</li>
+        </incompatibleRanks>
+
         <givesVFEAbilities>
             <li>BEWH_RaiseChapterBanner</li>
         </givesVFEAbilities>
@@ -297,7 +301,6 @@
             <li>BEWH_AstartesRankJudiciar</li>
             <li>BEWH_AstartesRankAcolytum</li>
             <li>BEWH_AstartesRankTechmarineNovitiate</li>
-            <li>BEWH_AstartesRankHelixAdept</li>
         </incompatibleRanks>
         <requiredTraitsOneAmong>
             <BEWH_FieldMedic />
@@ -315,6 +318,10 @@
         <givesAbilities>
             <li>BEWH_HarvestGeneseedsFromDead</li>
         </givesAbilities>
+
+        <customEffectDescriptions>
+            <li>25% chance to succesfully harvest geneseed from dead marines.</li>
+        </customEffectDescriptions>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedHarvest">
                 <chanceOffset>25</chanceOffset>
@@ -346,6 +353,9 @@
             <MedicalSurgerySuccessChance>0.2</MedicalSurgerySuccessChance>
         </statOffsets>
 
+        <customEffectDescriptions>
+            <li>50% chance to succesfully harvest geneseed from dead marines.</li>
+        </customEffectDescriptions>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedHarvest">
                 <chanceOffset>50</chanceOffset>
@@ -377,6 +387,9 @@
             <MedicalOperationSpeed>0.3</MedicalOperationSpeed>
         </statOffsets>
 
+        <customEffectDescriptions>
+            <li>80% chance to succesfully harvest geneseed from dead marines.</li>
+        </customEffectDescriptions>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedHarvest">
                 <chanceOffset>80</chanceOffset>
@@ -601,7 +614,7 @@
             <BEWH_AstartesRankVeteran>5</BEWH_AstartesRankVeteran>
         </rankRequirements>
         <incompatibleRanks>
-            <li>BEWH_AstartesRankJudiciar</li>
+            <li>BEWH_AstartesRankTechmarineNovitiate</li>
             <li>BEWH_AstartesRankAcolytum</li>
             <li>BEWH_AstartesRankHelixAdept</li>
         </incompatibleRanks>

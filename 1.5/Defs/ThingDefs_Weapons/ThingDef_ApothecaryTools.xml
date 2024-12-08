@@ -28,7 +28,7 @@
   <ThingDef ParentName="BEWH_ApothecaryToolGeneseed">
     <defName>BEWH_Narthecium</defName>
     <label>narthecium</label>
-    <description>A Narthecium is a special tool used by Adeptus Astartes Apothecaries and Primaris Apothecaries to retrieve the crucial gene-seed of their fallen battle-brothers so that new Astartes might be raised from among their Chapter's aspirants.</description>
+    <description>A Narthecium is a special tool used by Adeptus Astartes Apothecaries and Primaris Apothecaries to retrieve the crucial gene-seed of their fallen battle-brothers so that new Astartes might be raised from among their Chapter's aspirants. Increases the chance of succesfully extracting geneseeds from dead marines by 50%.</description>
     <graphicData>
       <texPath>Things/Weapons/BEWH_Narthecium</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -77,7 +77,7 @@
   <ThingDef ParentName="BEWH_ApothecaryToolGeneseed">
     <defName>BEWH_Reductor</defName>
     <label>reductor</label>
-    <description>A Reductor is a special tool used by Adeptus Astartes Apothecaries and Primaris Apothecaries to retrieve the crucial gene-seed of their fallen battle-brothers so that new Astartes might be raised from among their Chapter's aspirants. This tool also doubles as a close ranged pistol.</description>
+    <description>A Reductor is a special tool used by Adeptus Astartes Apothecaries and Primaris Apothecaries to retrieve the crucial gene-seed of their fallen battle-brothers so that new Astartes might be raised from among their Chapter's aspirants. This tool also doubles as a close ranged pistol. Increases the chance of succesfully extracting geneseeds from dead marines by 50%.</description>
     <graphicData>
       <texPath>Things/Weapons/BEWH_Reductor</texPath>
       <graphicClass>Graphic_Single</graphicClass>
