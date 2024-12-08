@@ -143,7 +143,7 @@
         <iconPath>UI/Genes/LivingSaint/BEWH_LivingSaint_SacredRegeneration</iconPath>
         <geneClass>Gene_Clotting</geneClass>
         <displayOrderInCategory>502</displayOrderInCategory>
-        <painFactor>0.4</painFactor>
+        <painFactor>0.2</painFactor>
         <capMods>
             <li>
                 <capacity>BloodPumping</capacity>

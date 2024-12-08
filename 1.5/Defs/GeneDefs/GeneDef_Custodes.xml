@@ -71,7 +71,7 @@
         <biostatArc>3</biostatArc>
 
         <preventPermanentWounds>true</preventPermanentWounds>
-        <painFactor>0.3</painFactor>
+        <painFactor>0.45</painFactor>
         <immuneToToxGasExposure>true</immuneToToxGasExposure>
 
         <statOffsets>

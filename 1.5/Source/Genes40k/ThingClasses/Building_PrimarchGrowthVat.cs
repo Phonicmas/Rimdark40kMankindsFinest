@@ -332,6 +332,8 @@ namespace Genes40k
 
             var geneDef = selectedEmbryo.primarchGenes.GenesListForReading.FirstOrDefault(g => g.HasModExtension<DefModExtension_PrimarchVatExtras>());
             var childAmount = geneDef == null ? 1 : geneDef.GetModExtension<DefModExtension_PrimarchVatExtras>().childAmount;
+            
+            var children = new List<Pawn>();
 
             var ritual = Faction.OfPlayer.ideos.PrimaryIdeo.GetPrecept(PreceptDefOf.ChildBirth) as Precept_Ritual;
             for (var i = 0; i < childAmount; i++)
@@ -343,6 +345,7 @@ namespace Genes40k
                     pawn2.genes.AddGene(gene, true);
                 }
                 pawn2.genes.SetXenotypeDirect(selectedEmbryo.xenotype);
+                children.Add(pawn2);
                 if (thing == null || !(embryoStarvation > 0f))
                 {
                     continue;
@@ -352,6 +355,26 @@ namespace Genes40k
                 var hediff = HediffMaker.MakeHediff(HediffDefOf.BioStarvation, pawn);
                 hediff.Severity = Mathf.Lerp(0f, HediffDefOf.BioStarvation.maxSeverity, embryoStarvation);
                 pawn.health.AddHediff(hediff);
+            }
+
+            Pawn firstTwin = null;
+            
+            foreach (var pawn3 in children.Where(pawn3 => pawn3.genes.HasActiveGene(Genes40kDefOf.BEWH_PrimarchSpecificGeneXX)))
+            {
+                if (firstTwin == null)
+                {
+                    firstTwin = pawn3;
+                }
+                else
+                {
+                    ((Gene_TwinConnected)firstTwin.genes.GetGene(Genes40kDefOf.BEWH_PrimarchSpecificGeneXX)).SetTwin(pawn3);
+                    ((Gene_TwinConnected)pawn3.genes.GetGene(Genes40kDefOf.BEWH_PrimarchSpecificGeneXX)).SetTwin(firstTwin);
+                    
+                    firstTwin.relations.AddDirectRelation(PawnRelationDefOf.Sibling, pawn3);
+                    pawn3.relations.AddDirectRelation(PawnRelationDefOf.Sibling, firstTwin);
+                    
+                    firstTwin = null;
+                }
             }
         }
 

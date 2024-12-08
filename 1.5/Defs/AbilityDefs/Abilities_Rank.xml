@@ -37,8 +37,7 @@
 
 
     <!-- Ancient: Raise Chapter Banner -->
-    <!-- Places banner in range of like 2.9. gives aura that buffs mental treshold and painfactor and maybe small increase to shooting and melee hit chance -->
-    <!-- Maybe like a small warcry thingy when banner is placed?-->
+    <!-- Maybe like a small warcry/tune thingy when banner is placed? -->
     <VFECore.Abilities.AbilityDef>
         <defName>BEWH_RaiseChapterBanner</defName>
         <label>Raise Chapter Banner</label>
@@ -48,7 +47,7 @@
         <needsTicking>true</needsTicking>
         <requireLineOfSight>true</requireLineOfSight>
         <cooldownTime>60000</cooldownTime>
-        <range>2.9</range>
+        <range>1.9</range>
         <castTime>60</castTime>
         <targetMode>Location</targetMode>
     </VFECore.Abilities.AbilityDef>

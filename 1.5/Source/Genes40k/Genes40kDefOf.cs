@@ -58,6 +58,8 @@ namespace Genes40k
         public static GeneDef BEWH_CelerityNexus;
         public static GeneDef BEWH_HyperionMuscleStrands;
 
+        public static GeneDef BEWH_PrimarchSpecificGeneXX;
+
         //Psyker genes
         public static GeneDef BEWH_IotaPsyker;
         public static GeneDef BEWH_Psyker;

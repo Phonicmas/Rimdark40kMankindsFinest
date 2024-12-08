@@ -99,6 +99,7 @@
     <Compile Include="GeneClasses\Gene_InduceFear.cs" />
     <Compile Include="GeneClasses\Gene_Perpetual.cs" />
     <Compile Include="GeneClasses\Gene_ProgenoidGlands.cs" />
+    <Compile Include="GeneClasses\Gene_TwinConnected.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_BlockedPsycasting.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_DomitarMechExclusive.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_FuryboundPawnText.cs" />

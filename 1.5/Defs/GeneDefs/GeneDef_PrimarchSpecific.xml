@@ -9,6 +9,9 @@
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>401</displayOrderInCategory>
         <geneClass>Core40k.Gene_GiveVFECoreAbility</geneClass>
+        <statOffsets>
+            <MeleeDodgeChance>6</MeleeDodgeChance>
+        </statOffsets>
         <customEffectDescriptions>
             <li>Enables Forestwalking.</li>
         </customEffectDescriptions>
@@ -47,7 +50,7 @@
         </statOffsets>
         <statFactors>
             <SocialImpact>2.5</SocialImpact>
-            <ConversionPower MayRequire="Ludeon.RimWorld.Ideology">2</ConversionPower>
+            <ConversionPower MayRequire="Ludeon.RimWorld.Ideology">1.5</ConversionPower>
         </statFactors>
         <forcedTraits>
             <li>
@@ -121,6 +124,7 @@
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>405</displayOrderInCategory>
         <statFactors>
+            <MoveSpeed>1.2</MoveSpeed>
             <CaravanRidingSpeedFactor>2</CaravanRidingSpeedFactor>
         </statFactors>
         <abilities>
@@ -177,8 +181,8 @@
         <displayOrderInCategory>407</displayOrderInCategory>
         <hairColorOverride>(0.65, 0.65, 0.65)</hairColorOverride>
         <statOffsets>
-            <ConstructionSpeed>0.35</ConstructionSpeed>
-            <ConstructSuccessChance>0.35</ConstructSuccessChance>
+            <ConstructionSpeed>0.45</ConstructionSpeed>
+            <ConstructSuccessChance>0.45</ConstructSuccessChance>
         </statOffsets>
         <geneClass>Core40k.Gene_GiveVFECoreAbility</geneClass>
         <customEffectDescriptions>
@@ -205,7 +209,7 @@
         <hairColorOverride>(1, 1, 1)</hairColorOverride>
         <ignoreDarkness>true</ignoreDarkness>
         <statOffsets>
-            <MeleeDodgeChance>10</MeleeDodgeChance>
+            <MeleeDodgeChance>2</MeleeDodgeChance>
         </statOffsets>
         <customEffectDescriptions>
             <li>Able to let out a psychic scream, destroying lighting sources and stunning enemies.</li>
@@ -216,6 +220,9 @@
                     <MoveSpeed>1.25</MoveSpeed>
                     <MeleeHitChance>1.5</MeleeHitChance>
                 </statFactors>
+                <statOffsets>
+                    <MeleeDodgeChance>3</MeleeDodgeChance>
+                </statOffsets>
             </li>
         </conditionalStatAffecters>
         <modExtensions>
@@ -238,11 +245,8 @@
         <customEffectDescriptions>
             <li>Ignores speed penalty from obstacles.</li>
         </customEffectDescriptions>
-        <statFactors>
-            <MoveSpeed>1.2</MoveSpeed>
-        </statFactors>
         <statOffsets>
-            <MeleeDodgeChance>15</MeleeDodgeChance>
+            <MeleeDodgeChance>10</MeleeDodgeChance>
         </statOffsets>
         <capMods>
             <li>
@@ -369,7 +373,7 @@
         <statOffsets>
             <MentalBreakThreshold>-0.1</MentalBreakThreshold>
         </statOffsets>
-        <painFactor>0</painFactor>
+        <painFactor>0.1</painFactor>
         <abilities>
             <li>BEWH_ChillgronEmpathy</li>
         </abilities>
@@ -406,7 +410,7 @@
             <WorkSpeedGlobal>1.35</WorkSpeedGlobal>
         </statFactors>
         <aptitudes>
-            <Social>5</Social>
+            <Social>4</Social>
         </aptitudes>
         <passionMod>
             <skill>Social</skill>
@@ -539,12 +543,12 @@
         <statFactors>
             <ArrestSuccessChance>2</ArrestSuccessChance>
             <SocialImpact>1.5</SocialImpact>
-            <PsychicSensitivity>3</PsychicSensitivity>
-            <MeditationFocusGain>1.5</MeditationFocusGain>
-            <PsychicEntropyRecoveryRate>1.5</PsychicEntropyRecoveryRate>
+            <ConversionPower MayRequire="Ludeon.RimWorld.Ideology">2</ConversionPower>
         </statFactors>
         <statOffsets>
-            <ConversionPower MayRequire="Ludeon.RimWorld.Ideology">1.5</ConversionPower>
+            <PsychicSensitivity>2</PsychicSensitivity>
+            <MeditationFocusGain>0.75</MeditationFocusGain>
+            <PsychicEntropyRecoveryRate>0.75</PsychicEntropyRecoveryRate>
         </statOffsets>
         <aptitudes>
             <Social>3</Social>
@@ -602,10 +606,10 @@
         <conditionalStatAffecters>
             <li Class="VanillaGenesExpanded.ConditionalStatAffecter_Darkness">
                 <statFactors>
-                    <MoveSpeed>1.35</MoveSpeed>
-                    <ShootingAccuracyPawn>1.5</ShootingAccuracyPawn>
-                    <MeleeHitChance>1.5</MeleeHitChance>
-                    <HuntingStealth>3</HuntingStealth>
+                    <MoveSpeed>1.5</MoveSpeed>
+                    <ShootingAccuracyPawn>1.75</ShootingAccuracyPawn>
+                    <MeleeHitChance>1.75</MeleeHitChance>
+                    <HuntingStealth>4</HuntingStealth>
                 </statFactors>
             </li>
         </conditionalStatAffecters>
@@ -627,10 +631,11 @@
         <description>The genetic material of Alpharius/Omegon.</description>
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
         <displayOrderInCategory>420</displayOrderInCategory>
+        <geneClass>Genes40k.Gene_TwinConnected</geneClass>
         <customEffectDescriptions>
             <li>You have a twin!</li>
         </customEffectDescriptions>
-        <!-- Ability to buff firstborn or primaris with the alpha legion gene? -->
+        <!-- Ability to switch position with twin, given that they're on a map and maybe also one to teleport on to another -->
         <modExtensions>
             <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
             <li Class="Genes40k.DefModExtension_PrimarchVatExtras">

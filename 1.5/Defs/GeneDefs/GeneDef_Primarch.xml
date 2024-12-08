@@ -331,7 +331,7 @@
         <biostatCpx>9</biostatCpx>
         <biostatArc>3</biostatArc>
 
-        <painFactor>0.15</painFactor>
+        <painFactor>0.2</painFactor>
         <statOffsets>
             <ArmorRating_Blunt>0.75</ArmorRating_Blunt>
             <ArmorRating_Sharp>0.75</ArmorRating_Sharp>
