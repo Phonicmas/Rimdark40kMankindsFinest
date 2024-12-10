@@ -301,4 +301,19 @@
     </modExtensions>
   </VFECore.Abilities.AbilityDef>
 
+
+  <!-- Alpharius/Omegon: Teleport to Twin -->  <!-- abilityClass to disable if twin is dead.-->
+  <AbilityDef ParentName="BEWH_SelfTargetAbilities">
+    <defName>BEWH_TwinTeleportation</defName>
+    <label>Teleport to Twin</label>
+    <description>You're able to teleport to your twin. This works while the twin is on a map or in a caravan.</description>
+    <iconPath>UI/Abilities/BEWH_Ability_JaghataiKhanAlakhGeh</iconPath>
+    <cooldownTicksRange>60000</cooldownTicksRange>
+    <category>BEWH_Primarch</category>
+    <comps>
+      <li Class="Genes40k.CompProperties_AbilityTwinDisable" />
+      <li Class="Genes40k.CompProperties_AbilityTwinTeleport" />
+    </comps>
+  </AbilityDef>
+
 </Defs>

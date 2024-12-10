@@ -4,22 +4,22 @@ namespace Genes40k
 {
     public class Gene_TwinConnected : Gene
     {
-        private Pawn pawn = null;
-        public Pawn Pawn => pawn;
+        private Pawn twin = null;
+        public Pawn Twin => twin;
         private bool twinSet = false;
         
-        public void SetTwin(Pawn twin)
+        public void SetTwin(Pawn pawn)
         {
             if (!twinSet)
             {
-                pawn = twin;
+                twin = pawn;
             }
         }
 
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_References.Look(ref pawn, "pawn");
+            Scribe_References.Look(ref twin, "twin");
             Scribe_Values.Look(ref twinSet, "twinSet");
         }
     }

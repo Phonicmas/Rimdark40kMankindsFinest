@@ -329,7 +329,7 @@ namespace Genes40k
                         foreach (var gestatables in gestatablesAvailable)
                         {
                             var text = gestatables.label;
-                            list.Add(new FloatMenuOption(text, delegate
+                            var floatMenu = new FloatMenuOption(text, delegate
                             {
                                 selectedMatrix = gestatables;
                                 haulJobStarted = true;
@@ -340,7 +340,16 @@ namespace Genes40k
                                 
                                 GenPlace.TryPlaceThing(containedMatrix, InteractionCell, Map, ThingPlaceMode.Direct);
                                 containedMatrix = null;
-                            }));
+                            });
+
+                            var doesNotHaveMatrix = Map.listerThings.ThingsOfDef(gestatables).NullOrEmpty();
+                            
+                            if (doesNotHaveMatrix)
+                            {
+                                floatMenu.Disabled = true;
+                            }
+
+                            list.Add(floatMenu);
                         }
                         if (!list.Any())
                         {

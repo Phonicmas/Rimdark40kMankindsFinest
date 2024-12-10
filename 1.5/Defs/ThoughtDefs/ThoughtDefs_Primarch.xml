@@ -35,4 +35,19 @@
     </stages>
   </ThoughtDef>
 
+  <!-- Alpharius/Omegon -->
+  <ThoughtDef>
+    <defName>BEWH_PrimarchSpecificXXMood</defName>
+    <workerClass>Genes40k.ThoughtWorker_XXTwinDead</workerClass>
+    <stackLimit>1</stackLimit>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>Lost my other half</label>
+        <description>It feels so empty with my other half dead...</description>
+        <baseMoodEffect>-15</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
 </Defs>

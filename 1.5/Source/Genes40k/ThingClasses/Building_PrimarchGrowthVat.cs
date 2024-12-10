@@ -344,7 +344,7 @@ namespace Genes40k
                 {
                     pawn2.genes.AddGene(gene, true);
                 }
-                pawn2.genes.SetXenotypeDirect(selectedEmbryo.xenotype);
+                pawn2.genes.SetXenotypeDirect(Genes40kDefOf.BEWH_Primarch);
                 children.Add(pawn2);
                 if (thing == null || !(embryoStarvation > 0f))
                 {

@@ -80,12 +80,16 @@
     <Compile Include="Comps\CompAbilityEffect_WordOfAuthority.cs" />
     <Compile Include="Comps\CompAbilityEffect_WordOfDivination.cs" />
     <Compile Include="Comps\CompProperties_AbilitySharedBurden.cs" />
+    <Compile Include="Comps\CompProperties_AbilityTwinDisable.cs" />
+    <Compile Include="Comps\CompProperties_AbilityTwinTeleport.cs" />
     <Compile Include="Comps\CompProperties_AbilityWordOfAuthority.cs" />
     <Compile Include="Comps\CompProperties_AbilityWordOfDivination.cs" />
     <Compile Include="Comps\CompProperties_Aura.cs" />
     <Compile Include="Comps\CompProperties_DenyTheWitch.cs" />
     <Compile Include="Comps\CompProperties_SummonMechsForCaster.cs" />
     <Compile Include="Comps\Comp_Aura.cs" />
+    <Compile Include="Comps\Comp_TwinDisable.cs" />
+    <Compile Include="Comps\Comp_TwinTeleport.cs" />
     <Compile Include="Comps\GameComponent_Perpetual.cs" />
     <Compile Include="DefModExtensions\DefModExtension_ExclusiveMech.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneInducedFear.cs" />
@@ -115,6 +119,7 @@
     <Compile Include="Misc\ITab_ContentsGeneticStorage.cs" />
     <Compile Include="Misc\ITab_SangprimusPortum.cs" />
     <Compile Include="Misc\StockGenerator_TagSangprimusMaterialNoDupe.cs" />
+    <Compile Include="ThingClasses\Building_ChapterBanner.cs" />
     <Compile Include="ThingClasses\Building_GeneGestator.cs" />
     <Compile Include="ThingClasses\Building_GeneTable.cs" />
     <Compile Include="ThingClasses\Building_GeneticStorage.cs" />
@@ -151,6 +156,7 @@
     <Compile Include="Workers\JobDriver_FillGeneGestator.cs" />
     <Compile Include="Workers\JobDriver_FleeInducedFear.cs" />
     <Compile Include="Workers\ThoughtWorker_HolyRadiance.cs" />
+    <Compile Include="Workers\ThoughtWorker_XXTwinDead.cs" />
     <Compile Include="Workers\WorkerClass_RubiconPrimaris.cs" />
     <Compile Include="Workers\WorkGiver_FillPrimarchGrowthVat.cs" />
     <Compile Include="Workers\WorkGiver_HaulToPrimarchVat.cs" />

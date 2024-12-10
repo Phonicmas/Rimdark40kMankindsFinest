@@ -11,6 +11,9 @@
   <BEWH.PerpetualBirth>Enabling this will allow children to be rarely and randomly born as perpetuals.</BEWH.PerpetualBirth>
   <BEWH.PerpetualBirthChance>Chance that newly born children will be a perpetual: {0}%</BEWH.PerpetualBirthChance>
 
+  <BEWH.ColorForBannerOne>First colour of chapter banner</BEWH.ColorForBannerOne>
+  <BEWH.ColorForBannerTwo>Second colour of chapter banner</BEWH.ColorForBannerTwo>
+  <BEWH.UseChaosVersionForBanner>Use chaos version of the banner for the chapter ancient ability.</BEWH.UseChaosVersionForBanner>
 
   <!-- Code Event related -->
   <BEWH.PsychicPhenomenaLetter>Psychic Phenomena</BEWH.PsychicPhenomenaLetter>
@@ -30,6 +33,9 @@
   <BEWH.Psyker>psyker</BEWH.Psyker>
   <BEWH.Pariah>pariah</BEWH.Pariah>
   <BEWH.Perpetual>perpetual</BEWH.Perpetual>
+
+  <BEWH.TwinConnectedDead>Twin is dead</BEWH.TwinConnectedDead>
+  <BEWH.TwinConnectedDifferentMap>Twin is on a different map</BEWH.TwinConnectedDifferentMap>
 
   <!-- Building -->
   <!-- Gestator -->
@@ -104,6 +110,10 @@
   <BEWH.GeneseedOrderedImplantedMedicineNeeded>\n\nYou do not have enough medicine to implant the geneseed. Implanting cannot begin until you get {MEDICINENEEDED} medicine.</BEWH.GeneseedOrderedImplantedMedicineNeeded>
 
   <BEWH.NamedGeneseedVial>{0} geneseed vial</BEWH.NamedGeneseedVial>
+
+  <BEWH.CraftPrimarchEmbryo>Craft primarch embryo using an embryo from {0}</BEWH.CraftPrimarchEmbryo>
+  <BEWH.NotSkilledEnoughPrimarchEmbryo>{0} is not skilled enough to craft a primarch embryo, needs {1}</BEWH.NotSkilledEnoughPrimarchEmbryo>
+  <BEWH.NoGeneManipulationTable>No gene manipulation table available to craft a priamrch embryo</BEWH.NoGeneManipulationTable>
 
   <!-- Living Saint -->
   <BEWH.LivingSaint>Living Saint</BEWH.LivingSaint>

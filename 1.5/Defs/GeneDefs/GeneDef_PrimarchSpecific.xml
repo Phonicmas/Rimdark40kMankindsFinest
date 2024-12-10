@@ -635,7 +635,12 @@
         <customEffectDescriptions>
             <li>You have a twin!</li>
         </customEffectDescriptions>
-        <!-- Ability to switch position with twin, given that they're on a map and maybe also one to teleport on to another -->
+        <abilities>
+            <li>BEWH_TwinTeleportation</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>BEWH_TwinTeleportation</AbilityDef>
+        </descriptionHyperlinks>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
             <li Class="Genes40k.DefModExtension_PrimarchVatExtras">

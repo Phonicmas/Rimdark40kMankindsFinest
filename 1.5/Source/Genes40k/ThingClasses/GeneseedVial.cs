@@ -3,6 +3,7 @@ using System.Linq;
 using RimWorld;
 using UnityEngine;
 using Verse;
+using Verse.AI;
 
 
 namespace Genes40k
@@ -146,6 +147,73 @@ namespace Genes40k
             }
         }
 
+        public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Pawn selPawn)
+        {
+            foreach (FloatMenuOption floatMenuOption in base.GetFloatMenuOptions(selPawn))
+            {
+                yield return floatMenuOption;
+            }
+
+            if (def != Genes40kDefOf.BEWH_GeneseedVialPrimarch)
+            {
+                yield break;
+            }
+            
+            var humanEmbryos = Map.listerThings.ThingsOfDef(ThingDefOf.HumanEmbryo);
+
+            if (humanEmbryos.NullOrEmpty())
+            {
+                yield break;
+            }
+            
+            var pawn = Find.Selector.SelectedPawns.FirstOrDefault();
+            var geneTable = Map.listerThings.ThingsOfDef(Genes40kDefOf.BEWH_GeneManipulationTable);
+            
+            if (pawn == null || geneTable.NullOrEmpty())
+            {
+                yield return new FloatMenuOption("BEWH.NoGeneManipulationTable".Translate(), null);
+                yield break;
+            }
+
+            var recipe = Genes40kDefOf.BEWH_MakePrimarchEmbryo;
+
+            if (!recipe.PawnSatisfiesSkillRequirements(pawn))
+            {
+                var text = recipe.skillRequirements.Aggregate("", (current, skillRequirement) => current + (skillRequirement.skill.label + ": " + skillRequirement.minLevel + " "));
+
+                text = text.Trim();
+                yield return new FloatMenuOption("BEWH.NotSkilledEnoughPrimarchEmbryo".Translate(pawn, text), null);
+                yield break;
+            }
+            
+            foreach (var humanEmbryo in humanEmbryos)
+            {
+                if (!(humanEmbryo is HumanEmbryo embryo))
+                {
+                    continue;
+                }
+                
+                var text = "BEWH.CraftPrimarchEmbryo".Translate(embryo.Mother.NameShortColored);
+                        
+                yield return new FloatMenuOption(text, delegate
+                {
+                    var chosenGeneTable = (Building_GeneTable)geneTable.MinBy(table => table.Position.DistanceTo(Position));
+                    var thingCount = new List<ThingCount>
+                    {
+                        new ThingCount(this, 1),
+                        new ThingCount(humanEmbryo, 1)
+                    };
+                    
+                    var bill = recipe.MakeNewBill();
+                    bill.billStack = new BillStack(chosenGeneTable);
+                    
+                    var job = WorkGiver_DoBill.TryStartNewDoBillJob(pawn, bill, chosenGeneTable, thingCount, out _);
+                    pawn.jobs.TryTakeOrderedJob(job);
+                    chosenGeneTable.billStack.AddBill(bill);
+                });
+            }
+        }
+        
         public override string GetInspectString()
         {
             var text = base.GetInspectString();

@@ -21,10 +21,7 @@ use stuff like {PAWN_nameDef} and {PAWN_pronoun} in description texts instead of
 
 Primarch Specific Icons (Not sure what excatly to do here) (Maybe flip the helix of the Chapter ones and add some bedazzle? Or just make something that would remind you of them, like red skin and psyker thing i made for Magnus, and the wings for Sanguinius) (The helix should stay i feel) (I think i learn towards just flipping the helix and adding some bedazzle)
 
-Icons for new abilities (Roboute, Horus, Lorgar (recruit one), Perturabo, Alpharius/Omegon (Teleport to other)/(Swap places))
-
-Icon for ancient place banner ability
-Banner drawing, only south dimension
+Icons for new abilities (Roboute, Horus, Perturabo, Alpharius/Omegon (Teleport to other)/(Swap places))
 
 Maybe some different backgrounds (the blue hexagon for xenotype or white circle thingy for endogenes) for the different genes? (Maybe keep the recoloured one psyker and pariah and then make some new type for the different super human, with increasing golden stuff and purity seals n stuff) (im just cooking here, this is not important)
 
@@ -32,16 +29,19 @@ Maybe some different backgrounds (the blue hexagon for xenotype or white circle 
 
 add stat offsets and factor and abilities to ranks. possibly add more?
 
-Make ability for Alpharius/Omegon gene, one to teleport and one to swap places between the born twins.
-Also maybe a permanent mood debuff for one twin if the other dies like "Lost my other half" 
+Redo primarch geneseed vial human embryo crafting to be a gizmo on gene table (will make window where you can choose among available.) (remove floatmenu from geneseed class)
 
 
+
+Move primarch vat from misc to production tab? (Or make own RimDark tab for all RimDark mods????)
 
 And when a rank is given if it is higher or equal to current ones importance then change the pawns rank in their info (the place where you can insert a custome one) (Maybe)
 
 In spect window code, call discard on pawn???
 
 ## Bugs
+
+For some reason the gestational flurry crates 10x twice???
 
 ## Other
 

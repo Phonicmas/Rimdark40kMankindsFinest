@@ -15,6 +15,11 @@ namespace Genes40k
             var hEmbryo = (HumanEmbryo)ingredients.First(x => x is HumanEmbryo);
             var geneseedVial = (GeneseedVial)ingredients.First(x => x is GeneseedVial);
 
+            if (geneseedVial.extraGeneFromMaterial != null)
+            {
+                geneseedVial.GeneSet.AddGene(geneseedVial.extraGeneFromMaterial);
+            }
+            
             embryo.Initialize(hEmbryo.Mother, hEmbryo.Father, geneseedVial.GeneSet, hEmbryo.GeneSet, geneseedVial.iconDef, geneseedVial.xenotype);
 
             GenPlace.TryPlaceThing(embryo, billDoer.Position, billDoer.Map, ThingPlaceMode.Direct);

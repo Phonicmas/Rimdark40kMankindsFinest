@@ -1,6 +1,7 @@
 ﻿using System;
 using RimWorld;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using UnityEngine;
 using Verse;
@@ -369,6 +370,30 @@ namespace Genes40k
             text += "\n\n" + "WouldYouLikeToContinue".Translate();
 
             return text;
+        }
+        
+        
+        public static bool FromHexErrorLess(string hex, out Color color)
+        {
+            if (hex.StartsWith("#"))
+            {
+                hex = hex.Substring(1);
+            }
+            if (hex.Length != 6 && hex.Length != 8)
+            {
+                color = Color.white;
+                return false;
+            }
+            var r = int.Parse(hex.Substring(0, 2), NumberStyles.HexNumber);
+            var g = int.Parse(hex.Substring(2, 2), NumberStyles.HexNumber);
+            var b = int.Parse(hex.Substring(4, 2), NumberStyles.HexNumber);
+            var a = 255;
+            if (hex.Length == 8)
+            {
+                a = int.Parse(hex.Substring(6, 2), NumberStyles.HexNumber);
+            }
+            color = GenColor.FromBytes(r, g, b, a);
+            return true;
         }
         
     }

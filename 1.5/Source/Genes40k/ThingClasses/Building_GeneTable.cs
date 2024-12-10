@@ -1,5 +1,6 @@
 ﻿using RimWorld;
 using System;
+using System.Collections.Generic;
 using Verse;
 using Verse.AI;
 
@@ -80,6 +81,12 @@ namespace Genes40k
                 }
                 hediff.Severity += severityAdd;
             }
+        }
+
+        public override IEnumerable<Gizmo> GetGizmos()
+        {
+            return base.GetGizmos();
+            
         }
 
         public override void ExposeData()

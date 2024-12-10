@@ -5,6 +5,7 @@
     <defName>BEWH_AncientChapterBanner</defName>
     <label>Chapter Banner</label>
     <description>...</description>
+    <thingClass>Genes40k.Building_ChapterBanner</thingClass>
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
       <texPath>Things/Building/Misc/SacrificialFlag/SacrificialFlag</texPath>
@@ -46,12 +47,13 @@
         <lifespanTicks>10000</lifespanTicks>
         <expireEffect>RaisedRock_Collapse</expireEffect>
       </li>
-      <li Class="Genes40k.CompProperties_Lifespan">
+      <li Class="Genes40k.CompProperties_Aura">
         <givesHediff>BEWH_ChapterBannerBuff</givesHediff>
         <durationOutsideRange>750</durationOutsideRange>
         <range>20</range>
       </li>
     </comps>
+
   </ThingDef>
 
 

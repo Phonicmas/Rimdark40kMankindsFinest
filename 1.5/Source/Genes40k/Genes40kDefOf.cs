@@ -121,14 +121,14 @@ namespace Genes40k
 
         //ThingDefs
         public static ThingDef BEWH_GeneseedGestator;
-        public static ThingDef BEWH_GeneticCryostaticStorage;
-        public static ThingDef BEWH_GeneseedVialStorage;
         public static ThingDef BEWH_PrimarchEmbryoContainer;
         public static ThingDef BEWH_SangprimusPortum;
         public static ThingDef BEWH_PrimarchGrowthVat;
+        public static ThingDef BEWH_GeneManipulationTable;
 
         public static ThingDef BEWH_GeneseedVialFirstborn;
         public static ThingDef BEWH_GeneseedVialPrimaris;
+        public static ThingDef BEWH_GeneseedVialPrimarch;
 
         public static ThingDef BEWH_PrimarchEmbryo;
 
@@ -149,6 +149,7 @@ namespace Genes40k
 
         //RecipeDefs
         public static RecipeDef BEWH_RubiconSurgery;
+        public static RecipeDef BEWH_MakePrimarchEmbryo;
         
         //MentalStateDefs
         public static MentalStateDef BEWH_InducedFear;
