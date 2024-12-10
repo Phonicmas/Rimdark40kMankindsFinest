@@ -9,30 +9,37 @@ namespace Genes40k
     [StaticConstructorOnStartup]
     public class Building_ChapterBanner : Building
     {
-        public Genes40kModSettings modSettings = null;
-        
-        public override Graphic Graphic
-        {
-            get
-            {
-                if (modSettings == null)
-                {
-                    modSettings = LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>();
-                }
+        private Genes40kModSettings modSettings = null;
 
-                return modSettings.useChaosVersion ? GetChaosBannerGraphic() : GetImperialBannerGraphic();
-            }
-        }
+        public Genes40kModSettings ModSettings => modSettings ?? (modSettings = LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>());
+
+        public override Color DrawColorTwo => ModSettings?.bannerColorTwo ?? base.DrawColorTwo;
+
+        public override Color DrawColor => ModSettings?.bannerColorOne ?? base.DrawColor;
+            
+        public override Graphic Graphic => ModSettings.useChaosVersion ? GetChaosBannerGraphic() : GetImperialBannerGraphic();
 
         private Graphic GetImperialBannerGraphic()
-        {
-           return GraphicDatabase.Get<Graphic_Multi>(def.graphicData.texPath, def.graphicData.shaderType.Shader, def.graphicData.drawSize, modSettings.bannerColorOne, modSettings.bannerColorTwo);
+        { 
+            const string imperialBannerPathMask = "Things/Building/ChapterBanner/BEWH_ThingChapterBannerm";
+            var shader = ShaderDatabase.CutoutComplex;
+            if (def.graphicData.shaderType != null)
+            {
+                shader = def.graphicData.shaderType.Shader;
+            }
+            return GraphicDatabase.Get<Graphic_Single>(def.graphicData.texPath, shader, def.graphicData.drawSize, modSettings.bannerColorOne, modSettings.bannerColorTwo, def.graphicData, imperialBannerPathMask);
         }
 
         private Graphic GetChaosBannerGraphic()
         {
-            const string chaosBannerPath = "Things/Buildings/ChapterBanner/BEWH_ThingChapterBanner_Chaos";
-            return GraphicDatabase.Get<Graphic_Multi>(chaosBannerPath, def.graphicData.shaderType.Shader, def.graphicData.drawSize, modSettings.bannerColorOne, modSettings.bannerColorTwo);
+            const string chaosBannerPath = "Things/Building/ChapterBanner/BEWH_ThingChapterBanner_Chaos";
+            const string chaosBannerPathMask = "Things/Building/ChapterBanner/BEWH_ThingChapterBanner_Chaosm";
+            var shader = ShaderDatabase.CutoutComplex;
+            if (def.graphicData.shaderType != null)
+            {
+                shader = def.graphicData.shaderType.Shader;
+            }
+            return GraphicDatabase.Get<Graphic_Single>(chaosBannerPath, shader, def.graphicData.drawSize, modSettings.bannerColorOne, modSettings.bannerColorTwo, def.graphicData, chaosBannerPathMask);
         }
         
     }

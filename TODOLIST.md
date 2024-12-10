@@ -17,6 +17,8 @@ Compile list of features
 
 use stuff like {PAWN_nameDef} and {PAWN_pronoun} in description texts instead of "Your" "Pawn" or other ways pawns are reffered too. (Where applicable)
 
+In the FromCode.xml where all text are, sort them properly cause oh boy its not sorted anymore
+
 ## Art
 
 Primarch Specific Icons (Not sure what excatly to do here) (Maybe flip the helix of the Chapter ones and add some bedazzle? Or just make something that would remind you of them, like red skin and psyker thing i made for Magnus, and the wings for Sanguinius) (The helix should stay i feel) (I think i learn towards just flipping the helix and adding some bedazzle)
@@ -30,6 +32,10 @@ Maybe some different backgrounds (the blue hexagon for xenotype or white circle 
 add stat offsets and factor and abilities to ranks. possibly add more?
 
 Redo primarch geneseed vial human embryo crafting to be a gizmo on gene table (will make window where you can choose among available.) (remove floatmenu from geneseed class)
+
+Make class for power armor, for choosing colour. Should have set of 18 predefined colours (all chapters) (put in genesUtils) when spawning take one randomly from the list and set colour of armor to that.
+
+For choosing colour for ancient chapter banner, make a new? window that has a colour wheel thingy where players can choose the two colours (maybe also add a gizmo to chapter banner for quick access to this window so they dont have to navigate to settings each time)
 
 
 

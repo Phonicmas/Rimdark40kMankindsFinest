@@ -7,10 +7,11 @@
     <description>...</description>
     <thingClass>Genes40k.Building_ChapterBanner</thingClass>
     <graphicData>
-      <graphicClass>Graphic_Single</graphicClass>
       <texPath>Things/Building/ChapterBanner/BEWH_ThingChapterBanner</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
       <drawSize>(2.5,2.75)</drawSize>
-	  <drawOffset>(0, 0, 0.75)</drawOffset>
+      <drawOffset>(0, 0, 0.75)</drawOffset>
       <shadowData>
         <volume>(0.3, 0.3 ,0.3)</volume>
         <offset>(0, 0, -0.2)</offset>
@@ -56,6 +57,5 @@
     </comps>
 
   </ThingDef>
-
 
 </Defs>
