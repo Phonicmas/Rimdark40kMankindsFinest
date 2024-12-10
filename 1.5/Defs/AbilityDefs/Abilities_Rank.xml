@@ -41,8 +41,8 @@
     <VFECore.Abilities.AbilityDef>
         <defName>BEWH_RaiseChapterBanner</defName>
         <label>Raise Chapter Banner</label>
-        <description>Raise your chapters banner, showing it proudly, inspiring your chapter.</description>
-        <iconPath>UI/Abilities/BEWH_Ability_RogalDornFortify</iconPath>
+        <description>Raise your chapter's banner, showing it proudly, inspiring your battle brothers.</description>
+        <iconPath>UI/Abilities/BEWH_Ability_RaiseChapterBanner</iconPath>
         <abilityClass>Genes40k.Ability_ChapterBanner</abilityClass>
         <needsTicking>true</needsTicking>
         <requireLineOfSight>true</requireLineOfSight>
