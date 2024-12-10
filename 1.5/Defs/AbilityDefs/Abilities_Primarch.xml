@@ -182,7 +182,7 @@
     <label>Word of Authority</label>
     <description>Your words carry great meaning, able to persuade people to join your cause.</description>
     <cooldownTicksRange>900000</cooldownTicksRange>
-    <iconPath>UI/Abilities/BEWH_ApothecaryGeneseedHarvestIcon</iconPath>
+    <iconPath>UI/Abilities/BEWH_Ability_LorgarWordOfAuthority</iconPath>
     <jobDef>CastAbilityOnThingMelee</jobDef>
     <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>

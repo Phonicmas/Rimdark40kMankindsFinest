@@ -8,8 +8,9 @@
     <thingClass>Genes40k.Building_ChapterBanner</thingClass>
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
-      <texPath>Things/Building/Misc/SacrificialFlag/SacrificialFlag</texPath>
-      <drawSize>(1,1)</drawSize>
+      <texPath>Things/Building/ChapterBanner/BEWH_ThingChapterBanner</texPath>
+      <drawSize>(2.5,2.75)</drawSize>
+	  <drawOffset>(0, 0, 0.75)</drawOffset>
       <shadowData>
         <volume>(0.3, 0.3 ,0.3)</volume>
         <offset>(0, 0, -0.2)</offset>
