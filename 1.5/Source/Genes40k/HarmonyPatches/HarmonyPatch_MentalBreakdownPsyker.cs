@@ -27,7 +27,7 @@ namespace Genes40k
 
             var pawn = __instance.CurState.pawn;
 
-            if (pawn.genes == null)
+            if (pawn?.genes == null)
             {
                 return;
             }

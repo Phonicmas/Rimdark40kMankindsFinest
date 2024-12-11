@@ -161,4 +161,11 @@
 
   <BEWH.WillNotSummonAny>Will not summon any {0} as limit has been reached</BEWH.WillNotSummonAny>
 
+
+  <BEWH.NothingSelected>Nothing selected</BEWH.NothingSelected>
+  <BEWH.NothingSelected>Nothing selected</BEWH.NothingSelected>
+
+  <BEWH.CraftPrimarchEmbryo>Craft primarch embryo</BEWH.CraftPrimarchEmbryo>
+  <BEWH.CraftPrimarchEmbryoDesc>Select geneseed vial and human embryo for creation of a primarch embryo</BEWH.CraftPrimarchEmbryoDesc>
+
 </LanguageData>

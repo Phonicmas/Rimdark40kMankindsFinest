@@ -1,6 +1,7 @@
 ﻿using RimWorld;
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 using Verse;
 using Verse.AI;
 
@@ -18,6 +19,8 @@ namespace Genes40k
         private const float psyfocusDrain = -0.05f;
 
         private const float severityAdd = 0.1f;
+        
+        private static readonly CachedTexture CraftPrimarchEmbryo = new CachedTexture("UI/Gizmos/ViewGenes");
 
         public Building_GeneTable()
         {
@@ -85,8 +88,22 @@ namespace Genes40k
 
         public override IEnumerable<Gizmo> GetGizmos()
         {
-            return base.GetGizmos();
+            foreach (var gizmo in base.GetGizmos())
+            {
+                yield return gizmo;
+            }
             
+            var command_Action = new Command_Action
+            {
+                defaultLabel = "BEWH.CraftPrimarchEmbryo".Translate() + "...",
+                defaultDesc = "BEWH.CraftPrimarchEmbryoDesc".Translate(),
+                icon = CraftPrimarchEmbryo.Texture,
+                action = delegate
+                {
+                    Find.WindowStack.Add(new Dialog_CraftPrimarchEmbryo(Map, this));
+                }
+            };
+            yield return command_Action;
         }
 
         public override void ExposeData()

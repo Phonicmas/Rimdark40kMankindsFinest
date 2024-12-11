@@ -116,6 +116,8 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_RubiconSurgeryChanceIncrease.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_SangprimusNoDuplicateAccepted.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_SecondProgenoidGlandProgress.cs" />
+    <Compile Include="Misc\Dialog_CraftPrimarchEmbryo.cs" />
+    <Compile Include="Misc\Dialog_ViewGenesEmbryo.cs" />
     <Compile Include="Misc\ITab_ContentsGeneticStorage.cs" />
     <Compile Include="Misc\ITab_SangprimusPortum.cs" />
     <Compile Include="Misc\StockGenerator_TagSangprimusMaterialNoDupe.cs" />
