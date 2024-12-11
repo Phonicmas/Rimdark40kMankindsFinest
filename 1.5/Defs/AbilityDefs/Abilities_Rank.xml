@@ -7,7 +7,7 @@
         <label>Strip ranks</label>
         <description>...</description>
         <cooldownTicksRange>15000</cooldownTicksRange>
-        <iconPath>UI/Abilities/BEWH_ApothecaryGeneseedHarvestIcon</iconPath>
+        <iconPath>UI/Abilities/BEWH_Ability_RankStripRank</iconPath>
         <jobDef>CastAbilityOnThingMelee</jobDef>
         <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
