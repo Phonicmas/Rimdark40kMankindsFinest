@@ -236,7 +236,7 @@
     <defName>BEWH_IronCircle</defName>
     <label>Iron Circle</label>
     <description>Summon or reinforce your iron circle, loyal automata that serves as bodyguards.</description>
-    <iconPath>UI/Abilities/BEWH_Ability_CorvusCoraxConceal</iconPath>
+    <iconPath>UI/Abilities/BEWH_Ability_PerturaboIronCircle</iconPath>
     <cooldownTicksRange>60000</cooldownTicksRange>
     <category>BEWH_Primarch</category>
     <abilityClass>Genes40k.Ability_IronCircle</abilityClass>
@@ -263,7 +263,7 @@
     <defName>BEWH_OpusMaxima</defName>
     <label>Opus Maxima</label>
     <description>By meticulous planning, you're able to temporarily increase productivity of other colonists on the map.</description>
-    <iconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</iconPath>
+    <iconPath>UI/Abilities/BEWH_Ability_RobotGullymanOpusMaxima</iconPath>
     <abilityClass>Core40k.Ability_MapWideHediff</abilityClass>
     <castTime>30</castTime>
     <needsTicking>true</needsTicking>
@@ -285,7 +285,7 @@
     <defName>BEWH_WarPlanning</defName>
     <label>War Planning</label>
     <description>By tactical and strategic planning, you're able to form a war plan, increasing combat effectiveness of other colonists on the map.</description>
-    <iconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</iconPath>
+    <iconPath>UI/Abilities/BEWH_Ability_HorusWarPlanning</iconPath>
     <abilityClass>Core40k.Ability_MapWideHediff</abilityClass>
     <castTime>30</castTime>
     <needsTicking>true</needsTicking>
@@ -307,7 +307,7 @@
     <defName>BEWH_TwinTeleportation</defName>
     <label>Teleport to Twin</label>
     <description>You're able to teleport to your twin. This works while the twin is on a map or in a caravan.</description>
-    <iconPath>UI/Abilities/BEWH_Ability_JaghataiKhanAlakhGeh</iconPath>
+    <iconPath>UI/Abilities/BEWH_TeleportToTwin</iconPath>
     <cooldownTicksRange>60000</cooldownTicksRange>
     <category>BEWH_Primarch</category>
     <comps>
