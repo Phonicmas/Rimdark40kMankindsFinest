@@ -153,10 +153,10 @@
         <lifeStages>
             <li>
                 <bodyGraphicData>
-                    <texPath>Things/Pawn/Mechs/Domitar/Domitar</texPath>
+                    <texPath>Things/Pawn/Mechs/Domitar/BEWH_Domitar</texPath>
                     <shaderType>CutoutWithOverlay</shaderType>
                     <graphicClass>Graphic_Multi</graphicClass>
-                    <drawSize>1.5</drawSize>
+                    <drawSize>2</drawSize>
                     <shadowData>
                         <volume>(0.4, 0.8, 0.4)</volume>
                     </shadowData>
@@ -190,6 +190,7 @@
         <graphicData>
             <texPath>Things/Weapons/BEWH_GravitonMaul</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.85</drawSize>
         </graphicData>
         <tools>
             <li>
