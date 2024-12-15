@@ -612,6 +612,7 @@
         <statOffsets>
             <HuntingStealth>0.3</HuntingStealth>
         </statOffsets>
+        <skinColorOverride>(230, 220, 200)</skinColorOverride>
         <conditionalStatAffecters>
             <li Class="VanillaGenesExpanded.ConditionalStatAffecter_Darkness">
                 <statFactors>

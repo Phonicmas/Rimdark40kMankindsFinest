@@ -6,6 +6,9 @@
         <hideBodyPartNames>true</hideBodyPartNames>
         <targetsBodyPart>false</targetsBodyPart>
         <surgerySuccessChanceFactor>2</surgerySuccessChanceFactor>
+        <recipeUsers>
+            <li>Human</li>
+        </recipeUsers>
     </RecipeDef>
 
     <!-- Make space marine geneseed -->

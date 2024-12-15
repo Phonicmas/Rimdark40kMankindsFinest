@@ -25,7 +25,7 @@
         <stages>
             <li>
                 <label>holy radiance</label>
-                <baseOpinionOffset>15</baseOpinionOffset>
+                <baseOpinionOffset>30</baseOpinionOffset>
             </li>
         </stages>
     </ThoughtDef>
@@ -38,7 +38,7 @@
             <li>
                 <label>holy radiance</label>
                 <description>The holy radiance fills me with joy</description>
-                <baseMoodEffect>10</baseMoodEffect>
+                <baseMoodEffect>20</baseMoodEffect>
             </li>
         </stages>
     </ThoughtDef>

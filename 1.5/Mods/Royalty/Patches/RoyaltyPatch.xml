@@ -1,30 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-    <Operation Class="PatchOperationAdd">
-        <xpath>Defs/FactionDef[defName = "BEWH_ImperiumFaction"]</xpath>
-        <value>
-            <royalFavorLabel>respect</royalFavorLabel>
-            <royalFavorIconPath>UI/Icons/RoyalFavor</royalFavorIconPath>
-            <royalTitleInheritanceWorkerClass>RoyalTitleInheritanceWorker</royalTitleInheritanceWorkerClass>
-            <royalTitleInheritanceRelations>
-                <li>Child</li>
-                <li>Grandchild</li>
-                <li>GreatGrandchild</li>
-                <li>NephewOrNiece</li>
-                <li>Spouse</li>
-                <li>Sibling</li>
-                <li>HalfSibling</li>
-                <li>Cousin</li>
-                <li>Parent</li>
-                <li>UncleOrAunt</li>
-            </royalTitleInheritanceRelations>
-            <royalTitleTags>
-                <li>ImperiumTitle</li>
-            </royalTitleTags>
-        </value>
-    </Operation>
-
     <Operation Class="PatchOperationAddModExtension">
         <xpath>Defs/GeneDef[defName = "BEWH_IotaPsyker" or defName = "BEWH_Psyker" or defName = "BEWH_DeltaPsyker" or defName = "BEWH_BetaPsyker"]</xpath>
         <value>

@@ -85,6 +85,15 @@
     </GeneDef>
 
 
+    <!-- Living Saint: Base -->
+    <GeneDef ParentName="BEWH_GenesOverallParent" Name="BEWH_LivingSaintBase" Abstract="True">
+        <biostatCpx>4</biostatCpx>
+        <biostatArc>1</biostatArc>
+        <marketValueFactor>3</marketValueFactor>
+        <minAgeActive>3</minAgeActive>
+    </GeneDef>
+
+
     <!-- Perpetual -->
     <GeneDef ParentName="BEWH_GenesOverallParent" Name="BEWH_Perpetual" Abstract="True">
         <marketValueFactor>10</marketValueFactor>

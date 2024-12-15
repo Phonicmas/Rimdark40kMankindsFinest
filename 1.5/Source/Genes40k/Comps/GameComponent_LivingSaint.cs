@@ -8,9 +8,12 @@ namespace Genes40k
     public class GameComponent_LivingSaint : GameComponent
     {
         private List<Pawn> livingSaints = new List<Pawn>();
+        
+        private Genes40kModSettings modSettings;
 
         public GameComponent_LivingSaint(Game game)
         {
+            modSettings = LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>();
         }
 
         public void TrySpawnSaint(IncidentCategoryDef categoryDef)
@@ -22,11 +25,11 @@ namespace Genes40k
             int chance;
             if (categoryDef == IncidentCategoryDefOf.ThreatBig)
             {
-                chance = 65;
+                chance = modSettings.livingSaintBigThreat;
             }
             else if (categoryDef == IncidentCategoryDefOf.ThreatSmall)
             {
-                chance = 35;
+                chance = modSettings.livingSaintSmallThreat;
             }
             else
             {

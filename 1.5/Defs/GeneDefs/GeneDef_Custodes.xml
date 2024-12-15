@@ -12,6 +12,8 @@
         <biostatCpx>8</biostatCpx>
         <biostatArc>3</biostatArc>
 
+        <bodyType>Hulk</bodyType>
+
         <overdoseChanceFactor>0</overdoseChanceFactor>
         <sterilize>true</sterilize>
 
@@ -20,17 +22,20 @@
             <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
             <ArmorRating_Sharp>0.5</ArmorRating_Sharp>
             <ArmorRating_Heat>0.3</ArmorRating_Heat>
+
             <ComfyTemperatureMin>-80</ComfyTemperatureMin>
             <ComfyTemperatureMax>80</ComfyTemperatureMax>
+
+            <SuppressionPower MayRequire="Ludeon.RimWorld.Ideology">0.85</SuppressionPower>
+
+            <LeatherAmount>0.45</LeatherAmount>
+            <MeatAmount>0.45</MeatAmount>
+            <Mass>0.45</Mass>
+            <VEF_CosmeticBodySize_Multiplier>0.45</VEF_CosmeticBodySize_Multiplier>
         </statOffsets>
         <statFactors>
-            <LeatherAmount>1.45</LeatherAmount>
-            <MeatAmount>1.45</MeatAmount>
-            <Mass>1.45</Mass>
-            <VEF_CosmeticBodySize_Multiplier>1.45</VEF_CosmeticBodySize_Multiplier>
-            <Fertility>0</Fertility>
             <StaggerDurationFactor>0</StaggerDurationFactor>
-            <IncomingDamageFactor>0.4</IncomingDamageFactor>
+            <IncomingDamageFactor>0.5</IncomingDamageFactor>
             <MeleeDamageFactor>3.5</MeleeDamageFactor>
         </statFactors>
 
@@ -72,7 +77,6 @@
 
         <preventPermanentWounds>true</preventPermanentWounds>
         <painFactor>0.45</painFactor>
-        <immuneToToxGasExposure>true</immuneToToxGasExposure>
 
         <statOffsets>
             <ToxicEnvironmentResistance>2</ToxicEnvironmentResistance>
@@ -115,7 +119,7 @@
         <dontMindRawFood>true</dontMindRawFood>
 
         <statOffsets>
-            <MeleeDodgeChance>10</MeleeDodgeChance>
+            <MeleeDodgeChance>8</MeleeDodgeChance>
         </statOffsets>
         <statFactors>
             <MeleeWeapon_CooldownMultiplier>0.8</MeleeWeapon_CooldownMultiplier>
@@ -139,22 +143,27 @@
             <li>No loss in shooting skill.</li>
         </customEffectDescriptions>
 
+        <passionMod>
+            <skill>Shooting</skill>
+            <modType>AddOneLevel</modType>
+        </passionMod>
+
         <capMods>
             <li>
                 <capacity>Sight</capacity>
-                <postFactor>2.5</postFactor>
+                <offset>1.75</offset>
             </li>
             <li>
                 <capacity>Hearing</capacity>
-                <postFactor>2.5</postFactor>
+                <offset>1.5</offset>
             </li>
             <li>
                 <capacity>Talking</capacity>
-                <postFactor>1.8</postFactor>
+                <offset>0.8</offset>
             </li>
             <li>
                 <capacity>Eating</capacity>
-                <postFactor>1.25</postFactor>
+                <offset>0.45</offset>
             </li>
         </capMods>
         <modExtensions>
@@ -176,6 +185,8 @@
         <biostatArc>3</biostatArc>
         <minAgeActive>4</minAgeActive>
 
+        <foodPoisoningChanceFactor>0</foodPoisoningChanceFactor>
+
         <statFactors>
             <ImmunityGainSpeed>3.5</ImmunityGainSpeed>
         </statFactors>
@@ -183,7 +194,7 @@
         <capMods>
             <li>
                 <capacity>BloodFiltration</capacity>
-                <postFactor>2.5</postFactor>
+                <offset>1.3</offset>
             </li>
         </capMods>
 
@@ -258,7 +269,7 @@
 
 
         <aptitudes>
-            <Intellectual>6</Intellectual>
+            <Intellectual>4</Intellectual>
         </aptitudes>
         <suppressedTraits>
             <li>
@@ -274,14 +285,14 @@
         <capMods>
             <li>
                 <capacity>Consciousness</capacity>
-                <postFactor>1.85</postFactor>
+                <offset>0.85</offset>
             </li>
         </capMods>
 
         <customEffectDescriptions>
             <li>Will never have mental breaks when drafted.</li>
         </customEffectDescriptions>
-		
+
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <hediffsToBodyParts>
@@ -292,6 +303,10 @@
                         </bodyparts>
                     </li>
                 </hediffsToBodyParts>
+            </li>
+            <li Class="Core40k.DefModExtension_SlaveabilityRecruitability">
+                <canBeEnslaved>false</canBeEnslaved>
+                <canBeRecruited>false</canBeRecruited>
             </li>
         </modExtensions>
     </GeneDef>
@@ -316,15 +331,15 @@
         <capMods>
             <li>
                 <capacity>BloodPumping</capacity>
-                <postFactor>2.5</postFactor>
+                <offset>1.2</offset>
             </li>
             <li>
                 <capacity>Manipulation</capacity>
-                <postFactor>2.5</postFactor>
+                <offset>1.5</offset>
             </li>
             <li>
                 <capacity>Breathing</capacity>
-                <postFactor>2.5</postFactor>
+                <offset>1.5</offset>
             </li>
         </capMods>
 
@@ -338,12 +353,20 @@
                 <degree>-2</degree>
             </li>
         </suppressedTraits>
+
         <aptitudes>
             <Melee>8</Melee>
         </aptitudes>
+
         <customEffectDescriptions>
             <li>No loss in melee skill.</li>
         </customEffectDescriptions>
+
+        <passionMod>
+            <skill>Melee</skill>
+            <modType>AddOneLevel</modType>
+        </passionMod>
+
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <noSkillLoss>Melee</noSkillLoss>

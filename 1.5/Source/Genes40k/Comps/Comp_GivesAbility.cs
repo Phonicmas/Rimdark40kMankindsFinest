@@ -3,7 +3,7 @@
 
 namespace Genes40k
 {
-    public class CompGivesAbility : ThingComp
+    public class Comp_GivesAbility : ThingComp
     {
         private CompProperties_GivesAbility Props => (CompProperties_GivesAbility)props;
 

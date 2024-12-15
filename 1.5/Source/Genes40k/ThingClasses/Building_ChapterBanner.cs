@@ -13,12 +13,12 @@ namespace Genes40k
 
         public Genes40kModSettings ModSettings => modSettings ?? (modSettings = LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>());
 
-        public override Color DrawColorTwo => ModSettings?.bannerColorTwo ?? base.DrawColorTwo;
+        public override Color DrawColorTwo => ModSettings?.chapterColorTwo ?? base.DrawColorTwo;
 
-        public override Color DrawColor => ModSettings?.bannerColorOne ?? base.DrawColor;
+        public override Color DrawColor => ModSettings?.chapterColorOne ?? base.DrawColor;
             
         public override Graphic Graphic => ModSettings.useChaosVersion ? GetChaosBannerGraphic() : GetImperialBannerGraphic();
-
+        
         private Graphic GetImperialBannerGraphic()
         { 
             const string imperialBannerPathMask = "Things/Building/ChapterBanner/BEWH_ThingChapterBannerm";
@@ -27,7 +27,7 @@ namespace Genes40k
             {
                 shader = def.graphicData.shaderType.Shader;
             }
-            return GraphicDatabase.Get<Graphic_Single>(def.graphicData.texPath, shader, def.graphicData.drawSize, modSettings.bannerColorOne, modSettings.bannerColorTwo, def.graphicData, imperialBannerPathMask);
+            return GraphicDatabase.Get<Graphic_Single>(def.graphicData.texPath, shader, def.graphicData.drawSize, modSettings.chapterColorOne, modSettings.chapterColorTwo, def.graphicData, imperialBannerPathMask);
         }
 
         private Graphic GetChaosBannerGraphic()
@@ -39,7 +39,7 @@ namespace Genes40k
             {
                 shader = def.graphicData.shaderType.Shader;
             }
-            return GraphicDatabase.Get<Graphic_Single>(chaosBannerPath, shader, def.graphicData.drawSize, modSettings.bannerColorOne, modSettings.bannerColorTwo, def.graphicData, chaosBannerPathMask);
+            return GraphicDatabase.Get<Graphic_Single>(chaosBannerPath, shader, def.graphicData.drawSize, modSettings.chapterColorOne, modSettings.chapterColorTwo, def.graphicData, chaosBannerPathMask);
         }
         
     }

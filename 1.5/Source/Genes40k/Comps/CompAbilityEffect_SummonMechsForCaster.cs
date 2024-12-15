@@ -7,7 +7,7 @@ namespace Genes40k
 {
     public class CompAbilityEffect_SummonMechsForCaster : CompAbilityEffect
     {
-        private new CompProperties_SummonMechsForCaster Props => (CompProperties_SummonMechsForCaster)props;
+        private new CompProperties_AbilitySummonMechsForCaster Props => (CompProperties_AbilitySummonMechsForCaster)props;
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {

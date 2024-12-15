@@ -5,7 +5,7 @@ namespace Genes40k
 {
     public class CompAbilityEffect_DenyTheWitch : CompAbilityEffect
     {
-        private new CompProperties_DenyTheWitch Props => (CompProperties_DenyTheWitch)props;
+        private new CompProperties_AbilityDenyTheWitch Props => (CompProperties_AbilityDenyTheWitch)props;
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {

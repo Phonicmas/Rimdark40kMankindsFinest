@@ -1,10 +1,10 @@
 ﻿using System;
+using Core40k;
 using Verse;
-
 
 namespace Genes40k
 {
-    public class Gene_ProgenoidGlands : Gene
+    public class Gene_ProgenoidGlands : Gene_DisabledBy
     {
         private bool firstProgenoidGlandHarvested = false;
         private bool secondProgenoidGlandHarvested = false;

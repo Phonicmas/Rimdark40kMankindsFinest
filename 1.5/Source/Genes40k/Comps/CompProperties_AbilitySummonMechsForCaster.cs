@@ -4,7 +4,7 @@ using Verse;
 
 namespace Genes40k
 {
-    public class CompProperties_SummonMechsForCaster : CompProperties_AbilityEffect
+    public class CompProperties_AbilitySummonMechsForCaster : CompProperties_AbilityEffect
     {
         public PawnKindDef mechKind;
 
@@ -14,7 +14,7 @@ namespace Genes40k
 
         public List<IntVec3> trySpawnHere = new List<IntVec3>();
 
-        public CompProperties_SummonMechsForCaster()
+        public CompProperties_AbilitySummonMechsForCaster()
         {
             compClass = typeof(CompAbilityEffect_SummonMechsForCaster);
         }

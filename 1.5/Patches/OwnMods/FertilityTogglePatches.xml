@@ -1,36 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-    <!-- ===== Custodes ===== -->
-    <Operation Class="VFECore.PatchOperationToggableSequence">
-        <enabled>False</enabled>
-        <mods>
-            <li>Warhammer 40.000 - Genes</li>
-        </mods>
-        <label>Restore custodes fertility:</label>
-        <operations>
-            <li Class="PatchOperationRemove">
-                <xpath>Defs/GeneDef[defName = "BEWH_CustodesAnatomy"]/statFactors/Fertility</xpath>
-            </li>
-            <li Class="PatchOperationRemove">
-                <xpath>Defs/GeneDef[defName = "BEWH_CustodesAnatomy"]/sterilize</xpath>
-            </li>
-        </operations>
-    </Operation>
-
     <!-- ===== Space Marine ===== -->
     <Operation Class="VFECore.PatchOperationToggableSequence">
         <enabled>False</enabled>
         <mods>
-            <li>Warhammer 40.000 - Genes</li>
+            <li>RimDark 40k - Mankinds Finest</li>
         </mods>
         <label>Restore space marine fertility:</label>
         <operations>
             <li Class="PatchOperationRemove">
-                <xpath>Defs/GeneDef[defName = "BEWH_Ossmodula"]/statFactors/Fertility</xpath>
-            </li>
-            <li Class="PatchOperationRemove">
                 <xpath>Defs/GeneDef[defName = "BEWH_Ossmodula"]/sterilize</xpath>
+            </li>
+        </operations>
+    </Operation>
+
+    <!-- ===== Custodes ===== -->
+    <Operation Class="VFECore.PatchOperationToggableSequence">
+        <enabled>False</enabled>
+        <mods>
+            <li>RimDark 40k - Mankinds Finest</li>
+        </mods>
+        <label>Restore custodes fertility:</label>
+        <operations>
+            <li Class="PatchOperationRemove">
+                <xpath>Defs/GeneDef[defName = "BEWH_AtlasMorphogen"]/sterilize</xpath>
             </li>
         </operations>
     </Operation>
@@ -39,15 +33,26 @@
     <Operation Class="VFECore.PatchOperationToggableSequence">
         <enabled>False</enabled>
         <mods>
-            <li>Warhammer 40.000 - Genes</li>
+            <li>RimDark 40k - Mankinds Finest</li>
         </mods>
         <label>Restore primarch fertility:</label>
         <operations>
             <li Class="PatchOperationRemove">
-                <xpath>Defs/GeneDef[defName = "BEWH_PrimarchAnatomy"]/statFactors/Fertility</xpath>
+                <xpath>Defs/GeneDef[defName = "BEWH_ImmortisGland"]/sterilize</xpath>
             </li>
+        </operations>
+    </Operation>
+
+    <!-- ===== Livinsg Saint ===== -->
+    <Operation Class="VFECore.PatchOperationToggableSequence">
+        <enabled>False</enabled>
+        <mods>
+            <li>RimDark 40k - Mankinds Finest</li>
+        </mods>
+        <label>Restore living saint fertility:</label>
+        <operations>
             <li Class="PatchOperationRemove">
-                <xpath>Defs/GeneDef[defName = "BEWH_PrimarchAnatomy"]/sterilize</xpath>
+                <xpath>Defs/GeneDef[defName = "BEWH_LivingSaintBeingOfFaith"]/sterilize</xpath>
             </li>
         </operations>
     </Operation>

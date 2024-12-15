@@ -8,15 +8,12 @@
         <description>Carriers of this gene sinews are reinforced with durametallic coil-cables that can contract with incredible force, magnifying his strength as well as giving his body another layer of defence.</description>
         <iconPath>UI/Genes/Primaris/BEWH_Primaris_SinewCoilIcon</iconPath>
         <displayOrderInCategory>21</displayOrderInCategory>
-        <prerequisite>BEWH_Biscopea</prerequisite>
         <statOffsets>
             <CarryingCapacity>100</CarryingCapacity>
+            <MeleeDamageFactor>0.3</MeleeDamageFactor>
+            <StaggerDurationFactor>-0.5</StaggerDurationFactor>
+            <IncomingDamageFactor>-0.05</IncomingDamageFactor>
         </statOffsets>
-        <statFactors>
-            <MeleeDamageFactor>1.25</MeleeDamageFactor>
-            <IncomingDamageFactor>0.95</IncomingDamageFactor>
-            <StaggerDurationFactor>0</StaggerDurationFactor>
-        </statFactors>
         <suppressedTraits>
             <li>
                 <def>Beauty</def>
@@ -33,7 +30,7 @@
         </exclusionTags>
         <modExtensions>
             <li Class="Core40k.DefModExtension_GeneExtension">
-                <addedWorldCarryCapacity>80</addedWorldCarryCapacity>
+                <addedWorldCarryCapacity>100</addedWorldCarryCapacity>
             </li>
         </modExtensions>
     </GeneDef>
@@ -45,20 +42,19 @@
         <description>Carriers of this gene possess a small, thumbnail-sized lobe in the brain's cortex that make them physically even larger, stronger and with faster reaction times than his non-Primaris brethren.</description>
         <iconPath>UI/Genes/Primaris/BEWH_Primaris_MagnificatIcon</iconPath>
         <displayOrderInCategory>22</displayOrderInCategory>
-        <prerequisite>BEWH_Biscopea</prerequisite>
         <statOffsets>
-            <MeleeDodgeChance>5</MeleeDodgeChance>
+            <MeleeDodgeChance>3</MeleeDodgeChance>
+            <LeatherAmount>0.15</LeatherAmount>
+            <MeatAmount>0.15</MeatAmount>
+            <Mass>0.15</Mass>
             <VEF_CosmeticBodySize_Multiplier>0.1</VEF_CosmeticBodySize_Multiplier>
+
+            <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">-0.1</CertaintyLossFactor>
+            <SuppressionPower MayRequire="Ludeon.RimWorld.Ideology">0.1</SuppressionPower>
         </statOffsets>
         <statFactors>
-            <AimingDelayFactor>0.85</AimingDelayFactor>
             <MeleeWeapon_CooldownMultiplier>0.85</MeleeWeapon_CooldownMultiplier>
             <RangedCooldownFactor>0.85</RangedCooldownFactor>
-            <MeleeHitChance>1.2</MeleeHitChance>
-            <LeatherAmount>1.15</LeatherAmount>
-            <MeatAmount>1.15</MeatAmount>
-            <Mass>1.15</Mass>
-            <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.05</CertaintyLossFactor>
         </statFactors>
         <minAgeActive>13</minAgeActive>
         <exclusionTags>
@@ -73,7 +69,9 @@
         <description>Carriers of this gene possess a dormant organ that connects to both Astartes hearts. In times of extreme stress, or should the warrior's body undergo violent, damaging trauma, it expels great blurts of self-synthesized chemicals — a hyper-cocktail that simulates the biological action of combat stimms while also aiding in the rapid regrowth of tissue, bone and muscle.</description>
         <iconPath>UI/Genes/Primaris/BEWH_Primaris_BelisarianFurnaceIcon</iconPath>
         <displayOrderInCategory>23</displayOrderInCategory>
-        <prerequisite>BEWH_Biscopea</prerequisite>
+        <statOffsets>
+            <InjuryHealingFactor>0.5</InjuryHealingFactor>
+        </statOffsets>
         <abilities>
             <li>BEWH_BelisarianFurnaceBoost</li>
         </abilities>

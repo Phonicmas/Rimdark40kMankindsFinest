@@ -15,6 +15,10 @@
   <BEWH.ColorForBannerTwo>Second colour of chapter banner</BEWH.ColorForBannerTwo>
   <BEWH.UseChaosVersionForBanner>Use chaos version of the banner for the chapter ancient ability.</BEWH.UseChaosVersionForBanner>
 
+  <BEWH.LivingSaintChance>Chances for a lost Living Saint to resurrect</BEWH.LivingSaintChance>
+  <BEWH.LivingSaintBigThreat>Big threat: {0}%</BEWH.LivingSaintBigThreat>
+  <BEWH.LivingSaintSmallThreat>Small threat: {0}%</BEWH.LivingSaintSmallThreat>
+
   <!-- Code Event related -->
   <BEWH.PsychicPhenomenaLetter>Psychic Phenomena</BEWH.PsychicPhenomenaLetter>
   <BEWH.PerilsOfTheWarpLetter>Perils of the Warp</BEWH.PerilsOfTheWarpLetter>
@@ -161,11 +165,15 @@
 
   <BEWH.WillNotSummonAny>Will not summon any {0} as limit has been reached</BEWH.WillNotSummonAny>
 
-
-  <BEWH.NothingSelected>Nothing selected</BEWH.NothingSelected>
   <BEWH.NothingSelected>Nothing selected</BEWH.NothingSelected>
 
-  <BEWH.CraftPrimarchEmbryo>Craft primarch embryo</BEWH.CraftPrimarchEmbryo>
-  <BEWH.CraftPrimarchEmbryoDesc>Select geneseed vial and human embryo for creation of a primarch embryo</BEWH.CraftPrimarchEmbryoDesc>
+  <BEWH.CraftPrimarchEmbryoGeneTable>Craft primarch embryo</BEWH.CraftPrimarchEmbryoGeneTable>
+  <BEWH.CraftPrimarchEmbryoGeneTableDesc>Select geneseed vial and human embryo for creation of a primarch embryo</BEWH.CraftPrimarchEmbryoGeneTableDesc>
+
+  <BEWH.DefaultChapterColours>Select default chapter colours</BEWH.DefaultChapterColours>
+  <BEWH.ColourPreset>Colour Preset: {0}</BEWH.ColourPreset>
+
+  <BEWH.AbilityDisabledNoDivineRadiance>{0_labelShort} does not have enough divine radiance.</BEWH.AbilityDisabledNoDivineRadiance>
+  <BEWH.AbilityDisabledNoDivineRadianceGene>{0_labelShort} is not radiant.</BEWH.AbilityDisabledNoDivineRadianceGene>
 
 </LanguageData>

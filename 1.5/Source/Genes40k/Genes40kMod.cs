@@ -43,19 +43,20 @@ namespace Genes40k
             }
             
             listingStandard.Gap();
+            listingStandard.Label("BEWH.LivingSaintChance".Translate());
+            listingStandard.Label("BEWH.LivingSaintBigThreat".Translate(settings.livingSaintBigThreat));
+            settings.livingSaintBigThreat = (int)listingStandard.Slider(settings.livingSaintBigThreat, 0, 100);
+            listingStandard.Label("BEWH.LivingSaintSmallThreat".Translate(settings.livingSaintSmallThreat));
+            settings.livingSaintSmallThreat = (int)listingStandard.Slider(settings.livingSaintSmallThreat, 0, 100);
+            
+            listingStandard.Gap();
             listingStandard.CheckboxLabeled("BEWH.UseChaosVersionForBanner".Translate(), ref settings.useChaosVersion);
-            
-            var colorOne = listingStandard.TextEntry(ColorUtility.ToHtmlStringRGBA(settings.bannerColorOne));
-            if (Genes40kUtils.FromHexErrorLess(colorOne, out var c1))
+            listingStandard.Indent(inRect.width * 0.25f);
+            if (listingStandard.ButtonText("BEWH.DefaultChapterColours".Translate(), widthPct: 0.5f))
             {
-                settings.bannerColorOne = c1;
+                Find.WindowStack.Add(new Dialog_ChangeDefaultChapterColour(settings));
             }
-            
-            var colorTwo = listingStandard.TextEntry(ColorUtility.ToHtmlStringRGBA(settings.bannerColorTwo));
-            if (Genes40kUtils.FromHexErrorLess(colorTwo, out var c2))
-            {
-                settings.bannerColorTwo = c2;
-            }
+            listingStandard.Outdent(inRect.width * 0.25f);
 
             listingStandard.Gap();
             listingStandard.Label("\n" + "BEWH.CheckVEFPatches".Translate());

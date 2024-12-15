@@ -10,16 +10,17 @@
         <displayOrderInCategory>-100</displayOrderInCategory>
         <biostatCpx>3</biostatCpx>
         <biostatMet>-1</biostatMet>
-        <statFactors>
-            <LeatherAmount>1.5</LeatherAmount>
-            <MeatAmount>1.5</MeatAmount>
-            <Mass>1.5</Mass>
-            <VEF_CosmeticBodySize_Multiplier>1.25</VEF_CosmeticBodySize_Multiplier>
-        </statFactors>
         <statOffsets>
             <ArmorRating_Blunt>0.2</ArmorRating_Blunt>
             <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
             <ArmorRating_Heat>0.1</ArmorRating_Heat>
+
+            <SuppressionPower MayRequire="Ludeon.RimWorld.Ideology">0.4</SuppressionPower>
+
+            <LeatherAmount>0.5</LeatherAmount>
+            <MeatAmount>0.5</MeatAmount>
+            <Mass>0.5</Mass>
+            <VEF_CosmeticBodySize_Multiplier>0.35</VEF_CosmeticBodySize_Multiplier>
         </statOffsets>
         <suppressedTraits>
             <li>
@@ -49,10 +50,10 @@
         </capMods>
         <statOffsets>
             <CarryingCapacity>100</CarryingCapacity>
+            <StaggerDurationFactor>-0.6</StaggerDurationFactor>
         </statOffsets>
         <statFactors>
             <MeleeDamageFactor>1.75</MeleeDamageFactor>
-            <StaggerDurationFactor>0.4</StaggerDurationFactor>
             <IncomingDamageFactor>0.8</IncomingDamageFactor>
         </statFactors>
         <aptitudes>
@@ -79,26 +80,18 @@
         <capMods>
             <li>
                 <capacity>Manipulation</capacity>
-                <postFactor>1.25</postFactor>
+                <offset>0.25</offset>
             </li>
             <li>
                 <capacity>Consciousness</capacity>
-                <postFactor>1.1</postFactor>
+                <offset>0.1</offset>
             </li>
         </capMods>
         <aggroMentalBreakSelectionChanceFactor>999</aggroMentalBreakSelectionChanceFactor>
         <statFactors>
             <MoveSpeed>1.2</MoveSpeed>
         </statFactors>
-        <forcedTraits>
-            <li>
-                <def>Psychopath</def>
-            </li>
-        </forcedTraits>
         <suppressedTraits>
-            <li>
-                <def>Kind</def>
-            </li>
             <li>
                 <def>SpeedOffset</def>
                 <degree>-1</degree>
@@ -123,8 +116,8 @@
                 <offset>0.4</offset>
             </li>
             <li>
-                <capacity>BloodPumping</capacity>
-                <offset>0.4</offset>
+                <capacity>BloodFiltration</capacity>
+                <offset>0.35</offset>
             </li>
         </capMods>
         <statFactors>
@@ -151,15 +144,15 @@
             </li>
             <li>
                 <capacity>Sight</capacity>
-                <offset>0.35</offset>
-            </li>
-            <li>
-                <capacity>Hearing</capacity>
                 <offset>0.45</offset>
             </li>
             <li>
+                <capacity>Hearing</capacity>
+                <offset>0.65</offset>
+            </li>
+            <li>
                 <capacity>Eating</capacity>
-                <postFactor>0.85</postFactor>
+                <offset>0.4</offset>
             </li>
         </capMods>
         <statOffsets>
@@ -183,6 +176,17 @@
         <biostatCpx>3</biostatCpx>
         <biostatMet>7</biostatMet>
         <geneClass>Genes40k.Gene_Furybound</geneClass>
+        <dontMindRawFood>true</dontMindRawFood>
+        <forcedTraits>
+            <li>
+                <def>Psychopath</def>
+            </li>
+        </forcedTraits>
+        <suppressedTraits>
+            <li>
+                <def>Wimp</def>
+            </li>
+        </suppressedTraits> 
         <statFactors>
             <PsychicSensitivity>0</PsychicSensitivity>
         </statFactors>

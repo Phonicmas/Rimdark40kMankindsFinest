@@ -28,6 +28,9 @@
         <skillRequirements>
             <Medicine>14</Medicine>
         </skillRequirements>
+        <recipeUsers>
+            <li>Human</li>
+        </recipeUsers>
     </RecipeDef>
 
     <!-- Rubicon Surgery -->

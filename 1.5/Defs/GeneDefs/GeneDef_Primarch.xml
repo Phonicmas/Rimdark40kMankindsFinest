@@ -32,18 +32,20 @@
             </li>
         </suppressedTraits>
 
-        <statFactors>
-            <LeatherAmount>2</LeatherAmount>
-            <MeatAmount>2</MeatAmount>
-            <Mass>2</Mass>
-            <VEF_CosmeticBodySize_Multiplier>1.55</VEF_CosmeticBodySize_Multiplier>
-            <StaggerDurationFactor>0</StaggerDurationFactor>
-            <Fertility>0</Fertility>
-        </statFactors>
-
         <statOffsets>
+            <LeatherAmount>1</LeatherAmount>
+            <MeatAmount>1</MeatAmount>
+            <Mass>1</Mass>
+            <VEF_CosmeticBodySize_Multiplier>0.55</VEF_CosmeticBodySize_Multiplier>
+
+            <SuppressionPower MayRequire="Ludeon.RimWorld.Ideology">1.2</SuppressionPower>
+
             <CarryingCapacity>500</CarryingCapacity>
         </statOffsets>
+
+        <statFactors>
+            <StaggerDurationFactor>0</StaggerDurationFactor>
+        </statFactors>
 
         <modExtensions>
             <li Class="Core40k.DefModExtension_GeneExtension">
@@ -77,26 +79,26 @@
         </statFactors>
 
         <aptitudes>
-            <Shooting>12</Shooting>
-            <Social>8</Social>
+            <Shooting>10</Shooting>
+            <Social>4</Social>
         </aptitudes>
 
         <capMods>
             <li>
                 <capacity>Consciousness</capacity>
-                <postFactor>2.25</postFactor>
+                <offset>1.25</offset>
             </li>
             <li>
                 <capacity>Sight</capacity>
-                <postFactor>4</postFactor>
+                <offset>3</offset>
             </li>
             <li>
                 <capacity>Hearing</capacity>
-                <postFactor>3.5</postFactor>
+                <offset>2.5</offset>
             </li>
             <li>
                 <capacity>Talking</capacity>
-                <postFactor>2.45</postFactor>
+                <offset>1.45</offset>
             </li>
         </capMods>
 
@@ -104,17 +106,14 @@
             <li>No loss in shooting skill.</li>
         </customEffectDescriptions>
 
+        <passionMod>
+            <skill>Shooting</skill>
+            <modType>AddOneLevel</modType>
+        </passionMod>
+
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <noSkillLoss>Shooting</noSkillLoss>
-                <hediffsToBodyParts>
-                    <li>
-                        <hediff>BEWH_WarpShield</hediff>
-                        <bodyparts>
-                            <li>Brain</li>
-                        </bodyparts>
-                    </li>
-                </hediffsToBodyParts>
             </li>
         </modExtensions>
     </GeneDef>
@@ -135,7 +134,7 @@
             <MentalBreakThreshold>-0.2</MentalBreakThreshold>
         </statOffsets>
         <statFactors>
-            <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.2</CertaintyLossFactor>
+            <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.35</CertaintyLossFactor>
             <GlobalLearningFactor>2.5</GlobalLearningFactor>
         </statFactors>
 
@@ -150,7 +149,7 @@
             </li>
         </suppressedTraits>
         <aptitudes>
-            <Intellectual>8</Intellectual>
+            <Intellectual>6</Intellectual>
         </aptitudes>
 
     </GeneDef>
@@ -171,8 +170,8 @@
         <preventPermanentWounds>true</preventPermanentWounds>
 
         <statFactors>
-            <ImmunityGainSpeed>6</ImmunityGainSpeed>
-            <InjuryHealingFactor>12</InjuryHealingFactor>
+            <ImmunityGainSpeed>5</ImmunityGainSpeed>
+            <InjuryHealingFactor>11</InjuryHealingFactor>
         </statFactors>
 
         <biologicalAgeTickFactorFromAgeCurve>
@@ -243,7 +242,6 @@
 
         <foodPoisoningChanceFactor>0</foodPoisoningChanceFactor>
         <dontMindRawFood>true</dontMindRawFood>
-        <immuneToToxGasExposure>true</immuneToToxGasExposure>
         <overdoseChanceFactor>0</overdoseChanceFactor>
 
         <statFactors>
@@ -260,19 +258,19 @@
         <capMods>
             <li>
                 <capacity>BloodPumping</capacity>
-                <postFactor>3.75</postFactor>
+                <offset>2.75</offset>
             </li>
             <li>
                 <capacity>BloodFiltration</capacity>
-                <postFactor>3.5</postFactor>
+                <offset>2.5</offset>
             </li>
             <li>
                 <capacity>Breathing</capacity>
-                <postFactor>4.5</postFactor>
+                <offset>2.75</offset>
             </li>
             <li>
                 <capacity>Eating</capacity>
-                <postFactor>2</postFactor>
+                <offset>0.9</offset>
             </li>
         </capMods>
     </GeneDef>
@@ -290,7 +288,7 @@
 
 
         <statOffsets>
-            <MeleeDodgeChance>15</MeleeDodgeChance>
+            <MeleeDodgeChance>12</MeleeDodgeChance>
         </statOffsets>
 
         <statFactors>
@@ -301,7 +299,7 @@
         <capMods>
             <li>
                 <capacity>Manipulation</capacity>
-                <postFactor>4.5</postFactor>
+                <offset>2.9</offset>
             </li>
         </capMods>
         <suppressedTraits>
@@ -339,7 +337,7 @@
         </statOffsets>
         <statFactors>
             <IncomingDamageFactor>0.2</IncomingDamageFactor>
-            <MeleeDamageFactor>7</MeleeDamageFactor>
+            <MeleeDamageFactor>6</MeleeDamageFactor>
         </statFactors>
 
         <suppressedTraits>
@@ -347,12 +345,20 @@
                 <def>Wimp</def>
             </li>
         </suppressedTraits>
+
         <aptitudes>
-            <Melee>12</Melee>
+            <Melee>10</Melee>
         </aptitudes>
+
         <customEffectDescriptions>
             <li>No loss in melee skill.</li>
         </customEffectDescriptions>
+
+        <passionMod>
+            <skill>Melee</skill>
+            <modType>AddOneLevel</modType>
+        </passionMod>
+
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <noSkillLoss>Melee</noSkillLoss>

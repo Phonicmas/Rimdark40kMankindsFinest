@@ -54,9 +54,17 @@ namespace Genes40k
             {
                 traitAddChance = 10f;
             }
-            else if (__instance.story.traits.HasTrait(Genes40kDefOf.PsychicSensitivity, 2))
+            else if (__instance.story.traits.HasTrait(Genes40kDefOf.PsychicSensitivity, 1))
             {
                 traitAddChance = 5f;
+            }
+            else if (__instance.story.traits.HasTrait(Genes40kDefOf.PsychicSensitivity, -1))
+            {
+                traitAddChance = -10f;
+            }
+            else if (__instance.story.traits.HasTrait(Genes40kDefOf.PsychicSensitivity, -2))
+            {
+                traitAddChance = -200f;
             }
 
             var rand = new Random();
@@ -64,7 +72,7 @@ namespace Genes40k
 
             /*if (Prefs.DevMode && DebugSettings.godMode)
             {
-                resurrectionChance = 200;
+                resurrectionChance = 400;
             }*/
 
             const int chanceMax = 100;

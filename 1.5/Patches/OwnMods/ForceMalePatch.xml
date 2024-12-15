@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
+
     <Operation Class="VFECore.PatchOperationToggableSequence">
         <enabled>False</enabled>
         <mods>
-            <li>Warhammer 40.000 - Genes</li>
+            <li>RimDark 40k - Mankinds Finest</li>
         </mods>
-        <label>Force male on geneseeds:</label>
+        <label>Force space marines to be male:</label>
         <operations>
             <li Class="PatchOperationAdd">
-                <xpath>Defs/GeneDef[defName = "BEWH_SecondaryHeart"]</xpath>
+                <xpath>Defs/GeneDef[defName = "BEWH_Ossmodula"]</xpath>
                 <value>
                     <modExtensions>
                         <li Class="VanillaGenesExpanded.GeneExtension">
@@ -19,4 +20,5 @@
             </li>
         </operations>
     </Operation>
+    
 </Patch>

@@ -10,8 +10,6 @@ namespace Genes40k
     {
         private Vector2 scrollPosition;
 
-        private const float HeaderHeight = 30f;
-
         private Map map = null;
         private Building_GeneTable geneTable = null;
         
@@ -253,7 +251,7 @@ namespace Genes40k
             TooltipHandler.TipRegion(pawnIconRect, toolTipPawn);
             
             
-            if (Widgets.ButtonText(new Rect(inRect.xMax - CloseButSize.x, inRect.yMax, Window.CloseButSize.x, Window.CloseButSize.y), "Close".Translate()))
+            if (Widgets.ButtonText(new Rect(inRect.xMax - CloseButSize.x, inRect.yMax, CloseButSize.x, CloseButSize.y), "Close".Translate()))
             {
                 Close();
             }
@@ -263,7 +261,7 @@ namespace Genes40k
                 return;
             }
             
-            if (Widgets.ButtonText(new Rect(inRect.xMin, inRect.yMax, Window.CloseButSize.x, Window.CloseButSize.y), "Accept".Translate()))
+            if (Widgets.ButtonText(new Rect(inRect.xMin, inRect.yMax, CloseButSize.x, CloseButSize.y), "Accept".Translate()))
             {
                 var thingCount = new List<ThingCount>
                 {

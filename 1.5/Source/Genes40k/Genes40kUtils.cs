@@ -371,29 +371,13 @@ namespace Genes40k
 
             return text;
         }
-        
-        
-        public static bool FromHexErrorLess(string hex, out Color color)
+        public static void OffsetDivineRadiance(Pawn pawn, float offset)
         {
-            if (hex.StartsWith("#"))
+            var geneDivineRadiance = pawn.genes?.GetFirstGeneOfType<Gene_DivineRadiance>();
+            if (geneDivineRadiance != null)
             {
-                hex = hex.Substring(1);
+                geneDivineRadiance.ChangeDivineRadianceAmount(offset, false);
             }
-            if (hex.Length != 6 && hex.Length != 8)
-            {
-                color = Color.white;
-                return false;
-            }
-            var r = int.Parse(hex.Substring(0, 2), NumberStyles.HexNumber);
-            var g = int.Parse(hex.Substring(2, 2), NumberStyles.HexNumber);
-            var b = int.Parse(hex.Substring(4, 2), NumberStyles.HexNumber);
-            var a = 255;
-            if (hex.Length == 8)
-            {
-                a = int.Parse(hex.Substring(6, 2), NumberStyles.HexNumber);
-            }
-            color = GenColor.FromBytes(r, g, b, a);
-            return true;
         }
         
     }

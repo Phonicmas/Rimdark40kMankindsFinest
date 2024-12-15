@@ -40,7 +40,7 @@
     <tickerType>Normal</tickerType>
 
     <canGenerateDefaultDesignator>false</canGenerateDefaultDesignator>
-    <designationCategory Inherit="False" />
+    <designationCategory IsNull="True"/>
     <minifiedDef Inherit="False" />
     <thingCategories Inherit="False" />
 

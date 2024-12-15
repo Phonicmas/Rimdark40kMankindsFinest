@@ -9,12 +9,16 @@ namespace Genes40k
         public bool psychicPhenomena = true;
         public bool psykerPariahBirth = true;
         public int psykerPariahBirthChance = 10;
+        
         public bool perpetualBirth = true;
         public int perpetualBirthChance = 3;
+
+        public int livingSaintBigThreat = 65;
+        public int livingSaintSmallThreat = 35;
         
-        
-        public Color bannerColorOne = Color.yellow;
-        public Color bannerColorTwo = Color.red;
+        public ChapterColourDef currentlySelectedPreset = null;
+        public Color chapterColorOne = Color.black;
+        public Color chapterColorTwo = Color.red;
         
         public bool useChaosVersion = false;
 
@@ -24,9 +28,10 @@ namespace Genes40k
             Scribe_Values.Look(ref psykerPariahBirth, "psykerPariahBirth", true);
             Scribe_Values.Look(ref psykerPariahBirthChance, "psykerPariahBirthChance", 10);
             Scribe_Values.Look(ref perpetualBirthChance, "perpetualBirthChance", 3);
-            Scribe_Values.Look(ref bannerColorOne, "bannerColorOne", Color.yellow);
-            Scribe_Values.Look(ref bannerColorTwo, "bannerColorTwo", Color.red);
+            Scribe_Values.Look(ref chapterColorOne, "chapterColorOne", Color.black);
+            Scribe_Values.Look(ref chapterColorTwo, "chapterColorTwo", Color.red);
             Scribe_Values.Look(ref useChaosVersion, "useChaosVersion", false);
+            Scribe_Defs.Look(ref currentlySelectedPreset, "currentlySelectedPreset");
             base.ExposeData();
         }
     }

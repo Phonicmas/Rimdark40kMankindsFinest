@@ -437,8 +437,10 @@
             <ImmunityGainSpeed>100</ImmunityGainSpeed>
             <IncomingDamageFactor>0.75</IncomingDamageFactor>
         </statFactors>
+        <immuneToToxGasExposure>true</immuneToToxGasExposure>
         <statOffsets>
-            <ToxicResistance>4</ToxicResistance>
+            <ToxicResistance>10</ToxicResistance>
+            <ToxicEnvironmentResistance>10</ToxicEnvironmentResistance>
             <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
             <ArmorRating_Sharp>0.15</ArmorRating_Sharp>
             <ArmorRating_Heat>0.20</ArmorRating_Heat>

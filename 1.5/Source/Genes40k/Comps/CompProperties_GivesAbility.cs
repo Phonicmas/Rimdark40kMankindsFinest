@@ -10,7 +10,7 @@ namespace Genes40k
 
         public CompProperties_GivesAbility()
         {
-            compClass = typeof(CompGivesAbility);
+            compClass = typeof(Comp_GivesAbility);
         }
     }
 }

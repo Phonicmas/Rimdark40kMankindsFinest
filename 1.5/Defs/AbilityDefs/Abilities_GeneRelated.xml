@@ -26,14 +26,14 @@
     <iconPath>UI/Abilities/BEWH_DivineFlight</iconPath>
     <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
-    <cooldownTicksRange>200</cooldownTicksRange>
+    <cooldownTicksRange>0</cooldownTicksRange>
     <verbProperties>
       <verbClass>Verb_CastAbilityJump</verbClass>
       <label>divine flight</label>
       <violent>false</violent>
       <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
-      <warmupTime>1</warmupTime>
-      <range>80</range>
+      <warmupTime>0.5</warmupTime>
+      <range>100</range>
       <requireLineOfSight>true</requireLineOfSight>
       <soundCast>Longjump_Jump</soundCast>
       <soundLanding>Longjump_Land</soundLanding>
@@ -43,6 +43,11 @@
         <canTargetBuildings>false</canTargetBuildings>
       </targetParams>
     </verbProperties>
+    <comps>
+      <li Class="Genes40k.CompProperties_AbilityDivineRadianceCost">
+        <divineRadianceCost>0.02</divineRadianceCost>
+      </li>
+    </comps>
   </AbilityDef>
 
   <!-- Angelic Flight -->

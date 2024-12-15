@@ -148,4 +148,63 @@
 		</stages>
 	</HediffDef>
 
+	<!-- Living Saint: Missing Divine Radiance -->
+	<HediffDef>
+		<defName>BEWH_DivineRadiaceFading</defName>
+		<label>divine radiance fading</label>
+		<description>...</description>
+		<hediffClass>Hediff_HemogenCraving</hediffClass>
+		<defaultLabelColor>(1, 0.2, 0.2)</defaultLabelColor>
+		<initialSeverity>0.01</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<everCurableByItem>false</everCurableByItem>
+		<stages>
+			<li>
+				<label>minor</label>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.9</setMax>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<label>moderate</label>
+				<minSeverity>0.35</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.65</setMax>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<label>major</label>
+				<minSeverity>0.7</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.4</setMax>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<label>fatal</label>
+				<minSeverity>1</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="Genes40k.HediffCompProperties_SeverityFromDivineRadiance">
+				<severityPerHourEmpty>0.2</severityPerHourEmpty>				<!-- Gives 5 hours before pawn dies -->
+				<severityPerHourDivineRadiance>-0.1</severityPerHourDivineRadiance>
+			</li>
+		</comps>
+	</HediffDef>
+
 </Defs>

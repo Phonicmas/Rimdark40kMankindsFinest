@@ -78,7 +78,7 @@
 
 
   <!-- Leman Russ: Deny the Witch -->
-  <AbilityDef>
+  <AbilityDef>  
     <defName>BEWH_DenyTheWitch</defName>
     <label>Deny the Witch</label>
     <description>Blocks target from using psycasts and dampens both their psychic and mental capabilities.</description>
@@ -102,7 +102,7 @@
       </targetParams>
     </verbProperties>
     <comps>
-      <li Class="Genes40k.CompProperties_DenyTheWitch">
+      <li Class="Genes40k.CompProperties_AbilityDenyTheWitch">
         <range>46</range>
         <hediffDef>BEWH_DeniedWitch</hediffDef>
       </li>
@@ -241,7 +241,7 @@
     <category>BEWH_Primarch</category>
     <abilityClass>Genes40k.Ability_IronCircle</abilityClass>
     <comps>
-      <li Class="Genes40k.CompProperties_SummonMechsForCaster">
+      <li Class="Genes40k.CompProperties_AbilitySummonMechsForCaster">
         <mechKind>BEWH_PerturaboDomitar</mechKind>
         <amount>6</amount>
         <cannotHaveMoreThanAmount>true</cannotHaveMoreThanAmount>

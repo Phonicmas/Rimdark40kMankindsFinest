@@ -22,6 +22,7 @@
       <Steel>200</Steel>
       <ComponentIndustrial>12</ComponentIndustrial>
       <ComponentSpacer>2</ComponentSpacer>
+      <Gold>5</Gold>
     </costList>
     <comps>
       <li Class="CompProperties_Power">
@@ -56,7 +57,7 @@
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
     <hasInteractionCell>true</hasInteractionCell>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
-    <designationCategory>Production</designationCategory>
+    <designationCategory>BEWH_RimDarkCategory</designationCategory>
     <uiOrder>2530</uiOrder>
     <surfaceType>Item</surfaceType>
     <designationHotKey>Misc12</designationHotKey>
@@ -92,7 +93,7 @@
     <hasInteractionCell>true</hasInteractionCell>
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
     <defaultPlacingRot>North</defaultPlacingRot>
-    <designationCategory>Production</designationCategory>
+    <designationCategory>BEWH_RimDarkCategory</designationCategory>
     <uiOrder>2100</uiOrder>
     <researchPrerequisites>
       <li>BEWH_GeneseedCreation</li>
@@ -169,8 +170,11 @@
       <Flammability>0.5</Flammability>
     </statBases>
     <costList>
-      <Steel>150</Steel>
-      <ComponentIndustrial>4</ComponentIndustrial>
+      <Steel>300</Steel>
+      <Plasteel>50</Plasteel>
+      <Gold>10</Gold>
+      <ComponentIndustrial>10</ComponentIndustrial>
+      <ComponentSpacer>10</ComponentSpacer>
     </costList>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
@@ -179,7 +183,7 @@
     <drawerType>MapMeshAndRealTime</drawerType>
     <fillPercent>0.5</fillPercent>
     <canOverlapZones>false</canOverlapZones>
-    <designationCategory>Misc</designationCategory>
+    <designationCategory>BEWH_RimDarkCategory</designationCategory>
     <uiOrder>2200</uiOrder>
     <hasInteractionCell>true</hasInteractionCell>
     <inspectorTabs>

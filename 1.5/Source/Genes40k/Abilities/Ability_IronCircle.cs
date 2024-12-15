@@ -40,7 +40,7 @@ namespace Genes40k
         
         public override bool GizmoDisabled(out string reason)
         {
-            var comp = (CompProperties_SummonMechsForCaster)def.comps.First(properties => properties is CompProperties_SummonMechsForCaster);
+            var comp = (CompProperties_AbilitySummonMechsForCaster)def.comps.First(properties => properties is CompProperties_AbilitySummonMechsForCaster);
             
             var amountToSpawn = comp.amount;
             

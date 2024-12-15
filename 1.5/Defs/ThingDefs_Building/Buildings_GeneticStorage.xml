@@ -12,7 +12,7 @@
       <Mass>10</Mass>
     </statBases>
     <defaultPlacingRot>North</defaultPlacingRot>
-    <designationCategory>Misc</designationCategory>
+    <designationCategory>BEWH_RimDarkCategory</designationCategory>
     <building>
       <destroySound>BuildingDestroyed_Metal_Small</destroySound>
       <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
@@ -64,9 +64,11 @@
       <li>BEWH_GeneseedCreation</li>
     </researchPrerequisites>
     <costList>
+      <Steel>100</Steel>
       <Plasteel>50</Plasteel>
-      <ComponentIndustrial>4</ComponentIndustrial>
-      <ComponentSpacer>2</ComponentSpacer>
+      <Gold>10</Gold>
+      <ComponentIndustrial>8</ComponentIndustrial>
+      <ComponentSpacer>6</ComponentSpacer>
     </costList>
     <inspectorTabs Inherit="False">
       <li>Genes40k.ITab_SangprimusPortum</li>
@@ -128,7 +130,9 @@
       <li>BEWH_GeneseedPurification</li>
     </researchPrerequisites>
     <costList>
-      <Plasteel>50</Plasteel>
+      <Steel>100</Steel>
+      <Plasteel>10</Plasteel>
+      <Gold>2</Gold>
       <ComponentIndustrial>4</ComponentIndustrial>
       <ComponentSpacer>2</ComponentSpacer>
     </costList>
@@ -187,9 +191,11 @@
       <li>BEWH_GeneseedPerfection</li>
     </researchPrerequisites>
     <costList>
-      <Plasteel>50</Plasteel>
-      <ComponentIndustrial>4</ComponentIndustrial>
-      <ComponentSpacer>2</ComponentSpacer>
+      <Steel>100</Steel>
+      <Plasteel>25</Plasteel>
+      <Gold>5</Gold>
+      <ComponentIndustrial>6</ComponentIndustrial>
+      <ComponentSpacer>4</ComponentSpacer>
     </costList>
     <building>
       <fixedStorageSettings>
@@ -242,9 +248,11 @@
     </researchPrerequisites>
     <size>(1,1)</size>
     <costList>
-      <Plasteel>20</Plasteel>
-      <ComponentIndustrial>4</ComponentIndustrial>
-      <ComponentSpacer>2</ComponentSpacer>
+      <Steel>40</Steel>
+      <Plasteel>40</Plasteel>
+      <Gold>10</Gold>
+      <ComponentIndustrial>8</ComponentIndustrial>
+      <ComponentSpacer>8</ComponentSpacer>
     </costList>
     <building>
       <fixedStorageSettings>

@@ -5,31 +5,36 @@
         <defName>BEWH_ImperiumFaction</defName>
         <label>Imperium</label>
         <description>A company of the emperors finest warriors, the Adeptus Astartes, charged with purging heresy from this backwater rimworld.</description>
+
         <pawnSingular>Human</pawnSingular>
         <pawnsPlural>Humen</pawnsPlural>
         <fixedLeaderKinds>
             <li>BEWH_LordCommander</li>
         </fixedLeaderKinds>
+        <leaderTitle>Lord Commander</leaderTitle>
         <fixedName>Imperium of Mankind</fixedName>
+
         <settlementGenerationWeight>1</settlementGenerationWeight>
         <requiredCountAtGameStart>1</requiredCountAtGameStart>
         <allowedArrivalTemperatureRange>-100~200</allowedArrivalTemperatureRange>
         <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
         <configurationListOrderPriority>90</configurationListOrderPriority>
+
         <canSiege>true</canSiege>
         <canStageAttacks>true</canStageAttacks>
         <permanentEnemy>false</permanentEnemy>
-        <leaderTitle>Lord Commander</leaderTitle>
         <techLevel>Ultra</techLevel>
         <rescueesCanJoin>false</rescueesCanJoin>
+
         <factionNameMaker>BEWH_FactionNameMaker</factionNameMaker>
         <settlementNameMaker>BEWH_SettlementNameMaker</settlementNameMaker>
         <factionIconPath>UI/Icons/Imperium/ImperiumIcon</factionIconPath>
         <settlementTexturePath>UI/Icons/Imperium/ImperiumIcon</settlementTexturePath>
+
         <xenotypeSet Inherit="False">
             <xenotypeChances>
                 <BEWH_SpaceMarine>0.40</BEWH_SpaceMarine>
-                <BEWH_PrimarisSpaceMarine>0.10</BEWH_PrimarisSpaceMarine>
+                <BEWH_PrimarisSpaceMarine>0.20</BEWH_PrimarisSpaceMarine>
                 <BEWH_Custodes>0.02</BEWH_Custodes>
             </xenotypeChances>
         </xenotypeSet>
@@ -41,6 +46,7 @@
                 </categoriesAdulthood>
             </li>
         </backstoryFilters>
+
         <earliestRaidDays>45</earliestRaidDays>
         <autoFlee>false</autoFlee>
         <raidCommonalityFromPointsCurve>
@@ -59,6 +65,53 @@
                 <li>(100000, 5000)</li>
             </points>
         </maxPawnCostPerTotalPointsCurve>
+
+
+        <fixedIdeo MayRequire="Ludeon.RimWorld.Ideology">true</fixedIdeo>
+        <ideoName MayRequire="Ludeon.RimWorld.Ideology">Imperial Cult</ideoName>
+        <ideoDescription MayRequire="Ludeon.RimWorld.Ideology">The Imperial Cult, also called the Cult Imperialis in High Gothic, is the official and only state religion of the Imperium of Man. It is devoted to the worship of the Emperor of Mankind as the ascended divinity and saviour of Humanity.</ideoDescription>
+        <deityPresets MayRequire="Ludeon.RimWorld.Ideology">
+            <li>
+                <nameType>
+                    <name>God-Emperor of Mankind</name>
+                    <type>God</type>
+                </nameType>
+                <gender>Male</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+        </deityPresets>
+        <styles>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Techist</li>
+        </styles>
+        <forcedMemes>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Structure_TheistEmbodied</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Proselytizer</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">HumanPrimacy</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Loyalist</li>
+        </forcedMemes>
+        <requiredPreceptsOnly MayRequire="Ludeon.RimWorld.Ideology">true</requiredPreceptsOnly>
+
+
+        <royalFavorLabel MayRequire="Ludeon.RimWorld.Royalty">respect</royalFavorLabel>
+        <royalFavorIconPath MayRequire="Ludeon.RimWorld.Royalty">UI/Icons/RoyalFavor</royalFavorIconPath>
+        <royalTitleInheritanceWorkerClass MayRequire="Ludeon.RimWorld.Royalty">RoyalTitleInheritanceWorker</royalTitleInheritanceWorkerClass>
+        <royalTitleInheritanceRelations MayRequire="Ludeon.RimWorld.Royalty">
+            <li>Child</li>
+            <li>Grandchild</li>
+            <li>GreatGrandchild</li>
+            <li>NephewOrNiece</li>
+            <li>Spouse</li>
+            <li>Sibling</li>
+            <li>HalfSibling</li>
+            <li>Cousin</li>
+            <li>Parent</li>
+            <li>UncleOrAunt</li>
+        </royalTitleInheritanceRelations>
+        <royalTitleTags MayRequire="Ludeon.RimWorld.Royalty">
+            <li>ImperiumTitle</li>
+        </royalTitleTags>
+
+
         <pawnGroupMakers>
             <li>
                 <!-- Normal fights -->

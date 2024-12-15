@@ -95,8 +95,8 @@ namespace Genes40k
             
             var command_Action = new Command_Action
             {
-                defaultLabel = "BEWH.CraftPrimarchEmbryo".Translate() + "...",
-                defaultDesc = "BEWH.CraftPrimarchEmbryoDesc".Translate(),
+                defaultLabel = "BEWH.CraftPrimarchEmbryoGeneTable".Translate() + "...",
+                defaultDesc = "BEWH.CraftPrimarchEmbryoGeneTableDesc".Translate(),
                 icon = CraftPrimarchEmbryo.Texture,
                 action = delegate
                 {

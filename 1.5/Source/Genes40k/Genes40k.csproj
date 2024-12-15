@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="0ColourPicker">
+      <HintPath>..\..\Assemblies\0ColourPicker.dll</HintPath>
+    </Reference>
     <Reference Include="0Harmony">
       <HintPath>..\..\..\..\..\..\..\workshop\content\294100\2009463077\Current\Assemblies\0Harmony.dll</HintPath>
       <Private>False</Private>
@@ -57,9 +60,15 @@
     </Reference>
     <Reference Include="UnityEngine.IMGUIModule">
       <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.TextRenderingModule">
       <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="VFECore">
       <HintPath>..\..\..\..\..\..\..\workshop\content\294100\2023507013\1.4\Assemblies\VFECore.dll</HintPath>
@@ -75,22 +84,26 @@
     <Compile Include="Abilities\Ability_PsychicEmp.cs" />
     <Compile Include="Abilities\Ability_UpdateGizmo.cs" />
     <Compile Include="Comps\CompAbilityEffect_DenyTheWitch.cs" />
+    <Compile Include="Comps\CompAbilityEffect_DivineRadianceCost.cs" />
     <Compile Include="Comps\CompAbilityEffect_SharedBurden.cs" />
     <Compile Include="Comps\CompAbilityEffect_SummonMechsForCaster.cs" />
     <Compile Include="Comps\CompAbilityEffect_WordOfAuthority.cs" />
     <Compile Include="Comps\CompAbilityEffect_WordOfDivination.cs" />
+    <Compile Include="Comps\CompProperties_AbilityDivineRadianceCost.cs" />
     <Compile Include="Comps\CompProperties_AbilitySharedBurden.cs" />
     <Compile Include="Comps\CompProperties_AbilityTwinDisable.cs" />
     <Compile Include="Comps\CompProperties_AbilityTwinTeleport.cs" />
     <Compile Include="Comps\CompProperties_AbilityWordOfAuthority.cs" />
     <Compile Include="Comps\CompProperties_AbilityWordOfDivination.cs" />
     <Compile Include="Comps\CompProperties_Aura.cs" />
-    <Compile Include="Comps\CompProperties_DenyTheWitch.cs" />
-    <Compile Include="Comps\CompProperties_SummonMechsForCaster.cs" />
+    <Compile Include="Comps\CompProperties_AbilityDenyTheWitch.cs" />
+    <Compile Include="Comps\CompProperties_AbilitySummonMechsForCaster.cs" />
     <Compile Include="Comps\Comp_Aura.cs" />
     <Compile Include="Comps\Comp_TwinDisable.cs" />
     <Compile Include="Comps\Comp_TwinTeleport.cs" />
     <Compile Include="Comps\GameComponent_Perpetual.cs" />
+    <Compile Include="Comps\HediffCompProperties_SeverityFromDivineRadiance.cs" />
+    <Compile Include="Comps\HediffComp_SeverityFromDivineRadiance.cs" />
     <Compile Include="DefModExtensions\DefModExtension_ExclusiveMech.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneInducedFear.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneseedHarvest.cs" />
@@ -99,6 +112,8 @@
     <Compile Include="DefModExtensions\DefModExtension_GeneseedVialRecipe.cs" />
     <Compile Include="DefModExtensions\DefModExtension_PerpetualGene.cs" />
     <Compile Include="DefModExtensions\DefModExtension_PrimarchVatExtras.cs" />
+    <Compile Include="GeneClasses\GeneGizmo_ResourceDivineRadiance.cs" />
+    <Compile Include="GeneClasses\Gene_DivineRadiance.cs" />
     <Compile Include="GeneClasses\Gene_Furybound.cs" />
     <Compile Include="GeneClasses\Gene_InduceFear.cs" />
     <Compile Include="GeneClasses\Gene_Perpetual.cs" />
@@ -108,6 +123,7 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_DomitarMechExclusive.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_FuryboundPawnText.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_ImplantGeneseedCorrectIngredient.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_LivingSaintKilledPawn.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_MoreArtJoy.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_ProgenoidGlandProgress.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_NaturalBirthPerpetual.cs" />
@@ -116,10 +132,7 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_RubiconSurgeryChanceIncrease.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_SangprimusNoDuplicateAccepted.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_SecondProgenoidGlandProgress.cs" />
-    <Compile Include="Misc\Dialog_CraftPrimarchEmbryo.cs" />
-    <Compile Include="Misc\Dialog_ViewGenesEmbryo.cs" />
-    <Compile Include="Misc\ITab_ContentsGeneticStorage.cs" />
-    <Compile Include="Misc\ITab_SangprimusPortum.cs" />
+    <Compile Include="Misc\ChapterColourDef.cs" />
     <Compile Include="Misc\StockGenerator_TagSangprimusMaterialNoDupe.cs" />
     <Compile Include="ThingClasses\Building_ChapterBanner.cs" />
     <Compile Include="ThingClasses\Building_GeneGestator.cs" />
@@ -154,6 +167,11 @@
     <Compile Include="ThingClasses\GeneticMatrix.cs" />
     <Compile Include="ThingClasses\PrimarchEmbryo.cs" />
     <Compile Include="ThingClasses\GeneseedVial.cs" />
+    <Compile Include="Windows\Dialog_ChangeDefaultChapterColour.cs" />
+    <Compile Include="Windows\Dialog_CraftPrimarchEmbryo.cs" />
+    <Compile Include="Windows\Dialog_ViewGenesEmbryo.cs" />
+    <Compile Include="Windows\ITab_ContentsGeneticStorage.cs" />
+    <Compile Include="Windows\ITab_SangprimusPortum.cs" />
     <Compile Include="Workers\JobDriver_FillPrimarchGrowthVat.cs" />
     <Compile Include="Workers\JobDriver_FillGeneGestator.cs" />
     <Compile Include="Workers\JobDriver_FleeInducedFear.cs" />
@@ -173,7 +191,7 @@
     <Compile Include="Comps\CompProperties_GivesAbility.cs" />
     <Compile Include="DefModExtensions\DefModExtension_WarpShield.cs" />
     <Compile Include="DefModExtensions\DefModExtension_Psyker.cs" />
-    <Compile Include="Comps\CompGivesAbility.cs" />
+    <Compile Include="Comps\Comp_GivesAbility.cs" />
     <Compile Include="GeneClasses\Gene_Pariah.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_StopDeterioation.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_MentalBreakdownPsyker.cs" />

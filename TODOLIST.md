@@ -21,11 +21,13 @@ In the FromCode.xml where all text are, sort them properly cause oh boy its not 
 
 ## Art
 
-Primarch Specific Icons (Not sure what excatly to do here) (Maybe flip the helix of the Chapter ones and add some bedazzle? Or just make something that would remind you of them, like red skin and psyker thing i made for Magnus, and the wings for Sanguinius) (The helix should stay i feel) (I think i learn towards just flipping the helix and adding some bedazzle)
+Icon for primarch embryo creation on the gene table
 
-Icon for geneseed vial creation on the gene table
+
 
 Maybe some different backgrounds (the blue hexagon for xenotype or white circle thingy for endogenes) for the different genes? (Maybe keep the recoloured one psyker and pariah and then make some new type for the different super human, with increasing golden stuff and purity seals n stuff) (im just cooking here, this is not important)
+
+Primarch Specific Icons (Not sure what excatly to do here) (Maybe flip the helix of the Chapter ones and add some bedazzle? Or just make something that would remind you of them, like red skin and psyker thing i made for Magnus, and the wings for Sanguinius) (The helix should stay i feel) (I think i learn towards just flipping the helix and adding some bedazzle)
 
 ## Code and XML
 
@@ -33,9 +35,30 @@ add stat offsets and factor and abilities to ranks. possibly add more?
 
 in gene table class replace icon with new icon when done
 
-For choosing colour for ancient chapter banner, make a new? window that has a colour wheel thingy where players can choose the two colours (maybe also add a gizmo to chapter banner for quick access to this window so they dont have to navigate to settings each time)
+Make class for power armor, for choosing colour, and for spawned marines giving them a chapter gene. Use ChapterColourDefs, go get random from all off those defs and use info from there.
 
-Make class for power armor, for choosing colour. Should have set of 18 predefined colours (all chapters) (put in genesUtils) when spawning take one randomly from the list and set colour of armor to that.
+Living saint: 
+Upon pawn death they may become a living saint. Female have a higher chance than males. shooting and melee also increase chance so does psysensitive traits (vanilla ones). Pariah should maybe not be able to? and decrease psy trait should maybe decrease chance. (Done)
+
+Give resource "Divine Radiance". Used to power abilities. Every kill decreases this by some amount depending on enemy pawns combat strength. If this reaches 0, they gain a debuff that slowly makes them weaker untill they simply die. (Max of resource is 500) (Done)
+
+When pawn gets too much resource they go into temp boosted Holy Ascension where they are empowered, but rapidly lose resource after some time in it. (Doing)
+
+Send message when low on radiance (Doing)
+
+New abilities:
+"Holy Blast": aoe blast that damages enemies and heal allies for half damage divided between all injuries (so 40 dmg => 20 heal, 5 injuries, 4hp each injury?) (apply new damage def that just does this by default (add to core, then it can be used elsewhere) ) Cost 20 divine radiance. low cooldown.
+
+"Divine flight": ability to fly very long distances. cost 2 divine radiance, no cooldown. (Done)
+
+"Proof of faith": Drains the target, making them go into coma? days and gives some Divine Radiance. Must target colonist, and if ideo is enabled then they must have same ideo. Also cant rarget pawns already drained. low cooldown. Coma duration and resource gained depends on pawn psy sens. Gain 10 * psysens (100% = 1f, so 200% psysens would give 20)
+
+--maybe insert aura ability here will cost divine radiance if so--
+
+Has an aura that increase mood around them. They also have greatly increase opinions by other. (Done)
+
+When saint dies they disappear. On a major raid they have a 65% chance of reappearing and a 35% on smaller raids (will add modsetting slider for this) (Done) 
+
 
 
 
@@ -49,7 +72,6 @@ In spect window code, call discard on pawn???
 
 ## Bugs
 
-For some reason the gestational flurry crates 10x twice???
 
 ## Other
 
