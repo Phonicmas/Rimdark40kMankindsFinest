@@ -22,13 +22,16 @@ namespace Genes40k
         public override float InitialResourceMax => NewMax;
 
         public override float MinLevelForAlert => 0.1f;
-        public override float MaxLevelOffset => 2f;
+        public override float MaxLevelOffset => 1f;
 
         protected override Color BarColor => new ColorInt(240, 183, 29).ToColor;
 
         protected override Color BarHighlightColor => new ColorInt(255, 200, 51).ToColor;
 
-        private bool canOvercharge = false;
+        public bool isOvercharging = false;
+        public bool overloadRadiance = false;
+
+        public bool passivelyDrainRadiance = false;
         
         public override float Value
         {
@@ -36,29 +39,34 @@ namespace Genes40k
             set
             {
                 var maxVal = max;
-                if (canOvercharge)
+                if (isOvercharging)
                 {
                     maxVal += MaxLevelOffset;
-                    canOvercharge = false;
                 }
                 cur = Mathf.Clamp(value, 0f, maxVal);
+                if (overloadRadiance && cur > max)
+                {
+                    overloadRadiance = false;
+                    cur = max + MaxLevelOffset;
+                }
             }
         }
         
-
         public Gene_DivineRadiance()
         {
             SetMax(NewMax);
         }
 
-        public void ChangeDivineRadianceAmount(float amount, bool canOverchargeValue)
+        public void ChangeDivineRadianceAmount(float amount)
         {
-            canOvercharge = canOverchargeValue;
             Value += amount;
 
             if (Value > Max)
             {
-                //Add overcharge hediff here that increases consciousness and combat stats.
+                if (!pawn.health.hediffSet.HasHediff(Genes40kDefOf.BEWH_LivingSaintHolyAscension))
+                {
+                    pawn.health.AddHediff(Genes40kDefOf.BEWH_LivingSaintHolyAscension);
+                }
             }
 
             if (Value <= MinLevelForAlert)
@@ -66,7 +74,16 @@ namespace Genes40k
                 //Send alert of low level divine radiance
             }
             
-            if (Value > 1f)
+            if (Value > 10f)
+            {
+                passivelyDrainRadiance = false;
+            }
+            else
+            {
+                passivelyDrainRadiance = true;
+            }
+
+            if (Value > 0.01f)
             {
                 return;
             }
@@ -74,6 +91,15 @@ namespace Genes40k
             if (!pawn.health.hediffSet.HasHediff(Genes40kDefOf.BEWH_DivineRadiaceFading))
             {
                 pawn.health.AddHediff(Genes40kDefOf.BEWH_DivineRadiaceFading);
+            }
+        }
+
+        public override void Tick()
+        {
+            base.Tick();
+            if (passivelyDrainRadiance && pawn.IsHashIntervalTick(2500))
+            {
+                ChangeDivineRadianceAmount(-0.02f);
             }
         }
 
@@ -107,24 +133,35 @@ namespace Genes40k
             {
                 var command_Action = new Command_Action
                 {
-                    defaultLabel = "DEV: Divine Radiance -10",
+                    defaultLabel = "DEV: Divine Radiance -30",
                     action = delegate
                     {
-                        ChangeDivineRadianceAmount(-0.1f, false);
+                        ChangeDivineRadianceAmount(-0.3f);
                     }
                 };
                 yield return command_Action;
                 
                 var command_Action2 = new Command_Action
                 {
-                    defaultLabel = "DEV: Divine Radiance +10",
+                    defaultLabel = "DEV: Divine Radiance +30",
                     action = delegate
                     {
-                        ChangeDivineRadianceAmount(0.1f, true);
+                        isOvercharging = true;
+                        overloadRadiance = true;
+                        ChangeDivineRadianceAmount(0.3f);
+                        overloadRadiance = false;
                     }
                 };
                 yield return command_Action2;
             }
+        }
+
+        public override void ExposeData()
+        {
+            base.ExposeData();
+            Scribe_Values.Look(ref isOvercharging, "isOvercharging", false);
+            Scribe_Values.Look(ref overloadRadiance, "overloadRadiance", false);
+            Scribe_Values.Look(ref passivelyDrainRadiance, "passivelyDrainRadiance", false);
         }
     }
 }

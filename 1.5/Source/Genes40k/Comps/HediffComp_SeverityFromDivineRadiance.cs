@@ -1,6 +1,4 @@
-﻿using RimWorld;
-using Verse;
-
+﻿using Verse;
 
 namespace Genes40k
 {
@@ -18,18 +16,42 @@ namespace Genes40k
             {
                 if (cachedDivineRadianceGene == null)
                 {
-                    cachedDivineRadianceGene = base.Pawn.genes.GetFirstGeneOfType<Gene_DivineRadiance>();
+                    cachedDivineRadianceGene = Pawn.genes.GetFirstGeneOfType<Gene_DivineRadiance>();
                 }
                 return cachedDivineRadianceGene;
+            }
+        }
+
+        public override void CompPostPostAdd(DamageInfo? dinfo)
+        {
+            base.CompPostPostAdd(dinfo);
+            if (Props.divineRadiancePerHour != 0)
+            {
+                DivineRadiance.isOvercharging = true;
+            }
+        }
+
+        public override void CompPostPostRemoved()
+        {
+            if (Props.divineRadiancePerHour != 0)
+            {
+                DivineRadiance.isOvercharging = false;
             }
         }
 
         public override void CompPostTick(ref float severityAdjustment)
         {
             base.CompPostTick(ref severityAdjustment);
-            if (DivineRadiance != null)
+            if (DivineRadiance == null)
             {
-                severityAdjustment += (DivineRadiance.Value > 0f ? Props.severityPerHourDivineRadiance : Props.severityPerHourEmpty) / 2500f;
+                return;
+            }
+            
+            severityAdjustment += (DivineRadiance.Value > 0f ? Props.severityPerHourDivineRadiance : Props.severityPerHourEmpty) / 2500f;
+                
+            if (Props.divineRadiancePerHour != 0)
+            {
+                DivineRadiance.ChangeDivineRadianceAmount(Props.divineRadiancePerHour / 2500f);
             }
         }
     }

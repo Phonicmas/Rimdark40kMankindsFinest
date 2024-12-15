@@ -42,12 +42,12 @@ Upon pawn death they may become a living saint. Female have a higher chance than
 
 Give resource "Divine Radiance". Used to power abilities. Every kill decreases this by some amount depending on enemy pawns combat strength. If this reaches 0, they gain a debuff that slowly makes them weaker untill they simply die. (Max of resource is 500) (Done)
 
-When pawn gets too much resource they go into temp boosted Holy Ascension where they are empowered, but rapidly lose resource after some time in it. (Doing)
+When pawn gets too much resource they go into temp boosted Holy Ascension where they are empowered, but rapidly lose resource after some time in it. (Done)
 
-Send message when low on radiance (Doing)
+Send message when low on radiance
 
 New abilities:
-"Holy Blast": aoe blast that damages enemies and heal allies for half damage divided between all injuries (so 40 dmg => 20 heal, 5 injuries, 4hp each injury?) (apply new damage def that just does this by default (add to core, then it can be used elsewhere) ) Cost 20 divine radiance. low cooldown.
+"Holy Blast": aoe blast that damages enemies and heal allies for half damage divided between all injuries (so 40 dmg => 20 heal, 5 injuries, 4hp each injury?) (apply new damage def that just does this by default (add to core, then it can be used elsewhere) ) Cost 20 divine radiance. low cooldown. (damage done for this is 10 * (pawn psysens * 0.75). So 400% psysens = 10 + (4 * 0.75) = 30) (Done)
 
 "Divine flight": ability to fly very long distances. cost 2 divine radiance, no cooldown. (Done)
 

@@ -110,6 +110,7 @@ namespace Genes40k
         public static HediffDef BEWH_PrimarisPhaseThree;
         
         public static HediffDef BEWH_DivineRadiaceFading;
+        public static HediffDef BEWH_LivingSaintHolyAscension;
 
         //Letters
         public static LetterDef BEWH_NaturalBornX;

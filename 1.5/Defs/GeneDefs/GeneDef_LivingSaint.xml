@@ -93,6 +93,13 @@
             <li>Gives Divine Radiance.</li>
         </customEffectDescriptions>
 
+        <abilities>
+            <li>BEWH_LivingSaintHolyBlast</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>BEWH_LivingSaintHolyBlast</AbilityDef>
+        </descriptionHyperlinks>
+
         <disablesNeeds>
             <li>Rest</li>
             <li>Food</li>
@@ -201,6 +208,7 @@
         </statOffsets>
         <statFactors>
             <MeleeDamageFactor>2.75</MeleeDamageFactor>
+            <AimingDelayFactor>0.7</AimingDelayFactor>
         </statFactors>
         <suppressedTraits>
             <li>

@@ -83,12 +83,14 @@
     <Compile Include="Abilities\Ability_RaiseBastion.cs" />
     <Compile Include="Abilities\Ability_PsychicEmp.cs" />
     <Compile Include="Abilities\Ability_UpdateGizmo.cs" />
+    <Compile Include="Comps\CompAbilityEffect_AoeHit.cs" />
     <Compile Include="Comps\CompAbilityEffect_DenyTheWitch.cs" />
     <Compile Include="Comps\CompAbilityEffect_DivineRadianceCost.cs" />
     <Compile Include="Comps\CompAbilityEffect_SharedBurden.cs" />
     <Compile Include="Comps\CompAbilityEffect_SummonMechsForCaster.cs" />
     <Compile Include="Comps\CompAbilityEffect_WordOfAuthority.cs" />
     <Compile Include="Comps\CompAbilityEffect_WordOfDivination.cs" />
+    <Compile Include="Comps\CompProperties_AbilityAoeHit.cs" />
     <Compile Include="Comps\CompProperties_AbilityDivineRadianceCost.cs" />
     <Compile Include="Comps\CompProperties_AbilitySharedBurden.cs" />
     <Compile Include="Comps\CompProperties_AbilityTwinDisable.cs" />

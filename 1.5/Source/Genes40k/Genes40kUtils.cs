@@ -374,10 +374,7 @@ namespace Genes40k
         public static void OffsetDivineRadiance(Pawn pawn, float offset)
         {
             var geneDivineRadiance = pawn.genes?.GetFirstGeneOfType<Gene_DivineRadiance>();
-            if (geneDivineRadiance != null)
-            {
-                geneDivineRadiance.ChangeDivineRadianceAmount(offset, false);
-            }
+            geneDivineRadiance?.ChangeDivineRadianceAmount(offset);
         }
         
     }
