@@ -6,7 +6,7 @@
         <defName>BEWH_PrimarchSpecificGeneI</defName>
         <label>Lion El'Jonson</label>
         <description>The genetic material of Lion El'Jonson.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Lion</iconPath>
         <displayOrderInCategory>401</displayOrderInCategory>
         <geneClass>Core40k.Gene_GiveVFECoreAbility</geneClass>
         <statOffsets>
@@ -26,12 +26,12 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chapter II - ??? -->
+    <!-- Chapter II - ??? Redacted by the Emperor's order -->
     <!--<GeneDef ParentName="BEWH_PrimarchSpecific">
         <defName>BEWH_PrimarchSpecificGeneII</defName>
         <label>???</label>
         <description>The genetic material of ???</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Chillgron</iconPath>
         <displayOrderInCategory>402</displayOrderInCategory>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
@@ -43,7 +43,7 @@
         <defName>BEWH_PrimarchSpecificGeneIII</defName>
         <label>Fulgrim</label>
         <description>The genetic material of Fulgrim.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Fulgrim</iconPath>
         <displayOrderInCategory>403</displayOrderInCategory>
         <statOffsets>
             <PawnBeauty>2</PawnBeauty>
@@ -83,7 +83,7 @@
         <defName>BEWH_PrimarchSpecificGeneIV</defName>
         <label>Perturabo</label>
         <description>The genetic material of Perturabo.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Perturabo</iconPath>
         <displayOrderInCategory>404</displayOrderInCategory>
         <statOffsets>
             <ResearchSpeed>2</ResearchSpeed>
@@ -121,7 +121,7 @@
         <defName>BEWH_PrimarchSpecificGeneV</defName>
         <label>Jaghatai Khan</label>
         <description>The genetic material of Jaghatai Khan.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Khan</iconPath>
         <displayOrderInCategory>405</displayOrderInCategory>
         <statFactors>
             <MoveSpeed>1.2</MoveSpeed>
@@ -143,7 +143,7 @@
         <defName>BEWH_PrimarchSpecificGeneVI</defName>
         <label>Leman Russ</label>
         <description>The genetic material of Leman Russ.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Russ</iconPath>
         <displayOrderInCategory>406</displayOrderInCategory>
         <abilities>
             <li>BEWH_WarpShield</li>
@@ -177,7 +177,7 @@
         <defName>BEWH_PrimarchSpecificGeneVII</defName>
         <label>Rogal Dorn</label>
         <description>The genetic material of Rogal Dorn.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Dorn</iconPath>
         <displayOrderInCategory>407</displayOrderInCategory>
         <hairColorOverride>(0.65, 0.65, 0.65)</hairColorOverride>
         <statOffsets>
@@ -203,7 +203,7 @@
         <defName>BEWH_PrimarchSpecificGeneVIII</defName>
         <label>Konrad Curze</label>
         <description>The genetic material of Konrad Curze.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Curze</iconPath>
         <displayOrderInCategory>408</displayOrderInCategory>
         <geneClass>Core40k.Gene_GiveVFECoreAbility</geneClass>
         <hairColorOverride>(1, 1, 1)</hairColorOverride>
@@ -240,7 +240,7 @@
         <defName>BEWH_PrimarchSpecificGeneIX</defName>
         <label>sanguinius</label>
         <description>The genetic material of Sanguinius, when implanted, grows a set of featered wings, allow for greater speed and flight.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificIX</iconPath>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Sanguinius</iconPath>
         <displayOrderInCategory>409</displayOrderInCategory>
         <customEffectDescriptions>
             <li>Ignores speed penalty from obstacles.</li>
@@ -302,7 +302,7 @@
         <defName>BEWH_PrimarchSpecificGeneX</defName>
         <label>Ferrus Manus</label>
         <description>The genetic material of Ferrus Manus.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Manus</iconPath>
         <displayOrderInCategory>410</displayOrderInCategory>
         <passionMod>
             <skill>Crafting</skill>
@@ -346,12 +346,12 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chapter XI - ??? -->
+    <!-- Chapter XI - ??? Redacted by the Emperor's order -->
     <!--<GeneDef ParentName="BEWH_PrimarchSpecific">
         <defName>BEWH_PrimarchSpecificGeneXI</defName>
         <label>???</label>
         <description>The genetic material of ???</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Chillgron</iconPath>
         <displayOrderInCategory>411</displayOrderInCategory>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
@@ -363,7 +363,7 @@
         <defName>BEWH_PrimarchSpecificGeneXII</defName>
         <label>Angron</label>
         <description>The genetic material of Angron.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Chillgron</iconPath>
         <displayOrderInCategory>412</displayOrderInCategory>
         <forcedTraits>
             <li>
@@ -390,7 +390,7 @@
         <defName>BEWH_PrimarchSpecificGeneXIII</defName>
         <label>Roboute Guilliman</label>
         <description>The genetic material of Roboute Guilliman.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Robot</iconPath>
         <displayOrderInCategory>413</displayOrderInCategory>
         <geneClass>Core40k.Gene_GiveVFECoreAbility</geneClass>
         <customEffectDescriptions>
@@ -431,7 +431,7 @@
         <defName>BEWH_PrimarchSpecificGeneXIV</defName>
         <label>Mortarion</label>
         <description>The genetic material of Mortarion.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Morty</iconPath>
         <displayOrderInCategory>414</displayOrderInCategory>
         <statFactors>
             <ImmunityGainSpeed>100</ImmunityGainSpeed>
@@ -462,7 +462,7 @@
         <defName>BEWH_PrimarchSpecificGeneXV</defName>
         <label>Magnus the Red</label>
         <description>The genetic material of Magnus the Red, when implanted, greatly improves psychic capabilities.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Mangus</iconPath>
         <displayOrderInCategory>415</displayOrderInCategory>
         <geneClass>Core40k.Gene_AddRandomGeneAndOrTraitByWeight</geneClass>
         <statFactors>
@@ -501,7 +501,7 @@
         <defName>BEWH_PrimarchSpecificGeneXVI</defName>
         <label>Horus Lupercal</label>
         <description>The genetic material of Horus Lupercal.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_TheBaldOne</iconPath>
         <displayOrderInCategory>416</displayOrderInCategory>
         <geneClass>Core40k.Gene_GiveVFECoreAbility</geneClass>
         <customEffectDescriptions>
@@ -534,7 +534,7 @@
         <defName>BEWH_PrimarchSpecificGeneXVII</defName>
         <label>Lorgar</label>
         <description>The genetic material of Lorgar.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Lorgar</iconPath>
         <displayOrderInCategory>410</displayOrderInCategory>
         <abilities>
             <li>BEWH_LorgarWordOfAuthority</li>
@@ -569,7 +569,7 @@
         <defName>BEWH_PrimarchSpecificGeneXVIII</defName>
         <label>Vulkan</label>
         <description>The genetic material of Vulkan.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Vulkan</iconPath>
         <displayOrderInCategory>418</displayOrderInCategory>
         <geneClass>Core40k.Gene_AddRandomGeneAndOrTraitByWeight</geneClass>
         <forcedTraits>
@@ -603,7 +603,7 @@
         <defName>BEWH_PrimarchSpecificGeneXIX</defName>
         <label>Corvus Corax</label>
         <description>The genetic material of Corvus Corax.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Corvus</iconPath>
         <displayOrderInCategory>419</displayOrderInCategory>
         <conditionalStatAffecters>
             <li Class="VanillaGenesExpanded.ConditionalStatAffecter_Darkness">
@@ -631,7 +631,7 @@
         <defName>BEWH_PrimarchSpecificGeneXX</defName>
         <label>Alpharius/Omegon</label>
         <description>The genetic material of Alpharius/Omegon.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_MPrimarchSpecificXV</iconPath>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_AlphaOmega</iconPath>
         <displayOrderInCategory>420</displayOrderInCategory>
         <geneClass>Genes40k.Gene_TwinConnected</geneClass>
         <customEffectDescriptions>
