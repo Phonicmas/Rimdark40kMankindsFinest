@@ -176,4 +176,11 @@
   <BEWH.AbilityDisabledNoDivineRadiance>{0_labelShort} does not have enough divine radiance.</BEWH.AbilityDisabledNoDivineRadiance>
   <BEWH.AbilityDisabledNoDivineRadianceGene>{0_labelShort} is not radiant.</BEWH.AbilityDisabledNoDivineRadianceGene>
 
+  <BEWH.LowHolyRadiance>Living Saint {0_labelShort} holy radiance supply is dwindling.</BEWH.LowHolyRadiance>
+
+  <BEWH.StasisResearchNotCompleted>{0} is about to enter stasis. You have not researched {1} and will have a hard time resurrecting {0} from stasis. \n\nUse with caution!</BEWH.StasisResearchNotCompleted>
+
+  <BEWH.ProofOfFaithNoStat>{0_labelShort}'s {1} is below or at 0.</BEWH.ProofOfFaithNoStat>
+  <BEWH.ProofOfFaithGain>Will give {1} radiance and induce {0_labelShort} with coma for {2} days.</BEWH.ProofOfFaithGain>
+
 </LanguageData>

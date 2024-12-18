@@ -160,6 +160,9 @@ namespace Genes40k
         
         //TraitDefs
         public static TraitDef PsychicSensitivity;
+        
+        //ResearchDefs
+        public static ResearchProjectDef BEWH_StasisResurrection;
 
         static Genes40kDefOf()
         {

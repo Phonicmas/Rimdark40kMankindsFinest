@@ -27,7 +27,7 @@ namespace Genes40k
             {
                 shader = def.graphicData.shaderType.Shader;
             }
-            return GraphicDatabase.Get<Graphic_Single>(def.graphicData.texPath, shader, def.graphicData.drawSize, modSettings.chapterColorOne, modSettings.chapterColorTwo, def.graphicData, imperialBannerPathMask);
+            return GraphicDatabase.Get<Graphic_Single>(def.graphicData.texPath, shader, def.graphicData.drawSize, ModSettings.chapterColorOne, ModSettings.chapterColorTwo, def.graphicData, imperialBannerPathMask);
         }
 
         private Graphic GetChaosBannerGraphic()
@@ -39,7 +39,7 @@ namespace Genes40k
             {
                 shader = def.graphicData.shaderType.Shader;
             }
-            return GraphicDatabase.Get<Graphic_Single>(chaosBannerPath, shader, def.graphicData.drawSize, modSettings.chapterColorOne, modSettings.chapterColorTwo, def.graphicData, chaosBannerPathMask);
+            return GraphicDatabase.Get<Graphic_Single>(chaosBannerPath, shader, def.graphicData.drawSize, ModSettings.chapterColorOne, ModSettings.chapterColorTwo, def.graphicData, chaosBannerPathMask);
         }
         
     }

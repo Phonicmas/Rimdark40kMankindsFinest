@@ -32,6 +32,7 @@ namespace Genes40k
         public bool overloadRadiance = false;
 
         public bool passivelyDrainRadiance = false;
+        private bool sendMessageOfLowRadiance = true;
         
         public override float Value
         {
@@ -69,19 +70,17 @@ namespace Genes40k
                 }
             }
 
-            if (Value <= MinLevelForAlert)
+            if (Value <= MinLevelForAlert && sendMessageOfLowRadiance)
             {
-                //Send alert of low level divine radiance
-            }
-            
-            if (Value > 10f)
-            {
-                passivelyDrainRadiance = false;
+                Messages.Message("BEWH.LowHolyRadiance".Translate(pawn), MessageTypeDefOf.NegativeEvent, false);
+                sendMessageOfLowRadiance = false;
             }
             else
             {
-                passivelyDrainRadiance = true;
+                sendMessageOfLowRadiance = true;
             }
+            
+            passivelyDrainRadiance = Value < 0.1f;
 
             if (Value > 0.01f)
             {
@@ -97,9 +96,9 @@ namespace Genes40k
         public override void Tick()
         {
             base.Tick();
-            if (passivelyDrainRadiance && pawn.IsHashIntervalTick(2500))
+            if (passivelyDrainRadiance && pawn.IsHashIntervalTick(1250))
             {
-                ChangeDivineRadianceAmount(-0.02f);
+                ChangeDivineRadianceAmount(-0.01f);
             }
         }
 

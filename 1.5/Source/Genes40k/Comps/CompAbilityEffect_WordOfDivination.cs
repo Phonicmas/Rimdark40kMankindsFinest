@@ -16,13 +16,17 @@ namespace Genes40k
         
         public override bool Valid(LocalTargetInfo target, bool throwMessages = false)
         {
-            base.Valid(target, throwMessages);
             if (parent.pawn.ideo?.Ideo == null)
             {
                 return false;
             }
 
-            return target.Pawn.ideo.Ideo != parent.pawn.ideo.Ideo;
+            if (target.Pawn.ideo.Ideo == parent.pawn.ideo.Ideo)
+            {
+                return false;
+            }
+
+            return base.Valid(target, throwMessages);
         }
         
         public override string ExtraLabelMouseAttachment(LocalTargetInfo target)

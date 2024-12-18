@@ -37,34 +37,13 @@ in gene table class replace icon with new icon when done
 
 Make class for power armor, for choosing colour, and for spawned marines giving them a chapter gene. Use ChapterColourDefs, go get random from all off those defs and use info from there.
 
-Living saint: 
-Upon pawn death they may become a living saint. Female have a higher chance than males. shooting and melee also increase chance so does psysensitive traits (vanilla ones). Pariah should maybe not be able to? and decrease psy trait should maybe decrease chance. (Done)
-
-Give resource "Divine Radiance". Used to power abilities. Every kill decreases this by some amount depending on enemy pawns combat strength. If this reaches 0, they gain a debuff that slowly makes them weaker untill they simply die. (Max of resource is 500) (Done)
-
-When pawn gets too much resource they go into temp boosted Holy Ascension where they are empowered, but rapidly lose resource after some time in it. (Done)
-
-Send message when low on radiance
-
-New abilities:
-"Holy Blast": aoe blast that damages enemies and heal allies for half damage divided between all injuries (so 40 dmg => 20 heal, 5 injuries, 4hp each injury?) (apply new damage def that just does this by default (add to core, then it can be used elsewhere) ) Cost 20 divine radiance. low cooldown. (damage done for this is 10 * (pawn psysens * 0.75). So 400% psysens = 10 + (4 * 0.75) = 30) (Done)
-
-"Divine flight": ability to fly very long distances. cost 2 divine radiance, no cooldown. (Done)
-
-"Proof of faith": Drains the target, making them go into coma? days and gives some Divine Radiance. Must target colonist, and if ideo is enabled then they must have same ideo. Also cant rarget pawns already drained. low cooldown. Coma duration and resource gained depends on pawn psy sens. Gain 10 * psysens (100% = 1f, so 200% psysens would give 20)
-
---maybe insert aura ability here will cost divine radiance if so--
-
-Has an aura that increase mood around them. They also have greatly increase opinions by other. (Done)
-
-When saint dies they disappear. On a major raid they have a 65% chance of reappearing and a 35% on smaller raids (will add modsetting slider for this) (Done) 
+Make a standalone banner without aura that can be built (will have same palette as placed banner)
 
 
 
 
-Make a standalone banner without aura that can be built (will have same palette as placed banner?)
 
-Move primarch vat from misc to production tab? (Or make own RimDark tab for all RimDark mods????)
+Aura ability for living saint, buffing nearby pawn temporarily (Maybe)
 
 And when a rank is given if it is higher or equal to current ones importance then change the pawns rank in their info (the place where you can insert a custome one) (Maybe)
 

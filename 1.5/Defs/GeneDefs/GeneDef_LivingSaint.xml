@@ -95,9 +95,13 @@
 
         <abilities>
             <li>BEWH_LivingSaintHolyBlast</li>
+            <li>BEWH_LivingSaintProofOfFaith</li>
+            <li>BEWH_DivineFlight</li>
         </abilities>
         <descriptionHyperlinks>
             <AbilityDef>BEWH_LivingSaintHolyBlast</AbilityDef>
+            <AbilityDef>BEWH_LivingSaintProofOfFaith</AbilityDef>
+            <AbilityDef>BEWH_DivineFlight</AbilityDef>
         </descriptionHyperlinks>
 
         <disablesNeeds>
@@ -120,9 +124,6 @@
         <statOffsets>
             <MeleeDodgeChance>5</MeleeDodgeChance>
         </statOffsets>
-        <abilities>
-            <li>BEWH_DivineFlight</li>
-        </abilities>
         <capMods>
             <li>
                 <capacity>Moving</capacity>

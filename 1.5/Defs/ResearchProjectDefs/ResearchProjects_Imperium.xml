@@ -20,7 +20,7 @@
   <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
     <defName>BEWH_StasisResurrection</defName>
     <label>Stasis Resurrection</label>
-    <description>Unlocks the surgery to be able to bring back pawns from self induced stasis.</description>
+    <description>Unlocks the medical surgery required to bring back pawns from self induced stasis.</description>
     <prerequisites>
       <li>MedicineProduction</li>
       <li>BEWH_GeneseedPurification</li>

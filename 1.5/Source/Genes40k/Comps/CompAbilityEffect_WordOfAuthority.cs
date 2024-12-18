@@ -16,8 +16,7 @@ namespace Genes40k
         
         public override bool Valid(LocalTargetInfo target, bool throwMessages = false)
         {
-            base.Valid(target, throwMessages);
-            return !target.Pawn.Faction.IsPlayer;
+            return !target.Pawn.Faction.IsPlayer && base.Valid(target, throwMessages);
         }
         
         public override string ExtraLabelMouseAttachment(LocalTargetInfo target)

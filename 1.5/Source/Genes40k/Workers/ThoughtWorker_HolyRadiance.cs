@@ -7,7 +7,8 @@ namespace Genes40k
 {
     public class ThoughtWorker_HolyRadiance : ThoughtWorker
     {
-        public float maxDistForThought = 10;
+        private const float MaxDistForThought = 10;
+        private const float MoodBuffThreshold = 0.5f;
 
         protected override ThoughtState CurrentSocialStateInternal(Pawn pawn, Pawn other)
         {
@@ -23,13 +24,22 @@ namespace Genes40k
             {
                 return false;
             }
+
+            var gene = other.genes.GetFirstGeneOfType<Gene_DivineRadiance>();
+
+            if (gene.Value <= MoodBuffThreshold)
+            {
+                return true;
+            }
+            
             if (pawn.genes != null && !pawn.genes.HasActiveGene(Genes40kDefOf.BEWH_LivingSaintHolyRadiance))
             {
-                if (pawn.Position.DistanceTo(other.Position) <= maxDistForThought)
+                if (pawn.Position.DistanceTo(other.Position) <= MaxDistForThought)
                 {
                     pawn.needs.mood.thoughts.memories.TryGainMemoryFast(Genes40kDefOf.BEWH_LivingSaintHolyRadianceThought);
                 }
             }
+            
             return true; 
         }
     }

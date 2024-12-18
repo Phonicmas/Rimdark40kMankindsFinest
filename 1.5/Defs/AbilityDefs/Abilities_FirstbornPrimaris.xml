@@ -99,6 +99,7 @@
         <onlyApplyToSelf>True</onlyApplyToSelf>
         <replaceExisting>true</replaceExisting>
       </li>
+      <li Class="Genes40k.CompProperties_AbilityStasisConfirmation" />
     </comps>
   </AbilityDef>
 

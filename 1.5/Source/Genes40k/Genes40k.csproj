@@ -86,13 +86,17 @@
     <Compile Include="Comps\CompAbilityEffect_AoeHit.cs" />
     <Compile Include="Comps\CompAbilityEffect_DenyTheWitch.cs" />
     <Compile Include="Comps\CompAbilityEffect_DivineRadianceCost.cs" />
+    <Compile Include="Comps\CompAbilityEffect_ProofOfFaith.cs" />
     <Compile Include="Comps\CompAbilityEffect_SharedBurden.cs" />
+    <Compile Include="Comps\CompAbilityEffect_StasisConfirmation.cs" />
     <Compile Include="Comps\CompAbilityEffect_SummonMechsForCaster.cs" />
     <Compile Include="Comps\CompAbilityEffect_WordOfAuthority.cs" />
     <Compile Include="Comps\CompAbilityEffect_WordOfDivination.cs" />
     <Compile Include="Comps\CompProperties_AbilityAoeHit.cs" />
     <Compile Include="Comps\CompProperties_AbilityDivineRadianceCost.cs" />
+    <Compile Include="Comps\CompProperties_AbilityProofOfFaith.cs" />
     <Compile Include="Comps\CompProperties_AbilitySharedBurden.cs" />
+    <Compile Include="Comps\CompProperties_AbilityStasisConfirmation.cs" />
     <Compile Include="Comps\CompProperties_AbilityTwinDisable.cs" />
     <Compile Include="Comps\CompProperties_AbilityTwinTeleport.cs" />
     <Compile Include="Comps\CompProperties_AbilityWordOfAuthority.cs" />
@@ -137,6 +141,8 @@
     <Compile Include="Misc\ChapterColourDef.cs" />
     <Compile Include="Misc\StockGenerator_TagSangprimusMaterialNoDupe.cs" />
     <Compile Include="ThingClasses\Building_ChapterBanner.cs" />
+    <Compile Include="ThingClasses\Building_ChapterBuildingMulti.cs" />
+    <Compile Include="ThingClasses\Building_ChapterBuildingSingle.cs" />
     <Compile Include="ThingClasses\Building_GeneGestator.cs" />
     <Compile Include="ThingClasses\Building_GeneTable.cs" />
     <Compile Include="ThingClasses\Building_GeneticStorage.cs" />
