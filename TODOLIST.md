@@ -37,10 +37,6 @@ in gene table class replace icon with new icon when done
 
 Make class for power armor, for choosing colour, and for spawned marines giving them a chapter gene. Use ChapterColourDefs, go get random from all off those defs and use info from there.
 
-Make a standalone banner without aura that can be built (will have same palette as placed banner)
-
-
-
 
 
 Aura ability for living saint, buffing nearby pawn temporarily (Maybe)
