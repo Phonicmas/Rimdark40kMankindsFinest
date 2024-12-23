@@ -119,7 +119,6 @@ namespace Genes40k
             
             if (Widgets.ButtonText(new Rect(inRect.xMin, inRect.yMax, CloseButSize.x, CloseButSize.y), "Accept".Translate()))
             {
-                //Apply preset
                 settings.chapterColorOne = currentlySelectedPreset.primaryColour;
                 settings.chapterColorTwo = currentlySelectedPreset.secondaryColour;
                 settings.currentlySelectedPreset = currentlySelectedPreset == customDef ? null : customDef;

@@ -23,7 +23,13 @@ In the FromCode.xml where all text are, sort them properly cause oh boy its not 
 
 Icon for primarch embryo creation on the gene table
 
+Other sides for iron circle
 
+
+
+Maybe Bolter retex (instead of spencers)
+
+Maybe power armor retex (instead of spencers)
 
 Maybe some different backgrounds (the blue hexagon for xenotype or white circle thingy for endogenes) for the different genes? (Maybe keep the recoloured one psyker and pariah and then make some new type for the different super human, with increasing golden stuff and purity seals n stuff) (im just cooking here, this is not important)
 
@@ -35,8 +41,11 @@ add stat offsets and factor and abilities to ranks. possibly add more?
 
 in gene table class replace icon with new icon when done
 
-Make class for power armor, for choosing colour, and for spawned marines giving them a chapter gene. Use ChapterColourDefs, go get random from all off those defs and use info from there.
+Make class for power armor, for choosing colour, and for spawned marines giving them a chapter gene. Use ChapterColourDefs, go get random from all off those defs and 
+use info from there.
 
+Make raid type for imperium, that uses ChapterColourDefs for colour for their armor, and the geneseed for the marine deployed, should all be from same chapter.
+^^ use custom PawnGroupKindDef worker, also make them have unlocked the first two ranks of the rank tree, with required days + random between 0-3 additional days
 
 
 Aura ability for living saint, buffing nearby pawn temporarily (Maybe)
@@ -64,9 +73,6 @@ Should spawn one alpha and a couple of other ones, if alpha is slain, other ones
 https://wh40k.lexicanum.com/wiki/Fenrisian_Wolf 
 
 Make Blood Chalice art and xml, an exotic item that when ingested by pawns with the red thirst, will completely fill essentially all need and restore all wounds. - https://wh40k.lexicanum.com/wiki/Blood_Chalice 
-
-
-https://wh40k.lexicanum.com/wiki/Gene-seed#Chapters_with_known_gene-seed_flaws
 
 SOS2 integration?
 

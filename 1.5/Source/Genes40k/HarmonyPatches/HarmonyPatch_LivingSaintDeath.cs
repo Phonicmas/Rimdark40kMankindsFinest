@@ -19,6 +19,11 @@ namespace Genes40k
                 return;
             }
 
+            if (__instance.IsGhoul)
+            {
+                return;
+            }
+
             var forbiddenGenes = Genes40kDefOf.BEWH_LivingSaintBeingOfFaith.GetModExtension<DefModExtension_LivingSaint>().cantHaveGenes;
 
             if (Enumerable.Any(__instance.genes.GenesListForReading, gene => forbiddenGenes.Contains(gene.def)))

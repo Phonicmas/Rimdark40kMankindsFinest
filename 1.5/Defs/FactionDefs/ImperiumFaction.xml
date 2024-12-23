@@ -114,36 +114,46 @@
 
         <pawnGroupMakers>
             <li>
-                <!-- Normal fights -->
+                <!-- Mixed fight -->
                 <kindDef>Combat</kindDef>
                 <commonality>100</commonality>
                 <options>
-                    <BEWH_ImperiumGuardman>20</BEWH_ImperiumGuardman>
+                    <BEWH_ImperiumGuardman>15</BEWH_ImperiumGuardman>
+                    <BEWH_SpaceMarine>10</BEWH_SpaceMarine>
+                    <BEWH_PrimarisSpaceMarine>8</BEWH_PrimarisSpaceMarine>
+                    <BEWH_SpaceMarinePsyker>2</BEWH_SpaceMarinePsyker>
+                </options>
+            </li>
+            <li>
+                <!-- Firstborn squad -->
+                <kindDef>Combat</kindDef>
+                <commonality>30</commonality>
+                <options>
                     <BEWH_SpaceMarine>10</BEWH_SpaceMarine>
                     <BEWH_SpaceMarinePsyker>2</BEWH_SpaceMarinePsyker>
                 </options>
             </li>
             <li>
-                <!-- Primaris fights -->
+                <!-- Primaris squad -->
                 <kindDef>Combat</kindDef>
-                <commonality>20</commonality>
+                <commonality>30</commonality>
                 <options>
                     <BEWH_PrimarisSpaceMarine>10</BEWH_PrimarisSpaceMarine>
-                    <BEWH_SpaceMarinePsyker>2</BEWH_SpaceMarinePsyker>
                 </options>
             </li>
             <li>
                 <!-- Base defense -->
                 <kindDef>Settlement</kindDef>
                 <options>
-                    <BEWH_ImperiumGuardman>20</BEWH_ImperiumGuardman>
+                    <BEWH_ImperiumGuardman>10</BEWH_ImperiumGuardman>
                     <BEWH_SpaceMarine>14</BEWH_SpaceMarine>
                     <BEWH_SpaceMarinePsyker>4</BEWH_SpaceMarinePsyker>
-                    <BEWH_PrimarisSpaceMarine>4</BEWH_PrimarisSpaceMarine>
-                    <BEWH_Custodes>10</BEWH_Custodes>
+                    <BEWH_PrimarisSpaceMarine>8</BEWH_PrimarisSpaceMarine>
+                    <BEWH_Custodes>20</BEWH_Custodes>
                 </options>
             </li>
             <li>
+                <!-- Trader -->
                 <kindDef>Trader</kindDef>
                 <traders>
                     <BEWH_ImperiumTrader>1</BEWH_ImperiumTrader>
@@ -157,6 +167,7 @@
                 </guards>
             </li>
             <li>
+                <!-- Peaceful -->
                 <kindDef>Peaceful</kindDef>
                 <options>
                     <BEWH_ImperiumGuardman>16</BEWH_ImperiumGuardman>
