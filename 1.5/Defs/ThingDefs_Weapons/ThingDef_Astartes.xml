@@ -8,7 +8,7 @@
     <description>The Bolter, also called a Boltgun, and its variants are some of the most powerful, hand-held, ballistic anti-personnel weaponry in use by the military forces of the Imperium of Man. It is a powerful assault weapon that fires explosive kinetic rounds colloquially referred to as bolts.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
-      <texPath>Things/Weapons/BEWH_Bolter</texPath>
+      <texPath>Things/Weapons/BEWH_BoltCarbine</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_ChargeRifle</soundInteract>
@@ -81,7 +81,7 @@
   <!-- Chainsword -->
   <ThingDef ParentName="MeleeWeaponUltratech">
     <defName>BEWH_AstartesChainsword</defName>
-    <label>chainsword</label>
+    <label>Chainsword</label>
     <description>A vicious and brutal weapon, the chainsword is an iconic tool of the adeptus astartes. It can carve flesh with absolute easy and is relatively inexpensive to make. The downside is that it lacks the armor penetration of power weapons.</description>
     <soundInteract>Interact_MonoSword</soundInteract>
     <meleeHitSound>MeleeHit_MonoSword</meleeHitSound>

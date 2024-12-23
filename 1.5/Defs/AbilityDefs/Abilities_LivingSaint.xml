@@ -39,7 +39,7 @@
     <defName>BEWH_LivingSaintHolyBlast</defName>
     <label>holy blast</label>
     <description>...</description>
-    <iconPath>UI/Abilities/BEWH_DivineFlight</iconPath>
+    <iconPath>UI/Abilities/BEWH_HolyBlast</iconPath>
     <displayGizmoWhileUndrafted>False</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
     <cooldownTicksRange>1250</cooldownTicksRange>
@@ -77,7 +77,7 @@
     <defName>BEWH_LivingSaintProofOfFaith</defName>
     <label>Proof of Faith</label>
     <description>...</description>
-    <iconPath>UI/Abilities/BEWH_DivineFlight</iconPath>
+    <iconPath>UI/Abilities/BEWH_ProofOfFaith</iconPath>
     <displayGizmoWhileUndrafted>False</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
     <cooldownTicksRange>1250</cooldownTicksRange>
