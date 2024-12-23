@@ -117,10 +117,10 @@
                             <li Class="MVCF.VerbComps.VerbCompProperties_Turret">
                                 <compClass>MVCF.VerbComps.VerbComp_Turret</compClass>
                                 <graphic>
-                                    <texPath>Things/Building/Security/TurretMini_Top</texPath>
+                                    <texPath>UI/Abilities/BEWH_OlympiaBolter</texPath>
                                     <graphicClass>Graphic_Single</graphicClass>
                                 </graphic>
-                                <drawScale>3</drawScale>
+                                <!-- <drawScale>3</drawScale> -->
                             </li>
                         </comps>
                     </li>
