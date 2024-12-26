@@ -141,6 +141,7 @@
 
         <customEffectDescriptions>
             <li>No loss in shooting skill.</li>
+            <li>Recreation from shooting.</li>
         </customEffectDescriptions>
 
         <passionMod>
@@ -169,6 +170,7 @@
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <noSkillLoss>Shooting</noSkillLoss>
+                <skillRecreation>Shooting</skillRecreation>
             </li>
         </modExtensions>
     </GeneDef>
@@ -360,6 +362,7 @@
 
         <customEffectDescriptions>
             <li>No loss in melee skill.</li>
+            <li>Recreation from melee.</li>
         </customEffectDescriptions>
 
         <passionMod>
@@ -370,6 +373,7 @@
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <noSkillLoss>Melee</noSkillLoss>
+                <skillRecreation>Melee</skillRecreation>
             </li>
         </modExtensions>
     </GeneDef>

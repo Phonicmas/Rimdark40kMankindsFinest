@@ -121,7 +121,7 @@ namespace Genes40k
             {
                 settings.chapterColorOne = currentlySelectedPreset.primaryColour;
                 settings.chapterColorTwo = currentlySelectedPreset.secondaryColour;
-                settings.currentlySelectedPreset = currentlySelectedPreset == customDef ? null : customDef;
+                settings.currentlySelectedPreset = currentlySelectedPreset;
                 Close();
             }
         }

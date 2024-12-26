@@ -23,6 +23,9 @@
                     <li>BEWH_ForestWalkShort</li>
                 </abilityDefs>
             </li>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
+            </li>
         </modExtensions>
     </GeneDef>
 
@@ -75,6 +78,9 @@
                     </li>
                 </qualityBoostLevel>
             </li>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
+            </li>
         </modExtensions>
     </GeneDef>
 
@@ -112,6 +118,7 @@
                         </bodyparts>
                     </li>
                 </hediffsToBodyParts>
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
             </li>
         </modExtensions>
     </GeneDef>
@@ -135,6 +142,9 @@
         </descriptionHyperlinks>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
+            </li>
         </modExtensions>
     </GeneDef>
 
@@ -168,6 +178,7 @@
                         </bodyparts>
                     </li>
                 </hediffsToBodyParts>
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
             </li>
         </modExtensions>
     </GeneDef>
@@ -180,6 +191,7 @@
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_Dorn</iconPath>
         <displayOrderInCategory>407</displayOrderInCategory>
         <hairColorOverride>(0.65, 0.65, 0.65)</hairColorOverride>
+        <iconColor>(255, 255, 255)</iconColor>
         <statOffsets>
             <ConstructionSpeed>0.45</ConstructionSpeed>
             <ConstructSuccessChance>0.45</ConstructSuccessChance>
@@ -195,6 +207,9 @@
                     <li>BEWH_RaiseBastion</li>
                 </abilityDefs>
             </li>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
+            </li>
         </modExtensions>
     </GeneDef>
 
@@ -207,6 +222,7 @@
         <displayOrderInCategory>408</displayOrderInCategory>
         <geneClass>Core40k.Gene_GiveVFECoreAbility</geneClass>
         <hairColorOverride>(1, 1, 1)</hairColorOverride>
+        <iconColor>(255, 255, 255)</iconColor>
         <ignoreDarkness>true</ignoreDarkness>
         <statOffsets>
             <MeleeDodgeChance>2</MeleeDodgeChance>
@@ -231,6 +247,9 @@
                 <abilityDefs>
                     <li>BEWH_PsychicEmp</li>
                 </abilityDefs>
+            </li>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
             </li>
         </modExtensions>
     </GeneDef>
@@ -293,6 +312,7 @@
             <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <hediffToWholeBody>BEWH_WingsHover</hediffToWholeBody>
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
             </li>
         </modExtensions>
     </GeneDef>
@@ -334,6 +354,7 @@
                         </bodyparts>
                     </li>
                 </hediffsToBodyParts>
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
             </li>
             <li Class="Core40k.DefModExtension_BoostQualityCreatedByPawn">
                 <qualityBoostLevel>
@@ -382,6 +403,9 @@
         </descriptionHyperlinks>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
+            </li>
         </modExtensions>
     </GeneDef>
 
@@ -423,6 +447,9 @@
                     <li>BEWH_OpusMaxima</li>
                 </abilityDefs>
             </li>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
+            </li>
         </modExtensions>
     </GeneDef>
 
@@ -454,6 +481,9 @@
         </forcedTraits>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
+            </li>
         </modExtensions>
     </GeneDef>
 
@@ -477,6 +507,7 @@
             </li>
         </capMods>
         <skinColorOverride>(150, 62, 62)</skinColorOverride>
+        <iconColor>(255, 255, 255)</iconColor>
         <customEffectDescriptions>
             <li>Gives the Beta Psyker gene.</li>
         </customEffectDescriptions>
@@ -492,6 +523,9 @@
                         <value>100</value>
                     </li>
                 </possibleGenesToGive>
+            </li>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
             </li>
         </modExtensions>
     </GeneDef>
@@ -525,6 +559,9 @@
                 <abilityDefs>
                     <li>BEWH_WarPlanning</li>
                 </abilityDefs>
+            </li>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
             </li>
         </modExtensions>
     </GeneDef>
@@ -561,6 +598,9 @@
         </passionMod>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
+            </li>
         </modExtensions>
     </GeneDef>
 
@@ -579,6 +619,7 @@
             </li>
         </forcedTraits>
         <skinColorOverride>(55, 55, 55)</skinColorOverride>
+        <iconColor>(255, 255, 255)</iconColor>
         <customEffectDescriptions>
             <li>Gives the Beta Perpetual gene.</li>
         </customEffectDescriptions>
@@ -594,6 +635,9 @@
                         <value>100</value>
                     </li>
                 </possibleGenesToGive>
+            </li>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
             </li>
         </modExtensions>
     </GeneDef>
@@ -623,6 +667,9 @@
         </descriptionHyperlinks>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
+            </li>
         </modExtensions>
     </GeneDef>
 
@@ -647,6 +694,9 @@
             <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
             <li Class="Genes40k.DefModExtension_PrimarchVatExtras">
                 <childAmount>2</childAmount>
+            </li>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
             </li>
         </modExtensions>
     </GeneDef>

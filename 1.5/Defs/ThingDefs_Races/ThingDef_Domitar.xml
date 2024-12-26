@@ -112,7 +112,7 @@
                         <label>Olympia Bolter</label>
                         <visualLabel>Olympia Bolter</visualLabel>
                         <description>Olympia Bolter mounted on the shoulder.</description>
-                        <canBeToggled>true</canBeToggled>
+                        <!--<Icon>UI/Abilities/BEWH_OlympiaBolter</Icon>-->
                         <comps>
                             <li Class="MVCF.VerbComps.VerbCompProperties_Turret">
                                 <compClass>MVCF.VerbComps.VerbComp_Turret</compClass>

@@ -55,6 +55,9 @@
                 <canBeEnslaved>false</canBeEnslaved>
                 <canBeRecruited>false</canBeRecruited>
             </li>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
+            </li>
         </modExtensions>
     </GeneDef>
 
@@ -104,6 +107,7 @@
 
         <customEffectDescriptions>
             <li>No loss in shooting skill.</li>
+            <li>Recreation from shooting.</li>
         </customEffectDescriptions>
 
         <passionMod>
@@ -114,6 +118,8 @@
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <noSkillLoss>Shooting</noSkillLoss>
+                <skillRecreation>Shooting</skillRecreation>
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
             </li>
         </modExtensions>
     </GeneDef>
@@ -152,6 +158,11 @@
             <Intellectual>6</Intellectual>
         </aptitudes>
 
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
+            </li>
+        </modExtensions>
     </GeneDef>
 
     <!-- Helixome Array -->
@@ -222,6 +233,7 @@
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <diseaseProgressionFactor>0.05</diseaseProgressionFactor>
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
             </li>
             <li Class="Core40k.DefModExtension_LostLungSurvival" />
             <li Class="Core40k.DefModExtension_LostHeartSurvival" />
@@ -273,6 +285,12 @@
                 <offset>0.9</offset>
             </li>
         </capMods>
+
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
+            </li>
+        </modExtensions>
     </GeneDef>
 
     <!-- Celerity Nexus -->
@@ -316,6 +334,12 @@
                 <degree>-2</degree>
             </li>
         </suppressedTraits>
+
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
+            </li>
+        </modExtensions>
     </GeneDef>
 
     <!-- Hyperion Muscle Strands -->
@@ -352,6 +376,7 @@
 
         <customEffectDescriptions>
             <li>No loss in melee skill.</li>
+            <li>Recreation from melee.</li>
         </customEffectDescriptions>
 
         <passionMod>
@@ -362,6 +387,8 @@
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <noSkillLoss>Melee</noSkillLoss>
+                <skillRecreation>Melee</skillRecreation>
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
             </li>
         </modExtensions>
     </GeneDef>

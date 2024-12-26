@@ -21,15 +21,8 @@ In the FromCode.xml where all text are, sort them properly cause oh boy its not 
 
 ## Art
 
-Icon for primarch embryo creation on the gene table
-
-Other sides for iron circle
 
 
-
-Maybe Bolter retex (instead of spencers)
-
-Maybe power armor retex (instead of spencers)
 
 Maybe some different backgrounds (the blue hexagon for xenotype or white circle thingy for endogenes) for the different genes? (Maybe keep the recoloured one psyker and pariah and then make some new type for the different super human, with increasing golden stuff and purity seals n stuff) (im just cooking here, this is not important)
 
@@ -46,6 +39,9 @@ use info from there.
 
 Make raid type for imperium, that uses ChapterColourDefs for colour for their armor, and the geneseed for the marine deployed, should all be from same chapter.
 ^^ use custom PawnGroupKindDef worker, also make them have unlocked the first two ranks of the rank tree, with required days + random between 0-3 additional days
+
+Increase domitar shooting and melee, either skill or chance to hit. (skill is currently set to 4)
+
 
 
 Aura ability for living saint, buffing nearby pawn temporarily (Maybe)

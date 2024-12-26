@@ -121,6 +121,7 @@
       <RecipeDef>BEWH_RubiconSurgery</RecipeDef>
     </descriptionHyperlinks>
     <thingClass>ThingWithComps</thingClass>
+    <stackLimit>15</stackLimit>
     <statBases>
       <MarketValue>4000</MarketValue>
       <MaxHitPoints>100</MaxHitPoints>
@@ -146,7 +147,7 @@
     <selectable>true</selectable>
     <altitudeLayer>Item</altitudeLayer>
     <alwaysHaulable>true</alwaysHaulable>
-    <drawGUIOverlay>false</drawGUIOverlay>
+    <drawGUIOverlay>true</drawGUIOverlay>
     <rotatable>false</rotatable>
     <pathCost>14</pathCost>
     <comps>

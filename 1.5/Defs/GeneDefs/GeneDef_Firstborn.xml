@@ -91,8 +91,16 @@
         </passionMod>
         <customEffectDescriptions>
             <li>No loss in melee skill.</li>
+            <li>Recreation from melee.</li>
         </customEffectDescriptions>
         <minAgeActive>12</minAgeActive>
+
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <noSkillLoss>Melee</noSkillLoss>
+                <skillRecreation>Melee</skillRecreation>
+            </li>
+        </modExtensions>
     </GeneDef>
 
     <!-- Haemastamen -->
@@ -254,10 +262,12 @@
         </passionMod>
         <customEffectDescriptions>
             <li>No loss in shooting skill.</li>
+            <li>Recreation from shooting.</li>
         </customEffectDescriptions>
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <noSkillLoss>Shooting</noSkillLoss>
+                <skillRecreation>Shooting</skillRecreation>
             </li>
         </modExtensions>
         <minAgeActive>16</minAgeActive>
