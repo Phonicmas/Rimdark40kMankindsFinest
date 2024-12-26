@@ -3,8 +3,8 @@
 
     <AbilityDef>
         <defName>BEWH_HarvestGeneseedsFromDead</defName>
-        <label>harvest geneseed</label>
-        <description>Harvest the secondary geneseed of a fallen brother.</description>
+        <label>harvest gene-seed</label>
+        <description>Harvest the secondary gene-seed of a fallen brother.</description>
         <cooldownTicksRange>15000</cooldownTicksRange>
         <iconPath>UI/Abilities/BEWH_ApothecaryGeneseedHarvestIcon</iconPath>
         <jobDef>CastAbilityOnThingMelee</jobDef>

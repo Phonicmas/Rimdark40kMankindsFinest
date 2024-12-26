@@ -31,7 +31,7 @@
 	</HediffDef>
 
 
-	<!-- Geneseed Vial Related -->
+	<!-- Gene-seed Vial Related -->
 	<!-- Firstborn Phase Base -->
 	<HediffDef Name="BEWH_FirstbornPhaseHediffBase" Abstract="True">
 		<hediffClass>HediffWithComps</hediffClass>

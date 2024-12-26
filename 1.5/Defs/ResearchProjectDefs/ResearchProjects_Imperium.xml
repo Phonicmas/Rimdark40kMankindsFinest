@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <!--=== Geneseed Research ===-->
-  <!-- Geneseed creation -->
+  <!--=== Gene-seed Research ===-->
+  <!-- Gene-seed creation -->
   <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
     <defName>BEWH_GeneseedCreation</defName>
-    <label>Geneseed creation</label>
+    <label>Gene-seed creation</label>
     <description>Unlocks the creation of genetic augmentations, suitable for creation of Proto-Astartes.</description>
     <prerequisites>
       <li>FertilityProcedures</li>
@@ -30,11 +30,11 @@
     <researchViewY>0</researchViewY>
   </ResearchProjectDef>
 
-  <!-- Geneseed purification -->
+  <!-- Gene-seed purification -->
   <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
     <defName>BEWH_GeneseedPurification</defName>
-    <label>Geneseed purification</label>
-    <description>Unlocks the creation of more stable astartes, by purifying and futher developing geneseed creation process.</description>
+    <label>Gene-seed purification</label>
+    <description>Unlocks the creation of more stable astartes, by purifying and futher developing gene-seed creation process.</description>
     <prerequisites>
       <li>BEWH_GeneseedCreation</li>
     </prerequisites>
@@ -43,11 +43,11 @@
     <researchViewY>1</researchViewY>
   </ResearchProjectDef>
 
-  <!-- Geneseed perfection -->
+  <!-- Gene-seed perfection -->
   <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
     <defName>BEWH_GeneseedPerfection</defName>
-    <label>Geneseed perfection</label>
-    <description>Unlocks the creation of enhanced astartes, by futher improving and refining the geneseed creation process.</description>
+    <label>Gene-seed perfection</label>
+    <description>Unlocks the creation of enhanced astartes, by futher improving and refining the gene-seed creation process.</description>
     <prerequisites>
       <li>BEWH_GeneseedPurification</li>
     </prerequisites>
@@ -56,7 +56,7 @@
     <researchViewY>1</researchViewY>
   </ResearchProjectDef>
 
-  <!-- Geneseed Extraction (Space Marine) -->
+  <!-- Gene-seed Extraction (Space Marine) -->
   <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
     <defName>BEWH_GeneseedExtractionFirstborn</defName>
     <label>Firstborn geneseed extraction</label>
@@ -69,11 +69,11 @@
     <researchViewY>2</researchViewY>
   </ResearchProjectDef>
 
-  <!-- Geneseed Extraction (Priamris Marine) -->
+  <!-- Gene-seed Extraction (Priamris Marine) -->
   <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
     <defName>BEWH_GeneseedExtractionPrimaris</defName>
-    <label>Primaris geneseed extracton</label>
-    <description>Unlocks the surgery to extract geneseeds from a fully grown progenoid gland of a primaris marine.</description>
+    <label>Primaris gene-seed extracton</label>
+    <description>Unlocks the surgery to extract gene-seeds from a fully grown progenoid gland of a primaris marine.</description>
     <prerequisites>
       <li>BEWH_GeneseedPerfection</li>
       <li>BEWH_GeneseedExtractionFirstborn</li>
