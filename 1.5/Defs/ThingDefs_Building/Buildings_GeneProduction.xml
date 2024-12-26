@@ -70,11 +70,11 @@
     </researchPrerequisites>
   </ThingDef>
 
-  <!-- Geneseed gestator -->
+  <!-- Gene-seed gestator -->
   <ThingDef ParentName="BuildingBase">
     <defName>BEWH_GeneseedGestator</defName>
-    <label>geneseed gestator</label>
-    <description>This gestator is able to create implant ready geneseed vials, by transforming genetic matrices.</description>
+    <label>gene-seed gestator</label>
+    <description>This gestator is able to create implant ready gene-seed vials, by transforming genetic matrices.</description>
     <thingClass>Genes40k.Building_GeneGestator</thingClass>
     <containedPawnsSelectable>true</containedPawnsSelectable>
     <altitudeLayer>Building</altitudeLayer>

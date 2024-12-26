@@ -168,11 +168,11 @@
     </comps>
   </ThingDef>
 
-  <!-- Geneseed vial storage -->
+  <!-- Gene-seed vial storage -->
   <ThingDef ParentName="BEWH_GeneticStorage">
     <defName>BEWH_GeneseedVialStorage</defName>
-    <label>geneseed vial storage</label>
-    <description>Able to holster 6 geneseed vials, keeping them safe and preventing deterioration.</description>
+    <label>gene-seed vial storage</label>
+    <description>Able to holster 6 gene-seed vials, keeping them safe and preventing deterioration.</description>
     <graphicData>
       <texPath>Things/Building/GeneseedVialStorage/BEWH_GeneseedVialStorage_Empty</texPath>
       <graphicClass>Graphic_Single</graphicClass>

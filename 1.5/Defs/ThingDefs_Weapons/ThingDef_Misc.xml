@@ -3,7 +3,7 @@
 
     <ThingDef ParentName="BaseBullet">
         <defName>BEWH_BolterRound</defName>
-        <label>Bolter Round</label>
+        <label>bolter round</label>
         <graphicData>
             <texPath>Things/Projectiles/BEWH_BolterRound</texPath>
             <graphicClass>Graphic_Single</graphicClass>

@@ -75,7 +75,7 @@
   <XenotypeDef ParentName="SpaceMarineBase">
     <defName>BEWH_SpaceMarine</defName>
     <label>firstborn marine</label>
-    <description>Forged from the Emperor's ancient designs, the Firstborn stand as the original and proud warriors of the Adeptus Astartes, each bound by the geneseed of their Primarch. Untouched by any natural disease, space marines are able to suffer wounds that would kill an ordinary man and still live to fight another day.</description>
+    <description>Forged from the Emperor's ancient designs, the Firstborn stand as the original and proud warriors of the Adeptus Astartes, each bound by the gene-seed of their Primarch. Untouched by any natural disease, space marines are able to suffer wounds that would kill an ordinary man and still live to fight another day.</description>
     <descriptionShort>Barely human, but instead superhuman; genetically engineered to be superior to normal humans in every way.</descriptionShort>
     <iconPath>UI/Xenotypes/BEWH_SpaceMarineXenoIcon</iconPath>
     <combatPowerFactor>1.25</combatPowerFactor>

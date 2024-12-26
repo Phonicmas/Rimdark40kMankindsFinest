@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <!-- Make geneseed base -->
+    <!-- Make gene-seed base -->
     <RecipeDef ParentName="SurgeryFlesh" Name="BEWH_GeneseedFromProgenoid" Abstract="True">
         <hideBodyPartNames>true</hideBodyPartNames>
         <targetsBodyPart>false</targetsBodyPart>
@@ -11,11 +11,11 @@
         </recipeUsers>
     </RecipeDef>
 
-    <!-- Make space marine geneseed -->
+    <!-- Make space marine gene-seed -->
     <RecipeDef ParentName="BEWH_GeneseedFromProgenoid">
         <defName>BEWH_AstartesPack</defName>
-        <label>Extract firstborn geneseed gland</label>
-        <description>Remove fully grown germ cells from progenoid glands to make a geneseed vial of a Firstborn.</description>
+        <label>Extract firstborn gene-seed gland</label>
+        <description>Remove fully grown germ cells from progenoid glands to make a gene-seed vial of a Firstborn.</description>
         <jobString>creating gene-seed from progenoid glands</jobString>
         <successfullyRemovedHediffMessage>{0} has successfully created gene-seed from {1}'s progenoid glands.</successfullyRemovedHediffMessage>
         <workAmount>2200</workAmount>
@@ -59,11 +59,11 @@
         </skillRequirements>
     </RecipeDef>
 
-    <!-- Make primaris geneseed -->
+    <!-- Make primaris gene-seed -->
     <RecipeDef ParentName="BEWH_GeneseedFromProgenoid">
         <defName>BEWH_PrimarisPack</defName>
-        <label>Extract primaris geneseed gland</label>
-        <description>Remove fully grown germ cells from progenoid glands to make all a geneseed vial of a Primaris.</description>
+        <label>Extract primaris gene-seed gland</label>
+        <description>Remove fully grown germ cells from progenoid glands to make all a gene-seed vial of a Primaris.</description>
         <jobString>creating primaris gene-seed from progenoid glands</jobString>
         <successfullyRemovedHediffMessage>{0} has successfully created primaris gene-seed from {1}'s progenoid glands.</successfullyRemovedHediffMessage>
         <workAmount>4200</workAmount>

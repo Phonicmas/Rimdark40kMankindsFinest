@@ -94,10 +94,10 @@
 
   <BEWH.ChillgronAbility>{0} is not in mental state or have any negative thoughts or memories</BEWH.ChillgronAbility>
 
-  <!-- Geneseed Vial -->
+  <!-- Gene-seed Vial -->
   <BEWH.ImplantGeneseedDesc>You are about to implant {0}, making them into a {1}</BEWH.ImplantGeneseedDesc>
   <BEWH.OutsideOptimalAgeRange>{0} being outside the optimal age range {1}~{2} for this procedure</BEWH.OutsideOptimalAgeRange>
-  <BEWH.CurrentFailureChance>Current failure chance is {0}%, failure will result in death and loss of geneseed vial. This fail chance is a second check after a succesfull surgery.</BEWH.CurrentFailureChance>
+  <BEWH.CurrentFailureChance>Current failure chance is {0}%, failure will result in death and loss of gene-seed vial. This fail chance is a second check after a succesfull surgery.</BEWH.CurrentFailureChance>
   <BEWH.BaseFailureChance>base failure chance</BEWH.BaseFailureChance>
   <BEWH.FailureChanceCausedBy>Current failure chance is caused by:</BEWH.FailureChanceCausedBy>
   <BEWH.FailureChanceCause>{0}%: caused by {1}</BEWH.FailureChanceCause>
@@ -105,15 +105,15 @@
 
   <BEWH.AlreadySuperHuman>{0} is already a superhuman and cannot be enhanced again</BEWH.AlreadySuperHuman>
 
-  <BEWH.OrderImplantGeneseed>Order geneseed implantation...</BEWH.OrderImplantGeneseed>
-  <BEWH.OrderImplantGeneseedDesc>Implant this geneseed into a person to partially override their genetic code.\n\nThis is a surgical operation, so it requires a doctor, medical bed and {MEDICINEAMOUNT} medicine.</BEWH.OrderImplantGeneseedDesc>
+  <BEWH.OrderImplantGeneseed>Order gene-seed implantation...</BEWH.OrderImplantGeneseed>
+  <BEWH.OrderImplantGeneseedDesc>Implant this gene-seed into a person to partially override their genetic code.\n\nThis is a surgical operation, so it requires a doctor, medical bed and {MEDICINEAMOUNT} medicine.</BEWH.OrderImplantGeneseedDesc>
 
-  <BEWH.LetterLabelGeneseedOrderedImplanted>Geneseed implantation ordered</BEWH.LetterLabelGeneseedOrderedImplanted>
-  <BEWH.LetterGeneseedOrderedImplanted>You have ordered a geneseed be implanted in {PAWN_nameDef}. This procedure requires a medical bed and {MEDICINENEEDED} medicine.{BEDINFO}{MEDICINEINFO}\n\nYou can cancel this procedure by going to {PAWN_nameDef}'s health -> operations tab.</BEWH.LetterGeneseedOrderedImplanted>
+  <BEWH.LetterLabelGeneseedOrderedImplanted>Gene-seed implantation ordered</BEWH.LetterLabelGeneseedOrderedImplanted>
+  <BEWH.LetterGeneseedOrderedImplanted>You have ordered a gene-seed be implanted in {PAWN_nameDef}. This procedure requires a medical bed and {MEDICINENEEDED} medicine.{BEDINFO}{MEDICINEINFO}\n\nYou can cancel this procedure by going to {PAWN_nameDef}'s health -> operations tab.</BEWH.LetterGeneseedOrderedImplanted>
   <BEWH.GeneseedOrderedImplantedBedNeeded>\n\nYou do not have any medical beds available for {PAWN_nameDef}. Consider marking a bed as medical.</BEWH.GeneseedOrderedImplantedBedNeeded>
-  <BEWH.GeneseedOrderedImplantedMedicineNeeded>\n\nYou do not have enough medicine to implant the geneseed. Implanting cannot begin until you get {MEDICINENEEDED} medicine.</BEWH.GeneseedOrderedImplantedMedicineNeeded>
+  <BEWH.GeneseedOrderedImplantedMedicineNeeded>\n\nYou do not have enough medicine to implant the gene-seed. Implanting cannot begin until you get {MEDICINENEEDED} medicine.</BEWH.GeneseedOrderedImplantedMedicineNeeded>
 
-  <BEWH.NamedGeneseedVial>{0} geneseed vial</BEWH.NamedGeneseedVial>
+  <BEWH.NamedGeneseedVial>{0} gene-seed vial</BEWH.NamedGeneseedVial>
 
   <BEWH.CraftPrimarchEmbryo>Craft primarch embryo using an embryo from {0}</BEWH.CraftPrimarchEmbryo>
   <BEWH.NotSkilledEnoughPrimarchEmbryo>{0} is not skilled enough to craft a primarch embryo, needs {1}</BEWH.NotSkilledEnoughPrimarchEmbryo>
@@ -129,16 +129,16 @@
   <!-- Progenoid Gland -->
   <BEWH.NoProgenoidGlands>Does not have any progenoid glands</BEWH.NoProgenoidGlands>
   <BEWH.SecondaryGlandsAlreadyHarvested>Secondary progenoid glands already harvested</BEWH.SecondaryGlandsAlreadyHarvested>
-  <BEWH.SMGeneseedExtractionNotResearched>Space Marine geneseed extraction not researched</BEWH.SMGeneseedExtractionNotResearched>
-  <BEWH.PMGeneseedExtractionNotResearched>Primaris Marine geneseed extraction not researched</BEWH.PMGeneseedExtractionNotResearched>
+  <BEWH.SMGeneseedExtractionNotResearched>Space Marine gene-seed extraction not researched</BEWH.SMGeneseedExtractionNotResearched>
+  <BEWH.PMGeneseedExtractionNotResearched>Primaris Marine gene-seed extraction not researched</BEWH.PMGeneseedExtractionNotResearched>
 
-  <BEWH.FirstGeneseedsHarvested>Geneseeds have already been harvested.</BEWH.FirstGeneseedsHarvested>
-  <BEWH.FirstGeneseedsHarvestable>Geneseeds ready to be harvested.</BEWH.FirstGeneseedsHarvestable>
-  <BEWH.FirstGeneseedsHarvestableIn>Geneseeds can be harvested in {0} days{1}.</BEWH.FirstGeneseedsHarvestableIn>
+  <BEWH.FirstGeneseedsHarvested>Gene-seeds have already been harvested.</BEWH.FirstGeneseedsHarvested>
+  <BEWH.FirstGeneseedsHarvestable>Gene-seeds ready to be harvested.</BEWH.FirstGeneseedsHarvestable>
+  <BEWH.FirstGeneseedsHarvestableIn>Gene-seeds can be harvested in {0} days{1}.</BEWH.FirstGeneseedsHarvestableIn>
 
   <BEWH.SecondGeneseedsHarvestableUponDeath>and upon death</BEWH.SecondGeneseedsHarvestableUponDeath>
-  <BEWH.SecondGeneseedsHarvested>Geneseeds have already been harvested.</BEWH.SecondGeneseedsHarvested>
-  <BEWH.SecondGeneseedsHarvestable>Geneseeds ready to be harvested.</BEWH.SecondGeneseedsHarvestable>
+  <BEWH.SecondGeneseedsHarvested>Gene-seeds have already been harvested.</BEWH.SecondGeneseedsHarvested>
+  <BEWH.SecondGeneseedsHarvestable>Gene-seeds ready to be harvested.</BEWH.SecondGeneseedsHarvestable>
 
   <!-- Thunder Warrior -->
   <BEWH.WarriorChanceToBerserk>{0}% chance to go berserk within half a day.</BEWH.WarriorChanceToBerserk>
@@ -168,7 +168,7 @@
   <BEWH.NothingSelected>Nothing selected</BEWH.NothingSelected>
 
   <BEWH.CraftPrimarchEmbryoGeneTable>Craft primarch embryo</BEWH.CraftPrimarchEmbryoGeneTable>
-  <BEWH.CraftPrimarchEmbryoGeneTableDesc>Select geneseed vial and human embryo for creation of a primarch embryo</BEWH.CraftPrimarchEmbryoGeneTableDesc>
+  <BEWH.CraftPrimarchEmbryoGeneTableDesc>Select gene-seed vial and human embryo for creation of a primarch embryo</BEWH.CraftPrimarchEmbryoGeneTableDesc>
 
   <BEWH.DefaultChapterColours>Select default chapter colours</BEWH.DefaultChapterColours>
   <BEWH.ColourPreset>Colour Preset: {0}</BEWH.ColourPreset>
