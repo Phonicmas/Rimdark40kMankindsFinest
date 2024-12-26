@@ -21,7 +21,7 @@
 
     <ThingCategoryDef>
         <defName>BEWH_GeneseedVial</defName>
-        <label>geneseed vial</label>
+        <label>gene-seed vial</label>
         <parent>Items</parent>
     </ThingCategoryDef>
 

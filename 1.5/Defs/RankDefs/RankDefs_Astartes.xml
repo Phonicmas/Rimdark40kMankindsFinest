@@ -320,7 +320,7 @@
         </givesAbilities>
 
         <customEffectDescriptions>
-            <li>25% chance to succesfully harvest geneseed from dead marines.</li>
+            <li>25% chance to succesfully harvest gene-seed from dead marines.</li>
         </customEffectDescriptions>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedHarvest">
@@ -354,7 +354,7 @@
         </statOffsets>
 
         <customEffectDescriptions>
-            <li>50% chance to succesfully harvest geneseed from dead marines.</li>
+            <li>50% chance to succesfully harvest gene-seed from dead marines.</li>
         </customEffectDescriptions>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedHarvest">
@@ -388,7 +388,7 @@
         </statOffsets>
 
         <customEffectDescriptions>
-            <li>80% chance to succesfully harvest geneseed from dead marines.</li>
+            <li>80% chance to succesfully harvest gene-seed from dead marines.</li>
         </customEffectDescriptions>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedHarvest">

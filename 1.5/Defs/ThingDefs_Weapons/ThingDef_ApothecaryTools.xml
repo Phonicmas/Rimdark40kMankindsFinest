@@ -28,7 +28,7 @@
   <ThingDef ParentName="BEWH_ApothecaryToolGeneseed">
     <defName>BEWH_Narthecium</defName>
     <label>narthecium</label>
-    <description>A Narthecium is a special tool used by Adeptus Astartes Apothecaries and Primaris Apothecaries to retrieve the crucial gene-seed of their fallen battle-brothers so that new Astartes might be raised from among their Chapter's aspirants. Increases the chance of succesfully extracting geneseeds from dead marines by 50%.</description>
+    <description>The Narthecium is a special tool used by Adeptus Astartes apothecaries and Primaris apothecaries to retrieve the crucial gene-seed of their fallen battle-brothers so that new Astartes might be raised from among their Chapter's aspirants. Increases the chance of successfully extracting gene-seeds from dead marines by 50%.</description>
     <graphicData>
       <texPath>Things/Weapons/BEWH_Narthecium</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -64,20 +64,39 @@
       <li>
         <label>drill</label>
         <capacities>
-          <li>Poke</li>
+          <li>Stab</li>
         </capacities>
         <power>26</power>
         <cooldownTime>1.8</cooldownTime>
         <armorPenetration>2</armorPenetration>
       </li>
     </tools>
+	<modExtensions>
+		<li Class="VFECore.ThingDefExtension">
+			<weaponCarryDrawOffsets>
+				<north>
+					<drawOffset>(0, 0, -0.23)</drawOffset>
+				</north>
+				<east>
+					<drawOffset>(-0.2, 0, -0.23)</drawOffset>
+				</east>
+				<south>
+					<angleOffset>-20</angleOffset>
+					<drawOffset>(-0.2, 0, -0.23)</drawOffset>
+				</south>
+				<west>
+					<drawOffset>(0.2, 0, -0.23)</drawOffset>
+				</west>
+			</weaponCarryDrawOffsets>
+		</li>
+	</modExtensions>
   </ThingDef>
 
 
   <ThingDef ParentName="BEWH_ApothecaryToolGeneseed">
     <defName>BEWH_Reductor</defName>
     <label>reductor</label>
-    <description>A Reductor is a special tool used by Adeptus Astartes Apothecaries and Primaris Apothecaries to retrieve the crucial gene-seed of their fallen battle-brothers so that new Astartes might be raised from among their Chapter's aspirants. This tool also doubles as a close ranged pistol. Increases the chance of succesfully extracting geneseeds from dead marines by 50%.</description>
+    <description>The Reductor is a special tool used by Adeptus Astartes apothecaries and Primaris apothecaries to retrieve the crucial gene-seed of their fallen battle-brothers so that new Astartes might be raised from among their Chapter's aspirants. This tool also doubles as a close ranged pistol. Increases the chance of successfully extracting gene-seeds from dead marines by 50%.</description>
     <graphicData>
       <texPath>Things/Weapons/BEWH_Reductor</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -127,14 +146,33 @@
         <cooldownTime>2</cooldownTime>
       </li>
       <li>
-        <label>barrel</label>
+        <label>extractor drill</label>
         <capacities>
-          <li>Poke</li>
+          <li>Stab</li>
         </capacities>
         <power>14</power>
         <cooldownTime>2</cooldownTime>
       </li>
     </tools>
+	<modExtensions>
+		<li Class="VFECore.ThingDefExtension">
+			<weaponCarryDrawOffsets>
+				<north>
+					<drawOffset>(0, 0, -0.2)</drawOffset>
+				</north>
+				<east>
+					<drawOffset>(-0.1, 0, -0.2)</drawOffset>
+				</east>
+				<south>
+					<angleOffset>-20</angleOffset>
+					<drawOffset>(0, 0, -0.2)</drawOffset>
+				</south>
+				<west>
+					<drawOffset>(0.1, 0, -0.2)</drawOffset>
+				</west>
+			</weaponCarryDrawOffsets>
+		</li>
+	</modExtensions>
   </ThingDef>
 
 </Defs>
