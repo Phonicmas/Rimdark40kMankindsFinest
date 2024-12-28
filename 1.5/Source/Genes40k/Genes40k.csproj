@@ -32,7 +32,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="0ColourPicker">
-      <HintPath>..\..\Assemblies\0ColourPicker.dll</HintPath>
+      <HintPath>..\..\..\..\Rimdark40kFramework\1.5\Assemblies\0ColourPicker.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="0Harmony">
       <HintPath>..\..\..\..\..\..\..\workshop\content\294100\2009463077\Current\Assemblies\0Harmony.dll</HintPath>
@@ -138,6 +139,7 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_RubiconSurgeryChanceIncrease.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_SangprimusNoDuplicateAccepted.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_SecondProgenoidGlandProgress.cs" />
+    <Compile Include="Misc\ChapterApparelColourTwo.cs" />
     <Compile Include="Misc\ChapterColourDef.cs" />
     <Compile Include="Misc\StockGenerator_TagSangprimusMaterialNoDupe.cs" />
     <Compile Include="ThingClasses\Building_ChapterBanner.cs" />

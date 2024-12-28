@@ -7,7 +7,6 @@ namespace Genes40k
 {
     public class Ability_IronCircle: Ability
     {
-
         public Ability_IronCircle()
         {
         }

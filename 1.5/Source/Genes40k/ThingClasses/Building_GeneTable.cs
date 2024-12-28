@@ -1,6 +1,7 @@
 ﻿using RimWorld;
 using System;
 using System.Collections.Generic;
+using Core40k;
 using UnityEngine;
 using Verse;
 using Verse.AI;
@@ -15,12 +16,12 @@ namespace Genes40k
         private const int tickAmountDrain = 1000;
 
         private Pawn workingPawn = null;
-
+    
         private const float psyfocusDrain = -0.05f;
 
         private const float severityAdd = 0.1f;
         
-        private static readonly CachedTexture CraftPrimarchEmbryo = new CachedTexture("UI/Gizmos/ViewGenes");
+        private static readonly CachedTexture CraftPrimarchEmbryo = new CachedTexture("UI/Gizmos/BEWH_GestationStartIcon");
 
         public Building_GeneTable()
         {
@@ -104,6 +105,26 @@ namespace Genes40k
                 }
             };
             yield return command_Action;
+        }
+
+        public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Pawn selPawn)
+        {
+            foreach (var floatMenu in base.GetFloatMenuOptions(selPawn))
+            {
+                yield return floatMenu;
+            }
+            
+            if (!selPawn.apparel.WornApparel.Any(a => a is ApparelColourTwo))
+            {
+                yield break;
+            }
+            
+            var secondColourChangeFloatMenu = FloatMenuUtility.DecoratePrioritizedTask(new FloatMenuOption("BEWH.ChangeSecondaryColour".Translate().CapitalizeFirst(), delegate
+            {
+                selPawn.jobs.TryTakeOrderedJob(JobMaker.MakeJob(Core40kDefOf.BEWH_OpenStylingStationDialogForSecondColour, this), JobTag.Misc);
+            }), selPawn, this);
+            
+            yield return secondColourChangeFloatMenu;
         }
 
         public override void ExposeData()
