@@ -5,7 +5,7 @@
 	<supportedVersions>
 		<li>1.5</li>
 	</supportedVersions>
-	<packageId>Phonicmas.40kGenes</packageId>
+	<packageId>Phonicmas.RimDark.MankindsFinest</packageId>
 	<description>
 		Rimdark 40k - Mankinds Finest module.
 	</description>
@@ -15,7 +15,7 @@
 			<displayName>Biotech</displayName>
 		</li>
 		<li>
-			<packageId>Phonicmas.40kCore</packageId>
+			<packageId>Phonicmas.RimDark.Framework</packageId>
 			<displayName>RimDark 40k - Framework</displayName>
 			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3267464767</steamWorkshopUrl>
 		</li>
@@ -30,6 +30,6 @@
 		<li>dubwise.dubsbadhygiene</li>
 		<li>ceteam.combatextended</li>
 		<li>Katavrik.CrashLanding</li>
-		<li>Phonicmas.40kCore</li>
+		<li>Phonicmas.RimDark.Framework</li>
 	</loadAfter>
 </ModMetaData>

@@ -39,6 +39,9 @@ If player got path to chaos, disable heretic chapters from spawning then.
 
 Increase domitar shooting and melee, either skill or chance to hit. (skill is currently set to 4)
 
+For armor color tool, make it possibly to select presetnf from chaptercolourdefs, and also allow player to save presets
+
+
 
 
 Aura ability for living saint, buffing nearby pawn temporarily (Maybe)
