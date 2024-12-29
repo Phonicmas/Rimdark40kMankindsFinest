@@ -41,6 +41,8 @@ Increase domitar shooting and melee, either skill or chance to hit. (skill is cu
 
 For armor color tool, make it possibly to select presetnf from chaptercolourdefs, and also allow player to save presets
 
+For embryo creation window. Put a box below each current box, with a name of what it is (required-wise, geneseed vial, human embryo, pawn)
+
 
 
 

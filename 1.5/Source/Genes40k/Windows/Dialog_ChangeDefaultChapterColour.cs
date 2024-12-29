@@ -40,7 +40,6 @@ namespace Genes40k
         {
             const float gap = 5f;
             inRect.yMax -= CloseButSize.y;
-
             
             var defaultChapterButton = new Rect(inRect);
             defaultChapterButton.height = 40f;
