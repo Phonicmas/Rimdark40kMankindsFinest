@@ -43,6 +43,7 @@ For armor color tool, make it possibly to select presetnf from chaptercolourdefs
 
 For embryo creation window. Put a box below each current box, with a name of what it is (required-wise, geneseed vial, human embryo, pawn)
 
+Make shoulder pads draw ontop of armor (in side view only?)
 
 
 

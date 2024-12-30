@@ -7,7 +7,7 @@
         <defName>BEWH_ImperiumPowerArmor</defName>
         <label>Imperium Power Armor</label>
         <description>Power armor of Imperium Space Marines.</description>
-        <thingClass>Genes40k.ChapterApparelColourTwo</thingClass>
+        <thingClass>Genes40k.PowerArmorApparelColourTwo</thingClass>
         <recipeMaker>
             <researchPrerequisite>BEWH_AstartesPowerArmor</researchPrerequisite>
         </recipeMaker>

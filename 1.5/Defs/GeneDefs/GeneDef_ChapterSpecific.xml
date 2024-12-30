@@ -332,18 +332,6 @@
         <resourceLossPerDay>0.04</resourceLossPerDay>
         <aggroMentalBreakSelectionChanceFactor>20</aggroMentalBreakSelectionChanceFactor>
         <skinColorOverride>(252, 225, 194)</skinColorOverride>
-        <modExtensions>
-            <li Class="VanillaGenesExpanded.GeneExtension">
-                <hediffsToBodyParts>
-                    <li>
-                        <hediff>BEWH_CanisHelixCanines</hediff>
-                        <bodyparts>
-                            <li>Head</li>
-                        </bodyparts>
-                    </li>
-                </hediffsToBodyParts>
-            </li>
-        </modExtensions>
     </GeneDef>
 
     <!-- Chapter X - Iron Hands -->

@@ -26,7 +26,7 @@ namespace Genes40k
             
             customDef = new ChapterColourDef
             {
-                defName = "BEWH_CustomDef",
+                defName = "BEWH_CustomChapterDef",
                 label = "Custom",
                 primaryColour = settings.chapterColorOne,
                 secondaryColour = settings.chapterColorTwo,

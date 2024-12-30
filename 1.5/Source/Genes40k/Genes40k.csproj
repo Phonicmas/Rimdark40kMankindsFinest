@@ -139,7 +139,6 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_RubiconSurgeryChanceIncrease.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_SangprimusNoDuplicateAccepted.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_SecondProgenoidGlandProgress.cs" />
-    <Compile Include="Misc\ChapterApparelColourTwo.cs" />
     <Compile Include="Misc\ChapterColourDef.cs" />
     <Compile Include="Misc\StockGenerator_TagSangprimusMaterialNoDupe.cs" />
     <Compile Include="ThingClasses\Building_ChapterBanner.cs" />
@@ -173,8 +172,10 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_LivingSaintResurrection.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_LivingSaintDeath.cs" />
     <Compile Include="ThingClasses\Building_SangprimusPortum.cs" />
+    <Compile Include="ThingClasses\ChapterApparelColourTwo.cs" />
     <Compile Include="ThingClasses\GeneMaterialExtra.cs" />
     <Compile Include="ThingClasses\GeneticMatrix.cs" />
+    <Compile Include="ThingClasses\PowerArmorApparelColourTwo.cs" />
     <Compile Include="ThingClasses\PrimarchEmbryo.cs" />
     <Compile Include="ThingClasses\GeneseedVial.cs" />
     <Compile Include="Windows\Dialog_ChangeDefaultChapterColour.cs" />

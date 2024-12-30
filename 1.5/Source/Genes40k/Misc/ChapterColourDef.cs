@@ -1,13 +1,10 @@
-﻿using UnityEngine;
+﻿using Core40k;
 using Verse;
 
 namespace Genes40k
 {
-    public class ChapterColourDef : Def
+    public class ChapterColourDef : ColourPresetDef
     {
-        public Color primaryColour = Color.white;
-        public Color secondaryColour = Color.white;
-        
         public GeneDef relatedChapterGene = null;
     }
-}
+}   
