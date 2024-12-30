@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using Core40k;
+using RimWorld;
 using Verse;
 
 
@@ -163,6 +164,10 @@ namespace Genes40k
         
         //ResearchDefs
         public static ResearchProjectDef BEWH_StasisResurrection;
+        
+        //RankDefs
+        public static RankDef BEWH_AstartesRankBattleBrother;
+        public static RankDef BEWH_AstartesRankVeteran;
 
         static Genes40kDefOf()
         {

@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using ColourPicker;
+using Core40k;
 using UnityEngine;
 using Verse;
 
 namespace Genes40k
 {
-    [StaticConstructorOnStartup]
     public class Dialog_ChangeDefaultChapterColour : Window
     {
         private Genes40kModSettings settings;
@@ -52,7 +52,7 @@ namespace Genes40k
                 var customMenuOption = new FloatMenuOption("Custom Colour", delegate
                 {
                     currentlySelectedPreset = customDef;
-                }, Widgets.PlaceholderIconTex, Color.white);
+                }, Core40kUtils.ColourPreview(customDef.primaryColour, customDef.secondaryColour), Color.white);
             
                 list.Add(customMenuOption);
                 foreach (var colour in chapterColours)
@@ -60,7 +60,7 @@ namespace Genes40k
                     var menuOption = new FloatMenuOption(colour.label.CapitalizeFirst(), delegate
                     {
                         currentlySelectedPreset = colour;
-                    }, Widgets.PlaceholderIconTex, Color.white);
+                    }, Core40kUtils.ColourPreview(colour.primaryColour, colour.secondaryColour), Color.white);
                     list.Add(menuOption);
                 }
                 

@@ -47,25 +47,6 @@
             </li>
         </backstoryFilters>
 
-        <earliestRaidDays>45</earliestRaidDays>
-        <autoFlee>false</autoFlee>
-        <raidCommonalityFromPointsCurve>
-            <points>
-                <li>(0, 1)</li>
-            </points>
-        </raidCommonalityFromPointsCurve>
-        <maxPawnCostPerTotalPointsCurve>
-            <points>
-                <li>(0,0)</li>
-                <li>(400, 60)</li>
-                <li>(1000, 90)</li>
-                <li>(2000, 200)</li>
-                <li>(5000, 600)</li>
-                <li>(10000, 2000)</li>
-                <li>(100000, 5000)</li>
-            </points>
-        </maxPawnCostPerTotalPointsCurve>
-
 
         <fixedIdeo MayRequire="Ludeon.RimWorld.Ideology">true</fixedIdeo>
         <ideoName MayRequire="Ludeon.RimWorld.Ideology">Imperial Cult</ideoName>
@@ -112,9 +93,27 @@
         </royalTitleTags>
 
 
+        <earliestRaidDays>45</earliestRaidDays>
+        <autoFlee>false</autoFlee>
+        <raidCommonalityFromPointsCurve>
+            <points>
+                <li>(0, 1)</li>
+            </points>
+        </raidCommonalityFromPointsCurve>
+        <maxPawnCostPerTotalPointsCurve>
+            <points>
+                <li>(0,0)</li>
+                <li>(400, 100)</li>
+                <li>(1000, 200)</li>
+                <li>(2000, 400)</li>
+                <li>(5000, 1000)</li>
+                <li>(10000, 3000)</li>
+                <li>(100000, 10000)</li>
+            </points>
+        </maxPawnCostPerTotalPointsCurve>
         <pawnGroupMakers>
-            <li>
-                <!-- Mixed fight -->
+            <!-- Mixed fight -->
+            <!--<li>
                 <kindDef>Combat</kindDef>
                 <commonality>100</commonality>
                 <options>
@@ -123,37 +122,37 @@
                     <BEWH_PrimarisSpaceMarine>8</BEWH_PrimarisSpaceMarine>
                     <BEWH_SpaceMarinePsyker>2</BEWH_SpaceMarinePsyker>
                 </options>
-            </li>
+            </li>-->
+            <!-- Firstborn squad -->
             <li>
-                <!-- Firstborn squad -->
-                <kindDef>Combat</kindDef>
+                <kindDef>BEWH_ChapterEncounter</kindDef>
                 <commonality>30</commonality>
                 <options>
                     <BEWH_SpaceMarine>10</BEWH_SpaceMarine>
                     <BEWH_SpaceMarinePsyker>2</BEWH_SpaceMarinePsyker>
                 </options>
             </li>
-            <li>
-                <!-- Primaris squad -->
+            <!-- Primaris squad -->
+            <!--<li>
                 <kindDef>Combat</kindDef>
                 <commonality>30</commonality>
                 <options>
                     <BEWH_PrimarisSpaceMarine>10</BEWH_PrimarisSpaceMarine>
                 </options>
-            </li>
+            </li>-->
+            <!-- Base defense -->
             <li>
-                <!-- Base defense -->
                 <kindDef>Settlement</kindDef>
                 <options>
-                    <BEWH_ImperiumGuardman>10</BEWH_ImperiumGuardman>
+                    <BEWH_ImperiumGuardman>6</BEWH_ImperiumGuardman>
                     <BEWH_SpaceMarine>14</BEWH_SpaceMarine>
                     <BEWH_SpaceMarinePsyker>4</BEWH_SpaceMarinePsyker>
                     <BEWH_PrimarisSpaceMarine>8</BEWH_PrimarisSpaceMarine>
                     <BEWH_Custodes>20</BEWH_Custodes>
                 </options>
             </li>
+            <!-- Trader -->
             <li>
-                <!-- Trader -->
                 <kindDef>Trader</kindDef>
                 <traders>
                     <BEWH_ImperiumTrader>1</BEWH_ImperiumTrader>
@@ -166,8 +165,8 @@
                     <BEWH_SpaceMarine>2</BEWH_SpaceMarine>
                 </guards>
             </li>
+            <!-- Peaceful -->
             <li>
-                <!-- Peaceful -->
                 <kindDef>Peaceful</kindDef>
                 <options>
                     <BEWH_ImperiumGuardman>16</BEWH_ImperiumGuardman>

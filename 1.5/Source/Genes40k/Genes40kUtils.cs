@@ -145,7 +145,6 @@ namespace Genes40k
             return Enumerable.Any(DevelopmentPhases, hediff => pawn.health.hediffSet.HasHediff(hediff));
         }
 
-
         public static void MakeGeneseedVial(Pawn pawn, bool isPrimaris)
         {
             GeneseedVial geneseedVial;
@@ -371,6 +370,7 @@ namespace Genes40k
 
             return text;
         }
+        
         public static void OffsetDivineRadiance(Pawn pawn, float offset)
         {
             var geneDivineRadiance = pawn.genes?.GetFirstGeneOfType<Gene_DivineRadiance>();

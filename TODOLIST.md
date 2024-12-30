@@ -41,6 +41,12 @@ Increase domitar shooting and melee, either skill or chance to hit. (skill is cu
 
 For embryo creation window. Put a box below each current box, with a name of what it is (required-wise, geneseed vial, human embryo, pawn)
 
+For ranks, make it such that if a pawn is recruited, check if their current ranks are inside legal limit, if not, de-rank them.
+
+Raid thingy not working properly.
+
+Make code to allow rank icons and chapter icons to show on shoulder pads. Use render nodes like shoulder pad with maybe custom worker. Get rank icon from rank def, and use highest rank of pawn (or selectable?) For chapter icons make them selectable in the colour tool thingy.
+
 
 
 Aura ability for living saint, buffing nearby pawn temporarily (Maybe)
@@ -50,7 +56,6 @@ And when a rank is given if it is higher or equal to current ones importance the
 In spect window code, call discard on pawn???
 
 ## Bugs
-Error saving/loading currently selected chaptercolourdef
 
 
 ## Other
