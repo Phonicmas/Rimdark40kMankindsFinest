@@ -7,7 +7,7 @@
         <defName>BEWH_ImperiumPowerArmor</defName>
         <label>Imperium Power Armor</label>
         <description>Power armor of Imperium Space Marines.</description>
-        <thingClass>Genes40k.PowerArmorApparelColourTwo</thingClass>
+        <thingClass>Genes40k.ChapterApparelColourTwo</thingClass>
         <recipeMaker>
             <researchPrerequisite>BEWH_AstartesPowerArmor</researchPrerequisite>
         </recipeMaker>
@@ -21,6 +21,42 @@
             <tags>
                 <li>ImperiumPowerArmor</li>
             </tags>
+            <renderNodeProperties>
+                <li>
+                    <workerClass>PawnRenderNodeWorker_Apparel_Body</workerClass>
+                    <nodeClass>PawnRenderNode_Apparel</nodeClass>
+                    <texPath>Things/Armor/Imperium/PowerArmor/BEWH_ImperiumPowerArmor</texPath>
+                    <drawSize>1</drawSize>
+                    <parentTagDef>Body</parentTagDef>
+                    <drawData>
+                        <defaultData>
+                            <layer>60</layer>
+                        </defaultData>
+                        <dataNorth>
+                            <layer>70</layer>
+                        </dataNorth>
+                        <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+                    </drawData>
+                </li>
+                <li>
+                    <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentShoulderPad</workerClass>
+                    <texPath>Things/Armor/Imperium/PowerArmor/Shoulder/BEWH_ImperiumPowerArmor_Shoulder</texPath>
+                    <drawSize>1</drawSize>
+                    <parentTagDef>ApparelBody</parentTagDef>
+                    <drawData>
+                        <defaultData>
+                            <layer>-1</layer>
+                        </defaultData>
+                        <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+                        <dataEast>
+                            <layer>80</layer>
+                        </dataEast>
+                        <dataWest>
+                            <layer>80</layer>
+                        </dataWest>
+                    </drawData>
+                </li>
+            </renderNodeProperties>
         </apparel>
     </ThingDef>
 

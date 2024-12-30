@@ -39,11 +39,7 @@ If player got path to chaos, disable heretic chapters from spawning then.
 
 Increase domitar shooting and melee, either skill or chance to hit. (skill is currently set to 4)
 
-For armor color tool, make it possibly to select presetnf from chaptercolourdefs, and also allow player to save presets
-
 For embryo creation window. Put a box below each current box, with a name of what it is (required-wise, geneseed vial, human embryo, pawn)
-
-Make shoulder pads draw ontop of armor (in side view only?)
 
 
 
