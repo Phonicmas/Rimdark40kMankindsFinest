@@ -19,6 +19,8 @@ use stuff like {PAWN_nameDef} and {PAWN_pronoun} in description texts instead of
 
 In the FromCode.xml where all text are, sort them properly cause oh boy its not sorted anymore
 
+Make sure all type of tags, defs and what not are prefixed with BEWH_
+
 ## Art
 
 Shoulder pad icons for chapters and ranks
@@ -47,11 +49,9 @@ For ranks, make it such that if a pawn is recruited, check if their current rank
 
 Raid thingy not working properly.
 
-Make code to allow rank icons and chapter icons to show on shoulder pads. Use render nodes like shoulder pad with maybe custom worker. Get rank icon from rank def, and use highest rank of pawn (or selectable?) For chapter icons make them selectable in the colour tool thingy.
-
 In PawnRenderNodeWorker_AttachmentChapterRankIcon, make standard path use neophyte icon when made.
 
-possible also to give each shoulder pad own colours
+
 
 
 Aura ability for living saint, buffing nearby pawn temporarily (Maybe)

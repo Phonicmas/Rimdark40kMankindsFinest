@@ -2,11 +2,12 @@
 <Defs>
 
     <!-- ===== IMPERIUM ===== -->
-    <!-- Power Armor Imperium -->
+    <!-- MK 7 -->
+    <!-- Power Armor MK 7 -->
     <ThingDef ParentName="BEWH_PowerArmorBase">
-        <defName>BEWH_ImperiumPowerArmor</defName>
-        <label>Imperium Power Armor</label>
-        <description>Power armor of Imperium Space Marines.</description>
+        <defName>BEWH_MkVIIPowerArmor</defName>
+        <label>Mk VII Power Armor</label>
+        <description>Mk VII power armor of Firstborn Space Marines.</description>
         <thingClass>Genes40k.ChapterApparelColourTwo</thingClass>
         <recipeMaker>
             <researchPrerequisite>BEWH_AstartesPowerArmor</researchPrerequisite>
@@ -16,13 +17,31 @@
             <graphicClass>Graphic_Single</graphicClass>
             <shaderType>CutoutComplex</shaderType>
         </graphicData>
+        <statBases Inherit="false">
+            <WorkToMake>75000</WorkToMake>
+            <MaxHitPoints>500</MaxHitPoints>
+            <Mass>15</Mass>
+            <Flammability>0</Flammability>
+            <ArmorRating_Sharp>1.1</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+            <ArmorRating_Heat>1</ArmorRating_Heat>
+            <Insulation_Cold>36</Insulation_Cold>
+            <Insulation_Heat>20</Insulation_Heat>
+            <EquipDelay>18</EquipDelay>
+        </statBases>
+        <costList Inherit="false">
+            <ComponentSpacer>6</ComponentSpacer>
+            <Plasteel>150</Plasteel>
+            <Steel>100</Steel>
+            <Uranium>50</Uranium>
+        </costList>
         <equippedStatOffsets>
             <MoveSpeed>-1</MoveSpeed>
         </equippedStatOffsets>
         <apparel>
             <wornGraphicPath>Things/Armor/Imperium/PowerArmor/BEWH_ImperiumPowerArmor</wornGraphicPath>
             <tags>
-                <li>ImperiumPowerArmor</li>
+                <li>BEWH_PowerArmorMkVII</li>
             </tags>
             <renderNodeProperties>
                 <li>
@@ -104,12 +123,12 @@
         </modExtensions>
     </ThingDef>
 
-    <!-- Power Armor Helmet Imperium -->
+    <!-- Power Armor MK 7 Helmet -->
     <ThingDef ParentName="BEWH_PowerArmorHelmetBase">
-        <defName>BEWH_ImperiumPowerArmorHelmet</defName>
-        <label>Imperium Power Helmet</label>
-        <description>Standard issue helmet of Imperium Space Marines.</description>
-        <thingClass>Genes40k.ChapterApparelColourTwo</thingClass>
+        <defName>BEWH_MkVIIPowerArmorHelmet</defName>
+        <label>Mk VII Power Armor Helmet</label>
+        <description>Standard issue Mk VII helmet of Firstborn Space Marines.</description>
+        <thingClass>Core40k.ApparelColourTwo</thingClass>
         <recipeMaker>
             <researchPrerequisite>BEWH_AstartesPowerArmor</researchPrerequisite>
         </recipeMaker>
@@ -118,20 +137,158 @@
             <graphicClass>Graphic_Single</graphicClass>
             <shaderType>CutoutComplex</shaderType>
         </graphicData>
+        <statBases Inherit="false">
+            <WorkToMake>26250</WorkToMake>
+            <MaxHitPoints>400</MaxHitPoints>
+            <Mass>3</Mass>
+            <Flammability>0</Flammability>
+            <ArmorRating_Sharp>1.1</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+            <ArmorRating_Heat>1</ArmorRating_Heat>
+            <Insulation_Cold>4</Insulation_Cold>
+            <Insulation_Heat>2</Insulation_Heat>
+            <EquipDelay>6</EquipDelay>
+        </statBases>
+        <costList Inherit="false">
+            <ComponentSpacer>1</ComponentSpacer>
+            <Plasteel>50</Plasteel>
+            <Steel>20</Steel>
+        </costList>
         <apparel>
             <wornGraphicPath>Things/Headgear/Imperium/PowerArmor/BEWH_ImperiumHelmet</wornGraphicPath>
             <tags>
-                <li>ImperiumPowerArmorHelmet</li>
+                <li>BEWH_PowerArmorHelmetMkVII</li>
             </tags>
         </apparel>
     </ThingDef>
 
-    <!-- Power Armor Primaris Helmet Imperium -->
-    <ThingDef ParentName="BEWH_PowerArmorHelmetBase">
-        <defName>BEWH_ImperiumPrimarisPowerArmorHelmet</defName>
-        <label>Imperium Primaris Power Helmet</label>
-        <description>Standard issue helmet of Imperium Primaris Space Marines.</description>
+    <!-- MK 10-->
+    <!-- Power Armor MK 10 -->
+    <ThingDef ParentName="BEWH_PowerArmorBase">
+        <defName>BEWH_MkXPowerArmor</defName>
+        <label>Mk X Power Armor</label>
+        <description>Mk X power armor of Primaris Space Marines.</description>
         <thingClass>Genes40k.ChapterApparelColourTwo</thingClass>
+        <recipeMaker>
+            <researchPrerequisite>BEWH_AstartesPowerArmor</researchPrerequisite>
+        </recipeMaker>
+        <graphicData>
+            <texPath>Things/Armor/Imperium/PowerArmor/BEWH_ImperiumPowerArmor</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+        </graphicData>
+        <statBases Inherit="false">
+            <WorkToMake>90000</WorkToMake>
+            <MaxHitPoints>500</MaxHitPoints>
+            <Mass>15</Mass>
+            <Flammability>0</Flammability>
+            <ArmorRating_Sharp>1.3</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.8</ArmorRating_Blunt>
+            <ArmorRating_Heat>1.2</ArmorRating_Heat>
+            <Insulation_Cold>40</Insulation_Cold>
+            <Insulation_Heat>30</Insulation_Heat>
+            <EquipDelay>18</EquipDelay>
+        </statBases>
+        <costList Inherit="false">
+            <ComponentSpacer>8</ComponentSpacer>
+            <Plasteel>175</Plasteel>
+            <Steel>120</Steel>
+            <Uranium>60</Uranium>
+        </costList>
+        <equippedStatOffsets>
+            <MoveSpeed>-1</MoveSpeed>
+        </equippedStatOffsets>
+        <apparel>
+            <wornGraphicPath>Things/Armor/Imperium/PowerArmor/BEWH_ImperiumPowerArmor</wornGraphicPath>
+            <tags>
+                <li>BEWH_PowerArmorMkX</li>
+            </tags>
+            <renderNodeProperties>
+                <li>
+                    <workerClass>PawnRenderNodeWorker_Apparel_Body</workerClass>
+                    <nodeClass>PawnRenderNode_Apparel</nodeClass>
+                    <texPath>Things/Armor/Imperium/PowerArmor/BEWH_ImperiumPowerArmor</texPath>
+                    <drawSize>1</drawSize>
+                    <parentTagDef>Body</parentTagDef>
+                    <drawData>
+                        <defaultData>
+                            <layer>60</layer>
+                        </defaultData>
+                        <dataNorth>
+                            <layer>70</layer>
+                        </dataNorth>
+                        <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+                    </drawData>
+                </li>
+                <li>
+                    <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentShoulderPad</workerClass>
+                    <texPath>Things/Armor/Imperium/PowerArmor/Shoulder/BEWH_ImperiumPowerArmor_Shoulder</texPath>
+                    <drawSize>1</drawSize>
+                    <parentTagDef>ApparelBody</parentTagDef>
+                    <drawData>
+                        <defaultData>
+                            <layer>-1</layer>
+                        </defaultData>
+                        <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+                        <dataEast>
+                            <layer>80</layer>
+                        </dataEast>
+                        <dataWest>
+                            <layer>80</layer>
+                        </dataWest>
+                    </drawData>
+                </li>
+                <li>
+                    <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentShoulderChapterIcon</workerClass>
+                    <texPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_DeathGuard</texPath>
+                    <drawSize>1</drawSize>
+                    <parentTagDef>ApparelBody</parentTagDef>
+                    <drawData>
+                        <defaultData>
+                            <layer>81</layer>
+                        </defaultData>
+                        <dataSouth>
+                            <offset>(-0.065,0,-0.02)</offset>
+                        </dataSouth>
+                        <dataNorth>
+                            <offset>(0.065,0,-0.02)</offset>
+                        </dataNorth>
+                        <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+                    </drawData>
+                </li>
+                <li>
+                    <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentShoulderRankIcon</workerClass>
+                    <texPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_Veteran</texPath>
+                    <drawSize>1</drawSize>
+                    <parentTagDef>ApparelBody</parentTagDef>
+                    <drawData>
+                        <defaultData>
+                            <layer>81</layer>
+                        </defaultData>
+                        <dataSouth>
+                            <offset>(0.065,0,-0.02)</offset>
+                        </dataSouth>
+                        <dataNorth>
+                            <offset>(-0.065,0,-0.02)</offset>
+                        </dataNorth>
+                        <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+                    </drawData>
+                </li>
+            </renderNodeProperties>
+        </apparel>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_EnableTabDef">
+                <tabDef>BEWH_AstartesShoulderIconDef</tabDef>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <!-- Power Armor MK 10 Helmet -->
+    <ThingDef ParentName="BEWH_PowerArmorHelmetBase">
+        <defName>BEWH_MkXPowerArmorHelmet</defName>
+        <label>Mk X Power Armor Helmet</label>
+        <description>Standard issue Mk X helmet of Primaris Space Marines.</description>
+        <thingClass>Core40k.ApparelColourTwo</thingClass>
         <recipeMaker>
             <researchPrerequisite>BEWH_AstartesPowerArmor</researchPrerequisite>
         </recipeMaker>
@@ -140,10 +297,27 @@
             <graphicClass>Graphic_Single</graphicClass>
             <shaderType>CutoutComplex</shaderType>
         </graphicData>
+        <statBases Inherit="false">
+            <WorkToMake>35000</WorkToMake>
+            <MaxHitPoints>400</MaxHitPoints>
+            <Mass>3</Mass>
+            <Flammability>0</Flammability>
+            <ArmorRating_Sharp>1.3</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.8</ArmorRating_Blunt>
+            <ArmorRating_Heat>1.2</ArmorRating_Heat>
+            <Insulation_Cold>6</Insulation_Cold>
+            <Insulation_Heat>4</Insulation_Heat>
+            <EquipDelay>6</EquipDelay>
+        </statBases>
+        <costList Inherit="false">
+            <ComponentSpacer>1</ComponentSpacer>
+            <Plasteel>50</Plasteel>
+            <Steel>20</Steel>
+        </costList>
         <apparel>
             <wornGraphicPath>Things/Headgear/Imperium/PowerArmorPrimaris/BEWH_ImperiumHelmetAlt</wornGraphicPath>
             <tags>
-                <li>ImperiumPowerArmorHelmet</li>
+                <li>BEWH_PowerArmorHelmetMkX</li>
             </tags>
         </apparel>
     </ThingDef>

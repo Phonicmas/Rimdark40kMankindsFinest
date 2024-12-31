@@ -31,12 +31,12 @@
             <li>Western</li>
         </apparelDisallowTags>
         <apparelRequired>
-            <li>BEWH_ImperiumPowerArmor</li>
-            <li>BEWH_ImperiumPowerArmorHelmet</li>
+            <li>BEWH_MkVIIPowerArmor</li>
+            <li>BEWH_MkVIIPowerArmorHelmet</li>
         </apparelRequired>
         <weaponTags>
-            <li>BEWH_AstartesBolter</li>
-            <li>BEWH_AstartesChainsword</li>
+            <li>BEWH_AstartesRanged</li>
+            <li>BEWH_AstartesMelee</li>
         </weaponTags>
         <disallowedTraits>
             <li>Brawler</li>
@@ -109,11 +109,11 @@
     </PawnKindDef>
 
 
-    <!-- Space Marine -->
+    <!-- Primaris Marine -->
     <PawnKindDef ParentName="SpaceMarineBasePawn" Name="PrimarisMarineBasePawn" Abstract="True">
         <apparelRequired Inherit="False">
-            <li>BEWH_ImperiumPowerArmor</li>
-            <li>BEWH_ImperiumPrimarisPowerArmorHelmet</li>
+            <li>BEWH_MkXPowerArmor</li>
+            <li>BEWH_MkXPowerArmorHelmet</li>
         </apparelRequired>
     </PawnKindDef>
 

@@ -2,20 +2,15 @@
 <Defs>
 
   <!-- Bolter -->
-  <ThingDef ParentName="BaseHumanMakeableGun">
+  <ThingDef ParentName="BEWH_AstartesRangedBase">
     <defName>BEWH_AstartesBolter</defName>
     <label>bolter</label>
     <description>The Bolter, also called a Boltgun, and its variants are some of the most powerful, hand-held, ballistic anti-personnel weaponry in use by the military forces of the Imperium of Man. It is a powerful assault weapon that fires explosive kinetic rounds colloquially referred to as bolts.</description>
-    <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Weapons/BEWH_BoltCarbine</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_ChargeRifle</soundInteract>
-    <smeltable>false</smeltable>
-    <burnableByRecipe>true</burnableByRecipe>
-    <tradeability>None</tradeability>
-    <tradeTags Inherit="False" />
     <statBases>
       <WorkToMake>45000</WorkToMake>
       <Mass>4.6</Mass>
@@ -26,23 +21,15 @@
       <RangedWeapon_Cooldown>2.00</RangedWeapon_Cooldown>
     </statBases>
     <recipeMaker>
-      <researchPrerequisite>BEWH_AstartesWeapons</researchPrerequisite>
       <skillRequirements>
-        <Crafting>12</Crafting>
+        <Crafting>11</Crafting>
       </skillRequirements>
-      <recipeUsers Inherit="False">
-        <li>FabricationBench</li>
-      </recipeUsers>
     </recipeMaker>
     <costList>
       <Steel>40</Steel>
       <Plasteel>55</Plasteel>
       <ComponentSpacer>3</ComponentSpacer>
     </costList>
-    <thingSetMakerTags Inherit="False" />
-    <weaponTags Inherit="False">
-      <li>BEWH_AstartesBolter</li>
-    </weaponTags>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
@@ -57,71 +44,39 @@
         <muzzleFlashScale>12</muzzleFlashScale>
       </li>
     </verbs>
-    <tools>
-      <li>
-        <label>stock</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>9</power>
-        <cooldownTime>2</cooldownTime>
+    <modExtensions>
+      <li Class="VFECore.ThingDefExtension">
+        <weaponCarryDrawOffsets>
+          <north>
+            <drawOffset>(0, 0, -0.2)</drawOffset>
+          </north>
+          <east>
+            <drawOffset>(-0.1, 0, -0.2)</drawOffset>
+          </east>
+          <south>
+            <angleOffset>-20</angleOffset>
+            <drawOffset>(0, 0, -0.2)</drawOffset>
+          </south>
+          <west>
+            <drawOffset>(0.1, 0, -0.2)</drawOffset>
+          </west>
+        </weaponCarryDrawOffsets>
       </li>
-      <li>
-        <label>barrel</label>
-        <capacities>
-          <li>Blunt</li>
-          <li>Poke</li>
-        </capacities>
-        <power>9</power>
-        <cooldownTime>2</cooldownTime>
-      </li>
-    </tools>
-	<modExtensions>
-		<li Class="VFECore.ThingDefExtension">
-			<weaponCarryDrawOffsets>
-				<north>
-					<drawOffset>(0, 0, -0.2)</drawOffset>
-				</north>
-				<east>
-					<drawOffset>(-0.1, 0, -0.2)</drawOffset>
-				</east>
-				<south>
-					<angleOffset>-20</angleOffset>
-					<drawOffset>(0, 0, -0.2)</drawOffset>
-				</south>
-				<west>
-					<drawOffset>(0.1, 0, -0.2)</drawOffset>
-				</west>
-			</weaponCarryDrawOffsets>
-		</li>
-	</modExtensions>
+    </modExtensions>
   </ThingDef>
 
   <!-- Chainsword -->
-  <ThingDef ParentName="MeleeWeaponUltratech">
+  <ThingDef ParentName="BEWH_AstartesMeleeBase">
     <defName>BEWH_AstartesChainsword</defName>
     <label>chainsword</label>
     <description>A vicious and brutal weapon, the Chainsword is an iconic tool of the Adeptus Astartes. It can carve flesh with absolute easy and is relatively inexpensive to make. The downside is that it lacks the armor penetration of power weapons.</description>
     <soundInteract>Interact_MonoSword</soundInteract>
     <meleeHitSound>MeleeHit_MonoSword</meleeHitSound>
     <!-- <equippedAngleOffset>-65</equippedAngleOffset> -->
-    <relicChance>0</relicChance>
-    <smeltable>false</smeltable>
-    <burnableByRecipe>true</burnableByRecipe>
-    <tradeability>None</tradeability>
-    <tradeTags Inherit="False" />
-    <thingSetMakerTags Inherit="False" />
-    <weaponTags Inherit="False">
-      <li>BEWH_AstartesChainsword</li>
-    </weaponTags>
     <recipeMaker>
-      <researchPrerequisite>BEWH_AstartesWeapons</researchPrerequisite>
       <skillRequirements>
         <Crafting>10</Crafting>
       </skillRequirements>
-      <recipeUsers Inherit="False">
-        <li>FabricationBench</li>
-      </recipeUsers>
     </recipeMaker>
     <costList>
       <Steel>65</Steel>
@@ -132,17 +87,9 @@
     <graphicData>
       <texPath>Things/Weapons/BEWH_Chainsword</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-	  <drawSize>1.15</drawSize>
+      <drawSize>1.15</drawSize>
     </graphicData>
     <tools>
-      <li>
-        <label>handle</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>12</power>
-        <cooldownTime>1.6</cooldownTime>
-      </li>
       <li>
         <label>edge</label>
         <capacities>
@@ -153,24 +100,79 @@
         <armorPenetration>0.65</armorPenetration>
       </li>
     </tools>
-	<modExtensions>
-		<li Class="VFECore.ThingDefExtension">
-			<weaponCarryDrawOffsets>
-				<north>
-					<drawOffset>(0, 0, -0.15)</drawOffset>
-				</north>
-				<east>
-					<drawOffset>(0, 0, -0.15)</drawOffset>
-				</east>
-				<south>
-					<drawOffset>(0, 0, -0.15)</drawOffset>
-				</south>
-				<west>
-					<drawOffset>(0, 0, -0.15)</drawOffset>
-				</west>
-			</weaponCarryDrawOffsets>
-		</li>
-	</modExtensions>
+    <modExtensions>
+      <li Class="VFECore.ThingDefExtension">
+        <weaponCarryDrawOffsets>
+          <north>
+            <drawOffset>(0, 0, -0.15)</drawOffset>
+          </north>
+          <east>
+            <drawOffset>(0, 0, -0.15)</drawOffset>
+          </east>
+          <south>
+            <drawOffset>(0, 0, -0.15)</drawOffset>
+          </south>
+          <west>
+            <drawOffset>(0, 0, -0.15)</drawOffset>
+          </west>
+        </weaponCarryDrawOffsets>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Power Sword -->
+  <ThingDef ParentName="BEWH_AstartesMeleeBase">
+    <defName>BEWH_AstartesPowerSword</defName>
+    <label>power sword</label>
+    <description>...</description>
+    <soundInteract>Interact_MonoSword</soundInteract>
+    <meleeHitSound>MeleeHit_MonoSword</meleeHitSound>
+    <!-- <equippedAngleOffset>-65</equippedAngleOffset> -->
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <Steel>45</Steel>
+      <Plasteel>30</Plasteel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <graphicData>
+      <texPath>Things/Weapons/BEWH_Powersword</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.15</drawSize>
+    </graphicData>
+    <tools>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>22</power>
+        <cooldownTime>2</cooldownTime>
+        <armorPenetration>1.2</armorPenetration>
+      </li>
+    </tools>
+    <modExtensions>
+      <li Class="VFECore.ThingDefExtension">
+        <weaponCarryDrawOffsets>
+          <north>
+            <drawOffset>(0, 0, -0.15)</drawOffset>
+          </north>
+          <east>
+            <drawOffset>(0, 0, -0.15)</drawOffset>
+          </east>
+          <south>
+            <drawOffset>(0, 0, -0.15)</drawOffset>
+          </south>
+          <west>
+            <drawOffset>(0, 0, -0.15)</drawOffset>
+          </west>
+        </weaponCarryDrawOffsets>
+      </li>
+    </modExtensions>
   </ThingDef>
 
 </Defs>
