@@ -11,7 +11,7 @@
     <!-- ====Astartes==== -->
     <!-- =Base= -->
     <!-- Neophyte -->
-    <Core40k.RankDef>
+    <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankNeophyte</defName>
         <label>Neophyte</label>
         <description>Neophyte are the newest recruits of a Chapter. Neophytes are usually employed along a Chapter's Scout Squads as part of their training.</description>
@@ -34,9 +34,11 @@
 
         <rankTier>0</rankTier>
 
-    </Core40k.RankDef>
+        <unlocksRankIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_Veteran</unlocksRankIconPath>
+
+    </Genes40k.ChapterRankDef>
     <!-- Battle-Brother -->
-    <Core40k.RankDef>
+    <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankBattleBrother</defName>
         <label>Battle-Brother</label>
         <description>Battle-Brother description</description>
@@ -62,9 +64,11 @@
 
         <rankTier>1</rankTier>
 
-    </Core40k.RankDef>
+        <unlocksRankIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_CloseSupport</unlocksRankIconPath>
+
+    </Genes40k.ChapterRankDef>
     <!-- Veteran -->
-    <Core40k.RankDef>
+    <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankVeteran</defName>
         <label>Veteran</label>
         <description>Veteran description.</description>
@@ -87,11 +91,11 @@
 
         <rankTier>2</rankTier>
 
-    </Core40k.RankDef>
+    </Genes40k.ChapterRankDef>
 
     <!-- =Tactical Marine= -->
     <!-- Sergeant -->
-    <Core40k.RankDef>
+    <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankSergeant</defName>
         <label>Sergeant</label>
         <description>Sergeant description.</description>
@@ -111,9 +115,9 @@
 
         <rankTier>3</rankTier>
 
-    </Core40k.RankDef>
+    </Genes40k.ChapterRankDef>
     <!-- Lieutenant -->
-    <Core40k.RankDef>
+    <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankLieutenant</defName>
         <label>Lieutenant</label>
         <description>Lieutenant description.</description>
@@ -146,9 +150,9 @@
 
         <rankTier>4</rankTier>
 
-    </Core40k.RankDef>
+    </Genes40k.ChapterRankDef>
     <!-- Captain -->
-    <Core40k.RankDef>
+    <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankCaptain</defName>
         <label>Captain</label>
         <description>Captain description.</description>
@@ -174,9 +178,9 @@
 
         <rankTier>6</rankTier>
 
-    </Core40k.RankDef>
+    </Genes40k.ChapterRankDef>
     <!-- Chapter Master -->
-    <Core40k.RankDef>
+    <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankChapterMaster</defName>
         <label>Chapter Master</label>
         <description>Chapter Master description.</description>
@@ -209,10 +213,10 @@
 
         <rankTier>10</rankTier>
 
-    </Core40k.RankDef>
+    </Genes40k.ChapterRankDef>
 
     <!-- =Vanguard= -->
-    <Core40k.RankDef>
+    <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankVanguard</defName>
         <label>Vanguard</label>
         <description>Vanguard description.</description>
@@ -243,10 +247,10 @@
 
         <rankTier>3</rankTier>
 
-    </Core40k.RankDef>
+    </Genes40k.ChapterRankDef>
 
     <!-- =Chapter Ancient= -->
-    <Core40k.RankDef>
+    <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankChapterAncient</defName>
         <label>Chapter Ancient</label>
         <description>Chapter Ancient description.</description>
@@ -282,11 +286,11 @@
         <rankTier>6</rankTier>
 
         <!-- Ability to that essentially places a battle standard, and gives the pawn a movespeed factor 0 so they cant move. Standard buffs allies within area -->
-    </Core40k.RankDef>
+    </Genes40k.ChapterRankDef>
 
     <!-- =Apothecary= -->
     <!-- Helix Adept -->
-    <Core40k.RankDef>
+    <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankHelixAdept</defName>
         <label>Helix Adept</label>
         <description>Helix Adept description.</description>
@@ -330,9 +334,9 @@
 
         <rankTier>2</rankTier>
 
-    </Core40k.RankDef>
+    </Genes40k.ChapterRankDef>
     <!-- Apothecary -->
-    <Core40k.RankDef>
+    <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankApothecary</defName>
         <label>Apothecary</label>
         <description>Apothecary description.</description>
@@ -364,9 +368,9 @@
 
         <rankTier>4</rankTier>
 
-    </Core40k.RankDef>
+    </Genes40k.ChapterRankDef>
     <!-- Master of the Apothecarion -->
-    <Core40k.RankDef>
+    <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankMasterOfTheApothecarion</defName>
         <label>Master of the Apothecarion</label>
         <description>Master of the Apothecarion description.</description>
@@ -398,11 +402,11 @@
 
         <rankTier>7</rankTier>
 
-    </Core40k.RankDef>
+    </Genes40k.ChapterRankDef>
 
     <!-- =Techmarine= -->
     <!-- Techmarine Novitiate -->
-    <Core40k.RankDef>
+    <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankTechmarineNovitiate</defName>
         <label>Techmarine Novitiate</label>
         <description>Techmarine Novitiate description.</description>
@@ -436,9 +440,9 @@
 
         <rankTier>2</rankTier>
 
-    </Core40k.RankDef>
+    </Genes40k.ChapterRankDef>
     <!-- Techmarine -->
-    <Core40k.RankDef>
+    <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankTechmarine</defName>
         <label>Techmarine</label>
         <description>Techmarine description.</description>
@@ -465,9 +469,9 @@
 
         <rankTier>4</rankTier>
 
-    </Core40k.RankDef>
+    </Genes40k.ChapterRankDef>
     <!-- Master of the Forge -->
-    <Core40k.RankDef>
+    <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankMasterOfTheForge</defName>
         <label>Master of the Forge</label>
         <description>Master of the Forge description.</description>
@@ -496,11 +500,11 @@
 
         <rankTier>7</rankTier>
 
-    </Core40k.RankDef>
+    </Genes40k.ChapterRankDef>
 
     <!-- =Librarian= -->
     <!-- Acolytum -->
-    <Core40k.RankDef>
+    <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankAcolytum</defName>
         <label>Acolytum</label>
         <description>Acolytum description.</description>
@@ -538,9 +542,9 @@
 
         <rankTier>2</rankTier>
 
-    </Core40k.RankDef>
+    </Genes40k.ChapterRankDef>
     <!-- Librarian -->
-    <Core40k.RankDef>
+    <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankLibrarian</defName>
         <label>Librarian</label>
         <description>Librarian description.</description>
@@ -568,9 +572,9 @@
 
         <rankTier>4</rankTier>
 
-    </Core40k.RankDef>
+    </Genes40k.ChapterRankDef>
     <!-- Chief Librarian -->
-    <Core40k.RankDef>
+    <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankChiefLibrarian</defName>
         <label>Chief Librarian</label>
         <description>Chief Librarian description.</description>
@@ -598,11 +602,11 @@
 
         <rankTier>7</rankTier>
 
-    </Core40k.RankDef>
+    </Genes40k.ChapterRankDef>
 
     <!-- =Chaplain= -->
     <!-- Judiciar -->
-    <Core40k.RankDef>
+    <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankJudiciar</defName>
         <label>Judiciar</label>
         <description>Judiciar description.</description>
@@ -641,9 +645,9 @@
 
         <rankTier>3</rankTier>
 
-    </Core40k.RankDef>
+    </Genes40k.ChapterRankDef>
     <!-- Chaplain -->
-    <Core40k.RankDef>
+    <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankChaplain</defName>
         <label>Chaplain</label>
         <description>Chaplain description.</description>
@@ -672,9 +676,9 @@
 
         <rankTier>6</rankTier>
 
-    </Core40k.RankDef>
+    </Genes40k.ChapterRankDef>
     <!-- Master of Sanctity  -->
-    <Core40k.RankDef>
+    <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankMasterOfSanctity</defName>
         <label>Master of Sanctity</label>
         <description>Master of Sanctity description.</description>
@@ -703,11 +707,11 @@
 
         <rankTier>9</rankTier>
 
-    </Core40k.RankDef>
+    </Genes40k.ChapterRankDef>
 
     <!-- =Devastator= -->
     <!-- Devastator -->
-    <Core40k.RankDef>
+    <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankDevastator</defName>
         <label>Devastator</label>
         <description>Devastator description.</description>
@@ -732,9 +736,9 @@
 
         <rankTier>2</rankTier>
 
-    </Core40k.RankDef>
+    </Genes40k.ChapterRankDef>
     <!-- Devastator Sergeant -->
-    <Core40k.RankDef>
+    <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankDevastatorSergeant</defName>
         <label>Devastator Sergeant</label>
         <description>Devastator Sergeant description.</description>
@@ -760,11 +764,11 @@
 
         <rankTier>3</rankTier>
 
-    </Core40k.RankDef>
+    </Genes40k.ChapterRankDef>
 
     <!-- =Assault= -->
     <!-- Assault -->
-    <Core40k.RankDef>
+    <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankAssault</defName>
         <label>Assault</label>
         <description>Assault description.</description>
@@ -789,9 +793,9 @@
 
         <rankTier>2</rankTier>
 
-    </Core40k.RankDef>
+    </Genes40k.ChapterRankDef>
     <!-- Assault Sergeant -->
-    <Core40k.RankDef>
+    <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankAssaultSergeant</defName>
         <label>Assault Sergeant</label>
         <description>Assault Sergeant description.</description>
@@ -817,6 +821,6 @@
 
         <rankTier>3</rankTier>
 
-    </Core40k.RankDef>
+    </Genes40k.ChapterRankDef>
 
 </Defs>

@@ -56,8 +56,49 @@
                         </dataWest>
                     </drawData>
                 </li>
+                <li>
+                    <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentShoulderChapterIcon</workerClass>
+                    <texPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_DeathGuard</texPath>
+                    <drawSize>1</drawSize>
+                    <parentTagDef>ApparelBody</parentTagDef>
+                    <drawData>
+                        <defaultData>
+                            <layer>81</layer>
+                        </defaultData>
+                        <dataSouth>
+                            <offset>(-0.065,0,-0.02)</offset>
+                        </dataSouth>
+                        <dataNorth>
+                            <offset>(0.065,0,-0.02)</offset>
+                        </dataNorth>
+                        <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+                    </drawData>
+                </li>
+                <li>
+                    <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentShoulderRankIcon</workerClass>
+                    <texPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_Veteran</texPath>
+                    <drawSize>1</drawSize>
+                    <parentTagDef>ApparelBody</parentTagDef>
+                    <drawData>
+                        <defaultData>
+                            <layer>81</layer>
+                        </defaultData>
+                        <dataSouth>
+                            <offset>(0.065,0,-0.02)</offset>
+                        </dataSouth>
+                        <dataNorth>
+                            <offset>(-0.065,0,-0.02)</offset>
+                        </dataNorth>
+                        <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+                    </drawData>
+                </li>
             </renderNodeProperties>
         </apparel>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_EnableTabDef">
+                <tabDef>BEWH_AstartesShoulderIconDef</tabDef>
+            </li>
+        </modExtensions>
     </ThingDef>
 
     <!-- Power Armor Helmet Imperium -->

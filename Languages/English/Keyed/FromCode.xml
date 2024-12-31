@@ -183,4 +183,9 @@
   <BEWH.ProofOfFaithNoStat>{0_labelShort}'s {1} is below or at 0.</BEWH.ProofOfFaithNoStat>
   <BEWH.ProofOfFaithGain>Will give {1} radiance and induce {0_labelShort} with coma for {2} days.</BEWH.ProofOfFaithGain>
 
+
+  <BEWH.ResetToDefault>Reset to default</BEWH.ResetToDefault>
+  <BEWH.ChapterIcons>Chapter Icons</BEWH.ChapterIcons>
+  <BEWH.RankIcons>Rank Icons</BEWH.RankIcons>
+
 </LanguageData>

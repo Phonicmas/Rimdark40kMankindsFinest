@@ -21,6 +21,8 @@ In the FromCode.xml where all text are, sort them properly cause oh boy its not 
 
 ## Art
 
+Shoulder pad icons for chapters and ranks
+
 
 
 
@@ -47,6 +49,9 @@ Raid thingy not working properly.
 
 Make code to allow rank icons and chapter icons to show on shoulder pads. Use render nodes like shoulder pad with maybe custom worker. Get rank icon from rank def, and use highest rank of pawn (or selectable?) For chapter icons make them selectable in the colour tool thingy.
 
+In PawnRenderNodeWorker_AttachmentChapterRankIcon, make standard path use neophyte icon when made.
+
+possible also to give each shoulder pad own colours
 
 
 Aura ability for living saint, buffing nearby pawn temporarily (Maybe)

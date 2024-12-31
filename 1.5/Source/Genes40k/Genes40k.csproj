@@ -139,6 +139,10 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_RubiconSurgeryChanceIncrease.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_SangprimusNoDuplicateAccepted.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_SecondProgenoidGlandProgress.cs" />
+    <Compile Include="Misc\ChapterRankDef.cs" />
+    <Compile Include="Misc\PawnRenderNodeWorker_AttachmentShoulderRankIcon.cs" />
+    <Compile Include="Misc\PawnRenderNodeWorker_AttachmentShoulderChapterIcon.cs" />
+    <Compile Include="Misc\ShoulderPadIconTab.cs" />
     <Compile Include="Misc\ChapterColourDef.cs" />
     <Compile Include="Misc\PawnGroupKindWorker_40kChapter.cs" />
     <Compile Include="Misc\PawnRenderNodeWorker_AttachmentShoulderPad.cs" />

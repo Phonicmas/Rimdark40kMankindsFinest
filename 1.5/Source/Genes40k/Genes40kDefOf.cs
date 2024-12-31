@@ -165,6 +165,9 @@ namespace Genes40k
         //ResearchDefs
         public static ResearchProjectDef BEWH_StasisResurrection;
         
+        //RankCategoryDefs
+        public static RankCategoryDef BEWH_AstartesRankCategory;
+        
         //RankDefs
         public static RankDef BEWH_AstartesRankBattleBrother;
         public static RankDef BEWH_AstartesRankVeteran;

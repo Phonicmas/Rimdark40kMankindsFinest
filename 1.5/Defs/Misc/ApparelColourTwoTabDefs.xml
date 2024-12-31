@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <Core40k.ApparelColourTwoTabDef>
+        <defName>BEWH_AstartesShoulderIconDef</defName>
+        <label>Shoulder Icons</label>
+        <description>Selection of shoulder pad icons</description>
+        <tabDrawerClass>Genes40k.ShoulderPadIconTab</tabDrawerClass>
+    </Core40k.ApparelColourTwoTabDef>
+
+</Defs>

@@ -5,24 +5,26 @@ using Verse;
 
 namespace Genes40k
 {
-    public class PawnRenderNodeWorker_AttachmentShoulderPad : PawnRenderNodeWorker_AttachmentBody
+    public class PawnRenderNodeWorker_AttachmentShoulderChapterIcon : PawnRenderNodeWorker_AttachmentBody
     {
-        private Graphic cachedShoulderGraphic = null;
+        private Genes40kModSettings modSettings = null;
 
+        private Genes40kModSettings ModSettings => modSettings ?? (modSettings = LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>());
+        
         public override bool CanDrawNow(PawnRenderNode node, PawnDrawParms parms)
         {
             var pawn = parms.pawn;
-
+            
             if (parms.Portrait)
             {
-                if (parms.facing == Rot4.South || parms.facing == Rot4.North)
+                if (parms.facing == Rot4.East)
                 {
                     return false;
                 }
             }
             else
             {
-                if (pawn.Rotation == Rot4.North || pawn.Rotation == Rot4.South)
+                if (pawn.Rotation == Rot4.East)
                 {
                     return false;
                 }
@@ -43,24 +45,35 @@ namespace Genes40k
                 }
             }
             
-            return true;
+            return ModSettings.currentlySelectedPreset != null;
         }
 
         protected override Graphic GetGraphic(PawnRenderNode node, PawnDrawParms parms)
         {
-            var def = node.apparel.def;
-            var apparelColourTwo = (ApparelColourTwo)node.apparel;
+            var standardPath = "Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_ImperialFists";
             
-            const string shoulderPath = "Things/Armor/Imperium/PowerArmor/Shoulder/BEWH_ImperiumPowerArmor_Shoulder";
+            /*if (ModSettings.currentlySelectedPreset != null)
+            {
+                standardPath = ModSettings.currentlySelectedPreset?.relatedChapterIconPath;
+            }*/
+            
+            var def = node.apparel.def;
+            var apparelColourTwo = (ChapterApparelColourTwo)node.apparel;
+
+            if (apparelColourTwo.CurrentlySelectedChapterIcon != null)
+            {
+                standardPath = apparelColourTwo.CurrentlySelectedChapterIcon.relatedChapterIconPath;
+            }
+            
             var shader = ShaderDatabase.CutoutComplex;
                     
             if (def.graphicData.shaderType != null)
             {
                 shader = def.graphicData.shaderType.Shader;
             }
-            cachedShoulderGraphic = GraphicDatabase.Get<Graphic_Multi>(shoulderPath, shader, def.graphicData.drawSize, apparelColourTwo.DrawColor, apparelColourTwo.DrawColorTwo, def.graphicData);
             
-            return cachedShoulderGraphic;
+            //If not colorable, set color.white instead of drawcolors of apparel
+            return  GraphicDatabase.Get<Graphic_Multi>(standardPath, shader, node.Props.drawSize, apparelColourTwo.DrawColor, apparelColourTwo.DrawColorTwo, def.graphicData);
         }
     }
 }
