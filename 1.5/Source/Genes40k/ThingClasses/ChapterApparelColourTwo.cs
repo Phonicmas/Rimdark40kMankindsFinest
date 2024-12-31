@@ -31,20 +31,6 @@ namespace Genes40k
         
         private string overrideRankIcon = null;
 
-        private ChapterColourDef originalSelectedChapterIcon = null;
-        
-        private ChapterColourDef currentlySelectedChapterIcon = null;
-
-        public ChapterColourDef CurrentlySelectedChapterIcon
-        {
-            get => currentlySelectedChapterIcon;
-            set
-            {
-                currentlySelectedChapterIcon = value;
-                Notify_ColorChanged();
-            }
-        }
-        
         public string OverrideRankIcon
         {
             get
@@ -68,7 +54,21 @@ namespace Genes40k
                 Notify_ColorChanged();
             }
         }
+        
+        private ChapterColourDef originalSelectedChapterIcon = null;
+        
+        private ChapterColourDef currentlySelectedChapterIcon = null;
 
+        public ChapterColourDef CurrentlySelectedChapterIcon
+        {
+            get => currentlySelectedChapterIcon;
+            set
+            {
+                currentlySelectedChapterIcon = value;
+                Notify_ColorChanged();
+            }
+        }
+        
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);

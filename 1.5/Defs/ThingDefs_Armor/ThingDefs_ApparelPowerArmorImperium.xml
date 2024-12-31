@@ -16,6 +16,9 @@
             <graphicClass>Graphic_Single</graphicClass>
             <shaderType>CutoutComplex</shaderType>
         </graphicData>
+        <equippedStatOffsets>
+            <MoveSpeed>-1</MoveSpeed>
+        </equippedStatOffsets>
         <apparel>
             <wornGraphicPath>Things/Armor/Imperium/PowerArmor/BEWH_ImperiumPowerArmor</wornGraphicPath>
             <tags>

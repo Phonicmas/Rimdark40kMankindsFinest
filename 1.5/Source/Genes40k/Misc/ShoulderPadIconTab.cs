@@ -41,7 +41,7 @@ namespace Genes40k
             
             //Chapter icons themselves;
             var iconSize = new Vector2(viewRect.width/RowAmount, viewRect.width/RowAmount);
-            var position = new Vector2(resetChapterIconRect.x, resetChapterIconRect.yMax);
+            var position = new Vector2(viewRect.x, resetChapterIconRect.yMax);
             
             var curX = position.x;
             var curY = position.y;
@@ -56,7 +56,7 @@ namespace Genes40k
                 if (i != 0 && (i+1) % RowAmount == 0)
                 {
                     curY += iconRect.height;
-                    curX = resetChapterIconRect.position.x;
+                    curX = viewRect.position.x;
                 }
                 
                 iconRect = iconRect.ContractedBy(5f);
@@ -75,7 +75,7 @@ namespace Genes40k
                 }
             }
 
-            curY += 10f;
+            curY += 34f;
 
             var rankComp = pawn.GetComp<CompRankInfo>();
 
@@ -100,7 +100,7 @@ namespace Genes40k
                     chapterApparel.OverrideRankIcon = null;
                 }
                 
-                position = new Vector2(resetRankIconRect.x, resetRankIconRect.yMax);
+                position = new Vector2(viewRect.x, resetRankIconRect.yMax);
             
                 curX = position.x;
                 curY = position.y;
@@ -118,7 +118,7 @@ namespace Genes40k
                     if (i != 0 && (i+1) % RowAmount == 0)
                     {
                         curY += iconRect.height;
-                        curX = resetChapterIconRect.position.x;
+                        curX = viewRect.position.x;
                     }
                 
                     iconRect = iconRect.ContractedBy(5f);

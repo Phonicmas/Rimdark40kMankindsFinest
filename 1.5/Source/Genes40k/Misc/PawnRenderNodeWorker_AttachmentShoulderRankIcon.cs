@@ -76,7 +76,7 @@ namespace Genes40k
                     if (comp.HasRankOfCategory(Genes40kDefOf.BEWH_AstartesRankCategory))
                     {
                         var highestRank = (ChapterRankDef)comp.HighestRankDef(true) ?? (ChapterRankDef)comp.HighestRankDef(false);
-                        if (highestRank != null)
+                        if (highestRank != null && highestRank.unlocksRankIconPath != string.Empty)
                         {
                             rankIconPath = highestRank.unlocksRankIconPath;
                         }
