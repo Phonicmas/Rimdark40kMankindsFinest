@@ -84,6 +84,11 @@
     <Compile Include="Abilities\Ability_RaiseBastion.cs" />
     <Compile Include="Abilities\Ability_PsychicEmp.cs" />
     <Compile Include="Abilities\Ability_UpdateGizmo.cs" />
+    <Compile Include="ChapterApparelColourTwo\ChapterColourDef.cs" />
+    <Compile Include="ChapterApparelColourTwo\PawnRenderNodeWorker_AttachmentShoulderChapterIcon.cs" />
+    <Compile Include="ChapterApparelColourTwo\PawnRenderNodeWorker_AttachmentShoulderPad.cs" />
+    <Compile Include="ChapterApparelColourTwo\PawnRenderNodeWorker_AttachmentShoulderRankIcon.cs" />
+    <Compile Include="ChapterApparelColourTwo\ShoulderPadIconTab.cs" />
     <Compile Include="Comps\CompAbilityEffect_AoeHit.cs" />
     <Compile Include="Comps\CompAbilityEffect_DenyTheWitch.cs" />
     <Compile Include="Comps\CompAbilityEffect_DivineRadianceCost.cs" />
@@ -139,14 +144,9 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_RubiconSurgeryChanceIncrease.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_SangprimusNoDuplicateAccepted.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_SecondProgenoidGlandProgress.cs" />
-    <Compile Include="Misc\ChapterRankDef.cs" />
-    <Compile Include="Misc\PawnRenderNodeWorker_AttachmentShoulderRankIcon.cs" />
-    <Compile Include="Misc\PawnRenderNodeWorker_AttachmentShoulderChapterIcon.cs" />
-    <Compile Include="Misc\ShoulderPadIconTab.cs" />
-    <Compile Include="Misc\ChapterColourDef.cs" />
-    <Compile Include="Misc\PawnGroupKindWorker_40kChapter.cs" />
-    <Compile Include="Misc\PawnRenderNodeWorker_AttachmentShoulderPad.cs" />
-    <Compile Include="Misc\StockGenerator_TagSangprimusMaterialNoDupe.cs" />
+    <Compile Include="Rank\ChapterRankDef.cs" />
+    <Compile Include="RoleRequirement\RoleRequirement_MustBeSpaceMarine.cs" />
+    <Compile Include="StockGenerator\StockGenerator_TagSangprimusMaterialNoDupe.cs" />
     <Compile Include="ThingClasses\Building_ChapterBanner.cs" />
     <Compile Include="ThingClasses\Building_ChapterBuildingMulti.cs" />
     <Compile Include="ThingClasses\Building_ChapterBuildingSingle.cs" />
@@ -192,6 +192,7 @@
     <Compile Include="Workers\JobDriver_FillPrimarchGrowthVat.cs" />
     <Compile Include="Workers\JobDriver_FillGeneGestator.cs" />
     <Compile Include="Workers\JobDriver_FleeInducedFear.cs" />
+    <Compile Include="Workers\PawnGroupKindWorker_40kChapter.cs" />
     <Compile Include="Workers\ThoughtWorker_HolyRadiance.cs" />
     <Compile Include="Workers\ThoughtWorker_XXTwinDead.cs" />
     <Compile Include="Workers\WorkerClass_RubiconPrimaris.cs" />
@@ -213,7 +214,6 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_StopDeterioation.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_MentalBreakdownPsyker.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_NaturalBirthPsykerPariah.cs" />
-    <Compile Include="Misc\RoleRequirement_MustBeSpaceMarine.cs" />
     <Compile Include="Comps\CompAbilityEffect_GeneseedHarvest.cs" />
     <Compile Include="Comps\CompProperties_AbilityGeneseedHarvest.cs" />
     <Compile Include="DefModExtensions\DefModExtension_PotentialHarvest.cs" />

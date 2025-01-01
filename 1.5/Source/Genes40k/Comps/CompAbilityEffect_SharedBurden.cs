@@ -65,7 +65,7 @@ namespace Genes40k
 
             if (target.Pawn.needs.mood.thoughts.memories.Memories.Any(memory => memory.MoodOffset() >= 0) && !target.Pawn.InMentalState)
             {
-                return "BEWH.ChillgronAbility".Translate(target.Pawn);
+                return "BEWH.MankindsFinest.Ability.ChillgronAbility".Translate(target.Pawn);
             }
 
             return null;

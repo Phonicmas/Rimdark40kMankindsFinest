@@ -36,7 +36,7 @@ namespace Genes40k
                 __result += comp.Props.deteriorationRateOutside;
                 if (!reasons.NullOrEmpty())
                 {
-                    reasons.Add("BEWH.ItemDeterioratingNotInContainer".Translate());
+                    reasons.Add("BEWH.MankindsFinest.Containers.ItemDeterioratingNotInContainer".Translate());
                 }
             }
             else

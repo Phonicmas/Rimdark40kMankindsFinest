@@ -22,18 +22,18 @@ namespace Genes40k
             
             if (progenoidGlands.FirstProgenoidGlandHarvested)
             {
-                stringBuilder.AppendLine("BEWH.FirstGeneseedsHarvested".Translate());
+                stringBuilder.AppendLine("BEWH.MankindsFinest.SpaceMarine.FirstGeneseedsHarvested".Translate());
             }
             else
             {
                 var secondProgenoid = !progenoidGlands.SecondProgenoidGlandHarvested
-                    ? " " + (string)"BEWH.SecondGeneseedsHarvestableUponDeath".Translate()
+                    ? " " + (string)"BEWH.MankindsFinest.SpaceMarine.SecondGeneseedsHarvestableUponDeath".Translate()
                     : string.Empty;
 
                 float ticksLeft = progenoidGlands.TicksUntilHarvestable;
                 stringBuilder.AppendLine(ticksLeft > 0
-                    ? "BEWH.FirstGeneseedsHarvestableIn".Translate((ticksLeft / 60000).ToString("0.00"), secondProgenoid)
-                    : "BEWH.FirstGeneseedsHarvestable".Translate());
+                    ? "BEWH.MankindsFinest.SpaceMarine.FirstGeneseedsHarvestableIn".Translate((ticksLeft / 60000).ToString("0.00"), secondProgenoid)
+                    : "BEWH.MankindsFinest.SpaceMarine.FirstGeneseedsHarvestable".Translate());
                 
             }
             

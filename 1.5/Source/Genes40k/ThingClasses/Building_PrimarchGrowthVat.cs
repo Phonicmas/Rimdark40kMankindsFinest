@@ -413,13 +413,13 @@ namespace Genes40k
                 //STARTS MACHINE
                 var command_Action1 = new Command_Action
                 {
-                    defaultLabel = "BEWH.StartGeneGestating".Translate(),
-                    defaultDesc = "BEWH.StartGeneGestatingDesc".Translate(),
+                    defaultLabel = "BEWH.MankindsFinest.PrimarchGrowthVat.StartPrimarchGrowth".Translate(),
+                    defaultDesc = "BEWH.MankindsFinest.PrimarchGrowthVat.StartPrimarchGrowthDesc".Translate(),
                     icon = StartIcon,
                     activateSound = SoundDefOf.Designate_Cancel,
                     action = delegate
                     {
-                        var window = Dialog_MessageBox.CreateConfirmation("BEWH.PrimarchVatStartConfirmation".Translate(), Action, destructive: true);
+                        var window = Dialog_MessageBox.CreateConfirmation("BEWH.MankindsFinest.PrimarchGrowthVat.PrimarchVatStartConfirmation".Translate(), Action, destructive: true);
                         Find.WindowStack.Add(window);
                         return;
 
@@ -432,7 +432,7 @@ namespace Genes40k
                 yield return command_Action1;
                 if (containedEmbryo == null)
                 {
-                    command_Action1.Disable("BEWH.ContainsNoEmbryo".Translate().CapitalizeFirst());
+                    command_Action1.Disable("BEWH.MankindsFinest.PrimarchGrowthVat.ContainsNoEmbryo".Translate().CapitalizeFirst());
                 }
                 else if (!PowerOn)
                 {
@@ -444,8 +444,8 @@ namespace Genes40k
                     //EJECT PRIMARCH EMBRYO
                     var command_Action2 = new Command_Action
                     {
-                        defaultLabel = "BEWH.EjectPrimarchEmbryo".Translate(),
-                        defaultDesc = "BEWH.EjectPrimarchEmbryoDesc".Translate(),
+                        defaultLabel = "BEWH.MankindsFinest.PrimarchGrowthVat.EjectPrimarchEmbryo".Translate(),
+                        defaultDesc = "BEWH.MankindsFinest.PrimarchGrowthVat.EjectPrimarchEmbryoDesc".Translate(),
                         icon = EjectEmbryoIcon,
                         activateSound = SoundDefOf.Designate_Cancel,
                         action = delegate
@@ -477,12 +477,12 @@ namespace Genes40k
                             foreach (var embryo in embryos)
                             {
                                 var primarchEmbryo = embryo;
-                                var embryoName = "BEWH.PrimarchMother".Translate(primarchEmbryo.mother.Name.ToStringFull);
+                                var embryoName = "BEWH.MankindsFinest.PrimarchGrowthVat.PrimarchMother".Translate(primarchEmbryo.mother.Name.ToStringFull);
                                 var primarchChapterGenes = primarchEmbryo.primarchGenes.GenesListForReading.Where(gene => gene.HasModExtension<DefModExtension_PrimarchMaterial>());
                                 if (primarchChapterGenes.Any())
                                 {
                                     embryoName += "\n";
-                                    embryoName += "BEWH.PrimarchFather".Translate(primarchChapterGenes.First().label);
+                                    embryoName += "BEWH.MankindsFinest.PrimarchGrowthVat.PrimarchFather".Translate(primarchChapterGenes.First().label);
                                 }
                                 list.Add(new FloatMenuOption(embryoName, delegate
                                 {
@@ -601,11 +601,6 @@ namespace Genes40k
             var embryos = new List<Thing>();
             embryos.AddRange(Map.listerThings.ThingsOfDef(Genes40kDefOf.BEWH_PrimarchEmbryo));
 
-            foreach (var building in Map.listerBuildings.AllBuildingsColonistOfDef(Genes40kDefOf.BEWH_PrimarchEmbryoContainer).Cast<Building_GeneticStorage>())
-            {
-                embryos.AddRange(building.slotGroup.HeldThings);
-            }
-
             return embryos.Cast<PrimarchEmbryo>().ToList();
         }
 
@@ -721,7 +716,6 @@ namespace Genes40k
                     }
                     else
                     {
-                        //stringBuilder.AppendLineIfNotEmpty().AppendLineTagged("EmbryoTimeUntilBirth".Translate() + ": " + "PeriodHours".Translate((EmbryoGestationTicksRemaining/2500).ToString("0.00")).Colorize(ColoredText.DateTimeColor));
                         stringBuilder.AppendTagged("EmbryoTimeUntilBirth".Translate() + ": " + EmbryoGestationTicksRemaining.ToStringTicksToPeriod(allowYears: false).Colorize(ColoredText.DateTimeColor));
                     }
                 }

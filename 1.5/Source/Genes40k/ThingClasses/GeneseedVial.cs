@@ -63,7 +63,7 @@ namespace Genes40k
                 {
                     return base.LabelNoCount;
                 }
-                return "BEWH.NamedGeneseedVial".Translate(xenotypeName.Named("NAME"));
+                return "BEWH.MankindsFinest.GeneseedVial.NamedGeneseedVial".Translate(xenotypeName.Named("NAME"));
             }
         }
 

@@ -53,7 +53,7 @@ namespace Genes40k
 
             if (amountToSpawn < 1)
             {
-                reason = "BEWH.WillNotSummonAny".Translate(comp.mechKind.label);
+                reason = "BEWH.MankindsFinest.Ability.WillNotSummonAny".Translate(comp.mechKind.label);
                 return true;
             }
             

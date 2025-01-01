@@ -16,7 +16,7 @@ namespace Genes40k
 
         public static void ResetStaticData()
         {
-            NoGeneMatrix = "BEWH.NoGeneMatrix".Translate();
+            NoGeneMatrix = "BEWH.MankindsFinest.GeneGestator.NoGeneMatrix".Translate();
         }
 
         public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)

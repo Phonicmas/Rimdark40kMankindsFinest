@@ -61,7 +61,7 @@ namespace Genes40k
             
             livingSaints.Remove(toSpawn);
 
-            var letter = LetterMaker.MakeLetter("BEWH.LivingSaintReturn".Translate(), "BEWH.LivingSaintReturnMessage".Translate(toSpawn), Genes40kDefOf.BEWH_GoldenPositive, toSpawn);
+            var letter = LetterMaker.MakeLetter("BEWH.MankindsFinest.LivingSaint.LivingSaintReturn".Translate(), "BEWH.MankindsFinest.LivingSaint.LivingSaintReturnMessage".Translate(toSpawn), Genes40kDefOf.BEWH_GoldenPositive, toSpawn);
             Find.LetterStack.ReceiveLetter(letter);
         }
 

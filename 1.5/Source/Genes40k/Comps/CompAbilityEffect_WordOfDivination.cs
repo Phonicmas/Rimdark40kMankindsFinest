@@ -33,10 +33,10 @@ namespace Genes40k
         {
             if (parent.pawn.ideo?.Ideo == null)
             {
-                return "BEWH.LorgarDivinationNoIdeo".Translate(parent.pawn);
+                return "BEWH.MankindsFinest.Ability.LorgarDivinationNoIdeo".Translate(parent.pawn);
             }
             
-            return target.Pawn.ideo.Ideo == parent.pawn.ideo.Ideo ? "BEWH.LorgarDivination".Translate(target.Pawn, parent.pawn) : null;
+            return target.Pawn.ideo.Ideo == parent.pawn.ideo.Ideo ? "BEWH.MankindsFinest.Ability.LorgarDivination".Translate(target.Pawn, parent.pawn) : null;
         }
     }
 }

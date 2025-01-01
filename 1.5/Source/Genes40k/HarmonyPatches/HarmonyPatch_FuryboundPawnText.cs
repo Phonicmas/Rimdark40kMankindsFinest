@@ -19,7 +19,7 @@ namespace Genes40k
             var furybound = (Gene_Furybound)__instance.genes.GetGene(Genes40kDefOf.BEWH_Furybound);
 
             stringBuilder.AppendLine("\n");
-            stringBuilder.AppendLine("BEWH.WarriorChanceToBerserk".Translate(furybound.percentChance));
+            stringBuilder.AppendLine("BEWH.MankindsFinest.ThunderWarrior.ChanceToBerserk".Translate(furybound.percentChance));
             
             __result = stringBuilder.ToString().TrimEndNewlines();
         }

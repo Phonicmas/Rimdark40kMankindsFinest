@@ -20,13 +20,13 @@ namespace Genes40k
                 var gene = (Gene_TwinConnected)caster.genes.GetGene(Genes40kDefOf.BEWH_PrimarchSpecificGeneXX);
                 if (Props.disableIfDead && gene.Twin.Dead)
                 {
-                    reason = "BEWH.TwinConnectedDead".Translate();
+                    reason = "BEWH.MankindsFinest.Ability.TwinConnectedDead".Translate();
                     return true;
                 }
 
                 if (Props.disableIfOnDifferentMap && caster.Map != gene.Twin.Map)
                 {
-                    reason = "BEWH.TwinConnectedDifferentMap".Translate();
+                    reason = "BEWH.MankindsFinest.Ability.TwinConnectedDifferentMap".Translate();
                     return true;
                 }
             }

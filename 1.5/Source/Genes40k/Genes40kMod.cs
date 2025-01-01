@@ -37,49 +37,49 @@ namespace Genes40k
             var listingStandard = new Listing_Standard();
             listingStandard.Begin(inRect);
 
-            listingStandard.CheckboxLabeled("BEWH.PsychicPhenomena".Translate(), ref Settings.psychicPhenomena);
+            listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.PsychicPhenomena".Translate(), ref Settings.psychicPhenomena);
             
             listingStandard.Gap();
-            listingStandard.CheckboxLabeled("BEWH.PsykerPariahBirth".Translate(), ref Settings.psykerPariahBirth);
+            listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.PsykerPariahBirth".Translate(), ref Settings.psykerPariahBirth);
             if (Settings.psykerPariahBirth)
             {
-                listingStandard.Label("BEWH.PsykerPariahBirthChance".Translate(Settings.psykerPariahBirthChance));
+                listingStandard.Label("BEWH.MankindsFinest.ModSettings.PsykerPariahBirthChance".Translate(Settings.psykerPariahBirthChance));
                 Settings.psykerPariahBirthChance = (int)listingStandard.Slider(Settings.psykerPariahBirthChance, 0, 100);
             }
             
             listingStandard.Gap();
-            listingStandard.CheckboxLabeled("BEWH.PerpetualBirth".Translate(), ref Settings.perpetualBirth);
+            listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.PerpetualBirth".Translate(), ref Settings.perpetualBirth);
             if (Settings.perpetualBirth)
             {
-                listingStandard.Label("BEWH.PerpetualBirthChance".Translate(Settings.perpetualBirthChance));
+                listingStandard.Label("BEWH.MankindsFinest.ModSettings.PerpetualBirthChance".Translate(Settings.perpetualBirthChance));
                 Settings.perpetualBirthChance = (int)listingStandard.Slider(Settings.perpetualBirthChance, 0, 100);
             }
             
             listingStandard.Gap();
-            listingStandard.Label("BEWH.LivingSaintChance".Translate());
-            listingStandard.Label("BEWH.LivingSaintBigThreat".Translate(Settings.livingSaintBigThreat));
+            listingStandard.Label("BEWH.MankindsFinest.ModSettings.LivingSaintChance".Translate());
+            listingStandard.Label("BEWH.MankindsFinest.ModSettings.LivingSaintBigThreat".Translate(Settings.livingSaintBigThreat));
             Settings.livingSaintBigThreat = (int)listingStandard.Slider(Settings.livingSaintBigThreat, 0, 100);
-            listingStandard.Label("BEWH.LivingSaintSmallThreat".Translate(Settings.livingSaintSmallThreat));
+            listingStandard.Label("BEWH.MankindsFinest.ModSettings.LivingSaintSmallThreat".Translate(Settings.livingSaintSmallThreat));
             Settings.livingSaintSmallThreat = (int)listingStandard.Slider(Settings.livingSaintSmallThreat, 0, 100);
             
             listingStandard.Gap();
-            listingStandard.CheckboxLabeled("BEWH.UseChaosVersionForBanner".Translate(), ref Settings.useChaosVersion);
+            listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.UseChaosVersionForBanner".Translate(), ref Settings.useChaosVersion);
             listingStandard.Indent(inRect.width * 0.25f);
-            if (listingStandard.ButtonText("BEWH.DefaultChapterColours".Translate(), widthPct: 0.5f))
+            if (listingStandard.ButtonText("BEWH.MankindsFinest.ModSettings.DefaultChapterColours".Translate(), widthPct: 0.5f))
             {
                 Find.WindowStack.Add(new Dialog_ChangeDefaultChapterColour(Settings));
             }
             listingStandard.Outdent(inRect.width * 0.25f);
 
             listingStandard.Gap();
-            listingStandard.Label("\n" + "BEWH.CheckVEFPatches".Translate());
+            listingStandard.Label("\n" + "BEWH.ModSettings.CheckVEFPatches".Translate());
             listingStandard.End();
             base.DoSettingsWindowContents(inRect);
         }
 
         public override string SettingsCategory()
         {
-            return "BEWH.ModSettingsNameGenes".Translate();
+            return "BEWH.MankindsFinest.ModSettings.ModName".Translate();
         }
     }
 }

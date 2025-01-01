@@ -21,7 +21,7 @@ namespace Genes40k
         
         public override string ExtraLabelMouseAttachment(LocalTargetInfo target)
         {
-            return target.Pawn.Faction.IsPlayer ? "BEWH.LorgarAuthority".Translate(target.Pawn, parent.pawn) : null;
+            return target.Pawn.Faction.IsPlayer ? "BEWH.MankindsFinest.Ability.LorgarAuthority".Translate(target.Pawn, parent.pawn) : null;
         }
     }
 }

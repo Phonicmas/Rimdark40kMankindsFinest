@@ -36,7 +36,7 @@ namespace Genes40k
             {
                 if (FindNutrition(pawn, building_GrowthVat).Thing != null) return true;
                 
-                JobFailReason.Is("BEWH.NoSlurry".Translate());
+                JobFailReason.Is("BEWH.MankindsFinest.PrimarchGrowthVat.NoSlurry".Translate());
                 return false;
             }
             if (building_GrowthVat.selectedEmbryo != null && !building_GrowthVat.innerContainer.Contains(building_GrowthVat.selectedEmbryo))

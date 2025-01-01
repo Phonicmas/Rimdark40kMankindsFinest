@@ -23,8 +23,8 @@ namespace Genes40k
             stringBuilder.AppendLine("\n");
 
             stringBuilder.AppendLine(progenoidGlands.SecondProgenoidGlandHarvested
-                ? "BEWH.SecondGeneseedsHarvested".Translate()
-                : "BEWH.SecondGeneseedsHarvestable".Translate());
+                ? "BEWH.MankindsFinest.SpaceMarine.SecondGeneseedsHarvested".Translate()
+                : "BEWH.MankindsFinest.SpaceMarine.SecondGeneseedsHarvestable".Translate());
 
             __result = stringBuilder.ToString().TrimEndNewlines();
         }

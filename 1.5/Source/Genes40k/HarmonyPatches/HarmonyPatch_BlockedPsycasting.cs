@@ -30,7 +30,7 @@ namespace Genes40k
             __result = false;
             if (__instance.CasterPawn.Faction == Faction.OfPlayer)
             {
-                Messages.Message("BEWH.DeniedWitch".Translate(__instance.CasterPawn), __instance.CasterPawn, MessageTypeDefOf.NeutralEvent);
+                Messages.Message("BEWH.MankindsFinest.Ability.DeniedWitch".Translate(__instance.CasterPawn), __instance.CasterPawn, MessageTypeDefOf.NeutralEvent);
             }
             return false;
         }

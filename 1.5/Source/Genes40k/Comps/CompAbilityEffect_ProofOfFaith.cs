@@ -48,13 +48,13 @@ namespace Genes40k
 
             if (requiredStat <= 0)
             {
-                return "BEWH.ProofOfFaithNoStat".Translate(pawn, Props.durationMultiplier.label);
+                return "BEWH.MankindsFinest.Ability.ProofOfFaithNoStat".Translate(pawn, Props.durationMultiplier.label);
             }
             
             var gainedAmount = Props.divineRadianceGain;
             gainedAmount *= pawn.GetStatValue(Props.durationMultiplier);
 
-            return "BEWH.ProofOfFaithGain".Translate(pawn, gainedAmount * 100, requiredStat.ToString("0.0"));
+            return "BEWH.MankindsFinest.Ability.ProofOfFaithGain".Translate(pawn, gainedAmount * 100, requiredStat.ToString("0.0"));
         }
     }
 }

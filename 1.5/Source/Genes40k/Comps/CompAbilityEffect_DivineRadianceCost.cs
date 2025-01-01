@@ -27,18 +27,18 @@ namespace Genes40k
             var geneDivineRadiance = parent.pawn.genes?.GetFirstGeneOfType<Gene_DivineRadiance>();
             if (geneDivineRadiance == null)
             {
-                reason = "BEWH.AbilityDisabledNoDivineRadianceGene".Translate(parent.pawn);
+                reason = "BEWH.MankindsFinest.Ability.NoDivineRadianceGene".Translate(parent.pawn);
                 return true;
             }
             if (geneDivineRadiance.Value < Props.divineRadianceCost)
             {
-                reason = "BEWH.AbilityDisabledNoDivineRadiance".Translate(parent.pawn);
+                reason = "BEWH.MankindsFinest.Ability.NoDivineRadiance".Translate(parent.pawn);
                 return true;
             }
             var num2 = Props.divineRadianceCost;
             if (Props.divineRadianceCost > float.Epsilon && num2 > geneDivineRadiance.Value)
             {
-                reason = "BEWH.AbilityDisabledNoDivineRadiance".Translate(parent.pawn);
+                reason = "BEWH.MankindsFinest.Ability.NoDivineRadiance".Translate(parent.pawn);
                 return true;
             }
             reason = null;

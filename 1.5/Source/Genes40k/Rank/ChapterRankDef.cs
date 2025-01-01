@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Core40k;
+﻿using Core40k;
 
 namespace Genes40k
 {

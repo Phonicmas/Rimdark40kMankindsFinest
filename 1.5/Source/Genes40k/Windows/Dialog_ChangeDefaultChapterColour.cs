@@ -46,10 +46,10 @@ namespace Genes40k
             defaultChapterButton.width /= 2;
             defaultChapterButton.x += defaultChapterButton.width / 2;
 
-            if (Widgets.ButtonText(defaultChapterButton, "BEWH.ColourPreset".Translate(currentlySelectedPreset.label)))
+            if (Widgets.ButtonText(defaultChapterButton, "BEWH.MankindsFinest.ModSettings.ColourPreset".Translate(currentlySelectedPreset.label)))
             {
                 var list = new List<FloatMenuOption>();
-                var customMenuOption = new FloatMenuOption("Custom Colour", delegate
+                var customMenuOption = new FloatMenuOption("BEWH.MankindsFinest.ModSettings.CustomColour".Translate(), delegate
                 {
                     currentlySelectedPreset = customDef;
                 }, Core40kUtils.ColourPreview(customDef.primaryColour, customDef.secondaryColour), Color.white);

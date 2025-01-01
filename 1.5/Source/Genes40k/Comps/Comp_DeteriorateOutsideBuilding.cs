@@ -33,14 +33,14 @@ namespace Genes40k
         public override string CompInspectStringExtra()
         {
             var stringBuilder = new StringBuilder();
-            stringBuilder.Append("BEWH.DeterioratingOutsideContainer".Translate(parent.Label));
+            stringBuilder.Append("BEWH.MankindsFinest.Containers.DeterioratingOutsideContainer".Translate(parent.Label));
             return stringBuilder.ToString();
         }
         
         public override string GetDescriptionPart()
         {
             var stringBuilder = new StringBuilder();
-            stringBuilder.Append("BEWH.SuitableContainers".Translate());
+            stringBuilder.Append("BEWH.MankindsFinest.Containers.SuitableContainers".Translate());
             foreach (var container in Props.antiDeteriorateContainers)
             {
                 stringBuilder.Append("\n");

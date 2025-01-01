@@ -72,7 +72,7 @@ namespace Genes40k
 
             if (Value <= MinLevelForAlert && sendMessageOfLowRadiance)
             {
-                Messages.Message("BEWH.LowHolyRadiance".Translate(pawn), MessageTypeDefOf.NegativeEvent, false);
+                Messages.Message("BEWH.MankindsFinest.LivingSaint.LowHolyRadiance".Translate(pawn), MessageTypeDefOf.NegativeEvent, false);
                 sendMessageOfLowRadiance = false;
             }
             else

@@ -25,7 +25,7 @@ namespace Genes40k
 
             if (requiredGene != null && !pawn.genes.HasActiveGene(requiredGene))
             {
-                __result = "BEWH.PawnDoesNotHaveGeneToControl".Translate(pawn, requiredGene.label);
+                __result = "BEWH.MankindsFinest.Ability.PawnDoesNotHaveGeneToControl".Translate(pawn, requiredGene.label);
                 return;
             }
             
@@ -37,7 +37,7 @@ namespace Genes40k
 
             if (pawnHasAmount >= defMod.totalAmountAllowedToHave)
             {
-                __result = "BEWH.PawnCannotControlMoreMechsOfType".Translate(pawn, mech.def.label, defMod.totalAmountAllowedToHave);
+                __result = "BEWH.MankindsFinest.Ability.PawnCannotControlMoreMechsOfType".Translate(pawn, mech.def.label, defMod.totalAmountAllowedToHave);
                 return;
             }
 

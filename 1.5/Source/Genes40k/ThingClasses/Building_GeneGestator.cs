@@ -143,7 +143,7 @@ namespace Genes40k
 
             GenSpawn.Spawn(geneseedVial, InteractionCell, Map);
 
-            var letter = LetterMaker.MakeLetter("BEWH.GestateFinishLetter".Translate(), "BEWH.GestateFinishMessage".Translate(selectedMatrix.label, geneseedVial.Label), LetterDefOf.PositiveEvent, geneseedVial);
+            var letter = LetterMaker.MakeLetter("BEWH.MankindsFinest.GeneGestator.GestateFinishLetter".Translate(), "BEWH.MankindsFinest.GeneGestator.GestateFinishMessage".Translate(selectedMatrix.label, geneseedVial.Label), LetterDefOf.PositiveEvent, geneseedVial);
 
             Find.LetterStack.ReceiveLetter(letter);
             Reset();
@@ -172,12 +172,12 @@ namespace Genes40k
             stringBuilder.Append(base.GetInspectString());
             stringBuilder.Append("\n");
 
-            stringBuilder.Append(containedMatrix == null ? "BEWH.ContainsNoGeneMatrix".Translate() : "BEWH.ContainsGeneMatrix".Translate(containedMatrix.Label));
+            stringBuilder.Append(containedMatrix == null ? "BEWH.MankindsFinest.GeneGestator.ContainsNoGeneMatrix".Translate() : "BEWH.MankindsFinest.GeneGestator.ContainsGeneMatrix".Translate(containedMatrix.Label));
 
             if (selectedMaterial != null)
             {
                 stringBuilder.Append("\n");
-                stringBuilder.Append("BEWH.ContainsExtraMaterial".Translate(selectedMaterial.label));
+                stringBuilder.Append("BEWH.MankindsFinest.GeneGestator.ContainsExtraMaterial".Translate(selectedMaterial.label));
             }
 
             if (!InProgress) return stringBuilder.ToString();
@@ -185,7 +185,7 @@ namespace Genes40k
             stringBuilder.Append("\n");
             if (Finished)
             {
-                stringBuilder.Append("BEWH.GeneVialFinished".Translate());
+                stringBuilder.Append("BEWH.MankindsFinest.GeneGestator.GeneVialFinished".Translate());
             }
             else
             {
@@ -199,7 +199,7 @@ namespace Genes40k
                     divider = 2500f;
                     timeDenoter = "LetterHour".Translate();
                 }
-                stringBuilder.Append("BEWH.GeneVialFinishesIn".Translate(Math.Round(timeLeft / divider, 2), timeDenoter));
+                stringBuilder.Append("BEWH.MankindsFinest.GeneGestator.GeneVialFinishesIn".Translate(Math.Round(timeLeft / divider, 2), timeDenoter));
             }
 
             return stringBuilder.ToString();
@@ -217,7 +217,7 @@ namespace Genes40k
                 {
                     //DEV: ALMOST FINISH
                     var command_Action5 = new Command_Action();
-                    command_Action5.defaultLabel = "DEV: ALMOST FINISH".Translate();
+                    command_Action5.defaultLabel = "DEV: ALMOST FINISH";
                     command_Action5.icon = CancelIcon;
                     command_Action5.activateSound = SoundDefOf.Designate_Cancel;
                     command_Action5.action = delegate
@@ -242,19 +242,19 @@ namespace Genes40k
                         if (containedMatrix.def.GetModExtension<DefModExtension_GeneMatrix>().canUsePrimarchMaterial)
                         {
                             availableMaterial.AddRange(sangprimus.SearchableContentsPrimarch.Where(x => x.def.HasModExtension<DefModExtension_PrimarchMaterial>()));
-                            geneticType = "BEWH.Primarch".Translate();
+                            geneticType = "BEWH.MankindsFinest.CommonKeywords.Primarch".Translate();
                             emptyMaterialIcon = EmptyPrimarchMaterialIcon;
                         }
                         else
                         {
                             availableMaterial.AddRange(sangprimus.SearchableContentsChapter.Where(x => x.def.HasModExtension<DefModExtension_ChapterMaterial>()));
-                            geneticType = "BEWH.Chapter".Translate();
+                            geneticType = "BEWH.MankindsFinest.CommonKeywords.Chapter".Translate();
                             emptyMaterialIcon = EmptyChapterMaterialIcon;
                         }
                         //SELECT PRIMARCH OR CHAPTER MATERIAL
                         var command_Action10 = new Command_Action();
-                        command_Action10.defaultLabel = "BEWH.SelectXMaterial".Translate(geneticType);
-                        command_Action10.defaultDesc = "BEWH.SelectXMaterialDesc".Translate(geneticType);
+                        command_Action10.defaultLabel = "BEWH.MankindsFinest.GeneGestator.SelectXMaterial".Translate(geneticType);
+                        command_Action10.defaultDesc = "BEWH.MankindsFinest.GeneGestator.SelectXMaterialDesc".Translate(geneticType);
 
                         command_Action10.icon = selectedMaterial == null ? emptyMaterialIcon : selectedMaterial.GetModExtension<DefModExtension_GeneFromMaterial>().addedGene.Icon;
                        
@@ -279,7 +279,7 @@ namespace Genes40k
                             }
                             if (!list.Any())
                             {
-                                list.Add(new FloatMenuOption("BEWH.NoAvailableMaterial".Translate(), null));
+                                list.Add(new FloatMenuOption("BEWH.MankindsFinest.GeneGestator.NoAvailableMaterial".Translate(), null));
                             }
                             Find.WindowStack.Add(new FloatMenu(list));
                         };
@@ -288,8 +288,8 @@ namespace Genes40k
                 }
                 //STARTS MACHINE
                 var command_Action4 = new Command_Action();
-                command_Action4.defaultLabel = "BEWH.StartGeneGestating".Translate();
-                command_Action4.defaultDesc = "BEWH.StartGeneGestatingDesc".Translate();
+                command_Action4.defaultLabel = "BEWH.MankindsFinest.GeneGestator.StartGeneGestating".Translate();
+                command_Action4.defaultDesc = "BEWH.MankindsFinest.GeneGestator.StartGeneGestatingDesc".Translate();
                 command_Action4.icon = StartIcon;
                 command_Action4.activateSound = SoundDefOf.Designate_Cancel;
                 command_Action4.action = delegate
@@ -300,8 +300,8 @@ namespace Genes40k
 
                 //EJECT LOADED MATRIX
                 var command_Action2 = new Command_Action();
-                command_Action2.defaultLabel = "BEWH.EjectGeneMatrix".Translate(containedMatrix.Label);
-                command_Action2.defaultDesc = "BEWH.EjectGeneMatrixDesc".Translate(containedMatrix.Label);
+                command_Action2.defaultLabel = "BEWH.MankindsFinest.GeneGestator.EjectGeneMatrix".Translate(containedMatrix.Label);
+                command_Action2.defaultDesc = "BEWH.MankindsFinest.GeneGestator.EjectGeneMatrixDesc".Translate(containedMatrix.Label);
                 command_Action2.icon = EjectIcon;
                 command_Action2.activateSound = SoundDefOf.Designate_Cancel;
                 command_Action2.action = delegate
@@ -317,8 +317,8 @@ namespace Genes40k
                 {
                     //SELECTS MATRIX TO LOAD AND START HAUL JOB
                     var command_Action1 = new Command_Action();
-                    command_Action1.defaultLabel = "BEWH.SelectMatrix".Translate() + "...";
-                    command_Action1.defaultDesc = "BEWH.SelectMatrixDesc".Translate();
+                    command_Action1.defaultLabel = "BEWH.MankindsFinest.GeneGestator.SelectMatrix".Translate() + "...";
+                    command_Action1.defaultDesc = "BEWH.MankindsFinest.GeneGestator.SelectMatrixDesc".Translate();
                     command_Action1.icon = selectedMatrix == null ? MatrixSelectionTex : selectedMatrix.uiIcon;
                     
                     var gestatablesAvailable = new List<ThingDef>();
@@ -353,7 +353,7 @@ namespace Genes40k
                         }
                         if (!list.Any())
                         {
-                            list.Add(new FloatMenuOption("BEWH.NoAvailableMaterial".Translate(), null));
+                            list.Add(new FloatMenuOption("BEWH.MankindsFinest.GeneGestator.NoAvailableMaterial".Translate(), null));
                         }
                         Find.WindowStack.Add(new FloatMenu(list));
                     };
@@ -363,7 +363,7 @@ namespace Genes40k
                     }
                     if (gestatablesAvailable.NullOrEmpty())
                     {
-                        command_Action1.Disable("BEWH.MissingGestateResearch".Translate().CapitalizeFirst());
+                        command_Action1.Disable("BEWH.MankindsFinest.GeneGestator.MissingGestateResearch".Translate().CapitalizeFirst());
                     }
                     yield return command_Action1;
                     

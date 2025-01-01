@@ -300,22 +300,22 @@ namespace Genes40k
                 return string.Empty;
             }
             
-            var text = "BEWH.ImplantGeneseedDesc".Translate(pawn, geneseedVial.xenotypeName);
+            var text = "BEWH.MankindsFinest.GeneseedVial.ImplantGeneseedDesc".Translate(pawn, geneseedVial.xenotypeName);
             var defMod = geneseedVial.def.GetModExtension<DefModExtension_GeneseedVial>();
             var failChanceCausedBy = new List<string>();
             
-            failChanceCausedBy.Add("\t- " + "BEWH.FailureChanceCause".Translate(defMod.baseFailureChance, "BEWH.BaseFailureChance".Translate()));
+            failChanceCausedBy.Add("\t- " + "BEWH.MankindsFinest.GeneseedVial.FailureChanceCause".Translate(defMod.baseFailureChance, "BEWH.MankindsFinest.GeneseedVial.BaseFailureChance".Translate()));
             
             var failChanceAgeOffset = 0;
             if (pawn.ageTracker.AgeBiologicalYears < defMod.minAgeImplant)
             {
                 failChanceAgeOffset = defMod.minAgeImplant - pawn.ageTracker.AgeBiologicalYears;
-                failChanceCausedBy.Add("\t- " + "BEWH.FailureChanceCause".Translate(failChanceAgeOffset, "BEWH.OutsideOptimalAgeRange".Translate(pawn, defMod.minAgeImplant, defMod.maxAgeImplant)));
+                failChanceCausedBy.Add("\t- " + "BEWH.MankindsFinest.GeneseedVial.FailureChanceCause".Translate(failChanceAgeOffset, "BEWH.MankindsFinest.GeneseedVial.OutsideOptimalAgeRange".Translate(pawn, defMod.minAgeImplant, defMod.maxAgeImplant)));
             }
             else if (pawn.ageTracker.AgeBiologicalYears > defMod.maxAgeImplant)
             {
                 failChanceAgeOffset = pawn.ageTracker.AgeBiologicalYears - defMod.minAgeImplant;
-                failChanceCausedBy.Add("\t- " + "BEWH.FailureChanceCause".Translate(failChanceAgeOffset, "BEWH.OutsideOptimalAgeRange".Translate(pawn, defMod.minAgeImplant, defMod.maxAgeImplant)));
+                failChanceCausedBy.Add("\t- " + "BEWH.MankindsFinest.GeneseedVial.FailureChanceCause".Translate(failChanceAgeOffset, "BEWH.MankindsFinest.GeneseedVial.OutsideOptimalAgeRange".Translate(pawn, defMod.minAgeImplant, defMod.maxAgeImplant)));
             }
             failChanceAgeOffset *= defMod.failureChancePerAgePast;
 
@@ -330,7 +330,7 @@ namespace Genes40k
                 var geneDefMod = geneseedVial.extraGeneFromMaterial.GetModExtension<DefModExtension_GeneseedPurity>();
                 failChanceCapGeneOffset += geneDefMod.additionalChanceCapOffset;
                 failChanceGeneOffset += geneDefMod.additionalChanceOffset;
-                failChanceCausedBy.Add("\t- " + "BEWH.FailureChanceCause".Translate(geneDefMod.additionalChanceOffset, geneseedVial.extraGeneFromMaterial.label));
+                failChanceCausedBy.Add("\t- " + "BEWH.MankindsFinest.GeneseedVial.FailureChanceCause".Translate(geneDefMod.additionalChanceOffset, geneseedVial.extraGeneFromMaterial.label));
             }
 
             failCapChance += failChanceCapGeneOffset;
@@ -351,9 +351,9 @@ namespace Genes40k
 
             if (failChance > 0)
             {
-                text += "\n\n" + "BEWH.CurrentFailureChance".Translate(failChance);
+                text += "\n\n" + "BEWH.MankindsFinest.GeneseedVial.CurrentFailureChance".Translate(failChance);
 
-                text += "\n\n" + "BEWH.FailureChanceCausedBy".Translate();
+                text += "\n\n" + "BEWH.MankindsFinest.GeneseedVial.FailureChanceCausedBy".Translate();
 
                 foreach (var failChanceCause in failChanceCausedBy)
                 {
@@ -362,7 +362,7 @@ namespace Genes40k
 
                 if (wasCapped)
                 {
-                    text += "\n\n" + "BEWH.FailureChanceCapped".Translate(failCapChance);
+                    text += "\n\n" + "BEWH.MankindsFinest.GeneseedVial.FailureChanceCapped".Translate(failCapChance);
                 }
             }
 

@@ -27,14 +27,14 @@ namespace Genes40k
             nameRect.x += nameRect.width / 2;
             Widgets.DrawMenuSection(nameRect);
             Text.Anchor = TextAnchor.MiddleCenter;
-            Widgets.Label(nameRect, "BEWH.ChapterIcons".Translate());
+            Widgets.Label(nameRect, "BEWH.MankindsFinest.ShoulderIcon.ChapterIcons".Translate());
             Text.Anchor = TextAnchor.UpperLeft;
                 
             //Reset chapter icon to default
             var resetChapterIconRect = new Rect(viewRect.x, viewRect.y, viewRect.width, 30f);
             resetChapterIconRect.width /= 5;
             resetChapterIconRect.x = nameRect.xMin - resetChapterIconRect.width - nameRect.width/20;
-            if (Widgets.ButtonText(resetChapterIconRect, "BEWH.ResetToDefault".Translate()))
+            if (Widgets.ButtonText(resetChapterIconRect, "BEWH.MankindsFinest.ShoulderIcon.ResetToDefault".Translate()))
             {
                 chapterApparel.CurrentlySelectedChapterIcon = null;
             }
@@ -88,14 +88,14 @@ namespace Genes40k
             
                 Widgets.DrawMenuSection(nameRect2);
                 Text.Anchor = TextAnchor.MiddleCenter;
-                Widgets.Label(nameRect2, "BEWH.RankIcons".Translate());
+                Widgets.Label(nameRect2, "BEWH.MankindsFinest.ShoulderIcon.RankIcons".Translate());
                 Text.Anchor = TextAnchor.UpperLeft;
             
                 //Reset rank icon to default
                 var resetRankIconRect = new Rect(viewRect.x, curY, viewRect.width, 30f);
                 resetRankIconRect.width /= 5;
                 resetRankIconRect.x = nameRect.xMin - resetRankIconRect.width - nameRect.width/20;
-                if (Widgets.ButtonText(resetRankIconRect, "BEWH.ResetToDefault".Translate()))
+                if (Widgets.ButtonText(resetRankIconRect, "BEWH.MankindsFinest.ShoulderIcon.ResetToDefault".Translate()))
                 {
                     chapterApparel.OverrideRankIcon = null;
                 }

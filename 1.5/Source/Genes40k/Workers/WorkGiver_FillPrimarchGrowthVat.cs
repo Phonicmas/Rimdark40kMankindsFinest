@@ -16,7 +16,7 @@ namespace Genes40k
 
         public static void ResetStaticData()
         {
-            NoPrimarchEmbryo = "BEWH.NoPrimarchEmbryo".Translate();
+            NoPrimarchEmbryo = "BEWH.MankindsFinest.PrimarchGrowthVat.NoPrimarchEmbryo".Translate();
         }
 
         public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)

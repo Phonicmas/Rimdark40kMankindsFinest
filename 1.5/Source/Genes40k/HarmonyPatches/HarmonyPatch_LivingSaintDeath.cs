@@ -96,7 +96,7 @@ namespace Genes40k
 
             ResurrectionUtility.TryResurrect(__instance);
 
-            var letter = LetterMaker.MakeLetter("BEWH.LivingSaint".Translate(), "BEWH.LivingSaintMessage".Translate(__instance), Genes40kDefOf.BEWH_GoldenPositive, __instance);
+            var letter = LetterMaker.MakeLetter("BEWH.MankindsFinest.CommonKeywords.LivingSaint".Translate(), "BEWH.MankindsFinest.LivingSaint.LivingSaintMessage".Translate(__instance), Genes40kDefOf.BEWH_GoldenPositive, __instance);
             Find.LetterStack.ReceiveLetter(letter);
         }    
     }

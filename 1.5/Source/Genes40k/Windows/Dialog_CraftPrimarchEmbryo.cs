@@ -46,6 +46,10 @@ namespace Genes40k
             geneseedInspectRect.height /= 4;
             geneseedInspectRect.y = geneseedIconRect.yMax + 10f;
             
+            var geneseedNameRect = new Rect(geneseedIconRect);
+            geneseedNameRect.height /= 3;
+            geneseedNameRect.y = geneseedIconRect.yMin - geneseedNameRect.height;
+            
             
             var embryoRect = new Rect(geneseedRect)
             {
@@ -63,6 +67,10 @@ namespace Genes40k
             embryoInspectRect.height /= 4;
             embryoInspectRect.y = embryoIconRect.yMax + 10f;
             
+            var embryoNameRect = new Rect(embryoIconRect);
+            embryoNameRect.height /= 3;
+            embryoNameRect.y = embryoIconRect.yMin - embryoNameRect.height;
+            
 
             var pawnRect = new Rect(rect);
             pawnRect.height /= 2;
@@ -74,6 +82,10 @@ namespace Genes40k
             pawnIconRect.width = pawnIconRect.height;
             pawnIconRect.x += pawnRect.width/2 - pawnIconRect.width/2;
             pawnIconRect.y += pawnRect.height/2 - pawnIconRect.height/2;
+            
+            var pawnNameRect = new Rect(pawnIconRect);
+            pawnNameRect.height /= 3;
+            pawnNameRect.y = pawnIconRect.yMin - pawnNameRect.height;
             
             
             GUI.DrawTexture(geneseedIconRect, Command.BGTexShrunk);
@@ -104,12 +116,17 @@ namespace Genes40k
                     }, Widgets.PlaceholderIconTex, Color.white);
                     list.Add(menuOption);
                 }
-                if (!list.NullOrEmpty())
+                if (list.NullOrEmpty())
                 {
-                    Find.WindowStack.Add(new FloatMenu(list));
+                    var menuOption = new FloatMenuOption("BEWH.MankindsFinest.GeneManupulationTable.NoneToSelect".Translate(), null, Widgets.PlaceholderIconTex, Color.white)
+                        {
+                            Disabled = true
+                        };
+                    list.Add(menuOption);
                 }
+                Find.WindowStack.Add(new FloatMenu(list));
             }
-            var toolTipGeneseed = "BEWH.NothingSelected".Translate();
+            var toolTipGeneseed = "BEWH.MankindsFinest.GeneManupulationTable.NothingSelected".Translate();
             if (primarchGeneseedVials.NullOrEmpty())
             {
                 Widgets.DrawRectFast(geneseedIconRect, new Color(0f, 0f, 0f, 0.8f));   
@@ -131,6 +148,13 @@ namespace Genes40k
                 }
             }
             TooltipHandler.TipRegion(geneseedIconRect, toolTipGeneseed);
+            
+            Widgets.DrawMenuSection(geneseedNameRect);
+            Text.Font = GameFont.Tiny;
+            Text.Anchor = TextAnchor.MiddleCenter;
+            Widgets.Label(geneseedNameRect, "BEWH.MankindsFinest.GeneManupulationTable.PrimarchGeneseedVialSelection".Translate());
+            Text.Font = GameFont.Small;
+            Text.Anchor = TextAnchor.UpperLeft;
             
             
             GUI.DrawTexture(embryoIconRect, Command.BGTexShrunk);
@@ -158,12 +182,17 @@ namespace Genes40k
                     }, Widgets.PlaceholderIconTex, Color.white);
                     list.Add(menuOption);
                 }
-                if (!list.NullOrEmpty())
+                if (list.NullOrEmpty())
                 {
-                    Find.WindowStack.Add(new FloatMenu(list));
+                    var menuOption = new FloatMenuOption("BEWH.MankindsFinest.GeneManupulationTable.NoneToSelect".Translate(), null, Widgets.PlaceholderIconTex, Color.white)
+                    {
+                        Disabled = true
+                    };
+                    list.Add(menuOption);
                 }
+                Find.WindowStack.Add(new FloatMenu(list));
             }
-            var toolTipEmbryo = "BEWH.NothingSelected".Translate();
+            var toolTipEmbryo = "BEWH.MankindsFinest.GeneManupulationTable.NothingSelected".Translate();
             if (humanEmbryos.NullOrEmpty())
             {
                 Widgets.DrawRectFast(embryoIconRect, new Color(0f, 0f, 0f, 0.8f));   
@@ -182,6 +211,13 @@ namespace Genes40k
                 }
             }
             TooltipHandler.TipRegion(embryoIconRect, toolTipEmbryo);
+            
+            Widgets.DrawMenuSection(embryoNameRect);
+            Text.Font = GameFont.Tiny;
+            Text.Anchor = TextAnchor.MiddleCenter;
+            Widgets.Label(embryoNameRect, "BEWH.MankindsFinest.GeneManupulationTable.HumanEmbryoSelection".Translate());
+            Text.Font = GameFont.Small;
+            Text.Anchor = TextAnchor.UpperLeft;
             
             
             GUI.DrawTexture(pawnIconRect, Command.BGTexShrunk);
@@ -221,7 +257,7 @@ namespace Genes40k
                         menuOption.Disabled = true;
                         var text = recipe.skillRequirements.Aggregate("", (current, skillRequirement) => current + (skillRequirement.skill.label + ": " + skillRequirement.minLevel + " "));
                         text = text.Trim();
-                        menuOption.Label += "\n" + "BEWH.NotSkilledEnoughPrimarchEmbryo".Translate(pawn, text);
+                        menuOption.Label += "\n" + "BEWH.MankindsFinest.GeneManupulationTable.NotSkilledEnoughPrimarchEmbryo".Translate(pawn, text);
                     }
                     
                     list.Add(menuOption);
@@ -231,7 +267,7 @@ namespace Genes40k
                     Find.WindowStack.Add(new FloatMenu(list));
                 }
             }
-            var toolTipPawn = "BEWH.NothingSelected".Translate();
+            var toolTipPawn = "BEWH.MankindsFinest.GeneManupulationTable.NothingSelected".Translate();
             if (playerPawnWithSkills.NullOrEmpty())
             {
                 Widgets.DrawRectFast(pawnIconRect, new Color(0f, 0f, 0f, 0.8f));   
@@ -245,8 +281,14 @@ namespace Genes40k
                 
                 toolTipPawn = chosenPawn.NameFullColored.CapitalizeFirst();
             }
-            
             TooltipHandler.TipRegion(pawnIconRect, toolTipPawn);
+            
+            Widgets.DrawMenuSection(pawnNameRect);
+            Text.Font = GameFont.Tiny;
+            Text.Anchor = TextAnchor.MiddleCenter;
+            Widgets.Label(pawnNameRect, "BEWH.MankindsFinest.GeneManupulationTable.PawnSelection".Translate());
+            Text.Font = GameFont.Small;
+            Text.Anchor = TextAnchor.UpperLeft;
             
             
             if (Widgets.ButtonText(new Rect(inRect.xMax - CloseButSize.x, inRect.yMax, CloseButSize.x, CloseButSize.y), "Close".Translate()))

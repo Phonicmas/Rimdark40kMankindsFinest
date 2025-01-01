@@ -18,7 +18,7 @@ namespace Genes40k
 
             var stasisResearch = Genes40kDefOf.BEWH_StasisResurrection;
 
-            return stasisResearch.IsFinished ? null : Dialog_MessageBox.CreateConfirmation("BEWH.StasisResearchNotCompleted".Translate(pawn.Named("PAWN"), stasisResearch.label), confirmAction, destructive: true);
+            return stasisResearch.IsFinished ? null : Dialog_MessageBox.CreateConfirmation("BEWH.MankindsFinest.Ability.StasisResearchNotCompleted".Translate(pawn.Named("PAWN"), stasisResearch.label), confirmAction, destructive: true);
         }
     }
 }

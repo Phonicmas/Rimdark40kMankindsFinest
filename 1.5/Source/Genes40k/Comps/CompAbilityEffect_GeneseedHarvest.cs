@@ -87,19 +87,19 @@ namespace Genes40k
             }
             if (!Genes40kDefOf.BEWH_GeneseedExtractionFirstborn.IsFinished)
             {
-                return "BEWH.SMGeneseedExtractionNotResearched".Translate();
+                return "BEWH.MankindsFinest.SpaceMarine.SMGeneseedExtractionNotResearched".Translate();
             }
             if (Genes40kUtils.IsPrimaris(corpse.InnerPawn) && !Genes40kDefOf.BEWH_GeneseedExtractionPrimaris.IsFinished)
             {
-                return "BEWH.PMGeneseedExtractionNotResearched".Translate();
+                return "BEWH.MankindsFinest.SpaceMarine.PMGeneseedExtractionNotResearched".Translate();
             }
             if (!corpse.InnerPawn.genes.HasActiveGene(Genes40kDefOf.BEWH_ProgenoidGlands))
             {
-                return "BEWH.NoProgenoidGlands".Translate();
+                return "BEWH.MankindsFinest.SpaceMarine.NoProgenoidGlands".Translate();
             }
             if (corpse.InnerPawn.genes.GetGene(Genes40kDefOf.BEWH_ProgenoidGlands) is Gene_ProgenoidGlands progenoidGlands && progenoidGlands.SecondProgenoidGlandHarvested)
             {
-                return "BEWH.SecondaryGlandsAlreadyHarvested".Translate();
+                return "BEWH.MankindsFinest.SpaceMarine.SecondaryGlandsAlreadyHarvested".Translate();
             }
             
             return null;

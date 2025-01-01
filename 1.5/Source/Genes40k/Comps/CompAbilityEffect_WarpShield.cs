@@ -13,7 +13,7 @@ namespace Genes40k
         private static readonly Texture2D MindShieldOffIcon = ContentFinder<Texture2D>.Get("UI/Abilities/BEWH_MindShieldOff");
         private static readonly Texture2D MindShieldOnIcon = ContentFinder<Texture2D>.Get("UI/Abilities/BEWH_MindShieldOn");
 
-        private string tooltipExtra = "CurrentToggle".Translate("Off".Translate());
+        private string tooltipExtra = "BEWH.MankindsFinest.Ability.CurrentToggle".Translate("BEWH.MankindsFinest.CommonKeywords.Off".Translate());
 
         public override string ExtraTooltipPart()
         {
@@ -36,14 +36,14 @@ namespace Genes40k
                 hediff.Severity = 1;
 
                 ability_WarpShield.SetIcon(MindShieldOnIcon);
-                tooltipExtra = "CurrentToggle".Translate("On".Translate());
+                tooltipExtra = "BEWH.MankindsFinest.Ability.CurrentToggle".Translate("BEWH.MankindsFinest.CommonKeywords.On".Translate());
             }
             else
             {
                 hediff.Severity = 2;
                 
                 ability_WarpShield.SetIcon(MindShieldOffIcon);
-                tooltipExtra = "CurrentToggle".Translate("Off".Translate());
+                tooltipExtra = "BEWH.MankindsFinest.Ability.CurrentToggle".Translate("BEWH.MankindsFinest.CommonKeywords.Off".Translate());
             }
         }
     }

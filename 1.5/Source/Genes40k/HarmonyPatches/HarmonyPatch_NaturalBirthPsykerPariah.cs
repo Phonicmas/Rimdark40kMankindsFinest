@@ -53,14 +53,14 @@ namespace Genes40k
             weightedSelection.AddEntry(Genes40kDefOf.BEWH_OmegaPariah, 4);
             
             var chosenGene = weightedSelection.GetRandomUnique();
-            var typeBorn = chosenGene.HasModExtension<DefModExtension_Pariah>() ? "BEWH.Pariah".Translate() : "BEWH.Psyker".Translate();
+            var typeBorn = chosenGene.HasModExtension<DefModExtension_Pariah>() ? "BEWH.MankindsFinest.CommonKeywords.Pariah".Translate() : "BEWH.MankindsFinest.CommonKeywords.Psyker".Translate();
             
             var letter = new Letter_JumpTo
             {
                 lookTargets = pawn,
                 def = Genes40kDefOf.BEWH_NaturalBornX,
-                Text = "BEWH.NaturalBornXMessage".Translate(geneticMother.Named("PAWN"), pawn.Named("PAWN"), typeBorn),
-                Label = "BEWH.NaturalBornXLetter".Translate(typeBorn),
+                Text = "BEWH.MankindsFinest.Event.NaturalBornXMessage".Translate(geneticMother.Named("PAWN"), pawn.Named("PAWN"), typeBorn),
+                Label = "BEWH.MankindsFinest.Event.NaturalBornXLetter".Translate(typeBorn),
 
             };
 

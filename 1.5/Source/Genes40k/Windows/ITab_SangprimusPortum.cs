@@ -37,8 +37,8 @@ namespace Genes40k
         public ITab_SangprimusPortum()
         {
 	        size = new Vector2(460f, 450f);
-            labelKey = "BEWH.SangprimusPortumAcquired";
-            containedItemsKey = "BEWH.SangprimusPortumAcquired";
+            labelKey = "BEWH.MankindsFinest.Containers.SangprimusPortumAcquired";
+            containedItemsKey = "BEWH.MankindsFinest.Containers.SangprimusPortumAcquired";
         }
         
         protected override void FillTab()

@@ -43,42 +43,38 @@ namespace Genes40k
             var rand = new Random();
             var roll = rand.Next(1, 100);
             roll += (int)pawn.GetStatValue(StatDefOf.PsychicSensitivity);
+
+            letter.Label = roll >= 90 ? "BEWH.MankindsFinest.Event.PerilsOfTheWarpLetter".Translate() : "BEWH.MankindsFinest.Event.PsychicPhenomenaLetter".Translate();
             
             switch (roll)
             {
                 case 100:
                     pawn.Kill(null);
                     GenExplosion.DoExplosion(pawn.Corpse.Position, pawn.Corpse.Map, pawn.GetStatValue(StatDefOf.PsychicSensitivity) * 5, Genes40kDefOf.BEWH_WarpEnergy, pawn, damAmount: (int)(pawn.GetStatValue(StatDefOf.PsychicSensitivity) * 100), armorPenetration: 10f);
-                    letter.Text = "BEWH.Annihilation".Translate(pawn.Named("PAWN"));
-                    letter.Label = "BEWH.PerilsOfTheWarpLetter".Translate();
+                    letter.Text = "BEWH.MankindsFinest.Event.Annihilation".Translate(pawn.Named("PAWN"));
                     break;
                 case int n when n >= 99:
                     SummonDaemons(pawn);
-                    letter.Text = "BEWH.DaemonHost".Translate(pawn.Named("PAWN"));
-                    letter.Label = "BEWH.PerilsOfTheWarpLetter".Translate();
+                    letter.Text = "BEWH.MankindsFinest.Event.DaemonHost".Translate(pawn.Named("PAWN"));
                     break;
                 case int n when n >= 95:
                     GenExplosion.DoExplosion(pawn.Position, pawn.Map, pawn.GetStatValue(StatDefOf.PsychicSensitivity) * 2, Genes40kDefOf.BEWH_WarpEnergy, pawn);
-                    letter.Text = "BEWH.UncontrollablePowers".Translate(pawn.Named("PAWN"));
-                    letter.Label = "BEWH.PerilsOfTheWarpLetter".Translate();
+                    letter.Text = "BEWH.MankindsFinest.Event.UncontrollablePowers".Translate(pawn.Named("PAWN"));
                     break;
                 case int n when n >= 90:
                     pawn.health.AddHediff(Genes40kDefOf.BEWH_PsychicComa);
-                    letter.Text = "BEWH.PsychicComa".Translate(pawn.Named("PAWN"));
-                    letter.Label = "BEWH.PerilsOfTheWarpLetter".Translate();
+                    letter.Text = "BEWH.MankindsFinest.Event.PsychicComa".Translate(pawn.Named("PAWN"));
                     break;
                 /*case int n when n >= 80:
                             //??
                             break;*/
                 case int n when n >= 70:
                     pawn.health.AddHediff(Genes40kDefOf.BEWH_PsychicConnectionSevered);
-                    letter.Text = "BEWH.PsychicConnectionSevered".Translate(pawn.Named("PAWN"));
-                    letter.Label = "BEWH.PsychicPhenomenaLetter".Translate();
+                    letter.Text = "BEWH.MankindsFinest.Event.PsychicConnectionSevered".Translate(pawn.Named("PAWN"));
                     break;
                 case int n when n >= 60:
                     pawn.Map.weatherManager.TransitionTo(Genes40kDefOf.BEWH_BloodRain);
-                    letter.Text = "BEWH.BloodRain".Translate();
-                    letter.Label = "BEWH.PsychicPhenomenaLetter".Translate();
+                    letter.Text = "BEWH.MankindsFinest.Event.BloodRain".Translate();
                     break;
                 case int n when n >= 30:
                     IEnumerable<IntVec3> t = GenRadial.RadialCellsAround(pawn.Position, 8, true);
@@ -90,8 +86,7 @@ namespace Genes40k
                             plant.Kill();
                         }
                     }
-                    letter.Text = "BEWH.PlantRot".Translate(pawn.Named("PAWN"));
-                    letter.Label = "BEWH.PsychicPhenomenaLetter".Translate();
+                    letter.Text = "BEWH.MankindsFinest.Event.PlantRot".Translate(pawn.Named("PAWN"));
                     break;
                 default:
                     sendLetter = false;

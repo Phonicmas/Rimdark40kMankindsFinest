@@ -96,8 +96,8 @@ namespace Genes40k
             
             var command_Action = new Command_Action
             {
-                defaultLabel = "BEWH.CraftPrimarchEmbryoGeneTable".Translate() + "...",
-                defaultDesc = "BEWH.CraftPrimarchEmbryoGeneTableDesc".Translate(),
+                defaultLabel = "BEWH.MankindsFinest.GeneManupulationTable.CraftPrimarchEmbryo".Translate() + "...",
+                defaultDesc = "BEWH.MankindsFinest.GeneManupulationTable.CraftPrimarchEmbryoDesc".Translate(),
                 icon = CraftPrimarchEmbryo.Texture,
                 action = delegate
                 {
@@ -119,7 +119,7 @@ namespace Genes40k
                 yield break;
             }
             
-            var secondColourChangeFloatMenu = FloatMenuUtility.DecoratePrioritizedTask(new FloatMenuOption("BEWH.ChangeSecondaryColour".Translate().CapitalizeFirst(), delegate
+            var secondColourChangeFloatMenu = FloatMenuUtility.DecoratePrioritizedTask(new FloatMenuOption("BEWH.Framework.ApparelColourTwo.ChangeSecondaryColour".Translate().CapitalizeFirst(), delegate
             {
                 selPawn.jobs.TryTakeOrderedJob(JobMaker.MakeJob(Core40kDefOf.BEWH_OpenStylingStationDialogForSecondColour, this), JobTag.Misc);
             }), selPawn, this);

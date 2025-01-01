@@ -25,7 +25,7 @@ Make sure all type of tags, defs and what not are prefixed with BEWH_
 
 Shoulder pad icons for chapters and ranks
 
-
+Mk X armor + helmet
 
 
 Maybe some different backgrounds (the blue hexagon for xenotype or white circle thingy for endogenes) for the different genes? (Maybe keep the recoloured one psyker and pariah and then make some new type for the different super human, with increasing golden stuff and purity seals n stuff) (im just cooking here, this is not important)
@@ -43,8 +43,6 @@ If player got path to chaos, disable heretic chapters from spawning then.
 
 Increase domitar shooting and melee, either skill or chance to hit. (skill is currently set to 4)
 
-For embryo creation window. Put a box below each current box, with a name of what it is (required-wise, geneseed vial, human embryo, pawn)
-
 For ranks, make it such that if a pawn is recruited, check if their current ranks are inside legal limit, if not, de-rank them.
 
 Raid thingy not working properly.
@@ -55,8 +53,6 @@ In PawnRenderNodeWorker_AttachmentChapterRankIcon, make standard path use neophy
 
 
 Aura ability for living saint, buffing nearby pawn temporarily (Maybe)
-
-And when a rank is given if it is higher or equal to current ones importance then change the pawns rank in their info (the place where you can insert a custome one) (Maybe)
 
 In spect window code, call discard on pawn???
 
