@@ -179,6 +179,7 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_LivingSaintDeath.cs" />
     <Compile Include="ThingClasses\Building_SangprimusPortum.cs" />
     <Compile Include="ThingClasses\ChapterApparelColourTwo.cs" />
+    <Compile Include="ThingClasses\ExtraIconsChapterApparelColourTwo.cs" />
     <Compile Include="ThingClasses\GeneMaterialExtra.cs" />
     <Compile Include="ThingClasses\GeneticMatrix.cs" />
     <Compile Include="ThingClasses\PrimarchEmbryo.cs" />

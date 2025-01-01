@@ -10,7 +10,7 @@ namespace Genes40k
     [StaticConstructorOnStartup]
     public class Comp_TwinDisable : AbilityComp
     {
-        public new CompProperties_AbilityTwinDisable Props => (CompProperties_AbilityTwinDisable)props;
+        private CompProperties_AbilityTwinDisable Props => (CompProperties_AbilityTwinDisable)props;
 
         public override bool GizmoDisabled(out string reason)
         {

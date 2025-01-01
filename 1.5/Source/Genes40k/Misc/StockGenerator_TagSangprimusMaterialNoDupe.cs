@@ -12,7 +12,7 @@ namespace Genes40k
 
         private IntRange thingDefCountRange = IntRange.one;
 
-        private List<ThingDef> excludedThingDefs;
+        private List<ThingDef> excludedThingDefs = new List<ThingDef>();
 
         public override IEnumerable<Thing> GenerateThings(int forTile, Faction faction = null)
         {

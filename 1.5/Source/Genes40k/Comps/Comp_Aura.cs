@@ -9,7 +9,7 @@ namespace Genes40k
     [StaticConstructorOnStartup]
     public class Comp_Aura : ThingComp
     {
-        public new CompProperties_Aura Props => (CompProperties_Aura)props;
+        private CompProperties_Aura Props => (CompProperties_Aura)props;
 
         public override void CompTick()
         {

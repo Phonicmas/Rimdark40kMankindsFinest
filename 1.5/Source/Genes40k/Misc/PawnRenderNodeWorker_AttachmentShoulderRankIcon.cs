@@ -9,8 +9,6 @@ namespace Genes40k
 {
     public class PawnRenderNodeWorker_AttachmentShoulderRankIcon : PawnRenderNodeWorker_AttachmentBody
     {
-        private Graphic cachedShoulderGraphic = null;
-
         public override bool CanDrawNow(PawnRenderNode node, PawnDrawParms parms)
         {
             var pawn = parms.pawn;
@@ -55,14 +53,12 @@ namespace Genes40k
 
         protected override Graphic GetGraphic(PawnRenderNode node, PawnDrawParms parms)
         {
-            //Change standard to use neophyte icon instead when made.
-            const string standardPath = "Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_Veteran";
             var pawn = parms.pawn;
 
-            var rankIconPath = standardPath;
+            var rankIconPath = node.Props.texPath;
             
             var def = node.apparel.def;
-            var apparelColourTwo = (ChapterApparelColourTwo)node.apparel;
+            var apparelColourTwo = (ExtraIconsChapterApparelColourTwo)node.apparel;
 
             if (apparelColourTwo.OverrideRankIcon != null)
             {
@@ -84,15 +80,8 @@ namespace Genes40k
                 }
             }
             
-            var shader = ShaderDatabase.CutoutComplex;
-                    
-            if (def.graphicData.shaderType != null)
-            {
-                shader = def.graphicData.shaderType.Shader;
-            }
-            
             //If not colorable, set color.white instead of drawcolors of apparel
-            return GraphicDatabase.Get<Graphic_Multi>(rankIconPath, shader, node.Props.drawSize, apparelColourTwo.DrawColor, apparelColourTwo.DrawColorTwo, def.graphicData);
+            return GraphicDatabase.Get<Graphic_Multi>(rankIconPath, node.Props.shaderTypeDef.Shader, node.Props.drawSize, apparelColourTwo.DrawColor, apparelColourTwo.DrawColorTwo, def.graphicData);
         }
     }
 }

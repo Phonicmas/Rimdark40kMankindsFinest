@@ -8,8 +8,6 @@ namespace Genes40k
 {
     public class Dialog_CraftPrimarchEmbryo : Window
     {
-        private Vector2 scrollPosition;
-
         private Map map = null;
         private Building_GeneTable geneTable = null;
         

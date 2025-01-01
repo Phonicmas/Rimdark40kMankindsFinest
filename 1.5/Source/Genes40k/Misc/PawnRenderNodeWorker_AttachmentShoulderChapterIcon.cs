@@ -50,30 +50,23 @@ namespace Genes40k
 
         protected override Graphic GetGraphic(PawnRenderNode node, PawnDrawParms parms)
         {
-            var standardPath = "Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_ImperialFists";
+            var chapterIconPath = node.Props.texPath;
             
             /*if (ModSettings.currentlySelectedPreset != null)
             {
-                standardPath = ModSettings.currentlySelectedPreset?.relatedChapterIconPath;
+                chapterIconPath = ModSettings.currentlySelectedPreset?.relatedChapterIconPath;
             }*/
             
             var def = node.apparel.def;
-            var apparelColourTwo = (ChapterApparelColourTwo)node.apparel;
+            var apparelColourTwo = (ExtraIconsChapterApparelColourTwo)node.apparel;
 
             if (apparelColourTwo.CurrentlySelectedChapterIcon != null)
             {
-                standardPath = apparelColourTwo.CurrentlySelectedChapterIcon.relatedChapterIconPath;
-            }
-            
-            var shader = ShaderDatabase.CutoutComplex;
-                    
-            if (def.graphicData.shaderType != null)
-            {
-                shader = def.graphicData.shaderType.Shader;
+                chapterIconPath = apparelColourTwo.CurrentlySelectedChapterIcon.relatedChapterIconPath;
             }
             
             //If not colorable, set color.white instead of drawcolors of apparel
-            return  GraphicDatabase.Get<Graphic_Multi>(standardPath, shader, node.Props.drawSize, apparelColourTwo.DrawColor, apparelColourTwo.DrawColorTwo, def.graphicData);
+            return  GraphicDatabase.Get<Graphic_Multi>(chapterIconPath, node.Props.shaderTypeDef.Shader, node.Props.drawSize, apparelColourTwo.DrawColor, apparelColourTwo.DrawColorTwo, def.graphicData);
         }
     }
 }

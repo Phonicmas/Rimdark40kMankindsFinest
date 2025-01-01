@@ -8,7 +8,7 @@
         <defName>BEWH_MkVIIPowerArmor</defName>
         <label>Mk VII Power Armor</label>
         <description>Mk VII power armor of Firstborn Space Marines.</description>
-        <thingClass>Genes40k.ChapterApparelColourTwo</thingClass>
+        <thingClass>Genes40k.ExtraIconsChapterApparelColourTwo</thingClass>
         <recipeMaker>
             <researchPrerequisite>BEWH_AstartesPowerArmor</researchPrerequisite>
         </recipeMaker>
@@ -48,11 +48,10 @@
                     <workerClass>PawnRenderNodeWorker_Apparel_Body</workerClass>
                     <nodeClass>PawnRenderNode_Apparel</nodeClass>
                     <texPath>Things/Armor/Imperium/PowerArmor/BEWH_ImperiumPowerArmor</texPath>
-                    <drawSize>1</drawSize>
                     <parentTagDef>Body</parentTagDef>
                     <drawData>
                         <defaultData>
-                            <layer>60</layer>
+                            <layer>40</layer>
                         </defaultData>
                         <dataNorth>
                             <layer>70</layer>
@@ -63,29 +62,26 @@
                 <li>
                     <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentShoulderPad</workerClass>
                     <texPath>Things/Armor/Imperium/PowerArmor/Shoulder/BEWH_ImperiumPowerArmor_Shoulder</texPath>
-                    <drawSize>1</drawSize>
+                    <shaderTypeDef>CutoutComplex</shaderTypeDef>
                     <parentTagDef>ApparelBody</parentTagDef>
                     <drawData>
-                        <defaultData>
-                            <layer>-1</layer>
-                        </defaultData>
                         <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
                         <dataEast>
-                            <layer>80</layer>
+                            <layer>71</layer>
                         </dataEast>
                         <dataWest>
-                            <layer>80</layer>
+                            <layer>71</layer>
                         </dataWest>
                     </drawData>
                 </li>
                 <li>
                     <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentShoulderChapterIcon</workerClass>
-                    <texPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_DeathGuard</texPath>
-                    <drawSize>1</drawSize>
+                    <texPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_ImperialFists</texPath>
+                    <shaderTypeDef>CutoutComplex</shaderTypeDef>
                     <parentTagDef>ApparelBody</parentTagDef>
                     <drawData>
                         <defaultData>
-                            <layer>81</layer>
+                            <layer>72</layer>
                         </defaultData>
                         <dataSouth>
                             <offset>(-0.065,0,-0.02)</offset>
@@ -98,12 +94,12 @@
                 </li>
                 <li>
                     <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentShoulderRankIcon</workerClass>
+                    <!-- Change this to be neophyte when made -->
                     <texPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_Veteran</texPath>
-                    <drawSize>1</drawSize>
                     <parentTagDef>ApparelBody</parentTagDef>
                     <drawData>
                         <defaultData>
-                            <layer>81</layer>
+                            <layer>72</layer>
                         </defaultData>
                         <dataSouth>
                             <offset>(0.065,0,-0.02)</offset>
@@ -123,12 +119,13 @@
         </modExtensions>
     </ThingDef>
 
+
     <!-- Power Armor MK 7 Helmet -->
     <ThingDef ParentName="BEWH_PowerArmorHelmetBase">
         <defName>BEWH_MkVIIPowerArmorHelmet</defName>
         <label>Mk VII Power Armor Helmet</label>
         <description>Standard issue Mk VII helmet of Firstborn Space Marines.</description>
-        <thingClass>Core40k.ApparelColourTwo</thingClass>
+        <thingClass>Genes40k.ChapterApparelColourTwo</thingClass>
         <recipeMaker>
             <researchPrerequisite>BEWH_AstartesPowerArmor</researchPrerequisite>
         </recipeMaker>
@@ -168,7 +165,7 @@
         <defName>BEWH_MkXPowerArmor</defName>
         <label>Mk X Power Armor</label>
         <description>Mk X power armor of Primaris Space Marines.</description>
-        <thingClass>Genes40k.ChapterApparelColourTwo</thingClass>
+        <thingClass>Genes40k.ExtraIconsChapterApparelColourTwo</thingClass>
         <recipeMaker>
             <researchPrerequisite>BEWH_AstartesPowerArmor</researchPrerequisite>
         </recipeMaker>
@@ -288,7 +285,7 @@
         <defName>BEWH_MkXPowerArmorHelmet</defName>
         <label>Mk X Power Armor Helmet</label>
         <description>Standard issue Mk X helmet of Primaris Space Marines.</description>
-        <thingClass>Core40k.ApparelColourTwo</thingClass>
+        <thingClass>Genes40k.ChapterApparelColourTwo</thingClass>
         <recipeMaker>
             <researchPrerequisite>BEWH_AstartesPowerArmor</researchPrerequisite>
         </recipeMaker>

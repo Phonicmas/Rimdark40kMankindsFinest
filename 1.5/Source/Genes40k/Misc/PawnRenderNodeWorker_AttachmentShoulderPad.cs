@@ -7,8 +7,6 @@ namespace Genes40k
 {
     public class PawnRenderNodeWorker_AttachmentShoulderPad : PawnRenderNodeWorker_AttachmentBody
     {
-        private Graphic cachedShoulderGraphic = null;
-
         public override bool CanDrawNow(PawnRenderNode node, PawnDrawParms parms)
         {
             var pawn = parms.pawn;
@@ -49,18 +47,9 @@ namespace Genes40k
         protected override Graphic GetGraphic(PawnRenderNode node, PawnDrawParms parms)
         {
             var def = node.apparel.def;
-            var apparelColourTwo = (ApparelColourTwo)node.apparel;
-            
-            const string shoulderPath = "Things/Armor/Imperium/PowerArmor/Shoulder/BEWH_ImperiumPowerArmor_Shoulder";
-            var shader = ShaderDatabase.CutoutComplex;
-                    
-            if (def.graphicData.shaderType != null)
-            {
-                shader = def.graphicData.shaderType.Shader;
-            }
-            cachedShoulderGraphic = GraphicDatabase.Get<Graphic_Multi>(shoulderPath, shader, def.graphicData.drawSize, apparelColourTwo.DrawColor, apparelColourTwo.DrawColorTwo, def.graphicData);
-            
-            return cachedShoulderGraphic;
+            var apparelColourTwo = (ChapterApparelColourTwo)node.apparel;
+
+            return GraphicDatabase.Get<Graphic_Multi>(node.Props.texPath, node.Props.shaderTypeDef.Shader, def.graphicData.drawSize, apparelColourTwo.DrawColor, apparelColourTwo.DrawColorTwo, def.graphicData);
         }
     }
 }

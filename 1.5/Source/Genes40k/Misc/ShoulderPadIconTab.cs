@@ -16,7 +16,7 @@ namespace Genes40k
         
         public override void DrawTab(Rect rect, Pawn pawn, float viewRectHeight, ref Vector2 apparelColorScrollPosition)
         {
-            var chapterApparel = (ChapterApparelColourTwo)pawn.apparel.WornApparel.First(a => a is ChapterApparelColourTwo);
+            var chapterApparel = (ExtraIconsChapterApparelColourTwo)pawn.apparel.WornApparel.First(a => a is ExtraIconsChapterApparelColourTwo);
             
             var viewRect = new Rect(rect.x, rect.y, rect.width - 16f, viewRectHeight);
             Widgets.BeginScrollView(rect, ref apparelColorScrollPosition, viewRect);
