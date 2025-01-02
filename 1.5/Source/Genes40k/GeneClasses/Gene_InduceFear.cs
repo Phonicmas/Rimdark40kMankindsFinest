@@ -48,6 +48,11 @@ namespace Genes40k
                 {
                     continue;
                 }
+                
+                if (!otherPawn.story.traits.allTraits.NullOrEmpty() && defMod.traitCausesImmunityToFear.Any(traitData => otherPawn.story.traits.HasTrait(traitData.traitDef)))
+                {
+                    continue;
+                }
 
                 var random = new Random();
                 var randomRoll = random.Next(0, 100);

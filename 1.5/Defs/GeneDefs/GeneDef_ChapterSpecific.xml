@@ -269,6 +269,9 @@
                     <li>BEWH_ThalaxCortex</li>
                     <li>BEWH_LivingSaintBeingOfFaith</li>
                 </genesCausesImmunityToFear>
+                <traitCausesImmunityToFear>
+                    <Psychopath>0</Psychopath>
+                </traitCausesImmunityToFear>
             </li>
         </modExtensions>
     </GeneDef>
