@@ -34,18 +34,7 @@ Primarch Specific Icons (Not sure what excatly to do here) (Maybe flip the helix
 
 ## Code and XML
 
-add stat offsets and factor and abilities to ranks. possibly add more?
-
-Make raid type for imperium, that uses ChapterColourDefs for colour for their armor, and the geneseed for the marine deployed, should all be from same chapter.
-^^ use custom PawnGroupKindDef worker, also make them have unlocked the first two ranks of the rank tree, with required days + random between 0-3 additional days.
-If player selected chapter colour is not custom, then dont spawn the selected one from them
-If player got path to chaos, disable heretic chapters from spawning then.
-
-Increase domitar shooting and melee, either skill or chance to hit. (skill is currently set to 4)
-
-For ranks, make it such that if a pawn is recruited, check if their current ranks are inside legal limit, if not, de-rank them.
-
-Raid thingy not working properly.
+add stat offsets and factor, abilities and possibly more to ranks. (Flesh them out a bit i guess)
 
 In PawnRenderNodeWorker_AttachmentChapterRankIcon, make standard path use neophyte icon when made.
 
@@ -53,8 +42,6 @@ In PawnRenderNodeWorker_AttachmentChapterRankIcon, make standard path use neophy
 
 
 Aura ability for living saint, buffing nearby pawn temporarily (Maybe)
-
-In spect window code, call discard on pawn???
 
 ## Bugs
 

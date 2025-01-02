@@ -52,7 +52,7 @@ namespace Genes40k
         {
             var chapterIconPath = node.Props.texPath;
             
-            /*if (ModSettings.currentlySelectedPreset != null)
+            /*if (parms.pawn.Faction != null && parms.pawn.Faction.IsPlayer && ModSettings.currentlySelectedPreset != null)
             {
                 chapterIconPath = ModSettings.currentlySelectedPreset?.relatedChapterIconPath;
             }*/

@@ -33,9 +33,9 @@
         </suppressedTraits>
 
         <statOffsets>
-            <LeatherAmount>1</LeatherAmount>
-            <MeatAmount>1</MeatAmount>
-            <Mass>1</Mass>
+            <LeatherAmount>100</LeatherAmount>
+            <MeatAmount>100</MeatAmount>
+            <Mass>100</Mass>
             <VEF_CosmeticBodySize_Multiplier>0.55</VEF_CosmeticBodySize_Multiplier>
 
             <SuppressionPower MayRequire="Ludeon.RimWorld.Ideology">1.2</SuppressionPower>

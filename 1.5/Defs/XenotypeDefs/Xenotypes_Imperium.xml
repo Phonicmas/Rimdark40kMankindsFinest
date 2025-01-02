@@ -96,19 +96,6 @@
     </genes>
   </XenotypeDef>
 
-  <!-- Space Marine Psyker -->
-  <XenotypeDef ParentName="SpaceMarineBase">
-    <defName>BEWH_SpaceMarinePsyker</defName>
-    <label>firstborn marine psyker</label>
-    <description>Rare Space Marine psykers who tap into the tumultuous energies of the warp, channeling its power to elevate their combat prowess. Trained as both warriors and seers, they unleash psychic might upon their foes, weaving spells of destruction while dancing on the precipice of corruption, ever vigilant against the dark whispers that seek to ensnare their souls.</description>
-    <descriptionShort>Barely human, but instead superhuman; genetically engineered to be superior to normal humans in every way. These space marines carry the psyker gene, which gives them unnatural abilities.</descriptionShort>
-    <iconPath>UI/Xenotypes/BEWH_SpaceMarinePsykerXenoIcon</iconPath>
-    <combatPowerFactor>1.45</combatPowerFactor>
-    <genes>
-      <li>BEWH_Psyker</li>
-    </genes>
-  </XenotypeDef>
-
   <!-- Thunder Warrior -->
   <XenotypeDef ParentName="BEWH_ImperiumEliteBase">
     <defName>BEWH_ThunderWarrior</defName>

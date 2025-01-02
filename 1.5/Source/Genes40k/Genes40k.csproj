@@ -113,6 +113,7 @@
     <Compile Include="Comps\Comp_Aura.cs" />
     <Compile Include="Comps\Comp_TwinDisable.cs" />
     <Compile Include="Comps\Comp_TwinTeleport.cs" />
+    <Compile Include="Comps\GameComponent_MankindFinestUtils.cs" />
     <Compile Include="Comps\GameComponent_Perpetual.cs" />
     <Compile Include="Comps\HediffCompProperties_SeverityFromDivineRadiance.cs" />
     <Compile Include="Comps\HediffComp_SeverityFromDivineRadiance.cs" />
@@ -144,6 +145,7 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_RubiconSurgeryChanceIncrease.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_SangprimusNoDuplicateAccepted.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_SecondProgenoidGlandProgress.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_SpaceMarineChapterSpawn.cs" />
     <Compile Include="Rank\ChapterRankDef.cs" />
     <Compile Include="RoleRequirement\RoleRequirement_MustBeSpaceMarine.cs" />
     <Compile Include="StockGenerator\StockGenerator_TagSangprimusMaterialNoDupe.cs" />
@@ -192,7 +194,6 @@
     <Compile Include="Workers\JobDriver_FillPrimarchGrowthVat.cs" />
     <Compile Include="Workers\JobDriver_FillGeneGestator.cs" />
     <Compile Include="Workers\JobDriver_FleeInducedFear.cs" />
-    <Compile Include="Workers\PawnGroupKindWorker_40kChapter.cs" />
     <Compile Include="Workers\ThoughtWorker_HolyRadiance.cs" />
     <Compile Include="Workers\ThoughtWorker_XXTwinDead.cs" />
     <Compile Include="Workers\WorkerClass_RubiconPrimaris.cs" />

@@ -48,13 +48,13 @@
     <drawOffscreen>true</drawOffscreen>
     <drawerType>RealtimeOnly</drawerType>
     <projectile>
-      <damageDef>BEWH_WarpEnergy</damageDef> <!-- Is in Core -->
+      <damageDef>BEWH_WarpEnergy</damageDef>      <!-- Is in Core -->
       <speed>50</speed>
       <damageAmountBase>12</damageAmountBase>
       <armorPenetrationBase>2</armorPenetrationBase>
       <stoppingPower>1.5</stoppingPower>
       <shadowSize>0.6</shadowSize>
     </projectile>
-  </ThingDef>  
+  </ThingDef>
 
 </Defs>

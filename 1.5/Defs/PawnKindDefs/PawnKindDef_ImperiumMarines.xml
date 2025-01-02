@@ -3,7 +3,7 @@
 
     <!-- Space Marine Base -->
 
-    <PawnKindDef ParentName="BEWH_ImperiumBase" Name="SpaceMarineBasePawn" Abstract="True">
+    <PawnKindDef ParentName="BEWH_ImperiumBase" Name="BEWH_SpaceMarineBasePawn" Abstract="True">
         <initialWillRange>300~400</initialWillRange>
         <initialResistanceRange>300~400</initialResistanceRange>
         <acceptArrestChanceFactor>0</acceptArrestChanceFactor>
@@ -19,21 +19,16 @@
             </li>
         </backstoryFiltersOverride>
         <weaponMoney>10000~10000</weaponMoney>
-        <apparelMoney>
-            <min>2000</min>
-            <max>9000</max>
-        </apparelMoney>
-        <apparelTags>
-            <li>IndustrialMilitaryBasic</li>
-            <li>IndustrialMilitaryAdvanced</li>
-        </apparelTags>
-        <apparelDisallowTags>
-            <li>Western</li>
-        </apparelDisallowTags>
-        <apparelRequired>
-            <li>BEWH_MkVIIPowerArmor</li>
-            <li>BEWH_MkVIIPowerArmorHelmet</li>
-        </apparelRequired>
+        <specificApparelRequirements>
+            <li>
+                <apparelDef>Apparel_BasicShirt</apparelDef>
+                <stuff>Cloth</stuff>
+            </li>
+            <li>
+                <apparelDef>Apparel_Pants</apparelDef>
+                <stuff>Cloth</stuff>
+            </li>
+        </specificApparelRequirements>
         <weaponTags>
             <li>BEWH_AstartesRanged</li>
             <li>BEWH_AstartesMelee</li>
@@ -65,10 +60,14 @@
     </PawnKindDef>
 
     <!-- Space Marine -->
-    <PawnKindDef ParentName="SpaceMarineBasePawn">
+    <PawnKindDef ParentName="BEWH_SpaceMarineBasePawn">
         <defName>BEWH_SpaceMarine</defName>
         <label>Tactical Marine</label>
         <combatPower>170</combatPower>
+        <apparelRequired>
+            <li>BEWH_MkVIIPowerArmor</li>
+            <li>BEWH_MkVIIPowerArmorHelmet</li>
+        </apparelRequired>
         <skills>
             <li>
                 <skill>Shooting</skill>
@@ -86,42 +85,15 @@
         </xenotypeSet>
     </PawnKindDef>
 
-    <!-- Space Marine Psyker -->
-    <PawnKindDef ParentName="SpaceMarineBasePawn">
-        <defName>BEWH_SpaceMarinePsyker</defName>
-        <label>Librarian</label>
-        <combatPower>200</combatPower>
-        <skills>
-            <li>
-                <skill>Shooting</skill>
-                <range>7~12</range>
-            </li>
-            <li>
-                <skill>Melee</skill>
-                <range>7~12</range>
-            </li>
-        </skills>
-        <xenotypeSet>
-            <xenotypeChances>
-                <BEWH_SpaceMarinePsyker>1</BEWH_SpaceMarinePsyker>
-            </xenotypeChances>
-        </xenotypeSet>
-    </PawnKindDef>
-
-
-    <!-- Primaris Marine -->
-    <PawnKindDef ParentName="SpaceMarineBasePawn" Name="PrimarisMarineBasePawn" Abstract="True">
-        <apparelRequired Inherit="False">
-            <li>BEWH_MkXPowerArmor</li>
-            <li>BEWH_MkXPowerArmorHelmet</li>
-        </apparelRequired>
-    </PawnKindDef>
-
     <!-- Primaris Space Marine -->
-    <PawnKindDef ParentName="PrimarisMarineBasePawn">
+    <PawnKindDef ParentName="BEWH_SpaceMarineBasePawn">
         <defName>BEWH_PrimarisSpaceMarine</defName>
         <label>Tactical Primaris Marine</label>
         <combatPower>220</combatPower>
+        <apparelRequired>
+            <li>BEWH_MkXPowerArmor</li>
+            <li>BEWH_MkXPowerArmorHelmet</li>
+        </apparelRequired>
         <skills>
             <li>
                 <skill>Shooting</skill>
@@ -140,19 +112,23 @@
     </PawnKindDef>
 
     <!-- Custodes -->
-    <PawnKindDef ParentName="PrimarisMarineBasePawn">
+    <PawnKindDef ParentName="BEWH_SpaceMarineBasePawn">
         <defName>BEWH_Custodes</defName>
         <label>custodes</label>
         <combatPower>750</combatPower>
         <apparelColor>(240,170,30)</apparelColor>
+        <apparelRequired>
+            <li>BEWH_MkXPowerArmor</li>
+            <li>BEWH_MkXPowerArmorHelmet</li>
+        </apparelRequired>
         <skills>
             <li>
                 <skill>Shooting</skill>
-                <range>16~19</range>
+                <range>17~19</range>
             </li>
             <li>
                 <skill>Melee</skill>
-                <range>16~19</range>
+                <range>17~19</range>
             </li>
         </skills>
         <xenotypeSet>
@@ -163,20 +139,24 @@
     </PawnKindDef>
 
     <!-- Lord Commander - Primarch -->
-    <PawnKindDef ParentName="PrimarisMarineBasePawn">
+    <PawnKindDef ParentName="BEWH_SpaceMarineBasePawn">
         <defName>BEWH_LordCommander</defName>
         <label>primarch</label>
         <combatPower>1200</combatPower>
         <factionLeader>true</factionLeader>
         <apparelColor>(230,150,0)</apparelColor>
+        <apparelRequired>
+            <li>BEWH_MkXPowerArmor</li>
+            <li>BEWH_MkXPowerArmorHelmet</li>
+        </apparelRequired>
         <skills>
             <li>
                 <skill>Shooting</skill>
-                <range>20~20</range>
+                <range>20</range>
             </li>
             <li>
                 <skill>Melee</skill>
-                <range>20~20</range>
+                <range>20</range>
             </li>
         </skills>
         <xenotypeSet>

@@ -1,8 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <!-- Make sure it can only be controlled by one with perturabo gene -->
-
     <!-- Iron Circle-->
     <ThingDef ParentName="HeavyMechanoid">
         <defName>BEWH_PerturaboDomitar</defName>
@@ -15,6 +13,7 @@
 
             <BandwidthCost>0</BandwidthCost>
             <WastepacksPerRecharge>0</WastepacksPerRecharge>
+
         </statBases>
 
         <butcherProducts />
@@ -127,7 +126,7 @@
                 </verbProps>
             </li>
         </comps>
-
+        
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ExclusiveMech">
                 <requiredGeneToControl>BEWH_PrimarchSpecificGeneIV</requiredGeneToControl>
@@ -150,6 +149,12 @@
 
         <allowInMechClusters>false</allowInMechClusters>
 
+        <startingHediffs>
+            <li>
+                <def>BEWH_AdvancedTargetingSystems</def>
+            </li>
+        </startingHediffs>
+
         <lifeStages>
             <li>
                 <bodyGraphicData>
@@ -165,6 +170,23 @@
         </lifeStages>
     </PawnKindDef>
 
+    <!-- Domitar Chip -->
+    <HediffDef>
+        <defName>BEWH_AdvancedTargetingSystems</defName>
+        <label>Advanced Targeting System</label>
+        <description>...</description>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <everCurableByItem>false</everCurableByItem>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <MeleeHitChance>10</MeleeHitChance>
+                    <ShootingAccuracyPawn>6</ShootingAccuracyPawn>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
 
     <!-- Graviton Maul-->
     <ThingDef ParentName="MeleeWeaponUltratech">

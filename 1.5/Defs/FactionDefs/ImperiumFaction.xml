@@ -113,40 +113,37 @@
         </maxPawnCostPerTotalPointsCurve>
         <pawnGroupMakers>
             <!-- Mixed fight -->
-            <!--<li>
+            <li>
                 <kindDef>Combat</kindDef>
                 <commonality>100</commonality>
                 <options>
                     <BEWH_ImperiumGuardman>15</BEWH_ImperiumGuardman>
                     <BEWH_SpaceMarine>10</BEWH_SpaceMarine>
                     <BEWH_PrimarisSpaceMarine>8</BEWH_PrimarisSpaceMarine>
-                    <BEWH_SpaceMarinePsyker>2</BEWH_SpaceMarinePsyker>
-                </options>
-            </li>-->
-            <!-- Firstborn squad -->
-            <li>
-                <kindDef>BEWH_ChapterEncounter</kindDef>
-                <commonality>30</commonality>
-                <options>
-                    <BEWH_SpaceMarine>10</BEWH_SpaceMarine>
-                    <BEWH_SpaceMarinePsyker>2</BEWH_SpaceMarinePsyker>
                 </options>
             </li>
-            <!-- Primaris squad -->
-            <!--<li>
+            <!-- Firstborn squad -->
+            <li>
                 <kindDef>Combat</kindDef>
                 <commonality>30</commonality>
                 <options>
-                    <BEWH_PrimarisSpaceMarine>10</BEWH_PrimarisSpaceMarine>
+                    <BEWH_SpaceMarine>1</BEWH_SpaceMarine>
                 </options>
-            </li>-->
+            </li>
+            <!-- Primaris squad -->
+            <li>
+                <kindDef>Combat</kindDef>
+                <commonality>20</commonality>
+                <options>
+                    <BEWH_PrimarisSpaceMarine>1</BEWH_PrimarisSpaceMarine>
+                </options>
+            </li>
             <!-- Base defense -->
             <li>
                 <kindDef>Settlement</kindDef>
                 <options>
                     <BEWH_ImperiumGuardman>6</BEWH_ImperiumGuardman>
                     <BEWH_SpaceMarine>14</BEWH_SpaceMarine>
-                    <BEWH_SpaceMarinePsyker>4</BEWH_SpaceMarinePsyker>
                     <BEWH_PrimarisSpaceMarine>8</BEWH_PrimarisSpaceMarine>
                     <BEWH_Custodes>20</BEWH_Custodes>
                 </options>
