@@ -32,7 +32,7 @@ namespace Genes40k
                 {
                     case ExtraIconsChapterApparelColourTwo extraIconsChapterApparelColourTwo:
                         extraIconsChapterApparelColourTwo.ApplyColourPreset(chapter);
-                        extraIconsChapterApparelColourTwo.CurrentlySelectedChapterIcon = chapter;
+                        extraIconsChapterApparelColourTwo.LeftShoulderIcon = chapter.relatedChapterIcon;
                         break;
                     case ChapterApparelColourTwo chapterApparelColourTwo:
                         chapterApparelColourTwo.ApplyColourPreset(chapter);

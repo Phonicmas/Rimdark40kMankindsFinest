@@ -164,8 +164,8 @@
   <!--=== Apparel Two ===-->
   <!-- Shoulder Icons -->
   <BEWH.MankindsFinest.ShoulderIcon.ResetToDefault>Reset to default</BEWH.MankindsFinest.ShoulderIcon.ResetToDefault>
-  <BEWH.MankindsFinest.ShoulderIcon.ChapterIcons>Chapter Icons</BEWH.MankindsFinest.ShoulderIcon.ChapterIcons>
-  <BEWH.MankindsFinest.ShoulderIcon.RankIcons>Rank Icons</BEWH.MankindsFinest.ShoulderIcon.RankIcons>
+  <BEWH.MankindsFinest.ShoulderIcon.LeftShoulder>Left Shoulder</BEWH.MankindsFinest.ShoulderIcon.LeftShoulder>
+  <BEWH.MankindsFinest.ShoulderIcon.RightShoulder>Right Shoulder</BEWH.MankindsFinest.ShoulderIcon.RightShoulder>
 
 
   <!--=== Gene-seed vial ===-->

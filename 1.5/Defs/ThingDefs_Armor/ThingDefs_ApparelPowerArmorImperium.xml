@@ -76,7 +76,7 @@
                 </li>
                 <li>
                     <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentShoulderChapterIcon</workerClass>
-                    <texPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_ImperialFists</texPath>
+                    <texPath>Things/Armor/Imperium/PowerArmor/CommonIcons/BEWH_None</texPath>
                     <shaderTypeDef>CutoutComplex</shaderTypeDef>
                     <parentTagDef>ApparelBody</parentTagDef>
                     <drawData>
@@ -94,8 +94,8 @@
                 </li>
                 <li>
                     <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentShoulderRankIcon</workerClass>
-                    <!-- Change this to be neophyte when made -->
-                    <texPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_Veteran</texPath>
+                    <texPath>Things/Armor/Imperium/PowerArmor/CommonIcons/BEWH_None</texPath>
+                    <shaderTypeDef>CutoutComplex</shaderTypeDef>
                     <parentTagDef>ApparelBody</parentTagDef>
                     <drawData>
                         <defaultData>

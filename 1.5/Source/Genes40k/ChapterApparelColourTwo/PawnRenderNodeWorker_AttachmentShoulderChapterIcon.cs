@@ -1,6 +1,4 @@
-﻿using Core40k;
-using RimWorld;
-using UnityEngine;
+﻿using RimWorld;
 using Verse;
 
 namespace Genes40k
@@ -14,6 +12,13 @@ namespace Genes40k
         public override bool CanDrawNow(PawnRenderNode node, PawnDrawParms parms)
         {
             var pawn = parms.pawn;
+            
+            var apparelColourTwo = (ExtraIconsChapterApparelColourTwo)node.apparel;
+
+            if (apparelColourTwo.LeftShoulderIcon == Genes40kDefOf.BEWH_ShoulderNone)
+            {
+                return false;
+            }
             
             if (parms.Portrait)
             {
@@ -45,28 +50,30 @@ namespace Genes40k
                 }
             }
             
-            return ModSettings.currentlySelectedPreset != null;
+            return true;
         }
 
         protected override Graphic GetGraphic(PawnRenderNode node, PawnDrawParms parms)
         {
-            var chapterIconPath = node.Props.texPath;
+            string leftShoulderIcon;
             
-            /*if (parms.pawn.Faction != null && parms.pawn.Faction.IsPlayer && ModSettings.currentlySelectedPreset != null)
-            {
-                chapterIconPath = ModSettings.currentlySelectedPreset?.relatedChapterIconPath;
-            }*/
-            
-            var def = node.apparel.def;
             var apparelColourTwo = (ExtraIconsChapterApparelColourTwo)node.apparel;
 
-            if (apparelColourTwo.CurrentlySelectedChapterIcon != null)
+            if (apparelColourTwo.LeftShoulderIcon != null)
             {
-                chapterIconPath = apparelColourTwo.CurrentlySelectedChapterIcon.relatedChapterIconPath;
+                leftShoulderIcon = apparelColourTwo.LeftShoulderIcon.drawnTextureIconPath;
+            }
+            else if (parms.pawn.Faction != null && parms.pawn.Faction.IsPlayer && ModSettings.currentlySelectedPreset != null)
+            {
+                leftShoulderIcon = ModSettings.currentlySelectedPreset.relatedChapterIcon.drawnTextureIconPath;
+            }
+            else
+            {
+                apparelColourTwo.LeftShoulderIcon = Genes40kDefOf.BEWH_ShoulderNone;
+                leftShoulderIcon = apparelColourTwo.LeftShoulderIcon.drawnTextureIconPath;
             }
             
-            //If not colorable, set color.white instead of drawcolors of apparel
-            return  GraphicDatabase.Get<Graphic_Multi>(chapterIconPath, node.Props.shaderTypeDef.Shader, node.Props.drawSize, apparelColourTwo.DrawColor, apparelColourTwo.DrawColorTwo, def.graphicData);
+            return GraphicDatabase.Get<Graphic_Multi>(leftShoulderIcon, node.Props.shaderTypeDef.Shader, node.Props.drawSize, apparelColourTwo.DrawColor, apparelColourTwo.DrawColorTwo, node.apparel.def.graphicData);
         }
     }
 }

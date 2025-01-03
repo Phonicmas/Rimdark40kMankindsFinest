@@ -17,13 +17,11 @@ Compile list of features
 
 use stuff like {PAWN_nameDef} and {PAWN_pronoun} in description texts instead of "Your" "Pawn" or other ways pawns are reffered too. (Where applicable)
 
-In the FromCode.xml where all text are, sort them properly cause oh boy its not sorted anymore
-
-Make sure all type of tags, defs and what not are prefixed with BEWH_
+Make sure all type of tags, defs and whatnot are prefixed with BEWH_
 
 ## Art
 
-Shoulder pad icons for chapters and ranks
+Shoulder pad icons for chapters and ranks (regarding back view, i can either render the backpack on top - or it can be draw to be around it)
 
 Mk X armor + helmet
 
@@ -35,8 +33,14 @@ Primarch Specific Icons (Not sure what excatly to do here) (Maybe flip the helix
 ## Code and XML
 
 add stat offsets and factor, abilities and possibly more to ranks. (Flesh them out a bit i guess)
+  "Command Ability" For Captain and Chapter Master rank, which increases combat effectiveness of nearby pawns (marines only maybe?).
+  Conditional modifiers for Vanguard to be more effective in low light envirioment.
+  "Medical aid" ability for apothecary, that only works on a downed pawn, tending all their bleeding wounds, and heals them 1-3 points of damage.
+  Techmarine ????
+  For Librarian give them a psychic power that buffs themselves for a tad, with increased (melee and ranged cooldown, and dodge capabilities, move speed)
+  For Chief librarian give them a psychic power that debuffs enemies in a small radius making them slowed (move speed, dodge, and melee and ranged cooldown)
+  For Chaplain give them an ability that makes them able to strengthen faith in ideology. (Chaplain can target pawns of same ideology and set their beleif in said ideology to max)
 
-In PawnRenderNodeWorker_AttachmentChapterRankIcon, make standard path use neophyte icon when made.
 
 
 
@@ -49,8 +53,6 @@ Aura ability for living saint, buffing nearby pawn temporarily (Maybe)
 ## Other
 
 Should the Primarch specific genes be renamed? (currently the name is of the Primarch)
-
-
 
 # NEW ADDITIONS TO MAKE AT SOME POINT (Not for first release most likely)
 
@@ -65,7 +67,7 @@ Make Blood Chalice art and xml, an exotic item that when ingested by pawns with 
 
 SOS2 integration?
 
-
+Living Saint armor?
 
 
 # Grey Knight

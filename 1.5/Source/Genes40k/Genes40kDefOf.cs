@@ -168,9 +168,8 @@ namespace Genes40k
         //RankCategoryDefs
         public static RankCategoryDef BEWH_AstartesRankCategory;
         
-        //RankDefs
-        public static RankDef BEWH_AstartesRankBattleBrother;
-        public static RankDef BEWH_AstartesRankVeteran;
+        //ShoulderIconDefs
+        public static ShoulderIconDef BEWH_ShoulderNone;
 
         static Genes40kDefOf()
         {

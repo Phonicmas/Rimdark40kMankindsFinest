@@ -34,7 +34,7 @@
 
         <rankTier>0</rankTier>
 
-        <unlocksRankIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_Veteran</unlocksRankIconPath>
+        <unlocksRankIcon>BEWH_RankIconNeophyte</unlocksRankIcon>
 
     </Genes40k.ChapterRankDef>
     <!-- Battle-Brother -->
@@ -64,7 +64,7 @@
 
         <rankTier>1</rankTier>
 
-        <unlocksRankIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_CloseSupport</unlocksRankIconPath>
+        <unlocksRankIcon>BEWH_RankIconBattleBrother</unlocksRankIcon>
 
     </Genes40k.ChapterRankDef>
     <!-- Veteran -->
@@ -91,6 +91,8 @@
 
         <rankTier>2</rankTier>
 
+        <unlocksRankIcon>BEWH_RankIconVeteran</unlocksRankIcon>
+
     </Genes40k.ChapterRankDef>
 
     <!-- =Tactical Marine= -->
@@ -114,6 +116,8 @@
         </statOffsets>
 
         <rankTier>3</rankTier>
+
+        <unlocksRankIcon>BEWH_RankIconSergeant</unlocksRankIcon>
 
     </Genes40k.ChapterRankDef>
     <!-- Lieutenant -->
@@ -150,6 +154,8 @@
 
         <rankTier>4</rankTier>
 
+        <unlocksRankIcon>BEWH_RankIconLieutenant</unlocksRankIcon>
+
     </Genes40k.ChapterRankDef>
     <!-- Captain -->
     <Genes40k.ChapterRankDef>
@@ -177,6 +183,8 @@
         </statOffsets>
 
         <rankTier>6</rankTier>
+
+        <unlocksRankIcon>BEWH_RankIconCaptain</unlocksRankIcon>
 
     </Genes40k.ChapterRankDef>
     <!-- Chapter Master -->
@@ -213,6 +221,8 @@
 
         <rankTier>10</rankTier>
 
+        <unlocksRankIcon>BEWH_RankIconChapterMaster</unlocksRankIcon>
+
     </Genes40k.ChapterRankDef>
 
     <!-- =Vanguard= -->
@@ -246,6 +256,8 @@
         </statFactors>
 
         <rankTier>3</rankTier>
+
+        <unlocksRankIcon>BEWH_RankIconVanguard</unlocksRankIcon>
 
     </Genes40k.ChapterRankDef>
 
@@ -285,7 +297,8 @@
 
         <rankTier>6</rankTier>
 
-        <!-- Ability to that essentially places a battle standard, and gives the pawn a movespeed factor 0 so they cant move. Standard buffs allies within area -->
+        <unlocksRankIcon>BEWH_RankIconChapterAncient</unlocksRankIcon>
+
     </Genes40k.ChapterRankDef>
 
     <!-- =Apothecary= -->
@@ -334,6 +347,8 @@
 
         <rankTier>2</rankTier>
 
+        <unlocksRankIcon>BEWH_RankIconHelixAdept</unlocksRankIcon>
+
     </Genes40k.ChapterRankDef>
     <!-- Apothecary -->
     <Genes40k.ChapterRankDef>
@@ -368,6 +383,8 @@
 
         <rankTier>4</rankTier>
 
+        <unlocksRankIcon>BEWH_RankIconApothecary</unlocksRankIcon>
+
     </Genes40k.ChapterRankDef>
     <!-- Master of the Apothecarion -->
     <Genes40k.ChapterRankDef>
@@ -401,6 +418,8 @@
         </modExtensions>
 
         <rankTier>7</rankTier>
+
+        <unlocksRankIcon>BEWH_RankIconMasterOfTheApothecarion</unlocksRankIcon>
 
     </Genes40k.ChapterRankDef>
 
@@ -440,6 +459,8 @@
 
         <rankTier>2</rankTier>
 
+        <unlocksRankIcon>BEWH_RankIconTechmarineNovitiate</unlocksRankIcon>
+
     </Genes40k.ChapterRankDef>
     <!-- Techmarine -->
     <Genes40k.ChapterRankDef>
@@ -468,6 +489,8 @@
         </statOffsets>
 
         <rankTier>4</rankTier>
+
+        <unlocksRankIcon>BEWH_RankIconTechmarine</unlocksRankIcon>
 
     </Genes40k.ChapterRankDef>
     <!-- Master of the Forge -->
@@ -499,6 +522,8 @@
         </statFactors>
 
         <rankTier>7</rankTier>
+
+        <unlocksRankIcon>BEWH_RankIconMasterOfTheForge</unlocksRankIcon>
 
     </Genes40k.ChapterRankDef>
 
@@ -542,6 +567,8 @@
 
         <rankTier>2</rankTier>
 
+        <unlocksRankIcon>BEWH_RankIconAcolytum</unlocksRankIcon>
+
     </Genes40k.ChapterRankDef>
     <!-- Librarian -->
     <Genes40k.ChapterRankDef>
@@ -572,6 +599,8 @@
 
         <rankTier>4</rankTier>
 
+        <unlocksRankIcon>BEWH_RankIconLibrarian</unlocksRankIcon>
+
     </Genes40k.ChapterRankDef>
     <!-- Chief Librarian -->
     <Genes40k.ChapterRankDef>
@@ -601,6 +630,8 @@
         </statFactors>
 
         <rankTier>7</rankTier>
+
+        <unlocksRankIcon>BEWH_RankIconChiefLibrarian</unlocksRankIcon>
 
     </Genes40k.ChapterRankDef>
 
@@ -645,6 +676,8 @@
 
         <rankTier>3</rankTier>
 
+        <unlocksRankIcon>BEWH_RankIconJudiciar</unlocksRankIcon>
+
     </Genes40k.ChapterRankDef>
     <!-- Chaplain -->
     <Genes40k.ChapterRankDef>
@@ -675,6 +708,8 @@
         </statFactors>
 
         <rankTier>6</rankTier>
+
+        <unlocksRankIcon>BEWH_RankIconChaplain</unlocksRankIcon>
 
     </Genes40k.ChapterRankDef>
     <!-- Master of Sanctity  -->
@@ -707,6 +742,8 @@
 
         <rankTier>9</rankTier>
 
+        <unlocksRankIcon>BEWH_RankIconMasterOfSanctity</unlocksRankIcon>
+
     </Genes40k.ChapterRankDef>
 
     <!-- =Devastator= -->
@@ -736,6 +773,8 @@
 
         <rankTier>2</rankTier>
 
+        <unlocksRankIcon>BEWH_RankIconDevastator</unlocksRankIcon>
+
     </Genes40k.ChapterRankDef>
     <!-- Devastator Sergeant -->
     <Genes40k.ChapterRankDef>
@@ -763,6 +802,8 @@
         </statFactors>
 
         <rankTier>3</rankTier>
+
+        <unlocksRankIcon>BEWH_RankIconDevastatorSergeant</unlocksRankIcon>
 
     </Genes40k.ChapterRankDef>
 
@@ -793,6 +834,8 @@
 
         <rankTier>2</rankTier>
 
+        <unlocksRankIcon>BEWH_RankIconAssault</unlocksRankIcon>
+
     </Genes40k.ChapterRankDef>
     <!-- Assault Sergeant -->
     <Genes40k.ChapterRankDef>
@@ -820,6 +863,8 @@
         </statFactors>
 
         <rankTier>3</rankTier>
+
+        <unlocksRankIcon>BEWH_RankIconAssaultSergeant</unlocksRankIcon>
 
     </Genes40k.ChapterRankDef>
 

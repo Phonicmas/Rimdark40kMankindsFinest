@@ -1,14 +1,14 @@
 ﻿using Core40k;
-using UnityEngine;
 using Verse;
 
 namespace Genes40k
 {
     public class ExtraIconsChapterApparelColourTwo : ChapterApparelColourTwo
     {
+        [Unsaved]
         private CompRankInfo rankInfoComp = null;
 
-        public CompRankInfo RankInfoComp
+        private CompRankInfo RankInfoComp
         {
             get
             {
@@ -23,11 +23,12 @@ namespace Genes40k
         
         private RankDef lastCheckRank = null;
         
-        private string originalOverrideRankIcon = null;
         
-        private string overrideRankIcon = null;
+        private ShoulderIconDef originalRightShoulderIcon = null;
+        
+        private ShoulderIconDef rightShoulderIcon = null;
 
-        public string OverrideRankIcon
+        public ShoulderIconDef RightShoulderIcon
         {
             get
             {
@@ -38,29 +39,30 @@ namespace Genes40k
                     if (lastCheckRank == null || rankCheck != null && rankCheck.rankTier > lastCheckRank.rankTier)
                     {
                         lastCheckRank = rankCheck;
-                        overrideRankIcon = null;
+                        rightShoulderIcon = null;
                     }
                 }
                 
-                return overrideRankIcon;
+                return rightShoulderIcon;
             }
             set
             {
-                overrideRankIcon = value;
+                rightShoulderIcon = value;
                 Notify_ColorChanged();
             }
         }
         
-        private ChapterColourDef originalSelectedChapterIcon = null;
         
-        private ChapterColourDef currentlySelectedChapterIcon = null;
+        private ShoulderIconDef originalLeftShoulderIcon = null;
+        
+        private ShoulderIconDef leftShoulderIcon = null;
 
-        public ChapterColourDef CurrentlySelectedChapterIcon
+        public ShoulderIconDef LeftShoulderIcon
         {
-            get => currentlySelectedChapterIcon;
+            get => leftShoulderIcon;
             set
             {
-                currentlySelectedChapterIcon = value;
+                leftShoulderIcon = value;
                 Notify_ColorChanged();
             }
         }
@@ -74,25 +76,25 @@ namespace Genes40k
 
         public override void SetOriginals()
         {
-            originalSelectedChapterIcon = currentlySelectedChapterIcon;
-            originalOverrideRankIcon = overrideRankIcon;
+            originalLeftShoulderIcon = leftShoulderIcon;
+            originalRightShoulderIcon = rightShoulderIcon;
             base.SetOriginals();
         }
         
         public override void Reset()
         {
-            overrideRankIcon = originalOverrideRankIcon;
-            currentlySelectedChapterIcon = originalSelectedChapterIcon;
+            rightShoulderIcon = originalRightShoulderIcon;
+            leftShoulderIcon = originalLeftShoulderIcon;
             base.Reset();
         }
 
         public override void ExposeData()
         {
-            Scribe_Defs.Look(ref currentlySelectedChapterIcon, "currentlySelectedChapterIcon");
-            Scribe_Defs.Look(ref originalSelectedChapterIcon, "originalSelectedChapterIcon");
             Scribe_Defs.Look(ref lastCheckRank, "lastCheckRank");
-            Scribe_Values.Look(ref overrideRankIcon, "overrideRankIcon");
-            Scribe_Values.Look(ref originalOverrideRankIcon, "originalOverrideRankIcon");
+            Scribe_Defs.Look(ref leftShoulderIcon, "leftShoulderIcon");
+            Scribe_Defs.Look(ref originalLeftShoulderIcon, "originalSelectedChapterIcon");
+            Scribe_Defs.Look(ref rightShoulderIcon, "rightShoulderIcon");
+            Scribe_Defs.Look(ref originalRightShoulderIcon, "originalRightShoulderIcon");
             base.ExposeData();
         }
     }

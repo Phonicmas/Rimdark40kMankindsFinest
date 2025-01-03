@@ -1,9 +1,6 @@
-﻿using System.Linq;
-using Core40k;
+﻿using Core40k;
 using RimWorld;
-using UnityEngine;
 using Verse;
-using Verse.AI;
 
 namespace Genes40k
 {
@@ -12,8 +9,10 @@ namespace Genes40k
         public override bool CanDrawNow(PawnRenderNode node, PawnDrawParms parms)
         {
             var pawn = parms.pawn;
+            
+            var apparelColourTwo = (ExtraIconsChapterApparelColourTwo)node.apparel;
 
-            if (!pawn.HasComp<CompRankInfo>() || !pawn.GetComp<CompRankInfo>().HasRankOfCategory(Genes40kDefOf.BEWH_AstartesRankCategory))
+            if (apparelColourTwo.RightShoulderIcon == Genes40kDefOf.BEWH_ShoulderNone)
             {
                 return false;
             }
@@ -53,35 +52,33 @@ namespace Genes40k
 
         protected override Graphic GetGraphic(PawnRenderNode node, PawnDrawParms parms)
         {
-            var pawn = parms.pawn;
+            var rightShoulderPath = node.Props.texPath;
 
-            var rankIconPath = node.Props.texPath;
-            
-            var def = node.apparel.def;
             var apparelColourTwo = (ExtraIconsChapterApparelColourTwo)node.apparel;
 
-            if (apparelColourTwo.OverrideRankIcon != null)
+            if (apparelColourTwo.RightShoulderIcon != null)
             {
-                rankIconPath = apparelColourTwo.OverrideRankIcon;
+                rightShoulderPath = apparelColourTwo.RightShoulderIcon.drawnTextureIconPath;
             }
-            else
+            else if (parms.pawn.HasComp<CompRankInfo>())
             {
-                if (pawn.HasComp<CompRankInfo>())
+                var comp = parms.pawn.GetComp<CompRankInfo>();
+                if (comp.HasRankOfCategory(Genes40kDefOf.BEWH_AstartesRankCategory))
                 {
-                    var comp = pawn.GetComp<CompRankInfo>();
-                    if (comp.HasRankOfCategory(Genes40kDefOf.BEWH_AstartesRankCategory))
+                    var highestRank = (ChapterRankDef)comp.HighestRankDef(true) ?? (ChapterRankDef)comp.HighestRankDef(false);
+                    if (highestRank?.unlocksRankIcon != null)
                     {
-                        var highestRank = (ChapterRankDef)comp.HighestRankDef(true) ?? (ChapterRankDef)comp.HighestRankDef(false);
-                        if (highestRank != null && highestRank.unlocksRankIconPath != string.Empty)
-                        {
-                            rankIconPath = highestRank.unlocksRankIconPath;
-                        }
+                        rightShoulderPath = highestRank.unlocksRankIcon.drawnTextureIconPath;
                     }
                 }
             }
+            else
+            {
+                apparelColourTwo.RightShoulderIcon = Genes40kDefOf.BEWH_ShoulderNone;
+                rightShoulderPath = apparelColourTwo.RightShoulderIcon.drawnTextureIconPath;
+            }
             
-            //If not colorable, set color.white instead of drawcolors of apparel
-            return GraphicDatabase.Get<Graphic_Multi>(rankIconPath, node.Props.shaderTypeDef.Shader, node.Props.drawSize, apparelColourTwo.DrawColor, apparelColourTwo.DrawColorTwo, def.graphicData);
+            return GraphicDatabase.Get<Graphic_Multi>(rightShoulderPath, node.Props.shaderTypeDef.Shader, node.Props.drawSize, apparelColourTwo.DrawColor, apparelColourTwo.DrawColorTwo, node.apparel.def.graphicData);
         }
     }
 }

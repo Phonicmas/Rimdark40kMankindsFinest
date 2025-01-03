@@ -84,10 +84,13 @@
     <Compile Include="Abilities\Ability_RaiseBastion.cs" />
     <Compile Include="Abilities\Ability_PsychicEmp.cs" />
     <Compile Include="Abilities\Ability_UpdateGizmo.cs" />
+    <Compile Include="ChapterApparelColourTwo\ChapterApparelColourTwo.cs" />
     <Compile Include="ChapterApparelColourTwo\ChapterColourDef.cs" />
+    <Compile Include="ChapterApparelColourTwo\ExtraIconsChapterApparelColourTwo.cs" />
     <Compile Include="ChapterApparelColourTwo\PawnRenderNodeWorker_AttachmentShoulderChapterIcon.cs" />
     <Compile Include="ChapterApparelColourTwo\PawnRenderNodeWorker_AttachmentShoulderPad.cs" />
     <Compile Include="ChapterApparelColourTwo\PawnRenderNodeWorker_AttachmentShoulderRankIcon.cs" />
+    <Compile Include="ChapterApparelColourTwo\ShoulderIconDef.cs" />
     <Compile Include="ChapterApparelColourTwo\ShoulderPadIconTab.cs" />
     <Compile Include="Comps\CompAbilityEffect_AoeHit.cs" />
     <Compile Include="Comps\CompAbilityEffect_DenyTheWitch.cs" />
@@ -180,8 +183,6 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_LivingSaintResurrection.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_LivingSaintDeath.cs" />
     <Compile Include="ThingClasses\Building_SangprimusPortum.cs" />
-    <Compile Include="ThingClasses\ChapterApparelColourTwo.cs" />
-    <Compile Include="ThingClasses\ExtraIconsChapterApparelColourTwo.cs" />
     <Compile Include="ThingClasses\GeneMaterialExtra.cs" />
     <Compile Include="ThingClasses\GeneticMatrix.cs" />
     <Compile Include="ThingClasses\PrimarchEmbryo.cs" />
