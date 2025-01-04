@@ -72,6 +72,7 @@ namespace Genes40k
             base.SpawnSetup(map, respawningAfterLoad);
             DrawColor = ModSettings?.chapterColorOne ?? base.DrawColor;
             SetSecondaryColor(ModSettings?.chapterColorTwo ?? base.DrawColorTwo);
+            leftShoulderIcon = ModSettings?.currentlySelectedPreset.relatedChapterIcon;
         }
 
         public override void SetOriginals()

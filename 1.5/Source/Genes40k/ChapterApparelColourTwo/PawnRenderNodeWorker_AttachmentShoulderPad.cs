@@ -5,8 +5,15 @@ using Verse;
 
 namespace Genes40k
 {
-    public class PawnRenderNodeWorker_AttachmentShoulderPad : PawnRenderNodeWorker_AttachmentBody
+    public class PawnRenderNodeWorker_AttachmentShoulderPad : PawnRenderNodeWorker
     {
+        public override Vector3 ScaleFor(PawnRenderNode node, PawnDrawParms parms)
+        {
+            var vector = base.ScaleFor(node, parms);
+            var bodyGraphicScale = parms.pawn.story.bodyType.bodyGraphicScale;
+            return vector * ((bodyGraphicScale.x + bodyGraphicScale.y) / 2f);
+        }
+        
         public override bool CanDrawNow(PawnRenderNode node, PawnDrawParms parms)
         {
             var pawn = parms.pawn;
@@ -46,10 +53,9 @@ namespace Genes40k
 
         protected override Graphic GetGraphic(PawnRenderNode node, PawnDrawParms parms)
         {
-            var def = node.apparel.def;
             var apparelColourTwo = (ChapterApparelColourTwo)node.apparel;
 
-            return GraphicDatabase.Get<Graphic_Multi>(node.Props.texPath, node.Props.shaderTypeDef.Shader, def.graphicData.drawSize, apparelColourTwo.DrawColor, apparelColourTwo.DrawColorTwo, def.graphicData);
+            return GraphicDatabase.Get<Graphic_Multi>(node.Props.texPath, node.ShaderFor(parms.pawn), node.Props.drawSize, apparelColourTwo.DrawColor, apparelColourTwo.DrawColorTwo);
         }
     }
 }

@@ -86,6 +86,7 @@
     <Compile Include="Abilities\Ability_UpdateGizmo.cs" />
     <Compile Include="ChapterApparelColourTwo\ChapterApparelColourTwo.cs" />
     <Compile Include="ChapterApparelColourTwo\ChapterColourDef.cs" />
+    <Compile Include="ChapterApparelColourTwo\Dialog_ChangeDefaultChapterColour.cs" />
     <Compile Include="ChapterApparelColourTwo\ExtraIconsChapterApparelColourTwo.cs" />
     <Compile Include="ChapterApparelColourTwo\PawnRenderNodeWorker_AttachmentShoulderChapterIcon.cs" />
     <Compile Include="ChapterApparelColourTwo\PawnRenderNodeWorker_AttachmentShoulderPad.cs" />
@@ -187,7 +188,6 @@
     <Compile Include="ThingClasses\GeneticMatrix.cs" />
     <Compile Include="ThingClasses\PrimarchEmbryo.cs" />
     <Compile Include="ThingClasses\GeneseedVial.cs" />
-    <Compile Include="Windows\Dialog_ChangeDefaultChapterColour.cs" />
     <Compile Include="Windows\Dialog_CraftPrimarchEmbryo.cs" />
     <Compile Include="Windows\Dialog_ViewGenesEmbryo.cs" />
     <Compile Include="Windows\ITab_ContentsGeneticStorage.cs" />

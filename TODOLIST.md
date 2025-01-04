@@ -49,10 +49,14 @@ Aura ability for living saint, buffing nearby pawn temporarily (Maybe)
 
 ## Bugs
 
+Error: Attempted to load a graphic off the main thread   (?)
 
 ## Other
 
 Should the Primarch specific genes be renamed? (currently the name is of the Primarch)
+
+
+
 
 # NEW ADDITIONS TO MAKE AT SOME POINT (Not for first release most likely)
 

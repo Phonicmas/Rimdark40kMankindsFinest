@@ -1,13 +1,21 @@
 ﻿using RimWorld;
+using UnityEngine;
 using Verse;
 
 namespace Genes40k
 {
-    public class PawnRenderNodeWorker_AttachmentShoulderChapterIcon : PawnRenderNodeWorker_AttachmentBody
+    public class PawnRenderNodeWorker_AttachmentShoulderChapterIcon : PawnRenderNodeWorker
     {
         private Genes40kModSettings modSettings = null;
 
         private Genes40kModSettings ModSettings => modSettings ?? (modSettings = LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>());
+        
+        public override Vector3 ScaleFor(PawnRenderNode node, PawnDrawParms parms)
+        {
+            var vector = base.ScaleFor(node, parms);
+            var bodyGraphicScale = parms.pawn.story.bodyType.bodyGraphicScale;
+            return vector * ((bodyGraphicScale.x + bodyGraphicScale.y) / 2f);
+        }
         
         public override bool CanDrawNow(PawnRenderNode node, PawnDrawParms parms)
         {
@@ -15,7 +23,11 @@ namespace Genes40k
             
             var apparelColourTwo = (ExtraIconsChapterApparelColourTwo)node.apparel;
 
-            if (apparelColourTwo.LeftShoulderIcon == Genes40kDefOf.BEWH_ShoulderNone)
+            if (apparelColourTwo.LeftShoulderIcon == Genes40kDefOf.BEWH_ShoulderNone || apparelColourTwo.LeftShoulderIcon == null)
+            {
+                return false;
+            }
+            if (ModSettings.currentlySelectedPreset == null)
             {
                 return false;
             }
@@ -55,7 +67,7 @@ namespace Genes40k
 
         protected override Graphic GetGraphic(PawnRenderNode node, PawnDrawParms parms)
         {
-            string leftShoulderIcon;
+            var leftShoulderIcon = node.Props.texPath;
             
             var apparelColourTwo = (ExtraIconsChapterApparelColourTwo)node.apparel;
 
@@ -67,13 +79,8 @@ namespace Genes40k
             {
                 leftShoulderIcon = ModSettings.currentlySelectedPreset.relatedChapterIcon.drawnTextureIconPath;
             }
-            else
-            {
-                apparelColourTwo.LeftShoulderIcon = Genes40kDefOf.BEWH_ShoulderNone;
-                leftShoulderIcon = apparelColourTwo.LeftShoulderIcon.drawnTextureIconPath;
-            }
             
-            return GraphicDatabase.Get<Graphic_Multi>(leftShoulderIcon, node.Props.shaderTypeDef.Shader, node.Props.drawSize, apparelColourTwo.DrawColor, apparelColourTwo.DrawColorTwo, node.apparel.def.graphicData);
+            return GraphicDatabase.Get<Graphic_Multi>(leftShoulderIcon, node.ShaderFor(parms.pawn), node.Props.drawSize, apparelColourTwo.DrawColor, apparelColourTwo.DrawColorTwo);
         }
     }
 }

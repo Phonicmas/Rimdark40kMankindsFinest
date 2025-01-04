@@ -1,11 +1,19 @@
 ﻿using Core40k;
 using RimWorld;
+using UnityEngine;
 using Verse;
 
 namespace Genes40k
 {
-    public class PawnRenderNodeWorker_AttachmentShoulderRankIcon : PawnRenderNodeWorker_AttachmentBody
+    public class PawnRenderNodeWorker_AttachmentShoulderRankIcon : PawnRenderNodeWorker
     {
+        public override Vector3 ScaleFor(PawnRenderNode node, PawnDrawParms parms)
+        {
+            var vector = base.ScaleFor(node, parms);
+            var bodyGraphicScale = parms.pawn.story.bodyType.bodyGraphicScale;
+            return vector * ((bodyGraphicScale.x + bodyGraphicScale.y) / 2f);
+        }
+        
         public override bool CanDrawNow(PawnRenderNode node, PawnDrawParms parms)
         {
             var pawn = parms.pawn;
@@ -53,7 +61,7 @@ namespace Genes40k
         protected override Graphic GetGraphic(PawnRenderNode node, PawnDrawParms parms)
         {
             var rightShoulderPath = node.Props.texPath;
-
+            
             var apparelColourTwo = (ExtraIconsChapterApparelColourTwo)node.apparel;
 
             if (apparelColourTwo.RightShoulderIcon != null)
@@ -72,13 +80,8 @@ namespace Genes40k
                     }
                 }
             }
-            else
-            {
-                apparelColourTwo.RightShoulderIcon = Genes40kDefOf.BEWH_ShoulderNone;
-                rightShoulderPath = apparelColourTwo.RightShoulderIcon.drawnTextureIconPath;
-            }
             
-            return GraphicDatabase.Get<Graphic_Multi>(rightShoulderPath, node.Props.shaderTypeDef.Shader, node.Props.drawSize, apparelColourTwo.DrawColor, apparelColourTwo.DrawColorTwo, node.apparel.def.graphicData);
+            return GraphicDatabase.Get<Graphic_Multi>(rightShoulderPath, node.ShaderFor(parms.pawn), node.Props.drawSize, apparelColourTwo.DrawColor, apparelColourTwo.DrawColorTwo);
         }
     }
 }
