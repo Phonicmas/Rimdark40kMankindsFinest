@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!-- Mote Link -->
+	<ThingDef ParentName="MoteBase">
+		<defName>BEWH_MoteLink</defName>
+		<thingClass>MoteDualAttached</thingClass>
+		<altitudeLayer>MoteLow</altitudeLayer>
+		<mote>
+			<fadeInTime>0.1</fadeInTime>
+			<fadeOutTime>0.1</fadeOutTime>
+			<solidTime>999999</solidTime>
+			<needsMaintenance>True</needsMaintenance>
+			<rotateTowardsTarget>True</rotateTowardsTarget>
+			<scaleToConnectTargets>True</scaleToConnectTargets>
+		</mote>
+		<graphicData>
+			<shaderType>MoteGlow</shaderType>
+			<texPath>Things/Mote/BEWH_MoteLink</texPath>
+		</graphicData>
+	</ThingDef>
+
+	<ThingDef ParentName="MoteBase">
+		<defName>BEWH_MoteBubble</defName>
+		<thingClass>MoteAttached</thingClass>
+		<altitudeLayer>LightingOverlay</altitudeLayer>
+		<drawOffscreen>true</drawOffscreen>
+		<mote>
+			<solidTime>9999999</solidTime>
+			<needsMaintenance>true</needsMaintenance>
+		</mote>
+		<graphicData>
+			<graphicClass>Graphic_Mote</graphicClass>
+			<texPath>Things/Mote/BEWH_MoteCircle</texPath>
+			<shaderType>MoteGlow</shaderType>
+			<color>(255, 204, 0)</color>
+			<drawSize>20</drawSize>
+		</graphicData>
+	</ThingDef>
+</Defs>

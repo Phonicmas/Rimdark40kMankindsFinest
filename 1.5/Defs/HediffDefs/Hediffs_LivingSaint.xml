@@ -158,4 +158,55 @@
 		</comps>
 	</HediffDef>
 
+	<!-- Inviolable Aura Self -->
+	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
+		<defName>BEWH_LivingSaintInviolableAuraSelf</defName>
+		<label>Inviolable Aura</label>
+		<description>...</description>
+		<comps>
+			<li Class="HediffCompProperties_GiveHediffsInRange">
+				<range>11.9</range>
+				<mote>BEWH_MoteBubble</mote>
+				<targetingParameters>
+					<canTargetBuildings>false</canTargetBuildings>
+					<canTargetAnimals>false</canTargetAnimals>
+					<canTargetMechs>false</canTargetMechs>
+					<onlyTargetColonists>true</onlyTargetColonists>
+				</targetingParameters>
+				<hediff>BEWH_LivingSaintInviolableAuraOther</hediff>
+			</li>
+		</comps>
+	</HediffDef>
+	<!-- Inviolable Aura Other -->
+	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
+		<defName>BEWH_LivingSaintInviolableAuraOther</defName>
+		<label>Aura of Protection</label>
+		<description>...</description>
+		<debugLabelExtra>other</debugLabelExtra>
+		<stages>
+			<li>
+				<statOffsets>
+					<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+					<ArmorRating_Heat>0.2</ArmorRating_Heat>
+				</statOffsets>
+				<statFactors>
+					<StaggerDurationFactor>0.5</StaggerDurationFactor>
+					<IncomingDamageFactor>0.75</IncomingDamageFactor>
+				</statFactors>
+			</li>
+		</stages>
+		<comps Inherit="False">
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>false</showRemainingTime>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+			<li Class="HediffCompProperties_Link">
+				<requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
+				<maxDistance>15</maxDistance>
+				<customMote>BEWH_MoteLink</customMote>
+			</li>
+		</comps>
+	</HediffDef>
+
 </Defs>

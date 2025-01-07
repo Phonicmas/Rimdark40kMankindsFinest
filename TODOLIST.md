@@ -41,15 +41,18 @@ Drop pod texture (believe you said you had one of these too) + turret textture f
 
 
 
+
+Maybe new motes for the linking and circle of the living saint aura?
+
+
 Maybe some different backgrounds (the blue hexagon for xenotype or white circle thingy for endogenes) for the different genes? (Maybe keep the recoloured one psyker and pariah and then make some new type for the different super human, with increasing golden stuff and purity seals n stuff) (im just cooking here, this is not important)
 
 Primarch Specific Icons (Not sure what excatly to do here) (Maybe flip the helix of the Chapter ones and add some bedazzle? Or just make something that would remind you of them, like red skin and psyker thing i made for Magnus, and the wings for Sanguinius) (The helix should stay i feel) (I think i learn towards just flipping the helix and adding some bedazzle)
 
 ## Code and XML
-New turret texture for rogal ability turret
-
 When chapter icons are made remove the temp setting of chapters in the Genes40kUtils.SetupChapterForPawn() method and the chapterColourDef from Genes40kDefOf
 
+New trait "Serf" that has increase mood and work speed when near a Firstborn, Primaris, Custodes or Primarch (Maybe thunder warrior and living saint?)
 
 
 Aura ability for living saint, buffing nearby pawn temporarily (Maybe)

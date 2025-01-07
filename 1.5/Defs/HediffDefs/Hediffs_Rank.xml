@@ -126,27 +126,9 @@
 			<li Class="HediffCompProperties_Link">
 				<requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
 				<maxDistance>15</maxDistance>
-				<customMote>BEWH_CaptainOrderMoteLink</customMote>
+				<customMote>BEWH_MoteLink</customMote>
 			</li>
 		</comps>
 	</HediffDef>
-	<!-- Mote Link -->
-	<ThingDef ParentName="MoteBase">
-		<defName>BEWH_CaptainOrderMoteLink</defName>
-		<thingClass>MoteDualAttached</thingClass>
-		<altitudeLayer>MoteLow</altitudeLayer>
-		<mote>
-			<fadeInTime>0.1</fadeInTime>
-			<fadeOutTime>0.1</fadeOutTime>
-			<solidTime>999999</solidTime>
-			<needsMaintenance>True</needsMaintenance>
-			<rotateTowardsTarget>True</rotateTowardsTarget>
-			<scaleToConnectTargets>True</scaleToConnectTargets>
-		</mote>
-		<graphicData>
-			<shaderType>MoteGlow</shaderType>
-			<texPath>Things/Mote/CaptainOrderMoteLink</texPath>
-		</graphicData>
-	</ThingDef>
 
 </Defs>

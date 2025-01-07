@@ -70,7 +70,7 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Divine Radiance -->    <!-- Make new class and resource type gizmo for it, also make this gene have the holy blast ability -->
+    <!-- Divine Radiance -->
     <GeneDef ParentName="BEWH_LivingSaintBase">
         <defName>BEWH_LivingSaintDivineRadiance</defName>
         <label>Divine radiance</label>
@@ -94,14 +94,10 @@
         </customEffectDescriptions>
 
         <abilities>
-            <li>BEWH_LivingSaintHolyBlast</li>
             <li>BEWH_LivingSaintProofOfFaith</li>
-            <li>BEWH_DivineFlight</li>
         </abilities>
         <descriptionHyperlinks>
-            <AbilityDef>BEWH_LivingSaintHolyBlast</AbilityDef>
             <AbilityDef>BEWH_LivingSaintProofOfFaith</AbilityDef>
-            <AbilityDef>BEWH_DivineFlight</AbilityDef>
         </descriptionHyperlinks>
 
         <disablesNeeds>
@@ -118,6 +114,7 @@
         <description>Immense faith have conjured forth ethereal wings of warp energy, resembling that of an angels. These wings allows for short flights.</description>
         <iconPath>UI/Genes/LivingSaint/BEWH_LivingSaint_DivineFlight</iconPath>
         <displayOrderInCategory>501</displayOrderInCategory>
+        <prerequisite>BEWH_LivingSaintDivineRadiance</prerequisite>
         <statFactors>
             <MoveSpeed>1.2</MoveSpeed>
         </statFactors>
@@ -130,6 +127,12 @@
                 <postFactor>1.15</postFactor>
             </li>
         </capMods>
+        <abilities>
+            <li>BEWH_DivineFlight</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>BEWH_DivineFlight</AbilityDef>
+        </descriptionHyperlinks>
         <exclusionTags>
             <li>Wing</li>
             <li>Wings</li>
@@ -204,6 +207,7 @@
         <iconPath>UI/Genes/LivingSaint/BEWH_LivingSaint_FuryOfTheEmperor</iconPath>
         <geneClass>Gene_Clotting</geneClass>
         <displayOrderInCategory>503</displayOrderInCategory>
+        <prerequisite>BEWH_LivingSaintDivineRadiance</prerequisite>
         <statOffsets>
             <MeleeHitChance>4</MeleeHitChance>
         </statOffsets>
@@ -224,6 +228,12 @@
                 <degree>-2</degree>
             </li>
         </suppressedTraits>
+        <abilities>
+            <li>BEWH_LivingSaintHolyBlast</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>BEWH_LivingSaintHolyBlast</AbilityDef>
+        </descriptionHyperlinks>
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <noSkillLoss>Melee</noSkillLoss>
@@ -238,6 +248,7 @@
         <description>Having already died once, carriers of this gene have steeled themselves to damage, greatly reducing incoming damage.</description>
         <iconPath>UI/Genes/LivingSaint/BEWH_LivingSaint_MartyrsEndurance</iconPath>
         <displayOrderInCategory>504</displayOrderInCategory>
+        <prerequisite>BEWH_LivingSaintDivineRadiance</prerequisite>
         <statOffsets>
             <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
             <ArmorRating_Sharp>0.3</ArmorRating_Sharp>
@@ -258,6 +269,12 @@
                 <def>Delicate</def>
             </li>
         </suppressedTraits>
+        <abilities>
+            <li>BEWH_LivingSaintInviolableAura</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>BEWH_LivingSaintInviolableAura</AbilityDef>
+        </descriptionHyperlinks>
     </GeneDef>
 
     <!-- Holy Radiance -->

@@ -114,4 +114,51 @@
     </comps>
   </AbilityDef>
 
+  <!-- Inviolable Aura -->
+  <AbilityDef>
+    <defName>BEWH_LivingSaintInviolableAura</defName>
+    <label>Inviolable Aura</label>
+    <description>The living saint extends an aura of protection to nearby allies, shielding them from attacks. The effect remains attached to the caster for 6 hours.</description>
+    <iconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Long</iconPath>
+    <jobDef>CastAbilityOnThing</jobDef>
+    <targetRequired>False</targetRequired>
+    <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
+    <stunTargetWhileCasting>True</stunTargetWhileCasting>
+    <showPsycastEffects>False</showPsycastEffects>
+    <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <statBases>
+      <Ability_Duration>250</Ability_Duration>
+      <Ability_EffectRadius>11.9</Ability_EffectRadius>
+    </statBases>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>0.5</warmupTime>
+      <range>11.9</range>
+      <drawAimPie>False</drawAimPie>
+      <requireLineOfSight>False</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetAnimals>false</canTargetAnimals>
+        <canTargetHumans>false</canTargetHumans>
+        <canTargetMechs>false</canTargetMechs>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="Genes40k.CompProperties_AbilityDivineRadianceCost">
+        <divineRadianceCost>1</divineRadianceCost>
+      </li>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>BEWH_LivingSaintInviolableAuraSelf</hediffDef>
+        <onlyBrain>True</onlyBrain>
+        <onlyApplyToSelf>True</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+  </AbilityDef>
+
 </Defs>
