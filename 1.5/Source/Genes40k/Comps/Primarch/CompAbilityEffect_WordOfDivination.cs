@@ -11,17 +11,17 @@ namespace Genes40k
         {
             var pawn = target.Pawn;
 
-            pawn.ideo.SetIdeo(parent.pawn.ideo.Ideo);
+            pawn.ideo.SetIdeo(parent.pawn.Ideo);
         }
         
         public override bool Valid(LocalTargetInfo target, bool throwMessages = false)
         {
-            if (parent.pawn.ideo?.Ideo == null)
+            if (parent.pawn.Ideo == null)
             {
                 return false;
             }
 
-            if (target.Pawn.ideo.Ideo == parent.pawn.ideo.Ideo)
+            if (target.Pawn.Ideo == parent.pawn.Ideo)
             {
                 return false;
             }
@@ -31,12 +31,12 @@ namespace Genes40k
         
         public override string ExtraLabelMouseAttachment(LocalTargetInfo target)
         {
-            if (parent.pawn.ideo?.Ideo == null)
+            if (parent.pawn.Ideo == null)
             {
                 return "BEWH.MankindsFinest.Ability.LorgarDivinationNoIdeo".Translate(parent.pawn);
             }
             
-            return target.Pawn.ideo.Ideo == parent.pawn.ideo.Ideo ? "BEWH.MankindsFinest.Ability.LorgarDivination".Translate(target.Pawn, parent.pawn) : null;
+            return target.Pawn.Ideo == parent.pawn.Ideo ? "BEWH.MankindsFinest.Ability.LorgarDivination".Translate(target.Pawn, parent.pawn) : null;
         }
     }
 }

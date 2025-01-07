@@ -2,7 +2,7 @@
 <Defs>
 
   <AbilityCategoryDef>
-    <defName>BEWH_SpaceMarine</defName>
+    <defName>BEWH_SpaceMarineCategory</defName>
     <displayOrder>999</displayOrder>
   </AbilityCategoryDef>
 
@@ -14,7 +14,7 @@
     <iconPath>UI/Abilities/AcidSpray</iconPath>
     <cooldownTicksRange>60000</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
-    <category>BEWH_SpaceMarine</category>
+    <category>BEWH_SpaceMarineCategory</category>
     <warmupStartSound>AcidSpray_Warmup</warmupStartSound>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
@@ -70,7 +70,7 @@
     <jobDef>CastAbilityOnThing</jobDef>
     <iconPath>UI/Abilities/BEWH_CatalepseanNodeUnsleeping</iconPath>
     <cooldownTicksRange>180000</cooldownTicksRange>
-    <category>BEWH_SpaceMarine</category>
+    <category>BEWH_SpaceMarineCategory</category>
     <statBases>
       <Ability_Duration>600</Ability_Duration>
     </statBases>
@@ -91,7 +91,7 @@
     <description>Carriers of the sus-an membrane can enter a state of suspended animation, keeping the them alive for years, even if they has suffered otherwise mortal wounds.</description>
     <iconPath>UI/Abilities/BEWH_StasisIcon</iconPath>
     <cooldownTicksRange>240000</cooldownTicksRange>
-    <category>BEWH_SpaceMarine</category>
+    <category>BEWH_SpaceMarineCategory</category>
     <comps>
       <li Class="CompProperties_AbilityGiveHediff">
         <compClass>CompAbilityEffect_GiveHediff</compClass>
@@ -113,7 +113,7 @@
     <iconPath>UI/Abilities/BEWH_OmophageaRemembrance</iconPath>
     <showPsycastEffects>False</showPsycastEffects>
     <cooldownTicksRange>240000</cooldownTicksRange>
-    <category>BEWH_SpaceMarine</category>
+    <category>BEWH_SpaceMarineCategory</category>
     <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
     <verbProperties>
@@ -141,7 +141,7 @@
     <description>Carriers of the belisarian furnace can produce a hyper-cocktail to boost their regrowth of tissue, bone and muscle.</description>
     <iconPath>UI/Abilities/BEWH_BelisarianFurnaceBoost</iconPath>
     <cooldownTicksRange>240000</cooldownTicksRange>
-    <category>BEWH_SpaceMarine</category>
+    <category>BEWH_SpaceMarineCategory</category>
     <statBases>
       <Ability_Duration>120</Ability_Duration>
     </statBases>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!--= Chapter Ancient =-->
+	<!-- Chapter Banner -->
+	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
+		<defName>BEWH_ChapterBannerBuff</defName>
+		<label>Chapter Banner</label>
+		<description>The nearby banner of my chapter inspires me to do better!</description>
+		<stages>
+			<li>
+				<statOffsets>
+					<MeleeHitChance>3</MeleeHitChance>
+					<ShootingAccuracyPawn>3</ShootingAccuracyPawn>
+					<MentalBreakThreshold>-0.1</MentalBreakThreshold>
+				</statOffsets>
+				<painFactor>0.75</painFactor>
+			</li>
+		</stages>
+	</HediffDef>
+
+
+	<!--= Librarian =-->
+	<!-- Quickening -->
+	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
+		<defName>BEWH_LibrarianQuickeningBuff</defName>
+		<label>Quickening</label>
+		<description>...</description>
+		<stages>
+			<li>
+				<statFactors>
+					<MoveSpeed>1.3</MoveSpeed>
+					<RangedCooldownFactor>0.85</RangedCooldownFactor>
+					<MeleeCooldownFactor>0.85</MeleeCooldownFactor>
+				</statFactors>
+				<statOffsets>
+					<MeleeDodgeChance>4</MeleeDodgeChance>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<!-- Wave of Lethargy -->
+	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
+		<defName>BEWH_ChiefLibrarianWaveOfLethargyDebuff</defName>
+		<label>Wave of Lethargy</label>
+		<description>...</description>
+		<stages>
+			<li>
+				<statFactors>
+					<MoveSpeed>0.8</MoveSpeed>
+					<RangedCooldownFactor>1.15</RangedCooldownFactor>
+					<MeleeCooldownFactor>1.15</MeleeCooldownFactor>
+				</statFactors>
+				<statOffsets>
+					<MeleeDodgeChance>-4</MeleeDodgeChance>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+
+
+	<!--= Apothecary =-->
+	<!-- Stimulants -->
+	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
+		<defName>BEWH_ApothecaryStimulantsBuff</defName>
+		<label>Stimulants</label>
+		<description>...</description>
+		<stages>
+			<li>
+				<statOffsets>
+					<InjuryHealingFactor>0.8</InjuryHealingFactor>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.15</offset>
+					</li>
+				</capMods>
+				<painFactor>0.33</painFactor>
+			</li>
+		</stages>
+	</HediffDef>
+
+
+	<!--= Captain =-->
+	<!-- Captains Orders -->
+	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
+		<defName>BEWH_CaptainsOrderBuff</defName>
+		<label>Orders Given!</label>
+		<description>...</description>
+		<comps>
+			<li Class="HediffCompProperties_GiveHediffsInRange">
+				<range>11.9</range>
+				<targetingParameters>
+					<canTargetBuildings>false</canTargetBuildings>
+					<canTargetAnimals>false</canTargetAnimals>
+					<canTargetMechs>false</canTargetMechs>
+					<onlyTargetColonists>true</onlyTargetColonists>
+				</targetingParameters>
+				<hediff>BEWH_CaptainsOrderBuffBuff</hediff>
+			</li>
+		</comps>
+	</HediffDef>
+	<!-- Buff given to others -->
+	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
+		<defName>BEWH_CaptainsOrderBuffBuff</defName>
+		<label>Orders Received!</label>
+		<description>...</description>
+		<debugLabelExtra>other</debugLabelExtra>
+		<stages>
+			<li>
+				<statOffsets>
+					<MeleeHitChance>4</MeleeHitChance>
+					<ShootingAccuracyPawn>4</ShootingAccuracyPawn>
+					<MeleeCooldownFactor>-0.2</MeleeCooldownFactor>
+					<RangedCooldownFactor>-0.2</RangedCooldownFactor>
+				</statOffsets>
+			</li>
+		</stages>
+		<comps Inherit="False">
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>false</showRemainingTime>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+			<li Class="HediffCompProperties_Link">
+				<requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
+				<maxDistance>15</maxDistance>
+				<customMote>BEWH_CaptainOrderMoteLink</customMote>
+			</li>
+		</comps>
+	</HediffDef>
+	<!-- Mote Link -->
+	<ThingDef ParentName="MoteBase">
+		<defName>BEWH_CaptainOrderMoteLink</defName>
+		<thingClass>MoteDualAttached</thingClass>
+		<altitudeLayer>MoteLow</altitudeLayer>
+		<mote>
+			<fadeInTime>0.1</fadeInTime>
+			<fadeOutTime>0.1</fadeOutTime>
+			<solidTime>999999</solidTime>
+			<needsMaintenance>True</needsMaintenance>
+			<rotateTowardsTarget>True</rotateTowardsTarget>
+			<scaleToConnectTargets>True</scaleToConnectTargets>
+		</mote>
+		<graphicData>
+			<shaderType>MoteGlow</shaderType>
+			<texPath>Things/Mote/CaptainOrderMoteLink</texPath>
+		</graphicData>
+	</ThingDef>
+
+</Defs>

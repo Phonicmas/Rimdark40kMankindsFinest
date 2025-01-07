@@ -29,7 +29,7 @@
 
     <!-- Human Trader -->
     <PawnKindDef ParentName="BEWH_HumanBase">
-        <defName>BEWH_ImperiumTrader</defName>
+        <defName>BEWH_ImperiumTraderPawn</defName>
         <combatPower>20</combatPower>
         <trader>true</trader>
         <isFighter>false</isFighter>
@@ -40,7 +40,7 @@
 
     <!-- Human Laborer -->
     <PawnKindDef ParentName="BEWH_HumanBase">
-        <defName>BEWH_ImperiumLaborer</defName>
+        <defName>BEWH_ImperiumLaborerPawn</defName>
         <combatPower>20</combatPower>
         <trader>false</trader>
         <isFighter>false</isFighter>
@@ -77,7 +77,7 @@
 
     <!-- Human Guardsman -->
     <PawnKindDef ParentName="BEWH_HumanBase">
-        <defName>BEWH_ImperiumGuardman</defName>
+        <defName>BEWH_ImperiumGuardmanPawn</defName>
         <combatPower>40</combatPower>
         <trader>false</trader>
         <isFighter>true</isFighter>

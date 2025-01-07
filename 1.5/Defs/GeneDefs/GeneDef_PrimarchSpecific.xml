@@ -270,7 +270,7 @@
         <capMods>
             <li>
                 <capacity>Moving</capacity>
-                <postFactor>1.75</postFactor>
+                <postFactor>2.5</postFactor>
             </li>
         </capMods>
         <abilities>

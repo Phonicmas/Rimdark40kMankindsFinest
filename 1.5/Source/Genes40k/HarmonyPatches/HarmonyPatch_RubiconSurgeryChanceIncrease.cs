@@ -1,9 +1,7 @@
 ﻿using System.Linq;
-using System.Text;
 using HarmonyLib;
 using RimWorld;
 using Verse;
-using Verse.AI;
 
 namespace Genes40k
 {

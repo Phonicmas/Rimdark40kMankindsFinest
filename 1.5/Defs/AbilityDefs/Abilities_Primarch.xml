@@ -64,7 +64,7 @@
     <cooldownTicksRange>60000</cooldownTicksRange>
     <category>BEWH_Primarch</category>
     <statBases>
-      <Ability_Duration>500</Ability_Duration>
+      <Ability_Duration>250</Ability_Duration>
     </statBases>
     <comps>
       <li Class="CompProperties_AbilityGiveHediff">

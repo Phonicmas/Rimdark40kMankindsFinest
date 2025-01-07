@@ -184,6 +184,10 @@
 
         <rankTier>6</rankTier>
 
+        <givesAbilities>
+            <li>BEWH_CaptainsOrder</li>
+        </givesAbilities>
+
         <unlocksRankIcon>BEWH_RankIconCaptain</unlocksRankIcon>
 
     </Genes40k.ChapterRankDef>
@@ -219,6 +223,10 @@
             <li>BEWH_StripRanks</li>
         </givesAbilities>
 
+        <givesVFEAbilities>
+            <li>BEWH_ChapterMasterSteelRain</li>
+        </givesVFEAbilities>
+
         <rankTier>10</rankTier>
 
         <unlocksRankIcon>BEWH_RankIconChapterMaster</unlocksRankIcon>
@@ -248,12 +256,30 @@
 
         <statOffsets>
             <MoveSpeed>0.05</MoveSpeed>
-            <HuntingStealth>0.1</HuntingStealth>
+            <HuntingStealth>0.2</HuntingStealth>
         </statOffsets>
 
         <statFactors>
             <PawnTrapSpringChance>0.5</PawnTrapSpringChance>
         </statFactors>
+
+        <customEffectDescriptions>
+            <li>Increased stats while in darkness</li>
+        </customEffectDescriptions>
+
+        <conditionalStatAffecters>
+            <li Class="VanillaGenesExpanded.ConditionalStatAffecter_Darkness">
+                <statOffsets>
+                    <MoveSpeed>0.15</MoveSpeed>
+                    <MeleeDodgeChance>1</MeleeDodgeChance>
+                </statOffsets>
+                <statFactors>
+                    <HuntingStealth>1.5</HuntingStealth>
+                    <ShootingAccuracyPawn>1.15</ShootingAccuracyPawn>
+                    <MeleeHitChance>1.15</MeleeHitChance>
+                </statFactors>
+            </li>
+        </conditionalStatAffecters>
 
         <rankTier>3</rankTier>
 
@@ -337,11 +363,11 @@
         </givesAbilities>
 
         <customEffectDescriptions>
-            <li>25% chance to succesfully harvest gene-seed from dead marines.</li>
+            <li>10% increased chance to succesfully harvest gene-seed from dead marines.</li>
         </customEffectDescriptions>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedHarvest">
-                <chanceOffset>25</chanceOffset>
+                <chanceOffset>10</chanceOffset>
             </li>
         </modExtensions>
 
@@ -373,13 +399,17 @@
         </statOffsets>
 
         <customEffectDescriptions>
-            <li>50% chance to succesfully harvest gene-seed from dead marines.</li>
+            <li>25% increased chance to succesfully harvest gene-seed from dead marines.</li>
         </customEffectDescriptions>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedHarvest">
-                <chanceOffset>50</chanceOffset>
+                <chanceOffset>25</chanceOffset>
             </li>
         </modExtensions>
+
+        <givesAbilities>
+            <li>BEWH_ApothecaryEmergencyAid</li>
+        </givesAbilities>
 
         <rankTier>4</rankTier>
 
@@ -409,11 +439,11 @@
         </statOffsets>
 
         <customEffectDescriptions>
-            <li>80% chance to succesfully harvest gene-seed from dead marines.</li>
+            <li>40% increased chance to succesfully harvest gene-seed from dead marines.</li>
         </customEffectDescriptions>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedHarvest">
-                <chanceOffset>80</chanceOffset>
+                <chanceOffset>40</chanceOffset>
             </li>
         </modExtensions>
 
@@ -597,6 +627,10 @@
             <GlobalLearningFactor>1.03</GlobalLearningFactor>
         </statFactors>
 
+        <givesAbilities>
+            <li>BEWH_LibrarianQuickening</li>
+        </givesAbilities>
+
         <rankTier>4</rankTier>
 
         <unlocksRankIcon>BEWH_RankIconLibrarian</unlocksRankIcon>
@@ -628,6 +662,10 @@
         <statFactors>
             <GlobalLearningFactor>1.05</GlobalLearningFactor>
         </statFactors>
+
+        <givesAbilities>
+            <li>BEWH_LibrarianWaveOfLethargy</li>
+        </givesAbilities>
 
         <rankTier>7</rankTier>
 
@@ -708,6 +746,10 @@
         </statFactors>
 
         <rankTier>6</rankTier>
+
+        <givesVFEAbilities>
+            <li>BEWH_ChaplainInspire</li>
+        </givesVFEAbilities>
 
         <unlocksRankIcon>BEWH_RankIconChaplain</unlocksRankIcon>
 

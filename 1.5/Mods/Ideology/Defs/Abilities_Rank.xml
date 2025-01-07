@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Chaplain: Strengthen Faith -->
+  <AbilityDef>
+    <defName>BEWH_ChaplainStrengthenFaith</defName>
+    <label>Strengthen Faith</label>
+    <description>...</description>
+    <cooldownTicksRange>120000</cooldownTicksRange>
+    <iconPath>UI/Abilities/BEWH_Ability_LorgarBONK</iconPath>
+    <jobDef>CastAbilityOnThingMelee</jobDef>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <targetRequired>true</targetRequired>
+    <showWhenDrafted>true</showWhenDrafted>
+    <hostile>false</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityTouch</verbClass>
+      <range>-1</range>
+      <warmupTime>3</warmupTime>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetAnimals>false</canTargetAnimals>
+        <canTargetMechs>false</canTargetMechs>
+        <canTargetBloodfeeders>false</canTargetBloodfeeders>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="Genes40k.CompProperties_AbilityStrengthenFaith" />
+    </comps>
+  </AbilityDef>
+
+</Defs>

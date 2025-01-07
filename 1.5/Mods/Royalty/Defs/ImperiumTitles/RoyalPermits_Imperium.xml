@@ -93,7 +93,7 @@
         <uiPosition>(0,3)</uiPosition>
         <royalAid>
             <favorCost>4</favorCost>
-            <pawnKindDef>BEWH_ImperiumLaborer</pawnKindDef>
+            <pawnKindDef>BEWH_ImperiumLaborerPawn</pawnKindDef>
             <pawnCount>4</pawnCount>
             <aidDurationDays>4</aidDurationDays>
         </royalAid>
@@ -113,7 +113,7 @@
         <uiPosition>(1,3)</uiPosition>
         <royalAid>
             <favorCost>8</favorCost>
-            <pawnKindDef>BEWH_ImperiumLaborer</pawnKindDef>
+            <pawnKindDef>BEWH_ImperiumLaborerPawn</pawnKindDef>
             <pawnCount>8</pawnCount>
             <aidDurationDays>4</aidDurationDays>
         </royalAid>
@@ -135,7 +135,7 @@
         <uiPosition>(0,4)</uiPosition>
         <royalAid>
             <favorCost>4</favorCost>
-            <pawnKindDef>BEWH_SpaceMarine</pawnKindDef>
+            <pawnKindDef>BEWH_FirstbornPawn</pawnKindDef>
             <pawnCount>4</pawnCount>
             <targetingRange>39.9</targetingRange>
         </royalAid>
@@ -155,7 +155,7 @@
         <uiPosition>(1,4)</uiPosition>
         <royalAid>
             <favorCost>6</favorCost>
-            <pawnKindDef>BEWH_PrimarisSpaceMarine</pawnKindDef>
+            <pawnKindDef>BEWH_PrimarisSpaceMarinePawn</pawnKindDef>
             <pawnCount>4</pawnCount>
             <targetingRange>39.9</targetingRange>
         </royalAid>
@@ -178,7 +178,7 @@
         <uiPosition>(2,4)</uiPosition>
         <royalAid>
             <favorCost>8</favorCost>
-            <pawnKindDef>BEWH_Custodes</pawnKindDef>
+            <pawnKindDef>BEWH_CustodesPawn</pawnKindDef>
             <pawnCount>2</pawnCount>
             <targetingRange>39.9</targetingRange>
         </royalAid>

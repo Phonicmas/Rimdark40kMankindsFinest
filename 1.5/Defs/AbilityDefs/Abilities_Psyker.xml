@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
+  <!-- Psyker Bolt -->
   <VFECore.Abilities.AbilityDef>
     <defName>BEWH_PsykerBolt</defName>
     <label>psychic bolt</label>
@@ -32,7 +33,7 @@
       </li>
     </modExtensions>
   </VFECore.Abilities.AbilityDef>
-
+  <!-- Psyker Bolt Projectile -->
   <ThingDef ParentName="BaseBullet">
     <defName>BEWH_PsykerBolt</defName>
     <label>psyker bolt</label>

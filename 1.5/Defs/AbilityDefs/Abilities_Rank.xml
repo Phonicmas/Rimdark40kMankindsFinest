@@ -36,8 +36,7 @@
     </AbilityDef>
 
 
-    <!-- Ancient: Raise Chapter Banner -->
-    <!-- Maybe like a small warcry/tune thingy when banner is placed? -->
+    <!-- Ancient: Raise Chapter Banner -->    <!-- Maybe like a small warcry/tune thingy when banner is placed? -->
     <VFECore.Abilities.AbilityDef>
         <defName>BEWH_RaiseChapterBanner</defName>
         <label>Raise Chapter Banner</label>
@@ -49,6 +48,181 @@
         <cooldownTime>60000</cooldownTime>
         <range>1.9</range>
         <castTime>60</castTime>
+        <targetMode>Location</targetMode>
+    </VFECore.Abilities.AbilityDef>
+
+
+    <!-- Librarian: Quickening -->
+    <AbilityDef ParentName="BEWH_SelfTargetAbilities">
+        <defName>BEWH_LibrarianQuickening</defName>
+        <label>Quickening</label>
+        <description>The Psyker gains precognitive powers and increased haste, allowing him to outfight his enemies by seeing their movements before they even act and outspeeding them.</description>
+        <iconPath>UI/Abilities/BEWH_Ability_JaghataiKhanAlakhGeh</iconPath>
+        <cooldownTicksRange>90000</cooldownTicksRange>
+        <statBases>
+            <Ability_Duration>125</Ability_Duration>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>BEWH_LibrarianQuickeningBuff</hediffDef>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>true</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <!-- Librarian: Wave of Lethargy -->
+    <AbilityDef>
+        <defName>BEWH_LibrarianWaveOfLethargy</defName>
+        <label>Wave of Lethargy</label>
+        <description>The Psyker shoots out a wave of lethargy, causing anyone caught in it to become fatigued and slowed.</description>
+        <iconPath>UI/Abilities/BEWH_Ability_JaghataiKhanAlakhGeh</iconPath>
+        <cooldownTicksRange>120000</cooldownTicksRange>
+        <statBases>
+            <Ability_Duration>125</Ability_Duration>
+        </statBases>
+        <aiCanUse>true</aiCanUse>
+        <warmupStartSound>FireSpew_Warmup</warmupStartSound>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <range>9.9</range>
+            <warmupTime>1</warmupTime>
+            <soundCast>FireSpew_Resolve</soundCast>
+            <targetParams>
+                <canTargetLocations>true</canTargetLocations>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="Core40k.CompProperties_AbilityWaveAttack">
+                <hediffDef>BEWH_ChiefLibrarianWaveOfLethargyDebuff</hediffDef>
+                <effecterDef>FoamSpray_Directional</effecterDef>                <!-- Change this to something else (Maybe look at effectDef unfathomable gaze from chaos mod) -->
+                <range>9.9</range>
+                <lineWidthEnd>14</lineWidthEnd>
+                <stunTicks>50</stunTicks>
+                <replaceExisting>true</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+
+    <!-- Apothecary: Emergency Aid -->
+    <AbilityDef>
+        <defName>BEWH_ApothecaryEmergencyAid</defName>
+        <label>Emergency Aid</label>
+        <description>Apply emergency aid to a downed or bedridden pawn. Pumping them full of stimulants to reduce pain and increase natural healing speed, and applying first aid, quickly tending and slightly healing all wounds.</description>
+        <cooldownTicksRange>5000</cooldownTicksRange>
+        <iconPath>UI/Abilities/BEWH_Ability_ChillgronShareBurden</iconPath>
+        <jobDef>CastAbilityOnThingMelee</jobDef>
+        <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <targetRequired>true</targetRequired>
+        <showWhenDrafted>true</showWhenDrafted>
+        <hostile>false</hostile>
+        <statBases>
+            <Ability_Duration>50</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <verbClass>Verb_CastAbilityTouch</verbClass>
+            <range>-1</range>
+            <warmupTime>1</warmupTime>
+            <targetParams>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetAnimals>false</canTargetAnimals>
+                <canTargetMechs>false</canTargetMechs>
+                <canTargetBloodfeeders>false</canTargetBloodfeeders>
+                <canTargetCorpses>false</canTargetCorpses>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="Genes40k.CompProperties_AbilityHealAndTend">
+                <healAmount>1~2</healAmount>
+            </li>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>BEWH_ApothecaryStimulantsBuff</hediffDef>
+                <replaceExisting>true</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+
+    <!-- Chaplain: Inspire -->
+    <VFECore.Abilities.AbilityDef>
+        <defName>BEWH_ChaplainInspire</defName>
+        <label>Inspire</label>
+        <description>...</description>
+        <iconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Long</iconPath>
+        <abilityClass>Genes40k.Ability_Inspire</abilityClass>
+        <cooldownTime>90000</cooldownTime>
+        <castTime>200</castTime>
+        <durationTime>5000</durationTime>
+        <range>4.9</range>
+        <radius>4.9</radius>
+        <targetMode>Self</targetMode>
+        <worldTargeting>false</worldTargeting>
+        <needsTicking>false</needsTicking>
+        <showGizmoOnWorldView>false</showGizmoOnWorldView>
+    </VFECore.Abilities.AbilityDef>
+
+
+    <!-- Captain: Command -->
+    <AbilityDef>
+        <defName>BEWH_CaptainsOrder</defName>
+        <label>Captains Order</label>
+        <description>..... The effect remains attached to the caster for 24 hours.</description>
+        <iconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Long</iconPath>
+        <jobDef>CastAbilityOnThing</jobDef>
+        <targetRequired>False</targetRequired>
+        <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
+        <stunTargetWhileCasting>True</stunTargetWhileCasting>
+        <showPsycastEffects>False</showPsycastEffects>
+        <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+        <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <statBases>
+            <Ability_Duration>1000</Ability_Duration>
+            <Ability_EffectRadius>11.9</Ability_EffectRadius>
+        </statBases>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <warmupTime>0.5</warmupTime>
+            <range>11.9</range>
+            <drawAimPie>False</drawAimPie>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>true</canTargetSelf>
+                <canTargetPawns>false</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetAnimals>false</canTargetAnimals>
+                <canTargetHumans>false</canTargetHumans>
+                <canTargetMechs>false</canTargetMechs>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>BEWH_CaptainsOrderBuff</hediffDef>
+                <onlyBrain>True</onlyBrain>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>true</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+
+    <!-- Chapter Master: Steel Rain -->
+    <VFECore.Abilities.AbilityDef>
+        <defName>BEWH_ChapterMasterSteelRain</defName>
+        <label>Steel Rain</label>
+        <description>...</description>
+        <iconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Long</iconPath>
+        <abilityClass>Genes40k.Ability_SteelRain</abilityClass>
+        <castTime>40</castTime>
+        <range>30.9</range>
+        <radius>12.9</radius>
+        <cooldownTime>5000</cooldownTime>
         <targetMode>Location</targetMode>
     </VFECore.Abilities.AbilityDef>
 

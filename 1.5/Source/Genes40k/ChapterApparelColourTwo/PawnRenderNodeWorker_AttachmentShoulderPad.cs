@@ -51,11 +51,11 @@ namespace Genes40k
             return true;
         }
 
-        protected override Graphic GetGraphic(PawnRenderNode node, PawnDrawParms parms)
+        /*protected override Graphic GetGraphic(PawnRenderNode node, PawnDrawParms parms)
         {
             var apparelColourTwo = (ChapterApparelColourTwo)node.apparel;
 
             return GraphicDatabase.Get<Graphic_Multi>(node.Props.texPath, node.ShaderFor(parms.pawn), node.Props.drawSize, apparelColourTwo.DrawColor, apparelColourTwo.DrawColorTwo);
-        }
+        }*/
     }
 }

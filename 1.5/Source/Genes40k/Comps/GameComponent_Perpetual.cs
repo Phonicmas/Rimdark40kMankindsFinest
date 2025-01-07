@@ -10,7 +10,7 @@ namespace Genes40k
     {
         private Dictionary<Pawn ,int> perpetuals = new Dictionary<Pawn, int>();
         
-        private const int CheckInterval = 5000;
+        private const int CheckInterval = 4000;
         private int currentTick;
 
         public GameComponent_Perpetual(Game game)
@@ -21,7 +21,7 @@ namespace Genes40k
         {
             if (currentTick != CheckInterval)
             {
-                currentTick++;
+                currentTick++;  
                 return;
             }
 
@@ -29,16 +29,26 @@ namespace Genes40k
 
             var removeAfterResurrection = new List<Pawn>();
             
-            foreach (var perpetual in perpetuals.Where(perpetual => perpetual.Key.Dead && Find.TickManager.TicksGame >= perpetual.Value))
+            foreach (var perpetual in perpetuals.Where(perpetual => Find.TickManager.TicksGame >= perpetual.Value))
             {
-                if (!perpetual.Key.Spawned && perpetual.Key.Corpse != null && !perpetual.Key.Corpse.Spawned && perpetual.Key.Corpse.MapHeld == null)
+                if (perpetual.Key.genes?.GetFirstGeneOfType<Gene_Perpetual>() == null)
+                {
+                    removeAfterResurrection.Add(perpetual.Key);
+                    continue;
+                }
+                
+                if (perpetual.Key.Dead)
+                {
+                    ResurrectionUtility.TryResurrect(perpetual.Key);
+                }
+                
+                if (!perpetual.Key.Spawned && perpetual.Key.Corpse != null && !perpetual.Key.Corpse.Spawned)
                 {
                     var map = GetMapToSpawnIn(perpetual.Key);
                     CellFinder.TryFindRandomCell(map, cell => cell.Walkable(map), out var cell2);
                     GenSpawn.Spawn(perpetual.Key, cell2, map);
                 }
                 
-                ResurrectionUtility.TryResurrect(perpetual.Key);
                 removeAfterResurrection.Add(perpetual.Key);
             }
 

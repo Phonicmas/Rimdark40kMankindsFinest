@@ -71,25 +71,25 @@
         <armorPenetration>2</armorPenetration>
       </li>
     </tools>
-	<modExtensions>
-		<li Class="VFECore.ThingDefExtension">
-			<weaponCarryDrawOffsets>
-				<north>
-					<drawOffset>(0, 0, -0.23)</drawOffset>
-				</north>
-				<east>
-					<drawOffset>(-0.2, 0, -0.23)</drawOffset>
-				</east>
-				<south>
-					<angleOffset>-20</angleOffset>
-					<drawOffset>(-0.2, 0, -0.23)</drawOffset>
-				</south>
-				<west>
-					<drawOffset>(0.2, 0, -0.23)</drawOffset>
-				</west>
-			</weaponCarryDrawOffsets>
-		</li>
-	</modExtensions>
+    <modExtensions>
+      <li Class="VFECore.ThingDefExtension">
+        <weaponCarryDrawOffsets>
+          <north>
+            <drawOffset>(0, 0, -0.23)</drawOffset>
+          </north>
+          <east>
+            <drawOffset>(-0.2, 0, -0.23)</drawOffset>
+          </east>
+          <south>
+            <angleOffset>-20</angleOffset>
+            <drawOffset>(-0.2, 0, -0.23)</drawOffset>
+          </south>
+          <west>
+            <drawOffset>(0.2, 0, -0.23)</drawOffset>
+          </west>
+        </weaponCarryDrawOffsets>
+      </li>
+    </modExtensions>
   </ThingDef>
 
 
@@ -154,25 +154,25 @@
         <cooldownTime>2</cooldownTime>
       </li>
     </tools>
-	<modExtensions>
-		<li Class="VFECore.ThingDefExtension">
-			<weaponCarryDrawOffsets>
-				<north>
-					<drawOffset>(0, 0, -0.2)</drawOffset>
-				</north>
-				<east>
-					<drawOffset>(-0.1, 0, -0.2)</drawOffset>
-				</east>
-				<south>
-					<angleOffset>-20</angleOffset>
-					<drawOffset>(0, 0, -0.2)</drawOffset>
-				</south>
-				<west>
-					<drawOffset>(0.1, 0, -0.2)</drawOffset>
-				</west>
-			</weaponCarryDrawOffsets>
-		</li>
-	</modExtensions>
+    <modExtensions>
+      <li Class="VFECore.ThingDefExtension">
+        <weaponCarryDrawOffsets>
+          <north>
+            <drawOffset>(0, 0, -0.2)</drawOffset>
+          </north>
+          <east>
+            <drawOffset>(-0.1, 0, -0.2)</drawOffset>
+          </east>
+          <south>
+            <angleOffset>-20</angleOffset>
+            <drawOffset>(0, 0, -0.2)</drawOffset>
+          </south>
+          <west>
+            <drawOffset>(0.1, 0, -0.2)</drawOffset>
+          </west>
+        </weaponCarryDrawOffsets>
+      </li>
+    </modExtensions>
   </ThingDef>
 
 </Defs>

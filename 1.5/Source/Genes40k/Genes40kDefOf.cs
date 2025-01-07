@@ -141,6 +141,9 @@ namespace Genes40k
         public static ThingDef BEWH_RaisedTurret;
         
         public static ThingDef BEWH_AncientChapterBanner;
+        
+        public static ThingDef BEWH_SteelRainDropPodBuilding;
+        public static ThingDef BEWH_SteelRainDropPodSkyfaller;
 
         //JobDefs
         public static JobDef BEWH_FillGeneGestator;
@@ -150,6 +153,7 @@ namespace Genes40k
         //ThoughtDefs
         public static ThoughtDef BEWH_LivingSaintHolyRadianceThought;
         public static ThoughtDef BEWH_PrimarchSpecificXIIMood;
+        public static ThoughtDef BEWH_ChaplainInspired;
 
         //RecipeDefs
         public static RecipeDef BEWH_RubiconSurgery;
@@ -170,7 +174,16 @@ namespace Genes40k
         
         //ShoulderIconDefs
         public static ShoulderIconDef BEWH_ShoulderNone;
-
+        
+        //PawnKindDefs
+        public static PawnKindDef BEWH_FirstbornPawn;
+        
+        //FactionDefs
+        public static FactionDef BEWH_OffworldMarinesFaction;
+        
+        //TEMP
+        public static ChapterColourDef BEWH_ChapterColourVII;
+        
         static Genes40kDefOf()
         {
             DefOfHelper.EnsureInitializedInCtor(typeof(Genes40kDefOf));

@@ -1,19 +1,25 @@
-﻿using Core40k;
-using HarmonyLib;
+﻿using HarmonyLib;
 using RimWorld;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using Vehicles;
 using Verse;
-using Verse.AI;
 
 namespace Genes40k
 {
     [HarmonyPatch(typeof(Pawn), "Destroy")]
+    [HarmonyPriority(Priority.Low)]
     public class PerpetualNoDestroy
     {
-        public static bool Prefix(Pawn __instance)
+        public static bool Prefix(Pawn __instance, ref DestroyMode mode)
         {
+            if (ModsConfig.IsActive("smashphil.vehicleframework"))
+            {
+                if (__instance is VehiclePawn)
+                {
+                    mode = DestroyMode.Vanish;
+                    GenLeaving.DoLeavingsFor(__instance, __instance.Map, DestroyMode.Deconstruct);
+                    return true;
+                }
+            }
             if (__instance.genes == null || !__instance.genes.GenesListForReading.Any(gene => gene.def.HasModExtension<DefModExtension_PerpetualGene>()))
             {
                 return true;
@@ -27,6 +33,11 @@ namespace Genes40k
             if (__instance.Spawned)
             {
                 __instance.DeSpawn(); 
+            }
+
+            if (__instance.Corpse != null && __instance.Corpse.Spawned)
+            {
+                __instance.Corpse.DeSpawn();
             }
             
             return false;

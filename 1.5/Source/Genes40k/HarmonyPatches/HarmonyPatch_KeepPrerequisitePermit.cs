@@ -1,10 +1,5 @@
-﻿using Core40k;
-using HarmonyLib;
+﻿using HarmonyLib;
 using RimWorld;
-using System;
-using System.Collections.Generic;
-using Verse;
-using Verse.AI;
 
 namespace Genes40k
 {

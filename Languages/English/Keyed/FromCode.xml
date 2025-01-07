@@ -160,6 +160,13 @@
   <!-- Space Marine -->
   <BEWH.MankindsFinest.Ability.StasisResearchNotCompleted>{0} is about to enter stasis. You have not researched {1} and will have a hard time resurrecting {0} from stasis. \n\nUse with caution!</BEWH.MankindsFinest.Ability.StasisResearchNotCompleted>
 
+  <!-- Apothecary -->
+  <BEWH.MankindsFinest.Ability.MustBePawn>Must target pawn.</BEWH.MankindsFinest.Ability.MustBePawn>
+  <BEWH.MankindsFinest.Ability.MustBeDownedOrInBed>{0} is not downed or in bed.</BEWH.MankindsFinest.Ability.MustBeDownedOrInBed>
+
+  <!-- Chaplain -->
+  <BEWH.MankindsFinest.Ability.MustHaveIdeo>{0} must be part of an ideology.</BEWH.MankindsFinest.Ability.MustHaveIdeo>
+  <BEWH.MankindsFinest.Ability.MustHaveSameIdeo>{0} must be part of {1} ideology.</BEWH.MankindsFinest.Ability.MustHaveSameIdeo>
 
   <!--=== Apparel Two ===-->
   <!-- Shoulder Icons -->

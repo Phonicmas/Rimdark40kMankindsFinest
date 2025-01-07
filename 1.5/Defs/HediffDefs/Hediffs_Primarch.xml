@@ -9,9 +9,9 @@
 		<stages>
 			<li>
 				<statFactors>
-					<MoveSpeed>2</MoveSpeed>
+					<MoveSpeed>3.5</MoveSpeed>
 					<MeleeCooldownFactor>0.5</MeleeCooldownFactor>
-					<MeleeDodgeChance>2</MeleeDodgeChance>
+					<MeleeDodgeChance>3.5</MeleeDodgeChance>
 				</statFactors>
 			</li>
 		</stages>
@@ -75,8 +75,8 @@
 			<li>
 				<minSeverity>0</minSeverity>
 				<statFactors>
-					<PsychicSensitivity>0.1</PsychicSensitivity>
-					<PsychicEntropyRecoveryRate>0.1</PsychicEntropyRecoveryRate>
+					<PsychicSensitivity>0.05</PsychicSensitivity>
+					<PsychicEntropyRecoveryRate>0.05</PsychicEntropyRecoveryRate>
 				</statFactors>
 				<capMods>
 					<li>

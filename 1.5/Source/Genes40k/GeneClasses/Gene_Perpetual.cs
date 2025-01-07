@@ -80,12 +80,6 @@ namespace Genes40k
             base.Notify_PawnDied(dinfo, culprit);
         }
         
-        public override void PostRemove()
-        {
-            Current.Game.GetComponent<GameComponent_Perpetual>().RemovePerpetual(pawn);
-            base.PostRemove();
-        }
-        
         public override void PostAdd()
         {
             defMod = def.GetModExtension<DefModExtension_PerpetualGene>();

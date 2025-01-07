@@ -58,7 +58,7 @@ namespace Genes40k
             return true;
         }
 
-        protected override Graphic GetGraphic(PawnRenderNode node, PawnDrawParms parms)
+        /*protected override Graphic GetGraphic(PawnRenderNode node, PawnDrawParms parms)
         {
             var rightShoulderPath = node.Props.texPath;
             
@@ -82,6 +82,6 @@ namespace Genes40k
             }
             
             return GraphicDatabase.Get<Graphic_Multi>(rightShoulderPath, node.ShaderFor(parms.pawn), node.Props.drawSize, apparelColourTwo.DrawColor, apparelColourTwo.DrawColorTwo);
-        }
+        }*/
     }
 }

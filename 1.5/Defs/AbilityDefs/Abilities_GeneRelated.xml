@@ -11,7 +11,7 @@
     <abilityClass>Genes40k.Ability_UpdateGizmo</abilityClass>
     <cooldownTicksRange>0</cooldownTicksRange>
     <hostile>false</hostile>
-    <category>BEWH_SpaceMarine</category>
+    <category>BEWH_SpaceMarineCategory</category>
     <comps>
       <li Class="Genes40k.CompProperties_AbilityWarpShield"/>
     </comps>

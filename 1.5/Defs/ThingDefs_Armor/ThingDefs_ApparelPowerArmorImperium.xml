@@ -61,6 +61,7 @@
                 </li>
                 <li>
                     <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentShoulderPad</workerClass>
+                    <nodeClass>Genes40k.PawnRenderNode_AttachmentShoulderPad</nodeClass>
                     <texPath>Things/Armor/Imperium/PowerArmor/Shoulder/BEWH_ImperiumPowerArmor_Shoulder</texPath>
                     <shaderTypeDef>CutoutComplex</shaderTypeDef>
                     <parentTagDef>Body</parentTagDef>
@@ -76,6 +77,7 @@
                 </li>
                 <li>
                     <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentShoulderChapterIcon</workerClass>
+                    <nodeClass>Genes40k.PawnRenderNode_AttachmentShoulderChapterIcon</nodeClass>
                     <texPath>Things/Armor/Imperium/PowerArmor/CommonIcons/BEWH_None</texPath>
                     <shaderTypeDef>CutoutComplex</shaderTypeDef>
                     <parentTagDef>Body</parentTagDef>
@@ -94,6 +96,7 @@
                 </li>
                 <li>
                     <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentShoulderRankIcon</workerClass>
+                    <nodeClass>Genes40k.PawnRenderNode_AttachmentShoulderRankIcon</nodeClass>
                     <texPath>Things/Armor/Imperium/PowerArmor/CommonIcons/BEWH_None</texPath>
                     <shaderTypeDef>CutoutComplex</shaderTypeDef>
                     <parentTagDef>Body</parentTagDef>

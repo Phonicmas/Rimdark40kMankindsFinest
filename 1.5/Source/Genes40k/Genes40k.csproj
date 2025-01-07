@@ -71,6 +71,10 @@
       <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Vehicles">
+      <HintPath>..\..\..\..\..\..\..\workshop\content\294100\3014915404\1.5\Assemblies\Vehicles.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="VFECore">
       <HintPath>..\..\..\..\..\..\..\workshop\content\294100\2023507013\1.4\Assemblies\VFECore.dll</HintPath>
       <Private>False</Private>
@@ -80,9 +84,11 @@
     <Compile Include="Abilities\Ability_ChapterBanner.cs" />
     <Compile Include="Abilities\Ability_ForeswalkLong.cs" />
     <Compile Include="Abilities\Ability_ForeswalkShort.cs" />
+    <Compile Include="Abilities\Ability_Inspire.cs" />
     <Compile Include="Abilities\Ability_IronCircle.cs" />
     <Compile Include="Abilities\Ability_RaiseBastion.cs" />
     <Compile Include="Abilities\Ability_PsychicEmp.cs" />
+    <Compile Include="Abilities\Ability_SteelRain.cs" />
     <Compile Include="Abilities\Ability_UpdateGizmo.cs" />
     <Compile Include="ChapterApparelColourTwo\ChapterApparelColourTwo.cs" />
     <Compile Include="ChapterApparelColourTwo\ChapterColourDef.cs" />
@@ -91,36 +97,50 @@
     <Compile Include="ChapterApparelColourTwo\PawnRenderNodeWorker_AttachmentShoulderChapterIcon.cs" />
     <Compile Include="ChapterApparelColourTwo\PawnRenderNodeWorker_AttachmentShoulderPad.cs" />
     <Compile Include="ChapterApparelColourTwo\PawnRenderNodeWorker_AttachmentShoulderRankIcon.cs" />
+    <Compile Include="ChapterApparelColourTwo\PawnRenderNode_AttachmentShoulderChapterIcon.cs" />
+    <Compile Include="ChapterApparelColourTwo\PawnRenderNode_AttachmentShoulderPad.cs" />
+    <Compile Include="ChapterApparelColourTwo\PawnRenderNode_AttachmentShoulderRankIcon.cs" />
     <Compile Include="ChapterApparelColourTwo\ShoulderIconDef.cs" />
     <Compile Include="ChapterApparelColourTwo\ShoulderPadIconTab.cs" />
     <Compile Include="Comps\CompAbilityEffect_AoeHit.cs" />
-    <Compile Include="Comps\CompAbilityEffect_DenyTheWitch.cs" />
-    <Compile Include="Comps\CompAbilityEffect_DivineRadianceCost.cs" />
-    <Compile Include="Comps\CompAbilityEffect_ProofOfFaith.cs" />
-    <Compile Include="Comps\CompAbilityEffect_SharedBurden.cs" />
-    <Compile Include="Comps\CompAbilityEffect_StasisConfirmation.cs" />
-    <Compile Include="Comps\CompAbilityEffect_SummonMechsForCaster.cs" />
-    <Compile Include="Comps\CompAbilityEffect_WordOfAuthority.cs" />
-    <Compile Include="Comps\CompAbilityEffect_WordOfDivination.cs" />
     <Compile Include="Comps\CompProperties_AbilityAoeHit.cs" />
-    <Compile Include="Comps\CompProperties_AbilityDivineRadianceCost.cs" />
-    <Compile Include="Comps\CompProperties_AbilityProofOfFaith.cs" />
-    <Compile Include="Comps\CompProperties_AbilitySharedBurden.cs" />
-    <Compile Include="Comps\CompProperties_AbilityStasisConfirmation.cs" />
-    <Compile Include="Comps\CompProperties_AbilityTwinDisable.cs" />
-    <Compile Include="Comps\CompProperties_AbilityTwinTeleport.cs" />
-    <Compile Include="Comps\CompProperties_AbilityWordOfAuthority.cs" />
-    <Compile Include="Comps\CompProperties_AbilityWordOfDivination.cs" />
     <Compile Include="Comps\CompProperties_Aura.cs" />
-    <Compile Include="Comps\CompProperties_AbilityDenyTheWitch.cs" />
-    <Compile Include="Comps\CompProperties_AbilitySummonMechsForCaster.cs" />
     <Compile Include="Comps\Comp_Aura.cs" />
-    <Compile Include="Comps\Comp_TwinDisable.cs" />
-    <Compile Include="Comps\Comp_TwinTeleport.cs" />
     <Compile Include="Comps\GameComponent_MankindFinestUtils.cs" />
     <Compile Include="Comps\GameComponent_Perpetual.cs" />
-    <Compile Include="Comps\HediffCompProperties_SeverityFromDivineRadiance.cs" />
-    <Compile Include="Comps\HediffComp_SeverityFromDivineRadiance.cs" />
+    <Compile Include="Comps\LivingSaint\CompAbilityEffect_DivineRadianceCost.cs" />
+    <Compile Include="Comps\LivingSaint\CompAbilityEffect_ProofOfFaith.cs" />
+    <Compile Include="Comps\LivingSaint\CompProperties_AbilityDivineRadianceCost.cs" />
+    <Compile Include="Comps\LivingSaint\CompProperties_AbilityProofOfFaith.cs" />
+    <Compile Include="Comps\LivingSaint\GameComponent_LivingSaint.cs" />
+    <Compile Include="Comps\LivingSaint\HediffCompProperties_SeverityFromDivineRadiance.cs" />
+    <Compile Include="Comps\LivingSaint\HediffComp_SeverityFromDivineRadiance.cs" />
+    <Compile Include="Comps\Primarch\CompAbilityEffect_DenyTheWitch.cs" />
+    <Compile Include="Comps\Primarch\CompAbilityEffect_SharedBurden.cs" />
+    <Compile Include="Comps\Primarch\CompAbilityEffect_SummonMechsForCaster.cs" />
+    <Compile Include="Comps\Primarch\CompAbilityEffect_WarpShield.cs" />
+    <Compile Include="Comps\Primarch\CompAbilityEffect_WordOfAuthority.cs" />
+    <Compile Include="Comps\Primarch\CompAbilityEffect_WordOfDivination.cs" />
+    <Compile Include="Comps\Primarch\CompProperties_AbilityDenyTheWitch.cs" />
+    <Compile Include="Comps\Primarch\CompProperties_AbilitySharedBurden.cs" />
+    <Compile Include="Comps\Primarch\CompProperties_AbilitySummonMechsForCaster.cs" />
+    <Compile Include="Comps\Primarch\CompProperties_AbilityTwinDisable.cs" />
+    <Compile Include="Comps\Primarch\CompProperties_AbilityTwinTeleport.cs" />
+    <Compile Include="Comps\Primarch\CompProperties_AbilityWarpShield.cs" />
+    <Compile Include="Comps\Primarch\CompProperties_AbilityWordOfAuthority.cs" />
+    <Compile Include="Comps\Primarch\CompProperties_AbilityWordOfDivination.cs" />
+    <Compile Include="Comps\Primarch\Comp_TwinDisable.cs" />
+    <Compile Include="Comps\Primarch\Comp_TwinTeleport.cs" />
+    <Compile Include="Comps\Rank\CompAbilityEffect_GeneseedHarvest.cs" />
+    <Compile Include="Comps\Rank\CompAbilityEffect_HealAndTend.cs" />
+    <Compile Include="Comps\Rank\CompAbilityEffect_StrengthenFaith.cs" />
+    <Compile Include="Comps\Rank\CompProperties_AbilityGeneseedHarvest.cs" />
+    <Compile Include="Comps\Rank\CompProperties_AbilityHealAndTend.cs" />
+    <Compile Include="Comps\Rank\CompProperties_AbilityStrengthenFaith.cs" />
+    <Compile Include="Comps\SpaceMarine\CompAbilityEffect_Remembrance.cs" />
+    <Compile Include="Comps\SpaceMarine\CompAbilityEffect_StasisConfirmation.cs" />
+    <Compile Include="Comps\SpaceMarine\CompProperties_AbilityRemembrance.cs" />
+    <Compile Include="Comps\SpaceMarine\CompProperties_AbilityStasisConfirmation.cs" />
     <Compile Include="DefModExtensions\DefModExtension_ExclusiveMech.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneInducedFear.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneseedHarvest.cs" />
@@ -156,6 +176,7 @@
     <Compile Include="ThingClasses\Building_ChapterBanner.cs" />
     <Compile Include="ThingClasses\Building_ChapterBuildingMulti.cs" />
     <Compile Include="ThingClasses\Building_ChapterBuildingSingle.cs" />
+    <Compile Include="ThingClasses\Building_DropPod.cs" />
     <Compile Include="ThingClasses\Building_GeneGestator.cs" />
     <Compile Include="ThingClasses\Building_GeneTable.cs" />
     <Compile Include="ThingClasses\Building_GeneticStorage.cs" />
@@ -173,7 +194,6 @@
     <Compile Include="DefModExtensions\DefModExtension_GeneMatrixRecipe.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneMatrix.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneGestator.cs" />
-    <Compile Include="Comps\GameComponent_LivingSaint.cs" />
     <Compile Include="GeneClasses\Gene_EternalWatch.cs" />
     <Compile Include="GeneClasses\Gene_LivingSaint.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_BillPsycost.cs" />
@@ -182,7 +202,7 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_KeepPrerequisitePermit.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_EternalWatchStopMentalState.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_LivingSaintResurrection.cs" />
-    <Compile Include="HarmonyPatches\HarmonyPatch_LivingSaintDeath.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_LivingSaintAscension.cs" />
     <Compile Include="ThingClasses\Building_SangprimusPortum.cs" />
     <Compile Include="ThingClasses\GeneMaterialExtra.cs" />
     <Compile Include="ThingClasses\GeneticMatrix.cs" />
@@ -192,11 +212,14 @@
     <Compile Include="Windows\Dialog_ViewGenesEmbryo.cs" />
     <Compile Include="Windows\ITab_ContentsGeneticStorage.cs" />
     <Compile Include="Windows\ITab_SangprimusPortum.cs" />
-    <Compile Include="Workers\JobDriver_FillPrimarchGrowthVat.cs" />
-    <Compile Include="Workers\JobDriver_FillGeneGestator.cs" />
-    <Compile Include="Workers\JobDriver_FleeInducedFear.cs" />
-    <Compile Include="Workers\ThoughtWorker_HolyRadiance.cs" />
-    <Compile Include="Workers\ThoughtWorker_XXTwinDead.cs" />
+    <Compile Include="Workers\JobDriver\JobDriver_FillGeneGestator.cs" />
+    <Compile Include="Workers\JobDriver\JobDriver_FillPrimarchGrowthVat.cs" />
+    <Compile Include="Workers\JobDriver\JobDriver_FleeInducedFear.cs" />
+    <Compile Include="Workers\ThoughtWorkers\ThoughtWorker_HolyRadiance.cs" />
+    <Compile Include="Workers\ThoughtWorkers\ThoughtWorker_Pariah.cs" />
+    <Compile Include="Workers\ThoughtWorkers\ThoughtWorker_Precept_Psyker.cs" />
+    <Compile Include="Workers\ThoughtWorkers\ThoughtWorker_Precept_Psyker_Social.cs" />
+    <Compile Include="Workers\ThoughtWorkers\ThoughtWorker_XXTwinDead.cs" />
     <Compile Include="Workers\WorkerClass_RubiconPrimaris.cs" />
     <Compile Include="Workers\WorkGiver_FillPrimarchGrowthVat.cs" />
     <Compile Include="Workers\WorkGiver_HaulToPrimarchVat.cs" />
@@ -206,8 +229,6 @@
     <Compile Include="Workers\WorkGiver_FillGeneGestator.cs" />
     <Compile Include="Comps\CompProperties_DeteriorateOutsideBuilding.cs" />
     <Compile Include="Comps\Comp_DeteriorateOutsideBuilding.cs" />
-    <Compile Include="Comps\CompAbilityEffect_WarpShield.cs" />
-    <Compile Include="Comps\CompProperties_AbilityWarpShield.cs" />
     <Compile Include="Comps\CompProperties_GivesAbility.cs" />
     <Compile Include="DefModExtensions\DefModExtension_WarpShield.cs" />
     <Compile Include="DefModExtensions\DefModExtension_Psyker.cs" />
@@ -216,23 +237,16 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_StopDeterioation.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_MentalBreakdownPsyker.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_NaturalBirthPsykerPariah.cs" />
-    <Compile Include="Comps\CompAbilityEffect_GeneseedHarvest.cs" />
-    <Compile Include="Comps\CompProperties_AbilityGeneseedHarvest.cs" />
     <Compile Include="DefModExtensions\DefModExtension_PotentialHarvest.cs" />
     <Compile Include="DefModExtensions\DefModExtension_Pariah.cs" />
     <Compile Include="Genes40kMod.cs" />
     <Compile Include="Genes40kModSettings.cs" />
-    <Compile Include="Workers\ThoughtWorker_Precept_Psyker_Social.cs" />
-    <Compile Include="Workers\ThoughtWorker_Precept_Psyker.cs" />
     <Compile Include="Workers\WorkerClass_GeneProgenoidRemovalPrimarisMarine.cs" />
     <Compile Include="Workers\WorkerClass_GeneProgenoidRemovalSpaceMarine.cs" />
     <Compile Include="Workers\WorkerClass_GeneProgenoidRemovalBase.cs" />
-    <Compile Include="Workers\ThoughtWorker_Pariah.cs" />
     <Compile Include="Genes40kUtils.cs" />
     <Compile Include="Genes40kDefOf.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_Carapace.cs" />
-    <Compile Include="Comps\CompProperties_AbilityRemembrance.cs" />
-    <Compile Include="Comps\CompAbilityEffect_Remembrance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

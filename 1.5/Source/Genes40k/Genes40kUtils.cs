@@ -207,6 +207,7 @@ namespace Genes40k
             Find.WindowStack.Add(new Dialog_ViewGenes(pawn));
             
             pawn.Destroy();
+            Find.WorldPawns.RemoveAndDiscardPawnViaGC(pawn);
         }
         
         public static void InspectGeneseedVialGenes(GeneseedVial geneseedVial)
@@ -246,6 +247,7 @@ namespace Genes40k
             Find.WindowStack.Add(new Dialog_ViewGenes(pawn));
             
             pawn.Destroy();
+            Find.WorldPawns.RemoveAndDiscardPawnViaGC(pawn);
         }
 
         public static int GetGeneseedImplantationSuccessChance(Pawn pawn, GeneseedVial geneseedVial)
@@ -375,6 +377,38 @@ namespace Genes40k
         {
             var geneDivineRadiance = pawn.genes?.GetFirstGeneOfType<Gene_DivineRadiance>();
             geneDivineRadiance?.ChangeDivineRadianceAmount(offset);
+        }
+        
+        public static void SetupChapterForPawn(Pawn pawn)
+        {
+            if (pawn.genes == null || !IsFirstborn(pawn))
+            {
+                return;
+            }
+            
+            var chapter = Current.Game.GetComponent<GameComponent_MankindFinestUtils>().CurrentChapterColour;
+            
+            //Temp
+            chapter = Genes40kDefOf.BEWH_ChapterColourVII;
+
+            if (!pawn.genes.HasActiveGene(chapter.relatedChapterGene))
+            {
+                pawn.genes.AddGene(chapter.relatedChapterGene, true);
+            }
+            
+            foreach (var apparel in pawn.apparel.WornApparel)
+            {
+                switch (apparel)
+                {
+                    case ExtraIconsChapterApparelColourTwo extraIconsChapterApparelColourTwo:
+                        extraIconsChapterApparelColourTwo.ApplyColourPreset(chapter);
+                        extraIconsChapterApparelColourTwo.LeftShoulderIcon = chapter.relatedChapterIcon;
+                        break;
+                    case ChapterApparelColourTwo chapterApparelColourTwo:
+                        chapterApparelColourTwo.ApplyColourPreset(chapter);
+                        break;
+                }
+            }
         }
         
     }

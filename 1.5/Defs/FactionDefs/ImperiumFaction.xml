@@ -9,7 +9,7 @@
         <pawnSingular>Human</pawnSingular>
         <pawnsPlural>Humen</pawnsPlural>
         <fixedLeaderKinds>
-            <li>BEWH_LordCommander</li>
+            <li>BEWH_LordCommanderPawn</li>
         </fixedLeaderKinds>
         <leaderTitle>Lord Commander</leaderTitle>
         <fixedName>Imperium of Mankind</fixedName>
@@ -117,9 +117,9 @@
                 <kindDef>Combat</kindDef>
                 <commonality>100</commonality>
                 <options>
-                    <BEWH_ImperiumGuardman>15</BEWH_ImperiumGuardman>
-                    <BEWH_SpaceMarine>10</BEWH_SpaceMarine>
-                    <BEWH_PrimarisSpaceMarine>8</BEWH_PrimarisSpaceMarine>
+                    <BEWH_ImperiumGuardmanPawn>15</BEWH_ImperiumGuardmanPawn>
+                    <BEWH_FirstbornPawn>10</BEWH_FirstbornPawn>
+                    <BEWH_PrimarisSpaceMarinePawn>8</BEWH_PrimarisSpaceMarinePawn>
                 </options>
             </li>
             <!-- Firstborn squad -->
@@ -127,7 +127,7 @@
                 <kindDef>Combat</kindDef>
                 <commonality>30</commonality>
                 <options>
-                    <BEWH_SpaceMarine>1</BEWH_SpaceMarine>
+                    <BEWH_FirstbornPawn>1</BEWH_FirstbornPawn>
                 </options>
             </li>
             <!-- Primaris squad -->
@@ -135,39 +135,39 @@
                 <kindDef>Combat</kindDef>
                 <commonality>20</commonality>
                 <options>
-                    <BEWH_PrimarisSpaceMarine>1</BEWH_PrimarisSpaceMarine>
+                    <BEWH_PrimarisSpaceMarinePawn>1</BEWH_PrimarisSpaceMarinePawn>
                 </options>
             </li>
             <!-- Base defense -->
             <li>
                 <kindDef>Settlement</kindDef>
                 <options>
-                    <BEWH_ImperiumGuardman>6</BEWH_ImperiumGuardman>
-                    <BEWH_SpaceMarine>14</BEWH_SpaceMarine>
-                    <BEWH_PrimarisSpaceMarine>8</BEWH_PrimarisSpaceMarine>
-                    <BEWH_Custodes>20</BEWH_Custodes>
+                    <BEWH_ImperiumGuardmanPawn>6</BEWH_ImperiumGuardmanPawn>
+                    <BEWH_FirstbornPawn>14</BEWH_FirstbornPawn>
+                    <BEWH_PrimarisSpaceMarinePawn>8</BEWH_PrimarisSpaceMarinePawn>
+                    <BEWH_CustodesPawn>20</BEWH_CustodesPawn>
                 </options>
             </li>
             <!-- Trader -->
             <li>
                 <kindDef>Trader</kindDef>
                 <traders>
-                    <BEWH_ImperiumTrader>1</BEWH_ImperiumTrader>
+                    <BEWH_ImperiumTraderPawn>1</BEWH_ImperiumTraderPawn>
                 </traders>
                 <carriers>
                     <Muffalo>10</Muffalo>
                 </carriers>
                 <guards>
-                    <BEWH_ImperiumGuardman>20</BEWH_ImperiumGuardman>
-                    <BEWH_SpaceMarine>2</BEWH_SpaceMarine>
+                    <BEWH_ImperiumGuardmanPawn>20</BEWH_ImperiumGuardmanPawn>
+                    <BEWH_FirstbornPawn>2</BEWH_FirstbornPawn>
                 </guards>
             </li>
             <!-- Peaceful -->
             <li>
                 <kindDef>Peaceful</kindDef>
                 <options>
-                    <BEWH_ImperiumGuardman>16</BEWH_ImperiumGuardman>
-                    <BEWH_SpaceMarine>4</BEWH_SpaceMarine>
+                    <BEWH_ImperiumGuardmanPawn>16</BEWH_ImperiumGuardmanPawn>
+                    <BEWH_FirstbornPawn>4</BEWH_FirstbornPawn>
                 </options>
             </li>
         </pawnGroupMakers>

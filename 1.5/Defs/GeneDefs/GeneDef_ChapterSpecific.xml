@@ -287,6 +287,7 @@
         <statOffsets>
             <MeleeDamageFactor>0.2</MeleeDamageFactor>
             <MeleeHitChance>3</MeleeHitChance>
+            <MeleeDodgeChance>1</MeleeDodgeChance>
         </statOffsets>
         <forcedTraits>
             <li>

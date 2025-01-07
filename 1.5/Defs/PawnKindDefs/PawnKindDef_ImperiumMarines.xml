@@ -61,7 +61,7 @@
 
     <!-- Space Marine -->
     <PawnKindDef ParentName="BEWH_SpaceMarineBasePawn">
-        <defName>BEWH_SpaceMarine</defName>
+        <defName>BEWH_FirstbornPawn</defName>
         <label>Tactical Marine</label>
         <combatPower>170</combatPower>
         <apparelRequired>
@@ -87,7 +87,7 @@
 
     <!-- Primaris Space Marine -->
     <PawnKindDef ParentName="BEWH_SpaceMarineBasePawn">
-        <defName>BEWH_PrimarisSpaceMarine</defName>
+        <defName>BEWH_PrimarisSpaceMarinePawn</defName>
         <label>Tactical Primaris Marine</label>
         <combatPower>220</combatPower>
         <apparelRequired>
@@ -113,7 +113,7 @@
 
     <!-- Custodes -->
     <PawnKindDef ParentName="BEWH_SpaceMarineBasePawn">
-        <defName>BEWH_Custodes</defName>
+        <defName>BEWH_CustodesPawn</defName>
         <label>custodes</label>
         <combatPower>750</combatPower>
         <apparelColor>(240,170,30)</apparelColor>
@@ -140,7 +140,7 @@
 
     <!-- Lord Commander - Primarch -->
     <PawnKindDef ParentName="BEWH_SpaceMarineBasePawn">
-        <defName>BEWH_LordCommander</defName>
+        <defName>BEWH_LordCommanderPawn</defName>
         <label>primarch</label>
         <combatPower>1200</combatPower>
         <factionLeader>true</factionLeader>
