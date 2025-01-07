@@ -48,6 +48,7 @@ Primarch Specific Icons (Not sure what excatly to do here) (Maybe flip the helix
 ## Code and XML
 New turret texture for rogal ability turret
 
+When chapter icons are made remove the temp setting of chapters in the Genes40kUtils.SetupChapterForPawn() method and the chapterColourDef from Genes40kDefOf
 
 
 
@@ -72,7 +73,7 @@ These can then be found by a quest or by an event where they wander by.
 Should spawn one alpha and a couple of other ones, if alpha is slain, other ones immediately become tamed under the killer. Should also be made compatible with whatever mount riding framework is currently da shit(best), giddy up 2?
 https://wh40k.lexicanum.com/wiki/Fenrisian_Wolf 
 
-Make Blood Chalice art and xml, an exotic item that when ingested by pawns with the red thirst, will completely fill essentially all need and restore all wounds. - https://wh40k.lexicanum.com/wiki/Blood_Chalice 
+Make Blood Chalice art and xml, an exotic item that when ingested by pawns with the red thirst, will completely fill essentially all need and restore all wounds. Would be found in a quest to give one. One use, can be replenished somehow - https://wh40k.lexicanum.com/wiki/Blood_Chalice 
 
 SOS2 integration?
 

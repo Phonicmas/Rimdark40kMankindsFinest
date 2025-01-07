@@ -219,10 +219,11 @@
         <description>...</description>
         <iconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Long</iconPath>
         <abilityClass>Genes40k.Ability_SteelRain</abilityClass>
-        <castTime>40</castTime>
-        <range>30.9</range>
-        <radius>12.9</radius>
-        <cooldownTime>5000</cooldownTime>
+        <castTime>100</castTime>
+        <range>40.9</range>
+        <power>3</power>        <!-- Determines amount of drop pods -->
+        <radius>15.9</radius>
+        <cooldownTime>120000</cooldownTime>
         <targetMode>Location</targetMode>
     </VFECore.Abilities.AbilityDef>
 

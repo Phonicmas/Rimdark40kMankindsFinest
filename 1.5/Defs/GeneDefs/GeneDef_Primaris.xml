@@ -11,7 +11,7 @@
         <statOffsets>
             <CarryingCapacity>100</CarryingCapacity>
             <MeleeDamageFactor>0.3</MeleeDamageFactor>
-            <StaggerDurationFactor>-0.5</StaggerDurationFactor>
+            <StaggerDurationFactor>-0.3</StaggerDurationFactor>
             <IncomingDamageFactor>-0.05</IncomingDamageFactor>
         </statOffsets>
         <suppressedTraits>

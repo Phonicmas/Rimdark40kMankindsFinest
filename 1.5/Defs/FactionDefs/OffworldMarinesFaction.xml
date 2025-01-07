@@ -31,8 +31,8 @@
         <hidden>true</hidden>
         <autoFlee>false</autoFlee>
 
-        <factionIconPath>UI/Icons/Imperium/ImperiumIcon</factionIconPath>
-        <settlementTexturePath>UI/Icons/Imperium/ImperiumIcon</settlementTexturePath>
+        <factionIconPath>UI/Xenotypes/BEWH_SpaceMarineXenoIcon</factionIconPath>
+        <settlementTexturePath>UI/Xenotypes/BEWH_SpaceMarineXenoIcon</settlementTexturePath>
     </FactionDef>
 
 </Defs>

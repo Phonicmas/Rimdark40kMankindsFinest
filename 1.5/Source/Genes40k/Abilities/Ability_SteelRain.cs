@@ -16,14 +16,25 @@ namespace Genes40k
             base.Cast(targets);
             foreach (var globalTargetInfo in targets)
             {
-                var list = GenRadial.RadialCellsAround(globalTargetInfo.Cell, GetRadiusForPawn(), useCenter: true).Where(c => c.InBounds(pawn.Map) && !c.Fogged(pawn.Map) && c.GetEdifice(pawn.Map) == null).ToList();
+                var possibleCells = GenRadial.RadialCellsAround(globalTargetInfo.Cell, GetRadiusForPawn(), useCenter: true).Where(c => c.InBounds(pawn.Map) && !c.Fogged(pawn.Map)).ToList();
+
+                var cellsToSpawn = new List<IntVec3>();
+                var initialCell = possibleCells.Where(c => c.GetEdifice(pawn.Map) == null).RandomElement();
                 
-                var firstSpawnCell = list.RandomElement();
+                cellsToSpawn.Add(initialCell);
+                possibleCells.Remove(initialCell);
                 
-                var secondSpawnCell = list.Where(cell => cell.DistanceTo(firstSpawnCell) > 5).RandomElement();
-                
-                SpawnSkyfaller(firstSpawnCell);
-                SpawnSkyfaller(secondSpawnCell);
+                for (var i = 0; i < def.power-1; i++)
+                {
+                    var spawnCell = possibleCells.Where(c => cellsToSpawn.All(c2 => c2.DistanceTo(c) > 5) && c.GetEdifice(pawn.Map) == null).RandomElement();
+                    cellsToSpawn.Add(spawnCell);
+                    possibleCells.Remove(spawnCell);
+                }
+
+                foreach (var cell in cellsToSpawn)
+                {
+                    SpawnSkyfaller(cell);
+                }
             }
         }
         

@@ -1,6 +1,5 @@
 ﻿using HarmonyLib;
 using RimWorld;
-using Vehicles;
 using Verse;
 
 namespace Genes40k
@@ -11,14 +10,12 @@ namespace Genes40k
     {
         public static bool Prefix(Pawn __instance, ref DestroyMode mode)
         {
-            if (ModsConfig.IsActive("smashphil.vehicleframework"))
+            //SmashPhil Vehicle case, hopefully doesnt cause any side effects. Pawns shouldn't be targeted by deconstruct anyway.
+            if (mode == DestroyMode.Deconstruct)
             {
-                if (__instance is VehiclePawn)
-                {
-                    mode = DestroyMode.Vanish;
-                    GenLeaving.DoLeavingsFor(__instance, __instance.Map, DestroyMode.Deconstruct);
-                    return true;
-                }
+                mode = DestroyMode.Vanish;
+                GenLeaving.DoLeavingsFor(__instance, __instance.Map, DestroyMode.Deconstruct);
+                return true;
             }
             if (__instance.genes == null || !__instance.genes.GenesListForReading.Any(gene => gene.def.HasModExtension<DefModExtension_PerpetualGene>()))
             {

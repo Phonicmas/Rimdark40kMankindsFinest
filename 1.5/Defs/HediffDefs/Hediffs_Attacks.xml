@@ -16,10 +16,41 @@
                     <li>
                         <label>wulfen canines</label>
                         <capacities>
-                            <li>Stab</li>
+                            <li>Bite</li>
                         </capacities>
                         <power>19</power>
                         <cooldownTime>1.8</cooldownTime>
+                        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+                        <soundMeleeHit>Pawn_Melee_HumanBite_Hit</soundMeleeHit>
+                        <soundMeleeMiss>Pawn_Melee_HumanBite_Miss</soundMeleeMiss>
+                    </li>
+                </tools>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <!-- Elongated Teeth -->
+    <HediffDef>
+        <defName>BEWH_RedThirstElongatedTeeth</defName>
+        <label>elongated teeth</label>
+        <description>...</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_VerbGiver">
+                <tools>
+                    <li>
+                        <label>elongated teeth</label>
+                        <capacities>
+                            <li>Bite</li>
+                        </capacities>
+                        <power>12</power>
+                        <cooldownTime>2</cooldownTime>
+                        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+                        <soundMeleeHit>Pawn_Melee_HumanBite_Hit</soundMeleeHit>
+                        <soundMeleeMiss>Pawn_Melee_HumanBite_Miss</soundMeleeMiss>
                     </li>
                 </tools>
             </li>

@@ -329,13 +329,26 @@
         </resourceGizmoThresholds>
         <customEffectDescriptions>
             <li>Gives hemogen supply.</li>
+            <li>Gives elongated teeth.</li>
         </customEffectDescriptions>
         <showGizmoOnWorldView>true</showGizmoOnWorldView>
         <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
         <resourceDescription>A reserve of biological strength which can be gained and spent in a variety of ways.\n\nHemogen can be increased by bloodfeeding from a human or consuming hemogen packs. You can obtain hemogen packs using the 'extract hemogen pack' medical operation on a non-hemogenic human.\n\nIf hemogen reaches zero, {PAWN_nameDef} will become very unhappy.</resourceDescription>
-        <resourceLossPerDay>0.04</resourceLossPerDay>
+        <resourceLossPerDay>0.01</resourceLossPerDay>
         <aggroMentalBreakSelectionChanceFactor>20</aggroMentalBreakSelectionChanceFactor>
         <skinColorOverride>(252, 225, 194)</skinColorOverride>
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <hediffsToBodyParts>
+                    <li>
+                        <hediff>BEWH_RedThirstElongatedTeeth</hediff>
+                        <bodyparts>
+                            <li>Head</li>
+                        </bodyparts>
+                    </li>
+                </hediffsToBodyParts>
+            </li>
+        </modExtensions>
     </GeneDef>
 
     <!-- Chapter X - Iron Hands -->

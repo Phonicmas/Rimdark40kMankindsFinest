@@ -61,7 +61,7 @@
         <chanceNeverExplodeFromDamage>0.5</chanceNeverExplodeFromDamage>
       </li>
       <li Class="CompProperties_Lifespan">        <!-- Switch with some that makes a skyfaller that accelerates out into space OR simply crumble if they dont -->
-        <lifespanTicks>2500</lifespanTicks>
+        <lifespanTicks>10000</lifespanTicks>
         <expireEffect>RaisedRock_Collapse</expireEffect>
       </li>
       <!--<li Class="CompProperties_Stunnable">
@@ -99,8 +99,8 @@
         <defaultProjectile>BEWH_BolterRound</defaultProjectile>
         <warmupTime>0</warmupTime>
         <range>28.9</range>
-        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
-        <burstShotCount>4</burstShotCount>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <burstShotCount>2</burstShotCount>
         <soundCast>GunShotA</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>

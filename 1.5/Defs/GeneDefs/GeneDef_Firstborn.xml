@@ -71,7 +71,7 @@
         <displayOrderInCategory>3</displayOrderInCategory>
         <statOffsets>
             <CarryingCapacity>80</CarryingCapacity>
-            <StaggerDurationFactor>-0.25</StaggerDurationFactor>
+            <StaggerDurationFactor>-0.45</StaggerDurationFactor>
         </statOffsets>
         <statFactors>
             <MeleeDamageFactor>1.55</MeleeDamageFactor>
