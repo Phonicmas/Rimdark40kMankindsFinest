@@ -54,9 +54,6 @@ When chapter icons are made remove the temp setting of chapters in the Genes40kU
 
 New trait "Serf" that has increase mood and work speed when near a Firstborn, Primaris, Custodes or Primarch (Maybe thunder warrior and living saint?)
 
-
-Aura ability for living saint, buffing nearby pawn temporarily (Maybe)
-
 ## Bugs
 
 

@@ -22,7 +22,7 @@ namespace Genes40k
                     return icon;
                 }
                 
-                icon = !iconPath.NullOrEmpty() ? ContentFinder<Texture2D>.Get(iconPath) : BaseContent.BadTex;
+                icon = !iconPath.NullOrEmpty() ? ContentFinder<Texture2D>.Get(iconPath) : ContentFinder<Texture2D>.Get(Genes40kDefOf.BEWH_ShoulderNone.iconPath);
                 return icon;
             }
         }
@@ -37,6 +37,8 @@ namespace Genes40k
         public float sortOrder = 0f;
 
         public RankDef mustHaveRank = null;
+        
+        public GeneDef relatedChapterGene = null;
         
         //public GeneDef mustHaveGene = null;
         

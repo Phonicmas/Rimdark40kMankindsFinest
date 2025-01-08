@@ -17,7 +17,9 @@
             <WorkSpeedGlobal>1.1</WorkSpeedGlobal>
         </statFactors>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_ChapterGene" />
+            <li Class="Genes40k.DefModExtension_ChapterGene">
+                <chapterName>Dark Angels</chapterName>
+            </li>
             <li Class="Genes40k.DefModExtension_GeneseedPurity">
                 <additionalChanceOffset>-15</additionalChanceOffset>
                 <additionalChanceCapOffset>-15</additionalChanceCapOffset>
@@ -57,7 +59,9 @@
             <li>Increased joy from viewing art.</li>
         </customEffectDescriptions>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_ChapterGene" />
+            <li Class="Genes40k.DefModExtension_ChapterGene">
+                <chapterName>Emperor's Children</chapterName>
+            </li>
             <li Class="Genes40k.DefModExtension_IncreasedJoyFromArt">
                 <joyFromArtFactor>2</joyFromArtFactor>
             </li>
@@ -81,7 +85,9 @@
             <li>7% decrease to gene-seed implantation failure chance cap.</li>
         </customEffectDescriptions>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_ChapterGene" />
+            <li Class="Genes40k.DefModExtension_ChapterGene">
+                <chapterName>Iron Warriors</chapterName>
+            </li>
             <li Class="Genes40k.DefModExtension_GeneseedPurity">
                 <additionalChanceOffset>-7</additionalChanceOffset>
                 <additionalChanceCapOffset>-7</additionalChanceCapOffset>
@@ -128,7 +134,9 @@
             <CrawlSpeed>0.4</CrawlSpeed>
         </statOffsets>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_ChapterGene" />
+            <li Class="Genes40k.DefModExtension_ChapterGene">
+                <chapterName>White Scars</chapterName>
+            </li>
         </modExtensions>
     </GeneDef>
 
@@ -151,7 +159,9 @@
             <GeneDef>BEWH_ChapterIXFlaw</GeneDef>
         </descriptionHyperlinks>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_ChapterGene" />
+            <li Class="Genes40k.DefModExtension_ChapterGene">
+                <chapterName>Space Wolves</chapterName>
+            </li>
             <li Class="Core40k.DefModExtension_AddRandomGeneByWeight">
                 <possibleGenesToGive>
                     <li>
@@ -237,9 +247,15 @@
             <ConstructSuccessChance>0.5</ConstructSuccessChance>
             <MentalBreakThreshold>-0.05</MentalBreakThreshold>
         </statOffsets>
+        <customEffectDescriptions>
+            <li>Non-functioning sus-an membrane.</li>
+            <li>Non-functioning betcher's gland.</li>
+        </customEffectDescriptions>
         <painFactor>0.7</painFactor>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_ChapterGene" />
+            <li Class="Genes40k.DefModExtension_ChapterGene">
+                <chapterName>Imperial Fists</chapterName>
+            </li>
         </modExtensions>
     </GeneDef>
 
@@ -261,7 +277,9 @@
             </li>
         </forcedTraits>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_ChapterGene" />
+            <li Class="Genes40k.DefModExtension_ChapterGene">
+                <chapterName>Night Lords</chapterName>
+            </li>
             <li Class="Genes40k.DefModExtension_GeneInducedFear">
                 <genesCausesImmunityToFear>
                     <li>BEWH_ChapterVIIINightLords</li>
@@ -301,7 +319,9 @@
             <GeneDef>BEWH_ChapterIXFlaw</GeneDef>
         </descriptionHyperlinks>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_ChapterGene" />
+            <li Class="Genes40k.DefModExtension_ChapterGene">
+                <chapterName>Blood Angels</chapterName>
+            </li>
             <li Class="Core40k.DefModExtension_AddRandomGeneByWeight">
                 <possibleGenesToGive>
                     <li>
@@ -371,7 +391,9 @@
             <ResearchSpeed>0.1</ResearchSpeed>
         </statOffsets>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_ChapterGene" />
+            <li Class="Genes40k.DefModExtension_ChapterGene">
+                <chapterName>Iron Hands</chapterName>
+            </li>
         </modExtensions>
     </GeneDef>
 
@@ -408,7 +430,9 @@
         <socialFightChanceFactor>2</socialFightChanceFactor>
         <aggroMentalBreakSelectionChanceFactor>3</aggroMentalBreakSelectionChanceFactor>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_ChapterGene" />
+            <li Class="Genes40k.DefModExtension_ChapterGene">
+                <chapterName>World Eaters</chapterName>
+            </li>
             <li Class="Core40k.DefModExtension_AddRandomTraitByWeight">
                 <possibleTraitsToGive>
                     <li>
@@ -450,7 +474,9 @@
             <WorkSpeedGlobal>1.3</WorkSpeedGlobal>
         </statFactors>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_ChapterGene" />
+            <li Class="Genes40k.DefModExtension_ChapterGene">
+                <chapterName>Ultramarines</chapterName>
+            </li>
             <li Class="Genes40k.DefModExtension_GeneseedPurity">
                 <additionalChanceOffset>-10</additionalChanceOffset>
                 <additionalChanceCapOffset>-5</additionalChanceCapOffset>
@@ -478,7 +504,9 @@
             </li>
         </forcedTraits>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_ChapterGene" />
+            <li Class="Genes40k.DefModExtension_ChapterGene">
+                <chapterName>Death Guard</chapterName>
+            </li>
         </modExtensions>
     </GeneDef>
 
@@ -504,7 +532,9 @@
             <PsychicEntropyRecoveryRate>1.2</PsychicEntropyRecoveryRate>
         </statFactors>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_ChapterGene" />
+            <li Class="Genes40k.DefModExtension_ChapterGene">
+                <chapterName>Thousand Sons</chapterName>
+            </li>
             <li Class="Core40k.DefModExtension_AddRandomGeneByWeight">
                 <possibleGenesToGive>
                     <li>
@@ -537,7 +567,9 @@
             <ShootingAccuracyFactor_Touch>1.5</ShootingAccuracyFactor_Touch>
         </statFactors>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_ChapterGene" />
+            <li Class="Genes40k.DefModExtension_ChapterGene">
+                <chapterName>Sons of Horus</chapterName>
+            </li>
         </modExtensions>
     </GeneDef>
 
@@ -557,7 +589,9 @@
         </aptitudes>
         <painFactor>0.9</painFactor>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_ChapterGene" />
+            <li Class="Genes40k.DefModExtension_ChapterGene">
+                <chapterName>Word Bearers</chapterName>
+            </li>
         </modExtensions>
     </GeneDef>
 
@@ -589,7 +623,9 @@
             </li>
         </capMods>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_ChapterGene" />
+            <li Class="Genes40k.DefModExtension_ChapterGene">
+                <chapterName>Salamanders</chapterName>
+            </li>
             <li Class="Core40k.DefModExtension_AddRandomTraitByWeight">
                 <possibleTraitsToGive>
                     <li>
@@ -618,6 +654,10 @@
             <HuntingStealth>0.3</HuntingStealth>
         </statOffsets>
         <skinColorOverride>(230, 220, 200)</skinColorOverride>
+        <customEffectDescriptions>
+            <li>Non-functioning mucranoid.</li>
+            <li>Non-functioning betcher's gland.</li>
+        </customEffectDescriptions>
         <conditionalStatAffecters>
             <li Class="VanillaGenesExpanded.ConditionalStatAffecter_Darkness">
                 <statFactors>
@@ -628,7 +668,9 @@
             </li>
         </conditionalStatAffecters>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_ChapterGene" />
+            <li Class="Genes40k.DefModExtension_ChapterGene">
+                <chapterName>Raven Guard</chapterName>
+            </li>
         </modExtensions>
     </GeneDef>
 
@@ -657,7 +699,9 @@
             <Social>3</Social>
         </aptitudes>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_ChapterGene" />
+            <li Class="Genes40k.DefModExtension_ChapterGene">
+                <chapterName>Alpha Legion</chapterName>
+            </li>
         </modExtensions>
     </GeneDef>
 

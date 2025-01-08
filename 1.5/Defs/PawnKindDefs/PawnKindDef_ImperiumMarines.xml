@@ -8,7 +8,7 @@
         <initialResistanceRange>300~400</initialResistanceRange>
         <acceptArrestChanceFactor>0</acceptArrestChanceFactor>
         <fixedGender>Male</fixedGender>
-        <itemQuality>Good</itemQuality>
+        <itemQuality>Normal</itemQuality>
         <requiredWorkTags>Violent</requiredWorkTags>
         <backstoryFiltersOverride>
             <li>

@@ -89,6 +89,9 @@ namespace Genes40k
         public static XenotypeDef BEWH_PrimarisSpaceMarine;
         public static XenotypeDef BEWH_Custodes;
         public static XenotypeDef BEWH_Primarch;
+        
+        //XenotypeIcon
+        public static XenotypeIconDef BEWH_AstartesIcon;
 
         //Researchprojects
         public static ResearchProjectDef BEWH_GeneseedExtractionFirstborn;
@@ -182,6 +185,7 @@ namespace Genes40k
         public static FactionDef BEWH_OffworldMarinesFaction;
         
         //TEMP
+        public static ChapterColourDef BEWH_ChapterColourI;
         public static ChapterColourDef BEWH_ChapterColourVII;
         
         static Genes40kDefOf()

@@ -13,8 +13,6 @@ namespace Genes40k
         
         private List<ChapterColourDef> chapterColours = new List<ChapterColourDef>();
 
-        private ChapterColourDef customDef;
-
         private ChapterColourDef currentlySelectedPreset;
         
         public override Vector2 InitialSize => new Vector2(900f, 700f);
@@ -24,15 +22,11 @@ namespace Genes40k
             this.settings = settings;
             closeOnClickedOutside = true;
             
-            customDef = new ChapterColourDef
+            currentlySelectedPreset = settings.CurrentlySelectedPreset;
+            if (currentlySelectedPreset == null)
             {
-                defName = "BEWH_CustomChapterDef",
-                label = "Custom",
-                primaryColour = settings.chapterColorOne,
-                secondaryColour = settings.chapterColorTwo,
-            };
-            
-            currentlySelectedPreset = settings.currentlySelectedPreset ?? customDef;
+                currentlySelectedPreset = settings.CustomPreset;
+            }
             chapterColours = DefDatabase<ChapterColourDef>.AllDefs.ToList();
         }
         
@@ -51,8 +45,8 @@ namespace Genes40k
                 var list = new List<FloatMenuOption>();
                 var customMenuOption = new FloatMenuOption("BEWH.MankindsFinest.ModSettings.CustomColour".Translate(), delegate
                 {
-                    currentlySelectedPreset = customDef;
-                }, Core40kUtils.ColourPreview(customDef.primaryColour, customDef.secondaryColour), Color.white);
+                    currentlySelectedPreset = settings.CustomPreset;
+                }, Core40kUtils.ColourPreview(settings.CustomPreset.primaryColour, settings.CustomPreset.secondaryColour), Color.white);
             
                 list.Add(customMenuOption);
                 foreach (var colour in chapterColours)
@@ -86,9 +80,9 @@ namespace Genes40k
             {
                 Find.WindowStack.Add( new Dialog_ColourPicker( currentlySelectedPreset.primaryColour, ( newColour ) =>
                 {
-                    customDef.primaryColour = newColour;
-                    customDef.secondaryColour = currentlySelectedPreset.secondaryColour;
-                    currentlySelectedPreset = customDef;
+                    settings.CustomPreset.primaryColour = newColour;
+                    settings.CustomPreset.secondaryColour = currentlySelectedPreset.secondaryColour;
+                    currentlySelectedPreset = settings.CustomPreset;
                 } ) );
             }
 
@@ -104,9 +98,9 @@ namespace Genes40k
             {
                 Find.WindowStack.Add( new Dialog_ColourPicker( currentlySelectedPreset.secondaryColour, ( newColour ) =>
                 {
-                    customDef.secondaryColour = newColour;
-                    customDef.primaryColour = currentlySelectedPreset.primaryColour;
-                    currentlySelectedPreset = customDef;
+                    settings.CustomPreset.secondaryColour = newColour;
+                    settings.CustomPreset.primaryColour = currentlySelectedPreset.primaryColour;
+                    currentlySelectedPreset = settings.CustomPreset;
                 } ) );
             }
             
@@ -120,7 +114,7 @@ namespace Genes40k
             {
                 settings.chapterColorOne = currentlySelectedPreset.primaryColour;
                 settings.chapterColorTwo = currentlySelectedPreset.secondaryColour;
-                settings.currentlySelectedPreset = currentlySelectedPreset == customDef ? null : currentlySelectedPreset;
+                settings.CurrentlySelectedPreset = currentlySelectedPreset;
                 Close();
             }
         }

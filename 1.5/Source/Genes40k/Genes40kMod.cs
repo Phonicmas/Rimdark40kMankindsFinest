@@ -27,7 +27,6 @@ namespace Genes40k
 
         public Genes40kMod(ModContentPack content) : base(content)
         {
-            //settings = GetSettings<Genes40kModSettings>();
             harmony = new Harmony("Genes40k.Mod");
             harmony.PatchAll();
         }
@@ -65,9 +64,28 @@ namespace Genes40k
             listingStandard.Gap();
             listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.UseChaosVersionForBanner".Translate(), ref Settings.useChaosVersion);
             listingStandard.Indent(inRect.width * 0.25f);
-            if (listingStandard.ButtonText("BEWH.MankindsFinest.ModSettings.DefaultChapterColours".Translate(), widthPct: 0.5f))
+            if (listingStandard.ButtonText("BEWH.MankindsFinest.ModSettings.DefaultChapterColours".Translate(settings.CurrentlySelectedPreset.label), widthPct: 0.5f))
             {
                 Find.WindowStack.Add(new Dialog_ChangeDefaultChapterColour(Settings));
+            }
+
+            if (Settings.CurrentlySelectedPreset.defName == "BEWH_CustomChapterDef")
+            {
+                //Maybe create this like RightShoulderIconDef in genes utils, to avoid creating it over and over.
+                var list = new List<FloatMenuOption>();
+                foreach (var shoulderIcon in Genes40kUtils.LeftShoulderIconDef)
+                {
+                    var menuOption = new FloatMenuOption(shoulderIcon.label, delegate
+                    {
+                        settings.chapterShoulderIcon = shoulderIcon;
+                        settings.CustomPreset.relatedChapterIcon = shoulderIcon;
+                    }, shoulderIcon.Icon, Color.white);
+                    list.Add(menuOption);
+                }
+                if (!list.NullOrEmpty() && listingStandard.ButtonText("BEWH.MankindsFinest.ModSettings.SelectDefaultChapterIcon".Translate(settings.chapterShoulderIcon.label), widthPct: 0.5f))
+                {
+                    Find.WindowStack.Add(new FloatMenu(list));
+                }
             }
             listingStandard.Outdent(inRect.width * 0.25f);
 

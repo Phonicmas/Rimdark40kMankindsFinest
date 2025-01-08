@@ -231,7 +231,7 @@
         <defName>BEWH_RankIconMasterOfTheApothecarion</defName>
         <label>Master of the Apothecarion</label>
         <description>Master of the Apothecarion rank icon</description>
-        <iconPath>UI/Ranks/Astartes/ MasterOfTheApothecarion</iconPath>
+        <iconPath>UI/Ranks/Astartes/MasterOfTheApothecarion</iconPath>
         <drawnTextureIconPath>...</drawnTextureIconPath>
         <sortOrder>9</sortOrder>
         <mustHaveRank>BEWH_AstartesRankMasterOfTheApothecarion</mustHaveRank>
@@ -264,7 +264,7 @@
         <defName>BEWH_RankIconMasterOfSanctity</defName>
         <label>Master of Sanctity</label>
         <description>Master of Sanctity rank icon</description>
-        <iconPath>UI/Ranks/Astartes/ MasterOfSanctity</iconPath>
+        <iconPath>UI/Ranks/Astartes/MasterOfSanctity</iconPath>
         <drawnTextureIconPath>...</drawnTextureIconPath>
         <sortOrder>9.75</sortOrder>
         <mustHaveRank>BEWH_AstartesRankMasterOfSanctity</mustHaveRank>

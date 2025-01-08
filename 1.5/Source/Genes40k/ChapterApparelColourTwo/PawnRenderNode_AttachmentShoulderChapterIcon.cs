@@ -24,9 +24,9 @@ namespace Genes40k
             {
                 leftShoulderIcon = apparelColourTwo.LeftShoulderIcon.drawnTextureIconPath;
             }
-            else if (pawn.Faction != null && pawn.Faction.IsPlayer && ModSettings.currentlySelectedPreset != null)
+            else if (pawn.Faction != null && pawn.Faction.IsPlayer && ModSettings.CurrentlySelectedPreset.relatedChapterIcon != null)
             {
-                leftShoulderIcon = ModSettings.currentlySelectedPreset.relatedChapterIcon.drawnTextureIconPath;
+                leftShoulderIcon = ModSettings.CurrentlySelectedPreset.relatedChapterIcon.drawnTextureIconPath;
             }
             
             return GraphicDatabase.Get<Graphic_Multi>(leftShoulderIcon, ShaderFor(pawn), Props.drawSize, apparelColourTwo.DrawColor, apparelColourTwo.DrawColorTwo);

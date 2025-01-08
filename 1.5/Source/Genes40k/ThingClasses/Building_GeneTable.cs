@@ -10,7 +10,6 @@ namespace Genes40k
 {
     public class Building_GeneTable : Building_WorkTable
     {
-
         private int tickAmount = 0;
 
         private const int tickAmountDrain = 1000;

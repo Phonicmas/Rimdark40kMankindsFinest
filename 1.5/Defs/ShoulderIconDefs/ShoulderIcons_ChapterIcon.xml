@@ -14,6 +14,7 @@
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterIDarkAngels</iconPath>
         <drawnTextureIconPath>...</drawnTextureIconPath>
         <sortOrder>1</sortOrder>
+        <relatedChapterGene>BEWH_ChapterIDarkAngels</relatedChapterGene>
     </Genes40k.ShoulderIconDef>
 
     <!-- Emperor's Children -->
@@ -24,6 +25,7 @@
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterIIIEmperorsChildren</iconPath>
         <drawnTextureIconPath>...</drawnTextureIconPath>
         <sortOrder>3</sortOrder>
+        <relatedChapterGene>BEWH_ChapterIIIEmperorsChildren</relatedChapterGene>
     </Genes40k.ShoulderIconDef>
 
     <!-- Iron Warriors -->
@@ -34,6 +36,7 @@
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterIVIronWarriors</iconPath>
         <drawnTextureIconPath>...</drawnTextureIconPath>
         <sortOrder>4</sortOrder>
+        <relatedChapterGene>BEWH_ChapterIVIronWarriors</relatedChapterGene>
     </Genes40k.ShoulderIconDef>
 
     <!-- White Scars -->
@@ -44,6 +47,7 @@
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterVWhiteScars</iconPath>
         <drawnTextureIconPath>...</drawnTextureIconPath>
         <sortOrder>5</sortOrder>
+        <relatedChapterGene>BEWH_ChapterVWhiteScars</relatedChapterGene>
     </Genes40k.ShoulderIconDef>
 
     <!-- Space Wolves -->
@@ -54,6 +58,7 @@
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterVISpaceWolves</iconPath>
         <drawnTextureIconPath>...</drawnTextureIconPath>
         <sortOrder>6</sortOrder>
+        <relatedChapterGene>BEWH_ChapterVISpaceWolves</relatedChapterGene>
     </Genes40k.ShoulderIconDef>
 
     <!-- Imperial Fists -->
@@ -64,6 +69,7 @@
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterVIIImperialFists</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_ImperialFists</drawnTextureIconPath>
         <sortOrder>7</sortOrder>
+        <relatedChapterGene>BEWH_ChapterVIIImperialFists</relatedChapterGene>
     </Genes40k.ShoulderIconDef>
 
     <!-- Night Lords -->
@@ -74,6 +80,7 @@
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterVIIINightLords</iconPath>
         <drawnTextureIconPath>...</drawnTextureIconPath>
         <sortOrder>8</sortOrder>
+        <relatedChapterGene>BEWH_ChapterVIIINightLords</relatedChapterGene>
     </Genes40k.ShoulderIconDef>
 
     <!-- Blood Angels -->
@@ -84,6 +91,7 @@
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterIXBloodAngels</iconPath>
         <drawnTextureIconPath>...</drawnTextureIconPath>
         <sortOrder>9</sortOrder>
+        <relatedChapterGene>BEWH_ChapterIXBloodAngels</relatedChapterGene>
     </Genes40k.ShoulderIconDef>
 
     <!-- Iron Hands -->
@@ -94,6 +102,7 @@
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXIronHands</iconPath>
         <drawnTextureIconPath>...</drawnTextureIconPath>
         <sortOrder>10</sortOrder>
+        <relatedChapterGene>BEWH_ChapterXIronHands</relatedChapterGene>
     </Genes40k.ShoulderIconDef>
 
     <!-- World Eaters -->
@@ -104,6 +113,7 @@
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXIIWorldEaters</iconPath>
         <drawnTextureIconPath>...</drawnTextureIconPath>
         <sortOrder>12</sortOrder>
+        <relatedChapterGene>BEWH_ChapterXIIWorldEaters</relatedChapterGene>
     </Genes40k.ShoulderIconDef>
 
     <!-- Ultramarines -->
@@ -114,6 +124,7 @@
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXIIIUltramarines</iconPath>
         <drawnTextureIconPath>...</drawnTextureIconPath>
         <sortOrder>13</sortOrder>
+        <relatedChapterGene>BEWH_ChapterXIIIUltramarines</relatedChapterGene>
     </Genes40k.ShoulderIconDef>
 
     <!-- Death Guard -->
@@ -124,6 +135,7 @@
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXIVDeathGuard</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_DeathGuard</drawnTextureIconPath>
         <sortOrder>14</sortOrder>
+        <relatedChapterGene>BEWH_ChapterXIVDeathGuard</relatedChapterGene>
     </Genes40k.ShoulderIconDef>
 
     <!-- Thousand Sons -->
@@ -134,6 +146,7 @@
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXVThousandSons</iconPath>
         <drawnTextureIconPath>...</drawnTextureIconPath>
         <sortOrder>15</sortOrder>
+        <relatedChapterGene>BEWH_ChapterXVThousandSons</relatedChapterGene>
     </Genes40k.ShoulderIconDef>
 
     <!-- Sons of Horus -->
@@ -144,6 +157,7 @@
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXVISonsOfHorus</iconPath>
         <drawnTextureIconPath>...</drawnTextureIconPath>
         <sortOrder>16</sortOrder>
+        <relatedChapterGene>BEWH_ChapterXVISonsOfHorus</relatedChapterGene>
     </Genes40k.ShoulderIconDef>
 
     <!-- Word Bearers -->
@@ -154,6 +168,7 @@
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXVIIWordBearers</iconPath>
         <drawnTextureIconPath>...</drawnTextureIconPath>
         <sortOrder>17</sortOrder>
+        <relatedChapterGene>BEWH_ChapterXVIIWordBearers</relatedChapterGene>
     </Genes40k.ShoulderIconDef>
 
     <!-- Salamanders -->
@@ -164,6 +179,7 @@
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXVIIISalamanders</iconPath>
         <drawnTextureIconPath>...</drawnTextureIconPath>
         <sortOrder>18</sortOrder>
+        <relatedChapterGene>BEWH_ChapterXVIIISalamanders</relatedChapterGene>
     </Genes40k.ShoulderIconDef>
 
     <!-- Raven Guard -->
@@ -174,6 +190,7 @@
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXIXRavenGuard</iconPath>
         <drawnTextureIconPath>...</drawnTextureIconPath>
         <sortOrder>19</sortOrder>
+        <relatedChapterGene>BEWH_ChapterXIXRavenGuard</relatedChapterGene>
     </Genes40k.ShoulderIconDef>
 
     <!-- Alpha Legion -->
@@ -184,6 +201,7 @@
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXXAlphaLegion</iconPath>
         <drawnTextureIconPath>...</drawnTextureIconPath>
         <sortOrder>20</sortOrder>
+        <relatedChapterGene>BEWH_ChapterXXAlphaLegion</relatedChapterGene>
     </Genes40k.ShoulderIconDef>
 
 

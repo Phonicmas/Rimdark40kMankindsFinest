@@ -55,12 +55,12 @@ namespace Genes40k
         }
         
         private ChapterColourDef GetRandomChapterForRaid()
-        {
-            var chapterColours = DefDatabase<ChapterColourDef>.AllDefsListForReading;
+        {   
+            var chapterColours = DefDatabase<ChapterColourDef>.AllDefsListForReading.ToList();
 
-            if (ModSettings.currentlySelectedPreset != null)
+            if (ModSettings.CurrentlySelectedPreset != null && ModSettings.CurrentlySelectedPreset != ModSettings.CustomPreset)
             {
-                chapterColours.Remove(ModSettings.currentlySelectedPreset);
+                chapterColours.Remove(ModSettings.CurrentlySelectedPreset);
             }
 
             if (currentChapterColour != null && chapterColours.Contains(currentChapterColour))

@@ -8,7 +8,7 @@ namespace Genes40k
     {
         public static void Postfix(Pawn __instance)
         {
-            if (__instance.Faction == null || __instance.Faction.IsPlayer)
+            if (__instance.Faction == null || __instance.Faction.IsPlayer || __instance.Faction.def == Genes40kDefOf.BEWH_OffworldMarinesFaction)
             {
                 return;
             }
@@ -18,7 +18,7 @@ namespace Genes40k
                 return;
             }
 
-            Genes40kUtils.SetupChapterForPawn(__instance);
+            Genes40kUtils.SetupChapterForPawn(__instance, true);
         }
     }
 }

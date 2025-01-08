@@ -27,7 +27,7 @@ namespace Genes40k
             {
                 return false;
             }
-            if (ModSettings.currentlySelectedPreset == null)
+            if (ModSettings.CurrentlySelectedPreset.relatedChapterIcon == null)
             {
                 return false;
             }

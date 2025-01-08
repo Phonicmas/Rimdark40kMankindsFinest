@@ -10,7 +10,6 @@ using Verse.AI;
 
 namespace Genes40k
 {
-
     [StaticConstructorOnStartup]
     public class Building_GeneGestator : Building
     {

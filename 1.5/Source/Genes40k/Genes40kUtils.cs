@@ -1,16 +1,25 @@
-﻿using System;
-using RimWorld;
+﻿using RimWorld;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
-using UnityEngine;
 using Verse;
-
 
 namespace Genes40k
 {
-    public class Genes40kUtils
+    public static class Genes40kUtils
     {
+        private static Genes40kModSettings modSettings = null;
+
+        public static Genes40kModSettings ModSettings => modSettings ?? (modSettings = LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>());
+
+        private static List<ShoulderIconDef> rightShoulderIconDef = null;
+        
+        public static List<ShoulderIconDef> RightShoulderIconDef => rightShoulderIconDef ?? (rightShoulderIconDef = DefDatabase<ShoulderIconDef>.AllDefsListForReading.Where(rightShoulderDef => rightShoulderDef.rightShoulder).ToList());
+        
+        private static List<ShoulderIconDef> leftShoulderIconDef = null;
+        
+        public static List<ShoulderIconDef> LeftShoulderIconDef => leftShoulderIconDef ?? (leftShoulderIconDef = DefDatabase<ShoulderIconDef>.AllDefsListForReading.Where(leftShoulderDef => leftShoulderDef.leftShoulder).ToList());
+
+        
         public static List<GeneDef> ThunderWarriorGenes => new List<GeneDef>
             {
                 Genes40kDefOf.BEWH_ProtoOssmodula,
@@ -126,7 +135,7 @@ namespace Genes40k
         
         public static bool IsSuperHuman(Pawn pawn)
         {
-            //Primaris not check, as if they are primaris, then they are by extension also firstborn
+            //Primaris is not checked, as if they are primaris, then they are by extension also firstborn
             return IsThunderWarrior(pawn) || IsFirstborn(pawn) || IsCustodes(pawn) || IsPrimarch(pawn);
         }
         
@@ -143,6 +152,67 @@ namespace Genes40k
         public static bool UndergoingPhaseDevelopment(Pawn pawn)
         {
             return Enumerable.Any(DevelopmentPhases, hediff => pawn.health.hediffSet.HasHediff(hediff));
+        }
+        
+        public static void OffsetDivineRadiance(Pawn pawn, float offset)
+        {
+            var geneDivineRadiance = pawn.genes?.GetFirstGeneOfType<Gene_DivineRadiance>();
+            geneDivineRadiance?.ChangeDivineRadianceAmount(offset);
+        }
+        
+        public static void SetupChapterForPawn(Pawn pawn, bool randomChapter)
+        {
+            if (pawn.genes == null || !IsFirstborn(pawn))
+            {
+                return;
+            }
+
+            var xenotypeName = string.Empty;
+            
+            var chapter = randomChapter ? Current.Game.GetComponent<GameComponent_MankindFinestUtils>().CurrentChapterColour : ModSettings.CurrentlySelectedPreset;
+            
+            var chapterColourPrimary = chapter.primaryColour;
+            var chapterColourSecondary = chapter.secondaryColour;
+            var shoulderIconDef = chapter.relatedChapterIcon;
+            GeneDef chapterGene = null;
+
+            if (chapter.relatedChapterGene != null)
+            {
+                chapterGene = chapter.relatedChapterGene;
+            }
+            else if (shoulderIconDef != null)
+            {
+                chapterGene = shoulderIconDef.relatedChapterGene;
+            }
+            
+            if (chapterGene != null && chapterGene.HasModExtension<DefModExtension_ChapterGene>())
+            {
+                xenotypeName = chapterGene.GetModExtension<DefModExtension_ChapterGene>().chapterName;
+            }
+
+            if (chapterGene != null && !pawn.genes.HasActiveGene(chapterGene))
+            {
+                pawn.genes.AddGene(chapterGene, true);
+                if (xenotypeName != string.Empty)
+                {
+                    pawn.genes.xenotypeName = xenotypeName;
+                    pawn.genes.iconDef = Genes40kDefOf.BEWH_AstartesIcon;
+                }
+            }
+            
+            foreach (var apparel in pawn.apparel.WornApparel)
+            {
+                switch (apparel)
+                {
+                    case ExtraIconsChapterApparelColourTwo extraIconsChapterApparelColourTwo:
+                        extraIconsChapterApparelColourTwo.ApplyColourPreset(chapterColourPrimary, chapterColourSecondary);
+                        extraIconsChapterApparelColourTwo.LeftShoulderIcon = shoulderIconDef;
+                        break;
+                    case ChapterApparelColourTwo chapterApparelColourTwo:
+                        chapterApparelColourTwo.ApplyColourPreset(chapterColourPrimary, chapterColourSecondary);
+                        break;
+                }
+            }
         }
 
         public static void MakeGeneseedVial(Pawn pawn, bool isPrimaris)
@@ -372,44 +442,5 @@ namespace Genes40k
 
             return text;
         }
-        
-        public static void OffsetDivineRadiance(Pawn pawn, float offset)
-        {
-            var geneDivineRadiance = pawn.genes?.GetFirstGeneOfType<Gene_DivineRadiance>();
-            geneDivineRadiance?.ChangeDivineRadianceAmount(offset);
-        }
-        
-        public static void SetupChapterForPawn(Pawn pawn)
-        {
-            if (pawn.genes == null || !IsFirstborn(pawn))
-            {
-                return;
-            }
-            
-            var chapter = Current.Game.GetComponent<GameComponent_MankindFinestUtils>().CurrentChapterColour;
-            
-            //Temp
-            chapter = Genes40kDefOf.BEWH_ChapterColourVII;
-
-            if (!pawn.genes.HasActiveGene(chapter.relatedChapterGene))
-            {
-                pawn.genes.AddGene(chapter.relatedChapterGene, true);
-            }
-            
-            foreach (var apparel in pawn.apparel.WornApparel)
-            {
-                switch (apparel)
-                {
-                    case ExtraIconsChapterApparelColourTwo extraIconsChapterApparelColourTwo:
-                        extraIconsChapterApparelColourTwo.ApplyColourPreset(chapter);
-                        extraIconsChapterApparelColourTwo.LeftShoulderIcon = chapter.relatedChapterIcon;
-                        break;
-                    case ChapterApparelColourTwo chapterApparelColourTwo:
-                        chapterApparelColourTwo.ApplyColourPreset(chapter);
-                        break;
-                }
-            }
-        }
-        
     }
 }

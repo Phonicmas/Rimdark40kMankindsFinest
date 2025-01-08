@@ -58,7 +58,7 @@ namespace Genes40k
                 
                 var spawnPawn = PawnGenerator.GeneratePawn(Genes40kDefOf.BEWH_FirstbornPawn, Faction);
                 
-                Genes40kUtils.SetupChapterForPawn(spawnPawn);
+                Genes40kUtils.SetupChapterForPawn(spawnPawn, false);
                 
                 GenSpawn.Spawn(spawnPawn, actualPosition, Map);
                 
