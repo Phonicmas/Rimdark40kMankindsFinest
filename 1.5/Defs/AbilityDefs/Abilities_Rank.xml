@@ -57,7 +57,7 @@
         <defName>BEWH_LibrarianQuickening</defName>
         <label>Quickening</label>
         <description>The Psyker gains precognitive powers and increased haste, allowing him to outfight his enemies by seeing their movements before they even act and outspeeding them.</description>
-        <iconPath>UI/Abilities/BEWH_Ability_JaghataiKhanAlakhGeh</iconPath>
+        <iconPath>UI/Abilities/BEWH_AbilityLibrarianQuickening</iconPath>
         <cooldownTicksRange>90000</cooldownTicksRange>
         <statBases>
             <Ability_Duration>125</Ability_Duration>
@@ -77,7 +77,7 @@
         <defName>BEWH_LibrarianWaveOfLethargy</defName>
         <label>Wave of Lethargy</label>
         <description>The Psyker shoots out a wave of lethargy, causing anyone caught in it to become fatigued and slowed.</description>
-        <iconPath>UI/Abilities/BEWH_Ability_JaghataiKhanAlakhGeh</iconPath>
+        <iconPath>UI/Abilities/BEWH_AbilityLibrarianWaveOfLethargy</iconPath>
         <cooldownTicksRange>120000</cooldownTicksRange>
         <statBases>
             <Ability_Duration>125</Ability_Duration>
@@ -112,7 +112,7 @@
         <label>Emergency Aid</label>
         <description>Apply emergency aid to a downed or bedridden pawn. Pumping them full of stimulants to reduce pain and increase natural healing speed, and applying first aid, quickly tending and slightly healing all wounds.</description>
         <cooldownTicksRange>5000</cooldownTicksRange>
-        <iconPath>UI/Abilities/BEWH_Ability_ChillgronShareBurden</iconPath>
+        <iconPath>UI/Abilities/BEWH_AbilityApothecaryEAid</iconPath>
         <jobDef>CastAbilityOnThingMelee</jobDef>
         <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
@@ -153,7 +153,7 @@
         <defName>BEWH_ChaplainInspire</defName>
         <label>Inspire</label>
         <description>...</description>
-        <iconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Long</iconPath>
+        <iconPath>UI/Abilities/BEWH_AbilityChaplainInspire</iconPath>
         <abilityClass>Genes40k.Ability_Inspire</abilityClass>
         <cooldownTime>90000</cooldownTime>
         <castTime>200</castTime>
@@ -170,9 +170,9 @@
     <!-- Captain: Command -->
     <AbilityDef>
         <defName>BEWH_CaptainsOrder</defName>
-        <label>Captains Order</label>
+        <label>Captain's Order</label>
         <description>..... The effect remains attached to the caster for 24 hours.</description>
-        <iconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Long</iconPath>
+        <iconPath>UI/Abilities/BEWH_AbilityCaptainsOrder</iconPath>
         <jobDef>CastAbilityOnThing</jobDef>
         <targetRequired>False</targetRequired>
         <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
@@ -217,7 +217,7 @@
         <defName>BEWH_ChapterMasterSteelRain</defName>
         <label>Steel Rain</label>
         <description>...</description>
-        <iconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Long</iconPath>
+        <iconPath>UI/Abilities/BEWH_AbilitySteelRainIII</iconPath>
         <abilityClass>Genes40k.Ability_SteelRain</abilityClass>
         <castTime>100</castTime>
         <range>40.9</range>
