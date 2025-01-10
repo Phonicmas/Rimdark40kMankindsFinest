@@ -26,13 +26,8 @@ Shoulder pad icons for chapters and ranks (regarding back view, i can either ren
 Mk X armor + helmet
 
 Icon for:
-Librarian: Quickening ability.
-Librarian: Wave of Lethargy ability.
-Apothecary: Stimulants ability
-Chaplain: Inspire ability
+
 Chaplain: Strenghten Faith ability
-Captain: Captains Order ability
-Chapter Master: Steel Rain ability
 
 New turret texture for rogal ability turret (something something, you had some from vehicle mod i believe you said)
 
@@ -47,7 +42,6 @@ Maybe new motes for the linking and circle of the living saint aura?
 
 Maybe some different backgrounds (the blue hexagon for xenotype or white circle thingy for endogenes) for the different genes? (Maybe keep the recoloured one psyker and pariah and then make some new type for the different super human, with increasing golden stuff and purity seals n stuff) (im just cooking here, this is not important)
 
-Primarch Specific Icons (Not sure what excatly to do here) (Maybe flip the helix of the Chapter ones and add some bedazzle? Or just make something that would remind you of them, like red skin and psyker thing i made for Magnus, and the wings for Sanguinius) (The helix should stay i feel) (I think i learn towards just flipping the helix and adding some bedazzle)
 
 ## Code and XML
 When chapter icons are made remove the temp setting of chapters in the Genes40kUtils.SetupChapterForPawn() method and the chapterColourDef from Genes40kDefOf
