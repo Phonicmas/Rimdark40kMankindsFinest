@@ -13,7 +13,7 @@
             <researchPrerequisite>BEWH_AstartesPowerArmor</researchPrerequisite>
         </recipeMaker>
         <graphicData>
-            <texPath>Things/Armor/Imperium/PowerArmor/BEWH_ImperiumPowerArmor</texPath>
+            <texPath>Things/Armor/Imperium/PowerArmor/MkVIIPowerArmor/BEWH_MkVIIPowerArmor</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <shaderType>CutoutComplex</shaderType>
         </graphicData>
@@ -39,7 +39,7 @@
             <MoveSpeed>-1</MoveSpeed>
         </equippedStatOffsets>
         <apparel>
-            <wornGraphicPath>Things/Armor/Imperium/PowerArmor/BEWH_ImperiumPowerArmor</wornGraphicPath>
+            <wornGraphicPath>Things/Armor/Imperium/PowerArmor/MkVIIPowerArmor/BEWH_MkVIIPowerArmor</wornGraphicPath>
             <tags>
                 <li>BEWH_PowerArmorMkVII</li>
             </tags>
@@ -47,7 +47,7 @@
                 <li>
                     <workerClass>PawnRenderNodeWorker_Apparel_Body</workerClass>
                     <nodeClass>PawnRenderNode_Apparel</nodeClass>
-                    <texPath>Things/Armor/Imperium/PowerArmor/BEWH_ImperiumPowerArmor</texPath>
+                    <texPath>Things/Armor/Imperium/PowerArmor/MkVIIPowerArmor/BEWH_MkVIIPowerArmor</texPath>
                     <parentTagDef>Body</parentTagDef>
                     <drawData>
                         <defaultData>
@@ -62,7 +62,7 @@
                 <li>
                     <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentShoulderPad</workerClass>
                     <nodeClass>Genes40k.PawnRenderNode_AttachmentShoulderPad</nodeClass>
-                    <texPath>Things/Armor/Imperium/PowerArmor/Shoulder/BEWH_ImperiumPowerArmor_Shoulder</texPath>
+                    <texPath>Things/Armor/Imperium/PowerArmor/MkVIIPowerArmor/Shoulder/BEWH_MkVIIPowerArmor_Shoulder</texPath>
                     <shaderTypeDef>CutoutComplex</shaderTypeDef>
                     <parentTagDef>Body</parentTagDef>
                     <drawData>
@@ -173,7 +173,7 @@
             <researchPrerequisite>BEWH_AstartesPowerArmor</researchPrerequisite>
         </recipeMaker>
         <graphicData>
-            <texPath>Things/Armor/Imperium/PowerArmor/BEWH_ImperiumPowerArmor</texPath>
+            <texPath>Things/Armor/Imperium/PowerArmor/MkXPowerArmor/BEWH_MkXPowerArmor</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <shaderType>CutoutComplex</shaderType>
         </graphicData>
@@ -199,7 +199,7 @@
             <MoveSpeed>-1</MoveSpeed>
         </equippedStatOffsets>
         <apparel>
-            <wornGraphicPath>Things/Armor/Imperium/PowerArmor/BEWH_ImperiumPowerArmor</wornGraphicPath>
+            <wornGraphicPath>Things/Armor/Imperium/PowerArmor/MkXPowerArmor/BEWH_MkXPowerArmor</wornGraphicPath>
             <tags>
                 <li>BEWH_PowerArmorMkX</li>
             </tags>
@@ -207,7 +207,7 @@
                 <li>
                     <workerClass>PawnRenderNodeWorker_Apparel_Body</workerClass>
                     <nodeClass>PawnRenderNode_Apparel</nodeClass>
-                    <texPath>Things/Armor/Imperium/PowerArmor/BEWH_ImperiumPowerArmor</texPath>
+                    <texPath>Things/Armor/Imperium/PowerArmor/MkXPowerArmor/BEWH_MkXPowerArmor</texPath>
                     <drawSize>1</drawSize>
                     <parentTagDef>Body</parentTagDef>
                     <drawData>
@@ -222,7 +222,7 @@
                 </li>
                 <li>
                     <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentShoulderPad</workerClass>
-                    <texPath>Things/Armor/Imperium/PowerArmor/Shoulder/BEWH_ImperiumPowerArmor_Shoulder</texPath>
+                    <texPath>Things/Armor/Imperium/PowerArmor/MkXPowerArmor/Shoulder/BEWH_MkXPowerArmor_Shoulder</texPath>
                     <drawSize>1</drawSize>
                     <parentTagDef>ApparelBody</parentTagDef>
                     <drawData>
