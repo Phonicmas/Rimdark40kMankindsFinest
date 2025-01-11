@@ -44,7 +44,7 @@
                 <li>BEWH_PowerArmorMkVII</li>
             </tags>
             <renderNodeProperties>
-                <li>
+                <li>                    <!-- Armor itself -->
                     <workerClass>PawnRenderNodeWorker_Apparel_Body</workerClass>
                     <nodeClass>PawnRenderNode_Apparel</nodeClass>
                     <texPath>Things/Armor/Imperium/PowerArmor/MkVIIPowerArmor/BEWH_MkVIIPowerArmor</texPath>
@@ -59,10 +59,9 @@
                         <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
                     </drawData>
                 </li>
-                <li>
-                    <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentShoulderPad</workerClass>
-                    <nodeClass>Genes40k.PawnRenderNode_AttachmentShoulderPad</nodeClass>
-                    <texPath>Things/Armor/Imperium/PowerArmor/MkVIIPowerArmor/Shoulder/BEWH_MkVIIPowerArmor_Shoulder</texPath>
+                <li>                    <!-- Backpacks -->
+                    <nodeClass>Genes40k.PawnRenderNode_AttachmentChapterApparelColour</nodeClass>
+                    <texPath>Things/Armor/Imperium/PowerArmor/MkVIIPowerArmor/Backpacks/BEWH_MkVIIPowerArmor_Backpack</texPath>
                     <shaderTypeDef>CutoutComplex</shaderTypeDef>
                     <parentTagDef>Body</parentTagDef>
                     <drawData>
@@ -73,9 +72,31 @@
                         <dataWest>
                             <layer>71</layer>
                         </dataWest>
+                        <dataNorth>
+                            <layer>77</layer>
+                        </dataNorth>
+                        <dataSouth>
+                            <layer>39</layer>
+                        </dataSouth>
                     </drawData>
                 </li>
-                <li>
+                <li>                    <!-- Shoulder pad -->
+                    <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentShoulderPad</workerClass>
+                    <nodeClass>Genes40k.PawnRenderNode_AttachmentChapterApparelColour</nodeClass>
+                    <texPath>Things/Armor/Imperium/PowerArmor/MkVIIPowerArmor/Shoulder/BEWH_MkVIIPowerArmor_Shoulder</texPath>
+                    <shaderTypeDef>CutoutComplex</shaderTypeDef>
+                    <parentTagDef>Body</parentTagDef>
+                    <drawData>
+                        <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+                        <dataEast>
+                            <layer>73</layer>
+                        </dataEast>
+                        <dataWest>
+                            <layer>73</layer>
+                        </dataWest>
+                    </drawData>
+                </li>
+                <li>                    <!-- Left shoulder pad/chapter icon -->
                     <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentShoulderChapterIcon</workerClass>
                     <nodeClass>Genes40k.PawnRenderNode_AttachmentShoulderChapterIcon</nodeClass>
                     <texPath>Things/Armor/Imperium/PowerArmor/CommonIcons/BEWH_None</texPath>
@@ -83,7 +104,7 @@
                     <parentTagDef>Body</parentTagDef>
                     <drawData>
                         <defaultData>
-                            <layer>72</layer>
+                            <layer>75</layer>
                         </defaultData>
                         <dataSouth>
                             <offset>(-0.065,0,-0.02)</offset>
@@ -94,7 +115,7 @@
                         <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
                     </drawData>
                 </li>
-                <li>
+                <li>                    <!-- Right shoulder pad/rank icon -->
                     <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentShoulderRankIcon</workerClass>
                     <nodeClass>Genes40k.PawnRenderNode_AttachmentShoulderRankIcon</nodeClass>
                     <texPath>Things/Armor/Imperium/PowerArmor/CommonIcons/BEWH_None</texPath>
@@ -102,7 +123,7 @@
                     <parentTagDef>Body</parentTagDef>
                     <drawData>
                         <defaultData>
-                            <layer>72</layer>
+                            <layer>75</layer>
                         </defaultData>
                         <dataSouth>
                             <offset>(0.065,0,-0.02)</offset>
@@ -204,48 +225,65 @@
                 <li>BEWH_PowerArmorMkX</li>
             </tags>
             <renderNodeProperties>
-                <li>
+                <li>                    <!-- Armor itself -->
                     <workerClass>PawnRenderNodeWorker_Apparel_Body</workerClass>
                     <nodeClass>PawnRenderNode_Apparel</nodeClass>
                     <texPath>Things/Armor/Imperium/PowerArmor/MkXPowerArmor/BEWH_MkXPowerArmor</texPath>
-                    <drawSize>1</drawSize>
                     <parentTagDef>Body</parentTagDef>
                     <drawData>
                         <defaultData>
-                            <layer>60</layer>
+                            <layer>40</layer>
                         </defaultData>
                         <dataNorth>
                             <layer>70</layer>
                         </dataNorth>
-                        <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
                     </drawData>
                 </li>
-                <li>
-                    <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentShoulderPad</workerClass>
-                    <texPath>Things/Armor/Imperium/PowerArmor/MkXPowerArmor/Shoulder/BEWH_MkXPowerArmor_Shoulder</texPath>
-                    <drawSize>1</drawSize>
-                    <parentTagDef>ApparelBody</parentTagDef>
+                <li>                    <!-- Backpacks -->
+                    <nodeClass>Genes40k.PawnRenderNode_AttachmentChapterApparelColour</nodeClass>
+                    <texPath>Things/Armor/Imperium/PowerArmor/MkXPowerArmor/Backpacks/BEWH_MkXPowerArmor_Backpack</texPath>
+                    <shaderTypeDef>CutoutComplex</shaderTypeDef>
+                    <parentTagDef>Body</parentTagDef>
                     <drawData>
-                        <defaultData>
-                            <layer>-1</layer>
-                        </defaultData>
-                        <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
                         <dataEast>
-                            <layer>80</layer>
+                            <layer>71</layer>
                         </dataEast>
                         <dataWest>
-                            <layer>80</layer>
+                            <layer>71</layer>
+                        </dataWest>
+                        <dataNorth>
+                            <layer>77</layer>
+                        </dataNorth>
+                        <dataSouth>
+                            <layer>39</layer>
+                        </dataSouth>
+                    </drawData>
+                </li>
+                <li>                    <!-- Shoulder pad -->
+                    <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentShoulderPad</workerClass>
+                    <nodeClass>Genes40k.PawnRenderNode_AttachmentChapterApparelColour</nodeClass>
+                    <texPath>Things/Armor/Imperium/PowerArmor/MkXPowerArmor/Shoulder/BEWH_MkXPowerArmor_Shoulder</texPath>
+                    <shaderTypeDef>CutoutComplex</shaderTypeDef>
+                    <parentTagDef>Body</parentTagDef>
+                    <drawData>
+                        <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+                        <dataEast>
+                            <layer>73</layer>
+                        </dataEast>
+                        <dataWest>
+                            <layer>73</layer>
                         </dataWest>
                     </drawData>
                 </li>
-                <li>
+                <li>                    <!-- Left shoulder pad/chapter icon -->
                     <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentShoulderChapterIcon</workerClass>
-                    <texPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_DeathGuard</texPath>
-                    <drawSize>1</drawSize>
-                    <parentTagDef>ApparelBody</parentTagDef>
+                    <nodeClass>Genes40k.PawnRenderNode_AttachmentShoulderChapterIcon</nodeClass>
+                    <texPath>Things/Armor/Imperium/PowerArmor/CommonIcons/BEWH_None</texPath>
+                    <shaderTypeDef>CutoutComplex</shaderTypeDef>
+                    <parentTagDef>Body</parentTagDef>
                     <drawData>
                         <defaultData>
-                            <layer>81</layer>
+                            <layer>75</layer>
                         </defaultData>
                         <dataSouth>
                             <offset>(-0.065,0,-0.02)</offset>
@@ -253,17 +291,17 @@
                         <dataNorth>
                             <offset>(0.065,0,-0.02)</offset>
                         </dataNorth>
-                        <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
                     </drawData>
                 </li>
-                <li>
+                <li>                    <!-- Right shoulder pad/rank icon -->
                     <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentShoulderRankIcon</workerClass>
-                    <texPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_Veteran</texPath>
-                    <drawSize>1</drawSize>
-                    <parentTagDef>ApparelBody</parentTagDef>
+                    <nodeClass>Genes40k.PawnRenderNode_AttachmentShoulderRankIcon</nodeClass>
+                    <texPath>Things/Armor/Imperium/PowerArmor/CommonIcons/BEWH_None</texPath>
+                    <shaderTypeDef>CutoutComplex</shaderTypeDef>
+                    <parentTagDef>Body</parentTagDef>
                     <drawData>
                         <defaultData>
-                            <layer>81</layer>
+                            <layer>75</layer>
                         </defaultData>
                         <dataSouth>
                             <offset>(0.065,0,-0.02)</offset>
@@ -271,7 +309,6 @@
                         <dataNorth>
                             <offset>(-0.065,0,-0.02)</offset>
                         </dataNorth>
-                        <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
                     </drawData>
                 </li>
             </renderNodeProperties>

@@ -41,6 +41,11 @@ namespace Genes40k
             }
             else
             {
+                if (parms.posture == PawnPosture.LayingOnGroundNormal || parms.posture == PawnPosture.LayingOnGroundFaceUp)
+                {
+                    return true;
+                }
+                
                 if (pawn.Rotation == Rot4.East)
                 {
                     return false;

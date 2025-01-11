@@ -11,7 +11,7 @@
         <defName>BEWH_RankIconNeophyte</defName>
         <label>Neophyte</label>
         <description>Neophyte rank icon</description>
-        <iconPath>UI/Ranks/Astartes/Neophyte</iconPath>
+        <iconPath>UI/Ranks/Astartes/BEWH_Neophyte</iconPath>
         <drawnTextureIconPath>...</drawnTextureIconPath>
         <sortOrder>1</sortOrder>
         <mustHaveRank>BEWH_AstartesRankNeophyte</mustHaveRank>
@@ -22,7 +22,7 @@
         <defName>BEWH_RankIconBattleBrother</defName>
         <label>Battle-Brother</label>
         <description>Battle-Brother rank icon</description>
-        <iconPath>UI/Ranks/Astartes/BattleBrother</iconPath>
+        <iconPath>UI/Ranks/Astartes/BEWH_BattleBrother</iconPath>
         <drawnTextureIconPath>...</drawnTextureIconPath>
         <sortOrder>2</sortOrder>
         <mustHaveRank>BEWH_AstartesRankBattleBrother</mustHaveRank>
@@ -33,7 +33,7 @@
         <defName>BEWH_RankIconVanguard</defName>
         <label>Vanguard</label>
         <description>Vanguard rank icon</description>
-        <iconPath>UI/Ranks/Astartes/Vanguard</iconPath>
+        <iconPath>UI/Ranks/Astartes/BEWH_Vanguard</iconPath>
         <drawnTextureIconPath>...</drawnTextureIconPath>
         <sortOrder>2.5</sortOrder>
         <mustHaveRank>BEWH_AstartesRankVanguard</mustHaveRank>
@@ -44,7 +44,7 @@
         <defName>BEWH_RankIconVeteran</defName>
         <label>Veteran</label>
         <description>Veteran rank icon</description>
-        <iconPath>UI/Ranks/Astartes/Veteran</iconPath>
+        <iconPath>UI/Ranks/Astartes/BEWH_Veteran</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_Veteran</drawnTextureIconPath>
         <sortOrder>3</sortOrder>
         <mustHaveRank>BEWH_AstartesRankVeteran</mustHaveRank>
@@ -55,7 +55,7 @@
         <defName>BEWH_RankIconDevastator</defName>
         <label>Devastator</label>
         <description>Devastator rank icon</description>
-        <iconPath>UI/Ranks/Astartes/FireSupport</iconPath>
+        <iconPath>UI/Ranks/Astartes/BEWH_FireSupport</iconPath>
         <drawnTextureIconPath>...</drawnTextureIconPath>
         <sortOrder>3.33</sortOrder>
         <mustHaveRank>BEWH_AstartesRankDevastator</mustHaveRank>
@@ -66,7 +66,7 @@
         <defName>BEWH_RankIconAssault</defName>
         <label>Assault</label>
         <description>Assault rank icon</description>
-        <iconPath>UI/Ranks/Astartes/CloseSupport</iconPath>
+        <iconPath>UI/Ranks/Astartes/BEWH_CloseSupport</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_CloseSupport</drawnTextureIconPath>
         <sortOrder>3.66</sortOrder>
         <mustHaveRank>BEWH_AstartesRankAssault</mustHaveRank>
@@ -77,7 +77,7 @@
         <defName>BEWH_RankIconSergeant</defName>
         <label>Sergeant</label>
         <description>Sergeant rank icon</description>
-        <iconPath>UI/Ranks/Astartes/Sergeant</iconPath>
+        <iconPath>UI/Ranks/Astartes/BEWH_Sergeant</iconPath>
         <drawnTextureIconPath>...</drawnTextureIconPath>
         <sortOrder>4</sortOrder>
         <mustHaveRank>BEWH_AstartesRankSergeant</mustHaveRank>
@@ -88,7 +88,7 @@
         <defName>BEWH_RankIconDevastatorSergeant</defName>
         <label>Devastator Sergeant</label>
         <description>Devastator Sergeant rank icon</description>
-        <iconPath>UI/Ranks/Astartes/FireSupportSergeant</iconPath>
+        <iconPath>UI/Ranks/Astartes/BEWH_FireSupportSergeant</iconPath>
         <drawnTextureIconPath>...</drawnTextureIconPath>
         <sortOrder>4.33</sortOrder>
         <mustHaveRank>BEWH_AstartesRankDevastatorSergeant</mustHaveRank>
@@ -99,7 +99,7 @@
         <defName>BEWH_RankIconAssaultSergeant</defName>
         <label>Assault Sergeant</label>
         <description>Assault Sergeant rank icon</description>
-        <iconPath>UI/Ranks/Astartes/CloseSupportSergeant</iconPath>
+        <iconPath>UI/Ranks/Astartes/BEWH_CloseSupportSergeant</iconPath>
         <drawnTextureIconPath>...</drawnTextureIconPath>
         <sortOrder>4.66</sortOrder>
         <mustHaveRank>BEWH_AstartesRankAssaultSergeant</mustHaveRank>
@@ -110,7 +110,7 @@
         <defName>BEWH_RankIconLieutenant</defName>
         <label>Lieutenant</label>
         <description>Lieutenant rank icon</description>
-        <iconPath>UI/Ranks/Astartes/Lieutenant</iconPath>
+        <iconPath>UI/Ranks/Astartes/BEWH_Lieutenant</iconPath>
         <drawnTextureIconPath>...</drawnTextureIconPath>
         <sortOrder>5</sortOrder>
         <mustHaveRank>BEWH_AstartesRankLieutenant</mustHaveRank>
@@ -121,7 +121,7 @@
         <defName>BEWH_RankIconChapterAncient</defName>
         <label>Chapter Ancient</label>
         <description>Chapter Ancient rank icon</description>
-        <iconPath>UI/Ranks/Astartes/Ancient</iconPath>
+        <iconPath>UI/Ranks/Astartes/BEWH_Ancient</iconPath>
         <drawnTextureIconPath>...</drawnTextureIconPath>
         <sortOrder>5.5</sortOrder>
         <mustHaveRank>BEWH_AstartesRankChapterAncient</mustHaveRank>
@@ -132,7 +132,7 @@
         <defName>BEWH_RankIconCaptain</defName>
         <label>Captain</label>
         <description>Captain rank icon</description>
-        <iconPath>UI/Ranks/Astartes/Captain</iconPath>
+        <iconPath>UI/Ranks/Astartes/BEWH_Captain</iconPath>
         <drawnTextureIconPath>...</drawnTextureIconPath>
         <sortOrder>6</sortOrder>
         <mustHaveRank>BEWH_AstartesRankCaptain</mustHaveRank>
@@ -143,7 +143,7 @@
         <defName>BEWH_RankIconHelixAdept</defName>
         <label>Helix Adept</label>
         <description>Helix Adept rank icon</description>
-        <iconPath>UI/Ranks/Astartes/HelixAdept</iconPath>
+        <iconPath>UI/Ranks/Astartes/BEWH_HelixAdept</iconPath>
         <drawnTextureIconPath>...</drawnTextureIconPath>
         <sortOrder>7</sortOrder>
         <mustHaveRank>BEWH_AstartesRankHelixAdept</mustHaveRank>
@@ -154,7 +154,7 @@
         <defName>BEWH_RankIconTechmarineNovitiate</defName>
         <label>Techmarine Novitiate</label>
         <description>Techmarine Novitiate rank icon</description>
-        <iconPath>UI/Ranks/Astartes/TechmarineNovitiate</iconPath>
+        <iconPath>UI/Ranks/Astartes/BEWH_TechmarineNovitiate</iconPath>
         <drawnTextureIconPath>...</drawnTextureIconPath>
         <sortOrder>7.25</sortOrder>
         <mustHaveRank>BEWH_AstartesRankTechmarineNovitiate</mustHaveRank>
@@ -165,7 +165,7 @@
         <defName>BEWH_RankIconAcolytum</defName>
         <label>Acolytum</label>
         <description>Acolytum rank icon</description>
-        <iconPath>UI/Ranks/Astartes/Acolytum</iconPath>
+        <iconPath>UI/Ranks/Astartes/BEWH_Acolytum</iconPath>
         <drawnTextureIconPath>...</drawnTextureIconPath>
         <sortOrder>7.50</sortOrder>
         <mustHaveRank>BEWH_AstartesRankAcolytum</mustHaveRank>
@@ -176,7 +176,7 @@
         <defName>BEWH_RankIconJudiciar</defName>
         <label>Judiciar</label>
         <description>Judiciar rank icon</description>
-        <iconPath>UI/Ranks/Astartes/Judiciar</iconPath>
+        <iconPath>UI/Ranks/Astartes/BEWH_Judiciar</iconPath>
         <drawnTextureIconPath>...</drawnTextureIconPath>
         <sortOrder>7.75</sortOrder>
         <mustHaveRank>BEWH_AstartesRankJudiciar</mustHaveRank>
@@ -187,7 +187,7 @@
         <defName>BEWH_RankIconApothecary</defName>
         <label>Apothecary</label>
         <description>Apothecary rank icon</description>
-        <iconPath>UI/Ranks/Astartes/Apothecary</iconPath>
+        <iconPath>UI/Ranks/Astartes/BEWH_Apothecary</iconPath>
         <drawnTextureIconPath>...</drawnTextureIconPath>
         <sortOrder>8</sortOrder>
         <mustHaveRank>BEWH_AstartesRankApothecary</mustHaveRank>
@@ -198,7 +198,7 @@
         <defName>BEWH_RankIconTechmarine</defName>
         <label>Techmarine</label>
         <description>Techmarine rank icon</description>
-        <iconPath>UI/Ranks/Astartes/Techmarine</iconPath>
+        <iconPath>UI/Ranks/Astartes/BEWH_Techmarine</iconPath>
         <drawnTextureIconPath>...</drawnTextureIconPath>
         <sortOrder>8.25</sortOrder>
         <mustHaveRank>BEWH_AstartesRankTechmarine</mustHaveRank>
@@ -209,7 +209,7 @@
         <defName>BEWH_RankIconLibrarian</defName>
         <label>Librarian</label>
         <description>Librarian rank icon</description>
-        <iconPath>UI/Ranks/Astartes/Librarian</iconPath>
+        <iconPath>UI/Ranks/Astartes/BEWH_Librarian</iconPath>
         <drawnTextureIconPath>...</drawnTextureIconPath>
         <sortOrder>8.50</sortOrder>
         <mustHaveRank>BEWH_AstartesRankLibrarian</mustHaveRank>
@@ -220,7 +220,7 @@
         <defName>BEWH_RankIconChaplain</defName>
         <label>Chaplain</label>
         <description>Chaplain rank icon</description>
-        <iconPath>UI/Ranks/Astartes/Chaplain</iconPath>
+        <iconPath>UI/Ranks/Astartes/BEWH_Chaplain</iconPath>
         <drawnTextureIconPath>...</drawnTextureIconPath>
         <sortOrder>8.75</sortOrder>
         <mustHaveRank>BEWH_AstartesRankChaplain</mustHaveRank>
@@ -231,7 +231,7 @@
         <defName>BEWH_RankIconMasterOfTheApothecarion</defName>
         <label>Master of the Apothecarion</label>
         <description>Master of the Apothecarion rank icon</description>
-        <iconPath>UI/Ranks/Astartes/MasterOfTheApothecarion</iconPath>
+        <iconPath>UI/Ranks/Astartes/BEWH_MasterOfTheApothecarion</iconPath>
         <drawnTextureIconPath>...</drawnTextureIconPath>
         <sortOrder>9</sortOrder>
         <mustHaveRank>BEWH_AstartesRankMasterOfTheApothecarion</mustHaveRank>
@@ -242,7 +242,7 @@
         <defName>BEWH_RankIconMasterOfTheForge</defName>
         <label>Master of the Forge</label>
         <description>Master of the Forge rank icon</description>
-        <iconPath>UI/Ranks/Astartes/MasterOfTheForge</iconPath>
+        <iconPath>UI/Ranks/Astartes/BEWH_MasterOfTheForge</iconPath>
         <drawnTextureIconPath>...</drawnTextureIconPath>
         <sortOrder>9.25</sortOrder>
         <mustHaveRank>BEWH_AstartesRankMasterOfTheForge</mustHaveRank>
@@ -253,7 +253,7 @@
         <defName>BEWH_RankIconChiefLibrarian</defName>
         <label>Chief Librarian</label>
         <description>Chief Librarian rank icon</description>
-        <iconPath>UI/Ranks/Astartes/ChiefLibrarian</iconPath>
+        <iconPath>UI/Ranks/Astartes/BEWH_ChiefLibrarian</iconPath>
         <drawnTextureIconPath>...</drawnTextureIconPath>
         <sortOrder>9.50</sortOrder>
         <mustHaveRank>BEWH_AstartesRankChiefLibrarian</mustHaveRank>
@@ -264,7 +264,7 @@
         <defName>BEWH_RankIconMasterOfSanctity</defName>
         <label>Master of Sanctity</label>
         <description>Master of Sanctity rank icon</description>
-        <iconPath>UI/Ranks/Astartes/MasterOfSanctity</iconPath>
+        <iconPath>UI/Ranks/Astartes/BEWH_MasterOfSanctity</iconPath>
         <drawnTextureIconPath>...</drawnTextureIconPath>
         <sortOrder>9.75</sortOrder>
         <mustHaveRank>BEWH_AstartesRankMasterOfSanctity</mustHaveRank>
@@ -275,7 +275,7 @@
         <defName>BEWH_RankIconChapterMaster</defName>
         <label>Chapter Master</label>
         <description>Chapter Master rank icon</description>
-        <iconPath>UI/Ranks/Astartes/ChapterMaster</iconPath>
+        <iconPath>UI/Ranks/Astartes/BEWH_ChapterMaster</iconPath>
         <drawnTextureIconPath>...</drawnTextureIconPath>
         <sortOrder>10</sortOrder>
         <mustHaveRank>BEWH_AstartesRankChapterMaster</mustHaveRank>

@@ -22,8 +22,8 @@ namespace Genes40k
             }
             DrawColor = ModSettings?.chapterColorOne ?? base.DrawColor;
             SetSecondaryColor(ModSettings?.chapterColorTwo ?? base.DrawColorTwo);
+            SetUpMisc();
             SetInitialColour();
-
         }
 
         public virtual void ApplyColourPreset(ChapterColourDef chapterColour)
@@ -38,6 +38,11 @@ namespace Genes40k
             DrawColor = primaryColour;
             SetSecondaryColor(secondaryColour);
             SetInitialColour();
+        }
+
+        public virtual void SetUpMisc()
+        {
+            
         }
 
         protected void SetInitialColour()

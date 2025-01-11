@@ -23,7 +23,7 @@ Make sure all type of tags, defs and whatnot are prefixed with BEWH_
 
 Shoulder pad icons for chapters and ranks (regarding back view, i can either render the backpack on top - or it can be draw to be around it)
 
-Mk X armor + helmet
+Mk X helmet
 
 Icon for:
 
@@ -47,6 +47,11 @@ Maybe some different backgrounds (the blue hexagon for xenotype or white circle 
 When chapter icons are made remove the temp setting of chapters in the Genes40kUtils.SetupChapterForPawn() method and the chapterColourDef from Genes40kDefOf
 
 New trait "Serf" that has increase mood and work speed when near a Firstborn, Primaris, Custodes or Primarch (Maybe thunder warrior and living saint?)
+
+
+
+
+(Maybe) Make functionality for jump pack to be installed on power armor. (Maybe some job or recipe, that uses the power armor and a jump pack and some components, which then does stuff and switches the graphic)
 
 ## Bugs
 

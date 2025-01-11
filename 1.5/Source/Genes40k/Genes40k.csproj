@@ -94,7 +94,7 @@
     <Compile Include="ChapterApparelColourTwo\PawnRenderNodeWorker_AttachmentShoulderPad.cs" />
     <Compile Include="ChapterApparelColourTwo\PawnRenderNodeWorker_AttachmentShoulderRankIcon.cs" />
     <Compile Include="ChapterApparelColourTwo\PawnRenderNode_AttachmentShoulderChapterIcon.cs" />
-    <Compile Include="ChapterApparelColourTwo\PawnRenderNode_AttachmentShoulderPad.cs" />
+    <Compile Include="ChapterApparelColourTwo\PawnRenderNode_AttachmentChapterApparelColour.cs" />
     <Compile Include="ChapterApparelColourTwo\PawnRenderNode_AttachmentShoulderRankIcon.cs" />
     <Compile Include="ChapterApparelColourTwo\ShoulderIconDef.cs" />
     <Compile Include="ChapterApparelColourTwo\ShoulderPadIconTab.cs" />

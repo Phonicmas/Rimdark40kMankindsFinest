@@ -1,4 +1,5 @@
 ﻿using Core40k;
+using RimWorld;
 using Verse;
 
 namespace Genes40k
@@ -67,17 +68,12 @@ namespace Genes40k
             }
         }
         
-        public override void SpawnSetup(Map map, bool respawningAfterLoad)
+        private BodyTypeDef originalBodyType = null;
+
+        public override void SetUpMisc()
         {
-            base.SpawnSetup(map, respawningAfterLoad);
-            if (InitialColourSet)
-            {
-                return;
-            }
-            DrawColor = ModSettings?.chapterColorOne ?? base.DrawColor;
-            SetSecondaryColor(ModSettings?.chapterColorTwo ?? base.DrawColorTwo);
             leftShoulderIcon = ModSettings?.CurrentlySelectedPreset.relatedChapterIcon;
-            SetInitialColour();
+            base.SetUpMisc();
         }
 
         public override void ApplyColourPreset(ChapterColourDef chapterColour)
@@ -103,6 +99,25 @@ namespace Genes40k
             base.Reset();
         }
 
+        public override void Notify_Equipped(Pawn pawn)
+        {
+            if (pawn.story.bodyType != BodyTypeDefOf.Hulk)
+            {
+                originalBodyType = pawn.story.bodyType;
+                pawn.story.bodyType = BodyTypeDefOf.Hulk;
+            }
+            base.Notify_Equipped(pawn);
+        }
+
+        public override void Notify_Unequipped(Pawn pawn)
+        {
+            if (originalBodyType != null)
+            {
+                pawn.story.bodyType = originalBodyType;
+            }
+            base.Notify_Unequipped(pawn);
+        }
+
         public override void ExposeData()
         {
             Scribe_Defs.Look(ref lastCheckRank, "lastCheckRank");
@@ -110,6 +125,7 @@ namespace Genes40k
             Scribe_Defs.Look(ref originalLeftShoulderIcon, "originalSelectedChapterIcon");
             Scribe_Defs.Look(ref rightShoulderIcon, "rightShoulderIcon");
             Scribe_Defs.Look(ref originalRightShoulderIcon, "originalRightShoulderIcon");
+            Scribe_Defs.Look(ref originalBodyType, "originalBodyType");
             base.ExposeData();
         }
     }

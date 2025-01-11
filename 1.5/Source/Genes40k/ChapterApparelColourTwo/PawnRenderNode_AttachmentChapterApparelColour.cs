@@ -1,12 +1,10 @@
-﻿using System;
-using UnityEngine;
-using Verse;
+﻿using Verse;
 
 namespace Genes40k
 {
-    public class PawnRenderNode_AttachmentShoulderPad : PawnRenderNode
+    public class PawnRenderNode_AttachmentChapterApparelColour : PawnRenderNode
     {
-        public PawnRenderNode_AttachmentShoulderPad(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree) : base(pawn, props, tree)
+        public PawnRenderNode_AttachmentChapterApparelColour(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree) : base(pawn, props, tree)
         {
         }
 
