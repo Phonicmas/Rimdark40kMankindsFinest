@@ -154,7 +154,7 @@
             <researchPrerequisite>BEWH_AstartesPowerArmor</researchPrerequisite>
         </recipeMaker>
         <graphicData>
-            <texPath>Things/Headgear/Imperium/PowerArmor/BEWH_ImperiumHelmet</texPath>
+            <texPath>Things/Headgear/Imperium/PowerArmor/BEWH_MkVIIHelmet</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <shaderType>CutoutComplex</shaderType>
         </graphicData>
@@ -176,7 +176,7 @@
             <Steel>20</Steel>
         </costList>
         <apparel>
-            <wornGraphicPath>Things/Headgear/Imperium/PowerArmor/BEWH_ImperiumHelmet</wornGraphicPath>
+            <wornGraphicPath>Things/Headgear/Imperium/PowerArmor/BEWH_MkVIIHelmet</wornGraphicPath>
             <tags>
                 <li>BEWH_PowerArmorHelmetMkVII</li>
             </tags>
@@ -330,7 +330,7 @@
             <researchPrerequisite>BEWH_AstartesPowerArmor</researchPrerequisite>
         </recipeMaker>
         <graphicData>
-            <texPath>Things/Headgear/Imperium/PowerArmorPrimaris/BEWH_ImperiumHelmetAlt</texPath>
+            <texPath>Things/Headgear/Imperium/PowerArmorPrimaris/BEWH_MkXHelmet</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <shaderType>CutoutComplex</shaderType>
         </graphicData>
@@ -352,7 +352,7 @@
             <Steel>20</Steel>
         </costList>
         <apparel>
-            <wornGraphicPath>Things/Headgear/Imperium/PowerArmorPrimaris/BEWH_ImperiumHelmetAlt</wornGraphicPath>
+            <wornGraphicPath>Things/Headgear/Imperium/PowerArmorPrimaris/BEWH_MkXHelmet</wornGraphicPath>
             <tags>
                 <li>BEWH_PowerArmorHelmetMkX</li>
             </tags>
