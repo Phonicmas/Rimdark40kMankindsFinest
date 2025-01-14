@@ -25,7 +25,7 @@
 	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
 		<defName>BEWH_LibrarianQuickeningBuff</defName>
 		<label>Quickening</label>
-		<description>...</description>
+		<description>Warp power enhancing ones speed.</description>
 		<stages>
 			<li>
 				<statFactors>
@@ -44,7 +44,7 @@
 	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
 		<defName>BEWH_ChiefLibrarianWaveOfLethargyDebuff</defName>
 		<label>Wave of Lethargy</label>
-		<description>...</description>
+		<description>A warp veil covers you, slowing you down.</description>
 		<stages>
 			<li>
 				<statFactors>
@@ -65,7 +65,7 @@
 	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
 		<defName>BEWH_ApothecaryStimulantsBuff</defName>
 		<label>Stimulants</label>
-		<description>...</description>
+		<description>Drugs and injections of all kinds.</description>
 		<stages>
 			<li>
 				<statOffsets>
@@ -88,7 +88,7 @@
 	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
 		<defName>BEWH_CaptainsOrderBuff</defName>
 		<label>Orders Given!</label>
-		<description>...</description>
+		<description>Orders have been given to enhance combat capabilities of nearby pawns.</description>
 		<comps>
 			<li Class="HediffCompProperties_GiveHediffsInRange">
 				<range>11.9</range>
@@ -106,7 +106,7 @@
 	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
 		<defName>BEWH_CaptainsOrderBuffBuff</defName>
 		<label>Orders Received!</label>
-		<description>...</description>
+		<description>Combat orders detailing effective strategies.</description>
 		<debugLabelExtra>other</debugLabelExtra>
 		<stages>
 			<li>

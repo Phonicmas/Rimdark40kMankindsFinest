@@ -174,7 +174,7 @@
     <HediffDef>
         <defName>BEWH_AdvancedTargetingSystems</defName>
         <label>Advanced Targeting System</label>
-        <description>...</description>
+        <description>Advanced targeting systems that enhances the combat capabilities of the Domitar</description>
         <scenarioCanAdd>false</scenarioCanAdd>
         <everCurableByItem>false</everCurableByItem>
         <isBad>false</isBad>

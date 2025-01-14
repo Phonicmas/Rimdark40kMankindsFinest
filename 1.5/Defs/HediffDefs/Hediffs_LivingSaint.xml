@@ -5,7 +5,7 @@
 	<HediffDef>
 		<defName>BEWH_DivineRadiaceFading</defName>
 		<label>divine radiance fading</label>
-		<description>...</description>
+		<description>Your connection to this world is fading, without divine radiance you will eventually disappear back into the warp.</description>
 		<hediffClass>Hediff_HemogenCraving</hediffClass>
 		<defaultLabelColor>(1, 0.2, 0.2)</defaultLabelColor>
 		<initialSeverity>0.01</initialSeverity>
@@ -64,7 +64,7 @@
 	<HediffDef>
 		<defName>BEWH_LivingSaintHolyAscension</defName>
 		<label>holy ascension</label>
-		<description>...</description>
+		<description>By absorbing a sudden burst of warp energy, your power gets elevated to completely new levels.</description>
 		<hediffClass>Hediff_HemogenCraving</hediffClass>
 		<defaultLabelColor>(0.8, 0.8, 0.2)</defaultLabelColor>
 		<initialSeverity>1</initialSeverity>
@@ -162,7 +162,7 @@
 	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
 		<defName>BEWH_LivingSaintInviolableAuraSelf</defName>
 		<label>Inviolable Aura</label>
-		<description>...</description>
+		<description>You radiate an aura that veils other, protecting them for some incoming damage.</description>
 		<comps>
 			<li Class="HediffCompProperties_GiveHediffsInRange">
 				<range>11.9</range>
@@ -181,7 +181,7 @@
 	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
 		<defName>BEWH_LivingSaintInviolableAuraOther</defName>
 		<label>Aura of Protection</label>
-		<description>...</description>
+		<description>The aura of a nearby Living Saint rests upon you, reducing incoming damage.</description>
 		<debugLabelExtra>other</debugLabelExtra>
 		<stages>
 			<li>

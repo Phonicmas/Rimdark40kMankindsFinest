@@ -33,7 +33,7 @@
     <HediffDef>
         <defName>BEWH_RedThirstElongatedTeeth</defName>
         <label>elongated teeth</label>
-        <description>...</description>
+        <description>These elongated teeth gives you an advantages in the direst of naked hand to hand combat.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <scenarioCanAdd>false</scenarioCanAdd>
         <maxSeverity>1.0</maxSeverity>

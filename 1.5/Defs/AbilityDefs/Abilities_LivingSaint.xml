@@ -38,7 +38,7 @@
   <AbilityDef>
     <defName>BEWH_LivingSaintHolyBlast</defName>
     <label>holy blast</label>
-    <description>...</description>
+    <description>The living saint focuses on a spot, causing an explosion of warp energy to emerge, damaging enemies but healing allies.</description>
     <iconPath>UI/Abilities/BEWH_HolyBlast</iconPath>
     <displayGizmoWhileUndrafted>False</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
@@ -76,7 +76,7 @@
   <AbilityDef>
     <defName>BEWH_LivingSaintProofOfFaith</defName>
     <label>Proof of Faith</label>
-    <description>...</description>
+    <description>The living saint uses the devotion of a pawn as a conduit to tap into the warp, fueling their power. This however leaves the pawn in coma, due to the nature of channeling warp energy through them.</description>
     <iconPath>UI/Abilities/BEWH_ProofOfFaith</iconPath>
     <displayGizmoWhileUndrafted>False</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>

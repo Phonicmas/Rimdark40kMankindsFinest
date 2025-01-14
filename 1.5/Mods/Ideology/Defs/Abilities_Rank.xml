@@ -5,7 +5,7 @@
   <AbilityDef>
     <defName>BEWH_ChaplainStrengthenFaith</defName>
     <label>Strengthen Faith</label>
-    <description>...</description>
+    <description>Strenghten the faith in a the pawns shared ideology</description>
     <cooldownTicksRange>120000</cooldownTicksRange>
     <iconPath>UI/Abilities/BEWH_Ability_LorgarBONK</iconPath>
     <jobDef>CastAbilityOnThingMelee</jobDef>

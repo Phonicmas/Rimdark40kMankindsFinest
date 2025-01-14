@@ -124,7 +124,7 @@
   <ThingDef ParentName="BEWH_AstartesMeleeBase">
     <defName>BEWH_AstartesPowerSword</defName>
     <label>power sword</label>
-    <description>...</description>
+    <description>Power weapons generally exude a hazy field of bluish energy that wraps around the primary impact region of a melee weapon, be it a sword's blade or warhammer's head, which is capable of disrupting the molecular bonds of matter when it strikes, greatly increasing its armor penetrative capabilities.</description>
     <soundInteract>Interact_MonoSword</soundInteract>
     <meleeHitSound>MeleeHit_MonoSword</meleeHitSound>
     <!-- <equippedAngleOffset>-65</equippedAngleOffset> -->

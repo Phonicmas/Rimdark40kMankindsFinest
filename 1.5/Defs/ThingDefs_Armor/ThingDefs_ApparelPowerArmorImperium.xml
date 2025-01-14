@@ -286,10 +286,10 @@
                             <layer>75</layer>
                         </defaultData>
                         <dataSouth>
-                            <offset>(-0.065,0,-0.02)</offset>
+                            <offset>(-0.072,0,-0.02)</offset>
                         </dataSouth>
                         <dataNorth>
-                            <offset>(0.065,0,-0.02)</offset>
+                            <offset>(0.072,0,-0.02)</offset>
                         </dataNorth>
                     </drawData>
                 </li>

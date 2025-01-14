@@ -5,7 +5,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>BEWH_SteelRainDropPodBuilding</defName>
     <label>Drop Pod</label>
-    <description>...</description>
+    <description>A drop pod from space, includes a bolter mounted gun for assistance upon landing.</description>
     <thingClass>Genes40k.Building_DropDrop</thingClass>
     <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
@@ -76,7 +76,7 @@
   <ThingDef ParentName="BaseWeaponTurret">
     <defName>BEWH_SteelRainDropPodTurret</defName>
     <label>Drop Pod Turret</label>
-    <description>...</description>
+    <description>Bolter mounted gun.</description>
     <graphicData>
       <texPath>Things/Building/Security/TurretMini_Top</texPath>
       <graphicClass>Graphic_Single</graphicClass>

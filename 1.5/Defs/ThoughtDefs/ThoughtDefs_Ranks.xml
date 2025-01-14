@@ -11,7 +11,7 @@
     <stages>
       <li>
         <label>Inspired by Chaplain</label>
-        <description>...</description>
+        <description>You've been inspired by your chaplain.</description>
         <baseMoodEffect>10</baseMoodEffect>
       </li>
     </stages>

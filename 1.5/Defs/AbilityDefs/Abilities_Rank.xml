@@ -5,7 +5,7 @@
     <AbilityDef>
         <defName>BEWH_StripRanks</defName>
         <label>Strip ranks</label>
-        <description>...</description>
+        <description>You strip the target pawn of their ranks, effectively resetting their standing in the organization.</description>
         <cooldownTicksRange>15000</cooldownTicksRange>
         <iconPath>UI/Abilities/BEWH_Ability_RankStripRank</iconPath>
         <jobDef>CastAbilityOnThingMelee</jobDef>
@@ -152,7 +152,7 @@
     <VFECore.Abilities.AbilityDef>
         <defName>BEWH_ChaplainInspire</defName>
         <label>Inspire</label>
-        <description>...</description>
+        <description>Your rank and voice carry great weight. You're able to inspire your nearby allies, reinforcing their thoughtstream to not worry.</description>
         <iconPath>UI/Abilities/BEWH_AbilityChaplainInspire</iconPath>
         <abilityClass>Genes40k.Ability_Inspire</abilityClass>
         <cooldownTime>90000</cooldownTime>
@@ -171,7 +171,7 @@
     <AbilityDef>
         <defName>BEWH_CaptainsOrder</defName>
         <label>Captain's Order</label>
-        <description>..... The effect remains attached to the caster for 24 hours.</description>
+        <description>Your rank comes with great experience. You're able to give out commands to nearby allies, making them able to perform better in combat. The effect remains attached to the caster for 24 hours.</description>
         <iconPath>UI/Abilities/BEWH_AbilityCaptainsOrder</iconPath>
         <jobDef>CastAbilityOnThing</jobDef>
         <targetRequired>False</targetRequired>
@@ -216,7 +216,7 @@
     <VFECore.Abilities.AbilityDef>
         <defName>BEWH_ChapterMasterSteelRain</defName>
         <label>Steel Rain</label>
-        <description>...</description>
+        <description>Your rank as Chapter Master warrents you great respect and obedience. Your position allows you to call down temporary reinforcements. Offworld marines are dropped onto your RimWorld, where they will help for a while before moving on.</description>
         <iconPath>UI/Abilities/BEWH_AbilitySteelRainIII</iconPath>
         <abilityClass>Genes40k.Ability_SteelRain</abilityClass>
         <castTime>100</castTime>

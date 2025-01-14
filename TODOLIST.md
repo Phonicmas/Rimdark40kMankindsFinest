@@ -23,14 +23,11 @@ Make sure all type of tags, defs and whatnot are prefixed with BEWH_
 
 Shoulder pad icons for chapters and ranks (regarding back view, i can either render the backpack on top - or it can be draw to be around it)
 
-Mk X helmet
-
 Icon for:
 
 Chaplain: Strenghten Faith ability
 
 New turret texture for rogal ability turret (something something, you had some from vehicle mod i believe you said)
-
 
 Drop pod texture (believe you said you had one of these too) + turret textture for ontop of it.
 
@@ -46,10 +43,9 @@ Maybe some different backgrounds (the blue hexagon for xenotype or white circle 
 ## Code and XML
 When chapter icons are made remove the temp setting of chapters in the Genes40kUtils.SetupChapterForPawn() method and the chapterColourDef from Genes40kDefOf
 
-New trait "Serf" that has increase mood and work speed when near a Firstborn, Primaris, Custodes or Primarch (Maybe thunder warrior and living saint?)
 
 
-
+(Maybe) New trait "Serf" that has increase mood and work speed when near a Firstborn, Primaris, Custodes or Primarch (Maybe thunder warrior and living saint?)
 
 (Maybe) Make functionality for jump pack to be installed on power armor. (Maybe some job or recipe, that uses the power armor and a jump pack and some components, which then does stuff and switches the graphic)
 
@@ -61,6 +57,13 @@ New trait "Serf" that has increase mood and work speed when near a Firstborn, Pr
 Should the Primarch specific genes be renamed? (currently the name is of the Primarch)
 
 
+## Notes
+To make a fully fledges chapter one should:
+1) Make a geneDef for the chapter
+2) Make a thingDef for the chapter 
+3) Make a recipeDef for the chapter that inherits "BEWH_FirstbornVialInsertion" and "BEWH_PrimarisVialInsertion" and uses "DefModExtension_GeneseedVialRecipe" to define the item used and gene given.
+4) Make a shoulderIconDef for your chapter to have a custom icon for the shoulder plates available (Optional)
+4) Makes a chapterColourDef featuring the chapters colours, gene and icon. (Optional)
 
 
 # NEW ADDITIONS TO MAKE AT SOME POINT (Not for first release most likely)
