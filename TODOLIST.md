@@ -29,8 +29,6 @@ Chaplain: Strenghten Faith ability
 
 New turret texture for rogal ability turret (something something, you had some from vehicle mod i believe you said)
 
-Drop pod texture (believe you said you had one of these too) + turret textture for ontop of it.
-
 
 
 

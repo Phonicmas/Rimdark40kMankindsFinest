@@ -5,7 +5,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>BEWH_AncientChapterBanner</defName>
     <label>Chapter Banner</label>
-    <description>Chapter banner.</description>
+    <description>The Chapter Banner is a symbol of honor and unity, a sacred emblem raised in key locations to strengthen the resolve of the Space Marines. When unfurled, the banner inspires all nearby Marines, granting them increased morale and combat effectiveness as they fight in the name of their chapter's legacy.</description>
     <thingClass>Genes40k.Building_ChapterBanner</thingClass>
     <graphicData>
       <texPath>Things/Building/ChapterBanner/BEWH_ThingChapterBanner</texPath>
@@ -62,8 +62,8 @@
   <!-- Decorative Loyalist -->
   <ThingDef ParentName="BuildingBase">
     <defName>BEWH_DecorativeChapterBannerImperium</defName>
-    <label>Decorative Loyalist Banner</label>
-    <description>Chapter banner featuring loyalist design.</description>
+    <label>Decorative Chapter Banner</label>
+    <description>A beautifully crafted banner adorned with the chapter's symbols and colors. It stands as a proud testament to the chapter's history and glory.</description>
     <thingClass>Genes40k.Building_ChapterBuildingSingle</thingClass>
     <graphicData>
       <texPath>Things/Building/ChapterBanner/BEWH_DecorationChapterBanner</texPath>
@@ -113,8 +113,8 @@
   <!-- Decorative Heresy -->
   <ThingDef ParentName="BuildingBase">
     <defName>BEWH_DecorativeChapterBannerChaos</defName>
-    <label>Decorative Heresy Banner</label>
-    <description>Chapter banner featuring heretic design.</description>
+    <label>Decorative Chaos Banner</label>
+    <description>A dark and twisted banner, emblazoned with the symbols of Chaos and ruinous forces. The banner radiates an aura of decay and darkness, swaying unnaturally in the winds of battle, a symbol of the chaotic forces that corrupt the very fabric of reality.</description>
     <thingClass>Genes40k.Building_ChapterBuildingSingle</thingClass>
     <graphicData>
       <texPath>Things/Building/ChapterBanner/BEWH_DecorationChapterBannerChaos</texPath>

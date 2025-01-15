@@ -5,7 +5,7 @@
 	<HediffDef>
 		<defName>BEWH_DivineRadiaceFading</defName>
 		<label>divine radiance fading</label>
-		<description>Your connection to this world is fading, without divine radiance you will eventually disappear back into the warp.</description>
+		<description>Without Divine Radiance, the Saint's connection to the material plane weakens, causing them to fade and lose stability, unable to remain in the physical world for long.</description>
 		<hediffClass>Hediff_HemogenCraving</hediffClass>
 		<defaultLabelColor>(1, 0.2, 0.2)</defaultLabelColor>
 		<initialSeverity>0.01</initialSeverity>
@@ -64,7 +64,7 @@
 	<HediffDef>
 		<defName>BEWH_LivingSaintHolyAscension</defName>
 		<label>holy ascension</label>
-		<description>By absorbing a sudden burst of warp energy, your power gets elevated to completely new levels.</description>
+		<description>By absorbing a sudden burst of warp energy, the Living Saint is elevated to their full celestial form, radiating pure divine energy and gaining increased strength and resilience.</description>
 		<hediffClass>Hediff_HemogenCraving</hediffClass>
 		<defaultLabelColor>(0.8, 0.8, 0.2)</defaultLabelColor>
 		<initialSeverity>1</initialSeverity>
@@ -162,7 +162,7 @@
 	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
 		<defName>BEWH_LivingSaintInviolableAuraSelf</defName>
 		<label>Inviolable Aura</label>
-		<description>You radiate an aura that veils other, protecting them for some incoming damage.</description>
+		<description>The Living Saint radiates a divine aura that envelops nearby allies in holy protection, reducing incoming damage. The Emperor protects!</description>
 		<comps>
 			<li Class="HediffCompProperties_GiveHediffsInRange">
 				<range>11.9</range>
@@ -181,7 +181,7 @@
 	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
 		<defName>BEWH_LivingSaintInviolableAuraOther</defName>
 		<label>Aura of Protection</label>
-		<description>The aura of a nearby Living Saint rests upon you, reducing incoming damage.</description>
+		<description>This servant of the Emperor is shielded by the inviolable aura of the Living Saint, reducing incoming damage.</description>
 		<debugLabelExtra>other</debugLabelExtra>
 		<stages>
 			<li>

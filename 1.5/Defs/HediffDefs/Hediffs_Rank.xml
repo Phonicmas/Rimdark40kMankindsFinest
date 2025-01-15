@@ -6,7 +6,7 @@
 	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
 		<defName>BEWH_ChapterBannerBuff</defName>
 		<label>Chapter Banner</label>
-		<description>The nearby banner of my chapter inspires me to do better!</description>
+		<description>The sacred banner of my Chapter fills me with unwavering resolve, driving me to greater feats in the Emperor's name!</description>
 		<stages>
 			<li>
 				<statOffsets>
@@ -25,7 +25,7 @@
 	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
 		<defName>BEWH_LibrarianQuickeningBuff</defName>
 		<label>Quickening</label>
-		<description>Warp power enhancing ones speed.</description>
+		<description>The psyker's senses are heightened through precognitive abilities, greatly enhancing their speed and awareness.</description>
 		<stages>
 			<li>
 				<statFactors>
@@ -44,7 +44,7 @@
 	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
 		<defName>BEWH_ChiefLibrarianWaveOfLethargyDebuff</defName>
 		<label>Wave of Lethargy</label>
-		<description>A warp veil covers you, slowing you down.</description>
+		<description>This character is under the influence of the wave of lethargy. As overwhelming exhaustion sets in, their limbs grow heavy, every movement a struggle. Their senses are dulled, leaving them sluggish and unable to react with the urgency they once had.</description>
 		<stages>
 			<li>
 				<statFactors>
@@ -65,7 +65,7 @@
 	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
 		<defName>BEWH_ApothecaryStimulantsBuff</defName>
 		<label>Stimulants</label>
-		<description>Drugs and injections of all kinds.</description>
+		<description>This character is under the effects of emergency stimulants that relieve pain and increase healing speed. Their body is temporarily revitalized, reducing fatigue and speeding recovery, but the effects are short-lived and they may need further care.</description>
 		<stages>
 			<li>
 				<statOffsets>
@@ -88,7 +88,7 @@
 	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
 		<defName>BEWH_CaptainsOrderBuff</defName>
 		<label>Orders Given!</label>
-		<description>Orders have been given to enhance combat capabilities of nearby pawns.</description>
+		<description>This character has given the command with unwavering authority, empowering those around him.</description>
 		<comps>
 			<li Class="HediffCompProperties_GiveHediffsInRange">
 				<range>11.9</range>
@@ -106,7 +106,7 @@
 	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
 		<defName>BEWH_CaptainsOrderBuffBuff</defName>
 		<label>Orders Received!</label>
-		<description>Combat orders detailing effective strategies.</description>
+		<description>This character is under the influence of the Captain's command, which increases their strength, accuracy, and morale. They fight with increased coordination and ferocity, hardening their resolve and increasing their combat effectiveness.</description>
 		<debugLabelExtra>other</debugLabelExtra>
 		<stages>
 			<li>
