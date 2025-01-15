@@ -10,7 +10,7 @@
     <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
       <texPath>Things/Building/DropPod/BEWH_DropPod</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(6,6)</drawSize>
 	  <drawOffset>(0, 0, -0.5)</drawOffset>
       <damageData>
@@ -47,6 +47,7 @@
       <claimable>false</claimable>
       <neverBuildable>true</neverBuildable>
       <turretGunDef>BEWH_SteelRainDropPodTurret</turretGunDef>
+      <turretTopDrawSize>1</turretTopDrawSize>
     </building>
     <stuffCategories Inherit="False" />
     <designationCategory IsNull="True"/>
@@ -81,7 +82,7 @@
     <graphicData>
       <texPath>Things/Building/DropPod/BEWH_DropPod_Turret</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(3,3)</drawSize>
+      <drawSize>(1,1)</drawSize>
     </graphicData>
     <statBases>
       <AccuracyTouch>0.56</AccuracyTouch>
@@ -114,7 +115,7 @@
     <label>warp flame</label>
     <size>(1, 1)</size>
     <graphicData>
-      <texPath>Things/Building/DropPod/BEWH_DropPod</texPath>
+      <texPath>Things/Building/DropPod/BEWH_DropPod_Closed</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>Transparent</shaderType>
       <drawSize>(10, 10)</drawSize>

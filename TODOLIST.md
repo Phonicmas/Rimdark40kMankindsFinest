@@ -27,9 +27,6 @@ Icon for:
 
 Chaplain: Strenghten Faith ability
 
-New turret texture for rogal ability turret (something something, you had some from vehicle mod i believe you said)
-
-
 
 
 (Maybe) new motes for the linking and circle of the living saint aura?
@@ -39,7 +36,10 @@ New turret texture for rogal ability turret (something something, you had some f
 ## Code and XML
 When chapter icons are made remove the temp setting of chapters in the Genes40kUtils.SetupChapterForPawn() method and the chapterColourDef from Genes40kDefOf
 
-Make rogal dorn turret in xml, the turret itself
+Drop pod colour does not apply for some reason.
+
+Make drop pod have closed texture when landing, then before it spawns marines, make it make the vanilla dust cloud puff then switch to open texture, then spawn marines 
+Make drop pod use colour from chapter selected. (Primary)
 
 
 (Maybe) New trait "Serf" that has increase mood and work speed when near a Firstborn, Primaris, Custodes or Primarch (Maybe thunder warrior and living saint?)
