@@ -119,7 +119,7 @@
     <defName>BEWH_LivingSaintInviolableAura</defName>
     <label>Inviolable Aura</label>
     <description>The living saint extends an aura of protection to nearby allies, shielding them from attacks. The effect remains attached to the caster for 6 hours.</description>
-    <iconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Long</iconPath>
+    <iconPath>UI/Abilities/BEWH_AbilityLivingSaintAura</iconPath>
     <jobDef>CastAbilityOnThing</jobDef>
     <targetRequired>False</targetRequired>
     <canUseAoeToGetTargets>False</canUseAoeToGetTargets>

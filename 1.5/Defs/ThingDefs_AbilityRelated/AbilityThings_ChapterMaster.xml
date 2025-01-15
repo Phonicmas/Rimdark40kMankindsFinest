@@ -11,7 +11,8 @@
     <graphicData>
       <texPath>Things/Building/DropPod/BEWH_DropPod</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(9,9)</drawSize>
+      <drawSize>(6,6)</drawSize>
+	  <drawOffset>(0, 0, -0.5)</drawOffset>
       <damageData>
         <rect>(0.2,0.2,0.6,0.6)</rect>
       </damageData>
@@ -78,7 +79,7 @@
     <label>Drop Pod Turret</label>
     <description>Bolter mounted gun.</description>
     <graphicData>
-      <texPath>Things/Building/Security/TurretMini_Top</texPath>
+      <texPath>Things/Building/DropPod/BEWH_DropPod_Turret</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(3,3)</drawSize>
     </graphicData>
