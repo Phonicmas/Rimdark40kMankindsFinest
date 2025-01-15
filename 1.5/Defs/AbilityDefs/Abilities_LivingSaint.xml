@@ -6,7 +6,7 @@
   <AbilityDef>
     <defName>BEWH_DivineFlight</defName>
     <label>divine flight</label>
-    <description>This pawn is granted flight by their wings.</description>
+    <description>The Living Saint ascends into the air, sustained by radiant wings of holy light, allowing them to cover great distances quickly.</description>
     <iconPath>UI/Abilities/BEWH_DivineFlight</iconPath>
     <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
@@ -38,7 +38,7 @@
   <AbilityDef>
     <defName>BEWH_LivingSaintHolyBlast</defName>
     <label>holy blast</label>
-    <description>The living saint focuses on a spot, causing an explosion of warp energy to emerge, damaging enemies but healing allies.</description>
+    <description>The Living Saint unleashes a powerful burst of divine energy, blasting enemies in a targeted area with searing light. At the same time, the radiant power heals nearby allies, restoring their strength.</description>
     <iconPath>UI/Abilities/BEWH_HolyBlast</iconPath>
     <displayGizmoWhileUndrafted>False</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
@@ -76,7 +76,7 @@
   <AbilityDef>
     <defName>BEWH_LivingSaintProofOfFaith</defName>
     <label>Proof of Faith</label>
-    <description>The living saint uses the devotion of a pawn as a conduit to tap into the warp, fueling their power. This however leaves the pawn in coma, due to the nature of channeling warp energy through them.</description>
+    <description>The Living Saint calls upon a willing ally to make the ultimate sacrifice, channeling their life force to replenish the Saint's divine radiance. The chosen pawn enters a state of deep, restorative coma for several days or weeks.</description>
     <iconPath>UI/Abilities/BEWH_ProofOfFaith</iconPath>
     <displayGizmoWhileUndrafted>False</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
@@ -118,7 +118,7 @@
   <AbilityDef>
     <defName>BEWH_LivingSaintInviolableAura</defName>
     <label>Inviolable Aura</label>
-    <description>The living saint extends an aura of protection to nearby allies, shielding them from attacks. The effect remains attached to the caster for 6 hours.</description>
+    <description>The Living Saint radiates a divine aura that envelops nearby allies in holy protection, shielding them from harm. The effect remains attached to the caster for 6 hours.</description>
     <iconPath>UI/Abilities/BEWH_AbilityLivingSaintAura</iconPath>
     <jobDef>CastAbilityOnThing</jobDef>
     <targetRequired>False</targetRequired>

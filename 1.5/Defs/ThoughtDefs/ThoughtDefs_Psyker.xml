@@ -13,7 +13,7 @@
         <stages>
             <li>
                 <label>Iota Psyker</label>
-                <description>I can feel the warp...</description>
+                <description>The Warp hums softly within me, a faint whisper rather than a roar. My connection is limited, but sufficient. I wield this power with precision and restraint, knowing I walk a finer line than most.</description>
                 <baseMoodEffect>-2</baseMoodEffect>
             </li>
         </stages>
@@ -31,7 +31,7 @@
         <stages>
             <li>
                 <label>Epsilon Psyker</label>
-                <description>I can feel the warp...</description>
+                <description>The warp flows through me, steady and strong. Its whispers guide me, its power fuels me, yet I remain vigilant.</description>
                 <baseMoodEffect>-4</baseMoodEffect>
             </li>
         </stages>
@@ -49,7 +49,7 @@
         <stages>
             <li>
                 <label>Delta Psyker</label>
-                <description>I can feel the warp...</description>
+                <description>The warp surges within me, potent and commanding. Its tides are fierce, but I have the strength to harness them. Though the temptation of chaos is ever-present, my resolve keeps me steadfast.</description>
                 <baseMoodEffect>-8</baseMoodEffect>
             </li>
         </stages>
@@ -68,7 +68,7 @@
         <stages>
             <li>
                 <label>Beta Psyker</label>
-                <description>I can feel the warp...</description>
+                <description>The warp is a storm within me, vast and unrelenting. I wield a power few can comprehend, let alone control. Every thought, every action must be precise, for my power hovers on the brink of destruction. Yet I am no mere instrument of the Immaterium - I am its master.</description>
                 <baseMoodEffect>-14</baseMoodEffect>
             </li>
         </stages>
@@ -87,7 +87,7 @@
         <stages>
             <li>
                 <label>Alpha Psyker</label>
-                <description>I can feel the warp...</description>
+                <description>The warp bends to my will, its infinite power coursing through me like a roaring tempest. I am a living beacon of the Immaterium, my abilities far beyond what mortals can fathom. Such power is both a blessing and a burden, for even the slightest misstep could unravel worlds.</description>
                 <baseMoodEffect>-22</baseMoodEffect>
             </li>
         </stages>

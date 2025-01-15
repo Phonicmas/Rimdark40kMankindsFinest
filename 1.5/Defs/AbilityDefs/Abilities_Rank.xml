@@ -5,7 +5,7 @@
     <AbilityDef>
         <defName>BEWH_StripRanks</defName>
         <label>Strip ranks</label>
-        <description>You strip the target pawn of their ranks, effectively resetting their standing in the organization.</description>
+        <description>Target an underperforming or insubordinate ally, demoting and stripping them of rank, effectively resetting their place in the hierarchy.</description>
         <cooldownTicksRange>15000</cooldownTicksRange>
         <iconPath>UI/Abilities/BEWH_Ability_RankStripRank</iconPath>
         <jobDef>CastAbilityOnThingMelee</jobDef>
@@ -40,7 +40,7 @@
     <VFECore.Abilities.AbilityDef>
         <defName>BEWH_RaiseChapterBanner</defName>
         <label>Raise Chapter Banner</label>
-        <description>Raise your chapter's banner, showing it proudly, inspiring your battle brothers.</description>
+        <description>Raise the Chapter's sacred banner, inspiring nearby battle brothers with unwavering courage and strength. While the banner is raised, they fight with increased morale and unparalleled determination, embodying the glory of their chapter.</description>
         <iconPath>UI/Abilities/BEWH_Ability_RaiseChapterBanner</iconPath>
         <abilityClass>Genes40k.Ability_ChapterBanner</abilityClass>
         <needsTicking>true</needsTicking>
@@ -56,7 +56,7 @@
     <AbilityDef ParentName="BEWH_SelfTargetAbilities">
         <defName>BEWH_LibrarianQuickening</defName>
         <label>Quickening</label>
-        <description>The Psyker gains precognitive powers and increased haste, allowing him to outfight his enemies by seeing their movements before they even act and outspeeding them.</description>
+        <description>The psyker taps into precognitive abilities that greatly increase his speed and awareness. With heightened reflexes and foresight, he can anticipate enemy movements and strike with unparalleled speed, outmaneuvering opponents before they can react.</description>
         <iconPath>UI/Abilities/BEWH_AbilityLibrarianQuickening</iconPath>
         <cooldownTicksRange>90000</cooldownTicksRange>
         <statBases>
@@ -76,7 +76,7 @@
     <AbilityDef>
         <defName>BEWH_LibrarianWaveOfLethargy</defName>
         <label>Wave of Lethargy</label>
-        <description>The Psyker shoots out a wave of lethargy, causing anyone caught in it to become fatigued and slowed.</description>
+        <description>Unleashes a psychic wave of exhaustion that drains the strength of all enemies in its path. Those caught in the wave are slowed and overwhelmed, leaving them sluggish and vulnerable to subsequent attacks.</description>
         <iconPath>UI/Abilities/BEWH_AbilityLibrarianWaveOfLethargy</iconPath>
         <cooldownTicksRange>120000</cooldownTicksRange>
         <statBases>
@@ -110,7 +110,7 @@
     <AbilityDef>
         <defName>BEWH_ApothecaryEmergencyAid</defName>
         <label>Emergency Aid</label>
-        <description>Apply emergency aid to a downed or bedridden pawn. Pumping them full of stimulants to reduce pain and increase natural healing speed, and applying first aid, quickly tending and slightly healing all wounds.</description>
+        <description>Provides emergency treatment to a downed or bedridden pawn, administering stimulants to ease pain and speed healing. The quick, precise care tends to all the pawn's wounds, providing a slight but immediate recovery.</description>
         <cooldownTicksRange>5000</cooldownTicksRange>
         <iconPath>UI/Abilities/BEWH_AbilityApothecaryEAid</iconPath>
         <jobDef>CastAbilityOnThingMelee</jobDef>
@@ -152,7 +152,7 @@
     <VFECore.Abilities.AbilityDef>
         <defName>BEWH_ChaplainInspire</defName>
         <label>Inspire</label>
-        <description>Your rank and voice carry great weight. You're able to inspire your nearby allies, reinforcing their thoughtstream to not worry.</description>
+        <description>The Chaplain rallies his allies with strong, heartfelt words, filling them with an unshakable faith in their common cause.</description>
         <iconPath>UI/Abilities/BEWH_AbilityChaplainInspire</iconPath>
         <abilityClass>Genes40k.Ability_Inspire</abilityClass>
         <cooldownTime>90000</cooldownTime>
@@ -171,7 +171,7 @@
     <AbilityDef>
         <defName>BEWH_CaptainsOrder</defName>
         <label>Captain's Order</label>
-        <description>Your rank comes with great experience. You're able to give out commands to nearby allies, making them able to perform better in combat. The effect remains attached to the caster for 24 hours.</description>
+        <description>The captain issues a powerful command that rallies nearby allies and increases their combat effectiveness. The command increases their strength, precision, and morale, allowing them to fight with greater coordination and ferocity. The effect remains attached to the caster for 24 hours.</description>
         <iconPath>UI/Abilities/BEWH_AbilityCaptainsOrder</iconPath>
         <jobDef>CastAbilityOnThing</jobDef>
         <targetRequired>False</targetRequired>
@@ -216,7 +216,7 @@
     <VFECore.Abilities.AbilityDef>
         <defName>BEWH_ChapterMasterSteelRain</defName>
         <label>Steel Rain</label>
-        <description>Your rank as Chapter Master warrents you great respect and obedience. Your position allows you to call down temporary reinforcements. Offworld marines are dropped onto your RimWorld, where they will help for a while before moving on.</description>
+        <description>Call down a barrage of bolter-equipped drop pods, each carrying a squad of Space Marines. The pods crash onto the battlefield, quickly deploying their deadly occupants to overwhelm enemies with a storm of steel and gunfire.</description>
         <iconPath>UI/Abilities/BEWH_AbilitySteelRainIII</iconPath>
         <abilityClass>Genes40k.Ability_SteelRain</abilityClass>
         <castTime>100</castTime>

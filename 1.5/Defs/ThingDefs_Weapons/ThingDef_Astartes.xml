@@ -4,8 +4,8 @@
   <!-- Bolter -->
   <ThingDef ParentName="BEWH_AstartesRangedBase">
     <defName>BEWH_AstartesBolter</defName>
-    <label>bolter</label>
-    <description>The Bolter, also called a Boltgun, and its variants are some of the most powerful, hand-held, ballistic anti-personnel weaponry in use by the military forces of the Imperium of Man. It is a powerful assault weapon that fires explosive kinetic rounds colloquially referred to as bolts.</description>
+    <label>bolt carabine</label>
+    <description>The Bolt Carbine is a compact, rapid-fire firearm of the Adeptus Astartes that fires explosive bolt rounds. Lightweight and versatile, it delivers powerful shots with deadly accuracy, ideal for close to mid-range combat.</description>
     <graphicData>
       <texPath>Things/Weapons/BEWH_BoltCarbine</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -124,7 +124,7 @@
   <ThingDef ParentName="BEWH_AstartesMeleeBase">
     <defName>BEWH_AstartesPowerSword</defName>
     <label>power sword</label>
-    <description>Power weapons generally exude a hazy field of bluish energy that wraps around the primary impact region of a melee weapon, be it a sword's blade or warhammer's head, which is capable of disrupting the molecular bonds of matter when it strikes, greatly increasing its armor penetrative capabilities.</description>
+    <description>A melee weapon with an energy field, the Power Sword is capable of slicing through armor with ease. Its energy blade hums with deadly force, allowing the wielder to strike with precision and overwhelming power.</description>
     <soundInteract>Interact_MonoSword</soundInteract>
     <meleeHitSound>MeleeHit_MonoSword</meleeHitSound>
     <!-- <equippedAngleOffset>-65</equippedAngleOffset> -->
