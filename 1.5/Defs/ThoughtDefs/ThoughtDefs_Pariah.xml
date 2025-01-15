@@ -13,7 +13,7 @@
         <stages>
             <li>
                 <label>Sigma Pariah</label>
-                <description>Calm...</description>
+                <description>The silence... it's all I know. Others recoil from me, their fear and hatred as loud as a battle cry. I am a void in the warp, a shadow in their light. They call me cursed, but I see it as strength - a shield against the corruption that taints them. If my existence is a weapon, so be it. I will endure their scorn to serve humanity.</description>
                 <baseMoodEffect>10</baseMoodEffect>
             </li>
         </stages>
@@ -50,7 +50,7 @@
         <stages>
             <li>
                 <label>Upsilon Pariah</label>
-                <description>Calm...</description>
+                <description>The emptiness within me consumes all. I am a walking abyss, a terror even to my own kind. Yet, this curse is my weapon, my strength. The warp recoils from me, and with it, so do its foul servants. If isolation is my burden, I will bear it to stand as humanity's unyielding shield against the darkness.</description>
                 <baseMoodEffect>25</baseMoodEffect>
             </li>
         </stages>
@@ -87,7 +87,7 @@
         <stages>
             <li>
                 <label>Omega Pariah</label>
-                <description>Calm...</description>
+                <description>I am nothing, yet I am everything they fear. The warp crumbles in my presence, its whispers silenced, its corruption halted. I am the void, the end of the unnatural, and the last hope against the darkness.</description>
                 <baseMoodEffect>500</baseMoodEffect>
             </li>
         </stages>

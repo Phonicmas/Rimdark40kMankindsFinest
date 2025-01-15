@@ -5,13 +5,14 @@
   <ThingDef ParentName="BuildingBase">
     <defName>BEWH_SteelRainDropPodBuilding</defName>
     <label>Drop Pod</label>
-    <description>A drop pod from space, includes a bolter mounted gun for assistance upon landing.</description>
+    <description>A heavily armored, high-velocity capsule used to drop Space Marines right into the heart of battle. With reinforced hulls and rapid descent systems, the Drop Pod blasts through the atmosphere, delivering its deadly payload with devastating impact.</description>
     <thingClass>Genes40k.Building_DropDrop</thingClass>
     <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
       <texPath>Things/Building/DropPod/BEWH_DropPod</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(9,9)</drawSize>
+      <drawSize>(6,6)</drawSize>
+	  <drawOffset>(0, 0, -0.5)</drawOffset>
       <damageData>
         <rect>(0.2,0.2,0.6,0.6)</rect>
       </damageData>
@@ -76,9 +77,9 @@
   <ThingDef ParentName="BaseWeaponTurret">
     <defName>BEWH_SteelRainDropPodTurret</defName>
     <label>Drop Pod Turret</label>
-    <description>Bolter mounted gun.</description>
+    <description>A heavy, double-barreled version of the standard .75 caliber bolter mounted on drop pods to unleash devastating firepower on enemy forces. Its increased weight and recoil make it unsuitable for infantry use, but it provides powerful suppression and support during planetary assaults.</description>
     <graphicData>
-      <texPath>Things/Building/Security/TurretMini_Top</texPath>
+      <texPath>Things/Building/DropPod/BEWH_DropPod_Turret</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(3,3)</drawSize>
     </graphicData>
