@@ -139,10 +139,45 @@
     <building>
       <combatPower>45</combatPower>      <!-- same as a scavenger -->
       <ai_combatDangerous>true</ai_combatDangerous>
-      <turretGunDef>Gun_MiniTurret</turretGunDef>
+      <turretGunDef>BEWH_RaisedTurretTopGun</turretGunDef>
       <turretBurstCooldownTime>2</turretBurstCooldownTime>
     </building>
     <designationHotKey>Misc2</designationHotKey>
+  </ThingDef>
+  <!-- Turret top part -->
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>BEWH_RaisedTurretTopGun</defName>
+    <label>Bolter Turret</label>
+    <description>Bolter mounted gun.</description>
+    <graphicData>
+      <texPath>Things/Building/Security/TurretMini_Top</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,3)</drawSize>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.66</AccuracyTouch>
+      <AccuracyShort>0.76</AccuracyShort>
+      <AccuracyMedium>0.66</AccuracyMedium>
+      <AccuracyLong>0.46</AccuracyLong>
+      <RangedWeapon_Cooldown>2.20</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>5</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <verbs>
+      <li>
+        <label>Storm Bolter</label>
+        <verbClass>Verb_Shoot</verbClass>
+        <defaultProjectile>BEWH_BolterRound</defaultProjectile>
+        <warmupTime>0</warmupTime>
+        <range>28.9</range>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <burstShotCount>3</burstShotCount>
+        <soundCast>GunShotA</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
   </ThingDef>
 
 </Defs>

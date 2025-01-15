@@ -34,15 +34,14 @@ Drop pod texture (believe you said you had one of these too) + turret textture f
 
 
 
-Maybe new motes for the linking and circle of the living saint aura?
+(Maybe) new motes for the linking and circle of the living saint aura?
 
-
-Maybe some different backgrounds (the blue hexagon for xenotype or white circle thingy for endogenes) for the different genes? (Maybe keep the recoloured one psyker and pariah and then make some new type for the different super human, with increasing golden stuff and purity seals n stuff) (im just cooking here, this is not important)
-
+(Maybe) Some different backgrounds (the blue hexagon for xenotype or white circle thingy for endogenes) for the different genes? (Maybe keep the recoloured one psyker and pariah and then make some new type for the different super human, with increasing golden stuff and purity seals n stuff) (im just cooking here, this is not important)
 
 ## Code and XML
 When chapter icons are made remove the temp setting of chapters in the Genes40kUtils.SetupChapterForPawn() method and the chapterColourDef from Genes40kDefOf
 
+Make rogal dorn turret in xml, the turret itself
 
 
 (Maybe) New trait "Serf" that has increase mood and work speed when near a Firstborn, Primaris, Custodes or Primarch (Maybe thunder warrior and living saint?)
