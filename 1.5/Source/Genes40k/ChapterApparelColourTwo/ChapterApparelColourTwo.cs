@@ -11,7 +11,6 @@ namespace Genes40k
         protected Genes40kModSettings ModSettings => modSettings ?? (modSettings = LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>());
 
         private bool initialColourSet = false;
-        protected bool InitialColourSet => initialColourSet;
         
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {

@@ -4,6 +4,7 @@ using System.Linq;
 using UnityEngine;
 using Verse;
 using Verse.AI.Group;
+using Verse.Sound;
 
 namespace Genes40k
 {
@@ -16,21 +17,17 @@ namespace Genes40k
 
         private const string LeaveSignal = "BEWH_SpaceMarineHelpEnd";
 
-        public override void SpawnSetup(Map map, bool respawningAfterLoad)
-        {
-            base.SpawnSetup(map, respawningAfterLoad);
-            var offworldFaction = Find.FactionManager.FirstFactionOfDef(Genes40kDefOf.BEWH_OffworldMarinesFaction);
-            if (offworldFaction == null)
-            {
-                var faction = new Faction
-                {
-                    def = Genes40kDefOf.BEWH_OffworldMarinesFaction,
-                };
-                offworldFaction = faction;
-                //Log.Error("Steel Rain: Could not find offworld faction. Missing from game? Report to Phonicmas");
-            }
-            SetFactionDirect(offworldFaction);
-        }
+        public List<Pawn> MarinesToSpawn = new List<Pawn>();
+
+        [Unsaved]
+        private Graphic cachedOpenGraphic;
+        
+        private Graphic OpenGraphic =>
+            cachedOpenGraphic ?? (cachedOpenGraphic =
+                GraphicDatabase.Get<Graphic_Single>(def.GetModExtension<DefModExtension_DropPod>().openGraphic, def.graphicData.shaderType.Shader,
+                    def.graphicData.drawSize, DrawColor, Color.white, DefaultGraphic.data, def.GetModExtension<DefModExtension_DropPod>().openGraphicMask));
+        
+        public override Graphic Graphic => hasSpawnedMarines ? OpenGraphic : DefaultGraphic;
 
         public override void Tick()
         {
@@ -50,19 +47,24 @@ namespace Genes40k
                 new Vector3(0, 0, -1)
             };
 
-            var pawns = new List<Pawn>(); 
-            
-            foreach (var position in positions)
+            var pawns = new List<Pawn>();
+
+            for (var i = 0; i < MarinesToSpawn.Count; i++)
             {
-                var actualPosition = Position + position.ToIntVec3();
+                var actualPosition = Position;
+                if (i+1 < MarinesToSpawn.Count)
+                {
+                    actualPosition += positions[i].ToIntVec3();
+                }
+                else
+                {
+                    actualPosition = actualPosition.RandomAdjacentCell8Way();
+                }
+
+                FleckMaker.ThrowDustPuff(actualPosition, Map, 1f);
+                GenSpawn.Spawn(MarinesToSpawn[i], actualPosition, Map);
                 
-                var spawnPawn = PawnGenerator.GeneratePawn(Genes40kDefOf.BEWH_FirstbornPawn, Faction);
-                
-                Genes40kUtils.SetupChapterForPawn(spawnPawn, false);
-                
-                GenSpawn.Spawn(spawnPawn, actualPosition, Map);
-                
-                pawns.Add(spawnPawn);
+                pawns.Add(MarinesToSpawn[i]);
             }
             
             var lordJob = new LordJob_AssistColony(Faction, Position + positions.First().ToIntVec3());
@@ -80,6 +82,7 @@ namespace Genes40k
         {
             base.ExposeData();
             Scribe_Values.Look(ref hasSpawnedMarines, "hasSpawnedMarines");
+            Scribe_Collections.Look(ref MarinesToSpawn, "MarinesToSpawn");
             Scribe_References.Look(ref lord, "lord");
         }
     }

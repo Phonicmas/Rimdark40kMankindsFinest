@@ -7,12 +7,14 @@
     <label>Drop Pod</label>
     <description>A heavily armored, high-velocity capsule used to drop Space Marines right into the heart of battle. With reinforced hulls and rapid descent systems, the Drop Pod blasts through the atmosphere, delivering its deadly payload with devastating impact.</description>
     <thingClass>Genes40k.Building_DropDrop</thingClass>
-    <drawerType>MapMeshAndRealTime</drawerType>
+    <drawerType>RealtimeOnly</drawerType>
     <graphicData>
-      <texPath>Things/Building/DropPod/BEWH_DropPod</texPath>
-      <graphicClass>Graphic_Multi</graphicClass>
+      <texPath>Things/Building/DropPod/BEWH_DropPod_Closed</texPath>
+      <maskPath>Things/Building/DropPod/BEWH_DropPod_Closed_m</maskPath>
+      <shaderType>CutoutComplex</shaderType>
+      <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(6,6)</drawSize>
-	  <drawOffset>(0, 0, -0.5)</drawOffset>
+      <drawOffset>(0, 0, -0.5)</drawOffset>
       <damageData>
         <rect>(0.2,0.2,0.6,0.6)</rect>
       </damageData>
@@ -27,7 +29,7 @@
     <stealable>false</stealable>
     <rotatable>false</rotatable>
     <statBases>
-      <MaxHitPoints>1000</MaxHitPoints>
+      <MaxHitPoints>5000</MaxHitPoints>
       <Flammability>0</Flammability>
       <Mass>50</Mass>
       <Beauty>-10</Beauty>
@@ -62,6 +64,9 @@
         <explosiveDamageType>Bomb</explosiveDamageType>
         <chanceNeverExplodeFromDamage>0.5</chanceNeverExplodeFromDamage>
       </li>
+      <li>
+        <compClass>CompColorable</compClass>
+      </li>
       <li Class="CompProperties_Lifespan">        <!-- Switch with some that makes a skyfaller that accelerates out into space OR simply crumble if they dont -->
         <lifespanTicks>10000</lifespanTicks>
         <expireEffect>RaisedRock_Collapse</expireEffect>
@@ -73,6 +78,12 @@
                 </affectedDamageDefs>
             </li>-->
     </comps>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_DropPod">
+        <openGraphic>Things/Building/DropPod/BEWH_DropPod</openGraphic>
+        <openGraphicMask>Things/Building/DropPod/BEWH_DropPod_m</openGraphicMask>
+      </li>
+    </modExtensions>
   </ThingDef>
   <!-- Turret top part -->
   <ThingDef ParentName="BaseWeaponTurret">
@@ -116,8 +127,9 @@
     <size>(1, 1)</size>
     <graphicData>
       <texPath>Things/Building/DropPod/BEWH_DropPod_Closed</texPath>
+      <maskPath>Things/Building/DropPod/BEWH_DropPod_Closed_m</maskPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>Transparent</shaderType>
+      <shaderType>CutoutComplex</shaderType>
       <drawSize>(10, 10)</drawSize>
     </graphicData>
     <skyfaller>
@@ -131,6 +143,11 @@
       <explosionDamage>Bomb</explosionDamage>
       <explosionDamageFactor>0.5</explosionDamageFactor>
     </skyfaller>
+    <comps>
+      <li>
+        <compClass>CompColorable</compClass>
+      </li>
+    </comps>
   </ThingDef>
 
 </Defs>

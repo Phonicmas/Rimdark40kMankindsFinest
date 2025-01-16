@@ -160,11 +160,11 @@ namespace Genes40k
             geneDivineRadiance?.ChangeDivineRadianceAmount(offset);
         }
         
-        public static void SetupChapterForPawn(Pawn pawn, bool randomChapter)
+        public static ChapterColourDef SetupChapterForPawn(Pawn pawn, bool randomChapter)
         {
             if (pawn.genes == null || !IsFirstborn(pawn))
             {
-                return;
+                return null;
             }
 
             var xenotypeName = string.Empty;
@@ -213,6 +213,8 @@ namespace Genes40k
                         break;
                 }
             }
+
+            return chapter;
         }
 
         public static void MakeGeneseedVial(Pawn pawn, bool isPrimaris)

@@ -137,6 +137,7 @@
     <Compile Include="Comps\SpaceMarine\CompAbilityEffect_StasisConfirmation.cs" />
     <Compile Include="Comps\SpaceMarine\CompProperties_AbilityRemembrance.cs" />
     <Compile Include="Comps\SpaceMarine\CompProperties_AbilityStasisConfirmation.cs" />
+    <Compile Include="DefModExtensions\DefModExtension_DropPod.cs" />
     <Compile Include="DefModExtensions\DefModExtension_ExclusiveMech.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneInducedFear.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneseedHarvest.cs" />

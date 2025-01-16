@@ -36,10 +36,8 @@ Chaplain: Strenghten Faith ability
 ## Code and XML
 When chapter icons are made remove the temp setting of chapters in the Genes40kUtils.SetupChapterForPawn() method and the chapterColourDef from Genes40kDefOf
 
-Drop pod colour does not apply for some reason.
+Give Drop Pod thump sound when opened
 
-Make drop pod have closed texture when landing, then before it spawns marines, make it make the vanilla dust cloud puff then switch to open texture, then spawn marines 
-Make drop pod use colour from chapter selected. (Primary)
 
 
 (Maybe) New trait "Serf" that has increase mood and work speed when near a Firstborn, Primaris, Custodes or Primarch (Maybe thunder warrior and living saint?)
