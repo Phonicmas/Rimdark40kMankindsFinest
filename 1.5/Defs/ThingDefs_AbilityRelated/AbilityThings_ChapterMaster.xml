@@ -94,6 +94,7 @@
       <texPath>Things/Building/DropPod/BEWH_DropPod_Turret</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(1,1)</drawSize>
+      <flipExtraRotation>0.45</flipExtraRotation>
     </graphicData>
     <statBases>
       <AccuracyTouch>0.56</AccuracyTouch>
