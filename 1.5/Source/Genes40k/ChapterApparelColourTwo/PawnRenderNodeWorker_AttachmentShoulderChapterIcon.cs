@@ -10,12 +10,12 @@ namespace Genes40k
 
         private Genes40kModSettings ModSettings => modSettings ?? (modSettings = LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>());
         
-        public override Vector3 ScaleFor(PawnRenderNode node, PawnDrawParms parms)
+        /*public override Vector3 ScaleFor(PawnRenderNode node, PawnDrawParms parms)
         {
             var vector = base.ScaleFor(node, parms);
             var bodyGraphicScale = parms.pawn.story.bodyType.bodyGraphicScale;
             return vector * ((bodyGraphicScale.x + bodyGraphicScale.y) / 2f);
-        }
+        }*/
         
         public override bool CanDrawNow(PawnRenderNode node, PawnDrawParms parms)
         {
