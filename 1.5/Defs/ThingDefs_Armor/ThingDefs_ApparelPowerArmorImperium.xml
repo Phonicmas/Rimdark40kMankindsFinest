@@ -106,12 +106,6 @@
                         <defaultData>
                             <layer>75</layer>
                         </defaultData>
-                        <dataSouth>
-                            <offset>(-0.065,0,-0.02)</offset>
-                        </dataSouth>
-                        <dataNorth>
-                            <offset>(0.065,0,-0.02)</offset>
-                        </dataNorth>
                         <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
                     </drawData>
                 </li>
@@ -125,12 +119,6 @@
                         <defaultData>
                             <layer>75</layer>
                         </defaultData>
-                        <dataSouth>
-                            <offset>(0.065,0,-0.02)</offset>
-                        </dataSouth>
-                        <dataNorth>
-                            <offset>(-0.065,0,-0.02)</offset>
-                        </dataNorth>
                         <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
                     </drawData>
                 </li>
