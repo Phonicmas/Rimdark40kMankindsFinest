@@ -56,7 +56,6 @@
                         <dataNorth>
                             <layer>70</layer>
                         </dataNorth>
-                        <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
                     </drawData>
                 </li>
                 <li>                    <!-- Backpacks -->
@@ -65,7 +64,6 @@
                     <shaderTypeDef>CutoutComplex</shaderTypeDef>
                     <parentTagDef>Body</parentTagDef>
                     <drawData>
-                        <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
                         <dataEast>
                             <layer>71</layer>
                         </dataEast>
@@ -87,7 +85,6 @@
                     <shaderTypeDef>CutoutComplex</shaderTypeDef>
                     <parentTagDef>Body</parentTagDef>
                     <drawData>
-                        <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
                         <dataEast>
                             <layer>73</layer>
                         </dataEast>
@@ -106,13 +103,6 @@
                         <defaultData>
                             <layer>75</layer>
                         </defaultData>
-                        <dataSouth>
-                            <offset>(-0.065,0,-0.02)</offset>
-                        </dataSouth>
-                        <dataNorth>
-                            <offset>(0.065,0,-0.02)</offset>
-                        </dataNorth>
-                        <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
                     </drawData>
                 </li>
                 <li>                    <!-- Right shoulder pad/rank icon -->
@@ -125,13 +115,6 @@
                         <defaultData>
                             <layer>75</layer>
                         </defaultData>
-                        <dataSouth>
-                            <offset>(0.065,0,-0.02)</offset>
-                        </dataSouth>
-                        <dataNorth>
-                            <offset>(-0.065,0,-0.02)</offset>
-                        </dataNorth>
-                        <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
                     </drawData>
                 </li>
             </renderNodeProperties>
@@ -266,7 +249,6 @@
                     <shaderTypeDef>CutoutComplex</shaderTypeDef>
                     <parentTagDef>Body</parentTagDef>
                     <drawData>
-                        <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
                         <dataEast>
                             <layer>73</layer>
                         </dataEast>

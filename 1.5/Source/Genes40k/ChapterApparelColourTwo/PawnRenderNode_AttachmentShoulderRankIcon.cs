@@ -1,4 +1,6 @@
 ﻿using Core40k;
+using RimWorld;
+using UnityEngine;
 using Verse;
 
 namespace Genes40k
@@ -14,7 +16,9 @@ namespace Genes40k
             var rightShoulderPath = Props.texPath;
             
             var apparelColourTwo = (ExtraIconsChapterApparelColourTwo)apparel;
-
+            //var drawColour = apparelColourTwo.RightShoulderIconColour;
+            var drawColour = apparelColourTwo.DrawColor;
+            
             if (apparelColourTwo.RightShoulderIcon != null)
             {
                 rightShoulderPath = apparelColourTwo.RightShoulderIcon.drawnTextureIconPath;
@@ -32,7 +36,7 @@ namespace Genes40k
                 }
             }
             
-            return GraphicDatabase.Get<Graphic_Multi>(rightShoulderPath, ShaderFor(pawn), Props.drawSize, apparelColourTwo.DrawColor, apparelColourTwo.DrawColorTwo);
+            return GraphicDatabase.Get<Graphic_Multi>(rightShoulderPath, ShaderFor(pawn), Props.drawSize, drawColour);
         }
     }
 }

@@ -62,23 +62,5 @@ namespace Genes40k
             
             return true;
         }
-
-        /*protected override Graphic GetGraphic(PawnRenderNode node, PawnDrawParms parms)
-        {
-            var leftShoulderIcon = node.Props.texPath;
-            
-            var apparelColourTwo = (ExtraIconsChapterApparelColourTwo)node.apparel;
-
-            if (apparelColourTwo.LeftShoulderIcon != null)
-            {
-                leftShoulderIcon = apparelColourTwo.LeftShoulderIcon.drawnTextureIconPath;
-            }
-            else if (parms.pawn.Faction != null && parms.pawn.Faction.IsPlayer && ModSettings.currentlySelectedPreset != null)
-            {
-                leftShoulderIcon = ModSettings.currentlySelectedPreset.relatedChapterIcon.drawnTextureIconPath;
-            }
-            
-            return GraphicDatabase.Get<Graphic_Multi>(leftShoulderIcon, node.ShaderFor(parms.pawn), node.Props.drawSize, apparelColourTwo.DrawColor, apparelColourTwo.DrawColorTwo);
-        }*/
     }
 }

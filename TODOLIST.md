@@ -38,6 +38,9 @@ When chapter icons are made remove the temp setting of chapters in the Genes40kU
 
 Give Drop Pod thump sound when opened
 
+Add small colour palette before each shoulder icon selection. That will colour colourable icons (Only make it show if currently selected allows colouring)
+Save above colour in apparel ^^ 
+
 
 
 (Maybe) New trait "Serf" that has increase mood and work speed when near a Firstborn, Primaris, Custodes or Primarch (Maybe thunder warrior and living saint?)
@@ -75,6 +78,8 @@ Make Blood Chalice art and xml, an exotic item that when ingested by pawns with 
 SOS2 integration?
 
 Living Saint armor?
+
+accessories for shoulder pad or armor in general. Just patch in render nodes or put them directly and add new tab for em.
 
 
 # Grey Knight

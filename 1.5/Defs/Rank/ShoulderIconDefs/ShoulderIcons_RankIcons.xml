@@ -46,6 +46,8 @@
         <description>Veteran rank icon</description>
         <iconPath>UI/Ranks/Astartes/BEWH_Veteran</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_Veteran</drawnTextureIconPath>
+        <useColour>true</useColour> <!-- When true the icon will use whatever colour is given, if false or not set (same as being false) it will draw icon using its own colour -->
+        <defaultColour>(255, 50, 50)</defaultColour> <!-- The colour that the icon will be initially, works like normal apparel being dyed-->
         <sortOrder>3</sortOrder>
         <mustHaveRank>BEWH_AstartesRankVeteran</mustHaveRank>
     </Genes40k.ShoulderIconDef>
@@ -68,6 +70,8 @@
         <description>Assault rank icon</description>
         <iconPath>UI/Ranks/Astartes/BEWH_CloseSupport</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_CloseSupport</drawnTextureIconPath>
+        <useColour>true</useColour> <!-- When true the icon will use whatever colour is given, if false or not set (same as being false) it will draw icon using its own colour -->
+        <defaultColour>(255, 50, 50)</defaultColour> <!-- The colour that the icon will be initially, works like normal apparel being dyed-->
         <sortOrder>3.66</sortOrder>
         <mustHaveRank>BEWH_AstartesRankAssault</mustHaveRank>
     </Genes40k.ShoulderIconDef>

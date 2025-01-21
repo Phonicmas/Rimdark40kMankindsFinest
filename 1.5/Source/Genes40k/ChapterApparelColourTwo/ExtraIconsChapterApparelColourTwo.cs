@@ -1,5 +1,6 @@
 ﻿using Core40k;
 using RimWorld;
+using UnityEngine;
 using Verse;
 
 namespace Genes40k
@@ -49,6 +50,22 @@ namespace Genes40k
             set
             {
                 rightShoulderIcon = value;
+                rightShoulderIconColour = value.defaultColour;
+                originalRightShoulderIconColour = value.defaultColour;
+                Notify_ColorChanged();
+            }
+        }
+        
+        private Color originalRightShoulderIconColour = Color.white;
+        
+        private Color rightShoulderIconColour = Color.white;
+
+        public Color RightShoulderIconColour
+        {
+            get => rightShoulderIconColour;
+            set
+            {
+                rightShoulderIconColour = value;
                 Notify_ColorChanged();
             }
         }
@@ -64,12 +81,29 @@ namespace Genes40k
             set
             {
                 leftShoulderIcon = value;
+                originalLeftShoulderIconColour = value.defaultColour;
+                leftShoulderIconColour = value.defaultColour;
+                Notify_ColorChanged();
+            }
+        }
+
+        private Color originalLeftShoulderIconColour = Color.white;
+        
+        private Color leftShoulderIconColour = Color.white;
+
+        public Color LeftShoulderIconColour
+        {
+            get => leftShoulderIconColour;
+            set
+            {
+                leftShoulderIconColour = value;
                 Notify_ColorChanged();
             }
         }
         
+        
         private BodyTypeDef originalBodyType = null;
-
+        
         public override void SetUpMisc()
         {
             leftShoulderIcon = ModSettings?.CurrentlySelectedPreset.relatedChapterIcon;
@@ -88,14 +122,19 @@ namespace Genes40k
         public override void SetOriginals()
         {
             originalLeftShoulderIcon = leftShoulderIcon;
+            originalLeftShoulderIconColour = leftShoulderIconColour;
+            
             originalRightShoulderIcon = rightShoulderIcon;
+            originalRightShoulderIconColour = rightShoulderIconColour;
             base.SetOriginals();
         }
         
         public override void Reset()
         {
             rightShoulderIcon = originalRightShoulderIcon;
+            rightShoulderIconColour = originalRightShoulderIconColour;
             leftShoulderIcon = originalLeftShoulderIcon;
+            leftShoulderIconColour = originalLeftShoulderIconColour;
             base.Reset();
         }
 
@@ -123,8 +162,14 @@ namespace Genes40k
             Scribe_Defs.Look(ref lastCheckRank, "lastCheckRank");
             Scribe_Defs.Look(ref leftShoulderIcon, "leftShoulderIcon");
             Scribe_Defs.Look(ref originalLeftShoulderIcon, "originalSelectedChapterIcon");
+            Scribe_Values.Look(ref leftShoulderIconColour, "leftShoulderIconColour");
+            Scribe_Values.Look(ref originalLeftShoulderIconColour, "originalLeftShoulderIconColour");
+            
             Scribe_Defs.Look(ref rightShoulderIcon, "rightShoulderIcon");
             Scribe_Defs.Look(ref originalRightShoulderIcon, "originalRightShoulderIcon");
+            Scribe_Values.Look(ref rightShoulderIconColour, "rightShoulderIconColour");
+            Scribe_Values.Look(ref originalRightShoulderIconColour, "originalRightShoulderIconColour");
+            
             Scribe_Defs.Look(ref originalBodyType, "originalBodyType");
             base.ExposeData();
         }

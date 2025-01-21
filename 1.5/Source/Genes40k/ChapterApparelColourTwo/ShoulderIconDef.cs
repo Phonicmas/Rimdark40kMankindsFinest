@@ -39,11 +39,15 @@ namespace Genes40k
         public RankDef mustHaveRank = null;
         
         public GeneDef relatedChapterGene = null;
-        
+
+        public bool useColour = false;
+
+        public Color defaultColour = Color.white;
+
         //public GeneDef mustHaveGene = null;
-        
+
         //public TraitDef mustHaveTrait = null;
-        
+
         //public HediffDef mustHaveHediff = null;
     }
 }   

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.Net;
+using ColourPicker;
 using Core40k;
 using UnityEngine;
 using Verse;
@@ -15,6 +15,8 @@ namespace Genes40k
         private const int RowAmount = 6;
 
         private bool setupDone = false;
+
+        private Vector2 apparelColorScrollPosition2;
 
         private void Setup(Pawn pawn)
         {
@@ -67,7 +69,7 @@ namespace Genes40k
             var chapterApparel = (ExtraIconsChapterApparelColourTwo)pawn.apparel.WornApparel.First(a => a is ExtraIconsChapterApparelColourTwo);
             
             var viewRect = new Rect(rect.x, rect.y, rect.width - 16f, viewRectHeight);
-            Widgets.BeginScrollView(rect, ref apparelColorScrollPosition, viewRect);
+            Widgets.BeginScrollView(rect, ref apparelColorScrollPosition2, viewRect);
             
             //Left shoulder icon title
             var nameRect = new Rect(viewRect.x, viewRect.y, viewRect.width, 30f);
@@ -87,13 +89,32 @@ namespace Genes40k
                 chapterApparel.LeftShoulderIcon = null;
             }
             
-            //Left shoulder icons
             var iconSize = new Vector2(viewRect.width/RowAmount, viewRect.width/RowAmount);
             var position = new Vector2(viewRect.x, resetChapterIconRect.yMax);
             
             var curX = position.x;
             var curY = position.y;
             
+            //Left icon colour selection if possible.
+            /*if (chapterApparel.LeftShoulderIcon != null && chapterApparel.LeftShoulderIcon.useColour)
+            {
+                var tertiaryColourRect = new Rect(position, new Vector2(viewRect.width, 50f)).ContractedBy(5);
+                Widgets.DrawMenuSection(tertiaryColourRect);
+                tertiaryColourRect = tertiaryColourRect.ContractedBy(1);
+                
+                Widgets.DrawRectFast(tertiaryColourRect, chapterApparel.LeftShoulderIcon.defaultColour);
+                if (Widgets.ButtonInvisible(tertiaryColourRect))
+                {
+                    Find.WindowStack.Add( new Dialog_ColourPicker( chapterApparel.LeftShoulderIconColour, ( newColour ) =>
+                    {
+                        chapterApparel.LeftShoulderIconColour = newColour;
+                    } ) );
+                }
+
+                curY = tertiaryColourRect.yMax;
+            }*/
+            
+            //Left icon selection
             for (var i = 0; i < leftShoulderIcons.Count; i++)
             {
                 position = new Vector2(curX, curY);
@@ -129,62 +150,76 @@ namespace Genes40k
 
             curY += 34f;
 
-            var rankComp = pawn.GetComp<CompRankInfo>();
-
-            if (rankComp != null && !rankComp.UnlockedRanks.NullOrEmpty())
+            //Right Shoulder title
+            var nameRect2 = new Rect(viewRect.x, curY, viewRect.width, 30f);
+            nameRect2.width /= 2;
+            nameRect2.x += nameRect2.width / 2;
+            
+            Widgets.DrawMenuSection(nameRect2);
+            Text.Anchor = TextAnchor.MiddleCenter;
+            Widgets.Label(nameRect2, "BEWH.MankindsFinest.ShoulderIcon.RightShoulder".Translate());
+            Text.Anchor = TextAnchor.UpperLeft;
+            
+            //Reset right Shoulder to default
+            var resetRankIconRect = new Rect(viewRect.x, curY, viewRect.width, 30f);
+            resetRankIconRect.width /= 5;
+            resetRankIconRect.x = nameRect.xMin - resetRankIconRect.width - nameRect.width/20;
+            if (Widgets.ButtonText(resetRankIconRect, "BEWH.MankindsFinest.ShoulderIcon.ResetToDefault".Translate()))
             {
-                //Right Shoulder title
-                var nameRect2 = new Rect(viewRect.x, curY, viewRect.width, 30f);
-                nameRect2.width /= 2;
-                nameRect2.x += nameRect2.width / 2;
+                chapterApparel.RightShoulderIcon = null;
+            }
+
+            position = new Vector2(viewRect.x, resetRankIconRect.yMax);
             
-                Widgets.DrawMenuSection(nameRect2);
-                Text.Anchor = TextAnchor.MiddleCenter;
-                Widgets.Label(nameRect2, "BEWH.MankindsFinest.ShoulderIcon.RightShoulder".Translate());
-                Text.Anchor = TextAnchor.UpperLeft;
+            curX = position.x;
+            curY = position.y;
             
-                //Reset right Shoulder to default
-                var resetRankIconRect = new Rect(viewRect.x, curY, viewRect.width, 30f);
-                resetRankIconRect.width /= 5;
-                resetRankIconRect.x = nameRect.xMin - resetRankIconRect.width - nameRect.width/20;
-                if (Widgets.ButtonText(resetRankIconRect, "BEWH.MankindsFinest.ShoulderIcon.ResetToDefault".Translate()))
+            //Right icon colour selection if possible.
+            /*if (chapterApparel.RightShoulderIcon != null && chapterApparel.RightShoulderIcon.useColour)
+            {
+                var tertiaryColourRect = new Rect(position, new Vector2(viewRect.width, 50f)).ContractedBy(5);
+                Widgets.DrawMenuSection(tertiaryColourRect);
+                tertiaryColourRect = tertiaryColourRect.ContractedBy(1);
+                
+                Widgets.DrawRectFast(tertiaryColourRect, chapterApparel.RightShoulderIcon.defaultColour);
+                if (Widgets.ButtonInvisible(tertiaryColourRect))
                 {
-                    chapterApparel.RightShoulderIcon = null;
+                    Find.WindowStack.Add( new Dialog_ColourPicker( chapterApparel.RightShoulderIconColour, ( newColour ) =>
+                    {
+                        chapterApparel.RightShoulderIconColour = newColour;
+                    } ) );
+                }
+
+                curY = tertiaryColourRect.yMax;
+            }*/
+                
+            //Right Shoulder Icons
+            for (var i = 0; i < rightShoulderIcons.Count; i++)
+            {
+                position = new Vector2(curX, curY);
+                var iconRect = new Rect(position, iconSize);
+                
+                curX += iconRect.width;
+
+                if (i != 0 && (i+1) % RowAmount == 0)
+                {
+                    curY += iconRect.height;
+                    curX = viewRect.position.x;
                 }
                 
-                position = new Vector2(viewRect.x, resetRankIconRect.yMax);
-            
-                curX = position.x;
-                curY = position.y;
+                iconRect = iconRect.ContractedBy(5f);
                 
-                //Right Shoulder Icons
-                for (var i = 0; i < rightShoulderIcons.Count; i++)
+                var color = Mouse.IsOver(iconRect) ? GenUI.MouseoverColor : Color.white;
+                GUI.color = color;
+                GUI.DrawTexture(iconRect, Command.BGTexShrunk);
+                GUI.color = Color.white;
+                GUI.DrawTexture(iconRect, rightShoulderIcons[i].Icon);
+                
+                TooltipHandler.TipRegion(iconRect, rightShoulderIcons[i].label);
+
+                if (Widgets.ButtonInvisible(iconRect))
                 {
-                    position = new Vector2(curX, curY);
-                    var iconRect = new Rect(position, iconSize);
-                
-                    curX += iconRect.width;
-
-                    if (i != 0 && (i+1) % RowAmount == 0)
-                    {
-                        curY += iconRect.height;
-                        curX = viewRect.position.x;
-                    }
-                
-                    iconRect = iconRect.ContractedBy(5f);
-                
-                    var color = Mouse.IsOver(iconRect) ? GenUI.MouseoverColor : Color.white;
-                    GUI.color = color;
-                    GUI.DrawTexture(iconRect, Command.BGTexShrunk);
-                    GUI.color = Color.white;
-                    GUI.DrawTexture(iconRect, rightShoulderIcons[i].Icon);
-                
-                    TooltipHandler.TipRegion(iconRect, rightShoulderIcons[i].label);
-
-                    if (Widgets.ButtonInvisible(iconRect))
-                    {
-                        chapterApparel.RightShoulderIcon = rightShoulderIcons[i];
-                    }
+                    chapterApparel.RightShoulderIcon = rightShoulderIcons[i];
                 }
             }
             

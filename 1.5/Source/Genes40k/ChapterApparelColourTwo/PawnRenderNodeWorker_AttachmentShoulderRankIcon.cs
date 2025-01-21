@@ -60,31 +60,5 @@ namespace Genes40k
 
             return true;
         }
-
-        /*protected override Graphic GetGraphic(PawnRenderNode node, PawnDrawParms parms)
-        {
-            var rightShoulderPath = node.Props.texPath;
-            
-            var apparelColourTwo = (ExtraIconsChapterApparelColourTwo)node.apparel;
-
-            if (apparelColourTwo.RightShoulderIcon != null)
-            {
-                rightShoulderPath = apparelColourTwo.RightShoulderIcon.drawnTextureIconPath;
-            }
-            else if (parms.pawn.HasComp<CompRankInfo>())
-            {
-                var comp = parms.pawn.GetComp<CompRankInfo>();
-                if (comp.HasRankOfCategory(Genes40kDefOf.BEWH_AstartesRankCategory))
-                {
-                    var highestRank = (ChapterRankDef)comp.HighestRankDef(true) ?? (ChapterRankDef)comp.HighestRankDef(false);
-                    if (highestRank?.unlocksRankIcon != null)
-                    {
-                        rightShoulderPath = highestRank.unlocksRankIcon.drawnTextureIconPath;
-                    }
-                }
-            }
-            
-            return GraphicDatabase.Get<Graphic_Multi>(rightShoulderPath, node.ShaderFor(parms.pawn), node.Props.drawSize, apparelColourTwo.DrawColor, apparelColourTwo.DrawColorTwo);
-        }*/
     }
 }

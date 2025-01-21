@@ -1,4 +1,5 @@
-﻿using Verse;
+﻿using UnityEngine;
+using Verse;
 
 namespace Genes40k
 {
@@ -8,7 +9,6 @@ namespace Genes40k
         private Genes40kModSettings modSettings = null;
 
         private Genes40kModSettings ModSettings => modSettings ?? (modSettings = LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>());
-
         
         public PawnRenderNode_AttachmentShoulderChapterIcon(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree) : base(pawn, props, tree)
         {
@@ -19,7 +19,9 @@ namespace Genes40k
             var leftShoulderIcon = Props.texPath;
             
             var apparelColourTwo = (ExtraIconsChapterApparelColourTwo)apparel;
-
+            //var drawColour = apparelColourTwo.LeftShoulderIconColour;
+            var drawColour = apparelColourTwo.DrawColor;
+            
             if (apparelColourTwo.LeftShoulderIcon != null)
             {
                 leftShoulderIcon = apparelColourTwo.LeftShoulderIcon.drawnTextureIconPath;
@@ -29,7 +31,7 @@ namespace Genes40k
                 leftShoulderIcon = ModSettings.CurrentlySelectedPreset.relatedChapterIcon.drawnTextureIconPath;
             }
             
-            return GraphicDatabase.Get<Graphic_Multi>(leftShoulderIcon, ShaderFor(pawn), Props.drawSize, apparelColourTwo.DrawColor, apparelColourTwo.DrawColorTwo);
+            return GraphicDatabase.Get<Graphic_Multi>(leftShoulderIcon, ShaderFor(pawn), Props.drawSize, drawColour);
         }
     }
 }
