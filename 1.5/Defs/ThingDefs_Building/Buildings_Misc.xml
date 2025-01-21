@@ -24,7 +24,7 @@
     <rotatable>false</rotatable>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <passability>PassThroughOnly</passability>
-    <altitudeLayer>Building</altitudeLayer>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
     <pathCost>42</pathCost>
     <canOverlapZones>false</canOverlapZones>
     <fillPercent>0.25</fillPercent>
@@ -83,7 +83,7 @@
     <rotatable>false</rotatable>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <passability>PassThroughOnly</passability>
-    <altitudeLayer>Building</altitudeLayer>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
     <pathCost>42</pathCost>
     <canOverlapZones>false</canOverlapZones>
     <fillPercent>0.25</fillPercent>
@@ -134,7 +134,7 @@
     <rotatable>false</rotatable>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <passability>PassThroughOnly</passability>
-    <altitudeLayer>Building</altitudeLayer>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
     <pathCost>42</pathCost>
     <canOverlapZones>false</canOverlapZones>
     <fillPercent>0.25</fillPercent>
