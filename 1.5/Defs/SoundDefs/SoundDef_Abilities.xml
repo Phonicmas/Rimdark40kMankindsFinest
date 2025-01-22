@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+										<!--============Rank Abilities=============-->
+<!-- Strip Ranks -->
+	<SoundDef>
+		<defName>BEWH_SFX_StripRanks</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>BEWH_DrumHit</clipPath>
+					</li>
+				</grains>
+				<volumeRange>40~42</volumeRange>
+				<pitchRange>1</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+<!-- Ancient: Raise Chapter Banner -->
+<!-- Librarian: Quickening -->
+<!-- Librarian: Wave of Lethargy -->
+<!-- Apothecary: Emergency Aid -->
+	<SoundDef>
+		<defName>BEWH_SFX_EmergencyAid</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>BEWH_Injection</clipPath>
+					</li>
+				</grains>
+				<volumeRange>40~42</volumeRange>
+				<pitchRange>1</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+</Defs>
