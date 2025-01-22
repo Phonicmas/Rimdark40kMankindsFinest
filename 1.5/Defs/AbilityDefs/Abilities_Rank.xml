@@ -18,6 +18,7 @@
             <verbClass>Verb_CastAbilityTouch</verbClass>
             <range>-1</range>
             <warmupTime>0.25</warmupTime>
+            <soundCast>BEWH_SFX_StripRanks</soundCast>
             <targetParams>
                 <canTargetPawns>true</canTargetPawns>
                 <canTargetBuildings>false</canTargetBuildings>
@@ -126,6 +127,7 @@
             <verbClass>Verb_CastAbilityTouch</verbClass>
             <range>-1</range>
             <warmupTime>1</warmupTime>
+            <soundCast>BEWH_SFX_EmergencyAid</soundCast>
             <targetParams>
                 <canTargetPawns>true</canTargetPawns>
                 <canTargetBuildings>false</canTargetBuildings>

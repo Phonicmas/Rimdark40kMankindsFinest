@@ -21,8 +21,6 @@ Make sure all type of tags, defs and whatnot are prefixed with BEWH_
 
 ## Art
 
-Shoulder pad icons for chapters and ranks (regarding back view, i can either render the backpack on top - or it can be draw to be around it)
-
 Icon for:
 
 Chaplain: Strenghten Faith ability
