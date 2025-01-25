@@ -68,6 +68,8 @@
         <damageAmount>5</damageAmount>
         <scaleStat>PsychicSensitivity</scaleStat>
         <scaleFactor>0.6</scaleFactor>
+        <fleckDefTarget>BEWH_HolyBlastSmall</fleckDefTarget>
+        <fleckDefLocation>BEWH_HolyBlastBig</fleckDefLocation>
       </li>
     </comps>
   </AbilityDef>
@@ -78,7 +80,7 @@
     <label>Proof of Faith</label>
     <description>The Living Saint calls upon a willing ally to make the ultimate sacrifice, channeling their life force to replenish the Saint's divine radiance. The chosen pawn enters a state of deep, restorative coma for several days or weeks.</description>
     <iconPath>UI/Abilities/BEWH_ProofOfFaith</iconPath>
-    <displayGizmoWhileUndrafted>False</displayGizmoWhileUndrafted>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
     <cooldownTicksRange>1250</cooldownTicksRange>
     <hostile>False</hostile>
@@ -92,6 +94,7 @@
       <warmupTime>1</warmupTime>
       <!--<soundCast>AcidSpray_Resolve</soundCast>-->
       <targetParams>
+        <onlyTargetColonists>True</onlyTargetColonists>
         <canTargetHumans>True</canTargetHumans>
         <canTargetLocations>false</canTargetLocations>
         <canTargetBuildings>false</canTargetBuildings>

@@ -118,6 +118,8 @@
   <BEWH.MankindsFinest.SpaceMarine.SecondGeneseedsHarvestable>Gene-seeds ready to be harvested.</BEWH.MankindsFinest.SpaceMarine.SecondGeneseedsHarvestable>
 
   <!-- Living Saint -->
+  <BEWH.MankindsFinest.LivingSaint.HolyRadianceCost>Holy Radiance Cost: {0}</BEWH.MankindsFinest.LivingSaint.HolyRadianceCost>
+
   <BEWH.MankindsFinest.LivingSaint.LivingSaintMessage>In {0}'s final moments they felt a surge of energy surging through them, invigorating and strengthening them. {0} was born anew as a living saint, stronger, faster and evermore loyal.</BEWH.MankindsFinest.LivingSaint.LivingSaintMessage>
 
   <BEWH.MankindsFinest.LivingSaint.LivingSaintReturn>Living Saint Returns</BEWH.MankindsFinest.LivingSaint.LivingSaintReturn>

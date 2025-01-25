@@ -31,6 +31,11 @@ namespace Genes40k
             
             var pawn = target.Pawn;
 
+            if (pawn != null && !pawn.Faction.IsPlayer)
+            {
+                return false;
+            }
+            
             var requiredStat = pawn?.GetStatValue(Props.durationMultiplier);
             
             return requiredStat > 0;

@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using System.Collections.Generic;
+using RimWorld;
 using Verse;
 
 namespace Genes40k
@@ -15,11 +16,15 @@ namespace Genes40k
                 return geneDivineRadiance != null && !(geneDivineRadiance.Value < Props.divineRadianceCost);
             }
         }
-
-        public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
+        
+        public override void PostApplied(List<LocalTargetInfo> targets, Map map)
         {
-            base.Apply(target, dest);
             Genes40kUtils.OffsetDivineRadiance(parent.pawn, 0f - Props.divineRadianceCost);
+        }
+        
+        public override string ExtraTooltipPart()
+        {
+            return "BEWH.MankindsFinest.LivingSaint.HolyRadianceCost".Translate(Props.divineRadianceCost * 100);
         }
 
         public override bool GizmoDisabled(out string reason)

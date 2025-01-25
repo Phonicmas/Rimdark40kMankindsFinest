@@ -476,9 +476,8 @@ namespace Genes40k
                             var list = new List<FloatMenuOption>();
                             foreach (var embryo in embryos)
                             {
-                                var primarchEmbryo = embryo;
-                                var embryoName = "BEWH.MankindsFinest.PrimarchGrowthVat.PrimarchMother".Translate(primarchEmbryo.mother.Name.ToStringFull);
-                                var primarchChapterGenes = primarchEmbryo.primarchGenes.GenesListForReading.Where(gene => gene.HasModExtension<DefModExtension_PrimarchMaterial>());
+                                var embryoName = "BEWH.MankindsFinest.PrimarchGrowthVat.PrimarchMother".Translate(embryo.mother.Name.ToStringFull);
+                                var primarchChapterGenes = embryo.primarchGenes.GenesListForReading.Where(gene => gene.HasModExtension<DefModExtension_PrimarchMaterial>()).ToList();
                                 if (primarchChapterGenes.Any())
                                 {
                                     embryoName += "\n";

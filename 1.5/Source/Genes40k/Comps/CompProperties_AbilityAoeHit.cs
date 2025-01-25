@@ -14,6 +14,10 @@ namespace Genes40k
         
         public float scaleFactor = 1f;
         
+        public FleckDef fleckDefLocation = null;
+        
+        public FleckDef fleckDefTarget = null;
+        
         public CompProperties_AbilityAoeHit()
         {
             compClass = typeof(CompAbilityEffect_AoeHit);

@@ -39,6 +39,8 @@ Give Drop Pod thump sound when opened
 Add small colour palette before each shoulder icon selection. That will colour colourable icons (Only make it show if currently selected allows colouring)
 Save above colour in apparel ^^ 
 
+switch pawn "title/occupation" to new rank when unlocked if it is higher than current (should be made in core)
+
 
 
 (Maybe) New trait "Serf" that has increase mood and work speed when near a Firstborn, Primaris, Custodes or Primarch (Maybe thunder warrior and living saint?)

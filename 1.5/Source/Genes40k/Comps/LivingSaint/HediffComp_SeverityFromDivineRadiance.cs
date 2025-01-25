@@ -25,6 +25,11 @@ namespace Genes40k
         public override void CompPostPostAdd(DamageInfo? dinfo)
         {
             base.CompPostPostAdd(dinfo);
+            if (DivineRadiance == null)
+            {
+                return;
+            }
+            
             if (Props.divineRadiancePerHour != 0)
             {
                 DivineRadiance.isOvercharging = true;
@@ -33,6 +38,12 @@ namespace Genes40k
 
         public override void CompPostPostRemoved()
         {
+            base.CompPostPostRemoved();
+            if (DivineRadiance == null)
+            {
+                return;
+            }
+            
             if (Props.divineRadiancePerHour != 0)
             {
                 DivineRadiance.isOvercharging = false;
