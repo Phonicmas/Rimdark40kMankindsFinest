@@ -4,7 +4,7 @@
   <!-- Bolter -->
   <ThingDef ParentName="BEWH_AstartesRangedBase">
     <defName>BEWH_AstartesBolter</defName>
-    <label>bolt carabine</label>
+    <label>bolt carbine</label>
     <description>The Bolt Carbine is a compact, rapid-fire firearm of the Adeptus Astartes that fires explosive bolt rounds. Lightweight and versatile, it delivers powerful shots with deadly accuracy, ideal for close to mid-range combat.</description>
     <graphicData>
       <texPath>Things/Weapons/BEWH_BoltCarbine</texPath>
@@ -35,11 +35,12 @@
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>BEWH_BolterRound</defaultProjectile>
+        <forcedMissRadius>0.1</forcedMissRadius>
         <warmupTime>1.0</warmupTime>
         <range>35.9</range>
         <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
         <burstShotCount>3</burstShotCount>
-        <soundCast>Shot_ChargeRifle</soundCast>
+        <soundCast>BEWH_SFX_BolterShot</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>12</muzzleFlashScale>
       </li>
@@ -70,8 +71,8 @@
     <defName>BEWH_AstartesChainsword</defName>
     <label>chainsword</label>
     <description>A vicious and brutal weapon, the Chainsword is an iconic tool of the Adeptus Astartes. It can carve flesh with absolute easy and is relatively inexpensive to make. The downside is that it lacks the armor penetration of power weapons.</description>
-    <soundInteract>Interact_MonoSword</soundInteract>
-    <meleeHitSound>MeleeHit_MonoSword</meleeHitSound>
+    <soundInteract>BEWH_SFX_ChainswordInteract</soundInteract>
+    <meleeHitSound>BEWH_SFX_ChainswordHit</meleeHitSound>
     <!-- <equippedAngleOffset>-65</equippedAngleOffset> -->
     <recipeMaker>
       <skillRequirements>
@@ -91,7 +92,7 @@
     </graphicData>
     <tools>
       <li>
-        <label>edge</label>
+        <label>chain</label>
         <capacities>
           <li>Cut</li>
         </capacities>

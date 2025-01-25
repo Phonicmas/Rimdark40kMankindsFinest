@@ -19,8 +19,8 @@
       <warmupTime>0.5</warmupTime>
       <range>100</range>
       <requireLineOfSight>true</requireLineOfSight>
-      <soundCast>Longjump_Jump</soundCast>
-      <soundLanding>Longjump_Land</soundLanding>
+      <soundCast>BEWH_SFX_DivineFlightStart</soundCast>
+      <soundLanding>BEWH_SFX_DivineFlightEnd</soundLanding>
       <targetParams>
         <canTargetLocations>true</canTargetLocations>
         <canTargetPawns>false</canTargetPawns>

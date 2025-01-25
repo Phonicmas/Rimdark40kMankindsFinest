@@ -4,6 +4,7 @@
     <ThingDef ParentName="BaseBullet">
         <defName>BEWH_BolterRound</defName>
         <label>bolter round</label>
+        <thingClass>Projectile_Explosive</thingClass>
         <graphicData>
             <texPath>Things/Projectiles/BEWH_BolterRound</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -12,7 +13,9 @@
             <damageDef>Bullet</damageDef>
             <damageAmountBase>25</damageAmountBase>
             <armorPenetrationBase>0.75</armorPenetrationBase>
-            <explosionRadius>1.9</explosionRadius>
+            <explosionRadius>1.2</explosionRadius>
+            <soundExplode>GunShotA</soundExplode>
+            <screenShakeFactor>0.2</screenShakeFactor>
             <speed>90</speed>
         </projectile>
     </ThingDef>

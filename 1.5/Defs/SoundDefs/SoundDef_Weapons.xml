@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	
+										<!--============Ranged=============-->
+<!-- Bolt Carabine -->
+	<SoundDef>
+		<defName>BEWH_SFX_BolterShot</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>BEWH_BolterShot</clipPath>
+					</li>
+				</grains>
+				<volumeRange>41~43</volumeRange>
+				<pitchRange>0.85~1.15</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+										<!--============Melee=============-->
+<!-- Chainsword -->
+	<SoundDef>
+		<defName>BEWH_SFX_ChainswordHit</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>ChainswordAttack</clipFolderPath>
+					</li>
+				</grains>
+				<volumeRange>37~40</volumeRange>
+				<pitchRange>0.8~1.15</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>BEWH_SFX_ChainswordInteract</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>BEWH_ChainswordPickup</clipPath>
+					</li>
+				</grains>
+				<volumeRange>35~40</volumeRange>
+				<!-- <pitchRange>1~1</pitchRange> -->
+			</li>
+		</subSounds>
+	</SoundDef>
+</Defs>
