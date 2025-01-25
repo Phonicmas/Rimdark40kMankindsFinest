@@ -92,9 +92,21 @@ namespace Genes40k
             }
 
             ResurrectionUtility.TryResurrect(__instance);
-
+            
             var letter = LetterMaker.MakeLetter("BEWH.MankindsFinest.CommonKeywords.LivingSaint".Translate(), "BEWH.MankindsFinest.LivingSaint.LivingSaintMessage".Translate(__instance), Genes40kDefOf.BEWH_GoldenPositive, __instance);
             Find.LetterStack.ReceiveLetter(letter);
+            
+            switch (__instance.Name)
+            {
+                case NameTriple triple:
+                    var nameTriple = new NameTriple("St. " + triple.First, "St. " + triple.Nick, triple.Last);
+                    __instance.Name = nameTriple;
+                    break;
+                case NameSingle single:
+                    var nameSingle = new NameSingle("St. " + single.Name);
+                    __instance.Name = nameSingle;
+                    break;
+            }
         }    
     }
 }
