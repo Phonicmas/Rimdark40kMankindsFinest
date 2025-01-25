@@ -50,6 +50,7 @@
         <range>1.9</range>
         <castTime>60</castTime>
         <targetMode>Location</targetMode>
+        <castSound>BEWH_SFX_RaiseBanner</castSound>
     </VFECore.Abilities.AbilityDef>
 
 
@@ -63,6 +64,9 @@
         <statBases>
             <Ability_Duration>125</Ability_Duration>
         </statBases>
+        <verbProperties>
+            <soundCast>BEWH_SFX_Quickening</soundCast>
+        </verbProperties>
         <comps>
             <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
@@ -84,12 +88,11 @@
             <Ability_Duration>125</Ability_Duration>
         </statBases>
         <aiCanUse>true</aiCanUse>
-        <warmupStartSound>FireSpew_Warmup</warmupStartSound>
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>
             <range>9.9</range>
             <warmupTime>1</warmupTime>
-            <soundCast>FireSpew_Resolve</soundCast>
+            <soundCast>BEWH_SFX_WaveOfLethargy</soundCast>
             <targetParams>
                 <canTargetLocations>true</canTargetLocations>
             </targetParams>
@@ -193,6 +196,7 @@
             <range>11.9</range>
             <drawAimPie>False</drawAimPie>
             <requireLineOfSight>False</requireLineOfSight>
+            <soundCast>BEWH_SFX_CaptainsOrder</soundCast>
             <targetParams>
                 <canTargetSelf>true</canTargetSelf>
                 <canTargetPawns>false</canTargetPawns>
