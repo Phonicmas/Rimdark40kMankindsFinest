@@ -56,7 +56,7 @@ namespace Genes40k
 
         private const int EmbryoGestationTicks = 600000;
         
-        private const int EmbryoLateStageGraphicTicksRemaining = 600000;
+        private const int EmbryoLateStageGraphicTicksRemaining = 300000;
 
         private const float FetusMinSize = 0.4f;
 
@@ -125,14 +125,16 @@ namespace Genes40k
 
         private Graphic FetusEarlyStage =>
             fetusEarlyStageGraphic ?? (fetusEarlyStageGraphic =
-                GraphicDatabase.Get<Graphic_Single>("Other/VatGrownFetus_EarlyStage", ShaderDatabase.Cutout,
-                    Vector2.one, Color.white));
+                GraphicDatabase.Get<Graphic_Single>(DefModTexture.earlyFetusTexture, ShaderDatabase.Cutout,
+                    DefModTexture.earlyFetusSize, Color.white));
 
         private Graphic FetusLateStage =>
             fetusLateStageGraphic ?? (fetusLateStageGraphic =
-                GraphicDatabase.Get<Graphic_Single>("Other/VatGrownFetus_LateStage", ShaderDatabase.Cutout,
-                    Vector2.one, Color.white));
+                GraphicDatabase.Get<Graphic_Single>(DefModTexture.lateFetusTexture, ShaderDatabase.Cutout,
+                    DefModTexture.lateFetusSize, Color.white));
 
+        private DefModExtension_PrimarchVatTexture DefModTexture => def.GetModExtension<DefModExtension_PrimarchVatTexture>();
+        
         public override void PostMake()
         {
             base.PostMake();
@@ -593,6 +595,16 @@ namespace Genes40k
                     startTick = Find.TickManager.TicksGame + 2500;
                 }
             };
+            
+            //DEV: DECREASE TIME REMAINING BY 12H
+            yield return new Command_Action
+            {
+                defaultLabel = "DEV: decrease time by 12h",
+                action = delegate
+                {
+                    startTick -= 30000;
+                }
+            };
         }
 
         private List<PrimarchEmbryo> AvailableEmbryo()
@@ -642,16 +654,16 @@ namespace Genes40k
                 loc.y += 1f / 52f;
                 loc.z += Mathf.PingPong(Find.TickManager.TicksGame * def.building.formingMechBobSpeed, def.building.formingMechYBobDistance);
                 
-                var drawSize = Vector2.one * Mathf.Lerp(FetusMinSize, FetusMaxSize, EmbryoGestationPct);
-                
                 if (EmbryoGestationTicksRemaining > EmbryoLateStageGraphicTicksRemaining)
                 {
-                    FetusEarlyStage.drawSize = drawSize;
+                    FetusEarlyStage.drawSize = DefModTexture.earlyFetusSize * Mathf.Lerp(FetusMinSize, FetusMaxSize, EmbryoGestationPct);
+                    loc += DefModTexture.earlyFetusOffset;
                     FetusEarlyStage.DrawFromDef(loc, Rot4.North, null);
                 }
                 else
                 {
-                    FetusLateStage.drawSize = drawSize;
+                    FetusLateStage.drawSize = DefModTexture.lateFetusSize * Mathf.Lerp(FetusMinSize, FetusMaxSize, EmbryoGestationPct);
+                    loc += DefModTexture.lateFetusOffset;
                     FetusLateStage.DrawFromDef(loc, Rot4.North, null);
                 }
             }

@@ -16,5 +16,7 @@ namespace Genes40k
         public string openGraphic;
         
         public string openGraphicMask;
+        
+        public SoundDef openSound;
     }
 }

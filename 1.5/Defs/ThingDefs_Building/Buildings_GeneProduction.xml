@@ -255,6 +255,17 @@
       </li>
       <li Class="CompProperties_Flickable"/>
     </comps>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_PrimarchVatTexture">
+        <earlyFetusTexture>Other/VatGrownFetus_EarlyStage</earlyFetusTexture>
+        <earlyFetusSize>(1,1)</earlyFetusSize>
+        <earlyFetusOffset>(0,0,0)</earlyFetusOffset>
+
+        <lateFetusTexture>Other/VatGrownFetus_LateStage</lateFetusTexture>
+        <lateFetusSize>(1,1)</lateFetusSize>
+        <lateFetusOffset>(0,0,0)</lateFetusOffset>
+      </li>
+    </modExtensions>
   </ThingDef>
 
 </Defs>

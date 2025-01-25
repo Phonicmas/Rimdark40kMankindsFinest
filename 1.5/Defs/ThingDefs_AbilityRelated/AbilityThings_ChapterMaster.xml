@@ -67,7 +67,7 @@
       <li>
         <compClass>CompColorable</compClass>
       </li>
-      <li Class="CompProperties_Lifespan">        <!-- Switch with some that makes a skyfaller that accelerates out into space OR simply crumble if they dont -->
+      <li Class="CompProperties_Lifespan">        <!-- Switch with some that makes a skyfaller that accelerates out into space OR simply crumble if they dont? -->
         <lifespanTicks>10000</lifespanTicks>
         <expireEffect>RaisedRock_Collapse</expireEffect>
       </li>
@@ -82,6 +82,7 @@
       <li Class="Genes40k.DefModExtension_DropPod">
         <openGraphic>Things/Building/DropPod/BEWH_DropPod</openGraphic>
         <openGraphicMask>Things/Building/DropPod/BEWH_DropPod_m</openGraphicMask>
+        <openSound>BEWH_SFX_DropPodThump</openSound>
       </li>
     </modExtensions>
   </ThingDef>

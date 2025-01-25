@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
-
 <Defs>
-										<!--============Rank Abilities=============-->
-<!-- Strip Ranks -->
+
+	<!--============Rank Abilities=============-->
+	<!-- Strip Ranks -->
 	<SoundDef>
 		<defName>BEWH_SFX_StripRanks</defName>
 		<context>MapOnly</context>
@@ -19,8 +19,8 @@
 			</li>
 		</subSounds>
 	</SoundDef>
-	
-<!-- Ancient: Raise Chapter Banner -->
+
+	<!-- Ancient: Raise Chapter Banner -->
 	<SoundDef>
 		<defName>BEWH_SFX_RaiseBanner</defName>
 		<context>MapOnly</context>
@@ -37,8 +37,8 @@
 			</li>
 		</subSounds>
 	</SoundDef>
-	
-<!-- Librarian: Quickening -->
+
+	<!-- Librarian: Quickening -->
 	<SoundDef>
 		<defName>BEWH_SFX_Quickening</defName>
 		<context>MapOnly</context>
@@ -55,8 +55,8 @@
 			</li>
 		</subSounds>
 	</SoundDef>
-	
-<!-- Librarian: Wave of Lethargy -->
+
+	<!-- Librarian: Wave of Lethargy -->
 	<SoundDef>
 		<defName>BEWH_SFX_WaveOfLethargy</defName>
 		<context>MapOnly</context>
@@ -73,8 +73,8 @@
 			</li>
 		</subSounds>
 	</SoundDef>
-	
-<!-- Apothecary: Emergency Aid -->
+
+	<!-- Apothecary: Emergency Aid -->
 	<SoundDef>
 		<defName>BEWH_SFX_EmergencyAid</defName>
 		<context>MapOnly</context>
@@ -91,7 +91,7 @@
 			</li>
 		</subSounds>
 	</SoundDef>
-	
+
 	<!-- Captain: Captain's Order -->
 	<SoundDef>
 		<defName>BEWH_SFX_CaptainsOrder</defName>
@@ -109,7 +109,26 @@
 			</li>
 		</subSounds>
 	</SoundDef>
-											<!--============Living Saint=============-->
+
+	<!-- Chapter Master: Drop Pod Thump -->
+	<SoundDef>
+		<defName>BEWH_SFX_DropPodThump</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>3</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>BEWH_Raaar</clipPath>
+					</li>
+				</grains>
+				<volumeRange>40~42</volumeRange>
+				<pitchRange>1</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<!--============Living Saint=============-->
 	<!-- Divine Flight -->
 	<SoundDef>
 		<defName>BEWH_SFX_DivineFlightStart</defName>
@@ -146,4 +165,5 @@
 	<!-- Holy Blast -->
 	<!-- Proof of Faith -->
 	<!-- Inviolable Aura? -->
+
 </Defs>

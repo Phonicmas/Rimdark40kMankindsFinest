@@ -32,14 +32,8 @@ Chaplain: Strenghten Faith ability
 (Maybe) Some different backgrounds (the blue hexagon for xenotype or white circle thingy for endogenes) for the different genes? (Maybe keep the recoloured one psyker and pariah and then make some new type for the different super human, with increasing golden stuff and purity seals n stuff) (im just cooking here, this is not important)
 
 ## Code and XML
-When chapter icons are made remove the temp setting of chapters in the Genes40kUtils.SetupChapterForPawn() method and the chapterColourDef from Genes40kDefOf
-
-Give Drop Pod thump sound when opened
-
 Add small colour palette before each shoulder icon selection. That will colour colourable icons (Only make it show if currently selected allows colouring)
 Save above colour in apparel ^^ 
-
-switch pawn "title/occupation" to new rank when unlocked if it is higher than current (should be made in core)
 
 
 

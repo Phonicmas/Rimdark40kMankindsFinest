@@ -184,10 +184,6 @@ namespace Genes40k
         //FactionDefs
         public static FactionDef BEWH_OffworldMarinesFaction;
         
-        //TEMP
-        public static ChapterColourDef BEWH_ChapterColourI;
-        public static ChapterColourDef BEWH_ChapterColourVII;
-        
         static Genes40kDefOf()
         {
             DefOfHelper.EnsureInitializedInCtor(typeof(Genes40kDefOf));

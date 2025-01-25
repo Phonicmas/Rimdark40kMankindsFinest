@@ -146,6 +146,7 @@
     <Compile Include="DefModExtensions\DefModExtension_GeneseedVialRecipe.cs" />
     <Compile Include="DefModExtensions\DefModExtension_PerpetualGene.cs" />
     <Compile Include="DefModExtensions\DefModExtension_PrimarchVatExtras.cs" />
+    <Compile Include="DefModExtensions\DefModExtension_PrimarchVatTexture.cs" />
     <Compile Include="GeneClasses\GeneGizmo_ResourceDivineRadiance.cs" />
     <Compile Include="GeneClasses\Gene_DivineRadiance.cs" />
     <Compile Include="GeneClasses\Gene_Furybound.cs" />

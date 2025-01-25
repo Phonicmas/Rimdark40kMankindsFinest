@@ -48,6 +48,8 @@ namespace Genes40k
             };
 
             var pawns = new List<Pawn>();
+            
+            def.GetModExtension<DefModExtension_DropPod>().openSound.PlayOneShot(new TargetInfo(Position, Map));
 
             for (var i = 0; i < MarinesToSpawn.Count; i++)
             {
