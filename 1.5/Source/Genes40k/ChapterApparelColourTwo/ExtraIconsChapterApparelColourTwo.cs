@@ -14,16 +14,14 @@ namespace Genes40k
         {
             get
             {
-                if (rankInfoComp == null && ParentHolder is Pawn pawn)
+                if (rankInfoComp == null && Wearer != null)
                 {
-                    rankInfoComp = pawn.GetComp<CompRankInfo>();
+                    rankInfoComp = Wearer.GetComp<CompRankInfo>();
                 }
 
                 return rankInfoComp;
             }
         }
-        
-        private RankDef lastCheckRank = null;
         
         
         private ShoulderIconDef originalRightShoulderIcon = null;
@@ -34,24 +32,26 @@ namespace Genes40k
         {
             get
             {
-                if (RankInfoComp != null)
+                if (rightShoulderIcon != null || RankInfoComp == null)
                 {
-                    var rankCheck = RankInfoComp.HighestRankDef(true) ?? RankInfoComp.HighestRankDef(false);
-
-                    if (lastCheckRank == null || rankCheck != null && rankCheck.rankTier > lastCheckRank.rankTier)
-                    {
-                        lastCheckRank = rankCheck;
-                        rightShoulderIcon = null;
-                    }
+                    return rightShoulderIcon;
                 }
                 
-                return rightShoulderIcon;
+                var highestRankDef = RankInfoComp.HighestRankDef(true, Genes40kDefOf.BEWH_AstartesRankCategory) ?? RankInfoComp.HighestRankDef(false, Genes40kDefOf.BEWH_AstartesRankCategory);
+                return ((ChapterRankDef)highestRankDef)?.unlocksRankIcon;
             }
             set
             {
                 rightShoulderIcon = value;
-                rightShoulderIconColour = value.defaultColour;
-                originalRightShoulderIconColour = value.defaultColour;
+                if (value != null)
+                {
+                    if (value.setsNull)
+                    {
+                        rightShoulderIcon = null;
+                    }
+                    rightShoulderIconColour = value.defaultColour;
+                    originalRightShoulderIconColour = value.defaultColour;
+                }
                 Notify_ColorChanged();
             }
         }
@@ -81,8 +81,15 @@ namespace Genes40k
             set
             {
                 leftShoulderIcon = value;
-                originalLeftShoulderIconColour = value.defaultColour;
-                leftShoulderIconColour = value.defaultColour;
+                if (value != null)
+                {
+                    if (value.setsNull)
+                    {
+                        leftShoulderIcon = null;
+                    }
+                    leftShoulderIconColour = value.defaultColour;
+                    originalLeftShoulderIconColour = value.defaultColour;
+                }
                 Notify_ColorChanged();
             }
         }
@@ -107,6 +114,7 @@ namespace Genes40k
         public override void SetUpMisc()
         {
             leftShoulderIcon = ModSettings?.CurrentlySelectedPreset.relatedChapterIcon;
+            rightShoulderIcon = null;
             base.SetUpMisc();
         }
 
@@ -159,7 +167,6 @@ namespace Genes40k
 
         public override void ExposeData()
         {
-            Scribe_Defs.Look(ref lastCheckRank, "lastCheckRank");
             Scribe_Defs.Look(ref leftShoulderIcon, "leftShoulderIcon");
             Scribe_Defs.Look(ref originalLeftShoulderIcon, "originalSelectedChapterIcon");
             Scribe_Values.Look(ref leftShoulderIconColour, "leftShoulderIconColour");

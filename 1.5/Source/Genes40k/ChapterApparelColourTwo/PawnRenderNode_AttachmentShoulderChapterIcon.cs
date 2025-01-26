@@ -1,5 +1,4 @@
-﻿using UnityEngine;
-using Verse;
+﻿using Verse;
 
 namespace Genes40k
 {
@@ -19,8 +18,7 @@ namespace Genes40k
             var leftShoulderIcon = Props.texPath;
             
             var apparelColourTwo = (ExtraIconsChapterApparelColourTwo)apparel;
-            //var drawColour = apparelColourTwo.LeftShoulderIconColour;
-            var drawColour = apparelColourTwo.DrawColor;
+            var drawColour = apparelColourTwo.LeftShoulderIconColour;
             
             if (apparelColourTwo.LeftShoulderIcon != null)
             {

@@ -23,7 +23,7 @@ Make sure all type of tags, defs and whatnot are prefixed with BEWH_
 
 Icon for:
 
-Chaplain: Strenghten Faith ability
+Chaplain: Strenghten Faith ability (is in the mods/idelogy folder)
 
 
 

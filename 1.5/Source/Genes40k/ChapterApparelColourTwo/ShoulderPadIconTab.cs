@@ -16,7 +16,7 @@ namespace Genes40k
 
         private bool setupDone = false;
 
-        private Vector2 apparelColorScrollPosition2;
+        private static float listScrollViewHeight = 0f;
 
         private void Setup(Pawn pawn)
         {
@@ -58,7 +58,7 @@ namespace Genes40k
             return true;
         }
         
-        public override void DrawTab(Rect rect, Pawn pawn, float viewRectHeight, ref Vector2 apparelColorScrollPosition)
+        public override void DrawTab(Rect rect, Pawn pawn, ref Vector2 apparelColorScrollPosition)
         {
             if (!setupDone)
             {
@@ -68,8 +68,10 @@ namespace Genes40k
             
             var chapterApparel = (ExtraIconsChapterApparelColourTwo)pawn.apparel.WornApparel.First(a => a is ExtraIconsChapterApparelColourTwo);
             
-            var viewRect = new Rect(rect.x, rect.y, rect.width - 16f, viewRectHeight);
-            Widgets.BeginScrollView(rect, ref apparelColorScrollPosition2, viewRect);
+            GUI.BeginGroup(rect);
+            var outRect = new Rect(0f, 0f, rect.width, rect.height);
+            var viewRect = new Rect(0f, 0f, rect.width - 16f, listScrollViewHeight);
+            Widgets.BeginScrollView(outRect, ref apparelColorScrollPosition, viewRect);
             
             //Left shoulder icon title
             var nameRect = new Rect(viewRect.x, viewRect.y, viewRect.width, 30f);
@@ -86,7 +88,7 @@ namespace Genes40k
             resetChapterIconRect.x = nameRect.xMin - resetChapterIconRect.width - nameRect.width/20;
             if (Widgets.ButtonText(resetChapterIconRect, "BEWH.MankindsFinest.ShoulderIcon.ResetToDefault".Translate()))
             {
-                chapterApparel.LeftShoulderIcon = null;
+                chapterApparel.LeftShoulderIcon = LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>().CurrentlySelectedPreset.relatedChapterIcon ?? null;
             }
             
             var iconSize = new Vector2(viewRect.width/RowAmount, viewRect.width/RowAmount);
@@ -102,7 +104,7 @@ namespace Genes40k
                 Widgets.DrawMenuSection(tertiaryColourRect);
                 tertiaryColourRect = tertiaryColourRect.ContractedBy(1);
                 
-                Widgets.DrawRectFast(tertiaryColourRect, chapterApparel.LeftShoulderIcon.defaultColour);
+                Widgets.DrawRectFast(tertiaryColourRect, chapterApparel.LeftShoulderIconColour);
                 if (Widgets.ButtonInvisible(tertiaryColourRect))
                 {
                     Find.WindowStack.Add( new Dialog_ColourPicker( chapterApparel.LeftShoulderIconColour, ( newColour ) =>
@@ -175,13 +177,13 @@ namespace Genes40k
             curY = position.y;
             
             //Right icon colour selection if possible.
-            /*if (chapterApparel.RightShoulderIcon != null && chapterApparel.RightShoulderIcon.useColour)
+            if (chapterApparel.RightShoulderIcon != null && chapterApparel.RightShoulderIcon.useColour)
             {
                 var tertiaryColourRect = new Rect(position, new Vector2(viewRect.width, 50f)).ContractedBy(5);
                 Widgets.DrawMenuSection(tertiaryColourRect);
                 tertiaryColourRect = tertiaryColourRect.ContractedBy(1);
                 
-                Widgets.DrawRectFast(tertiaryColourRect, chapterApparel.RightShoulderIcon.defaultColour);
+                Widgets.DrawRectFast(tertiaryColourRect, chapterApparel.RightShoulderIconColour);
                 if (Widgets.ButtonInvisible(tertiaryColourRect))
                 {
                     Find.WindowStack.Add( new Dialog_ColourPicker( chapterApparel.RightShoulderIconColour, ( newColour ) =>
@@ -191,7 +193,7 @@ namespace Genes40k
                 }
 
                 curY = tertiaryColourRect.yMax;
-            }*/
+            }
                 
             //Right Shoulder Icons
             for (var i = 0; i < rightShoulderIcons.Count; i++)
@@ -222,8 +224,11 @@ namespace Genes40k
                     chapterApparel.RightShoulderIcon = rightShoulderIcons[i];
                 }
             }
+
+            listScrollViewHeight = position.y + iconSize.y + 10f;
             
             Widgets.EndScrollView();
+            GUI.EndGroup();
         }
     }
 }   

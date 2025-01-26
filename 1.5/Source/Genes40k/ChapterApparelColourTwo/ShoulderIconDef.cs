@@ -44,6 +44,8 @@ namespace Genes40k
 
         public Color defaultColour = Color.white;
 
+        public bool setsNull = false;
+
         //public GeneDef mustHaveGene = null;
 
         //public TraitDef mustHaveTrait = null;
