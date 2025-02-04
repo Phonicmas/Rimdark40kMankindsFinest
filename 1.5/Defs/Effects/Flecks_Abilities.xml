@@ -19,16 +19,16 @@
 
     <FleckDef ParentName="FleckBase">
         <defName>BEWH_HolyBlastSmall</defName>
-        <solidTime>0.4</solidTime>
+        <solidTime>0.8</solidTime>
         <fadeOutTime>0.1</fadeOutTime>
-        <growthRate>20</growthRate>
+        <!-- <growthRate>20</growthRate> -->
         <altitudeLayer>MoteOverhead</altitudeLayer>
         <graphicData Class="VFECore.GraphicData_Animated">
             <texPath>Effects/LivingSaint/HolyBlastSmall</texPath>
-            <ticksPerFrame>6</ticksPerFrame>
+            <ticksPerFrame>3</ticksPerFrame>
             <graphicClass>VFECore.Graphic_Fleck_Animated</graphicClass>
             <shaderType>MoteGlow</shaderType>
-            <drawSize>(0.4, 0.4)</drawSize>
+            <drawSize>(1.57, 1.57)</drawSize>
             <random>false</random>
         </graphicData>
     </FleckDef>

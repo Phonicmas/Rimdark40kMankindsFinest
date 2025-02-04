@@ -82,7 +82,8 @@
       <li Class="Genes40k.DefModExtension_DropPod">
         <openGraphic>Things/Building/DropPod/BEWH_DropPod</openGraphic>
         <openGraphicMask>Things/Building/DropPod/BEWH_DropPod_m</openGraphicMask>
-        <openSound>BEWH_SFX_DropPodThump</openSound>
+        <!-- sfx placeholder -->
+        <openSound>ThumpCannon_Impact</openSound>
       </li>
     </modExtensions>
   </ThingDef>

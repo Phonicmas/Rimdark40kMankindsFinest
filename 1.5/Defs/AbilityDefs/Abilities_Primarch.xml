@@ -26,6 +26,8 @@
     <needsTicking>true</needsTicking>
     <showGizmoOnWorldView>true</showGizmoOnWorldView>
   </VFECore.Abilities.AbilityDef>
+
+
   <!-- Lion El'Jonson: Forestwalk shortrange -->
   <VFECore.Abilities.AbilityDef>
     <defName>BEWH_ForestWalkShort</defName>
@@ -93,6 +95,7 @@
       <verbClass>Verb_CastAbility</verbClass>
       <range>46</range>
       <warmupTime>0.5</warmupTime>
+      <soundCast>PsychicInsanityLanceCast</soundCast>
       <targetParams>
         <canTargetLocations>false</canTargetLocations>
         <canTargetBuildings>false</canTargetBuildings>
@@ -123,6 +126,7 @@
     <range>25</range>
     <castTime>60</castTime>
     <targetMode>Location</targetMode>
+    <castSound MayRequire="Ludeon.RimWorld.Royalty">PsycastWallraise</castSound>
   </VFECore.Abilities.AbilityDef>
 
 
