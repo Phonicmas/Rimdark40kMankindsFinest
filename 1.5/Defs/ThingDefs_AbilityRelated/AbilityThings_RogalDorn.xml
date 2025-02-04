@@ -35,7 +35,7 @@
     <defName>BEWH_RaisedWall</defName>
     <label>raised wall</label>
     <description>A sturdy wall to keep back attackers. It will collapse in time.</description>
-    <uiIconPath>Things/Building/Linked/GreyWall_MenuIcon</uiIconPath>
+    <uiIconPath>Things/Building/Linked/WallSmooth_MenuIcon</uiIconPath>
     <graphicData>
       <texPath>Things/Building/Linked/Wall</texPath>
       <graphicClass>Graphic_Appearances</graphicClass>
@@ -69,7 +69,7 @@
     <defName>BEWH_RaisedBarricade</defName>
     <label>raised barricade</label>
     <description>A sturdy barricade to keep back attackers. It will collapse in time.</description>
-    <uiIconPath>Things/Building/Linked/GreyWall_MenuIcon</uiIconPath>
+    <uiIconPath>Things/Building/Linked/WallSmooth_MenuIcon</uiIconPath>
     <graphicData>
       <texPath>Things/Building/Linked/Barricade_Atlas</texPath>
       <graphicClass>Graphic_Single</graphicClass>

@@ -22,14 +22,34 @@
 
 	<!-- Ancient: Raise Chapter Banner -->
 	<SoundDef>
-		<defName>BEWH_SFX_RaiseBanner</defName>
+		<defName>BEWH_SFX_BannerWarmUp</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<priorityMode>PrioritizeNearest</priorityMode>
+		<sustain>True</sustain>
+		<sustainFadeoutTime>0.1</sustainFadeoutTime>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>BEWH_BannerWarmup</clipPath>
+					</li>
+				</grains>
+				<volumeRange>40~42</volumeRange>
+				<pitchRange>1</pitchRange>
+				<muteWhenPaused>True</muteWhenPaused>
+			</li>
+		</subSounds>
+	</SoundDef>
+	<SoundDef>
+		<defName>BEWH_SFX_BannerCast</defName>
 		<context>MapOnly</context>
 		<maxSimultaneous>1</maxSimultaneous>
 		<subSounds>
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>BEWH_Raaar</clipPath>
+						<clipPath>BEWH_BannerCast</clipPath>
 					</li>
 				</grains>
 				<volumeRange>40~42</volumeRange>
@@ -111,7 +131,7 @@
 	</SoundDef>
 
 	<!-- Chapter Master: Drop Pod Thump -->
-	<SoundDef>
+<!-- 	<SoundDef>
 		<defName>BEWH_SFX_DropPodThump</defName>
 		<context>MapOnly</context>
 		<maxSimultaneous>3</maxSimultaneous>
@@ -126,7 +146,7 @@
 				<pitchRange>1</pitchRange>
 			</li>
 		</subSounds>
-	</SoundDef>
+	</SoundDef> -->
 
 	<!--============Living Saint=============-->
 	<!-- Divine Flight -->
@@ -162,8 +182,75 @@
 			</li>
 		</subSounds>
 	</SoundDef>
+
 	<!-- Holy Blast -->
+	<SoundDef>
+		<defName>BEWH_SFX_HolyBlastWarmup</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>LivingSaint/BEWH_SaintHolyBlastWarmup</clipPath>
+					</li>
+				</grains>
+				<volumeRange>40~42</volumeRange>
+				<pitchRange>1</pitchRange>
+				<muteWhenPaused>True</muteWhenPaused>
+			</li>
+		</subSounds>
+	</SoundDef>
+	<SoundDef>
+		<defName>BEWH_SFX_HolyBlastCast</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>LivingSaint/BEWH_SaintHolyBlastCast</clipPath>
+					</li>
+				</grains>
+				<volumeRange>40~42</volumeRange>
+				<pitchRange>1</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
 	<!-- Proof of Faith -->
-	<!-- Inviolable Aura? -->
+	<SoundDef>
+		<defName>BEWH_SFX_PofWarmup</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>LivingSaint/BEWH_SaintAbsorbWarmup</clipPath>
+					</li>
+				</grains>
+				<volumeRange>48</volumeRange>
+				<pitchRange>1</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	<SoundDef>
+		<defName>BEWH_SFX_PofResolve</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>LivingSaint/BEWH_SaintAbsorbResolve</clipPath>
+					</li>
+				</grains>
+				<volumeRange>15</volumeRange>
+				<pitchRange>1</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	<!-- Inviolable Aura (sustainer)? -->
 
 </Defs>
