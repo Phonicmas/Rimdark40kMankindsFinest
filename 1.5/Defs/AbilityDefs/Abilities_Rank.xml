@@ -48,9 +48,11 @@
         <requireLineOfSight>true</requireLineOfSight>
         <cooldownTime>60000</cooldownTime>
         <range>1.9</range>
-        <castTime>60</castTime>
+        <castTime>30</castTime>
         <targetMode>Location</targetMode>
-        <castSound>BEWH_SFX_RaiseBanner</castSound>
+        <!-- <warmupStartSound>...</warmupStartSound> -->
+        <warmupSound>BEWH_SFX_BannerWarmUp</warmupSound>
+        <castSound>BEWH_SFX_BannerCast</castSound>
     </VFECore.Abilities.AbilityDef>
 
 
@@ -88,6 +90,7 @@
             <Ability_Duration>125</Ability_Duration>
         </statBases>
         <aiCanUse>true</aiCanUse>
+        <warmupStartSound>BEWH_SFX_HolyBlastWarmup</warmupStartSound>
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>
             <range>9.9</range>
