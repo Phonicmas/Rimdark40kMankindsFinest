@@ -29,18 +29,13 @@ namespace Genes40k
 
         public override bool ValidateTarget(LocalTargetInfo target, bool showMessages = false)
         {
-            if (target.Cell.GetFirstBuilding(pawn.Map) == null)
+            if (target.Cell.GetFirstBuilding(pawn.Map) != null)
             {
-                return true;
+                Messages.Message("AbilityOccupiedCells".Translate(def.LabelCap), target.ToTargetInfo(pawn.Map), MessageTypeDefOf.RejectInput, historical: false);
+                return false;
             }
-            /*if (!target.Cell.Filled(pawn.Map))
-            {
-                return true;
-            }*/
             
-            Messages.Message("AbilityOccupiedCells".Translate(def.LabelCap), target.ToTargetInfo(pawn.Map), MessageTypeDefOf.RejectInput, historical: false);
-            return false;
-
+            return base.ValidateTarget(target, showMessages);
         }
     }
 }

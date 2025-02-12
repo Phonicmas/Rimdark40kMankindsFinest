@@ -20,7 +20,7 @@ namespace Genes40k
                 return;
             }
 
-            var list = GenRadial.RadialDistinctThingsAround(parent.Position, parent.Map, Props.range, true).Where(thing => thing is Pawn pawn && pawn.Faction.IsPlayer);
+            var list = GenRadial.RadialDistinctThingsAround(parent.Position, parent.Map, Props.range, true).Where(thing => thing is Pawn pawn && pawn.Faction != null && pawn.Faction.IsPlayer);
             
             var things = list.ToList();
             

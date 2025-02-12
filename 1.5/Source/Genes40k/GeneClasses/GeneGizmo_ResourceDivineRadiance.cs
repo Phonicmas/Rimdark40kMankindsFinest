@@ -13,6 +13,8 @@ namespace Genes40k
 
 		private const float TotalPulsateTime = 0.85f;
 
+		protected override bool IsDraggable => false;
+
 		private List<Pair<IGeneResourceDrain, float>> tmpDrainGenes = new List<Pair<IGeneResourceDrain, float>>();
 
 		public GeneGizmo_ResourceDivineRadiance(Gene_Resource gene, List<IGeneResourceDrain> drainGenes, Color barColor,
