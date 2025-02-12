@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-    <!--<statOffsets>
-        <MoveSpeed>5</MoveSpeed>
-    </statOffsets>
-    <statFactors>
-        <MoveSpeed>10</MoveSpeed>
-    </statFactors>-->
-
     <!-- ====Astartes==== -->
     <!-- =Base= -->
     <!-- Neophyte -->
@@ -482,9 +475,9 @@
         </requiredSkills>
 
         <statOffsets>
-            <DeepDrillingSpeed>0.4</DeepDrillingSpeed>
+            <DeepDrillingSpeed>0.2</DeepDrillingSpeed>
             <WorkSpeedGlobal>0.05</WorkSpeedGlobal>
-            <HackingSpeed MayRequire="Ludeon.RimWorld.Ideology">0.05</HackingSpeed>
+            <HackingSpeed MayRequire="Ludeon.RimWorld.Ideology">0.1</HackingSpeed>
         </statOffsets>
 
         <rankTier>2</rankTier>
@@ -515,7 +508,7 @@
             <WorkSpeedGlobal>0.05</WorkSpeedGlobal>
             <MechBandwidth>1</MechBandwidth>
             <MechFormingSpeed>0.2</MechFormingSpeed>
-            <HackingSpeed MayRequire="Ludeon.RimWorld.Ideology">0.05</HackingSpeed>
+            <HackingSpeed MayRequire="Ludeon.RimWorld.Ideology">0.15</HackingSpeed>
         </statOffsets>
 
         <rankTier>4</rankTier>

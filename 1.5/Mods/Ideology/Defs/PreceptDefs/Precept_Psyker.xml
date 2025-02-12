@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Issue -->
+    <IssueDef>
+        <defName>BEWH_Psyker</defName>
+        <label>psyker</label>
+        <iconPath>UI/Issues/PsykerPrecept</iconPath>
+    </IssueDef>
+
+    <!-- Precepts -->
+    <PreceptDef>
+        <defName>BEWH_Psyker_Respected</defName>
+        <issue>BEWH_Psyker</issue>
+        <label>respected</label>
+        <description>To be a psyker is a thing worthy of respect.</description>
+        <impact>Medium</impact>
+        <displayOrderInIssue>200</displayOrderInIssue>
+        <displayOrderInImpact>1000</displayOrderInImpact>
+        <defaultSelectionWeight>0</defaultSelectionWeight>
+        <comps>
+            <li Class="PreceptComp_SituationalThought">
+                <thought>BEWH_Psyker_Respected</thought>
+            </li>
+            <li Class="PreceptComp_SituationalThought">
+                <thought>BEWH_Psyker_Respected_Social</thought>
+            </li>
+        </comps>
+    </PreceptDef>
+
+
+    <PreceptDef>
+        <defName>BEWH_Psyker_Acceptable</defName>
+        <issue>BEWH_Psyker</issue>
+        <label>acceptable</label>
+        <description>To be a psyker is acceptable.</description>
+        <impact>Low</impact>
+        <displayOrderInIssue>201</displayOrderInIssue>
+        <defaultSelectionWeight>1</defaultSelectionWeight>
+    </PreceptDef>
+
+
+    <PreceptDef>
+        <defName>BEWH_Psyker_Horrible</defName>
+        <issue>BEWH_Psyker</issue>
+        <impact>Medium</impact>
+        <label>horrible</label>
+        <displayOrderInIssue>202</displayOrderInIssue>
+        <displayOrderInImpact>1000</displayOrderInImpact>
+        <defaultSelectionWeight>0</defaultSelectionWeight>
+        <description>To be a psyker is a horrible thing.</description>
+        <comps>
+            <li Class="PreceptComp_SituationalThought">
+                <thought>BEWH_Psyker_Horrible</thought>
+            </li>
+            <li Class="PreceptComp_SituationalThought">
+                <thought>BEWH_Psyker_Horrible_Social</thought>
+            </li>
+        </comps>
+    </PreceptDef>
+
+
+    <!-- Thoughts : Psyker -->
+    <!-- Respected Psyker Thought -->
+    <ThoughtDef>
+        <defName>BEWH_Psyker_Respected</defName>
+        <workerClass>Genes40k.ThoughtWorker_Precept_Psyker</workerClass>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <stages>
+            <li>
+                <label>psyker</label>
+                <description>Being a psyker is a boon.</description>
+                <baseMoodEffect>5</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>BEWH_Psyker_Respected_Social</defName>
+        <workerClass>Genes40k.ThoughtWorker_Precept_Psyker_Social</workerClass>
+        <thoughtClass>Thought_SituationalSocial</thoughtClass>
+        <stages>
+            <li>
+                <label>psyker</label>
+                <baseOpinionOffset>20</baseOpinionOffset>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <!-- Horrible Psyker Thought -->
+    <ThoughtDef>
+        <defName>BEWH_Psyker_Horrible</defName>
+        <workerClass>Genes40k.ThoughtWorker_Precept_Psyker</workerClass>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <stages>
+            <li>
+                <label>psyker</label>
+                <description>Being a psyker is a curse laid upon me.</description>
+                <baseMoodEffect>-3</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>BEWH_Psyker_Horrible_Social</defName>
+        <workerClass>Genes40k.ThoughtWorker_Precept_Psyker_Social</workerClass>
+        <thoughtClass>Thought_SituationalSocial</thoughtClass>
+        <stages>
+            <li>
+                <label>psyker</label>
+                <baseOpinionOffset>-20</baseOpinionOffset>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+
+</Defs>

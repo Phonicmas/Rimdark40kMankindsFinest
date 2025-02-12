@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <MemeDef>
+    <defName>BEWH_ImperialStructure</defName>
+    <label>Imperium of Mankind</label>
+    <description>The Emperor of Mankind, often referred to by His faithful as the "God-Emperor" or simply "the Emperor", is the immortal Perpetual and psyker who serves as the reigning monarch of the Imperium of Man, and is described by the Imperial Ecclesiarchy and the Imperial Cult as the Father, Guardian and God of Humanity.</description>
+    <category>Structure</category>
+    <impact>0</impact>
+    <deityCount>1</deityCount>
+    <randomizationSelectionWeightFactor>0</randomizationSelectionWeightFactor>
+    <preventApparelRequirements>true</preventApparelRequirements>
+    <iconPath>UI/Icons/Imperium/ImperiumIcon</iconPath>
+    <worshipRoomLabel>Chapter Hall</worshipRoomLabel>
+    <deityNameMakerOverride>BEWH_NamerDeityImperium</deityNameMakerOverride>
+    <deityTypeMakerOverride>BEWH_DeityTypeMakerImperium</deityTypeMakerOverride>
+    <generalRules>
+      <rulesStrings>
+        <li>memeAdjective->faithful</li>
+        <li>memeAdjective->loyalist</li>
+        <li>memeLeaderNoun->chapter master</li>
+        <li>memeMoralist->chaplain</li>
+      </rulesStrings>
+    </generalRules>
+    <descriptionMaker>
+      <patterns>
+        <li>
+          <def>BEWH_ImperialDescription</def>
+        </li>
+      </patterns>
+      <constants>
+        <li>
+          <key>bewh_structure_imperial</key>
+          <value>true</value>
+        </li>
+      </constants>
+    </descriptionMaker>
+    <symbolPacks>
+      <li>
+        <ideoName>Imperial</ideoName>
+        <theme>faith</theme>
+        <adjective>imperialistic</adjective>
+        <member>imperial</member>
+      </li>
+      <li>
+        <ideoName>Imperial Cult</ideoName>
+        <theme>loyal</theme>
+        <adjective>loyal</adjective>
+        <member>loyalist</member>
+      </li>
+    </symbolPacks>
+    <thingStyleCategories>
+      <li>
+        <category>Techist</category>
+        <priority>2</priority>
+      </li>
+    </thingStyleCategories>
+  </MemeDef>
+
+  <!-- Description for Ideology-->
+  <IdeoStoryPatternDef>
+    <defName>BEWH_ImperialDescription</defName>
+    <segments>
+      <li>creation</li>
+      <li>salvation</li>
+      <li>unification</li>
+      <!-- Can add more segments for longer description for ideology -->
+    </segments>
+    <rules>
+      <rulesStrings>
+        <!-- For each of these, more can be added to have variation -->
+
+        <!-- generic creation -->
+        <li>creation->In an old universe of strife, war was all around, and plagued everyone.</li>
+
+        <!-- generic salvation -->
+        <li>salvation->But when it seemed like everything was turning bleak, [deity0_name] came forth.</li>
+
+        <!-- generic unification -->
+        <li>unification->[deity0_name] unified his world and remove all who stood in the way of a new age for us, and brought forth a new era.</li>
+      </rulesStrings>
+    </rules>
+  </IdeoStoryPatternDef>
+
+  <!-- Icon for Faction-->
+  <IdeoIconDef>
+    <defName>BEWH_ImperiumIcon</defName>
+    <iconPath>UI/Icons/Imperium/ImperiumIcon</iconPath>
+    <memes>
+      <li>BEWH_ImperialStructure</li>
+    </memes>
+  </IdeoIconDef>
+  <IdeoColorDef>
+    <defName>BEWH_White</defName>
+    <colorDef>Structure_White</colorDef>
+    <memes>
+      <li>BEWH_ImperialStructure</li>
+    </memes>
+  </IdeoColorDef>
+
+</Defs>

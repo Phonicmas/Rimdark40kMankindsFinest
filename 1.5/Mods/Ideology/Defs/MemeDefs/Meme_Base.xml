@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <MemeDef Name="BEWH_ImperialMemeBase" Abstract="True">
+    <category>Normal</category>
+    <impact>2</impact>
+    <deityCount>1</deityCount>
+    <groupDef>Misc</groupDef>
+    <symbolPacks>
+      <li>
+        <ideoName>Imperial</ideoName>
+        <theme>faith</theme>
+        <adjective>imperialistic</adjective>
+        <member>imperial</member>
+      </li>
+      <li>
+        <ideoName>Imperial Cult</ideoName>
+        <theme>loyal</theme>
+        <adjective>loyal</adjective>
+        <member>loyalist</member>
+      </li>
+    </symbolPacks>
+  </MemeDef>
+
+</Defs>

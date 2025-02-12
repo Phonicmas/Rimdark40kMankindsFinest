@@ -48,6 +48,10 @@
         </backstoryFilters>
 
 
+        <allowedCultures MayRequire="Ludeon.RimWorld.Ideology">
+            <li>BEWH_ImperiumCulture</li>
+        </allowedCultures>
+
         <fixedIdeo MayRequire="Ludeon.RimWorld.Ideology">true</fixedIdeo>
         <ideoName MayRequire="Ludeon.RimWorld.Ideology">Imperial Cult</ideoName>
         <ideoDescription MayRequire="Ludeon.RimWorld.Ideology">The Imperial Cult, also called the Cult Imperialis in High Gothic, is the official and only state religion of the Imperium of Man. It is devoted to the worship of the Emperor of Mankind as the ascended divinity and saviour of Humanity.</ideoDescription>
