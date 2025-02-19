@@ -4,8 +4,8 @@
     <!-- Base -->
     <Genes40k.ShoulderIconDef Name="BEWH_RankShoulderIcon" Abstract="True">
         <rightShoulder>true</rightShoulder>
-        <!--<useColour>True</useColour>   - This one allows players to colours their icons
-        <defaultColour>(255, 0, 0)</defaultColour>    - This one sets the default colour of the icon (Default is white, which does nothing to the icon)   -->
+        <!--<useColour>True</useColour>-->   <!-- - This one allows players to colours their icons-->
+        <!--<defaultColour>(255, 0, 0)</defaultColour>-->    <!-- - This one sets the default colour of the icon (Default is white, which does nothing to the icon)   -->
     </Genes40k.ShoulderIconDef>
 
     <!-- Follow Rank Up -->
@@ -13,7 +13,7 @@
         <defName>BEWH_FollowRankUp</defName>
         <label>Use pawn rank</label>
         <description>Use pawns rank as icon</description>
-        <iconPath>UI/Designators/Cancel</iconPath>
+        <iconPath>UI/Ranks/BEWH_UseRankIcon</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/CommonIcons/BEWH_None</drawnTextureIconPath>
         <sortOrder>0</sortOrder>
         <setsNull>True</setsNull>

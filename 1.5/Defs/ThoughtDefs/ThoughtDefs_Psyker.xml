@@ -93,4 +93,21 @@
         </stages>
     </ThoughtDef>
 
+
+    <!--=== Psychic Phenomena ===-->
+    <!-- Soaked in blood -->
+    <ThoughtDef>
+        <defName>BEWH_BloodSoaked</defName>
+        <durationDays>0.1</durationDays>
+        <stackLimit>1</stackLimit>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <label>raining blood</label>
+                <description>It's raining blood...</description>
+                <baseMoodEffect>-5</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
 </Defs>

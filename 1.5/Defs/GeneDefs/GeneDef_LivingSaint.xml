@@ -24,6 +24,11 @@
             <PsychicEntropyRecoveryRate>1.7</PsychicEntropyRecoveryRate>
             <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0</CertaintyLossFactor>
         </statFactors>
+        <suppressedTraits>
+            <li>
+                <def>BEWH_Serf</def>
+            </li>
+        </suppressedTraits>
         <capMods>
             <li>
                 <capacity>Manipulation</capacity>

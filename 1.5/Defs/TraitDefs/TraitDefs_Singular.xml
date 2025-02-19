@@ -31,4 +31,15 @@
         </degreeDatas>
     </TraitDef>
 
+    <TraitDef>
+        <defName>BEWH_Serf</defName>
+        <commonality>0.4</commonality>
+        <degreeDatas>
+            <li>
+                <label>serf</label>
+                <description>{PAWN_nameDef} is a serf. {PAWN_pronoun} sole purpose is to serve his space marine masters.</description>
+            </li>
+        </degreeDatas>
+    </TraitDef>
+
 </Defs>

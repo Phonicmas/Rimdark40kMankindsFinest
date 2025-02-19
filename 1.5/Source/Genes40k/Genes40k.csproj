@@ -167,8 +167,12 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_RubiconSurgeryChanceIncrease.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_SangprimusNoDuplicateAccepted.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_SecondProgenoidGlandProgress.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_SerfGainTrait.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_SerfGetTrait1.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_SerfGetTrait2.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_SpaceMarineChapterSpawn.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_UpdateRankIconOnRankUp.cs" />
+    <Compile Include="Hediffs\Hediff_Serf.cs" />
     <Compile Include="Rank\ChapterRankDef.cs" />
     <Compile Include="RoleRequirement\RoleRequirement_MustBeSpaceMarine.cs" />
     <Compile Include="StockGenerator\StockGenerator_TagSangprimusMaterialNoDupe.cs" />
@@ -218,6 +222,7 @@
     <Compile Include="Workers\ThoughtWorkers\ThoughtWorker_Pariah.cs" />
     <Compile Include="Workers\ThoughtWorkers\ThoughtWorker_Precept_Psyker.cs" />
     <Compile Include="Workers\ThoughtWorkers\ThoughtWorker_Precept_Psyker_Social.cs" />
+    <Compile Include="Workers\ThoughtWorkers\ThoughtWorker_Serf.cs" />
     <Compile Include="Workers\ThoughtWorkers\ThoughtWorker_XXTwinDead.cs" />
     <Compile Include="Workers\WorkerClass_RubiconPrimaris.cs" />
     <Compile Include="Workers\WorkGiver_FillPrimarchGrowthVat.cs" />

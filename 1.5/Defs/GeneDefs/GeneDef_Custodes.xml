@@ -86,6 +86,12 @@
             <InjuryHealingFactor>7</InjuryHealingFactor>
         </statFactors>
 
+        <suppressedTraits>
+            <li>
+                <def>BEWH_Serf</def>
+            </li>
+        </suppressedTraits>
+
         <biologicalAgeTickFactorFromAgeCurve>
             <points>
                 <li>(0, 1)</li>

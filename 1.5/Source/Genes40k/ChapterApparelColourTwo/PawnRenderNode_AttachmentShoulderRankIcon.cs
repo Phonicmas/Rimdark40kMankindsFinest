@@ -20,7 +20,7 @@ namespace Genes40k
                 rightShoulderPath = apparelColourTwo.RightShoulderIcon.drawnTextureIconPath;
             }
             
-            return GraphicDatabase.Get<Graphic_Multi>(rightShoulderPath, ShaderFor(pawn), Props.drawSize, drawColour);
+            return GraphicDatabase.Get<Graphic_Multi>(rightShoulderPath, ShaderFor(pawn), Props.drawSize, drawColour, drawColour);
         }
     }
 }

@@ -108,48 +108,48 @@ namespace Genes40k
                 Genes40kDefOf.BEWH_PrimarisPhaseThree,
             };
 
-        public static bool IsThunderWarrior(Pawn pawn)
+        public static bool IsThunderWarrior(this Pawn pawn)
         {
             return ThunderWarriorGenes.All(geneDef => pawn.genes.HasActiveGene(geneDef));
         }
 
-        public static bool IsFirstborn(Pawn pawn)
+        public static bool IsFirstborn(this Pawn pawn)
         {
             return SpaceMarineGenes.All(geneDef => pawn.genes.HasActiveGene(geneDef));
         }
 
-        public static bool IsPrimaris(Pawn pawn)
+        public static bool IsPrimaris(this Pawn pawn)
         {
             return PrimarisGenes.All(geneDef => pawn.genes.HasActiveGene(geneDef)) && IsFirstborn(pawn);
         }
 
-        public static bool IsCustodes(Pawn pawn)
+        public static bool IsCustodes(this Pawn pawn)
         {
             return CustodesGenes.All(geneDef => pawn.genes.HasActiveGene(geneDef));
         }
 
-        public static bool IsPrimarch(Pawn pawn)
+        public static bool IsPrimarch(this Pawn pawn)
         {
             return PrimarchGenes.All(geneDef => pawn.genes.HasActiveGene(geneDef));
         }
         
-        public static bool IsSuperHuman(Pawn pawn)
+        public static bool IsSuperHuman(this Pawn pawn)
         {
             //Primaris is not checked, as if they are primaris, then they are by extension also firstborn
-            return IsThunderWarrior(pawn) || IsFirstborn(pawn) || IsCustodes(pawn) || IsPrimarch(pawn);
+            return pawn.IsThunderWarrior() || pawn.IsFirstborn() || pawn.IsCustodes() || pawn.IsPrimarch();
         }
         
-        public static bool IsPsyker(Pawn pawn)
+        public static bool IsPsyker(this Pawn pawn)
         {
             return Enumerable.Any(PsykerGenes, gene => pawn.genes.HasActiveGene(gene));
         }
 
-        public static bool IsPariah(Pawn pawn)
+        public static bool IsPariah(this Pawn pawn)
         {
             return Enumerable.Any(PariahGenes, gene => pawn.genes.HasActiveGene(gene));
         }
 
-        public static bool UndergoingPhaseDevelopment(Pawn pawn)
+        public static bool UndergoingPhaseDevelopment(this Pawn pawn)
         {
             return Enumerable.Any(DevelopmentPhases, hediff => pawn.health.hediffSet.HasHediff(hediff));
         }
@@ -162,7 +162,7 @@ namespace Genes40k
         
         public static ChapterColourDef SetupChapterForPawn(Pawn pawn, bool randomChapter)
         {
-            if (pawn.genes == null || !IsFirstborn(pawn))
+            if (pawn.genes == null || !pawn.IsFirstborn())
             {
                 return null;
             }

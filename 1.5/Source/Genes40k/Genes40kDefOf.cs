@@ -115,6 +115,8 @@ namespace Genes40k
         
         public static HediffDef BEWH_DivineRadiaceFading;
         public static HediffDef BEWH_LivingSaintHolyAscension;
+        
+        public static HediffDef BEWH_SerfBuff;
 
         //Letters
         public static LetterDef BEWH_NaturalBornX;
@@ -157,6 +159,7 @@ namespace Genes40k
         public static ThoughtDef BEWH_LivingSaintHolyRadianceThought;
         public static ThoughtDef BEWH_PrimarchSpecificXIIMood;
         public static ThoughtDef BEWH_ChaplainInspired;
+        public static ThoughtDef BEWH_SerfNearbyMarine;
 
         //RecipeDefs
         public static RecipeDef BEWH_RubiconSurgery;
@@ -168,6 +171,7 @@ namespace Genes40k
         
         //TraitDefs
         public static TraitDef PsychicSensitivity;
+        public static TraitDef BEWH_Serf;
         
         //ResearchDefs
         public static ResearchProjectDef BEWH_StasisResurrection;

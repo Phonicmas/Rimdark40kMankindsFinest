@@ -1,7 +1,6 @@
 ﻿using RimWorld;
 using Verse;
 
-
 namespace Genes40k
 {
     public class Gene_LivingSaint : Gene

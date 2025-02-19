@@ -186,6 +186,9 @@
             <li>
                 <def>Wimp</def>
             </li>
+            <li>
+                <def>BEWH_Serf</def>
+            </li>
         </suppressedTraits> 
         <statFactors>
             <PsychicSensitivity>0</PsychicSensitivity>

@@ -18,7 +18,7 @@ namespace Genes40k
                 return false;
             }
 
-            return Genes40kUtils.IsFirstborn(pawn) && !Genes40kUtils.IsPrimaris(pawn);
+            return pawn.IsFirstborn() && !pawn.IsPrimaris();
         }
 
         public override void ApplyOnPawn(Pawn pawn, BodyPartRecord part, Pawn billDoer, List<Thing> ingredients, Bill bill)

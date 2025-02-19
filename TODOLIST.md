@@ -32,12 +32,7 @@ Chaplain: Strenghten Faith ability (is in the mods/idelogy folder)
 (Maybe) Some different backgrounds (the blue hexagon for xenotype or white circle thingy for endogenes) for the different genes? (Maybe keep the recoloured one psyker and pariah and then make some new type for the different super human, with increasing golden stuff and purity seals n stuff) (im just cooking here, this is not important)
 
 ## Code and XML
-Add small colour palette before each shoulder icon selection. That will colour colourable icons (Only make it show if currently selected allows colouring)
-Save above colour in apparel ^^ 
 
-
-
-(Maybe) New trait "Serf" that has increase mood and work speed when near a Firstborn, Primaris, Custodes or Primarch (Maybe thunder warrior and living saint?)
 
 (Maybe) Make functionality for jump pack to be installed on power armor. (Maybe some job or recipe, that uses the power armor and a jump pack and some components, which then does stuff and switches the graphic)
 

@@ -19,11 +19,15 @@ namespace Genes40k
             {
                 return false;
             }
-            if (Genes40kUtils.IsSuperHuman(pawn))
+            if (pawn.IsSuperHuman())
             {
                 return false;
             }
-            if (Genes40kUtils.UndergoingPhaseDevelopment(pawn))
+            if (pawn.UndergoingPhaseDevelopment())
+            {
+                return false;
+            }
+            if (pawn.story != null && pawn.story.traits.HasTrait(Genes40kDefOf.BEWH_Serf))
             {
                 return false;
             }

@@ -21,7 +21,7 @@ namespace Genes40k
             {
                 return false;
             }
-            return Genes40kUtils.IsFirstborn(p);
+            return p.IsFirstborn();
         }
     }
 }

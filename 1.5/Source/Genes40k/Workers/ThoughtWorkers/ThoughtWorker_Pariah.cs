@@ -21,12 +21,14 @@ namespace Genes40k
             
             foreach (var gene in other.genes.GenesListForReading)
             {
-                if (!gene.def.HasModExtension<DefModExtension_Pariah>() ||
-                    !def.HasModExtension<DefModExtension_Pariah>()) continue;
+                if (!gene.def.HasModExtension<DefModExtension_Pariah>() || !def.HasModExtension<DefModExtension_Pariah>())
+                {
+                    continue;
+                }
                 
                 if (gene.def.GetModExtension<DefModExtension_Pariah>().pariahGene == def.GetModExtension<DefModExtension_Pariah>().pariahGene)
                 {
-                    return !Genes40kUtils.IsPariah(pawn) && !pawn.genes.HasActiveGene(Genes40kDefOf.BEWH_MnemosyneMindshield);
+                    return !pawn.IsPariah() && !pawn.genes.HasActiveGene(Genes40kDefOf.BEWH_MnemosyneMindshield);
                 }
             }
             return false;

@@ -496,6 +496,11 @@
         </statFactors>
         <painFactor>0.8</painFactor>
         <minAgeActive>19</minAgeActive>
+        <suppressedTraits>
+            <li>
+                <def>BEWH_Serf</def>
+            </li>
+        </suppressedTraits>
         <modExtensions>
             <li Class="Core40k.DefModExtension_SlaveabilityRecruitability">
                 <canBeEnslaved>false</canBeEnslaved>
