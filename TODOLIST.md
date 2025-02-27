@@ -33,9 +33,6 @@ Chaplain: Strenghten Faith ability (is in the mods/idelogy folder)
 
 ## Code and XML
 
-
-(Maybe) Make functionality for jump pack to be installed on power armor. (Maybe some job or recipe, that uses the power armor and a jump pack and some components, which then does stuff and switches the graphic)
-
 ## Bugs
 
 
@@ -57,7 +54,7 @@ To make a fully fledges chapter one should:
 
 Make frostblade xml?
 
-Make Fenrisian Wolves (Art also, maybe just take vanilla wolf and change it? Maybe ask someone who made a wolf like create for it and then change some of it)
+Make Fenrisian Wolves (Art also)
 These can then be found by a quest or by an event where they wander by. 
 Should spawn one alpha and a couple of other ones, if alpha is slain, other ones immediately become tamed under the killer. Should also be made compatible with whatever mount riding framework is currently da shit(best), giddy up 2?
 https://wh40k.lexicanum.com/wiki/Fenrisian_Wolf 

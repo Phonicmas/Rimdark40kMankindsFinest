@@ -93,6 +93,7 @@
     <Compile Include="ChapterApparelColourTwo\PawnRenderNodeWorker_AttachmentShoulderChapterIcon.cs" />
     <Compile Include="ChapterApparelColourTwo\PawnRenderNodeWorker_AttachmentShoulderPad.cs" />
     <Compile Include="ChapterApparelColourTwo\PawnRenderNodeWorker_AttachmentShoulderRankIcon.cs" />
+    <Compile Include="ChapterApparelColourTwo\PawnRenderNode_AttachmentBackpack.cs" />
     <Compile Include="ChapterApparelColourTwo\PawnRenderNode_AttachmentShoulderChapterIcon.cs" />
     <Compile Include="ChapterApparelColourTwo\PawnRenderNode_AttachmentChapterApparelColour.cs" />
     <Compile Include="ChapterApparelColourTwo\PawnRenderNode_AttachmentShoulderRankIcon.cs" />
@@ -142,6 +143,7 @@
     <Compile Include="DefModExtensions\DefModExtension_GeneInducedFear.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneseedHarvest.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneStorageGraphicProgression.cs" />
+    <Compile Include="DefModExtensions\DefModExtension_HideJumpPack.cs" />
     <Compile Include="DefModExtensions\DefModExtension_IncreasedJoyFromArt.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneseedVialRecipe.cs" />
     <Compile Include="DefModExtensions\DefModExtension_PerpetualGene.cs" />
@@ -157,6 +159,7 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_BlockedPsycasting.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_DomitarMechExclusive.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_FuryboundPawnText.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_HideJumpPack.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_ImplantGeneseedCorrectIngredient.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_LivingSaintKilledPawn.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_MoreArtJoy.cs" />

@@ -59,7 +59,7 @@
                     </drawData>
                 </li>
                 <li>                    <!-- Backpacks -->
-                    <nodeClass>Genes40k.PawnRenderNode_AttachmentChapterApparelColour</nodeClass>
+                    <nodeClass>Genes40k.PawnRenderNode_AttachmentBackpack</nodeClass>
                     <texPath>Things/Armor/Imperium/PowerArmor/MkVIIPowerArmor/Backpacks/BEWH_MkVIIPowerArmor_Backpack</texPath>
                     <shaderTypeDef>CutoutComplex</shaderTypeDef>
                     <parentTagDef>Body</parentTagDef>
@@ -123,6 +123,7 @@
             <li Class="Core40k.DefModExtension_EnableTabDef">
                 <tabDef>BEWH_AstartesShoulderIconDef</tabDef>
             </li>
+            <li Class="Genes40k.DefModExtension_HideJumpPack" />
         </modExtensions>
     </ThingDef>
 
@@ -223,7 +224,7 @@
                     </drawData>
                 </li>
                 <li>                    <!-- Backpacks -->
-                    <nodeClass>Genes40k.PawnRenderNode_AttachmentChapterApparelColour</nodeClass>
+                    <nodeClass>Genes40k.PawnRenderNode_AttachmentBackpack</nodeClass>
                     <texPath>Things/Armor/Imperium/PowerArmor/MkXPowerArmor/Backpacks/BEWH_MkXPowerArmor_Backpack</texPath>
                     <shaderTypeDef>CutoutComplex</shaderTypeDef>
                     <parentTagDef>Body</parentTagDef>
@@ -287,6 +288,7 @@
             <li Class="Core40k.DefModExtension_EnableTabDef">
                 <tabDef>BEWH_AstartesShoulderIconDef</tabDef>
             </li>
+            <li Class="Genes40k.DefModExtension_HideJumpPack" />
         </modExtensions>
     </ThingDef>
 

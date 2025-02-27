@@ -149,6 +149,8 @@ namespace Genes40k
         
         public static ThingDef BEWH_SteelRainDropPodBuilding;
         public static ThingDef BEWH_SteelRainDropPodSkyfaller;
+        
+        public static ThingDef Apparel_PackJump;
 
         //JobDefs
         public static JobDef BEWH_FillGeneGestator;
@@ -187,6 +189,9 @@ namespace Genes40k
         
         //FactionDefs
         public static FactionDef BEWH_OffworldMarinesFaction;
+        
+        //FactionDefs
+        public static AbilityCategoryDef Psychic;
         
         static Genes40kDefOf()
         {
