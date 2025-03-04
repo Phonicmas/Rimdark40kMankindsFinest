@@ -1,4 +1,4 @@
-﻿using HarmonyLib;
+﻿/*using HarmonyLib;
 using Verse;
 
 namespace Genes40k
@@ -21,7 +21,6 @@ namespace Genes40k
             var divineRadianceGene = pawn.genes?.GetFirstGeneOfType<Gene_DivineRadiance>();
 
             divineRadianceGene?.KilledPawn(__instance);
-
         }    
     }
-}
+}*/
