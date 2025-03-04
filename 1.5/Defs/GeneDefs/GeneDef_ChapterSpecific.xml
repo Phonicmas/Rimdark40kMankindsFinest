@@ -653,7 +653,8 @@
         <statOffsets>
             <HuntingStealth>0.3</HuntingStealth>
         </statOffsets>
-        <skinColorOverride>(230, 220, 200)</skinColorOverride>
+        <skinColorOverride>(240, 240, 240)</skinColorOverride>
+        <hairColorOverride>(20, 20, 20)</hairColorOverride>
         <customEffectDescriptions>
             <li>Non-functioning mucranoid.</li>
             <li>Non-functioning betcher's gland.</li>

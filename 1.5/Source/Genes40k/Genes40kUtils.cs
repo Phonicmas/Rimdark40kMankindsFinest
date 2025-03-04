@@ -107,30 +107,60 @@ namespace Genes40k
                 Genes40kDefOf.BEWH_PrimarisPhaseTwo,
                 Genes40kDefOf.BEWH_PrimarisPhaseThree,
             };
+        
+        public static bool HasGene(this Pawn_GeneTracker geneTracker, GeneDef geneDef)
+        {
+            if (geneDef == null)
+            {
+                return false;
+            }
+            var genesListForReading = geneTracker.GenesListForReading;
+            
+            foreach (var gene in genesListForReading)
+            {
+                if (gene.def == geneDef)
+                {
+                    return true;
+                }
+            }
+            
+            return false;
+        }
+        
+        public static bool HasGenes(this Pawn_GeneTracker geneTracker, List<GeneDef> geneDefs)
+        {
+            if (geneDefs.NullOrEmpty())
+            {
+                return false;
+            }
+            var genesListForReading = geneTracker.GenesListForReading.Select(gene => gene.def).ToList();
 
+            return geneDefs.All(geneDef => genesListForReading.Contains(geneDef));
+        }
+        
         public static bool IsThunderWarrior(this Pawn pawn)
         {
-            return ThunderWarriorGenes.All(geneDef => pawn.genes.HasActiveGene(geneDef));
+            return pawn.genes.HasGenes(ThunderWarriorGenes);
         }
 
         public static bool IsFirstborn(this Pawn pawn)
         {
-            return SpaceMarineGenes.All(geneDef => pawn.genes.HasActiveGene(geneDef));
+            return pawn.genes.HasGenes(SpaceMarineGenes);
         }
 
         public static bool IsPrimaris(this Pawn pawn)
         {
-            return PrimarisGenes.All(geneDef => pawn.genes.HasActiveGene(geneDef)) && IsFirstborn(pawn);
+            return pawn.genes.HasGenes(PrimarisGenes) && pawn.IsFirstborn();
         }
 
         public static bool IsCustodes(this Pawn pawn)
         {
-            return CustodesGenes.All(geneDef => pawn.genes.HasActiveGene(geneDef));
+            return pawn.genes.HasGenes(CustodesGenes);
         }
 
         public static bool IsPrimarch(this Pawn pawn)
         {
-            return PrimarchGenes.All(geneDef => pawn.genes.HasActiveGene(geneDef));
+            return pawn.genes.HasGenes(PrimarchGenes);
         }
         
         public static bool IsSuperHuman(this Pawn pawn)

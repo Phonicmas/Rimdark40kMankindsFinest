@@ -113,7 +113,7 @@
     <label>rubicon surgery kit</label>
     <description>Rubicon surgery kit.</description>
     <graphicData>
-      <texPath>Things/Item/RawGestationalSlurry</texPath>
+      <texPath>Things/Item/RubiconSurgeryKit</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
       <drawSize>0.90</drawSize>
     </graphicData>

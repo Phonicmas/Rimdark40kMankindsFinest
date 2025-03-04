@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using HarmonyLib;
 using RimWorld;
 using Verse;
@@ -21,6 +22,8 @@ namespace Genes40k
             }
             
             var blockingHediffs = new List<HediffDef> { Genes40kDefOf.BEWH_DeniedWitch, Genes40kDefOf.BEWH_PsychicConnectionSevered };
+            
+            var t = blockingHediffs.Select(b=> b.causesNeed);
             
             for (var i = 0; i < blockingHediffs.Count; i++)
             {
