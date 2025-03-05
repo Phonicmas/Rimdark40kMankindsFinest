@@ -171,6 +171,9 @@
   <BEWH.MankindsFinest.Ability.MustHaveIdeo>{0} must be part of an ideology.</BEWH.MankindsFinest.Ability.MustHaveIdeo>
   <BEWH.MankindsFinest.Ability.MustHaveSameIdeo>{0} must be part of {1} ideology.</BEWH.MankindsFinest.Ability.MustHaveSameIdeo>
 
+  <!-- Misc -->
+  <BEWH.MankindsFinest.Ability.DoesNotHaveGene>{0} does not have the {1} gene.</BEWH.MankindsFinest.Ability.DoesNotHaveGene>
+
   <!--=== Apparel Two ===-->
   <!-- Shoulder Icons -->
   <BEWH.MankindsFinest.ShoulderIcon.ResetToDefault>Reset to default</BEWH.MankindsFinest.ShoulderIcon.ResetToDefault>

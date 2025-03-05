@@ -1,6 +1,4 @@
-﻿using Core40k;
-using Verse;
-
+﻿using Verse;
 
 namespace Genes40k
 {

@@ -38,7 +38,7 @@
     <GeneDef ParentName="BEWH_SpaceMarineParent" Name="BEWH_ChapterGeneParent" Abstract="True">
         <marketValueFactor>1.05</marketValueFactor>
         <biostatCpx>1</biostatCpx>
-        <minAgeActive>18</minAgeActive>
+        <minAgeActive>0</minAgeActive>
         <exclusionTags>
             <li>BEWH_ChapterGene</li>
         </exclusionTags>

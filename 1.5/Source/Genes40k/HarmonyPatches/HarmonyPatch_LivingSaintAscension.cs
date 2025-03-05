@@ -16,7 +16,7 @@ namespace Genes40k
                 return;
             }
 
-            if (__instance.IsGhoul)
+            if (__instance.IsGhoul || __instance.IsSlave || __instance.IsPrisoner)
             {
                 return;
             }

@@ -102,7 +102,9 @@
     <Compile Include="Comps\CompAbilityEffect_AoeHit.cs" />
     <Compile Include="Comps\CompProperties_AbilityAoeHit.cs" />
     <Compile Include="Comps\CompProperties_Aura.cs" />
+    <Compile Include="Comps\CompProperties_DisableInactiveGene.cs" />
     <Compile Include="Comps\Comp_Aura.cs" />
+    <Compile Include="Comps\Comp_DisableInactiveGene.cs" />
     <Compile Include="Comps\GameComponent_MankindFinestUtils.cs" />
     <Compile Include="Comps\GameComponent_Perpetual.cs" />
     <Compile Include="Comps\LivingSaint\CompAbilityEffect_DivineRadianceCost.cs" />

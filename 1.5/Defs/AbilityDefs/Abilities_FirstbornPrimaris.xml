@@ -31,6 +31,9 @@
         <numCellsToHit>9</numCellsToHit>
         <sprayEffecter>AcidSpray_Directional</sprayEffecter>
       </li>
+      <li Class="Genes40k.CompProperties_DisableInactiveGene">
+        <geneDef>BEWH_BetchersGland</geneDef>
+      </li>
     </comps>
   </AbilityDef>
   <!-- Betcher's Spit Projectile-->
@@ -52,7 +55,7 @@
     <projectile>
       <damageDef>AcidBurn</damageDef>
       <speed>35</speed>
-      <damageAmountBase>52</damageAmountBase>
+      <damageAmountBase>38</damageAmountBase>
       <arcHeightFactor>0.4</arcHeightFactor>
       <armorPenetrationBase>0.92</armorPenetrationBase>
       <stoppingPower>1</stoppingPower>
@@ -98,6 +101,9 @@
         <hediffDef>BEWH_Sus_anMembraneStasis</hediffDef>
         <onlyApplyToSelf>True</onlyApplyToSelf>
         <replaceExisting>true</replaceExisting>
+      </li>
+      <li Class="Genes40k.CompProperties_DisableInactiveGene">
+        <geneDef>BEWH_SusAnMembrane</geneDef>
       </li>
       <li Class="Genes40k.CompProperties_AbilityStasisConfirmation" />
     </comps>
