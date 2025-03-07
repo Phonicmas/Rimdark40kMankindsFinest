@@ -50,8 +50,7 @@
         <range>1.9</range>
         <castTime>30</castTime>
         <targetMode>Location</targetMode>
-        <!-- <warmupStartSound>...</warmupStartSound> -->
-        <warmupSound>BEWH_SFX_BannerWarmUp</warmupSound>
+        <warmupSound>BEWH_SFX_BannerWarmUp</warmupSound> 
         <castSound>BEWH_SFX_BannerCast</castSound>
     </VFECore.Abilities.AbilityDef>
 

@@ -29,7 +29,7 @@
     </verbProperties>
     <comps>
       <li Class="Genes40k.CompProperties_AbilityDivineRadianceCost">
-        <divineRadianceCost>0.02</divineRadianceCost>
+        <divineRadianceCost>0.05</divineRadianceCost>
       </li>
     </comps>
   </AbilityDef>
@@ -47,12 +47,12 @@
     <statBases>
       <Ability_EffectRadius>11.9</Ability_EffectRadius>
     </statBases>
-    <warmupStartSound>BEWH_SFX_HolyBlastWarmup</warmupStartSound>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
       <range>30</range>
-      <!-- warmup time synched to sfx -->
+      <!-- warmup time synched to effecter -->
       <warmupTime>5</warmupTime>
+      <warmupEffecter>HolyBlastWarmupEffect</warmupEffecter>
       <soundCast>BEWH_SFX_HolyBlastCast</soundCast>
       <targetParams>
         <canTargetHumans>True</canTargetHumans>
@@ -63,7 +63,7 @@
     </verbProperties>
     <comps>
       <li Class="Genes40k.CompProperties_AbilityDivineRadianceCost">
-        <divineRadianceCost>0.20</divineRadianceCost>
+        <divineRadianceCost>1.00</divineRadianceCost>
       </li>
       <li Class="Genes40k.CompProperties_AbilityAoeHit">
         <damageDef>BEWH_LivingSaintHoly</damageDef>
@@ -108,7 +108,7 @@
     </verbProperties>
     <comps>
       <li Class="Genes40k.CompProperties_AbilityProofOfFaith">
-        <divineRadianceGain>0.15</divineRadianceGain>
+        <divineRadianceGain>0.50</divineRadianceGain>
         <durationMultiplier>PsychicSensitivity</durationMultiplier>
       </li>
       <li Class="CompProperties_AbilityGiveHediff">

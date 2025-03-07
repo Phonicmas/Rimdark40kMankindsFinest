@@ -70,8 +70,8 @@
       <maskPath>Things/Building/ChapterBanner/BEWH_DecorationChapterBannerm</maskPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>CutoutComplex</shaderType>
-      <drawSize>(1, 1.75)</drawSize>
-      <drawOffset>(0, 0, 0.5)</drawOffset>
+      <drawSize>(1.5, 2.5)</drawSize>
+      <drawOffset>(0, 0, 0.7)</drawOffset>
       <drawRotated>false</drawRotated>
       <shadowData>
         <volume>(0.3, 0.3 ,0.3)</volume>
@@ -121,8 +121,8 @@
       <maskPath>Things/Building/ChapterBanner/BEWH_DecorationChapterBannerChaosm</maskPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>CutoutComplex</shaderType>
-      <drawSize>(1, 1.75)</drawSize>
-      <drawOffset>(0, 0, 0.5)</drawOffset>
+      <drawSize>(1.3, 2.3)</drawSize>
+      <drawOffset>(0, 0, 0.65)</drawOffset>
       <drawRotated>false</drawRotated>
       <shadowData>
         <volume>(0.3, 0.3 ,0.3)</volume>

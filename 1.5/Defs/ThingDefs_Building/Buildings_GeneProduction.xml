@@ -7,7 +7,7 @@
     <label>gene manipulation table</label>
     <description>This table contains all the needed tools and machines to create thing needed to make enhanced superhumans.</description>
     <thingClass>Genes40k.Building_GeneTable</thingClass>
-    <altitudeLayer>Building</altitudeLayer>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>50</pathCost>
     <statBases>
