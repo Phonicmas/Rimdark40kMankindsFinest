@@ -25,7 +25,7 @@
     </graphicData>
     <uiIconPath>Things/Building/DropPod/BEWH_DropPodIcon</uiIconPath>
     <uiIconScale>0.90</uiIconScale>
-    <altitudeLayer>Building</altitudeLayer>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
     <stealable>false</stealable>
     <rotatable>false</rotatable>
     <statBases>
@@ -97,6 +97,7 @@
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(1,1)</drawSize>
     </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
     <statBases>
       <AccuracyTouch>0.56</AccuracyTouch>
       <AccuracyShort>0.66</AccuracyShort>

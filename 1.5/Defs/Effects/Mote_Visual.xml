@@ -32,7 +32,7 @@
                 <_ScanOffset>-0.09</_ScanOffset>
                 <_ScanScale>12</_ScanScale>
             </shaderParameters>
-            <drawSize>(5.7, 4.275)</drawSize>
+            <drawSize>(5.7, 5.275)</drawSize>
         </graphicData>
     </ThingDef>
 
@@ -42,10 +42,10 @@
             <texPath>Things/Building/PrimarchGrowthVat/BEWH_PrimarchVatGlassGlow_east</texPath>
             <shaderParameters>
                 <_MistOpacityTex>/Things/Building/PrimarchGrowthVat/BEWH_PrimarchVatGlassGlowSoft_east</_MistOpacityTex>
-                <_ScanOffset>-0.05</_ScanOffset>
+                <_ScanOffset>-0.9</_ScanOffset>
                 <_ScanScale>11.25</_ScanScale>
             </shaderParameters>
-            <drawSize>(4.275, 5.7)</drawSize>
+            <drawSize>(5, 6.1)</drawSize>
         </graphicData>
     </ThingDef>
 
@@ -58,17 +58,18 @@
             </shaderParameters>
         </graphicData>
     </ThingDef>
-
+    
     <ThingDef Name="BEWH_PrimarchVatFormingLargeNorth" ParentName="BEWH_PrimarchVatFormingBase">
         <defName>BEWH_PrimarchVatForming_North</defName>
         <graphicData>
+            <!-- Front to player -->
             <texPath>Things/Building/PrimarchGrowthVat/BEWH_PrimarchVatGlassGlow_north</texPath>
             <shaderParameters>
                 <_MistOpacityTex>/Things/Building/PrimarchGrowthVat/BEWH_PrimarchVatGlassGlowSoft_north</_MistOpacityTex>
                 <_ScanOffset>-0.09</_ScanOffset>
-                <_ScanScale>12</_ScanScale>
+                <_ScanScale>50</_ScanScale>
             </shaderParameters>
-            <drawSize>(5.7, 4.275)</drawSize>
+            <drawSize>(5.7, 4.575)</drawSize>
         </graphicData>
     </ThingDef>
 

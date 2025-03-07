@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <EffecterDef>
+    <defName>HolyBlastWarmupEffect</defName>
+        <children>
+        <li>
+            <subEffecterClass>SubEffecter_SoundTriggered</subEffecterClass>
+            <spawnLocType>OnSource</spawnLocType>
+            <soundDef>BEWH_SFX_HolyBlastWarmup</soundDef>
+        </li>
+        <li>
+            <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+            <positionRadius>0</positionRadius>
+            <moteDef>Mote_LongSparkThrown</moteDef>
+            <burstCount>4~5</burstCount>
+            <speed>3.3~5</speed>
+            <scale>0.5~0.6</scale>
+            <spawnLocType>OnSource</spawnLocType>
+        </li>
+        <li>
+            <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+            <fleckDef>Fleck_HeatWaveDistortion</fleckDef>
+            <burstCount>4</burstCount>
+            <speed>0.2</speed>
+            <scale>1.1~1.2</scale>
+            <spawnLocType>OnTarget</spawnLocType>
+        </li>
+        </children>
+  </EffecterDef>
+
+</Defs>

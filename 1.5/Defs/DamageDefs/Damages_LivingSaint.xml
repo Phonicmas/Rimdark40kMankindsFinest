@@ -20,7 +20,7 @@
     <overkillPctToDestroyPart>0.4~1.0</overkillPctToDestroyPart>
     <modExtensions>
       <li Class="Core40k.DefModExtension_HolyDamageExtension">
-        <chanceToIgnite>8</chanceToIgnite>
+        <chanceToIgnite>37</chanceToIgnite>
         <minHitAmount>2</minHitAmount>
         <maxHitAmount>5</maxHitAmount>
         <healPercentOfDamageToAllies>0.5</healPercentOfDamageToAllies>

@@ -16,7 +16,7 @@
 		</mote>
 		<graphicData>
 			<shaderType>MoteGlow</shaderType>
-			<texPath>Things/Mote/BEWH_MoteLink</texPath>
+			<texPath>Effects/Mote/BEWH_MoteLink</texPath>
 		</graphicData>
 	</ThingDef>
 
@@ -31,9 +31,9 @@
 		</mote>
 		<graphicData>
 			<graphicClass>Graphic_Mote</graphicClass>
-			<texPath>Things/Mote/BEWH_MoteCircle</texPath>
+			<texPath>Effects/Mote/BEWH_MoteCircle</texPath>
 			<shaderType>MoteGlow</shaderType>
-			<color>(255, 204, 0)</color>
+			<color>(213, 216, 140)</color>
 			<drawSize>20</drawSize>
 		</graphicData>
 	</ThingDef>
