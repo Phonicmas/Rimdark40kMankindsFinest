@@ -6,7 +6,7 @@
         <defName>BEWH_AstartesRankCategory</defName>
         <label>astartes</label>
         <description>Ranks of the astartes.</description>
-        <unlockedByGene>BEWH_ProgenoidGlands</unlockedByGene>
+        <unlockedByGene>BEWH_SecondaryHeart</unlockedByGene>
     </Core40k.RankCategoryDef>
 
 </Defs>
