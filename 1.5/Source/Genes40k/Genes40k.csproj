@@ -170,7 +170,8 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_PerpetualNoDestroy.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_ReactToMelee.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_RubiconSurgeryChanceIncrease.cs" />
-    <Compile Include="HarmonyPatches\HarmonyPatch_SangprimusNoDuplicateAccepted.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_SangprimusNoDuplicateAccepted1.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_SangprimusNoDuplicateAccepted2.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_SecondProgenoidGlandProgress.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_SerfGainTrait.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_SerfGetTrait1.cs" />

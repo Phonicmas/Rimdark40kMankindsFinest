@@ -86,6 +86,12 @@ namespace Genes40k
         
         public override void Notify_ReceivedThing(Thing newItem)
         {
+            if (SearchableContents.Select(t => t.def).Any(thingDef => thingDef == newItem.def))
+            {
+                newItem.DeSpawn();
+                return;
+            }
+            
             if (newItem.def.HasModExtension<DefModExtension_PrimarchMaterial>())
             {
                 innerContainerPrimarch.Add(newItem);
