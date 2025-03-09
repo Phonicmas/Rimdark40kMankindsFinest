@@ -32,9 +32,12 @@ namespace Genes40k
             {
                 return false;
             }
-            if (building_GrowthVat.NutritionNeeded > NutritionBuffer)
+            if (building_GrowthVat.NutritionNeeded > NutritionBuffer && building_GrowthVat.containedEmbryo != null)
             {
-                if (FindNutrition(pawn, building_GrowthVat).Thing != null) return true;
+                if (FindNutrition(pawn, building_GrowthVat).Thing != null)
+                {
+                    return true;
+                }
                 
                 JobFailReason.Is("BEWH.MankindsFinest.PrimarchGrowthVat.NoSlurry".Translate());
                 return false;
@@ -52,7 +55,7 @@ namespace Genes40k
             {
                 return null;
             }
-            if (building_GrowthVat.NutritionNeeded > 0f)
+            if (building_GrowthVat.NutritionNeeded > NutritionBuffer && building_GrowthVat.containedEmbryo != null)
             {
                 var thingCount = FindNutrition(pawn, building_GrowthVat);
                 if (thingCount.Thing != null)
@@ -65,10 +68,14 @@ namespace Genes40k
 
             if (building_GrowthVat.selectedEmbryo == null ||
                 building_GrowthVat.innerContainer.Contains(building_GrowthVat.selectedEmbryo) ||
-                !CanHaulSelectedThing(pawn, building_GrowthVat.selectedEmbryo)) return null;
+                !CanHaulSelectedThing(pawn, building_GrowthVat.selectedEmbryo))
+            {
+                return null;
+            }
             
-            var job2 = HaulAIUtility.HaulToContainerJob(pawn, building_GrowthVat.selectedEmbryo, t);
+            var job2 = JobMaker.MakeJob(Genes40kDefOf.BEWH_FillPrimarchGrowthVat, t, building_GrowthVat.selectedEmbryo);
             job2.count = 1;
+            job2.haulMode = HaulMode.ToContainer;
             return job2;
         }
 
@@ -83,10 +90,10 @@ namespace Genes40k
 
         private ThingCount FindNutrition(Pawn pawn, Building_PrimarchGrowthVat vat)
         {
-            var thing = GenClosest.ClosestThingReachable(pawn.Position, pawn.Map, ThingRequest.ForGroup(ThingRequestGroup.FoodSourceNotPlantOrTree), PathEndMode.ClosestTouch, TraverseParms.For(pawn), 9999f, Validator);
+            var thing = GenClosest.ClosestThingReachable(pawn.Position, pawn.Map, ThingRequest.ForDef(Genes40kDefOf.BEWH_RawGestationalSlurry), PathEndMode.ClosestTouch, TraverseParms.For(pawn), 9999f, Validator);
             if (thing == null)
             {
-                return default(ThingCount);
+                return default;
             }
             var b = Mathf.CeilToInt(vat.NutritionNeeded / thing.GetStatValue(StatDefOf.Nutrition));
             return new ThingCount(thing, Mathf.Min(thing.stackCount, b));

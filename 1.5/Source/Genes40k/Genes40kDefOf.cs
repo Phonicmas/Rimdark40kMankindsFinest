@@ -151,6 +151,8 @@ namespace Genes40k
         public static ThingDef BEWH_SteelRainDropPodSkyfaller;
         
         public static ThingDef Apparel_PackJump;
+        
+        public static ThingDef BEWH_RawGestationalSlurry;
 
         //JobDefs
         public static JobDef BEWH_FillGeneGestator;

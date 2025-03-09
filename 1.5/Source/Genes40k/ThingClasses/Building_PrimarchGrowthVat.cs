@@ -100,7 +100,7 @@ namespace Genes40k
         {
             get
             {
-                var num = ((selectedEmbryo != null) ? BaseEmbryoConsumedNutritionPerDay : 3f);
+                var num = selectedEmbryo != null ? BaseEmbryoConsumedNutritionPerDay : 3f;
 
                 if (!(BiostarvationSeverityPercent > 0f))
                 {
@@ -257,8 +257,15 @@ namespace Genes40k
         {
             foreach (var thing in innerContainer)
             {
+                if (thing.def != Genes40kDefOf.BEWH_RawGestationalSlurry)
+                {
+                    continue;
+                }
                 var statValue = thing.GetStatValue(StatDefOf.Nutrition);
-                if (!(statValue > 0f)) continue;
+                if (!(statValue > 0f))
+                {
+                    continue;
+                }
                     
                 containedNutrition += statValue;
                 thing.SplitOff(1).DeSpawn();
@@ -288,6 +295,7 @@ namespace Genes40k
         private void OnStop()
         {
             selectedEmbryo = null;
+            containedEmbryo = null;
             startTick = -1;
             embryoStarvation = 0f;
             sustainerWorking = null;
