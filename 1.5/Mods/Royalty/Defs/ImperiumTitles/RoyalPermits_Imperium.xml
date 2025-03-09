@@ -213,7 +213,7 @@
     <!-- Local Exterminatus -->
     <RoyalTitlePermitDef>
         <defName>BEWH_CallLocalExterminatus</defName>
-        <label>call local exterminatus</label>
+        <label>call localized exterminatus</label>
         <description>Call a last resort, devastating bombardment salvo at target location.</description>
         <workerClass>RoyalTitlePermitWorker_OrbitalStrike</workerClass>
         <minTitle>BEWH_Title7</minTitle>
@@ -224,11 +224,11 @@
         <uiPosition>(1,5)</uiPosition>
         <royalAid>
             <favorCost>14</favorCost>
-            <targetingRange>100.9</targetingRange>
-            <radius>20.9</radius>
+            <targetingRange>120.9</targetingRange>
+            <radius>40.9</radius>
             <explosionRadiusRange>9.9</explosionRadiusRange>
-            <explosionCount>30</explosionCount>
-            <intervalTicks>15</intervalTicks>
+            <explosionCount>40</explosionCount>
+            <intervalTicks>10</intervalTicks>
             <warmupTicks>60</warmupTicks>
         </royalAid>
         <modExtensions>

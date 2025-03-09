@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
+    <!-- ===== Thunder Warrior ===== -->
+    <Operation Class="VFECore.PatchOperationToggableSequence">
+        <enabled>False</enabled>
+        <mods>
+            <li>RimDark 40k - Mankinds Finest</li>
+        </mods>
+        <label>Disable thunder warrior forced body type:</label>
+        <operations>
+            <li Class="PatchOperationRemove">
+                <xpath>Defs/GeneDef[defName = "BEWH_ProtoOssmodula"]/bodyType</xpath>
+            </li>
+        </operations>
+    </Operation>
+
     <!-- ===== Space Marine ===== -->
     <Operation Class="VFECore.PatchOperationToggableSequence">
         <enabled>False</enabled>

@@ -10,6 +10,7 @@
         <displayOrderInCategory>-100</displayOrderInCategory>
         <biostatCpx>3</biostatCpx>
         <biostatMet>-1</biostatMet>
+        <bodyType>Hulk</bodyType>
         <statOffsets>
             <ArmorRating_Blunt>0.2</ArmorRating_Blunt>
             <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
@@ -22,6 +23,9 @@
             <Mass>50</Mass>
             <VEF_CosmeticBodySize_Multiplier>0.35</VEF_CosmeticBodySize_Multiplier>
         </statOffsets>
+        <statFactors>
+            <Fertility>0.5</Fertility>
+        </statFactors>
         <suppressedTraits>
             <li>
                 <def>Kind</def>
@@ -189,7 +193,7 @@
             <li>
                 <def>BEWH_Serf</def>
             </li>
-        </suppressedTraits> 
+        </suppressedTraits>
         <statFactors>
             <PsychicSensitivity>0</PsychicSensitivity>
         </statFactors>

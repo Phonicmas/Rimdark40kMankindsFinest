@@ -17,7 +17,10 @@ namespace Genes40k
                 return false;
             }
 
-            if (other.genes == null) return false;
+            if (other.genes == null)
+            {
+                return false;
+            }
             
             foreach (var gene in other.genes.GenesListForReading)
             {
