@@ -180,6 +180,7 @@
         <biostatCpx>3</biostatCpx>
         <biostatMet>7</biostatMet>
         <geneClass>Genes40k.Gene_Furybound</geneClass>
+        <mentalBreakDef>BerserkShort</mentalBreakDef>
         <dontMindRawFood>true</dontMindRawFood>
         <forcedTraits>
             <li>
