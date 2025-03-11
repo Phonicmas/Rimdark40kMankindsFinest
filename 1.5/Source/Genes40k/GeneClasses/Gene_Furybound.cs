@@ -33,7 +33,7 @@ namespace Genes40k
                 return;
             }
             
-            pawn.mindState.mentalStateHandler.TryStartMentalState(Genes40kDefOf.BEWH_ThunderWarriorBerserk);
+            pawn.mindState.mentalStateHandler.TryStartMentalState(Genes40kDefOf.BEWH_ThunderWarriorBerserk, forced: true);
             percentChance = 0;
         }
 

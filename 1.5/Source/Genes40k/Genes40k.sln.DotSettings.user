@@ -28,5 +28,7 @@
   &lt;Assembly Path="C:\Steam\steamapps\common\RimWorld\Mods\Rimdark40kMankindsFinest\1.5\Assemblies\0ColourPicker.dll" /&gt;&#xD;
   &lt;Assembly Path="C:\Steam\steamapps\common\RimWorld\Mods\Rimdark40kFramework\1.5\Assemblies\0ColourPicker.dll" /&gt;&#xD;
 &lt;/AssemblyExplorer&gt;</s:String>
+	<s:String x:Key="/Default/Environment/Hierarchy/Build/BuildTool/CustomBuildToolPath/@EntryValue">C:\Program Files\dotnet\sdk\6.0.402\MSBuild.dll</s:String>
+	<s:Int64 x:Key="/Default/Environment/Hierarchy/Build/BuildTool/MsbuildVersion/@EntryValue">1114112</s:Int64>
 	<s:Boolean x:Key="/Default/UserDictionary/Words/=primaris/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/UserDictionary/Words/=psyker/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>
