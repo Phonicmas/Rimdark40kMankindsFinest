@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- test1 -->
+    <Genes40k.ExtraDecorationDef>
+        <defName>BEWH_TEST1</defName>
+        <label>test1</label>
+        <description>No icon</description>
+        <iconPath>UI/Designators/Cancel</iconPath>
+        <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankNeophyte</drawnTextureIconPath>
+        <sortOrder>0</sortOrder>
+    </Genes40k.ExtraDecorationDef>
+
+    <!-- test2 -->
+    <Genes40k.ExtraDecorationDef>
+        <defName>BEWH_TEST2</defName>
+        <label>test2</label>
+        <description>No icon</description>
+        <iconPath>UI/Designators/Cancel</iconPath>
+        <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_UltramarinesShoulder</drawnTextureIconPath>
+        <sortOrder>1</sortOrder>
+    </Genes40k.ExtraDecorationDef>
+
+</Defs>

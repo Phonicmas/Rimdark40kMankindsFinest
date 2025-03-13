@@ -171,7 +171,6 @@ namespace Genes40k
         
         //MentalStateDefs
         public static MentalStateDef BEWH_InducedFear;
-        public static MentalStateDef BEWH_ThunderWarriorBerserk;
         
         //TraitDefs
         public static TraitDef PsychicSensitivity;

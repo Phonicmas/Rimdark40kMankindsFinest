@@ -1,4 +1,5 @@
-﻿using Core40k;
+﻿using System.Collections.Generic;
+using Core40k;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -110,6 +111,18 @@ namespace Genes40k
         
         
         private BodyTypeDef originalBodyType = null;
+        
+        private List<ExtraDecorationDef> extraDecorations = new List<ExtraDecorationDef>();
+
+        public List<ExtraDecorationDef> ExtraDecorationDefs
+        {
+            get => extraDecorations;
+            set
+            {
+                extraDecorations = value;
+                Notify_ColorChanged();
+            }
+        }
         
         public override void SetUpMisc()
         {

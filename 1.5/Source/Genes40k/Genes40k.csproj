@@ -90,11 +90,14 @@
     <Compile Include="ChapterApparelColourTwo\ChapterApparelColourTwo.cs" />
     <Compile Include="ChapterApparelColourTwo\ChapterColourDef.cs" />
     <Compile Include="ChapterApparelColourTwo\Dialog_ChangeDefaultChapterColour.cs" />
+    <Compile Include="ChapterApparelColourTwo\ExtraDecorationDef.cs" />
+    <Compile Include="ChapterApparelColourTwo\ExtraDecorationTab.cs" />
     <Compile Include="ChapterApparelColourTwo\ExtraIconsChapterApparelColourTwo.cs" />
     <Compile Include="ChapterApparelColourTwo\PawnRenderNodeWorker_AttachmentShoulderChapterIcon.cs" />
     <Compile Include="ChapterApparelColourTwo\PawnRenderNodeWorker_AttachmentShoulderPad.cs" />
     <Compile Include="ChapterApparelColourTwo\PawnRenderNodeWorker_AttachmentShoulderRankIcon.cs" />
     <Compile Include="ChapterApparelColourTwo\PawnRenderNode_AttachmentBackpack.cs" />
+    <Compile Include="ChapterApparelColourTwo\PawnRenderNode_AttachmentExtraDecoration.cs" />
     <Compile Include="ChapterApparelColourTwo\PawnRenderNode_AttachmentShoulderChapterIcon.cs" />
     <Compile Include="ChapterApparelColourTwo\PawnRenderNode_AttachmentChapterApparelColour.cs" />
     <Compile Include="ChapterApparelColourTwo\PawnRenderNode_AttachmentShoulderRankIcon.cs" />
