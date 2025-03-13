@@ -301,17 +301,15 @@
             <li>Will never have mental breaks when drafted.</li>
         </customEffectDescriptions>
 
-        <modExtensions>
-            <li Class="VanillaGenesExpanded.GeneExtension">
-                <hediffsToBodyParts>
-                    <li>
-                        <hediff>BEWH_WarpShield</hediff>
-                        <bodyparts>
-                            <li>Brain</li>
-                        </bodyparts>
-                    </li>
-                </hediffsToBodyParts>
+        <conditionalStatAffecters>
+            <li Class="Genes40k.ConditionalStatAffecter_WarpShield">
+                <statFactors>
+                    <PsychicSensitivity>0</PsychicSensitivity>
+                </statFactors>
             </li>
+        </conditionalStatAffecters>
+
+        <modExtensions>
             <li Class="Core40k.DefModExtension_SlaveabilityRecruitability">
                 <canBeEnslaved>false</canBeEnslaved>
                 <canBeRecruited>false</canBeRecruited>

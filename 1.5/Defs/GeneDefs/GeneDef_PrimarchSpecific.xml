@@ -155,6 +155,7 @@
         <description>The genetic material of Leman Russ.</description>
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_Russ</iconPath>
         <displayOrderInCategory>406</displayOrderInCategory>
+        <geneClass>Genes40k.Gene_WarpShield</geneClass>
         <abilities>
             <li>BEWH_WarpShield</li>
             <li MayRequire="Ludeon.RimWorld.Royalty">BEWH_DenyTheWitch</li>
@@ -167,6 +168,13 @@
         <statOffsets>
             <ComfyTemperatureMin>-25</ComfyTemperatureMin>
         </statOffsets>
+        <conditionalStatAffecters>
+            <li Class="Genes40k.ConditionalStatAffecter_WarpShield">
+                <statFactors>
+                    <PsychicSensitivity>0</PsychicSensitivity>
+                </statFactors>
+            </li>
+        </conditionalStatAffecters>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
             <li Class="VanillaGenesExpanded.GeneExtension">

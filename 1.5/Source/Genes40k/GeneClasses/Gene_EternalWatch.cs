@@ -3,7 +3,7 @@
 
 namespace Genes40k
 {
-    public class Gene_EternalWatch : Gene
+    public class Gene_EternalWatch : Gene_WarpShield
     {
         public MentalBreakDef mentalBreak;
 

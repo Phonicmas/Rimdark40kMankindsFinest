@@ -127,6 +127,10 @@
 
   <BEWH.MankindsFinest.LivingSaint.LowHolyRadiance>Living Saint {0_labelShort} holy radiance supply is dwindling.</BEWH.MankindsFinest.LivingSaint.LowHolyRadiance>
 
+  <!-- Shared Gene -->
+  <BEWH.MankindsFinest.WarpShield.Conditional>Warp Shield</BEWH.MankindsFinest.WarpShield.Conditional>
+  <BEWH.MankindsFinest.WarpShield.Tooltip>Currently turned {0}</BEWH.MankindsFinest.WarpShield.Tooltip>
+
 
   <!--=== Abilities ===-->
   <!-- Lorgar -->

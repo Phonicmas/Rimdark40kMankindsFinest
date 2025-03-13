@@ -1,36 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-	<!-- Warp Shield-->
-	<HediffDef>
-		<defName>BEWH_WarpShield</defName>
-		<label>Warp Influence</label>
-		<description>This pawn can open and close their senses to the warp at will.</description>
-		<initialSeverity>1</initialSeverity>
-		<minSeverity>0</minSeverity>
-		<maxSeverity>2</maxSeverity>
-		<isBad>false</isBad>
-		<scenarioCanAdd>false</scenarioCanAdd>
-		<everCurableByItem>false</everCurableByItem>
-		<stages>
-			<li>
-				<label>Shielded</label>
-				<minSeverity>1</minSeverity>
-				<statFactors>
-					<PsychicSensitivity>0</PsychicSensitivity>
-				</statFactors>
-			</li>
-			<li>
-				<label>Unshielded</label>
-				<minSeverity>2</minSeverity>
-			</li>
-		</stages>
-		<modExtensions>
-			<li Class="Genes40k.DefModExtension_WarpShield"/>
-		</modExtensions>
-	</HediffDef>
-
-
 	<!-- Gene-seed Vial Related -->
 	<!-- Firstborn Phase Base -->
 	<HediffDef Name="BEWH_FirstbornPhaseHediffBase" Abstract="True">

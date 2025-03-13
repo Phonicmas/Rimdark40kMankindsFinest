@@ -121,7 +121,6 @@
     <Compile Include="Comps\Primarch\CompAbilityEffect_DenyTheWitch.cs" />
     <Compile Include="Comps\Primarch\CompAbilityEffect_SharedBurden.cs" />
     <Compile Include="Comps\Primarch\CompAbilityEffect_SummonMechsForCaster.cs" />
-    <Compile Include="Comps\Primarch\CompAbilityEffect_WarpShield.cs" />
     <Compile Include="Comps\Primarch\CompAbilityEffect_WordOfAuthority.cs" />
     <Compile Include="Comps\Primarch\CompAbilityEffect_WordOfDivination.cs" />
     <Compile Include="Comps\Primarch\CompProperties_AbilityDenyTheWitch.cs" />
@@ -129,7 +128,6 @@
     <Compile Include="Comps\Primarch\CompProperties_AbilitySummonMechsForCaster.cs" />
     <Compile Include="Comps\Primarch\CompProperties_AbilityTwinDisable.cs" />
     <Compile Include="Comps\Primarch\CompProperties_AbilityTwinTeleport.cs" />
-    <Compile Include="Comps\Primarch\CompProperties_AbilityWarpShield.cs" />
     <Compile Include="Comps\Primarch\CompProperties_AbilityWordOfAuthority.cs" />
     <Compile Include="Comps\Primarch\CompProperties_AbilityWordOfDivination.cs" />
     <Compile Include="Comps\Primarch\Comp_TwinDisable.cs" />
@@ -144,6 +142,7 @@
     <Compile Include="Comps\SpaceMarine\CompAbilityEffect_StasisConfirmation.cs" />
     <Compile Include="Comps\SpaceMarine\CompProperties_AbilityRemembrance.cs" />
     <Compile Include="Comps\SpaceMarine\CompProperties_AbilityStasisConfirmation.cs" />
+    <Compile Include="ConditionalStatAffecters\ConditionalStatAffecter_WarpShield.cs" />
     <Compile Include="DefModExtensions\DefModExtension_DropPod.cs" />
     <Compile Include="DefModExtensions\DefModExtension_ExclusiveMech.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneInducedFear.cs" />
@@ -155,6 +154,7 @@
     <Compile Include="DefModExtensions\DefModExtension_PerpetualGene.cs" />
     <Compile Include="DefModExtensions\DefModExtension_PrimarchVatExtras.cs" />
     <Compile Include="DefModExtensions\DefModExtension_PrimarchVatTexture.cs" />
+    <Compile Include="GeneClasses\Gene_WarpShield.cs" />
     <Compile Include="GeneClasses\GeneGizmo_ResourceDivineRadiance.cs" />
     <Compile Include="GeneClasses\Gene_DivineRadiance.cs" />
     <Compile Include="GeneClasses\Gene_Furybound.cs" />

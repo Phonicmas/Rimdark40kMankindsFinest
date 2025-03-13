@@ -6,15 +6,12 @@
     <defName>BEWH_WarpShield</defName>
     <label>Toggle warp shield</label>
     <description>Toggle warp shield on and off. This will affect the psychic sensitivity of this pawn.</description>
-    <iconPath>UI/Abilities/BEWH_MindShieldOff</iconPath>
+    <iconPath>UI/Abilities/BEWH_MindShieldOn</iconPath>
     <jobDef Inherit="False" />
     <abilityClass>Genes40k.Ability_UpdateGizmo</abilityClass>
     <cooldownTicksRange>0</cooldownTicksRange>
     <hostile>false</hostile>
     <category>BEWH_SpaceMarineCategory</category>
-    <comps>
-      <li Class="Genes40k.CompProperties_AbilityWarpShield"/>
-    </comps>
   </AbilityDef>
 
   <!-- Angelic Flight -->
