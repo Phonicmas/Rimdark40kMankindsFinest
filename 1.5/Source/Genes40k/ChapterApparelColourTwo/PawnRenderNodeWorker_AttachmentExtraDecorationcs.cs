@@ -1,32 +1,32 @@
-﻿using RimWorld;
+﻿using System.Collections.Generic;
+using System.Linq;
+using RimWorld;
 using Verse;
 
 namespace Genes40k
 {
-    public class PawnRenderNodeWorker_AttachmentShoulderChapterIcon : PawnRenderNodeWorker
+    public class PawnRenderNodeWorker_AttachmentExtraDecoration : PawnRenderNodeWorker
     {
-        private Genes40kModSettings modSettings = null;
-
-        private Genes40kModSettings ModSettings => modSettings ?? (modSettings = LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>());
-        
         public override bool CanDrawNow(PawnRenderNode node, PawnDrawParms parms)
         {
             var pawn = parms.pawn;
             
-            var apparelColourTwo = (ExtraIconsChapterApparelColourTwo)node.apparel;
+            var apparelColourTwo = (ExtraIconsChapterApparelColourTwo)pawn.apparel.WornApparel.FirstOrDefault(wornApparel => wornApparel is ExtraIconsChapterApparelColourTwo);
 
-            if (apparelColourTwo.LeftShoulderIcon == Genes40kDefOf.BEWH_ShoulderNone || apparelColourTwo.LeftShoulderIcon == null)
-            {
-                return false;
-            }
-            if (ModSettings.CurrentlySelectedPreset.relatedChapterIcon == null)
-            {
-                return false;
-            }
+            var decoration = apparelColourTwo.ExtraDecorationDefs.Keys.FirstOrFallback(def => def.drawnTextureIconPath == node.Props.texPath);
             
+            var showWhenFacing = new List<Rot4>();
+            if (node.Props.flipGraphic)
+            {
+                showWhenFacing.AddRange(decoration.defaultShowRotation.Select(rotation => rotation.Opposite));
+            } 
+            else
+            {
+                showWhenFacing = decoration.defaultShowRotation;
+            }
             if (parms.Portrait)
             {
-                if (parms.facing == Rot4.East)
+                if (!showWhenFacing.Contains(parms.facing))
                 {
                     return false;
                 }
@@ -38,7 +38,7 @@ namespace Genes40k
                     return true;
                 }
                 
-                if (pawn.Rotation == Rot4.East)
+                if (!showWhenFacing.Contains(parms.facing))
                 {
                     return false;
                 }
@@ -59,7 +59,7 @@ namespace Genes40k
                 }
             }
             
-            return true;
+            return base.CanDrawNow(node, parms);
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using UnityEngine;
 using Verse;
 
 namespace Genes40k
@@ -10,19 +9,11 @@ namespace Genes40k
         {
         }
 
-        protected override IEnumerable<Graphic> GraphicsFor(Pawn pawn)
+        public override Graphic GraphicFor(Pawn pawn)
         {
-            var apparelColourTwo = (ExtraIconsChapterApparelColourTwo)apparel;
-
-            var drawnTextures = apparelColourTwo.ExtraDecorationDefs.Select(def => def.drawnTextureIconPath);
-
-            //somewhere check apparel for its renders nodes, or check this for its parents to then add more renders nodes or some shit likke that
-            //need to find parent render node, somehow be able to add chldren.
+            Props.color ??= Color.white;
             
-            foreach (var texture in drawnTextures)
-            {
-                yield return GraphicDatabase.Get<Graphic_Multi>(texture, ShaderFor(pawn), Props.drawSize, apparelColourTwo.DrawColor, apparelColourTwo.DrawColorTwo);
-            }
+            return GraphicDatabase.Get<Graphic_Multi>(Props.texPath, ShaderFor(pawn), Props.drawSize, Props.color.Value);
         }
     }
 }

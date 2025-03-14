@@ -56,6 +56,9 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
@@ -90,9 +93,12 @@
     <Compile Include="ChapterApparelColourTwo\ChapterApparelColourTwo.cs" />
     <Compile Include="ChapterApparelColourTwo\ChapterColourDef.cs" />
     <Compile Include="ChapterApparelColourTwo\Dialog_ChangeDefaultChapterColour.cs" />
+    <Compile Include="ChapterApparelColourTwo\ExtraDecorationComp.cs" />
+    <Compile Include="ChapterApparelColourTwo\ExtraDecorationCompProperties.cs" />
     <Compile Include="ChapterApparelColourTwo\ExtraDecorationDef.cs" />
     <Compile Include="ChapterApparelColourTwo\ExtraDecorationTab.cs" />
     <Compile Include="ChapterApparelColourTwo\ExtraIconsChapterApparelColourTwo.cs" />
+    <Compile Include="ChapterApparelColourTwo\PawnRenderNodeWorker_AttachmentExtraDecorationcs.cs" />
     <Compile Include="ChapterApparelColourTwo\PawnRenderNodeWorker_AttachmentShoulderChapterIcon.cs" />
     <Compile Include="ChapterApparelColourTwo\PawnRenderNodeWorker_AttachmentShoulderPad.cs" />
     <Compile Include="ChapterApparelColourTwo\PawnRenderNodeWorker_AttachmentShoulderRankIcon.cs" />

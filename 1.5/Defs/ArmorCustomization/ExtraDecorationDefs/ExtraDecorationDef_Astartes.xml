@@ -9,6 +9,12 @@
         <iconPath>UI/Designators/Cancel</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankNeophyte</drawnTextureIconPath>
         <sortOrder>0</sortOrder>
+        <defaultShowRotation>
+            <li>North</li>
+            <li>South</li>
+            <li>West</li>
+        </defaultShowRotation>
+        <shaderType>Cutout</shaderType>
     </Genes40k.ExtraDecorationDef>
 
     <!-- test2 -->
@@ -19,6 +25,44 @@
         <iconPath>UI/Designators/Cancel</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_UltramarinesShoulder</drawnTextureIconPath>
         <sortOrder>1</sortOrder>
+        <defaultShowRotation>
+            <li>North</li>
+            <li>South</li>
+            <li>East</li>
+        </defaultShowRotation>
+        <shaderType>Cutout</shaderType>
+    </Genes40k.ExtraDecorationDef>
+
+    <!-- test3 -->
+    <Genes40k.ExtraDecorationDef>
+        <defName>BEWH_TEST3</defName>
+        <label>test3</label>
+        <description>No icon</description>
+        <iconPath>UI/Designators/Cancel</iconPath>
+        <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_WorldEatersShoulder</drawnTextureIconPath>
+        <sortOrder>3</sortOrder>
+        <defaultShowRotation>
+            <li>North</li>
+            <li>South</li>
+            <li>East</li>
+        </defaultShowRotation>
+        <shaderType>Cutout</shaderType>
+    </Genes40k.ExtraDecorationDef>
+
+    <!-- test4 -->
+    <Genes40k.ExtraDecorationDef>
+        <defName>BEWH_TEST4</defName>
+        <label>test4</label>
+        <description>No icon</description>
+        <iconPath>UI/Designators/Cancel</iconPath>
+        <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_ThousandSonsShoulder</drawnTextureIconPath>
+        <sortOrder>4</sortOrder>
+        <defaultShowRotation>
+            <li>North</li>
+            <li>South</li>
+            <li>East</li>
+        </defaultShowRotation>
+        <shaderType>Cutout</shaderType>
     </Genes40k.ExtraDecorationDef>
 
 </Defs>

@@ -19,6 +19,7 @@ namespace Genes40k
         private void Setup(Pawn pawn)
         {
             extraDecorationDefs = DefDatabase<ExtraDecorationDef>.AllDefs.ToList();
+            extraDecorationDefs.SortBy(def => def.sortOrder);
         }
         
         public override void DrawTab(Rect rect, Pawn pawn, ref Vector2 apparelColorScrollPosition)
@@ -76,7 +77,7 @@ namespace Genes40k
                 
                 iconRect = iconRect.ContractedBy(5f);
                 
-                if (currentDecorations.Contains(extraDecorationDefs[i]))
+                if (currentDecorations.ContainsKey(extraDecorationDefs[i]))
                 {
                     Widgets.DrawStrongHighlight(iconRect.ExpandedBy(3f));
                 }
@@ -91,18 +92,9 @@ namespace Genes40k
                 
                 if (Widgets.ButtonInvisible(iconRect))
                 {
-                    if (currentDecorations.Contains(extraDecorationDefs[i]))
-                    {
-                        currentDecorations.Remove(extraDecorationDefs[i]);
-                    }
-                    else
-                    {
-                        currentDecorations.Add(extraDecorationDefs[i]);
-                    }
-                    chapterApparel.ExtraDecorationDefs = currentDecorations;
+                    chapterApparel.AddOrRemoveDecoration(extraDecorationDefs[i]);
                 }
             }
-            //When chosen, add it to some list, that list is then converted into the pawnrender nodes as children of the pawnrendernode on the armor.
             
             Widgets.EndScrollView();
             GUI.EndGroup();

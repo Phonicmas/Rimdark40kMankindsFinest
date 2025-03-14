@@ -1,6 +1,4 @@
-﻿using Core40k;
-using RimWorld;
-using UnityEngine;
+﻿using RimWorld;
 using Verse;
 
 namespace Genes40k

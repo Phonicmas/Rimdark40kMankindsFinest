@@ -112,16 +112,26 @@ namespace Genes40k
         
         private BodyTypeDef originalBodyType = null;
         
-        private List<ExtraDecorationDef> extraDecorations = new List<ExtraDecorationDef>();
+        private Dictionary<ExtraDecorationDef, bool> originalExtraDecorations = new Dictionary<ExtraDecorationDef, bool>();
+        private Dictionary<ExtraDecorationDef, bool> extraDecorations = new Dictionary<ExtraDecorationDef, bool>();
 
-        public List<ExtraDecorationDef> ExtraDecorationDefs
+        public Dictionary<ExtraDecorationDef, bool> ExtraDecorationDefs => extraDecorations;
+
+        public void AddOrRemoveDecoration(ExtraDecorationDef decoration)
         {
-            get => extraDecorations;
-            set
+            if (extraDecorations.ContainsKey(decoration) && extraDecorations[decoration])
             {
-                extraDecorations = value;
-                Notify_ColorChanged();
+                extraDecorations.Remove(decoration);
             }
+            else if (extraDecorations.ContainsKey(decoration))
+            {
+                extraDecorations[decoration] = true;
+            }
+            else
+            {
+                extraDecorations.Add(decoration, false);
+            }
+            Notify_ColorChanged();
         }
         
         public override void SetUpMisc()
@@ -147,6 +157,9 @@ namespace Genes40k
             
             originalRightShoulderIcon = rightShoulderIcon;
             originalRightShoulderIconColour = rightShoulderIconColour;
+
+            originalExtraDecorations = extraDecorations;
+            
             base.SetOriginals();
         }
         
@@ -154,8 +167,12 @@ namespace Genes40k
         {
             rightShoulderIcon = originalRightShoulderIcon;
             rightShoulderIconColour = originalRightShoulderIconColour;
+            
             leftShoulderIcon = originalLeftShoulderIcon;
             leftShoulderIconColour = originalLeftShoulderIconColour;
+            
+            extraDecorations = originalExtraDecorations;
+            
             base.Reset();
         }
 
@@ -190,8 +207,19 @@ namespace Genes40k
             Scribe_Values.Look(ref rightShoulderIconColour, "rightShoulderIconColour");
             Scribe_Values.Look(ref originalRightShoulderIconColour, "originalRightShoulderIconColour");
             
+            Scribe_Collections.Look(ref extraDecorations, "extraDecorations");
+            Scribe_Collections.Look(ref originalExtraDecorations, "originalExtraDecorations");
+            
             Scribe_Defs.Look(ref originalBodyType, "originalBodyType");
             base.ExposeData();
+
+            /*if (Scribe.mode == LoadSaveMode.PostLoadInit)
+            {
+                foreach (var decoration in extraDecorations)
+                {
+                    AddOrRemoveDecoration(decoration);
+                }
+            }*/
         }
     }
 }
