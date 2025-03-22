@@ -10,6 +10,10 @@ namespace Genes40k
     {
         public static bool Prefix(Pawn __instance, ref DestroyMode mode)
         {
+            if (__instance == null)
+            {
+                return true;
+            }
             //SmashPhil Vehicle case, hopefully doesnt cause any side effects. Pawns shouldn't be targeted by deconstruct anyway.
             if (mode == DestroyMode.Deconstruct)
             {

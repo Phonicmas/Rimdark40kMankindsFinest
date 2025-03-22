@@ -1,41 +1,49 @@
-﻿using RimWorld;
+﻿using System.Collections.Generic;
+using System.Linq;
+using RimWorld;
 using Verse;
 
 namespace Genes40k
 {
-    public class PawnRenderNodeWorker_AttachmentShoulderRankIcon : PawnRenderNodeWorker
+    public class PawnRenderNodeWorker_AttachmentExtraDecorationBody : PawnRenderNodeWorker
     {
         public override bool CanDrawNow(PawnRenderNode node, PawnDrawParms parms)
         {
             var pawn = parms.pawn;
             
-            var apparelColourTwo = (BodyChapterApparelColourTwo)node.apparel;
+            var apparelColourTwo = (BodyChapterApparelColourTwo)pawn.apparel.WornApparel.FirstOrDefault(wornApparel => wornApparel is BodyChapterApparelColourTwo);
 
-            if (apparelColourTwo.RightShoulderIcon == Genes40kDefOf.BEWH_ShoulderNone)
+            var decoration = apparelColourTwo.ExtraDecorationDefs.Keys.FirstOrFallback(def => def.drawnTextureIconPath == node.Props.texPath);
+            
+            if (decoration == null)
             {
                 return false;
             }
             
+            var showWhenFacing = new List<Rot4>();
+            if (node.Props.flipGraphic)
+            {
+                showWhenFacing.AddRange(decoration.defaultShowRotation.Select(rotation => rotation.Opposite));
+            } 
+            else
+            {
+                showWhenFacing = decoration.defaultShowRotation;
+            }
             if (parms.Portrait)
             {
-                if (parms.facing == Rot4.West)
+                if (!showWhenFacing.Contains(parms.facing))
                 {
                     return false;
                 }
             }
             else
             {
-                if (parms.posture == PawnPosture.LayingOnGroundFaceUp)
+                if (parms.posture == PawnPosture.LayingOnGroundNormal || parms.posture == PawnPosture.LayingOnGroundFaceUp)
                 {
                     return true;
                 }
-
-                if (parms.posture == PawnPosture.LayingOnGroundNormal)
-                {
-                    return false;
-                }
                 
-                if (pawn.Rotation == Rot4.West)
+                if (!showWhenFacing.Contains(parms.facing))
                 {
                     return false;
                 }
@@ -55,8 +63,8 @@ namespace Genes40k
                     return parms.bed.def.building.bed_showSleeperBody;
                 }
             }
-
-            return true;
+            
+            return base.CanDrawNow(node, parms);
         }
     }
 }

@@ -92,13 +92,14 @@
     <Compile Include="Abilities\Ability_UpdateGizmo.cs" />
     <Compile Include="ChapterApparelColourTwo\ChapterApparelColourTwo.cs" />
     <Compile Include="ChapterApparelColourTwo\ChapterColourDef.cs" />
+    <Compile Include="ChapterApparelColourTwo\DecorationDef.cs" />
     <Compile Include="ChapterApparelColourTwo\Dialog_ChangeDefaultChapterColour.cs" />
-    <Compile Include="ChapterApparelColourTwo\ExtraDecorationComp.cs" />
-    <Compile Include="ChapterApparelColourTwo\ExtraDecorationCompProperties.cs" />
     <Compile Include="ChapterApparelColourTwo\ExtraDecorationDef.cs" />
     <Compile Include="ChapterApparelColourTwo\ExtraDecorationTab.cs" />
-    <Compile Include="ChapterApparelColourTwo\ExtraIconsChapterApparelColourTwo.cs" />
-    <Compile Include="ChapterApparelColourTwo\PawnRenderNodeWorker_AttachmentExtraDecorationcs.cs" />
+    <Compile Include="ChapterApparelColourTwo\BodyChapterApparelColourTwo.cs" />
+    <Compile Include="ChapterApparelColourTwo\HelmetChapterApparelColourTwo.cs" />
+    <Compile Include="ChapterApparelColourTwo\PawnRenderNodeWorker_AttachmentExtraDecorationBody.cs" />
+    <Compile Include="ChapterApparelColourTwo\PawnRenderNodeWorker_AttachmentExtraDecorationHelmet.cs" />
     <Compile Include="ChapterApparelColourTwo\PawnRenderNodeWorker_AttachmentShoulderChapterIcon.cs" />
     <Compile Include="ChapterApparelColourTwo\PawnRenderNodeWorker_AttachmentShoulderPad.cs" />
     <Compile Include="ChapterApparelColourTwo\PawnRenderNodeWorker_AttachmentShoulderRankIcon.cs" />
@@ -175,6 +176,8 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_ImplantGeneseedCorrectIngredient.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_LivingSaintKilledPawn.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_MoreArtJoy.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_PowerArmorBodyDecorationPatch.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_PowerArmorHelmetDecorationPatch.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_ProgenoidGlandProgress.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_NaturalBirthPerpetual.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_PerpetualNoDestroy.cs" />

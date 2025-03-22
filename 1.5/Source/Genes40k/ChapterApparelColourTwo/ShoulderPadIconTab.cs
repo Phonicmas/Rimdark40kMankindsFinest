@@ -23,7 +23,7 @@ namespace Genes40k
             var allShoulderIcons = DefDatabase<ShoulderIconDef>.AllDefs.ToList();
             foreach (var shoulderIcon in allShoulderIcons)
             {
-                if (!HasRequirements(shoulderIcon, pawn))
+                if (!shoulderIcon.HasRequirements(pawn))
                 {
                     continue;
                 }
@@ -40,23 +40,6 @@ namespace Genes40k
             rightShoulderIcons.SortBy(def => def.sortOrder);
             leftShoulderIcons.SortBy(def => def.sortOrder);
         }
-
-        private static bool HasRequirements(ShoulderIconDef shoulderIconDef, Pawn pawn)
-        {
-            if (shoulderIconDef.mustHaveRank != null)
-            {
-                if (!pawn.HasComp<CompRankInfo>())
-                {
-                    return false;
-                }
-                var comp = pawn.GetComp<CompRankInfo>();
-                if (!comp.HasRank(shoulderIconDef.mustHaveRank))
-                {
-                    return false;
-                }
-            }
-            return true;
-        }
         
         public override void DrawTab(Rect rect, Pawn pawn, ref Vector2 apparelColorScrollPosition)
         {
@@ -66,7 +49,7 @@ namespace Genes40k
                 Setup(pawn);
             }
             
-            var chapterApparel = (ExtraIconsChapterApparelColourTwo)pawn.apparel.WornApparel.First(a => a is ExtraIconsChapterApparelColourTwo);
+            var chapterApparel = (BodyChapterApparelColourTwo)pawn.apparel.WornApparel.First(a => a is BodyChapterApparelColourTwo);
             
             GUI.BeginGroup(rect);
             var outRect = new Rect(0f, 0f, rect.width, rect.height);

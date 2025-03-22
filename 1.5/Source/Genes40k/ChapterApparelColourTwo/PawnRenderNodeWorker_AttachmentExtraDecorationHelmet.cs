@@ -5,15 +5,20 @@ using Verse;
 
 namespace Genes40k
 {
-    public class PawnRenderNodeWorker_AttachmentExtraDecoration : PawnRenderNodeWorker
+    public class PawnRenderNodeWorker_AttachmentExtraDecorationHelmet : PawnRenderNodeWorker
     {
         public override bool CanDrawNow(PawnRenderNode node, PawnDrawParms parms)
         {
             var pawn = parms.pawn;
             
-            var apparelColourTwo = (ExtraIconsChapterApparelColourTwo)pawn.apparel.WornApparel.FirstOrDefault(wornApparel => wornApparel is ExtraIconsChapterApparelColourTwo);
+            var apparelColourTwo = (HelmetChapterApparelColourTwo)pawn.apparel.WornApparel.FirstOrDefault(wornApparel => wornApparel is HelmetChapterApparelColourTwo);
 
             var decoration = apparelColourTwo.ExtraDecorationDefs.Keys.FirstOrFallback(def => def.drawnTextureIconPath == node.Props.texPath);
+
+            if (decoration == null)
+            {
+                return false;
+            }
             
             var showWhenFacing = new List<Rot4>();
             if (node.Props.flipGraphic)

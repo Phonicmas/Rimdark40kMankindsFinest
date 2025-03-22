@@ -67,6 +67,9 @@
             <li Class="Genes40k.DefModExtension_LivingSaint">
                 <cantHaveGenes>
                     <li>BEWH_LivingSaintBeingOfFaith</li>
+                    <li>BEWH_PerpetualGamma</li>
+                    <li>BEWH_PerpetualBeta</li>
+                    <li>BEWH_PerpetualAlpha</li>
                     <li>BEWH_SigmaPariah</li>
                     <li>BEWH_UpsilonPariah</li>
                     <li>BEWH_OmegaPariah</li>

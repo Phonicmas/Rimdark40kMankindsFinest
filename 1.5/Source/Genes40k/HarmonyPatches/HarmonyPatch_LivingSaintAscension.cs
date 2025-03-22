@@ -11,6 +11,10 @@ namespace Genes40k
     {
         public static void Postfix(Pawn __instance)
         {
+            if (__instance == null)
+            {
+                return;
+            }
             if (__instance.Faction != Faction.OfPlayer || __instance.genes == null)
             {
                 return;

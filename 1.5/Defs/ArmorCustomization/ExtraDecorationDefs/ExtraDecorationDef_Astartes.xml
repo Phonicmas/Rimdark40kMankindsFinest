@@ -65,4 +65,21 @@
         <shaderType>Cutout</shaderType>
     </Genes40k.ExtraDecorationDef>
 
+    <!-- test5 -->
+    <Genes40k.ExtraDecorationDef>
+        <defName>BEWH_TEST5</defName>
+        <label>test5</label>
+        <description>No icon</description>
+        <iconPath>UI/Designators/Cancel</iconPath>
+        <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_ThousandSonsShoulder</drawnTextureIconPath>
+        <sortOrder>4</sortOrder>
+        <isHelmetDecoration>true</isHelmetDecoration>
+        <defaultShowRotation>
+            <li>West</li>
+            <li>South</li>
+            <li>East</li>
+        </defaultShowRotation>
+        <shaderType>Cutout</shaderType>
+    </Genes40k.ExtraDecorationDef>
+
 </Defs>

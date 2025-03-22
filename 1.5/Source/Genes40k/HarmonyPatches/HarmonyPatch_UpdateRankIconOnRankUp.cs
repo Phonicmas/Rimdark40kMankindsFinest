@@ -25,7 +25,7 @@ namespace Genes40k
                 return;
             }
 
-            var apparel = pawn.apparel.WornApparel.FirstOrFallback(a => a is ExtraIconsChapterApparelColourTwo, null);
+            var apparel = pawn.apparel.WornApparel.FirstOrFallback(a => a is BodyChapterApparelColourTwo, null);
 
             apparel?.Notify_ColorChanged();
         }

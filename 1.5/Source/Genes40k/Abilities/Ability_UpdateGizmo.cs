@@ -4,6 +4,7 @@ using Verse;
 
 namespace Genes40k
 {
+    //[StaticConstructorOnStartup]
     public class Ability_UpdateGizmo : Ability
     {
         private static readonly Texture2D MindShieldOffIcon = ContentFinder<Texture2D>.Get("UI/Abilities/BEWH_MindShieldOff");
