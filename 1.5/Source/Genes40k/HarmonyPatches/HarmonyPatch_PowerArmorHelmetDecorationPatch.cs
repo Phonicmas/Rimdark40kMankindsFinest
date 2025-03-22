@@ -16,7 +16,7 @@ namespace Genes40k
                 return;
             }
 
-            var defaultLayerValue = 100f;
+            var defaultLayerValue = 75f;
             
             foreach (var decoration in chapterApparel.ExtraDecorationDefs)
             {

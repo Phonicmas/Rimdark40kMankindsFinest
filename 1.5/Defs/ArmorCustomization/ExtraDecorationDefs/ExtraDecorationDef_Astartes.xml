@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
+    <!-- BODY STUFF -->
     <!-- test1 -->
     <Genes40k.ExtraDecorationDef>
         <defName>BEWH_TEST1</defName>
@@ -33,38 +34,8 @@
         <shaderType>Cutout</shaderType>
     </Genes40k.ExtraDecorationDef>
 
-    <!-- test3 -->
-    <Genes40k.ExtraDecorationDef>
-        <defName>BEWH_TEST3</defName>
-        <label>test3</label>
-        <description>No icon</description>
-        <iconPath>UI/Designators/Cancel</iconPath>
-        <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_WorldEatersShoulder</drawnTextureIconPath>
-        <sortOrder>3</sortOrder>
-        <defaultShowRotation>
-            <li>North</li>
-            <li>South</li>
-            <li>East</li>
-        </defaultShowRotation>
-        <shaderType>Cutout</shaderType>
-    </Genes40k.ExtraDecorationDef>
 
-    <!-- test4 -->
-    <Genes40k.ExtraDecorationDef>
-        <defName>BEWH_TEST4</defName>
-        <label>test4</label>
-        <description>No icon</description>
-        <iconPath>UI/Designators/Cancel</iconPath>
-        <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_ThousandSonsShoulder</drawnTextureIconPath>
-        <sortOrder>4</sortOrder>
-        <defaultShowRotation>
-            <li>North</li>
-            <li>South</li>
-            <li>East</li>
-        </defaultShowRotation>
-        <shaderType>Cutout</shaderType>
-    </Genes40k.ExtraDecorationDef>
-
+    <!-- HEAD STUFF-->
     <!-- test5 -->
     <Genes40k.ExtraDecorationDef>
         <defName>BEWH_TEST5</defName>
