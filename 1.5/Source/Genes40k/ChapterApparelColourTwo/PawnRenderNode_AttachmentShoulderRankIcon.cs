@@ -12,7 +12,7 @@ namespace Genes40k
         {
             var rightShoulderPath = Props.texPath;
             
-            var apparelColourTwo = (BodyChapterApparelColourTwo)apparel;
+            var apparelColourTwo = (ChapterBodyDecorativeApparelColourTwo)apparel;
             var drawColour = apparelColourTwo.RightShoulderIconColour;
             
             if (apparelColourTwo.RightShoulderIcon != null)

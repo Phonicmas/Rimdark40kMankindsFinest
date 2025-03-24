@@ -5,8 +5,12 @@ using Verse;
 
 namespace Genes40k
 {
-    public class BodyChapterApparelColourTwo : ChapterApparelColourTwo
+    public class ChapterBodyDecorativeApparelColourTwo : BodyDecorativeApparelColourTwo
     {
+        private Genes40kModSettings modSettings = null;
+
+        protected Genes40kModSettings ModSettings => modSettings ??= LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>();
+        
         [Unsaved]
         private CompRankInfo rankInfoComp = null;
 
@@ -110,21 +114,24 @@ namespace Genes40k
         
         
         private BodyTypeDef originalBodyType = null;
+
+        public override void SpawnSetup(Map map, bool respawningAfterLoad)
+        {
+            base.SpawnSetup(map, respawningAfterLoad);
+            if (InitialColourSet)
+            {
+                return;
+            }
+            DrawColor = ModSettings?.chapterColorOne ?? base.DrawColor;
+            SetSecondaryColor(ModSettings?.chapterColorTwo ?? base.DrawColorTwo);
+            SetUpMisc();
+            SetInitialColour();
+        }
         
-        public override void SetUpMisc()
+        private void SetUpMisc()
         {
             leftShoulderIcon = ModSettings?.CurrentlySelectedPreset.relatedChapterIcon;
             rightShoulderIcon = null;
-            base.SetUpMisc();
-        }
-
-        public override void ApplyColourPreset(ChapterColourDef chapterColour)
-        {
-            if (chapterColour.relatedChapterIcon != null)
-            {
-                leftShoulderIcon = chapterColour.relatedChapterIcon;
-            }
-            base.ApplyColourPreset(chapterColour);
         }
         
         public override void SetOriginals()

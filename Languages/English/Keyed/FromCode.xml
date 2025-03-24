@@ -184,9 +184,6 @@
   <BEWH.MankindsFinest.ShoulderIcon.LeftShoulder>Left Shoulder</BEWH.MankindsFinest.ShoulderIcon.LeftShoulder>
   <BEWH.MankindsFinest.ShoulderIcon.RightShoulder>Right Shoulder</BEWH.MankindsFinest.ShoulderIcon.RightShoulder>
 
-  <BEWH.MankindsFinest.ExtraDecoration.BodyDecoration>Body Decorations</BEWH.MankindsFinest.ExtraDecoration.BodyDecoration>
-  <BEWH.MankindsFinest.ExtraDecoration.HelmetDecoration>Helmet Decorations</BEWH.MankindsFinest.ExtraDecoration.HelmetDecoration>
-
   <!--=== Gene-seed vial ===-->
   <!-- Implantation -->
   <BEWH.MankindsFinest.GeneseedVial.ImplantGeneseedDesc>You are about to implant {0}, making them into a {1}</BEWH.MankindsFinest.GeneseedVial.ImplantGeneseedDesc>

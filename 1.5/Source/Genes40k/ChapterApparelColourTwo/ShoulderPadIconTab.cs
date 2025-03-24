@@ -49,7 +49,7 @@ namespace Genes40k
                 Setup(pawn);
             }
             
-            var chapterApparel = (BodyChapterApparelColourTwo)pawn.apparel.WornApparel.First(a => a is BodyChapterApparelColourTwo);
+            var chapterApparel = (ChapterBodyDecorativeApparelColourTwo)pawn.apparel.WornApparel.First(a => a is ChapterBodyDecorativeApparelColourTwo);
             
             GUI.BeginGroup(rect);
             var outRect = new Rect(0f, 0f, rect.width, rect.height);

@@ -15,6 +15,16 @@
             <li>South</li>
             <li>West</li>
         </defaultShowRotation>
+        <layerOffsets>
+            <li>
+                <key>South</key>
+                <value>2.5</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>-10</value>
+            </li>
+        </layerOffsets>
         <shaderType>Cutout</shaderType>
     </Genes40k.ExtraDecorationDef>
 

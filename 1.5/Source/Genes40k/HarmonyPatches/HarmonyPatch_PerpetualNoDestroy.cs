@@ -14,6 +14,7 @@ namespace Genes40k
             {
                 return true;
             }
+            
             //SmashPhil Vehicle case, hopefully doesnt cause any side effects. Pawns shouldn't be targeted by deconstruct anyway.
             if (mode == DestroyMode.Deconstruct)
             {
@@ -21,6 +22,7 @@ namespace Genes40k
                 GenLeaving.DoLeavingsFor(__instance, __instance.Map, DestroyMode.Deconstruct);
                 return true;
             }
+            
             if (__instance.genes == null || !__instance.genes.GenesListForReading.Any(gene => gene.def.HasModExtension<DefModExtension_PerpetualGene>()))
             {
                 return true;

@@ -234,11 +234,11 @@ namespace Genes40k
             {
                 switch (apparel)
                 {
-                    case BodyChapterApparelColourTwo extraIconsChapterApparelColourTwo:
+                    case ChapterBodyDecorativeApparelColourTwo extraIconsChapterApparelColourTwo:
                         extraIconsChapterApparelColourTwo.ApplyColourPreset(chapterColourPrimary, chapterColourSecondary);
                         extraIconsChapterApparelColourTwo.LeftShoulderIcon = shoulderIconDef;
                         break;
-                    case ChapterApparelColourTwo chapterApparelColourTwo:
+                    case ChapterHeadDecorativeApparelColourTwo chapterApparelColourTwo:
                         chapterApparelColourTwo.ApplyColourPreset(chapterColourPrimary, chapterColourSecondary);
                         break;
                 }

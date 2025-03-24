@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <ThingDef Name="BEWH_PowerArmorBase_ChapterColour" ParentName="BEWH_PowerArmorBase" Abstract="True">
+        <thingClass>Genes40k.ChapterBodyDecorativeApparelColourTwo</thingClass>
+        <apparel>
+            <renderNodeProperties>
+                <!-- Armor itself -->
+                <li>
+                    <workerClass>PawnRenderNodeWorker_Apparel_Body</workerClass>
+                    <nodeClass>PawnRenderNode_Apparel</nodeClass>
+                    <texPath>Things/Armor/Imperium/PowerArmor/MkVIIPowerArmor/BEWH_MkVIIPowerArmor</texPath>
+                    <parentTagDef>Body</parentTagDef>
+                    <drawData>
+                        <defaultData>
+                            <layer>40</layer>
+                        </defaultData>
+                        <dataNorth>
+                            <layer>70</layer>
+                        </dataNorth>
+                    </drawData>
+                </li>
+                <!-- Backpacks -->
+                <li>
+                    <nodeClass>Genes40k.PawnRenderNode_AttachmentBackpack</nodeClass>
+                    <texPath>Things/Armor/Imperium/PowerArmor/MkVIIPowerArmor/Backpacks/BEWH_MkVIIPowerArmor_Backpack</texPath>
+                    <shaderTypeDef>CutoutComplex</shaderTypeDef>
+                    <parentTagDef>Body</parentTagDef>
+                    <drawData>
+                        <dataEast>
+                            <layer>71</layer>
+                        </dataEast>
+                        <dataWest>
+                            <layer>71</layer>
+                        </dataWest>
+                        <dataNorth>
+                            <layer>77</layer>
+                        </dataNorth>
+                        <dataSouth>
+                            <layer>39</layer>
+                        </dataSouth>
+                    </drawData>
+                </li>
+                <!-- Shoulder pad -->
+                <li>
+                    <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentShoulderPad</workerClass>
+                    <nodeClass>Genes40k.PawnRenderNode_AttachmentChapterApparelColour</nodeClass>
+                    <texPath>Things/Armor/Imperium/PowerArmor/MkVIIPowerArmor/Shoulder/BEWH_MkVIIPowerArmor_Shoulder</texPath>
+                    <shaderTypeDef>CutoutComplex</shaderTypeDef>
+                    <parentTagDef>Body</parentTagDef>
+                    <drawData>
+                        <dataEast>
+                            <layer>73</layer>
+                        </dataEast>
+                        <dataWest>
+                            <layer>73</layer>
+                        </dataWest>
+                    </drawData>
+                </li>
+                <!-- Left shoulder pad/chapter icon -->
+                <li>
+                    <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentShoulderChapterIcon</workerClass>
+                    <nodeClass>Genes40k.PawnRenderNode_AttachmentShoulderChapterIcon</nodeClass>
+                    <texPath>Things/Armor/Imperium/PowerArmor/CommonIcons/BEWH_None</texPath>
+                    <shaderTypeDef>Cutout</shaderTypeDef>
+                    <parentTagDef>Body</parentTagDef>
+                    <drawData>
+                        <defaultData>
+                            <layer>75</layer>
+                        </defaultData>
+                    </drawData>
+                </li>
+                <!-- Right shoulder pad/rank icon -->
+                <li>
+                    <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentShoulderRankIcon</workerClass>
+                    <nodeClass>Genes40k.PawnRenderNode_AttachmentShoulderRankIcon</nodeClass>
+                    <texPath>Things/Armor/Imperium/PowerArmor/CommonIcons/BEWH_None</texPath>
+                    <shaderTypeDef>Cutout</shaderTypeDef>
+                    <parentTagDef>Body</parentTagDef>
+                    <drawData>
+                        <defaultData>
+                            <layer>75</layer>
+                        </defaultData>
+                    </drawData>
+                </li>
+            </renderNodeProperties>
+        </apparel>
+    </ThingDef>
+
+    <!-- ===== IMPERIUM ===== -->
+    <!-- MK 7 -->
+    <!-- Power Armor MK 7 -->
+    <ThingDef ParentName="BEWH_PowerArmorBase_ChapterColour">
+        <defName>BEWH_MkVIIPowerArmor</defName>
+        <label>Mk VII Power Armor</label>
+        <description>Mk VII power armor of Firstborn Space Marines.</description>
+        <recipeMaker>
+            <researchPrerequisite>BEWH_AstartesPowerArmor</researchPrerequisite>
+        </recipeMaker>
+        <graphicData>
+            <texPath>Things/Armor/Imperium/PowerArmor/MkVIIPowerArmor/BEWH_MkVIIPowerArmor</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+        </graphicData>
+        <statBases Inherit="false">
+            <WorkToMake>75000</WorkToMake>
+            <MaxHitPoints>500</MaxHitPoints>
+            <Mass>15</Mass>
+            <Flammability>0</Flammability>
+            <ArmorRating_Sharp>1.1</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+            <ArmorRating_Heat>1</ArmorRating_Heat>
+            <Insulation_Cold>36</Insulation_Cold>
+            <Insulation_Heat>20</Insulation_Heat>
+            <EquipDelay>18</EquipDelay>
+        </statBases>
+        <costList Inherit="false">
+            <ComponentSpacer>6</ComponentSpacer>
+            <Plasteel>150</Plasteel>
+            <Steel>100</Steel>
+            <Uranium>50</Uranium>
+        </costList>
+        <equippedStatOffsets>
+            <MoveSpeed>-1</MoveSpeed>
+        </equippedStatOffsets>
+        <apparel>
+            <wornGraphicPath>Things/Armor/Imperium/PowerArmor/MkVIIPowerArmor/BEWH_MkVIIPowerArmor</wornGraphicPath>
+            <tags>
+                <li>BEWH_PowerArmorMkVII</li>
+            </tags>
+        </apparel>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_EnableTabDef">
+                <tabDefs>
+                    <li>BEWH_AstartesShoulderIcon</li>
+                    <li>BEWH_AstartesExtraDecoration</li>
+                </tabDefs>
+            </li>
+            <li Class="Genes40k.DefModExtension_HideJumpPack" />
+        </modExtensions>
+    </ThingDef>
+
+    <!-- MK 10-->
+    <!-- Power Armor MK 10 -->
+    <ThingDef ParentName="BEWH_PowerArmorBase_ChapterColour">
+        <defName>BEWH_MkXPowerArmor</defName>
+        <label>Mk X Power Armor</label>
+        <description>Mk X power armor of Primaris Space Marines.</description>
+        <recipeMaker>
+            <researchPrerequisite>BEWH_AstartesPowerArmor</researchPrerequisite>
+        </recipeMaker>
+        <graphicData>
+            <texPath>Things/Armor/Imperium/PowerArmor/MkXPowerArmor/BEWH_MkXPowerArmor</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+        </graphicData>
+        <statBases Inherit="false">
+            <WorkToMake>90000</WorkToMake>
+            <MaxHitPoints>500</MaxHitPoints>
+            <Mass>15</Mass>
+            <Flammability>0</Flammability>
+            <ArmorRating_Sharp>1.3</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.8</ArmorRating_Blunt>
+            <ArmorRating_Heat>1.2</ArmorRating_Heat>
+            <Insulation_Cold>40</Insulation_Cold>
+            <Insulation_Heat>30</Insulation_Heat>
+            <EquipDelay>18</EquipDelay>
+        </statBases>
+        <costList Inherit="false">
+            <ComponentSpacer>8</ComponentSpacer>
+            <Plasteel>175</Plasteel>
+            <Steel>120</Steel>
+            <Uranium>60</Uranium>
+        </costList>
+        <equippedStatOffsets>
+            <MoveSpeed>-1</MoveSpeed>
+        </equippedStatOffsets>
+        <apparel>
+            <wornGraphicPath>Things/Armor/Imperium/PowerArmor/MkXPowerArmor/BEWH_MkXPowerArmor</wornGraphicPath>
+            <tags>
+                <li>BEWH_PowerArmorMkX</li>
+            </tags>
+        </apparel>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_EnableTabDef">
+                <tabDefs>
+                    <li>BEWH_AstartesShoulderIcon</li>
+                    <li>BEWH_AstartesExtraDecoration</li>
+                </tabDefs>
+            </li>
+            <li Class="Genes40k.DefModExtension_HideJumpPack" />
+        </modExtensions>
+    </ThingDef>
+
+</Defs>

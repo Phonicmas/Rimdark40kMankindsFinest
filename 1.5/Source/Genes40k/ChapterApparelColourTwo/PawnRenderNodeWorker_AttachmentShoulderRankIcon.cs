@@ -9,7 +9,7 @@ namespace Genes40k
         {
             var pawn = parms.pawn;
             
-            var apparelColourTwo = (BodyChapterApparelColourTwo)node.apparel;
+            var apparelColourTwo = (ChapterBodyDecorativeApparelColourTwo)node.apparel;
 
             if (apparelColourTwo.RightShoulderIcon == Genes40kDefOf.BEWH_ShoulderNone)
             {

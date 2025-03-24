@@ -10,7 +10,7 @@ namespace Genes40k
 
         public override Graphic GraphicFor(Pawn pawn)
         {
-            var apparelColourTwo = (ChapterApparelColourTwo)apparel;
+            var apparelColourTwo = (ChapterBodyDecorativeApparelColourTwo)apparel;
 
             return GraphicDatabase.Get<Graphic_Multi>(Props.texPath, ShaderFor(pawn), Props.drawSize, apparelColourTwo.DrawColor, apparelColourTwo.DrawColorTwo);
         }

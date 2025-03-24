@@ -12,7 +12,7 @@ namespace Genes40k
         {
             var backpackPath = Props.texPath;
             
-            var apparelColourTwo = (ChapterApparelColourTwo)apparel;
+            var apparelColourTwo = (ChapterBodyDecorativeApparelColourTwo)apparel;
             
             if (pawn.apparel.WornApparel.Any(wornApparel => wornApparel.def == Genes40kDefOf.Apparel_PackJump))
             {
