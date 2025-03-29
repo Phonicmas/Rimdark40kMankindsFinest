@@ -1,10 +1,12 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 using Verse;
 
 namespace Genes40k
 {
+    [StaticConstructorOnStartup]
     public static class Genes40kUtils
     {
         private static Genes40kModSettings modSettings = null;
@@ -19,6 +21,8 @@ namespace Genes40k
         
         public static List<ShoulderIconDef> LeftShoulderIconDef => leftShoulderIconDef ?? (leftShoulderIconDef = DefDatabase<ShoulderIconDef>.AllDefsListForReading.Where(leftShoulderDef => leftShoulderDef.leftShoulder).ToList());
 
+        public static readonly Texture2D MindShieldOffIcon = ContentFinder<Texture2D>.Get("UI/Abilities/BEWH_MindShieldOff");
+        public static readonly Texture2D MindShieldOnIcon = ContentFinder<Texture2D>.Get("UI/Abilities/BEWH_MindShieldOn");
         
         public static List<GeneDef> ThunderWarriorGenes => new List<GeneDef>
             {

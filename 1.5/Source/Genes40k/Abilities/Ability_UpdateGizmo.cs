@@ -4,11 +4,9 @@ using Verse;
 
 namespace Genes40k
 {
-    //[StaticConstructorOnStartup]
     public class Ability_UpdateGizmo : Ability
     {
-        private static readonly Texture2D MindShieldOffIcon = ContentFinder<Texture2D>.Get("UI/Abilities/BEWH_MindShieldOff");
-        private static readonly Texture2D MindShieldOnIcon = ContentFinder<Texture2D>.Get("UI/Abilities/BEWH_MindShieldOn");
+        
         
         private void SetIcon(Texture2D texture)
         {
@@ -80,7 +78,7 @@ namespace Genes40k
             
             warpShield.SwitchShieldState();
 
-            SetIcon(warpShield.IsShielded ? MindShieldOffIcon : MindShieldOnIcon);
+            SetIcon(warpShield.IsShielded ? Genes40kUtils.MindShieldOffIcon : Genes40kUtils.MindShieldOnIcon);
 
             return true;
         }
