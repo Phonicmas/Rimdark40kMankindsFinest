@@ -30,6 +30,7 @@
         </layerOffsets>
         <shaderType>Cutout</shaderType>
         <colourable>true</colourable>
+        <flipable>true</flipable>
     </Genes40k.ExtraDecorationDef>
 
     <Genes40k.ExtraDecorationDef ParentName="BEWH_TESTSTUFF">
@@ -53,7 +54,7 @@
         <description>...</description>
     </Genes40k.ExtraDecorationDef>
     <Genes40k.ExtraDecorationDef ParentName="BEWH_TESTSTUFF">
-        <defName>BEWH_4DecoDWatchPauldron</defName>
+        <defName>BEWH_4DecoDWatchPauldron</defName> 
         <label>Deathwatch pauldron</label>
         <description>...</description>
     </Genes40k.ExtraDecorationDef>
@@ -204,6 +205,7 @@
             <li>BEWH_MkVIIPowerArmorHelmet</li>
         </appliesTo>
         <colourable>true</colourable>
+        <useArmorColourAsDefault>true</useArmorColourAsDefault>
         <layerOffsets>
             <li>
                 <key>East</key>
