@@ -127,6 +127,11 @@
 
   <BEWH.MankindsFinest.LivingSaint.LowHolyRadiance>Living Saint {0_labelShort} holy radiance supply is dwindling.</BEWH.MankindsFinest.LivingSaint.LowHolyRadiance>
 
+  <!-- Perpetual -->
+  <BEWH.MankindsFinest.Perpetual.PerpetualReturn>Perpetual Resurrects</BEWH.MankindsFinest.Perpetual.PerpetualReturn>
+  <BEWH.MankindsFinest.Perpetual.PerpetualReturnMessage>Though thought dead, it seem that {0} has regenerated even their most dire wounds</BEWH.MankindsFinest.Perpetual.PerpetualReturnMessage>
+
+
   <!-- Shared Gene -->
   <BEWH.MankindsFinest.WarpShield.Conditional>Warp Shield</BEWH.MankindsFinest.WarpShield.Conditional>
   <BEWH.MankindsFinest.WarpShield.Tooltip>Currently turned {0}</BEWH.MankindsFinest.WarpShield.Tooltip>

@@ -1,7 +1,6 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
 using Verse;
 
 namespace Genes40k
@@ -26,7 +25,7 @@ namespace Genes40k
             }
 
             currentTick = 0;
-
+            
             var removeAfterResurrection = new List<Pawn>();
             
             foreach (var perpetual in perpetuals.Where(perpetual => Find.TickManager.TicksGame >= perpetual.Value))
@@ -36,19 +35,20 @@ namespace Genes40k
                     removeAfterResurrection.Add(perpetual.Key);
                     continue;
                 }
-                
                 if (perpetual.Key.Dead)
                 {
                     ResurrectionUtility.TryResurrect(perpetual.Key);
                 }
                 
-                if (!perpetual.Key.Spawned && perpetual.Key.Corpse != null && !perpetual.Key.Corpse.Spawned)
+                if (!perpetual.Key.Spawned && perpetual.Key.Corpse is { Spawned: false } or null)
                 {
                     var map = GetMapToSpawnIn(perpetual.Key);
                     CellFinder.TryFindRandomCell(map, cell => cell.Walkable(map), out var cell2);
-                    GenSpawn.Spawn(perpetual.Key, cell2, map);
+                    var pawn = GenSpawn.Spawn(perpetual.Key, cell2, map);
+                    
+                    var letter = LetterMaker.MakeLetter("BEWH.MankindsFinest.Perpetual.PerpetualReturn".Translate(), "BEWH.MankindsFinest.Perpetual.PerpetualReturnMessage".Translate(pawn), Genes40kDefOf.BEWH_GoldenPositive, pawn);
+                    Find.LetterStack.ReceiveLetter(letter);
                 }
-                
                 removeAfterResurrection.Add(perpetual.Key);
             }
 

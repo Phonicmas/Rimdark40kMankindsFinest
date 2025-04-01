@@ -4,13 +4,13 @@ using Verse;
 
 namespace Genes40k
 {
-    [HarmonyPatch(typeof(Pawn), "Destroy")]
+    [HarmonyPatch(typeof(Corpse), "Destroy")]
     [HarmonyPriority(Priority.Low)]
-    public class PerpetualNoDestroy
+    public class PerpetualCorpseNoDestroy
     {
-        public static bool Prefix(Pawn __instance, ref DestroyMode mode)
+        public static bool Prefix(Corpse __instance, ref DestroyMode mode)
         {
-            if (__instance == null)
+            if (__instance?.InnerPawn == null)
             {
                 return true;
             }
@@ -23,26 +23,14 @@ namespace Genes40k
                 return true;
             }
 
-            if (__instance.genes == null || !__instance.genes.GenesListForReading.Any(gene => gene.def.HasModExtension<DefModExtension_PerpetualGene>()))
+            if (__instance.InnerPawn.genes == null || !__instance.InnerPawn.genes.GenesListForReading.Any(gene => gene.def.HasModExtension<DefModExtension_PerpetualGene>()))
             {
                 return true;
-            }
-
-            if (!__instance.Dead)
-            {
-                __instance.Kill(null);
-                return false;
             }
 
             if (__instance.Spawned)
             {
                 __instance.DeSpawn(); 
-                return false;
-            }
-
-            if (__instance.Corpse != null && mode == DestroyMode.Vanish)
-            {
-                __instance.Corpse.DeSpawn();
                 return false;
             }
             
