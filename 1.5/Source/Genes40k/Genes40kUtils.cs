@@ -254,7 +254,7 @@ namespace Genes40k
         public static void MakeGeneseedVial(Pawn pawn, bool isPrimaris)
         {
             GeneseedVial geneseedVial;
-
+            
             if (isPrimaris)
             {
                 geneseedVial = (GeneseedVial)ThingMaker.MakeThing(Genes40kDefOf.BEWH_GeneseedVialPrimaris);
@@ -264,16 +264,13 @@ namespace Genes40k
                 geneseedVial = (GeneseedVial)ThingMaker.MakeThing(Genes40kDefOf.BEWH_GeneseedVialFirstborn);
             }
 
-            GeneDef extraGeneFromMaterial = null;
-
-            if (pawn.genes != null)
+            if (pawn.genes?.GenesListForReading != null)
             {
-                extraGeneFromMaterial = pawn.genes.GenesListForReading.First(gene => gene.Active && gene.def.HasModExtension<DefModExtension_ChapterGene>()).def;
-            }
-
-            if (extraGeneFromMaterial != null)
-            {
-                geneseedVial.extraGeneFromMaterial = extraGeneFromMaterial;
+                var gene = pawn.genes.GenesListForReading.FirstOrFallback(gene => gene.Active && gene.def.HasModExtension<DefModExtension_ChapterGene>(), null);
+                if (gene != null)
+                {
+                    geneseedVial.extraGeneFromMaterial = gene.def;
+                }
             }
 
             if (GenPlace.TryPlaceThing(geneseedVial, pawn.PositionHeld, pawn.MapHeld, ThingPlaceMode.Near))
