@@ -3,6 +3,11 @@
 
     <ThingDef Name="BEWH_PowerArmorBase_ChapterColour" ParentName="BEWH_PowerArmorBase" Abstract="True">
         <thingClass>Genes40k.ChapterBodyDecorativeApparelColourTwo</thingClass>
+        <equippedStatOffsets>
+            <MoveSpeed>-1.0</MoveSpeed>
+            <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.4</SlaveSuppressionOffset>
+        </equippedStatOffsets>
+        <tradeability>Sellable</tradeability>
         <apparel>
             <renderNodeProperties>
                 <!-- Armor itself -->
@@ -113,6 +118,7 @@
             <Insulation_Cold>36</Insulation_Cold>
             <Insulation_Heat>20</Insulation_Heat>
             <EquipDelay>18</EquipDelay>
+            <MarketValue>8000</MarketValue>
         </statBases>
         <costList Inherit="false">
             <ComponentSpacer>6</ComponentSpacer>
@@ -120,9 +126,6 @@
             <Steel>100</Steel>
             <Uranium>50</Uranium>
         </costList>
-        <equippedStatOffsets>
-            <MoveSpeed>-1</MoveSpeed>
-        </equippedStatOffsets>
         <apparel>
             <wornGraphicPath>Things/Armor/Imperium/PowerArmor/MkVIIPowerArmor/BEWH_MkVIIPowerArmor</wornGraphicPath>
             <tags>
@@ -165,6 +168,7 @@
             <Insulation_Cold>40</Insulation_Cold>
             <Insulation_Heat>30</Insulation_Heat>
             <EquipDelay>18</EquipDelay>
+            <MarketValue>10000</MarketValue>
         </statBases>
         <costList Inherit="false">
             <ComponentSpacer>8</ComponentSpacer>
@@ -172,9 +176,6 @@
             <Steel>120</Steel>
             <Uranium>60</Uranium>
         </costList>
-        <equippedStatOffsets>
-            <MoveSpeed>-1</MoveSpeed>
-        </equippedStatOffsets>
         <apparel>
             <wornGraphicPath>Things/Armor/Imperium/PowerArmor/MkXPowerArmor/BEWH_MkXPowerArmor</wornGraphicPath>
             <tags>

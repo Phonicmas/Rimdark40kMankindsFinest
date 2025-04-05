@@ -27,6 +27,7 @@
             <Insulation_Cold>4</Insulation_Cold>
             <Insulation_Heat>2</Insulation_Heat>
             <EquipDelay>6</EquipDelay>
+            <MarketValue>2500</MarketValue>
         </statBases>
         <costList Inherit="false">
             <ComponentSpacer>1</ComponentSpacer>
@@ -39,6 +40,7 @@
                 <li>BEWH_PowerArmorHelmetMkVII</li>
             </tags>
         </apparel>
+        <tradeability>Sellable</tradeability>
         <modExtensions>
             <li Class="Core40k.DefModExtension_EnableTabDef">
                 <tabDefs>
@@ -73,6 +75,7 @@
             <Insulation_Cold>6</Insulation_Cold>
             <Insulation_Heat>4</Insulation_Heat>
             <EquipDelay>6</EquipDelay>
+            <MarketValue>4000</MarketValue>
         </statBases>
         <costList Inherit="false">
             <ComponentSpacer>1</ComponentSpacer>
@@ -85,6 +88,7 @@
                 <li>BEWH_PowerArmorHelmetMkX</li>
             </tags>
         </apparel>
+        <tradeability>Sellable</tradeability>
         <modExtensions>
             <li Class="Core40k.DefModExtension_EnableTabDef">
                 <tabDefs>
