@@ -364,25 +364,24 @@ namespace Genes40k
             }
             else if (pawn.ageTracker.AgeBiologicalYears > defMod.maxAgeImplant)
             {
-                failChanceAgeOffset = pawn.ageTracker.AgeBiologicalYears - defMod.minAgeImplant;
+                failChanceAgeOffset = pawn.ageTracker.AgeBiologicalYears - defMod.maxAgeImplant;
             }
             failChanceAgeOffset *= defMod.failureChancePerAgePast;
-
-            var failChance = defMod.baseFailureChance;
+            
             var failChanceGeneOffset = 0;
-
-            var failCapChance = defMod.failChanceCap;
             var failChanceCapGeneOffset = 0;
 
             if (geneseedVial.extraGeneFromMaterial != null && geneseedVial.extraGeneFromMaterial.HasModExtension<DefModExtension_GeneseedPurity>())
             {
                 var geneDefMod = geneseedVial.extraGeneFromMaterial.GetModExtension<DefModExtension_GeneseedPurity>();
-                failChanceCapGeneOffset += geneDefMod.additionalChanceCapOffset;
                 failChanceGeneOffset += geneDefMod.additionalChanceOffset;
+                failChanceCapGeneOffset += geneDefMod.additionalChanceCapOffset;
             }
             
+            var failChance = defMod.baseFailureChance;
             failChance += failChanceAgeOffset + failChanceGeneOffset;
 
+            var failCapChance = defMod.failChanceCap;
             failCapChance += failChanceCapGeneOffset;
             
             if (failCapChance > 100)
@@ -415,19 +414,19 @@ namespace Genes40k
             if (pawn.ageTracker.AgeBiologicalYears < defMod.minAgeImplant)
             {
                 failChanceAgeOffset = defMod.minAgeImplant - pawn.ageTracker.AgeBiologicalYears;
-                failChanceCausedBy.Add("\t- " + "BEWH.MankindsFinest.GeneseedVial.FailureChanceCause".Translate(failChanceAgeOffset, "BEWH.MankindsFinest.GeneseedVial.OutsideOptimalAgeRange".Translate(pawn, defMod.minAgeImplant, defMod.maxAgeImplant)));
             }
             else if (pawn.ageTracker.AgeBiologicalYears > defMod.maxAgeImplant)
             {
-                failChanceAgeOffset = pawn.ageTracker.AgeBiologicalYears - defMod.minAgeImplant;
+                failChanceAgeOffset = pawn.ageTracker.AgeBiologicalYears - defMod.maxAgeImplant;
+            }
+
+            if (failChanceAgeOffset != 0)
+            {
+                failChanceAgeOffset *= defMod.failureChancePerAgePast;
                 failChanceCausedBy.Add("\t- " + "BEWH.MankindsFinest.GeneseedVial.FailureChanceCause".Translate(failChanceAgeOffset, "BEWH.MankindsFinest.GeneseedVial.OutsideOptimalAgeRange".Translate(pawn, defMod.minAgeImplant, defMod.maxAgeImplant)));
             }
-            failChanceAgeOffset *= defMod.failureChancePerAgePast;
-
-            var failChance = defMod.baseFailureChance;
+            
             var failChanceGeneOffset = 0;
-
-            var failCapChance = defMod.failChanceCap;
             var failChanceCapGeneOffset = 0;
 
             if (geneseedVial.extraGeneFromMaterial != null && geneseedVial.extraGeneFromMaterial.HasModExtension<DefModExtension_GeneseedPurity>())
@@ -438,9 +437,23 @@ namespace Genes40k
                 failChanceCausedBy.Add("\t- " + "BEWH.MankindsFinest.GeneseedVial.FailureChanceCause".Translate(geneDefMod.additionalChanceOffset, geneseedVial.extraGeneFromMaterial.label));
             }
 
-            failCapChance += failChanceCapGeneOffset;
+            var failChance = defMod.baseFailureChance;
             failChance += failChanceGeneOffset + failChanceAgeOffset;
-
+            
+            var failCapChance = defMod.failChanceCap;
+            failCapChance += failChanceCapGeneOffset;
+            
+            if (ModSettings.implantationSuccessOffset != 0)
+            {
+                failChance += ModSettings.implantationSuccessOffset;
+                failChanceCausedBy.Add("\t- " + "BEWH.MankindsFinest.GeneseedVial.FailureChanceCause".Translate(ModSettings.implantationSuccessOffset, "BEWH.Framework.CommonKeywords.ModSettings".Translate()));
+            }
+            
+            if (ModSettings.implantationCapOffset != 0)
+            {
+                failCapChance += ModSettings.implantationCapOffset;
+            }
+            
             if (failCapChance > 100)
             {
                 failCapChance = 100;

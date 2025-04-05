@@ -55,6 +55,14 @@ namespace Genes40k
             }
             
             listingStandard.Gap();
+            listingStandard.Label("BEWH.MankindsFinest.ModSettings.ImplantationSuccessChange".Translate(Settings.implantationSuccessOffset));
+            Settings.implantationSuccessOffset = (int)listingStandard.Slider(Settings.implantationSuccessOffset, -200, 200);
+            
+            listingStandard.Gap();
+            listingStandard.Label("BEWH.MankindsFinest.ModSettings.ImplantationCapOffset".Translate(Settings.implantationCapOffset));
+            Settings.implantationCapOffset = (int)listingStandard.Slider(Settings.implantationCapOffset, -100, 100);
+            
+            listingStandard.Gap();
             listingStandard.Label("BEWH.MankindsFinest.ModSettings.LivingSaintChance".Translate());
             listingStandard.Label("BEWH.MankindsFinest.ModSettings.LivingSaintBigThreat".Translate(Settings.livingSaintBigThreat));
             Settings.livingSaintBigThreat = (int)listingStandard.Slider(Settings.livingSaintBigThreat, 0, 100);

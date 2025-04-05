@@ -21,6 +21,9 @@
   <BEWH.MankindsFinest.ModSettings.LivingSaintBigThreat>Big threat: {0}%</BEWH.MankindsFinest.ModSettings.LivingSaintBigThreat>
   <BEWH.MankindsFinest.ModSettings.LivingSaintSmallThreat>Small threat: {0}%</BEWH.MankindsFinest.ModSettings.LivingSaintSmallThreat>
 
+  <BEWH.MankindsFinest.ModSettings.ImplantationSuccessChange>Implantation success offset: {0}%</BEWH.MankindsFinest.ModSettings.ImplantationSuccessChange>
+  <BEWH.MankindsFinest.ModSettings.ImplantationCapOffset>Implantation cap offset: {0}%</BEWH.MankindsFinest.ModSettings.ImplantationCapOffset>
+
   <!--=== Common keywords ===-->
   <BEWH.MankindsFinest.CommonKeywords.Primarch>primarch</BEWH.MankindsFinest.CommonKeywords.Primarch>
   <BEWH.MankindsFinest.CommonKeywords.Chapter>chapter</BEWH.MankindsFinest.CommonKeywords.Chapter>
@@ -33,7 +36,6 @@
 
   <BEWH.MankindsFinest.CommonKeywords.On>on</BEWH.MankindsFinest.CommonKeywords.On>
   <BEWH.MankindsFinest.CommonKeywords.Off>off</BEWH.MankindsFinest.CommonKeywords.Off>
-
 
   <!--=== Buildings ===-->
   <!-- Gestator -->
