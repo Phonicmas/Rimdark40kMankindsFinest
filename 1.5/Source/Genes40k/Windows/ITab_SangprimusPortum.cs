@@ -126,7 +126,11 @@ namespace Genes40k
 			Widgets.Label(rect3, label.Truncate(rect3.width));
 			Text.WordWrap = true;
 			Text.Anchor = TextAnchor.UpperLeft;
-			TooltipHandler.TipRegion(rect, thingDef.description.Truncate(rect3.width));
+			if (Widgets.ButtonInvisible(rect))
+			{
+				Find.WindowStack.Add(new Dialog_InfoCard(thingDef));
+			}
+			TooltipHandler.TipRegion(rect, thingDef.description + "\n\n" + "BEWH.MankindsFinest.Containers.SangprimusPortumMoreInfo".Translate());
 		}
     }
 }
