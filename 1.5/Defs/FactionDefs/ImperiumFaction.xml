@@ -6,8 +6,8 @@
         <label>Imperium</label>
         <description>A company of the emperors finest warriors, the Adeptus Astartes, charged with purging heresy from this backwater rimworld.</description>
 
-        <pawnSingular>Human</pawnSingular>
-        <pawnsPlural>Humen</pawnsPlural>
+        <pawnSingular>human</pawnSingular>
+        <pawnsPlural>humans</pawnsPlural>
         <fixedLeaderKinds>
             <li>BEWH_LordCommanderPawn</li>
         </fixedLeaderKinds>
