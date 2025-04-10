@@ -25,6 +25,11 @@
                 <count>3</count>
             </li>
         </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>MedicineUltratech</li>
+            </thingDefs>
+        </fixedIngredientFilter>
         <skillRequirements>
             <Medicine>14</Medicine>
         </skillRequirements>
@@ -64,6 +69,12 @@
                 <count>1</count>
             </li>
         </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>MedicineUltratech</li>
+                <li>BEWH_RubiconSurgeryKit</li>
+            </thingDefs>
+        </fixedIngredientFilter>
         <skillRequirements>
             <Medicine>16</Medicine>
         </skillRequirements>

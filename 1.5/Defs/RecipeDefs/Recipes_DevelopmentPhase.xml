@@ -12,9 +12,9 @@
         <targetsBodyPart>false</targetsBodyPart>
         <surgerySuccessChanceFactor>1</surgerySuccessChanceFactor>
         <fixedIngredientFilter>
-            <categories>
-                <li>Medicine</li>
-            </categories>
+            <thingDefs>
+                <li>MedicineUltratech</li>
+            </thingDefs>
         </fixedIngredientFilter>
         <recipeUsers>
             <li>Human</li>

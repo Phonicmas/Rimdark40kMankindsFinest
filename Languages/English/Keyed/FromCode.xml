@@ -37,6 +37,8 @@
   <BEWH.MankindsFinest.CommonKeywords.On>on</BEWH.MankindsFinest.CommonKeywords.On>
   <BEWH.MankindsFinest.CommonKeywords.Off>off</BEWH.MankindsFinest.CommonKeywords.Off>
 
+  <BEWH.MankindsFinest.CommonKeywords.Acquired> (acquired)</BEWH.MankindsFinest.CommonKeywords.Acquired>
+
   <!--=== Buildings ===-->
   <!-- Gestator -->
   <BEWH.MankindsFinest.GeneGestator.GestateFinishLetter>Matrix Gestated</BEWH.MankindsFinest.GeneGestator.GestateFinishLetter>

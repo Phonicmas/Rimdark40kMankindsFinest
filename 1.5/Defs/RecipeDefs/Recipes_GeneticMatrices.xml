@@ -10,6 +10,14 @@
         <recipeUsers>
             <li>BEWH_GeneManipulationTable</li>
         </recipeUsers>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>MedicineUltratech</li>
+                <li>Luciferium</li>
+                <li>Meat_Human</li>
+                <li>Neutroamine</li>
+            </thingDefs>
+        </fixedIngredientFilter>
         <workSkill>Crafting</workSkill>
         <displayPriority>0</displayPriority>
     </RecipeDef>
