@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-    <!-- BODY STUFF -->
-    <!-- Deathwatch Pauldron -->
+<!-- TEST AREA -->
     <Genes40k.ExtraDecorationDef Name="BEWH_TESTSTUFF" Abstract="True">
-        <!--<defName>BEWH_DecoDWatchPauldron</defName>
-        <label>Deathwatch pauldron</label>
-        <description>...</description>-->
         <iconPath>Things/Decorations/Armor/Common/BEWH_Deco_DeathWatch_Shoulder_east</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_DeathWatch_Shoulder</drawnTextureIconPath>
         <sortOrder>0</sortOrder>
@@ -17,6 +13,7 @@
         </defaultShowRotation>
         <appliesTo>
             <li>BEWH_MkVIIPowerArmor</li>
+            <li>BEWH_MkXPowerArmor</li>
         </appliesTo>
         <layerOffsets>
             <li>
@@ -33,8 +30,8 @@
         <flipable>true</flipable>
     </Genes40k.ExtraDecorationDef>
 
-    <Genes40k.ExtraDecorationDef ParentName="BEWH_TESTSTUFF">
-        <defName>BEWH_DecoDWatchPauldron</defName>
+<!--     <Genes40k.ExtraDecorationDef ParentName="BEWH_TESTSTUFF">
+        <defName>BEWH_0DecoDWatchPauldron</defName>
         <label>Deathwatch pauldron</label>
         <description>...</description>
     </Genes40k.ExtraDecorationDef>
@@ -72,22 +69,37 @@
         <defName>BEWH_7DecoDWatchPauldron</defName>
         <label>Deathwatch pauldron</label>
         <description>...</description>
-    </Genes40k.ExtraDecorationDef>
+    </Genes40k.ExtraDecorationDef> -->
 
-    <!-- test2 -->
+    <!-- BODY STUFF -->
+
+    <!-- Common -->
+    
     <Genes40k.ExtraDecorationDef>
-        <defName>BEWH_TEST2</defName>
-        <label>test2</label>
-        <description>No icon</description>
-        <iconPath>UI/Designators/Cancel</iconPath>
-        <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_UltramarinesShoulder</drawnTextureIconPath>
-        <sortOrder>1</sortOrder>
+        <defName>BEWH_DecoDWatchPauldron</defName>
+        <label>Deathwatch pauldron</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Armor/Common/BEWH_Deco_DeathWatch_Shoulder_west</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_DeathWatch_Shoulder</drawnTextureIconPath>
+        <sortOrder>0</sortOrder>
         <defaultShowRotation>
             <li>North</li>
             <li>South</li>
-            <li>East</li>
+            <!-- <li>East</li> -->
+            <li>West</li>
         </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmor</li>
+            <li>BEWH_MkXPowerArmor</li>
+        </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>South</key>
+                <value>-10</value>
+            </li>
+        </layerOffsets>
         <shaderType>Cutout</shaderType>
+        <flipable>true</flipable>
     </Genes40k.ExtraDecorationDef>
 
 
@@ -110,7 +122,9 @@
         </defaultShowRotation>
         <appliesTo>
             <li>BEWH_MkVIIPowerArmorHelmet</li>
+            <li>BEWH_MkXPowerArmorHelmet</li>
         </appliesTo>
+        <colourable>true</colourable>
         <shaderType>Cutout</shaderType>
     </Genes40k.ExtraDecorationDef>
 
@@ -129,7 +143,72 @@
         </defaultShowRotation>
         <appliesTo>
             <li>BEWH_MkVIIPowerArmorHelmet</li>
+            <li>BEWH_MkXPowerArmorHelmet</li>
         </appliesTo>
+        <colourable>true</colourable>
+        <shaderType>Cutout</shaderType>
+    </Genes40k.ExtraDecorationDef>
+
+    <Genes40k.ExtraDecorationDef>
+        <defName>BEWH_DecoLaurels</defName>
+        <label>Laurel wreath</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Headgear/Common/BEWH_Deco_Laurel_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Headgear/Common/BEWH_Deco_Laurel</drawnTextureIconPath>
+        <sortOrder>4</sortOrder>
+        <isHelmetDecoration>true</isHelmetDecoration>
+        <defaultShowRotation>
+            <li>West</li>
+            <li>South</li>
+            <li>East</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmorHelmet</li>
+            <li>BEWH_MkXPowerArmorHelmet</li>
+        </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>East</key>
+                <value>1</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>1</value>
+            </li>
+        </layerOffsets>
+        <colourable>true</colourable>
+        <shaderType>Cutout</shaderType>
+    </Genes40k.ExtraDecorationDef>
+    
+    <Genes40k.ExtraDecorationDef>
+        <defName>BEWH_MkxBladeguardBrim</defName>
+        <label>Bladeguard brim</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_MkxBladeguardShield_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_MkxBladeguardShield</drawnTextureIconPath>
+        <sortOrder>4</sortOrder>
+        <isHelmetDecoration>true</isHelmetDecoration>
+        <defaultShowRotation>
+            <li>West</li>
+            <li>South</li>
+            <li>East</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkXPowerArmorHelmet</li>
+            <li>BEWH_MkVIIPowerArmorHelmet</li>
+        </appliesTo>
+        <colourable>true</colourable>
+        <useArmorColourAsDefault>true</useArmorColourAsDefault>
+        <layerOffsets>
+            <li>
+                <key>East</key>
+                <value>-3</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>-3</value>
+            </li>
+        </layerOffsets>
         <shaderType>Cutout</shaderType>
     </Genes40k.ExtraDecorationDef>
 
@@ -150,8 +229,9 @@
             <li>North</li>
         </defaultShowRotation>
         <appliesTo>
-            <li>BEWH_MkVIIPowerArmorHelmet</li>
+            <li>BEWH_MkXPowerArmorHelmet</li>
         </appliesTo>
+        <colourable>true</colourable>
         <layerOffsets>
             <li>
                 <key>South</key>
@@ -176,9 +256,9 @@
             <li>North</li>
         </defaultShowRotation>
         <appliesTo>
-            <li>BEWH_MkVIIPowerArmorHelmet</li>
+            <li>BEWH_MkXPowerArmorHelmet</li>
         </appliesTo>
-        <colourable>true</colourable>
+        <colourable>false</colourable>
         <layerOffsets>
             <li>
                 <key>South</key>
@@ -188,31 +268,6 @@
         <shaderType>Cutout</shaderType>
     </Genes40k.ExtraDecorationDef>
 
-    <Genes40k.ExtraDecorationDef>
-        <defName>BEWH_MkxBladeguardBrim</defName>
-        <label>Bladeguard brim</label>
-        <description>...</description>
-        <iconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_MkxBladeguardShield_south</iconPath>
-        <drawnTextureIconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_MkxBladeguardShield</drawnTextureIconPath>
-        <sortOrder>4</sortOrder>
-        <isHelmetDecoration>true</isHelmetDecoration>
-        <defaultShowRotation>
-            <li>West</li>
-            <li>South</li>
-            <li>East</li>
-        </defaultShowRotation>
-        <appliesTo>
-            <li>BEWH_MkVIIPowerArmorHelmet</li>
-        </appliesTo>
-        <colourable>true</colourable>
-        <useArmorColourAsDefault>true</useArmorColourAsDefault>
-        <layerOffsets>
-            <li>
-                <key>East</key>
-                <value>-3</value>
-            </li>
-        </layerOffsets>
-        <shaderType>Cutout</shaderType>
-    </Genes40k.ExtraDecorationDef>
+
 
 </Defs>
