@@ -88,7 +88,7 @@ namespace Genes40k
         public static List<GeneDef> PsykerGenes => new List<GeneDef>
             {
                 Genes40kDefOf.BEWH_IotaPsyker,
-                Genes40kDefOf.BEWH_Psyker,
+                Genes40kDefOf.BEWH_EpsilonPsyker,
                 Genes40kDefOf.BEWH_DeltaPsyker,
                 Genes40kDefOf.BEWH_BetaPsyker,
                 Genes40kDefOf.BEWH_AlphaPsyker

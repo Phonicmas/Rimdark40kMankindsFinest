@@ -146,7 +146,7 @@
             </li>
         </suppressedTraits>
         <aggroMentalBreakSelectionChanceFactor>999</aggroMentalBreakSelectionChanceFactor>
-        <geneClass>Core40k.Gene_GiveVFECoreAbility</geneClass>
+        <geneClass>Genes40k.Gene_Psyker</geneClass>
         <customEffectDescriptions>
             <li>Gives the ability to fire psychic bolts.</li>
         </customEffectDescriptions>

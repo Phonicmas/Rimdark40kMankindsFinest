@@ -26,7 +26,7 @@
 
     <!-- Epsilon Psyker -->
     <GeneDef ParentName="BEWH_PsykerParent">
-        <defName>BEWH_Psyker</defName>
+        <defName>BEWH_EpsilonPsyker</defName>
         <label>epsilon psyker</label>
         <description>Carriers of this gene are able to unlock their true psychic potential, while dangerous, they're still just average.</description>
         <iconPath>UI/Genes/Psyker/BEWH_GenePsyker</iconPath>

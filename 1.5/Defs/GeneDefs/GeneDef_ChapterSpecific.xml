@@ -522,7 +522,7 @@
             <li>Gives a psyker gene.</li>
         </customEffectDescriptions>
         <descriptionHyperlinks>
-            <GeneDef>BEWH_Psyker</GeneDef>
+            <GeneDef>BEWH_EpsilonPsyker</GeneDef>
             <GeneDef>BEWH_DeltaPsyker</GeneDef>
             <GeneDef>BEWH_BetaPsyker</GeneDef>
         </descriptionHyperlinks>
@@ -538,7 +538,7 @@
             <li Class="Core40k.DefModExtension_AddRandomGeneByWeight">
                 <possibleGenesToGive>
                     <li>
-                        <key>BEWH_Psyker</key>
+                        <key>BEWH_EpsilonPsyker</key>
                         <value>100</value>
                     </li>
                     <li>

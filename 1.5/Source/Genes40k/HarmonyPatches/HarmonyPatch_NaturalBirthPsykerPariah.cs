@@ -43,7 +43,7 @@ namespace Genes40k
             var weightedSelection = new WeightedSelection<GeneDef>();
             //Psyker genes
             weightedSelection.AddEntry(Genes40kDefOf.BEWH_IotaPsyker, 60);
-            weightedSelection.AddEntry(Genes40kDefOf.BEWH_Psyker, 40);
+            weightedSelection.AddEntry(Genes40kDefOf.BEWH_EpsilonPsyker, 40);
             weightedSelection.AddEntry(Genes40kDefOf.BEWH_DeltaPsyker, 12);
             weightedSelection.AddEntry(Genes40kDefOf.BEWH_BetaPsyker, 4);
             weightedSelection.AddEntry(Genes40kDefOf.BEWH_AlphaPsyker, 1);

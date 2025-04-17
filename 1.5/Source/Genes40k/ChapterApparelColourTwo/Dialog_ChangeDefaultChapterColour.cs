@@ -46,7 +46,7 @@ namespace Genes40k
                 var customMenuOption = new FloatMenuOption("BEWH.MankindsFinest.ModSettings.CustomColour".Translate(), delegate
                 {
                     currentlySelectedPreset = settings.CustomPreset;
-                }, Core40kUtils.ColourPreview(settings.CustomPreset.primaryColour, settings.CustomPreset.secondaryColour), Color.white);
+                }, Core40kUtils.TwoColourPreview(settings.CustomPreset.primaryColour, settings.CustomPreset.secondaryColour), Color.white);
             
                 list.Add(customMenuOption);
                 foreach (var colour in chapterColours)
@@ -54,7 +54,7 @@ namespace Genes40k
                     var menuOption = new FloatMenuOption(colour.label.CapitalizeFirst(), delegate
                     {
                         currentlySelectedPreset = colour;
-                    }, Core40kUtils.ColourPreview(colour.primaryColour, colour.secondaryColour), Color.white);
+                    }, Core40kUtils.TwoColourPreview(colour.primaryColour, colour.secondaryColour), Color.white);
                     list.Add(menuOption);
                 }
                 

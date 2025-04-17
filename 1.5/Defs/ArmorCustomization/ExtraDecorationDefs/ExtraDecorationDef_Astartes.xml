@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-<!-- TEST AREA -->
+    <!-- TEST AREA -->
     <Genes40k.ExtraDecorationDef Name="BEWH_TESTSTUFF" Abstract="True">
         <iconPath>Things/Decorations/Armor/Common/BEWH_Deco_DeathWatch_Shoulder_east</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_DeathWatch_Shoulder</drawnTextureIconPath>
@@ -20,7 +20,7 @@
                 <key>South</key>
                 <value>-10</value>
             </li>
-<!--             <li>
+            <!--             <li>
                 <key>West</key>
                 <value>-10</value>
             </li> -->
@@ -30,51 +30,8 @@
         <flipable>true</flipable>
     </Genes40k.ExtraDecorationDef>
 
-<!--     <Genes40k.ExtraDecorationDef ParentName="BEWH_TESTSTUFF">
-        <defName>BEWH_0DecoDWatchPauldron</defName>
-        <label>Deathwatch pauldron</label>
-        <description>...</description>
-    </Genes40k.ExtraDecorationDef>
-    <Genes40k.ExtraDecorationDef ParentName="BEWH_TESTSTUFF">
-        <defName>BEWH_1DecoDWatchPauldron</defName>
-        <label>Deathwatch pauldron</label>
-        <description>...</description>
-    </Genes40k.ExtraDecorationDef>
-    <Genes40k.ExtraDecorationDef ParentName="BEWH_TESTSTUFF">
-        <defName>BEWH_2DecoDWatchPauldron</defName>
-        <label>Deathwatch pauldron</label>
-        <description>...</description>
-    </Genes40k.ExtraDecorationDef>
-    <Genes40k.ExtraDecorationDef ParentName="BEWH_TESTSTUFF">
-        <defName>BEWH_3DecoDWatchPauldron</defName>
-        <label>Deathwatch pauldron</label>
-        <description>...</description>
-    </Genes40k.ExtraDecorationDef>
-    <Genes40k.ExtraDecorationDef ParentName="BEWH_TESTSTUFF">
-        <defName>BEWH_4DecoDWatchPauldron</defName> 
-        <label>Deathwatch pauldron</label>
-        <description>...</description>
-    </Genes40k.ExtraDecorationDef>
-    <Genes40k.ExtraDecorationDef ParentName="BEWH_TESTSTUFF">
-        <defName>BEWH_5DecoDWatchPauldron</defName>
-        <label>Deathwatch pauldron</label>
-        <description>...</description>
-    </Genes40k.ExtraDecorationDef>
-    <Genes40k.ExtraDecorationDef ParentName="BEWH_TESTSTUFF">
-        <defName>BEWH_6DecoDWatchPauldron</defName>
-        <label>Deathwatch pauldron</label>
-        <description>...</description>
-    </Genes40k.ExtraDecorationDef>
-    <Genes40k.ExtraDecorationDef ParentName="BEWH_TESTSTUFF">
-        <defName>BEWH_7DecoDWatchPauldron</defName>
-        <label>Deathwatch pauldron</label>
-        <description>...</description>
-    </Genes40k.ExtraDecorationDef> -->
-
     <!-- BODY STUFF -->
-
     <!-- Common -->
-    
     <Genes40k.ExtraDecorationDef>
         <defName>BEWH_DecoDWatchPauldron</defName>
         <label>Deathwatch pauldron</label>
@@ -104,9 +61,7 @@
 
 
     <!-- HEAD STUFF-->
-
     <!-- Common -->
-
     <Genes40k.ExtraDecorationDef>
         <defName>BEWH_DecoInquisInsignia</defName>
         <label>Inquisition insignia</label>
@@ -176,10 +131,13 @@
                 <value>1</value>
             </li>
         </layerOffsets>
+        <availablePresets>
+            <li>BEWH_TestThingy</li>
+        </availablePresets>
         <colourable>true</colourable>
         <shaderType>Cutout</shaderType>
     </Genes40k.ExtraDecorationDef>
-    
+
     <Genes40k.ExtraDecorationDef>
         <defName>BEWH_MkxBladeguardBrim</defName>
         <label>Bladeguard brim</label>
@@ -213,7 +171,6 @@
     </Genes40k.ExtraDecorationDef>
 
     <!-- Mark X -->
-
     <Genes40k.ExtraDecorationDef>
         <defName>BEWH_MkxDecoStripe</defName>
         <label>Stripe</label>
@@ -267,7 +224,5 @@
         </layerOffsets>
         <shaderType>Cutout</shaderType>
     </Genes40k.ExtraDecorationDef>
-
-
 
 </Defs>

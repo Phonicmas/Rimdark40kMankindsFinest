@@ -2,7 +2,7 @@
 <Patch>
 
     <Operation Class="PatchOperationAddModExtension">
-        <xpath>Defs/GeneDef[defName = "BEWH_IotaPsyker" or defName = "BEWH_Psyker" or defName = "BEWH_DeltaPsyker" or defName = "BEWH_BetaPsyker"]</xpath>
+        <xpath>Defs/GeneDef[defName = "BEWH_IotaPsyker" or defName = "BEWH_EpsilonPsyker" or defName = "BEWH_DeltaPsyker" or defName = "BEWH_BetaPsyker"]</xpath>
         <value>
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <hediffsToBodyParts>

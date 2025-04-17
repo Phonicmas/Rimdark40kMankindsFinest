@@ -222,7 +222,7 @@
 
   <!-- Natural Born Abhuman -->
   <BEWH.MankindsFinest.Event.NaturalBornXLetter>Natural Born {0}</BEWH.MankindsFinest.Event.NaturalBornXLetter>
-  <BEWH.MankindsFinest.Event.NaturalBornXMessage>From the moment {0} became pregnant something felt off, something that has finally come to light. It seems that {1} has been born as a {2}.</BEWH.MankindsFinest.Event.NaturalBornXMessage>
+  <BEWH.MankindsFinest.Event.NaturalBornXMessage>From the moment {1} was conceived something felt off, something that has finally come to light. It seems that {1} has been born as a {2}.</BEWH.MankindsFinest.Event.NaturalBornXMessage>
 
 
   <!--=== Misc ===-->

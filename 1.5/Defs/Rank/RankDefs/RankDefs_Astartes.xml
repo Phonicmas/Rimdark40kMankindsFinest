@@ -570,7 +570,7 @@
         </incompatibleRanks>
         <requiredGenesOneAmong>
             <li>BEWH_IotaPsyker</li>
-            <li>BEWH_Psyker</li>
+            <li>BEWH_EpsilonPsyker</li>
             <li>BEWH_DeltaPsyker</li>
             <li>BEWH_BetaPsyker</li>
             <li>BEWH_AlphaPsyker</li>

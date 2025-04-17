@@ -3,7 +3,7 @@
 
     <!-- Issue -->
     <IssueDef>
-        <defName>BEWH_Psyker</defName>
+        <defName>BEWH_PsykerIssue</defName>
         <label>psyker</label>
         <iconPath>UI/Issues/PsykerPrecept</iconPath>
     </IssueDef>
@@ -11,7 +11,7 @@
     <!-- Precepts -->
     <PreceptDef>
         <defName>BEWH_Psyker_Respected</defName>
-        <issue>BEWH_Psyker</issue>
+        <issue>BEWH_PsykerIssue</issue>
         <label>respected</label>
         <description>To be a psyker is a thing worthy of respect.</description>
         <impact>Medium</impact>
@@ -31,7 +31,7 @@
 
     <PreceptDef>
         <defName>BEWH_Psyker_Acceptable</defName>
-        <issue>BEWH_Psyker</issue>
+        <issue>BEWH_PsykerIssue</issue>
         <label>acceptable</label>
         <description>To be a psyker is acceptable.</description>
         <impact>Low</impact>
@@ -42,7 +42,7 @@
 
     <PreceptDef>
         <defName>BEWH_Psyker_Horrible</defName>
-        <issue>BEWH_Psyker</issue>
+        <issue>BEWH_PsykerIssue</issue>
         <impact>Medium</impact>
         <label>horrible</label>
         <displayOrderInIssue>202</displayOrderInIssue>

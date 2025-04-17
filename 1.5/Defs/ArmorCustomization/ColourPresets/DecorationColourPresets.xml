@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <Core40k.DecorationColourPresetDef>
+        <defName>BEWH_TestThingy</defName>
+        <label>Test</label>
+        <colour>(38,65,54)</colour>
+    </Core40k.DecorationColourPresetDef>
+
+</Defs>

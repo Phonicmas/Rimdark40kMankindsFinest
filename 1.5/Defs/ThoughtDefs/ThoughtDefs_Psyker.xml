@@ -25,7 +25,7 @@
         <workerClass>ThoughtWorker_AlwaysActive</workerClass>
         <stackLimit>1</stackLimit>
         <requiredGenes>
-            <li>BEWH_Psyker</li>
+            <li>BEWH_EpsilonPsyker</li>
         </requiredGenes>
         <validWhileDespawned>true</validWhileDespawned>
         <stages>

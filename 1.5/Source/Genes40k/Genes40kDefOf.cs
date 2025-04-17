@@ -63,7 +63,7 @@ namespace Genes40k
 
         //Psyker genes
         public static GeneDef BEWH_IotaPsyker;
-        public static GeneDef BEWH_Psyker;
+        public static GeneDef BEWH_EpsilonPsyker;
         public static GeneDef BEWH_DeltaPsyker;
         public static GeneDef BEWH_BetaPsyker;
         public static GeneDef BEWH_AlphaPsyker;
