@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Living Saint Bolt Pistol -->
+  <ThingDef ParentName="BaseGunWithQuality">
+    <defName>BEWH_LSaintBoltPistol</defName>
+    <label>Living Saint Bolt Pistol</label>
+    <description>...</description>
+    <graphicData>
+      <texPath>Things/Weapons/BEWH_LSaintBoltPistol</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+
+    <techLevel>Spacer</techLevel>
+    <smeltable>false</smeltable>
+    <burnableByRecipe>true</burnableByRecipe>
+
+    <tradeability>None</tradeability>
+    <tradeTags Inherit="False" />
+    <thingSetMakerTags Inherit="False" />
+    <weaponTags Inherit="false" />
+    
+    <soundInteract>Interact_ChargeRifle</soundInteract>
+    <statBases>
+      <Flammability>0</Flammability>
+      <MaxHitPoints>666</MaxHitPoints>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>4.6</Mass>
+      <AccuracyTouch>0.8</AccuracyTouch>
+      <AccuracyShort>0.9</AccuracyShort>
+      <AccuracyMedium>0.65</AccuracyMedium>
+      <AccuracyLong>0.45</AccuracyLong>
+      <RangedWeapon_Cooldown>1.40</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>BEWH_BolterRound</defaultProjectile>
+        <forcedMissRadius>0.075</forcedMissRadius>
+        <warmupTime>0.85</warmupTime>
+        <range>35.9</range>
+        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+        <burstShotCount>2</burstShotCount>
+        <soundCast>BEWH_SFX_BolterShot</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>12</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>Handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+
+    <comps>
+      <li Class="CompProperties_Biocodable"/>
+    </comps>
+    <modExtensions>
+      <li Class="VFECore.ThingDefExtension">
+        <weaponCarryDrawOffsets>
+          <north>
+            <drawOffset>(0, 0, -0.2)</drawOffset>
+          </north>
+          <east>
+            <drawOffset>(-0.1, 0, -0.2)</drawOffset>
+          </east>
+          <south>
+            <angleOffset>-20</angleOffset>
+            <drawOffset>(0, 0, -0.2)</drawOffset>
+          </south>
+          <west>
+            <drawOffset>(0.1, 0, -0.2)</drawOffset>
+          </west>
+        </weaponCarryDrawOffsets>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Living Saint Sword -->
+  <ThingDef ParentName="MeleeWeaponUltratech">
+    <defName>BEWH_LSaintSword</defName>
+    <label>Living Saint Sword</label>
+    <description>...</description>
+    <graphicData>
+      <texPath>Things/Weapons/BEWH_LSaintSword</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.15</drawSize>
+    </graphicData>
+
+    <techLevel>Spacer</techLevel>
+    <relicChance>0</relicChance>
+    <smeltable>false</smeltable>
+    <burnableByRecipe>true</burnableByRecipe>
+    <tradeability>None</tradeability>
+
+    <tradeTags Inherit="False" />
+    <thingSetMakerTags Inherit="False" />
+    <weaponTags Inherit="false" />
+
+    <soundInteract>Interact_MonoSword</soundInteract>
+    <meleeHitSound>MeleeHit_MonoSword</meleeHitSound>
+    <statBases>
+      <Flammability>0</Flammability>
+      <MaxHitPoints>666</MaxHitPoints>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>27</power>
+        <cooldownTime>1.9</cooldownTime>
+        <armorPenetration>1.4</armorPenetration>
+      </li>
+    </tools>
+
+    <comps>
+      <li Class="CompProperties_Biocodable"/>
+    </comps>
+    <modExtensions>
+      <li Class="VFECore.ThingDefExtension">
+        <weaponCarryDrawOffsets>
+          <north>
+            <drawOffset>(0, 0, -0.15)</drawOffset>
+          </north>
+          <east>
+            <drawOffset>(0, 0, -0.15)</drawOffset>
+          </east>
+          <south>
+            <drawOffset>(0, 0, -0.15)</drawOffset>
+          </south>
+          <west>
+            <drawOffset>(0, 0, -0.15)</drawOffset>
+          </west>
+        </weaponCarryDrawOffsets>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

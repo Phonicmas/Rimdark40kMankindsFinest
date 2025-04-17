@@ -153,6 +153,9 @@ namespace Genes40k
         public static ThingDef Apparel_PackJump;
         
         public static ThingDef BEWH_RawGestationalSlurry;
+        
+        public static ThingDef BEWH_LSaintSword;
+        public static ThingDef BEWH_LSaintBoltPistol;
 
         //JobDefs
         public static JobDef BEWH_FillGeneGestator;

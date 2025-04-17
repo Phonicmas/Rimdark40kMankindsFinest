@@ -201,6 +201,11 @@ namespace Genes40k
                 return null;
             }
 
+            if (Enumerable.Any(pawn.genes.GenesListForReading, gene => gene.def.HasModExtension<DefModExtension_ChapterGene>()))
+            {
+                return null;
+            }
+
             var xenotypeName = string.Empty;
             
             var chapter = randomChapter ? Current.Game.GetComponent<GameComponent_MankindFinestUtils>().CurrentChapterColour : ModSettings.CurrentlySelectedPreset;

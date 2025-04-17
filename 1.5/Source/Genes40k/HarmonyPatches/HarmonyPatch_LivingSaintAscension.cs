@@ -75,7 +75,7 @@ namespace Genes40k
 
             var rand = new Random();
             var resurrectionChance = baseChance + skillAddsChance + traitAddChance;
-
+            
             /*if (Prefs.DevMode && DebugSettings.godMode)
             {
                 resurrectionChance = 400;
@@ -110,6 +110,30 @@ namespace Genes40k
                     var nameSingle = new NameSingle("St. " + single.Name);
                     __instance.Name = nameSingle;
                     break;
+            }
+            
+            var lSSword = (ThingWithComps)ThingMaker.MakeThing(Genes40kDefOf.BEWH_LSaintSword);
+            lSSword.TryGetComp<CompBiocodable>().CodeFor(__instance);
+            lSSword.TryGetComp<CompQuality>().SetQuality(QualityCategory.Legendary, ArtGenerationContext.Outsider);
+            
+            var lSPistol = (ThingWithComps)ThingMaker.MakeThing(Genes40kDefOf.BEWH_LSaintBoltPistol);
+            lSPistol.TryGetComp<CompBiocodable>().CodeFor(__instance);
+            lSPistol.TryGetComp<CompQuality>().SetQuality(QualityCategory.Legendary, ArtGenerationContext.Outsider);
+
+            if (__instance.equipment.PrimaryEq != null)
+            {
+                __instance.equipment.TryTransferEquipmentToContainer(__instance.equipment.PrimaryEq.parent, __instance.equipment.GetDirectlyHeldThings());
+            }
+
+            if (shootingSkill > meleeSkill)
+            {
+                __instance.equipment.AddEquipment(lSPistol);
+                __instance.inventory.TryAddAndUnforbid(lSSword);
+            }
+            else
+            {
+                __instance.equipment.AddEquipment(lSSword);
+                __instance.inventory.TryAddAndUnforbid(lSPistol);
             }
         }    
     }

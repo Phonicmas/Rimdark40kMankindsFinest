@@ -7,7 +7,7 @@
     <relicChance>0</relicChance>
     <smeltable>false</smeltable>
     <burnableByRecipe>true</burnableByRecipe>
-    <tradeability>None</tradeability>
+    <tradeability>Sellable</tradeability>
     <tradeTags Inherit="False" />
     <thingSetMakerTags Inherit="False" />
     <weaponTags Inherit="False">

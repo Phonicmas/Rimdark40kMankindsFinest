@@ -27,6 +27,7 @@
         <iconPath>UI/Ranks/Astartes/BEWH_Neophyte</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankNeophyte</drawnTextureIconPath>
         <sortOrder>1</sortOrder>
+        <useColour>true</useColour>
         <mustHaveRank>BEWH_AstartesRankNeophyte</mustHaveRank>
     </Genes40k.ShoulderIconDef>
 

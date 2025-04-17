@@ -24,6 +24,11 @@ namespace Genes40k
             {
                 return;
             }
+
+            if (!pawn.Drafted)
+            {
+                return;
+            }
             
             var pawns = GenRadial.RadialDistinctThingsAround(pawn.Position, pawn.Map, effectRadius, useCenter: true).OfType<Pawn>().ToList();
             AffectPawns(pawn, pawns);
@@ -38,6 +43,11 @@ namespace Genes40k
             foreach (var otherPawn in pawns)
             {
                 if (otherPawn == null || p == otherPawn || !p.RaceProps.Humanlike || otherPawn.Faction == Faction.OfPlayer || !otherPawn.Faction.HostileTo(Faction.OfPlayer))
+                {
+                    continue;
+                }
+
+                if (otherPawn.IsPrisoner)
                 {
                     continue;
                 }
