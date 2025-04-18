@@ -156,6 +156,7 @@
             <li>BEWH_MkVIIPowerArmorHelmet</li>
         </appliesTo>
         <colourable>true</colourable>
+        <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
         <useArmorColourAsDefault>true</useArmorColourAsDefault>
         <layerOffsets>
             <li>
