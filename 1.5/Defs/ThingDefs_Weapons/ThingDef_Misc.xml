@@ -10,7 +10,7 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <projectile>
-            <damageDef>Bullet</damageDef>
+            <damageDef>BEWH_Bolt</damageDef>
             <damageAmountBase>25</damageAmountBase>
             <armorPenetrationBase>0.75</armorPenetrationBase>
             <explosionRadius>1.2</explosionRadius>

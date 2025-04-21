@@ -1,10 +1,54 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+<!-- Gold -->
     <Core40k.DecorationColourPresetDef>
-        <defName>BEWH_TestThingy</defName>
-        <label>Test</label>
-        <colour>(38,65,54)</colour>
+        <defName>BEWH_DecoPaletteGold</defName>
+        <label>Gold</label>
+        <colour>(240,176,29)</colour>
+    </Core40k.DecorationColourPresetDef>
+
+<!-- Silver -->
+    <Core40k.DecorationColourPresetDef>
+        <defName>BEWH_DecoPaletteSilver</defName>
+        <label>Silver</label>
+        <colour>(0.68,0.7,0.7)</colour>
+    </Core40k.DecorationColourPresetDef>
+
+<!-- Green -->
+    <Core40k.DecorationColourPresetDef>
+        <defName>BEWH_DecoPaletteGreen</defName>
+        <label>Green</label>
+        <colour>(75,97,32)</colour>
+    </Core40k.DecorationColourPresetDef>
+
+<!-- Imperial fist Black -->
+    <Core40k.DecorationColourPresetDef>
+        <defName>BEWH_DecoPaletteIFBlack</defName>
+        <label>Black</label>
+        <colour>(50,51,50)</colour>
+    </Core40k.DecorationColourPresetDef>
+
+<!-- Helmet stripe Red -->
+    <Core40k.DecorationColourPresetDef>
+        <defName>BEWH_DecoPaletteStripeRed</defName>
+        <label>UM Red</label>
+        <!-- 0.ugh! -->
+        <colour>(0.55,0.01,0.01)</colour>
+    </Core40k.DecorationColourPresetDef>
+
+<!-- Leather Brown-->
+    <Core40k.DecorationColourPresetDef>
+        <defName>BEWH_DecoPaletteLeatherBrown</defName>
+        <label>Brown</label>
+        <colour>(173, 130, 87)</colour>
+    </Core40k.DecorationColourPresetDef>
+    
+<!-- Leather Black -->
+    <Core40k.DecorationColourPresetDef>
+        <defName>BEWH_DecoPaletteLeatherBlack</defName>
+        <label>Black</label>
+        <colour>(114, 114, 114)</colour>
     </Core40k.DecorationColourPresetDef>
 
 </Defs>
