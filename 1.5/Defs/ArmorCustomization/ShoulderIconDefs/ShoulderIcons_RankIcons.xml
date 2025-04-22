@@ -39,6 +39,7 @@
         <iconPath>UI/Ranks/Astartes/BEWH_BattleBrother</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankBattleBrother</drawnTextureIconPath>
         <sortOrder>2</sortOrder>
+        <useColour>true</useColour>
         <mustHaveRank>BEWH_AstartesRankBattleBrother</mustHaveRank>
     </Genes40k.ShoulderIconDef>
 
@@ -50,6 +51,7 @@
         <iconPath>UI/Ranks/Astartes/BEWH_Vanguard</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankVanguard</drawnTextureIconPath>
         <sortOrder>2.5</sortOrder>
+        <useColour>true</useColour>
         <mustHaveRank>BEWH_AstartesRankVanguard</mustHaveRank>
     </Genes40k.ShoulderIconDef>
 
@@ -61,6 +63,7 @@
         <iconPath>UI/Ranks/Astartes/BEWH_Veteran</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankVeteran</drawnTextureIconPath>
         <sortOrder>3</sortOrder>
+        <useColour>true</useColour>
         <mustHaveRank>BEWH_AstartesRankVeteran</mustHaveRank>
     </Genes40k.ShoulderIconDef>
 
@@ -72,6 +75,7 @@
         <iconPath>UI/Ranks/Astartes/BEWH_FireSupport</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankFireSupport</drawnTextureIconPath>
         <sortOrder>3.33</sortOrder>
+        <useColour>true</useColour>
         <mustHaveRank>BEWH_AstartesRankDevastator</mustHaveRank>
     </Genes40k.ShoulderIconDef>
 
@@ -83,6 +87,7 @@
         <iconPath>UI/Ranks/Astartes/BEWH_CloseSupport</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankCloseSupport</drawnTextureIconPath>
         <sortOrder>3.66</sortOrder>
+        <useColour>true</useColour>
         <mustHaveRank>BEWH_AstartesRankAssault</mustHaveRank>
     </Genes40k.ShoulderIconDef>
 
@@ -149,6 +154,8 @@
         <iconPath>UI/Ranks/Astartes/BEWH_Captain</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankCaptain</drawnTextureIconPath>
         <sortOrder>6</sortOrder>
+        <useColour>true</useColour>
+        <defaultColour>(0.94, 0.69, 0.11)</defaultColour>
         <mustHaveRank>BEWH_AstartesRankCaptain</mustHaveRank>
     </Genes40k.ShoulderIconDef>
 
@@ -182,6 +189,7 @@
         <iconPath>UI/Ranks/Astartes/BEWH_Acolytum</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankAcolytum</drawnTextureIconPath>
         <sortOrder>7.50</sortOrder>
+        <useColour>true</useColour>
         <mustHaveRank>BEWH_AstartesRankAcolytum</mustHaveRank>
     </Genes40k.ShoulderIconDef>
 
@@ -193,6 +201,7 @@
         <iconPath>UI/Ranks/Astartes/BEWH_Judiciar</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankJudiciar</drawnTextureIconPath>
         <sortOrder>7.75</sortOrder>
+        <useColour>true</useColour>
         <mustHaveRank>BEWH_AstartesRankJudiciar</mustHaveRank>
     </Genes40k.ShoulderIconDef>
 
@@ -226,6 +235,7 @@
         <iconPath>UI/Ranks/Astartes/BEWH_Librarian</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankLibrarian</drawnTextureIconPath>
         <sortOrder>8.50</sortOrder>
+        <useColour>true</useColour>
         <mustHaveRank>BEWH_AstartesRankLibrarian</mustHaveRank>
     </Genes40k.ShoulderIconDef>
 
