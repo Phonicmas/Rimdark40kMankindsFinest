@@ -101,7 +101,7 @@
         <drawnTextureIconPath>Things/Decorations/Armor/Common/PuritySeals/BEWH_Deco_PuritySeal2</drawnTextureIconPath>
         <sortOrder>0</sortOrder>
         <defaultShowRotation>
-            <!-- <li>North</li> -->
+            <li>North</li>
             <li>South</li>
             <li>West</li>
         </defaultShowRotation>
@@ -109,7 +109,7 @@
             <li>BEWH_MkVIIPowerArmor</li>
             <li>BEWH_MkXPowerArmor</li>
         </appliesTo>
-<!--         <layerOffsets>
+        <!--         <layerOffsets>
             <li>
                 <key>North</key>
                 <value>1</value>
@@ -135,7 +135,7 @@
             <li>BEWH_MkVIIPowerArmor</li>
             <li>BEWH_MkXPowerArmor</li>
         </appliesTo>
-<!--         <layerOffsets>
+        <!--         <layerOffsets>
             <li>
                 <key>North</key>
                 <value>1</value>
@@ -144,7 +144,7 @@
         <shaderType>Cutout</shaderType>
         <flipable>true</flipable>
     </Genes40k.ExtraDecorationDef>
-   
+
     <Genes40k.ExtraDecorationDef>
         <defName>BEWH_DecoPSeal_4</defName>
         <label>Purity seals 4</label>
@@ -160,7 +160,7 @@
             <li>BEWH_MkVIIPowerArmor</li>
             <li>BEWH_MkXPowerArmor</li>
         </appliesTo>
-<!--         <layerOffsets>
+        <!--         <layerOffsets>
             <li>
                 <key>North</key>
                 <value>1</value>
@@ -186,7 +186,7 @@
             <li>BEWH_MkVIIPowerArmor</li>
             <li>BEWH_MkXPowerArmor</li>
         </appliesTo>
-<!--         <layerOffsets>
+        <!--         <layerOffsets>
             <li>
                 <key>North</key>
                 <value>1</value>
@@ -205,13 +205,14 @@
         <sortOrder>0</sortOrder>
         <defaultShowRotation>
             <li>South</li>
-            <li>West</li>
+            <li>North</li>
+            <li>East</li>
         </defaultShowRotation>
         <appliesTo>
             <li>BEWH_MkVIIPowerArmor</li>
             <li>BEWH_MkXPowerArmor</li>
         </appliesTo>
-<!--         <layerOffsets>
+        <!--         <layerOffsets>
             <li>
                 <key>North</key>
                 <value>1</value>
@@ -229,7 +230,7 @@
         <drawnTextureIconPath>Things/Decorations/Armor/Common/Pouches/BEWH_Deco_Pouch</drawnTextureIconPath>
         <sortOrder>0</sortOrder>
         <defaultShowRotation>
-            <li>North</li>
+            <!--<li>North</li>-->
             <li>East</li>
             <li>South</li>
         </defaultShowRotation>
@@ -237,7 +238,7 @@
             <li>BEWH_MkVIIPowerArmor</li>
             <li>BEWH_MkXPowerArmor</li>
         </appliesTo>
-<!--         <layerOffsets>
+        <!--         <layerOffsets>
             <li>
                 <key>North</key>
                 <value>1</value>
@@ -314,7 +315,7 @@
         <shaderType>Cutout</shaderType>
         <flipable>true</flipable>
     </Genes40k.ExtraDecorationDef>
-   
+
     <!-- HEAD STUFF-->
     <!-- Common -->
     <Genes40k.ExtraDecorationDef>
@@ -613,11 +614,12 @@
         <defaultShowRotation>
             <li>West</li>
             <li>South</li>
+            <li>North</li>
             <!-- <li>East</li> -->
         </defaultShowRotation>
         <appliesTo>
             <li>BEWH_MkVIIPowerArmorHelmet</li>
-        </appliesTo>
+        </appliesTo>    
         <colourable>false</colourable>
         <flipable>true</flipable>
         <shaderType>Cutout</shaderType>
@@ -634,6 +636,7 @@
         <defaultShowRotation>
             <li>West</li>
             <li>South</li>
+            <li>North</li>
             <!-- <li>East</li> -->
         </defaultShowRotation>
         <appliesTo>
