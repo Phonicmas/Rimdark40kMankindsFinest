@@ -17,8 +17,10 @@ namespace Genes40k
         private Pawn workingPawn = null;
     
         private const float psyfocusDrain = -0.05f;
+        private const float psyfocusDrainMinimum = -0.005f;
 
         private const float severityAdd = 0.1f;
+        private const float severityAddMinimum = 0.01f;
         
         private static readonly CachedTexture CraftPrimarchEmbryo = new CachedTexture("UI/Gizmos/BEWH_GestationStartIcon");
 
@@ -42,29 +44,35 @@ namespace Genes40k
             {
                 return;
             }
+            
             tickAmount++;
-            if (tickAmount < tickAmountDrain) return;
+            if (tickAmount < tickAmountDrain)
+            {
+                return;
+            }
+
+            var psysens = workingPawn.GetStatValue(StatDefOf.PsychicSensitivity);
             
             if (ModsConfig.RoyaltyActive)
             {
                 if (workingPawn.psychicEntropy.CurrentPsyfocus >= Math.Abs(psyfocusDrain))
                 {
-                    workingPawn.psychicEntropy.OffsetPsyfocusDirectly(psyfocusDrain);
+                    workingPawn.psychicEntropy.OffsetPsyfocusDirectly(Math.Max(psyfocusDrain / psysens, psyfocusDrainMinimum));
                 }
                 else
                 {
                     workingPawn.psychicEntropy.OffsetPsyfocusDirectly(workingPawn.psychicEntropy.CurrentPsyfocus * -1);
-                    DoComaHediff();
+                    DoComaHediff(psysens);
                 }
             }
             else
             {
-                DoComaHediff();
+                DoComaHediff(psysens);
             }
             tickAmount = 0;
         }
 
-        private void DoComaHediff()
+        private void DoComaHediff(float psysens)
         {
             if (workingPawn == null)
             {
@@ -82,7 +90,7 @@ namespace Genes40k
                     workingPawn.jobs.EndCurrentJob(JobCondition.InterruptForced);
                     workingPawn.jobs.ClearQueuedJobs(false);
                 }
-                hediff.Severity += severityAdd;
+                hediff.Severity += Math.Max(severityAdd / psysens, severityAddMinimum);
             }
         }
 

@@ -28,6 +28,11 @@
 		<isBad>true</isBad>
 		<initialSeverity>1</initialSeverity>
 		<maxSeverity>3</maxSeverity>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-1.5</severityPerDay>
+			</li>
+		</comps>
 		<stages>
 			<li>
 				<minSeverity>1</minSeverity>

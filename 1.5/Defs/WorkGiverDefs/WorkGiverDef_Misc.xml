@@ -47,7 +47,7 @@
   <WorkGiverDef>
     <defName>BEWH_DoBillsGeneManipulationTable</defName>
     <label>fabricate things</label>
-    <giverClass>WorkGiver_DoBill</giverClass>
+    <giverClass>Genes40k.WorkGiver_DoBillPsychic</giverClass>
     <workType>Research</workType>
     <priorityInType>35</priorityInType>
     <fixedBillGiverDefs>
