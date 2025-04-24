@@ -1,16 +1,13 @@
 ﻿using RimWorld;
-using Verse;
 
+namespace Genes40k;
 
-namespace Genes40k
+public class CompProperties_AbilityProofOfFaith : CompProperties_AbilityEffectWithDuration
 {
-    public class CompProperties_AbilityProofOfFaith : CompProperties_AbilityEffectWithDuration
-    {
-        public float divineRadianceGain;
+    public float divineRadianceGain;
         
-        public CompProperties_AbilityProofOfFaith()
-        {
-            compClass = typeof(CompAbilityEffect_ProofOfFaith);
-        }
+    public CompProperties_AbilityProofOfFaith()
+    {
+        compClass = typeof(CompAbilityEffect_ProofOfFaith);
     }
 }

@@ -1,6 +1,5 @@
 ﻿using RimWorld;
 
-
 namespace Genes40k
 {
     public class CompProperties_AbilityTwinDisable : CompProperties_AbilityEffect

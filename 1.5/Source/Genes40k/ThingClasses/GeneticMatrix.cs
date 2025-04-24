@@ -1,39 +1,34 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using RimWorld;
-using UnityEngine;
+﻿using UnityEngine;
 using Verse;
 
+namespace Genes40k;
 
-namespace Genes40k
+[StaticConstructorOnStartup]
+public class GeneticMatrix : ThingWithComps
 {
-    [StaticConstructorOnStartup]
-    public class GeneticMatrix : ThingWithComps
-    {
-        private bool invisible = false;
+    private bool invisible = false;
         
-        public override Graphic Graphic
+    public override Graphic Graphic
+    {
+        get
         {
-            get
-            {
-                var graphic = DefaultGraphic.GetCopy(def.graphicData.drawSize, null);
+            var graphic = DefaultGraphic.GetCopy(def.graphicData.drawSize, null);
                 
-                graphic.drawSize = !invisible ? def.graphicData.drawSize : Vector2.zero;
+            graphic.drawSize = !invisible ? def.graphicData.drawSize : Vector2.zero;
                 
-                return graphic;
-            }
+            return graphic;
         }
+    }
 
-        public void ChangeVisibility(bool newValue)
-        {
-            invisible = newValue;
-        }
+    public void ChangeVisibility(bool newValue)
+    {
+        invisible = newValue;
+    }
 
 
-        public override void ExposeData()
-        {
-            base.ExposeData();
-            Scribe_Values.Look(ref invisible, "invisible");
-        }
+    public override void ExposeData()
+    {
+        base.ExposeData();
+        Scribe_Values.Look(ref invisible, "invisible");
     }
 }

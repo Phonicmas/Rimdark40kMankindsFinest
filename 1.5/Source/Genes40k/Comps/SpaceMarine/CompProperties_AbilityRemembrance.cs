@@ -1,13 +1,11 @@
 ﻿using RimWorld;
 
+namespace Genes40k;
 
-namespace Genes40k
+public class CompProperties_AbilityRemembrance : CompProperties_AbilityEffect
 {
-    public class CompProperties_AbilityRemembrance : CompProperties_AbilityEffect
+    public CompProperties_AbilityRemembrance()
     {
-        public CompProperties_AbilityRemembrance()
-        {
-            compClass = typeof(CompAbilityEffect_Remembrance);
-        }
+        compClass = typeof(CompAbilityEffect_Remembrance);
     }
 }

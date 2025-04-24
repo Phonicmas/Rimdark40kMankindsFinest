@@ -1,14 +1,12 @@
 ﻿using RimWorld;
 using Verse;
 
+namespace Genes40k;
 
-namespace Genes40k
+public class ThoughtWorker_Precept_Psyker : ThoughtWorker_Precept   
 {
-    public class ThoughtWorker_Precept_Psyker : ThoughtWorker_Precept   
+    protected override ThoughtState ShouldHaveThought(Pawn p)
     {
-        protected override ThoughtState ShouldHaveThought(Pawn p)
-        {
-            return p.genes != null && p.IsPsyker();
-        }
+        return p.genes != null && p.IsPsyker();
     }
 }

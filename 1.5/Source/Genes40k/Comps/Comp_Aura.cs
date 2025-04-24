@@ -2,57 +2,56 @@
 using UnityEngine;
 using Verse;
 
-namespace Genes40k
+namespace Genes40k;
+
+[StaticConstructorOnStartup]
+public class Comp_Aura : ThingComp
 {
-    [StaticConstructorOnStartup]
-    public class Comp_Aura : ThingComp
+    private CompProperties_Aura Props => (CompProperties_Aura)props;
+
+    public override void CompTick()
     {
-        private CompProperties_Aura Props => (CompProperties_Aura)props;
+        base.CompTick();
 
-        public override void CompTick()
+        if (!parent.IsHashIntervalTick(500))
         {
-            base.CompTick();
+            return;
+        }
 
-            if (!parent.IsHashIntervalTick(500))
+        var list = GenRadial.RadialDistinctThingsAround(parent.Position, parent.Map, Props.range, true).Where(thing => thing is Pawn pawn && pawn.Faction != null && pawn.Faction.IsPlayer);
+            
+        var things = list.ToList();
+            
+        if (things.NullOrEmpty())
+        {
+            return;
+        }
+            
+        foreach (var thing in things)
+        {
+            if (!(thing is Pawn pawn))
             {
-                return;
+                continue;
             }
-
-            var list = GenRadial.RadialDistinctThingsAround(parent.Position, parent.Map, Props.range, true).Where(thing => thing is Pawn pawn && pawn.Faction != null && pawn.Faction.IsPlayer);
-            
-            var things = list.ToList();
-            
-            if (things.NullOrEmpty())
+            var firstHediffOfDef = pawn.health.hediffSet.GetFirstHediffOfDef(Props.givesHediff);
+            if (firstHediffOfDef != null)
             {
-                return;
+                pawn.health.RemoveHediff(firstHediffOfDef);
             }
-            
-            foreach (var thing in things)
-            {
-                if (!(thing is Pawn pawn))
-                {
-                    continue;
-                }
-                var firstHediffOfDef = pawn.health.hediffSet.GetFirstHediffOfDef(Props.givesHediff);
-                if (firstHediffOfDef != null)
-                {
-                    pawn.health.RemoveHediff(firstHediffOfDef);
-                }
-                var hediff = HediffMaker.MakeHediff(Props.givesHediff, pawn, pawn.health.hediffSet.GetBrain());
-                var hediffComp_Disappears = hediff.TryGetComp<HediffComp_Disappears>();
+            var hediff = HediffMaker.MakeHediff(Props.givesHediff, pawn, pawn.health.hediffSet.GetBrain());
+            var hediffComp_Disappears = hediff.TryGetComp<HediffComp_Disappears>();
                 
-                if (hediffComp_Disappears != null)
-                {
-                    hediffComp_Disappears.ticksToDisappear = Props.durationOutsideRange;
-                }
-                pawn.health.AddHediff(hediff);
+            if (hediffComp_Disappears != null)
+            {
+                hediffComp_Disappears.ticksToDisappear = Props.durationOutsideRange;
             }
+            pawn.health.AddHediff(hediff);
         }
+    }
         
-        public override void PostDraw()
-        {
-            var cells = GenRadial.RadialCellsAround(parent.Position, 0, Props.range).ToList();
-            GenDraw.DrawFieldEdges(cells, Color.green);
-        }
+    public override void PostDraw()
+    {
+        var cells = GenRadial.RadialCellsAround(parent.Position, 0, Props.range).ToList();
+        GenDraw.DrawFieldEdges(cells, Color.green);
     }
 }

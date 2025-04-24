@@ -1,14 +1,11 @@
 ﻿using RimWorld;
-using Verse;
 
+namespace Genes40k;
 
-namespace Genes40k
+public class CompProperties_AbilityStasisConfirmation : CompProperties_AbilityEffect
 {
-    public class CompProperties_AbilityStasisConfirmation : CompProperties_AbilityEffect
+    public CompProperties_AbilityStasisConfirmation()
     {
-        public CompProperties_AbilityStasisConfirmation()
-        {
-            compClass = typeof(CompAbilityEffect_StasisConfirmation);
-        }
+        compClass = typeof(CompAbilityEffect_StasisConfirmation);
     }
 }

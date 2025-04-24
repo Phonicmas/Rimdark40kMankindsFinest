@@ -4,55 +4,52 @@ using RimWorld;
 using RimWorld.Planet;
 using UnityEngine;
 using Verse;
-using Verse.AI;
-using Verse.Sound;
 
-namespace Genes40k
+namespace Genes40k;
+
+public class Ability_Inspire : VFECore.Abilities.Ability
 {
-    public class Ability_Inspire : VFECore.Abilities.Ability
-    {
-		private IEnumerable<Pawn> PawnsToAffect()
+	private IEnumerable<Pawn> PawnsToAffect()
+	{
+		foreach (var item in GenRadial.RadialDistinctThingsAround(pawn.Position, pawn.Map, GetRadiusForPawn(), useCenter: true))
 		{
-			foreach (var item in GenRadial.RadialDistinctThingsAround(pawn.Position, pawn.Map, GetRadiusForPawn(), useCenter: true))
+			if (item is not Pawn targetPawn || targetPawn.Dead || targetPawn == pawn)
 			{
-				if (!(item is Pawn targetPawn) || targetPawn.Dead || targetPawn == pawn)
+				continue;
+			}
+			if (!targetPawn.IsColonist && !targetPawn.IsPrisonerOfColony)
+			{
+				if (targetPawn.RaceProps.Animal)
 				{
 					continue;
 				}
-				if (!targetPawn.IsColonist && !targetPawn.IsPrisonerOfColony)
+				var faction = targetPawn.Faction;
+				if (faction == null || !faction.IsPlayer)
 				{
-					if (targetPawn.RaceProps.Animal)
-					{
-						continue;
-					}
-					var faction = targetPawn.Faction;
-					if (faction == null || !faction.IsPlayer)
-					{
-						continue;
-					}
+					continue;
 				}
-				yield return targetPawn;
 			}
+			yield return targetPawn;
 		}
+	}
 
-		public override void Cast(params GlobalTargetInfo[] targets)
+	public override void Cast(params GlobalTargetInfo[] targets)
+	{
+		var pawnList = PawnsToAffect().ToList();
+
+		foreach (var targetPawn in pawnList)
 		{
-			var pawnList = PawnsToAffect().ToList();
-
-			foreach (var targetPawn in pawnList)
-			{
-				var inspiredThought = ThoughtMaker.MakeThought(Genes40kDefOf.BEWH_ChaplainInspired, null);
-				inspiredThought.durationTicksOverride = def.durationTime;
-				targetPawn.needs.mood.thoughts.memories.TryGainMemory(inspiredThought);
-			}
+			var inspiredThought = ThoughtMaker.MakeThought(Genes40kDefOf.BEWH_ChaplainInspired, null);
+			inspiredThought.durationTicksOverride = def.durationTime;
+			targetPawn.needs.mood.thoughts.memories.TryGainMemory(inspiredThought);
+		}
 			
-			base.Cast(targets);
-		}
+		base.Cast(targets);
+	}
 
-		public override void GizmoUpdateOnMouseover()
-		{
-			var radiusForPawn = GetRadiusForPawn();
-			GenDraw.DrawRadiusRing(pawn.Position, radiusForPawn, Color.green);
-		}
-    }
+	public override void GizmoUpdateOnMouseover()
+	{
+		var radiusForPawn = GetRadiusForPawn();
+		GenDraw.DrawRadiusRing(pawn.Position, radiusForPawn, Color.green);
+	}
 }

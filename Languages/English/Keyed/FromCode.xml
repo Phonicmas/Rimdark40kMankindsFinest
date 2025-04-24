@@ -17,10 +17,14 @@
   <BEWH.MankindsFinest.ModSettings.ColourPreset>Colour Preset: {0}</BEWH.MankindsFinest.ModSettings.ColourPreset>
   <BEWH.MankindsFinest.ModSettings.CustomColour>Custom Colour</BEWH.MankindsFinest.ModSettings.CustomColour>
 
-  <BEWH.MankindsFinest.ModSettings.LivingSaintChance>Chances for a lost Living Saint to resurrect</BEWH.MankindsFinest.ModSettings.LivingSaintChance>
+  <BEWH.MankindsFinest.ModSettings.LivingSaintChance>Chances for a Living Saint to resurrect</BEWH.MankindsFinest.ModSettings.LivingSaintChance>
   <BEWH.MankindsFinest.ModSettings.LivingSaintBigThreat>Big threat: {0}%</BEWH.MankindsFinest.ModSettings.LivingSaintBigThreat>
   <BEWH.MankindsFinest.ModSettings.LivingSaintSmallThreat>Small threat: {0}%</BEWH.MankindsFinest.ModSettings.LivingSaintSmallThreat>
+  <BEWH.MankindsFinest.ModSettings.LivingSaintSystem>Enabling this will allow colonist being killed to resurrect as Living Saints.</BEWH.MankindsFinest.ModSettings.LivingSaintSystem>
+  <BEWH.MankindsFinest.ModSettings.LivingSaintBaseChance>Living Saints base chance: {0}% (other modifiers may increase beyond this)</BEWH.MankindsFinest.ModSettings.LivingSaintBaseChance>
+  <BEWH.MankindsFinest.ModSettings.LivingSaintPawnLimit>Living Saint pawn limit: {0}</BEWH.MankindsFinest.ModSettings.LivingSaintPawnLimit>
 
+  <BEWH.MankindsFinest.ModSettings.ImplantationDesc>Geneseed implantation offsets.</BEWH.MankindsFinest.ModSettings.ImplantationDesc>
   <BEWH.MankindsFinest.ModSettings.ImplantationSuccessChange>Implantation success offset: {0}%</BEWH.MankindsFinest.ModSettings.ImplantationSuccessChange>
   <BEWH.MankindsFinest.ModSettings.ImplantationCapOffset>Implantation cap offset: {0}%</BEWH.MankindsFinest.ModSettings.ImplantationCapOffset>
 

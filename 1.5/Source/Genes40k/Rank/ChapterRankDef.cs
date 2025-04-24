@@ -1,9 +1,8 @@
 ﻿using Core40k;
 
-namespace Genes40k
+namespace Genes40k;
+
+public class ChapterRankDef : RankDef
 {
-    public class ChapterRankDef : RankDef
-    {
-        public ShoulderIconDef unlocksRankIcon = null;
-    }
-}   
+    public ShoulderIconDef unlocksRankIcon = null;
+}

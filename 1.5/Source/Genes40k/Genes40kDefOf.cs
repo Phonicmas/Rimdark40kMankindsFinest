@@ -80,6 +80,11 @@ namespace Genes40k
 
         //Living saint genes
         public static GeneDef BEWH_LivingSaintBeingOfFaith;
+        public static GeneDef BEWH_LivingSaintDivineRadiance;
+        public static GeneDef BEWH_LivingSaintDivineFlight;
+        public static GeneDef BEWH_LivingSaintSacredRegeneration;
+        public static GeneDef BEWH_LivingSaintFuryOfTheEmperor;
+        public static GeneDef BEWH_LivingSaintMartyrsEndurance;
         public static GeneDef BEWH_LivingSaintHolyRadiance;
 
         //Xenotype

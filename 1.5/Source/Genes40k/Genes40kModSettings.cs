@@ -12,6 +12,9 @@ namespace Genes40k
         public bool perpetualBirth = true;
         public int perpetualBirthChance = 3;
 
+        public bool livingSaintSystem = true;
+        public int livingSaintLimit = 1;
+        public float livingSaintBaseChance = 1;
         public int livingSaintBigThreat = 65;
         public int livingSaintSmallThreat = 35;
         
@@ -22,20 +25,20 @@ namespace Genes40k
         
         public ChapterColourDef CurrentlySelectedPreset
         {
-            get => currentlySelectedPreset ?? (currentlySelectedPreset = CustomPreset);
+            get => currentlySelectedPreset ??= CustomPreset;
             set => currentlySelectedPreset = value;
         }
 
         private ChapterColourDef customPreset = null;
         public ChapterColourDef CustomPreset =>
-            customPreset ?? (customPreset = new ChapterColourDef
+            customPreset ??= new ChapterColourDef
             {
                 defName = "BEWH_CustomChapterDef",
                 label = "Custom",
                 primaryColour = chapterColorOne,
                 secondaryColour = chapterColorTwo,
                 relatedChapterIcon = chapterShoulderIcon,
-            });
+            };
 
         public Color chapterColorOne = Color.black;
         public Color chapterColorTwo = Color.red;
@@ -53,6 +56,9 @@ namespace Genes40k
             Scribe_Values.Look(ref perpetualBirth, "perpetualBirth", true);
             Scribe_Values.Look(ref perpetualBirthChance, "perpetualBirthChance", 3);
             
+            Scribe_Values.Look(ref livingSaintSystem, "livingSaintSystem", true);
+            Scribe_Values.Look(ref livingSaintLimit, "livingSaintLimit", 1);
+            Scribe_Values.Look(ref livingSaintBaseChance, "livingSaintBaseChance", 1f);
             Scribe_Values.Look(ref livingSaintBigThreat, "livingSaintBigThreat", 65);
             Scribe_Values.Look(ref livingSaintSmallThreat, "livingSaintSmallThreat", 35);
             

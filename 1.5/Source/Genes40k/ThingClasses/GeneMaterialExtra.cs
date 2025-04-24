@@ -1,44 +1,40 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using RimWorld;
-using UnityEngine;
 using Verse;
 
+namespace Genes40k;
 
-namespace Genes40k
+[StaticConstructorOnStartup]
+public class GeneMaterialExtra : ThingWithComps
 {
-    [StaticConstructorOnStartup]
-    public class GeneMaterialExtra : ThingWithComps
-    {
-        private GeneSet geneSet;
+    private GeneSet geneSet;
         
-        public override IEnumerable<StatDrawEntry> SpecialDisplayStats()
+    public override IEnumerable<StatDrawEntry> SpecialDisplayStats()
+    {
+        foreach (var item in base.SpecialDisplayStats())
         {
-            foreach (var item in base.SpecialDisplayStats())
-            {
-                yield return item;
-            }
+            yield return item;
+        }
 
-            if (geneSet == null)
+        if (geneSet == null)
+        {
+            var defMod = def.GetModExtension<DefModExtension_GeneFromMaterial>();
+            geneSet = new GeneSet();
+            geneSet.AddGene(defMod.addedGene);
+            if (defMod.extraAddedGeneForDescription != null)
             {
-                var defMod = def.GetModExtension<DefModExtension_GeneFromMaterial>();
-                geneSet = new GeneSet();
-                geneSet.AddGene(defMod.addedGene);
-                if (defMod.extraAddedGeneForDescription != null)
-                {
-                    geneSet.AddGene(defMod.extraAddedGeneForDescription);
-                }
+                geneSet.AddGene(defMod.extraAddedGeneForDescription);
             }
+        }
 
-            Dialog_InfoCard.Hyperlink? inspectGenesHyperlink = null;
-            if (ThingSelectionUtility.SelectableByMapClick(this))
-            {
-                inspectGenesHyperlink = new Dialog_InfoCard.Hyperlink(this, -1, thingIsGeneOwner: true);
-            }
-            foreach (var item3 in geneSet.SpecialDisplayStats(inspectGenesHyperlink))
-            {
-                yield return item3;
-            }
+        Dialog_InfoCard.Hyperlink? inspectGenesHyperlink = null;
+        if (ThingSelectionUtility.SelectableByMapClick(this))
+        {
+            inspectGenesHyperlink = new Dialog_InfoCard.Hyperlink(this, -1, thingIsGeneOwner: true);
+        }
+        foreach (var item3 in geneSet.SpecialDisplayStats(inspectGenesHyperlink))
+        {
+            yield return item3;
         }
     }
 }

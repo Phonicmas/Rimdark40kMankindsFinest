@@ -5,8 +5,6 @@ namespace Genes40k
 {
     public class CompProperties_AbilityDenyTheWitch : CompProperties_AbilityEffect
     {
-        public float range;
-
         public HediffDef hediffDef;
 
         public CompProperties_AbilityDenyTheWitch()

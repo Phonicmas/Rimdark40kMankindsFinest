@@ -100,6 +100,17 @@ namespace Genes40k
                 Genes40kDefOf.BEWH_SigmaPariah,
                 Genes40kDefOf.BEWH_UpsilonPariah,
             };
+        
+        public static List<GeneDef> LivingSaintGenes => new List<GeneDef>
+        {
+            Genes40kDefOf.BEWH_LivingSaintBeingOfFaith,
+            Genes40kDefOf.BEWH_LivingSaintDivineRadiance,
+            Genes40kDefOf.BEWH_LivingSaintDivineFlight,
+            Genes40kDefOf.BEWH_LivingSaintSacredRegeneration,
+            Genes40kDefOf.BEWH_LivingSaintFuryOfTheEmperor,
+            Genes40kDefOf.BEWH_LivingSaintMartyrsEndurance,
+            Genes40kDefOf.BEWH_LivingSaintHolyRadiance,
+        };
 
         public static List<HediffDef> DevelopmentPhases => new List<HediffDef>
             {
@@ -181,6 +192,11 @@ namespace Genes40k
         public static bool IsPariah(this Pawn pawn)
         {
             return Enumerable.Any(PariahGenes, gene => pawn.genes.HasActiveGene(gene));
+        }
+        
+        public static bool IsLivingSaint(this Pawn pawn)
+        {
+            return Enumerable.Any(LivingSaintGenes, gene => pawn.genes.HasActiveGene(gene));
         }
 
         public static bool UndergoingPhaseDevelopment(this Pawn pawn)

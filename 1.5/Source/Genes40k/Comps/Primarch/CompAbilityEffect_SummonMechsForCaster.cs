@@ -1,54 +1,52 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using RimWorld;
 using Verse;
 
-namespace Genes40k
+namespace Genes40k;
+
+public class CompAbilityEffect_SummonMechsForCaster : CompAbilityEffect
 {
-    public class CompAbilityEffect_SummonMechsForCaster : CompAbilityEffect
+    private new CompProperties_AbilitySummonMechsForCaster Props => (CompProperties_AbilitySummonMechsForCaster)props;
+
+    public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
     {
-        private new CompProperties_AbilitySummonMechsForCaster Props => (CompProperties_AbilitySummonMechsForCaster)props;
+        base.Apply(target, dest);
 
-        public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
+        var caster = parent.pawn;
+
+        var amountToSpawn = Props.amount;
+
+        if (Props.cannotHaveMoreThanAmount)
         {
-            base.Apply(target, dest);
+            var tmpMechsInAssignedOrder = new List<Pawn>();
 
-            var caster = parent.pawn;
+            MechanitorUtility.GetMechsInAssignedOrder(caster, ref tmpMechsInAssignedOrder);
+            amountToSpawn -= tmpMechsInAssignedOrder.Count;
+        }
 
-            var amountToSpawn = Props.amount;
+        for (var i = 0; i < amountToSpawn; i++)
+        {
+            var mechToSummon = PawnGenerator.GeneratePawn(Props.mechKind, caster.Faction);
 
-            if (Props.cannotHaveMoreThanAmount)
+            var pos = caster.Position.RandomAdjacentCell8Way();
+
+            if (!Props.trySpawnHere.NullOrEmpty())
             {
-                var tmpMechsInAssignedOrder = new List<Pawn>();
-
-                MechanitorUtility.GetMechsInAssignedOrder(caster, ref tmpMechsInAssignedOrder);
-                amountToSpawn -= tmpMechsInAssignedOrder.Count;
+                pos = caster.Position + Props.trySpawnHere[i];
             }
+                
+            var map = caster.Map;
 
-            for (var i = 0; i < amountToSpawn; i++)
+            if (!pos.Walkable(map))
             {
-                var mechToSummon = PawnGenerator.GeneratePawn(Props.mechKind, caster.Faction);
-
-                var pos = caster.Position.RandomAdjacentCell8Way();
-
-                if (!Props.trySpawnHere.NullOrEmpty())
-                {
-                    pos = caster.Position + Props.trySpawnHere[i];
-                }
-                
-                var map = caster.Map;
-
-                if (!pos.Walkable(map))
-                {
-                    pos = caster.Position;
-                }
-                
-                GenSpawn.Spawn(mechToSummon, pos, map);
-                
-                caster.relations.AddDirectRelation(PawnRelationDefOf.Overseer, mechToSummon);
-                
-                mechToSummon.drafter.Drafted = true;
+                pos = caster.Position;
             }
+                
+            GenSpawn.Spawn(mechToSummon, pos, map);
+                
+            caster.relations.AddDirectRelation(PawnRelationDefOf.Overseer, mechToSummon);
+                
+            mechToSummon.drafter.Drafted = true;
         }
     }
 }

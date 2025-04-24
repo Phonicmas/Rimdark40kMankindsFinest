@@ -30,14 +30,23 @@ namespace Genes40k
             harmony = new Harmony("Genes40k.Mod");
             harmony.PatchAll();
         }
+        
+        private Vector2 scrollPos;
 
+        private float listScrollViewHeight = 200f;
+        
         public override void DoSettingsWindowContents(Rect inRect)
         {
+            var viewRect = new Rect(inRect.x, inRect.y, inRect.width - 16f, listScrollViewHeight);
+            
+            Widgets.BeginScrollView(inRect, ref scrollPos, viewRect);
             var listingStandard = new Listing_Standard();
-            listingStandard.Begin(inRect);
-
+            listingStandard.Begin(viewRect);
+            
+            //Psychic Phenomena
             listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.PsychicPhenomena".Translate(), ref Settings.psychicPhenomena);
             
+            //Psyker/Pariah Birth
             listingStandard.Gap();
             listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.PsykerPariahBirth".Translate(), ref Settings.psykerPariahBirth);
             if (Settings.psykerPariahBirth)
@@ -46,6 +55,7 @@ namespace Genes40k
                 Settings.psykerPariahBirthChance = (int)listingStandard.Slider(Settings.psykerPariahBirthChance, 0, 100);
             }
             
+            //Perpetual Birth
             listingStandard.Gap();
             listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.PerpetualBirth".Translate(), ref Settings.perpetualBirth);
             if (Settings.perpetualBirth)
@@ -54,21 +64,35 @@ namespace Genes40k
                 Settings.perpetualBirthChance = (int)listingStandard.Slider(Settings.perpetualBirthChance, 0, 100);
             }
             
+            //Living Saint System
             listingStandard.Gap();
+            listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.LivingSaintSystem".Translate(), ref Settings.livingSaintSystem);
+            if (Settings.livingSaintSystem)
+            {
+                listingStandard.Label("BEWH.MankindsFinest.ModSettings.LivingSaintBaseChance".Translate(Settings.livingSaintBaseChance));
+                Settings.livingSaintBaseChance = (int)listingStandard.Slider(Settings.livingSaintBaseChance, 0, 100);
+                
+                listingStandard.Label("BEWH.MankindsFinest.ModSettings.LivingSaintPawnLimit".Translate(Settings.livingSaintLimit));
+                Settings.livingSaintLimit = (int)listingStandard.Slider(Settings.livingSaintLimit, 1, 100);
+                
+                listingStandard.Label("BEWH.MankindsFinest.ModSettings.LivingSaintChance".Translate());
+                listingStandard.Label("BEWH.MankindsFinest.ModSettings.LivingSaintBigThreat".Translate(Settings.livingSaintBigThreat));
+                Settings.livingSaintBigThreat = (int)listingStandard.Slider(Settings.livingSaintBigThreat, 0, 100);
+                listingStandard.Label("BEWH.MankindsFinest.ModSettings.LivingSaintSmallThreat".Translate(Settings.livingSaintSmallThreat));
+                Settings.livingSaintSmallThreat = (int)listingStandard.Slider(Settings.livingSaintSmallThreat, 0, 100);
+            }
+            
+            //Geneseed Implantation Offset
+            listingStandard.Gap();
+            listingStandard.Label("BEWH.MankindsFinest.ModSettings.ImplantationDesc".Translate());
             listingStandard.Label("BEWH.MankindsFinest.ModSettings.ImplantationSuccessChange".Translate(Settings.implantationSuccessOffset));
             Settings.implantationSuccessOffset = (int)listingStandard.Slider(Settings.implantationSuccessOffset, -200, 200);
             
-            listingStandard.Gap();
+            //Geneseed Implantation Cap Offset
             listingStandard.Label("BEWH.MankindsFinest.ModSettings.ImplantationCapOffset".Translate(Settings.implantationCapOffset));
             Settings.implantationCapOffset = (int)listingStandard.Slider(Settings.implantationCapOffset, -100, 100);
             
-            listingStandard.Gap();
-            listingStandard.Label("BEWH.MankindsFinest.ModSettings.LivingSaintChance".Translate());
-            listingStandard.Label("BEWH.MankindsFinest.ModSettings.LivingSaintBigThreat".Translate(Settings.livingSaintBigThreat));
-            Settings.livingSaintBigThreat = (int)listingStandard.Slider(Settings.livingSaintBigThreat, 0, 100);
-            listingStandard.Label("BEWH.MankindsFinest.ModSettings.LivingSaintSmallThreat".Translate(Settings.livingSaintSmallThreat));
-            Settings.livingSaintSmallThreat = (int)listingStandard.Slider(Settings.livingSaintSmallThreat, 0, 100);
-            
+            //Chaos Version for Stuff
             listingStandard.Gap();
             listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.UseChaosVersionForBanner".Translate(), ref Settings.useChaosVersion);
             listingStandard.Indent(inRect.width * 0.25f);
@@ -99,8 +123,10 @@ namespace Genes40k
 
             listingStandard.Gap();
             listingStandard.Label("\n" + "BEWH.ModSettings.CheckVEFPatches".Translate());
+            listScrollViewHeight = listingStandard.CurHeight;
             listingStandard.End();
-            base.DoSettingsWindowContents(inRect);
+            
+            Widgets.EndScrollView();
         }
 
         public override string SettingsCategory()

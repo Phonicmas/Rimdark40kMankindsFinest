@@ -1,34 +1,32 @@
 ﻿using RimWorld;
 using Verse;
 
+namespace Genes40k;
 
-namespace Genes40k
+[StaticConstructorOnStartup]
+public class Comp_TwinDisable : AbilityComp
 {
-    [StaticConstructorOnStartup]
-    public class Comp_TwinDisable : AbilityComp
+    private CompProperties_AbilityTwinDisable Props => (CompProperties_AbilityTwinDisable)props;
+
+    public override bool GizmoDisabled(out string reason)
     {
-        private CompProperties_AbilityTwinDisable Props => (CompProperties_AbilityTwinDisable)props;
-
-        public override bool GizmoDisabled(out string reason)
+        var caster = parent.pawn;
+        if (caster.genes != null && caster.genes.HasActiveGene(Genes40kDefOf.BEWH_PrimarchSpecificGeneXX))
         {
-            var caster = parent.pawn;
-            if (caster.genes != null && caster.genes.HasActiveGene(Genes40kDefOf.BEWH_PrimarchSpecificGeneXX))
+            var gene = (Gene_TwinConnected)caster.genes.GetGene(Genes40kDefOf.BEWH_PrimarchSpecificGeneXX);
+            if (Props.disableIfDead && gene.Twin.Dead)
             {
-                var gene = (Gene_TwinConnected)caster.genes.GetGene(Genes40kDefOf.BEWH_PrimarchSpecificGeneXX);
-                if (Props.disableIfDead && gene.Twin.Dead)
-                {
-                    reason = "BEWH.MankindsFinest.Ability.TwinConnectedDead".Translate();
-                    return true;
-                }
-
-                if (Props.disableIfOnDifferentMap && caster.Map != gene.Twin.Map)
-                {
-                    reason = "BEWH.MankindsFinest.Ability.TwinConnectedDifferentMap".Translate();
-                    return true;
-                }
+                reason = "BEWH.MankindsFinest.Ability.TwinConnectedDead".Translate();
+                return true;
             }
-            
-            return base.GizmoDisabled(out reason);
+
+            if (Props.disableIfOnDifferentMap && caster.Map != gene.Twin.Map)
+            {
+                reason = "BEWH.MankindsFinest.Ability.TwinConnectedDifferentMap".Translate();
+                return true;
+            }
         }
+            
+        return base.GizmoDisabled(out reason);
     }
 }

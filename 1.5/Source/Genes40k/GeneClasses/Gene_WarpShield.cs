@@ -1,14 +1,13 @@
 ﻿using Verse;
 
-namespace Genes40k
-{
-    public class Gene_WarpShield : Gene
-    {
-        public bool IsShielded = false;
+namespace Genes40k;
 
-        public void SwitchShieldState()
-        {
-            IsShielded = !IsShielded;
-        }
+public class Gene_WarpShield : Gene
+{
+    public bool IsShielded = false;
+
+    public void SwitchShieldState()
+    {
+        IsShielded = !IsShielded;
     }
 }

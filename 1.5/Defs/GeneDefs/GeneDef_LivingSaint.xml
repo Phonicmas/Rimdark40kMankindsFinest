@@ -283,6 +283,9 @@
         <descriptionHyperlinks>
             <AbilityDef>BEWH_LivingSaintInviolableAura</AbilityDef>
         </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_IgnoreMovespeedDecrease" />
+        </modExtensions>
     </GeneDef>
 
     <!-- Holy Radiance -->
@@ -359,6 +362,7 @@
             </li>
         </renderNodeProperties>
         <modExtensions>
+            <li Class="Genes40k.DefModExtension_IgnoreMovespeedDecrease" />
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <noSkillLoss>Shooting</noSkillLoss>
             </li>

@@ -1,81 +1,77 @@
-﻿using RimWorld;
-using System.Collections.Generic;
-using System.Linq;
-using UnityEngine;
+﻿using System.Linq;
 using Verse;
 
-namespace Genes40k
+namespace Genes40k;
+
+public class GameComponent_MankindFinestUtils : GameComponent
 {
-    public class GameComponent_MankindFinestUtils : GameComponent
+
+    private const int CheckInterval = 500;
+    private int currentTick;
+
+    public bool useNewRandomChapter = true;
+        
+    private Genes40kModSettings modSettings = null;
+
+    private Genes40kModSettings ModSettings => modSettings ?? (modSettings = LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>());
+
+    private ChapterColourDef currentChapterColour;
+
+    public ChapterColourDef CurrentChapterColour
     {
+        get
+        {
+            if (useNewRandomChapter)
+            {
+                useNewRandomChapter = false;
+                currentChapterColour = GetRandomChapterForRaid();
+            }
 
-        private const int CheckInterval = 500;
-        private int currentTick;
+            return currentChapterColour;
+        }
+    }
 
-        public bool useNewRandomChapter = true;
+    public GameComponent_MankindFinestUtils(Game game)
+    {
+    }
+
+    public override void GameComponentTick()
+    {
+        if (currentTick != CheckInterval)
+        {
+            currentTick++;
+            return;
+        }
+
+        currentTick = 0;
+
+        if (!useNewRandomChapter)
+        {
+            useNewRandomChapter = true;
+        }
+    }
         
-        private Genes40kModSettings modSettings = null;
+    private ChapterColourDef GetRandomChapterForRaid()
+    {   
+        var chapterColours = DefDatabase<ChapterColourDef>.AllDefsListForReading.ToList();
 
-        private Genes40kModSettings ModSettings => modSettings ?? (modSettings = LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>());
-
-        private ChapterColourDef currentChapterColour;
-
-        public ChapterColourDef CurrentChapterColour
+        if (ModSettings.CurrentlySelectedPreset != null && ModSettings.CurrentlySelectedPreset != ModSettings.CustomPreset)
         {
-            get
-            {
-                if (useNewRandomChapter)
-                {
-                    useNewRandomChapter = false;
-                    currentChapterColour = GetRandomChapterForRaid();
-                }
-
-                return currentChapterColour;
-            }
+            chapterColours.Remove(ModSettings.CurrentlySelectedPreset);
         }
 
-        public GameComponent_MankindFinestUtils(Game game)
+        if (currentChapterColour != null && chapterColours.Contains(currentChapterColour))
         {
+            chapterColours.Remove(currentChapterColour);
         }
 
-        public override void GameComponentTick()
-        {
-            if (currentTick != CheckInterval)
-            {
-                currentTick++;
-                return;
-            }
-
-            currentTick = 0;
-
-            if (!useNewRandomChapter)
-            {
-                useNewRandomChapter = true;
-            }
-        }
-        
-        private ChapterColourDef GetRandomChapterForRaid()
-        {   
-            var chapterColours = DefDatabase<ChapterColourDef>.AllDefsListForReading.ToList();
-
-            if (ModSettings.CurrentlySelectedPreset != null && ModSettings.CurrentlySelectedPreset != ModSettings.CustomPreset)
-            {
-                chapterColours.Remove(ModSettings.CurrentlySelectedPreset);
-            }
-
-            if (currentChapterColour != null && chapterColours.Contains(currentChapterColour))
-            {
-                chapterColours.Remove(currentChapterColour);
-            }
-
-            return chapterColours.RandomElement();
-        }
+        return chapterColours.RandomElement();
+    }
 
         
-        public override void ExposeData()
-        {
-            base.ExposeData();
-            Scribe_Values.Look(ref currentTick, "currentTick");
-        }
+    public override void ExposeData()
+    {
+        base.ExposeData();
+        Scribe_Values.Look(ref currentTick, "currentTick");
     }
 }

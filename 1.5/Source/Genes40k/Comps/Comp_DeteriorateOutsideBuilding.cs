@@ -1,54 +1,51 @@
 ﻿using System.Text;
 using RimWorld;
-using UnityEngine;
-using UnityEngine.Diagnostics;
 using Verse;
 
-namespace Genes40k
+namespace Genes40k;
+
+//Thanks to VE for letting me repurpose code from VE ancients
+public class Comp_DeteriorateOutsideBuilding : ThingComp
 {
-    //Thanks to VE for letting me repurpose code from VE ancients
-    public class Comp_DeteriorateOutsideBuilding : ThingComp
+    public CompProperties_DeteriorateOutsideBuilding Props => props as CompProperties_DeteriorateOutsideBuilding;
+
+    public bool ShouldDeteriorate
     {
-        public CompProperties_DeteriorateOutsideBuilding Props => props as CompProperties_DeteriorateOutsideBuilding;
-
-        public bool ShouldDeteriorate
+        get
         {
-            get
+            var thing = parent.StoringThing();
+            if (thing == null || !Props.antiDeteriorateContainers.Contains(thing.def))
             {
-                var thing = parent.StoringThing();
-                if (thing == null || !Props.antiDeteriorateContainers.Contains(thing.def))
-                {
-                    return true;
-                }
+                return true;
+            }
                 
-                var comp = thing.TryGetComp<CompPowerTrader>();
-                if (comp != null)
-                {
-                    return !comp.PowerOn;
-                }
-                return false;
-            }
-        }
-        
-        public override string CompInspectStringExtra()
-        {
-            var stringBuilder = new StringBuilder();
-            stringBuilder.Append("BEWH.MankindsFinest.Containers.DeterioratingOutsideContainer".Translate(parent.Label));
-            return stringBuilder.ToString();
-        }
-        
-        public override string GetDescriptionPart()
-        {
-            var stringBuilder = new StringBuilder();
-            stringBuilder.Append("BEWH.MankindsFinest.Containers.SuitableContainers".Translate());
-            foreach (var container in Props.antiDeteriorateContainers)
+            var comp = thing.TryGetComp<CompPowerTrader>();
+            if (comp != null)
             {
-                stringBuilder.Append("\n");
-                stringBuilder.Append(" - " + container.label.CapitalizeFirst());
+                return !comp.PowerOn;
             }
-            return stringBuilder.ToString();
+            return false;
         }
+    }
+        
+    public override string CompInspectStringExtra()
+    {
+        var stringBuilder = new StringBuilder();
+        stringBuilder.Append("BEWH.MankindsFinest.Containers.DeterioratingOutsideContainer".Translate(parent.Label));
+        return stringBuilder.ToString();
+    }
+        
+    public override string GetDescriptionPart()
+    {
+        var stringBuilder = new StringBuilder();
+        stringBuilder.Append("BEWH.MankindsFinest.Containers.SuitableContainers".Translate());
+        foreach (var container in Props.antiDeteriorateContainers)
+        {
+            stringBuilder.Append("\n");
+            stringBuilder.Append(" - " + container.label.CapitalizeFirst());
+        }
+        return stringBuilder.ToString();
+    }
 
         
-    }
 }

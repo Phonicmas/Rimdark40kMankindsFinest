@@ -1,9 +1,8 @@
 ﻿using Verse;
 
-namespace Genes40k
+namespace Genes40k;
+
+public class DefModExtension_PrimarchVatExtras : DefModExtension
 {
-    public class DefModExtension_PrimarchVatExtras : DefModExtension
-    {
-        public int childAmount = 1;
-    }
+    public int childAmount = 1;
 }

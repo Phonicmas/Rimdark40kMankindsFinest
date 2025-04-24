@@ -1,69 +1,58 @@
 ﻿using Verse;
 
-namespace Genes40k
+namespace Genes40k;
+
+public class HediffComp_SeverityFromDivineRadiance : HediffComp
 {
-    public class HediffComp_SeverityFromDivineRadiance : HediffComp
+    private Gene_DivineRadiance cachedDivineRadianceGene;
+
+    public HediffCompProperties_SeverityFromDivineRadiance Props => (HediffCompProperties_SeverityFromDivineRadiance)props;
+
+    public override bool CompShouldRemove => Pawn.genes?.GetFirstGeneOfType<Gene_DivineRadiance>() == null;
+
+    private Gene_DivineRadiance DivineRadiance => cachedDivineRadianceGene ??= Pawn.genes.GetFirstGeneOfType<Gene_DivineRadiance>();
+
+    public override void CompPostPostAdd(DamageInfo? dinfo)
     {
-        private Gene_DivineRadiance cachedDivineRadianceGene;
-
-        public HediffCompProperties_SeverityFromDivineRadiance Props => (HediffCompProperties_SeverityFromDivineRadiance)props;
-
-        public override bool CompShouldRemove => Pawn.genes?.GetFirstGeneOfType<Gene_DivineRadiance>() == null;
-
-        private Gene_DivineRadiance DivineRadiance
+        base.CompPostPostAdd(dinfo);
+        if (DivineRadiance == null)
         {
-            get
-            {
-                if (cachedDivineRadianceGene == null)
-                {
-                    cachedDivineRadianceGene = Pawn.genes.GetFirstGeneOfType<Gene_DivineRadiance>();
-                }
-                return cachedDivineRadianceGene;
-            }
+            return;
         }
-
-        public override void CompPostPostAdd(DamageInfo? dinfo)
-        {
-            base.CompPostPostAdd(dinfo);
-            if (DivineRadiance == null)
-            {
-                return;
-            }
             
-            if (Props.divineRadiancePerHour != 0)
-            {
-                DivineRadiance.isOvercharging = true;
-            }
+        if (Props.divineRadiancePerHour != 0)
+        {
+            DivineRadiance.isOvercharging = true;
         }
+    }
 
-        public override void CompPostPostRemoved()
+    public override void CompPostPostRemoved()
+    {
+        base.CompPostPostRemoved();
+        if (DivineRadiance == null)
         {
-            base.CompPostPostRemoved();
-            if (DivineRadiance == null)
-            {
-                return;
-            }
-            
-            if (Props.divineRadiancePerHour != 0)
-            {
-                DivineRadiance.isOvercharging = false;
-            }
+            return;
         }
-
-        public override void CompPostTick(ref float severityAdjustment)
-        {
-            base.CompPostTick(ref severityAdjustment);
-            if (DivineRadiance == null)
-            {
-                return;
-            }
             
-            severityAdjustment += (DivineRadiance.Value > 0f ? Props.severityPerHourDivineRadiance : Props.severityPerHourEmpty) / 2500f;
+        if (Props.divineRadiancePerHour != 0)
+        {
+            DivineRadiance.isOvercharging = false;
+        }
+    }
+
+    public override void CompPostTick(ref float severityAdjustment)
+    {
+        base.CompPostTick(ref severityAdjustment);
+        if (DivineRadiance == null)
+        {
+            return;
+        }
+            
+        severityAdjustment += (DivineRadiance.Value > 0f ? Props.severityPerHourDivineRadiance : Props.severityPerHourEmpty) / 2500f;
                 
-            if (Props.divineRadiancePerHour != 0)
-            {
-                DivineRadiance.ChangeDivineRadianceAmount(Props.divineRadiancePerHour / 2500f);
-            }
+        if (Props.divineRadiancePerHour != 0)
+        {
+            DivineRadiance.ChangeDivineRadianceAmount(Props.divineRadiancePerHour / 2500f);
         }
     }
 }

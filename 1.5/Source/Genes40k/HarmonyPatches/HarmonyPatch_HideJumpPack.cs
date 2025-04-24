@@ -1,26 +1,25 @@
-﻿using HarmonyLib;
+﻿using System.Linq;
+using HarmonyLib;
 using RimWorld;
 
-namespace Genes40k
-{
-    [HarmonyPatch(typeof(Apparel), "WornGraphicPath", MethodType.Getter)]
-    public class HideJumpPack
-    {
-        public static void Postfix(ref string __result, Apparel __instance)
-        {
-            if ( __instance.def != Genes40kDefOf.Apparel_PackJump)
-            {
-                return;
-            }
+namespace Genes40k;
 
-            foreach (var apparel in __instance.Wearer.apparel.WornApparel)
-            {
-                if (apparel.def.HasModExtension<DefModExtension_HideJumpPack>())
-                {
-                    const string texPath = "Things/Armor/Imperium/PowerArmor/CommonIcons/BEWH_None";
-                    __result = texPath;
-                }
-            }
+[HarmonyPatch(typeof(Apparel), "WornGraphicPath", MethodType.Getter)]
+public class HideJumpPack
+{
+    public static void Postfix(ref string __result, Apparel __instance)
+    {
+        if ( __instance.def != Genes40kDefOf.Apparel_PackJump)
+        {
+            return;
         }
+
+        if (!__instance.Wearer.apparel.WornApparel.Any(apparel => apparel.def.HasModExtension<DefModExtension_HideJumpPack>()))
+        {
+            return;
+        }
+        
+        const string texPath = "Things/Armor/Imperium/PowerArmor/CommonIcons/BEWH_None";
+        __result = texPath;
     }
 }

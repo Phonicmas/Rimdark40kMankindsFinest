@@ -1,10 +1,9 @@
 ﻿using Verse;
 
-namespace Genes40k
+namespace Genes40k;
+
+public class DefModExtension_PerpetualGene : DefModExtension
 {
-    public class DefModExtension_PerpetualGene : DefModExtension
-    {
-        public int perpetualTier;
-        public IntRange perpetualRessurectionRange;
-    }
+    public int perpetualTier;
+    public IntRange perpetualRessurectionRange;
 }

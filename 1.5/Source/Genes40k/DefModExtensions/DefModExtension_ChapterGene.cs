@@ -1,9 +1,8 @@
 ﻿using Verse;
 
-namespace Genes40k
+namespace Genes40k;
+
+public class DefModExtension_ChapterGene : DefModExtension
 {
-    public class DefModExtension_ChapterGene : DefModExtension
-    {
-        public string chapterName = string.Empty;
-    }
+    public string chapterName = string.Empty;
 }

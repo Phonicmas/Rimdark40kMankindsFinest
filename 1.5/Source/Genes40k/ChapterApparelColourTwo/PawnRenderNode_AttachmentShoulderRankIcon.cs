@@ -1,26 +1,25 @@
 ﻿using Verse;
 
-namespace Genes40k
+namespace Genes40k;
+
+public class PawnRenderNode_AttachmentShoulderRankIcon : PawnRenderNode
 {
-    public class PawnRenderNode_AttachmentShoulderRankIcon : PawnRenderNode
+    public PawnRenderNode_AttachmentShoulderRankIcon(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree) : base(pawn, props, tree)
     {
-        public PawnRenderNode_AttachmentShoulderRankIcon(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree) : base(pawn, props, tree)
-        {
-        }
+    }
         
-        public override Graphic GraphicFor(Pawn pawn)
+    public override Graphic GraphicFor(Pawn pawn)
+    {
+        var rightShoulderPath = Props.texPath;
+            
+        var apparelColourTwo = (ChapterBodyDecorativeApparelColourTwo)apparel;
+        var drawColour = apparelColourTwo.RightShoulderIconColour;
+            
+        if (apparelColourTwo.RightShoulderIcon != null)
         {
-            var rightShoulderPath = Props.texPath;
-            
-            var apparelColourTwo = (ChapterBodyDecorativeApparelColourTwo)apparel;
-            var drawColour = apparelColourTwo.RightShoulderIconColour;
-            
-            if (apparelColourTwo.RightShoulderIcon != null)
-            {
-                rightShoulderPath = apparelColourTwo.RightShoulderIcon.drawnTextureIconPath;
-            }
-            
-            return GraphicDatabase.Get<Graphic_Multi>(rightShoulderPath, ShaderFor(pawn), Props.drawSize, drawColour, drawColour);
+            rightShoulderPath = apparelColourTwo.RightShoulderIcon.drawnTextureIconPath;
         }
+            
+        return GraphicDatabase.Get<Graphic_Multi>(rightShoulderPath, ShaderFor(pawn), Props.drawSize, drawColour, drawColour);
     }
 }

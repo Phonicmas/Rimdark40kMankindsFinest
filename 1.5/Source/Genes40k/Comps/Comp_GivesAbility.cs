@@ -1,20 +1,18 @@
 ﻿using Verse;
 
+namespace Genes40k;
 
-namespace Genes40k
+public class Comp_GivesAbility : ThingComp
 {
-    public class Comp_GivesAbility : ThingComp
+    private CompProperties_GivesAbility Props => (CompProperties_GivesAbility)props;
+
+    public override void Notify_Equipped(Pawn pawn)
     {
-        private CompProperties_GivesAbility Props => (CompProperties_GivesAbility)props;
+        pawn.abilities.GainAbility(Props.ability);
+    }
 
-        public override void Notify_Equipped(Pawn pawn)
-        {
-            pawn.abilities.GainAbility(Props.ability);
-        }
-
-        public override void Notify_Unequipped(Pawn pawn)
-        {
-            pawn.abilities.RemoveAbility(Props.ability);
-        }
+    public override void Notify_Unequipped(Pawn pawn)
+    {
+        pawn.abilities.RemoveAbility(Props.ability);
     }
 }

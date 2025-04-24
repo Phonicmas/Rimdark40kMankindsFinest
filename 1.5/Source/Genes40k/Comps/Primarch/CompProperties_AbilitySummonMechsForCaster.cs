@@ -12,7 +12,7 @@ namespace Genes40k
 
         public bool cannotHaveMoreThanAmount = false;
 
-        public List<IntVec3> trySpawnHere = new List<IntVec3>();
+        public List<IntVec3> trySpawnHere = new ();
 
         public CompProperties_AbilitySummonMechsForCaster()
         {

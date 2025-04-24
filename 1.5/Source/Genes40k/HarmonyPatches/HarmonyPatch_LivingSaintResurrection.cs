@@ -2,15 +2,19 @@
 using RimWorld;
 using Verse;
 
-namespace Genes40k
+namespace Genes40k;
+
+[HarmonyPatch(typeof(IncidentWorker), "TryExecute")]
+public class LivingSaintResurrection
 {
-    [HarmonyPatch(typeof(IncidentWorker), "TryExecute")]
-    public class LivingSaintResurrection
+    public static void Prefix(IncidentWorker __instance)
     {
-        public static void Prefix(IncidentWorker __instance)
+        if (!Genes40kUtils.ModSettings.livingSaintSystem)
         {
-            var gameComponent = Current.Game.GetComponent<GameComponent_LivingSaint>();
-            gameComponent?.TrySpawnSaint(__instance.def.category);
-        }    
-    }
+            return;
+        }
+            
+        var gameComponent = Current.Game.GetComponent<GameComponent_LivingSaint>();
+        gameComponent?.TrySpawnSaint(__instance.def.category);
+    }    
 }

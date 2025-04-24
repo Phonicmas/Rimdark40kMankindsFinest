@@ -506,6 +506,7 @@
                 <canBeEnslaved>false</canBeEnslaved>
                 <canBeRecruited>false</canBeRecruited>
             </li>
+            <li Class="Genes40k.DefModExtension_IgnoreMovespeedDecrease" />
         </modExtensions>
     </GeneDef>
 

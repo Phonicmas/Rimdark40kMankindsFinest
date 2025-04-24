@@ -3,56 +3,55 @@ using System.Collections.Generic;
 using System.Linq;
 using Verse;
 
-namespace Genes40k
+namespace Genes40k;
+
+public class StockGenerator_TagSangprimusMaterialNoDupe : StockGenerator
 {
-    public class StockGenerator_TagSangprimusMaterialNoDupe : StockGenerator
+    [NoTranslate]
+    public string tradeTag;
+
+    private IntRange thingDefCountRange = IntRange.one;
+
+    private List<ThingDef> excludedThingDefs = new List<ThingDef>();
+
+    public override IEnumerable<Thing> GenerateThings(int forTile, Faction faction = null)
     {
-        [NoTranslate]
-        public string tradeTag;
-
-        private IntRange thingDefCountRange = IntRange.one;
-
-        private List<ThingDef> excludedThingDefs = new List<ThingDef>();
-
-        public override IEnumerable<Thing> GenerateThings(int forTile, Faction faction = null)
+        var generatedDefs = new List<ThingDef>();
+        var numThingDefsToUse = thingDefCountRange.RandomInRange;
+        var maps = Find.Maps.Where(m => m.listerBuildings.ColonistsHaveBuilding(Genes40kDefOf.BEWH_SangprimusPortum));
+        var excludedMaterials = new List<ThingDef>();
+        //In case it is ever a problem; count amount of maps with a sangprimus then make that the limit of the amount of materials
+        foreach (var map in maps)
         {
-            var generatedDefs = new List<ThingDef>();
-            var numThingDefsToUse = thingDefCountRange.RandomInRange;
-            var maps = Find.Maps.Where(m => m.listerBuildings.ColonistsHaveBuilding(Genes40kDefOf.BEWH_SangprimusPortum));
-            var excludedMaterials = new List<ThingDef>();
-            //In case it is ever a problem; count amount of maps with a sangprimus then make that the limit of the amount of materials
-            foreach (var map in maps)
-            {
-                var building = (Building_SangprimusPortum)map.listerBuildings.AllBuildingsColonistOfDef(Genes40kDefOf.BEWH_SangprimusPortum).First();
-                excludedMaterials.AddRange(building.SearchableContents.Select(material => material.def));
-            }
-            for (var i = 0; i < numThingDefsToUse; i++)
-            {
-                if (!DefDatabase<ThingDef>.AllDefs.Where(d => HandlesThingDef(d) && d.tradeability.TraderCanSell() && d.PlayerAcquirable && !excludedMaterials.Contains(d) && (excludedThingDefs == null || !excludedThingDefs.Contains(d)) && !generatedDefs.Contains(d)).TryRandomElementByWeight(SelectionWeight, out var chosenThingDef))
-                {
-                    break;
-                }
-                foreach (var item in StockGeneratorUtility.TryMakeForStock(chosenThingDef, RandomCountOf(chosenThingDef), faction))
-                {
-                    yield return item;
-                }
-                generatedDefs.Add(chosenThingDef);
-                chosenThingDef = null;
-            }
+            var building = (Building_SangprimusPortum)map.listerBuildings.AllBuildingsColonistOfDef(Genes40kDefOf.BEWH_SangprimusPortum).First();
+            excludedMaterials.AddRange(building.SearchableContents.Select(material => material.def));
         }
-
-        public override bool HandlesThingDef(ThingDef thingDef)
+        for (var i = 0; i < numThingDefsToUse; i++)
         {
-            if (thingDef.tradeTags != null && thingDef.tradeability != 0 && (int)thingDef.techLevel <= (int)maxTechLevelBuy)
+            if (!DefDatabase<ThingDef>.AllDefs.Where(d => HandlesThingDef(d) && d.tradeability.TraderCanSell() && d.PlayerAcquirable && !excludedMaterials.Contains(d) && (excludedThingDefs == null || !excludedThingDefs.Contains(d)) && !generatedDefs.Contains(d)).TryRandomElementByWeight(SelectionWeight, out var chosenThingDef))
             {
-                return thingDef.tradeTags.Contains(tradeTag);
+                break;
             }
-            return false;
+            foreach (var item in StockGeneratorUtility.TryMakeForStock(chosenThingDef, RandomCountOf(chosenThingDef), faction))
+            {
+                yield return item;
+            }
+            generatedDefs.Add(chosenThingDef);
+            chosenThingDef = null;
         }
+    }
 
-        protected virtual float SelectionWeight(ThingDef thingDef)
+    public override bool HandlesThingDef(ThingDef thingDef)
+    {
+        if (thingDef.tradeTags != null && thingDef.tradeability != 0 && (int)thingDef.techLevel <= (int)maxTechLevelBuy)
         {
-            return 1f;
+            return thingDef.tradeTags.Contains(tradeTag);
         }
+        return false;
+    }
+
+    protected virtual float SelectionWeight(ThingDef thingDef)
+    {
+        return 1f;
     }
 }
