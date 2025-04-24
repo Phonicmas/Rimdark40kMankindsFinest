@@ -2,7 +2,7 @@
 <Defs>
 
     <!-- TEST AREA -->
-    <Genes40k.ExtraDecorationDef Name="BEWH_TESTSTUFF" Abstract="True">
+    <Core40k.ExtraDecorationDef Name="BEWH_TESTSTUFF" Abstract="True">
         <iconPath>Things/Decorations/Armor/Common/BEWH_Deco_DeathWatch_Shoulder_east</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_DeathWatch_Shoulder</drawnTextureIconPath>
         <sortOrder>0</sortOrder>
@@ -36,9 +36,9 @@
             <li>BEWH_DecoPaletteLeatherBrown</li>
             <li>BEWH_DecoPaletteLeatherBlack</li>
         </availablePresets>
-    </Genes40k.ExtraDecorationDef>
+    </Core40k.ExtraDecorationDef>
 	
-	<Genes40k.ExtraDecorationDef>
+	<Core40k.ExtraDecorationDef>
         <defName>BEWH_HeadTest</defName>
         <label>HeadTest</label>
         <description>...</description>
@@ -63,13 +63,13 @@
         <shaderType>Cutout</shaderType>
         <flipable>true</flipable>
         <drawInHeadSpace>true</drawInHeadSpace>
-    </Genes40k.ExtraDecorationDef>
+    </Core40k.ExtraDecorationDef>
 
     <!-- BODY STUFF -->
     <!-- Common -->
 
     <!-- Custom shoulders -->
-    <Genes40k.ExtraDecorationDef>
+    <Core40k.ExtraDecorationDef>
         <defName>BEWH_DecoDWatchPauldron</defName>
         <label>Deathwatch pauldron</label>
         <description>...</description>
@@ -93,10 +93,10 @@
         </layerOffsets>
         <shaderType>Cutout</shaderType>
         <flipable>true</flipable>
-    </Genes40k.ExtraDecorationDef>
+    </Core40k.ExtraDecorationDef>
 
     <!-- Purity Seals -->
-    <Genes40k.ExtraDecorationDef>
+    <Core40k.ExtraDecorationDef>
         <defName>BEWH_DecoPSeal_1</defName>
         <label>Purity seals 1</label>
         <description>...</description>
@@ -121,9 +121,9 @@
         </layerOffsets>
         <shaderType>Cutout</shaderType>
         <flipable>true</flipable>
-    </Genes40k.ExtraDecorationDef>
+    </Core40k.ExtraDecorationDef>
 
-    <Genes40k.ExtraDecorationDef>
+    <Core40k.ExtraDecorationDef>
         <defName>BEWH_DecoPSeal_2</defName>
         <label>Purity seals 2</label>
         <description>...</description>
@@ -141,9 +141,9 @@
         </appliesTo>
         <shaderType>Cutout</shaderType>
         <flipable>true</flipable>
-    </Genes40k.ExtraDecorationDef>
+    </Core40k.ExtraDecorationDef>
 
-    <Genes40k.ExtraDecorationDef>
+    <Core40k.ExtraDecorationDef>
         <defName>BEWH_DecoPSeal_3</defName>
         <label>Purity seals 3</label>
         <description>...</description>
@@ -167,9 +167,9 @@
         </layerOffsets>
         <shaderType>Cutout</shaderType>
         <flipable>true</flipable>
-    </Genes40k.ExtraDecorationDef>
+    </Core40k.ExtraDecorationDef>
    
-    <Genes40k.ExtraDecorationDef>
+    <Core40k.ExtraDecorationDef>
         <defName>BEWH_DecoPSeal_4</defName>
         <label>Purity seals 4</label>
         <description>...</description>
@@ -186,9 +186,9 @@
         </appliesTo>
         <shaderType>Cutout</shaderType>
         <flipable>true</flipable>
-    </Genes40k.ExtraDecorationDef>
+    </Core40k.ExtraDecorationDef>
 
-    <Genes40k.ExtraDecorationDef>
+    <Core40k.ExtraDecorationDef>
         <defName>BEWH_DecoPSeal_5</defName>
         <label>Purity seals 5</label>
         <description>...</description>
@@ -206,10 +206,10 @@
         </appliesTo>
         <shaderType>Cutout</shaderType>
         <flipable>true</flipable>
-    </Genes40k.ExtraDecorationDef>
+    </Core40k.ExtraDecorationDef>
 
     <!-- Relics -->
-    <Genes40k.ExtraDecorationDef>
+    <Core40k.ExtraDecorationDef>
         <defName>BEWH_DecoRelic_1</defName>
         <label>Relic 1</label>
         <description>...</description>
@@ -227,10 +227,10 @@
         </appliesTo>
         <shaderType>Cutout</shaderType>
         <flipable>true</flipable>
-    </Genes40k.ExtraDecorationDef>
+    </Core40k.ExtraDecorationDef>
 
     <!-- Pouches -->
-    <Genes40k.ExtraDecorationDef>
+    <Core40k.ExtraDecorationDef>
         <defName>BEWH_DecoPouch_1</defName>
         <label>Pouch 1</label>
         <description>...</description>
@@ -253,9 +253,9 @@
             <li>BEWH_DecoPaletteLeatherBlack</li>
         </availablePresets>
         <flipable>true</flipable>
-    </Genes40k.ExtraDecorationDef>
+    </Core40k.ExtraDecorationDef>
 
-    <Genes40k.ExtraDecorationDef>
+    <Core40k.ExtraDecorationDef>
         <defName>BEWH_DecoPouchBelt</defName>
         <label>Pouch belt</label>
         <description>...</description>
@@ -289,11 +289,11 @@
             <li>BEWH_DecoPaletteLeatherBlack</li>
         </availablePresets>
         <flipable>true</flipable>
-    </Genes40k.ExtraDecorationDef>
+    </Core40k.ExtraDecorationDef>
 
     <!-- Grenades -->
 
-    <Genes40k.ExtraDecorationDef>
+    <Core40k.ExtraDecorationDef>
         <defName>BEWH_Deco_Grenade_1</defName>
         <label>Grenade 1</label>
         <description>...</description>
@@ -312,9 +312,9 @@
         </appliesTo>
         <shaderType>Cutout</shaderType>
         <flipable>true</flipable>
-    </Genes40k.ExtraDecorationDef>
+    </Core40k.ExtraDecorationDef>
 
-    <Genes40k.ExtraDecorationDef>
+    <Core40k.ExtraDecorationDef>
         <defName>BEWH_Deco_Grenade_2</defName>
         <label>Grenade 2</label>
         <description>...</description>
@@ -333,9 +333,9 @@
         </appliesTo>
         <shaderType>Cutout</shaderType>
         <flipable>true</flipable>
-    </Genes40k.ExtraDecorationDef>
+    </Core40k.ExtraDecorationDef>
 
-    <Genes40k.ExtraDecorationDef>
+    <Core40k.ExtraDecorationDef>
         <defName>BEWH_Deco_KrGrenade_1</defName>
         <label>Krak Grenade 1</label>
         <description>...</description>
@@ -354,9 +354,9 @@
         </appliesTo>
         <shaderType>Cutout</shaderType>
         <flipable>true</flipable>
-    </Genes40k.ExtraDecorationDef>
+    </Core40k.ExtraDecorationDef>
 
-    <Genes40k.ExtraDecorationDef>
+    <Core40k.ExtraDecorationDef>
         <defName>BEWH_Deco_KrGrenade_2</defName>
         <label>Krak Grenade 2</label>
         <description>...</description>
@@ -375,10 +375,10 @@
         </appliesTo>
         <shaderType>Cutout</shaderType>
         <flipable>true</flipable>
-    </Genes40k.ExtraDecorationDef>
+    </Core40k.ExtraDecorationDef>
 
     <!-- Misc -->
-    <Genes40k.ExtraDecorationDef>
+    <Core40k.ExtraDecorationDef>
         <defName>BEWH_Deco_ClawMarks_1</defName>
         <label>Claw marks</label>
         <description>...</description>
@@ -407,9 +407,9 @@
         </layerOffsets>
         <shaderType>Cutout</shaderType>
         <flipable>true</flipable>
-    </Genes40k.ExtraDecorationDef>
+    </Core40k.ExtraDecorationDef>
 
-    <Genes40k.ExtraDecorationDef>
+    <Core40k.ExtraDecorationDef>
         <defName>BEWH_Deco_Rondel</defName>
         <label>Rondel</label>
         <description>...</description>
@@ -444,11 +444,11 @@
         <colourable>true</colourable>
         <useArmorColourAsDefault>true</useArmorColourAsDefault>
         <flipable>true</flipable>
-    </Genes40k.ExtraDecorationDef>
+    </Core40k.ExtraDecorationDef>
    
     <!-- HEAD STUFF-->
     <!-- Common -->
-    <Genes40k.ExtraDecorationDef>
+    <Core40k.ExtraDecorationDef>
         <defName>BEWH_DecoInquisInsignia</defName>
         <label>Inquisition insignia</label>
         <description>...</description>
@@ -472,9 +472,9 @@
             <li>BEWH_DecoPaletteIFBlack</li>
         </availablePresets>
         <shaderType>Cutout</shaderType>
-    </Genes40k.ExtraDecorationDef>
+    </Core40k.ExtraDecorationDef>
 
-    <Genes40k.ExtraDecorationDef>
+    <Core40k.ExtraDecorationDef>
         <defName>BEWH_DecoSkull</defName>
         <label>Skull</label>
         <description>...</description>
@@ -498,9 +498,9 @@
             <li>BEWH_DecoPaletteIFBlack</li>
         </availablePresets>
         <shaderType>Cutout</shaderType>
-    </Genes40k.ExtraDecorationDef>
+    </Core40k.ExtraDecorationDef>
 
-    <Genes40k.ExtraDecorationDef>
+    <Core40k.ExtraDecorationDef>
         <defName>BEWH_DecoLaurels</defName>
         <label>Laurel wreath</label>
         <description>...</description>
@@ -536,9 +536,9 @@
         </availablePresets>
         <colourable>true</colourable>
         <shaderType>Cutout</shaderType>
-    </Genes40k.ExtraDecorationDef>
+    </Core40k.ExtraDecorationDef>
 
-    <Genes40k.ExtraDecorationDef>
+    <Core40k.ExtraDecorationDef>
         <defName>BEWH_MkxBladeguardBrim</defName>
         <label>Bladeguard brim</label>
         <description>...</description>
@@ -575,10 +575,10 @@
             <li>BEWH_DecoPaletteStripeRed</li>
         </availablePresets>
         <shaderType>Cutout</shaderType>
-    </Genes40k.ExtraDecorationDef>
+    </Core40k.ExtraDecorationDef>
 
     <!-- Mark X -->
-    <Genes40k.ExtraDecorationDef>
+    <Core40k.ExtraDecorationDef>
         <defName>BEWH_MkxDecoStripe</defName>
         <label>Stripe</label>
         <description>...</description>
@@ -618,9 +618,9 @@
             <li>BEWH_DecoPaletteStripeRed</li>
         </availablePresets>
         <shaderType>Cutout</shaderType>
-    </Genes40k.ExtraDecorationDef>
+    </Core40k.ExtraDecorationDef>
 
-    <Genes40k.ExtraDecorationDef>
+    <Core40k.ExtraDecorationDef>
         <defName>BEWH_MkxLieutenantStripe</defName>
         <label>Lieutenant stripe</label>
         <description>...</description>
@@ -653,9 +653,9 @@
             </li>
         </layerOffsets>
         <shaderType>Cutout</shaderType>
-    </Genes40k.ExtraDecorationDef>
+    </Core40k.ExtraDecorationDef>
 
-    <Genes40k.ExtraDecorationDef>
+    <Core40k.ExtraDecorationDef>
         <defName>BEWH_MkXclawMarks_1</defName>
         <label>Claw marks 1</label>
         <description>...</description>
@@ -673,9 +673,9 @@
         </appliesTo>
         <flipable>true</flipable>
         <shaderType>Cutout</shaderType>
-    </Genes40k.ExtraDecorationDef>
+    </Core40k.ExtraDecorationDef>
 
-    <Genes40k.ExtraDecorationDef>
+    <Core40k.ExtraDecorationDef>
         <defName>BEWH_MkXclawMarks_2</defName>
         <label>Claw marks 2</label>
         <description>...</description>
@@ -693,10 +693,10 @@
         </appliesTo>
         <flipable>true</flipable>
         <shaderType>Cutout</shaderType>
-    </Genes40k.ExtraDecorationDef>
+    </Core40k.ExtraDecorationDef>
 
     <!-- Mark VII -->
-    <Genes40k.ExtraDecorationDef>
+    <Core40k.ExtraDecorationDef>
         <defName>BEWH_MkVIIDecoStripe</defName>
         <label>Stripe</label>
         <description>...</description>
@@ -736,9 +736,9 @@
             <li>BEWH_DecoPaletteStripeRed</li>
         </availablePresets>
         <shaderType>Cutout</shaderType>
-    </Genes40k.ExtraDecorationDef>
+    </Core40k.ExtraDecorationDef>
 
-    <Genes40k.ExtraDecorationDef>
+    <Core40k.ExtraDecorationDef>
         <defName>BEWH_MkVIILieutenantStripe</defName>
         <label>Lieutenant stripe</label>
         <description>...</description>
@@ -771,9 +771,9 @@
             </li>
         </layerOffsets>
         <shaderType>Cutout</shaderType>
-    </Genes40k.ExtraDecorationDef>
+    </Core40k.ExtraDecorationDef>
 
-    <Genes40k.ExtraDecorationDef>
+    <Core40k.ExtraDecorationDef>
         <defName>BEWH_MkVIIclawMarks_1</defName>
         <label>Claw marks 1</label>
         <description>...</description>
@@ -791,9 +791,9 @@
         </appliesTo>
         <flipable>true</flipable>
         <shaderType>Cutout</shaderType>
-    </Genes40k.ExtraDecorationDef>
+    </Core40k.ExtraDecorationDef>
 
-    <Genes40k.ExtraDecorationDef>
+    <Core40k.ExtraDecorationDef>
         <defName>BEWH_MkVIIclawMarks_2</defName>
         <label>Claw marks 2</label>
         <description>...</description>
@@ -811,5 +811,6 @@
         </appliesTo>
         <flipable>true</flipable>
         <shaderType>Cutout</shaderType>
-    </Genes40k.ExtraDecorationDef>
+    </Core40k.ExtraDecorationDef>
+    
 </Defs>

@@ -8,11 +8,4 @@
         <tabDrawerClass>Genes40k.ShoulderPadIconTab</tabDrawerClass>
     </Core40k.ApparelColourTwoTabDef>
 
-    <Core40k.ApparelColourTwoTabDef>
-        <defName>BEWH_AstartesExtraDecoration</defName>
-        <label>Extra Decoration</label>
-        <description>Extra deocration for armor</description>
-        <tabDrawerClass>Genes40k.ExtraDecorationTab</tabDrawerClass>
-    </Core40k.ApparelColourTwoTabDef>
-
 </Defs>

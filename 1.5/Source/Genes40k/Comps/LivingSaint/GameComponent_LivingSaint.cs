@@ -67,10 +67,16 @@ namespace Genes40k
 
         public void AddSaintToSpawnable(Pawn pawn)
         {
+            if (!pawn.Dead)
+            {
+                return;
+            }
+            
             if (pawn.genes == null || !pawn.genes.HasActiveGene(Genes40kDefOf.BEWH_LivingSaintBeingOfFaith) || livingSaints.Contains(pawn))
             {
                 return;
             }
+            
             livingSaints.Add(pawn);
         }
 

@@ -44,7 +44,7 @@
         <modExtensions>
             <li Class="Core40k.DefModExtension_EnableTabDef">
                 <tabDefs>
-                    <li>BEWH_AstartesExtraDecoration</li>
+                    <li>BEWH_ExtraDecoration</li>
                 </tabDefs>
             </li>
         </modExtensions>
@@ -92,7 +92,7 @@
         <modExtensions>
             <li Class="Core40k.DefModExtension_EnableTabDef">
                 <tabDefs>
-                    <li>BEWH_AstartesExtraDecoration</li>
+                    <li>BEWH_ExtraDecoration</li>
                 </tabDefs>
             </li>
         </modExtensions>
