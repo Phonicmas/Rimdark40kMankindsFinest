@@ -106,7 +106,6 @@
     </verbProperties>
     <comps>
       <li Class="Genes40k.CompProperties_AbilityDenyTheWitch">
-        <range>46</range>
         <hediffDef>BEWH_DeniedWitch</hediffDef>
       </li>
     </comps>

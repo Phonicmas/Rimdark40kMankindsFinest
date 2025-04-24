@@ -224,8 +224,6 @@
 
         <customEffectDescriptions>
             <li>Bleeding wounds close very quickly.</li>
-            <li>Can survive loss of lungs.</li>
-            <li>Can survive loss of heart.</li>
         </customEffectDescriptions>
 
         <suppressedTraits>
@@ -239,8 +237,6 @@
                 <diseaseProgressionFactor>0.05</diseaseProgressionFactor>
                 <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
             </li>
-            <li Class="Core40k.DefModExtension_LostLungSurvival" />
-            <li Class="Core40k.DefModExtension_LostHeartSurvival" />
         </modExtensions>
     </GeneDef>
 
@@ -290,10 +286,17 @@
             </li>
         </capMods>
 
+        <customEffectDescriptions>
+            <li>Can survive loss of lungs.</li>
+            <li>Can survive loss of heart.</li>
+        </customEffectDescriptions>
+
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
             </li>
+            <li Class="Core40k.DefModExtension_LostLungSurvival" />
+            <li Class="Core40k.DefModExtension_LostHeartSurvival" />
         </modExtensions>
     </GeneDef>
 

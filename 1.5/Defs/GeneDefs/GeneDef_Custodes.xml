@@ -103,13 +103,7 @@
 
         <customEffectDescriptions>
             <li>Bleeding wounds close very quickly.</li>
-            <li>Can survive loss of lungs.</li>
-            <li>Can survive loss of heart.</li>
         </customEffectDescriptions>
-        <modExtensions>
-            <li Class="Core40k.DefModExtension_LostLungSurvival" />
-            <li Class="Core40k.DefModExtension_LostHeartSurvival" />
-        </modExtensions>
     </GeneDef>
 
     <!-- Fulgurite Nerve Plexus -->
@@ -318,7 +312,6 @@
         </modExtensions>
     </GeneDef>
 
-
     <!-- Fulgur Vitaliumstrand -->
     <GeneDef ParentName="BEWH_CustodesBase">
         <defName>BEWH_FulgurVitaliumstrand</defName>
@@ -368,6 +361,8 @@
         <customEffectDescriptions>
             <li>No loss in melee skill.</li>
             <li>Recreation from melee.</li>
+            <li>Can survive loss of lungs.</li>
+            <li>Can survive loss of heart.</li>
         </customEffectDescriptions>
 
         <passionMod>
@@ -380,6 +375,8 @@
                 <noSkillLoss>Melee</noSkillLoss>
                 <skillRecreation>Melee</skillRecreation>
             </li>
+            <li Class="Core40k.DefModExtension_LostLungSurvival" />
+            <li Class="Core40k.DefModExtension_LostHeartSurvival" />
         </modExtensions>
     </GeneDef>
 
