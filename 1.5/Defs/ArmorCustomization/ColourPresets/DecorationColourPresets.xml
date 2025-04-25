@@ -51,4 +51,17 @@
         <colour>(114, 114, 114)</colour>
     </Core40k.DecorationColourPresetDef>
 
+<!-- Fabric Beige -->
+    <Core40k.DecorationColourPresetDef>
+        <defName>BEWH_DecoPaletteFabricBeige</defName>
+        <label>Beige</label>
+        <colour>(160, 158, 137)</colour>
+    </Core40k.DecorationColourPresetDef>
+<!-- Fabric Red -->
+    <Core40k.DecorationColourPresetDef>
+        <defName>BEWH_DecoPaletteFabricRed</defName>
+        <label>Crimson</label>
+        <colour>(180, 42, 0)</colour>
+    </Core40k.DecorationColourPresetDef>
+
 </Defs>

@@ -65,8 +65,9 @@
         <drawInHeadSpace>true</drawInHeadSpace>
     </Core40k.ExtraDecorationDef>
 
-    <!-- BODY STUFF -->
-    <!-- Common -->
+    <!-- ===BODY STUFF=== -->
+
+    <!-- COMMON -->
 
     <!-- Custom shoulders -->
     <Core40k.ExtraDecorationDef>
@@ -377,6 +378,73 @@
         <flipable>true</flipable>
     </Core40k.ExtraDecorationDef>
 
+    <!-- Fabric -->
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_BGUpperTabard</defName>
+        <label>Upper tabard</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Armor/Common/BEWH_Deco_BulwarkUpperTabard_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_BulwarkUpperTabard</drawnTextureIconPath>
+        <sortOrder>1</sortOrder>
+        <defaultShowRotation>
+            <!-- <li>North</li> -->
+            <li>South</li>
+            <li>West</li>
+            <li>East</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmor</li>
+            <li>BEWH_MkXPowerArmor</li>
+        </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>South</key>
+                <value>-30</value>
+            </li>
+            <li>
+                <key>East</key>
+                <value>-30</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>-30</value>
+            </li>
+        </layerOffsets>
+        <shaderType>Cutout</shaderType>
+        <availablePresets>
+            <li>BEWH_DecoPaletteFabricBeige</li>
+            <li>BEWH_DecoPaletteFabricRed</li>
+        </availablePresets>
+        <colourable>true</colourable>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_BGShoulderDrape</defName>
+        <label>Pauldron drape 1</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Armor/Common/BEWH_Deco_BulwarkShoulders_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_BulwarkShoulders</drawnTextureIconPath>
+        <sortOrder>1</sortOrder>
+        <defaultShowRotation>
+            <li>North</li>
+            <li>South</li>
+            <li>West</li>
+            <li>East</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmor</li>
+            <li>BEWH_MkXPowerArmor</li>
+        </appliesTo>
+        <availablePresets>
+            <li>BEWH_DecoPaletteFabricBeige</li>
+            <li>BEWH_DecoPaletteFabricRed</li>
+        </availablePresets>
+        <shaderType>CutoutComplex</shaderType>
+        <colourable>true</colourable>
+        <useMask>true</useMask>
+    </Core40k.ExtraDecorationDef>
+
     <!-- Misc -->
     <Core40k.ExtraDecorationDef>
         <defName>BEWH_Deco_ClawMarks_1</defName>
@@ -445,9 +513,91 @@
         <useArmorColourAsDefault>true</useArmorColourAsDefault>
         <flipable>true</flipable>
     </Core40k.ExtraDecorationDef>
-   
-    <!-- HEAD STUFF-->
-    <!-- Common -->
+
+    <!-- MARK VII -->
+    <!-- Fabric -->
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_BGLowerTabardMkVII</defName>
+        <label>Lower tabard</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Armor/MkVII/BEWH_Deco_MkVIIBulwarkLowerTabard_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/MkVII/BEWH_Deco_MkVIIBulwarkLowerTabard</drawnTextureIconPath>
+        <sortOrder>1</sortOrder>
+        <defaultShowRotation>
+            <li>North</li>
+            <li>South</li>
+            <li>West</li>
+            <li>East</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmor</li>
+        </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>East</key>
+                <value>-12</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>-12</value>
+            </li>
+            <li>
+                <key>South</key>
+                <value>-32</value>
+            </li>
+        </layerOffsets>
+        <shaderType>Cutout</shaderType>
+        <availablePresets>
+            <li>BEWH_DecoPaletteFabricBeige</li>
+            <li>BEWH_DecoPaletteFabricRed</li>
+        </availablePresets>
+        <colourable>true</colourable>
+    </Core40k.ExtraDecorationDef>
+
+    <!-- MARK X -->
+    <!-- Fabric -->
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_BGLowerTabardMkX</defName>
+        <label>Lower tabard</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Armor/MkX/BEWH_Deco_MkXBulwarkLowerTabard_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/MkX/BEWH_Deco_MkXBulwarkLowerTabard</drawnTextureIconPath>
+        <sortOrder>1</sortOrder>
+        <defaultShowRotation>
+            <li>North</li>
+            <li>South</li>
+            <li>West</li>
+            <li>East</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkXPowerArmor</li>
+        </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>East</key>
+                <value>-12</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>-12</value>
+            </li>
+            <li>
+                <key>South</key>
+                <value>-32</value>
+            </li>
+        </layerOffsets>
+        <shaderType>Cutout</shaderType>
+        <availablePresets>
+            <li>BEWH_DecoPaletteFabricBeige</li>
+            <li>BEWH_DecoPaletteFabricRed</li>
+        </availablePresets>
+        <colourable>true</colourable>
+    </Core40k.ExtraDecorationDef>
+
+    <!-- ===HEAD STUFF===-->
+
+    <!-- COMMON -->
+
     <Core40k.ExtraDecorationDef>
         <defName>BEWH_DecoInquisInsignia</defName>
         <label>Inquisition insignia</label>
@@ -577,7 +727,9 @@
         <shaderType>Cutout</shaderType>
     </Core40k.ExtraDecorationDef>
 
-    <!-- Mark X -->
+    <!-- MARK X -->
+
+    <!-- Stripes -->
     <Core40k.ExtraDecorationDef>
         <defName>BEWH_MkxDecoStripe</defName>
         <label>Stripe</label>
@@ -655,6 +807,7 @@
         <shaderType>Cutout</shaderType>
     </Core40k.ExtraDecorationDef>
 
+    <!-- Misc -->
     <Core40k.ExtraDecorationDef>
         <defName>BEWH_MkXclawMarks_1</defName>
         <label>Claw marks 1</label>
@@ -695,7 +848,9 @@
         <shaderType>Cutout</shaderType>
     </Core40k.ExtraDecorationDef>
 
-    <!-- Mark VII -->
+    <!-- MARK VII -->
+
+    <!-- Stripes -->
     <Core40k.ExtraDecorationDef>
         <defName>BEWH_MkVIIDecoStripe</defName>
         <label>Stripe</label>
@@ -772,6 +927,8 @@
         </layerOffsets>
         <shaderType>Cutout</shaderType>
     </Core40k.ExtraDecorationDef>
+
+    <!-- Misc -->
 
     <Core40k.ExtraDecorationDef>
         <defName>BEWH_MkVIIclawMarks_1</defName>
