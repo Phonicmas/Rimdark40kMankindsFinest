@@ -37,8 +37,8 @@
             <li>BEWH_DecoPaletteLeatherBlack</li>
         </availablePresets>
     </Core40k.ExtraDecorationDef>
-	
-	<Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef>
         <defName>BEWH_HeadTest</defName>
         <label>HeadTest</label>
         <description>...</description>
@@ -160,7 +160,7 @@
             <li>BEWH_MkVIIPowerArmor</li>
             <li>BEWH_MkXPowerArmor</li>
         </appliesTo>
-		<layerOffsets>
+        <layerOffsets>
             <li>
                 <key>North</key>
                 <value>5</value>
@@ -169,7 +169,7 @@
         <shaderType>Cutout</shaderType>
         <flipable>true</flipable>
     </Core40k.ExtraDecorationDef>
-   
+
     <Core40k.ExtraDecorationDef>
         <defName>BEWH_DecoPSeal_4</defName>
         <label>Purity seals 4</label>
@@ -220,7 +220,7 @@
         <defaultShowRotation>
             <li>South</li>
             <li>East</li>
-			<li>North</li>
+            <li>North</li>
         </defaultShowRotation>
         <appliesTo>
             <li>BEWH_MkVIIPowerArmor</li>
@@ -819,7 +819,7 @@
         <defaultShowRotation>
             <li>West</li>
             <li>South</li>
-			<li>North</li>
+            <li>North</li>
         </defaultShowRotation>
         <appliesTo>
             <li>BEWH_MkXPowerArmorHelmet</li>
@@ -839,7 +839,7 @@
         <defaultShowRotation>
             <li>West</li>
             <li>South</li>
-			<li>North</li>
+            <li>North</li>
         </defaultShowRotation>
         <appliesTo>
             <li>BEWH_MkXPowerArmorHelmet</li>
@@ -941,7 +941,7 @@
         <defaultShowRotation>
             <li>West</li>
             <li>South</li>
-			<li>North</li>
+            <li>North</li>
         </defaultShowRotation>
         <appliesTo>
             <li>BEWH_MkVIIPowerArmorHelmet</li>
@@ -961,7 +961,7 @@
         <defaultShowRotation>
             <li>West</li>
             <li>South</li>
-			<li>North</li>
+            <li>North</li>
         </defaultShowRotation>
         <appliesTo>
             <li>BEWH_MkVIIPowerArmorHelmet</li>
@@ -969,5 +969,5 @@
         <flipable>true</flipable>
         <shaderType>Cutout</shaderType>
     </Core40k.ExtraDecorationDef>
-    
+
 </Defs>
