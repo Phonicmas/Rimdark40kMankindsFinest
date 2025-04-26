@@ -29,9 +29,10 @@ public class Gene_Furybound : Gene
         {
             return;
         }
-            
+        
         percentChance = 0;
-            
+
+        //TODO: fix by changing def to some sort of short berserk, or manipulate tick remaining on normal berserk
         def.mentalBreakDef.Worker.TryStart(pawn, "MentalStateReason_Gene".Translate() + ": " + LabelCap, causedByMood: false);
     }
 
