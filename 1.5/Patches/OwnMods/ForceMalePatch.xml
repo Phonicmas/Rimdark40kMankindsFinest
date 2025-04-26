@@ -28,14 +28,12 @@
                     </modExtensions>
                 </value>
             </li>
-            <li Class="PatchOperationAdd">
+            <li Class="PatchOperationAddModExtension">
                 <xpath>Defs/GeneDef[defName = "BEWH_AtlasMorphogen"]</xpath>
                 <value>
-                    <modExtensions>
-                        <li Class="VanillaGenesExpanded.GeneExtension">
-                            <forceMale>true</forceMale>
-                        </li>
-                    </modExtensions>
+                    <li Class="VanillaGenesExpanded.GeneExtension">
+                        <forceMale>true</forceMale>
+                    </li>
                 </value>
             </li>
         </operations>

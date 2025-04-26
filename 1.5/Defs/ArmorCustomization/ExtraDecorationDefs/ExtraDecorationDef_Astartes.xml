@@ -38,33 +38,6 @@
         </availablePresets>
     </Core40k.ExtraDecorationDef>
 
-    <Core40k.ExtraDecorationDef>
-        <defName>BEWH_HeadTest</defName>
-        <label>HeadTest</label>
-        <description>...</description>
-        <iconPath>Things/Decorations/Armor/Common/BEWH_Deco_DeathWatch_Shoulder_west</iconPath>
-        <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_DeathWatch_Shoulder</drawnTextureIconPath>
-        <sortOrder>0</sortOrder>
-        <defaultShowRotation>
-            <li>North</li>
-            <li>South</li>
-            <li>West</li>
-        </defaultShowRotation>
-        <appliesTo>
-            <li>BEWH_MkVIIPowerArmor</li>
-            <li>BEWH_MkXPowerArmor</li>
-        </appliesTo>
-        <layerOffsets>
-            <li>
-                <key>South</key>
-                <value>-40</value>
-            </li>
-        </layerOffsets>
-        <shaderType>Cutout</shaderType>
-        <flipable>true</flipable>
-        <drawInHeadSpace>true</drawInHeadSpace>
-    </Core40k.ExtraDecorationDef>
-
     <!-- ===BODY STUFF=== -->
 
     <!-- COMMON -->
