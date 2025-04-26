@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <Core40k.ExtraDecorationPresetDef>
+        <defName>BEWH_Test1</defName>
+        <label>Test Preset</label>
+        <appliesTo>BEWH_MkVIIPowerArmor</appliesTo>
+        <presetData>
+            <BEWH_Deco_BGShoulderDrape>
+                <flipped>false</flipped>
+                <colour>(75,97,32)</colour>
+            </BEWH_Deco_BGShoulderDrape>
+            <BEWH_DecoDWatchPauldron>
+                <flipped>true</flipped>
+                <colour>(75,97,32)</colour>
+            </BEWH_DecoDWatchPauldron>
+        </presetData>
+    </Core40k.ExtraDecorationPresetDef>
+
+</Defs>
