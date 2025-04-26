@@ -6,8 +6,8 @@ namespace Genes40k;
 public class Gene_Furybound : Gene
 {
     private const int tickInterval = 15000;
-    private const int percentChanceIncrease = 5;
-    public int percentChance = 0;
+    private const float percentChanceIncrease = 2.5f;
+    public float percentChance = 0;
         
     public override void Tick()
     {

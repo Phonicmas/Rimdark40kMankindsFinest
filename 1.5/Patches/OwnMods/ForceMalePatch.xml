@@ -2,12 +2,22 @@
 <Patch>
 
     <Operation Class="VFECore.PatchOperationToggableSequence">
-        <enabled>False</enabled>
+        <enabled>True</enabled>
         <mods>
             <li>RimDark 40k - Mankinds Finest</li>
         </mods>
-        <label>Force space marines to be male:</label>
+        <label>Force superhuman to be male:</label>
         <operations>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/GeneDef[defName = "BEWH_ProtoOssmodula"]</xpath>
+                <value>
+                    <modExtensions>
+                        <li Class="VanillaGenesExpanded.GeneExtension">
+                            <forceMale>true</forceMale>
+                        </li>
+                    </modExtensions>
+                </value>
+            </li>
             <li Class="PatchOperationAdd">
                 <xpath>Defs/GeneDef[defName = "BEWH_Ossmodula"]</xpath>
                 <value>
@@ -18,7 +28,17 @@
                     </modExtensions>
                 </value>
             </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/GeneDef[defName = "BEWH_AtlasMorphogen"]</xpath>
+                <value>
+                    <modExtensions>
+                        <li Class="VanillaGenesExpanded.GeneExtension">
+                            <forceMale>true</forceMale>
+                        </li>
+                    </modExtensions>
+                </value>
+            </li>
         </operations>
     </Operation>
-    
+
 </Patch>
