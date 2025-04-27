@@ -34,9 +34,10 @@
             <li>BEWH_DecoPaletteSilver</li>
             <li>BEWH_DecoPaletteIFBlack</li>
             <li>BEWH_DecoPaletteLeatherBrown</li>
-            <li>BEWH_DecoPaletteLeatherBlack</li>
+            <li>BEWH_DecoPaletteLeatherGrey</li>
         </availablePresets>
     </Core40k.ExtraDecorationDef>
+
 
     <!-- ===BODY STUFF=== -->
 
@@ -64,6 +65,10 @@
                 <key>South</key>
                 <value>-10</value>
             </li>
+            <li>
+                <key>North</key>
+                <value>0</value>
+            </li>
         </layerOffsets>
         <shaderType>Cutout</shaderType>
         <flipable>true</flipable>
@@ -76,7 +81,7 @@
         <description>...</description>
         <iconPath>Things/Decorations/Armor/Common/PuritySeals/BEWH_Deco_PuritySeal1_south</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/PuritySeals/BEWH_Deco_PuritySeal1</drawnTextureIconPath>
-        <sortOrder>0</sortOrder>
+        <sortOrder>0.15</sortOrder>
         <defaultShowRotation>
             <li>East</li>
             <li>South</li>
@@ -89,7 +94,19 @@
         </appliesTo>
         <layerOffsets>
             <li>
+                <key>South</key>
+                <value>5</value>
+            </li>
+            <li>
                 <key>North</key>
+                <value>5</value>
+            </li>
+            <li>
+                <key>East</key>
+                <value>5</value>
+            </li>
+            <li>
+                <key>West</key>
                 <value>5</value>
             </li>
         </layerOffsets>
@@ -103,7 +120,7 @@
         <description>...</description>
         <iconPath>Things/Decorations/Armor/Common/PuritySeals/BEWH_Deco_PuritySeal2_south</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/PuritySeals/BEWH_Deco_PuritySeal2</drawnTextureIconPath>
-        <sortOrder>0</sortOrder>
+        <sortOrder>0.2</sortOrder>
         <defaultShowRotation>
             <li>North</li>
             <li>South</li>
@@ -113,6 +130,24 @@
             <li>BEWH_MkVIIPowerArmor</li>
             <li>BEWH_MkXPowerArmor</li>
         </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>South</key>
+                <value>5</value>
+            </li>
+            <li>
+                <key>North</key>
+                <value>5</value>
+            </li>
+            <li>
+                <key>East</key>
+                <value>5</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>5</value>
+            </li>
+        </layerOffsets>
         <shaderType>Cutout</shaderType>
         <flipable>true</flipable>
     </Core40k.ExtraDecorationDef>
@@ -123,7 +158,7 @@
         <description>...</description>
         <iconPath>Things/Decorations/Armor/Common/PuritySeals/BEWH_Deco_PuritySeal3_south</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/PuritySeals/BEWH_Deco_PuritySeal3</drawnTextureIconPath>
-        <sortOrder>0</sortOrder>
+        <sortOrder>0.3</sortOrder>
         <defaultShowRotation>
             <li>North</li>
             <li>South</li>
@@ -149,9 +184,10 @@
         <description>...</description>
         <iconPath>Things/Decorations/Armor/Common/PuritySeals/BEWH_Deco_PuritySeal4_south</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/PuritySeals/BEWH_Deco_PuritySeal4</drawnTextureIconPath>
-        <sortOrder>0</sortOrder>
+        <sortOrder>0.4</sortOrder>
         <defaultShowRotation>
             <li>South</li>
+            <li>North</li>
             <li>West</li>
         </defaultShowRotation>
         <appliesTo>
@@ -168,7 +204,7 @@
         <description>...</description>
         <iconPath>Things/Decorations/Armor/Common/PuritySeals/BEWH_Deco_PuritySeal5_south</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/PuritySeals/BEWH_Deco_PuritySeal5</drawnTextureIconPath>
-        <sortOrder>0</sortOrder>
+        <sortOrder>0.5</sortOrder>
         <defaultShowRotation>
             <li>South</li>
             <li>West</li>
@@ -178,6 +214,16 @@
             <li>BEWH_MkVIIPowerArmor</li>
             <li>BEWH_MkXPowerArmor</li>
         </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>West</key>
+                <value>-12</value>
+            </li>
+            <li>
+                <key>East</key>
+                <value>-12</value>
+            </li>
+        </layerOffsets>
         <shaderType>Cutout</shaderType>
         <flipable>true</flipable>
     </Core40k.ExtraDecorationDef>
@@ -199,6 +245,16 @@
             <li>BEWH_MkVIIPowerArmor</li>
             <li>BEWH_MkXPowerArmor</li>
         </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>West</key>
+                <value>-12</value>
+            </li>
+            <li>
+                <key>East</key>
+                <value>-12</value>
+            </li>
+        </layerOffsets>
         <shaderType>Cutout</shaderType>
         <flipable>true</flipable>
     </Core40k.ExtraDecorationDef>
@@ -220,11 +276,21 @@
             <li>BEWH_MkVIIPowerArmor</li>
             <li>BEWH_MkXPowerArmor</li>
         </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>West</key>
+                <value>-12</value>
+            </li>
+            <li>
+                <key>East</key>
+                <value>-12</value>
+            </li>
+        </layerOffsets>
         <shaderType>Cutout</shaderType>
         <colourable>true</colourable>
         <availablePresets>
             <li>BEWH_DecoPaletteLeatherBrown</li>
-            <li>BEWH_DecoPaletteLeatherBlack</li>
+            <li>BEWH_DecoPaletteLeatherGrey</li>
         </availablePresets>
         <flipable>true</flipable>
     </Core40k.ExtraDecorationDef>
@@ -260,7 +326,7 @@
         <colourable>true</colourable>
         <availablePresets>
             <li>BEWH_DecoPaletteLeatherBrown</li>
-            <li>BEWH_DecoPaletteLeatherBlack</li>
+            <li>BEWH_DecoPaletteLeatherGrey</li>
         </availablePresets>
         <flipable>true</flipable>
     </Core40k.ExtraDecorationDef>
@@ -273,7 +339,7 @@
         <description>...</description>
         <iconPath>Things/Decorations/Armor/Common/Grenades/BEWH_Deco_Grenade1_south</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/Grenades/BEWH_Deco_Grenade1</drawnTextureIconPath>
-        <sortOrder>0</sortOrder>
+        <sortOrder>1.26</sortOrder>
         <defaultShowRotation>
             <li>North</li>
             <li>East</li>
@@ -284,6 +350,16 @@
             <li>BEWH_MkVIIPowerArmor</li>
             <li>BEWH_MkXPowerArmor</li>
         </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>West</key>
+                <value>-12</value>
+            </li>
+            <li>
+                <key>East</key>
+                <value>-12</value>
+            </li>
+        </layerOffsets>
         <shaderType>Cutout</shaderType>
         <flipable>true</flipable>
     </Core40k.ExtraDecorationDef>
@@ -294,7 +370,7 @@
         <description>...</description>
         <iconPath>Things/Decorations/Armor/Common/Grenades/BEWH_Deco_Grenade2_south</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/Grenades/BEWH_Deco_Grenade2</drawnTextureIconPath>
-        <sortOrder>0</sortOrder>
+        <sortOrder>1.27</sortOrder>
         <defaultShowRotation>
             <li>North</li>
             <!-- <li>East</li> -->
@@ -305,6 +381,16 @@
             <li>BEWH_MkVIIPowerArmor</li>
             <li>BEWH_MkXPowerArmor</li>
         </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>West</key>
+                <value>-12</value>
+            </li>
+            <li>
+                <key>East</key>
+                <value>-12</value>
+            </li>
+        </layerOffsets>
         <shaderType>Cutout</shaderType>
         <flipable>true</flipable>
     </Core40k.ExtraDecorationDef>
@@ -315,7 +401,7 @@
         <description>...</description>
         <iconPath>Things/Decorations/Armor/Common/Grenades/BEWH_Deco_KrakGrenade1_south</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/Grenades/BEWH_Deco_KrakGrenade1</drawnTextureIconPath>
-        <sortOrder>0</sortOrder>
+        <sortOrder>1.28</sortOrder>
         <defaultShowRotation>
             <li>North</li>
             <li>East</li>
@@ -326,6 +412,16 @@
             <li>BEWH_MkVIIPowerArmor</li>
             <li>BEWH_MkXPowerArmor</li>
         </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>West</key>
+                <value>-12</value>
+            </li>
+            <li>
+                <key>East</key>
+                <value>-12</value>
+            </li>
+        </layerOffsets>
         <shaderType>Cutout</shaderType>
         <flipable>true</flipable>
     </Core40k.ExtraDecorationDef>
@@ -336,7 +432,7 @@
         <description>...</description>
         <iconPath>Things/Decorations/Armor/Common/Grenades/BEWH_Deco_KrakGrenade2_south</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/Grenades/BEWH_Deco_KrakGrenade2</drawnTextureIconPath>
-        <sortOrder>0</sortOrder>
+        <sortOrder>1.29</sortOrder>
         <defaultShowRotation>
             <li>North</li>
             <!-- <li>East</li> -->
@@ -347,6 +443,16 @@
             <li>BEWH_MkVIIPowerArmor</li>
             <li>BEWH_MkXPowerArmor</li>
         </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>West</key>
+                <value>-12</value>
+            </li>
+            <li>
+                <key>East</key>
+                <value>-12</value>
+            </li>
+        </layerOffsets>
         <shaderType>Cutout</shaderType>
         <flipable>true</flipable>
     </Core40k.ExtraDecorationDef>
@@ -359,7 +465,7 @@
         <description>...</description>
         <iconPath>Things/Decorations/Armor/Common/BEWH_Deco_BulwarkUpperTabard_south</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_BulwarkUpperTabard</drawnTextureIconPath>
-        <sortOrder>1</sortOrder>
+        <sortOrder>2.1</sortOrder>
         <defaultShowRotation>
             <!-- <li>North</li> -->
             <li>South</li>
@@ -398,7 +504,7 @@
         <description>...</description>
         <iconPath>Things/Decorations/Armor/Common/BEWH_Deco_BulwarkShoulders_south</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_BulwarkShoulders</drawnTextureIconPath>
-        <sortOrder>1</sortOrder>
+        <sortOrder>2.13</sortOrder>
         <defaultShowRotation>
             <li>North</li>
             <li>South</li>
@@ -409,6 +515,68 @@
             <li>BEWH_MkVIIPowerArmor</li>
             <li>BEWH_MkXPowerArmor</li>
         </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>South</key>
+                <value>6</value>
+            </li>
+            <li>
+                <key>East</key>
+                <value>6</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>6</value>
+            </li>
+            <li>
+                <key>North</key>
+                <value>0.5</value>
+            </li>
+        </layerOffsets>
+        <availablePresets>
+            <li>BEWH_DecoPaletteFabricBeige</li>
+            <li>BEWH_DecoPaletteFabricRed</li>
+        </availablePresets>
+        <shaderType>CutoutComplex</shaderType>
+        <colourable>true</colourable>
+        <useMask>true</useMask>
+    </Core40k.ExtraDecorationDef>
+
+     <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_ShoulderDrape2</defName>
+        <label>Pauldron drape 2</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Armor/Common/BEWH_Deco_Shoulders_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_Shoulders</drawnTextureIconPath>
+        <sortOrder>2.14</sortOrder>
+        <defaultShowRotation>
+            <li>North</li>
+            <li>South</li>
+            <li>West</li>
+            <li>East</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmor</li>
+            <li>BEWH_MkXPowerArmor</li>
+        </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>South</key>
+                <value>6</value>
+            </li>
+            <li>
+                <key>East</key>
+                <value>6</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>6</value>
+            </li>
+            <li>
+                <key>North</key>
+                <value>0.5</value>
+            </li>
+        </layerOffsets>
         <availablePresets>
             <li>BEWH_DecoPaletteFabricBeige</li>
             <li>BEWH_DecoPaletteFabricRed</li>
@@ -451,12 +619,12 @@
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
-        <defName>BEWH_Deco_Rondel</defName>
-        <label>Rondel</label>
+        <defName>BEWH_Deco_Rondel1</defName>
+        <label>Rondel 1</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Armor/Common/BEWH_Deco_Shield_south</iconPath>
-        <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_Shield</drawnTextureIconPath>
-        <sortOrder>0</sortOrder>
+        <iconPath>Things/Decorations/Armor/Common/BEWH_Deco_Shield1_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_Shield1</drawnTextureIconPath>
+        <sortOrder>1.4</sortOrder>
         <defaultShowRotation>
             <li>North</li>
             <li>South</li>
@@ -470,21 +638,99 @@
         <layerOffsets>
             <li>
                 <key>South</key>
-                <value>7</value>
+                <value>10</value>
             </li>
             <li>
                 <key>West</key>
-                <value>6</value>
+                <value>8</value>
             </li>
             <li>
                 <key>East</key>
-                <value>6</value>
+                <value>8</value>
             </li>
         </layerOffsets>
         <shaderType>Cutout</shaderType>
         <colourable>true</colourable>
         <useArmorColourAsDefault>true</useArmorColourAsDefault>
+        <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
         <flipable>true</flipable>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_Rondel2</defName>
+        <label>Rondel 2</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Armor/Common/BEWH_Deco_Shield2_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_Shield2</drawnTextureIconPath>
+        <sortOrder>1.5</sortOrder>
+        <defaultShowRotation>
+            <li>North</li>
+            <li>South</li>
+            <li>West</li>
+            <!-- <li>East</li> -->
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmor</li>
+            <li>BEWH_MkXPowerArmor</li>
+        </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>South</key>
+                <value>10</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>8</value>
+            </li>
+            <li>
+                <key>East</key>
+                <value>8</value>
+            </li>
+        </layerOffsets>
+        <shaderType>Cutout</shaderType>
+        <colourable>true</colourable>
+        <useArmorColourAsDefault>true</useArmorColourAsDefault>
+        <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
+        <flipable>true</flipable>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_Cape</defName>
+        <label>Cape</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Armor/Common/BEWH_Deco_Cape_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_Cape</drawnTextureIconPath>
+        <sortOrder>2.12</sortOrder>
+        <defaultShowRotation>
+            <li>North</li>
+            <li>South</li>
+            <li>West</li>
+            <li>East</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmor</li>
+            <li>BEWH_MkXPowerArmor</li>
+        </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>East</key>
+                <value>-10</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>-10</value>
+            </li>
+            <li>
+                <key>South</key>
+                <value>-42</value>
+            </li>
+        </layerOffsets>
+        <shaderType>Cutout</shaderType>
+        <availablePresets>
+            <li>BEWH_DecoPaletteFabricBeige</li>
+            <li>BEWH_DecoPaletteFabricRed</li>
+        </availablePresets>
+        <colourable>true</colourable>
     </Core40k.ExtraDecorationDef>
 
     <!-- MARK VII -->
@@ -495,7 +741,7 @@
         <description>...</description>
         <iconPath>Things/Decorations/Armor/MkVII/BEWH_Deco_MkVIIBulwarkLowerTabard_south</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/MkVII/BEWH_Deco_MkVIIBulwarkLowerTabard</drawnTextureIconPath>
-        <sortOrder>1</sortOrder>
+        <sortOrder>2.11</sortOrder>
         <defaultShowRotation>
             <li>North</li>
             <li>South</li>
@@ -508,15 +754,19 @@
         <layerOffsets>
             <li>
                 <key>East</key>
-                <value>-12</value>
+                <value>-14</value>
             </li>
             <li>
                 <key>West</key>
-                <value>-12</value>
+                <value>-14</value>
             </li>
             <li>
                 <key>South</key>
                 <value>-32</value>
+            <li>
+                <key>North</key>
+                <value>-1</value>
+            </li>
             </li>
         </layerOffsets>
         <shaderType>Cutout</shaderType>
@@ -535,7 +785,7 @@
         <description>...</description>
         <iconPath>Things/Decorations/Armor/MkX/BEWH_Deco_MkXBulwarkLowerTabard_south</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/MkX/BEWH_Deco_MkXBulwarkLowerTabard</drawnTextureIconPath>
-        <sortOrder>1</sortOrder>
+        <sortOrder>2.11</sortOrder>
         <defaultShowRotation>
             <li>North</li>
             <li>South</li>
@@ -548,15 +798,19 @@
         <layerOffsets>
             <li>
                 <key>East</key>
-                <value>-12</value>
+                <value>-14</value>
             </li>
             <li>
                 <key>West</key>
-                <value>-12</value>
+                <value>-14</value>
             </li>
             <li>
                 <key>South</key>
                 <value>-32</value>
+            </li>
+            <li>
+                <key>North</key>
+                <value>-1</value>
             </li>
         </layerOffsets>
         <shaderType>Cutout</shaderType>
@@ -570,6 +824,52 @@
     <!-- ===HEAD STUFF===-->
 
     <!-- COMMON -->
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_IronHalo1</defName>
+        <label>Iron halo 1</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Armor/Common/BEWH_Deco_IronHalo1_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_IronHalo1</drawnTextureIconPath>
+        <sortOrder>0</sortOrder>
+        <defaultShowRotation>
+            <li>South</li>
+            <li>West</li>
+            <li>East</li>
+            <li>North</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmor</li>
+            <li>BEWH_MkXPowerArmor</li>
+        </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>South</key>
+                <value>-40</value>
+            </li>
+            <li>
+                <key>East</key>
+                <value>-40</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>-40</value>
+            </li>
+            <li>
+                <key>North</key>
+                <value>4</value>
+            </li>
+        </layerOffsets>
+        <colourable>true</colourable>
+        <availablePresets>
+            <li>BEWH_DecoPaletteGold</li>
+            <li>BEWH_DecoPaletteSilver</li>
+            <li>BEWH_DecoPaletteIFBlack</li>
+        </availablePresets>
+        <shaderType>Cutout</shaderType>
+        <flipable>false</flipable>
+        <drawInHeadSpace>true</drawInHeadSpace>
+    </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
         <defName>BEWH_DecoInquisInsignia</defName>
@@ -588,11 +888,63 @@
             <li>BEWH_MkVIIPowerArmorHelmet</li>
             <li>BEWH_MkXPowerArmorHelmet</li>
         </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>East</key>
+                <value>-6</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>-6</value>
+            </li>
+        </layerOffsets>
         <colourable>true</colourable>
         <availablePresets>
             <li>BEWH_DecoPaletteGold</li>
             <li>BEWH_DecoPaletteSilver</li>
             <li>BEWH_DecoPaletteIFBlack</li>
+        </availablePresets>
+        <shaderType>Cutout</shaderType>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_DecoHood</defName>
+        <label>Hood</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Headgear/Common/BEWH_Deco_Hood_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Headgear/Common/BEWH_Deco_Hood</drawnTextureIconPath>
+        <sortOrder>4</sortOrder>
+        <isHelmetDecoration>true</isHelmetDecoration>
+        <defaultShowRotation>
+            <li>West</li>
+            <li>South</li>
+            <li>East</li>
+            <li>North</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmorHelmet</li>
+            <li>BEWH_MkXPowerArmorHelmet</li>
+        </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>South</key>
+                <value>5</value>
+            </li>
+            <li>
+                <key>East</key>
+                <value>-3</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>-3</value>
+            </li>
+        </layerOffsets>
+        <colourable>true</colourable>
+        <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
+        <useArmorColourAsDefault>true</useArmorColourAsDefault>
+        <availablePresets>
+            <li>BEWH_DecoPaletteFabricBeige</li>
+            <li>BEWH_DecoPaletteFabricRed</li>
         </availablePresets>
         <shaderType>Cutout</shaderType>
     </Core40k.ExtraDecorationDef>
@@ -614,6 +966,16 @@
             <li>BEWH_MkVIIPowerArmorHelmet</li>
             <li>BEWH_MkXPowerArmorHelmet</li>
         </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>East</key>
+                <value>7</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>7</value>
+            </li>
+        </layerOffsets>
         <colourable>true</colourable>
         <availablePresets>
             <li>BEWH_DecoPaletteGold</li>
@@ -643,12 +1005,16 @@
         </appliesTo>
         <layerOffsets>
             <li>
+                <key>South</key>
+                <value>7</value>
+            </li>
+            <li>
                 <key>East</key>
-                <value>1</value>
+                <value>-1</value>
             </li>
             <li>
                 <key>West</key>
-                <value>1</value>
+                <value>-1</value>
             </li>
         </layerOffsets>
         <availablePresets>
@@ -683,20 +1049,18 @@
         <useArmorColourAsDefault>true</useArmorColourAsDefault>
         <layerOffsets>
             <li>
+                <key>South</key>
+                <value>0</value>
+            </li>
+            <li>
                 <key>East</key>
-                <value>-3</value>
+                <value>-5</value>
             </li>
             <li>
                 <key>West</key>
-                <value>-3</value>
+                <value>-5</value>
             </li>
         </layerOffsets>
-        <availablePresets>
-            <li>BEWH_DecoPaletteGold</li>
-            <li>BEWH_DecoPaletteSilver</li>
-            <li>BEWH_DecoPaletteIFBlack</li>
-            <li>BEWH_DecoPaletteStripeRed</li>
-        </availablePresets>
         <shaderType>Cutout</shaderType>
     </Core40k.ExtraDecorationDef>
 
@@ -727,6 +1091,10 @@
                 <value>-1</value>
             </li>
             <li>
+                <key>North</key>
+                <value>-6</value>
+            </li>
+            <li>
                 <key>East</key>
                 <value>-4</value>
             </li>
@@ -746,11 +1114,11 @@
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
-        <defName>BEWH_MkxLieutenantStripe</defName>
+        <defName>BEWH_MkXLieutenantStripe</defName>
         <label>Lieutenant stripe</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_MkxLieutenantStripe_south</iconPath>
-        <drawnTextureIconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_MkxLieutenantStripe</drawnTextureIconPath>
+        <iconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_MkXLieutenantStripe_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_MkXLieutenantStripe</drawnTextureIconPath>
         <sortOrder>4</sortOrder>
         <isHelmetDecoration>true</isHelmetDecoration>
         <defaultShowRotation>
@@ -767,6 +1135,10 @@
             <li>
                 <key>South</key>
                 <value>-1</value>
+            </li>
+            <li>
+                <key>North</key>
+                <value>-6</value>
             </li>
             <li>
                 <key>East</key>
@@ -797,6 +1169,24 @@
         <appliesTo>
             <li>BEWH_MkXPowerArmorHelmet</li>
         </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>South</key>
+                <value>4</value>
+            </li>
+            <li>
+                <key>North</key>
+                <value>2</value>
+            </li>
+            <li>
+                <key>East</key>
+                <value>-5</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>-5</value>
+            </li>
+        </layerOffsets>
         <flipable>true</flipable>
         <shaderType>Cutout</shaderType>
     </Core40k.ExtraDecorationDef>
@@ -817,6 +1207,24 @@
         <appliesTo>
             <li>BEWH_MkXPowerArmorHelmet</li>
         </appliesTo>
+                <layerOffsets>
+            <li>
+                <key>South</key>
+                <value>4</value>
+            </li>
+            <li>
+                <key>North</key>
+                <value>2</value>
+            </li>
+            <li>
+                <key>East</key>
+                <value>-5</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>-5</value>
+            </li>
+        </layerOffsets>
         <flipable>true</flipable>
         <shaderType>Cutout</shaderType>
     </Core40k.ExtraDecorationDef>
@@ -919,6 +1327,24 @@
         <appliesTo>
             <li>BEWH_MkVIIPowerArmorHelmet</li>
         </appliesTo>
+                <layerOffsets>
+            <li>
+                <key>South</key>
+                <value>4</value>
+            </li>
+            <li>
+                <key>North</key>
+                <value>2</value>
+            </li>
+            <li>
+                <key>East</key>
+                <value>-5</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>-5</value>
+            </li>
+        </layerOffsets>
         <flipable>true</flipable>
         <shaderType>Cutout</shaderType>
     </Core40k.ExtraDecorationDef>
@@ -939,6 +1365,24 @@
         <appliesTo>
             <li>BEWH_MkVIIPowerArmorHelmet</li>
         </appliesTo>
+                <layerOffsets>
+            <li>
+                <key>South</key>
+                <value>4</value>
+            </li>
+            <li>
+                <key>North</key>
+                <value>2</value>
+            </li>
+            <li>
+                <key>East</key>
+                <value>-5</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>-5</value>
+            </li>
+        </layerOffsets>
         <flipable>true</flipable>
         <shaderType>Cutout</shaderType>
     </Core40k.ExtraDecorationDef>

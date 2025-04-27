@@ -23,4 +23,224 @@
         </presetData>
     </Core40k.ExtraDecorationPresetDef>
 
+    <Core40k.ExtraDecorationPresetDef>
+        <defName>BEWH_MkVIIBGVeteranBody</defName>
+        <label>Bladeguard Veteran</label>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmor</li>
+        </appliesTo>
+        <presetData>
+            <BEWH_IronHalo1>
+                <flipped>false</flipped>
+                <colour>(240,176,29)</colour>
+            </BEWH_IronHalo1>
+            <BEWH_DecoPSeal_1>
+                <flipped>false</flipped>
+                <colour>(255,255,255)</colour>
+            </BEWH_DecoPSeal_1>
+            <BEWH_DecoPSeal_5>
+                <flipped>true</flipped>
+                <colour>(255,255,255)</colour>
+            </BEWH_DecoPSeal_5>
+            <BEWH_Deco_Rondel1>
+                <flipped>false</flipped>
+                <colour />
+            </BEWH_Deco_Rondel1>
+            <BEWH_Deco_BGLowerTabardMkVII>
+                <flipped>false</flipped>
+                <colour>(160, 158, 137)</colour>
+            </BEWH_Deco_BGLowerTabardMkVII>
+        </presetData>
+    </Core40k.ExtraDecorationPresetDef>
+
+    <Core40k.ExtraDecorationPresetDef>
+        <defName>BEWH_MkXBGVeteranBody</defName>
+        <label>Bladeguard Veteran</label>
+        <appliesTo>
+            <li>BEWH_MkXPowerArmor</li>
+        </appliesTo>
+        <presetData>
+            <BEWH_IronHalo1>
+                <flipped>false</flipped>
+                <colour>(240,176,29)</colour>
+            </BEWH_IronHalo1>
+            <BEWH_DecoPSeal_1>
+                <flipped>false</flipped>
+                <colour>(255,255,255)</colour>
+            </BEWH_DecoPSeal_1>
+            <BEWH_DecoPSeal_5>
+                <flipped>true</flipped>
+                <colour>(255,255,255)</colour>
+            </BEWH_DecoPSeal_5>
+            <BEWH_Deco_Rondel1>
+                <flipped>false</flipped>
+                <colour />
+            </BEWH_Deco_Rondel1>
+            <BEWH_Deco_BGLowerTabardMkX>
+                <flipped>false</flipped>
+                <colour>(160, 158, 137)</colour>
+            </BEWH_Deco_BGLowerTabardMkX>
+        </presetData>
+    </Core40k.ExtraDecorationPresetDef>
+
+    <Core40k.ExtraDecorationPresetDef>
+        <defName>BEWH_MkVIIBGBody</defName>
+        <label>Bulwark</label>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmor</li>
+        </appliesTo>
+        <presetData>
+            <BEWH_Deco_Rondel2>
+                <flipped>false</flipped>
+                <colour />
+            </BEWH_Deco_Rondel2>
+            <BEWH_Deco_BGUpperTabard>
+                <flipped>false</flipped>
+                <colour>(160, 158, 137)</colour>
+            </BEWH_Deco_BGUpperTabard>
+            <BEWH_Deco_BGLowerTabardMkVII>
+                <flipped>false</flipped>
+                <colour>(160, 158, 137)</colour>
+            </BEWH_Deco_BGLowerTabardMkVII>
+            <BEWH_Deco_BGShoulderDrape>
+                <flipped>false</flipped>
+                <colour>(160, 158, 137)</colour>
+            </BEWH_Deco_BGShoulderDrape>
+        </presetData>
+    </Core40k.ExtraDecorationPresetDef>
+
+    <Core40k.ExtraDecorationPresetDef>
+        <defName>BEWH_MkXBGBody</defName>
+        <label>Bulwark</label>
+        <appliesTo>
+            <li>BEWH_MkXPowerArmor</li>
+        </appliesTo>
+        <presetData>
+            <BEWH_Deco_Rondel2>
+                <flipped>false</flipped>
+                <colour />
+            </BEWH_Deco_Rondel2>
+            <BEWH_Deco_BGUpperTabard>
+                <flipped>false</flipped>
+                <colour>(160, 158, 137)</colour>
+            </BEWH_Deco_BGUpperTabard>
+            <BEWH_Deco_BGLowerTabardMkX>
+                <flipped>false</flipped>
+                <colour>(160, 158, 137)</colour>
+            </BEWH_Deco_BGLowerTabardMkX>
+            <BEWH_Deco_BGShoulderDrape>
+                <flipped>false</flipped>
+                <colour>(160, 158, 137)</colour>
+            </BEWH_Deco_BGShoulderDrape>
+        </presetData>
+    </Core40k.ExtraDecorationPresetDef>
+
+    <Core40k.ExtraDecorationPresetDef>
+        <defName>BEWH_MkVIIBGVeteranHead</defName>
+        <label>Bladeguard Veteran</label>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmorHelmet</li>
+        </appliesTo>
+        <presetData>
+            <BEWH_MkxBladeguardBrim>
+                <flipped>false</flipped>
+                <colour />
+            </BEWH_MkxBladeguardBrim>
+        </presetData>
+    </Core40k.ExtraDecorationPresetDef>
+
+    <Core40k.ExtraDecorationPresetDef>
+        <defName>BEWH_MkXBGVeteranHead</defName>
+        <label>Bladeguard Veteran</label>
+        <appliesTo>
+            <li>BEWH_MkXPowerArmorHelmet</li>
+        </appliesTo>
+        <presetData>
+            <BEWH_MkxBladeguardBrim>
+                <flipped>false</flipped>
+                <colour />
+            </BEWH_MkxBladeguardBrim>
+        </presetData>
+    </Core40k.ExtraDecorationPresetDef>
+
+    <Core40k.ExtraDecorationPresetDef>
+        <defName>BEWH_MkVIIBGHead</defName>
+        <label>Bulwark</label>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmorHelmet</li>
+        </appliesTo>
+        <presetData>
+            <BEWH_DecoHood>
+                <flipped>false</flipped>
+                <colour>(160, 158, 137)</colour>
+            </BEWH_DecoHood>
+            <BEWH_MkxBladeguardBrim>
+                <flipped>false</flipped>
+                <colour />
+            </BEWH_MkxBladeguardBrim>
+        </presetData>
+    </Core40k.ExtraDecorationPresetDef>
+
+    <Core40k.ExtraDecorationPresetDef>
+        <defName>BEWH_MkXBGHead</defName>
+        <label>Bulwark</label>
+        <appliesTo>
+            <li>BEWH_MkXPowerArmorHelmet</li>
+        </appliesTo>
+        <presetData>
+            <BEWH_DecoHood>
+                <flipped>false</flipped>
+                <colour>(160, 158, 137)</colour>
+            </BEWH_DecoHood>
+            <BEWH_MkxBladeguardBrim>
+                <flipped>false</flipped>
+                <colour />
+            </BEWH_MkxBladeguardBrim>
+        </presetData>
+    </Core40k.ExtraDecorationPresetDef>
+
+    <Core40k.ExtraDecorationPresetDef>
+        <defName>BEWH_MkVIILieutenantHead</defName>
+        <label>UM Lieutenant</label>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmorHelmet</li>
+        </appliesTo>
+        <presetData>
+            <BEWH_DecoSkull>
+                <flipped>false</flipped>
+                <colour>(240,176,29)</colour>
+            </BEWH_DecoSkull>
+            <BEWH_DecoLaurels>
+                <flipped>false</flipped>
+                <colour>(240,176,29)</colour>
+            </BEWH_DecoLaurels>
+            <BEWH_MkVIILieutenantStripe>
+                <flipped>false</flipped>
+                <colour>(255,255,255)</colour>
+            </BEWH_MkVIILieutenantStripe>
+        </presetData>
+    </Core40k.ExtraDecorationPresetDef>
+
+    <Core40k.ExtraDecorationPresetDef>
+        <defName>BEWH_MkXLieutenantHead</defName>
+        <label>UM Lieutenant</label>
+        <appliesTo>
+            <li>BEWH_MkXPowerArmorHelmet</li>
+        </appliesTo>
+        <presetData>
+            <BEWH_DecoSkull>
+                <flipped>false</flipped>
+                <colour>(240,176,29)</colour>
+            </BEWH_DecoSkull>
+            <BEWH_DecoLaurels>
+                <flipped>false</flipped>
+                <colour>(240,176,29)</colour>
+            </BEWH_DecoLaurels>
+            <BEWH_MkXLieutenantStripe>
+                <flipped>false</flipped>
+                <colour>(255,255,255)</colour>
+            </BEWH_MkXLieutenantStripe>
+        </presetData>
+    </Core40k.ExtraDecorationPresetDef>
+
 </Defs>
