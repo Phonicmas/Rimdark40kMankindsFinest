@@ -1028,11 +1028,11 @@
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
-        <defName>BEWH_MkxBladeguardBrim</defName>
+        <defName>BEWH_MkXBladeguardBrim</defName>
         <label>Bladeguard brim</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_MkxBladeguardShield_south</iconPath>
-        <drawnTextureIconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_MkxBladeguardShield</drawnTextureIconPath>
+        <iconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_MkXBladeguardShield_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_MkXBladeguardShield</drawnTextureIconPath>
         <sortOrder>4</sortOrder>
         <isHelmetDecoration>true</isHelmetDecoration>
         <defaultShowRotation>
@@ -1068,11 +1068,11 @@
 
     <!-- Stripes -->
     <Core40k.ExtraDecorationDef>
-        <defName>BEWH_MkxDecoStripe</defName>
+        <defName>BEWH_MkXDecoStripe</defName>
         <label>Stripe</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_MkxStripe_south</iconPath>
-        <drawnTextureIconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_MkxStripe</drawnTextureIconPath>
+        <iconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_MkXStripe_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_MkXStripe</drawnTextureIconPath>
         <sortOrder>4</sortOrder>
         <isHelmetDecoration>true</isHelmetDecoration>
         <defaultShowRotation>

@@ -16,10 +16,10 @@
                 <flipped>true</flipped>
                 <colour />
             </BEWH_DecoDWatchPauldron>
-            <BEWH_MkxBladeguardBrim> <!-- This is illegal btw, its a head part on armor, it can be done this way but its fucked in game obviously x) -->
+            <BEWH_MkXBladeguardBrim> <!-- This is illegal btw, its a head part on armor, it can be done this way but its fucked in game obviously x) -->
                 <flipped>false</flipped>
                 <colour />
-            </BEWH_MkxBladeguardBrim>
+            </BEWH_MkXBladeguardBrim>
         </presetData>
     </Core40k.ExtraDecorationPresetDef>
 
@@ -142,10 +142,10 @@
             <li>BEWH_MkVIIPowerArmorHelmet</li>
         </appliesTo>
         <presetData>
-            <BEWH_MkxBladeguardBrim>
+            <BEWH_MkXBladeguardBrim>
                 <flipped>false</flipped>
                 <colour />
-            </BEWH_MkxBladeguardBrim>
+            </BEWH_MkXBladeguardBrim>
         </presetData>
     </Core40k.ExtraDecorationPresetDef>
 
@@ -156,10 +156,10 @@
             <li>BEWH_MkXPowerArmorHelmet</li>
         </appliesTo>
         <presetData>
-            <BEWH_MkxBladeguardBrim>
+            <BEWH_MkXBladeguardBrim>
                 <flipped>false</flipped>
                 <colour />
-            </BEWH_MkxBladeguardBrim>
+            </BEWH_MkXBladeguardBrim>
         </presetData>
     </Core40k.ExtraDecorationPresetDef>
 
@@ -174,10 +174,10 @@
                 <flipped>false</flipped>
                 <colour>(160, 158, 137)</colour>
             </BEWH_DecoHood>
-            <BEWH_MkxBladeguardBrim>
+            <BEWH_MkXBladeguardBrim>
                 <flipped>false</flipped>
                 <colour />
-            </BEWH_MkxBladeguardBrim>
+            </BEWH_MkXBladeguardBrim>
         </presetData>
     </Core40k.ExtraDecorationPresetDef>
 
@@ -192,10 +192,10 @@
                 <flipped>false</flipped>
                 <colour>(160, 158, 137)</colour>
             </BEWH_DecoHood>
-            <BEWH_MkxBladeguardBrim>
+            <BEWH_MkXBladeguardBrim>
                 <flipped>false</flipped>
                 <colour />
-            </BEWH_MkxBladeguardBrim>
+            </BEWH_MkXBladeguardBrim>
         </presetData>
     </Core40k.ExtraDecorationPresetDef>
 
