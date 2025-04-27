@@ -2,28 +2,6 @@
 <Defs>
 
     <Core40k.ExtraDecorationPresetDef>
-        <defName>BEWH_Test1</defName>
-        <label>Test Preset</label>
-        <appliesTo>
-            <li>BEWH_MkXPowerArmor</li>
-        </appliesTo>
-        <presetData>
-            <BEWH_Deco_BGShoulderDrape>
-                <flipped>false</flipped>
-                <colour>(75,97,32)</colour>
-            </BEWH_Deco_BGShoulderDrape>
-            <BEWH_DecoDWatchPauldron>
-                <flipped>true</flipped>
-                <colour />
-            </BEWH_DecoDWatchPauldron>
-            <BEWH_MkXBladeguardBrim> <!-- This is illegal btw, its a head part on armor, it can be done this way but its fucked in game obviously x) -->
-                <flipped>false</flipped>
-                <colour />
-            </BEWH_MkXBladeguardBrim>
-        </presetData>
-    </Core40k.ExtraDecorationPresetDef>
-
-    <Core40k.ExtraDecorationPresetDef>
         <defName>BEWH_MkVIIBGVeteranBody</defName>
         <label>Bladeguard Veteran</label>
         <appliesTo>
