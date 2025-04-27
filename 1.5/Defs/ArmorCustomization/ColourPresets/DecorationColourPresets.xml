@@ -44,10 +44,10 @@
         <colour>(173, 130, 87)</colour>
     </Core40k.DecorationColourPresetDef>
     
-<!-- Leather Black -->
+<!-- Leather Grey -->
     <Core40k.DecorationColourPresetDef>
-        <defName>BEWH_DecoPaletteLeatherBlack</defName>
-        <label>Black</label>
+        <defName>BEWH_DecoPaletteLeatherGrey</defName>
+        <label>Grey</label>
         <colour>(114, 114, 114)</colour>
     </Core40k.DecorationColourPresetDef>
 
@@ -60,8 +60,8 @@
 <!-- Fabric Red -->
     <Core40k.DecorationColourPresetDef>
         <defName>BEWH_DecoPaletteFabricRed</defName>
-        <label>Crimson</label>
-        <colour>(180, 42, 0)</colour>
+        <label>Maroon</label>
+        <colour>(104, 24, 33)</colour>
     </Core40k.DecorationColourPresetDef>
 
 </Defs>
