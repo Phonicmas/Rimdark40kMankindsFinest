@@ -125,7 +125,7 @@ public class Building_GeneTable : Building_WorkTable
             yield break;
         }
             
-        var secondColourChangeFloatMenu = FloatMenuUtility.DecoratePrioritizedTask(new FloatMenuOption("BEWH.Framework.ApparelColourTwo.ChangeSecondaryColour".Translate().CapitalizeFirst(), delegate
+        var secondColourChangeFloatMenu = FloatMenuUtility.DecoratePrioritizedTask(new FloatMenuOption("BEWH.Framework.ApparelColourTwo.ArmourDecorationFeature".Translate().CapitalizeFirst(), delegate
         {
             selPawn.jobs.TryTakeOrderedJob(JobMaker.MakeJob(Core40kDefOf.BEWH_OpenStylingStationDialogForSecondColour, this), JobTag.Misc);
         }), selPawn, this);
