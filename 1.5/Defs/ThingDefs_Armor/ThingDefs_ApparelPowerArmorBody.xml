@@ -97,6 +97,7 @@
                 </li>
                 <!-- Backpacks -->
                 <li>
+                    <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentBackpack</workerClass>
                     <nodeClass>Genes40k.PawnRenderNode_AttachmentBackpack</nodeClass>
                     <texPath>Things/Armor/Imperium/PowerArmor/MkVIIPowerArmor/Backpacks/BEWH_MkVIIPowerArmor_Backpack</texPath>
                     <shaderTypeDef>CutoutComplex</shaderTypeDef>
@@ -201,6 +202,7 @@
                 </li>
                 <!-- Backpacks -->
                 <li>
+                    <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentBackpack</workerClass>
                     <nodeClass>Genes40k.PawnRenderNode_AttachmentBackpack</nodeClass>
                     <texPath>Things/Armor/Imperium/PowerArmor/MkXPowerArmor/Backpacks/BEWH_MkXPowerArmor_Backpack</texPath>
                     <shaderTypeDef>CutoutComplex</shaderTypeDef>

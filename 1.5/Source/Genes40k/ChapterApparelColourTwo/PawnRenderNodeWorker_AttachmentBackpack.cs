@@ -3,7 +3,7 @@ using Verse;
 
 namespace Genes40k;
 
-public class PawnRenderNodeWorker_AttachmentShoulderPad : PawnRenderNodeWorker
+public class PawnRenderNodeWorker_AttachmentBackpack : PawnRenderNodeWorker
 {
     public override bool CanDrawNow(PawnRenderNode node, PawnDrawParms parms)
     {
@@ -11,11 +11,6 @@ public class PawnRenderNodeWorker_AttachmentShoulderPad : PawnRenderNodeWorker
 
         if (parms.Portrait)
         {
-            if (parms.facing == Rot4.South || parms.facing == Rot4.North)
-            {
-                return false;
-            }
-            
             if ((parms.flags & PawnRenderFlags.Clothes) != PawnRenderFlags.Clothes)
             {
                 return false;
@@ -26,11 +21,6 @@ public class PawnRenderNodeWorker_AttachmentShoulderPad : PawnRenderNodeWorker
             if (parms.posture is PawnPosture.LayingOnGroundNormal or PawnPosture.LayingOnGroundFaceUp)
             {
                 return true;
-            }
-                
-            if (pawn.Rotation == Rot4.North || pawn.Rotation == Rot4.South)
-            {
-                return false;
             }
                 
             if (parms.posture == PawnPosture.Standing)

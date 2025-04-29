@@ -30,6 +30,11 @@ public class PawnRenderNodeWorker_AttachmentShoulderChapterIcon : PawnRenderNode
             {
                 return false;
             }
+            
+            if ((parms.flags & PawnRenderFlags.Clothes) != PawnRenderFlags.Clothes)
+            {
+                return false;
+            }
         }
         else
         {

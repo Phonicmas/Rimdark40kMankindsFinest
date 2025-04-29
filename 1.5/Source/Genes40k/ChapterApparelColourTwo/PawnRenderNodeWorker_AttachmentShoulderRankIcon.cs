@@ -22,6 +22,11 @@ public class PawnRenderNodeWorker_AttachmentShoulderRankIcon : PawnRenderNodeWor
             {
                 return false;
             }
+            
+            if ((parms.flags & PawnRenderFlags.Clothes) != PawnRenderFlags.Clothes)
+            {
+                return false;
+            }
         }
         else
         {
