@@ -26,6 +26,11 @@
                 <count>1</count>
             </li>
         </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>BEWH_GeneseedVialFirstborn</li>
+            </thingDefs>
+        </fixedIngredientFilter>
         <skillRequirements>
             <Medicine>8</Medicine>
         </skillRequirements>

@@ -11,10 +11,9 @@
         <surgeryOutcomeEffect Inherit = "False" />
         <isViolation>true</isViolation>
         <fixedIngredientFilter>
-            <categories>
-                <li>Medicine</li>
-                <li>BEWH_GeneseedVial</li>
-            </categories>
+            <thingDefs>
+                <li>MedicineUltratech</li>
+            </thingDefs>
         </fixedIngredientFilter>
         <recipeUsers>
             <li>Human</li>
@@ -48,6 +47,11 @@
                 <count>1</count>
             </li>
         </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>BEWH_GeneseedVialThunderWarrior</li>
+            </thingDefs>
+        </fixedIngredientFilter>
         <skillRequirements>
             <Medicine>7</Medicine>
         </skillRequirements>
@@ -85,6 +89,11 @@
                 <count>1</count>
             </li>
         </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>BEWH_GeneseedVialCustodes</li>
+            </thingDefs>
+        </fixedIngredientFilter>
         <skillRequirements>
             <Medicine>13</Medicine>
         </skillRequirements>

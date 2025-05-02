@@ -56,7 +56,7 @@
 		<comps>
 			<li Class="Core40k.HediffCompProperties_SendLetterAtSeverity">
 				<letter>Firstborn Phase Completed</letter>
-				<message>Third phase of the firstborn development has been completed and can now be advanced to the final phase, should you be in posession of a chapters genetic material, then these can be added now.</message>
+				<message>Third phase of the firstborn development has been completed and can now be advanced to the final phase.</message>
 				<letterDef>PositiveEvent</letterDef>
 			</li>
 		</comps>
@@ -117,7 +117,7 @@
 		<comps>
 			<li Class="Core40k.HediffCompProperties_SendLetterAtSeverity">
 				<letter>Primaris Phase Completed</letter>
-				<message>Third phase of the primaris development has been completed and can now be advanced to the final phase, should you be in posession of a chapters genetic material, then these can be added now.</message>
+				<message>Third phase of the primaris development has been completed and can now be advanced to the final phase.</message>
 				<letterDef>PositiveEvent</letterDef>
 			</li>
 		</comps>

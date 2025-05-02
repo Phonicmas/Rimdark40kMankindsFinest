@@ -9,6 +9,7 @@ namespace Genes40k;
 public class WorkerClass_ImplantGeneseed : Recipe_Surgery
 {
     private GeneseedVial geneseedVialForText = null;
+    
     public override bool AvailableOnNow(Thing thing, BodyPartRecord part = null)
     {
         if (!base.AvailableOnNow(thing, part))
@@ -36,31 +37,23 @@ public class WorkerClass_ImplantGeneseed : Recipe_Surgery
 
         var list = pawn.Map.listerThings.ThingsOfDef(defMod.geneseedVial);
 
-        var result = false;
-
         foreach (var item in list)
         {
-            if (!(item is GeneseedVial geneseedVial))
+            if (item is not GeneseedVial geneseedVial)
             {
                 continue;
             }
 
-            if (defMod.geneFromMaterial == null && geneseedVial.extraGeneFromMaterial == null)
+            if (defMod.geneFromMaterial != geneseedVial.extraGeneFromMaterial)
             {
-                result = true;
-                geneseedVialForText = geneseedVial;
-                break;
+                continue;
             }
-
-            if (defMod.geneFromMaterial != null && defMod.geneFromMaterial == geneseedVial.extraGeneFromMaterial)
-            {
-                result = true;
-                geneseedVialForText = geneseedVial;
-                break;
-            }
-        }
             
-        return result;
+            geneseedVialForText = geneseedVial;
+            return true;
+        }
+
+        return false;
     }
 
     public override TaggedString GetConfirmation(Pawn pawn)
@@ -124,6 +117,5 @@ public class WorkerClass_ImplantGeneseed : Recipe_Surgery
         {
             pawn.health.AddHediff(defMod.appliesHediff);
         }
-            
     }
 }

@@ -439,7 +439,7 @@ public static class Genes40kUtils
         var defMod = geneseedVial.def.GetModExtension<DefModExtension_GeneseedVial>();
         var failChanceCausedBy = new List<string>();
             
-        failChanceCausedBy.Add("\t- " + "BEWH.MankindsFinest.GeneseedVial.FailureChanceCause".Translate(defMod.baseFailureChance, "BEWH.MankindsFinest.GeneseedVial.BaseFailureChance".Translate()));
+        failChanceCausedBy.Add("\t* " + "BEWH.MankindsFinest.GeneseedVial.FailureChanceCause".Translate(defMod.baseFailureChance, "BEWH.MankindsFinest.GeneseedVial.BaseFailureChance".Translate()));
             
         var failChanceAgeOffset = 0;
         if (pawn.ageTracker.AgeBiologicalYears < defMod.minAgeImplant)
@@ -454,7 +454,7 @@ public static class Genes40kUtils
         if (failChanceAgeOffset != 0)
         {
             failChanceAgeOffset *= defMod.failureChancePerAgePast;
-            failChanceCausedBy.Add("\t- " + "BEWH.MankindsFinest.GeneseedVial.FailureChanceCause".Translate(failChanceAgeOffset, "BEWH.MankindsFinest.GeneseedVial.OutsideOptimalAgeRange".Translate(pawn, defMod.minAgeImplant, defMod.maxAgeImplant)));
+            failChanceCausedBy.Add("\t* " + "BEWH.MankindsFinest.GeneseedVial.FailureChanceCause".Translate(failChanceAgeOffset, "BEWH.MankindsFinest.GeneseedVial.OutsideOptimalAgeRange".Translate(pawn, defMod.minAgeImplant, defMod.maxAgeImplant)));
         }
             
         var failChanceGeneOffset = 0;
@@ -465,7 +465,7 @@ public static class Genes40kUtils
             var geneDefMod = geneseedVial.extraGeneFromMaterial.GetModExtension<DefModExtension_GeneseedPurity>();
             failChanceCapGeneOffset += geneDefMod.additionalChanceCapOffset;
             failChanceGeneOffset += geneDefMod.additionalChanceOffset;
-            failChanceCausedBy.Add("\t- " + "BEWH.MankindsFinest.GeneseedVial.FailureChanceCause".Translate(geneDefMod.additionalChanceOffset, geneseedVial.extraGeneFromMaterial.label));
+            failChanceCausedBy.Add("\t* " + "BEWH.MankindsFinest.GeneseedVial.FailureChanceCause".Translate(geneDefMod.additionalChanceOffset, geneseedVial.extraGeneFromMaterial.label));
         }
 
         var failChance = defMod.baseFailureChance;
@@ -477,7 +477,7 @@ public static class Genes40kUtils
         if (ModSettings.implantationSuccessOffset != 0)
         {
             failChance += ModSettings.implantationSuccessOffset;
-            failChanceCausedBy.Add("\t- " + "BEWH.MankindsFinest.GeneseedVial.FailureChanceCause".Translate(ModSettings.implantationSuccessOffset, "BEWH.Framework.CommonKeywords.ModSettings".Translate()));
+            failChanceCausedBy.Add("\t* " + "BEWH.MankindsFinest.GeneseedVial.FailureChanceCause".Translate(ModSettings.implantationSuccessOffset, "BEWH.Framework.CommonKeywords.ModSettings".Translate()));
         }
             
         if (ModSettings.implantationCapOffset != 0)

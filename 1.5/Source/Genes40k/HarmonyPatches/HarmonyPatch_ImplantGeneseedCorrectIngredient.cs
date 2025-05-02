@@ -1,5 +1,6 @@
 ﻿using HarmonyLib;
 using RimWorld;
+using UnityEngine;
 using Verse;
 
 namespace Genes40k;
@@ -9,22 +10,19 @@ public class ImplantGeneseedCorrectIngredient
 {
     public static void Postfix(ref bool __result, Thing t, Bill bill)
     {
-        if (!__result || !bill.recipe.HasModExtension<DefModExtension_GeneseedVialRecipe>() || !(t is GeneseedVial geneseedVial))
+        if (!__result || !bill.recipe.HasModExtension<DefModExtension_GeneseedVialRecipe>() || t is not GeneseedVial geneseedVial)
         {
             return;
         }
-            
+        
         var defMod = bill.recipe.GetModExtension<DefModExtension_GeneseedVialRecipe>();
-            
-        if (defMod.geneFromMaterial != null && geneseedVial.GeneSet.GenesListForReading.Contains(defMod.geneFromMaterial))
+
+        if (geneseedVial.extraGeneFromMaterial == defMod.geneFromMaterial)
         {
             __result = true;
             return;
         }
-
-        if (defMod.geneFromMaterial == null && geneseedVial.extraGeneFromMaterial == null)
-        {
-            __result = true;
-        }
+        
+        __result = false;
     }    
 }

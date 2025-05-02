@@ -136,7 +136,6 @@ public class Building_GeneGestator : Building
         if (selectedMaterial != null)
         {
             geneseedVial.extraGeneFromMaterial = selectedMaterial.GetModExtension<DefModExtension_GeneFromMaterial>().addedGene;
-            //geneseedVial.AddExtraGene(selectedMaterial.GetModExtension<DefModExtension_GeneFromMaterial>().addedGene);
         }
 
         GenSpawn.Spawn(geneseedVial, InteractionCell, Map);
