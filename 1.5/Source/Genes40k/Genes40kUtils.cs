@@ -404,6 +404,16 @@ public static class Genes40kUtils
 
         var failCapChance = defMod.failChanceCap;
         failCapChance += failChanceCapGeneOffset;
+        
+        if (ModSettings.implantationSuccessOffset != 0)
+        {
+            failChance += ModSettings.implantationSuccessOffset;
+        }
+            
+        if (ModSettings.implantationCapOffset != 0)
+        {
+            failCapChance += ModSettings.implantationCapOffset;
+        }
             
         if (failCapChance > 100)
         {

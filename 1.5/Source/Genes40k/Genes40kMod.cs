@@ -33,6 +33,7 @@ public class Genes40kMod : Mod
         Widgets.BeginScrollView(inRect, ref scrollPos, viewRect);
         var listingStandard = new Listing_Standard();
         listingStandard.Begin(viewRect);
+        scrollViewHeight += listingHeightIncrease;
         
         //Psychic Phenomena
         listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.PsychicPhenomena".Translate(), ref Settings.psychicPhenomena);
@@ -103,11 +104,17 @@ public class Genes40kMod : Mod
         scrollViewHeight += listingHeightIncrease;
         Settings.implantationSuccessOffset = (int)listingStandard.Slider(Settings.implantationSuccessOffset, -200, 200);
         scrollViewHeight += listingHeightIncrease;
-            
         //Geneseed Implantation Cap Offset
         listingStandard.Label("BEWH.MankindsFinest.ModSettings.ImplantationCapOffset".Translate(Settings.implantationCapOffset));
         scrollViewHeight += listingHeightIncrease;
         Settings.implantationCapOffset = (int)listingStandard.Slider(Settings.implantationCapOffset, -100, 100);
+        scrollViewHeight += listingHeightIncrease;
+        
+        //Psychic Crafting
+        listingStandard.GapLine(36);
+        scrollViewHeight += listingHeightIncreaseGap;
+        listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.PsychicCrafting".Translate(), ref Settings.psychicCrafting);
+        scrollViewHeight += listingHeightIncrease;
         scrollViewHeight += listingHeightIncrease;
             
         //Chaos Version for Stuff
@@ -115,6 +122,8 @@ public class Genes40kMod : Mod
         scrollViewHeight += listingHeightIncreaseGap;
         listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.UseChaosVersionForBanner".Translate(), ref Settings.useChaosVersion);
         scrollViewHeight += listingHeightIncrease;
+        
+        //Default Chapter Colour
         listingStandard.Indent(inRect.width * 0.25f);
         if (listingStandard.ButtonText("BEWH.MankindsFinest.ModSettings.DefaultChapterColours".Translate(settings.CurrentlySelectedPreset.label), widthPct: 0.5f))
         {

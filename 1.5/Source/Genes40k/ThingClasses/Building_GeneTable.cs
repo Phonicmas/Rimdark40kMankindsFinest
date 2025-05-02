@@ -20,6 +20,10 @@ public class Building_GeneTable : Building_WorkTable
 
     private const float severityAdd = 0.1f;
     private const float severityAddMinimum = 0.01f;
+    
+    private static Genes40kModSettings modSettings = null;
+
+    public static Genes40kModSettings ModSettings => modSettings ??= LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>();
         
     private static readonly CachedTexture CraftPrimarchEmbryo = new CachedTexture("UI/Gizmos/BEWH_GestationStartIcon");
 
@@ -46,6 +50,11 @@ public class Building_GeneTable : Building_WorkTable
             
         tickAmount++;
         if (tickAmount < tickAmountDrain)
+        {
+            return;
+        }
+
+        if (!ModSettings.psychicCrafting)
         {
             return;
         }

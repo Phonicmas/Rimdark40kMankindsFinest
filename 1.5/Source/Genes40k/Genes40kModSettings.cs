@@ -20,6 +20,8 @@ public class Genes40kModSettings : ModSettings
         
     public int implantationSuccessOffset = 0;
     public int implantationCapOffset = 0;
+
+    public bool psychicCrafting = true;
         
     private ChapterColourDef currentlySelectedPreset = null;
         
@@ -64,6 +66,8 @@ public class Genes40kModSettings : ModSettings
             
         Scribe_Values.Look(ref implantationSuccessOffset, "implantationSuccessOffset", 0);
         Scribe_Values.Look(ref implantationCapOffset, "implantationCapOffset", 0);
+        
+        Scribe_Values.Look(ref psychicCrafting, "psychicCrafting", true);
             
         Scribe_Values.Look(ref chapterColorOne, "chapterColorOne", Color.black);
         Scribe_Values.Look(ref chapterColorTwo, "chapterColorTwo", Color.red);
