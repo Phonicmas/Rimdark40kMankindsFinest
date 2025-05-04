@@ -8,10 +8,10 @@
             <li>BEWH_MkVIIPowerArmor</li>
         </appliesTo>
         <presetData>
-            <BEWH_IronHalo1>
+            <BEWH_IronHalo_1>
                 <flipped>false</flipped>
                 <colour>(240,176,29)</colour>
-            </BEWH_IronHalo1>
+            </BEWH_IronHalo_1>
             <BEWH_DecoPSeal_1>
                 <flipped>false</flipped>
                 <colour>(255,255,255)</colour>
@@ -38,10 +38,10 @@
             <li>BEWH_MkXPowerArmor</li>
         </appliesTo>
         <presetData>
-            <BEWH_IronHalo1>
+            <BEWH_IronHalo_1>
                 <flipped>false</flipped>
                 <colour>(240,176,29)</colour>
-            </BEWH_IronHalo1>
+            </BEWH_IronHalo_1>
             <BEWH_DecoPSeal_1>
                 <flipped>false</flipped>
                 <colour>(255,255,255)</colour>
