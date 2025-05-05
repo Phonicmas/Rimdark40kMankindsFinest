@@ -59,6 +59,9 @@
             <Insulation_Heat>20</Insulation_Heat>
 
         </statBases>
+        <equippedStatOffsets>
+            <TerrorSource MayRequire="Ludeon.RimWorld.Ideology">17</TerrorSource>
+        </equippedStatOffsets>
         <costList>
             <ComponentSpacer>6</ComponentSpacer>
             <Plasteel>150</Plasteel>
@@ -159,6 +162,9 @@
             <Insulation_Heat>30</Insulation_Heat>
 
         </statBases>
+        <equippedStatOffsets>
+            <TerrorSource MayRequire="Ludeon.RimWorld.Ideology">17</TerrorSource>
+        </equippedStatOffsets>
         <costList>
             <ComponentSpacer>8</ComponentSpacer>
             <Plasteel>175</Plasteel>
@@ -261,7 +267,7 @@
 
         </statBases>
         <equippedStatOffsets>
-            <TerrorSource MayRequire="Ludeon.RimWorld.Ideology">20</TerrorSource>
+            <TerrorSource MayRequire="Ludeon.RimWorld.Ideology">65</TerrorSource>
         </equippedStatOffsets>
         <costList>
             <ComponentSpacer>8</ComponentSpacer>
