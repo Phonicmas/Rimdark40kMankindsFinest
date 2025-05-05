@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- Power Armor Base -->
+    <ThingDef Name="BEWH_PowerArmorBase" ParentName="ArmorMachineableBase" Abstract="True">
+        <techLevel>Spacer</techLevel>
+        <recipeMaker>
+            <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>13</Crafting>
+            </skillRequirements>
+            <recipeUsers Inherit="false">
+                <li>FabricationBench</li>
+            </recipeUsers>
+        </recipeMaker>
+        <statBases Inherit="false">
+            <MaxHitPoints>500</MaxHitPoints>
+            <Mass>15</Mass>
+            <Flammability>0</Flammability>
+            <EquipDelay>18</EquipDelay>
+            <DeteriorationRate>0.5</DeteriorationRate>
+            <Beauty>-2</Beauty>
+        </statBases>
+        <equippedStatOffsets>
+            <MoveSpeed>-1.0</MoveSpeed>
+            <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.4</SlaveSuppressionOffset>
+        </equippedStatOffsets>
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <drawSize>1.5</drawSize>
+        </graphicData>
+        <thingCategories>
+            <li>ApparelArmor</li>
+        </thingCategories>
+        <apparel>
+            <useWornGraphicMask>true</useWornGraphicMask>
+            <countsAsClothingForNudity>false</countsAsClothingForNudity>
+            <bodyPartGroups>
+                <li>Torso</li>
+                <li>Neck</li>
+                <li>Shoulders</li>
+                <li>Arms</li>
+                <li>Legs</li>
+                <li>Hands</li>
+                <li>Feet</li>
+            </bodyPartGroups>
+            <layers>
+                <li>Shell</li>
+            </layers>
+            <defaultOutfitTags>
+                <li>Soldier</li>
+            </defaultOutfitTags>
+            <tags>
+                <li>EVA</li>
+            </tags>
+        </apparel>
+        <tradeTags>
+            <li>HiTechArmor</li>
+        </tradeTags>
+        <thingSetMakerTags Inherit="False" />
+        <smeltable>false</smeltable>
+        <burnableByRecipe>true</burnableByRecipe>
+        <tradeability>Sellable</tradeability>
+    </ThingDef>
+
+
+    <!-- Power Armor Helmet Base -->
+    <ThingDef Name="BEWH_PowerArmorHelmetBase" ParentName="ArmorHelmetMakeableBase" Abstract="True">
+        <techLevel>Spacer</techLevel>
+        <recipeMaker>
+            <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>13</Crafting>
+            </skillRequirements>
+            <recipeUsers Inherit="false">
+                <li>FabricationBench</li>
+            </recipeUsers>
+        </recipeMaker>
+        <statBases>
+            <MaxHitPoints>400</MaxHitPoints>
+            <Mass>3</Mass>
+            <Flammability>0</Flammability>
+            <EquipDelay>4</EquipDelay>
+            <DeteriorationRate>0.5</DeteriorationRate>
+            <Beauty>-2</Beauty>
+        </statBases>
+        <equippedStatOffsets>
+            <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.2</SlaveSuppressionOffset>
+        </equippedStatOffsets>
+        <costList>
+            <ComponentSpacer>1</ComponentSpacer>
+            <Plasteel>50</Plasteel>
+            <Steel>100</Steel>
+            <Uranium>10</Uranium>
+        </costList>
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <drawSize>1.5</drawSize>
+        </graphicData>
+        <thingCategories>
+            <li>ApparelArmor</li>
+        </thingCategories>
+        <apparel>
+            <useWornGraphicMask>true</useWornGraphicMask>
+            <countsAsClothingForNudity>false</countsAsClothingForNudity>
+            <bodyPartGroups>
+                <li>FullHead</li>
+            </bodyPartGroups>
+            <layers>
+                <li>Overhead</li>
+            </layers>
+            <defaultOutfitTags>
+                <li>Soldier</li>
+            </defaultOutfitTags>
+        </apparel>
+        <tradeTags>
+            <li>HiTechArmor</li>
+        </tradeTags>
+        <thingSetMakerTags Inherit="False" />
+        <smeltable>false</smeltable>
+        <burnableByRecipe>true</burnableByRecipe>
+        <tradeability>Sellable</tradeability>
+    </ThingDef>
+
+</Defs>

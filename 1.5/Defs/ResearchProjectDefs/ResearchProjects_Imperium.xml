@@ -127,11 +127,11 @@
 
   <!-- Imperium Power Armor-->
   <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
-    <defName>BEWH_AstartesPowerArmor</defName>
-    <label>Astartes Power Armor</label>
-    <description>Unlocks recipes for creating Astartes power armor.</description>
-    <researchViewX>0</researchViewX>
-    <researchViewY>2</researchViewY>
+    <defName>BEWH_AstartesPowerArmorMkVII</defName>
+    <label>Mk VII Power Armor</label>
+    <description>Unlocks recipes for creating Mk VII power armor.</description>
+    <researchViewX>4</researchViewX>
+    <researchViewY>0</researchViewY>
     <baseCost>10000</baseCost>
     <prerequisites>
       <li>AdvancedFabrication</li>
@@ -140,13 +140,26 @@
     </prerequisites>
   </ResearchProjectDef>
 
+  <!-- Imperium Power Armor-->
+  <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
+    <defName>BEWH_AstartesPowerArmorMkX</defName>
+    <label>Mk X Power Armor</label>
+    <description>Unlocks recipes for creating Mk X power armor.</description>
+    <researchViewX>5</researchViewX>
+    <researchViewY>0</researchViewY>
+    <baseCost>3000</baseCost>
+    <prerequisites>
+      <li>BEWH_AstartesPowerArmorMkVII</li>
+    </prerequisites>
+  </ResearchProjectDef>
+
   <!-- Imperium Weapons-->
   <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
     <defName>BEWH_AstartesWeapons</defName>
-    <label>Astartes Weapons</label>
-    <description>Unlocks recipes for creating Astartes Weapons.</description>
-    <researchViewX>1</researchViewX>
-    <researchViewY>2</researchViewY>
+    <label>Astartes Weaponry</label>
+    <description>Unlocks recipes for creating various Astartes Weapons.</description>
+    <researchViewX>4</researchViewX>
+    <researchViewY>1</researchViewY>
     <baseCost>10000</baseCost>
     <prerequisites>
       <li>AdvancedFabrication</li>
