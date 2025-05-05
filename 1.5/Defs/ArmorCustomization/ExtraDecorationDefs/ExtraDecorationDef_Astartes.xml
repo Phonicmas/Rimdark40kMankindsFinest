@@ -91,6 +91,7 @@
         <appliesTo>
             <li>BEWH_MkVIIPowerArmor</li>
             <li>BEWH_MkXPowerArmor</li>
+            <li>BEWH_MkXPowerArmorChaplain</li>
         </appliesTo>
         <layerOffsets>
             <li>
@@ -129,6 +130,7 @@
         <appliesTo>
             <li>BEWH_MkVIIPowerArmor</li>
             <li>BEWH_MkXPowerArmor</li>
+            <li>BEWH_MkXPowerArmorChaplain</li>
         </appliesTo>
         <layerOffsets>
             <li>
@@ -213,6 +215,7 @@
         <appliesTo>
             <li>BEWH_MkVIIPowerArmor</li>
             <li>BEWH_MkXPowerArmor</li>
+            <li>BEWH_MkXPowerArmorChaplain</li>
         </appliesTo>
         <layerOffsets>
             <li>
@@ -244,6 +247,7 @@
         <appliesTo>
             <li>BEWH_MkVIIPowerArmor</li>
             <li>BEWH_MkXPowerArmor</li>
+            <li>BEWH_MkXPowerArmorChaplain</li>
         </appliesTo>
         <layerOffsets>
             <li>
@@ -259,6 +263,36 @@
         <flipable>true</flipable>
     </Core40k.ExtraDecorationDef>
 
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_DecoRelic_2</defName>
+        <label>Relic 2</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Armor/Common/BEWH_Deco_Relic2_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_Relic2</drawnTextureIconPath>
+        <sortOrder>0</sortOrder>
+        <defaultShowRotation>
+            <li>South</li>
+            <li>West</li>
+            <li>North</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmor</li>
+            <li>BEWH_MkXPowerArmor</li>
+            <li>BEWH_MkXPowerArmorChaplain</li>
+        </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>West</key>
+                <value>-12</value>
+            </li>
+            <li>
+                <key>East</key>
+                <value>-12</value>
+            </li>
+        </layerOffsets>
+        <shaderType>Cutout</shaderType>
+        <flipable>true</flipable>
+    </Core40k.ExtraDecorationDef>
     <!-- Pouches -->
     <Core40k.ExtraDecorationDef>
         <defName>BEWH_DecoPouch_1</defName>
@@ -275,6 +309,7 @@
         <appliesTo>
             <li>BEWH_MkVIIPowerArmor</li>
             <li>BEWH_MkXPowerArmor</li>
+            <li>BEWH_MkXPowerArmorChaplain</li>
         </appliesTo>
         <layerOffsets>
             <li>
@@ -826,7 +861,7 @@
     <!-- COMMON -->
 
     <Core40k.ExtraDecorationDef>
-        <defName>BEWH_IronHalo1</defName>
+        <defName>BEWH_IronHalo_1</defName>
         <label>Iron halo 1</label>
         <description>...</description>
         <iconPath>Things/Decorations/Armor/Common/BEWH_Deco_IronHalo1_south</iconPath>
@@ -841,6 +876,7 @@
         <appliesTo>
             <li>BEWH_MkVIIPowerArmor</li>
             <li>BEWH_MkXPowerArmor</li>
+            <li>BEWH_MkXPowerArmorChaplain</li>
         </appliesTo>
         <layerOffsets>
             <li>
@@ -871,6 +907,52 @@
         <drawInHeadSpace>true</drawInHeadSpace>
     </Core40k.ExtraDecorationDef>
 
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_IronHalo_2</defName>
+        <label>Iron halo 2</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Armor/Common/BEWH_Deco_IronHalo2_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_IronHalo2</drawnTextureIconPath>
+        <sortOrder>0</sortOrder>
+        <defaultShowRotation>
+            <li>South</li>
+            <li>West</li>
+            <li>East</li>
+            <li>North</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmor</li>
+            <li>BEWH_MkXPowerArmor</li>
+            <li>BEWH_MkXPowerArmorChaplain</li>
+        </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>South</key>
+                <value>-40</value>
+            </li>
+            <li>
+                <key>East</key>
+                <value>-40</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>-40</value>
+            </li>
+            <li>
+                <key>North</key>
+                <value>0</value>
+            </li>
+        </layerOffsets>
+        <colourable>true</colourable>
+        <availablePresets>
+            <li>BEWH_DecoPaletteGold</li>
+            <li>BEWH_DecoPaletteSilver</li>
+            <li>BEWH_DecoPaletteIFBlack</li>
+        </availablePresets>
+        <shaderType>Cutout</shaderType>
+        <flipable>false</flipable>
+        <drawInHeadSpace>true</drawInHeadSpace>
+    </Core40k.ExtraDecorationDef>
     <Core40k.ExtraDecorationDef>
         <defName>BEWH_DecoInquisInsignia</defName>
         <label>Inquisition insignia</label>
@@ -924,6 +1006,7 @@
         <appliesTo>
             <li>BEWH_MkVIIPowerArmorHelmet</li>
             <li>BEWH_MkXPowerArmorHelmet</li>
+            <li>BEWH_MkXPowerArmorChaplainHelmet</li>
         </appliesTo>
         <layerOffsets>
             <li>
@@ -1031,8 +1114,8 @@
         <defName>BEWH_MkXBladeguardBrim</defName>
         <label>Bladeguard brim</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_MkXBladeguardShield_south</iconPath>
-        <drawnTextureIconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_MkXBladeguardShield</drawnTextureIconPath>
+        <iconPath>Things/Decorations/Headgear/Common/BEWH_Deco_BladeguardShield_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Headgear/Common/BEWH_Deco_BladeguardShield</drawnTextureIconPath>
         <sortOrder>4</sortOrder>
         <isHelmetDecoration>true</isHelmetDecoration>
         <defaultShowRotation>
@@ -1069,7 +1152,7 @@
     <!-- Stripes -->
     <Core40k.ExtraDecorationDef>
         <defName>BEWH_MkXDecoStripe</defName>
-        <label>Stripe</label>
+        <label>Colour stripe</label>
         <description>...</description>
         <iconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_MkXStripe_south</iconPath>
         <drawnTextureIconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_MkXStripe</drawnTextureIconPath>
@@ -1234,7 +1317,7 @@
     <!-- Stripes -->
     <Core40k.ExtraDecorationDef>
         <defName>BEWH_MkVIIDecoStripe</defName>
-        <label>Stripe</label>
+        <label>Colour stripe</label>
         <description>...</description>
         <iconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_MkVIIStripe_south</iconPath>
         <drawnTextureIconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_MkVIIStripe</drawnTextureIconPath>

@@ -34,7 +34,7 @@
     <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankBattleBrother</defName>
         <label>Battle-Brother</label>
-        <description>Battle-Brother description</description>
+        <description>Battle-Brothers are fully initiated Astartes, proven in both skill and loyalty. They form the backbone of a Chapter's fighting force, deployed across the galaxy in service of the Emperor’s will.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_BattleBrother</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(2, 0)</displayPosition>
@@ -64,7 +64,7 @@
     <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankVeteran</defName>
         <label>Veteran</label>
-        <description>Veteran description.</description>
+        <description>Veterans are warriors honed by centuries of battle. These Space Marines are often equipped with the finest relics and serve as mentors, bodyguards, and champions in the Chapter’s most vital conflicts.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_Veteran</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(3, -2)</displayPosition>
@@ -93,7 +93,7 @@
     <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankSergeant</defName>
         <label>Sergeant</label>
-        <description>Sergeant description.</description>
+        <description>Sergeants are seasoned warriors appointed to lead squads into battle. Steeped in the Chapter’s doctrines, they embody tactical discipline and command the unwavering loyalty of their Battle-Brothers.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_Sergeant</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(5, -2)</displayPosition>
@@ -117,7 +117,7 @@
     <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankLieutenant</defName>
         <label>Lieutenant</label>
-        <description>Lieutenant description.</description>
+        <description>Lieutenants are junior officers who act as trusted aides to Captains. They provide strategic oversight, relay orders, and reinforce the chain of command, ensuring that that the will of the Chapter is carried out with perfect coordination.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_Lieutenant</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(8, 0)</displayPosition>
@@ -154,7 +154,7 @@
     <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankCaptain</defName>
         <label>Captain</label>
-        <description>Captain description.</description>
+        <description>Captains are the commanders of a Chapter’s companies. Each is a master of strategy and a paragon of the Chapter’s ideals.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_Captain</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(10, 0)</displayPosition>
@@ -188,7 +188,7 @@
     <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankChapterMaster</defName>
         <label>Chapter Master</label>
-        <description>Chapter Master description.</description>
+        <description>The Chapter Master is the supreme commander of the Chapter, a warlord whose word is the law, a living embodiment of Chapter’s legacy, will and strength. Under his leadership, the Chapter wages war across the galaxy in the name of the Emperor.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_ChapterMaster</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(14, 0)</displayPosition>
@@ -230,7 +230,7 @@
     <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankVanguard</defName>
         <label>Vanguard</label>
-        <description>Vanguard description.</description>
+        <description>Vanguards are elite warriors trained in stealth, rapid assault, and close-quarters combat. Often equipped with lighter armour and specialized wargear, they strike swiftly behind enemy lines, spreading terror and confusion before vanishing into the shadows.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_Vanguard</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(1, -1)</displayPosition>
@@ -283,7 +283,7 @@
     <!-- =Chapter Ancient= -->
     <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankChapterAncient</defName>
-        <label>Chapter Ancient</label>
+        <label>The Chapter Ancient bears the Chapter Standard into war — a relic of immense symbolic power. Its presence steels the hearts of Battle-Brothers and inspires them to fight with renewed fury and unwavering resolve.</label>
         <description>Chapter Ancient description.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_Ancient</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
@@ -325,7 +325,7 @@
     <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankHelixAdept</defName>
         <label>Helix Adept</label>
-        <description>Helix Adept description.</description>
+        <description>The Helix Adept is an Apothecary-in-training, versed in battlefield triage and the sacred duty of gene-seed retrieval. They learn the arts of life and death under the watchful eye of experienced Apothecaries.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_HelixAdept</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(4, 1)</displayPosition>
@@ -373,7 +373,7 @@
     <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankApothecary</defName>
         <label>Apothecary</label>
-        <description>Apothecary description.</description>
+        <description>Apothecaries are the healers and gene-seed keepers of the Chapter. On the battlefield, they tend the wounded and recover the genetic legacy of fallen brethren — an unbroken chain stretching back to the Chapter’s Primarch.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_Apothecary</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(6, 1)</displayPosition>
@@ -413,7 +413,7 @@
     <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankMasterOfTheApothecarion</defName>
         <label>Master of the Apothecarion</label>
-        <description>Master of the Apothecarion description.</description>
+        <description>The Master of the Apothecarion oversees all medical and genetic duties within the Chapter. A veteran among healers, they are charged with preserving the purity of the gene-seed and ensuring its sanctity across generations.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_MasterOfTheApothecarion</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(9, 1)</displayPosition>
@@ -451,7 +451,7 @@
     <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankTechmarineNovitiate</defName>
         <label>Techmarine Novitiate</label>
-        <description>Techmarine Novitiate description.</description>
+        <description>Techmarine Novitiates are initiates of the Machine Cult, undergoing rigorous training in the rites of the Omnissiah. Divided in loyalty between their Chapter and Mars, they begin their path by learning to commune with the machine spirit and soothing the “pain” of sacred wargear.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_TechmarineNovitiate</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(4, 2)</displayPosition>
@@ -489,7 +489,7 @@
     <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankTechmarine</defName>
         <label>Techmarine</label>
-        <description>Techmarine description.</description>
+        <description>Techmarines are the sacred bridge between the Chapter and Cult Mechanicus. They maintain war engines, command servitors, and wield powerful mechadendrites and plasma tools in both repair and battle.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_Techmarine</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(6, 2)</displayPosition>
@@ -520,7 +520,7 @@
     <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankMasterOfTheForge</defName>
         <label>Master of the Forge</label>
-        <description>Master of the Forge description.</description>
+        <description>The Master of the Forge is the highest Techmarine in a Chapter, responsible for the maintenance of its most sacred machines and relics.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_MasterOfTheForge</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(9, 2)</displayPosition>
@@ -555,7 +555,7 @@
     <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankAcolytum</defName>
         <label>Acolytum</label>
-        <description>Acolytum description.</description>
+        <description>Acolyta are those who take the first steps on the path of the Librarius. Under the guidance of senior Librarians, they learn to harness and control their psychic potential. Their souls are fortified against the Warp, but constant vigilance is required.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_Acolytum</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(4, 3)</displayPosition>
@@ -597,7 +597,7 @@
     <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankLibrarian</defName>
         <label>Librarian</label>
-        <description>Librarian description.</description>
+        <description>Librarians are warrior-psykers, sanctioned to wield the power of the Warp in service of the Emperor. Guardians of esoteric knowledge and lore-keepers of the Chapter, they walk a fine line between divine purpose and damnation.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_Librarian</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(6, 3)</displayPosition>
@@ -633,7 +633,7 @@
     <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankChiefLibrarian</defName>
         <label>Chief Librarian</label>
-        <description>Chief Librarian description.</description>
+        <description>The strongest and and most psychically attuned Librarian in the Chapter. The master of the Librarium. Chief Librarians often lead troops or assist the Chapter Master in battle.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_ChiefLibrarian</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(9, 3)</displayPosition>
@@ -671,7 +671,7 @@
     <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankJudiciar</defName>
         <label>Judiciar</label>
-        <description>Judiciar description.</description>
+        <description>Judiciars are grim enforcers of a Chapter’s discipline, ensuring their brothers remain true to their oaths.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_Judiciar</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(4, -3)</displayPosition>
@@ -714,7 +714,7 @@
     <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankChaplain</defName>
         <label>Chaplain</label>
-        <description>Chaplain description.</description>
+        <description>Chaplain are spiritual leaders and warriors of unyielding faith. They safeguard souls of their brethren and lead the battle rites. Their skull helms strike terror into the hearts of the unfaithful.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_Chaplain</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(6, -3)</displayPosition>
@@ -751,7 +751,7 @@
     <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankMasterOfSanctity</defName>
         <label>Master of Sanctity</label>
-        <description>Master of Sanctity description.</description>
+        <description>The Master of Sanctity is the highest Chaplain of the Chapter, guardian of its spiritual purity and eternal flame. His voice is sacred, his judgment absolute, and his presence an anathema to heresy and weakness.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_MasterOfSanctity</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(9, -3)</displayPosition>
@@ -786,7 +786,7 @@
     <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankDevastator</defName>
         <label>Devastator</label>
-        <description>Devastator description.</description>
+        <description>Devastators are heavy weapons specialists, providing devastating fire support with lascannons, missile launchers, and other armaments of immense destructive power. They anchor the line and annihilate enemy armour and fortifications.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_FireSupport</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(3, -1)</displayPosition>
@@ -814,7 +814,7 @@
     <!-- Devastator Sergeant -->
     <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankDevastatorSergeant</defName>
-        <label>Devastator Sergeant</label>
+        <label>Devastator Sergeants command squads of heavy weapon specialists. They direct firepower with calculated precision, coordinating volleys that reduce enemy strongholds and war engines to ruin.</label>
         <description>Devastator Sergeant description.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_FireSupportSergeant</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
@@ -847,7 +847,7 @@
     <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankAssault</defName>
         <label>Assault</label>
-        <description>Assault description.</description>
+        <description>Assault Marines are shock troops trained for brutal, hand-to-hand combat. Armed with jump packs and chainswords, they charge at the enemy like a thunder storm, carving a path through the foe with righteous zeal and relentless aggression.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_CloseSupport</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(3, 0)</displayPosition>
@@ -875,7 +875,7 @@
     <!-- Assault Sergeant -->
     <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankAssaultSergeant</defName>
-        <label>Assault Sergeant</label>
+        <label>Assault Sergeants lead from the front, rallying their squads in ferocious charges. They exemplify courage and martial prowess, often wielding master-crafted wargear as they inspire their brethren in the heart of battle.</label>
         <description>Assault Sergeant description.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_CloseSupportSergeant</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
