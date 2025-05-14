@@ -55,9 +55,21 @@ public class ShoulderPadIconTab : ApparelColourTwoTabDrawer
         var outRect = new Rect(0f, 0f, rect.width, rect.height);
         var viewRect = new Rect(0f, 0f, rect.width - 16f, listScrollViewHeight);
         Widgets.BeginScrollView(outRect, ref apparelColorScrollPosition, viewRect);
-            
+        
+        //Flip shoulder pad icon locations
+        var flipRect = new Rect(viewRect.x, viewRect.y, viewRect.width, 30f);
+        flipRect.width /= 3;
+        flipRect.x += flipRect.width;
+        if (Widgets.ButtonText(flipRect, "flip"))
+        {
+            chapterApparel.FlipShoulderIcons = !chapterApparel.FlipShoulderIcons;
+            Log.Message(chapterApparel.FlipShoulderIcons);
+        }
+
+        var curY = flipRect.yMax + 5f;
+        
         //Left shoulder icon title
-        var nameRect = new Rect(viewRect.x, viewRect.y, viewRect.width, 30f);
+        var nameRect = new Rect(viewRect.x, curY, viewRect.width, 30f);
         nameRect.width /= 2;
         nameRect.x += nameRect.width / 2;
         Widgets.DrawMenuSection(nameRect);
@@ -66,19 +78,19 @@ public class ShoulderPadIconTab : ApparelColourTwoTabDrawer
         Text.Anchor = TextAnchor.UpperLeft;
                 
         //Reset left shoulder icon to default
-        var resetChapterIconRect = new Rect(viewRect.x, viewRect.y, viewRect.width, 30f);
+        var resetChapterIconRect = new Rect(viewRect.x, curY, viewRect.width, 30f);
         resetChapterIconRect.width /= 5;
         resetChapterIconRect.x = nameRect.xMin - resetChapterIconRect.width - nameRect.width/20;
         if (Widgets.ButtonText(resetChapterIconRect, "BEWH.MankindsFinest.ShoulderIcon.ResetToDefault".Translate()))
         {
-            chapterApparel.LeftShoulderIcon = LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>().CurrentlySelectedPreset.relatedChapterIcon ?? null;
+            chapterApparel.LeftShoulderIcon = LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>().CurrentlySelectedPreset.relatedChapterIcon;
         }
             
         var iconSize = new Vector2(viewRect.width/RowAmount, viewRect.width/RowAmount);
         var position = new Vector2(viewRect.x, resetChapterIconRect.yMax);
             
         var curX = position.x;
-        var curY = position.y;
+        curY = position.y;
             
         //Left icon selection
         for (var i = 0; i < leftShoulderIcons.Count; i++)
@@ -99,13 +111,18 @@ public class ShoulderPadIconTab : ApparelColourTwoTabDrawer
             }
                 
             iconRect = iconRect.ContractedBy(5f);
+                    
+            if (chapterApparel.LeftShoulderIcon == leftShoulderIcons[i])
+            {
+                Widgets.DrawStrongHighlight(iconRect.ExpandedBy(3f));
+            }
                 
             var color = Mouse.IsOver(iconRect) ? GenUI.MouseoverColor : Color.white;
             GUI.color = color;
             GUI.DrawTexture(iconRect, Command.BGTexShrunk);
             GUI.color = Color.white;
             GUI.DrawTexture(iconRect, leftShoulderIcons[i].Icon);
-                
+            
             TooltipHandler.TipRegion(iconRect, leftShoulderIcons[i].label);
 
             if (Widgets.ButtonInvisible(iconRect))
@@ -174,7 +191,12 @@ public class ShoulderPadIconTab : ApparelColourTwoTabDrawer
             }
                 
             iconRect = iconRect.ContractedBy(5f);
-                
+             
+            if (chapterApparel.RightShoulderIcon == rightShoulderIcons[i])
+            {
+                Widgets.DrawStrongHighlight(iconRect.ExpandedBy(3f));
+            }
+            
             var color = Mouse.IsOver(iconRect) ? GenUI.MouseoverColor : Color.white;
             GUI.color = color;
             GUI.DrawTexture(iconRect, Command.BGTexShrunk);

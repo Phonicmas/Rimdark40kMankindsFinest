@@ -27,18 +27,20 @@ public class ChapterBodyDecorativeApparelColourTwo : BodyDecorativeApparelColour
         }
     }
         
-        
-    private ShoulderIconDef originalRightShoulderIcon = null;
-        
-    private ShoulderIconDef rightShoulderIcon = null;
-
+    private ShoulderIconSettings originalRightShoulder = null;
+    private ShoulderIconSettings rightShoulder = null;
     public ShoulderIconDef RightShoulderIcon
     {
         get
         {
-            if (rightShoulderIcon != null || RankInfoComp == null)
+            if (rightShoulder == null)
             {
-                return rightShoulderIcon;
+                return null;
+            }
+            
+            if (rightShoulder.ShoulderIcon != null || RankInfoComp == null)
+            {
+                return rightShoulder.ShoulderIcon;
             }
                 
             var highestRankDef = RankInfoComp.HighestRankDef(true, Genes40kDefOf.BEWH_AstartesRankCategory) ?? RankInfoComp.HighestRankDef(false, Genes40kDefOf.BEWH_AstartesRankCategory);
@@ -46,73 +48,64 @@ public class ChapterBodyDecorativeApparelColourTwo : BodyDecorativeApparelColour
         }
         set
         {
-            rightShoulderIcon = value;
-            if (value != null)
+            rightShoulder ??= new ShoulderIconSettings();
+            if (leftShoulder.ShoulderIcon == value && !leftShoulder.Flipped)
             {
-                if (value.setsNull)
-                {
-                    rightShoulderIcon = null;
-                }
-                rightShoulderIconColour = value.defaultColour;
-                originalRightShoulderIconColour = value.defaultColour;
+                rightShoulder.Flipped = true;
             }
+            else
+            {
+                rightShoulder.ShoulderIcon = value;
+            }
+            
+            if (value != null && value.setsNull)
+            {
+                rightShoulder = new ShoulderIconSettings();
+            }
+            
             Notify_ColorChanged();
         }
     }
-        
-    private Color originalRightShoulderIconColour = Color.white;
-        
-    private Color rightShoulderIconColour = Color.white;
-
     public Color RightShoulderIconColour
     {
-        get => rightShoulderIconColour;
+        get => rightShoulder?.Color ?? Color.white;
         set
         {
-            rightShoulderIconColour = value;
+            rightShoulder.Color = value;
             Notify_ColorChanged();
         }
     }
-        
-        
-    private ShoulderIconDef originalLeftShoulderIcon = null;
-        
-    private ShoulderIconDef leftShoulderIcon = null;
+    
 
+    private ShoulderIconSettings originalLeftShoulder = null;
+    private ShoulderIconSettings leftShoulder = null;
     public ShoulderIconDef LeftShoulderIcon
     {
-        get => leftShoulderIcon;
+        get => leftShoulder?.ShoulderIcon;
         set
         {
-            leftShoulderIcon = value;
-            if (value != null)
+            leftShoulder ??= new ShoulderIconSettings();
+            if (leftShoulder.ShoulderIcon == value && !leftShoulder.Flipped)
             {
-                if (value.setsNull)
-                {
-                    leftShoulderIcon = null;
-                }
-                leftShoulderIconColour = value.defaultColour;
-                originalLeftShoulderIconColour = value.defaultColour;
+                leftShoulder.Flipped = true;
+            }
+            else
+            {
+                leftShoulder.ShoulderIcon = value;
+            }
+            
+            if (value != null && value.setsNull)
+            {
+                leftShoulder = new ShoulderIconSettings();
             }
             Notify_ColorChanged();
         }
     }
+    public Color LeftShoulderIconColour => leftShoulder?.Color ?? Color.white;
 
-    private Color originalLeftShoulderIconColour = Color.white;
-        
-    private Color leftShoulderIconColour = Color.white;
 
-    public Color LeftShoulderIconColour
-    {
-        get => leftShoulderIconColour;
-        set
-        {
-            leftShoulderIconColour = value;
-            Notify_ColorChanged();
-        }
-    }
-        
-        
+    public bool FlipShoulderIcons = false;
+    
     private BodyTypeDef originalBodyType = null;
 
     public override void SpawnSetup(Map map, bool respawningAfterLoad)
@@ -130,28 +123,25 @@ public class ChapterBodyDecorativeApparelColourTwo : BodyDecorativeApparelColour
         
     private void SetUpMisc()
     {
-        leftShoulderIcon = ModSettings?.CurrentlySelectedPreset.relatedChapterIcon;
-        rightShoulderIcon = null;
+        leftShoulder = new ShoulderIconSettings()
+        {
+            ShoulderIcon = ModSettings?.CurrentlySelectedPreset.relatedChapterIcon,
+        };
+        rightShoulder = null;
     }
         
     public override void SetOriginals()
     {
-        originalLeftShoulderIcon = leftShoulderIcon;
-        originalLeftShoulderIconColour = leftShoulderIconColour;
-            
-        originalRightShoulderIcon = rightShoulderIcon;
-        originalRightShoulderIconColour = rightShoulderIconColour;
+        originalRightShoulder = rightShoulder;
+        originalLeftShoulder = leftShoulder;
             
         base.SetOriginals();
     }
         
     public override void Reset()
     {
-        rightShoulderIcon = originalRightShoulderIcon;
-        rightShoulderIconColour = originalRightShoulderIconColour;
-            
-        leftShoulderIcon = originalLeftShoulderIcon;
-        leftShoulderIconColour = originalLeftShoulderIconColour;
+        rightShoulder = originalRightShoulder;
+        leftShoulder = originalLeftShoulder;
             
         base.Reset();
     }
@@ -177,15 +167,12 @@ public class ChapterBodyDecorativeApparelColourTwo : BodyDecorativeApparelColour
 
     public override void ExposeData()
     {
-        Scribe_Defs.Look(ref leftShoulderIcon, "leftShoulderIcon");
-        Scribe_Defs.Look(ref originalLeftShoulderIcon, "originalSelectedChapterIcon");
-        Scribe_Values.Look(ref leftShoulderIconColour, "leftShoulderIconColour");
-        Scribe_Values.Look(ref originalLeftShoulderIconColour, "originalLeftShoulderIconColour");
-            
-        Scribe_Defs.Look(ref rightShoulderIcon, "rightShoulderIcon");
-        Scribe_Defs.Look(ref originalRightShoulderIcon, "originalRightShoulderIcon");
-        Scribe_Values.Look(ref rightShoulderIconColour, "rightShoulderIconColour");
-        Scribe_Values.Look(ref originalRightShoulderIconColour, "originalRightShoulderIconColour");
+        Scribe_Deep.Look(ref originalRightShoulder, "originalRightShoulder");
+        Scribe_Deep.Look(ref rightShoulder, "rightShoulder");
+        Scribe_Deep.Look(ref originalLeftShoulder, "originalLeftShoulder");
+        Scribe_Deep.Look(ref leftShoulder, "leftShoulder");
+        
+        Scribe_Values.Look(ref FlipShoulderIcons, "FlipShoulderIcons", false);
             
         Scribe_Defs.Look(ref originalBodyType, "originalBodyType");
         base.ExposeData();

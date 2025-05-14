@@ -28,8 +28,8 @@
       </targetParams>
     </verbProperties>
     <comps>
-      <li Class="Genes40k.CompProperties_AbilityDivineRadianceCost">
-        <divineRadianceCost>0.05</divineRadianceCost>
+      <li Class="Genes40k.CompProperties_AbilityDivineGraceCost">
+        <divineGraceCost>0.05</divineGraceCost>
       </li>
     </comps>
   </AbilityDef>
@@ -62,8 +62,8 @@
       </targetParams>
     </verbProperties>
     <comps>
-      <li Class="Genes40k.CompProperties_AbilityDivineRadianceCost">
-        <divineRadianceCost>1.00</divineRadianceCost>
+      <li Class="Genes40k.CompProperties_AbilityDivineGraceCost">
+        <divineGraceCost>1.00</divineGraceCost>
       </li>
       <li Class="Genes40k.CompProperties_AbilityAoeHit">
         <damageDef>BEWH_LivingSaintHoly</damageDef>
@@ -80,7 +80,7 @@
   <AbilityDef>
     <defName>BEWH_LivingSaintProofOfFaith</defName>
     <label>Proof of Faith</label>
-    <description>The Living Saint calls upon a willing ally to make the ultimate sacrifice, channeling their life force to replenish the Saint's divine radiance. The chosen pawn enters a state of deep, restorative coma for several days or weeks.</description>
+    <description>The Living Saint calls upon a willing ally to make the ultimate sacrifice, channeling their life force to replenish the Saint's divine grace. The chosen pawn enters a state of deep, restorative coma for several days or weeks.</description>
     <iconPath>UI/Abilities/BEWH_ProofOfFaith</iconPath>
     <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
@@ -108,7 +108,7 @@
     </verbProperties>
     <comps>
       <li Class="Genes40k.CompProperties_AbilityProofOfFaith">
-        <divineRadianceGain>0.50</divineRadianceGain>
+        <divineGraceGain>0.50</divineGraceGain>
         <durationMultiplier>PsychicSensitivity</durationMultiplier>
       </li>
       <li Class="CompProperties_AbilityGiveHediff">
@@ -154,8 +154,8 @@
       </targetParams>
     </verbProperties>
     <comps>
-      <li Class="Genes40k.CompProperties_AbilityDivineRadianceCost">
-        <divineRadianceCost>1</divineRadianceCost>
+      <li Class="Genes40k.CompProperties_AbilityDivineGraceCost">
+        <divineGraceCost>1</divineGraceCost>
       </li>
       <li Class="CompProperties_AbilityGiveHediff">
         <compClass>CompAbilityEffect_GiveHediff</compClass>

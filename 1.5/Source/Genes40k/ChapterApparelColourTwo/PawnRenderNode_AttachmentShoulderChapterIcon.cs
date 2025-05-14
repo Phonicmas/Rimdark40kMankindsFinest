@@ -8,7 +8,10 @@ public class PawnRenderNode_AttachmentShoulderChapterIcon : PawnRenderNode
     private Genes40kModSettings modSettings = null;
 
     private Genes40kModSettings ModSettings => modSettings ??= LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>();
-        
+
+    private bool flipped = false;
+    protected override bool FlipGraphic => flipped;
+    
     public PawnRenderNode_AttachmentShoulderChapterIcon(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree) : base(pawn, props, tree)
     {
     }
@@ -28,7 +31,12 @@ public class PawnRenderNode_AttachmentShoulderChapterIcon : PawnRenderNode
         {
             leftShoulderIcon = ModSettings.CurrentlySelectedPreset.relatedChapterIcon.drawnTextureIconPath;
         }
-            
+
+        if (apparelColourTwo.FlipShoulderIcons)
+        {
+            flipped = true;
+        }
+        
         return GraphicDatabase.Get<Graphic_Multi>(leftShoulderIcon, ShaderFor(pawn), Props.drawSize, drawColour);
     }
 }

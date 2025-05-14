@@ -15,9 +15,9 @@ public class CompAbilityEffect_ProofOfFaith : CompAbilityEffect_WithDuration
             return;
         }
             
-        var gainedAmount = Props.divineRadianceGain;
+        var gainedAmount = Props.divineGraceGain;
         gainedAmount *= pawn.GetStatValue(Props.durationMultiplier);
-        Genes40kUtils.OffsetDivineRadiance(parent.pawn, gainedAmount);
+        Genes40kUtils.OffsetDivineGrace(parent.pawn, gainedAmount);
             
         base.Apply(target, dest);
     }
@@ -56,7 +56,7 @@ public class CompAbilityEffect_ProofOfFaith : CompAbilityEffect_WithDuration
             return "BEWH.MankindsFinest.Ability.ProofOfFaithNoStat".Translate(pawn, Props.durationMultiplier.label);
         }
             
-        var gainedAmount = Props.divineRadianceGain;
+        var gainedAmount = Props.divineGraceGain;
         gainedAmount *= pawn.GetStatValue(Props.durationMultiplier);
 
         return "BEWH.MankindsFinest.Ability.ProofOfFaithGain".Translate(pawn, gainedAmount * 100, requiredStat.ToString("0.0"));

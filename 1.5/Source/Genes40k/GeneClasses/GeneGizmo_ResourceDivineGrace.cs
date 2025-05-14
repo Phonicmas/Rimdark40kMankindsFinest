@@ -6,9 +6,9 @@ using Verse;
 namespace Genes40k;
 
 [StaticConstructorOnStartup]
-public class GeneGizmo_ResourceDivineRadiance : GeneGizmo_Resource
+public class GeneGizmo_ResourceDivineGrace : GeneGizmo_Resource
 {
-	private static readonly Texture2D DivineRadianceCostTex =
+	private static readonly Texture2D DivineGraceCostTex =
 		SolidColorMaterials.NewSolidColorTexture(new Color(0.78f, 0.72f, 0.66f));
 
 	private const float TotalPulsateTime = 0.85f;
@@ -17,7 +17,7 @@ public class GeneGizmo_ResourceDivineRadiance : GeneGizmo_Resource
 
 	private List<Pair<IGeneResourceDrain, float>> tmpDrainGenes = new ();
 
-	public GeneGizmo_ResourceDivineRadiance(Gene_Resource gene, List<IGeneResourceDrain> drainGenes, Color barColor,
+	public GeneGizmo_ResourceDivineGrace(Gene_Resource gene, List<IGeneResourceDrain> drainGenes, Color barColor,
 		Color barHighlightColor) : base(gene, drainGenes, barColor, barHighlightColor)
 	{
 	}
@@ -40,14 +40,14 @@ public class GeneGizmo_ResourceDivineRadiance : GeneGizmo_Resource
 		{
 			foreach (var effectComp in command_Ability.Ability.EffectComps)
 			{
-				if (!(effectComp is CompAbilityEffect_DivineRadianceCost compAbilityEffect_DivineRadianceCost))
+				if (!(effectComp is CompAbilityEffect_DivineGraceCost compAbilityEffect_DivineGraceCost))
 				{
 					continue;
 				}
 
-				var props = (CompProperties_AbilityDivineRadianceCost)compAbilityEffect_DivineRadianceCost.Props;
+				var props = (CompProperties_AbilityDivineGraceCost)compAbilityEffect_DivineGraceCost.Props;
 
-				if (props.divineRadianceCost < float.Epsilon)
+				if (props.divineGraceCost < float.Epsilon)
 				{
 					continue;
 				}
@@ -56,10 +56,10 @@ public class GeneGizmo_ResourceDivineRadiance : GeneGizmo_Resource
 				var width = rect.width;
 				var num3 = gene.Value / gene.Max;
 				rect.xMax = rect.xMin + width * num3;
-				var num4 = Mathf.Min(props.divineRadianceCost / gene.Max, 1f);
+				var num4 = Mathf.Min(props.divineGraceCost / gene.Max, 1f);
 				rect.xMin = Mathf.Max(rect.xMin, rect.xMax - width * num4);
 				GUI.color = new Color(1f, 1f, 1f, num2 * 0.7f);
-				GenUI.DrawTextureWithMaterial(rect, DivineRadianceCostTex, null);
+				GenUI.DrawTextureWithMaterial(rect, DivineGraceCostTex, null);
 				GUI.color = Color.white;
 				return result;
 			}

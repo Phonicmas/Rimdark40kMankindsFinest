@@ -15,14 +15,19 @@ public class PawnRenderNodeWorker_AttachmentShoulderRankIcon : PawnRenderNodeWor
         {
             return false;
         }
+        
+        if (parms.facing == Rot4.West && !apparelColourTwo.FlipShoulderIcons)
+        {
+            return false;
+        }
+            
+        if (parms.facing == Rot4.East && apparelColourTwo.FlipShoulderIcons)
+        {
+            return false;
+        }
             
         if (parms.Portrait)
         {
-            if (parms.facing == Rot4.West)
-            {
-                return false;
-            }
-            
             if ((parms.flags & PawnRenderFlags.Clothes) != PawnRenderFlags.Clothes)
             {
                 return false;
@@ -30,26 +35,14 @@ public class PawnRenderNodeWorker_AttachmentShoulderRankIcon : PawnRenderNodeWor
         }
         else
         {
-            if (parms.posture == PawnPosture.LayingOnGroundFaceUp)
+            switch (parms.posture)
             {
-                return true;
+                case PawnPosture.LayingOnGroundFaceUp:
+                case PawnPosture.LayingOnGroundNormal:
+                case PawnPosture.Standing:
+                    return true;
             }
 
-            if (parms.posture == PawnPosture.LayingOnGroundNormal)
-            {
-                return false;
-            }
-                
-            if (pawn.Rotation == Rot4.West)
-            {
-                return false;
-            }
-                
-            if (parms.posture == PawnPosture.Standing)
-            {
-                return true;
-            }
-            
             var mindState = pawn.mindState;
             if (mindState != null && mindState.duty?.def?.drawBodyOverride.HasValue == true)
             {

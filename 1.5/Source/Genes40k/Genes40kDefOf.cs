@@ -79,7 +79,7 @@ public static class Genes40kDefOf
 
     //Living saint genes
     public static GeneDef BEWH_LivingSaintBeingOfFaith;
-    public static GeneDef BEWH_LivingSaintDivineRadiance;
+    public static GeneDef BEWH_LivingSaintDivineGrace;
     public static GeneDef BEWH_LivingSaintDivineFlight;
     public static GeneDef BEWH_LivingSaintSacredRegeneration;
     public static GeneDef BEWH_LivingSaintFuryOfTheEmperor;
@@ -114,7 +114,7 @@ public static class Genes40kDefOf
     public static HediffDef BEWH_PrimarisPhaseTwo;
     public static HediffDef BEWH_PrimarisPhaseThree;
         
-    public static HediffDef BEWH_DivineRadiaceFading;
+    public static HediffDef BEWH_DivineGraceFading;
     public static HediffDef BEWH_LivingSaintHolyAscension;
         
     public static HediffDef BEWH_SerfBuff;

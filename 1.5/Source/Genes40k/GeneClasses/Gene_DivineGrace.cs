@@ -5,7 +5,7 @@ using Verse;
 
 namespace Genes40k;
 
-public class Gene_DivineRadiance : Gene_Resource, IGeneResourceDrain
+public class Gene_DivineGrace : Gene_Resource, IGeneResourceDrain
 {
     public Gene_Resource Resource => this;
 
@@ -29,10 +29,10 @@ public class Gene_DivineRadiance : Gene_Resource, IGeneResourceDrain
     protected override Color BarHighlightColor => new ColorInt(255, 200, 51).ToColor;
 
     public bool isOvercharging = false;
-    public bool overloadRadiance = false;
+    public bool overloadGrace = false;
 
-    public bool passivelyDrainRadiance = false;
-    private bool sendMessageOfLowRadiance = true;
+    public bool passivelyDrainGrace = false;
+    private bool sendMessageOfLowGrace = true;
         
     public override float Value
     {
@@ -45,22 +45,22 @@ public class Gene_DivineRadiance : Gene_Resource, IGeneResourceDrain
                 maxVal += MaxLevelOffset;
             }
             cur = Mathf.Clamp(value, 0f, maxVal);
-            if (!overloadRadiance || !(cur > max))
+            if (!overloadGrace || !(cur > max))
             {
                 return;
             }
             
-            overloadRadiance = false;
+            overloadGrace = false;
             cur = max + MaxLevelOffset;
         }
     }
         
-    public Gene_DivineRadiance()
+    public Gene_DivineGrace()
     {
         SetMax(NewMax);
     }
 
-    public void ChangeDivineRadianceAmount(float amount)
+    public void ChangeDivineGraceAmount(float amount)
     {
         Value += amount;
 
@@ -72,35 +72,35 @@ public class Gene_DivineRadiance : Gene_Resource, IGeneResourceDrain
             }
         }
 
-        if (Value <= MinLevelForAlert && sendMessageOfLowRadiance)
+        if (Value <= MinLevelForAlert && sendMessageOfLowGrace)
         {
-            Messages.Message("BEWH.MankindsFinest.LivingSaint.LowHolyRadiance".Translate(pawn), MessageTypeDefOf.NegativeEvent, false);
-            sendMessageOfLowRadiance = false;
+            Messages.Message("BEWH.MankindsFinest.LivingSaint.LowHolyGrace".Translate(pawn), MessageTypeDefOf.NegativeEvent, false);
+            sendMessageOfLowGrace = false;
         }
         else
         {
-            sendMessageOfLowRadiance = true;
+            sendMessageOfLowGrace = true;
         }
             
-        passivelyDrainRadiance = Value < 0.1f;
+        passivelyDrainGrace = Value < 0.1f;
 
         if (Value > 0.01f)
         {
             return;
         }
             
-        if (!pawn.health.hediffSet.HasHediff(Genes40kDefOf.BEWH_DivineRadiaceFading))
+        if (!pawn.health.hediffSet.HasHediff(Genes40kDefOf.BEWH_DivineGraceFading))
         {
-            pawn.health.AddHediff(Genes40kDefOf.BEWH_DivineRadiaceFading);
+            pawn.health.AddHediff(Genes40kDefOf.BEWH_DivineGraceFading);
         }
     }
 
     public override void Tick()
     {
         base.Tick();
-        if (passivelyDrainRadiance && pawn.IsHashIntervalTick(1250))
+        if (passivelyDrainGrace && pawn.IsHashIntervalTick(1250))
         {
-            ChangeDivineRadianceAmount(-0.01f);
+            ChangeDivineGraceAmount(-0.01f);
         }
     }
 
@@ -134,23 +134,23 @@ public class Gene_DivineRadiance : Gene_Resource, IGeneResourceDrain
         {
             var command_Action = new Command_Action
             {
-                defaultLabel = "DEV: Divine Radiance -30",
+                defaultLabel = "DEV: Divine Grace -30",
                 action = delegate
                 {
-                    ChangeDivineRadianceAmount(-0.3f);
+                    ChangeDivineGraceAmount(-0.3f);
                 }
             };
             yield return command_Action;
                 
             var command_Action2 = new Command_Action
             {
-                defaultLabel = "DEV: Divine Radiance +30",
+                defaultLabel = "DEV: Divine Grace +30",
                 action = delegate
                 {
                     isOvercharging = true;
-                    overloadRadiance = true;
-                    ChangeDivineRadianceAmount(0.3f);
-                    overloadRadiance = false;
+                    overloadGrace = true;
+                    ChangeDivineGraceAmount(0.3f);
+                    overloadGrace = false;
                 }
             };
             yield return command_Action2;
@@ -161,7 +161,7 @@ public class Gene_DivineRadiance : Gene_Resource, IGeneResourceDrain
     {
         base.ExposeData();
         Scribe_Values.Look(ref isOvercharging, "isOvercharging", false);
-        Scribe_Values.Look(ref overloadRadiance, "overloadRadiance", false);
-        Scribe_Values.Look(ref passivelyDrainRadiance, "passivelyDrainRadiance", false);
+        Scribe_Values.Look(ref overloadGrace, "overloadGrace", false);
+        Scribe_Values.Look(ref passivelyDrainGrace, "passivelyDrainGrace", false);
     }
 }

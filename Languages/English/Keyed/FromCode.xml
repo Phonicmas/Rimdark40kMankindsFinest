@@ -129,14 +129,14 @@
   <BEWH.MankindsFinest.SpaceMarine.SecondGeneseedsHarvestable>Gene-seeds ready to be harvested.</BEWH.MankindsFinest.SpaceMarine.SecondGeneseedsHarvestable>
 
   <!-- Living Saint -->
-  <BEWH.MankindsFinest.LivingSaint.HolyRadianceCost>Holy Radiance Cost: {0}</BEWH.MankindsFinest.LivingSaint.HolyRadianceCost>
+  <BEWH.MankindsFinest.LivingSaint.DivineGraceCost>Divine Grace Cost: {0}</BEWH.MankindsFinest.LivingSaint.DivineGraceCost>
 
   <BEWH.MankindsFinest.LivingSaint.LivingSaintMessage>In {0}'s final moments they felt a surge of energy surging through them, invigorating and strengthening them. {0} was born anew as a living saint, stronger, faster and evermore loyal.</BEWH.MankindsFinest.LivingSaint.LivingSaintMessage>
 
   <BEWH.MankindsFinest.LivingSaint.LivingSaintReturn>Living Saint Returns</BEWH.MankindsFinest.LivingSaint.LivingSaintReturn>
   <BEWH.MankindsFinest.LivingSaint.LivingSaintReturnMessage>Though thought dead, {0}'s miracles keeps coming. It seem {0} sensed our situation from their afterlife and manifested themselves to help</BEWH.MankindsFinest.LivingSaint.LivingSaintReturnMessage>
 
-  <BEWH.MankindsFinest.LivingSaint.LowHolyRadiance>Living Saint {0_labelShort} holy radiance supply is dwindling.</BEWH.MankindsFinest.LivingSaint.LowHolyRadiance>
+  <BEWH.MankindsFinest.LivingSaint.LowHolyGrace>Living Saint {0_labelShort} holy radiance supply is dwindling.</BEWH.MankindsFinest.LivingSaint.LowHolyGrace>
 
   <!-- Perpetual -->
   <BEWH.MankindsFinest.Perpetual.PerpetualReturn>Perpetual Resurrects</BEWH.MankindsFinest.Perpetual.PerpetualReturn>
@@ -175,10 +175,10 @@
 
   <!-- Living Saint -->
   <BEWH.MankindsFinest.Ability.ProofOfFaithNoStat>{0_labelShort}'s {1} is below or at 0.</BEWH.MankindsFinest.Ability.ProofOfFaithNoStat>
-  <BEWH.MankindsFinest.Ability.ProofOfFaithGain>Will give {1} radiance and induce {0_labelShort} with coma for {2} days.</BEWH.MankindsFinest.Ability.ProofOfFaithGain>
+  <BEWH.MankindsFinest.Ability.ProofOfFaithGain>Will give {1} Grace and induce {0_labelShort} with coma for {2} days.</BEWH.MankindsFinest.Ability.ProofOfFaithGain>
 
-  <BEWH.MankindsFinest.Ability.NoDivineRadiance>{0_labelShort} does not have enough divine radiance.</BEWH.MankindsFinest.Ability.NoDivineRadiance>
-  <BEWH.MankindsFinest.Ability.NoDivineRadianceGene>{0_labelShort} is not radiant.</BEWH.MankindsFinest.Ability.NoDivineRadianceGene>
+  <BEWH.MankindsFinest.Ability.NoDivineGrace>{0_labelShort} does not have enough divine Grace.</BEWH.MankindsFinest.Ability.NoDivineGrace>
+  <BEWH.MankindsFinest.Ability.NoDivineGraceGene>{0_labelShort} is not divine.</BEWH.MankindsFinest.Ability.NoDivineGraceGene>
 
   <!-- Space Marine -->
   <BEWH.MankindsFinest.Ability.StasisResearchNotCompleted>{0} is about to enter stasis. You have not researched {1} and will have a hard time resurrecting {0} from stasis. \n\nUse with caution!</BEWH.MankindsFinest.Ability.StasisResearchNotCompleted>

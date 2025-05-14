@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using System;
+using RimWorld;
 using Verse;
 
 namespace Genes40k;
@@ -23,14 +24,19 @@ public class PawnRenderNodeWorker_AttachmentShoulderChapterIcon : PawnRenderNode
         {
             return false;
         }
+        
+        if (parms.facing == Rot4.East && !apparelColourTwo.FlipShoulderIcons)
+        {
+            return false;
+        }
+            
+        if (parms.facing == Rot4.West && apparelColourTwo.FlipShoulderIcons)
+        {
+            return false;
+        }
             
         if (parms.Portrait)
         {
-            if (parms.facing == Rot4.East)
-            {
-                return false;
-            }
-            
             if ((parms.flags & PawnRenderFlags.Clothes) != PawnRenderFlags.Clothes)
             {
                 return false;
@@ -38,21 +44,14 @@ public class PawnRenderNodeWorker_AttachmentShoulderChapterIcon : PawnRenderNode
         }
         else
         {
-            if (parms.posture == PawnPosture.LayingOnGroundNormal || parms.posture == PawnPosture.LayingOnGroundFaceUp)
+            switch (parms.posture)
             {
-                return true;
+                case PawnPosture.LayingOnGroundNormal:
+                case PawnPosture.LayingOnGroundFaceUp:
+                case PawnPosture.Standing:
+                    return true;
             }
-                
-            if (pawn.Rotation == Rot4.East)
-            {
-                return false;
-            }
-                
-            if (parms.posture == PawnPosture.Standing)
-            {
-                return true;
-            }
-            
+
             var mindState = pawn.mindState;
             if (mindState != null && mindState.duty?.def?.drawBodyOverride.HasValue == true)
             {

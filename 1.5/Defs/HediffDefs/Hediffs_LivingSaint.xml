@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-	<!-- Living Saint: Missing Divine Radiance -->
+	<!-- Living Saint: Missing Divine Grace -->
 	<HediffDef>
-		<defName>BEWH_DivineRadiaceFading</defName>
-		<label>divine radiance fading</label>
-		<description>Without Divine Radiance, the Saint's connection to the material plane weakens, causing them to fade and lose stability, unable to remain in the physical world for long.</description>
+		<defName>BEWH_DivineGraceFading</defName>
+		<label>divine Grace fading</label>
+		<description>Without Divine Grace, the Saint's connection to the material plane weakens, causing them to fade and lose stability, unable to remain in the physical world for long.</description>
 		<hediffClass>Hediff_HemogenCraving</hediffClass>
 		<defaultLabelColor>(1, 0.2, 0.2)</defaultLabelColor>
 		<initialSeverity>0.01</initialSeverity>
@@ -53,9 +53,9 @@
 			</li>
 		</stages>
 		<comps>
-			<li Class="Genes40k.HediffCompProperties_SeverityFromDivineRadiance">
+			<li Class="Genes40k.HediffCompProperties_SeverityFromDivineGrace">
 				<severityPerHourEmpty>0.2</severityPerHourEmpty>				<!-- Gives 5 hours before pawn dies -->
-				<severityPerHourDivineRadiance>-0.1</severityPerHourDivineRadiance>
+				<severityPerHourDivineGrace>-0.1</severityPerHourDivineGrace>
 			</li>
 		</comps>
 	</HediffDef>
@@ -123,10 +123,10 @@
 			</li>
 		</stages>
 		<comps>
-			<li Class="Genes40k.HediffCompProperties_SeverityFromDivineRadiance">
+			<li Class="Genes40k.HediffCompProperties_SeverityFromDivineGrace">
 				<severityPerHourEmpty>-1</severityPerHourEmpty>
-				<severityPerHourDivineRadiance>-0.25</severityPerHourDivineRadiance>
-				<divineRadiancePerHour>-0.5</divineRadiancePerHour>
+				<severityPerHourDivineGrace>-0.25</severityPerHourDivineGrace>
+				<divineGracePerHour>-0.5</divineGracePerHour>
 			</li>
 		</comps>
 	</HediffDef>

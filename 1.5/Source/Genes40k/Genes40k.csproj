@@ -103,6 +103,7 @@
     <Compile Include="ChapterApparelColourTwo\PawnRenderNode_AttachmentChapterApparelColour.cs" />
     <Compile Include="ChapterApparelColourTwo\PawnRenderNode_AttachmentShoulderRankIcon.cs" />
     <Compile Include="ChapterApparelColourTwo\ShoulderIconDef.cs" />
+    <Compile Include="ChapterApparelColourTwo\ShoulderIconSettings.cs" />
     <Compile Include="ChapterApparelColourTwo\ShoulderPadIconTab.cs" />
     <Compile Include="Comps\CompAbilityEffect_AoeHit.cs" />
     <Compile Include="Comps\CompProperties_AbilityAoeHit.cs" />
@@ -112,13 +113,13 @@
     <Compile Include="Comps\Comp_DisableInactiveGene.cs" />
     <Compile Include="Comps\GameComponent_MankindFinestUtils.cs" />
     <Compile Include="Comps\GameComponent_Perpetual.cs" />
-    <Compile Include="Comps\LivingSaint\CompAbilityEffect_DivineRadianceCost.cs" />
+    <Compile Include="Comps\LivingSaint\CompAbilityEffect_DivineGraceCost.cs" />
     <Compile Include="Comps\LivingSaint\CompAbilityEffect_ProofOfFaith.cs" />
-    <Compile Include="Comps\LivingSaint\CompProperties_AbilityDivineRadianceCost.cs" />
+    <Compile Include="Comps\LivingSaint\CompProperties_AbilityDivineGraceCost.cs" />
     <Compile Include="Comps\LivingSaint\CompProperties_AbilityProofOfFaith.cs" />
     <Compile Include="Comps\LivingSaint\GameComponent_LivingSaint.cs" />
-    <Compile Include="Comps\LivingSaint\HediffCompProperties_SeverityFromDivineRadiance.cs" />
-    <Compile Include="Comps\LivingSaint\HediffComp_SeverityFromDivineRadiance.cs" />
+    <Compile Include="Comps\LivingSaint\HediffCompProperties_SeverityFromDivineGrace.cs" />
+    <Compile Include="Comps\LivingSaint\HediffComp_SeverityFromDivineGrace.cs" />
     <Compile Include="Comps\Primarch\CompAbilityEffect_DenyTheWitch.cs" />
     <Compile Include="Comps\Primarch\CompAbilityEffect_SharedBurden.cs" />
     <Compile Include="Comps\Primarch\CompAbilityEffect_SummonMechsForCaster.cs" />
@@ -158,8 +159,8 @@
     <Compile Include="DefModExtensions\DefModExtension_PrimarchVatTexture.cs" />
     <Compile Include="GeneClasses\Gene_Psyker.cs" />
     <Compile Include="GeneClasses\Gene_WarpShield.cs" />
-    <Compile Include="GeneClasses\GeneGizmo_ResourceDivineRadiance.cs" />
-    <Compile Include="GeneClasses\Gene_DivineRadiance.cs" />
+    <Compile Include="GeneClasses\GeneGizmo_ResourceDivineGrace.cs" />
+    <Compile Include="GeneClasses\Gene_DivineGrace.cs" />
     <Compile Include="GeneClasses\Gene_Furybound.cs" />
     <Compile Include="GeneClasses\Gene_InduceFear.cs" />
     <Compile Include="GeneClasses\Gene_Perpetual.cs" />

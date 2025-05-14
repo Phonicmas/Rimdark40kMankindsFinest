@@ -4,7 +4,7 @@ namespace Genes40k;
 
 public class CompProperties_AbilityProofOfFaith : CompProperties_AbilityEffectWithDuration
 {
-    public float divineRadianceGain;
+    public float divineGraceGain;
         
     public CompProperties_AbilityProofOfFaith()
     {

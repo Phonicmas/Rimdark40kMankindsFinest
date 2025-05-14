@@ -23,7 +23,7 @@ public class ThoughtWorker_HolyRadiance : ThoughtWorker
             return false;
         }
 
-        var gene = other.genes.GetFirstGeneOfType<Gene_DivineRadiance>();
+        var gene = other.genes.GetFirstGeneOfType<Gene_DivineGrace>();
 
         if (gene.Value <= MoodBuffThreshold)
         {

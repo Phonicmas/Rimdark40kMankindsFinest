@@ -78,17 +78,17 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Divine Radiance -->
+    <!-- Divine Grace -->
     <GeneDef ParentName="BEWH_LivingSaintBase">
-        <defName>BEWH_LivingSaintDivineRadiance</defName>
-        <label>Divine radiance</label>
+        <defName>BEWH_LivingSaintDivineGrace</defName>
+        <label>Divine Grace</label>
         <description>Carriers of this gene have a resevoir of energy used to power fantastical abilities and themself.</description>
         <iconPath>UI/Genes/LivingSaint/BEWH_LivingSaint_DivineFlight</iconPath>
         <displayOrderInCategory>501</displayOrderInCategory>
 
-        <geneClass>Genes40k.Gene_DivineRadiance</geneClass>
-        <resourceGizmoType>Genes40k.GeneGizmo_ResourceDivineRadiance</resourceGizmoType>
-        <resourceLabel>Divine Radiance</resourceLabel>
+        <geneClass>Genes40k.Gene_DivineGrace</geneClass>
+        <resourceGizmoType>Genes40k.GeneGizmo_ResourceDivineGrace</resourceGizmoType>
+        <resourceLabel>Divine Grace</resourceLabel>
         <resourceGizmoThresholds>
             <li>0.25</li>
             <li>0.5</li>
@@ -98,7 +98,7 @@
         <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
         <resourceDescription>Warp powered faith used to manifest immense power.</resourceDescription>
         <customEffectDescriptions>
-            <li>Gives Divine Radiance.</li>
+            <li>Gives Divine Grace.</li>
         </customEffectDescriptions>
 
         <abilities>
@@ -122,7 +122,7 @@
         <description>Immense faith have conjured forth ethereal wings of warp energy, resembling that of an angels. These wings allows for short flights.</description>
         <iconPath>UI/Genes/LivingSaint/BEWH_LivingSaint_DivineFlight</iconPath>
         <displayOrderInCategory>501</displayOrderInCategory>
-        <prerequisite>BEWH_LivingSaintDivineRadiance</prerequisite>
+        <prerequisite>BEWH_LivingSaintDivineGrace</prerequisite>
         <statFactors>
             <MoveSpeed>1.2</MoveSpeed>
         </statFactors>
@@ -215,7 +215,7 @@
         <iconPath>UI/Genes/LivingSaint/BEWH_LivingSaint_FuryOfTheEmperor</iconPath>
         <geneClass>Gene_Clotting</geneClass>
         <displayOrderInCategory>503</displayOrderInCategory>
-        <prerequisite>BEWH_LivingSaintDivineRadiance</prerequisite>
+        <prerequisite>BEWH_LivingSaintDivineGrace</prerequisite>
         <statOffsets>
             <MeleeHitChance>4</MeleeHitChance>
         </statOffsets>
@@ -256,7 +256,7 @@
         <description>Having already died once, carriers of this gene have steeled themselves to damage, greatly reducing incoming damage.</description>
         <iconPath>UI/Genes/LivingSaint/BEWH_LivingSaint_MartyrsEndurance</iconPath>
         <displayOrderInCategory>504</displayOrderInCategory>
-        <prerequisite>BEWH_LivingSaintDivineRadiance</prerequisite>
+        <prerequisite>BEWH_LivingSaintDivineGrace</prerequisite>
         <statOffsets>
             <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
             <ArmorRating_Sharp>0.3</ArmorRating_Sharp>

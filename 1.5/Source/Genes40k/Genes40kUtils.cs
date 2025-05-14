@@ -104,7 +104,7 @@ public static class Genes40kUtils
     public static List<GeneDef> LivingSaintGenes => new List<GeneDef>
     {
         Genes40kDefOf.BEWH_LivingSaintBeingOfFaith,
-        Genes40kDefOf.BEWH_LivingSaintDivineRadiance,
+        Genes40kDefOf.BEWH_LivingSaintDivineGrace,
         Genes40kDefOf.BEWH_LivingSaintDivineFlight,
         Genes40kDefOf.BEWH_LivingSaintSacredRegeneration,
         Genes40kDefOf.BEWH_LivingSaintFuryOfTheEmperor,
@@ -204,10 +204,10 @@ public static class Genes40kUtils
         return Enumerable.Any(DevelopmentPhases, hediff => pawn.health.hediffSet.HasHediff(hediff));
     }
         
-    public static void OffsetDivineRadiance(Pawn pawn, float offset)
+    public static void OffsetDivineGrace(Pawn pawn, float offset)
     {
-        var geneDivineRadiance = pawn.genes?.GetFirstGeneOfType<Gene_DivineRadiance>();
-        geneDivineRadiance?.ChangeDivineRadianceAmount(offset);
+        var geneDivineGrace = pawn.genes?.GetFirstGeneOfType<Gene_DivineGrace>();
+        geneDivineGrace?.ChangeDivineGraceAmount(offset);
     }
         
     public static ChapterColourDef SetupChapterForPawn(Pawn pawn, bool randomChapter)
