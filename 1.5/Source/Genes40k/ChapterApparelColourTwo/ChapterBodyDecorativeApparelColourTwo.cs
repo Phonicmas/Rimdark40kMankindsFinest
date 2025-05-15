@@ -104,7 +104,16 @@ public class ChapterBodyDecorativeApparelColourTwo : BodyDecorativeApparelColour
     public Color LeftShoulderIconColour => leftShoulder?.Color ?? Color.white;
 
 
-    public bool FlipShoulderIcons = false;
+    private bool flipShoulderIcons = false;
+    public bool FlipShoulderIcons
+    {
+        get => flipShoulderIcons;
+        set
+        {
+            flipShoulderIcons = value;
+            Notify_ColorChanged();
+        }
+    }
     
     private BodyTypeDef originalBodyType = null;
 
@@ -172,7 +181,7 @@ public class ChapterBodyDecorativeApparelColourTwo : BodyDecorativeApparelColour
         Scribe_Deep.Look(ref originalLeftShoulder, "originalLeftShoulder");
         Scribe_Deep.Look(ref leftShoulder, "leftShoulder");
         
-        Scribe_Values.Look(ref FlipShoulderIcons, "FlipShoulderIcons", false);
+        Scribe_Values.Look(ref flipShoulderIcons, "flipShoulderIcons", false);
             
         Scribe_Defs.Look(ref originalBodyType, "originalBodyType");
         base.ExposeData();

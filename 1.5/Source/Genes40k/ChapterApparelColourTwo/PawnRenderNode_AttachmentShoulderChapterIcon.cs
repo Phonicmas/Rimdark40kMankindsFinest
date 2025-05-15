@@ -1,4 +1,5 @@
-﻿using Verse;
+﻿using UnityEngine;
+using Verse;
 
 namespace Genes40k;
 
@@ -9,8 +10,8 @@ public class PawnRenderNode_AttachmentShoulderChapterIcon : PawnRenderNode
 
     private Genes40kModSettings ModSettings => modSettings ??= LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>();
 
-    private bool flipped = false;
-    protected override bool FlipGraphic => flipped;
+    public bool Flipped = true;
+    protected override bool FlipGraphic => Flipped;
     
     public PawnRenderNode_AttachmentShoulderChapterIcon(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree) : base(pawn, props, tree)
     {
@@ -34,9 +35,9 @@ public class PawnRenderNode_AttachmentShoulderChapterIcon : PawnRenderNode
 
         if (apparelColourTwo.FlipShoulderIcons)
         {
-            flipped = true;
+            Flipped = !Flipped;
         }
         
-        return GraphicDatabase.Get<Graphic_Multi>(leftShoulderIcon, ShaderFor(pawn), Props.drawSize, drawColour);
+        return GraphicDatabase.Get<Graphic_Multi>(leftShoulderIcon, ShaderFor(pawn), Props.drawSize, drawColour, drawColour);
     }
 }

@@ -120,6 +120,9 @@
   <BEWH.MankindsFinest.SpaceMarine.SMGeneseedExtractionNotResearched>Space Marine gene-seed extraction not researched</BEWH.MankindsFinest.SpaceMarine.SMGeneseedExtractionNotResearched>
   <BEWH.MankindsFinest.SpaceMarine.PMGeneseedExtractionNotResearched>Primaris Marine gene-seed extraction not researched</BEWH.MankindsFinest.SpaceMarine.PMGeneseedExtractionNotResearched>
 
+  <BEWH.MankindsFinest.SpaceMarine.ProgrenoidGlandGrown>Gene-seeds harvestable.</BEWH.MankindsFinest.SpaceMarine.ProgrenoidGlandGrown>
+  <BEWH.MankindsFinest.SpaceMarine.ProgrenoidGlandGrownDesc>{0}'s gene-seeds are ready to be harvested.</BEWH.MankindsFinest.SpaceMarine.ProgrenoidGlandGrownDesc>
+
   <BEWH.MankindsFinest.SpaceMarine.FirstGeneseedsHarvested>Gene-seeds have already been harvested.</BEWH.MankindsFinest.SpaceMarine.FirstGeneseedsHarvested>
   <BEWH.MankindsFinest.SpaceMarine.FirstGeneseedsHarvestable>Gene-seeds ready to be harvested.</BEWH.MankindsFinest.SpaceMarine.FirstGeneseedsHarvestable>
   <BEWH.MankindsFinest.SpaceMarine.FirstGeneseedsHarvestableIn>Gene-seeds can be harvested in {0} days{1}.</BEWH.MankindsFinest.SpaceMarine.FirstGeneseedsHarvestableIn>
@@ -196,6 +199,7 @@
 
   <!--=== Apparel Two ===-->
   <!-- Shoulder Icons -->
+  <BEWH.MankindsFinest.ShoulderIcon.Flip>Flip icon sides</BEWH.MankindsFinest.ShoulderIcon.Flip>
   <BEWH.MankindsFinest.ShoulderIcon.ResetToDefault>Reset to default</BEWH.MankindsFinest.ShoulderIcon.ResetToDefault>
   <BEWH.MankindsFinest.ShoulderIcon.LeftShoulder>Left Shoulder</BEWH.MankindsFinest.ShoulderIcon.LeftShoulder>
   <BEWH.MankindsFinest.ShoulderIcon.RightShoulder>Right Shoulder</BEWH.MankindsFinest.ShoulderIcon.RightShoulder>

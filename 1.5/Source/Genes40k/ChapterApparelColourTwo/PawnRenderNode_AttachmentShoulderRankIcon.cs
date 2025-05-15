@@ -5,8 +5,8 @@ namespace Genes40k;
 public class PawnRenderNode_AttachmentShoulderRankIcon : PawnRenderNode
 {
     
-    private bool flipped = false;
-    protected override bool FlipGraphic => flipped;
+    public bool Flipped = false;
+    protected override bool FlipGraphic => Flipped;
     
     public PawnRenderNode_AttachmentShoulderRankIcon(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree) : base(pawn, props, tree)
     {
@@ -26,9 +26,9 @@ public class PawnRenderNode_AttachmentShoulderRankIcon : PawnRenderNode
         
         if (apparelColourTwo.FlipShoulderIcons)
         {
-            flipped = true;
+            Flipped = !Flipped;
         }
-            
+
         return GraphicDatabase.Get<Graphic_Multi>(rightShoulderPath, ShaderFor(pawn), Props.drawSize, drawColour, drawColour);
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using RimWorld;
+using UnityEngine;
 using Verse;
 
 namespace Genes40k;
@@ -25,16 +26,16 @@ public class PawnRenderNodeWorker_AttachmentShoulderChapterIcon : PawnRenderNode
             return false;
         }
         
-        if (parms.facing == Rot4.East && !apparelColourTwo.FlipShoulderIcons)
+        if (parms.facing == Rot4.East)
         {
-            return false;
+            return apparelColourTwo.FlipShoulderIcons;
         }
             
-        if (parms.facing == Rot4.West && apparelColourTwo.FlipShoulderIcons)
+        if (parms.facing == Rot4.West)
         {
-            return false;
+            return !apparelColourTwo.FlipShoulderIcons;
         }
-            
+        
         if (parms.Portrait)
         {
             if ((parms.flags & PawnRenderFlags.Clothes) != PawnRenderFlags.Clothes)
@@ -64,5 +65,17 @@ public class PawnRenderNodeWorker_AttachmentShoulderChapterIcon : PawnRenderNode
         }
             
         return true;
+    }
+    
+    public override Vector3 OffsetFor(PawnRenderNode node, PawnDrawParms parms, out Vector3 pivot)
+    {
+        var res = base.OffsetFor(node, parms, out pivot);
+
+        if (node is PawnRenderNode_AttachmentShoulderChapterIcon node2 && node2.Flipped && (parms.facing == Rot4.East || parms.facing == Rot4.West))
+        {
+            res.y += 0.1f;
+        }
+        
+        return res;
     }
 }

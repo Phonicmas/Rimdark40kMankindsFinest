@@ -60,10 +60,9 @@ public class ShoulderPadIconTab : ApparelColourTwoTabDrawer
         var flipRect = new Rect(viewRect.x, viewRect.y, viewRect.width, 30f);
         flipRect.width /= 3;
         flipRect.x += flipRect.width;
-        if (Widgets.ButtonText(flipRect, "flip"))
+        if (Widgets.ButtonText(flipRect, "BEWH.MankindsFinest.ShoulderIcon.Flip".Translate()))
         {
             chapterApparel.FlipShoulderIcons = !chapterApparel.FlipShoulderIcons;
-            Log.Message(chapterApparel.FlipShoulderIcons);
         }
 
         var curY = flipRect.yMax + 5f;
@@ -174,6 +173,10 @@ public class ShoulderPadIconTab : ApparelColourTwoTabDrawer
             }
 
             curY = tertiaryColourRect.yMax;
+        }
+        else
+        {
+            chapterApparel.RightShoulderIconColour = Color.white;
         }
                 
         //Right Shoulder Icons
