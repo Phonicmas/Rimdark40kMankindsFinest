@@ -51,7 +51,7 @@
   <ThingDef ParentName="ResourceBase">
     <defName>BEWH_RawGestationalSlurry</defName>
     <label>raw gestational slurry</label>
-    <description>This slurry, made from human tissue strengthened by luciferium, is used to in the creation of primarch.</description>
+    <description>This slurry, made from human tissue strengthened by luciferium, is used in the creation of a Primarch.</description>
     <graphicData>
       <texPath>Things/Item/RawGestationalSlurry</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -111,7 +111,7 @@
   <ThingDef>
     <defName>BEWH_RubiconSurgeryKit</defName>
     <label>rubicon surgery kit</label>
-    <description>Rubicon surgery kit.</description>
+    <description>A sacred assembly of Mechanicus-crafted instruments, designed to aid in the Rubicon Primaris procedure. This kit enhances the chances of a successful transformation, ensuring that Firstborn Astartes may ascend to the Primaris standard.</description>
     <graphicData>
       <texPath>Things/Item/RubiconSurgeryKit</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>

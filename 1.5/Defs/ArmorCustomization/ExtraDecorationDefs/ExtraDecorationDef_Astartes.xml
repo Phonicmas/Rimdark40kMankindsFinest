@@ -3,8 +3,8 @@
 
     <!-- TEST AREA -->
     <Core40k.ExtraDecorationDef Name="BEWH_TESTSTUFF" Abstract="True">
-        <iconPath>Things/Decorations/Armor/Common/BEWH_Deco_DeathWatch_Shoulder_east</iconPath>
-        <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_DeathWatch_Shoulder</drawnTextureIconPath>
+        <iconPath>Things/Decorations/Armor/Common/Pauldrons/BEWH_Deco_DeathWatch_Shoulder_east</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/Common/Pauldrons/BEWH_Deco_DeathWatch_Shoulder_east</drawnTextureIconPath>
         <sortOrder>0</sortOrder>
         <defaultShowRotation>
             <li>North</li>
@@ -48,8 +48,87 @@
         <defName>BEWH_DecoDWatchPauldron</defName>
         <label>Deathwatch pauldron</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Armor/Common/BEWH_Deco_DeathWatch_Shoulder_west</iconPath>
-        <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_DeathWatch_Shoulder</drawnTextureIconPath>
+        <iconPath>Things/Decorations/Armor/Common/Pauldrons/BEWH_Deco_DeathWatch_Shoulder_west</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/Common/Pauldrons/BEWH_Deco_DeathWatch_Shoulder</drawnTextureIconPath>
+        <sortOrder>0</sortOrder>
+        <defaultShowRotation>
+            <li>North</li>
+            <li>South</li>
+            <li>West</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmor</li>
+            <li>BEWH_MkXPowerArmor</li>
+            <li>BEWH_MkXPowerArmorChaplain</li>
+        </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>South</key>
+                <value>0</value>
+            </li>
+            <li>
+                <key>North</key>
+                <value>0</value>
+            </li>
+        </layerOffsets>
+        <shaderType>Cutout</shaderType>
+        <flipable>true</flipable>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_DecoColorPauldron_1</defName>
+        <label>Pauldron color 1</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Armor/Common/Pauldrons/BEWH_Deco_Color_Shoulder1_west</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/Common/Pauldrons/BEWH_Deco_Color_Shoulder1</drawnTextureIconPath>
+        <sortOrder>0</sortOrder>
+        <defaultShowRotation>
+            <li>North</li>
+            <li>South</li>
+            <li>West</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmor</li>
+            <li>BEWH_MkXPowerArmor</li>
+            <li>BEWH_MkXPowerArmorChaplain</li>
+        </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>South</key>
+                <value>-1</value>
+            </li>
+            <li>
+                <key>North</key>
+                <value>-1</value>
+            </li>
+            <li>
+                <key>East</key>
+                <value>-1</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>-1</value>
+            </li>
+        </layerOffsets>
+        <shaderType>Cutout</shaderType>
+        <flipable>true</flipable>
+        <colourable>true</colourable>
+        <availablePresets>
+            <li>BEWH_DecoPaletteGold</li> <!-- placeholder presets -->
+            <li>BEWH_DecoPaletteGreen</li>
+            <li>BEWH_DecoPaletteSilver</li>
+            <li>BEWH_DecoPaletteIFBlack</li>
+            <li>BEWH_DecoPaletteLeatherBrown</li>
+            <li>BEWH_DecoPaletteLeatherGrey</li>
+        </availablePresets>
+    </Core40k.ExtraDecorationDef>
+
+<!--     <Core40k.ExtraDecorationDef>
+        <defName>BEWH_DecoColorPauldron_2</defName>
+        <label>Pauldron color 1</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Armor/Common/Pauldrons/BEWH_Deco_DeathWatch_Shoulder_west</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/Common/Pauldrons/BEWH_Deco_DeathWatch_Shoulder</drawnTextureIconPath>
         <sortOrder>0</sortOrder>
         <defaultShowRotation>
             <li>North</li>
@@ -72,7 +151,7 @@
         </layerOffsets>
         <shaderType>Cutout</shaderType>
         <flipable>true</flipable>
-    </Core40k.ExtraDecorationDef>
+    </Core40k.ExtraDecorationDef> -->
 
     <!-- Purity Seals -->
     <Core40k.ExtraDecorationDef>
@@ -953,6 +1032,7 @@
         <flipable>false</flipable>
         <drawInHeadSpace>true</drawInHeadSpace>
     </Core40k.ExtraDecorationDef>
+
     <Core40k.ExtraDecorationDef>
         <defName>BEWH_DecoInquisInsignia</defName>
         <label>Inquisition insignia</label>
@@ -995,7 +1075,7 @@
         <description>...</description>
         <iconPath>Things/Decorations/Headgear/Common/BEWH_Deco_Hood_south</iconPath>
         <drawnTextureIconPath>Things/Decorations/Headgear/Common/BEWH_Deco_Hood</drawnTextureIconPath>
-        <sortOrder>4</sortOrder>
+        <sortOrder>4.1</sortOrder>
         <isHelmetDecoration>true</isHelmetDecoration>
         <defaultShowRotation>
             <li>West</li>
@@ -1147,6 +1227,135 @@
         <shaderType>Cutout</shaderType>
     </Core40k.ExtraDecorationDef>
 
+    
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_MkX_VictrixBrim</defName> <!-- MkX -->
+        <label>Victrix Guard Brim</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_VictrixHelmMkX_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_VictrixHelmMkX</drawnTextureIconPath>
+        <sortOrder>4</sortOrder>
+        <isHelmetDecoration>true</isHelmetDecoration>
+        <defaultShowRotation>
+            <li>West</li>
+            <li>South</li>
+            <li>East</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkXPowerArmorHelmet</li>
+        </appliesTo>
+        <colourable>true</colourable>
+        <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
+        <useArmorColourAsDefault>true</useArmorColourAsDefault>
+        <layerOffsets>
+            <li>
+                <key>South</key>
+                <value>0</value>
+            </li>
+            <li>
+                <key>East</key>
+                <value>-5</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>-5</value>
+            </li>
+        </layerOffsets>
+        <availablePresets>
+            <li>BEWH_DecoPaletteGold</li>
+            <li>BEWH_DecoPaletteGreen</li>
+            <li>BEWH_DecoPaletteSilver</li>
+            <li>BEWH_DecoPaletteIFBlack</li>
+        </availablePresets>
+        <shaderType>Cutout</shaderType>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_MkVII_VictrixBrim</defName> <!-- MkVII -->
+        <label>Victrix Guard Brim</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_VictrixHelmMkVII_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_VictrixHelmMkVII</drawnTextureIconPath>
+        <sortOrder>4</sortOrder>
+        <isHelmetDecoration>true</isHelmetDecoration>
+        <defaultShowRotation>
+            <li>West</li>
+            <li>South</li>
+            <li>East</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmorHelmet</li>
+        </appliesTo>
+        <colourable>true</colourable>
+        <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
+        <useArmorColourAsDefault>true</useArmorColourAsDefault>
+        <layerOffsets>
+            <li>
+                <key>South</key>
+                <value>0</value>
+            </li>
+            <li>
+                <key>East</key>
+                <value>-5</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>-5</value>
+            </li>
+        </layerOffsets>
+        <availablePresets>
+            <li>BEWH_DecoPaletteGold</li>
+            <li>BEWH_DecoPaletteGreen</li>
+            <li>BEWH_DecoPaletteSilver</li>
+            <li>BEWH_DecoPaletteIFBlack</li>
+        </availablePresets>
+        <shaderType>Cutout</shaderType>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_Visor_1</defName>
+        <label>Apothecary visor</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Headgear/Common/BEWH_Deco_ApothecaryVisor_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Headgear/Common/BEWH_Deco_ApothecaryVisor</drawnTextureIconPath>
+        <sortOrder>4</sortOrder>
+        <isHelmetDecoration>true</isHelmetDecoration>
+        <defaultShowRotation>
+            <li>North</li>
+            <li>South</li>
+            <!-- <li>West</li> -->
+            <li>East</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmorHelmet</li>
+            <li>BEWH_MkXPowerArmorHelmet</li>
+        </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>South</key>
+                <value>5</value>
+            </li>
+            <li>
+                <key>East</key>
+                <value>-4</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>-5</value>
+            </li>
+            <li>
+                <key>North</key>
+                <value>0.5</value>
+            </li>
+        </layerOffsets>
+        <shaderType>CutoutComplex</shaderType>
+        <colourable>true</colourable>
+        <useMask>true</useMask>
+        <flipable>true</flipable>
+        <useArmorColourAsDefault>true</useArmorColourAsDefault>
+        <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
+    </Core40k.ExtraDecorationDef>
+
     <!-- MARK X -->
 
     <!-- Stripes -->
@@ -1230,6 +1439,36 @@
             <li>
                 <key>West</key>
                 <value>-5</value>
+            </li>
+        </layerOffsets>
+        <shaderType>Cutout</shaderType>
+    </Core40k.ExtraDecorationDef>
+
+    <!-- Symbols -->
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_MkXApothecarySymbol</defName>
+        <label>Apothecary Symbol</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_ApothecarySignMkX_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_ApothecarySignMkX</drawnTextureIconPath>
+        <sortOrder>4.5</sortOrder>
+        <isHelmetDecoration>true</isHelmetDecoration>
+        <defaultShowRotation>
+            <li>West</li>
+            <li>South</li>
+            <li>East</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkXPowerArmorHelmet</li>
+        </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>East</key>
+                <value>-6</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>-6</value>
             </li>
         </layerOffsets>
         <shaderType>Cutout</shaderType>
@@ -1387,6 +1626,36 @@
             <li>
                 <key>West</key>
                 <value>-5</value>
+            </li>
+        </layerOffsets>
+        <shaderType>Cutout</shaderType>
+    </Core40k.ExtraDecorationDef>
+
+    <!-- Symbols -->
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_MkVIIApothecarySymbol</defName>
+        <label>Apothecary Symbol</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_ApothecarySignMkVII_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_ApothecarySignMkVII</drawnTextureIconPath>
+        <sortOrder>4.5</sortOrder>
+        <isHelmetDecoration>true</isHelmetDecoration>
+        <defaultShowRotation>
+            <li>West</li>
+            <li>South</li>
+            <li>East</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmorHelmet</li>
+        </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>East</key>
+                <value>-6</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>-6</value>
             </li>
         </layerOffsets>
         <shaderType>Cutout</shaderType>

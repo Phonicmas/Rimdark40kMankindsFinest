@@ -5,7 +5,7 @@
   <ThingDef ParentName="BenchBase">
     <defName>BEWH_GeneManipulationTable</defName>
     <label>gene manipulation table</label>
-    <description>This table contains all the needed tools and machines to create thing needed to make enhanced superhumans.</description>
+    <description>This specialized workstation is used to create Genetic Matrices, which serve as templates for the Ascendance Vials produced in the Gene-seed Gestator. These vials are later implanted into a subject to initiate the transformation process.\n\nThe Gene manipulation table also plays a critical role in the creation of Primarch embryos for the Primarch Project.</description>
     <thingClass>Genes40k.Building_GeneTable</thingClass>
     <altitudeLayer>BuildingOnTop</altitudeLayer>
     <passability>PassThroughOnly</passability>
@@ -74,10 +74,10 @@
   <ThingDef ParentName="BuildingBase">
     <defName>BEWH_GeneseedGestator</defName>
     <label>gene-seed gestator</label>
-    <description>This gestator is able to create implant ready gene-seed vials, by transforming genetic matrices.</description>
+    <description>Encased in reinforced adamantium plating and adorned with Mechanicus blessings, this machine carefully nurtures Ascendance Vials. It stabilizes and matures the genetic material for later implantation. Further research enables the creation of chapter-specific gene-seeds.</description>
     <thingClass>Genes40k.Building_GeneGestator</thingClass>
     <containedPawnsSelectable>true</containedPawnsSelectable>
-    <altitudeLayer>Building</altitudeLayer>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>50</pathCost>
     <fillPercent>0.4</fillPercent>
@@ -145,7 +145,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>BEWH_PrimarchGrowthVat</defName>
     <label>primarch growth vat</label>
-    <description>This growth vat is a modified version of the normal Growth Vat, allowing the articial growth of Primarchs by supplying extra needed power and raw gestational slurry.</description>
+    <description>A sacred and highly advanced chamber designed to nurture the embryonic development of a Primarch. Encased in reinforced adamantium and adorned with Mechanicus blessings, this vat regulates temperature, nutrient infusion, and genetic stability to ensure the flawless growth of the Emperor's demigods.</description>
     <thingClass>Genes40k.Building_PrimarchGrowthVat</thingClass>
     <containedPawnsSelectable>true</containedPawnsSelectable>
     <tickerType>Normal</tickerType>

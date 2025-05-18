@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-	<!-- Gene-seed Vial Related -->
+	<!-- Ascendance Vial Related -->
 	<!-- Firstborn Phase Base -->
 	<HediffDef Name="BEWH_FirstbornPhaseHediffBase" Abstract="True">
 		<hediffClass>HediffWithComps</hediffClass>
