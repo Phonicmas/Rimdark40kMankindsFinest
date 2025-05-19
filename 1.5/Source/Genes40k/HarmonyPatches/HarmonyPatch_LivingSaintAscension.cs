@@ -53,7 +53,7 @@ public class LivingSaintAscension
 
         var shootingLevelMult = shootingSkill > 10 ? 0.5f : 0f;
         var meleeLevelMult = meleeSkill > 10 ? 0.5f : 0f;
-
+        
         if (shootingSkill >= 15)
         {
             shootingLevelMult = shootingSkill >= 20 ? 1.5f : 1;
@@ -69,7 +69,7 @@ public class LivingSaintAscension
             baseChance++;
         }
             
-        var skillAddsChance = (meleeSkill - 10) * meleeLevelMult + (shootingSkill - 10) * shootingLevelMult;
+        var skillAddChance = (meleeSkill - 10) * meleeLevelMult + (shootingSkill - 10) * shootingLevelMult;
         var traitAddChance = 0f;
 
         if (__instance.story.traits.HasTrait(Genes40kDefOf.PsychicSensitivity, 2))
@@ -90,7 +90,7 @@ public class LivingSaintAscension
         }
 
         var rand = new Random();
-        var resurrectionChance = baseChance + skillAddsChance + traitAddChance;
+        var resurrectionChance = baseChance + skillAddChance + traitAddChance;
 
         const int chanceMax = 100;
 
