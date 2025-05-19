@@ -9,7 +9,7 @@ public class PawnRenderNodeWorker_AttachmentShoulderRankIcon : PawnRenderNodeWor
     public override bool CanDrawNow(PawnRenderNode node, PawnDrawParms parms)
     {
         var pawn = parms.pawn;
-            
+        
         var apparelColourTwo = (ChapterBodyDecorativeApparelColourTwo)node.apparel;
 
         if (apparelColourTwo.RightShoulderIcon == Genes40kDefOf.BEWH_ShoulderNone)
@@ -56,17 +56,5 @@ public class PawnRenderNodeWorker_AttachmentShoulderRankIcon : PawnRenderNodeWor
         }
 
         return true;
-    }
-
-    public override Vector3 OffsetFor(PawnRenderNode node, PawnDrawParms parms, out Vector3 pivot)
-    {
-        var res = base.OffsetFor(node, parms, out pivot);
-        
-        if (node is PawnRenderNode_AttachmentShoulderRankIcon node2 && node2.Flipped && (parms.facing == Rot4.East || parms.facing == Rot4.West))
-        {
-            res.y += 0.001f;
-        }
-        
-        return res;
     }
 }

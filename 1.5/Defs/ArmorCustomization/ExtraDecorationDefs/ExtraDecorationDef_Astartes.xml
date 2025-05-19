@@ -68,7 +68,7 @@
             </li>
             <li>
                 <key>North</key>
-                <value>0</value>
+                <value>0.5</value>
             </li>
         </layerOffsets>
         <shaderType>Cutout</shaderType>
@@ -645,7 +645,7 @@
             </li>
             <li>
                 <key>North</key>
-                <value>0.5</value>
+                <value>0.6</value>
             </li>
         </layerOffsets>
         <availablePresets>
@@ -689,7 +689,7 @@
             </li>
             <li>
                 <key>North</key>
-                <value>0.5</value>
+                <value>0.6</value>
             </li>
         </layerOffsets>
         <availablePresets>

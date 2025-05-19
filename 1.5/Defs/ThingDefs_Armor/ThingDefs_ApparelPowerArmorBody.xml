@@ -13,9 +13,18 @@
                     <shaderTypeDef>Cutout</shaderTypeDef>
                     <parentTagDef>Body</parentTagDef>
                     <drawData>
-                        <defaultData>
+                        <dataEast>
                             <layer>75</layer>
-                        </defaultData>
+                        </dataEast>
+                        <dataWest>
+                            <layer>75</layer>
+                        </dataWest>
+                        <dataNorth>
+                            <layer>73</layer>
+                        </dataNorth>
+                        <dataSouth>
+                            <layer>45</layer>
+                        </dataSouth>
                     </drawData>
                 </li>
                 <!-- Right shoulder pad/rank icon -->
@@ -26,9 +35,18 @@
                     <shaderTypeDef>Cutout</shaderTypeDef>
                     <parentTagDef>Body</parentTagDef>
                     <drawData>
-                        <defaultData>
+                        <dataEast>
                             <layer>75</layer>
-                        </defaultData>
+                        </dataEast>
+                        <dataWest>
+                            <layer>75</layer>
+                        </dataWest>
+                        <dataNorth>
+                            <layer>73</layer>
+                        </dataNorth>
+                        <dataSouth>
+                            <layer>45</layer>
+                        </dataSouth>
                     </drawData>
                 </li>
             </renderNodeProperties>
