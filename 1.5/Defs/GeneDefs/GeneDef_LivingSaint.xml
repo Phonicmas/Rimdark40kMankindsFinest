@@ -83,7 +83,7 @@
         <defName>BEWH_LivingSaintDivineGrace</defName>
         <label>Divine Grace</label>
         <description>Carriers of this gene have a resevoir of energy used to power fantastical abilities and themself.</description>
-        <iconPath>UI/Genes/LivingSaint/BEWH_LivingSaint_DivineFlight</iconPath>
+        <iconPath>UI/Genes/LivingSaint/BEWH_LivingSaint_DivineGrace</iconPath>
         <displayOrderInCategory>501</displayOrderInCategory>
 
         <geneClass>Genes40k.Gene_DivineGrace</geneClass>

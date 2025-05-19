@@ -42,7 +42,7 @@
     <RecipeDef ParentName="SurgeryFlesh">
         <defName>BEWH_RubiconSurgery</defName>
         <label>rubicon surgery</label>
-        <description>Extensive surgery to rebirth a Firstborn as a Primaris</description>
+        <description>Extensive surgery that elevates a Firstborn Astartes to Primaris status. Increases physical capabilities but may result in death during the procedure.</description>
         <workerClass>Genes40k.WorkerClass_RubiconPrimaris</workerClass>
         <jobString>rebirthing {0} into a Primaris</jobString>
         <successfullyRemovedHediffMessage>{1} has been reborn as a Primaris.</successfullyRemovedHediffMessage>

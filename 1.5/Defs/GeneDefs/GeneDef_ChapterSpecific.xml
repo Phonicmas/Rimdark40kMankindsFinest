@@ -5,7 +5,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterIDarkAngels</defName>
         <label>Gene-seed Material: Dark Angels</label>
-        <description>Your gene-seed comes from Lion El'Jonson and is relatively pure, allowing for more succesful and less deadly implantation of the gene-seed.</description>
+        <description>Your gene-seed comes from Lion El'Jonson and is relatively pure, allowing for more successful and less deadly implantation.</description>
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterIDarkAngels</iconPath>
         <displayOrderInCategory>100</displayOrderInCategory>
         <customEffectDescriptions>
@@ -44,7 +44,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterIIIEmperorsChildren</defName>
         <label>Gene-seed Material: Emperor's Children</label>
-        <description>Your gene-seed comes from Fulgrim, like him you enjoy the fine art of this world but rather not share it with others.</description>
+        <description>Your gene-seed comes from Fulgrim. Like him, you take pleasure in the finer arts of the world, but prefer not to share them with others.</description>
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterIIIEmperorsChildren</iconPath>
         <displayOrderInCategory>106</displayOrderInCategory>
         <statOffsets>
@@ -72,7 +72,8 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterIVIronWarriors</defName>
         <label>Gene-seed Material: Iron Warriors</label>
-        <description>Your gene-seed comes from Perturabo and is somewhat pure, you're able to quickly setup seige armaments or fortifications.</description>
+        <description>Your gene-seed comes from Perturabo and is somewhat pure. You are able to quickly set up siege armaments and fortifications.
+</description>
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterIVIronWarriors</iconPath>
         <displayOrderInCategory>109</displayOrderInCategory>
         <statOffsets>
@@ -122,7 +123,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterVWhiteScars</defName>
         <label>Gene-seed Material: White Scars</label>
-        <description>Your gene-seed comes from Jaghatai Khan, you've inherited some of his unmatched speed.</description>
+        <description>Your gene-seed comes from Jaghatai Khan. You've inherited some of his unmatched speed.</description>
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterVWhiteScars</iconPath>
         <displayOrderInCategory>112</displayOrderInCategory>
         <statFactors>
@@ -144,7 +145,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterVISpaceWolves</defName>
         <label>Gene-seed Material: Space Wolves</label>
-        <description>Your gene-seed comes from Leman Russ, you've inherited his ruthfulness and wolf-like attributes.</description>
+        <description>Your gene-seed comes from Leman Russ. You've inherited his wolf-like attributes and unrelenting nature.</description>
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterVISpaceWolves</iconPath>
         <displayOrderInCategory>115</displayOrderInCategory>
         <geneClass>Core40k.Gene_AddRandomGeneAndOrTraitByWeight</geneClass>
@@ -199,7 +200,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneFlawParent">
         <defName>BEWH_ChapterVIFlaw</defName>
         <label>Canis Helix</label>
-        <description>The Canis Helix is a mutation of normal gene-seed that gifts the Wolves with enhanced abilities, including hyper-acute senses of smell and hearing, elongated canines that can dent plasteel, and leathery, resilient skin.</description>
+        <description>The Canis Helix is a mutation of standard gene-seed that grants the Wolves enhanced abilities, including hyper-acute senses, elongated canines capable of denting plasteel, and leathery, resilient skin.</description>
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterVISpaceWolvesFlaw</iconPath>
         <displayOrderInCategory>116</displayOrderInCategory>
         <capMods>
@@ -239,7 +240,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterVIIImperialFists</defName>
         <label>Gene-seed Material: Imperial Fists</label>
-        <description>Your gene-seed comes from Rogal Dorn, you have great fortitude and know how to set up a great defense.</description>
+        <description>Your gene-seed comes from Rogal Dorn. You possess formidable fortitude and excel at constructing strong defenses.</description>
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterVIIImperialFists</iconPath>
         <displayOrderInCategory>118</displayOrderInCategory>
         <statOffsets>
@@ -263,7 +264,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterVIIINightLords</defName>
         <label>Gene-seed Material: Night Lords</label>
-        <description>Your gene-seed comes from Konrad Curze, you know how to induce fear into your enemies and don't mind the darkness</description>
+        <description>Your gene-seed comes from Konrad Curze. You excel at inducing fear in your enemies and thrive in darkness.</description>
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterVIIINightLords</iconPath>
         <displayOrderInCategory>121</displayOrderInCategory>
         <geneClass>Genes40k.Gene_InduceFear</geneClass>
@@ -298,7 +299,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterIXBloodAngels</defName>
         <label>Gene-seed Material: Blood Angels</label>
-        <description>Your gene-seed comes from Sanguinis, you carry the same wrath to those who would threaten your people.</description>
+        <description>Your gene-seed comes from Sanguinius. You carry his righteous wrath against those who threaten your people.</description>
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterIXBloodAngels</iconPath>
         <displayOrderInCategory>124</displayOrderInCategory>
         <geneClass>Core40k.Gene_AddRandomGeneAndOrTraitByWeight</geneClass>
@@ -375,7 +376,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXIronHands</defName>
         <label>Gene-seed Material: Iron Hands</label>
-        <description>Your gene-seed comes from Ferrus Manus, you have a urge to replace yourself with artificial parts to further enhance yourself.</description>
+        <description>Your gene-seed comes from Ferrus Manus. You possess an urge to replace your flesh with machine parts to enhance your form.</description>
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXIronHands</iconPath>
         <displayOrderInCategory>127</displayOrderInCategory>
         <forcedTraits>
@@ -413,7 +414,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXIIWorldEaters</defName>
         <label>Gene-seed Material: World Eaters</label>
-        <description>Your gene-seed comes from Angron, you have an innate lust for fighting and brawling.</description>
+        <description>Your gene-seed comes from Angron. You possess an innate lust for fighting and brawling.</description>
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXIIWorldEaters</iconPath>
         <displayOrderInCategory>133</displayOrderInCategory>
         <forcedTraits>
@@ -463,7 +464,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXIIIUltramarines</defName>
         <label>Gene-seed Material: Ultramarines</label>
-        <description>Your gene-seed comes from Roboute Guilliman, you've inherited his industriousness. Additionally your gene-seed stock is relatively pure, allowing for easier implantation.</description>
+        <description>Your gene-seed comes from Roboute Guilliman. You've inherited his industriousness. Additionally, your gene-seed stock is relatively pure, allowing for easier implantation.</description>
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXIIIUltramarines</iconPath>
         <displayOrderInCategory>136</displayOrderInCategory>
         <customEffectDescriptions>
@@ -488,7 +489,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXIVDeathGuard</defName>
         <label>Gene-seed Material: Death Guard</label>
-        <description>Your gene-seed comes from Mortarion, you share the same resillience to diseases and toxins.</description>
+        <description>Your gene-seed comes from Mortarion. You share his resilience to disease and toxins.</description>
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXIVDeathGuard</iconPath>
         <displayOrderInCategory>139</displayOrderInCategory>
         <statFactors>
@@ -558,7 +559,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXVISonsOfHorus</defName>
         <label>Gene-seed Material: Sons of Horus</label>
-        <description>Your gene-seed comes from Horus, you have a keen understanding of striking at close range.</description>
+        <description>Your gene-seed comes from Horus. You have a keen understanding of striking at a close range.</description>
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXVISonsOfHorus</iconPath>
         <displayOrderInCategory>145</displayOrderInCategory>
         <statFactors>
@@ -577,7 +578,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXVIIWordBearers</defName>
         <label>Gene-seed Material: Word Bearers</label>
-        <description>Your gene-seed comes from Lorgar Aurelian, like him your words are one of your strongest suits.</description>
+        <description>Your gene-seed comes from Lorgar Aurelian. Like him, you wield words as one of your greatest strengths.</description>
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXVIIWordBearers</iconPath>
         <displayOrderInCategory>148</displayOrderInCategory>
         <statOffsets>
@@ -599,7 +600,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXVIIISalamanders</defName>
         <label>Gene-seed Material: Salamanders</label>
-        <description>Your gene-seed comes from Vulkan, you share his passion for crafting. Additionally your gene-seed contains flaws, giving you black skin and red eyes.</description>
+        <description>Your gene-seed comes from Vulkan. You share his passion for crafting. Additionally, your gene-seed contains flaws, granting you black skin and red eyes.</description>
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXVIIISalamanders</iconPath>
         <displayOrderInCategory>151</displayOrderInCategory>
         <skinColorOverride>(55, 55, 55)</skinColorOverride>
@@ -647,7 +648,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXIXRavenGuard</defName>
         <label>Gene-seed Material: Raven Guard</label>
-        <description>Your gene-seed comes from Corvus Corax, you've a knack for using the shadows to your advantage.</description>
+        <description>Your gene-seed comes from Corvus Corax. You have a knack for using the shadows to your advantage.</description>
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXIXRavenGuard</iconPath>
         <displayOrderInCategory>154</displayOrderInCategory>
         <statOffsets>
@@ -679,7 +680,7 @@
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXXAlphaLegion</defName>
         <label>Gene-seed Material: Alpha Legion</label>
-        <description>Your gene-seed comes from Alpharius/Omegon, you've a sense for deception and manipulation.</description>
+        <description>Your gene-seed comes from Alpharius/Omegon. You have a talent for deception and manipulation.</description>
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXXAlphaLegion</iconPath>
         <displayOrderInCategory>157</displayOrderInCategory>
         <statOffsets>

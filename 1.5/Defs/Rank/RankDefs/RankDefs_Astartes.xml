@@ -671,7 +671,7 @@
     <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankJudiciar</defName>
         <label>Judiciar</label>
-        <description>Judiciars are grim enforcers of a Chapter’s discipline, ensuring their brothers remain true to their oaths.</description>
+        <description>Judiciars are grim enforcers of a Chapter's discipline, ensuring their brothers remain true to their oaths.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_Judiciar</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(4, -3)</displayPosition>
@@ -781,12 +781,12 @@
 
     </Genes40k.ChapterRankDef>
 
-    <!-- =Devastator= -->
-    <!-- Devastator -->
+    <!-- =Fire Support= -->
+    <!-- Fire Support -->
     <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankDevastator</defName>
-        <label>Devastator</label>
-        <description>Devastators are heavy weapons specialists, providing devastating fire support with lascannons, missile launchers, and other armaments of immense destructive power. They anchor the line and annihilate enemy armour and fortifications.</description>
+        <label>Fire Support</label>
+        <description>Fire Support Space Marines wield heavy weaponry to suppress enemy advances and annihilate armored targets. Positioned at the rear of the battle line, they deliver devastating firepower in support of the main assault.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_FireSupport</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(3, -1)</displayPosition>
@@ -811,11 +811,12 @@
         <unlocksRankIcon>BEWH_RankIconDevastator</unlocksRankIcon>
 
     </Genes40k.ChapterRankDef>
-    <!-- Devastator Sergeant -->
+
+    <!-- Fire Support Sergeant -->
     <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankDevastatorSergeant</defName>
-        <label>Devastator Sergeants command squads of heavy weapon specialists. They direct firepower with calculated precision, coordinating volleys that reduce enemy strongholds and war engines to ruin.</label>
-        <description>Devastator Sergeant description.</description>
+        <label>Fire Support Sergeant</label>
+        <description>The Fire Support Sergeant commands squads of heavy-weapon specialists, directing fields of fire with precision to break the enemy with overwhelming force.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_FireSupportSergeant</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(5, -1)</displayPosition>
@@ -842,12 +843,12 @@
 
     </Genes40k.ChapterRankDef>
 
-    <!-- =Assault= -->
-    <!-- Assault -->
+    <!-- =Close Support= -->
+    <!-- Close Support -->
     <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankAssault</defName>
-        <label>Assault</label>
-        <description>Assault Marines are shock troops trained for brutal, hand-to-hand combat. Armed with jump packs and chainswords, they charge at the enemy like a thunder storm, carving a path through the foe with righteous zeal and relentless aggression.</description>
+        <label>Close Support</label>
+        <description>Close Support Space Marines excel in fast and aggressive assaults. Armed for melee and close-range engagements, they strike hard and fast, disrupting enemy lines with relentless fury.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_CloseSupport</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(3, 0)</displayPosition>
@@ -872,11 +873,12 @@
         <unlocksRankIcon>BEWH_RankIconAssault</unlocksRankIcon>
 
     </Genes40k.ChapterRankDef>
-    <!-- Assault Sergeant -->
+
+    <!-- Close Support Sergeant -->
     <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankAssaultSergeant</defName>
-        <label>Assault Sergeants lead from the front, rallying their squads in ferocious charges. They exemplify courage and martial prowess, often wielding master-crafted wargear as they inspire their brethren in the heart of battle.</label>
-        <description>Assault Sergeant description.</description>
+        <label>Close Support Sergeant</label>
+        <description>The Close Support Sergeant leads from the front, driving his warriors into the heart of battle. His command is one of speed and savagery, ensuring the enemy is overwhelmed before they can respond.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_CloseSupportSergeant</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(5, 0)</displayPosition>

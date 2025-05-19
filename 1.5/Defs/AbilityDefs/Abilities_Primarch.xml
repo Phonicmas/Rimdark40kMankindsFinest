@@ -238,7 +238,7 @@
   <AbilityDef ParentName="BEWH_SelfTargetAbilities">
     <defName>BEWH_IronCircle</defName>
     <label>Iron Circle</label>
-    <description>Summon or reinforce your iron circle, loyal automata that serves as bodyguards.</description>
+    <description>Call in Iron Circle automata - unyielding bodyguards devoted to your defense.</description>
     <iconPath>UI/Abilities/BEWH_Ability_PerturaboIronCircle</iconPath>
     <cooldownTicksRange>60000</cooldownTicksRange>
     <category>BEWH_Primarch</category>

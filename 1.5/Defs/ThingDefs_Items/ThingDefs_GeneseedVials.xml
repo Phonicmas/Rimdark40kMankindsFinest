@@ -6,8 +6,8 @@
   <!-- Thunder Warrior -->
   <ThingDef ParentName="BEWH_GeneseedVialBase">
     <defName>BEWH_GeneseedVialThunderWarrior</defName>
-    <label>thunder warrior gene-seed vial</label>
-    <description>This vial contains the gestated genes ready for implantation into a pawn, creating a Thunder Warrior.\n\nThe safe implantation age is 12~21, implantation into anyone outside this range may kill them.\n\nThis item rapidly deteriorates outside containment.</description>
+    <label>thunder warrior ascendance vial</label>
+    <description>A high-tech containment device holding a potent genetic compound. It is used to initiate the transformation of selected subjects into superhuman warriors. Upon implantation, it triggers rapid genetic enhancements, increasing strength, endurance, and resilience.\n\nThis vial contains the gestated genes ready for implantation into a pawn, creating a Thunder Warrior.\n\nThe safe implantation age is 12~21, implantation into anyone outside this range may kill them.\n\nThis item rapidly deteriorates outside containment.</description>
     <graphicData>
       <texPath>Things/Item/GeneseedVial/BEWH_GeneseedVial_ThunderWarrior</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -32,8 +32,8 @@
   <!-- Firstborn -->
   <ThingDef ParentName="BEWH_GeneseedVialBase">
     <defName>BEWH_GeneseedVialFirstborn</defName>
-    <label>firstborn gene-seed vial</label>
-    <description>This vial contains the gestated genes ready for implantation into a pawn, creating a Firstborn.\n\nThe safe implantation age is 10~12, implantation into anyone outside this range may kill them.\n\nThis item rapidly deteriorates outside containment.</description>
+    <label>firstborn ascendance vial</label>
+    <description>A high-tech containment device holding a potent genetic compound. It is used to initiate the transformation of selected subjects into superhuman warriors. Upon implantation, it triggers rapid genetic enhancements, increasing strength, endurance, and resilience.\n\nThis vial contains the gestated genes ready for implantation into a pawn, creating a Firstborn.\n\nThe safe implantation age is 10~12, implantation into anyone outside this range may kill them.\n\nThis item rapidly deteriorates outside containment.</description>
     <graphicData>
       <texPath>Things/Item/GeneseedVial/BEWH_GeneseedVial_Firstborn</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -67,8 +67,8 @@
   <!-- Primaris -->
   <ThingDef ParentName="BEWH_GeneseedVialBase">
     <defName>BEWH_GeneseedVialPrimaris</defName>
-    <label>primaris gene-seed vial</label>
-    <description>This vial contains the gestated genes ready for implantation into a pawn, creating a Primaris.\n\nThe safe implantation age is 10~12, implantation into anyone outside this range may kill them.\n\nThis item rapidly deteriorates outside containment.</description>
+    <label>primaris ascendance vial</label>
+    <description>A high-tech containment device holding a potent genetic compound. It is used to initiate the transformation of selected subjects into superhuman warriors. Upon implantation, it triggers rapid genetic enhancements, increasing strength, endurance, and resilience.\n\nThis vial contains the gestated genes ready for implantation into a pawn, creating a Primaris.\n\nThe safe implantation age is 10~12, implantation into anyone outside this range may kill them.\n\nThis item rapidly deteriorates outside containment.</description>
     <graphicData>
       <texPath>Things/Item/GeneseedVial/BEWH_GeneseedVial_Primaris</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -103,8 +103,8 @@
   <!-- Custodes -->
   <ThingDef ParentName="BEWH_GeneseedVialBase">
     <defName>BEWH_GeneseedVialCustodes</defName>
-    <label>custodes gene-seed vial</label>
-    <description>This vial contains the gestated genes ready for implantation into a pawn, creating a Custodes.\n\nThe safe implantation age is 0-4, implantation into anyone outside this range may kill them.\n\nThis item rapidly deteriorates outside containment.</description>
+    <label>custodes ascendance vial</label>
+    <description>A high-tech containment device holding a potent genetic compound. It is used to initiate the transformation of selected subjects into superhuman warriors. Upon implantation, it triggers rapid genetic enhancements, increasing strength, endurance, and resilience.\n\nThis vial contains the gestated genes ready for implantation into a pawn, creating a Custodes.\n\nThe safe implantation age is 0-4, implantation into anyone outside this range may kill them.\n\nThis item rapidly deteriorates outside containment.</description>
     <graphicData>
       <texPath>Things/Item/GeneseedVial/BEWH_GeneseedVial_Custodes</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -129,8 +129,8 @@
   <!-- Primarch -->
   <ThingDef ParentName="BEWH_GeneseedVialBase">
     <defName>BEWH_GeneseedVialPrimarch</defName>
-    <label>primarch gene-seed vial</label>
-    <description>This vial contains the gestated genes for creation of a Primarch.\n\nDue to the potency of the primarch genes, it needs to be inserted into a human embryo and grown artificially.\n\nThis item rapidly deteriorates outside containment.</description>
+    <label>primarch ascendance vial</label>
+    <description>A high-tech containment device holding a potent genetic compound. It is used to initiate the transformation of selected subjects into superhuman warriors. Upon implantation, it triggers rapid genetic enhancements, increasing strength, endurance, and resilience.\n\nThis vial contains the gestated genes for creation of a Primarch.\n\nDue to the potency of the primarch genes, it needs to be inserted into a human embryo and grown artificially.\n\nThis item rapidly deteriorates outside containment.</description>
     <graphicData>
       <texPath>Things/Item/GeneseedVial/BEWH_GeneseedVial_Primarch</texPath>
       <graphicClass>Graphic_Single</graphicClass>

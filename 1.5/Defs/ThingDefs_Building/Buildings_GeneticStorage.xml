@@ -47,8 +47,8 @@
   <!-- Sangprimus Portum -->
   <ThingDef ParentName="BEWH_GeneticStorage">
     <defName>BEWH_SangprimusPortum</defName>
-    <label>sangprimus portum</label>
-    <description>The Sangprimus Portum is able to store Chapter and Primarch material. Whilst near a gestator it is able to duplicate the material within to complete the matrices of Firstborn, Primaris and Primarchs.\nCan only store one of each material.</description>
+    <label>Sangprimus Portum vault</label>
+    <description>This device replicates the function of the sanctified Sangprimus Portum. However, it does not contain the full range of genetic materials by default and must be filled with specific Legion and Primarch materials. Once filled, it enables the creation of gene-seed with the chosen traits when linked to a Gene-seed Gestator.\n\nWhilst near a gestator it is able to duplicate the material within to complete the matrices of Firstborn, Primaris and Primarchs.\nCan only store one of each material.</description>
     <thingClass>Genes40k.Building_SangprimusPortum</thingClass>
     <graphicData>
       <texPath>Things/Building/SangprimusPortum/BEWH_SangprimusPortum</texPath>
@@ -115,7 +115,7 @@
   <ThingDef ParentName="BEWH_GeneticStorage">
     <defName>BEWH_GeneticCryostaticStorage</defName>
     <label>genetic matrix storage</label>
-    <description>Able to holster 6 genetic matrices, keeping them safe and preventing deterioration.</description>
+    <description>A secure containment unit designed to preserve Genetic Matrices in stasis, shielding them from environmental degradation and the corrupting influence of the Immaterium. Essential for maintaining their integrity.\n\nAble to holster 6 Genetic matrices, keeping them safe and preventing deterioration.</description>
     <graphicData>
       <texPath>Things/Building/GeneticMatrixStorage/BEWH_MatrixStorage_Empty</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -168,11 +168,11 @@
     </comps>
   </ThingDef>
 
-  <!-- Gene-seed vial storage -->
+  <!-- Ascendance vial storage -->
   <ThingDef ParentName="BEWH_GeneticStorage">
     <defName>BEWH_GeneseedVialStorage</defName>
-    <label>gene-seed vial storage</label>
-    <description>Able to holster 6 gene-seed vials, keeping them safe and preventing deterioration.</description>
+    <label>vial stasis depository</label>
+    <description>A stasis vault designed to preserve Ascendance Vials in a state of suspended animation. It safeguards the volatile contents from degradation, time drift, and warp corruption, ensuring they remain viable for implantation.\n\nAble to holster 6 Ascendance Vials, keeping them safe and preventing deterioration.</description>
     <graphicData>
       <texPath>Things/Building/GeneseedVialStorage/BEWH_GeneseedVialStorage_Empty</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -184,7 +184,7 @@
     </graphicData>
     <uiIconOffset>(0, 0.05)</uiIconOffset>
     <uiIconScale>0.6</uiIconScale>
-    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <altitudeLayer>Building</altitudeLayer>
     <defaultPlacingRot>North</defaultPlacingRot>
     <size>(1, 1)</size>
     <researchPrerequisites>
