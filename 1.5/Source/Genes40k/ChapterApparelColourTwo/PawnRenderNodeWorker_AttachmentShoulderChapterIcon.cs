@@ -73,7 +73,7 @@ public class PawnRenderNodeWorker_AttachmentShoulderChapterIcon : PawnRenderNode
 
         if (node is PawnRenderNode_AttachmentShoulderChapterIcon node2 && node2.Flipped && (parms.facing == Rot4.East || parms.facing == Rot4.West))
         {
-            res.y += 0.1f;
+            res.y += 0.001f;
         }
         
         return res;
