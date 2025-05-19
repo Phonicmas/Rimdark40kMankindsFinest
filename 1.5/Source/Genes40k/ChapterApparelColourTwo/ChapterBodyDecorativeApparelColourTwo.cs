@@ -48,19 +48,14 @@ public class ChapterBodyDecorativeApparelColourTwo : BodyDecorativeApparelColour
         }
         set
         {
-            rightShoulder ??= new ShoulderIconSettings();
-            if (leftShoulder.ShoulderIcon == value && !leftShoulder.Flipped)
-            {
-                rightShoulder.Flipped = true;
-            }
-            else
-            {
-                rightShoulder.ShoulderIcon = value;
-            }
-            
             if (value != null && value.setsNull)
             {
                 rightShoulder = new ShoulderIconSettings();
+            }
+            else
+            {
+                rightShoulder ??= new ShoulderIconSettings();
+                rightShoulder.ShoulderIcon = value;
             }
             
             Notify_ColorChanged();
@@ -71,6 +66,7 @@ public class ChapterBodyDecorativeApparelColourTwo : BodyDecorativeApparelColour
         get => rightShoulder?.Color ?? Color.white;
         set
         {
+            rightShoulder ??= new ShoulderIconSettings();
             rightShoulder.Color = value;
             Notify_ColorChanged();
         }
@@ -84,25 +80,21 @@ public class ChapterBodyDecorativeApparelColourTwo : BodyDecorativeApparelColour
         get => leftShoulder?.ShoulderIcon;
         set
         {
-            leftShoulder ??= new ShoulderIconSettings();
-            if (leftShoulder.ShoulderIcon == value && !leftShoulder.Flipped)
-            {
-                leftShoulder.Flipped = true;
-            }
-            else
-            {
-                leftShoulder.ShoulderIcon = value;
-            }
-            
             if (value != null && value.setsNull)
             {
                 leftShoulder = new ShoulderIconSettings();
             }
+            else
+            {
+                leftShoulder ??= new ShoulderIconSettings();
+                leftShoulder.ShoulderIcon = value;
+            }
+            
             Notify_ColorChanged();
         }
     }
     public Color LeftShoulderIconColour => leftShoulder?.Color ?? Color.white;
-
+    
 
     private bool flipShoulderIcons = false;
     public bool FlipShoulderIcons
