@@ -95,7 +95,7 @@
         <defName>BEWH_ChapterColourXIII</defName>
         <label>Ultramarines</label>
         <primaryColour>(37,79,152)</primaryColour>
-        <secondaryColour>(228,161,1)</secondaryColour>
+        <secondaryColour>(251,163,1)</secondaryColour>
         <relatedChapterGene>BEWH_ChapterXIIIUltramarines</relatedChapterGene>
         <relatedChapterIcon>BEWH_ChapterIconXIII</relatedChapterIcon>
     </Genes40k.ChapterColourDef>
@@ -163,4 +163,17 @@
         <relatedChapterIcon>BEWH_ChapterIconXX</relatedChapterIcon>
     </Genes40k.ChapterColourDef>
 
+    <Genes40k.ChapterColourDef>
+        <defName>BEWH_ChapterColourDW</defName>
+        <label>Deathwatch</label>
+        <primaryColour>(71,71,71)</primaryColour>
+        <secondaryColour>(173,178,178)</secondaryColour>
+    </Genes40k.ChapterColourDef>
+
+    <Genes40k.ChapterColourDef>
+        <defName>BEWH_ChapterColourApothecary</defName>
+        <label>Apothecary</label>
+        <primaryColour>(218,210,199)</primaryColour>
+        <secondaryColour>(178,178,173)</secondaryColour>
+    </Genes40k.ChapterColourDef>
 </Defs>

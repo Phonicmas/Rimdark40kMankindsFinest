@@ -64,7 +64,7 @@
         <layerOffsets>
             <li>
                 <key>South</key>
-                <value>0</value>
+                <value>-7</value> <!-- if the value is 0 or higher it renders on top of the helmet for some reason -->
             </li>
             <li>
                 <key>North</key>
@@ -81,7 +81,7 @@
         <description>...</description>
         <iconPath>Things/Decorations/Armor/Common/Pauldrons/BEWH_Deco_Color_Shoulder1_west</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/Pauldrons/BEWH_Deco_Color_Shoulder1</drawnTextureIconPath>
-        <sortOrder>0</sortOrder>
+        <sortOrder>0.1</sortOrder>
         <defaultShowRotation>
             <li>North</li>
             <li>South</li>
@@ -95,7 +95,7 @@
         <layerOffsets>
             <li>
                 <key>South</key>
-                <value>-1</value>
+                <value>-5</value>
             </li>
             <li>
                 <key>North</key>
@@ -372,6 +372,7 @@
         <shaderType>Cutout</shaderType>
         <flipable>true</flipable>
     </Core40k.ExtraDecorationDef>
+
     <!-- Pouches -->
     <Core40k.ExtraDecorationDef>
         <defName>BEWH_DecoPouch_1</defName>
@@ -763,6 +764,10 @@
                 <value>8</value>
             </li>
         </layerOffsets>
+        <availablePresets>
+            <li>BEWH_DecoPaletteGold</li>
+            <li>BEWH_DecoPaletteSilver</li>
+        </availablePresets>
         <shaderType>Cutout</shaderType>
         <colourable>true</colourable>
         <useArmorColourAsDefault>true</useArmorColourAsDefault>
@@ -801,6 +806,10 @@
                 <value>8</value>
             </li>
         </layerOffsets>
+        <availablePresets>
+            <li>BEWH_DecoPaletteGold</li>
+            <li>BEWH_DecoPaletteSilver</li>
+        </availablePresets>
         <shaderType>Cutout</shaderType>
         <colourable>true</colourable>
         <useArmorColourAsDefault>true</useArmorColourAsDefault>
@@ -1250,7 +1259,7 @@
         <layerOffsets>
             <li>
                 <key>South</key>
-                <value>0</value>
+                <value>0.2</value>
             </li>
             <li>
                 <key>East</key>
