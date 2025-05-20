@@ -14,16 +14,16 @@
                     <parentTagDef>Body</parentTagDef>
                     <drawData>
                         <dataEast>
-                            <layer>75</layer>
+                            <layer>76</layer>
                         </dataEast>
                         <dataWest>
-                            <layer>75</layer>
+                            <layer>76</layer>
                         </dataWest>
                         <dataNorth>
-                            <layer>73</layer>
+                            <layer>74</layer>
                         </dataNorth>
                         <dataSouth>
-                            <layer>45</layer>
+                            <layer>72</layer>
                         </dataSouth>
                     </drawData>
                 </li>
@@ -36,16 +36,16 @@
                     <parentTagDef>Body</parentTagDef>
                     <drawData>
                         <dataEast>
-                            <layer>75</layer>
+                            <layer>76</layer>
                         </dataEast>
                         <dataWest>
-                            <layer>75</layer>
+                            <layer>76</layer>
                         </dataWest>
                         <dataNorth>
-                            <layer>73</layer>
+                            <layer>71</layer>
                         </dataNorth>
                         <dataSouth>
-                            <layer>45</layer>
+                            <layer>72</layer>
                         </dataSouth>
                     </drawData>
                 </li>
@@ -101,9 +101,6 @@
                         <defaultData>
                             <layer>40</layer>
                         </defaultData>
-                        <dataNorth>
-                            <layer>70</layer>
-                        </dataNorth>
                     </drawData>
                 </li>
                 <!-- Backpacks -->
@@ -137,10 +134,10 @@
                     <parentTagDef>Body</parentTagDef>
                     <drawData>
                         <dataEast>
-                            <layer>73</layer>
+                            <layer>72</layer>
                         </dataEast>
                         <dataWest>
-                            <layer>73</layer>
+                            <layer>72</layer>
                         </dataWest>
                     </drawData>
                 </li>
@@ -204,9 +201,6 @@
                         <defaultData>
                             <layer>40</layer>
                         </defaultData>
-                        <dataNorth>
-                            <layer>70</layer>
-                        </dataNorth>
                     </drawData>
                 </li>
                 <!-- Backpacks -->
@@ -240,10 +234,10 @@
                     <parentTagDef>Body</parentTagDef>
                     <drawData>
                         <dataEast>
-                            <layer>73</layer>
+                            <layer>72</layer>
                         </dataEast>
                         <dataWest>
-                            <layer>73</layer>
+                            <layer>72</layer>
                         </dataWest>
                     </drawData>
                 </li>
@@ -309,9 +303,6 @@
                         <defaultData>
                             <layer>40</layer>
                         </defaultData>
-                        <dataNorth>
-                            <layer>70</layer>
-                        </dataNorth>
                     </drawData>
                 </li>
                 <!-- Backpacks -->
@@ -345,10 +336,10 @@
                     <parentTagDef>Body</parentTagDef>
                     <drawData>
                         <dataEast>
-                            <layer>73</layer>
+                            <layer>72</layer>
                         </dataEast>
                         <dataWest>
-                            <layer>73</layer>
+                            <layer>72</layer>
                         </dataWest>
                     </drawData>
                 </li>

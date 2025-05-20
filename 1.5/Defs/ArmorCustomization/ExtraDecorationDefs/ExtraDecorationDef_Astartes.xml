@@ -64,7 +64,7 @@
         <layerOffsets>
             <li>
                 <key>South</key>
-                <value>-7</value> <!-- if the value is 0 or higher it renders on top of the helmet for some reason -->
+                <value>0</value> <!-- if the value is 0 or higher it renders on top of the helmet for some reason -->
             </li>
             <li>
                 <key>North</key>
@@ -95,11 +95,11 @@
         <layerOffsets>
             <li>
                 <key>South</key>
-                <value>-5</value>
+                <value>-8</value>
             </li>
             <li>
                 <key>North</key>
-                <value>-1</value>
+                <value>-5</value>
             </li>
             <li>
                 <key>East</key>
@@ -107,7 +107,7 @@
             </li>
             <li>
                 <key>West</key>
-                <value>-1</value>
+                <value>-4</value>
             </li>
         </layerOffsets>
         <shaderType>Cutout</shaderType>
@@ -1104,11 +1104,11 @@
             </li>
             <li>
                 <key>East</key>
-                <value>-3</value>
+                <value>-4</value>
             </li>
             <li>
                 <key>West</key>
-                <value>-3</value>
+                <value>-4</value>
             </li>
         </layerOffsets>
         <colourable>true</colourable>
