@@ -64,4 +64,10 @@
         <colour>(104, 24, 33)</colour>
     </Core40k.DecorationColourPresetDef>
 
+<!-- Apothecary Red -->
+    <Core40k.DecorationColourPresetDef>
+        <defName>BEWH_DecoPaletteApothecaryRed</defName>
+        <label>Apothecary Red</label>
+        <colour>(162, 54, 39)</colour>
+    </Core40k.DecorationColourPresetDef>
 </Defs>
