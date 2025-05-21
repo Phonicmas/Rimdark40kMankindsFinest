@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    
+    <!-- Forehead decor -->
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_DecoInquisInsignia</defName>
+        <label>Inquisition Symbol</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Headgear/Common/BEWH_Deco_Inquis_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Headgear/Common/BEWH_Deco_Inquis</drawnTextureIconPath>
+        <sortOrder>0</sortOrder>
+        <isHelmetDecoration>true</isHelmetDecoration>
+        <defaultShowRotation>
+            <li>West</li>
+            <li>South</li>
+            <li>East</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmorHelmet</li>
+            <li>BEWH_MkXPowerArmorHelmet</li>
+        </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>East</key>
+                <value>-6</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>-6</value>
+            </li>
+        </layerOffsets>
+        <colourable>true</colourable>
+        <availablePresets>
+            <li>BEWH_DecoPaletteGold</li>
+            <li>BEWH_DecoPaletteSilver</li>
+            <li>BEWH_DecoPaletteIFBlack</li>
+        </availablePresets>
+        <shaderType>Cutout</shaderType>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_MkVIIApothecarySymbol</defName>        <!-- Mark VII -->
+        <label>Apothecary Symbol</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_ApothecarySignMkVII_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_ApothecarySignMkVII</drawnTextureIconPath>
+        <sortOrder>0.1</sortOrder>
+        <isHelmetDecoration>true</isHelmetDecoration>
+        <defaultShowRotation>
+            <li>West</li>
+            <li>South</li>
+            <li>East</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmorHelmet</li>
+        </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>East</key>
+                <value>-6</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>-6</value>
+            </li>
+        </layerOffsets>
+        <shaderType>Cutout</shaderType>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_MkXApothecarySymbol</defName>        <!-- Mark X -->
+        <label>Apothecary Symbol</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_ApothecarySignMkX_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_ApothecarySignMkX</drawnTextureIconPath>
+        <sortOrder>0.1</sortOrder>
+        <isHelmetDecoration>true</isHelmetDecoration>
+        <defaultShowRotation>
+            <li>West</li>
+            <li>South</li>
+            <li>East</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkXPowerArmorHelmet</li>
+        </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>East</key>
+                <value>-6</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>-6</value>
+            </li>
+        </layerOffsets>
+        <shaderType>Cutout</shaderType>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_DecoSkull</defName>
+        <label>Skull</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Headgear/Common/BEWH_Deco_Skull_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Headgear/Common/BEWH_Deco_Skull</drawnTextureIconPath>
+        <sortOrder>1</sortOrder>
+        <isHelmetDecoration>true</isHelmetDecoration>
+        <defaultShowRotation>
+            <li>West</li>
+            <li>South</li>
+            <li>East</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmorHelmet</li>
+            <li>BEWH_MkXPowerArmorHelmet</li>
+        </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>East</key>
+                <value>7</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>7</value>
+            </li>
+        </layerOffsets>
+        <colourable>true</colourable>
+        <availablePresets>
+            <li>BEWH_DecoPaletteGold</li>
+            <li>BEWH_DecoPaletteSilver</li>
+            <li>BEWH_DecoPaletteIFBlack</li>
+        </availablePresets>
+        <shaderType>Cutout</shaderType>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_DecoLaurels</defName>
+        <label>Laurel wreath</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Headgear/Common/BEWH_Deco_Laurel_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Headgear/Common/BEWH_Deco_Laurel</drawnTextureIconPath>
+        <sortOrder>2</sortOrder>
+        <isHelmetDecoration>true</isHelmetDecoration>
+        <defaultShowRotation>
+            <li>West</li>
+            <li>South</li>
+            <li>East</li>
+            <li>North</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmorHelmet</li>
+            <li>BEWH_MkXPowerArmorHelmet</li>
+        </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>South</key>
+                <value>7</value>
+            </li>
+            <li>
+                <key>East</key>
+                <value>-1</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>-1</value>
+            </li>
+        </layerOffsets>
+        <availablePresets>
+            <li>BEWH_DecoPaletteGold</li>
+            <li>BEWH_DecoPaletteGreen</li>
+            <li>BEWH_DecoPaletteSilver</li>
+            <li>BEWH_DecoPaletteIFBlack</li>
+        </availablePresets>
+        <colourable>true</colourable>
+        <shaderType>Cutout</shaderType>
+    </Core40k.ExtraDecorationDef>
+
+</Defs>

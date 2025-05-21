@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    
+    <!-- Claw marks -->
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_MkVIIclawMarks_1</defName>        <!-- Mark VII -->
+        <label>Claw marks 1</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_ClawMarks1MkVII_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_ClawMarks1MkVII</drawnTextureIconPath>
+        <sortOrder>7</sortOrder>
+        <isHelmetDecoration>true</isHelmetDecoration>
+        <defaultShowRotation>
+            <li>West</li>
+            <li>South</li>
+            <li>North</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmorHelmet</li>
+        </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>South</key>
+                <value>4</value>
+            </li>
+            <li>
+                <key>North</key>
+                <value>2</value>
+            </li>
+            <li>
+                <key>East</key>
+                <value>-5</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>-5</value>
+            </li>
+        </layerOffsets>
+        <flipable>true</flipable>
+        <shaderType>Cutout</shaderType>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_MkXclawMarks_1</defName>        <!-- Mark X -->
+        <label>Claw marks 1</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_ClawMarks1MkX_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_ClawMarks1MkX</drawnTextureIconPath>
+        <sortOrder>7</sortOrder>
+        <isHelmetDecoration>true</isHelmetDecoration>
+        <defaultShowRotation>
+            <li>West</li>
+            <li>South</li>
+            <li>North</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkXPowerArmorHelmet</li>
+        </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>South</key>
+                <value>4</value>
+            </li>
+            <li>
+                <key>North</key>
+                <value>2</value>
+            </li>
+            <li>
+                <key>East</key>
+                <value>-5</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>-5</value>
+            </li>
+        </layerOffsets>
+        <flipable>true</flipable>
+        <shaderType>Cutout</shaderType>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_MkVIIclawMarks_2</defName>        <!-- Mark VII -->
+        <label>Claw marks 2</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_ClawMarks2MkVII_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_ClawMarks2MkVII</drawnTextureIconPath>
+        <sortOrder>7</sortOrder>
+        <isHelmetDecoration>true</isHelmetDecoration>
+        <defaultShowRotation>
+            <li>West</li>
+            <li>South</li>
+            <li>North</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmorHelmet</li>
+        </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>South</key>
+                <value>4</value>
+            </li>
+            <li>
+                <key>North</key>
+                <value>2</value>
+            </li>
+            <li>
+                <key>East</key>
+                <value>-5</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>-5</value>
+            </li>
+        </layerOffsets>
+        <flipable>true</flipable>
+        <shaderType>Cutout</shaderType>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_MkXclawMarks_2</defName>        <!-- Mark X -->
+        <label>Claw marks 2</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_ClawMarks2MkX_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_ClawMarks2MkX</drawnTextureIconPath>
+        <sortOrder>7</sortOrder>
+        <isHelmetDecoration>true</isHelmetDecoration>
+        <defaultShowRotation>
+            <li>West</li>
+            <li>South</li>
+            <li>North</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkXPowerArmorHelmet</li>
+        </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>South</key>
+                <value>4</value>
+            </li>
+            <li>
+                <key>North</key>
+                <value>2</value>
+            </li>
+            <li>
+                <key>East</key>
+                <value>-5</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>-5</value>
+            </li>
+        </layerOffsets>
+        <flipable>true</flipable>
+        <shaderType>Cutout</shaderType>
+    </Core40k.ExtraDecorationDef>
+
+</Defs>

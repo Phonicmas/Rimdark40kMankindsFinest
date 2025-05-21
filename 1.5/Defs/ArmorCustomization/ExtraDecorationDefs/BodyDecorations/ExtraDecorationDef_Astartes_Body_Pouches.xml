@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- Pouches -->
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_DecoPouch_1</defName>
+        <label>Pouch 1</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Armor/Common/Pouches/BEWH_Deco_Pouch_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/Common/Pouches/BEWH_Deco_Pouch</drawnTextureIconPath>
+        <sortOrder>6</sortOrder>
+        <defaultShowRotation>
+            <li>North</li>
+            <li>East</li>
+            <li>South</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmor</li>
+            <li>BEWH_MkXPowerArmor</li>
+            <li>BEWH_MkXPowerArmorChaplain</li>
+        </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>West</key>
+                <value>-12</value>
+            </li>
+            <li>
+                <key>East</key>
+                <value>-12</value>
+            </li>
+            <li>
+                <key>North</key>
+                <value>-1</value>
+            </li>
+        </layerOffsets>
+        <shaderType>Cutout</shaderType>
+        <colourable>true</colourable>
+        <availablePresets>
+            <li>BEWH_DecoPaletteLeatherBrown</li>
+            <li>BEWH_DecoPaletteLeatherGrey</li>
+        </availablePresets>
+        <flipable>true</flipable>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_DecoPouchBelt</defName>
+        <label>Pouch belt</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Armor/Common/Pouches/BEWH_Deco_PouchesBelt_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/Common/Pouches/BEWH_Deco_PouchesBelt</drawnTextureIconPath>
+        <sortOrder>6.1</sortOrder>
+        <defaultShowRotation>
+            <li>North</li>
+            <li>East</li>
+            <!-- <li>West</li> -->
+            <li>South</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmor</li>
+            <li>BEWH_MkXPowerArmor</li>
+        </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>West</key>
+                <value>-10</value>
+            </li>
+            <li>
+                <key>East</key>
+                <value>-10</value>
+            </li>
+        </layerOffsets>
+        <shaderType>Cutout</shaderType>
+        <colourable>true</colourable>
+        <availablePresets>
+            <li>BEWH_DecoPaletteLeatherBrown</li>
+            <li>BEWH_DecoPaletteLeatherGrey</li>
+        </availablePresets>
+        <flipable>true</flipable>
+    </Core40k.ExtraDecorationDef>
+
+</Defs>

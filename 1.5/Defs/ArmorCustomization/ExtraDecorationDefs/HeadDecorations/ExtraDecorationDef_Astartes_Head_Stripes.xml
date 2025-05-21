@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- Stripes -->
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_MkVIIDecoStripe</defName>        <!-- Mark VII -->
+        <label>Colour stripe</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_MkVIIStripe_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_MkVIIStripe</drawnTextureIconPath>
+        <sortOrder>6</sortOrder>
+        <isHelmetDecoration>true</isHelmetDecoration>
+        <defaultShowRotation>
+            <li>West</li>
+            <li>South</li>
+            <li>East</li>
+            <li>North</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmorHelmet</li>
+        </appliesTo>
+        <colourable>true</colourable>
+        <layerOffsets>
+            <li>
+                <key>South</key>
+                <value>-1</value>
+            </li>
+            <li>
+                <key>East</key>
+                <value>-4</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>-6</value>
+            </li>
+        </layerOffsets>
+        <availablePresets>
+            <li>BEWH_DecoPaletteGold</li>
+            <!-- <li>BEWH_DecoPaletteGreen</li> -->
+            <li>BEWH_DecoPaletteSilver</li>
+            <li>BEWH_DecoPaletteIFBlack</li>
+            <li>BEWH_DecoPaletteStripeRed</li>
+        </availablePresets>
+        <shaderType>Cutout</shaderType>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_MkXDecoStripe</defName>        <!-- Mark X -->
+        <label>Colour stripe</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_MkXStripe_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_MkXStripe</drawnTextureIconPath>
+        <sortOrder>6</sortOrder>
+        <isHelmetDecoration>true</isHelmetDecoration>
+        <defaultShowRotation>
+            <li>West</li>
+            <li>South</li>
+            <li>East</li>
+            <li>North</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkXPowerArmorHelmet</li>
+        </appliesTo>
+        <colourable>true</colourable>
+        <layerOffsets>
+            <li>
+                <key>South</key>
+                <value>-1</value>
+            </li>
+            <li>
+                <key>North</key>
+                <value>-6</value>
+            </li>
+            <li>
+                <key>East</key>
+                <value>-4</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>-6</value>
+            </li>
+        </layerOffsets>
+        <availablePresets>
+            <li>BEWH_DecoPaletteGold</li>
+            <!-- <li>BEWH_DecoPaletteGreen</li> -->
+            <li>BEWH_DecoPaletteSilver</li>
+            <li>BEWH_DecoPaletteIFBlack</li>
+            <li>BEWH_DecoPaletteStripeRed</li>
+        </availablePresets>
+        <shaderType>Cutout</shaderType>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_MkVIILieutenantStripe</defName>        <!-- Mark VII -->
+        <label>Lieutenant stripe</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_MkVIILieutenantStripe_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_MkVIILieutenantStripe</drawnTextureIconPath>
+        <sortOrder>6</sortOrder>
+        <isHelmetDecoration>true</isHelmetDecoration>
+        <defaultShowRotation>
+            <li>West</li>
+            <li>South</li>
+            <li>East</li>
+            <li>North</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmorHelmet</li>
+        </appliesTo>
+        <colourable>false</colourable>
+        <layerOffsets>
+            <li>
+                <key>South</key>
+                <value>-1</value>
+            </li>
+            <li>
+                <key>East</key>
+                <value>-4</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>-5</value>
+            </li>
+        </layerOffsets>
+        <shaderType>Cutout</shaderType>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_MkXLieutenantStripe</defName>        <!-- Mark X -->
+        <label>Lieutenant stripe</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_MkXLieutenantStripe_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_MkXLieutenantStripe</drawnTextureIconPath>
+        <sortOrder>6</sortOrder>
+        <isHelmetDecoration>true</isHelmetDecoration>
+        <defaultShowRotation>
+            <li>West</li>
+            <li>South</li>
+            <li>East</li>
+            <li>North</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkXPowerArmorHelmet</li>
+        </appliesTo>
+        <colourable>false</colourable>
+        <layerOffsets>
+            <li>
+                <key>South</key>
+                <value>-1</value>
+            </li>
+            <li>
+                <key>North</key>
+                <value>-6</value>
+            </li>
+            <li>
+                <key>East</key>
+                <value>-4</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>-5</value>
+            </li>
+        </layerOffsets>
+        <shaderType>Cutout</shaderType>
+    </Core40k.ExtraDecorationDef>
+
+</Defs>

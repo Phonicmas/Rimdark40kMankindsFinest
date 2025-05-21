@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- Custom shoulders -->
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_DecoDWatchPauldron</defName>
+        <label>Deathwatch pauldron</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Armor/Common/Pauldrons/BEWH_Deco_DeathWatch_Shoulder_west</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/Common/Pauldrons/BEWH_Deco_DeathWatch_Shoulder</drawnTextureIconPath>
+        <sortOrder>0</sortOrder>
+        <defaultShowRotation>
+            <li>North</li>
+            <li>South</li>
+            <li>West</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmor</li>
+            <li>BEWH_MkXPowerArmor</li>
+            <li>BEWH_MkXPowerArmorChaplain</li>
+        </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>South</key>
+                <value>-7</value>                <!-- REEEEEEE!!!!1 if the value is -6.9 (nice) or higher it renders on top of the helmet (which makes Cheese a dull boi) -->
+            </li>
+            <li>
+                <key>North</key>
+                <value>0.5</value>
+            </li>
+        </layerOffsets>
+        <shaderType>Cutout</shaderType>
+        <flipable>true</flipable>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_DecoColorPauldron_1</defName>
+        <label>Colorable shoulder 1</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Armor/Common/Pauldrons/BEWH_Deco_Color_Shoulder1_west</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/Common/Pauldrons/BEWH_Deco_Color_Shoulder1</drawnTextureIconPath>
+        <sortOrder>0.1</sortOrder>
+        <defaultShowRotation>
+            <li>North</li>
+            <li>South</li>
+            <li>West</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmor</li>
+            <li>BEWH_MkXPowerArmor</li>
+            <li>BEWH_MkXPowerArmorChaplain</li>
+        </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>South</key>
+                <value>-8</value>
+            </li>
+            <li>
+                <key>North</key>
+                <value>-5</value>
+            </li>
+            <li>
+                <key>East</key>
+                <value>-1</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>-4</value>
+            </li>
+        </layerOffsets>
+        <shaderType>Cutout</shaderType>
+        <flipable>true</flipable>
+        <colourable>true</colourable>
+        <availablePresets />
+        <!-- Custom chapter colors here -->
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_DecoColorPauldron_2</defName>
+        <label>Colorable shoulder 2</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Armor/Common/Pauldrons/BEWH_Deco_Color_Shoulder1_west</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/Common/Pauldrons/BEWH_Deco_Color_Shoulder1</drawnTextureIconPath>
+        <sortOrder>0.2</sortOrder>
+        <defaultShowRotation>
+            <li>North</li>
+            <li>South</li>
+            <li>West</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmor</li>
+            <li>BEWH_MkXPowerArmor</li>
+            <li>BEWH_MkXPowerArmorChaplain</li>
+        </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>South</key>
+                <value>-8</value>
+            </li>
+            <li>
+                <key>North</key>
+                <value>-5</value>
+            </li>
+            <li>
+                <key>East</key>
+                <value>-1</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>-4</value>
+            </li>
+        </layerOffsets>
+        <shaderType>Cutout</shaderType>
+        <flipable>true</flipable>
+        <colourable>true</colourable>
+        <availablePresets />
+        <!-- Custom chapter colors here -->
+    </Core40k.ExtraDecorationDef>
+
+</Defs>

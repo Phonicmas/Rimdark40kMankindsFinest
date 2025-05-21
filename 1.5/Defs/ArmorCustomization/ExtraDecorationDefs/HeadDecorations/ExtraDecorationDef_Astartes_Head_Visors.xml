@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    
+    <!-- Visors -->
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_Visor_1</defName>
+        <label>Apothecary visor</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Headgear/Common/BEWH_Deco_ApothecaryVisor_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Headgear/Common/BEWH_Deco_ApothecaryVisor</drawnTextureIconPath>
+        <sortOrder>3.1</sortOrder>
+        <isHelmetDecoration>true</isHelmetDecoration>
+        <defaultShowRotation>
+            <li>North</li>
+            <li>South</li>
+            <!-- <li>West</li> -->
+            <li>East</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmorHelmet</li>
+            <li>BEWH_MkXPowerArmorHelmet</li>
+        </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>South</key>
+                <value>5</value>
+            </li>
+            <li>
+                <key>East</key>
+                <value>-4</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>-5</value>
+            </li>
+            <li>
+                <key>North</key>
+                <value>0.5</value>
+            </li>
+        </layerOffsets>
+        <shaderType>CutoutComplex</shaderType>
+        <colourable>true</colourable>
+        <useMask>true</useMask>
+        <flipable>true</flipable>
+        <useArmorColourAsDefault>true</useArmorColourAsDefault>
+        <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
+    </Core40k.ExtraDecorationDef>
+
+</Defs>
