@@ -6,7 +6,7 @@
         <defName>BEWH_DecoPSeal_1</defName>
         <label>Purity seals 1</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Armor/Common/PuritySeals/BEWH_Deco_PuritySeal1_south</iconPath>
+        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_PuritySeal1_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/PuritySeals/BEWH_Deco_PuritySeal1</drawnTextureIconPath>
         <sortOrder>4.1</sortOrder>
         <defaultShowRotation>
@@ -46,7 +46,7 @@
         <defName>BEWH_DecoPSeal_2</defName>
         <label>Purity seals 2</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Armor/Common/PuritySeals/BEWH_Deco_PuritySeal2_south</iconPath>
+        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_PuritySeal2_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/PuritySeals/BEWH_Deco_PuritySeal2</drawnTextureIconPath>
         <sortOrder>4.2</sortOrder>
         <defaultShowRotation>
@@ -85,7 +85,7 @@
         <defName>BEWH_DecoPSeal_3</defName>
         <label>Purity seals 3</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Armor/Common/PuritySeals/BEWH_Deco_PuritySeal3_south</iconPath>
+        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_PuritySeal3_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/PuritySeals/BEWH_Deco_PuritySeal3</drawnTextureIconPath>
         <sortOrder>4.3</sortOrder>
         <defaultShowRotation>
@@ -111,7 +111,7 @@
         <defName>BEWH_DecoPSeal_4</defName>
         <label>Purity seals 4</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Armor/Common/PuritySeals/BEWH_Deco_PuritySeal4_south</iconPath>
+        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_PuritySeal4_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/PuritySeals/BEWH_Deco_PuritySeal4</drawnTextureIconPath>
         <sortOrder>4.4</sortOrder>
         <defaultShowRotation>
@@ -131,7 +131,7 @@
         <defName>BEWH_DecoPSeal_5</defName>
         <label>Purity seals 5</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Armor/Common/PuritySeals/BEWH_Deco_PuritySeal5_south</iconPath>
+        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_PuritySeal5_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/PuritySeals/BEWH_Deco_PuritySeal5</drawnTextureIconPath>
         <sortOrder>4.5</sortOrder>
         <defaultShowRotation>

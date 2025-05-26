@@ -6,7 +6,7 @@
         <defName>BEWH_MkVIIclawMarks_1</defName>        <!-- Mark VII -->
         <label>Claw marks 1</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_ClawMarks1MkVII_south</iconPath>
+        <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_ClawMarks1_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_ClawMarks1MkVII</drawnTextureIconPath>
         <sortOrder>7</sortOrder>
         <isHelmetDecoration>true</isHelmetDecoration>
@@ -44,7 +44,7 @@
         <defName>BEWH_MkXclawMarks_1</defName>        <!-- Mark X -->
         <label>Claw marks 1</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_ClawMarks1MkX_south</iconPath>
+        <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_ClawMarks1_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_ClawMarks1MkX</drawnTextureIconPath>
         <sortOrder>7</sortOrder>
         <isHelmetDecoration>true</isHelmetDecoration>
@@ -82,7 +82,7 @@
         <defName>BEWH_MkVIIclawMarks_2</defName>        <!-- Mark VII -->
         <label>Claw marks 2</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_ClawMarks2MkVII_south</iconPath>
+        <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_ClawMarks2_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_ClawMarks2MkVII</drawnTextureIconPath>
         <sortOrder>7</sortOrder>
         <isHelmetDecoration>true</isHelmetDecoration>
@@ -120,7 +120,7 @@
         <defName>BEWH_MkXclawMarks_2</defName>        <!-- Mark X -->
         <label>Claw marks 2</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_ClawMarks2MkX_south</iconPath>
+        <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_ClawMarks2_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_ClawMarks2MkX</drawnTextureIconPath>
         <sortOrder>7</sortOrder>
         <isHelmetDecoration>true</isHelmetDecoration>

@@ -6,7 +6,7 @@
         <defName>BEWH_Deco_Visor_1</defName>
         <label>Apothecary visor</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Headgear/Common/BEWH_Deco_ApothecaryVisor_south</iconPath>
+        <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_ApothecaryVisor_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Headgear/Common/BEWH_Deco_ApothecaryVisor</drawnTextureIconPath>
         <sortOrder>3.1</sortOrder>
         <isHelmetDecoration>true</isHelmetDecoration>

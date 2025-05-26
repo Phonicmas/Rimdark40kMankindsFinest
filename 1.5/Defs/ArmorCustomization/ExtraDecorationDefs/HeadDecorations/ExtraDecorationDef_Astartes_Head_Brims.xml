@@ -6,7 +6,7 @@
         <defName>BEWH_MkXBladeguardBrim</defName>
         <label>Bladeguard brim</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Headgear/Common/BEWH_Deco_BladeguardShield_south</iconPath>
+        <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_BladeguardShield_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Headgear/Common/BEWH_Deco_BladeguardShield</drawnTextureIconPath>
         <sortOrder>4</sortOrder>
         <isHelmetDecoration>true</isHelmetDecoration>
@@ -41,9 +41,9 @@
 
     <Core40k.ExtraDecorationDef>
         <defName>BEWH_Deco_MkVII_VictrixBrim</defName>        <!-- MkVII -->
-        <label>Victrix Guard Brim</label>
+        <label>Victrix Guard brim</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_VictrixHelmMkVII_south</iconPath>
+        <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_VictrixHelm_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_VictrixHelmMkVII</drawnTextureIconPath>
         <sortOrder>5</sortOrder>
         <isHelmetDecoration>true</isHelmetDecoration>
@@ -83,9 +83,9 @@
 
     <Core40k.ExtraDecorationDef>
         <defName>BEWH_Deco_MkX_VictrixBrim</defName>        <!-- MkX -->
-        <label>Victrix Guard Brim</label>
+        <label>Victrix Guard brim</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_VictrixHelmMkX_south</iconPath>
+        <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_VictrixHelm_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_VictrixHelmMkX</drawnTextureIconPath>
         <sortOrder>5</sortOrder>
         <isHelmetDecoration>true</isHelmetDecoration>
