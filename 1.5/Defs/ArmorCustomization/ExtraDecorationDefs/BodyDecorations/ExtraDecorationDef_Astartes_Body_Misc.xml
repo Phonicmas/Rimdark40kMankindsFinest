@@ -6,7 +6,7 @@
         <defName>BEWH_Deco_ClawMarks_1</defName>
         <label>Claw marks</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Armor/Common/BEWH_Deco_ClawMarks1_east</iconPath>
+        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_ClawMarks1_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_ClawMarks1</drawnTextureIconPath>
         <sortOrder>8</sortOrder>
         <defaultShowRotation>
@@ -37,7 +37,7 @@
         <defName>BEWH_Deco_Rondel1</defName>
         <label>Rondel 1</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Armor/Common/BEWH_Deco_Shield1_south</iconPath>
+        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_Shield1_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_Shield1</drawnTextureIconPath>
         <sortOrder>1.4</sortOrder>
         <defaultShowRotation>
@@ -79,7 +79,7 @@
         <defName>BEWH_Deco_Rondel2</defName>
         <label>Rondel 2</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Armor/Common/BEWH_Deco_Shield2_south</iconPath>
+        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_Shield2_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_Shield2</drawnTextureIconPath>
         <sortOrder>1.5</sortOrder>
         <defaultShowRotation>
@@ -115,47 +115,6 @@
         <useArmorColourAsDefault>true</useArmorColourAsDefault>
         <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
         <flipable>true</flipable>
-    </Core40k.ExtraDecorationDef>
-
-    <Core40k.ExtraDecorationDef>
-        <defName>BEWH_Deco_Cape</defName>
-        <label>Cape</label>
-        <description>...</description>
-        <iconPath>Things/Decorations/Armor/Common/BEWH_Deco_Cape_south</iconPath>
-        <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_Cape</drawnTextureIconPath>
-        <sortOrder>2.12</sortOrder>
-        <defaultShowRotation>
-            <li>North</li>
-            <li>South</li>
-            <li>West</li>
-            <li>East</li>
-        </defaultShowRotation>
-        <appliesTo>
-            <li>BEWH_MkVIIPowerArmor</li>
-            <li>BEWH_MkXPowerArmor</li>
-            <li>BEWH_MkXPowerArmorChaplain</li>
-        </appliesTo>
-        <layerOffsets>
-            <li>
-                <key>East</key>
-                <value>-10</value>
-            </li>
-            <li>
-                <key>West</key>
-                <value>-10</value>
-            </li>
-            <li>
-                <key>South</key>
-                <value>-42</value>
-            </li>
-        </layerOffsets>
-        <shaderType>Cutout</shaderType>
-        <availablePresets>
-            <li>BEWH_DecoPaletteFabricBeige</li>
-            <li>BEWH_DecoPaletteFabricRed</li>
-            <li>BEWH_DecoPaletteIFBlack</li>
-        </availablePresets>
-        <colourable>true</colourable>
     </Core40k.ExtraDecorationDef>
 
 </Defs>

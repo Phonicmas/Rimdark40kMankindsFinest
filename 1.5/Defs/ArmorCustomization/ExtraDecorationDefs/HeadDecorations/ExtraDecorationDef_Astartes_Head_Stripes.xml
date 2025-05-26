@@ -6,7 +6,7 @@
         <defName>BEWH_MkVIIDecoStripe</defName>        <!-- Mark VII -->
         <label>Colour stripe</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_MkVIIStripe_south</iconPath>
+        <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_Stripe_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_MkVIIStripe</drawnTextureIconPath>
         <sortOrder>6</sortOrder>
         <isHelmetDecoration>true</isHelmetDecoration>
@@ -48,7 +48,7 @@
         <defName>BEWH_MkXDecoStripe</defName>        <!-- Mark X -->
         <label>Colour stripe</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_MkXStripe_south</iconPath>
+        <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_Stripe_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_MkXStripe</drawnTextureIconPath>
         <sortOrder>6</sortOrder>
         <isHelmetDecoration>true</isHelmetDecoration>
@@ -94,7 +94,7 @@
         <defName>BEWH_MkVIILieutenantStripe</defName>        <!-- Mark VII -->
         <label>Lieutenant stripe</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_MkVIILieutenantStripe_south</iconPath>
+        <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_LieutenantStripe_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_MkVIILieutenantStripe</drawnTextureIconPath>
         <sortOrder>6</sortOrder>
         <isHelmetDecoration>true</isHelmetDecoration>
@@ -129,7 +129,7 @@
         <defName>BEWH_MkXLieutenantStripe</defName>        <!-- Mark X -->
         <label>Lieutenant stripe</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_MkXLieutenantStripe_south</iconPath>
+        <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_LieutenantStripe_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_MkXLieutenantStripe</drawnTextureIconPath>
         <sortOrder>6</sortOrder>
         <isHelmetDecoration>true</isHelmetDecoration>

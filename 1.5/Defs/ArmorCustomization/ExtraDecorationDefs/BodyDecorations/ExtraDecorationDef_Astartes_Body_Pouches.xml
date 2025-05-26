@@ -6,7 +6,7 @@
         <defName>BEWH_DecoPouch_1</defName>
         <label>Pouch 1</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Armor/Common/Pouches/BEWH_Deco_Pouch_south</iconPath>
+        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_Pouch_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/Pouches/BEWH_Deco_Pouch</drawnTextureIconPath>
         <sortOrder>6</sortOrder>
         <defaultShowRotation>
@@ -46,7 +46,7 @@
         <defName>BEWH_DecoPouchBelt</defName>
         <label>Pouch belt</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Armor/Common/Pouches/BEWH_Deco_PouchesBelt_south</iconPath>
+        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_PouchesBelt_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/Pouches/BEWH_Deco_PouchesBelt</drawnTextureIconPath>
         <sortOrder>6.1</sortOrder>
         <defaultShowRotation>

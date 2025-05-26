@@ -6,7 +6,7 @@
         <defName>BEWH_DecoInquisInsignia</defName>
         <label>Inquisition Symbol</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Headgear/Common/BEWH_Deco_Inquis_south</iconPath>
+        <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_Inquis_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Headgear/Common/BEWH_Deco_Inquis</drawnTextureIconPath>
         <sortOrder>0</sortOrder>
         <isHelmetDecoration>true</isHelmetDecoration>
@@ -42,7 +42,7 @@
         <defName>BEWH_Deco_MkVIIApothecarySymbol</defName>        <!-- Mark VII -->
         <label>Apothecary Symbol</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_ApothecarySignMkVII_south</iconPath>
+        <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_ApothecarySign_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_ApothecarySignMkVII</drawnTextureIconPath>
         <sortOrder>0.1</sortOrder>
         <isHelmetDecoration>true</isHelmetDecoration>
@@ -71,7 +71,7 @@
         <defName>BEWH_Deco_MkXApothecarySymbol</defName>        <!-- Mark X -->
         <label>Apothecary Symbol</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_ApothecarySignMkX_south</iconPath>
+        <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_ApothecarySign_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_ApothecarySignMkX</drawnTextureIconPath>
         <sortOrder>0.1</sortOrder>
         <isHelmetDecoration>true</isHelmetDecoration>
@@ -100,7 +100,7 @@
         <defName>BEWH_DecoSkull</defName>
         <label>Skull</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Headgear/Common/BEWH_Deco_Skull_south</iconPath>
+        <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_Skull_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Headgear/Common/BEWH_Deco_Skull</drawnTextureIconPath>
         <sortOrder>1</sortOrder>
         <isHelmetDecoration>true</isHelmetDecoration>
@@ -136,7 +136,7 @@
         <defName>BEWH_DecoLaurels</defName>
         <label>Laurel wreath</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Headgear/Common/BEWH_Deco_Laurel_south</iconPath>
+        <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_Laurel_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Headgear/Common/BEWH_Deco_Laurel</drawnTextureIconPath>
         <sortOrder>2</sortOrder>
         <isHelmetDecoration>true</isHelmetDecoration>

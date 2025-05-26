@@ -6,7 +6,7 @@
         <defName>BEWH_IronHalo_1</defName>
         <label>Iron halo 1</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Armor/Common/BEWH_Deco_IronHalo1_south</iconPath>
+        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_IronHalo1_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_IronHalo1</drawnTextureIconPath>
         <sortOrder>3</sortOrder>
         <defaultShowRotation>
@@ -53,7 +53,7 @@
         <defName>BEWH_IronHalo_2</defName>
         <label>Iron halo 2</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Armor/Common/BEWH_Deco_IronHalo2_south</iconPath>
+        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_IronHalo2_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_IronHalo2</drawnTextureIconPath>
         <sortOrder>3.1</sortOrder>
         <defaultShowRotation>

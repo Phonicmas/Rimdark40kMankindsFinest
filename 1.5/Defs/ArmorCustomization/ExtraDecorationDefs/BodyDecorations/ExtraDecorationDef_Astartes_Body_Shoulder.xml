@@ -6,7 +6,7 @@
         <defName>BEWH_DecoDWatchPauldron</defName>
         <label>Deathwatch pauldron</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Armor/Common/Pauldrons/BEWH_Deco_DeathWatch_Shoulder_west</iconPath>
+        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_DeathWatch_Shoulder_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/Pauldrons/BEWH_Deco_DeathWatch_Shoulder</drawnTextureIconPath>
         <sortOrder>0</sortOrder>
         <defaultShowRotation>
@@ -37,7 +37,7 @@
         <defName>BEWH_DecoColorPauldron_1</defName>
         <label>Colorable shoulder 1</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Armor/Common/Pauldrons/BEWH_Deco_Color_Shoulder1_west</iconPath>
+        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_Color_Shoulder1_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/Pauldrons/BEWH_Deco_Color_Shoulder1</drawnTextureIconPath>
         <sortOrder>0.1</sortOrder>
         <defaultShowRotation>
@@ -79,7 +79,7 @@
         <defName>BEWH_DecoColorPauldron_2</defName>
         <label>Colorable shoulder 2</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Armor/Common/Pauldrons/BEWH_Deco_Color_Shoulder1_west</iconPath>
+        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_Color_Shoulder1_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/Pauldrons/BEWH_Deco_Color_Shoulder1</drawnTextureIconPath>
         <sortOrder>0.2</sortOrder>
         <defaultShowRotation>
