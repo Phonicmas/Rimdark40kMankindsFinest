@@ -30,9 +30,9 @@
 
   <HediffDef ParentName="InjuryBase">
     <defName>BEWH_HolyBurn</defName>
-    <label>holy burn</label>
-    <labelNoun>a holy burn</labelNoun>
-    <description>A burn made from holy energy.</description>
+    <label>divine burn</label>
+    <labelNoun>a searing divine burn</labelNoun>
+    <description>Flesh scorched not by flame alone, but by the purging light of holy wrath.</description>
     <comps>
       <li Class="HediffCompProperties_TendDuration">
         <labelTendedWell>bandaged</labelTendedWell>
