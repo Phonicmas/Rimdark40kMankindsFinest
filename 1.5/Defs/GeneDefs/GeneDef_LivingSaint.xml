@@ -343,7 +343,6 @@
                         <layer>81</layer>
                         <offset>(0, -0.5, 0)</offset>
                     </defaultData>
-
                     <dataNorth>
                         <layer>10</layer>
                         <offset>(0, 0.3, 0.2)</offset>
@@ -351,7 +350,6 @@
                     <dataSouth>
                         <offset>(0, -0.1, 0.2)</offset>
                     </dataSouth>
-
                     <dataEast>
                         <offset>(-0.4, -0.3, -0)</offset>
                     </dataEast>

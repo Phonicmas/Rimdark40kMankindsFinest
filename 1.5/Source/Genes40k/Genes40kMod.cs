@@ -72,6 +72,9 @@ public class Genes40kMod : Mod
         scrollViewHeight += listingHeightIncrease;
         if (Settings.livingSaintSystem)
         {
+            listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.LivingSaintMale".Translate(), ref Settings.livingSaintMale);
+            scrollViewHeight += listingHeightIncrease;
+            
             listingStandard.Label("BEWH.MankindsFinest.ModSettings.LivingSaintChance".Translate());
             scrollViewHeight += listingHeightIncrease;
             listingStandard.Label("BEWH.MankindsFinest.ModSettings.LivingSaintBigThreat".Translate(Settings.livingSaintBigThreat));

@@ -13,6 +13,7 @@ public class Genes40kModSettings : ModSettings
     public int perpetualBirthChance = 3;
 
     public bool livingSaintSystem = true;
+    public bool livingSaintMale = false;
     public int livingSaintLimit = 1;
     public float livingSaintBaseChance = 1;
     public int livingSaintBigThreat = 65;
@@ -59,6 +60,7 @@ public class Genes40kModSettings : ModSettings
         Scribe_Values.Look(ref perpetualBirthChance, "perpetualBirthChance", 3);
             
         Scribe_Values.Look(ref livingSaintSystem, "livingSaintSystem", true);
+        Scribe_Values.Look(ref livingSaintMale, "livingSaintMale", false);
         Scribe_Values.Look(ref livingSaintLimit, "livingSaintLimit", 1);
         Scribe_Values.Look(ref livingSaintBaseChance, "livingSaintBaseChance", 1f);
         Scribe_Values.Look(ref livingSaintBigThreat, "livingSaintBigThreat", 65);

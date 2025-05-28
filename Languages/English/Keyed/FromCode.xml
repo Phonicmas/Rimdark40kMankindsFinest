@@ -21,6 +21,7 @@
   <BEWH.MankindsFinest.ModSettings.LivingSaintBigThreat>Big threat: {0}%</BEWH.MankindsFinest.ModSettings.LivingSaintBigThreat>
   <BEWH.MankindsFinest.ModSettings.LivingSaintSmallThreat>Small threat: {0}%</BEWH.MankindsFinest.ModSettings.LivingSaintSmallThreat>
   <BEWH.MankindsFinest.ModSettings.LivingSaintSystem>Enabling this will allow colonist being killed to resurrect as Living Saints.</BEWH.MankindsFinest.ModSettings.LivingSaintSystem>
+  <BEWH.MankindsFinest.ModSettings.LivingSaintMale>Males can become living saints</BEWH.MankindsFinest.ModSettings.LivingSaintMale>
   <BEWH.MankindsFinest.ModSettings.LivingSaintBaseChance>Living Saints base chance: {0}% (other modifiers may increase beyond this)</BEWH.MankindsFinest.ModSettings.LivingSaintBaseChance>
   <BEWH.MankindsFinest.ModSettings.LivingSaintPawnLimit>Living Saint pawn limit: {0}</BEWH.MankindsFinest.ModSettings.LivingSaintPawnLimit>
 

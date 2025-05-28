@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- Wings -->
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_LivingSaintWings_1</defName>
+        <label>Living Saint Wings 1</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Armor/LivingSaint/BEWH_Deco_LSaintWings_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/LivingSaint/BEWH_Deco_LSaintWings</drawnTextureIconPath>
+        <sortOrder>1</sortOrder>
+        <defaultShowRotation>
+            <li>South</li>
+            <li>West</li>
+            <li>East</li>
+            <li>North</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_LivingSaintArmor</li>
+        </appliesTo>
+        <layerOffsets>
+            <li>
+                <key>South</key>
+                <value>-40</value>
+            </li>
+            <li>
+                <key>West</key>
+                <value>-30</value>
+            </li>
+            <li>
+                <key>East</key>
+                <value>-30</value>
+            </li>
+        </layerOffsets>
+        <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>80</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>35</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>45</layer>
+            </dataEast>
+            <dataWest>
+                <layer>45</layer>
+            </dataWest>
+        </drawData>
+        <shaderType>Cutout</shaderType>
+        <flipable>false</flipable>
+        <drawSize>(2, 1)</drawSize>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_LivingSaintWings_2</defName>
+        <label>Living Saint Wings 2</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Armor/LivingSaint/BEWH_Deco_LSaintWings_Aethereal_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/LivingSaint/BEWH_Deco_LSaintWings_Aethereal</drawnTextureIconPath>
+        <sortOrder>2</sortOrder>
+        <defaultShowRotation>
+            <li>South</li>
+            <li>West</li>
+            <li>East</li>
+            <li>North</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_LivingSaintArmor</li>
+        </appliesTo>
+        <drawData>
+            <defaultData>
+                <layer>-1</layer>
+            </defaultData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>80</layer>
+                <offset>(0, 0.1, -0.2)</offset>
+            </dataNorth>
+            <dataSouth>
+                <offset>(0, -0.1, -0.2)</offset>
+            </dataSouth>
+            <dataEast>
+                <offset>(0, -0.1, -0.05)</offset>
+            </dataEast>
+            <dataWest>
+                <offset>(0, -0.1, -0.05)</offset>
+            </dataWest>
+        </drawData>
+        <shaderType>Cutout</shaderType>
+        <flipable>false</flipable>
+    </Core40k.ExtraDecorationDef>
+
+</Defs>
