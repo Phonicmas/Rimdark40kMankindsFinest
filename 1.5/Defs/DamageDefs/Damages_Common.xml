@@ -30,4 +30,5 @@
     <soundExplosion>GunShotA</soundExplosion>
     <combatLogRules>Damage_Bomb</combatLogRules>
   </DamageDef>
+
 </Defs>

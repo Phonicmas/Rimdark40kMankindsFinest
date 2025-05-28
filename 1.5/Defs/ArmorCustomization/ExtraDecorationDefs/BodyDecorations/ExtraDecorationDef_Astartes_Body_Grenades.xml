@@ -6,7 +6,7 @@
         <defName>BEWH_Deco_Grenade_1</defName>
         <label>Grenade 1</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Armor/Common/Grenades/BEWH_Deco_Grenade1_south</iconPath>
+        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_Grenade1_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/Grenades/BEWH_Deco_Grenade1</drawnTextureIconPath>
         <sortOrder>7</sortOrder>
         <defaultShowRotation>
@@ -37,7 +37,7 @@
         <defName>BEWH_Deco_Grenade_2</defName>
         <label>Grenade 2</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Armor/Common/Grenades/BEWH_Deco_Grenade2_south</iconPath>
+        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_Grenade2_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/Grenades/BEWH_Deco_Grenade2</drawnTextureIconPath>
         <sortOrder>7.1</sortOrder>
         <defaultShowRotation>
@@ -68,7 +68,7 @@
         <defName>BEWH_Deco_KrGrenade_1</defName>
         <label>Krak Grenade 1</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Armor/Common/Grenades/BEWH_Deco_KrakGrenade1_south</iconPath>
+        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_KrakGrenade1_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/Grenades/BEWH_Deco_KrakGrenade1</drawnTextureIconPath>
         <sortOrder>7.2</sortOrder>
         <defaultShowRotation>
@@ -99,7 +99,7 @@
         <defName>BEWH_Deco_KrGrenade_2</defName>
         <label>Krak Grenade 2</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Armor/Common/Grenades/BEWH_Deco_KrakGrenade2_south</iconPath>
+        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_KrakGrenade2_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/Grenades/BEWH_Deco_KrakGrenade2</drawnTextureIconPath>
         <sortOrder>7.3</sortOrder>
         <defaultShowRotation>

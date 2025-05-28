@@ -6,7 +6,7 @@
         <defName>BEWH_DecoHood</defName>
         <label>Hood</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Headgear/Common/BEWH_Deco_Hood_south</iconPath>
+        <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_Hood_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Headgear/Common/BEWH_Deco_Hood</drawnTextureIconPath>
         <sortOrder>3</sortOrder>
         <isHelmetDecoration>true</isHelmetDecoration>

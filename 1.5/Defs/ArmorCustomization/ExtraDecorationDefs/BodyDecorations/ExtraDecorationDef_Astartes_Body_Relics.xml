@@ -6,7 +6,7 @@
         <defName>BEWH_DecoRelic_1</defName>
         <label>Relic 1</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Armor/Common/BEWH_Deco_Relic1_south</iconPath>
+        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_Relic1_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_Relic1</drawnTextureIconPath>
         <sortOrder>5</sortOrder>
         <defaultShowRotation>
@@ -37,7 +37,7 @@
         <defName>BEWH_DecoRelic_2</defName>
         <label>Relic 2</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Armor/Common/BEWH_Deco_Relic2_south</iconPath>
+        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_Relic2_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_Relic2</drawnTextureIconPath>
         <sortOrder>5.1</sortOrder>
         <defaultShowRotation>

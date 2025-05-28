@@ -334,7 +334,7 @@
                 <texPath>Things/Pawn/Humanlike/HeadAttachments/HolyRadiance/BEWH_HolyRadiance</texPath>
                 <drawSize>1</drawSize>
                 <parentTagDef>Head</parentTagDef>
-                <!--<shaderTypeDef>TransparentPostLight</shaderTypeDef>-->
+                <shaderTypeDef>TransparentPostLight</shaderTypeDef>
                 <color>(255, 255, 255, 200)</color>
                 <colorType>Custom</colorType>
                 <rotDrawMode>Fresh</rotDrawMode>
