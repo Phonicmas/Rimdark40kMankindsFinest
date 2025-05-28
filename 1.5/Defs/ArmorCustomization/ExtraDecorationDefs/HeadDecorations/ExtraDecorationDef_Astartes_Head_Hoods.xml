@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-    
+
     <!-- Hoods -->
     <Core40k.ExtraDecorationDef>
         <defName>BEWH_DecoHood</defName>
@@ -21,20 +21,21 @@
             <li>BEWH_MkXPowerArmorHelmet</li>
             <li>BEWH_MkXPowerArmorChaplainHelmet</li>
         </appliesTo>
-        <layerOffsets>
-            <li>
-                <key>South</key>
-                <value>5</value>
-            </li>
-            <li>
-                <key>East</key>
-                <value>-4</value>
-            </li>
-            <li>
-                <key>West</key>
-                <value>-4</value>
-            </li>
-        </layerOffsets>
+        <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>76</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>81</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>72</layer>
+            </dataEast>
+            <dataWest>
+                <layer>72</layer>
+            </dataWest>
+        </drawData>
         <colourable>true</colourable>
         <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
         <useArmorColourAsDefault>true</useArmorColourAsDefault>

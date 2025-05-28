@@ -19,16 +19,21 @@
             <li>BEWH_MkXPowerArmor</li>
             <li>BEWH_MkXPowerArmorChaplain</li>
         </appliesTo>
-        <layerOffsets>
-            <li>
-                <key>South</key>
-                <value>-7</value>                <!-- REEEEEEE!!!!1 if the value is -6.9 (nice) or higher it renders on top of the helmet (which makes Cheese a dull boi) -->
-            </li>
-            <li>
-                <key>North</key>
-                <value>0.5</value>
-            </li>
-        </layerOffsets>
+        <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>76.5</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>69</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>76</layer>
+            </dataEast>
+            <dataWest>
+                <layer>76</layer>
+            </dataWest>
+        </drawData>
         <shaderType>Cutout</shaderType>
         <flipable>true</flipable>
     </Core40k.ExtraDecorationDef>
@@ -50,24 +55,21 @@
             <li>BEWH_MkXPowerArmor</li>
             <li>BEWH_MkXPowerArmorChaplain</li>
         </appliesTo>
-        <layerOffsets>
-            <li>
-                <key>South</key>
-                <value>-8</value>
-            </li>
-            <li>
-                <key>North</key>
-                <value>-5</value>
-            </li>
-            <li>
-                <key>East</key>
-                <value>-1</value>
-            </li>
-            <li>
-                <key>West</key>
-                <value>-4</value>
-            </li>
-        </layerOffsets>
+        <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>71</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>68</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>75</layer>
+            </dataEast>
+            <dataWest>
+                <layer>72</layer>
+            </dataWest>
+        </drawData>
         <shaderType>Cutout</shaderType>
         <flipable>true</flipable>
         <colourable>true</colourable>
@@ -92,24 +94,21 @@
             <li>BEWH_MkXPowerArmor</li>
             <li>BEWH_MkXPowerArmorChaplain</li>
         </appliesTo>
-        <layerOffsets>
-            <li>
-                <key>South</key>
-                <value>-8</value>
-            </li>
-            <li>
-                <key>North</key>
-                <value>-5</value>
-            </li>
-            <li>
-                <key>East</key>
-                <value>-1</value>
-            </li>
-            <li>
-                <key>West</key>
-                <value>-4</value>
-            </li>
-        </layerOffsets>
+        <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>71</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>68</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>75</layer>
+            </dataEast>
+            <dataWest>
+                <layer>72</layer>
+            </dataWest>
+        </drawData>
         <shaderType>Cutout</shaderType>
         <flipable>true</flipable>
         <colourable>true</colourable>

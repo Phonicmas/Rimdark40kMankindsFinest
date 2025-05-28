@@ -147,7 +147,7 @@
         </exclusionTags>
         <renderNodeProperties>
             <li>
-                <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+                <workerClass>Genes40k.PawnRenderNodeWorker_LivingSaintAttachmentBody</workerClass>
                 <texPath>Things/Pawn/Humanlike/BodyAttachments/DivineWings/BEWH_DivineWings_Aethereal</texPath>
                 <drawSize>1.4</drawSize>
                 <parentTagDef>Body</parentTagDef>
@@ -330,7 +330,7 @@
         <renderNodeProperties>
             <li>
                 <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
-                <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+                <workerClass>Genes40k.PawnRenderNodeWorker_LivingSaintAttachmentHead</workerClass>
                 <texPath>Things/Pawn/Humanlike/HeadAttachments/HolyRadiance/BEWH_HolyRadiance</texPath>
                 <drawSize>1</drawSize>
                 <parentTagDef>Head</parentTagDef>

@@ -22,20 +22,21 @@
         <colourable>true</colourable>
         <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
         <useArmorColourAsDefault>true</useArmorColourAsDefault>
-        <layerOffsets>
-            <li>
-                <key>South</key>
-                <value>0</value>
-            </li>
-            <li>
-                <key>East</key>
-                <value>-5</value>
-            </li>
-            <li>
-                <key>West</key>
-                <value>-5</value>
-            </li>
-        </layerOffsets>
+        <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>76</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>76</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>71</layer>
+            </dataEast>
+            <dataWest>
+                <layer>71</layer>
+            </dataWest>
+        </drawData>
         <shaderType>Cutout</shaderType>
     </Core40k.ExtraDecorationDef>
 
@@ -58,20 +59,21 @@
         <colourable>true</colourable>
         <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
         <useArmorColourAsDefault>true</useArmorColourAsDefault>
-        <layerOffsets>
-            <li>
-                <key>South</key>
-                <value>0</value>
-            </li>
-            <li>
-                <key>East</key>
-                <value>-5</value>
-            </li>
-            <li>
-                <key>West</key>
-                <value>-5</value>
-            </li>
-        </layerOffsets>
+        <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>76</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>76</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>71</layer>
+            </dataEast>
+            <dataWest>
+                <layer>71</layer>
+            </dataWest>
+        </drawData>
         <availablePresets>
             <li>BEWH_DecoPaletteGold</li>
             <li>BEWH_DecoPaletteGreen</li>
@@ -100,20 +102,21 @@
         <colourable>true</colourable>
         <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
         <useArmorColourAsDefault>true</useArmorColourAsDefault>
-        <layerOffsets>
-            <li>
-                <key>South</key>
-                <value>0.2</value>
-            </li>
-            <li>
-                <key>East</key>
-                <value>-5</value>
-            </li>
-            <li>
-                <key>West</key>
-                <value>-5</value>
-            </li>
-        </layerOffsets>
+        <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>76</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>76.2</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>71</layer>
+            </dataEast>
+            <dataWest>
+                <layer>71</layer>
+            </dataWest>
+        </drawData>
         <availablePresets>
             <li>BEWH_DecoPaletteGold</li>
             <li>BEWH_DecoPaletteGreen</li>

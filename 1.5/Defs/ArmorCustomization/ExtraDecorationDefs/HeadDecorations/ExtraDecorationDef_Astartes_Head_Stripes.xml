@@ -20,20 +20,21 @@
             <li>BEWH_MkVIIPowerArmorHelmet</li>
         </appliesTo>
         <colourable>true</colourable>
-        <layerOffsets>
-            <li>
-                <key>South</key>
-                <value>-1</value>
-            </li>
-            <li>
-                <key>East</key>
-                <value>-4</value>
-            </li>
-            <li>
-                <key>West</key>
-                <value>-6</value>
-            </li>
-        </layerOffsets>
+        <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>76</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>75</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>72</layer>
+            </dataEast>
+            <dataWest>
+                <layer>70</layer>
+            </dataWest>
+        </drawData>
         <availablePresets>
             <li>BEWH_DecoPaletteGold</li>
             <!-- <li>BEWH_DecoPaletteGreen</li> -->
@@ -62,24 +63,21 @@
             <li>BEWH_MkXPowerArmorHelmet</li>
         </appliesTo>
         <colourable>true</colourable>
-        <layerOffsets>
-            <li>
-                <key>South</key>
-                <value>-1</value>
-            </li>
-            <li>
-                <key>North</key>
-                <value>-6</value>
-            </li>
-            <li>
-                <key>East</key>
-                <value>-4</value>
-            </li>
-            <li>
-                <key>West</key>
-                <value>-6</value>
-            </li>
-        </layerOffsets>
+        <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>70</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>75</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>72</layer>
+            </dataEast>
+            <dataWest>
+                <layer>70</layer>
+            </dataWest>
+        </drawData>
         <availablePresets>
             <li>BEWH_DecoPaletteGold</li>
             <!-- <li>BEWH_DecoPaletteGreen</li> -->
@@ -108,20 +106,21 @@
             <li>BEWH_MkVIIPowerArmorHelmet</li>
         </appliesTo>
         <colourable>false</colourable>
-        <layerOffsets>
-            <li>
-                <key>South</key>
-                <value>-1</value>
-            </li>
-            <li>
-                <key>East</key>
-                <value>-4</value>
-            </li>
-            <li>
-                <key>West</key>
-                <value>-5</value>
-            </li>
-        </layerOffsets>
+        <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>76</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>75</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>72</layer>
+            </dataEast>
+            <dataWest>
+                <layer>71</layer>
+            </dataWest>
+        </drawData>
         <shaderType>Cutout</shaderType>
     </Core40k.ExtraDecorationDef>
 
@@ -143,24 +142,21 @@
             <li>BEWH_MkXPowerArmorHelmet</li>
         </appliesTo>
         <colourable>false</colourable>
-        <layerOffsets>
-            <li>
-                <key>South</key>
-                <value>-1</value>
-            </li>
-            <li>
-                <key>North</key>
-                <value>-6</value>
-            </li>
-            <li>
-                <key>East</key>
-                <value>-4</value>
-            </li>
-            <li>
-                <key>West</key>
-                <value>-5</value>
-            </li>
-        </layerOffsets>
+        <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>70</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>75</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>72</layer>
+            </dataEast>
+            <dataWest>
+                <layer>70</layer>
+            </dataWest>
+        </drawData>
         <shaderType>Cutout</shaderType>
     </Core40k.ExtraDecorationDef>
 

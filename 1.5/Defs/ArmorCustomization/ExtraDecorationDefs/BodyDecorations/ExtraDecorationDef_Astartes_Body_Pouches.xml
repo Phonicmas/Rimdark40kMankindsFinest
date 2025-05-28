@@ -19,20 +19,21 @@
             <li>BEWH_MkXPowerArmor</li>
             <li>BEWH_MkXPowerArmorChaplain</li>
         </appliesTo>
-        <layerOffsets>
-            <li>
-                <key>West</key>
-                <value>-12</value>
-            </li>
-            <li>
-                <key>East</key>
-                <value>-12</value>
-            </li>
-            <li>
-                <key>North</key>
-                <value>-1</value>
-            </li>
-        </layerOffsets>
+        <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>75</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>76</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>64</layer>
+            </dataEast>
+            <dataWest>
+                <layer>64</layer>
+            </dataWest>
+        </drawData>
         <shaderType>Cutout</shaderType>
         <colourable>true</colourable>
         <availablePresets>
@@ -59,16 +60,21 @@
             <li>BEWH_MkVIIPowerArmor</li>
             <li>BEWH_MkXPowerArmor</li>
         </appliesTo>
-        <layerOffsets>
-            <li>
-                <key>West</key>
-                <value>-10</value>
-            </li>
-            <li>
-                <key>East</key>
-                <value>-10</value>
-            </li>
-        </layerOffsets>
+        <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>76</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>76</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>66</layer>
+            </dataEast>
+            <dataWest>
+                <layer>66</layer>
+            </dataWest>
+        </drawData>
         <shaderType>Cutout</shaderType>
         <colourable>true</colourable>
         <availablePresets>

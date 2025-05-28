@@ -26,6 +26,12 @@ public class LivingSaintAscension
         {
             return;
         }
+
+        if (!Genes40kUtils.ModSettings.livingSaintMale && __instance.gender == Gender.Male)
+        {
+            return;
+        }
+        
         if (__instance.Faction != Faction.OfPlayer || __instance.genes == null)
         {
             return;
@@ -145,6 +151,11 @@ public class LivingSaintAscension
         {
             __instance.equipment.AddEquipment(lSSword);
             __instance.inventory.TryAddAndUnforbid(lSPistol);
+        }
+        
+        if (__instance.gender != Gender.Male)
+        {
+            //Give Armor
         }
             
         gComp.AddSaintToSpawnable(__instance);

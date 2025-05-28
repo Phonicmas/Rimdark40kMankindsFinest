@@ -18,20 +18,6 @@
         <appliesTo>
             <li>BEWH_LivingSaintArmor</li>
         </appliesTo>
-        <layerOffsets>
-            <li>
-                <key>South</key>
-                <value>-40</value>
-            </li>
-            <li>
-                <key>West</key>
-                <value>-30</value>
-            </li>
-            <li>
-                <key>East</key>
-                <value>-30</value>
-            </li>
-        </layerOffsets>
         <drawData>
             <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
             <dataNorth>
@@ -56,8 +42,8 @@
         <defName>BEWH_LivingSaintWings_2</defName>
         <label>Living Saint Wings 2</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Armor/LivingSaint/BEWH_Deco_LSaintWings_Aethereal_south</iconPath>
-        <drawnTextureIconPath>Things/Decorations/Armor/LivingSaint/BEWH_Deco_LSaintWings_Aethereal</drawnTextureIconPath>
+        <iconPath>Things/Pawn/Humanlike/BodyAttachments/DivineWings/BEWH_DivineWings_Aethereal_south</iconPath>
+        <drawnTextureIconPath>Things/Pawn/Humanlike/BodyAttachments/DivineWings/BEWH_DivineWings_Aethereal</drawnTextureIconPath>
         <sortOrder>2</sortOrder>
         <defaultShowRotation>
             <li>South</li>

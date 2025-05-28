@@ -19,16 +19,21 @@
             <li>BEWH_MkVIIPowerArmor</li>
             <li>BEWH_MkXPowerArmor</li>
         </appliesTo>
-        <layerOffsets>
-            <li>
-                <key>South</key>
-                <value>4</value>
-            </li>
-            <li>
-                <key>North</key>
-                <value>4</value>
-            </li>
-        </layerOffsets>
+        <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>80</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>80</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>76</layer>
+            </dataEast>
+            <dataWest>
+                <layer>76</layer>
+            </dataWest>
+        </drawData>
         <shaderType>Cutout</shaderType>
         <flipable>true</flipable>
     </Core40k.ExtraDecorationDef>
@@ -50,20 +55,21 @@
             <li>BEWH_MkVIIPowerArmor</li>
             <li>BEWH_MkXPowerArmor</li>
         </appliesTo>
-        <layerOffsets>
-            <li>
-                <key>South</key>
-                <value>10</value>
-            </li>
-            <li>
-                <key>West</key>
-                <value>8</value>
-            </li>
-            <li>
-                <key>East</key>
-                <value>8</value>
-            </li>
-        </layerOffsets>
+        <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>76</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>86</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>84</layer>
+            </dataEast>
+            <dataWest>
+                <layer>84</layer>
+            </dataWest>
+        </drawData>
         <availablePresets>
             <li>BEWH_DecoPaletteGold</li>
             <li>BEWH_DecoPaletteSilver</li>
@@ -92,20 +98,21 @@
             <li>BEWH_MkVIIPowerArmor</li>
             <li>BEWH_MkXPowerArmor</li>
         </appliesTo>
-        <layerOffsets>
-            <li>
-                <key>South</key>
-                <value>10</value>
-            </li>
-            <li>
-                <key>West</key>
-                <value>8</value>
-            </li>
-            <li>
-                <key>East</key>
-                <value>8</value>
-            </li>
-        </layerOffsets>
+        <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>76</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>86</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>84</layer>
+            </dataEast>
+            <dataWest>
+                <layer>84</layer>
+            </dataWest>
+        </drawData>
         <availablePresets>
             <li>BEWH_DecoPaletteGold</li>
             <li>BEWH_DecoPaletteSilver</li>

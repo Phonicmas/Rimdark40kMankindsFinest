@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-    
+
     <!-- Visors -->
     <Core40k.ExtraDecorationDef>
         <defName>BEWH_Deco_Visor_1</defName>
@@ -20,24 +20,21 @@
             <li>BEWH_MkVIIPowerArmorHelmet</li>
             <li>BEWH_MkXPowerArmorHelmet</li>
         </appliesTo>
-        <layerOffsets>
-            <li>
-                <key>South</key>
-                <value>5</value>
-            </li>
-            <li>
-                <key>East</key>
-                <value>-4</value>
-            </li>
-            <li>
-                <key>West</key>
-                <value>-5</value>
-            </li>
-            <li>
-                <key>North</key>
-                <value>0.5</value>
-            </li>
-        </layerOffsets>
+        <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>76.5</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>81</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>72</layer>
+            </dataEast>
+            <dataWest>
+                <layer>71</layer>
+            </dataWest>
+        </drawData>
         <shaderType>CutoutComplex</shaderType>
         <colourable>true</colourable>
         <useMask>true</useMask>

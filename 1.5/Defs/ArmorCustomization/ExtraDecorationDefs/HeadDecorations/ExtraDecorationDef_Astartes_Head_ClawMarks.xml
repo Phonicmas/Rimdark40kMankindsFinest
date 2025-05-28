@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-    
+
     <!-- Claw marks -->
     <Core40k.ExtraDecorationDef>
         <defName>BEWH_MkVIIclawMarks_1</defName>        <!-- Mark VII -->
@@ -18,24 +18,21 @@
         <appliesTo>
             <li>BEWH_MkVIIPowerArmorHelmet</li>
         </appliesTo>
-        <layerOffsets>
-            <li>
-                <key>South</key>
-                <value>4</value>
-            </li>
-            <li>
-                <key>North</key>
-                <value>2</value>
-            </li>
-            <li>
-                <key>East</key>
-                <value>-5</value>
-            </li>
-            <li>
-                <key>West</key>
-                <value>-5</value>
-            </li>
-        </layerOffsets>
+        <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>78</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>80</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>71</layer>
+            </dataEast>
+            <dataWest>
+                <layer>71</layer>
+            </dataWest>
+        </drawData>
         <flipable>true</flipable>
         <shaderType>Cutout</shaderType>
     </Core40k.ExtraDecorationDef>
@@ -56,24 +53,21 @@
         <appliesTo>
             <li>BEWH_MkXPowerArmorHelmet</li>
         </appliesTo>
-        <layerOffsets>
-            <li>
-                <key>South</key>
-                <value>4</value>
-            </li>
-            <li>
-                <key>North</key>
-                <value>2</value>
-            </li>
-            <li>
-                <key>East</key>
-                <value>-5</value>
-            </li>
-            <li>
-                <key>West</key>
-                <value>-5</value>
-            </li>
-        </layerOffsets>
+        <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>78</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>80</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>71</layer>
+            </dataEast>
+            <dataWest>
+                <layer>71</layer>
+            </dataWest>
+        </drawData>
         <flipable>true</flipable>
         <shaderType>Cutout</shaderType>
     </Core40k.ExtraDecorationDef>
@@ -94,24 +88,21 @@
         <appliesTo>
             <li>BEWH_MkVIIPowerArmorHelmet</li>
         </appliesTo>
-        <layerOffsets>
-            <li>
-                <key>South</key>
-                <value>4</value>
-            </li>
-            <li>
-                <key>North</key>
-                <value>2</value>
-            </li>
-            <li>
-                <key>East</key>
-                <value>-5</value>
-            </li>
-            <li>
-                <key>West</key>
-                <value>-5</value>
-            </li>
-        </layerOffsets>
+        <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>78</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>80</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>71</layer>
+            </dataEast>
+            <dataWest>
+                <layer>71</layer>
+            </dataWest>
+        </drawData>
         <flipable>true</flipable>
         <shaderType>Cutout</shaderType>
     </Core40k.ExtraDecorationDef>
@@ -132,24 +123,21 @@
         <appliesTo>
             <li>BEWH_MkXPowerArmorHelmet</li>
         </appliesTo>
-        <layerOffsets>
-            <li>
-                <key>South</key>
-                <value>4</value>
-            </li>
-            <li>
-                <key>North</key>
-                <value>2</value>
-            </li>
-            <li>
-                <key>East</key>
-                <value>-5</value>
-            </li>
-            <li>
-                <key>West</key>
-                <value>-5</value>
-            </li>
-        </layerOffsets>
+        <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>78</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>80</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>71</layer>
+            </dataEast>
+            <dataWest>
+                <layer>71</layer>
+            </dataWest>
+        </drawData>
         <flipable>true</flipable>
         <shaderType>Cutout</shaderType>
     </Core40k.ExtraDecorationDef>

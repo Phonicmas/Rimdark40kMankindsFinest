@@ -20,24 +20,21 @@
             <li>BEWH_MkXPowerArmor</li>
             <li>BEWH_MkXPowerArmorChaplain</li>
         </appliesTo>
-        <layerOffsets>
-            <li>
-                <key>South</key>
-                <value>5</value>
-            </li>
-            <li>
-                <key>North</key>
-                <value>5</value>
-            </li>
-            <li>
-                <key>East</key>
-                <value>5</value>
-            </li>
-            <li>
-                <key>West</key>
-                <value>5</value>
-            </li>
-        </layerOffsets>
+        <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>81</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>81</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>81</layer>
+            </dataEast>
+            <dataWest>
+                <layer>81</layer>
+            </dataWest>
+        </drawData>
         <shaderType>Cutout</shaderType>
         <flipable>true</flipable>
     </Core40k.ExtraDecorationDef>
@@ -59,24 +56,21 @@
             <li>BEWH_MkXPowerArmor</li>
             <li>BEWH_MkXPowerArmorChaplain</li>
         </appliesTo>
-        <layerOffsets>
-            <li>
-                <key>South</key>
-                <value>5</value>
-            </li>
-            <li>
-                <key>North</key>
-                <value>5</value>
-            </li>
-            <li>
-                <key>East</key>
-                <value>5</value>
-            </li>
-            <li>
-                <key>West</key>
-                <value>5</value>
-            </li>
-        </layerOffsets>
+        <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>81</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>81</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>81</layer>
+            </dataEast>
+            <dataWest>
+                <layer>81</layer>
+            </dataWest>
+        </drawData>
         <shaderType>Cutout</shaderType>
         <flipable>true</flipable>
     </Core40k.ExtraDecorationDef>
@@ -97,12 +91,21 @@
             <li>BEWH_MkVIIPowerArmor</li>
             <li>BEWH_MkXPowerArmor</li>
         </appliesTo>
-        <layerOffsets>
-            <li>
-                <key>North</key>
-                <value>5</value>
-            </li>
-        </layerOffsets>
+        <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>81</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>76</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>76</layer>
+            </dataEast>
+            <dataWest>
+                <layer>76</layer>
+            </dataWest>
+        </drawData>
         <shaderType>Cutout</shaderType>
         <flipable>true</flipable>
     </Core40k.ExtraDecorationDef>
@@ -144,16 +147,21 @@
             <li>BEWH_MkXPowerArmor</li>
             <li>BEWH_MkXPowerArmorChaplain</li>
         </appliesTo>
-        <layerOffsets>
-            <li>
-                <key>West</key>
-                <value>-12</value>
-            </li>
-            <li>
-                <key>East</key>
-                <value>-12</value>
-            </li>
-        </layerOffsets>
+        <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>76</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>76</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>74</layer>
+            </dataEast>
+            <dataWest>
+                <layer>74</layer>
+            </dataWest>
+        </drawData>
         <shaderType>Cutout</shaderType>
         <flipable>true</flipable>
     </Core40k.ExtraDecorationDef>

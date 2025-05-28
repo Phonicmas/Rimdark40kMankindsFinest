@@ -99,6 +99,8 @@
     <Compile Include="ChapterApparelColourTwo\PawnRenderNodeWorker_AttachmentShoulderChapterIcon.cs" />
     <Compile Include="ChapterApparelColourTwo\PawnRenderNodeWorker_AttachmentShoulderPad.cs" />
     <Compile Include="ChapterApparelColourTwo\PawnRenderNodeWorker_AttachmentShoulderRankIcon.cs" />
+    <Compile Include="ChapterApparelColourTwo\PawnRenderNodeWorker_LivingSaintAttachmentBody.cs" />
+    <Compile Include="ChapterApparelColourTwo\PawnRenderNodeWorker_LivingSaintAttachmentHead.cs" />
     <Compile Include="ChapterApparelColourTwo\PawnRenderNode_AttachmentBackpack.cs" />
     <Compile Include="ChapterApparelColourTwo\PawnRenderNode_AttachmentShoulderChapterIcon.cs" />
     <Compile Include="ChapterApparelColourTwo\PawnRenderNode_AttachmentChapterApparelColour.cs" />

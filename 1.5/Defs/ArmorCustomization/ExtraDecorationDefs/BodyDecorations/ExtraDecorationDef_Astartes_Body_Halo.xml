@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-    
+
     <!-- Halos -->
     <Core40k.ExtraDecorationDef>
         <defName>BEWH_IronHalo_1</defName>
@@ -20,24 +20,21 @@
             <li>BEWH_MkXPowerArmor</li>
             <li>BEWH_MkXPowerArmorChaplain</li>
         </appliesTo>
-        <layerOffsets>
-            <li>
-                <key>South</key>
-                <value>-40</value>
-            </li>
-            <li>
-                <key>East</key>
-                <value>-40</value>
-            </li>
-            <li>
-                <key>West</key>
-                <value>-40</value>
-            </li>
-            <li>
-                <key>North</key>
-                <value>4</value>
-            </li>
-        </layerOffsets>
+        <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>80</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>36</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>36</layer>
+            </dataEast>
+            <dataWest>
+                <layer>36</layer>
+            </dataWest>
+        </drawData>
         <colourable>true</colourable>
         <availablePresets>
             <li>BEWH_DecoPaletteGold</li>
@@ -67,24 +64,21 @@
             <li>BEWH_MkXPowerArmor</li>
             <li>BEWH_MkXPowerArmorChaplain</li>
         </appliesTo>
-        <layerOffsets>
-            <li>
-                <key>South</key>
-                <value>-40</value>
-            </li>
-            <li>
-                <key>East</key>
-                <value>-40</value>
-            </li>
-            <li>
-                <key>West</key>
-                <value>-40</value>
-            </li>
-            <li>
-                <key>North</key>
-                <value>0</value>
-            </li>
-        </layerOffsets>
+        <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>76</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>36</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>36</layer>
+            </dataEast>
+            <dataWest>
+                <layer>36</layer>
+            </dataWest>
+        </drawData>
         <colourable>true</colourable>
         <availablePresets>
             <li>BEWH_DecoPaletteGold</li>
