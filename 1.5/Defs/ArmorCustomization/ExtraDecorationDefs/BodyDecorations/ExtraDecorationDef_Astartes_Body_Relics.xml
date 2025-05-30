@@ -65,6 +65,7 @@
             </dataSouth>
             <dataEast>
                 <layer>64</layer>
+                <flip>true</flip>
             </dataEast>
             <dataWest>
                 <layer>64</layer>

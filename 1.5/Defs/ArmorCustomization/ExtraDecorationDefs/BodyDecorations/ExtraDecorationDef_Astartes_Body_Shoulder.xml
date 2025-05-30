@@ -29,6 +29,7 @@
             </dataSouth>
             <dataEast>
                 <layer>76</layer>
+                <flip>true</flip>
             </dataEast>
             <dataWest>
                 <layer>76</layer>
@@ -65,6 +66,7 @@
             </dataSouth>
             <dataEast>
                 <layer>75</layer>
+                <flip>true</flip>
             </dataEast>
             <dataWest>
                 <layer>72</layer>
@@ -104,6 +106,7 @@
             </dataSouth>
             <dataEast>
                 <layer>75</layer>
+                <flip>true</flip>
             </dataEast>
             <dataWest>
                 <layer>72</layer>

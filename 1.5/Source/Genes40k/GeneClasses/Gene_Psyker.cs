@@ -1,12 +1,14 @@
 ﻿using System.Linq;
-using Core40k;
+using Verse;
 
 namespace Genes40k;
 
-public class Gene_Psyker : Gene_AddRandomGeneAndOrTraitByWeight
+public class Gene_Psyker : Gene
 {
     public override void PostAdd()
     {
+        base.PostAdd();
+        
         var psykerGenes = pawn.genes.GenesListForReading.Where(gene => gene is Gene_Psyker).ToList();
 
         var genesToRemove = psykerGenes.Where(psykerGene => psykerGene.def.displayOrderInCategory < def.displayOrderInCategory);
@@ -17,8 +19,6 @@ public class Gene_Psyker : Gene_AddRandomGeneAndOrTraitByWeight
         {
             pawn.genes.RemoveGene(gene);
         }
-            
-        base.PostAdd();
 
         if (removeSelf)
         {
