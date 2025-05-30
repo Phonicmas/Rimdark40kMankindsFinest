@@ -149,8 +149,9 @@
             <li>
                 <workerClass>Genes40k.PawnRenderNodeWorker_LivingSaintAttachmentBody</workerClass>
                 <texPath>Things/Pawn/Humanlike/BodyAttachments/DivineWings/BEWH_DivineWings_Aethereal</texPath>
-                <drawSize>1.4</drawSize>
+                <drawSize>1</drawSize>
                 <parentTagDef>Body</parentTagDef>
+				<shaderTypeDef>TransparentPostLight</shaderTypeDef>
                 <color>(255, 255, 255, 200)</color>
                 <drawData>
                     <defaultData>
@@ -159,17 +160,7 @@
                     <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
                     <dataNorth>
                         <layer>90</layer>
-                        <offset>(0, 0.1, -0.2)</offset>
                     </dataNorth>
-                    <dataSouth>
-                        <offset>(0, -0.1, -0.2)</offset>
-                    </dataSouth>
-                    <dataEast>
-                        <offset>(0, -0.1, -0.05)</offset>
-                    </dataEast>
-                    <dataWest>
-                        <offset>(0, -0.1, -0.05)</offset>
-                    </dataWest>
                 </drawData>
             </li>
         </renderNodeProperties>
@@ -332,7 +323,7 @@
                 <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
                 <workerClass>Genes40k.PawnRenderNodeWorker_LivingSaintAttachmentHead</workerClass>
                 <texPath>Things/Pawn/Humanlike/HeadAttachments/HolyRadiance/BEWH_HolyRadiance</texPath>
-                <drawSize>1</drawSize>
+                <drawSize>0.9</drawSize>
                 <parentTagDef>Head</parentTagDef>
                 <shaderTypeDef>TransparentPostLight</shaderTypeDef>
                 <color>(255, 255, 255, 200)</color>
@@ -348,13 +339,13 @@
                         <offset>(0, 0.3, 0.2)</offset>
                     </dataNorth>
                     <dataSouth>
-                        <offset>(0, -0.1, 0.2)</offset>
+                        <offset>(0, -1, 0.2)</offset>
                     </dataSouth>
                     <dataEast>
-                        <offset>(-0.4, -0.3, -0)</offset>
+                        <offset>(-0.4, -0.3, 0)</offset>
                     </dataEast>
                     <dataWest>
-                        <offset>(0.4, -0.3, -0)</offset>
+                        <offset>(0.4, -0.3, 0)</offset>
                     </dataWest>
                 </drawData>
             </li>

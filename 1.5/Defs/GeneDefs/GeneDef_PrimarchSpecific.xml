@@ -301,17 +301,17 @@
                     </defaultData>
                     <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
                     <dataNorth>
-                        <layer>90</layer>
-                        <offset>(0, 0.1, -0.2)</offset>
+                        <layer>50</layer>
+                        <offset>(0, 0.1, 0)</offset>
                     </dataNorth>
                     <dataSouth>
-                        <offset>(0, -0.1, -0.2)</offset>
+                        <offset>(0, -0.1, 0)</offset>
                     </dataSouth>
                     <dataEast>
-                        <offset>(0, -0.1, -0.05)</offset>
+                        <offset>(0, -0.1, 0)</offset>
                     </dataEast>
                     <dataWest>
-                        <offset>(0, -0.1, -0.05)</offset>
+                        <offset>(0, -0.1, 0)</offset>
                     </dataWest>
                 </drawData>
             </li>
