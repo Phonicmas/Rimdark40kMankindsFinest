@@ -22,28 +22,32 @@
             <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
             <dataNorth>
                 <layer>80</layer>
+				<offset>(0, 0, 0.24)</offset>
             </dataNorth>
             <dataSouth>
                 <layer>35</layer>
+				<offset>(0, 0, 0.24)</offset>
             </dataSouth>
             <dataEast>
-                <layer>45</layer>
+                <layer>50</layer>
+				<offset>(0, 0, 0.33)</offset>
             </dataEast>
             <dataWest>
-                <layer>45</layer>
+                <layer>50</layer>
+				<offset>(0, 0, 0.33)</offset>
             </dataWest>
         </drawData>
         <shaderType>Cutout</shaderType>
         <flipable>false</flipable>
-        <drawSize>(2, 1)</drawSize>
+        <drawSize>(1.5, 0.75)</drawSize>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
         <defName>BEWH_LivingSaintWings_2</defName>
         <label>Living Saint Wings 2</label>
         <description>...</description>
-        <iconPath>Things/Pawn/Humanlike/BodyAttachments/DivineWings/BEWH_DivineWings_Aethereal_south</iconPath>
-        <drawnTextureIconPath>Things/Pawn/Humanlike/BodyAttachments/DivineWings/BEWH_DivineWings_Aethereal</drawnTextureIconPath>
+        <iconPath>Things/Decorations/Armor/LivingSaint/BEWH_Deco_DivineWings_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/LivingSaint/BEWH_Deco_DivineWings</drawnTextureIconPath>
         <sortOrder>2</sortOrder>
         <defaultShowRotation>
             <li>South</li>
@@ -61,19 +65,19 @@
             <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
             <dataNorth>
                 <layer>80</layer>
-                <offset>(0, 0.1, -0.2)</offset>
+                <offset>(0, 0.1, 0)</offset>
             </dataNorth>
             <dataSouth>
-                <offset>(0, -0.1, -0.2)</offset>
+                <offset>(0, -0.1, 0)</offset>
             </dataSouth>
             <dataEast>
-                <offset>(0, -0.1, -0.05)</offset>
+                <offset>(0, -0.1, 0)</offset>
             </dataEast>
             <dataWest>
-                <offset>(0, -0.1, -0.05)</offset>
+                <offset>(0, -0.1, 0)</offset>
             </dataWest>
         </drawData>
-        <shaderType>Cutout</shaderType>
+        <shaderType>TransparentPostLight</shaderType>
         <flipable>false</flipable>
     </Core40k.ExtraDecorationDef>
 
