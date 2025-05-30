@@ -399,9 +399,18 @@
                     <texPath>Things/Armor/Imperium/PowerArmor/LivingSaint/BEWH_LSaintArmor</texPath>
                     <parentTagDef>Body</parentTagDef>
                     <drawData>
-                        <defaultData>
+                        <dataEast>
                             <layer>40</layer>
-                        </defaultData>
+                        </dataEast>
+                        <dataWest>
+                            <layer>40</layer>
+                        </dataWest>
+                        <dataNorth>
+                            <layer>50</layer>
+                        </dataNorth>
+                        <dataSouth>
+                            <layer>40</layer>
+                        </dataSouth>
                     </drawData>
                 </li>
             </renderNodeProperties>
