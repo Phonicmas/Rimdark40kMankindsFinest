@@ -155,7 +155,23 @@ public class LivingSaintAscension
         
         if (__instance.gender != Gender.Male)
         {
-            //Give Armor
+            var lSArmor = (Apparel)ThingMaker.MakeThing(Genes40kDefOf.BEWH_LivingSaintArmor);
+            lSArmor.TryGetComp<CompBiocodable>().CodeFor(__instance);
+            lSArmor.TryGetComp<CompQuality>().SetQuality(QualityCategory.Legendary, ArtGenerationContext.Outsider);
+
+            if (!__instance.apparel.CanWearWithoutDroppingAnything(Genes40kDefOf.BEWH_LivingSaintArmor))
+            {
+                bool Predicate(Apparel a) => a.def.apparel.layers.Contains(ApparelLayerDefOf.Shell);
+                __instance.apparel.MoveAllToInventory(selector: Predicate);
+            }
+            
+            __instance.apparel.Wear(lSArmor);
+
+            if (lSArmor is LivingSaintBodyDecorativeApparelColourTwo lSArmorDeco)
+            {
+                lSArmorDeco.AddOrRemoveDecoration(Genes40kDefOf.BEWH_LivingSaintHalo_1);
+                lSArmorDeco.AddOrRemoveDecoration(Genes40kDefOf.BEWH_LivingSaintWings_2);
+            }
         }
             
         gComp.AddSaintToSpawnable(__instance);

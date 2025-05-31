@@ -155,6 +155,7 @@ public static class Genes40kDefOf
         
     public static ThingDef BEWH_LSaintSword;
     public static ThingDef BEWH_LSaintBoltPistol;
+    public static ThingDef BEWH_LivingSaintArmor;
 
     //JobDefs
     public static JobDef BEWH_FillGeneGestator;
@@ -194,6 +195,10 @@ public static class Genes40kDefOf
         
     //FactionDefs
     public static AbilityCategoryDef Psychic;
+    
+    //ExtraDecorationDef
+    public static ExtraDecorationDef BEWH_LivingSaintHalo_1;
+    public static ExtraDecorationDef BEWH_LivingSaintWings_2;
         
     static Genes40kDefOf()
     {

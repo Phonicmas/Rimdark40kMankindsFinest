@@ -16,9 +16,11 @@ public class LivingSaintBodyDecorativeApparelColourTwo : BodyDecorativeApparelCo
         {
             return;
         }
-        DrawColor = new Color(224,157,61);
-        SetSecondaryColor(new Color(149,34,35));
         SetInitialColour();
+        DrawColor = new Color(224,157,61);
+        SetOriginals();
+        SetSecondaryColor(new Color(149,34,35));
+        SetOriginals();
     }
     
     public override void Notify_Equipped(Pawn pawn)

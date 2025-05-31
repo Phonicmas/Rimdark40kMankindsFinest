@@ -1,4 +1,5 @@
-﻿using Verse;
+﻿using Core40k;
+using Verse;
 
 namespace Genes40k;
 
@@ -12,7 +13,7 @@ public class PawnRenderNode_AttachmentBackpack : PawnRenderNode
     {
         var backpackPath = Props.texPath;
             
-        var apparelColourTwo = (ChapterBodyDecorativeApparelColourTwo)apparel;
+        var apparelColourTwo = (BodyDecorativeApparelColourTwo)apparel;
             
         if (pawn.apparel.WornApparel.Any(wornApparel => wornApparel.def == Genes40kDefOf.Apparel_PackJump))
         {
