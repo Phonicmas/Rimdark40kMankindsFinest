@@ -361,7 +361,7 @@
         <defName>BEWH_LivingSaintArmor</defName>
         <label>Living Saint Armor</label>
         <thingClass>Genes40k.LivingSaintBodyDecorativeApparelColourTwo</thingClass>
-        <description>Living Saint Armor Description.</description>
+        <description>...</description>
         <graphicData>
             <texPath>Things/Armor/Imperium/PowerArmor/LivingSaint/BEWH_LSaintArmor</texPath>
         </graphicData>
@@ -410,6 +410,28 @@
                         </dataNorth>
                         <dataSouth>
                             <layer>40</layer>
+                        </dataSouth>
+                    </drawData>
+                </li>
+                <!-- Backpacks -->
+                <li>
+                    <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentBackpack</workerClass>
+                    <nodeClass>Genes40k.PawnRenderNode_AttachmentBackpack</nodeClass>
+                    <texPath>Things/Armor/Imperium/PowerArmor/LivingSaint/Backpacks/BEWH_LSaintArmor_Backpack</texPath>
+                    <shaderTypeDef>CutoutComplex</shaderTypeDef>
+                    <parentTagDef>Body</parentTagDef>
+                    <drawData>
+                        <dataEast>
+                            <layer>71</layer>
+                        </dataEast>
+                        <dataWest>
+                            <layer>71</layer>
+                        </dataWest>
+                        <dataNorth>
+                            <layer>77</layer>
+                        </dataNorth>
+                        <dataSouth>
+                            <layer>39</layer>
                         </dataSouth>
                     </drawData>
                 </li>

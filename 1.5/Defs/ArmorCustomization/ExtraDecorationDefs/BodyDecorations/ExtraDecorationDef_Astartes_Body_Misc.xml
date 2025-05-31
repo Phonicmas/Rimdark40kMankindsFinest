@@ -48,7 +48,6 @@
             <li>North</li>
             <li>South</li>
             <li>West</li>
-            <!-- <li>East</li> -->
         </defaultShowRotation>
         <appliesTo>
             <li>BEWH_MkVIIPowerArmor</li>
@@ -64,6 +63,7 @@
             </dataSouth>
             <dataEast>
                 <layer>84</layer>
+                <flip>true</flip>
             </dataEast>
             <dataWest>
                 <layer>84</layer>
@@ -91,7 +91,6 @@
             <li>North</li>
             <li>South</li>
             <li>West</li>
-            <!-- <li>East</li> -->
         </defaultShowRotation>
         <appliesTo>
             <li>BEWH_MkVIIPowerArmor</li>
@@ -107,6 +106,7 @@
             </dataSouth>
             <dataEast>
                 <layer>84</layer>
+                <flip>true</flip>
             </dataEast>
             <dataWest>
                 <layer>84</layer>

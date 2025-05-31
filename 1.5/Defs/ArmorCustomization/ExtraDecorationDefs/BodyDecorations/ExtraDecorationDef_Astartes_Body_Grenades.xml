@@ -12,7 +12,6 @@
         <defaultShowRotation>
             <li>North</li>
             <li>East</li>
-            <!-- <li>West</li> -->
             <li>South</li>
         </defaultShowRotation>
         <appliesTo>
@@ -25,7 +24,7 @@
                 <layer>76</layer>
             </dataNorth>
             <dataSouth>
-                <layer>76</layer>
+                <layer>65</layer>
             </dataSouth>
             <dataEast>
                 <layer>64</layer>
@@ -47,7 +46,6 @@
         <sortOrder>7.1</sortOrder>
         <defaultShowRotation>
             <li>North</li>
-            <!-- <li>East</li> -->
             <li>West</li>
             <li>South</li>
         </defaultShowRotation>
@@ -61,10 +59,11 @@
                 <layer>76</layer>
             </dataNorth>
             <dataSouth>
-                <layer>76</layer>
+                <layer>65</layer>
             </dataSouth>
             <dataEast>
                 <layer>64</layer>
+                <flip>true</flip>
             </dataEast>
             <dataWest>
                 <layer>64</layer>
@@ -84,7 +83,6 @@
         <defaultShowRotation>
             <li>North</li>
             <li>East</li>
-            <!-- <li>West</li> -->
             <li>South</li>
         </defaultShowRotation>
         <appliesTo>
@@ -97,7 +95,7 @@
                 <layer>76</layer>
             </dataNorth>
             <dataSouth>
-                <layer>76</layer>
+                <layer>65</layer>
             </dataSouth>
             <dataEast>
                 <layer>64</layer>
@@ -119,7 +117,6 @@
         <sortOrder>7.3</sortOrder>
         <defaultShowRotation>
             <li>North</li>
-            <!-- <li>East</li> -->
             <li>West</li>
             <li>South</li>
         </defaultShowRotation>
@@ -133,10 +130,11 @@
                 <layer>76</layer>
             </dataNorth>
             <dataSouth>
-                <layer>76</layer>
+                <layer>65</layer>
             </dataSouth>
             <dataEast>
                 <layer>64</layer>
+                <flip>true</flip>
             </dataEast>
             <dataWest>
                 <layer>64</layer>

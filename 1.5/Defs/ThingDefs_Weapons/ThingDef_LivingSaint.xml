@@ -8,6 +8,7 @@
     <description>Ascendant Wrath is an ancient weapon appearing to resemble a heavy bolt pistol, its true nature obscured by time and conflicting accounts. Some say it was never forged in any traditional sense, but appeared in the midst of battle - formed from blinding light and raw warp energy as the Saint rose to lead the faithful.</description>
     <graphicData>
       <texPath>Things/Weapons/BEWH_LSaintBoltPistol</texPath>
+      <drawSize>(0.75, 0.75)</drawSize>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
 
@@ -31,6 +32,7 @@
       <AccuracyMedium>0.65</AccuracyMedium>
       <AccuracyLong>0.38</AccuracyLong>
       <RangedWeapon_Cooldown>1.15</RangedWeapon_Cooldown>
+      <Beauty>5</Beauty>
     </statBases>
     <verbs>
       <li>
@@ -77,14 +79,14 @@
             <drawOffset>(0, 0, -0.2)</drawOffset>
           </north>
           <east>
-            <drawOffset>(-0.1, 0, -0.2)</drawOffset>
+            <drawOffset>(-0.1, 0, -0.07)</drawOffset>
           </east>
           <south>
-            <angleOffset>-20</angleOffset>
-            <drawOffset>(0, 0, -0.2)</drawOffset>
+            <angleOffset>0</angleOffset>
+            <drawOffset>(0, 0, -0.05)</drawOffset>
           </south>
           <west>
-            <drawOffset>(0.1, 0, -0.2)</drawOffset>
+            <drawOffset>(0.1, 0, -0.07)</drawOffset>
           </west>
         </weaponCarryDrawOffsets>
       </li>
@@ -94,12 +96,12 @@
   <!-- Living Saint Sword -->
   <ThingDef ParentName="MeleeWeaponUltratech">
     <defName>BEWH_LSaintSword</defName>
-    <label>The Ardent Blade</label>
-    <description>This power sword is said to be forged from crystallised faith and consecrated alloy. Weightless in the Saint's hand, it strikes with blinding speed and divine fury, as if guided by the Emperor Himself. At will, the blade unleashes a jet of holy flame, a searing manifestation of His wrath.</description>
+    <label>Ardent Blade</label>
+    <description>This power sword is said to be forged from crystallised faith and consecrated alloy. Weightless in the Saint's hand, it strikes with blinding speed and divine fury, burning heretics on impact as if guided by the Emperor Himself. At the wielder's will, the blade unleashes a jet of holy flame — a searing manifestation of His wrath.</description>
     <graphicData>
       <texPath>Things/Weapons/BEWH_LSaintSword</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>1.15</drawSize>
+      <!-- <drawSize>1.15</drawSize> -->
     </graphicData>
 
     <techLevel>Spacer</techLevel>
@@ -120,8 +122,9 @@
     <meleeHitSound>MeleeHit_PlasmaSword</meleeHitSound>
     <statBases>
       <Flammability>0</Flammability>
-      <MaxHitPoints>667</MaxHitPoints>
+      <MaxHitPoints>665</MaxHitPoints>
       <DeteriorationRate>0</DeteriorationRate>
+      <Beauty>5</Beauty>
     </statBases>
     <tools>
       <li>
@@ -187,7 +190,8 @@
             <drawOffset>(0, 0, -0.15)</drawOffset>
           </east>
           <south>
-            <drawOffset>(0, 0, -0.15)</drawOffset>
+            <drawOffset>(0, 0, 0.05)</drawOffset>
+            <angleOffset>-20</angleOffset>
           </south>
           <west>
             <drawOffset>(0, 0, -0.15)</drawOffset>

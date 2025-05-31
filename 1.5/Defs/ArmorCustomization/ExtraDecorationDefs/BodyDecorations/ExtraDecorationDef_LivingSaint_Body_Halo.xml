@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- Halos -->
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_LivingSaintHalo_1</defName>
+        <label>Holy Radiance</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Armor/LivingSaint/BEWH_Deco_HolyRadiance_south</iconPath> <!-- placheholder icon -->
+        <drawnTextureIconPath>Things/Decorations/Armor/LivingSaint/BEWH_Deco_HolyRadiance</drawnTextureIconPath>
+        <drawSize>(0.75, 0.75)</drawSize>
+        <sortOrder>4</sortOrder>
+        <defaultShowRotation>
+            <li>South</li>
+            <li>West</li>
+            <li>East</li>
+            <li>North</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_LivingSaintArmor</li>
+        </appliesTo>
+        <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>80</layer>
+                <offset>(0, 0, 0.1)</offset>
+            </dataNorth>
+            <dataSouth>
+                <layer>35</layer>
+                <offset>(0, 0, 0.1)</offset>
+            </dataSouth>
+            <dataEast>
+                <layer>35</layer>
+            </dataEast>
+            <dataWest>
+                <layer>35</layer>
+            </dataWest>
+        </drawData>
+        <shaderType>TransparentPostLight</shaderType>
+        <flipable>false</flipable>
+        <drawInHeadSpace>true</drawInHeadSpace>
+        <colourable>true</colourable>
+        <availablePresets>
+            <li>BEWH_DecoPaletteGold</li>
+            <li>BEWH_DecoPaletteSaintLight</li>
+        </availablePresets>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_LivingSaintHalo_2</defName>
+        <label>Iron Halo</label>
+        <description>...</description>
+        <iconPath>Things/Decorations/Armor/LivingSaint/BEWH_Deco_LSaintHalo_south</iconPath> <!-- placheholder icon -->
+        <drawnTextureIconPath>Things/Decorations/Armor/LivingSaint/BEWH_Deco_LSaintHalo</drawnTextureIconPath>
+        <sortOrder>2</sortOrder>
+        <defaultShowRotation>
+            <li>South</li>
+            <li>West</li>
+            <li>East</li>
+            <li>North</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_LivingSaintArmor</li>
+        </appliesTo>
+        <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>80</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>35</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>35</layer>
+            </dataEast>
+            <dataWest>
+                <layer>35</layer>
+            </dataWest>
+        </drawData>
+        <shaderType>CutoutComplex</shaderType>
+        <flipable>false</flipable>
+        <colourable>true</colourable>
+        <useMask>true</useMask>
+        <useArmorColourAsDefault>true</useArmorColourAsDefault>
+        <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption> 
+        <availablePresets>
+            <li>BEWH_DecoPaletteGold</li>
+            <li>BEWH_DecoPaletteSilver</li>
+        </availablePresets>
+        <drawInHeadSpace>true</drawInHeadSpace>
+    </Core40k.ExtraDecorationDef>
+</Defs>

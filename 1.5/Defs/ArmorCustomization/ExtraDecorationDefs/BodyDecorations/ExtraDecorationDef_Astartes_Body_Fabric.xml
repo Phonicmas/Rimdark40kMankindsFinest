@@ -21,7 +21,7 @@
         <drawData>
             <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
             <dataSouth>
-                <layer>35</layer>
+                <layer>45</layer>
             </dataSouth>
             <dataEast>
                 <layer>45</layer>
@@ -216,6 +216,9 @@
         </appliesTo>
         <drawData>
             <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataSouth>
+                <layer>70</layer>
+            </dataSouth>
             <dataEast>
                 <layer>66</layer>
             </dataEast>
@@ -337,7 +340,7 @@
         <drawData>
             <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
             <dataNorth>
-                <layer>76</layer>
+                <layer>70</layer>
             </dataNorth>
             <dataSouth>
                 <layer>34</layer>

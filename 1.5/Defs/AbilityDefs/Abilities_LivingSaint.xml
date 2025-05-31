@@ -38,7 +38,7 @@
   <AbilityDef>
     <defName>BEWH_LivingSaintHolyBlast</defName>
     <label>holy blast</label>
-    <description>The Living Saint unleashes a powerful burst of divine energy, blasting enemies in a targeted area with searing light. At the same time, the radiant power heals nearby allies, restoring their strength.</description>
+    <description>The Living Saint unleashes a powerful burst of divine energy, blasting humanoid enemies in a targeted area with searing light. At the same time, the radiant power heals nearby allies, restoring their strength.</description>
     <iconPath>UI/Abilities/BEWH_HolyBlast</iconPath>
     <displayGizmoWhileUndrafted>False</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>

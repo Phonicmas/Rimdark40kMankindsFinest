@@ -12,7 +12,6 @@
         <defaultShowRotation>
             <li>East</li>
             <li>South</li>
-            <!-- <li>West</li> -->
             <li>North</li>
         </defaultShowRotation>
         <appliesTo>
@@ -66,6 +65,7 @@
             </dataSouth>
             <dataEast>
                 <layer>81</layer>
+                <flip>true</flip>
             </dataEast>
             <dataWest>
                 <layer>81</layer>
@@ -126,6 +126,22 @@
             <li>BEWH_MkVIIPowerArmor</li>
             <li>BEWH_MkXPowerArmor</li>
         </appliesTo>
+        <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>81</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>76</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>76</layer>
+                <flip>true</flip>
+            </dataEast>
+            <dataWest>
+                <layer>76</layer>
+            </dataWest>
+        </drawData>
         <shaderType>Cutout</shaderType>
         <flipable>true</flipable>
     </Core40k.ExtraDecorationDef>
@@ -157,6 +173,7 @@
             </dataSouth>
             <dataEast>
                 <layer>74</layer>
+                <flip>true</flip>
             </dataEast>
             <dataWest>
                 <layer>74</layer>
