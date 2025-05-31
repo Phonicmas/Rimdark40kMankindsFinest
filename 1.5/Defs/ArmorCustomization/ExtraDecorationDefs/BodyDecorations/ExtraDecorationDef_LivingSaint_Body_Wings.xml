@@ -4,10 +4,11 @@
     <!-- Wings -->
     <Core40k.ExtraDecorationDef>
         <defName>BEWH_LivingSaintWings_1</defName>
-        <label>Living Saint Wings 1</label>
+        <label>Wings of Steel</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Armor/LivingSaint/BEWH_Deco_LSaintWings_south</iconPath>
+        <iconPath>Things/Decorations/Armor/LivingSaint/BEWH_Deco_LSaintWings_south</iconPath> <!-- Placeholder icon -->
         <drawnTextureIconPath>Things/Decorations/Armor/LivingSaint/BEWH_Deco_LSaintWings</drawnTextureIconPath>
+        <drawSize>(1.5, 0.75)</drawSize>
         <sortOrder>1</sortOrder>
         <defaultShowRotation>
             <li>South</li>
@@ -21,7 +22,7 @@
         <drawData>
             <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
             <dataNorth>
-                <layer>80</layer>
+                <layer>60</layer>
 				<offset>(0, 0, 0.24)</offset>
             </dataNorth>
             <dataSouth>
@@ -37,18 +38,21 @@
 				<offset>(0, 0, 0.33)</offset>
             </dataWest>
         </drawData>
-        <shaderType>Cutout</shaderType>
+        <shaderType>CutoutComplex</shaderType>
         <flipable>false</flipable>
-        <drawSize>(1.5, 0.75)</drawSize>
+        <colourable>true</colourable>
+        <useMask>true</useMask>
+        <useArmorColourAsDefault>true</useArmorColourAsDefault>
+        <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption> 
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
         <defName>BEWH_LivingSaintWings_2</defName>
-        <label>Living Saint Wings 2</label>
+        <label>Wings of Light</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Armor/LivingSaint/BEWH_Deco_DivineWings_south</iconPath>
+        <iconPath>Things/Decorations/Armor/LivingSaint/BEWH_Deco_DivineWings_south</iconPath> <!-- Placeholder icon -->
         <drawnTextureIconPath>Things/Decorations/Armor/LivingSaint/BEWH_Deco_DivineWings</drawnTextureIconPath>
-        <sortOrder>2</sortOrder>
+        <sortOrder>3</sortOrder>
         <defaultShowRotation>
             <li>South</li>
             <li>West</li>
@@ -64,8 +68,8 @@
             </defaultData>
             <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
             <dataNorth>
-                <layer>80</layer>
-                <offset>(0, 0.1, 0)</offset>
+                <layer>50</layer>
+                <offset>(0, 0, 0)</offset>
             </dataNorth>
             <dataSouth>
                 <offset>(0, -0.1, 0)</offset>
@@ -79,6 +83,10 @@
         </drawData>
         <shaderType>TransparentPostLight</shaderType>
         <flipable>false</flipable>
+        <colourable>true</colourable>
+        <availablePresets> <!-- Placeholder presets -->
+            <li>BEWH_DecoPaletteGold</li>
+            <li>BEWH_DecoPaletteSaintLight</li>
+        </availablePresets>
     </Core40k.ExtraDecorationDef>
-
 </Defs>

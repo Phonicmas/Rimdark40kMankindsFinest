@@ -8,6 +8,7 @@
         <description>...</description>
         <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_Inquis_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Headgear/Common/BEWH_Deco_Inquis</drawnTextureIconPath>
+        <drawSize>(0.125, 0.125)</drawSize>
         <sortOrder>0</sortOrder>
         <isHelmetDecoration>true</isHelmetDecoration>
         <defaultShowRotation>
@@ -20,18 +21,18 @@
             <li>BEWH_MkXPowerArmorHelmet</li>
         </appliesTo>
         <drawData>
-            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
-            <dataNorth>
-                <layer>76</layer>
-            </dataNorth>
+            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataSouth>
                 <layer>76</layer>
+                <offset>(0, 0, 0.04)</offset>
             </dataSouth>
             <dataEast>
-                <layer>70</layer>
+                <layer>70.8</layer>
+                <offset>(0.185, 0, 0.04)</offset>
             </dataEast>
             <dataWest>
-                <layer>70</layer>
+                <layer>70.8</layer>
+                <offset>(-0.185, 0, 0.04)</offset>
             </dataWest>
         </drawData>
         <colourable>true</colourable>
@@ -49,6 +50,7 @@
         <description>...</description>
         <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_ApothecarySign_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_ApothecarySignMkVII</drawnTextureIconPath>
+        <drawSize>(0.25, 0.25)</drawSize>
         <sortOrder>0.1</sortOrder>
         <isHelmetDecoration>true</isHelmetDecoration>
         <defaultShowRotation>
@@ -60,18 +62,17 @@
             <li>BEWH_MkVIIPowerArmorHelmet</li>
         </appliesTo>
         <drawData>
-            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
-            <dataNorth>
-                <layer>76</layer>
-            </dataNorth>
+            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataSouth>
                 <layer>76</layer>
             </dataSouth>
             <dataEast>
-                <layer>70</layer>
+                <layer>71</layer>
+                <offset>(0.186, 0, 0)</offset>
             </dataEast>
             <dataWest>
-                <layer>70</layer>
+                <layer>71</layer>
+                <offset>(-0.186, 0, 0)</offset>
             </dataWest>
         </drawData>
         <shaderType>Cutout</shaderType>
@@ -83,6 +84,7 @@
         <description>...</description>
         <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_ApothecarySign_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_ApothecarySignMkX</drawnTextureIconPath>
+        <drawSize>(0.25, 0.25)</drawSize>
         <sortOrder>0.1</sortOrder>
         <isHelmetDecoration>true</isHelmetDecoration>
         <defaultShowRotation>
@@ -94,18 +96,17 @@
             <li>BEWH_MkXPowerArmorHelmet</li>
         </appliesTo>
         <drawData>
-            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
-            <dataNorth>
-                <layer>76</layer>
-            </dataNorth>
+            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataSouth>
                 <layer>76</layer>
             </dataSouth>
             <dataEast>
-                <layer>70</layer>
+                <layer>71</layer>
+                <offset>(0.186, 0, 0)</offset>
             </dataEast>
             <dataWest>
-                <layer>70</layer>
+                <layer>71</layer>
+                <offset>(-0.186, 0, 0)</offset>
             </dataWest>
         </drawData>
         <shaderType>Cutout</shaderType>
@@ -117,6 +118,7 @@
         <description>...</description>
         <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_Skull_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Headgear/Common/BEWH_Deco_Skull</drawnTextureIconPath>
+        <drawSize>(0.125, 0.125)</drawSize>
         <sortOrder>1</sortOrder>
         <isHelmetDecoration>true</isHelmetDecoration>
         <defaultShowRotation>
@@ -129,18 +131,21 @@
             <li>BEWH_MkXPowerArmorHelmet</li>
         </appliesTo>
         <drawData>
-            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataNorth>
                 <layer>76</layer>
             </dataNorth>
             <dataSouth>
                 <layer>76</layer>
+                <offset>(0, 0, 0.04)</offset>
             </dataSouth>
             <dataEast>
-                <layer>83</layer>
+                <layer>75</layer>
+                <offset>(0.186, 0, 0.04)</offset>
             </dataEast>
             <dataWest>
-                <layer>83</layer>
+                <layer>75</layer>
+                <offset>(-0.186, 0, 0.04)</offset>
             </dataWest>
         </drawData>
         <colourable>true</colourable>
@@ -158,6 +163,7 @@
         <description>...</description>
         <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_Laurel_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Headgear/Common/BEWH_Deco_Laurel</drawnTextureIconPath>
+        <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>2</sortOrder>
         <isHelmetDecoration>true</isHelmetDecoration>
         <defaultShowRotation>
@@ -171,7 +177,7 @@
             <li>BEWH_MkXPowerArmorHelmet</li>
         </appliesTo>
         <drawData>
-            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataNorth>
                 <layer>76</layer>
             </dataNorth>

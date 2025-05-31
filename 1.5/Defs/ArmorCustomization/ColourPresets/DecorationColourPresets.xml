@@ -70,4 +70,11 @@
         <label>Apothecary Red</label>
         <colour>(162, 54, 39)</colour>
     </Core40k.DecorationColourPresetDef>
+
+<!-- Saint's Light -->
+    <Core40k.DecorationColourPresetDef>
+        <defName>BEWH_DecoPaletteSaintLight</defName>
+        <label>Saint's light</label>
+        <colour>(245, 245, 210)</colour>
+    </Core40k.DecorationColourPresetDef>
 </Defs>

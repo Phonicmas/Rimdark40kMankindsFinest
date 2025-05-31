@@ -140,7 +140,7 @@
   <BEWH.MankindsFinest.LivingSaint.LivingSaintReturn>Living Saint Returns</BEWH.MankindsFinest.LivingSaint.LivingSaintReturn>
   <BEWH.MankindsFinest.LivingSaint.LivingSaintReturnMessage>Though thought dead, {0}'s miracles keeps coming. It seem {0} sensed our situation from their afterlife and manifested themselves to help</BEWH.MankindsFinest.LivingSaint.LivingSaintReturnMessage>
 
-  <BEWH.MankindsFinest.LivingSaint.LowHolyGrace>Living Saint {0_labelShort} holy radiance supply is dwindling.</BEWH.MankindsFinest.LivingSaint.LowHolyGrace>
+  <BEWH.MankindsFinest.LivingSaint.LowHolyGrace>{0_labelShort} divine grace supply is dwindling.</BEWH.MankindsFinest.LivingSaint.LowHolyGrace>
 
   <!-- Perpetual -->
   <BEWH.MankindsFinest.Perpetual.PerpetualReturn>Perpetual Resurrects</BEWH.MankindsFinest.Perpetual.PerpetualReturn>

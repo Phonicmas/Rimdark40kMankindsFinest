@@ -8,6 +8,7 @@
         <description>...</description>
         <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_Hood_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Headgear/Common/BEWH_Deco_Hood</drawnTextureIconPath>
+        <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>3</sortOrder>
         <isHelmetDecoration>true</isHelmetDecoration>
         <defaultShowRotation>
@@ -22,7 +23,7 @@
             <li>BEWH_MkXPowerArmorChaplainHelmet</li>
         </appliesTo>
         <drawData>
-            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataNorth>
                 <layer>76</layer>
             </dataNorth>
@@ -30,10 +31,12 @@
                 <layer>81</layer>
             </dataSouth>
             <dataEast>
-                <layer>72</layer>
+                <layer>73</layer>
+                <offset>(-0.034, 0, 0)</offset>
             </dataEast>
             <dataWest>
-                <layer>72</layer>
+                <layer>72.3</layer>
+                <offset>(0.034, 0, 0)</offset>
             </dataWest>
         </drawData>
         <colourable>true</colourable>

@@ -13,7 +13,6 @@
         <defaultShowRotation>
             <li>North</li>
             <li>South</li>
-            <!-- <li>West</li> -->
             <li>East</li>
         </defaultShowRotation>
         <appliesTo>
@@ -33,6 +32,7 @@
             </dataEast>
             <dataWest>
                 <layer>71</layer>
+                <flip>true</flip>
             </dataWest>
         </drawData>
         <shaderType>CutoutComplex</shaderType>

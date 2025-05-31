@@ -265,7 +265,7 @@
     <!-- Chapter IX - Sanguinius -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
         <defName>BEWH_PrimarchSpecificGeneIX</defName>
-        <label>sanguinius</label>
+        <label>Sanguinius</label>
         <description>The genetic material of Sanguinius, when implanted, grows a set of featered wings, allow for greater speed and flight.</description>
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_Sanguinius</iconPath>
         <displayOrderInCategory>409</displayOrderInCategory>
@@ -301,8 +301,8 @@
                     </defaultData>
                     <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
                     <dataNorth>
-                        <layer>50</layer>
-                        <offset>(0, 0.1, 0)</offset>
+                        <layer>76</layer>
+                        <offset>(0, 0, 0)</offset>
                     </dataNorth>
                     <dataSouth>
                         <offset>(0, -0.1, 0)</offset>
