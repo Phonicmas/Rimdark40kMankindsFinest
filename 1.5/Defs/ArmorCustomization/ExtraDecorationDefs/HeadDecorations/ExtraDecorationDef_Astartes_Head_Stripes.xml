@@ -4,10 +4,11 @@
     <!-- Stripes -->
     <Core40k.ExtraDecorationDef>
         <defName>BEWH_MkVIIDecoStripe</defName>        <!-- Mark VII -->
-        <label>Colour stripe</label>
+        <label>Color stripe</label>
         <description>...</description>
         <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_Stripe_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_MkVIIStripe</drawnTextureIconPath>
+		<drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>6</sortOrder>
         <isHelmetDecoration>true</isHelmetDecoration>
         <defaultShowRotation>
@@ -21,7 +22,7 @@
         </appliesTo>
         <colourable>true</colourable>
         <drawData>
-            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataNorth>
                 <layer>76</layer>
             </dataNorth>
@@ -47,7 +48,7 @@
 
     <Core40k.ExtraDecorationDef>
         <defName>BEWH_MkXDecoStripe</defName>        <!-- Mark X -->
-        <label>Colour stripe</label>
+        <label>Color stripe</label>
         <description>...</description>
         <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_Stripe_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_MkXStripe</drawnTextureIconPath>
@@ -64,7 +65,7 @@
         </appliesTo>
         <colourable>true</colourable>
         <drawData>
-            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataNorth>
                 <layer>70</layer>
             </dataNorth>
@@ -94,6 +95,7 @@
         <description>...</description>
         <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_LieutenantStripe_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_MkVIILieutenantStripe</drawnTextureIconPath>
+		<drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>6</sortOrder>
         <isHelmetDecoration>true</isHelmetDecoration>
         <defaultShowRotation>
@@ -107,7 +109,7 @@
         </appliesTo>
         <colourable>false</colourable>
         <drawData>
-            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataNorth>
                 <layer>76</layer>
             </dataNorth>
@@ -143,7 +145,7 @@
         </appliesTo>
         <colourable>false</colourable>
         <drawData>
-            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataNorth>
                 <layer>70</layer>
             </dataNorth>

@@ -19,7 +19,7 @@
             <li>BEWH_MkXPowerArmor</li>
         </appliesTo>
         <drawData>
-            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataSouth>
                 <layer>45</layer>
             </dataSouth>
@@ -55,7 +55,7 @@
             <li>BEWH_MkVIIPowerArmor</li>
         </appliesTo>
         <drawData>
-            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataSouth>
                 <layer>45</layer>
             </dataSouth>
@@ -90,7 +90,7 @@
             <li>BEWH_MkXPowerArmor</li>
         </appliesTo>
         <drawData>
-            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataSouth>
                 <layer>45</layer>
             </dataSouth>
@@ -128,7 +128,7 @@
             <li>BEWH_MkXPowerArmorChaplain</li>
         </appliesTo>
         <drawData>
-            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataNorth>
                 <layer>76.6</layer>
             </dataNorth>
@@ -139,7 +139,7 @@
                 <layer>82</layer>
             </dataEast>
             <dataWest>
-                <layer>112</layer>
+                <layer>83</layer>
             </dataWest>
         </drawData>
         <availablePresets>
@@ -172,7 +172,7 @@
             <li>BEWH_MkXPowerArmorChaplain</li>
         </appliesTo>
         <drawData>
-            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataNorth>
                 <layer>76.6</layer>
             </dataNorth>
@@ -215,7 +215,7 @@
             <li>BEWH_MkXPowerArmor</li>
         </appliesTo>
         <drawData>
-            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataSouth>
                 <layer>70</layer>
             </dataSouth>
@@ -255,9 +255,9 @@
             <li>BEWH_MkVIIPowerArmor</li>
         </appliesTo>
         <drawData>
-            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataNorth>
-                <layer>75</layer>
+                <layer>69</layer>
             </dataNorth>
             <dataSouth>
                 <layer>44</layer>
@@ -295,9 +295,9 @@
             <li>BEWH_MkXPowerArmor</li>
         </appliesTo>
         <drawData>
-            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataNorth>
-                <layer>75</layer>
+                <layer>69</layer>
             </dataNorth>
             <dataSouth>
                 <layer>44</layer>
@@ -338,7 +338,7 @@
             <li>BEWH_MkXPowerArmorChaplain</li>
         </appliesTo>
         <drawData>
-            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataNorth>
                 <layer>70</layer>
             </dataNorth>
