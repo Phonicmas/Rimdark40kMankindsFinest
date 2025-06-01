@@ -11,11 +11,11 @@
   <BEWH.MankindsFinest.ModSettings.PerpetualBirth>Enabling this will allow children to be rarely and randomly born as perpetuals.</BEWH.MankindsFinest.ModSettings.PerpetualBirth>
   <BEWH.MankindsFinest.ModSettings.PerpetualBirthChance>Chance that newly born children will be a perpetual: {0}%</BEWH.MankindsFinest.ModSettings.PerpetualBirthChance>
 
-  <BEWH.MankindsFinest.ModSettings.DefaultChapterColours>Default chapter colours: {0}</BEWH.MankindsFinest.ModSettings.DefaultChapterColours>
+  <BEWH.MankindsFinest.ModSettings.DefaultChapterColours>Default chapter colors: {0}</BEWH.MankindsFinest.ModSettings.DefaultChapterColours>
   <BEWH.MankindsFinest.ModSettings.SelectDefaultChapterIcon>Default chapter icon: {0}</BEWH.MankindsFinest.ModSettings.SelectDefaultChapterIcon>
   <BEWH.MankindsFinest.ModSettings.UseChaosVersionForBanner>Use chaos version of the banner for the chapter ancient ability.</BEWH.MankindsFinest.ModSettings.UseChaosVersionForBanner>
-  <BEWH.MankindsFinest.ModSettings.ColourPreset>Colour Preset: {0}</BEWH.MankindsFinest.ModSettings.ColourPreset>
-  <BEWH.MankindsFinest.ModSettings.CustomColour>Custom Colour</BEWH.MankindsFinest.ModSettings.CustomColour>
+  <BEWH.MankindsFinest.ModSettings.ColourPreset>Color Preset: {0}</BEWH.MankindsFinest.ModSettings.ColourPreset>
+  <BEWH.MankindsFinest.ModSettings.CustomColour>Custom Color</BEWH.MankindsFinest.ModSettings.CustomColour>
 
   <BEWH.MankindsFinest.ModSettings.LivingSaintChance>Chances for a Living Saint to resurrect</BEWH.MankindsFinest.ModSettings.LivingSaintChance>
   <BEWH.MankindsFinest.ModSettings.LivingSaintBigThreat>Big threat: {0}%</BEWH.MankindsFinest.ModSettings.LivingSaintBigThreat>
