@@ -8,6 +8,7 @@
         <description>...</description>
         <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_BladeguardShield_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Headgear/Common/BEWH_Deco_BladeguardShield</drawnTextureIconPath>
+        <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>4</sortOrder>
         <isHelmetDecoration>true</isHelmetDecoration>
         <defaultShowRotation>
@@ -23,7 +24,7 @@
         <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
         <useArmorColourAsDefault>true</useArmorColourAsDefault>
         <drawData>
-            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataNorth>
                 <layer>76</layer>
             </dataNorth>
@@ -46,6 +47,7 @@
         <description>...</description>
         <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_VictrixHelm_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_VictrixHelmMkVII</drawnTextureIconPath>
+        <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>5</sortOrder>
         <isHelmetDecoration>true</isHelmetDecoration>
         <defaultShowRotation>
@@ -60,12 +62,13 @@
         <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
         <useArmorColourAsDefault>true</useArmorColourAsDefault>
         <drawData>
-            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataNorth>
                 <layer>76</layer>
             </dataNorth>
             <dataSouth>
                 <layer>76</layer>
+                <offset>(0, 0, -0.04)</offset>
             </dataSouth>
             <dataEast>
                 <layer>71</layer>
@@ -89,6 +92,7 @@
         <description>...</description>
         <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_VictrixHelm_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_VictrixHelmMkX</drawnTextureIconPath>
+        <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>5</sortOrder>
         <isHelmetDecoration>true</isHelmetDecoration>
         <defaultShowRotation>
@@ -103,12 +107,13 @@
         <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
         <useArmorColourAsDefault>true</useArmorColourAsDefault>
         <drawData>
-            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataNorth>
                 <layer>76</layer>
             </dataNorth>
             <dataSouth>
                 <layer>76.2</layer>
+                <offset>(0, 0, -0.04)</offset>
             </dataSouth>
             <dataEast>
                 <layer>71</layer>

@@ -8,6 +8,7 @@
         <description>...</description>
         <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_ApothecaryVisor_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Headgear/Common/BEWH_Deco_ApothecaryVisor</drawnTextureIconPath>
+        <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>3.1</sortOrder>
         <isHelmetDecoration>true</isHelmetDecoration>
         <defaultShowRotation>
@@ -20,7 +21,7 @@
             <li>BEWH_MkXPowerArmorHelmet</li>
         </appliesTo>
         <drawData>
-            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataNorth>
                 <layer>76.5</layer>
             </dataNorth>
@@ -28,10 +29,10 @@
                 <layer>81</layer>
             </dataSouth>
             <dataEast>
-                <layer>72</layer>
+                <layer>71.5</layer>
             </dataEast>
             <dataWest>
-                <layer>71</layer>
+                <layer>71.5</layer>
                 <flip>true</flip>
             </dataWest>
         </drawData>
