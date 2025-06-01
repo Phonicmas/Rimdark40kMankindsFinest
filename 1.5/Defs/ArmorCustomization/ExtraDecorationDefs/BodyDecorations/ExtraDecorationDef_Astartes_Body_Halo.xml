@@ -8,6 +8,7 @@
         <description>...</description>
         <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_IronHalo1_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_IronHalo1</drawnTextureIconPath>
+        <drawSize>(0.53, 0.53)</drawSize>
         <sortOrder>3</sortOrder>
         <defaultShowRotation>
             <li>South</li>
@@ -21,18 +22,22 @@
             <li>BEWH_MkXPowerArmorChaplain</li>
         </appliesTo>
         <drawData>
-            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataNorth>
                 <layer>80</layer>
+                <offset>(0, 0, 0.37)</offset>
             </dataNorth>
             <dataSouth>
                 <layer>36</layer>
+                <offset>(0, 0, 0.37)</offset>
             </dataSouth>
             <dataEast>
                 <layer>36</layer>
+                <offset>(-0.25, 0, 0.21)</offset>
             </dataEast>
             <dataWest>
                 <layer>36</layer>
+                <offset>(0.25, 0, 0.21)</offset>
             </dataWest>
         </drawData>
         <colourable>true</colourable>
@@ -52,6 +57,7 @@
         <description>...</description>
         <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_IronHalo2_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_IronHalo2</drawnTextureIconPath>
+        <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>3.1</sortOrder>
         <defaultShowRotation>
             <li>South</li>
@@ -65,18 +71,22 @@
             <li>BEWH_MkXPowerArmorChaplain</li>
         </appliesTo>
         <drawData>
-            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataNorth>
-                <layer>76</layer>
+                <layer>72</layer>
+                <offset>(0, 0, 0.37)</offset>
             </dataNorth>
             <dataSouth>
                 <layer>36</layer>
+                <offset>(0, 0, 0.37)</offset>
             </dataSouth>
             <dataEast>
                 <layer>36</layer>
+                <offset>(-0.25, 0, 0.21)</offset>
             </dataEast>
             <dataWest>
                 <layer>36</layer>
+                <offset>(0.25, 0, 0.21)</offset>
             </dataWest>
         </drawData>
         <colourable>true</colourable>

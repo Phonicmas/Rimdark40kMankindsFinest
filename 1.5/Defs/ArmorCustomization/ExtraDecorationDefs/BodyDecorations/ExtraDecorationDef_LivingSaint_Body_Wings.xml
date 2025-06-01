@@ -6,7 +6,7 @@
         <defName>BEWH_LivingSaintWings_1</defName>
         <label>Wings of Steel</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Armor/LivingSaint/BEWH_Deco_LSaintWings_south</iconPath> <!-- Placeholder icon -->
+        <iconPath>UI/Decoration/Icons/LivingSaint/Armor/BEWH_Deco_LSaintWings_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/LivingSaint/BEWH_Deco_LSaintWings</drawnTextureIconPath>
         <drawSize>(1.5, 0.75)</drawSize>
         <sortOrder>1</sortOrder>
@@ -50,7 +50,7 @@
         <defName>BEWH_LivingSaintWings_2</defName>
         <label>Wings of Light</label>
         <description>...</description>
-        <iconPath>Things/Decorations/Armor/LivingSaint/BEWH_Deco_DivineWings_south</iconPath> <!-- Placeholder icon -->
+        <iconPath>UI/Decoration/Icons/LivingSaint/Armor/BEWH_Deco_DivineWings_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/LivingSaint/BEWH_Deco_DivineWings</drawnTextureIconPath>
         <sortOrder>3</sortOrder>
         <defaultShowRotation>

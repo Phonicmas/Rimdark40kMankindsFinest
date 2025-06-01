@@ -77,4 +77,18 @@
         <label>Saint's light</label>
         <colour>(245, 245, 210)</colour>
     </Core40k.DecorationColourPresetDef>
+
+<!-- Saint's Rose -->
+    <Core40k.DecorationColourPresetDef>
+        <defName>BEWH_DecoPaletteSaintRose</defName>
+        <label>Rose</label>
+        <colour>(126, 51, 60)</colour>
+    </Core40k.DecorationColourPresetDef>
+
+<!-- Bone White -->
+    <Core40k.DecorationColourPresetDef>
+        <defName>BEWH_DecoPaletteBoneWhite</defName>
+        <label>Bone White</label>
+        <colour>(245, 245, 210)</colour>
+    </Core40k.DecorationColourPresetDef>
 </Defs>
