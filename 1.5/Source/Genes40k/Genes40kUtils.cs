@@ -260,11 +260,11 @@ public static class Genes40kUtils
             switch (apparel)
             {
                 case ChapterBodyDecorativeApparelColourTwo extraIconsChapterApparelColourTwo:
-                    extraIconsChapterApparelColourTwo.ApplyColourPreset(chapterColourPrimary, chapterColourSecondary);
+                    extraIconsChapterApparelColourTwo.SetInitialColours(chapterColourPrimary, chapterColourSecondary);
                     extraIconsChapterApparelColourTwo.LeftShoulderIcon = shoulderIconDef;
                     break;
                 case ChapterHeadDecorativeApparelColourTwo chapterApparelColourTwo:
-                    chapterApparelColourTwo.ApplyColourPreset(chapterColourPrimary, chapterColourSecondary);
+                    chapterApparelColourTwo.SetInitialColours(chapterColourPrimary, chapterColourSecondary);
                     break;
             }
         }

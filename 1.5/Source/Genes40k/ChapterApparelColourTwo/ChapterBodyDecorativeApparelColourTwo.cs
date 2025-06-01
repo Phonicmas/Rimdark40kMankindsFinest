@@ -116,10 +116,9 @@ public class ChapterBodyDecorativeApparelColourTwo : BodyDecorativeApparelColour
         {
             return;
         }
-        DrawColor = ModSettings?.chapterColorOne ?? base.DrawColor;
-        SetSecondaryColor(ModSettings?.chapterColorTwo ?? base.DrawColorTwo);
+        
+        SetInitialColours(ModSettings?.chapterColorOne ?? base.DrawColor, ModSettings?.chapterColorTwo ?? base.DrawColorTwo);
         SetUpMisc();
-        SetInitialColour();
     }
         
     private void SetUpMisc()

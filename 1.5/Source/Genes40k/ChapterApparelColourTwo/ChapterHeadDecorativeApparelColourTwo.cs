@@ -16,8 +16,7 @@ public class ChapterHeadDecorativeApparelColourTwo : HeadDecorativeApparelColour
         {
             return;
         }
-        DrawColor = ModSettings?.chapterColorOne ?? base.DrawColor;
-        SetSecondaryColor(ModSettings?.chapterColorTwo ?? base.DrawColorTwo);
-        SetInitialColour();
+
+        SetInitialColours(ModSettings?.chapterColorOne ?? base.DrawColor, ModSettings?.chapterColorTwo ?? base.DrawColorTwo);
     }
 }
