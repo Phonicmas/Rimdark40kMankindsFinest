@@ -267,6 +267,9 @@
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterVIIINightLords</iconPath>
         <displayOrderInCategory>121</displayOrderInCategory>
         <geneClass>Genes40k.Gene_InduceFear</geneClass>
+        <statOffsets>
+            <TerrorSource MayRequire="Ludeon.RimWorld.Ideology">25</TerrorSource>
+        </statOffsets>
         <customEffectDescriptions>
             <li>Chance to induce fear in enemies, causing them to flee.</li>
         </customEffectDescriptions>
