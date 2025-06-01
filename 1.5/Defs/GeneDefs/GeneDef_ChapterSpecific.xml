@@ -73,7 +73,7 @@
         <defName>BEWH_ChapterIVIronWarriors</defName>
         <label>Gene-seed Material: Iron Warriors</label>
         <description>Your gene-seed comes from Perturabo and is somewhat pure. You are able to quickly set up siege armaments and fortifications.
-</description>
+        </description>
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterIVIronWarriors</iconPath>
         <displayOrderInCategory>109</displayOrderInCategory>
         <statOffsets>

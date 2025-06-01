@@ -197,8 +197,8 @@ public static class Genes40kDefOf
     public static AbilityCategoryDef Psychic;
     
     //ExtraDecorationDef
-    public static ExtraDecorationDef BEWH_LivingSaintHalo_1;
-    public static ExtraDecorationDef BEWH_LivingSaintWings_2;
+    public static ExtraDecorationDef BEWH_LivingSaintHalo_2;
+    public static ExtraDecorationDef BEWH_LivingSaintWings_1;
         
     static Genes40kDefOf()
     {

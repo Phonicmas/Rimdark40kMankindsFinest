@@ -9,8 +9,8 @@ public class LivingSaintBodyDecorativeApparelColourTwo : BodyDecorativeApparelCo
 {
     private BodyTypeDef originalBodyType = null;
 
-    private static readonly Color GoldColour = new(0.878f, 0.615f, 0.239f);
-    private static readonly Color RedColour = new(0.584f, 0.133f, 0.137f);
+    private static readonly Color GoldColour = new(0.8358f, 0.619f, 0.298f);
+    private static readonly Color RedColour = new(0.407f, 0.094f, 0.129f);
 
     public override void SpawnSetup(Map map, bool respawningAfterLoad)
     {
@@ -20,6 +20,8 @@ public class LivingSaintBodyDecorativeApparelColourTwo : BodyDecorativeApparelCo
             return;
         }
         SetInitialColours(GoldColour, RedColour);
+        AddOrRemoveDecoration(Genes40kDefOf.BEWH_LivingSaintHalo_2);
+        AddOrRemoveDecoration(Genes40kDefOf.BEWH_LivingSaintWings_1);
     }
     
     public override void Notify_Equipped(Pawn pawn)

@@ -166,12 +166,6 @@ public class LivingSaintAscension
             }
             
             __instance.apparel.Wear(lSArmor);
-
-            if (lSArmor is LivingSaintBodyDecorativeApparelColourTwo lSArmorDeco)
-            {
-                lSArmorDeco.AddOrRemoveDecoration(Genes40kDefOf.BEWH_LivingSaintHalo_1);
-                lSArmorDeco.AddOrRemoveDecoration(Genes40kDefOf.BEWH_LivingSaintWings_2);
-            }
         }
             
         gComp.AddSaintToSpawnable(__instance);

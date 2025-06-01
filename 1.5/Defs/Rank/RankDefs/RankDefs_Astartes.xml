@@ -230,7 +230,7 @@
     <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankVanguard</defName>
         <label>Vanguard</label>
-        <description>Vanguards are elite warriors trained in stealth, rapid assault, and close-quarters combat. Often equipped with lighter armour and specialized wargear, they strike swiftly behind enemy lines, spreading terror and confusion before vanishing into the shadows.</description>
+        <description>Vanguards are elite warriors trained in stealth, rapid assault, and close-quarters combat. Often equipped with lighter armor and specialized wargear, they strike swiftly behind enemy lines, spreading terror and confusion before vanishing into the shadows.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_Vanguard</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(1, -1)</displayPosition>

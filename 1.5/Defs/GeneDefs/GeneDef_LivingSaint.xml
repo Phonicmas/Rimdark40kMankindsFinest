@@ -19,7 +19,7 @@
             <ToxicResistance>3</ToxicResistance>
             <PsychicSensitivity>4</PsychicSensitivity>
 
-            <VEF_CosmeticBodySize_Multiplier>0.3</VEF_CosmeticBodySize_Multiplier>
+            <VEF_CosmeticBodySize_Multiplier>0.2</VEF_CosmeticBodySize_Multiplier>
         </statOffsets>
         <statFactors>
             <MeditationFocusGain>1.4</MeditationFocusGain>
