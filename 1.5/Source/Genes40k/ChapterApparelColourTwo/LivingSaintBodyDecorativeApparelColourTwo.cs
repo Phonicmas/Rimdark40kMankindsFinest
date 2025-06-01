@@ -9,8 +9,8 @@ public class LivingSaintBodyDecorativeApparelColourTwo : BodyDecorativeApparelCo
 {
     private BodyTypeDef originalBodyType = null;
 
-    private static readonly Color GoldColour = new(224, 157, 61, 1);
-    private static readonly Color RedColour = new(149,34,35, 1);
+    private static readonly Color GoldColour = new(0.878f, 0.615f, 0.239f);
+    private static readonly Color RedColour = new(0.584f, 0.133f, 0.137f);
 
     public override void SpawnSetup(Map map, bool respawningAfterLoad)
     {
@@ -19,8 +19,7 @@ public class LivingSaintBodyDecorativeApparelColourTwo : BodyDecorativeApparelCo
         {
             return;
         }
-        //Self made colours not work?
-        SetInitialColours(Color.yellow, Color.red);
+        SetInitialColours(GoldColour, RedColour);
     }
     
     public override void Notify_Equipped(Pawn pawn)
