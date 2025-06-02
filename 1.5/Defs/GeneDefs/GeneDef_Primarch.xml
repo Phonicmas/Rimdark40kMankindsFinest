@@ -85,6 +85,10 @@
             <RangedCooldownFactor>0.65</RangedCooldownFactor>
         </statFactors>
 
+        <hediffGiversCannotGive>
+            <li>Cataract</li>
+        </hediffGiversCannotGive>
+
         <aptitudes>
             <Shooting>10</Shooting>
             <Social>4</Social>
@@ -139,6 +143,14 @@
         <biostatCpx>11</biostatCpx>
         <biostatArc>4</biostatArc>
         <minAgeActive>1</minAgeActive>
+
+        <makeImmuneTo>
+            <li>SleepingSickness</li>
+        </makeImmuneTo>
+        <hediffGiversCannotGive>
+            <li>Dementia</li>
+            <li>Alzheimers</li>
+        </hediffGiversCannotGive>
 
         <statOffsets>
             <MentalBreakThreshold>-0.2</MentalBreakThreshold>
@@ -200,24 +212,11 @@
         <makeImmuneTo>
             <li>Flu</li>
             <li>Malaria</li>
-            <li>SleepingSickness</li>
             <li>Plague</li>
-            <li>WoundInfection</li>
-            <li>LungRot</li>
             <li>GutWorms</li>
-            <li>MuscleParasites</li>
-            <li>LungRotExposure</li>
         </makeImmuneTo>
         <hediffGiversCannotGive>
             <li>Carcinoma</li>
-            <li>HeartAttack</li>
-            <li>BadBack</li>
-            <li>Frail</li>
-            <li>Cataract</li>
-            <li>Dementia</li>
-            <li>Alzheimers</li>
-            <li>Asthma</li>
-            <li>HeartArteryBlockage</li>
             <li>Cirrhosis</li>
             <li>DrugOverdose</li>
         </hediffGiversCannotGive>
@@ -251,6 +250,16 @@
         <biostatCpx>6</biostatCpx>
         <biostatArc>2</biostatArc>
         <minAgeActive>4</minAgeActive>
+
+        <makeImmuneTo>
+            <li>LungRot</li>
+            <li>LungRotExposure</li>
+        </makeImmuneTo>
+        <hediffGiversCannotGive>
+            <li>HeartAttack</li>
+            <li>Asthma</li>
+            <li>HeartArteryBlockage</li>
+        </hediffGiversCannotGive>
 
         <foodPoisoningChanceFactor>0</foodPoisoningChanceFactor>
         <dontMindRawFood>true</dontMindRawFood>
@@ -311,7 +320,6 @@
         <biostatCpx>7</biostatCpx>
         <biostatArc>3</biostatArc>
 
-
         <statOffsets>
             <MeleeDodgeChance>12</MeleeDodgeChance>
         </statOffsets>
@@ -359,6 +367,15 @@
 
         <biostatCpx>9</biostatCpx>
         <biostatArc>3</biostatArc>
+
+        <makeImmuneTo>
+            <li>WoundInfection</li>
+            <li>MuscleParasites</li>
+        </makeImmuneTo>
+        <hediffGiversCannotGive>
+            <li>BadBack</li>
+            <li>Frail</li>
+        </hediffGiversCannotGive>
 
         <painFactor>0.2</painFactor>
         <statOffsets>

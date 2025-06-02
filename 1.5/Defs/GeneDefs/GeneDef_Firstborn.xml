@@ -18,6 +18,10 @@
             <li>Can survive loss of heart.</li>
         </customEffectDescriptions>
         <minAgeActive>14</minAgeActive>
+        <hediffGiversCannotGive>
+            <li>HeartAttack</li>
+            <li>HeartArteryBlockage</li>
+        </hediffGiversCannotGive>
         <suppressedTraits>
             <li>
                 <def>SpeedOffset</def>
@@ -51,6 +55,10 @@
             <Mass>25</Mass>
             <VEF_CosmeticBodySize_Multiplier>0.3</VEF_CosmeticBodySize_Multiplier>
         </statOffsets>
+        <hediffGiversCannotGive>
+            <li>BadBack</li>
+            <li>Frail</li>
+        </hediffGiversCannotGive>
         <suppressedTraits>
             <li>
                 <def>Delicate</def>
@@ -85,6 +93,9 @@
         <aptitudes>
             <Melee>4</Melee>
         </aptitudes>
+        <makeImmuneTo>
+            <li>MuscleParasites</li>
+        </makeImmuneTo>
         <passionMod>
             <skill>Melee</skill>
             <modType>AddOneLevel</modType>
@@ -126,6 +137,9 @@
                 <degree>-2</degree>
             </li>
         </suppressedTraits>
+        <makeImmuneTo>
+            <li>WoundInfection</li>
+        </makeImmuneTo>
         <minAgeActive>14</minAgeActive>
     </GeneDef>
 
@@ -172,6 +186,13 @@
                 <degree>-2</degree>
             </li>
         </suppressedTraits>
+        <makeImmuneTo>
+            <li>SleepingSickness</li>
+        </makeImmuneTo>
+        <hediffGiversCannotGive>
+            <li>Dementia</li>
+            <li>Alzheimers</li>
+        </hediffGiversCannotGive>
         <minAgeActive>17</minAgeActive>
     </GeneDef>
 
@@ -231,6 +252,13 @@
                 <offset>0.25</offset>
             </li>
         </capMods>
+        <makeImmuneTo>
+            <li>LungRot</li>
+            <li>LungRotExposure</li>
+        </makeImmuneTo>
+        <hediffGiversCannotGive>
+            <li>Asthma</li>
+        </hediffGiversCannotGive>
         <minAgeActive>16</minAgeActive>
         <modExtensions>
             <li Class="Core40k.DefModExtension_LostLungSurvival" />
@@ -264,6 +292,9 @@
             <li>No loss in shooting skill.</li>
             <li>Recreation from shooting.</li>
         </customEffectDescriptions>
+        <hediffGiversCannotGive>
+            <li>Cataract</li>
+        </hediffGiversCannotGive>
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <noSkillLoss>Shooting</noSkillLoss>
@@ -358,6 +389,15 @@
             </li>
         </capMods>
         <biostatMet>3</biostatMet>
+        <makeImmuneTo>
+            <li>Flu</li>
+            <li>Malaria</li>
+            <li>Plague</li>
+            <li>GutWorms</li>
+        </makeImmuneTo>
+        <hediffGiversCannotGive>
+            <li>DrugOverdose</li>
+        </hediffGiversCannotGive>
         <suppressedTraits>
             <li>
                 <def>Immunity</def>
@@ -447,29 +487,9 @@
         <iconPath>UI/Genes/Firstborn/BEWH_Firstborn_ProgenoidsIcon</iconPath>
         <displayOrderInCategory>18</displayOrderInCategory>
         <geneClass>Genes40k.Gene_ProgenoidGlands</geneClass>
-        <makeImmuneTo>
-            <li>Flu</li>
-            <li>Malaria</li>
-            <li>SleepingSickness</li>
-            <li>Plague</li>
-            <li>WoundInfection</li>
-            <li>LungRot</li>
-            <li>GutWorms</li>
-            <li>MuscleParasites</li>
-            <li>LungRotExposure</li>
-        </makeImmuneTo>
         <hediffGiversCannotGive>
             <li>Carcinoma</li>
-            <li>HeartAttack</li>
-            <li>BadBack</li>
-            <li>Frail</li>
-            <li>Cataract</li>
-            <li>Dementia</li>
-            <li>Alzheimers</li>
-            <li>Asthma</li>
-            <li>HeartArteryBlockage</li>
             <li>Cirrhosis</li>
-            <li>DrugOverdose</li>
         </hediffGiversCannotGive>
         <biologicalAgeTickFactorFromAgeCurve>
             <points>

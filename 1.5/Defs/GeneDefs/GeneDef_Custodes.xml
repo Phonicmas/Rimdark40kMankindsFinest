@@ -17,6 +17,12 @@
         <overdoseChanceFactor>0</overdoseChanceFactor>
         <sterilize>true</sterilize>
 
+        <hediffGiversCannotGive>
+            <li>BadBack</li>
+            <li>Frail</li>
+            <li>DrugOverdose</li>
+        </hediffGiversCannotGive>
+
         <statOffsets>
             <CarryingCapacity>300</CarryingCapacity>
             <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
@@ -79,6 +85,10 @@
         <preventPermanentWounds>true</preventPermanentWounds>
         <painFactor>0.45</painFactor>
 
+        <makeImmuneTo>
+            <li>WoundInfection</li>
+        </makeImmuneTo>
+
         <statOffsets>
             <ToxicEnvironmentResistance>2</ToxicEnvironmentResistance>
             <ToxicResistance>2</ToxicResistance>
@@ -118,6 +128,14 @@
         <biostatArc>3</biostatArc>
 
         <dontMindRawFood>true</dontMindRawFood>
+
+        <makeImmuneTo>
+            <li>SleepingSickness</li>
+        </makeImmuneTo>
+
+        <hediffGiversCannotGive>
+            <li>Cataract</li>
+        </hediffGiversCannotGive>
 
         <statOffsets>
             <MeleeDodgeChance>8</MeleeDodgeChance>
@@ -204,27 +222,13 @@
         <makeImmuneTo>
             <li>Flu</li>
             <li>Malaria</li>
-            <li>SleepingSickness</li>
             <li>Plague</li>
-            <li>WoundInfection</li>
-            <li>LungRot</li>
             <li>GutWorms</li>
-            <li>MuscleParasites</li>
-            <li>LungRotExposure</li>
         </makeImmuneTo>
 
         <hediffGiversCannotGive>
             <li>Carcinoma</li>
-            <li>HeartAttack</li>
-            <li>BadBack</li>
-            <li>Frail</li>
-            <li>Cataract</li>
-            <li>Dementia</li>
-            <li>Alzheimers</li>
-            <li>Asthma</li>
-            <li>HeartArteryBlockage</li>
             <li>Cirrhosis</li>
-            <li>DrugOverdose</li>
         </hediffGiversCannotGive>
 
         <suppressedTraits>
@@ -261,6 +265,11 @@
             <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0</CertaintyLossFactor>
             <RestFallRateFactor>0.4</RestFallRateFactor>
         </statFactors>
+
+        <hediffGiversCannotGive>
+            <li>Dementia</li>
+            <li>Alzheimers</li>
+        </hediffGiversCannotGive>
 
         <abilities>
             <li>BEWH_WarpShield</li>
@@ -327,6 +336,18 @@
         <statFactors>
             <MeleeHitChance>1.8</MeleeHitChance>
         </statFactors>
+
+        <makeImmuneTo>
+            <li>LungRot</li>
+            <li>LungRotExposure</li>
+            <li>MuscleParasites</li>
+        </makeImmuneTo>
+
+        <hediffGiversCannotGive>
+            <li>HeartAttack</li>
+            <li>Asthma</li>
+            <li>HeartArteryBlockage</li>
+        </hediffGiversCannotGive>
 
         <capMods>
             <li>
