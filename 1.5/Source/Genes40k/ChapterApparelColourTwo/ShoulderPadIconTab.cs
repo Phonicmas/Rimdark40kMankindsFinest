@@ -20,13 +20,9 @@ public class ShoulderPadIconTab : ApparelColourTwoTabDrawer
 
     private void Setup(Pawn pawn)
     {
-        var allShoulderIcons = DefDatabase<ShoulderIconDef>.AllDefs.ToList();
-        foreach (var shoulderIcon in allShoulderIcons)
+        var allShoulderIcons = DefDatabase<ShoulderIconDef>.AllDefsListForReading;
+        foreach (var shoulderIcon in allShoulderIcons.Where(shoulderIcon => shoulderIcon.HasRequirements(pawn)))
         {
-            if (!shoulderIcon.HasRequirements(pawn))
-            {
-                continue;
-            }
             if (shoulderIcon.leftShoulder)
             {
                 leftShoulderIcons.Add(shoulderIcon);

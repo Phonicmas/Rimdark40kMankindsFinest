@@ -64,7 +64,7 @@
     <defName>BEWH_DecorativeChapterBannerImperium</defName>
     <label>Decorative Chapter Banner</label>
     <description>A beautifully crafted banner adorned with the chapter's symbols and colors. It stands as a proud testament to the chapter's history and glory.</description>
-    <thingClass>Genes40k.Building_ChapterBuildingSingle</thingClass>
+    <thingClass>Genes40k.Building_DecorativeFlag</thingClass>
     <graphicData>
       <texPath>Things/Building/ChapterBanner/BEWH_DecorationChapterBanner</texPath>
       <maskPath>Things/Building/ChapterBanner/BEWH_DecorationChapterBannerm</maskPath>
@@ -115,7 +115,7 @@
     <defName>BEWH_DecorativeChapterBannerChaos</defName>
     <label>Decorative Chaos Banner</label>
     <description>A dark and twisted banner, emblazoned with the symbols of Chaos and ruinous forces. The banner radiates an aura of decay and darkness, swaying unnaturally in the winds of battle, a symbol of the chaotic forces that corrupt the very fabric of reality.</description>
-    <thingClass>Genes40k.Building_ChapterBuildingSingle</thingClass>
+    <thingClass>Genes40k.Building_DecorativeFlag</thingClass>
     <graphicData>
       <texPath>Things/Building/ChapterBanner/BEWH_DecorationChapterBannerChaos</texPath>
       <maskPath>Things/Building/ChapterBanner/BEWH_DecorationChapterBannerChaosm</maskPath>

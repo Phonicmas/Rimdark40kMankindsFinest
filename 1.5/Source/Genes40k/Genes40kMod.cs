@@ -136,7 +136,6 @@ public class Genes40kMod : Mod
 
         if (Settings.CurrentlySelectedPreset.defName == "BEWH_CustomChapterDef")
         {
-            //Maybe create this like RightShoulderIconDef in genes utils, to avoid creating it over and over.
             var list = new List<FloatMenuOption>();
             foreach (var shoulderIcon in Genes40kUtils.LeftShoulderIconDef)
             {

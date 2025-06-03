@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- None -->
+    <Genes40k.FlagIconDef>
+        <defName>BEWH_FlagNone</defName>
+        <label>None</label>
+        <description>No icon</description>
+        <iconPath>UI/Designators/Cancel</iconPath>
+        <setsNull>true</setsNull>
+        <sortOrder>-1</sortOrder>
+    </Genes40k.FlagIconDef>
+
+    <!-- Aquila -->
+    <Genes40k.FlagIconDef>
+        <defName>BEWH_FlagAquila</defName>
+        <label>Aquila</label>
+        <description>Imperial Aquila</description>
+        <iconPath>UI/Decoration/LegionBadges/BEWH_iconUI_Aquila</iconPath>
+        <sortOrder>0</sortOrder>
+    </Genes40k.FlagIconDef>
+
+</Defs>

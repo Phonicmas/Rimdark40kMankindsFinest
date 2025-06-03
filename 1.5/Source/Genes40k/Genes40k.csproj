@@ -197,6 +197,7 @@
     <Compile Include="ThingClasses\Building_ChapterBanner.cs" />
     <Compile Include="ThingClasses\Building_ChapterBuildingMulti.cs" />
     <Compile Include="ThingClasses\Building_ChapterBuildingSingle.cs" />
+    <Compile Include="ThingClasses\Building_DecorativeFlag.cs" />
     <Compile Include="ThingClasses\Building_DropPod.cs" />
     <Compile Include="ThingClasses\Building_GeneGestator.cs" />
     <Compile Include="ThingClasses\Building_GeneTable.cs" />
@@ -225,11 +226,13 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_LivingSaintResurrection.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_LivingSaintAscension.cs" />
     <Compile Include="ThingClasses\Building_SangprimusPortum.cs" />
+    <Compile Include="ThingClasses\FlagIconDef.cs" />
     <Compile Include="ThingClasses\GeneMaterialExtra.cs" />
     <Compile Include="ThingClasses\GeneticMatrix.cs" />
     <Compile Include="ThingClasses\PrimarchEmbryo.cs" />
     <Compile Include="ThingClasses\GeneseedVial.cs" />
     <Compile Include="Windows\Dialog_CraftPrimarchEmbryo.cs" />
+    <Compile Include="Windows\Dialog_EditFlag.cs" />
     <Compile Include="Windows\Dialog_ViewGenesEmbryo.cs" />
     <Compile Include="Windows\ITab_ContentsGeneticStorage.cs" />
     <Compile Include="Windows\ITab_SangprimusPortum.cs" />
