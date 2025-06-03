@@ -31,7 +31,7 @@
         </graphicData>
         <projectile>
             <damageDef>BEWH_Bolt</damageDef>
-            <damageAmountBase>38</damageAmountBase>
+            <damageAmountBase>34</damageAmountBase>
             <armorPenetrationBase>0.75</armorPenetrationBase>
             <explosionRadius>1.2</explosionRadius>
             <soundExplode>GunShotA</soundExplode>
@@ -51,7 +51,7 @@
         </graphicData>
         <projectile>
             <damageDef>BEWH_LivingSaintHoly</damageDef>
-            <damageAmountBase>38</damageAmountBase>
+            <damageAmountBase>33</damageAmountBase>
             <armorPenetrationBase>0.75</armorPenetrationBase>
             <explosionRadius>1.2</explosionRadius>
             <soundExplode>GunShotA</soundExplode>

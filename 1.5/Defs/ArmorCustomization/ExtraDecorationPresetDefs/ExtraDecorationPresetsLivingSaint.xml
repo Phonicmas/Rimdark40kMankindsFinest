@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+<!-- 
+Preset colours pallete (For your own sanity)
+Pouch Grey: (114,114,114)
+Silver: (173,178,178)
+Maroon: (104,24,33)
+Fabric Beige: (160, 158, 137)
+Gold: (240,176,29)
+Black: (50,51,50)
+Apothecary white: (218,210,199)
+Apothecary red: (162, 54, 39)
+Saint's Light: (245, 245, 210)
+ -->
+
+<!-- St. Celestine -->
+    <!-- Body -->
+    <Core40k.ExtraDecorationPresetDef>
+        <defName>BEWH_Preset_StCelestine</defName>
+        <label>St. Celestine</label>
+        <appliesTo>
+            <li>BEWH_LivingSaintArmor</li>
+        </appliesTo>
+        <presetData>
+            <BEWH_LivingSaintWings_1>
+                <flipped>false</flipped>
+                <colour>(213, 158, 76)</colour> <!-- Default primary color -->
+            </BEWH_LivingSaintWings_1>
+            <BEWH_LivingSaintHalo_2>
+                <flipped>false</flipped>
+                <colour>(173, 178, 178)</colour>
+            </BEWH_LivingSaintHalo_2>
+            <BEWH_Deco_LsSkull>
+                <flipped>false</flipped>
+                <colour />
+            </BEWH_Deco_LsSkull>
+        </presetData>
+    </Core40k.ExtraDecorationPresetDef>
+
+    <!-- Being of light -->
+    <!-- Body -->
+    <Core40k.ExtraDecorationPresetDef>
+        <defName>BEWH_Preset_BeingOfLight</defName>
+        <label>Being of Light</label>
+        <appliesTo>
+            <li>BEWH_LivingSaintArmor</li>
+        </appliesTo>
+        <presetData>
+            <BEWH_LivingSaintWings_2>
+                <flipped>false</flipped>
+                <colour>(245, 245, 210)</colour> 
+            </BEWH_LivingSaintWings_2>
+            <BEWH_LivingSaintHalo_1>
+                <flipped>false</flipped>
+                <colour>(245, 245, 210)</colour>
+            </BEWH_LivingSaintHalo_1>
+            <BEWH_Deco_LsFleurDeLis>
+                <flipped>false</flipped>
+                <colour>(245, 245, 210)</colour>
+            </BEWH_Deco_LsFleurDeLis>
+        </presetData>
+    </Core40k.ExtraDecorationPresetDef>
+
+    <!-- Martyr's Vengeance -->
+    <!-- Body -->
+    <Core40k.ExtraDecorationPresetDef>
+        <defName>BEWH_Preset_Vengeance</defName>
+        <label>Martyr's Vengeance</label>
+        <appliesTo>
+            <li>BEWH_LivingSaintArmor</li>
+        </appliesTo>
+        <presetData>
+            <BEWH_LivingSaintWings_2>
+                <flipped>false</flipped>
+                <colour>(140, 35, 47)</colour> 
+            </BEWH_LivingSaintWings_2>
+            <BEWH_LivingSaintHalo_1>
+                <flipped>false</flipped>
+                <colour>(140, 35, 47)</colour>
+            </BEWH_LivingSaintHalo_1>
+            <BEWH_Deco_LsRose>
+                <flipped>false</flipped>
+                <colour>(126, 51, 60)</colour>
+            </BEWH_Deco_LsRose>
+        </presetData>
+    </Core40k.ExtraDecorationPresetDef>
+
+</Defs>

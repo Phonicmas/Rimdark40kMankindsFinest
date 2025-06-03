@@ -58,7 +58,7 @@
     <ThingDef ParentName="BEWH_PowerArmorBase_ChapterColour">
         <defName>BEWH_MkVIIPowerArmor</defName>
         <label>Mk VII Power Armor</label>
-        <description>Mk VII power armor of Firstborn Space Marines.</description>
+        <description>The MK VII "Aquila" Power Armor is an advanced battle plate worn by the Adeptus Astartes. It features dense ceramite plating, reinforced servo-musculature, and the iconic Aquila chest plate. It provides excellent protection against ballistic and energy weapons, making it ideal for prolonged engagements in hostile environments.</description>
         <recipeMaker>
             <researchPrerequisite>BEWH_AstartesPowerArmorMkVII</researchPrerequisite>
         </recipeMaker>
@@ -158,7 +158,7 @@
     <ThingDef ParentName="BEWH_PowerArmorBase_ChapterColour">
         <defName>BEWH_MkXPowerArmor</defName>
         <label>Mk X Power Armor</label>
-        <description>Mk X power armor of Primaris Space Marines.</description>
+        <description>The MK X "Tacticus" Power Armor is a modernized battle plate worn by Primaris Space Marines. Combining the durability of earlier marks with increased mobility, it features advanced ceramite-composite plating and enhanced servo systems. Its modular design allows for field adaptability across diverse combat roles, offering superior protection and efficiency in extended operations.</description>
         <recipeMaker>
             <researchPrerequisite>BEWH_AstartesPowerArmorMkX</researchPrerequisite>
         </recipeMaker>
@@ -258,8 +258,7 @@
     <ThingDef ParentName="BEWH_PowerArmorBase_ChapterColour">
         <defName>BEWH_MkXPowerArmorChaplain</defName>
         <label>Mk X Chaplain Power Armor</label>
-        <!-- God forbid we forget to proofread the descriptions -->
-        <description>Mk X power armor designed specially for Charles Chaplain of the Primaris marines.</description>
+        <description>...</description>
         <recipeMaker>
             <researchPrerequisite>BEWH_AstartesPowerArmorMkX</researchPrerequisite>
         </recipeMaker>
@@ -361,7 +360,7 @@
         <defName>BEWH_LivingSaintArmor</defName>
         <label>Living Saint Armor</label>
         <thingClass>Genes40k.LivingSaintBodyDecorativeApparelColourTwo</thingClass>
-        <description>...</description>
+        <description>A sanctified warplate worn by a Living Saint, adorned with the symbols of the Ecclesiarchy. It shines with a faint golden hue and, while lacking advanced systems, offers impressive protection. Some claim it has a calming or inspiring effect on nearby allies. Despite its imposing appearance, it moves easily with the wearer, providing both resilience and mobility.</description>
         <graphicData>
             <texPath>Things/Armor/Imperium/PowerArmor/LivingSaint/BEWH_LSaintArmor</texPath>
         </graphicData>
@@ -382,6 +381,7 @@
 
             <Insulation_Cold>50</Insulation_Cold>
             <Insulation_Heat>50</Insulation_Heat>
+            <Beauty>5</Beauty>
         </statBases>
         <equippedStatOffsets>
             <TerrorSource MayRequire="Ludeon.RimWorld.Ideology">80</TerrorSource>

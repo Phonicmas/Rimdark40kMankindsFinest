@@ -85,10 +85,10 @@
         <colour>(126, 51, 60)</colour>
     </Core40k.DecorationColourPresetDef>
 
-<!-- Bone White -->
+<!-- Saint's Vengeance -->
     <Core40k.DecorationColourPresetDef>
-        <defName>BEWH_DecoPaletteBoneWhite</defName>
-        <label>Bone White</label>
-        <colour>(245, 245, 210)</colour>
+        <defName>BEWH_DecoPaletteSaintVengeance</defName>
+        <label>Vengeance</label>
+        <colour>(140, 35, 47)</colour>
     </Core40k.DecorationColourPresetDef>
 </Defs>

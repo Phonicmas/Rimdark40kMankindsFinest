@@ -22,7 +22,7 @@
         <drawData>
             <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
             <dataNorth>
-                <layer>60</layer>
+                <layer>65</layer>
 				<offset>(0, 0, 0.24)</offset>
             </dataNorth>
             <dataSouth>
@@ -84,9 +84,10 @@
         <shaderType>TransparentPostLight</shaderType>
         <flipable>false</flipable>
         <colourable>true</colourable>
-        <availablePresets> <!-- Placeholder presets -->
+        <availablePresets>
             <li>BEWH_DecoPaletteGold</li>
             <li>BEWH_DecoPaletteSaintLight</li>
+            <li>BEWH_DecoPaletteSaintVengeance</li>
         </availablePresets>
     </Core40k.ExtraDecorationDef>
 </Defs>

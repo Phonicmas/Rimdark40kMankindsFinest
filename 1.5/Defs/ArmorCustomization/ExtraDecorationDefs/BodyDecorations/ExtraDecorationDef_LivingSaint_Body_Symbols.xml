@@ -51,7 +51,7 @@
         <availablePresets>
             <li>BEWH_DecoPaletteGold</li>
             <li>BEWH_DecoPaletteSilver</li>
-            <li>BEWH_DecoPaletteBoneWhite</li>
+            <li>BEWH_DecoPaletteSaintLight</li>
             <li>BEWH_DecoPaletteSaintRose</li>
         </availablePresets>
     </Core40k.ExtraDecorationDef>
@@ -82,7 +82,7 @@
         <availablePresets>
             <li>BEWH_DecoPaletteGold</li>
             <li>BEWH_DecoPaletteSilver</li>
-            <li>BEWH_DecoPaletteBoneWhite</li>
+            <li>BEWH_DecoPaletteSaintLight</li>
             <li>BEWH_DecoPaletteSaintRose</li>
         </availablePresets>
     </Core40k.ExtraDecorationDef>
@@ -113,7 +113,7 @@
         <availablePresets>
             <li>BEWH_DecoPaletteGold</li>
             <li>BEWH_DecoPaletteSilver</li>
-            <li>BEWH_DecoPaletteBoneWhite</li>
+            <li>BEWH_DecoPaletteSaintLight</li>
             <li>BEWH_DecoPaletteSaintRose</li>
         </availablePresets>
     </Core40k.ExtraDecorationDef>

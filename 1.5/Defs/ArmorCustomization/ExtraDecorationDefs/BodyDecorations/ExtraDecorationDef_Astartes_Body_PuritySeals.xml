@@ -176,7 +176,7 @@
                 <flip>true</flip>
             </dataEast>
             <dataWest>
-                <layer>74</layer>
+                <layer>65</layer>
             </dataWest>
         </drawData>
         <shaderType>Cutout</shaderType>
