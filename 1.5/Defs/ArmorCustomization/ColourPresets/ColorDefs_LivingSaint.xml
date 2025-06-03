@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <Genes40k.ChapterColourDef Name="BEWH_ColorPresetLivingSaint" Abstract="True">
+        <appliesTo>
+            <li>BEWH_LivingSaintArmor</li>
+        </appliesTo>
+    </Genes40k.ChapterColourDef>
+
+    <!-- St.Celestine -->
+    <Genes40k.ChapterColourDef ParentName="BEWH_ColorPresetLivingSaint">
+        <defName>BEWH_LSColorPreset_1</defName>
+        <label>St. Celestine</label>
+        <primaryColour>(213, 158, 76)</primaryColour>
+        <secondaryColour>(104, 24, 33)</secondaryColour>
+    </Genes40k.ChapterColourDef>
+
+    <!-- Silver Maiden -->
+    <Genes40k.ChapterColourDef ParentName="BEWH_ColorPresetLivingSaint">
+        <defName>BEWH_LSColorPreset_2</defName>
+        <label>Silver Maiden</label>
+        <primaryColour>(134, 136, 136)</primaryColour>
+        <secondaryColour>(22, 24, 24)</secondaryColour>
+    </Genes40k.ChapterColourDef>
+
+    <!-- Martyr's Vengeance -->
+    <Genes40k.ChapterColourDef ParentName="BEWH_ColorPresetLivingSaint">
+        <defName>BEWH_LSColorPreset_3</defName>
+        <label>Martyr's Vengeance</label>
+        <primaryColour>(44, 48, 48)</primaryColour>
+        <secondaryColour>(126, 51, 60)</secondaryColour>
+    </Genes40k.ChapterColourDef>
+
+</Defs>

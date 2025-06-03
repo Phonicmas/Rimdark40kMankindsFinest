@@ -5,7 +5,7 @@
   <ThingDef ParentName="BaseGunWithQuality">
     <defName>BEWH_LSaintBoltPistol</defName>
     <label>Ascendant Wrath</label>
-    <description>Ascendant Wrath is an ancient weapon appearing to resemble a heavy bolt pistol, its true nature obscured by time and conflicting accounts. Some say it was never forged in any traditional sense, but appeared in the midst of battle - formed from blinding light and raw warp energy as the Saint rose to lead the faithful.</description>
+    <description>An ancient weapon appearing to resemble a heavy bolt pistol, its true nature obscured by time and conflicting accounts. Some say it was never forged in any traditional sense, but appeared in the midst of battle - formed from blinding light and raw warp energy as the Saint rose to lead the faithful.</description>
     <graphicData>
       <texPath>Things/Weapons/BEWH_LSaintBoltPistol</texPath>
       <drawSize>(0.75, 0.75)</drawSize>
@@ -40,10 +40,10 @@
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>BEWH_SaintBolterRound</defaultProjectile>
         <forcedMissRadius>0.075</forcedMissRadius>
-        <warmupTime>0.4</warmupTime>
+        <warmupTime>0.6</warmupTime>
         <range>35.9</range>
-        <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
-        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>30</ticksBetweenBurstShots>
+        <burstShotCount>2</burstShotCount>
         <soundCast>BEWH_SFX_BolterShot</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>12</muzzleFlashScale>
@@ -206,7 +206,7 @@
   <label>Cleansing Fire</label>
   <description>The Ardent Blade unleashes a stream of searing flames upon the unfortunates in its path.</description>
   <iconPath>UI/Abilities/BEWH_CleansingFlame</iconPath>
-  <cooldownTicksRange>10000</cooldownTicksRange> <!-- about 4 hours -->
+  <cooldownTicksRange>5000</cooldownTicksRange> <!-- about 1 hour -->
   <showOnCharacterCard>false</showOnCharacterCard>
   
   <verbProperties>

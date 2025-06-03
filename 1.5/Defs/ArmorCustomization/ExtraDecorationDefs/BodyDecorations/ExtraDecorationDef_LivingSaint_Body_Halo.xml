@@ -45,6 +45,7 @@
         <availablePresets>
             <li>BEWH_DecoPaletteGold</li>
             <li>BEWH_DecoPaletteSaintLight</li>
+            <li>BEWH_DecoPaletteSaintVengeance</li>
         </availablePresets>
     </Core40k.ExtraDecorationDef>
 
