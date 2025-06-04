@@ -5,7 +5,7 @@
   <ThingDef>
     <defName>BEWH_PrimarchEmbryo</defName>
     <label>primarch embryo</label>
-    <description>An embryo of a primarch placed in a special container, ready to be artificially grown.\n\nThis item rapidly deteriorates outside containment.</description>
+    <description>A cluster of genetically-engineered cells in a special casing, prepeared to be artificially grown into a primarch.\n\nThis item rapidly deteriorates outside containment.</description>
     <thingClass>Genes40k.PrimarchEmbryo</thingClass>
     <graphicData>
       <texPath>Things/Item/BEWH_PrimarchEmbryo</texPath>
@@ -51,7 +51,7 @@
   <ThingDef ParentName="ResourceBase">
     <defName>BEWH_RawGestationalSlurry</defName>
     <label>raw gestational slurry</label>
-    <description>This slurry, made from human tissue strengthened by luciferium, is used in the creation of a Primarch.</description>
+    <description>This slurry, derived from human tissue and enhanced with luciferium, is a vital component in the creation of a Primarch.</description>
     <graphicData>
       <texPath>Things/Item/RawGestationalSlurry</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>

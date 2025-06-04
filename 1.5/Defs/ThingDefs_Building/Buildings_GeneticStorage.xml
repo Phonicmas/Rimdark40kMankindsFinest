@@ -233,7 +233,7 @@
   <ThingDef ParentName="BEWH_GeneticStorage">
     <defName>BEWH_PrimarchEmbryoContainer</defName>
     <label>primarch embryo container</label>
-    <description>Able to holster 1 primarch embryo, keeping it safe and preventing deterioration.</description>
+    <description>A specialized containment unit equipped with advanced life-support systems. It can hold a single Primarch embryo cluster, keeping it stable and preventing rapid deterioration.</description>
     <graphicData>
       <texPath>Things/Building/PrimarchEmbryoContainer/BEWH_PrimarchEmbryoContainerEmpty</texPath>
       <graphicClass>Graphic_Multi</graphicClass>

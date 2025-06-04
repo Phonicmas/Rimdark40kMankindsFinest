@@ -70,7 +70,7 @@
   <ThingDef ParentName="BEWH_AstartesMeleeBase">
     <defName>BEWH_AstartesChainsword</defName>
     <label>chainsword</label>
-    <description>A vicious and brutal weapon, the Chainsword is an iconic tool of the Adeptus Astartes. It can carve flesh with absolute easy and is relatively inexpensive to make. The downside is that it lacks the armor penetration of power weapons.</description>
+    <description>A vicious and brutal weapon, the Chainsword is an iconic tool of the Adeptus Astartes. It tears through flesh with ease and is relatively inexpensive to produce. However, it lacks the armor-penetrating capability of more advanced power weapons.</description>
     <soundInteract>BEWH_SFX_ChainswordInteract</soundInteract>
     <meleeHitSound>BEWH_SFX_ChainswordHit</meleeHitSound>
     <!-- <equippedAngleOffset>-65</equippedAngleOffset> -->
