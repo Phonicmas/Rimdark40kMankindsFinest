@@ -35,6 +35,15 @@ public class Genes40kMod : Mod
         listingStandard.Begin(viewRect);
         scrollViewHeight += listingHeightIncrease;
         
+        //Default Chapter Colour
+        listingStandard.Indent(inRect.width * 0.25f);
+        if (listingStandard.ButtonText("BEWH.MankindsFinest.ModSettings.DefaultChapterColours".Translate(settings.CurrentlySelectedPreset.label), widthPct: 0.5f))
+        {
+            Find.WindowStack.Add(new Dialog_ChangeDefaultChapterColour(Settings));
+        }
+        scrollViewHeight += listingHeightIncreaseGap;
+        listingStandard.Outdent(inRect.width * 0.25f);
+        
         //Psychic Phenomena
         listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.PsychicPhenomena".Translate(), ref Settings.psychicPhenomena);
         scrollViewHeight += listingHeightIncrease;
@@ -125,15 +134,6 @@ public class Genes40kMod : Mod
         scrollViewHeight += listingHeightIncreaseGap;
         listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.UseChaosVersionForBanner".Translate(), ref Settings.useChaosVersion);
         scrollViewHeight += listingHeightIncrease;
-        
-        //Default Chapter Colour
-        listingStandard.Indent(inRect.width * 0.25f);
-        if (listingStandard.ButtonText("BEWH.MankindsFinest.ModSettings.DefaultChapterColours".Translate(settings.CurrentlySelectedPreset.label), widthPct: 0.5f))
-        {
-            Find.WindowStack.Add(new Dialog_ChangeDefaultChapterColour(Settings));
-        }
-        scrollViewHeight += listingHeightIncreaseGap;
-        listingStandard.Outdent(inRect.width * 0.25f);
 
         listingStandard.GapLine(36);
         scrollViewHeight += listingHeightIncreaseGap;
