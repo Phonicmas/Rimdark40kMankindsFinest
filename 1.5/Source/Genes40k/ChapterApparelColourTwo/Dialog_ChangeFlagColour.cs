@@ -7,24 +7,37 @@ using Verse;
 
 namespace Genes40k;
 
-public class Dialog_ChangeDefaultChapterColour : Window
+public class Dialog_ChangeFlagColour : Window
 {
-    private Genes40kModSettings settings;
-        
-    private List<ChapterColourDef> chapterColours;
+    private readonly List<ChapterColourDef> chapterColours;
 
     private ChapterColourDef currentlySelectedPreset;
-    private Texture2D CurrentlySelectedIconTexture => ContentFinder<Texture2D>.Get(currentlySelectedPreset.relatedChapterIcon.iconPath);
+    private Color currentlySelectedPrimaryColour;
+    private Color currentlySelectedSecondaryColour;
+    private string currentlySelectedIcon;
+
+    private Texture2D CurrentlySelectedIconTexture => ContentFinder<Texture2D>.Get(currentlySelectedIcon);
+
+    private readonly Building_DecorativeFlag decoFlag;
+    
+    private readonly Genes40kModSettings modSettings = Genes40kUtils.ModSettings;
+
+    private List<FlagIconDef> flagIcons;
         
     public override Vector2 InitialSize => new (900f, 700f);
 
-    public Dialog_ChangeDefaultChapterColour(Genes40kModSettings settings)
+    public Dialog_ChangeFlagColour(Building_DecorativeFlag decoFlag)
     {
-        this.settings = settings;
+        this.decoFlag = decoFlag;
         closeOnClickedOutside = true;
-            
-        currentlySelectedPreset = settings.CurrentlySelectedPreset ?? settings.CustomPreset;
-        chapterColours = DefDatabase<ChapterColourDef>.AllDefs.ToList();
+
+        currentlySelectedPreset = decoFlag.currentlySelectedPreset;
+        currentlySelectedIcon = decoFlag.FlagInsigniaFilePath;
+        currentlySelectedPrimaryColour = decoFlag.DrawColor;
+        currentlySelectedSecondaryColour = decoFlag.DrawColorTwo;
+        chapterColours = DefDatabase<ChapterColourDef>.AllDefsListForReading;
+        
+        flagIcons = DefDatabase<FlagIconDef>.AllDefsListForReading;
     }
     
     private Vector2 scrollPos;
@@ -43,13 +56,19 @@ public class Dialog_ChangeDefaultChapterColour : Window
         defaultChapterButton.width /= 2;
         defaultChapterButton.x += defaultChapterButton.width / 2;
 
-        if (Widgets.ButtonText(defaultChapterButton, "BEWH.MankindsFinest.ModSettings.ColourPreset".Translate(currentlySelectedPreset.label)))
+        if (Widgets.ButtonText(defaultChapterButton, "BEWH.MankindsFinest.ModSettings.ColourPreset".Translate(currentlySelectedPreset?.label ?? modSettings.CustomPreset.label)))
         {
             var list = new List<FloatMenuOption>();
             var customMenuOption = new FloatMenuOption("BEWH.MankindsFinest.ModSettings.CustomColour".Translate(), delegate
             {
-                currentlySelectedPreset = settings.CustomPreset;
-            }, Core40kUtils.TwoColourPreview(settings.CustomPreset.primaryColour, settings.CustomPreset.secondaryColour), Color.white);
+                currentlySelectedPreset = modSettings.CustomPreset;
+                
+                currentlySelectedPrimaryColour = currentlySelectedPreset.primaryColour;
+                currentlySelectedSecondaryColour = currentlySelectedPreset.secondaryColour;
+                currentlySelectedIcon = currentlySelectedPreset.relatedChapterIcon.iconPath;
+                
+                decoFlag.currentlySelectedPreset = null;
+            }, Core40kUtils.TwoColourPreview(modSettings.CustomPreset.primaryColour, modSettings.CustomPreset.secondaryColour), Color.white);
             
             list.Add(customMenuOption);
             foreach (var colour in chapterColours.Where(ccd => ccd.relatedChapterGene != null))
@@ -57,14 +76,17 @@ public class Dialog_ChangeDefaultChapterColour : Window
                 var menuOption = new FloatMenuOption(colour.label.CapitalizeFirst(), delegate
                 {
                     currentlySelectedPreset = colour;
+                    
+                    currentlySelectedPrimaryColour = currentlySelectedPreset.primaryColour;
+                    currentlySelectedSecondaryColour = currentlySelectedPreset.secondaryColour;
+                    currentlySelectedIcon = currentlySelectedPreset.relatedChapterIcon.iconPath;
+                    
+                    decoFlag.currentlySelectedPreset = currentlySelectedPreset;
                 }, Core40kUtils.TwoColourPreview(colour.primaryColour, colour.secondaryColour), Color.white);
                 list.Add(menuOption);
             }
                 
-            if (!list.NullOrEmpty())
-            {
-                Find.WindowStack.Add(new FloatMenu(list));
-            }
+            Find.WindowStack.Add(new FloatMenu(list));
         }
             
         var colourFields = new Rect(inRect);
@@ -77,18 +99,17 @@ public class Dialog_ChangeDefaultChapterColour : Window
         primaryColorRect.x = inRect.xMin + 1f;
             
         Widgets.DrawMenuSection(primaryColorRect.ContractedBy(-1));
-        Widgets.DrawRectFast(primaryColorRect, currentlySelectedPreset.primaryColour);
+        Widgets.DrawRectFast(primaryColorRect, currentlySelectedPrimaryColour);
         Text.Anchor = TextAnchor.MiddleCenter;
         Widgets.Label(primaryColorRect, "BEWH.Framework.ApparelColourTwo.PrimaryColor".Translate());
         TooltipHandler.TipRegion(primaryColorRect, "BEWH.Framework.ApparelColourTwo.ChooseCustomColour".Translate());
         Text.Anchor = TextAnchor.UpperLeft;
         if (Widgets.ButtonInvisible(primaryColorRect))
         {
-            Find.WindowStack.Add( new Dialog_ColourPicker( currentlySelectedPreset.primaryColour, ( newColour ) =>
+            Find.WindowStack.Add( new Dialog_ColourPicker( currentlySelectedPrimaryColour, ( newColour ) =>
             {
-                settings.CustomPreset.primaryColour = newColour;
-                settings.CustomPreset.secondaryColour = currentlySelectedPreset.secondaryColour;
-                currentlySelectedPreset = settings.CustomPreset;
+                currentlySelectedPrimaryColour = newColour;
+                decoFlag.currentlySelectedPreset = null;
             } ) );
         }
 
@@ -99,22 +120,21 @@ public class Dialog_ChangeDefaultChapterColour : Window
         secondaryColorRect.x = inRect.xMax - secondaryColorRect.width - 1f;
             
         Widgets.DrawMenuSection(secondaryColorRect.ContractedBy(-1));
-        Widgets.DrawRectFast(secondaryColorRect, currentlySelectedPreset.secondaryColour);
+        Widgets.DrawRectFast(secondaryColorRect, currentlySelectedSecondaryColour);
         Text.Anchor = TextAnchor.MiddleCenter;
         Widgets.Label(secondaryColorRect, "BEWH.Framework.ApparelColourTwo.SecondaryColor".Translate());
         TooltipHandler.TipRegion(secondaryColorRect, "BEWH.Framework.ApparelColourTwo.ChooseCustomColour".Translate());
         Text.Anchor = TextAnchor.UpperLeft;
         if (Widgets.ButtonInvisible(secondaryColorRect))
         {
-            Find.WindowStack.Add( new Dialog_ColourPicker( currentlySelectedPreset.secondaryColour, ( newColour ) =>
+            Find.WindowStack.Add( new Dialog_ColourPicker( currentlySelectedSecondaryColour, ( newColour ) =>
             {
-                settings.CustomPreset.secondaryColour = newColour;
-                settings.CustomPreset.primaryColour = currentlySelectedPreset.primaryColour;
-                currentlySelectedPreset = settings.CustomPreset;
+                currentlySelectedSecondaryColour = newColour;
+                decoFlag.currentlySelectedPreset = null;
             } ) );
         }
         
-        if (currentlySelectedPreset.defName == "BEWH_CustomChapterDef")
+        if (decoFlag.currentlySelectedPreset == null)
         {
             var customIconName = new Rect(colourFields)
             {
@@ -132,7 +152,6 @@ public class Dialog_ChangeDefaultChapterColour : Window
             var curY = customIconName.yMax + gap;
 
             var viewRectHeight = inRect.yMax - customIconName.yMax - CloseButSize.y;
-            //var viewRectHeight = inRect.height - customIconName.height - CloseButSize.y;
             var outRect = new Rect(inRect.x, curY, inRect.width, viewRectHeight);
             var viewRect = new Rect(inRect.x, curY, inRect.width - 16f, Mathf.Max(scrollViewHeight, viewRectHeight));
             scrollViewHeight = viewRectHeight;
@@ -146,9 +165,8 @@ public class Dialog_ChangeDefaultChapterColour : Window
             
             var curX = position.x;
             
-            var shoulderIcons = Genes40kUtils.LeftShoulderIconDef;
             var rowsMade = 1;
-            for (var i = 0; i < shoulderIcons.Count; i++)
+            for (var i = 0; i < flagIcons.Count; i++)
             {
                 position = new Vector2(curX, curY);
                 var iconRect = new Rect(position, iconSize);
@@ -164,7 +182,7 @@ public class Dialog_ChangeDefaultChapterColour : Window
                 
                 iconRect = iconRect.ContractedBy(5f);
             
-                if (settings.CustomPreset.relatedChapterIcon == shoulderIcons[i])
+                if (currentlySelectedIcon == flagIcons[i].iconPath)
                 {
                     Widgets.DrawStrongHighlight(iconRect.ExpandedBy(3f));
                 }
@@ -173,17 +191,15 @@ public class Dialog_ChangeDefaultChapterColour : Window
                 GUI.color = color;
                 GUI.DrawTexture(iconRect, Command.BGTexShrunk);
                 GUI.color = Color.white;
-                GUI.DrawTexture(iconRect, shoulderIcons[i].Icon);
+                GUI.DrawTexture(iconRect, flagIcons[i].Icon);
                 
-                TooltipHandler.TipRegion(iconRect, shoulderIcons[i].label);
+                TooltipHandler.TipRegion(iconRect, flagIcons[i].label);
 
                 if (Widgets.ButtonInvisible(iconRect))
                 {
-                    settings.chapterShoulderIcon = shoulderIcons[i];
-                    settings.CustomPreset.relatedChapterIcon = shoulderIcons[i];
+                    currentlySelectedIcon = flagIcons[i].iconPath;
                 }
             }
-            
 
             scrollViewHeight = (rowsMade * iconSide) + 5f;
             
@@ -207,15 +223,26 @@ public class Dialog_ChangeDefaultChapterColour : Window
         
         if (Widgets.ButtonText(new Rect(inRect.xMax - CloseButSize.x, inRect.yMax - CloseButSize.y, CloseButSize.x, CloseButSize.y), "Close".Translate()))
         {
+            decoFlag.Reset();
             Close();
         }
             
         if (Widgets.ButtonText(new Rect(inRect.xMin, inRect.yMax - CloseButSize.y, CloseButSize.x, CloseButSize.y), "Accept".Translate()))
         {
-            settings.chapterColorOne = currentlySelectedPreset.primaryColour;
-            settings.chapterColorTwo = currentlySelectedPreset.secondaryColour;
-            settings.CurrentlySelectedPreset = currentlySelectedPreset;
+            decoFlag.SetPrimaryColor(currentlySelectedPrimaryColour);
+            decoFlag.SetSecondaryColor(currentlySelectedSecondaryColour);
+            decoFlag.SetFlagInsignia(currentlySelectedIcon);
+            decoFlag.SetOriginals();
+            decoFlag.Notify_ColorChanged();
+            _ = decoFlag.Graphic;
             Close();
         }
+    }
+    
+
+    public override void Notify_ClickOutsideWindow()
+    {
+        decoFlag.Reset();
+        base.Notify_ClickOutsideWindow();
     }
 }

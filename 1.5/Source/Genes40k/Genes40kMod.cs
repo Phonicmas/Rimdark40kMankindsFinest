@@ -133,25 +133,6 @@ public class Genes40kMod : Mod
             Find.WindowStack.Add(new Dialog_ChangeDefaultChapterColour(Settings));
         }
         scrollViewHeight += listingHeightIncreaseGap;
-
-        if (Settings.CurrentlySelectedPreset.defName == "BEWH_CustomChapterDef")
-        {
-            var list = new List<FloatMenuOption>();
-            foreach (var shoulderIcon in Genes40kUtils.LeftShoulderIconDef)
-            {
-                var menuOption = new FloatMenuOption(shoulderIcon.label, delegate
-                {
-                    settings.chapterShoulderIcon = shoulderIcon;
-                    settings.CustomPreset.relatedChapterIcon = shoulderIcon;
-                }, shoulderIcon.Icon, Color.white);
-                list.Add(menuOption);
-            }
-            if (!list.NullOrEmpty() && listingStandard.ButtonText("BEWH.MankindsFinest.ModSettings.SelectDefaultChapterIcon".Translate(settings.chapterShoulderIcon.label), widthPct: 0.5f))
-            {
-                Find.WindowStack.Add(new FloatMenu(list));
-            }
-            scrollViewHeight += listingHeightIncreaseGap;
-        }
         listingStandard.Outdent(inRect.width * 0.25f);
 
         listingStandard.GapLine(36);

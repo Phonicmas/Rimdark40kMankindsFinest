@@ -94,6 +94,7 @@
     <Compile Include="ChapterApparelColourTwo\ChapterHeadDecorativeApparelColourTwo.cs" />
     <Compile Include="ChapterApparelColourTwo\Dialog_ChangeDefaultChapterColour.cs" />
     <Compile Include="ChapterApparelColourTwo\ChapterBodyDecorativeApparelColourTwo.cs" />
+    <Compile Include="ChapterApparelColourTwo\Dialog_ChangeFlagColour.cs" />
     <Compile Include="ChapterApparelColourTwo\LivingSaintBodyDecorativeApparelColourTwo.cs" />
     <Compile Include="ChapterApparelColourTwo\PawnRenderNodeWorker_AttachmentBackpack.cs" />
     <Compile Include="ChapterApparelColourTwo\PawnRenderNodeWorker_AttachmentShoulderChapterIcon.cs" />
@@ -232,7 +233,6 @@
     <Compile Include="ThingClasses\PrimarchEmbryo.cs" />
     <Compile Include="ThingClasses\GeneseedVial.cs" />
     <Compile Include="Windows\Dialog_CraftPrimarchEmbryo.cs" />
-    <Compile Include="Windows\Dialog_EditFlag.cs" />
     <Compile Include="Windows\Dialog_ViewGenesEmbryo.cs" />
     <Compile Include="Windows\ITab_ContentsGeneticStorage.cs" />
     <Compile Include="Windows\ITab_SangprimusPortum.cs" />

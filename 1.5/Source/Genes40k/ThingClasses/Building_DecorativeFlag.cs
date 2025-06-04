@@ -9,15 +9,29 @@ public class Building_DecorativeFlag : Building
 {
     private Genes40kModSettings modSettings = null;
     private Genes40kModSettings ModSettings => modSettings ??= LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>();
-    
-    private Color drawColorOne = Color.white;
-    private Color originalColorOne = Color.white;
-    public override Color DrawColor => ModSettings?.chapterColorOne ?? base.DrawColor;
-    
-    private Color drawColorTwo = Color.white;
-    private Color originalColorTwo = Color.white;
-    public override Color DrawColorTwo => ModSettings?.chapterColorTwo ?? base.DrawColorTwo;
 
+    public Building_DecorativeFlag()
+    {
+        drawColorOne = ModSettings?.CurrentlySelectedPreset.primaryColour ?? Color.white;
+        originalColorOne = drawColorOne;
+        drawColorTwo = ModSettings?.CurrentlySelectedPreset.secondaryColour ?? Color.white;
+        originalColorTwo = drawColorTwo;
+
+        flagInsigniaFilePath = ModSettings?.CurrentlySelectedPreset.relatedChapterIcon.iconPath ?? originalFlagInsigniaFilePath;
+
+        currentlySelectedPreset = ModSettings?.CurrentlySelectedPreset == ModSettings?.CustomPreset ? null : ModSettings?.CurrentlySelectedPreset;
+    }
+    
+    private Color drawColorOne;
+    private Color originalColorOne;
+    public override Color DrawColor => drawColorOne;
+    
+    private Color drawColorTwo;
+    private Color originalColorTwo;
+    public override Color DrawColorTwo => drawColorTwo;
+
+    public ChapterColourDef currentlySelectedPreset;
+    
     public override Graphic Graphic => GetGraphic();
     private Graphic GetGraphic()
     {
@@ -27,15 +41,17 @@ public class Building_DecorativeFlag : Building
         {
             shader = def.graphicData.shaderType.Shader;
         }
-        return GraphicDatabase.Get<Graphic_Single>(def.graphicData.texPath, shader, def.graphicData.drawSize, ModSettings.chapterColorOne, ModSettings.chapterColorTwo, def.graphicData, maskPath);
-
+        
+        return GraphicDatabase.Get<Graphic_Single>(def.graphicData.texPath, shader, def.graphicData.drawSize, DrawColor, DrawColorTwo, def.graphicData, maskPath);
     }
     
-    private static readonly CachedTexture EditFlagIcon = new ("UI/Gizmos/BEWH_GestationStartIcon");
+    private static readonly CachedTexture EditFlagIcon = new ("UI/Gizmos/BEWH_CogIcon");
         
     [Unsaved(false)]
     private Graphic flagInsigniaGraphic;
-    private string flagInsigniaFilePath = "UI/Decoration/LegionBadges/BEWH_iconUI_Aquila";
+    
+    private string originalFlagInsigniaFilePath = "UI/Decoration/LegionBadges/BEWH_iconUI_Aquila";
+    private string flagInsigniaFilePath;
     public string FlagInsigniaFilePath => flagInsigniaFilePath;
     
     private const string NoIcon = "UI/Decoration/LegionBadges/BEWH_NoneSingle";
@@ -74,7 +90,7 @@ public class Building_DecorativeFlag : Building
             icon = EditFlagIcon.Texture,
             action = delegate
             {
-                Find.WindowStack.Add(new Dialog_EditFlag(this));
+                Find.WindowStack.Add(new Dialog_ChangeFlagColour(this));
             }
         };
         yield return command_Action;
@@ -82,11 +98,13 @@ public class Building_DecorativeFlag : Building
     
     public void SetOriginals()
     {
+        originalFlagInsigniaFilePath = flagInsigniaFilePath;
         originalColorOne = drawColorOne;
         originalColorTwo = drawColorTwo;
     }
     public void Reset()
     {
+        flagInsigniaFilePath = originalFlagInsigniaFilePath;
         drawColorOne = originalColorOne;
         drawColorTwo = originalColorTwo;
         Notify_ColorChanged();
@@ -112,6 +130,8 @@ public class Building_DecorativeFlag : Building
         Scribe_Values.Look(ref drawColorOne, "drawColorOne", Color.white);
         
         Scribe_Values.Look(ref flagInsigniaFilePath, "flagInsigniaFilePath");
+        Scribe_Values.Look(ref originalFlagInsigniaFilePath, "originalFlagInsigniaFilePath");
+        Scribe_Defs.Look(ref currentlySelectedPreset, "currentlySelectedPreset");
 
         if (Scribe.mode == LoadSaveMode.PostLoadInit)
         {
