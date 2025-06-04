@@ -8,7 +8,7 @@
     <ThingDef ParentName="BEWH_PowerArmorHelmetBase">
         <defName>BEWH_MkVIIPowerArmorHelmet</defName>
         <label>Mk VII Power Armor Helmet</label>
-        <description>Standard issue Mk VII helmet of Firstborn Space Marines.</description>
+        <description>A standard-issue battle helm of the Adeptus Astartes, offering durable ceramite protection and a reinforced grille design. It provides reliable performance and is well-suited for prolonged combat operations.</description>
         <thingClass>Genes40k.ChapterHeadDecorativeApparelColourTwo</thingClass>
         <recipeMaker>
             <researchPrerequisite>BEWH_AstartesPowerArmorMkVII</researchPrerequisite>
@@ -54,7 +54,7 @@
     <ThingDef ParentName="BEWH_PowerArmorHelmetBase">
         <defName>BEWH_MkXPowerArmorHelmet</defName>
         <label>Mk X Power Armor Helmet</label>
-        <description>Standard issue Mk X helmet of Primaris Space Marines.</description>
+        <description>A standard battle helm worn by Primaris Space Marines, designed for increased protection and clarity. Its refined optics and sealed construction support long deployments in hostile environments.</description>
         <thingClass>Genes40k.ChapterHeadDecorativeApparelColourTwo</thingClass>
         <recipeMaker>
             <researchPrerequisite>BEWH_AstartesPowerArmorMkX</researchPrerequisite>

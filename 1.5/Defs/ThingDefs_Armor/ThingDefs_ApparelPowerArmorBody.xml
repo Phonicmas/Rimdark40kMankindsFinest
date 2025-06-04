@@ -258,7 +258,7 @@
     <ThingDef ParentName="BEWH_PowerArmorBase_ChapterColour">
         <defName>BEWH_MkXPowerArmorChaplain</defName>
         <label>Mk X Chaplain Power Armor</label>
-        <description>...</description>
+        <description>This MK X Power Armor is a specialized variant of the Tacticus pattern, worn by Primaris Chaplains. Built upon the same durable and mobile frame, it is adorned with grim iconography to embody the Emperor's judgment and inspire unwavering zeal in those who follow.</description>
         <recipeMaker>
             <researchPrerequisite>BEWH_AstartesPowerArmorMkX</researchPrerequisite>
         </recipeMaker>

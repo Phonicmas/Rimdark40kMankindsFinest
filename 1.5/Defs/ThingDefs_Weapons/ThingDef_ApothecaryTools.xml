@@ -96,7 +96,7 @@
   <ThingDef ParentName="BEWH_ApothecaryToolGeneseed">
     <defName>BEWH_Reductor</defName>
     <label>reductor</label>
-    <description>The Reductor is a special tool used by Adeptus Astartes apothecaries and Primaris apothecaries to retrieve the crucial gene-seed of their fallen battle-brothers so that new Astartes might be raised from among their Chapter's aspirants. This tool also doubles as a close ranged pistol. Increases the chance of successfully extracting gene-seeds from dead marines by 50%.</description>
+    <description>The Reductor is a special tool used by apothecaries to retrieve the crucial gene-seed of their fallen brothers so that new Astartes might be raised from among their Chapter's aspirants. This tool also doubles as a close ranged pistol. \n\nIncreases the chance of successfully extracting gene-seeds from dead marines by 50%.</description>
     <graphicData>
       <texPath>Things/Weapons/BEWH_Reductor</texPath>
       <graphicClass>Graphic_Single</graphicClass>
