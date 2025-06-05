@@ -37,7 +37,7 @@ public class Dialog_ChangeFlagColour : Window
         currentlySelectedSecondaryColour = decoFlag.DrawColorTwo;
         chapterColours = DefDatabase<ChapterColourDef>.AllDefsListForReading;
         
-        flagIcons = DefDatabase<FlagIconDef>.AllDefsListForReading;
+        flagIcons = DefDatabase<FlagIconDef>.AllDefs.OrderBy(flagIcon => flagIcon.sortOrder).ToList();
     }
     
     private Vector2 scrollPos;

@@ -353,6 +353,10 @@ public class Building_PrimarchGrowthVat : Building_Enterable, IStoreSettingsPare
                 pawn2.genes.AddGene(gene, true);
             }
             pawn2.genes.SetXenotypeDirect(Genes40kDefOf.BEWH_Primarch);
+            if (!Genes40kUtils.ModSettings.allowFemalePrimarchBirths)
+            {
+                pawn2.gender = Gender.Male;
+            }
             children.Add(pawn2);
             if (thing == null || !(embryoStarvation > 0f))
             {

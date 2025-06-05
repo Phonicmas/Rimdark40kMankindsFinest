@@ -6,7 +6,7 @@
         <mods>
             <li>RimDark 40k - Mankinds Finest</li>
         </mods>
-        <label>Force superhuman to be male:</label>
+        <label>Force Thunder Warriors, Space Marines and Custodes to be male:</label>
         <operations>
             <li Class="PatchOperationAdd">
                 <xpath>Defs/GeneDef[defName = "BEWH_ProtoOssmodula"]</xpath>

@@ -121,6 +121,12 @@ public class Genes40kMod : Mod
         scrollViewHeight += listingHeightIncrease;
         Settings.implantationCapOffset = (int)listingStandard.Slider(Settings.implantationCapOffset, -100, 100);
         scrollViewHeight += listingHeightIncrease;
+            
+        //Only male Primarch
+        listingStandard.GapLine(36);
+        scrollViewHeight += listingHeightIncreaseGap;
+        listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.AllowFemalePrimarch".Translate(), ref Settings.allowFemalePrimarchBirths);
+        scrollViewHeight += listingHeightIncrease;
         
         //Psychic Crafting
         listingStandard.GapLine(36);

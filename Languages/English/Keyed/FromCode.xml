@@ -29,6 +29,8 @@
   <BEWH.MankindsFinest.ModSettings.ImplantationSuccessChange>Implantation success offset: {0}%</BEWH.MankindsFinest.ModSettings.ImplantationSuccessChange>
   <BEWH.MankindsFinest.ModSettings.ImplantationCapOffset>Implantation cap offset: {0}%</BEWH.MankindsFinest.ModSettings.ImplantationCapOffset>
 
+  <BEWH.MankindsFinest.ModSettings.AllowFemalePrimarchs>Allow female primarchs to be grown</BEWH.MankindsFinest.ModSettings.AllowFemalePrimarchs>
+
   <BEWH.MankindsFinest.ModSettings.PsychicCrafting>Enabling this will cause pawn to slowly lose consciousness while create superhuman matrices. \nIf royalty is installed and the pawn is psychic, they will lose psyfocus first.</BEWH.MankindsFinest.ModSettings.PsychicCrafting>
 
   <!--=== Common keywords ===-->

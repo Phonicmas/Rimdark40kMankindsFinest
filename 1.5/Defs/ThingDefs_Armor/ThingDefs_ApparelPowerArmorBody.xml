@@ -387,6 +387,12 @@
             <TerrorSource MayRequire="Ludeon.RimWorld.Ideology">80</TerrorSource>
         </equippedStatOffsets>
         <apparel>
+            <bodyPartGroups>
+                <li>FullHead</li>
+            </bodyPartGroups>
+            <renderSkipFlags>
+                <li>None</li>
+            </renderSkipFlags>
             <wornGraphicPath>Things/Armor/Imperium/PowerArmor/LivingSaint/BEWH_LSaintArmor</wornGraphicPath>
             <tags>
                 <li>BEWH_LivingSaintArmor</li>

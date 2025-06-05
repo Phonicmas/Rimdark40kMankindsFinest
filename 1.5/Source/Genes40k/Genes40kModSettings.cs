@@ -23,6 +23,8 @@ public class Genes40kModSettings : ModSettings
     public int implantationCapOffset = 0;
 
     public bool psychicCrafting = true;
+
+    public bool allowFemalePrimarchBirths = false;
         
     private ChapterColourDef currentlySelectedPreset = null;
         
@@ -69,14 +71,16 @@ public class Genes40kModSettings : ModSettings
         Scribe_Values.Look(ref implantationSuccessOffset, "implantationSuccessOffset", 0);
         Scribe_Values.Look(ref implantationCapOffset, "implantationCapOffset", 0);
         
+        Scribe_Values.Look(ref allowFemalePrimarchBirths, "allowFemalePrimarchBirths", false);
+        
         Scribe_Values.Look(ref psychicCrafting, "psychicCrafting", true);
+        
+        Scribe_Values.Look(ref useChaosVersion, "useChaosVersion", false);
             
         Scribe_Values.Look(ref chapterColorOne, "chapterColorOne", Color.black);
         Scribe_Values.Look(ref chapterColorTwo, "chapterColorTwo", Color.red);
         Scribe_Defs.Look(ref chapterShoulderIcon, "chapterShoulderIcon");
-            
-        Scribe_Values.Look(ref useChaosVersion, "useChaosVersion", false);
-            
+        
         if (Scribe.mode == LoadSaveMode.Saving)
         {
             if (currentlySelectedPreset == CustomPreset)
