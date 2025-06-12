@@ -34,20 +34,20 @@ public class Genes40kMod : Mod
         var listingStandard = new Listing_Standard();
         listingStandard.Begin(viewRect);
         scrollViewHeight += listingHeightIncrease;
-        
+
         //Default Chapter Colour
         listingStandard.Indent(inRect.width * 0.25f);
-        if (listingStandard.ButtonText("BEWH.MankindsFinest.ModSettings.DefaultChapterColours".Translate(settings.CurrentlySelectedPreset.label), widthPct: 0.5f))
+        if (listingStandard.ButtonText("BEWH.MankindsFinest.ModSettings.DefaultChapterColours".Translate(Settings.CurrentlySelectedPreset.label), widthPct: 0.5f))
         {
             Find.WindowStack.Add(new Dialog_ChangeDefaultChapterColour(Settings));
         }
         scrollViewHeight += listingHeightIncreaseGap;
         listingStandard.Outdent(inRect.width * 0.25f);
-        
+
         //Psychic Phenomena
         listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.PsychicPhenomena".Translate(), ref Settings.psychicPhenomena);
         scrollViewHeight += listingHeightIncrease;
-            
+  
         //Psyker/Pariah Birth
         listingStandard.GapLine(36);
         scrollViewHeight += listingHeightIncreaseGap;
@@ -73,7 +73,7 @@ public class Genes40kMod : Mod
             Settings.perpetualBirthChance = (int)listingStandard.Slider(Settings.perpetualBirthChance, 0, 100);
             scrollViewHeight += listingHeightIncrease;
         }
-            
+
         //Living Saint System
         listingStandard.GapLine(36);
         scrollViewHeight += listingHeightIncreaseGap;
@@ -106,7 +106,7 @@ public class Genes40kMod : Mod
             Settings.livingSaintLimit = (int)listingStandard.Slider(Settings.livingSaintLimit, 1, 100);
             scrollViewHeight += listingHeightIncrease;
         }
-            
+
         //Geneseed Implantation Offset
         listingStandard.GapLine(36);
         scrollViewHeight += listingHeightIncreaseGap;
@@ -121,11 +121,11 @@ public class Genes40kMod : Mod
         scrollViewHeight += listingHeightIncrease;
         Settings.implantationCapOffset = (int)listingStandard.Slider(Settings.implantationCapOffset, -100, 100);
         scrollViewHeight += listingHeightIncrease;
-            
+
         //Only male Primarch
         listingStandard.GapLine(36);
         scrollViewHeight += listingHeightIncreaseGap;
-        listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.AllowFemalePrimarch".Translate(), ref Settings.allowFemalePrimarchBirths);
+        listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.AllowFemalePrimarchs".Translate(), ref Settings.allowFemalePrimarchBirths);
         scrollViewHeight += listingHeightIncrease;
         
         //Psychic Crafting
@@ -134,7 +134,7 @@ public class Genes40kMod : Mod
         listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.PsychicCrafting".Translate(), ref Settings.psychicCrafting);
         scrollViewHeight += listingHeightIncrease;
         scrollViewHeight += listingHeightIncrease;
-            
+
         //Chaos Version for Stuff
         listingStandard.GapLine(36);
         scrollViewHeight += listingHeightIncreaseGap;
