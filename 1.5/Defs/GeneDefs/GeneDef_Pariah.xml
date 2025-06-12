@@ -19,6 +19,8 @@
             <li>Reduces psychic sensitivity of nearby pawns and self.</li>
         </customEffectDescriptions>
         <minAgeActive>6</minAgeActive>
+        <marketValueFactor>1.2</marketValueFactor>
+        <selectionWeight>0.7</selectionWeight>
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <backgroundPathXenogenes>UI/Genes/BEWH_GeneBackground_Pariah</backgroundPathXenogenes>
@@ -49,6 +51,8 @@
             <li>Greatly reduces psychic sensitivity of nearby pawns and self.</li>
         </customEffectDescriptions>
         <minAgeActive>6</minAgeActive>
+        <marketValueFactor>1.8</marketValueFactor>
+        <selectionWeight>0.3</selectionWeight>
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <backgroundPathXenogenes>UI/Genes/BEWH_GeneBackground_Pariah</backgroundPathXenogenes>
@@ -79,6 +83,9 @@
             <li>Nullifies psychic sensitivity of nearby pawns and self.</li>
         </customEffectDescriptions>
         <minAgeActive>6</minAgeActive>
+        <marketValueFactor>3</marketValueFactor>
+        <canGenerateInGeneSet>false</canGenerateInGeneSet>
+        <selectionWeight>0.05</selectionWeight>
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <backgroundPathXenogenes>UI/Genes/BEWH_GeneBackground_Pariah</backgroundPathXenogenes>

@@ -3,7 +3,7 @@
 
 	<!-- Sus-an Membrane Stasis -->
 	<HediffDef>
-		<defName>BEWH_Sus_anMembraneStasis</defName>
+		<defName>BEWH_SusAnMembraneStasis</defName>
 		<label>sus-an membrane stasis</label>
 		<description>Suspended in sus-an membrane stasis, requires advanced medical procedure to awaken.</description>
 		<everCurableByItem>false</everCurableByItem>
@@ -22,7 +22,7 @@
 					</li>
 				</capMods>
 				<statFactors>
-					<IncomingDamageFactor>0</IncomingDamageFactor>
+					<IncomingDamageFactor>0.5</IncomingDamageFactor>
 				</statFactors>
 				<totalBleedFactor>0</totalBleedFactor>
 			</li>
@@ -77,7 +77,7 @@
 					<InjuryHealingFactor>2000</InjuryHealingFactor>
 					<IncomingDamageFactor>0.5</IncomingDamageFactor>
 				</statFactors>
-				<painFactor>0</painFactor>
+				<painFactor>0.3</painFactor>
 			</li>
 		</stages>
 		<comps>

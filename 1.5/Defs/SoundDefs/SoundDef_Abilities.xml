@@ -131,7 +131,7 @@
 	</SoundDef>
 
 	<!-- Chapter Master: Drop Pod Thump -->
-<!-- 	<SoundDef>
+	<!-- 	<SoundDef>
 		<defName>BEWH_SFX_DropPodThump</defName>
 		<context>MapOnly</context>
 		<maxSimultaneous>3</maxSimultaneous>

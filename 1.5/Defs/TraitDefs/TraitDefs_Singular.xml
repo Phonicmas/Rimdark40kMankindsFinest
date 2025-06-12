@@ -33,7 +33,7 @@
 
     <TraitDef>
         <defName>BEWH_Serf</defName>
-        <commonality>0.4</commonality>
+        <commonality>0.35</commonality>
         <degreeDatas>
             <li>
                 <label>serf</label>

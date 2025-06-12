@@ -8,7 +8,7 @@
 			<operations>
 
 				<li Class="PatchOperationReplace">
-					<xpath>Defs/HediffDef[defName = "BEWH_Sus_anMembraneStasis"]/stages</xpath>
+					<xpath>Defs/HediffDef[defName = "BEWH_SusAnMembraneStasis"]/stages</xpath>
 					<value>
 						<stages>
 							<li>

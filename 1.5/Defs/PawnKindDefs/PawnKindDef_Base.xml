@@ -2,7 +2,7 @@
 <Defs>
 
     <!-- Human Base -->
-    <PawnKindDef Name="BEWH_ImperiumBase" Abstract="True">
+    <PawnKindDef Name="BEWH_ImperiumPawnBase" Abstract="True">
         <race>Human</race>
         <defaultFactionType>BEWH_ImperiumFaction</defaultFactionType>
         <invNutrition>2.55</invNutrition>

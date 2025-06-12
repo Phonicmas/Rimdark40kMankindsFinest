@@ -2,7 +2,7 @@
 <Defs>
 
     <!-- Human Base -->
-    <PawnKindDef ParentName="BEWH_ImperiumBase" Name="BEWH_HumanBase" Abstract="True">
+    <PawnKindDef ParentName="BEWH_ImperiumPawnBase" Name="BEWH_ImperiumHumanPawnBase" Abstract="True">
         <initialWillRange>2~4</initialWillRange>
         <initialResistanceRange>15~24</initialResistanceRange>
         <combatPower>20</combatPower>
@@ -17,7 +17,7 @@
                     </countRange>
                 </li>
                 <li>
-                    <thingDef>MedicineUltratech</thingDef>
+                    <thingDef>MedicineIndustrial</thingDef>
                     <countRange>
                         <min>1</min>
                         <max>2</max>
@@ -25,62 +25,74 @@
                 </li>
             </subOptionsChooseOne>
         </inventoryOptions>
+        <trader>false</trader>
+        <isFighter>false</isFighter>
     </PawnKindDef>
 
     <!-- Human Trader -->
-    <PawnKindDef ParentName="BEWH_HumanBase">
+    <PawnKindDef ParentName="BEWH_ImperiumHumanPawnBase">
         <defName>BEWH_ImperiumTraderPawn</defName>
-        <combatPower>20</combatPower>
+        <requiredWorkTags>
+            <li>Social</li>
+        </requiredWorkTags>
         <trader>true</trader>
-        <isFighter>false</isFighter>
         <apparelRequired>
             <li>Apparel_Duster</li>
         </apparelRequired>
+        <skills>
+            <li>
+                <skill>Social</skill>
+                <range>7~12</range>
+            </li>
+        </skills>
     </PawnKindDef>
 
     <!-- Human Laborer -->
-    <PawnKindDef ParentName="BEWH_HumanBase">
+    <PawnKindDef ParentName="BEWH_ImperiumHumanPawnBase">
         <defName>BEWH_ImperiumLaborerPawn</defName>
-        <combatPower>20</combatPower>
-        <trader>false</trader>
-        <isFighter>false</isFighter>
+        <requiredWorkTags>
+            <li>ManualDumb</li>
+            <li>ManualSkilled</li>
+        </requiredWorkTags>
         <apparelRequired>
             <li>Apparel_Jacket</li>
         </apparelRequired>
         <skills>
             <li>
                 <skill>Mining</skill>
-                <range>5~12</range>
+                <range>5~10</range>
             </li>
             <li>
                 <skill>Plants</skill>
-                <range>5~12</range>
+                <range>5~10</range>
             </li>
             <li>
                 <skill>Cooking</skill>
-                <range>5~12</range>
+                <range>5~10</range>
             </li>
             <li>
                 <skill>Crafting</skill>
-                <range>5~12</range>
+                <range>5~10</range>
             </li>
             <li>
                 <skill>Construction</skill>
-                <range>5~12</range>
+                <range>5~10</range>
             </li>
             <li>
                 <skill>Animals</skill>
-                <range>5~12</range>
+                <range>5~10</range>
             </li>
         </skills>
     </PawnKindDef>
 
     <!-- Human Guardsman -->
-    <PawnKindDef ParentName="BEWH_HumanBase">
+    <PawnKindDef ParentName="BEWH_ImperiumHumanPawnBase">
         <defName>BEWH_ImperiumGuardmanPawn</defName>
         <combatPower>40</combatPower>
-        <trader>false</trader>
         <isFighter>true</isFighter>
+        <requiredWorkTags>
+            <li>Violent</li>
+        </requiredWorkTags>
         <weaponTags>
             <li>IndustrialGunAdvanced</li>
         </weaponTags>

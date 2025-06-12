@@ -347,7 +347,7 @@
             </li>
         </forcedTraits>
         <customEffectDescriptions>
-            <li>Increase quality of crafting creations by 2.</li>
+            <li>Increase quality of crafting creations by 2 tiers.</li>
         </customEffectDescriptions>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_PrimarchMaterial" />

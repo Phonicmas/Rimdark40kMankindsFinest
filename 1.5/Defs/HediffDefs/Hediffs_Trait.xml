@@ -6,7 +6,7 @@
 		<defName>BEWH_SerfBuff</defName>
 		<hediffClass>Genes40k.Hediff_Serf</hediffClass>
 		<label>Serfdom</label>
-		<description>...</description>
+		<description>Serving is the only purpose.</description>
 		<scenarioCanAdd>false</scenarioCanAdd>
 		<everCurableByItem>false</everCurableByItem>
 		<isBad>false</isBad>

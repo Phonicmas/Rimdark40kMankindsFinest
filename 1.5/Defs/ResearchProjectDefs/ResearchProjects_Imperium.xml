@@ -125,7 +125,7 @@
 
 
 
-  <!-- Imperium Power Armor-->
+  <!-- Imperium Power Armor Mk. VII -->
   <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
     <defName>BEWH_AstartesPowerArmorMkVII</defName>
     <label>Mk VII Power Armor</label>
@@ -140,7 +140,7 @@
     </prerequisites>
   </ResearchProjectDef>
 
-  <!-- Imperium Power Armor-->
+  <!-- Imperium Power Armor Mk. X -->
   <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
     <defName>BEWH_AstartesPowerArmorMkX</defName>
     <label>Mk X Power Armor</label>
@@ -153,7 +153,7 @@
     </prerequisites>
   </ResearchProjectDef>
 
-  <!-- Imperium Weapons-->
+  <!-- Imperium Weapons -->
   <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
     <defName>BEWH_AstartesWeapons</defName>
     <label>Astartes Weaponry</label>

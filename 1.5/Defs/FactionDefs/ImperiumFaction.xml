@@ -93,7 +93,7 @@
             <li>UncleOrAunt</li>
         </royalTitleInheritanceRelations>
         <royalTitleTags MayRequire="Ludeon.RimWorld.Royalty">
-            <li>ImperiumTitle</li>
+            <li>BEWH_ImperiumFactionTitle</li>
         </royalTitleTags>
 
 

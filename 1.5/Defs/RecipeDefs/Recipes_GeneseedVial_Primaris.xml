@@ -3,8 +3,8 @@
 
     <!-- Primaris -->
     <RecipeDef ParentName="BEWH_RecipeGeneseedVialBase" Name="BEWH_PrimarisVialInsertion" Abstract="True">
-        <description>Make a primaris.</description>
-        <jobString>Making primaris.</jobString>
+        <description>Implant primaris genetic material into a patient.</description>
+        <jobString>Implanting primaris genetic material.</jobString>
         <researchPrerequisite>BEWH_GeneseedPerfection</researchPrerequisite>
         <workAmount>6500</workAmount>
         <uiIconThing>BEWH_GeneseedVialPrimaris</uiIconThing>

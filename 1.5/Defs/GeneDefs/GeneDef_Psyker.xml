@@ -21,7 +21,8 @@
                 <postFactor>1.05</postFactor>
             </li>
         </capMods>
-        <marketValueFactor>1.7</marketValueFactor>
+        <marketValueFactor>1.2</marketValueFactor>
+        <selectionWeight>0.7</selectionWeight>
     </GeneDef>
 
     <!-- Epsilon Psyker -->
@@ -44,7 +45,8 @@
                 <postFactor>1.15</postFactor>
             </li>
         </capMods>
-        <marketValueFactor>2.5</marketValueFactor>
+        <marketValueFactor>1.8</marketValueFactor>
+        <selectionWeight>0.4</selectionWeight>
     </GeneDef>
 
     <!-- Delta Psyker -->
@@ -67,7 +69,8 @@
                 <postFactor>1.35</postFactor>
             </li>
         </capMods>
-        <marketValueFactor>3.5</marketValueFactor>
+        <marketValueFactor>2.5</marketValueFactor>
+        <selectionWeight>0.25</selectionWeight>
     </GeneDef>
 
     <!-- Beta Psyker -->
@@ -90,7 +93,9 @@
                 <postFactor>1.85</postFactor>
             </li>
         </capMods>
-        <marketValueFactor>8</marketValueFactor>
+        <marketValueFactor>4</marketValueFactor>
+        <canGenerateInGeneSet>false</canGenerateInGeneSet>
+        <selectionWeight>0.15</selectionWeight>
     </GeneDef>
 
     <!-- Alpha Psyker -->
@@ -113,7 +118,9 @@
                 <postFactor>3.2</postFactor>
             </li>
         </capMods>
-        <marketValueFactor>12</marketValueFactor>
+        <marketValueFactor>8</marketValueFactor>
+        <canGenerateInGeneSet>false</canGenerateInGeneSet>
+        <selectionWeight>0.05</selectionWeight>
     </GeneDef>
 
 </Defs>

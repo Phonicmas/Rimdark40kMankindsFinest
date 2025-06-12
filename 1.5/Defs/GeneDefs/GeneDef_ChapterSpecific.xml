@@ -641,7 +641,7 @@
                         <value>100</value>
                     </li>
                 </possibleTraitsToGive>
-                <chanceToGrantTrait>60</chanceToGrantTrait>
+                <chanceToGrantTrait>35</chanceToGrantTrait>
             </li>
         </modExtensions>
     </GeneDef>

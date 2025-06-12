@@ -2,14 +2,15 @@
 <Defs>
 
     <!-- Space Marine Base -->
-
-    <PawnKindDef ParentName="BEWH_ImperiumBase" Name="BEWH_SpaceMarineBasePawn" Abstract="True">
+    <PawnKindDef ParentName="BEWH_ImperiumPawnBase" Name="BEWH_ImperiumSuperSoldierPawnBase" Abstract="True">
         <initialWillRange>300~400</initialWillRange>
         <initialResistanceRange>300~400</initialResistanceRange>
         <acceptArrestChanceFactor>0</acceptArrestChanceFactor>
         <fixedGender>Male</fixedGender>
-        <itemQuality>Normal</itemQuality>
-        <requiredWorkTags>Violent</requiredWorkTags>
+        <itemQuality>Good</itemQuality>
+        <requiredWorkTags>
+            <li>Violent</li>
+        </requiredWorkTags>
         <backstoryFiltersOverride>
             <li>
                 <categories>
@@ -41,15 +42,15 @@
                 <li>
                     <thingDef>MealSurvivalPack</thingDef>
                     <countRange>
-                        <min>4</min>
-                        <max>5</max>
+                        <min>3</min>
+                        <max>4</max>
                     </countRange>
                 </li>
                 <li>
                     <thingDef>MedicineUltratech</thingDef>
                     <countRange>
                         <min>2</min>
-                        <max>5</max>
+                        <max>3</max>
                     </countRange>
                 </li>
             </subOptionsChooseOne>
@@ -60,7 +61,7 @@
     </PawnKindDef>
 
     <!-- Space Marine -->
-    <PawnKindDef ParentName="BEWH_SpaceMarineBasePawn">
+    <PawnKindDef ParentName="BEWH_ImperiumSuperSoldierPawnBase">
         <defName>BEWH_FirstbornPawn</defName>
         <label>Tactical Marine</label>
         <combatPower>170</combatPower>
@@ -86,7 +87,7 @@
     </PawnKindDef>
 
     <!-- Primaris Space Marine -->
-    <PawnKindDef ParentName="BEWH_SpaceMarineBasePawn">
+    <PawnKindDef ParentName="BEWH_ImperiumSuperSoldierPawnBase">
         <defName>BEWH_PrimarisSpaceMarinePawn</defName>
         <label>Tactical Primaris Marine</label>
         <combatPower>220</combatPower>
@@ -112,7 +113,7 @@
     </PawnKindDef>
 
     <!-- Custodes -->
-    <PawnKindDef ParentName="BEWH_SpaceMarineBasePawn">
+    <PawnKindDef ParentName="BEWH_ImperiumSuperSoldierPawnBase">
         <defName>BEWH_CustodesPawn</defName>
         <label>custodes</label>
         <combatPower>750</combatPower>
@@ -139,7 +140,7 @@
     </PawnKindDef>
 
     <!-- Lord Commander - Primarch -->
-    <PawnKindDef ParentName="BEWH_SpaceMarineBasePawn">
+    <PawnKindDef ParentName="BEWH_ImperiumSuperSoldierPawnBase">
         <defName>BEWH_LordCommanderPawn</defName>
         <label>primarch</label>
         <combatPower>1200</combatPower>

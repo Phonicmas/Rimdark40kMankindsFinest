@@ -18,8 +18,8 @@
                         <capacities>
                             <li>Bite</li>
                         </capacities>
-                        <power>19</power>
-                        <cooldownTime>1.8</cooldownTime>
+                        <power>22</power>
+                        <cooldownTime>1.7</cooldownTime>
                         <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
                         <soundMeleeHit>Pawn_Melee_HumanBite_Hit</soundMeleeHit>
                         <soundMeleeMiss>Pawn_Melee_HumanBite_Miss</soundMeleeMiss>
@@ -46,8 +46,8 @@
                         <capacities>
                             <li>Bite</li>
                         </capacities>
-                        <power>12</power>
-                        <cooldownTime>2</cooldownTime>
+                        <power>14</power>
+                        <cooldownTime>1.95</cooldownTime>
                         <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
                         <soundMeleeHit>Pawn_Melee_HumanBite_Hit</soundMeleeHit>
                         <soundMeleeMiss>Pawn_Melee_HumanBite_Miss</soundMeleeMiss>

@@ -67,16 +67,11 @@
       <li>
         <compClass>CompColorable</compClass>
       </li>
-      <li Class="CompProperties_Lifespan">        <!-- Switch with some that makes a skyfaller that accelerates out into space OR simply crumble if they dont? -->
-        <lifespanTicks>10000</lifespanTicks>
+      <li Class="Genes40k.CompProperties_LifespanSkyfallerLeave">        <!-- Switch with some that makes a skyfaller that accelerates out into space OR simply crumble if they dont? -->
+        <lifespanTicks>1000</lifespanTicks>
         <expireEffect>RaisedRock_Collapse</expireEffect>
+        <skyfallerLeaving>BEWH_SteelRainDropPodLeaving</skyfallerLeaving>
       </li>
-      <!--<li Class="CompProperties_Stunnable">
-                <affectedDamageDefs>
-                    <li>Stun</li>
-                    <li>EMP</li>
-                </affectedDamageDefs>
-            </li>-->
     </comps>
     <modExtensions>
       <li Class="Genes40k.DefModExtension_DropPod">
@@ -127,7 +122,7 @@
   <!-- Skyfaller -->
   <ThingDef ParentName="SkyfallerBase">
     <defName>BEWH_SteelRainDropPodSkyfaller</defName>
-    <label>warp flame</label>
+    <label>astartes drop pod</label>
     <size>(1, 1)</size>
     <graphicData>
       <texPath>Things/Building/DropPod/BEWH_DropPod_Closed</texPath>
@@ -137,8 +132,8 @@
       <drawSize>(10, 10)</drawSize>
     </graphicData>
     <skyfaller>
-      <!--<movementType>Decelerate</movementType>-->
       <shadowSize>(3, 3)</shadowSize>
+      <shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>
       <anticipationSound>DropPod_Fall</anticipationSound>
       <anticipationSoundTicks>100</anticipationSoundTicks>
       <impactSound>DropPod_Impact</impactSound>
@@ -146,6 +141,38 @@
       <explosionRadius>2</explosionRadius>
       <explosionDamage>Bomb</explosionDamage>
       <explosionDamageFactor>0.5</explosionDamageFactor>
+    </skyfaller>
+    <comps>
+      <li>
+        <compClass>CompColorable</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="SkyfallerBase">
+    <defName>BEWH_SteelRainDropPodLeaving</defName>
+    <label>astartes drop pod (leaving)</label>
+    <size>(1, 1)</size>
+    <graphicData>
+      <texPath>Things/Building/DropPod/BEWH_DropPod_Closed</texPath>
+      <maskPath>Things/Building/DropPod/BEWH_DropPod_Closed_m</maskPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(10, 10)</drawSize>
+    </graphicData>
+    <skyfaller>
+      <shadowSize>(3, 3)</shadowSize>
+      <shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>
+      <anticipationSound>DropPod_Leaving</anticipationSound>
+      <anticipationSoundTicks>-10</anticipationSoundTicks>
+
+      <movementType>Decelerate</movementType>
+      <reversed>true</reversed>
+
+      <ticksToImpactRange>
+        <min>-40</min>
+        <max>-15</max>
+      </ticksToImpactRange>
     </skyfaller>
     <comps>
       <li>

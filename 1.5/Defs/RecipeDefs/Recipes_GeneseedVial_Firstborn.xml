@@ -3,8 +3,8 @@
 
     <!-- Firstborn -->
     <RecipeDef ParentName="BEWH_RecipeGeneseedVialBase" Name="BEWH_FirstbornVialInsertion" Abstract="True">
-        <description>Make a firstborn.</description>
-        <jobString>Making firstborn.</jobString>
+        <description>Implant firstborn genetic material into a patient.</description>
+        <jobString>Implanting firstborn genetic material.</jobString>
         <researchPrerequisite>BEWH_GeneseedPurification</researchPrerequisite>
         <workAmount>5000</workAmount>
         <uiIconThing>BEWH_GeneseedVialFirstborn</uiIconThing>

@@ -10,7 +10,6 @@
     </GeneCategoryDef>
 
     <!-- Parent Genes -->
-
     <GeneDef Name="BEWH_GenesOverallParent" Abstract="True">
         <displayCategory>BEWH_ImperialGenes</displayCategory>
         <canGenerateInGeneSet>false</canGenerateInGeneSet>
@@ -48,7 +47,7 @@
     <GeneDef ParentName="BEWH_SpaceMarineParent" Name="BEWH_ChapterGeneFlawParent" Abstract="True">
         <marketValueFactor>1</marketValueFactor>
         <biostatCpx>1</biostatCpx>
-        <minAgeActive>18</minAgeActive>
+        <minAgeActive>0</minAgeActive>
         <exclusionTags>
             <li>BEWH_ChapterGeneFlaw</li>
         </exclusionTags>
@@ -56,19 +55,19 @@
 
     <!-- Primaris Marine -->
     <GeneDef ParentName="BEWH_GenesOverallParent" Name="BEWH_PrimarisSpaceMarineParent" Abstract="True">
-        <marketValueFactor>1.4</marketValueFactor>
+        <marketValueFactor>1.3</marketValueFactor>
         <biostatCpx>3</biostatCpx>
     </GeneDef>
 
     <!-- Custodes: Base -->
     <GeneDef ParentName="BEWH_GenesOverallParent" Name="BEWH_CustodesBase" Abstract="True">
-        <marketValueFactor>5</marketValueFactor>
+        <marketValueFactor>2.5</marketValueFactor>
         <minAgeActive>8</minAgeActive>
     </GeneDef>
 
     <!-- Primarch: Base -->
     <GeneDef ParentName="BEWH_GenesOverallParent" Name="BEWH_PrimarchBase" Abstract="True">
-        <marketValueFactor>10</marketValueFactor>
+        <marketValueFactor>4</marketValueFactor>
         <minAgeActive>8</minAgeActive>
     </GeneDef>
 
@@ -87,9 +86,9 @@
 
     <!-- Living Saint: Base -->
     <GeneDef ParentName="BEWH_GenesOverallParent" Name="BEWH_LivingSaintBase" Abstract="True">
-        <biostatCpx>4</biostatCpx>
+        <biostatCpx>3</biostatCpx>
         <biostatArc>1</biostatArc>
-        <marketValueFactor>3</marketValueFactor>
+        <marketValueFactor>2</marketValueFactor>
         <minAgeActive>3</minAgeActive>
     </GeneDef>
 
@@ -114,7 +113,7 @@
 
     <!-- Pariah -->
     <GeneDef ParentName="BEWH_GenesOverallParent" Name="BEWH_PariahParent" Abstract="True">
-        <marketValueFactor>2</marketValueFactor>
+        <canGenerateInGeneSet>true</canGenerateInGeneSet>
         <geneClass>Genes40k.Gene_Pariah</geneClass>
         <suppressedTraits>
             <li>
@@ -135,6 +134,8 @@
 
     <!-- Psyker -->
     <GeneDef ParentName="BEWH_GenesOverallParent" Name="BEWH_PsykerParent" Abstract="True">
+        <canGenerateInGeneSet>true</canGenerateInGeneSet>
+        <geneClass>Genes40k.Gene_Psyker</geneClass>
         <suppressedTraits>
             <li>
                 <def>PsychicSensitivity</def>
@@ -146,7 +147,6 @@
             </li>
         </suppressedTraits>
         <aggroMentalBreakSelectionChanceFactor>999</aggroMentalBreakSelectionChanceFactor>
-        <geneClass>Genes40k.Gene_Psyker</geneClass>
         <customEffectDescriptions>
             <li>Gives the ability to fire psychic bolts.</li>
         </customEffectDescriptions>

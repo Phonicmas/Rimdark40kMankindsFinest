@@ -336,10 +336,10 @@
         </statOffsets>
         <minAgeActive>16</minAgeActive>
         <abilities>
-            <li>BEWH_Sus_anMembraneStasis</li>
+            <li>BEWH_SusAnMembraneStasis</li>
         </abilities>
         <descriptionHyperlinks>
-            <AbilityDef>BEWH_Sus_anMembraneStasis</AbilityDef>
+            <AbilityDef>BEWH_SusAnMembraneStasis</AbilityDef>
         </descriptionHyperlinks>
         <modExtensions>
             <li Class="Core40k.DefModExtension_GeneDisabledBy">

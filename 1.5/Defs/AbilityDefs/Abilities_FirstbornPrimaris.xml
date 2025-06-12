@@ -89,7 +89,7 @@
 
   <!-- Sus-an Membrane Stasis -->
   <AbilityDef ParentName="BEWH_SelfTargetAbilities">
-    <defName>BEWH_Sus_anMembraneStasis</defName>
+    <defName>BEWH_SusAnMembraneStasis</defName>
     <label>stasis</label>
     <description>Carriers of the sus-an membrane can enter a state of suspended animation, keeping the them alive for years, even if they has suffered otherwise mortal wounds.</description>
     <iconPath>UI/Abilities/BEWH_StasisIcon</iconPath>
@@ -98,7 +98,7 @@
     <comps>
       <li Class="CompProperties_AbilityGiveHediff">
         <compClass>CompAbilityEffect_GiveHediff</compClass>
-        <hediffDef>BEWH_Sus_anMembraneStasis</hediffDef>
+        <hediffDef>BEWH_SusAnMembraneStasis</hediffDef>
         <onlyApplyToSelf>True</onlyApplyToSelf>
         <replaceExisting>true</replaceExisting>
       </li>

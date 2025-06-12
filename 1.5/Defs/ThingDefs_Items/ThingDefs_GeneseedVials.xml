@@ -104,7 +104,7 @@
   <ThingDef ParentName="BEWH_GeneseedVialBase">
     <defName>BEWH_GeneseedVialCustodes</defName>
     <label>custodes ascendance vial</label>
-    <description>A high-tech containment device holding a potent genetic compound. It is used to initiate the transformation of selected subjects into superhuman warriors. Upon implantation, it triggers rapid genetic enhancements, increasing strength, endurance, and resilience.\n\nThis vial contains the gestated genes ready for implantation into a pawn, creating a Custodes.\n\nThe safe implantation age is 0-4, implantation into anyone outside this range may kill them.\n\nThis item rapidly deteriorates outside containment.</description>
+    <description>A high-tech containment device holding a potent genetic compound. It is used to initiate the transformation of selected subjects into superhuman warriors. Upon implantation, it triggers rapid genetic enhancements, increasing strength, endurance, and resilience.\n\nThis vial contains the gestated genes ready for implantation into a pawn, creating a Custodes.\n\nThe safe implantation age is 0-3, implantation into anyone outside this range may kill them.\n\nThis item rapidly deteriorates outside containment.</description>
     <graphicData>
       <texPath>Things/Item/GeneseedVial/BEWH_GeneseedVial_Custodes</texPath>
       <graphicClass>Graphic_Single</graphicClass>

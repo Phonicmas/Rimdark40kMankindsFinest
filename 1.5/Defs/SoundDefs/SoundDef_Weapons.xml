@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	
-										<!--============Ranged=============-->
-<!-- Bolt Carabine -->
+
+	<!--============Ranged=============-->
+	<!-- Bolt Carabine -->
 	<SoundDef>
 		<defName>BEWH_SFX_BolterShot</defName>
 		<context>MapOnly</context>
@@ -20,8 +20,9 @@
 			</li>
 		</subSounds>
 	</SoundDef>
-										<!--============Melee=============-->
-<!-- Chainsword -->
+
+	<!--============Melee=============-->
+	<!-- Chainsword -->
 	<SoundDef>
 		<defName>BEWH_SFX_ChainswordHit</defName>
 		<context>MapOnly</context>
@@ -55,4 +56,5 @@
 			</li>
 		</subSounds>
 	</SoundDef>
+
 </Defs>

@@ -6,12 +6,12 @@
         <defName>BEWH_StasisWake</defName>
         <label>resurrect from stasis</label>
         <description>Ressurects pawn from self-induced stasis</description>
-        <workerClass>Recipe_RemoveHediff</workerClass>
         <jobString>resurrecting {0} from stasis</jobString>
+        <workerClass>Recipe_RemoveHediff</workerClass>
         <successfullyRemovedHediffMessage>{0} has successfully awoken {1} from stasis.</successfullyRemovedHediffMessage>
         <workAmount>2200</workAmount>
         <hideBodyPartNames>true</hideBodyPartNames>
-        <removesHediff>BEWH_Sus_anMembraneStasis</removesHediff>
+        <removesHediff>BEWH_SusAnMembraneStasis</removesHediff>
         <targetsBodyPart>false</targetsBodyPart>
         <surgerySuccessChanceFactor>1</surgerySuccessChanceFactor>
         <researchPrerequisite>BEWH_StasisResurrection</researchPrerequisite>
