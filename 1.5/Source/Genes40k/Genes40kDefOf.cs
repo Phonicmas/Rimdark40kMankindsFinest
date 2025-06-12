@@ -148,7 +148,6 @@ public static class Genes40kDefOf
         
     public static ThingDef BEWH_SteelRainDropPodBuilding;
     public static ThingDef BEWH_SteelRainDropPodSkyfaller;
-    public static ThingDef BEWH_SteelRainDropPodLeaving;
         
     public static ThingDef Apparel_PackJump;
         

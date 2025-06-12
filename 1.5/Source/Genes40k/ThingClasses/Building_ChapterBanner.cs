@@ -14,7 +14,7 @@ public class Building_ChapterBanner : Building
 
     public override Color DrawColor => ModSettings?.chapterColorOne ?? base.DrawColor;
             
-    public override Graphic Graphic => ModSettings.useChaosVersion ? GetChaosBannerGraphic() : GetImperialBannerGraphic();
+    public override Graphic Graphic => GetImperialBannerGraphic();
         
     private Graphic GetImperialBannerGraphic()
     { 
@@ -26,17 +26,4 @@ public class Building_ChapterBanner : Building
         }
         return GraphicDatabase.Get<Graphic_Single>(def.graphicData.texPath, shader, def.graphicData.drawSize, ModSettings.chapterColorOne, ModSettings.chapterColorTwo, def.graphicData, imperialBannerPathMask);
     }
-
-    private Graphic GetChaosBannerGraphic()
-    {
-        const string chaosBannerPath = "Things/Building/ChapterBanner/BEWH_ThingChapterBanner_Chaos";
-        const string chaosBannerPathMask = "Things/Building/ChapterBanner/BEWH_ThingChapterBanner_Chaosm";
-        var shader = ShaderDatabase.CutoutComplex;
-        if (def.graphicData.shaderType != null)
-        {
-            shader = def.graphicData.shaderType.Shader;
-        }
-        return GraphicDatabase.Get<Graphic_Single>(chaosBannerPath, shader, def.graphicData.drawSize, ModSettings.chapterColorOne, ModSettings.chapterColorTwo, def.graphicData, chaosBannerPathMask);
-    }
-        
 }

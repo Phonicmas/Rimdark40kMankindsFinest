@@ -48,8 +48,6 @@ public class Genes40kModSettings : ModSettings
     public Color chapterColorOne = Color.black;
     public Color chapterColorTwo = Color.red;
     public ShoulderIconDef chapterShoulderIcon = Genes40kDefOf.BEWH_ShoulderNone;
-        
-    public bool useChaosVersion = false;
 
     public override void ExposeData()
     {
@@ -74,8 +72,6 @@ public class Genes40kModSettings : ModSettings
         Scribe_Values.Look(ref allowFemalePrimarchBirths, "allowFemalePrimarchBirths", false);
         
         Scribe_Values.Look(ref psychicCrafting, "psychicCrafting", true);
-        
-        Scribe_Values.Look(ref useChaosVersion, "useChaosVersion", false);
             
         Scribe_Values.Look(ref chapterColorOne, "chapterColorOne", Color.black);
         Scribe_Values.Look(ref chapterColorTwo, "chapterColorTwo", Color.red);

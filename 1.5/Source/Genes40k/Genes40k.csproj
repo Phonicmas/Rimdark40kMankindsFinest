@@ -112,10 +112,10 @@
     <Compile Include="Comps\CompProperties_AbilityAoeHit.cs" />
     <Compile Include="Comps\CompProperties_Aura.cs" />
     <Compile Include="Comps\CompProperties_DisableInactiveGene.cs" />
-    <Compile Include="Comps\CompProperties_LifespanSkyfallerLeave.cs" />
+    <Compile Include="Comps\CompProperties_LifespanDropItem.cs" />
     <Compile Include="Comps\Comp_Aura.cs" />
     <Compile Include="Comps\Comp_DisableInactiveGene.cs" />
-    <Compile Include="Comps\Comp_LifespanSkyfallerLeave.cs" />
+    <Compile Include="Comps\Comp_LifespanDropItem.cs" />
     <Compile Include="Comps\GameComponent_MankindFinestUtils.cs" />
     <Compile Include="Comps\GameComponent_Perpetual.cs" />
     <Compile Include="Comps\LivingSaint\CompAbilityEffect_DivineGraceCost.cs" />

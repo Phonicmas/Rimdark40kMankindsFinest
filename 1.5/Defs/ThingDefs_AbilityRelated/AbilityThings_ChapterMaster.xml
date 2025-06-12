@@ -67,10 +67,11 @@
       <li>
         <compClass>CompColorable</compClass>
       </li>
-      <li Class="Genes40k.CompProperties_LifespanSkyfallerLeave">        <!-- Switch with some that makes a skyfaller that accelerates out into space OR simply crumble if they dont? -->
-        <lifespanTicks>1000</lifespanTicks>
+      <li Class="Genes40k.CompProperties_LifespanDropItem">
+        <lifespanTicks>10000</lifespanTicks>
         <expireEffect>RaisedRock_Collapse</expireEffect>
-        <skyfallerLeaving>BEWH_SteelRainDropPodLeaving</skyfallerLeaving>
+        <droppedThingDef>Steel</droppedThingDef>
+        <amountDropped>30</amountDropped>
       </li>
     </comps>
     <modExtensions>
@@ -149,7 +150,7 @@
     </comps>
   </ThingDef>
 
-  <ThingDef ParentName="SkyfallerBase">
+  <!--<ThingDef ParentName="SkyfallerBase">
     <defName>BEWH_SteelRainDropPodLeaving</defName>
     <label>astartes drop pod (leaving)</label>
     <size>(1, 1)</size>
@@ -179,6 +180,6 @@
         <compClass>CompColorable</compClass>
       </li>
     </comps>
-  </ThingDef>
+  </ThingDef>-->
 
 </Defs>

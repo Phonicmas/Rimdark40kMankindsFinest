@@ -135,12 +135,6 @@ public class Genes40kMod : Mod
         scrollViewHeight += listingHeightIncrease;
         scrollViewHeight += listingHeightIncrease;
 
-        //Chaos Version for Stuff
-        listingStandard.GapLine(36);
-        scrollViewHeight += listingHeightIncreaseGap;
-        listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.UseChaosVersionForBanner".Translate(), ref Settings.useChaosVersion);
-        scrollViewHeight += listingHeightIncrease;
-
         listingStandard.GapLine(36);
         scrollViewHeight += listingHeightIncreaseGap;
         listingStandard.Label("\n" + "BEWH.ModSettings.CheckVEFPatches".Translate());

@@ -3,11 +3,11 @@ using Verse;
 
 namespace Genes40k;
 
-public class Comp_LifespanSkyfallerLeave : ThingComp
+public class Comp_LifespanDropItem : ThingComp
 {
     public int age = -1;
 
-    public CompProperties_LifespanSkyfallerLeave Props => (CompProperties_LifespanSkyfallerLeave)props;
+    public CompProperties_LifespanDropItem Props => (CompProperties_LifespanDropItem)props;
 
     public override void PostExposeData()
     {
@@ -48,12 +48,13 @@ public class Comp_LifespanSkyfallerLeave : ThingComp
         }
         
         Props.expireEffect?.Spawn(parent.Position, parent.Map).Cleanup();
-        
-        var leaver = SkyfallerMaker.MakeSkyfaller(Props.skyfallerLeaving ?? ThingDefOf.DropPodLeaving);
 
-        leaver.DrawColor = parent.DrawColor;
+        if (Props.droppedThingDef != null)
+        {
+            var thing = GenSpawn.Spawn(Props.droppedThingDef, parent.Position, parent.Map);
+            thing.stackCount = Props.amountDropped;
+        }
         
-        GenSpawn.Spawn(leaver, parent.Position, parent.Map);
         parent.Destroy(DestroyMode.KillFinalize);
     }
 }
