@@ -7,7 +7,7 @@
     <label>gene manipulation table</label>
     <description>This specialized workstation is used to create Genetic Matrices, which serve as templates for the Ascendance Vials produced in the Gene-seed Gestator. These vials are later implanted into a subject to initiate the transformation process.\n\nThe Gene manipulation table also plays a critical role in the creation of Primarch embryos for the Primarch Project.</description>
     <thingClass>Genes40k.Building_GeneTable</thingClass>
-    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>50</pathCost>
     <statBases>
@@ -77,7 +77,7 @@
     <description>Encased in reinforced adamantium plating and adorned with Mechanicus blessings, this machine carefully nurtures Ascendance Vials. It stabilizes and matures the genetic material for later implantation. Further research enables the creation of chapter-specific gene-seeds.</description>
     <thingClass>Genes40k.Building_GeneGestator</thingClass>
     <containedPawnsSelectable>true</containedPawnsSelectable>
-    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>50</pathCost>
     <fillPercent>0.4</fillPercent>
