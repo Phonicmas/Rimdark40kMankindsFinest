@@ -221,13 +221,7 @@ public class Dialog_ChangeFlagColour : Window
             GUI.DrawTexture(iconRect, CurrentlySelectedIconTexture);
         }
         
-        if (Widgets.ButtonText(new Rect(inRect.xMax - CloseButSize.x, inRect.yMax - CloseButSize.y, CloseButSize.x, CloseButSize.y), "Close".Translate()))
-        {
-            decoFlag.Reset();
-            Close();
-        }
-            
-        if (Widgets.ButtonText(new Rect(inRect.xMin, inRect.yMax - CloseButSize.y, CloseButSize.x, CloseButSize.y), "Accept".Translate()))
+        if (Widgets.ButtonText(new Rect(inRect.xMax - CloseButSize.x, inRect.yMax - CloseButSize.y, CloseButSize.x, CloseButSize.y), "Accept".Translate()))
         {
             decoFlag.SetPrimaryColor(currentlySelectedPrimaryColour);
             decoFlag.SetSecondaryColor(currentlySelectedSecondaryColour);
@@ -235,6 +229,12 @@ public class Dialog_ChangeFlagColour : Window
             decoFlag.SetOriginals();
             decoFlag.Notify_ColorChanged();
             _ = decoFlag.Graphic;
+            Close();
+        }
+            
+        if (Widgets.ButtonText(new Rect(inRect.xMin, inRect.yMax - CloseButSize.y, CloseButSize.x, CloseButSize.y), "Close".Translate()))
+        {
+            decoFlag.Reset();
             Close();
         }
     }

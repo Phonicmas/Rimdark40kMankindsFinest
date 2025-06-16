@@ -205,16 +205,16 @@ public class Dialog_ChangeDefaultChapterColour : Window
             GUI.DrawTexture(iconRect, CurrentlySelectedIconTexture);
         }
         
-        if (Widgets.ButtonText(new Rect(inRect.xMax - CloseButSize.x, inRect.yMax - CloseButSize.y, CloseButSize.x, CloseButSize.y), "Close".Translate()))
-        {
-            Close();
-        }
-            
-        if (Widgets.ButtonText(new Rect(inRect.xMin, inRect.yMax - CloseButSize.y, CloseButSize.x, CloseButSize.y), "Accept".Translate()))
+        if (Widgets.ButtonText(new Rect(inRect.xMax - CloseButSize.x, inRect.yMax - CloseButSize.y, CloseButSize.x, CloseButSize.y), "Accept".Translate()))
         {
             settings.chapterColorOne = currentlySelectedPreset.primaryColour;
             settings.chapterColorTwo = currentlySelectedPreset.secondaryColour;
             settings.CurrentlySelectedPreset = currentlySelectedPreset;
+            Close();
+        }
+            
+        if (Widgets.ButtonText(new Rect(inRect.xMin, inRect.yMax - CloseButSize.y, CloseButSize.x, CloseButSize.y), "Close".Translate()))
+        {
             Close();
         }
     }
