@@ -13,7 +13,6 @@
 
   <BEWH.MankindsFinest.ModSettings.DefaultChapterColours>Default chapter colors: {0}</BEWH.MankindsFinest.ModSettings.DefaultChapterColours>
   <BEWH.MankindsFinest.ModSettings.SelectDefaultChapterIcon>Default chapter icon: {0}</BEWH.MankindsFinest.ModSettings.SelectDefaultChapterIcon>
-  <BEWH.MankindsFinest.ModSettings.UseChaosVersionForBanner>Use chaos version of the banner for the chapter ancient ability.</BEWH.MankindsFinest.ModSettings.UseChaosVersionForBanner>
   <BEWH.MankindsFinest.ModSettings.ColourPreset>Color Preset: {0}</BEWH.MankindsFinest.ModSettings.ColourPreset>
   <BEWH.MankindsFinest.ModSettings.CustomColour>Custom Color</BEWH.MankindsFinest.ModSettings.CustomColour>
 
