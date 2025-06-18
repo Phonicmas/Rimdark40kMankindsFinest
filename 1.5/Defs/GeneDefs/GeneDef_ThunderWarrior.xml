@@ -75,7 +75,7 @@
     <GeneDef ParentName="BEWH_ThunderWarriorParent">
         <defName>BEWH_Mentanifex</defName>
         <label>mentanifex</label>
-        <description>A T-shaped organ, implanted right next to the brain stem. It stimulates the growth of nerve tissues, improving the recipient's reaction and situational awareness, but due to the very specific chemical compounds released into the bloodstream, as a bi-product of this organ, it also notably increases one's aggression. Yet, this implant proves it's necessity, simply due to the fact that increased reaction is required to fully utilize the Thunder Warrior's enhanced biology.</description>
+        <description>A T-shaped organ implanted near the brainstem, this implant stimulates nerve tissue growth, enhancing reaction speed and situational awareness. However, the unique chemical compounds it releases into the bloodstream also significantly increase aggression. Yet, this implant proves it's necessity, simply due to the fact that increased reaction is essential to fully utilize the Thunder Warrior's enhanced biology.</description>
         <iconPath>UI/Genes/ThunderWarrior/BEWH_ThunderWarrior_MentanifexIcon</iconPath>
         <displayOrderInCategory>-98</displayOrderInCategory>
         <biostatCpx>4</biostatCpx>

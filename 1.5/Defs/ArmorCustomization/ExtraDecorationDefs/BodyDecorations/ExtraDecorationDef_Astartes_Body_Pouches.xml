@@ -4,7 +4,7 @@
     <!-- Pouches -->
     <Core40k.ExtraDecorationDef>
         <defName>BEWH_DecoPouch_1</defName>
-        <label>Pouch 1</label>
+        <label>Pouch</label>
         <description>...</description>
         <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_Pouch_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/Pouches/BEWH_Deco_Pouch</drawnTextureIconPath>

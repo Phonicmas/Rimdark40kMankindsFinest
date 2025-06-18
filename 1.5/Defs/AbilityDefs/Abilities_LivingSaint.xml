@@ -5,8 +5,8 @@
   <!-- Divine Flight -->
   <AbilityDef>
     <defName>BEWH_DivineFlight</defName>
-    <label>divine flight</label>
-    <description>The Living Saint ascends into the air, sustained by radiant wings of holy light, allowing them to cover great distances quickly.</description>
+    <label>Divine Flight</label>
+    <description>The Living Saint ascends into the air, sustained by their blessed wings, allowing them to cover great distances quickly.</description>
     <iconPath>UI/Abilities/BEWH_DivineFlight</iconPath>
     <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
@@ -37,7 +37,7 @@
   <!-- Holy Blast -->
   <AbilityDef>
     <defName>BEWH_LivingSaintHolyBlast</defName>
-    <label>holy blast</label>
+    <label>Holy Blast</label>
     <description>The Living Saint unleashes a powerful burst of divine energy, blasting humanoid enemies in a targeted area with searing light. At the same time, the radiant power heals nearby allies, restoring their strength.</description>
     <iconPath>UI/Abilities/BEWH_HolyBlast</iconPath>
     <displayGizmoWhileUndrafted>False</displayGizmoWhileUndrafted>

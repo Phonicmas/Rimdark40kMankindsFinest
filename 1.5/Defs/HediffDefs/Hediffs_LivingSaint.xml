@@ -4,7 +4,7 @@
 	<!-- Living Saint: Missing Divine Grace -->
 	<HediffDef>
 		<defName>BEWH_DivineGraceFading</defName>
-		<label>divine Grace fading</label>
+		<label>Divine Grace fading</label>
 		<description>Without Divine Grace, the Saint's connection to the material plane weakens, causing them to fade and lose stability, unable to remain in the physical world for long.</description>
 		<hediffClass>Hediff_HemogenCraving</hediffClass>
 		<defaultLabelColor>(1, 0.2, 0.2)</defaultLabelColor>
@@ -63,7 +63,7 @@
 	<!-- Living Saint: Overcharge -->
 	<HediffDef>
 		<defName>BEWH_LivingSaintHolyAscension</defName>
-		<label>holy ascension</label>
+		<label>Holy Ascension</label>
 		<description>By absorbing a sudden burst of warp energy, the Living Saint is elevated to their full celestial form, radiating pure divine energy and gaining increased strength and resilience.</description>
 		<hediffClass>Hediff_HemogenCraving</hediffClass>
 		<defaultLabelColor>(0.8, 0.8, 0.2)</defaultLabelColor>

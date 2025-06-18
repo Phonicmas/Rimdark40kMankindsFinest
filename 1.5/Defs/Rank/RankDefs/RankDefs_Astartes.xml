@@ -7,7 +7,7 @@
     <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankNeophyte</defName>
         <label>Neophyte</label>
-        <description>Neophyte are the newest recruits of a Chapter. Neophytes are usually employed along a Chapter's Scout Squads as part of their training.</description>
+        <description>Neophytes are the newest recruits of a Chapter. They are usually employed along a Chapter's Scout Squads as part of their training.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_Neophyte</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(0, 0)</displayPosition>
@@ -34,7 +34,7 @@
     <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankBattleBrother</defName>
         <label>Battle-Brother</label>
-        <description>Battle-Brothers are fully initiated Astartes, proven in both skill and loyalty. They form the backbone of a Chapter's fighting force, deployed across the galaxy in service of the Emperor’s will.</description>
+        <description>Battle-Brothers are fully initiated Astartes, proven in both skill and loyalty. They form the backbone of a Chapter's fighting force, deployed across the galaxy in service of the Emperor's will.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_BattleBrother</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(2, 0)</displayPosition>
@@ -64,7 +64,7 @@
     <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankVeteran</defName>
         <label>Veteran</label>
-        <description>Veterans are warriors honed by centuries of battle. These Space Marines are often equipped with the finest relics and serve as mentors, bodyguards, and champions in the Chapter’s most vital conflicts.</description>
+        <description>Veterans are warriors honed by centuries of battle. These Space Marines are often equipped with the finest relics and serve as mentors, bodyguards, and champions in the Chapter's most vital conflicts.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_Veteran</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(3, -2)</displayPosition>
@@ -93,7 +93,7 @@
     <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankSergeant</defName>
         <label>Sergeant</label>
-        <description>Sergeants are seasoned warriors appointed to lead squads into battle. Steeped in the Chapter’s doctrines, they embody tactical discipline and command the unwavering loyalty of their Battle-Brothers.</description>
+        <description>Sergeants are seasoned warriors appointed to lead squads into battle. Steeped in the Chapter's doctrines, they embody tactical discipline and command the unwavering loyalty of their Battle-Brothers.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_Sergeant</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(5, -2)</displayPosition>
@@ -154,7 +154,7 @@
     <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankCaptain</defName>
         <label>Captain</label>
-        <description>Captains are the commanders of a Chapter’s companies. Each is a master of strategy and a paragon of the Chapter’s ideals.</description>
+        <description>Captains are the commanders of a Chapter's companies. Each is a master of strategy and a paragon of the Chapter's ideals.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_Captain</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(10, 0)</displayPosition>
@@ -188,7 +188,7 @@
     <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankChapterMaster</defName>
         <label>Chapter Master</label>
-        <description>The Chapter Master is the supreme commander of the Chapter, a warlord whose word is the law, a living embodiment of Chapter’s legacy, will and strength. Under his leadership, the Chapter wages war across the galaxy in the name of the Emperor.</description>
+        <description>The Chapter Master is the supreme commander of the Chapter, a warlord whose word is the law, a living embodiment of Chapter's legacy, will and strength. Under his leadership, the Chapter wages war across the galaxy in the name of the Emperor.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_ChapterMaster</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(14, 0)</displayPosition>
@@ -283,8 +283,8 @@
     <!-- =Chapter Ancient= -->
     <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankChapterAncient</defName>
-        <label>The Chapter Ancient bears the Chapter Standard into war — a relic of immense symbolic power. Its presence steels the hearts of Battle-Brothers and inspires them to fight with renewed fury and unwavering resolve.</label>
-        <description>Chapter Ancient description.</description>
+        <label>Ancient</label>
+        <description>The Chapter Ancient bears the Chapter Standard into war - a relic of immense symbolic power. Its presence steels the hearts of Battle-Brothers and inspires them to fight with renewed fury and unwavering resolve.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_Ancient</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(9, -1)</displayPosition>
@@ -307,6 +307,7 @@
 
         <givesVFEAbilities>
             <li>BEWH_RaiseChapterBanner</li>
+            <li>BEWH_Ability_SteelRain_2</li>
         </givesVFEAbilities>
 
         <statFactors>
@@ -373,7 +374,7 @@
     <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankApothecary</defName>
         <label>Apothecary</label>
-        <description>Apothecaries are the healers and gene-seed keepers of the Chapter. On the battlefield, they tend the wounded and recover the genetic legacy of fallen brethren — an unbroken chain stretching back to the Chapter’s Primarch.</description>
+        <description>Apothecaries are the healers and gene-seed keepers of the Chapter. On the battlefield, they tend the wounded and recover the genetic legacy of fallen brethren - an unbroken chain stretching back to the Chapter's Primarch.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_Apothecary</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(6, 1)</displayPosition>
@@ -451,7 +452,7 @@
     <Genes40k.ChapterRankDef>
         <defName>BEWH_AstartesRankTechmarineNovitiate</defName>
         <label>Techmarine Novitiate</label>
-        <description>Techmarine Novitiates are initiates of the Machine Cult, undergoing rigorous training in the rites of the Omnissiah. Divided in loyalty between their Chapter and Mars, they begin their path by learning to commune with the machine spirit and soothing the “pain” of sacred wargear.</description>
+        <description>Techmarine Novitiates are initiates of the Machine Cult, undergoing rigorous training in the rites of the Omnissiah. Divided in loyalty between their Chapter and Mars, they begin their path by learning to commune with the machine spirit and soothing the "pain" of sacred wargear.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_TechmarineNovitiate</rankIconPath>
         <rankCategory>BEWH_AstartesRankCategory</rankCategory>
         <displayPosition>(4, 2)</displayPosition>
@@ -543,6 +544,10 @@
         <statFactors>
             <HackingSpeed MayRequire="Ludeon.RimWorld.Ideology">2</HackingSpeed>
         </statFactors>
+
+        <givesVFEAbilities>
+            <li>BEWH_Ability_SteelRain_1</li>
+        </givesVFEAbilities>
 
         <rankTier>7</rankTier>
 

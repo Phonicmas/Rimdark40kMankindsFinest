@@ -5,13 +5,14 @@
 	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
 		<defName>BEWH_AlakhGeh</defName>
 		<label>Alakh Geh</label>
-		<description>Thought will and intention alone, the Khan is able to move unimpeded and swiftly.</description>
+		<description>Through thought, will, and intention alone, the Khan is able to move unimpeded and swiftly.</description>
 		<stages>
 			<li>
 				<statFactors>
 					<MoveSpeed>3.5</MoveSpeed>
 					<MeleeCooldownFactor>0.5</MeleeCooldownFactor>
 					<MeleeDodgeChance>3.5</MeleeDodgeChance>
+					<MeleeHitChance>9</MeleeHitChance>
 				</statFactors>
 			</li>
 		</stages>
@@ -33,7 +34,7 @@
 	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
 		<defName>BEWH_OpusMaxima</defName>
 		<label>Opus Maxima</label>
-		<description>Work work!</description>
+		<description>No room for rest, no time for doubt!</description>
 		<stages>
 			<li>
 				<statFactors>
@@ -65,7 +66,7 @@
 	<HediffDef>
 		<defName>BEWH_DeniedWitch</defName>
 		<label>Denied Witch</label>
-		<description>This pawn has had their psychic and mental capabilities dampened. They can no longer cast psycasts.</description>
+		<description>This pawn's psychic and mental abilities have been suppressed, rendering them unable to cast psycasts.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<scenarioCanAdd>false</scenarioCanAdd>
 		<initialSeverity>1.0 </initialSeverity>

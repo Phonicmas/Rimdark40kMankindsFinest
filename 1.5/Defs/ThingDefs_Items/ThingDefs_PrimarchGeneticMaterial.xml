@@ -33,7 +33,7 @@
     </comps>
   </ThingDef>
 
-  <!-- Chapter I - Lion El'Jonson -->
+  <!-- Legion I - Lion El'Jonson -->
   <ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
     <defName>BEWH_PrimarchMaterialI</defName>
     <label>primarch material I - Lion El'Jonson</label>
@@ -56,7 +56,7 @@
     </modExtensions>
   </ThingDef>
 
-  <!-- Chapter II - ??? -->
+  <!-- Legion II - ??? -->
   <!--<ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
     <defName>BEWH_PrimarchMaterialII</defName>
     <label>primarch material II - ???</label>
@@ -79,7 +79,7 @@
     </modExtensions>
   </ThingDef>-->
 
-  <!-- Chapter III - Fulgrim -->
+  <!-- Legion III - Fulgrim -->
   <ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
     <defName>BEWH_PrimarchMaterialIII</defName>
     <label>primarch material III - Fulgrim</label>
@@ -102,7 +102,7 @@
     </modExtensions>
   </ThingDef>
 
-  <!-- Chapter IV - Perturabo -->
+  <!-- Legion IV - Perturabo -->
   <ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
     <defName>BEWH_PrimarchMaterialIV</defName>
     <label>primarch material IV - Perturabo</label>
@@ -125,7 +125,7 @@
     </modExtensions>
   </ThingDef>
 
-  <!-- Chapter V - Jaghatai Khan -->
+  <!-- Legion V - Jaghatai Khan -->
   <ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
     <defName>BEWH_PrimarchMaterialV</defName>
     <label>primarch material V - Jaghatai Khan</label>
@@ -148,7 +148,7 @@
     </modExtensions>
   </ThingDef>
 
-  <!-- Chapter VI - Leman Russ -->
+  <!-- Legion VI - Leman Russ -->
   <ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
     <defName>BEWH_PrimarchMaterialVI</defName>
     <label>primarch material VI - Leman Russ</label>
@@ -171,7 +171,7 @@
     </modExtensions>
   </ThingDef>
 
-  <!-- Chapter VII - Rogal Dorn -->
+  <!-- Legion VII - Rogal Dorn -->
   <ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
     <defName>BEWH_PrimarchMaterialVII</defName>
     <label>primarch material VII - Rogal Dorn</label>
@@ -194,7 +194,7 @@
     </modExtensions>
   </ThingDef>
 
-  <!-- Chapter VIII - Konrad Curze -->
+  <!-- Legion VIII - Konrad Curze -->
   <ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
     <defName>BEWH_PrimarchMaterialVIII</defName>
     <label>primarch material VIII - Konrad Curze</label>
@@ -217,7 +217,7 @@
     </modExtensions>
   </ThingDef>
 
-  <!-- Chapter IX - Sanguinius -->
+  <!-- Legion IX - Sanguinius -->
   <ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
     <defName>BEWH_PrimarchMaterialIX</defName>
     <label>primarch material IX - Sanguinius</label>
@@ -240,7 +240,7 @@
     </modExtensions>
   </ThingDef>
 
-  <!-- Chapter X - Ferrus Manus -->
+  <!-- Legion X - Ferrus Manus -->
   <ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
     <defName>BEWH_PrimarchMaterialX</defName>
     <label>primarch material X - Ferrus Manus</label>
@@ -263,7 +263,7 @@
     </modExtensions>
   </ThingDef>
 
-  <!-- Chapter XI - ??? -->
+  <!-- Legion XI - ??? -->
   <!--<ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
     <defName>BEWH_PrimarchMaterialXI</defName>
     <label>primarch material XI - ???</label>
@@ -286,7 +286,7 @@
     </modExtensions>
   </ThingDef>-->
 
-  <!-- Chapter XII - Angron -->
+  <!-- Legion XII - Angron -->
   <ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
     <defName>BEWH_PrimarchMaterialXII</defName>
     <label>primarch material XII - Angron</label>
@@ -309,7 +309,7 @@
     </modExtensions>
   </ThingDef>
 
-  <!-- Chapter XIII - Roboute Guilliman -->
+  <!-- Legion XIII - Roboute Guilliman -->
   <ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
     <defName>BEWH_PrimarchMaterialXIII</defName>
     <label>primarch material XIII - Roboute Guilliman</label>
@@ -332,7 +332,7 @@
     </modExtensions>
   </ThingDef>
 
-  <!-- Chapter XIV - Mortarion -->
+  <!-- Legion XIV - Mortarion -->
   <ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
     <defName>BEWH_PrimarchMaterialXIV</defName>
     <label>primarch material XIV - Mortarion</label>
@@ -355,7 +355,7 @@
     </modExtensions>
   </ThingDef>
 
-  <!-- Chapter XV - Magnus the Red -->
+  <!-- Legion XV - Magnus the Red -->
   <ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
     <defName>BEWH_PrimarchMaterialXV</defName>
     <label>primarch material XV - Magnus the Red</label>
@@ -379,7 +379,7 @@
     </modExtensions>
   </ThingDef>
 
-  <!-- Chapter XVI - Horus Lupercal -->
+  <!-- Legion XVI - Horus Lupercal -->
   <ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
     <defName>BEWH_PrimarchMaterialXVI</defName>
     <label>primarch material XVI - Horus Lupercal</label>
@@ -402,7 +402,7 @@
     </modExtensions>
   </ThingDef>
 
-  <!-- Chapter XVII - Lorgar -->
+  <!-- Legion XVII - Lorgar -->
   <ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
     <defName>BEWH_PrimarchMaterialXVII</defName>
     <label>primarch material XVII - Lorgar</label>
@@ -425,7 +425,7 @@
     </modExtensions>
   </ThingDef>
 
-  <!-- Chapter XVIII - Vulkan -->
+  <!-- Legion XVIII - Vulkan -->
   <ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
     <defName>BEWH_PrimarchMaterialXVIII</defName>
     <label>primarch material XVIII - Vulkan</label>
@@ -449,7 +449,7 @@
     </modExtensions>
   </ThingDef>
 
-  <!-- Chapter XIX - Corvus Corax -->
+  <!-- Legion XIX - Corvus Corax -->
   <ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
     <defName>BEWH_PrimarchMaterialXIX</defName>
     <label>primarch material XIX - Corvus Corax</label>
@@ -472,11 +472,11 @@
     </modExtensions>
   </ThingDef>
 
-  <!-- Chapter XX - Alpharius/Omegon -->
+  <!-- Legion XX - Alpharius/Omegon -->
   <ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
     <defName>BEWH_PrimarchMaterialXX</defName>
-    <label>primarch material XX - Alpharius Omegon</label>
-    <description>A specialized container designed to store and preserve the sacred genetic data of a specific Astartes Primarch.\n\nThis unit holds the genetic material of Primarch XX - Alpharius Omegon.</description>
+    <label>primarch material XX - Alpharius/Omegon</label>
+    <description>A specialized container designed to store and preserve the sacred genetic data of a specific Astartes Primarch.\n\nThis unit holds the genetic material of Primarch XX - Alpharius/Omegon.</description>
     <graphicData>
       <texPath>Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_XX</texPath>
       <graphicClass>Graphic_Single</graphicClass>

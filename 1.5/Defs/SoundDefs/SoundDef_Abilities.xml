@@ -20,7 +20,7 @@
 		</subSounds>
 	</SoundDef>
 
-	<!-- Ancient: Raise Chapter Banner -->
+	<!-- Ancient: Raise Legion Standard -->
 	<SoundDef>
 		<defName>BEWH_SFX_BannerWarmUp</defName>
 		<context>MapOnly</context>

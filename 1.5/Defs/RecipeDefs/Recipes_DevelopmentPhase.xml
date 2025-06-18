@@ -5,8 +5,8 @@
     <RecipeDef ParentName="SurgeryFlesh" Name="BEWH_PhaseRecipeBase" Abstract="True">
         <description>Further develops the implanted gene-seed.</description>
         <workerClass>Genes40k.WorkerClass_PhaseDevelopment</workerClass>
-        <jobString>developing {0}'s gene-seed</jobString>
-        <successfullyRemovedHediffMessage>{0} has successfully futher developed {1}'s gene-seed.</successfullyRemovedHediffMessage>
+        <jobString>Developing {0}'s gene-seed.</jobString>
+        <successfullyRemovedHediffMessage>{0} has successfully further developed {1}'s gene-seed.</successfullyRemovedHediffMessage>
         <surgeryOutcomeEffect Inherit = "False" />
         <hideBodyPartNames>true</hideBodyPartNames>
         <targetsBodyPart>false</targetsBodyPart>

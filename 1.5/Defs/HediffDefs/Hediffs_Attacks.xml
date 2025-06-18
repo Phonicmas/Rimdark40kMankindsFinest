@@ -5,7 +5,7 @@
     <HediffDef>
         <defName>BEWH_CanisHelixCanines</defName>
         <label>wulfen canines</label>
-        <description>These elongated canines can dent plasteel, and leathery, resilient skin and is a result of the canis helix.</description>
+        <description>These elongated canines can dent plasteel, and leathery, resilient skin - a result of the Canis Helix.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <scenarioCanAdd>false</scenarioCanAdd>
         <maxSeverity>1.0</maxSeverity>
@@ -33,7 +33,7 @@
     <HediffDef>
         <defName>BEWH_RedThirstElongatedTeeth</defName>
         <label>elongated teeth</label>
-        <description>These elongated teeth gives you an advantages in the direst of naked hand to hand combat.</description>
+        <description>These elongated teeth give you an advantages in the direst of naked hand to hand combat.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <scenarioCanAdd>false</scenarioCanAdd>
         <maxSeverity>1.0</maxSeverity>

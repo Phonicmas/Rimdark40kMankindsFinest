@@ -21,7 +21,6 @@
             <li>BEWH_MkXPowerArmorHelmet</li>
         </appliesTo>
         <drawData>
-            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataNorth>
                 <layer>76.5</layer>
             </dataNorth>

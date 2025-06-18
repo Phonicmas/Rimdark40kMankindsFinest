@@ -3,8 +3,8 @@
 
     <GeneDef ParentName="BEWH_Perpetual">
         <defName>BEWH_PerpetualGamma</defName>
-        <label>Gamma Perpetual</label>
-        <description>Carriers of this gene are known to be effectively immortal, never aging and capable of ultimately healing almost any injury as a result of their extraordinarily rapid and efficient cellular regeneration.</description>
+        <label>gamma perpetual</label>
+        <description>Carriers of this gene are effectively immortal, they do not age and can eventually recover from most injuries due to their rapid and efficient cellular regeneration.</description>
         <iconPath>UI/Genes/Perpetual/BEWH_GeneIcon_PerpetualGamma</iconPath>
         <displayOrderInCategory>800</displayOrderInCategory>
     
@@ -31,8 +31,8 @@
 
     <GeneDef ParentName="BEWH_Perpetual">
         <defName>BEWH_PerpetualBeta</defName>
-        <label>Beta Perpetual</label>
-        <description>Carriers of this gene are known to be effectively immortal, never aging and capable of ultimately healing almost any injury as a result of their extraordinarily rapid and efficient cellular regeneration.</description>
+        <label>beta perpetual</label>
+        <description>Carriers of this gene are functionally immortal, they do not age and able to recover from severe injuries due to their rapid and efficient cellular regeneration.</description>
         <iconPath>UI/Genes/Perpetual/BEWH_GeneIcon_PerpetualBeta</iconPath>
         <displayOrderInCategory>801</displayOrderInCategory>
         <biostatCpx>13</biostatCpx>
@@ -58,8 +58,8 @@
 
     <GeneDef ParentName="BEWH_Perpetual">
         <defName>BEWH_PerpetualAlpha</defName>
-        <label>Alpha Perpetual</label>
-        <description>Carriers of this gene are known to be effectively immortal, never aging and capable of ultimately healing almost any injury as a result of their extraordinarily rapid and efficient cellular regeneration.</description>
+        <label>alpha perpetual</label>
+        <description>Carriers of this gene are trully immortal, they do not age and able to eventually regenerate from nearly any wound, no matter how devastating, due to their rapid and efficient cellular regeneration.</description>
         <iconPath>UI/Genes/Perpetual/BEWH_GeneIcon_PerpetualAlpha</iconPath>
         <displayOrderInCategory>802</displayOrderInCategory>
         <biostatCpx>18</biostatCpx>

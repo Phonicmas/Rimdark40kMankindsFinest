@@ -7,7 +7,9 @@
 	</supportedVersions>
 	<packageId>Phonicmas.RimDark.MankindsFinest</packageId>
 	<description>
-		Rimdark 40k - Mankinds Finest module.
+    Rimdark 40k - Mankinds Finest module.
+    Build an Imperial gene-lab to transform your pawns into Space Marines, Thunder Warriors, Custodes, or even Primarchs through research and gene-seed implantation.
+    The mod features new xenotypes, unique genes (Perpetual, Psyker, Pariah), a rank-based Astartes progression system, and a basic power armor set with legion color/heraldry customization and decoration system.
 	</description>
 	<modDependencies>
 		<li>

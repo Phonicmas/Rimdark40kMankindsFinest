@@ -33,7 +33,7 @@
   <ThingDef ParentName="BEWH_GeneseedVialBase">
     <defName>BEWH_GeneseedVialFirstborn</defName>
     <label>firstborn ascendance vial</label>
-    <description>A high-tech containment device holding a potent genetic compound. It is used to initiate the transformation of selected subjects into superhuman warriors. Upon implantation, it triggers rapid genetic enhancements, increasing strength, endurance, and resilience.\n\nThis vial contains the gestated genes ready for implantation into a pawn, creating a Firstborn.\n\nThe safe implantation age is 10~12, implantation into anyone outside this range may kill them.\n\nThis item rapidly deteriorates outside containment.</description>
+    <description>A high-tech containment device holding a potent genetic compound. It is used to initiate the transformation of selected subjects into superhuman warriors. Upon implantation, it triggers rapid genetic enhancements, increasing strength, endurance, and resilience.\n\nThis vial contains the gestated genes ready for implantation into a pawn, creating a Firstborn.\n\nThe safe implantation age is 10~14, implantation into anyone outside this range may kill them.\n\nThis item rapidly deteriorates outside containment.</description>
     <graphicData>
       <texPath>Things/Item/GeneseedVial/BEWH_GeneseedVial_Firstborn</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -68,7 +68,7 @@
   <ThingDef ParentName="BEWH_GeneseedVialBase">
     <defName>BEWH_GeneseedVialPrimaris</defName>
     <label>primaris ascendance vial</label>
-    <description>A high-tech containment device holding a potent genetic compound. It is used to initiate the transformation of selected subjects into superhuman warriors. Upon implantation, it triggers rapid genetic enhancements, increasing strength, endurance, and resilience.\n\nThis vial contains the gestated genes ready for implantation into a pawn, creating a Primaris.\n\nThe safe implantation age is 10~12, implantation into anyone outside this range may kill them.\n\nThis item rapidly deteriorates outside containment.</description>
+    <description>A high-tech containment device holding a potent genetic compound. It is used to initiate the transformation of selected subjects into superhuman warriors. Upon implantation, it triggers rapid genetic enhancements, increasing strength, endurance, and resilience.\n\nThis vial contains the gestated genes ready for implantation into a pawn, creating a Primaris.\n\nThe safe implantation age is 10~13, implantation into anyone outside this range may kill them.\n\nThis item rapidly deteriorates outside containment.</description>
     <graphicData>
       <texPath>Things/Item/GeneseedVial/BEWH_GeneseedVial_Primaris</texPath>
       <graphicClass>Graphic_Single</graphicClass>

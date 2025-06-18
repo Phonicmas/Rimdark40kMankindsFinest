@@ -67,9 +67,14 @@
     <defName>BEWH_NamerDeityImperium</defName>
     <rulePack>
       <rulesStrings>
-        <li>r_deityName->God Emperor of Mankind</li>
+        <li>r_deityName->Holy God Emperor</li>
         <li>r_deityName->God Emperor</li>
-        <li>r_deityName->Emperor of the Imperium</li>
+        <li>r_deityName->The Emperor</li>
+        <li>r_deityName->The Emperor of Mankind</li>
+        <li>r_deityName->The God Emperor of Mankind</li>
+        <li>r_deityName->God Emperor of Mankind</li>
+        <li>r_deityName->Him on Terra</li>
+        <li>r_deityName->The Allfather</li>
       </rulesStrings>
     </rulePack>
   </RulePackDef>
@@ -79,8 +84,10 @@
     <defName>BEWH_DeityTypeMakerImperium</defName>
     <rulePack>
       <rulesStrings>
-        <li>r_deityType->The God Emperor of Mankind protects all</li>
-        <li>r_deityType->The God Emperor of Mankind is above all</li>
+        <li>r_deityType->The Anathema</li>
+        <li>r_deityType->The Revelation</li>
+        <li>r_deityType->The Lord of Man</li>
+        <li>r_deityType->The Ruler of the Imperium</li>
       </rulesStrings>
     </rulePack>
   </RulePackDef>

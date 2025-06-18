@@ -5,7 +5,7 @@
         <thingClass>Genes40k.ChapterBodyDecorativeApparelColourTwo</thingClass>
         <apparel>
             <renderNodeProperties>
-                <!-- Left shoulder pad/chapter icon -->
+                <!-- Left shoulder pad/legion icon -->
                 <li>
                     <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentShoulderChapterIcon</workerClass>
                     <nodeClass>Genes40k.PawnRenderNode_AttachmentShoulderChapterIcon</nodeClass>
@@ -57,7 +57,7 @@
     <!-- MK 7 -->
     <ThingDef ParentName="BEWH_PowerArmorBase_ChapterColour">
         <defName>BEWH_MkVIIPowerArmor</defName>
-        <label>Mk VII Power Armor</label>
+        <label>mk VII Power Armor</label>
         <description>The MK VII "Aquila" Power Armor is an advanced battle plate worn by the Adeptus Astartes. It features dense ceramite plating, reinforced servo-musculature, and the iconic Aquila chest plate. It provides excellent protection against ballistic and energy weapons, making it ideal for prolonged engagements in hostile environments.</description>
         <recipeMaker>
             <researchPrerequisite>BEWH_AstartesPowerArmorMkVII</researchPrerequisite>
@@ -157,7 +157,7 @@
     <!-- MK 10 -->
     <ThingDef ParentName="BEWH_PowerArmorBase_ChapterColour">
         <defName>BEWH_MkXPowerArmor</defName>
-        <label>Mk X Power Armor</label>
+        <label>mk X Power Armor</label>
         <description>The MK X "Tacticus" Power Armor is a modernized battle plate worn by Primaris Space Marines. Combining the durability of earlier marks with increased mobility, it features advanced ceramite-composite plating and enhanced servo systems. Its modular design allows for field adaptability across diverse combat roles, offering superior protection and efficiency in extended operations.</description>
         <recipeMaker>
             <researchPrerequisite>BEWH_AstartesPowerArmorMkX</researchPrerequisite>
@@ -257,7 +257,7 @@
     <!-- MK 10 Chaplain -->
     <ThingDef ParentName="BEWH_PowerArmorBase_ChapterColour">
         <defName>BEWH_MkXPowerArmorChaplain</defName>
-        <label>Mk X Chaplain Power Armor</label>
+        <label>mk X Chaplain Power Armor</label>
         <description>This MK X Power Armor is a specialized variant of the Tacticus pattern, worn by Primaris Chaplains. Built upon the same durable and mobile frame, it is adorned with grim iconography to embody the Emperor's judgment and inspire unwavering zeal in those who follow.</description>
         <recipeMaker>
             <researchPrerequisite>BEWH_AstartesPowerArmorMkX</researchPrerequisite>

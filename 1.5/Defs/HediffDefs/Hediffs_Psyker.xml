@@ -34,7 +34,7 @@
 	<HediffDef ParentName="DiseaseBase">
 		<defName>BEWH_PsychicConnectionSevered</defName>
 		<label>psychic connection severed</label>
-		<description>This pawn has suddenly lost all connection to the warp.</description>
+		<description>This pawn has suddenly lost all connection to the Warp.</description>
 		<isBad>false</isBad>
 		<initialSeverity>1</initialSeverity>
 		<maxSeverity>1</maxSeverity>

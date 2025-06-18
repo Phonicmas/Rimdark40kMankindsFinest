@@ -5,7 +5,7 @@
 	<HediffDef>
 		<defName>BEWH_WingsHover</defName>
 		<label>wings</label>
-		<description>A set of wings growing from this person's shoulderblades. They are capable of flight and will not be slowed down by any obstacles.</description>
+		<description>A set of wings growing from this character's shoulderblades. They are capable of flight and will not be slowed down by any obstacles.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<scenarioCanAdd>false</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>

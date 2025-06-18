@@ -20,7 +20,6 @@
             <li>BEWH_MkVIIPowerArmorHelmet</li>
         </appliesTo>
         <drawData>
-            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataNorth>
                 <layer>78</layer>
             </dataNorth>
@@ -57,7 +56,6 @@
             <li>BEWH_MkXPowerArmorHelmet</li>
         </appliesTo>
         <drawData>
-            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataNorth>
                 <layer>78</layer>
             </dataNorth>
@@ -94,7 +92,6 @@
             <li>BEWH_MkVIIPowerArmorHelmet</li>
         </appliesTo>
         <drawData>
-            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataNorth>
                 <layer>78</layer>
             </dataNorth>
@@ -131,7 +128,6 @@
             <li>BEWH_MkXPowerArmorHelmet</li>
         </appliesTo>
         <drawData>
-            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataNorth>
                 <layer>78</layer>
             </dataNorth>

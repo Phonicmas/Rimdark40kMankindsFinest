@@ -4,7 +4,7 @@
     <!-- Halos -->
     <Core40k.ExtraDecorationDef>
         <defName>BEWH_IronHalo_1</defName>
-        <label>Iron halo 1</label>
+        <label>Iron Halo 1</label>
         <description>...</description>
         <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_IronHalo1_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_IronHalo1</drawnTextureIconPath>
@@ -22,7 +22,6 @@
             <li>BEWH_MkXPowerArmorChaplain</li>
         </appliesTo>
         <drawData>
-            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataNorth>
                 <layer>80</layer>
                 <offset>(0, 0, 0.37)</offset>
@@ -53,7 +52,7 @@
 
     <Core40k.ExtraDecorationDef>
         <defName>BEWH_IronHalo_2</defName>
-        <label>Iron halo 2</label>
+        <label>Iron Halo 2</label>
         <description>...</description>
         <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_IronHalo2_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_IronHalo2</drawnTextureIconPath>
@@ -71,7 +70,6 @@
             <li>BEWH_MkXPowerArmorChaplain</li>
         </appliesTo>
         <drawData>
-            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataNorth>
                 <layer>72</layer>
                 <offset>(0, 0, 0.37)</offset>

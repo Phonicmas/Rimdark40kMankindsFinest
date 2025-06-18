@@ -32,7 +32,7 @@
 		<comps>
 			<li Class="Core40k.HediffCompProperties_SendLetterAtSeverity">
 				<letter>Firstborn Phase Completed</letter>
-				<message>First phase of the firstborn development has been completed and can now be advanced to the second phase</message>
+				<message>First phase of the firstborn development has been completed and can now be advanced to the second phase.</message>
 				<letterDef>PositiveEvent</letterDef>
 			</li>
 		</comps>
@@ -44,7 +44,7 @@
 		<comps>
 			<li Class="Core40k.HediffCompProperties_SendLetterAtSeverity">
 				<letter>Firstborn Phase Completed</letter>
-				<message>Second phase of the firstborn development has been completed and can now be advanced to the third phase</message>
+				<message>Second phase of the firstborn development has been completed and can now be advanced to the third phase.</message>
 				<letterDef>PositiveEvent</letterDef>
 			</li>
 		</comps>
@@ -93,7 +93,7 @@
 		<comps>
 			<li Class="Core40k.HediffCompProperties_SendLetterAtSeverity">
 				<letter>Primaris Phase Completed</letter>
-				<message>First phase of the primaris development has been completed and can now be advanced to the second phase</message>
+				<message>First phase of the primaris development has been completed and can now be advanced to the second phase.</message>
 				<letterDef>PositiveEvent</letterDef>
 			</li>
 		</comps>
@@ -105,7 +105,7 @@
 		<comps>
 			<li Class="Core40k.HediffCompProperties_SendLetterAtSeverity">
 				<letter>Primaris Phase Completed</letter>
-				<message>Second phase of the primaris development has been completed and can now be advanced to the third phase</message>
+				<message>Second phase of the primaris development has been completed and can now be advanced to the third phase.</message>
 				<letterDef>PositiveEvent</letterDef>
 			</li>
 		</comps>

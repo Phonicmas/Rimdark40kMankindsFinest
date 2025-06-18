@@ -17,7 +17,6 @@
             <li>BEWH_LivingSaintArmor</li>
         </appliesTo>
         <drawData>
-            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataSouth>
                 <layer>45</layer>
             </dataSouth>
@@ -40,7 +39,6 @@
             <li>BEWH_LivingSaintArmor</li>
         </appliesTo>
         <drawData>
-            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataSouth>
                 <layer>45</layer>
             </dataSouth>
@@ -71,7 +69,6 @@
             <li>BEWH_LivingSaintArmor</li>
         </appliesTo>
         <drawData>
-            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataSouth>
                 <layer>45</layer>
             </dataSouth>
@@ -102,7 +99,6 @@
             <li>BEWH_LivingSaintArmor</li>
         </appliesTo>
         <drawData>
-            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataSouth>
                 <layer>45</layer>
             </dataSouth>

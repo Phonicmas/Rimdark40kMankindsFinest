@@ -33,8 +33,7 @@
     <Core40k.DecorationColourPresetDef>
         <defName>BEWH_DecoPaletteStripeRed</defName>
         <label>UM Red</label>
-        <!-- 0.ugh! -->
-        <colour>(0.55,0.01,0.01)</colour>
+        <colour>(140,3,3)</colour>
     </Core40k.DecorationColourPresetDef>
 
 <!-- Leather Brown-->
@@ -74,7 +73,7 @@
 <!-- Saint's Light -->
     <Core40k.DecorationColourPresetDef>
         <defName>BEWH_DecoPaletteSaintLight</defName>
-        <label>Saint's light</label>
+        <label>Saint's Light</label>
         <colour>(245, 245, 210)</colour>
     </Core40k.DecorationColourPresetDef>
 

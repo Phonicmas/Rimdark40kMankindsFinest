@@ -37,11 +37,11 @@
     </AbilityDef>
 
 
-    <!-- Ancient: Raise Chapter Banner -->    <!-- Maybe like a small warcry/tune thingy when banner is placed? -->
+    <!-- Ancient: Raise Legion Banner -->
     <VFECore.Abilities.AbilityDef>
         <defName>BEWH_RaiseChapterBanner</defName>
-        <label>Raise Chapter Banner</label>
-        <description>Raise the Chapter's sacred banner, inspiring nearby battle brothers with unwavering courage and strength. While the banner is raised, they fight with increased morale and unparalleled determination, embodying the glory of their chapter.</description>
+        <label>Raise Legion Standard</label>
+        <description>Raise the Legion's sacred banner, inspiring nearby battle brothers with unwavering courage and strength. While the banner is raised, they fight with increased morale and unparalleled determination, embodying the glory of their legion.</description>
         <iconPath>UI/Abilities/BEWH_Ability_RaiseChapterBanner</iconPath>
         <abilityClass>Genes40k.Ability_ChapterBanner</abilityClass>
         <needsTicking>true</needsTicking>
@@ -223,19 +223,65 @@
     <!-- Chapter Master: Steel Rain -->
     <VFECore.Abilities.AbilityDef>
         <defName>BEWH_ChapterMasterSteelRain</defName>
-        <label>Steel Rain</label>
+        <label>Steel Rain III</label>
         <description>Call down a barrage of bolter-equipped drop pods, each carrying a squad of Space Marines. The pods crash onto the battlefield, quickly deploying their deadly occupants to overwhelm enemies with a storm of steel and gunfire.</description>
         <iconPath>UI/Abilities/BEWH_AbilitySteelRainIII</iconPath>
         <abilityClass>Genes40k.Ability_SteelRain</abilityClass>
         <castTime>100</castTime>
         <range>40.9</range>
         <radius>15.9</radius>
-        <cooldownTime>120000</cooldownTime>
+        <cooldownTime>180000</cooldownTime>
         <targetMode>Location</targetMode>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_DropPod">
                 <usePlayerColours>true</usePlayerColours>
                 <dropPodAmount>3</dropPodAmount>
+                <marinesToSpawn>4</marinesToSpawn>
+                <fromFaction>BEWH_OffworldMarinesFaction</fromFaction>
+            </li>
+        </modExtensions>
+    </VFECore.Abilities.AbilityDef>
+
+
+    <!-- Chapter Ancient: Steel Rain II -->
+    <VFECore.Abilities.AbilityDef>
+        <defName>BEWH_Ability_SteelRain_2</defName>
+        <label>Steel Rain II</label>
+        <description>Call in two bolter-equipped drop pods, each carrying a Space Marine squad. The pods crash onto the battlefield, quickly deploying their deadly occupants to overwhelm enemies with a storm of steel and gunfire.</description>
+        <iconPath>UI/Abilities/BEWH_AbilitySteelRainII</iconPath>
+        <abilityClass>Genes40k.Ability_SteelRain</abilityClass>
+        <castTime>100</castTime>
+        <range>40.9</range>
+        <radius>15.9</radius>
+        <cooldownTime>180000</cooldownTime>
+        <targetMode>Location</targetMode>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_DropPod">
+                <usePlayerColours>true</usePlayerColours>
+                <dropPodAmount>2</dropPodAmount>
+                <marinesToSpawn>4</marinesToSpawn>
+                <fromFaction>BEWH_OffworldMarinesFaction</fromFaction>
+            </li>
+        </modExtensions>
+    </VFECore.Abilities.AbilityDef>
+    
+
+    <!-- Master of the Forge: Steel Rain I -->
+    <VFECore.Abilities.AbilityDef>
+        <defName>BEWH_Ability_SteelRain_1</defName>
+        <label>Steel Rain I</label>
+        <description>Call down a single bolter-equipped drop pods, each carrying a squad of Space Marines. The pods crash onto the battlefield, quickly deploying their deadly occupants to overwhelm enemies with a storm of steel and gunfire.</description>
+        <iconPath>UI/Abilities/BEWH_AbilitySteelRainI</iconPath>
+        <abilityClass>Genes40k.Ability_SteelRain</abilityClass>
+        <castTime>100</castTime>
+        <range>40.9</range>
+        <radius>15.9</radius>
+        <cooldownTime>180000</cooldownTime>
+        <targetMode>Location</targetMode>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_DropPod">
+                <usePlayerColours>true</usePlayerColours>
+                <dropPodAmount>1</dropPodAmount>
                 <marinesToSpawn>4</marinesToSpawn>
                 <fromFaction>BEWH_OffworldMarinesFaction</fromFaction>
             </li>

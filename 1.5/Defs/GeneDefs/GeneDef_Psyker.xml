@@ -5,7 +5,7 @@
     <GeneDef ParentName="BEWH_PsykerParent">
         <defName>BEWH_IotaPsyker</defName>
         <label>iota psyker</label>
-        <description>Carriers of this gene are able to unlock their psychic potential, though it is only a sliver of what's possible.</description>
+        <description>Carriers of this gene can unlock their psychic potential, though only a faint sliver of what's truly possible.</description>
         <iconPath>UI/Genes/Psyker/BEWH_GenePsykerIota</iconPath>
         <displayOrderInCategory>600</displayOrderInCategory>
         <biostatCpx>1</biostatCpx>
@@ -29,7 +29,7 @@
     <GeneDef ParentName="BEWH_PsykerParent">
         <defName>BEWH_EpsilonPsyker</defName>
         <label>epsilon psyker</label>
-        <description>Carriers of this gene are able to unlock their true psychic potential, while dangerous, they're still just average.</description>
+        <description>Carriers of this gene can unlock their true psychic potential. While dangerous, their abilities remain within the bounds of average psykers.</description>
         <iconPath>UI/Genes/Psyker/BEWH_GenePsyker</iconPath>
         <displayOrderInCategory>601</displayOrderInCategory>
         <biostatCpx>3</biostatCpx>
@@ -53,7 +53,7 @@
     <GeneDef ParentName="BEWH_PsykerParent">
         <defName>BEWH_DeltaPsyker</defName>
         <label>delta psyker</label>
-        <description>Carriers of this gene are able to unlock their true psychic potential, these beings are dangerous are should be treated as such.</description>
+        <description>Carriers of this gene can unlock their true psychic potential. These beings are dangerous and should be treated accordingly.</description>
         <iconPath>UI/Genes/Psyker/BEWH_GenePsykerDelta</iconPath>
         <displayOrderInCategory>602</displayOrderInCategory>
         <biostatCpx>4</biostatCpx>
@@ -77,7 +77,7 @@
     <GeneDef ParentName="BEWH_PsykerParent">
         <defName>BEWH_BetaPsyker</defName>
         <label>beta psyker</label>
-        <description>Carriers of this gene are able to unlock their true psychic potential, these beings are extremely dangerous, being able to defeat a whole army.</description>
+        <description>Carriers of this gene can unlock their true psychic potential. These beings are extremely dangerous, capable of overwhelming entire armies on their own.</description>
         <iconPath>UI/Genes/Psyker/BEWH_GenePsykerBeta</iconPath>
         <displayOrderInCategory>603</displayOrderInCategory>
         <biostatCpx>6</biostatCpx>
@@ -102,7 +102,7 @@
     <GeneDef ParentName="BEWH_PsykerParent">
         <defName>BEWH_AlphaPsyker</defName>
         <label>alpha psyker</label>
-        <description>Carriers of this gene are able to unlock their true psychic potential, these beings are extremely dangerous, being able to crumble whole planets if powers are trained properly.</description>
+        <description>Carriers of this gene can unlock their full psychic potential. These beings are extremely dangerous-capable of bringing entire worlds to ruin if their powers are properly honed.</description>
         <iconPath>UI/Genes/Psyker/BEWH_GenePsykerBeta</iconPath>
         <displayOrderInCategory>604</displayOrderInCategory>
         <biostatCpx>6</biostatCpx>

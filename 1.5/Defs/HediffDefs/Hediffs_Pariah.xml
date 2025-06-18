@@ -3,9 +3,9 @@
 
     <HediffDef>
         <defName>BEWH_PariahEffecter</defName>
-        <label>Pariah nearby</label>
-        <labelNoun>Pariah nearby</labelNoun>
-        <description>A Pariah is nearby, decreasing their connection to the warp</description>
+        <label>pariah nearby</label>
+        <labelNoun>pariah nearby</labelNoun>
+        <description>A pariah is nearby, weakening the connection to the Warp and intensifying the pain.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <scenarioCanAdd>false</scenarioCanAdd>
         <makesSickThought>false</makesSickThought>

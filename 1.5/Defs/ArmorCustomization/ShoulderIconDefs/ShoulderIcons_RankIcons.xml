@@ -12,7 +12,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_RankShoulderIcon">
         <defName>BEWH_FollowRankUp</defName>
         <label>Use pawn rank</label>
-        <description>Use pawns rank as icon</description>
+        <description>Use pawn's rank as icon.</description>
         <iconPath>UI/Ranks/BEWH_UseRankIcon</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/CommonIcons/BEWH_None</drawnTextureIconPath>
         <sortOrder>0</sortOrder>
@@ -23,7 +23,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_RankShoulderIcon">
         <defName>BEWH_RankIconNeophyte</defName>
         <label>Neophyte</label>
-        <description>Neophyte rank icon</description>
+        <description>Neophyte rank icon.</description>
         <iconPath>UI/Ranks/Astartes/BEWH_Neophyte</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankNeophyte</drawnTextureIconPath>
         <sortOrder>1</sortOrder>
@@ -35,7 +35,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_RankShoulderIcon">
         <defName>BEWH_RankIconBattleBrother</defName>
         <label>Battle-Brother</label>
-        <description>Battle-Brother rank icon</description>
+        <description>Battle-Brother rank icon.</description>
         <iconPath>UI/Ranks/Astartes/BEWH_BattleBrother</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankBattleBrother</drawnTextureIconPath>
         <sortOrder>2</sortOrder>
@@ -47,7 +47,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_RankShoulderIcon">
         <defName>BEWH_RankIconVanguard</defName>
         <label>Vanguard</label>
-        <description>Vanguard rank icon</description>
+        <description>Vanguard rank icon.</description>
         <iconPath>UI/Ranks/Astartes/BEWH_Vanguard</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankVanguard</drawnTextureIconPath>
         <sortOrder>2.5</sortOrder>
@@ -59,7 +59,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_RankShoulderIcon">
         <defName>BEWH_RankIconVeteran</defName>
         <label>Veteran</label>
-        <description>Veteran rank icon</description>
+        <description>Veteran rank icon.</description>
         <iconPath>UI/Ranks/Astartes/BEWH_Veteran</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankVeteran</drawnTextureIconPath>
         <sortOrder>3</sortOrder>
@@ -71,7 +71,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_RankShoulderIcon">
         <defName>BEWH_RankIconDevastator</defName>
         <label>Devastator</label>
-        <description>Devastator rank icon</description>
+        <description>Devastator rank icon.</description>
         <iconPath>UI/Ranks/Astartes/BEWH_FireSupport</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankFireSupport</drawnTextureIconPath>
         <sortOrder>3.33</sortOrder>
@@ -83,7 +83,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_RankShoulderIcon">
         <defName>BEWH_RankIconAssault</defName>
         <label>Assault</label>
-        <description>Assault rank icon</description>
+        <description>Assault rank icon.</description>
         <iconPath>UI/Ranks/Astartes/BEWH_CloseSupport</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankCloseSupport</drawnTextureIconPath>
         <sortOrder>3.66</sortOrder>
@@ -95,7 +95,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_RankShoulderIcon">
         <defName>BEWH_RankIconSergeant</defName>
         <label>Sergeant</label>
-        <description>Sergeant rank icon</description>
+        <description>Sergeant rank icon.</description>
         <iconPath>UI/Ranks/Astartes/BEWH_Sergeant</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankSergeant</drawnTextureIconPath>
         <sortOrder>4</sortOrder>
@@ -106,7 +106,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_RankShoulderIcon">
         <defName>BEWH_RankIconDevastatorSergeant</defName>
         <label>Devastator Sergeant</label>
-        <description>Devastator Sergeant rank icon</description>
+        <description>Devastator Sergeant rank icon.</description>
         <iconPath>UI/Ranks/Astartes/BEWH_FireSupportSergeant</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankFireSupportSergeant</drawnTextureIconPath>
         <sortOrder>4.33</sortOrder>
@@ -117,7 +117,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_RankShoulderIcon">
         <defName>BEWH_RankIconAssaultSergeant</defName>
         <label>Assault Sergeant</label>
-        <description>Assault Sergeant rank icon</description>
+        <description>Assault Sergeant rank icon.</description>
         <iconPath>UI/Ranks/Astartes/BEWH_CloseSupportSergeant</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankCloseSupportSergeant</drawnTextureIconPath>
         <sortOrder>4.66</sortOrder>
@@ -128,7 +128,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_RankShoulderIcon">
         <defName>BEWH_RankIconLieutenant</defName>
         <label>Lieutenant</label>
-        <description>Lieutenant rank icon</description>
+        <description>Lieutenant rank icon.</description>
         <iconPath>UI/Ranks/Astartes/BEWH_Lieutenant</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankLieutenant</drawnTextureIconPath>
         <sortOrder>5</sortOrder>
@@ -139,7 +139,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_RankShoulderIcon">
         <defName>BEWH_RankIconChapterAncient</defName>
         <label>Chapter Ancient</label>
-        <description>Chapter Ancient rank icon</description>
+        <description>Chapter Ancient rank icon.</description>
         <iconPath>UI/Ranks/Astartes/BEWH_Ancient</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankAncient</drawnTextureIconPath>
         <sortOrder>5.5</sortOrder>
@@ -150,7 +150,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_RankShoulderIcon">
         <defName>BEWH_RankIconCaptain</defName>
         <label>Captain</label>
-        <description>Captain rank icon</description>
+        <description>Captain rank icon.</description>
         <iconPath>UI/Ranks/Astartes/BEWH_Captain</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankCaptain</drawnTextureIconPath>
         <sortOrder>6</sortOrder>
@@ -163,7 +163,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_RankShoulderIcon">
         <defName>BEWH_RankIconHelixAdept</defName>
         <label>Helix Adept</label>
-        <description>Helix Adept rank icon</description>
+        <description>Helix Adept rank icon.</description>
         <iconPath>UI/Ranks/Astartes/BEWH_HelixAdept</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankHelixAdept</drawnTextureIconPath>
         <sortOrder>7</sortOrder>
@@ -174,7 +174,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_RankShoulderIcon">
         <defName>BEWH_RankIconTechmarineNovitiate</defName>
         <label>Techmarine Novitiate</label>
-        <description>Techmarine Novitiate rank icon</description>
+        <description>Techmarine Novitiate rank icon.</description>
         <iconPath>UI/Ranks/Astartes/BEWH_TechmarineNovitiate</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankTechmarineNovitiate</drawnTextureIconPath>
         <sortOrder>7.25</sortOrder>
@@ -185,7 +185,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_RankShoulderIcon">
         <defName>BEWH_RankIconAcolytum</defName>
         <label>Acolytum</label>
-        <description>Acolytum rank icon</description>
+        <description>Acolytum rank icon.</description>
         <iconPath>UI/Ranks/Astartes/BEWH_Acolytum</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankAcolytum</drawnTextureIconPath>
         <sortOrder>7.50</sortOrder>
@@ -197,7 +197,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_RankShoulderIcon">
         <defName>BEWH_RankIconJudiciar</defName>
         <label>Judiciar</label>
-        <description>Judiciar rank icon</description>
+        <description>Judiciar rank icon.</description>
         <iconPath>UI/Ranks/Astartes/BEWH_Judiciar</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankJudiciar</drawnTextureIconPath>
         <sortOrder>7.75</sortOrder>
@@ -209,7 +209,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_RankShoulderIcon">
         <defName>BEWH_RankIconApothecary</defName>
         <label>Apothecary</label>
-        <description>Apothecary rank icon</description>
+        <description>Apothecary rank icon.</description>
         <iconPath>UI/Ranks/Astartes/BEWH_Apothecary</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankApothecary</drawnTextureIconPath>
         <sortOrder>8</sortOrder>
@@ -220,7 +220,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_RankShoulderIcon">
         <defName>BEWH_RankIconTechmarine</defName>
         <label>Techmarine</label>
-        <description>Techmarine rank icon</description>
+        <description>Techmarine rank icon.</description>
         <iconPath>UI/Ranks/Astartes/BEWH_Techmarine</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankTechmarine</drawnTextureIconPath>
         <sortOrder>8.25</sortOrder>
@@ -231,7 +231,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_RankShoulderIcon">
         <defName>BEWH_RankIconLibrarian</defName>
         <label>Librarian</label>
-        <description>Librarian rank icon</description>
+        <description>Librarian rank icon.</description>
         <iconPath>UI/Ranks/Astartes/BEWH_Librarian</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankLibrarian</drawnTextureIconPath>
         <sortOrder>8.50</sortOrder>
@@ -243,7 +243,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_RankShoulderIcon">
         <defName>BEWH_RankIconChaplain</defName>
         <label>Chaplain</label>
-        <description>Chaplain rank icon</description>
+        <description>Chaplain rank icon.</description>
         <iconPath>UI/Ranks/Astartes/BEWH_Chaplain</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankChaplain</drawnTextureIconPath>
         <sortOrder>8.75</sortOrder>
@@ -254,7 +254,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_RankShoulderIcon">
         <defName>BEWH_RankIconMasterOfTheApothecarion</defName>
         <label>Master of the Apothecarion</label>
-        <description>Master of the Apothecarion rank icon</description>
+        <description>Master of the Apothecarion rank icon.</description>
         <iconPath>UI/Ranks/Astartes/BEWH_MasterOfTheApothecarion</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankMasterOfTheApothecarion</drawnTextureIconPath>
         <sortOrder>9</sortOrder>
@@ -265,7 +265,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_RankShoulderIcon">
         <defName>BEWH_RankIconMasterOfTheForge</defName>
         <label>Master of the Forge</label>
-        <description>Master of the Forge rank icon</description>
+        <description>Master of the Forge rank icon.</description>
         <iconPath>UI/Ranks/Astartes/BEWH_MasterOfTheForge</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankMasterOfTheForge</drawnTextureIconPath>
         <sortOrder>9.25</sortOrder>
@@ -276,7 +276,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_RankShoulderIcon">
         <defName>BEWH_RankIconChiefLibrarian</defName>
         <label>Chief Librarian</label>
-        <description>Chief Librarian rank icon</description>
+        <description>Chief Librarian rank icon.</description>
         <iconPath>UI/Ranks/Astartes/BEWH_ChiefLibrarian</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankChiefLibrarian</drawnTextureIconPath>
         <sortOrder>9.50</sortOrder>
@@ -287,7 +287,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_RankShoulderIcon">
         <defName>BEWH_RankIconMasterOfSanctity</defName>
         <label>Master of Sanctity</label>
-        <description>Master of Sanctity rank icon</description>
+        <description>Master of Sanctity rank icon.</description>
         <iconPath>UI/Ranks/Astartes/BEWH_MasterOfSanctity</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankMasterOfSanctity</drawnTextureIconPath>
         <sortOrder>9.75</sortOrder>
@@ -298,7 +298,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_RankShoulderIcon">
         <defName>BEWH_RankIconChapterMaster</defName>
         <label>Chapter Master</label>
-        <description>Chapter Master rank icon</description>
+        <description>Chapter Master rank icon.</description>
         <iconPath>UI/Ranks/Astartes/BEWH_ChapterMaster</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankChapterMaster</drawnTextureIconPath>
         <sortOrder>10</sortOrder>

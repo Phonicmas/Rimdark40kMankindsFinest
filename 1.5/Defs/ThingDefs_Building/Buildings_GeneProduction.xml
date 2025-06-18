@@ -31,6 +31,10 @@
         <shortCircuitInRain>true</shortCircuitInRain>
       </li>
       <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Glower">
+        <glowRadius>3</glowRadius>
+        <glowColor>(255,255,255,0)</glowColor>
+      </li>
       <li Class="CompProperties_Breakdownable"/>
     </comps>
     <graphicData>
@@ -74,7 +78,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>BEWH_GeneseedGestator</defName>
     <label>gene-seed gestator</label>
-    <description>Encased in reinforced adamantium plating and adorned with Mechanicus blessings, this machine carefully nurtures Ascendance Vials. It stabilizes and matures the genetic material for later implantation. Further research enables the creation of chapter-specific gene-seeds.</description>
+    <description>Encased in reinforced adamantium plating and adorned with Mechanicus blessings, this machine carefully nurtures Ascendance Vials. It stabilizes and matures the genetic material for later implantation. Further research enables the creation of legion-specific gene-seeds.</description>
     <thingClass>Genes40k.Building_GeneGestator</thingClass>
     <containedPawnsSelectable>true</containedPawnsSelectable>
     <altitudeLayer>Building</altitudeLayer>
@@ -125,6 +129,10 @@
         <linkableFacilities>
           <li>BEWH_SangprimusPortum</li>
         </linkableFacilities>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>2</glowRadius>
+        <glowColor>(255,255,255,0)</glowColor>
       </li>
       <li Class="CompProperties_Flickable" />
     </comps>
@@ -252,6 +260,10 @@
         <compClass>CompPowerTrader</compClass>
         <basePowerConsumption>2000</basePowerConsumption>
         <idlePowerDraw>80</idlePowerDraw>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>4</glowRadius>
+        <glowColor>(244,189,35,0)</glowColor>
       </li>
       <li Class="CompProperties_Flickable"/>
     </comps>

@@ -7,7 +7,7 @@
         <mods>
             <li>RimDark 40k - Mankinds Finest</li>
         </mods>
-        <label>Disable thunder warrior forced body type:</label>
+        <label>Disable Thunder Warriors forced body type:</label>
         <operations>
             <li Class="PatchOperationRemove">
                 <xpath>Defs/GeneDef[defName = "BEWH_ProtoOssmodula"]/bodyType</xpath>
@@ -21,7 +21,7 @@
         <mods>
             <li>RimDark 40k - Mankinds Finest</li>
         </mods>
-        <label>Disable space marine forced body type:</label>
+        <label>Disable Space Marines forced body type:</label>
         <operations>
             <li Class="PatchOperationRemove">
                 <xpath>Defs/GeneDef[defName = "BEWH_Ossmodula"]/bodyType</xpath>
@@ -35,7 +35,7 @@
         <mods>
             <li>RimDark 40k - Mankinds Finest</li>
         </mods>
-        <label>Disable custodes forced body type:</label>
+        <label>Disable Custodes forced body type:</label>
         <operations>
             <li Class="PatchOperationRemove">
                 <xpath>Defs/GeneDef[defName = "BEWH_AtlasMorphogen"]/bodyType</xpath>
@@ -49,7 +49,7 @@
         <mods>
             <li>RimDark 40k - Mankinds Finest</li>
         </mods>
-        <label>Disable primarch forced body type:</label>
+        <label>Disable Primarchs forced body type:</label>
         <operations>
             <li Class="PatchOperationRemove">
                 <xpath>Defs/GeneDef[defName = "BEWH_ImmortisGland"]/bodyType</xpath>

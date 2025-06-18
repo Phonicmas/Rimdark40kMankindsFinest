@@ -3,8 +3,8 @@
 
     <!-- Firstborn -->
     <RecipeDef ParentName="BEWH_RecipeGeneseedVialBase" Name="BEWH_FirstbornVialInsertion" Abstract="True">
-        <description>Implant firstborn genetic material into a patient.</description>
-        <jobString>Implanting firstborn genetic material.</jobString>
+        <description>Implant Firstborn genetic material into a patient.</description>
+        <jobString>Implanting Firstborn genetic material.</jobString>
         <researchPrerequisite>BEWH_GeneseedPurification</researchPrerequisite>
         <workAmount>5000</workAmount>
         <uiIconThing>BEWH_GeneseedVialFirstborn</uiIconThing>
@@ -39,7 +39,7 @@
     <!-- No Chapter -->
     <RecipeDef ParentName="BEWH_FirstbornVialInsertion">
         <defName>BEWH_MakeFirstborn</defName>
-        <label>make chapterless firstborn </label>
+        <label>make chapterless firstborn</label>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
                 <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
@@ -47,10 +47,10 @@
         </modExtensions>
     </RecipeDef>
 
-    <!-- Chapter I -->
+    <!-- Legion I -->
     <RecipeDef ParentName="BEWH_FirstbornVialInsertion">
         <defName>BEWH_MakeFirstbornChapterI</defName>
-        <label>make dark angel firstborn</label>
+        <label>make Dark Angels firstborn</label>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
                 <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
@@ -59,7 +59,7 @@
         </modExtensions>
     </RecipeDef>
 
-    <!-- Chapter II -->
+    <!-- Legion II -->
     <!--<RecipeDef ParentName="BEWH_FirstbornVialInsertion">
         <defName>BEWH_MakeFirstbornChapterII</defName>
         <label>make ?? firstborn</label>
@@ -71,10 +71,10 @@
         </modExtensions>
     </RecipeDef>-->
 
-    <!-- Chapter III -->
+    <!-- Legion III -->
     <RecipeDef ParentName="BEWH_FirstbornVialInsertion">
         <defName>BEWH_MakeFirstbornChapterIII</defName>
-        <label>make emperor's children firstborn</label>
+        <label>make Emperor's Children firstborn</label>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
                 <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
@@ -83,10 +83,10 @@
         </modExtensions>
     </RecipeDef>
 
-    <!-- Chapter IV -->
+    <!-- Legion IV -->
     <RecipeDef ParentName="BEWH_FirstbornVialInsertion">
         <defName>BEWH_MakeFirstbornChapterIV</defName>
-        <label>make iron warriors firstborn</label>
+        <label>make Iron Warriors firstborn</label>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
                 <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
@@ -95,10 +95,10 @@
         </modExtensions>
     </RecipeDef>
 
-    <!-- Chapter V -->
+    <!-- Legion V -->
     <RecipeDef ParentName="BEWH_FirstbornVialInsertion">
         <defName>BEWH_MakeFirstbornChapterV</defName>
-        <label>make white scars firstborn</label>
+        <label>make White Scars firstborn</label>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
                 <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
@@ -107,10 +107,10 @@
         </modExtensions>
     </RecipeDef>
 
-    <!-- Chapter VI -->
+    <!-- Legion VI -->
     <RecipeDef ParentName="BEWH_FirstbornVialInsertion">
         <defName>BEWH_MakeFirstbornChapterVI</defName>
-        <label>make space wolves firstborn</label>
+        <label>make Space Wolves firstborn</label>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
                 <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
@@ -119,10 +119,10 @@
         </modExtensions>
     </RecipeDef>
 
-    <!-- Chapter VII -->
+    <!-- Legion VII -->
     <RecipeDef ParentName="BEWH_FirstbornVialInsertion">
         <defName>BEWH_MakeFirstbornChapterVII</defName>
-        <label>make imperial fists firstborn</label>
+        <label>make Imperial Fists firstborn</label>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
                 <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
@@ -131,10 +131,10 @@
         </modExtensions>
     </RecipeDef>
 
-    <!-- Chapter VIII -->
+    <!-- Legion VIII -->
     <RecipeDef ParentName="BEWH_FirstbornVialInsertion">
         <defName>BEWH_MakeFirstbornChapterVIII</defName>
-        <label>make night lords firstborn</label>
+        <label>make Night Lords firstborn</label>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
                 <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
@@ -143,10 +143,10 @@
         </modExtensions>
     </RecipeDef>
 
-    <!-- Chapter IX -->
+    <!-- Legion IX -->
     <RecipeDef ParentName="BEWH_FirstbornVialInsertion">
         <defName>BEWH_MakeFirstbornChapterIX</defName>
-        <label>make blood angels firstborn</label>
+        <label>make Blood Angels firstborn</label>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
                 <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
@@ -155,10 +155,10 @@
         </modExtensions>
     </RecipeDef>
 
-    <!-- Chapter X -->
+    <!-- Legion X -->
     <RecipeDef ParentName="BEWH_FirstbornVialInsertion">
         <defName>BEWH_MakeFirstbornChapterX</defName>
-        <label>make iron hands firstborn</label>
+        <label>make Iron Hands firstborn</label>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
                 <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
@@ -167,7 +167,7 @@
         </modExtensions>
     </RecipeDef>
 
-    <!-- Chapter XI -->
+    <!-- Legion XI -->
     <!--<RecipeDef ParentName="BEWH_FirstbornVialInsertion">
         <defName>BEWH_MakeFirstbornChapterXI</defName>
         <label>make ?? firstborn</label>
@@ -179,10 +179,10 @@
         </modExtensions>
     </RecipeDef>-->
 
-    <!-- Chapter XII -->
+    <!-- Legion XII -->
     <RecipeDef ParentName="BEWH_FirstbornVialInsertion">
         <defName>BEWH_MakeFirstbornChapterXII</defName>
-        <label>make world eaters firstborn</label>
+        <label>make World Eaters firstborn</label>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
                 <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
@@ -191,10 +191,10 @@
         </modExtensions>
     </RecipeDef>
 
-    <!-- Chapter XIII -->
+    <!-- Legion XIII -->
     <RecipeDef ParentName="BEWH_FirstbornVialInsertion">
         <defName>BEWH_MakeFirstbornChapterXIII</defName>
-        <label>make ultramarine firstborn</label>
+        <label>make Ultramarines firstborn</label>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
                 <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
@@ -203,10 +203,10 @@
         </modExtensions>
     </RecipeDef>
 
-    <!-- Chapter XIV -->
+    <!-- Legion XIV -->
     <RecipeDef ParentName="BEWH_FirstbornVialInsertion">
         <defName>BEWH_MakeFirstbornChapterXIV</defName>
-        <label>make death guard firstborn</label>
+        <label>make Death Guard firstborn</label>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
                 <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
@@ -215,10 +215,10 @@
         </modExtensions>
     </RecipeDef>
 
-    <!-- Chapter XV -->
+    <!-- Legion XV -->
     <RecipeDef ParentName="BEWH_FirstbornVialInsertion">
         <defName>BEWH_MakeFirstbornChapterXV</defName>
-        <label>make thousand sons firstborn</label>
+        <label>make Thousand Sons firstborn</label>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
                 <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
@@ -227,10 +227,10 @@
         </modExtensions>
     </RecipeDef>
 
-    <!-- Chapter XVI -->
+    <!-- Legion XVI -->
     <RecipeDef ParentName="BEWH_FirstbornVialInsertion">
         <defName>BEWH_MakeFirstbornChapterXVI</defName>
-        <label>make sons of horus firstborn</label>
+        <label>make Sons of Horus firstborn</label>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
                 <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
@@ -239,10 +239,10 @@
         </modExtensions>
     </RecipeDef>
 
-    <!-- Chapter XVII -->
+    <!-- Legion XVII -->
     <RecipeDef ParentName="BEWH_FirstbornVialInsertion">
         <defName>BEWH_MakeFirstbornChapterXVII</defName>
-        <label>make word bearer firstborn</label>
+        <label>make Word Bearers firstborn</label>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
                 <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
@@ -251,10 +251,10 @@
         </modExtensions>
     </RecipeDef>
 
-    <!-- Chapter XVIII -->
+    <!-- Legion XVIII -->
     <RecipeDef ParentName="BEWH_FirstbornVialInsertion">
         <defName>BEWH_MakeFirstbornChapterXVIII</defName>
-        <label>make salamanders firstborn</label>
+        <label>make Salamanders firstborn</label>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
                 <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
@@ -263,10 +263,10 @@
         </modExtensions>
     </RecipeDef>
 
-    <!-- Chapter XIX -->
+    <!-- Legion XIX -->
     <RecipeDef ParentName="BEWH_FirstbornVialInsertion">
         <defName>BEWH_MakeFirstbornChapterXIX</defName>
-        <label>make raven guard firstborn</label>
+        <label>make Raven Guard firstborn</label>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
                 <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
@@ -275,10 +275,10 @@
         </modExtensions>
     </RecipeDef>
 
-    <!-- Chapter XX -->
+    <!-- Legion XX -->
     <RecipeDef ParentName="BEWH_FirstbornVialInsertion">
         <defName>BEWH_MakeFirstbornChapterXX</defName>
-        <label>make alpha legion firstborn</label>
+        <label>make Alpha Legion firstborn</label>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
                 <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
