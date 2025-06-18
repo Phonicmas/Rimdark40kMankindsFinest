@@ -73,7 +73,6 @@
     <description>A vicious and brutal weapon, the Chainsword is an iconic tool of the Adeptus Astartes. It tears through flesh with ease and is relatively inexpensive to produce. However, it lacks the armor-penetrating capability of more advanced power weapons.</description>
     <soundInteract>BEWH_SFX_ChainswordInteract</soundInteract>
     <meleeHitSound>BEWH_SFX_ChainswordHit</meleeHitSound>
-    <!-- <equippedAngleOffset>-65</equippedAngleOffset> -->
     <recipeMaker>
       <skillRequirements>
         <Crafting>10</Crafting>
@@ -128,7 +127,6 @@
     <description>A melee weapon with an energy field, the Power Sword is capable of slicing through armor with ease. Its energy blade hums with deadly force, allowing the wielder to strike with precision and overwhelming power.</description>
     <soundInteract>Interact_MonoSword</soundInteract>
     <meleeHitSound>MeleeHit_MonoSword</meleeHitSound>
-    <!-- <equippedAngleOffset>-65</equippedAngleOffset> -->
     <recipeMaker>
       <skillRequirements>
         <Crafting>12</Crafting>

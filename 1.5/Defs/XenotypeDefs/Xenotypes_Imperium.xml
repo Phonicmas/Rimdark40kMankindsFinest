@@ -29,7 +29,7 @@
   <XenotypeDef ParentName="BEWH_ImperiumEliteBase">
     <defName>BEWH_LivingSaint</defName>
     <label>living saint</label>
-    <description>In the name of the Holy God-Emperor, the path to sainthood begins with unwavering faith and total devotion to His divine will. This path often involves martyrdom — dying in battle or self-sacrifice for humanity. Reborn in celestial glory, they return, wreathed in the Emperor’s light, to fight His enemies with supernatural power and righteousness, a beacon to all faithful.</description>
+    <description>In the name of the Holy God-Emperor, the path to sainthood begins with unwavering faith and total devotion to His divine will. This path often involves martyrdom - dying in battle or self-sacrifice for humanity. Reborn in celestial glory, they return, wreathed in the Emperor's light, to fight His enemies with supernatural power and righteousness, a beacon to all faithful.</description>
     <descriptionShort>A Living Saint is an extraordinarily devout servant of the Emperor of Mankind, who displays seemingly miraculous, supernatural abilities derived from potent faith in the God-Emperor during his or her lifetime.</descriptionShort>
     <iconPath>UI/Xenotypes/BEWH_LivingSaint</iconPath>
     <combatPowerFactor>5</combatPowerFactor>
@@ -85,7 +85,7 @@
   <XenotypeDef ParentName="SpaceMarineBase">
     <defName>BEWH_PrimarisSpaceMarine</defName>
     <label>primaris marine</label>
-    <description>The Primaris, crafted in secret by Archmagos Belisarius Cawl under the Emperor’s long-forgotten edict, are the next evolution of the Adeptus Astartes, engineered to surpass even the Firstborn in strength, resilience, and combat prowess.</description>
+    <description>The Primaris, crafted in secret by Archmagos Belisarius Cawl under the Emperor's long-forgotten edict, are the next evolution of the Adeptus Astartes, engineered to surpass even the Firstborn in strength, resilience, and combat prowess.</description>
     <descriptionShort>Barely human, but instead superhuman; genetically engineered to be superior to normal humans in every way. These primaris stand above and are stronger than the standard space marine.</descriptionShort>
     <iconPath>UI/Xenotypes/BEWH_SpaceMarinePrimarisXenoIcon</iconPath>
     <combatPowerFactor>1.5</combatPowerFactor>
@@ -100,7 +100,7 @@
   <XenotypeDef ParentName="BEWH_ImperiumEliteBase">
     <defName>BEWH_ThunderWarrior</defName>
     <label>thunder warrior</label>
-    <description>The Thunder Warriors were the Emperor’s first creations, towering and brutal warriors forged for the unification of Terra. Unmatched in raw strength and fury, they were designed to crush all opposition, embodying the Emperor's wrath on the battlefield. But their power came at a cost — engineered for short, violent lives, they burned brightly and briefly, knowing only war before being cast aside as the Imperium's dark, forgotten foundation.</description>
+    <description>The Thunder Warriors were the Emperor's first creations, towering and brutal warriors forged for the unification of Terra. Unmatched in raw strength and fury, they were designed to crush all opposition, embodying the Emperor's wrath on the battlefield. But their power came at a cost - engineered for short, violent lives, they burned brightly and briefly, knowing only war before being cast aside as the Imperium's dark, forgotten foundation.</description>
     <descriptionShort>Gene-enhanced warriors created by the Emperor to be living weapons, the Thunder Warriors were known to be physically stronger, more savage, more resilient and more potent in combat than the later Firstborn, though they were not as long-lived and suffered from often dangerous mental instability and early metabolic collapse when their bodies began to reject their augmentations.</descriptionShort>
     <iconPath>UI/Xenotypes/BEWH_ThunderWarriorXenoIcon</iconPath>
     <combatPowerFactor>1.35</combatPowerFactor>
@@ -136,8 +136,8 @@
   <XenotypeDef ParentName="BEWH_ImperiumEliteBase">
     <defName>BEWH_Primarch</defName>
     <label>primarch</label>
-    <description>The Primarchs, crafted by the Emperor’s own hand, are demigods of war and leadership, each embodying a facet of His divine vision. Towering above all others in might, intellect, and charisma, they were destined to lead the Legiones Astartes and shape the fate of the Imperium. Their very presence reshaping worlds and inspiring legions.</description>
-    <descriptionShort>Bred to be perfect generals, warriors and statesmen; larger, stronger, faster, and smarter than any normal human could ever hope to be. They possessed a potent charisma and martial prowess that made them like the mythical gods of old — untouchable by disease, old age or supposedly the petty failings of lesser men.</descriptionShort>
+    <description>The Primarchs, crafted by the Emperor's own hand, are demigods of war and leadership, each embodying a facet of His divine vision. Towering above all others in might, intellect, and charisma, they were destined to lead the Legiones Astartes and shape the fate of the Imperium. Their very presence reshaping worlds and inspiring legions.</description>
+    <descriptionShort>Bred to be perfect generals, warriors and statesmen; larger, stronger, faster, and smarter than any normal human could ever hope to be. They possessed a potent charisma and martial prowess that made them like the mythical gods of old - untouchable by disease, old age or supposedly the petty failings of lesser men.</descriptionShort>
     <iconPath>UI/Xenotypes/BEWH_PrimarchXenoIcon</iconPath>
     <combatPowerFactor>8</combatPowerFactor>
     <genes>

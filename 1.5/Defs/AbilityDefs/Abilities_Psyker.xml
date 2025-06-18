@@ -4,8 +4,8 @@
   <!-- Psyker Bolt -->
   <VFECore.Abilities.AbilityDef>
     <defName>BEWH_PsykerBolt</defName>
-    <label>psychic bolt</label>
-    <description>A bolt made of raw warp energy, able to pierce even the toughest armor. The stronger the psyker, the stronger the bolt.</description>
+    <label>Psychic bolt</label>
+    <description>A bolt made of raw warp energy, able to pierce even the toughest armor. Its power scales with the strength of the psyker who casts it.</description>
     <iconPath>UI/Abilities/BEWH_PsychicBolt</iconPath>
     <abilityClass>VFECore.Abilities.Ability_ShootProjectile</abilityClass>
     <cooldownTime>2500</cooldownTime>
@@ -37,7 +37,7 @@
   <ThingDef ParentName="BaseBullet">
     <defName>BEWH_PsykerBolt</defName>
     <label>psyker bolt</label>
-    <description>A ball of psychic energy launched by a psyker</description>
+    <description>A ball of psychic energy unleashed by a psyker.</description>
     <thingClass>VFECore.Abilities.AbilityProjectile</thingClass>
     <tickerType>Normal</tickerType>
     <graphicData Class="VFECore.GraphicData_Animated">

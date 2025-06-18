@@ -3,8 +3,8 @@
 
     <!-- Primaris -->
     <RecipeDef ParentName="BEWH_RecipeGeneseedVialBase" Name="BEWH_PrimarisVialInsertion" Abstract="True">
-        <description>Implant primaris genetic material into a patient.</description>
-        <jobString>Implanting primaris genetic material.</jobString>
+        <description>Implant Primaris genetic material into a patient.</description>
+        <jobString>Implanting Primaris genetic material.</jobString>
         <researchPrerequisite>BEWH_GeneseedPerfection</researchPrerequisite>
         <workAmount>6500</workAmount>
         <uiIconThing>BEWH_GeneseedVialPrimaris</uiIconThing>
@@ -39,7 +39,7 @@
     <!-- No Chapter -->
     <RecipeDef ParentName="BEWH_PrimarisVialInsertion">
         <defName>BEWH_MakePrimaris</defName>
-        <label>make chapterless primaris </label>
+        <label>make chapterless primaris</label>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
                 <geneseedVial>BEWH_GeneseedVialPrimaris</geneseedVial>
@@ -47,10 +47,10 @@
         </modExtensions>
     </RecipeDef>
 
-    <!-- Chapter I -->
+    <!-- Legion I -->
     <RecipeDef ParentName="BEWH_PrimarisVialInsertion">
         <defName>BEWH_MakePrimarisChapterI</defName>
-        <label>make dark angel primaris</label>
+        <label>make Dark Angels primaris</label>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
                 <geneseedVial>BEWH_GeneseedVialPrimaris</geneseedVial>
@@ -59,7 +59,7 @@
         </modExtensions>
     </RecipeDef>
 
-    <!-- Chapter II -->
+    <!-- Legion II -->
     <!--<RecipeDef ParentName="BEWH_PrimarisVialInsertion">
         <defName>BEWH_MakePrimarisChapterII</defName>
         <label>make ?? primaris</label>
@@ -71,10 +71,10 @@
         </modExtensions>
     </RecipeDef>-->
 
-    <!-- Chapter III -->
+    <!-- Legion III -->
     <RecipeDef ParentName="BEWH_PrimarisVialInsertion">
         <defName>BEWH_MakePrimarisChapterIII</defName>
-        <label>make emperor's children primaris</label>
+        <label>make Emperor's Children primaris</label>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
                 <geneseedVial>BEWH_GeneseedVialPrimaris</geneseedVial>
@@ -83,10 +83,10 @@
         </modExtensions>
     </RecipeDef>
 
-    <!-- Chapter IV -->
+    <!-- Legion IV -->
     <RecipeDef ParentName="BEWH_PrimarisVialInsertion">
         <defName>BEWH_MakePrimarisChapterIV</defName>
-        <label>make iron warriors primaris</label>
+        <label>make Iron Warriors primaris</label>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
                 <geneseedVial>BEWH_GeneseedVialPrimaris</geneseedVial>
@@ -95,10 +95,10 @@
         </modExtensions>
     </RecipeDef>
 
-    <!-- Chapter V -->
+    <!-- Legion V -->
     <RecipeDef ParentName="BEWH_PrimarisVialInsertion">
         <defName>BEWH_MakePrimarisChapterV</defName>
-        <label>make white scars primaris</label>
+        <label>make White Scars primaris</label>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
                 <geneseedVial>BEWH_GeneseedVialPrimaris</geneseedVial>
@@ -107,10 +107,10 @@
         </modExtensions>
     </RecipeDef>
 
-    <!-- Chapter VI -->
+    <!-- Legion VI -->
     <RecipeDef ParentName="BEWH_PrimarisVialInsertion">
         <defName>BEWH_MakePrimarisChapterVI</defName>
-        <label>make space wolves primaris</label>
+        <label>make Space Wolves primaris</label>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
                 <geneseedVial>BEWH_GeneseedVialPrimaris</geneseedVial>
@@ -119,10 +119,10 @@
         </modExtensions>
     </RecipeDef>
 
-    <!-- Chapter VII -->
+    <!-- Legion VII -->
     <RecipeDef ParentName="BEWH_PrimarisVialInsertion">
         <defName>BEWH_MakePrimarisChapterVII</defName>
-        <label>make imperial fists primaris</label>
+        <label>make Imperial Fists primaris</label>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
                 <geneseedVial>BEWH_GeneseedVialPrimaris</geneseedVial>
@@ -131,10 +131,10 @@
         </modExtensions>
     </RecipeDef>
 
-    <!-- Chapter VIII -->
+    <!-- Legion VIII -->
     <RecipeDef ParentName="BEWH_PrimarisVialInsertion">
         <defName>BEWH_MakePrimarisChapterVIII</defName>
-        <label>make night lords primaris</label>
+        <label>make Night Lords primaris</label>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
                 <geneseedVial>BEWH_GeneseedVialPrimaris</geneseedVial>
@@ -143,10 +143,10 @@
         </modExtensions>
     </RecipeDef>
 
-    <!-- Chapter IX -->
+    <!-- Legion IX -->
     <RecipeDef ParentName="BEWH_PrimarisVialInsertion">
         <defName>BEWH_MakePrimarisChapterIX</defName>
-        <label>make blood angels primaris</label>
+        <label>make Blood Angels primaris</label>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
                 <geneseedVial>BEWH_GeneseedVialPrimaris</geneseedVial>
@@ -155,10 +155,10 @@
         </modExtensions>
     </RecipeDef>
 
-    <!-- Chapter X -->
+    <!-- Legion X -->
     <RecipeDef ParentName="BEWH_PrimarisVialInsertion">
         <defName>BEWH_MakePrimarisChapterX</defName>
-        <label>make iron hands primaris</label>
+        <label>make Iron Hands primaris</label>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
                 <geneseedVial>BEWH_GeneseedVialPrimaris</geneseedVial>
@@ -167,7 +167,7 @@
         </modExtensions>
     </RecipeDef>
 
-    <!-- Chapter XI -->
+    <!-- Legion XI -->
     <!--<RecipeDef ParentName="BEWH_PrimarisVialInsertion">
         <defName>BEWH_MakePrimarisChapterXI</defName>
         <label>make ?? primaris</label>
@@ -179,10 +179,10 @@
         </modExtensions>
     </RecipeDef>-->
 
-    <!-- Chapter XII -->
+    <!-- Legion XII -->
     <RecipeDef ParentName="BEWH_PrimarisVialInsertion">
         <defName>BEWH_MakePrimarisChapterXII</defName>
-        <label>make world eaters primaris</label>
+        <label>make World Eaters primaris</label>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
                 <geneseedVial>BEWH_GeneseedVialPrimaris</geneseedVial>
@@ -191,10 +191,10 @@
         </modExtensions>
     </RecipeDef>
 
-    <!-- Chapter XIII -->
+    <!-- Legion XIII -->
     <RecipeDef ParentName="BEWH_PrimarisVialInsertion">
         <defName>BEWH_MakePrimarisChapterXIII</defName>
-        <label>make ultramarine primaris</label>
+        <label>make Ultramarines primaris</label>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
                 <geneseedVial>BEWH_GeneseedVialPrimaris</geneseedVial>
@@ -203,10 +203,10 @@
         </modExtensions>
     </RecipeDef>
 
-    <!-- Chapter XIV -->
+    <!-- Legion XIV -->
     <RecipeDef ParentName="BEWH_PrimarisVialInsertion">
         <defName>BEWH_MakePrimarisChapterXIV</defName>
-        <label>make death guard primaris</label>
+        <label>make Death Guard primaris</label>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
                 <geneseedVial>BEWH_GeneseedVialPrimaris</geneseedVial>
@@ -215,10 +215,10 @@
         </modExtensions>
     </RecipeDef>
 
-    <!-- Chapter XV -->
+    <!-- Legion XV -->
     <RecipeDef ParentName="BEWH_PrimarisVialInsertion">
         <defName>BEWH_MakePrimarisChapterXV</defName>
-        <label>make thousand sons primaris</label>
+        <label>make Thousand Sons primaris</label>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
                 <geneseedVial>BEWH_GeneseedVialPrimaris</geneseedVial>
@@ -227,10 +227,10 @@
         </modExtensions>
     </RecipeDef>
 
-    <!-- Chapter XVI -->
+    <!-- Legion XVI -->
     <RecipeDef ParentName="BEWH_PrimarisVialInsertion">
         <defName>BEWH_MakePrimarisChapterXVI</defName>
-        <label>make sons of horus primaris</label>
+        <label>make Sons of Horus primaris</label>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
                 <geneseedVial>BEWH_GeneseedVialPrimaris</geneseedVial>
@@ -239,10 +239,10 @@
         </modExtensions>
     </RecipeDef>
 
-    <!-- Chapter XVII -->
+    <!-- Legion XVII -->
     <RecipeDef ParentName="BEWH_PrimarisVialInsertion">
         <defName>BEWH_MakePrimarisChapterXVII</defName>
-        <label>make word bearer primaris</label>
+        <label>make Word Bearers primaris</label>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
                 <geneseedVial>BEWH_GeneseedVialPrimaris</geneseedVial>
@@ -251,10 +251,10 @@
         </modExtensions>
     </RecipeDef>
 
-    <!-- Chapter XVIII -->
+    <!-- Legion XVIII -->
     <RecipeDef ParentName="BEWH_PrimarisVialInsertion">
         <defName>BEWH_MakePrimarisChapterXVIII</defName>
-        <label>make salamanders primaris</label>
+        <label>make Salamanders primaris</label>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
                 <geneseedVial>BEWH_GeneseedVialPrimaris</geneseedVial>
@@ -263,10 +263,10 @@
         </modExtensions>
     </RecipeDef>
 
-    <!-- Chapter XIX -->
+    <!-- Legion XIX -->
     <RecipeDef ParentName="BEWH_PrimarisVialInsertion">
         <defName>BEWH_MakePrimarisChapterXIX</defName>
-        <label>make raven guard primaris</label>
+        <label>make Raven Guard primaris</label>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
                 <geneseedVial>BEWH_GeneseedVialPrimaris</geneseedVial>
@@ -275,10 +275,10 @@
         </modExtensions>
     </RecipeDef>
 
-    <!-- Chapter XX -->
+    <!-- Legion XX -->
     <RecipeDef ParentName="BEWH_PrimarisVialInsertion">
         <defName>BEWH_MakePrimarisChapterXX</defName>
-        <label>make alpha legion primaris</label>
+        <label>make Alpha egion primaris</label>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
                 <geneseedVial>BEWH_GeneseedVialPrimaris</geneseedVial>

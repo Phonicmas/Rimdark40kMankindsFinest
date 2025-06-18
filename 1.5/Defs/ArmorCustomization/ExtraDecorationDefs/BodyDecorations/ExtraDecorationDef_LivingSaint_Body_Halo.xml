@@ -20,7 +20,6 @@
             <li>BEWH_LivingSaintArmor</li>
         </appliesTo>
         <drawData>
-            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataNorth>
                 <layer>80</layer>
                 <offset>(0, 0, 0.1)</offset>

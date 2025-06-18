@@ -93,7 +93,7 @@
       <productCount>10</productCount>
       <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
       <effectWorking>CutStone</effectWorking>
-      <soundWorking>Recipe_Machining</soundWorking>
+      <soundWorking>Recipe_Drug</soundWorking>
       <recipeUsers>
         <li>BEWH_GeneManipulationTable</li>
       </recipeUsers>

@@ -13,7 +13,7 @@
         <defName>BEWH_Psyker_Respected</defName>
         <issue>BEWH_PsykerIssue</issue>
         <label>respected</label>
-        <description>To be a psyker is a thing worthy of respect.</description>
+        <description>Being a psyker is something deserving of respect.</description>
         <impact>Medium</impact>
         <displayOrderInIssue>200</displayOrderInIssue>
         <displayOrderInImpact>1000</displayOrderInImpact>
@@ -48,7 +48,7 @@
         <displayOrderInIssue>202</displayOrderInIssue>
         <displayOrderInImpact>1000</displayOrderInImpact>
         <defaultSelectionWeight>0</defaultSelectionWeight>
-        <description>To be a psyker is a horrible thing.</description>
+        <description>It is a horrible thing to be a psyker.</description>
         <comps>
             <li Class="PreceptComp_SituationalThought">
                 <thought>BEWH_Psyker_Horrible</thought>

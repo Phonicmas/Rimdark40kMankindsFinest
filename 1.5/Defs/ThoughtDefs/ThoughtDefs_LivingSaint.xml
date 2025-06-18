@@ -22,7 +22,7 @@
         <stages>
             <li>
                 <label>holy radiance</label>
-                <description>The holy radiance fills me with joy</description>
+                <description>The holy radiance fills me with joy.</description>
                 <baseMoodEffect>8</baseMoodEffect>
             </li>
         </stages>

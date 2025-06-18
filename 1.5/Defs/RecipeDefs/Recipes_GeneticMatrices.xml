@@ -26,8 +26,8 @@
     <RecipeDef ParentName="BEWH_RecipeGeneticMatrixBase">
         <defName>BEWH_MakeThunderWarriorMatrix</defName>
         <label>make thunder warrior genetic matrix</label>
-        <description>Make a thunder warrior genetic matrix.</description>
-        <jobString>Making thunder warrior genetic matrix.</jobString>
+        <description>Make a Whunder Warrior genetic matrix.</description>
+        <jobString>Making Thunder Warrior genetic matrix.</jobString>
         <workAmount>45000</workAmount>
         <researchPrerequisite>BEWH_GeneseedCreation</researchPrerequisite>
         <ingredients>
@@ -77,9 +77,9 @@
     <!-- Firstborn -->
     <RecipeDef ParentName="BEWH_RecipeGeneticMatrixBase">
         <defName>BEWH_MakeFirstbornMatrix</defName>
-        <label>make firstborn genetic matrix</label>
-        <description>Make a firstborn genetic matrix.</description>
-        <jobString>Making firstborn genetic matrix.</jobString>
+        <label>make Firstborn genetic matrix</label>
+        <description>Make a Firstborn genetic matrix.</description>
+        <jobString>Making Firstborn genetic matrix.</jobString>
         <workAmount>100000</workAmount>
         <researchPrerequisite>BEWH_GeneseedPurification</researchPrerequisite>
         <ingredients>
@@ -129,9 +129,9 @@
     <!-- Primaris -->
     <RecipeDef ParentName="BEWH_RecipeGeneticMatrixBase">
         <defName>BEWH_MakePrimarisMatrix</defName>
-        <label>make primaris genetic matrix</label>
-        <description>Make a primaris genetic matrix.</description>
-        <jobString>Making primaris genetic matrix.</jobString>
+        <label>make Primaris genetic matrix</label>
+        <description>Make a Primaris genetic matrix.</description>
+        <jobString>Making Primaris genetic matrix.</jobString>
         <workAmount>150000</workAmount>
         <researchPrerequisite>BEWH_GeneseedPerfection</researchPrerequisite>
         <ingredients>
@@ -181,9 +181,9 @@
     <!-- Custodes -->
     <RecipeDef ParentName="BEWH_RecipeGeneticMatrixBase">
         <defName>BEWH_MakeCustodesMatrix</defName>
-        <label>make custodes genetic matrix</label>
-        <description>Make a custodes genetic matrix.</description>
-        <jobString>Making custodes genetic matrix.</jobString>
+        <label>make Custodes genetic matrix</label>
+        <description>Make a Custodes genetic matrix.</description>
+        <jobString>Making Custodes genetic matrix.</jobString>
         <workAmount>200000</workAmount>
         <researchPrerequisite>BEWH_CustodesCreation</researchPrerequisite>
         <ingredients>
@@ -238,9 +238,9 @@
     <!-- Primarch -->
     <RecipeDef ParentName="BEWH_RecipeGeneticMatrixBase">
         <defName>BEWH_MakePrimarchMatrix</defName>
-        <label>make primarch genetic matrix</label>
-        <description>Make a primarch genetic matrix.</description>
-        <jobString>Making primarch genetic matrix.</jobString>
+        <label>make Primarch genetic matrix</label>
+        <description>Make a Primarch genetic matrix.</description>
+        <jobString>Making Primarch genetic matrix.</jobString>
         <workAmount>250000</workAmount>
         <researchPrerequisite>BEWH_PrimarchProject</researchPrerequisite>
         <ingredients>

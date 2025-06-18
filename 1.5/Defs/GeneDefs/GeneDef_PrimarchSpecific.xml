@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <!-- Chapter I - Lion El'Jonson -->
+    <!-- Legion I - Lion El'Jonson -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
         <defName>BEWH_PrimarchSpecificGeneI</defName>
         <label>Lion El'Jonson</label>
@@ -29,7 +29,7 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chapter II - ??? Redacted by the Emperor's order -->
+    <!-- Legion II - ??? Redacted by the Emperor's order -->
     <!--<GeneDef ParentName="BEWH_PrimarchSpecific">
         <defName>BEWH_PrimarchSpecificGeneII</defName>
         <label>???</label>
@@ -41,7 +41,7 @@
         </modExtensions>
     </GeneDef>-->
 
-    <!-- Chapter III - Fulgrim -->
+    <!-- Legion III - Fulgrim -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
         <defName>BEWH_PrimarchSpecificGeneIII</defName>
         <label>Fulgrim</label>
@@ -84,7 +84,7 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chapter IV - Perturabo -->
+    <!-- Legion IV - Perturabo -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
         <defName>BEWH_PrimarchSpecificGeneIV</defName>
         <label>Perturabo</label>
@@ -123,7 +123,7 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chapter V - Jaghatai Khan -->
+    <!-- Legion V - Jaghatai Khan -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
         <defName>BEWH_PrimarchSpecificGeneV</defName>
         <label>Jaghatai Khan</label>
@@ -148,7 +148,7 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chapter VI - Leman Russ -->
+    <!-- Legion VI - Leman Russ -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
         <defName>BEWH_PrimarchSpecificGeneVI</defName>
         <label>Leman Russ</label>
@@ -191,7 +191,7 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chapter VII - Rogal Dorn -->
+    <!-- Legion VII - Rogal Dorn -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
         <defName>BEWH_PrimarchSpecificGeneVII</defName>
         <label>Rogal Dorn</label>
@@ -221,7 +221,7 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chapter VIII - Konrad Curze -->
+    <!-- Legion VIII - Konrad Curze -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
         <defName>BEWH_PrimarchSpecificGeneVIII</defName>
         <label>Konrad Curze</label>
@@ -262,7 +262,7 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chapter IX - Sanguinius -->
+    <!-- Legion IX - Sanguinius -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
         <defName>BEWH_PrimarchSpecificGeneIX</defName>
         <label>Sanguinius</label>
@@ -324,7 +324,7 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chapter X - Ferrus Manus -->
+    <!-- Legion X - Ferrus Manus -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
         <defName>BEWH_PrimarchSpecificGeneX</defName>
         <label>Ferrus Manus</label>
@@ -374,7 +374,7 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chapter XI - ??? Redacted by the Emperor's order -->
+    <!-- Legion XI - ??? Redacted by the Emperor's order -->
     <!--<GeneDef ParentName="BEWH_PrimarchSpecific">
         <defName>BEWH_PrimarchSpecificGeneXI</defName>
         <label>???</label>
@@ -386,7 +386,7 @@
         </modExtensions>
     </GeneDef>-->
 
-    <!-- Chapter XII - Angron -->
+    <!-- Legion XII - Angron -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
         <defName>BEWH_PrimarchSpecificGeneXII</defName>
         <label>Angron</label>
@@ -416,7 +416,7 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chapter XIII - Roboute Guilliman -->
+    <!-- Legion XIII - Roboute Guilliman -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
         <defName>BEWH_PrimarchSpecificGeneXIII</defName>
         <label>Roboute Guilliman</label>
@@ -460,7 +460,7 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chapter XIV - Mortarion -->
+    <!-- Legion XIV - Mortarion -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
         <defName>BEWH_PrimarchSpecificGeneXIV</defName>
         <label>Mortarion</label>
@@ -494,7 +494,7 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chapter XV - Magnus the Red -->
+    <!-- Legion XV - Magnus the Red -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
         <defName>BEWH_PrimarchSpecificGeneXV</defName>
         <label>Magnus the Red</label>
@@ -537,7 +537,7 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chapter XVI - Horus Lupercal -->
+    <!-- Legion XVI - Horus Lupercal -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
         <defName>BEWH_PrimarchSpecificGeneXVI</defName>
         <label>Horus Lupercal</label>
@@ -573,7 +573,7 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chapter XVII - Lorgar -->
+    <!-- Legion XVII - Lorgar -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
         <defName>BEWH_PrimarchSpecificGeneXVII</defName>
         <label>Lorgar</label>
@@ -611,7 +611,7 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chapter XVIII - Vulkan -->
+    <!-- Legion XVIII - Vulkan -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
         <defName>BEWH_PrimarchSpecificGeneXVIII</defName>
         <label>Vulkan</label>
@@ -649,7 +649,7 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chapter XIX - Corvus Corax -->
+    <!-- Legion XIX - Corvus Corax -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
         <defName>BEWH_PrimarchSpecificGeneXIX</defName>
         <label>Corvus Corax</label>
@@ -680,7 +680,7 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chapter XX - Alpharius/Omegon -->
+    <!-- Legion XX - Alpharius/Omegon -->
     <GeneDef ParentName="BEWH_PrimarchSpecific">
         <defName>BEWH_PrimarchSpecificGeneXX</defName>
         <label>Alpharius/Omegon</label>

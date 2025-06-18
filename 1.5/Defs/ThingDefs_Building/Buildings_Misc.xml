@@ -4,8 +4,8 @@
   <!-- Ancient Banner from ability -->
   <ThingDef ParentName="BuildingBase">
     <defName>BEWH_AncientChapterBanner</defName>
-    <label>Chapter Banner</label>
-    <description>The Chapter Banner is a symbol of honor and unity, a sacred emblem raised in key locations to strengthen the resolve of the Space Marines. When unfurled, the banner inspires all nearby Marines, granting them increased morale and combat effectiveness as they fight in the name of their chapter's legacy.</description>
+    <label>Legion Standard</label>
+    <description>The Legion Standard is a symbol of honor and unity, a sacred emblem raised in key locations to strengthen the resolve of the Space Marines. When unfurled, the banner inspires all nearby Marines, granting them increased morale and combat effectiveness as they fight in the name of their legion's legacy.</description>
     <thingClass>Genes40k.Building_ChapterBanner</thingClass>
     <graphicData>
       <texPath>Things/Building/ChapterBanner/BEWH_ThingChapterBanner</texPath>
@@ -55,6 +55,10 @@
         <durationOutsideRange>750</durationOutsideRange>
         <range>20</range>
       </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>18</glowRadius>
+        <glowColor>(200,200,200,0)</glowColor>
+      </li>
     </comps>
 
   </ThingDef>
@@ -62,8 +66,8 @@
   <!-- Decorative Banner -->
   <ThingDef ParentName="BuildingBase">
     <defName>BEWH_DecorativeChapterBannerImperium</defName>
-    <label>Decorative Chapter Banner</label>
-    <description>A beautifully crafted banner adorned with the chapter's symbols and colors. It stands as a proud testament to the chapter's history and glory.</description>
+    <label>decorative Legion Standard</label>
+    <description>A beautifully crafted banner adorned with the legion's symbols and colors. It stands as a proud testament to the legion's history and glory.</description>
     <thingClass>Genes40k.Building_DecorativeFlag</thingClass>
     <graphicData>
       <texPath>Things/Building/ChapterBanner/BEWH_DecorationChapterBanner</texPath>
@@ -98,6 +102,7 @@
     <costList>
       <WoodLog>25</WoodLog>
       <Cloth>40</Cloth>
+      <Gold>1</Gold>
     </costList>
 
     <tickerType>Normal</tickerType>

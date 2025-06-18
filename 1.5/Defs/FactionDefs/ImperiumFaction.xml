@@ -4,7 +4,7 @@
     <FactionDef ParentName="FactionBase">
         <defName>BEWH_ImperiumFaction</defName>
         <label>Imperium</label>
-        <description>A company of the emperors finest warriors, the Adeptus Astartes, charged with purging heresy from this backwater rimworld.</description>
+        <description>A company of the Emperor's finest warriors, the Adeptus Astartes, charged with purging heresy from this backwater rimworld.</description>
 
         <pawnSingular>human</pawnSingular>
         <pawnsPlural>humans</pawnsPlural>

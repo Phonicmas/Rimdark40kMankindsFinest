@@ -24,8 +24,8 @@
     <RecipeDef ParentName="BEWH_RecipeGeneseedVialBase">
         <defName>BEWH_MakeThunderWarrior</defName>
         <label>make thunder warrior</label>
-        <description>Implant thunder warrior genetic material into a patient.</description>
-        <jobString>Implanting thunder warrior genetic material.</jobString>
+        <description>Implant Thunder Warrior genetic material into a patient.</description>
+        <jobString>Implanting Thunder Warrior genetic material.</jobString>
         <researchPrerequisite>BEWH_GeneseedCreation</researchPrerequisite>
         <workAmount>10000</workAmount>
         <uiIconThing>BEWH_GeneseedVialThunderWarrior</uiIconThing>
@@ -66,8 +66,8 @@
     <RecipeDef ParentName="BEWH_RecipeGeneseedVialBase">
         <defName>BEWH_MakeCustodes</defName>
         <label>make custodes</label>
-        <description>Implant custodes genetic material into a patient.</description>
-        <jobString>Implanting custodes genetic material.</jobString>
+        <description>Implant Custodes genetic material into a patient.</description>
+        <jobString>Implanting Custodes genetic material.</jobString>
         <researchPrerequisite>BEWH_CustodesCreation</researchPrerequisite>
         <workAmount>15000</workAmount>
         <uiIconThing>BEWH_GeneseedVialCustodes</uiIconThing>

@@ -19,7 +19,6 @@
             <li>BEWH_MkXPowerArmor</li>
         </appliesTo>
         <drawData>
-            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataSouth>
                 <layer>45</layer>
             </dataSouth>
@@ -55,7 +54,6 @@
             <li>BEWH_MkVIIPowerArmor</li>
         </appliesTo>
         <drawData>
-            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataSouth>
                 <layer>45</layer>
             </dataSouth>
@@ -90,7 +88,6 @@
             <li>BEWH_MkXPowerArmor</li>
         </appliesTo>
         <drawData>
-            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataSouth>
                 <layer>45</layer>
             </dataSouth>
@@ -128,7 +125,6 @@
             <li>BEWH_MkXPowerArmorChaplain</li>
         </appliesTo>
         <drawData>
-            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataNorth>
                 <layer>76.6</layer>
             </dataNorth>
@@ -172,7 +168,6 @@
             <li>BEWH_MkXPowerArmorChaplain</li>
         </appliesTo>
         <drawData>
-            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataNorth>
                 <layer>76.6</layer>
             </dataNorth>
@@ -199,7 +194,7 @@
 
     <Core40k.ExtraDecorationDef>
         <defName>BEWH_Deco_HonourCords_1</defName>
-        <label>Honour Cords</label>
+        <label>Honour cords</label>
         <description>...</description>
         <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_HonourCords_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_HonourCords</drawnTextureIconPath>
@@ -215,7 +210,6 @@
             <li>BEWH_MkXPowerArmor</li>
         </appliesTo>
         <drawData>
-            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataSouth>
                 <layer>70</layer>
             </dataSouth>
@@ -255,7 +249,6 @@
             <li>BEWH_MkVIIPowerArmor</li>
         </appliesTo>
         <drawData>
-            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataNorth>
                 <layer>69</layer>
             </dataNorth>
@@ -295,7 +288,6 @@
             <li>BEWH_MkXPowerArmor</li>
         </appliesTo>
         <drawData>
-            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataNorth>
                 <layer>69</layer>
             </dataNorth>
@@ -338,7 +330,6 @@
             <li>BEWH_MkXPowerArmorChaplain</li>
         </appliesTo>
         <drawData>
-            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataNorth>
                 <layer>70</layer>
             </dataNorth>

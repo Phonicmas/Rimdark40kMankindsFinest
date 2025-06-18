@@ -69,7 +69,7 @@
     <GeneDef ParentName="BEWH_PrimarchBase">
         <defName>BEWH_TempestusOcularium</defName>
         <label>tempestus ocularium</label>
-        <description>The Tempestus Ocularium is a sophisticated enhancement to the carriers vision, as well as the source of a carriers dormant psychic abilities. Tempestus Ocularium is essentially an enchanced version of the Occulobe and Lyman's ear — a hearing and sight-enhancing implant, located at the base of the brain. Key diffierence between these organs consists in Tempestus Ocularium being sligthly larger and having a thin pearlescent membrane covering the entire organ. It allows the carrier to have perfect sight in the most tenebrous places, or resist the exposure to the brightest light and to be able to hear even the faintest sound. Apart from that, it acts as a natural psychic focal device, that increases the carriers psychic potential, making the carriers soul glow brightly in the Immaterium. As a side-effect, it also gives the carrier the ability to "read" people around them, giving them an edge in social situations and increasing their overall social impact.</description>
+        <description>The Tempestus Ocularium is a sophisticated enhancement to the carriers vision, as well as the source of a carriers dormant psychic abilities. Tempestus Ocularium is essentially an enchanced version of the Occulobe and Lyman's ear - a hearing and sight-enhancing implant, located at the base of the brain. Key diffierence between these organs consists in Tempestus Ocularium being sligthly larger and having a thin pearlescent membrane covering the entire organ. It allows the carrier to have perfect sight in the most tenebrous places, or resist the exposure to the brightest light and to be able to hear even the faintest sound. Apart from that, it acts as a natural psychic focal device, that increases the carriers psychic potential, making the carriers soul glow brightly in the Immaterium. As a side-effect, it also gives the carrier the ability to "read" people around them, giving them an edge in social situations and increasing their overall social impact.</description>
         <iconPath>UI/Genes/Primarch/BEWH_PrimarchTempestusOcularium</iconPath>
         <displayOrderInCategory>301</displayOrderInCategory>
 
@@ -185,7 +185,7 @@
     <GeneDef ParentName="BEWH_PrimarchBase">
         <defName>BEWH_HelixomeArray</defName>
         <label>helixome array</label>
-        <description>A complex array of nodules and vessels, doubling the lymphatic system and weaving around all the major organs and systems in helix-like fashion, hence the name. It greatly increases the healing potential, allowing the carrier to shrug off wounds capable of killing a space marine, let alone a mortal human. </description>
+        <description>A complex array of nodules and vessels, doubling the lymphatic system and weaving around all the major organs and systems in helix-like fashion, hence the name. It greatly increases the healing potential, allowing the carrier to shrug off wounds capable of killing a space marine, let alone a mortal human.</description>
         <iconPath>UI/Genes/Primarch/BEWH_PrimarchHelixomeArray</iconPath>
         <displayOrderInCategory>303</displayOrderInCategory>
         <geneClass>Gene_Clotting</geneClass>
@@ -313,7 +313,7 @@
     <GeneDef ParentName="BEWH_PrimarchBase">
         <defName>BEWH_CelerityNexus</defName>
         <label>celerity nexus</label>
-        <description>The Celerity Nexus is a complex network of bio-engineered neural nodes and enhanced myelin sheaths, which are interwoven with the carriers's existing nervous system, it runs parallel to the spinal cord, enhancing the central nervous system’s ability to transmit signals rapidly between the brain and the rest of the body. This significantly increasing their reaction time and movement speed, and allows the carrier to move with blinding speed, dodge attacks, close distances and strike enemies in the blink of an eye.</description>
+        <description>The Celerity Nexus is a complex network of bio-engineered neural nodes and enhanced myelin sheaths, which are interwoven with the carriers's existing nervous system, it runs parallel to the spinal cord, enhancing the central nervous system's ability to transmit signals rapidly between the brain and the rest of the body. This significantly increasing their reaction time and movement speed, and allows the carrier to move with blinding speed, dodge attacks, close distances and strike enemies in the blink of an eye.</description>
         <iconPath>UI/Genes/Primarch/BEWH_PrimarchCelerityNexus</iconPath>
         <displayOrderInCategory>305</displayOrderInCategory>
 

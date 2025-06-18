@@ -5,8 +5,8 @@
     <RecipeDef ParentName="SurgeryFlesh">
         <defName>BEWH_StasisWake</defName>
         <label>resurrect from stasis</label>
-        <description>Ressurects pawn from self-induced stasis</description>
-        <jobString>resurrecting {0} from stasis</jobString>
+        <description>Ressurects pawn from self-induced stasis.</description>
+        <jobString>Resurrecting {0} from stasis.</jobString>
         <workerClass>Recipe_RemoveHediff</workerClass>
         <successfullyRemovedHediffMessage>{0} has successfully awoken {1} from stasis.</successfullyRemovedHediffMessage>
         <workAmount>2200</workAmount>
@@ -44,12 +44,12 @@
         <label>rubicon surgery</label>
         <description>Extensive surgery that elevates a Firstborn Astartes to Primaris status. Increases physical capabilities but may result in death during the procedure.</description>
         <workerClass>Genes40k.WorkerClass_RubiconPrimaris</workerClass>
-        <jobString>rebirthing {0} into a Primaris</jobString>
+        <jobString>Rebirthing {0} into a Primaris.</jobString>
         <successfullyRemovedHediffMessage>{1} has been reborn as a Primaris.</successfullyRemovedHediffMessage>
         <workAmount>5000</workAmount>
         <hideBodyPartNames>true</hideBodyPartNames>
         <targetsBodyPart>false</targetsBodyPart>
-        <surgerySuccessChanceFactor>0.5</surgerySuccessChanceFactor>
+        <surgerySuccessChanceFactor>0.75</surgerySuccessChanceFactor> <!-- Sacrificing lore a bit for the sake of gameplay -->
         <researchPrerequisite>BEWH_RubiconSurgery</researchPrerequisite>
         <ingredients>
             <li>

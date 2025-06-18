@@ -4,7 +4,7 @@
     <FactionDef ParentName="FactionBase">
         <defName>BEWH_OffworldMarinesFaction</defName>
         <label>Offworld Marines</label>
-        <description>A company of marines stationed onboard ship offworld.</description>
+        <description>A company of Space Marines stationed aboard an off-world ship.</description>
 
         <pawnSingular>Marine</pawnSingular>
         <pawnsPlural>Marines</pawnsPlural>

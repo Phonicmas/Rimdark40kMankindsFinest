@@ -4,8 +4,8 @@
 	<!-- Sus-an Membrane Stasis -->
 	<HediffDef>
 		<defName>BEWH_SusAnMembraneStasis</defName>
-		<label>sus-an membrane stasis</label>
-		<description>Suspended in sus-an membrane stasis, requires advanced medical procedure to awaken.</description>
+		<label>Sus-an Membrane stasis</label>
+		<description>Suspended in Sus-an Membrane stasis, requires advanced medical procedure to awaken.</description>
 		<everCurableByItem>false</everCurableByItem>
 		<disablesNeeds>
 			<li>Food</li>
@@ -32,9 +32,9 @@
 	<!-- Catalepsean Node Unsleeping -->
 	<HediffDef>
 		<defName>BEWH_CatalepseanNodeUnsleeping</defName>
-		<label>catalepsean node unsleeping</label>
+		<label>Catalepsean Node unsleeping</label>
 		<hediffClass>HediffWithComps</hediffClass>
-		<description>Awake and alert!</description>
+		<description>This character's brain cycles rest through different regions, allowing parts to recover while others stay alert.</description>
 		<everCurableByItem>false</everCurableByItem>
 		<isBad>false</isBad>
 		<stages>
@@ -60,9 +60,9 @@
 	<!-- Belisarian Furnace Boost -->
 	<HediffDef>
 		<defName>BEWH_BelisarianFurnaceBoost</defName>
-		<label>belisarian furnace boost</label>
+		<label>Belisarian Furnace boost</label>
 		<hediffClass>HediffWithComps</hediffClass>
-		<description>A hyper-cocktail aiding in the rapid regrowth of tissue, bone and muscle.</description>
+		<description>A hyper-cocktail of chemicals aiding in the rapid regrowth of tissue, bone and muscle.</description>
 		<everCurableByItem>false</everCurableByItem>
 		<isBad>false</isBad>
 		<stages>

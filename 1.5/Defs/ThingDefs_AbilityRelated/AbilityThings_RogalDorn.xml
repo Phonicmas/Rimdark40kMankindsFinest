@@ -34,7 +34,7 @@
   <ThingDef ParentName="BEWH_RaisedBuilding">
     <defName>BEWH_RaisedWall</defName>
     <label>raised wall</label>
-    <description>A sturdy wall to keep back attackers. It will collapse in time.</description>
+    <description>A highly durable wall that serves well in defense, but will disappear after a limited time.</description>
     <uiIconPath>Things/Building/Linked/WallSmooth_MenuIcon</uiIconPath>
     <graphicData>
       <texPath>Things/Building/Linked/Wall</texPath>
@@ -68,7 +68,7 @@
   <ThingDef ParentName="BEWH_RaisedBuilding">
     <defName>BEWH_RaisedBarricade</defName>
     <label>raised barricade</label>
-    <description>A sturdy barricade to keep back attackers. It will collapse in time.</description>
+    <description>A durable barricade for short-term defense. Will disappear after a limited time.</description>
     <uiIconPath>Things/Building/Linked/WallSmooth_MenuIcon</uiIconPath>
     <graphicData>
       <texPath>Things/Building/Linked/Barricade_Atlas</texPath>
@@ -92,7 +92,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>BEWH_RaisedTurret</defName>
     <label>raised turret</label>
-    <description>A turret to keep back attackers. It will collapse in time</description>
+    <description>A heavy, double-barreled turret based on .75 caliber bolter. Will disappear after a limited time.</description>
     <thingClass>Building_TurretGun</thingClass>
     <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
@@ -147,7 +147,7 @@
   <!-- Turret top part -->
   <ThingDef ParentName="BaseWeaponTurret">
     <defName>BEWH_RaisedTurretTopGun</defName>
-    <label>Bolter Turret</label>
+    <label>bolter turret</label>
     <description>Bolter mounted gun.</description>
     <graphicData>
       <texPath>Things/Building/RogalDorn/BEWH_DornTurretTop</texPath>

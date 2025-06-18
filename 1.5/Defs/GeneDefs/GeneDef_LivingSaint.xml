@@ -203,8 +203,8 @@
     <!-- Fury of the Emperor -->
     <GeneDef ParentName="BEWH_LivingSaintBase">
         <defName>BEWH_LivingSaintFuryOfTheEmperor</defName>
-        <label>fury of the emperor</label>
-        <description>Filled with the fury of the emperor, carriers of this gene can feel the power of the emperor surge through them as they fight his enemies.</description>
+        <label>fury of the Emperor</label>
+        <description>Filled with the fury of the Emperor, carriers of this gene can feel the power of the Emperor surge through them as they fight his enemies.</description>
         <iconPath>UI/Genes/LivingSaint/BEWH_LivingSaint_FuryOfTheEmperor</iconPath>
         <geneClass>Gene_Clotting</geneClass>
         <displayOrderInCategory>503</displayOrderInCategory>

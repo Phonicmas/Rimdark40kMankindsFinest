@@ -24,7 +24,6 @@
         <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
         <useArmorColourAsDefault>true</useArmorColourAsDefault>
         <drawData>
-            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataNorth>
                 <layer>76</layer>
             </dataNorth>
@@ -62,7 +61,6 @@
         <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
         <useArmorColourAsDefault>true</useArmorColourAsDefault>
         <drawData>
-            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataNorth>
                 <layer>76</layer>
             </dataNorth>
@@ -107,7 +105,6 @@
         <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
         <useArmorColourAsDefault>true</useArmorColourAsDefault>
         <drawData>
-            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataNorth>
                 <layer>76</layer>
             </dataNorth>

@@ -2,11 +2,11 @@
 <Defs>
 
 	<!--= Chapter Ancient =-->
-	<!-- Chapter Banner -->
+	<!-- Legion Standard -->
 	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
 		<defName>BEWH_ChapterBannerBuff</defName>
-		<label>Chapter Banner</label>
-		<description>The sacred banner of my Chapter fills me with unwavering resolve, driving me to greater feats in the Emperor's name!</description>
+		<label>Legion Standard</label>
+		<description>The sacred banner of my Legion fills me with unwavering resolve, driving me to greater feats in the Emperor's name!</description>
 		<stages>
 			<li>
 				<statOffsets>
@@ -64,7 +64,7 @@
 	<!-- Stimulants -->
 	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
 		<defName>BEWH_ApothecaryStimulantsBuff</defName>
-		<label>Stimulants</label>
+		<label>stimulants</label>
 		<description>This character is under the effects of emergency stimulants that relieve pain and increase healing speed. Their body is temporarily revitalized, reducing fatigue and speeding recovery, but the effects are short-lived and they may need further care.</description>
 		<stages>
 			<li>

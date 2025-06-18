@@ -14,9 +14,9 @@
     <!-- Make space marine gene-seed -->
     <RecipeDef ParentName="BEWH_GeneseedFromProgenoid">
         <defName>BEWH_AstartesPack</defName>
-        <label>Extract firstborn gene-seed gland</label>
-        <description>Remove fully grown germ cells from progenoid glands to make a ascendance vial of a Firstborn.</description>
-        <jobString>creating gene-seed from progenoid glands</jobString>
+        <label>extract firstborn gene-seed gland</label>
+        <description>Remove fully grown germ cells from progenoid glands to make an Ascendance Vial of a Firstborn.</description>
+        <jobString>Creating gene-seed from progenoid glands.</jobString>
         <successfullyRemovedHediffMessage>{0} has successfully created gene-seed from {1}'s progenoid glands.</successfullyRemovedHediffMessage>
         <workAmount>2200</workAmount>
         <researchPrerequisite>BEWH_GeneseedExtractionFirstborn</researchPrerequisite>
@@ -62,9 +62,9 @@
     <!-- Make primaris gene-seed -->
     <RecipeDef ParentName="BEWH_GeneseedFromProgenoid">
         <defName>BEWH_PrimarisPack</defName>
-        <label>Extract primaris gene-seed gland</label>
-        <description>Remove fully grown germ cells from progenoid glands to make all a ascendance vial of a Primaris.</description>
-        <jobString>creating primaris gene-seed from progenoid glands</jobString>
+        <label>extract primaris gene-seed gland</label>
+        <description>Remove fully grown germ cells from the progenoid glands to create a Primaris Ascendance Vial.</description>
+        <jobString>Creating primaris gene-seed from progenoid glands.</jobString>
         <successfullyRemovedHediffMessage>{0} has successfully created primaris gene-seed from {1}'s progenoid glands.</successfullyRemovedHediffMessage>
         <workAmount>4200</workAmount>
         <researchPrerequisite>BEWH_GeneseedExtractionPrimaris</researchPrerequisite>

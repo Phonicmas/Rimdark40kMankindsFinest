@@ -4,7 +4,7 @@
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/TraderKindDef[defName = "Orbital_Exotic"]/stockGenerators</xpath>
         <value>
-            <!-- Chapter/Primarch Material -->
+            <!-- Legion/Primarch Material -->
             <li Class="Genes40k.StockGenerator_TagSangprimusMaterialNoDupe">
                 <tradeTag>BEWH_ChapterMaterial</tradeTag>
                 <thingDefCountRange>-1~2</thingDefCountRange>
@@ -21,7 +21,7 @@
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/TraderKindDef[defName = "Caravan_Outlander_Exotic"]/stockGenerators</xpath>
         <value>
-            <!-- Chapter Material -->
+            <!-- Legion Material -->
             <li Class="Genes40k.StockGenerator_TagSangprimusMaterialNoDupe">
                 <tradeTag>BEWH_ChapterMaterial</tradeTag>
                 <thingDefCountRange>-1~2</thingDefCountRange>
@@ -33,7 +33,7 @@
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/TraderKindDef[defName = "Visitor_Outlander_Standard"]/stockGenerators</xpath>
         <value>
-            <!-- Chapter Material -->
+            <!-- Legion Material -->
             <li Class="Genes40k.StockGenerator_TagSangprimusMaterialNoDupe">
                 <tradeTag>BEWH_ChapterMaterial</tradeTag>
                 <thingDefCountRange>-1~2</thingDefCountRange>

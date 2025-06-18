@@ -13,7 +13,7 @@
     <stages>
       <li>
         <label>genetic joy</label>
-        <description>Natural bonus from Ultramarine gene-seed.</description>
+        <description>Natural bonus from the Ultramarine gene-seed.</description>
         <baseMoodEffect>4</baseMoodEffect>
       </li>
     </stages>

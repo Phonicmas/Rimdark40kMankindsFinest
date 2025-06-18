@@ -4,37 +4,37 @@
   <!--=== Mod Setting related ===-->
   <BEWH.MankindsFinest.ModSettings.ModName>RimDark 40k - Mankinds Finest</BEWH.MankindsFinest.ModSettings.ModName>
 
-  <BEWH.MankindsFinest.ModSettings.PsychicPhenomena>Enabling this will make psykers who are experiencing mental breakdowns create a psychic phenomena.</BEWH.MankindsFinest.ModSettings.PsychicPhenomena>
-  <BEWH.MankindsFinest.ModSettings.PsykerPariahBirth>Enabling this will allow children to be rarely and randomly born as psykers and pariahs.</BEWH.MankindsFinest.ModSettings.PsykerPariahBirth>
-  <BEWH.MankindsFinest.ModSettings.PsykerPariahBirthChance>Chance that newly born children will either be a psyker or pariah: {0}%</BEWH.MankindsFinest.ModSettings.PsykerPariahBirthChance>
+  <BEWH.MankindsFinest.ModSettings.PsychicPhenomena>When enabled, psykers suffering a mental breakdown will trigger psychic phenomena.</BEWH.MankindsFinest.ModSettings.PsychicPhenomena>
+  <BEWH.MankindsFinest.ModSettings.PsykerPariahBirth>When enabled, children may rarely and randomly be born as psykers or pariahs.</BEWH.MankindsFinest.ModSettings.PsykerPariahBirth>
+  <BEWH.MankindsFinest.ModSettings.PsykerPariahBirthChance>Chance for newly born children to be psykers or pariahs: {0}%</BEWH.MankindsFinest.ModSettings.PsykerPariahBirthChance>
 
-  <BEWH.MankindsFinest.ModSettings.PerpetualBirth>Enabling this will allow children to be rarely and randomly born as perpetuals.</BEWH.MankindsFinest.ModSettings.PerpetualBirth>
-  <BEWH.MankindsFinest.ModSettings.PerpetualBirthChance>Chance that newly born children will be a perpetual: {0}%</BEWH.MankindsFinest.ModSettings.PerpetualBirthChance>
+  <BEWH.MankindsFinest.ModSettings.PerpetualBirth>When enabled, children may rarely and randomly be born as perpetuals.</BEWH.MankindsFinest.ModSettings.PerpetualBirth>
+  <BEWH.MankindsFinest.ModSettings.PerpetualBirthChance>Chance for newly born children to be a perpetual: {0}%</BEWH.MankindsFinest.ModSettings.PerpetualBirthChance>
 
-  <BEWH.MankindsFinest.ModSettings.DefaultChapterColours>Default chapter colors: {0}</BEWH.MankindsFinest.ModSettings.DefaultChapterColours>
-  <BEWH.MankindsFinest.ModSettings.SelectDefaultChapterIcon>Default chapter icon: {0}</BEWH.MankindsFinest.ModSettings.SelectDefaultChapterIcon>
+  <BEWH.MankindsFinest.ModSettings.DefaultChapterColours>Default legion colors: {0}</BEWH.MankindsFinest.ModSettings.DefaultChapterColours>
+  <BEWH.MankindsFinest.ModSettings.SelectDefaultChapterIcon>Default legion icon: {0}</BEWH.MankindsFinest.ModSettings.SelectDefaultChapterIcon>
   <BEWH.MankindsFinest.ModSettings.ColourPreset>Color Preset: {0}</BEWH.MankindsFinest.ModSettings.ColourPreset>
   <BEWH.MankindsFinest.ModSettings.CustomColour>Custom Color</BEWH.MankindsFinest.ModSettings.CustomColour>
 
-  <BEWH.MankindsFinest.ModSettings.LivingSaintChance>Chances for a Living Saint to resurrect</BEWH.MankindsFinest.ModSettings.LivingSaintChance>
+  <BEWH.MankindsFinest.ModSettings.LivingSaintChance>Chances for a character to be reborn as a Living Saint upon death.</BEWH.MankindsFinest.ModSettings.LivingSaintChance>
   <BEWH.MankindsFinest.ModSettings.LivingSaintBigThreat>Big threat: {0}%</BEWH.MankindsFinest.ModSettings.LivingSaintBigThreat>
   <BEWH.MankindsFinest.ModSettings.LivingSaintSmallThreat>Small threat: {0}%</BEWH.MankindsFinest.ModSettings.LivingSaintSmallThreat>
   <BEWH.MankindsFinest.ModSettings.LivingSaintSystem>Enabling this will allow colonist being killed to resurrect as Living Saints.</BEWH.MankindsFinest.ModSettings.LivingSaintSystem>
-  <BEWH.MankindsFinest.ModSettings.LivingSaintMale>Males can become living saints</BEWH.MankindsFinest.ModSettings.LivingSaintMale>
+  <BEWH.MankindsFinest.ModSettings.LivingSaintMale>Male colonists can become Living Saints</BEWH.MankindsFinest.ModSettings.LivingSaintMale>
   <BEWH.MankindsFinest.ModSettings.LivingSaintBaseChance>Living Saints base chance: {0}% (other modifiers may increase beyond this)</BEWH.MankindsFinest.ModSettings.LivingSaintBaseChance>
   <BEWH.MankindsFinest.ModSettings.LivingSaintPawnLimit>Living Saint pawn limit: {0}</BEWH.MankindsFinest.ModSettings.LivingSaintPawnLimit>
 
-  <BEWH.MankindsFinest.ModSettings.ImplantationDesc>Geneseed implantation offsets.</BEWH.MankindsFinest.ModSettings.ImplantationDesc>
+  <BEWH.MankindsFinest.ModSettings.ImplantationDesc>Gene-seed implantation offsets.</BEWH.MankindsFinest.ModSettings.ImplantationDesc>
   <BEWH.MankindsFinest.ModSettings.ImplantationSuccessChange>Implantation success offset: {0}%</BEWH.MankindsFinest.ModSettings.ImplantationSuccessChange>
   <BEWH.MankindsFinest.ModSettings.ImplantationCapOffset>Implantation cap offset: {0}%</BEWH.MankindsFinest.ModSettings.ImplantationCapOffset>
 
-  <BEWH.MankindsFinest.ModSettings.AllowFemalePrimarchs>Allow grown primarchs to be female</BEWH.MankindsFinest.ModSettings.AllowFemalePrimarchs>
+  <BEWH.MankindsFinest.ModSettings.AllowFemalePrimarchs>Allow vat-grown Primarchs to be female</BEWH.MankindsFinest.ModSettings.AllowFemalePrimarchs>
 
-  <BEWH.MankindsFinest.ModSettings.PsychicCrafting>Enabling this will cause pawn to slowly lose consciousness while create superhuman matrices. \nIf royalty is installed and the pawn is psychic, they will lose psyfocus first.</BEWH.MankindsFinest.ModSettings.PsychicCrafting>
+  <BEWH.MankindsFinest.ModSettings.PsychicCrafting>When enabled, pawns will slowly lose consciousness while creating genetic matrices.\nIf the Royalty DLC is installed and the pawn is psychic, they will lose psyfocus first.</BEWH.MankindsFinest.ModSettings.PsychicCrafting>
 
   <!--=== Common keywords ===-->
   <BEWH.MankindsFinest.CommonKeywords.Primarch>primarch</BEWH.MankindsFinest.CommonKeywords.Primarch>
-  <BEWH.MankindsFinest.CommonKeywords.Chapter>chapter</BEWH.MankindsFinest.CommonKeywords.Chapter>
+  <BEWH.MankindsFinest.CommonKeywords.Chapter>legion</BEWH.MankindsFinest.CommonKeywords.Chapter>
 
   <BEWH.MankindsFinest.CommonKeywords.Psyker>psyker</BEWH.MankindsFinest.CommonKeywords.Psyker>
   <BEWH.MankindsFinest.CommonKeywords.Pariah>pariah</BEWH.MankindsFinest.CommonKeywords.Pariah>
@@ -50,27 +50,27 @@
   <!--=== Buildings ===-->
   <!-- Gestator -->
   <BEWH.MankindsFinest.GeneGestator.GestateFinishLetter>Matrix Gestated</BEWH.MankindsFinest.GeneGestator.GestateFinishLetter>
-  <BEWH.MankindsFinest.GeneGestator.GestateFinishMessage>{0} has been gestated into {1} and can now be implanted into a suitable pawn</BEWH.MankindsFinest.GeneGestator.GestateFinishMessage>
+  <BEWH.MankindsFinest.GeneGestator.GestateFinishMessage>{0} has been gestated into {1} and can now be implanted into a suitable pawn.</BEWH.MankindsFinest.GeneGestator.GestateFinishMessage>
 
   <BEWH.MankindsFinest.GeneGestator.ContainsNoGeneMatrix>Contains no gene matrix</BEWH.MankindsFinest.GeneGestator.ContainsNoGeneMatrix>
   <BEWH.MankindsFinest.GeneGestator.ContainsGeneMatrix>Contains matrix: {0}</BEWH.MankindsFinest.GeneGestator.ContainsGeneMatrix>
   <BEWH.MankindsFinest.GeneGestator.ContainsExtraMaterial>Contains material: {0}</BEWH.MankindsFinest.GeneGestator.ContainsExtraMaterial>
 
-  <BEWH.MankindsFinest.GeneGestator.GeneVialFinished>Gene vial can be extracted</BEWH.MankindsFinest.GeneGestator.GeneVialFinished>
-  <BEWH.MankindsFinest.GeneGestator.GeneVialFinishesIn>Gene vial finishes in {0}{1}</BEWH.MankindsFinest.GeneGestator.GeneVialFinishesIn>
+  <BEWH.MankindsFinest.GeneGestator.GeneVialFinished>Ascendance vial can be extracted</BEWH.MankindsFinest.GeneGestator.GeneVialFinished>
+  <BEWH.MankindsFinest.GeneGestator.GeneVialFinishesIn>Ascendance vial creation finishes in {0}{1}</BEWH.MankindsFinest.GeneGestator.GeneVialFinishesIn>
 
   <BEWH.MankindsFinest.GeneGestator.SelectXMaterial>Select {0} material</BEWH.MankindsFinest.GeneGestator.SelectXMaterial>
-  <BEWH.MankindsFinest.GeneGestator.SelectXMaterialDesc>Select {0} material from among your available materials, if you have any</BEWH.MankindsFinest.GeneGestator.SelectXMaterialDesc>
+  <BEWH.MankindsFinest.GeneGestator.SelectXMaterialDesc>Select {0} material from among your available materials, if you have any.</BEWH.MankindsFinest.GeneGestator.SelectXMaterialDesc>
   <BEWH.MankindsFinest.GeneGestator.NoAvailableMaterial>No extra genetic material available</BEWH.MankindsFinest.GeneGestator.NoAvailableMaterial>
 
   <BEWH.MankindsFinest.GeneGestator.EjectGeneMatrix>Eject {0}</BEWH.MankindsFinest.GeneGestator.EjectGeneMatrix>
-  <BEWH.MankindsFinest.GeneGestator.EjectGeneMatrixDesc>Ejects {0} from the gene gestator, allowing you to insert another</BEWH.MankindsFinest.GeneGestator.EjectGeneMatrixDesc>
+  <BEWH.MankindsFinest.GeneGestator.EjectGeneMatrixDesc>Ejects {0} from the gene gestator, allowing you to insert another.</BEWH.MankindsFinest.GeneGestator.EjectGeneMatrixDesc>
 
   <BEWH.MankindsFinest.GeneGestator.StartGeneGestating>Start gestating</BEWH.MankindsFinest.GeneGestator.StartGeneGestating>
-  <BEWH.MankindsFinest.GeneGestator.StartGeneGestatingDesc>Starts the gestating process, once started it cannot be stopped</BEWH.MankindsFinest.GeneGestator.StartGeneGestatingDesc>
+  <BEWH.MankindsFinest.GeneGestator.StartGeneGestatingDesc>Starts the gestating process, once started it cannot be stopped.</BEWH.MankindsFinest.GeneGestator.StartGeneGestatingDesc>
 
   <BEWH.MankindsFinest.GeneGestator.SelectMatrix>Select matrix</BEWH.MankindsFinest.GeneGestator.SelectMatrix>
-  <BEWH.MankindsFinest.GeneGestator.SelectMatrixDesc>Select matrix to gestate from among your matrices</BEWH.MankindsFinest.GeneGestator.SelectMatrixDesc>
+  <BEWH.MankindsFinest.GeneGestator.SelectMatrixDesc>Select matrix to gestate from among your matrices.</BEWH.MankindsFinest.GeneGestator.SelectMatrixDesc>
 
   <BEWH.MankindsFinest.GeneGestator.MissingGestateResearch>You have not researched any gestatable genetic matrices projects</BEWH.MankindsFinest.GeneGestator.MissingGestateResearch>
 
@@ -78,8 +78,8 @@
 
   <!-- Primarch Growth Vat -->
   <BEWH.MankindsFinest.PrimarchGrowthVat.StartPrimarchGrowth>Start primarch growth</BEWH.MankindsFinest.PrimarchGrowthVat.StartPrimarchGrowth>
-  <BEWH.MankindsFinest.PrimarchGrowthVat.StartPrimarchGrowthDesc>Starts the primarch growth process, once started it cannot be stopped</BEWH.MankindsFinest.PrimarchGrowthVat.StartPrimarchGrowthDesc>
-  <BEWH.MankindsFinest.PrimarchGrowthVat.PrimarchVatStartConfirmation>Are you sure you want to start this process?\n\nYou cannot stop this machine once started, and destruction of it will lead to loss of embryo.</BEWH.MankindsFinest.PrimarchGrowthVat.PrimarchVatStartConfirmation>
+  <BEWH.MankindsFinest.PrimarchGrowthVat.StartPrimarchGrowthDesc>Starts the primarch growth process, once started it cannot be stopped.</BEWH.MankindsFinest.PrimarchGrowthVat.StartPrimarchGrowthDesc>
+  <BEWH.MankindsFinest.PrimarchGrowthVat.PrimarchVatStartConfirmation>Are you sure you want to start this process?\n\nOnce started, the machine cannot be stopped, and destroying it will result in the loss of the embryo.</BEWH.MankindsFinest.PrimarchGrowthVat.PrimarchVatStartConfirmation>
 
   <BEWH.MankindsFinest.PrimarchGrowthVat.ContainsNoEmbryo>Contains no embryo</BEWH.MankindsFinest.PrimarchGrowthVat.ContainsNoEmbryo>
 
@@ -93,7 +93,7 @@
   <BEWH.MankindsFinest.PrimarchGrowthVat.NoSlurry>No genetic slurry</BEWH.MankindsFinest.PrimarchGrowthVat.NoSlurry>
 
   <!-- Gene Manipulation Table -->
-  <BEWH.MankindsFinest.GeneManupulationTable.PrimarchGeneseedVialSelection>Select primarch geneseed vial</BEWH.MankindsFinest.GeneManupulationTable.PrimarchGeneseedVialSelection>
+  <BEWH.MankindsFinest.GeneManupulationTable.PrimarchGeneseedVialSelection>Select primarch ascendance vial</BEWH.MankindsFinest.GeneManupulationTable.PrimarchGeneseedVialSelection>
   <BEWH.MankindsFinest.GeneManupulationTable.HumanEmbryoSelection>Select human embryo</BEWH.MankindsFinest.GeneManupulationTable.HumanEmbryoSelection>
   <BEWH.MankindsFinest.GeneManupulationTable.PawnSelection>Select pawn for crafting</BEWH.MankindsFinest.GeneManupulationTable.PawnSelection>
   <BEWH.MankindsFinest.GeneManupulationTable.NothingSelected>Nothing selected</BEWH.MankindsFinest.GeneManupulationTable.NothingSelected>
@@ -101,10 +101,10 @@
   <BEWH.MankindsFinest.GeneManupulationTable.NotSkilledEnoughPrimarchEmbryo>{0} is not skilled enough to craft a primarch embryo, needs {1}</BEWH.MankindsFinest.GeneManupulationTable.NotSkilledEnoughPrimarchEmbryo>
 
   <BEWH.MankindsFinest.GeneManupulationTable.CraftPrimarchEmbryo>Craft primarch embryo</BEWH.MankindsFinest.GeneManupulationTable.CraftPrimarchEmbryo>
-  <BEWH.MankindsFinest.GeneManupulationTable.CraftPrimarchEmbryoDesc>Select gene-seed vial and human embryo for creation of a primarch embryo</BEWH.MankindsFinest.GeneManupulationTable.CraftPrimarchEmbryoDesc>
+  <BEWH.MankindsFinest.GeneManupulationTable.CraftPrimarchEmbryoDesc>Select ascendance vial and human embryo for creation of a primarch embryo.</BEWH.MankindsFinest.GeneManupulationTable.CraftPrimarchEmbryoDesc>
 
   <!-- Containers -->
-  <BEWH.MankindsFinest.Containers.DeterioratingOutsideContainer>Will deteriorate due to being outside suitable container.</BEWH.MankindsFinest.Containers.DeterioratingOutsideContainer>
+  <BEWH.MankindsFinest.Containers.DeterioratingOutsideContainer>Deteriorates outside suitable container.</BEWH.MankindsFinest.Containers.DeterioratingOutsideContainer>
   <BEWH.MankindsFinest.Containers.SuitableContainers>Suiteable containers:</BEWH.MankindsFinest.Containers.SuitableContainers>
   <BEWH.MankindsFinest.Containers.ItemDeterioratingNotInContainer>not in safe container</BEWH.MankindsFinest.Containers.ItemDeterioratingNotInContainer>
 
@@ -143,13 +143,13 @@
   <BEWH.MankindsFinest.LivingSaint.LivingSaintMessage>In {0}'s final moments they felt a surge of energy surging through them, invigorating and strengthening them. {0} was born anew as a living saint, stronger, faster and evermore loyal.</BEWH.MankindsFinest.LivingSaint.LivingSaintMessage>
 
   <BEWH.MankindsFinest.LivingSaint.LivingSaintReturn>Living Saint Returns</BEWH.MankindsFinest.LivingSaint.LivingSaintReturn>
-  <BEWH.MankindsFinest.LivingSaint.LivingSaintReturnMessage>Though thought dead, {0}'s miracles keeps coming. It seem {0} sensed our situation from their afterlife and manifested themselves to help</BEWH.MankindsFinest.LivingSaint.LivingSaintReturnMessage>
+  <BEWH.MankindsFinest.LivingSaint.LivingSaintReturnMessage>Though thought dead, {0}'s miracles keep coming. It seems {0} sensed our situation from beyond and returned to help.</BEWH.MankindsFinest.LivingSaint.LivingSaintReturnMessage>
 
   <BEWH.MankindsFinest.LivingSaint.LowHolyGrace>{0_labelShort} divine grace supply is dwindling.</BEWH.MankindsFinest.LivingSaint.LowHolyGrace>
 
   <!-- Perpetual -->
   <BEWH.MankindsFinest.Perpetual.PerpetualReturn>Perpetual Resurrects</BEWH.MankindsFinest.Perpetual.PerpetualReturn>
-  <BEWH.MankindsFinest.Perpetual.PerpetualReturnMessage>Though thought dead, it seem that {0} has regenerated even their most dire wounds</BEWH.MankindsFinest.Perpetual.PerpetualReturnMessage>
+  <BEWH.MankindsFinest.Perpetual.PerpetualReturnMessage>Though thought dead, it seems {0} has regenerated even their most dire wounds.</BEWH.MankindsFinest.Perpetual.PerpetualReturnMessage>
 
 
   <!-- Shared Gene -->
@@ -170,8 +170,8 @@
   <BEWH.MankindsFinest.Ability.CurrentToggle>Warp shield is currently toggled {0}</BEWH.MankindsFinest.Ability.CurrentToggle>
 
   <!-- Twin Teleport -->
-  <BEWH.MankindsFinest.Ability.TwinConnectedDead>Twin is dead</BEWH.MankindsFinest.Ability.TwinConnectedDead>
-  <BEWH.MankindsFinest.Ability.TwinConnectedDifferentMap>Twin is on a different map</BEWH.MankindsFinest.Ability.TwinConnectedDifferentMap>
+  <BEWH.MankindsFinest.Ability.TwinConnectedDead>The twin is dead</BEWH.MankindsFinest.Ability.TwinConnectedDead>
+  <BEWH.MankindsFinest.Ability.TwinConnectedDifferentMap>The twin is on a different map</BEWH.MankindsFinest.Ability.TwinConnectedDifferentMap>
 
   <!-- Denied Witch -->
   <BEWH.MankindsFinest.Ability.DeniedWitch>{0} psychic powers have been severed (Deny the Witch)</BEWH.MankindsFinest.Ability.DeniedWitch>
@@ -186,14 +186,14 @@
   <BEWH.MankindsFinest.Ability.ProofOfFaithNoStat>{0_labelShort}'s {1} is below or at 0.</BEWH.MankindsFinest.Ability.ProofOfFaithNoStat>
   <BEWH.MankindsFinest.Ability.ProofOfFaithGain>Will give {1} Grace and induce {0_labelShort} with coma for {2} days.</BEWH.MankindsFinest.Ability.ProofOfFaithGain>
 
-  <BEWH.MankindsFinest.Ability.NoDivineGrace>{0_labelShort} does not have enough divine Grace.</BEWH.MankindsFinest.Ability.NoDivineGrace>
+  <BEWH.MankindsFinest.Ability.NoDivineGrace>{0_labelShort} does not have enough Divine Grace.</BEWH.MankindsFinest.Ability.NoDivineGrace>
   <BEWH.MankindsFinest.Ability.NoDivineGraceGene>{0_labelShort} is not divine.</BEWH.MankindsFinest.Ability.NoDivineGraceGene>
 
   <!-- Space Marine -->
-  <BEWH.MankindsFinest.Ability.StasisResearchNotCompleted>{0} is about to enter stasis. You have not researched {1} and will have a hard time resurrecting {0} from stasis. \n\nUse with caution!</BEWH.MankindsFinest.Ability.StasisResearchNotCompleted>
+  <BEWH.MankindsFinest.Ability.StasisResearchNotCompleted>{0} is about to enter stasis. You have not researched {1} and will have a hard time resurrecting {0} from stasis.\n\nUse with caution!</BEWH.MankindsFinest.Ability.StasisResearchNotCompleted>
 
   <!-- Apothecary -->
-  <BEWH.MankindsFinest.Ability.MustBePawn>Must target pawn.</BEWH.MankindsFinest.Ability.MustBePawn>
+  <BEWH.MankindsFinest.Ability.MustBePawn>Target must be a pawn.</BEWH.MankindsFinest.Ability.MustBePawn>
   <BEWH.MankindsFinest.Ability.MustBeDownedOrInBed>{0} is not downed or in bed.</BEWH.MankindsFinest.Ability.MustBeDownedOrInBed>
 
   <!-- Chaplain -->
@@ -205,22 +205,22 @@
 
   <!--=== Apparel Two ===-->
   <!-- Shoulder Icons -->
-  <BEWH.MankindsFinest.ShoulderIcon.Flip>Flip icon sides</BEWH.MankindsFinest.ShoulderIcon.Flip>
+  <BEWH.MankindsFinest.ShoulderIcon.Flip>Swap shoulder icons</BEWH.MankindsFinest.ShoulderIcon.Flip>
   <BEWH.MankindsFinest.ShoulderIcon.ResetToDefault>Reset to default</BEWH.MankindsFinest.ShoulderIcon.ResetToDefault>
   <BEWH.MankindsFinest.ShoulderIcon.LeftShoulder>Left Shoulder</BEWH.MankindsFinest.ShoulderIcon.LeftShoulder>
   <BEWH.MankindsFinest.ShoulderIcon.RightShoulder>Right Shoulder</BEWH.MankindsFinest.ShoulderIcon.RightShoulder>
 
   <!--=== Gene-seed vial ===-->
   <!-- Implantation -->
-  <BEWH.MankindsFinest.GeneseedVial.ImplantGeneseedDesc>You are about to implant {0}, making them into a {1}</BEWH.MankindsFinest.GeneseedVial.ImplantGeneseedDesc>
-  <BEWH.MankindsFinest.GeneseedVial.OutsideOptimalAgeRange>{0} being outside the optimal age range {1}~{2} for this procedure</BEWH.MankindsFinest.GeneseedVial.OutsideOptimalAgeRange>
-  <BEWH.MankindsFinest.GeneseedVial.CurrentFailureChance>Current failure chance is {0}%, failure will result in death and loss of gene-seed vial. This fail chance is a second check after a succesfull surgery.</BEWH.MankindsFinest.GeneseedVial.CurrentFailureChance>
+  <BEWH.MankindsFinest.GeneseedVial.ImplantGeneseedDesc>You are about to implant {0}, making them a {1}.</BEWH.MankindsFinest.GeneseedVial.ImplantGeneseedDesc>
+  <BEWH.MankindsFinest.GeneseedVial.OutsideOptimalAgeRange>{0} is outside the optimal age range of {1}~{2} for this procedure</BEWH.MankindsFinest.GeneseedVial.OutsideOptimalAgeRange>
+  <BEWH.MankindsFinest.GeneseedVial.CurrentFailureChance>Current failure chance: {0}%. Failure results in death and loss of the ascendance vial. This failure chance is determined after a successful surgery.</BEWH.MankindsFinest.GeneseedVial.CurrentFailureChance>
   <BEWH.MankindsFinest.GeneseedVial.BaseFailureChance>base failure chance</BEWH.MankindsFinest.GeneseedVial.BaseFailureChance>
-  <BEWH.MankindsFinest.GeneseedVial.FailureChanceCausedBy>Current failure chance is caused by:</BEWH.MankindsFinest.GeneseedVial.FailureChanceCausedBy>
-  <BEWH.MankindsFinest.GeneseedVial.FailureChanceCause>{0}%: caused by {1}</BEWH.MankindsFinest.GeneseedVial.FailureChanceCause>
+  <BEWH.MankindsFinest.GeneseedVial.FailureChanceCausedBy>Current failure chance breakdown:</BEWH.MankindsFinest.GeneseedVial.FailureChanceCausedBy>
+  <BEWH.MankindsFinest.GeneseedVial.FailureChanceCause>{0}% - caused by {1}</BEWH.MankindsFinest.GeneseedVial.FailureChanceCause>
   <BEWH.MankindsFinest.GeneseedVial.FailureChanceCapped>Procedure failure chance was capped at {0}%</BEWH.MankindsFinest.GeneseedVial.FailureChanceCapped>
 
-  <BEWH.MankindsFinest.GeneseedVial.NamedGeneseedVial>{0} gene-seed vial</BEWH.MankindsFinest.GeneseedVial.NamedGeneseedVial>
+  <BEWH.MankindsFinest.GeneseedVial.NamedGeneseedVial>{0} ascendance vial</BEWH.MankindsFinest.GeneseedVial.NamedGeneseedVial>
 
 
   <!--=== Events ===-->
@@ -229,16 +229,16 @@
   <BEWH.MankindsFinest.Event.PerilsOfTheWarpLetter>Perils of the Warp</BEWH.MankindsFinest.Event.PerilsOfTheWarpLetter>
 
   <BEWH.MankindsFinest.Event.Annihilation>A psychic blast surged through {0} and into the world, causing a warp explosion completely annihilating {0} and severely damaging everything around them.</BEWH.MankindsFinest.Event.Annihilation>
-  <BEWH.MankindsFinest.Event.DaemonHost>A strong link was established between {0} and one of the chaos gods, allowing them to send in some daemons.</BEWH.MankindsFinest.Event.DaemonHost>
-  <BEWH.MankindsFinest.Event.UncontrollablePowers>In a temporary loss of control over their powers, {0} caused a warp explosion, causing damage to everyone near them.</BEWH.MankindsFinest.Event.UncontrollablePowers>
-  <BEWH.MankindsFinest.Event.PsychicComa>Overwhelmed by the warp made {0} fall into a psychic coma.</BEWH.MankindsFinest.Event.PsychicComa>
+  <BEWH.MankindsFinest.Event.DaemonHost>A strong link was established between {0} and one of the Chaos Gods, allowing them to send in daemons.</BEWH.MankindsFinest.Event.DaemonHost>
+  <BEWH.MankindsFinest.Event.UncontrollablePowers>In a temporary loss of control over their powers, {0} caused a warp explosion that damaged everyone nearby.</BEWH.MankindsFinest.Event.UncontrollablePowers>
+  <BEWH.MankindsFinest.Event.PsychicComa>Overwhelmed by the warp, {0} has fallen into a psychic coma.</BEWH.MankindsFinest.Event.PsychicComa>
   <BEWH.MankindsFinest.Event.PsychicConnectionSevered>In an instant {0} no longer felt any connection to the warp, as if completely cut off.</BEWH.MankindsFinest.Event.PsychicConnectionSevered>
-  <BEWH.MankindsFinest.Event.BloodRain>As if a cruel joke, blood suddenly starts raining.</BEWH.MankindsFinest.Event.BloodRain>
-  <BEWH.MankindsFinest.Event.PlantRot>All plant life seems to rot in {0} presence, leaving it lifeless.</BEWH.MankindsFinest.Event.PlantRot>
+  <BEWH.MankindsFinest.Event.BloodRain>As if a cruel joke, it began raining blood.</BEWH.MankindsFinest.Event.BloodRain>
+  <BEWH.MankindsFinest.Event.PlantRot>All plant life seems to rot in {0}'s presence, leaving it lifeless.</BEWH.MankindsFinest.Event.PlantRot>
 
   <!-- Natural Born Abhuman -->
   <BEWH.MankindsFinest.Event.NaturalBornXLetter>Natural Born {0}</BEWH.MankindsFinest.Event.NaturalBornXLetter>
-  <BEWH.MankindsFinest.Event.NaturalBornXMessage>From the moment {1} was conceived something felt off, something that has finally come to light. It seems that {1} has been born as a {2}.</BEWH.MankindsFinest.Event.NaturalBornXMessage>
+  <BEWH.MankindsFinest.Event.NaturalBornXMessage>Something felt off from the moment {1} was conceived. It has now come to light that {1} was born a {2}.</BEWH.MankindsFinest.Event.NaturalBornXMessage>
 
 
   <!--=== Misc ===-->

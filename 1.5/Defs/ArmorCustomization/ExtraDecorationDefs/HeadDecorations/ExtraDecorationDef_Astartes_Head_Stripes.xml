@@ -22,7 +22,6 @@
         </appliesTo>
         <colourable>true</colourable>
         <drawData>
-            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataNorth>
                 <layer>76</layer>
             </dataNorth>
@@ -65,7 +64,6 @@
         </appliesTo>
         <colourable>true</colourable>
         <drawData>
-            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataNorth>
                 <layer>70</layer>
             </dataNorth>
@@ -109,7 +107,6 @@
         </appliesTo>
         <colourable>false</colourable>
         <drawData>
-            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataNorth>
                 <layer>76</layer>
             </dataNorth>
@@ -145,7 +142,6 @@
         </appliesTo>
         <colourable>false</colourable>
         <drawData>
-            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataNorth>
                 <layer>70</layer>
             </dataNorth>

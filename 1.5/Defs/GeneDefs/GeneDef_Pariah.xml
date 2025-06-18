@@ -5,7 +5,7 @@
     <GeneDef ParentName="BEWH_PariahParent">
         <defName>BEWH_SigmaPariah</defName>
         <label>sigma pariah</label>
-        <description>Carriers of this gene have reduced psychic sensitivity. Additionally they slightly reduces the psychic sensitivity and consciousness of others nearby whilst also slightly increasing their pain.</description>
+        <description>Carriers of this gene have reduced psychic sensitivity. Additionally they slightly reduce the psychic sensitivity and consciousness of others nearby whilst also slightly increasing their pain.</description>
         <iconPath>UI/Genes/Pariah/BEWH_PariahSigma</iconPath>
         <displayOrderInCategory>700</displayOrderInCategory>
         <biostatCpx>1</biostatCpx>
@@ -37,7 +37,7 @@
     <GeneDef ParentName="BEWH_PariahParent">
         <defName>BEWH_UpsilonPariah</defName>
         <label>upsilon pariah</label>
-        <description>Carriers of this gene have greatly reduced psychic sensitivity. Additionally they reduces the psychic sensitivity and consciousness of others nearby whilst also increasing their pain.</description>
+        <description>Carriers of this gene have greatly reduced psychic sensitivity. Additionally, they reduce the psychic sensitivity and consciousness of nearby pawns, while also increasing their pain.</description>
         <iconPath>UI/Genes/Pariah/BEWH_PariahUpsilon</iconPath>
         <displayOrderInCategory>701</displayOrderInCategory>
         <biostatCpx>3</biostatCpx>
@@ -69,7 +69,7 @@
     <GeneDef ParentName="BEWH_PariahParent">
         <defName>BEWH_OmegaPariah</defName>
         <label>omega pariah</label>
-        <description>Carriers of this gene have no psychic sensitivity. Additionally they nullify the psychic sensitivity and consciousness of others nearby whilst also greatly increasing their pain.</description>
+        <description>Carriers of this gene have no psychic sensitivity. Additionally, they nullify the psychic sensitivity and reduce the consciousness of nearby pawns, while greatly increasing their pain.</description>
         <iconPath>UI/Genes/Pariah/BEWH_PariahOmega</iconPath>
         <displayOrderInCategory>702</displayOrderInCategory>
         <biostatCpx>5</biostatCpx>
