@@ -371,6 +371,8 @@
             <Uranium>200</Uranium>
             <Cloth>100</Cloth>
         </costList>
+        <useHitPoints>false</useHitPoints>
+        <deteriorateFromEnvironmentalEffects>false</deteriorateFromEnvironmentalEffects>
         <statBases>
             <WorkToMake>200000</WorkToMake>
             <MarketValue>10000</MarketValue>
@@ -382,6 +384,7 @@
             <Insulation_Cold>50</Insulation_Cold>
             <Insulation_Heat>50</Insulation_Heat>
             <Beauty>5</Beauty>
+            <DeteriorationRate>0</DeteriorationRate>
         </statBases>
         <equippedStatOffsets>
             <TerrorSource MayRequire="Ludeon.RimWorld.Ideology">80</TerrorSource>
