@@ -20,7 +20,7 @@
   <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
     <defName>BEWH_StasisResurrection</defName>
     <label>Stasis Resurrection</label>
-    <description>Unlocks the medical surgery required to bring back pawns from self induced stasis.</description>
+    <description>Unlocks the medical surgery required to bring back pawns from self-induced stasis.</description>
     <prerequisites>
       <li>MedicineProduction</li>
       <li>BEWH_GeneseedPurification</li>
@@ -59,8 +59,8 @@
   <!-- Gene-seed Extraction (Space Marine) -->
   <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
     <defName>BEWH_GeneseedExtractionFirstborn</defName>
-    <label>Firstborn geneseed extraction</label>
-    <description>Unlocks the surgery to extract geneseeds from a fully grown progenoid gland of a space marine.</description>
+    <label>Firstborn gene-seed extraction</label>
+    <description>Unlocks the surgery to extract gene-seeds from a fully grown progenoid gland of a space marine.</description>
     <prerequisites>
       <li>BEWH_GeneseedPurification</li>
     </prerequisites>
@@ -73,7 +73,7 @@
   <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
     <defName>BEWH_GeneseedExtractionPrimaris</defName>
     <label>Primaris gene-seed extracton</label>
-    <description>Unlocks the surgery to extract gene-seeds from a fully grown progenoid gland of a primaris marine.</description>
+    <description>Unlocks the surgery to extract gene-seeds from a fully grown progenoid gland of a Primaris marine.</description>
     <prerequisites>
       <li>BEWH_GeneseedPerfection</li>
       <li>BEWH_GeneseedExtractionFirstborn</li>
@@ -100,7 +100,7 @@
   <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
     <defName>BEWH_CustodesCreation</defName>
     <label>Custodes creation</label>
-    <description>Unlocks the creation of custodes a long costly process.</description>
+    <description>Unlocks the creation of Custodes - a long costly process.</description>
     <prerequisites>
       <li>BEWH_GeneseedCreation</li>
     </prerequisites>
@@ -113,7 +113,7 @@
   <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
     <defName>BEWH_PrimarchProject</defName>
     <label>Primarch Project</label>
-    <description>Unlocks the creation of primarchs, a very long and costly process.</description>
+    <description>Unlocks the creation of Primarchs - a very long and costly process.</description>
     <prerequisites>
       <li>BEWH_CustodesCreation</li>
       <li>Archogenetics</li>
@@ -129,7 +129,7 @@
   <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
     <defName>BEWH_AstartesPowerArmorMkVII</defName>
     <label>Mk VII Power Armor</label>
-    <description>Unlocks recipes for creating Mk VII power armor.</description>
+    <description>Grants access to STCs enabling the manufacture of Mk VII Power Armor.</description>
     <researchViewX>4</researchViewX>
     <researchViewY>0</researchViewY>
     <baseCost>10000</baseCost>
@@ -144,7 +144,7 @@
   <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
     <defName>BEWH_AstartesPowerArmorMkX</defName>
     <label>Mk X Power Armor</label>
-    <description>Unlocks recipes for creating Mk X power armor.</description>
+    <description>Grants access to advanced STCs enabling the manufacture of Mk X Power Armor.</description>
     <researchViewX>5</researchViewX>
     <researchViewY>0</researchViewY>
     <baseCost>3000</baseCost>
@@ -157,7 +157,7 @@
   <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
     <defName>BEWH_AstartesWeapons</defName>
     <label>Astartes Weaponry</label>
-    <description>Unlocks recipes for creating various Astartes Weapons.</description>
+    <description>Grants access to STCs enabling the manufacture of essential Astartes armaments.</description>
     <researchViewX>4</researchViewX>
     <researchViewY>1</researchViewY>
     <baseCost>10000</baseCost>

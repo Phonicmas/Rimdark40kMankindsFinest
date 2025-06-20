@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <!-- Chapter I - Dark Angels -->
+    <!-- Legion I - Dark Angels -->
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterIDarkAngels</defName>
         <label>Gene-seed Material: Dark Angels</label>
@@ -28,7 +28,7 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chapter II - ??? -->
+    <!-- Legion II - ??? -->
     <!--<GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterII</defName>
         <label>Gene-seed Material: </label>
@@ -40,7 +40,7 @@
         </modExtensions>
     </GeneDef>-->
 
-    <!-- Chapter III - Emperor's Children -->
+    <!-- Legion III - Emperor's Children -->
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterIIIEmperorsChildren</defName>
         <label>Gene-seed Material: Emperor's Children</label>
@@ -68,7 +68,7 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chapter IV - Iron Warriors -->
+    <!-- Legion IV - Iron Warriors -->
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterIVIronWarriors</defName>
         <label>Gene-seed Material: Iron Warriors</label>
@@ -118,7 +118,7 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chapter V - White Scars -->
+    <!-- Legion V - White Scars -->
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterVWhiteScars</defName>
         <label>Gene-seed Material: White Scars</label>
@@ -140,7 +140,7 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chapter VI - Space Wolves -->
+    <!-- Legion VI - Space Wolves -->
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterVISpaceWolves</defName>
         <label>Gene-seed Material: Space Wolves</label>
@@ -153,7 +153,7 @@
         </statFactors>
         <customEffectDescriptions>
             <li>Chance to have either Brawler or Abrasive trait.</li>
-            <li>Gives the Canis Helix gene</li>
+            <li>Gives the Canis Helix gene.</li>
         </customEffectDescriptions>
         <descriptionHyperlinks>
             <GeneDef>BEWH_ChapterIXFlaw</GeneDef>
@@ -195,7 +195,7 @@
             </li>
         </modExtensions>
     </GeneDef>
-    <!-- Chapter VI - Flaw -->
+    <!-- Legion VI - Flaw -->
     <GeneDef ParentName="BEWH_ChapterGeneFlawParent">
         <defName>BEWH_ChapterVIFlaw</defName>
         <label>Canis Helix</label>
@@ -235,7 +235,7 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chapter VII - Imperial Fists -->
+    <!-- Legion VII - Imperial Fists -->
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterVIIImperialFists</defName>
         <label>Gene-seed Material: Imperial Fists</label>
@@ -248,8 +248,8 @@
             <MentalBreakThreshold>-0.05</MentalBreakThreshold>
         </statOffsets>
         <customEffectDescriptions>
-            <li>Non-functioning sus-an membrane.</li>
-            <li>Non-functioning betcher's gland.</li>
+            <li>Non-functioning Sus-an Membrane.</li>
+            <li>Non-functioning Betcher's Gland.</li>
         </customEffectDescriptions>
         <painFactor>0.7</painFactor>
         <modExtensions>
@@ -259,7 +259,7 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chapter VIII - Night Lords -->
+    <!-- Legion VIII - Night Lords -->
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterVIIINightLords</defName>
         <label>Gene-seed Material: Night Lords</label>
@@ -297,7 +297,7 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chapter IX - Blood Angels -->
+    <!-- Legion IX - Blood Angels -->
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterIXBloodAngels</defName>
         <label>Gene-seed Material: Blood Angels</label>
@@ -316,7 +316,7 @@
             </li>
         </forcedTraits>
         <customEffectDescriptions>
-            <li>Gives the Red Thirst gene</li>
+            <li>Gives the Red Thirst gene.</li>
         </customEffectDescriptions>
         <descriptionHyperlinks>
             <GeneDef>BEWH_ChapterIXFlaw</GeneDef>
@@ -335,7 +335,7 @@
             </li>
         </modExtensions>
     </GeneDef>
-    <!-- Chapter IX - Flaw -->
+    <!-- Legion IX - Flaw -->
     <GeneDef ParentName="BEWH_ChapterGeneFlawParent">
         <defName>BEWH_ChapterIXFlaw</defName>
         <label>Red Thirst</label>
@@ -374,7 +374,7 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chapter X - Iron Hands -->
+    <!-- Legion X - Iron Hands -->
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXIronHands</defName>
         <label>Gene-seed Material: Iron Hands</label>
@@ -400,7 +400,7 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chapter XI - ??? -->
+    <!-- Legion XI - ??? -->
     <!--<GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXI</defName>
         <label>Gene-seed Material: </label>
@@ -412,7 +412,7 @@
         </modExtensions>
     </GeneDef>-->
 
-    <!-- Chapter XII - World Eaters -->
+    <!-- Legion XII - World Eaters -->
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXIIWorldEaters</defName>
         <label>Gene-seed Material: World Eaters</label>
@@ -462,7 +462,7 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chapter XIII - Ultramarines -->
+    <!-- Legion XIII - Ultramarines -->
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXIIIUltramarines</defName>
         <label>Gene-seed Material: Ultramarines</label>
@@ -487,7 +487,7 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chapter XIV - Death Guard -->
+    <!-- Legion XIV - Death Guard -->
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXIVDeathGuard</defName>
         <label>Gene-seed Material: Death Guard</label>
@@ -513,7 +513,7 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chapter XV - Thousand Sons -->
+    <!-- Legion XV - Thousand Sons -->
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXVThousandSons</defName>
         <label>Gene-seed Material: Thousand Sons</label>
@@ -557,7 +557,7 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chapter XVI - Sons of Horus -->
+    <!-- Legion XVI - Sons of Horus -->
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXVISonsOfHorus</defName>
         <label>Gene-seed Material: Sons of Horus</label>
@@ -576,7 +576,7 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chapter XVII - Word Bearers -->
+    <!-- Legion XVII - Word Bearers -->
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXVIIWordBearers</defName>
         <label>Gene-seed Material: Word Bearers</label>
@@ -598,7 +598,7 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chapter XVIII - Salamanders -->
+    <!-- Legion XVIII - Salamanders -->
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXVIIISalamanders</defName>
         <label>Gene-seed Material: Salamanders</label>
@@ -646,7 +646,7 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chapter XIX - Raven Guard -->
+    <!-- Legion XIX - Raven Guard -->
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXIXRavenGuard</defName>
         <label>Gene-seed Material: Raven Guard</label>
@@ -659,8 +659,8 @@
         <skinColorOverride>(240, 240, 240)</skinColorOverride>
         <hairColorOverride>(20, 20, 20)</hairColorOverride>
         <customEffectDescriptions>
-            <li>Non-functioning mucranoid.</li>
-            <li>Non-functioning betcher's gland.</li>
+            <li>Non-functioning Mucranoid.</li>
+            <li>Non-functioning Betcher's Gland.</li>
         </customEffectDescriptions>
         <conditionalStatAffecters>
             <li Class="VanillaGenesExpanded.ConditionalStatAffecter_Darkness">
@@ -678,7 +678,7 @@
         </modExtensions>
     </GeneDef>
 
-    <!-- Chapter XX - Alpha Legion -->
+    <!-- Legion XX - Alpha Legion -->
     <GeneDef ParentName="BEWH_ChapterGeneParent">
         <defName>BEWH_ChapterXXAlphaLegion</defName>
         <label>Gene-seed Material: Alpha Legion</label>

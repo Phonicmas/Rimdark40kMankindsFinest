@@ -5,7 +5,7 @@
     <Genes40k.FlagIconDef>
         <defName>BEWH_FlagIconI</defName>
         <label>Dark Angels</label>
-        <description>Chapter icon of the Dark Angels</description>
+        <description>Legion insignia of the Dark Angels.</description>
         <iconPath>UI/Decoration/LegionBadges/BEWH_iconUI_Legion_IDarkAngels</iconPath>
         <sortOrder>1</sortOrder>
     </Genes40k.FlagIconDef>
@@ -14,7 +14,7 @@
     <Genes40k.FlagIconDef>
         <defName>BEWH_FlagIconIII</defName>
         <label>Emperor's Children</label>
-        <description>Chapter icon of the Emperor's Children</description>
+        <description>Legion insignia of the Emperor's Children.</description>
         <iconPath>UI/Decoration/LegionBadges/BEWH_iconUI_Legion_IIIEmperorsChildrenPRE</iconPath>
         <sortOrder>3</sortOrder>
     </Genes40k.FlagIconDef>
@@ -23,7 +23,7 @@
     <Genes40k.FlagIconDef>
         <defName>BEWH_FlagIconIV</defName>
         <label>Iron Warriors</label>
-        <description>Chapter icon of the Iron Warriors</description>
+        <description>Legion insignia of the Iron Warriors.</description>
         <iconPath>UI/Decoration/LegionBadges/BEWH_iconUI_Legion_IVIronWarriorsPRE</iconPath>
         <sortOrder>4</sortOrder>
     </Genes40k.FlagIconDef>
@@ -32,7 +32,7 @@
     <Genes40k.FlagIconDef>
         <defName>BEWH_FlagIconV</defName>
         <label>White Scars</label>
-        <description>Chapter icon of the White Scars</description>
+        <description>Legion insignia of the White Scars.</description>
         <iconPath>UI/Decoration/LegionBadges/BEWH_iconUI_Legion_VWhiteScars</iconPath>
         <sortOrder>5</sortOrder>
     </Genes40k.FlagIconDef>
@@ -41,7 +41,7 @@
     <Genes40k.FlagIconDef>
         <defName>BEWH_FlagIconVI</defName>
         <label>Space Wolves</label>
-        <description>Chapter icon of the Space Wolves</description>
+        <description>Legion insignia of the Space Wolves.</description>
         <iconPath>UI/Decoration/LegionBadges/BEWH_iconUI_Legion_VISpaceWolves</iconPath>
         <sortOrder>6</sortOrder>
     </Genes40k.FlagIconDef>
@@ -50,7 +50,7 @@
     <Genes40k.FlagIconDef>
         <defName>BEWH_FlagIconVII</defName>
         <label>Imperial Fists</label>
-        <description>Chapter icon of the Imperial Fists</description>
+        <description>Legion insignia of the Imperial Fists.</description>
         <iconPath>UI/Decoration/LegionBadges/BEWH_iconUI_Legion_VIIImperialFists</iconPath>
         <sortOrder>7</sortOrder>
     </Genes40k.FlagIconDef>
@@ -59,7 +59,7 @@
     <Genes40k.FlagIconDef>
         <defName>BEWH_FlagIconVIII</defName>
         <label>Night Lords</label>
-        <description>Chapter icon of the Night Lords</description>
+        <description>Legion insignia of the Night Lords.</description>
         <iconPath>UI/Decoration/LegionBadges/BEWH_iconUI_Legion_VIIIINightLodsPRE</iconPath>
         <sortOrder>8</sortOrder>
     </Genes40k.FlagIconDef>
@@ -68,7 +68,7 @@
     <Genes40k.FlagIconDef>
         <defName>BEWH_FlagIconIX</defName>
         <label>Blood Angels</label>
-        <description>Chapter icon of the Blood Angels</description>
+        <description>Legion insignia of the Blood Angels.</description>
         <iconPath>UI/Decoration/LegionBadges/BEWH_iconUI_Legion_IXBloodAngels</iconPath>
         <sortOrder>9</sortOrder>
     </Genes40k.FlagIconDef>
@@ -77,7 +77,7 @@
     <Genes40k.FlagIconDef>
         <defName>BEWH_FlagIconX</defName>
         <label>Iron Hands</label>
-        <description>Chapter icon of the Iron Hands</description>
+        <description>Legion insignia of the Iron Hands.</description>
         <iconPath>UI/Decoration/LegionBadges/BEWH_iconUI_Legion_XIronHands</iconPath>
         <sortOrder>10</sortOrder>
     </Genes40k.FlagIconDef>
@@ -86,7 +86,7 @@
     <Genes40k.FlagIconDef>
         <defName>BEWH_FlagIconXII</defName>
         <label>World Eaters</label>
-        <description>Chapter icon of the World Eaters</description>
+        <description>Legion insignia of the World Eaters.</description>
         <iconPath>UI/Decoration/LegionBadges/BEWH_iconUI_Legion_XIIWorldEatersPRE</iconPath>
         <sortOrder>12</sortOrder>
     </Genes40k.FlagIconDef>
@@ -95,7 +95,7 @@
     <Genes40k.FlagIconDef>
         <defName>BEWH_FlagIconXIII</defName>
         <label>Ultramarines</label>
-        <description>Chapter icon of the Ultramarines</description>
+        <description>Legion insignia of the Ultramarines.</description>
         <iconPath>UI/Decoration/LegionBadges/BEWH_iconUI_Legion_XIIIUltramarines</iconPath>
         <sortOrder>13</sortOrder>
     </Genes40k.FlagIconDef>
@@ -104,7 +104,7 @@
     <Genes40k.FlagIconDef>
         <defName>BEWH_FlagIconXIV</defName>
         <label>Death Guard</label>
-        <description>Chapter icon of the Death Guard</description>
+        <description>Legion insignia of the Death Guard.</description>
         <iconPath>UI/Decoration/LegionBadges/BEWH_iconUI_Legion_XIVDeathGuardPRE</iconPath>
         <sortOrder>14</sortOrder>
     </Genes40k.FlagIconDef>
@@ -113,7 +113,7 @@
     <Genes40k.FlagIconDef>
         <defName>BEWH_FlagIconXV</defName>
         <label>Thousand Sons</label>
-        <description>Chapter icon of the Thousand Sons</description>
+        <description>Legion insignia of the Thousand Sons.</description>
         <iconPath>UI/Decoration/LegionBadges/BEWH_iconUI_Legion_XVThousandSonsPRE</iconPath>
         <sortOrder>15</sortOrder>
     </Genes40k.FlagIconDef>
@@ -122,7 +122,7 @@
     <Genes40k.FlagIconDef>
         <defName>BEWH_FlagIconXVI</defName>
         <label>Sons of Horus</label>
-        <description>Chapter icon of the Sons of Horus</description>
+        <description>Legion insignia of the Sons of Horus.</description>
         <iconPath>UI/Decoration/LegionBadges/BEWH_iconUI_Legion_XVISonsOfHorusPRE</iconPath>
         <sortOrder>16</sortOrder>
     </Genes40k.FlagIconDef>
@@ -131,7 +131,7 @@
     <Genes40k.FlagIconDef>
         <defName>BEWH_FlagIconXVII</defName>
         <label>Word Bearers</label>
-        <description>Chapter icon of the Word Bearers</description>
+        <description>Legion insignia of the Word Bearers.</description>
         <iconPath>UI/Decoration/LegionBadges/BEWH_iconUI_Legion_XVIIWordBearersPRE</iconPath>
         <sortOrder>17</sortOrder>
     </Genes40k.FlagIconDef>
@@ -140,7 +140,7 @@
     <Genes40k.FlagIconDef>
         <defName>BEWH_FlagIconXVIII</defName>
         <label>Salamanders</label>
-        <description>Chapter icon of the Salamanders</description>
+        <description>Legion insignia of the Salamanders.</description>
         <iconPath>UI/Decoration/LegionBadges/BEWH_iconUI_Legion_XVIIISalamanders</iconPath>
         <sortOrder>18</sortOrder>
     </Genes40k.FlagIconDef>
@@ -149,7 +149,7 @@
     <Genes40k.FlagIconDef>
         <defName>BEWH_FlagIconXIX</defName>
         <label>Raven Guard</label>
-        <description>Chapter icon of the Raven Guard</description>
+        <description>Legion insignia of the Raven Guard.</description>
         <iconPath>UI/Decoration/LegionBadges/BEWH_iconUI_Legion_XIXRavenGuard</iconPath>
         <sortOrder>19</sortOrder>
     </Genes40k.FlagIconDef>
@@ -158,7 +158,7 @@
     <Genes40k.FlagIconDef>
         <defName>BEWH_FlagIconXX</defName>
         <label>Alpha Legion</label>
-        <description>Chapter icon of the Alpha Legion</description>
+        <description>Legion insignia of the Alpha Legion.</description>
         <iconPath>UI/Decoration/LegionBadges/BEWH_iconUI_Legion_XXAlphaLegionPRE</iconPath>
         <sortOrder>20</sortOrder>
     </Genes40k.FlagIconDef>

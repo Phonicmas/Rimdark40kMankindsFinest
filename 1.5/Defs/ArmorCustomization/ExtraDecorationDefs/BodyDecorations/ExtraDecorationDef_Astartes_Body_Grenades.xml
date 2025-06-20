@@ -75,7 +75,7 @@
 
     <Core40k.ExtraDecorationDef>
         <defName>BEWH_Deco_KrGrenade_1</defName>
-        <label>Krak Grenade 1</label>
+        <label>Krak grenade 1</label>
         <description>...</description>
         <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_KrakGrenade1_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/Grenades/BEWH_Deco_KrakGrenade1</drawnTextureIconPath>
@@ -110,7 +110,7 @@
 
     <Core40k.ExtraDecorationDef>
         <defName>BEWH_Deco_KrGrenade_2</defName>
-        <label>Krak Grenade 2</label>
+        <label>Krak grenade 2</label>
         <description>...</description>
         <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_KrakGrenade2_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/Grenades/BEWH_Deco_KrakGrenade2</drawnTextureIconPath>

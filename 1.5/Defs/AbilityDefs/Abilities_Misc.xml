@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <!-- Harvest Geneseed -->
+    <!-- Harvest Gene-seed -->
     <AbilityDef>
         <defName>BEWH_HarvestGeneseedsFromDead</defName>
         <label>harvest gene-seed</label>

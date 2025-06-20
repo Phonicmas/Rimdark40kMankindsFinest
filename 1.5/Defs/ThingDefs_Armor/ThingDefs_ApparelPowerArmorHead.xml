@@ -7,7 +7,7 @@
     <!-- MK 7 -->
     <ThingDef ParentName="BEWH_PowerArmorHelmetBase">
         <defName>BEWH_MkVIIPowerArmorHelmet</defName>
-        <label>Mk VII Power Armor Helmet</label>
+        <label>mk VII Power Armor Helmet</label>
         <description>A standard-issue battle helm of the Adeptus Astartes, offering durable ceramite protection and a reinforced grille design. It provides reliable performance and is well-suited for prolonged combat operations.</description>
         <thingClass>Genes40k.ChapterHeadDecorativeApparelColourTwo</thingClass>
         <recipeMaker>
@@ -53,7 +53,7 @@
     <!-- MK 10-->
     <ThingDef ParentName="BEWH_PowerArmorHelmetBase">
         <defName>BEWH_MkXPowerArmorHelmet</defName>
-        <label>Mk X Power Armor Helmet</label>
+        <label>mk X Power Armor Helmet</label>
         <description>A standard battle helm worn by Primaris Space Marines, designed for increased protection and clarity. Its refined optics and sealed construction support long deployments in hostile environments.</description>
         <thingClass>Genes40k.ChapterHeadDecorativeApparelColourTwo</thingClass>
         <recipeMaker>
@@ -98,7 +98,7 @@
     <!-- MK 10 Chaplain-->
     <ThingDef ParentName="BEWH_PowerArmorHelmetBase">
         <defName>BEWH_MkXPowerArmorChaplainHelmet</defName>
-        <label>Mk X Chaplain Helmet</label>
+        <label>mk X Chaplain Helmet</label>
         <description>Mk X helmet modified for Chaplains, adorned with skull iconography and grim visages to inspire loyalty and fear in equal measure.</description>
         <thingClass>Genes40k.ChapterHeadDecorativeApparelColourTwo</thingClass>
         <recipeMaker>

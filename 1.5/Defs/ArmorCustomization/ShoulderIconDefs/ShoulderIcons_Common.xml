@@ -5,7 +5,7 @@
     <Genes40k.ShoulderIconDef>
         <defName>BEWH_ShoulderNone</defName>
         <label>None</label>
-        <description>No icon</description>
+        <description>No icon.</description>
         <iconPath>UI/Designators/Cancel</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/CommonIcons/BEWH_None</drawnTextureIconPath>
         <sortOrder>0</sortOrder>

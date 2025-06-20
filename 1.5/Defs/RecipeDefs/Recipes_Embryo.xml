@@ -12,7 +12,7 @@
         <researchPrerequisite>BEWH_PrimarchProject</researchPrerequisite>
         <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
         <effectWorking>Cook</effectWorking>
-        <soundWorking>Recipe_Machining</soundWorking>
+        <soundWorking>Recipe_Drug</soundWorking>
         <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
         <!--<recipeUsers>
             <li>BEWH_GeneManipulationTable</li>

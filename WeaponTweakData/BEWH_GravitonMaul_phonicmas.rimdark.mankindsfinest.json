@@ -1,0 +1,14 @@
+{
+  "TextureModID": "phonicmas.rimdark.mankindsfinest",
+  "ItemDefName": "BEWH_GravitonMaul",
+  "ItemType": "ThingDef",
+  "ItemTypeNamespace": "Verse",
+  "OffX": 0.271444082,
+  "OffY": 0.00651465775,
+  "Rotation": 45.0,
+  "ScaleX": 1.85,
+  "ScaleY": 1.85,
+  "BladeStart": 0.844734,
+  "BladeEnd": 1.1226927,
+  "MeleeWeaponType": 1
+}

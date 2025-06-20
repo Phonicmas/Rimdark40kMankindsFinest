@@ -1,0 +1,13 @@
+{
+  "TextureModID": "phonicmas.rimdark.mankindsfinest",
+  "ItemDefName": "BEWH_LSaintSword",
+  "ItemType": "ThingDef",
+  "ItemTypeNamespace": "Verse",
+  "OffX": 0.397306383,
+  "OffY": -0.02020202,
+  "Rotation": 65.0,
+  "HandsMode": 2,
+  "BladeStart": 0.175084174,
+  "BladeEnd": 0.996633,
+  "MeleeWeaponType": 6
+}

@@ -7,7 +7,7 @@
         <mods>
             <li>RimDark 40k - Mankinds Finest</li>
         </mods>
-        <label>Restore thunder warrior fertility:</label>
+        <label>Restore Thunder Warriors fertility:</label>
         <operations>
             <li Class="PatchOperationRemove">
                 <xpath>Defs/GeneDef[defName = "BEWH_ProtoOssmodula"]/statFactors/Fertility</xpath>
@@ -21,7 +21,7 @@
         <mods>
             <li>RimDark 40k - Mankinds Finest</li>
         </mods>
-        <label>Restore space marine fertility:</label>
+        <label>Restore Space Marines fertility:</label>
         <operations>
             <li Class="PatchOperationRemove">
                 <xpath>Defs/GeneDef[defName = "BEWH_Ossmodula"]/sterilize</xpath>
@@ -35,7 +35,7 @@
         <mods>
             <li>RimDark 40k - Mankinds Finest</li>
         </mods>
-        <label>Restore custodes fertility:</label>
+        <label>Restore Custodes fertility:</label>
         <operations>
             <li Class="PatchOperationRemove">
                 <xpath>Defs/GeneDef[defName = "BEWH_AtlasMorphogen"]/sterilize</xpath>
@@ -49,7 +49,7 @@
         <mods>
             <li>RimDark 40k - Mankinds Finest</li>
         </mods>
-        <label>Restore primarch fertility:</label>
+        <label>Restore Primarchs fertility:</label>
         <operations>
             <li Class="PatchOperationRemove">
                 <xpath>Defs/GeneDef[defName = "BEWH_ImmortisGland"]/sterilize</xpath>
@@ -63,7 +63,7 @@
         <mods>
             <li>RimDark 40k - Mankinds Finest</li>
         </mods>
-        <label>Restore living saint fertility:</label>
+        <label>Restore Living Saints fertility:</label>
         <operations>
             <li Class="PatchOperationRemove">
                 <xpath>Defs/GeneDef[defName = "BEWH_LivingSaintBeingOfFaith"]/sterilize</xpath>

@@ -1,0 +1,15 @@
+{
+  "TextureModID": "phonicmas.rimdark.mankindsfinest",
+  "ItemDefName": "BEWH_AstartesChainsword",
+  "ItemType": "ThingDef",
+  "ItemTypeNamespace": "Verse",
+  "OffX": 0.09917355,
+  "OffY": -0.005509642,
+  "Rotation": 30.0,
+  "ScaleX": 1.2,
+  "ScaleY": 1.2,
+  "HandsMode": 2,
+  "BladeStart": -0.156862751,
+  "BladeEnd": 0.769607842,
+  "MeleeWeaponType": 3
+}

@@ -82,7 +82,7 @@
                 <countRange>1~2</countRange>
             </li>
 
-            <!-- Chapter/Primarch Material -->
+            <!-- Legion/Primarch Material -->
             <li Class="Genes40k.StockGenerator_TagSangprimusMaterialNoDupe">
                 <tradeTag>BEWH_ChapterMaterial</tradeTag>
                 <thingDefCountRange>-1~2</thingDefCountRange>

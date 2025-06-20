@@ -10,7 +10,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_ChapterShoulderIcon">
         <defName>BEWH_ChapterIconI</defName>
         <label>Dark Angels</label>
-        <description>Chapter icon of the Dark Angels</description>
+        <description>Legion icon of the Dark Angels.</description>
         <iconPath>UI/Decoration/LegionBadges/BEWH_iconUI_Legion_IDarkAngels</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_DarkAngelsShoulder</drawnTextureIconPath>
         <sortOrder>1</sortOrder>
@@ -21,7 +21,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_ChapterShoulderIcon">
         <defName>BEWH_ChapterIconIII</defName>
         <label>Emperor's Children</label>
-        <description>Chapter icon of the Emperor's Children</description>
+        <description>Legion icon of the Emperor's Children.</description>
         <iconPath>UI/Decoration/LegionBadges/BEWH_iconUI_Legion_IIIEmperorsChildrenPRE</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_EmperorsChildrenShoulder</drawnTextureIconPath>
         <sortOrder>3</sortOrder>
@@ -32,7 +32,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_ChapterShoulderIcon">
         <defName>BEWH_ChapterIconIV</defName>
         <label>Iron Warriors</label>
-        <description>Chapter icon of the Iron Warriors</description>
+        <description>Legion icon of the Iron Warriors.</description>
         <iconPath>UI/Decoration/LegionBadges/BEWH_iconUI_Legion_IVIronWarriorsPRE</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_IronWarriorsShoulder</drawnTextureIconPath>
         <sortOrder>4</sortOrder>
@@ -43,7 +43,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_ChapterShoulderIcon">
         <defName>BEWH_ChapterIconV</defName>
         <label>White Scars</label>
-        <description>Chapter icon of the White Scars</description>
+        <description>Legion icon of the White Scars.</description>
         <iconPath>UI/Decoration/LegionBadges/BEWH_iconUI_Legion_VWhiteScars</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_WhiteScarsShoulder</drawnTextureIconPath>
         <sortOrder>5</sortOrder>
@@ -54,7 +54,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_ChapterShoulderIcon">
         <defName>BEWH_ChapterIconVI</defName>
         <label>Space Wolves</label>
-        <description>Chapter icon of the Space Wolves</description>
+        <description>Legion icon of the Space Wolves.</description>
         <iconPath>UI/Decoration/LegionBadges/BEWH_iconUI_Legion_VISpaceWolves</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_SpaceWolvesShoulder</drawnTextureIconPath>
         <sortOrder>6</sortOrder>
@@ -65,7 +65,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_ChapterShoulderIcon">
         <defName>BEWH_ChapterIconVII</defName>
         <label>Imperial Fists</label>
-        <description>Chapter icon of the Imperial Fists</description>
+        <description>Legion icon of the Imperial Fists.</description>
         <iconPath>UI/Decoration/LegionBadges/BEWH_iconUI_Legion_VIIImperialFists</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_ImperialFistsShoulder</drawnTextureIconPath>
         <sortOrder>7</sortOrder>
@@ -76,7 +76,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_ChapterShoulderIcon">
         <defName>BEWH_ChapterIconVIII</defName>
         <label>Night Lords</label>
-        <description>Chapter icon of the Night Lords</description>
+        <description>Legion icon of the Night Lords.</description>
         <iconPath>UI/Decoration/LegionBadges/BEWH_iconUI_Legion_VIIIINightLodsPRE</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_NightLordsShoulder</drawnTextureIconPath>
         <sortOrder>8</sortOrder>
@@ -87,7 +87,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_ChapterShoulderIcon">
         <defName>BEWH_ChapterIconIX</defName>
         <label>Blood Angels</label>
-        <description>Chapter icon of the Blood Angels</description>
+        <description>Legion icon of the Blood Angels.</description>
         <iconPath>UI/Decoration/LegionBadges/BEWH_iconUI_Legion_IXBloodAngels</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_BloodAngelsShoulder</drawnTextureIconPath>
         <sortOrder>9</sortOrder>
@@ -98,7 +98,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_ChapterShoulderIcon">
         <defName>BEWH_ChapterIconX</defName>
         <label>Iron Hands</label>
-        <description>Chapter icon of the Iron Hands</description>
+        <description>Legion icon of the Iron Hands.</description>
         <iconPath>UI/Decoration/LegionBadges/BEWH_iconUI_Legion_XIronHands</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_IronHandsShoulder</drawnTextureIconPath>
         <sortOrder>10</sortOrder>
@@ -109,7 +109,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_ChapterShoulderIcon">
         <defName>BEWH_ChapterIconXII</defName>
         <label>World Eaters</label>
-        <description>Chapter icon of the World Eaters</description>
+        <description>Legion icon of the World Eaters.</description>
         <iconPath>UI/Decoration/LegionBadges/BEWH_iconUI_Legion_XIIWorldEatersPRE</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_WorldEatersShoulder</drawnTextureIconPath>
         <sortOrder>12</sortOrder>
@@ -120,7 +120,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_ChapterShoulderIcon">
         <defName>BEWH_ChapterIconXIII</defName>
         <label>Ultramarines</label>
-        <description>Chapter icon of the Ultramarines</description>
+        <description>Legion icon of the Ultramarines.</description>
         <iconPath>UI/Decoration/LegionBadges/BEWH_iconUI_Legion_XIIIUltramarines</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_UltramarinesShoulder</drawnTextureIconPath>
         <sortOrder>13</sortOrder>
@@ -131,7 +131,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_ChapterShoulderIcon">
         <defName>BEWH_ChapterIconXIV</defName>
         <label>Death Guard</label>
-        <description>Chapter icon of the Death Guard</description>
+        <description>Legion icon of the Death Guard.</description>
         <iconPath>UI/Decoration/LegionBadges/BEWH_iconUI_Legion_XIVDeathGuardPRE</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_DeathGuardShoulder</drawnTextureIconPath>
         <sortOrder>14</sortOrder>
@@ -142,7 +142,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_ChapterShoulderIcon">
         <defName>BEWH_ChapterIconXV</defName>
         <label>Thousand Sons</label>
-        <description>Chapter icon of the Thousand Sons</description>
+        <description>Legion icon of the Thousand Sons.</description>
         <iconPath>UI/Decoration/LegionBadges/BEWH_iconUI_Legion_XVThousandSonsPRE</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_ThousandSonsShoulder</drawnTextureIconPath>
         <sortOrder>15</sortOrder>
@@ -153,7 +153,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_ChapterShoulderIcon">
         <defName>BEWH_ChapterIconXVI</defName>
         <label>Sons of Horus</label>
-        <description>Chapter icon of the Sons of Horus</description>
+        <description>Legion icon of the Sons of Horus.</description>
         <iconPath>UI/Decoration/LegionBadges/BEWH_iconUI_Legion_XVISonsOfHorusPRE</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_SonsOfHorusShoulder</drawnTextureIconPath>
         <sortOrder>16</sortOrder>
@@ -164,7 +164,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_ChapterShoulderIcon">
         <defName>BEWH_ChapterIconXVII</defName>
         <label>Word Bearers</label>
-        <description>Chapter icon of the Word Bearers</description>
+        <description>Legion icon of the Word Bearers.</description>
         <iconPath>UI/Decoration/LegionBadges/BEWH_iconUI_Legion_XVIIWordBearersPRE</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_WordBearersShoulder</drawnTextureIconPath>
         <sortOrder>17</sortOrder>
@@ -175,7 +175,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_ChapterShoulderIcon">
         <defName>BEWH_ChapterIconXVIII</defName>
         <label>Salamanders</label>
-        <description>Chapter icon of the Salamanders</description>
+        <description>Legion icon of the Salamanders.</description>
         <iconPath>UI/Decoration/LegionBadges/BEWH_iconUI_Legion_XVIIISalamanders</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_SalamandersShoulder</drawnTextureIconPath>
         <sortOrder>18</sortOrder>
@@ -186,7 +186,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_ChapterShoulderIcon">
         <defName>BEWH_ChapterIconXIX</defName>
         <label>Raven Guard</label>
-        <description>Chapter icon of the Raven Guard</description>
+        <description>Legion icon of the Raven Guard.</description>
         <iconPath>UI/Decoration/LegionBadges/BEWH_iconUI_Legion_XIXRavenGuard</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_RavenGuardShoulder</drawnTextureIconPath>
         <sortOrder>19</sortOrder>
@@ -197,7 +197,7 @@
     <Genes40k.ShoulderIconDef ParentName="BEWH_ChapterShoulderIcon">
         <defName>BEWH_ChapterIconXX</defName>
         <label>Alpha Legion</label>
-        <description>Chapter icon of the Alpha Legion</description>
+        <description>Legion icon of the Alpha Legion.</description>
         <iconPath>UI/Decoration/LegionBadges/BEWH_iconUI_Legion_XXAlphaLegionPRE</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_AlphaLegionShoulder</drawnTextureIconPath>
         <sortOrder>20</sortOrder>

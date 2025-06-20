@@ -1,0 +1,15 @@
+{
+  "TextureModID": "phonicmas.rimdark.mankindsfinest",
+  "ItemDefName": "BEWH_AstartesPowerSword",
+  "ItemType": "ThingDef",
+  "ItemTypeNamespace": "Verse",
+  "OffX": 0.09917355,
+  "OffY": -0.005509642,
+  "Rotation": 30.0,
+  "ScaleX": 1.2,
+  "ScaleY": 1.2,
+  "HandsMode": 2,
+  "BladeStart": -0.191176474,
+  "BladeEnd": 0.8333333,
+  "MeleeWeaponType": 6
+}

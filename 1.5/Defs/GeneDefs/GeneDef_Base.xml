@@ -33,7 +33,7 @@
         <biostatCpx>2</biostatCpx>
     </GeneDef>
 
-    <!-- Space Marine Chapter -->
+    <!-- Space Marine Legion -->
     <GeneDef ParentName="BEWH_SpaceMarineParent" Name="BEWH_ChapterGeneParent" Abstract="True">
         <marketValueFactor>1.05</marketValueFactor>
         <biostatCpx>1</biostatCpx>
@@ -43,7 +43,7 @@
         </exclusionTags>
     </GeneDef>
 
-    <!-- Space Marine Chapter Flaw -->
+    <!-- Space Marine Legion Flaw -->
     <GeneDef ParentName="BEWH_SpaceMarineParent" Name="BEWH_ChapterGeneFlawParent" Abstract="True">
         <marketValueFactor>1</marketValueFactor>
         <biostatCpx>1</biostatCpx>

@@ -5,7 +5,7 @@
     <Genes40k.FlagIconDef>
         <defName>BEWH_FlagNone</defName>
         <label>None</label>
-        <description>No icon</description>
+        <description>No icon.</description>
         <iconPath>UI/Designators/Cancel</iconPath>
         <setsNull>true</setsNull>
         <sortOrder>-1</sortOrder>
@@ -15,7 +15,7 @@
     <Genes40k.FlagIconDef>
         <defName>BEWH_FlagAquila</defName>
         <label>Aquila</label>
-        <description>Imperial Aquila</description>
+        <description>Imperial Aquila.</description>
         <iconPath>UI/Decoration/LegionBadges/BEWH_iconUI_Aquila</iconPath>
         <sortOrder>0</sortOrder>
     </Genes40k.FlagIconDef>

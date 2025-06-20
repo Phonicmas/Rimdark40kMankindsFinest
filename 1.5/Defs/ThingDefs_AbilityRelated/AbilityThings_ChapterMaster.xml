@@ -130,7 +130,7 @@
       <maskPath>Things/Building/DropPod/BEWH_DropPod_Closed_m</maskPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>CutoutComplex</shaderType>
-      <drawSize>(10, 10)</drawSize>
+      <drawSize>(5, 5)</drawSize>
     </graphicData>
     <skyfaller>
       <shadowSize>(3, 3)</shadowSize>

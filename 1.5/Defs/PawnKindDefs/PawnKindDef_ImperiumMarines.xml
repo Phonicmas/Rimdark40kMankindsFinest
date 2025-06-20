@@ -115,7 +115,7 @@
     <!-- Custodes -->
     <PawnKindDef ParentName="BEWH_ImperiumSuperSoldierPawnBase">
         <defName>BEWH_CustodesPawn</defName>
-        <label>custodes</label>
+        <label>Custodes</label>
         <combatPower>750</combatPower>
         <apparelColor>(240,170,30)</apparelColor>
         <apparelRequired>
@@ -142,7 +142,7 @@
     <!-- Lord Commander - Primarch -->
     <PawnKindDef ParentName="BEWH_ImperiumSuperSoldierPawnBase">
         <defName>BEWH_LordCommanderPawn</defName>
-        <label>primarch</label>
+        <label>Primarch</label>
         <combatPower>1200</combatPower>
         <factionLeader>true</factionLeader>
         <apparelColor>(230,150,0)</apparelColor>

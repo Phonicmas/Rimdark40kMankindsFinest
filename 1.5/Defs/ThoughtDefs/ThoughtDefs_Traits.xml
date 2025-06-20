@@ -21,7 +21,7 @@
             </li>
             <li>
                 <label>Serfdom</label>
-                <description>Nearby Space Marines make me ecstatic and gives me purpose!</description>
+                <description>Nearby Space Marines make me ecstatic and give me purpose!</description>
                 <baseMoodEffect>15</baseMoodEffect>
             </li>
         </stages>

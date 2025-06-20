@@ -10,8 +10,8 @@
   <!-- Lion El'Jonson: Forestwalk longrange -->
   <VFECore.Abilities.AbilityDef>
     <defName>BEWH_ForestWalkLong</defName>
-    <label>Forestwalk Longrange</label>
-    <description>By focusing on where you want to go, you're able to manifest yourself there, by striding through the forests of Caliban until you reach your destination.</description>
+    <label>Forestwalk longrange</label>
+    <description>By focusing on your destination, you manifest there by striding through the shadowed forests of Caliban until you arrive.</description>
     <iconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Long</iconPath>
     <abilityClass>Genes40k.Ability_ForeswalkLong</abilityClass>
     <cooldownTime>15000</cooldownTime>
@@ -31,8 +31,8 @@
   <!-- Lion El'Jonson: Forestwalk shortrange -->
   <VFECore.Abilities.AbilityDef>
     <defName>BEWH_ForestWalkShort</defName>
-    <label>Forestwalk Shortrange</label>
-    <description>By focusing on where you want to go, you're able to manifest yourself there, by striding through the forests of Caliban until you reach your destination.</description>
+    <label>Forestwalk shortrange</label>
+    <description>By focusing on your destination, you manifest there by striding through the shadowed forests of Caliban until you arrive.</description>
     <iconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</iconPath>
     <abilityClass>Genes40k.Ability_ForeswalkShort</abilityClass>
     <targetCount>2</targetCount>
@@ -116,7 +116,7 @@
   <VFECore.Abilities.AbilityDef>
     <defName>BEWH_RaiseBastion</defName>
     <label>Raise Bastion</label>
-    <description>Raise a temporary sturdy bastion, outfitted with gun and holding points.</description>
+    <description>Raise a temporary, sturdy bastion equipped with turrets and defensive positions.</description>
     <iconPath>UI/Abilities/BEWH_Ability_RogalDornFortify</iconPath>
     <abilityClass>Genes40k.Ability_RaiseBastion</abilityClass>
     <needsTicking>true</needsTicking>
@@ -133,7 +133,7 @@
   <VFECore.Abilities.AbilityDef>
     <defName>BEWH_PsychicEmp</defName>
     <label>Veil of Darkness</label>
-    <description>Let out a psychic scream, destroying all light and temporary stunning nearby enemies.</description>
+    <description>Let out a psychic scream, that disrupts electronics, shattering all light sources, plunging the area into darkness and temporary stunning nearby enemies.</description>
     <iconPath>UI/Abilities/BEWH_Ability_KonradCurzeVOD</iconPath>
     <abilityClass>Genes40k.Ability_PsychicEmp</abilityClass>
     <needsTicking>true</needsTicking>
@@ -150,7 +150,7 @@
   <!-- Angron: Shared burden -->
   <AbilityDef>
     <defName>BEWH_ChillgronEmpathy</defName>
-    <label>Shared Burden</label>
+    <label>Shared burden</label>
     <description>By psychially tapping into the recipients mind, you're able to feel and share their emotion, taking the burden of negative thoughts they might have onto yourself.</description>
     <cooldownTicksRange>15000</cooldownTicksRange>
     <iconPath>UI/Abilities/BEWH_Ability_ChillgronShareBurden</iconPath>
@@ -183,7 +183,7 @@
   <AbilityDef>
     <defName>BEWH_LorgarWordOfAuthority</defName>
     <label>Word of Authority</label>
-    <description>Your words carry great meaning, able to persuade people to join your cause.</description>
+    <description>Your words carry great meaning, able to persuade people to join you.n\n\Compels a humanoid pawn to join your cause, instantly becoming one of your colonists.</description>
     <cooldownTicksRange>900000</cooldownTicksRange>
     <iconPath>UI/Abilities/BEWH_Ability_LorgarWordOfAuthority</iconPath>
     <jobDef>CastAbilityOnThingMelee</jobDef>
@@ -221,7 +221,7 @@
     <cooldownTicksRange>2500</cooldownTicksRange>
     <category>BEWH_Primarch</category>
     <statBases>
-      <Ability_Duration>625</Ability_Duration>
+      <Ability_Duration>2000</Ability_Duration>
     </statBases>
     <comps>
       <li Class="CompProperties_AbilityGiveHediff">
@@ -240,7 +240,7 @@
     <label>Iron Circle</label>
     <description>Call in Iron Circle automata - unyielding bodyguards devoted to your defense.</description>
     <iconPath>UI/Abilities/BEWH_Ability_PerturaboIronCircle</iconPath>
-    <cooldownTicksRange>60000</cooldownTicksRange>
+    <cooldownTicksRange>300000</cooldownTicksRange> <!-- once every 5 days -->
     <category>BEWH_Primarch</category>
     <abilityClass>Genes40k.Ability_IronCircle</abilityClass>
     <comps>
@@ -249,10 +249,10 @@
         <amount>6</amount>
         <cannotHaveMoreThanAmount>true</cannotHaveMoreThanAmount>
         <trySpawnHere>
-          <li>(1, 0, 1)</li>
-          <li>(-1, 0, 1)</li>
-          <li>(1, 0, -1)</li>
-          <li>(-1, 0, -1)</li>
+          <li>(1, 0, 2)</li>
+          <li>(-1, 0, 2)</li>
+          <li>(1, 0, -2)</li>
+          <li>(-1, 0, -2)</li>
           <li>(2, 0, 0)</li>
           <li>(-2, 0, 0)</li>
         </trySpawnHere>
