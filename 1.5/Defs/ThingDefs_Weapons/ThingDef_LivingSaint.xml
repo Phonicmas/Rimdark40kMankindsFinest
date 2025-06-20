@@ -38,7 +38,7 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>BEWH_SaintBolterRound</defaultProjectile>
+        <defaultProjectile>BEWH_HeavyBolterRound</defaultProjectile>
         <forcedMissRadius>0.075</forcedMissRadius>
         <warmupTime>0.6</warmupTime>
         <range>35.9</range>

@@ -5,7 +5,7 @@
     <GeneDef ParentName="BEWH_SpaceMarineParent">
         <defName>BEWH_SecondaryHeart</defName>
         <label>secondary heart</label>
-        <description>It is both the first and the easiest of the gene-seed that is implanted on a neophyte, allowing not only to survive the loss of his original heart but to exceed its performance in combat, and survive low oxygen environments in case of a hull breach. While it occupies little space in the chest cavity (because the neophyte at this point is not a hulking mass) it is still a very efficient organ compared to its baseline counterpart, its design almost a work of art by the Emperor. The first prototype of the secondary heart was used in the Proto-Legionaires primordial strain and it was one of the few organs that were already stable, its simplicity combined with its performance make the Secondary Heart a drastical boost without much of a risk, if at all, such is its low risk of implantation that it is usually implanted with the Ossmodula and the Biscopea at the same time.</description>
+        <description>The secondary heart is the first and easiest gene-seed organ implanted into a neophyte. It enables survival without the original heart, enhances combat performance, and allows its user to survive in the vacuum of space for a limited time. Compact yet powerful, it fits easily into the chest of a still-developing Astartes. Due to its low rejection risk, it is often implanted alongside the Ossmodula and Biscopea.</description>
         <iconPath>UI/Genes/Firstborn/BEWH_Firstborn_SecondaryHeartIcon</iconPath>
         <displayOrderInCategory>1</displayOrderInCategory>
         <capMods>
@@ -37,7 +37,7 @@
     <GeneDef ParentName="BEWH_SpaceMarineParent">
         <defName>BEWH_Ossmodula</defName>
         <label>ossmodula</label>
-        <description>The Ossmodula is a small gland located between the hypophysis and the hypothalamus, both of which are the main regulator of the human hormones, from gonades to growth. It is by a chain of negative and positive feedbacks that the hypothalamus control the hypophysis and its hormonal synthesis and that's where the Ossmodula comes in. As a man-in-the-middle organ, the Ossmodula modifies the input and output of the hypothalamus and boosts the synthesis capabilities of the hypophysis, while also creating its own kind of growth hormone that supercedes the normal HGH and gives the Astartes their iconic size and durability... As its name implies, Oss (from ossium, bone) and modula (from modulatus, to regulate), it regulates bone growth and coupled with a specific diet it gives the neophyte, after a couple years, a very dense skeletal system with ceramite infused in it, plus a bullet-proof fused ribcage that coupled with the biscopea, will be surrounded by stronger muscle.</description>
+        <description>The Ossmodula is a small gland located between the hypothalamus and hypophysis. This tiny organ mediates hormonal signals and boosts growth hormone production well beyond natural human levels. It also drives dense bone growth over several years, forming a fused, bullet-resistant ribcage. Alongside the Biscopea, it provides the foundation for the Astartes' immense strength and durability.</description>
         <iconPath>UI/Genes/Firstborn/BEWH_Firstborn_OssmodulaIcon</iconPath>
         <displayOrderInCategory>2</displayOrderInCategory>
         <bodyType>Hulk</bodyType>
@@ -74,7 +74,7 @@
     <GeneDef ParentName="BEWH_SpaceMarineParent">
         <defName>BEWH_Biscopea</defName>
         <label>biscopea</label>
-        <description>The Biscopea is the last organ to be introduced alongside the Secondary Heart and there is good reason for that, while the secondary heart allows the nutrition of a bigger mass and the Ossmodula improves the neophytes basic structure, the biscopea builds upon them with a stronger muscle layer. Working similarly to the Ossmodula, as in hormonally, the biscopea allows the muscle of the neophyte to grow alongside the bones, not only in size but also in durability, with stronger fibers that are predisposed to high strain without requiring the physical training that a normal human would. These muscles are not only stronger and efficient but also able to regenerate faster, helping with fatigue in long campaigns.</description>
+        <description>The Biscopea is the last organ implanted alongside the Secondary Heart. While the Secondary Heart supports a larger body and the Ossmodula strengthens the skeleton, the Biscopea builds a tougher muscle layer. It hormonally promotes muscle growth in size and durability, producing stronger fibers that endure high strain without normal human training. These muscles also regenerate faster, reducing fatigue during long campaigns.</description>
         <iconPath>UI/Genes/Firstborn/BEWH_Firstborn_BiscopeaIcon</iconPath>
         <displayOrderInCategory>3</displayOrderInCategory>
         <statOffsets>
@@ -118,7 +118,7 @@
     <GeneDef ParentName="BEWH_SpaceMarineParent">
         <defName>BEWH_Haemastamen</defName>
         <label>haemastamen</label>
-        <description>Hemoglobin is the molecule used by humans to carry oxygen and carbon dioxide, a complex protein with four groups called Heme that use iron to bond to O2 and CO2 and transport it. The Haemastamen is an organ inserted right into a main blood vessel that acts as a filter to the Eritrocites that the neophyte produces, and modifies them to have a better version of hemoglobin, which causes superior O2 carrying capacity and brigher red blood due to it. It also changes the affinity so that the heme groups won't get polluted with carbon monoxide and similar. The improved affinity for O2 allows for more nutrition while the affinity for CO2 allows in its elimination, and so disrupts the acidification of blood and fatigue so that the neophyte can not only work harder, but longer.</description>
+        <description>The Haemastamen is a small organ placed in a major blood vessel that improves the neophyte's blood cells. It alters the blood's biochemical composition to carry oxygen and nutrients more efficiently, boosting hemoglobin and giving the blood a rich, bright red color. This keeps the blood balanced and fights fatigue, letting the neophyte push harder and last longer.</description>
         <iconPath>UI/Genes/Firstborn/BEWH_Firstborn_HaemastamenIcon</iconPath>
         <displayOrderInCategory>4</displayOrderInCategory>
         <capMods>
@@ -147,7 +147,7 @@
     <GeneDef ParentName="BEWH_SpaceMarineParent">
         <defName>BEWH_LarramansOrgan</defName>
         <label>larraman's organ</label>
-        <description>An organ designed to secrete a special kind of byo-engineered cells, the Larraman's cells. These cells are an upgrade on normal human platelets, able to locate and fix damage to blood vessels. These cells use leucocytes as their main transport to arrive to damaged areas where they deploy and fix any tearing using themselves as a barrier, the main difference with platelets is that they are able to aggregate in a way that allows them to "patch-up" astartes vessels, which are bigger and stronger, but also to directly form clots and stop blood flow into fully opened blood vessels.</description>
+        <description>An organ that secretes special bio-engineered cells, which travel on leucocytes to reach damaged blood vessels, where they deploy to seal tears by forming a protective barrier. Unlike normal platelets, these cells can aggregate to patch the larger, tougher vessels of Astartes and directly form clots to stop the blood flow from fully opened vessels.</description>
         <iconPath>UI/Genes/Firstborn/BEWH_Firstborn_LarramansOrganIcon</iconPath>
         <displayOrderInCategory>5</displayOrderInCategory>
         <geneClass>Gene_Clotting</geneClass>
@@ -164,7 +164,7 @@
     <GeneDef ParentName="BEWH_SpaceMarineParent">
         <defName>BEWH_CatalepseanNode</defName>
         <label>catalepsean node</label>
-        <description>Installed in the brain stem, the Catalepsean node periodically tests for stress hormones and is able to detect a forceful lack of sleep in the neophyte, then, using its nervous connections as a node, it cuts off certain parts of the brain so that sleep is simulated to allow for longer wake periods. While dangerous to use for prolongued periods, it allows the neophyte to stay alert during an extended siege or defense and was instrumental in the defense of Terra in the Horus invasion. Its one of the reasons why astartes can win fights against humans even while very outnumbered, they just don't care about a war of atrition. Once the catalepsean node is installed, there is a requirement to start hypno-therapy to "calibrate" it.</description>
+        <description>Installed in the brainstem, the Catalepsean node monitors stress hormones and detects severe sleep deprivation. It then simulates sleep by temporarily shutting down parts of the brain, allowing the user to remain awake longer. Though dangerous if used for extended periods, it enables sustained alertness during sieges or defenses. This ability helps Astartes prevail against overwhelming numbers by enduring attrition others cannot.</description>
         <iconPath>UI/Genes/Firstborn/BEWH_Firstborn_CatalepseanNodeIcon</iconPath>
         <displayOrderInCategory>6</displayOrderInCategory>
         <abilities>
@@ -200,7 +200,7 @@
     <GeneDef ParentName="BEWH_SpaceMarineParent">
         <defName>BEWH_Preomnor</defName>
         <label>preomnor</label>
-        <description>The Preomnor pre, meaning before and Omnor from Omni, everything, is a small sack placed between the stomach and the esophagus, and as its name implies it allows to eat almost anything without consequences, even straight up poison that is isolated and stored in Betcher's glands. It works by a combination of specific and non-specific enzymes and tailored antigens to neutralize any danger that the ingested material poses to the neophyte. While often overlooked, the Preomnor is a miracle of imperial material science and one of the most complex organs.</description>
+        <description>The Preomnor is a small pouch-like organ located between the stomach and esophagus that allows the user to consume almost anything, even poisons, which are isolated and stored in the Betcher's glands. It neutralizes threats through a combination of specific enzymes and tailored antigens. Often overlooked, the Preomnor is a marvel of Imperial bioengineering and one of the most complex organs.</description>
         <iconPath>UI/Genes/Firstborn/BEWH_Firstborn_PreomnorIcon</iconPath>
         <displayOrderInCategory>7</displayOrderInCategory>
         <dontMindRawFood>true</dontMindRawFood>
@@ -215,7 +215,7 @@
     <GeneDef ParentName="BEWH_SpaceMarineParent">
         <defName>BEWH_Omophagea</defName>
         <label>omophagea</label>
-        <description>The Omophagea is one of the least understood implants, seemingly allowing the neophyte to aquire the memories of animals, humans and xenos by eating them, Imperial consensus is that it works by the analysis of DNA, RNA or protein sequences that supposedly carry the memories of the deceased which are then transmitted directly to the brain, which is used in survival situations, a more sensible aproach would be that it doesn't access the actual memories of the eaten but it's genetic ones, analysis how certain creatures are genetically predisposed to some things, while the protein analysis could give light unto what it was doing just before dying, both by hormones and by cells present, or pathogens, the combination of this information could be used by the omophagea to speculate and then the brain of the neophyte translates that information in the form of a memory for understanding, as a complex analysis of chemical composition wouldn't be so useful.</description>
+        <description>The Omophagea is one of the least understood implants, allowing its user to acquire memories by consuming animals, humans, or even xenos. Imperial theory suggests it analyzes DNA, RNA, or protein sequences that carry the memories of the deceased and transmits them directly to the brain. The Omophagea then helps the brain translate this complex biochemical data into usable "memories" for understanding.</description>
         <iconPath>UI/Genes/Firstborn/BEWH_Firstborn_OmophageaIcon</iconPath>
         <displayOrderInCategory>8</displayOrderInCategory>
         <statFactors>
@@ -237,7 +237,7 @@
     <GeneDef ParentName="BEWH_SpaceMarineParent">
         <defName>BEWH_MultiLung</defName>
         <label>multi-lung</label>
-        <description>The multi lung is but a bag, similar in composition to a lung but with similar enzymes and filters to the preomnor. Implanted just under the lungs to be able to fully use the diaphragm, the multi-lung is routed to a sphincter in the trachea so that it can be used alongside the other lungs to feed the now higher oxygen requirements due to the Haemastamen, but also so that it can close it, forcing all air input to come through it, in case the neophyte is in a dangerous atmosphere and the air needs to be filtered.</description>
+        <description>The Multi-Lung is essentially a bag similar in composition to a lung but equipped with enzymes and filters like those in the Preomnor. Implanted just beneath the lungs to fully utilize the diaphragm, it connects to a sphincter in the trachea. This allows it to work alongside the other lungs to meet the increased oxygen demands caused by the Haemastamen. It can also close off the trachea, forcing all air intake through itself to filter out harmful gases.</description>
         <iconPath>UI/Genes/Firstborn/BEWH_Firstborn_Multi-LungIcon</iconPath>
         <displayOrderInCategory>9</displayOrderInCategory>
         <customEffectDescriptions>
@@ -269,7 +269,7 @@
     <GeneDef ParentName="BEWH_SpaceMarineParent">
         <defName>BEWH_Occulobe</defName>
         <label>occulobe</label>
-        <description>The occulobe is implanted on the base of the frontal lobe, with a direct access to the occular nerves to which it's attached and connected directly, giving access to the retina inputs and functioning in two different ways: One is to modify the growth of the eye with hormonal therapy, giving the neophyte better sight and more compact, efficient retinal cells. The other is to allow the optical input to be directly transmitted and translated in the brain for optical hypno-therapy.</description>
+        <description>The occulobe is implanted on the base of the frontal lobe, with a direct access to the occular nerves to which it's attached and connected directly, giving access to the retina inputs and functioning in two different ways: one is to modify the growth of the eye with hormonal therapy, giving the neophyte better sight and more compact, efficient retinal cells. The other is to allow the optical input to be directly transmitted and translated in the brain for optical hypno-therapy.</description>
         <iconPath>UI/Genes/Firstborn/BEWH_Firstborn_OcculobeIcon</iconPath>
         <displayOrderInCategory>10</displayOrderInCategory>
         <statFactors>
@@ -308,7 +308,7 @@
     <GeneDef ParentName="BEWH_SpaceMarineParent">
         <defName>BEWH_LymansEar</defName>
         <label>lyman's ear</label>
-        <description>The Lyman's ear is an inner ear implant that allows the carrier to modify their sound perception by applying digital filters, for example doing frequency sweeps and looking for known patterns. This is used by some chapters for secret codes in frequencies that only they can hear and know to look for. As the implant sits in the inner ear, is also has mechanical control of the complex bone structure that is used for balance, and is interfered with so that the neophyte can not only be immune to motion sickes but also be able to work flawlessly on low or even zero gravity environments. The Lyman's ear in particular is one of the most mechanically complex implants and one of the few that have a digital component, it is good then that only one is implanted on the neophyte, as an electronic attack could render them deaf if they didnt still have a normal, fully organic ear.</description>
+        <description>The Lyman's Ear is an inner ear implant that allows the user to modify sound perception through digital filters, such as frequency sweeps for detecting specific patterns. Located in the inner ear, it also controls the complex bones responsible for balance, making the user immune to motion sickness and fully capable of operating in low or zero gravity. The organic ear remains functional.</description>
         <iconPath>UI/Genes/Firstborn/BEWH_Firstborn_LymansEarIcon</iconPath>
         <displayOrderInCategory>11</displayOrderInCategory>
         <capMods>
@@ -327,7 +327,7 @@
     <GeneDef ParentName="BEWH_SpaceMarineParent">
         <defName>BEWH_SusAnMembrane</defName>
         <label>sus-an membrane</label>
-        <description>Carriers possess an organ within the their cranium, this organ eventually produces a membrane comprised of genetically-engineered neural tissue that merges with the recipient's cerebrum, that allows them to enter a state of suspended animation, the organ will shut down all biological and psychic functions</description>
+        <description>The Sus-an Membrane is a thin bio-engineered layer implanted beneath the skin that enables the Space marine to enter a state of suspended animation. By drastically slowing metabolism and vital signs, it allows the Astartes to survive extreme wounds or environmental hazards that would normally be fatal. Can be activated on demand.</description>
         <iconPath>UI/Genes/Firstborn/BEWH_Firstborn_Sus-anMembraneIcon</iconPath>
         <displayOrderInCategory>12</displayOrderInCategory>
         <geneClass>Core40k.Gene_DisabledBy</geneClass>
@@ -354,7 +354,7 @@
     <GeneDef ParentName="BEWH_SpaceMarineParent">
         <defName>BEWH_Melanochrome</defName>
         <label>melanochrome</label>
-        <description>The Melanochrome, melano from melanin, a substance used as protection against the sun, and chrome from color, is another hormonal secretor that uses the lynphatic system as transport for its hormones. Designed to improve the radiation protection of the neophyte by assisting in the creation of more or less melanin (For example, giving the sons of Vulcan their black color and the angels their pale skin, both of which are mutations of the melanochrome) in case of high radiation exposure but also it is designed to capture certain metals from the diet and use them in the formation of skin cells to protect against other types of radiation, these metals are usually ingested through their Astartes specific meals and are comprised of heavy metals like lead and gold, taking particular care in not using ferro-magnetic ones.</description>
+        <description>The Melanochrome is a specialized gland that uses the lymphatic system to distribute its hormones. It enhances radiation protection by regulating melanin production. This gland is responsible for certain distinctive mutations, such as the deep black skin of the Salamanders or the snow-white complexion of the Angels.</description>
         <iconPath>UI/Genes/Firstborn/BEWH_Firstborn_MelanochromeIcon</iconPath>
         <displayOrderInCategory>13</displayOrderInCategory>
         <minAgeActive>16</minAgeActive>
@@ -372,7 +372,7 @@
     <GeneDef ParentName="BEWH_SpaceMarineParent">
         <defName>BEWH_OoliticKidney</defName>
         <label>oolitic kidney</label>
-        <description>The Oolitic kidney, while called a kidney is not really designed to work alongside its normal kidneys, but as an emergency measure. It does however have the same function of filtering but on a degree that even machines are not able to get close to. The oolitic filter works as a sort of strengthened dialysis in case either the preomnor or multi-lung have failed in their detoxification. As a last line of defense against toxins and poisons, the Oolitic kidney will do everything it can to rid the neophyte from the dangerous substance and for that it puts him into a sort of coma, to lower metabolic rate as much as possible and prevent further system exposure to the dangerous material while it is slowly and meticulously filtered out. When not necessary for emergency detox, it is used as regulatory for other implants.</description>
+        <description>The Oolitic kidney is an emergency backup filter, surpassing even machines in detoxification ability. If the Preomnor or Multi-lung fail, it induces a coma-like state to slow metabolism and carefully remove toxins. When not in use, it regulates other implants.</description>
         <iconPath>UI/Genes/Firstborn/BEWH_Firstborn_OoliticKidneyIcon</iconPath>
         <displayOrderInCategory>14</displayOrderInCategory>
         <statOffsets>
@@ -411,7 +411,7 @@
     <GeneDef ParentName="BEWH_SpaceMarineParent">
         <defName>BEWH_Neuroglottis</defName>
         <label>neuroglottis</label>
-        <description>The Neuroglotis is a sensor implanted on the mouth cavity, close to the nasopharyn and connected to the nasal cavity. Its main function is sensing the chemical composition of liquids, gasses and solids that pass through either the nose or mouth and sending very specific nervous signals to the neophyte, allowing the instant verification of toxicity and nutritional value, but also the capacity of smelling and recognizing substances that humans usually don't, for example, hormones. While it can't be denied that is very useful in survival situations, it is often overlooked how useful it is in social interactions, in which the neophyte could recognize stress and other factors just by smelling or in case of a surprise attack down-wind, the alert could prove a decisive factor in victory.</description>
+        <description>The Neuroglotis is a special sensor implanted near the mouth and nasal cavity that detects the chemical makeup of substances passing through them. It sends precise signals to its user, instantly identifying toxicity, nutritional value, and even scents like hormones that humans normally cannot detect. Beyond survival, it aids social interactions allowing to recognize stress and other subtle cues by scent.</description>
         <iconPath>UI/Genes/Firstborn/BEWH_Firstborn_NeuroglottisIcon</iconPath>
         <displayOrderInCategory>15</displayOrderInCategory>
         <statOffsets>
@@ -430,7 +430,7 @@
     <GeneDef ParentName="BEWH_SpaceMarineParent">
         <defName>BEWH_Mucranoid</defName>
         <label>mucranoid</label>
-        <description>The Mucranoid is a long organ installed alongside the spine and connected to the lynphatic system for transport, it detects a chemical stimuli that is usually self-administered in case of emergency and then secretes signals that travel to the skin and close up the pores using a waxy mucus, as more of it is released the entire skin ends up covered and then a neural signal is sent to the brain to enter a deep-coma, reducing metabolism to almost nothing. While protected this way, the neophyte is immune to the vacuum and coldness of space, keeping them alive until he can be rescued. Of course, this can also be used in other circumstances in which he has received mortal wounds, the mucranoid and the larraman's cells work together to put him into the best position possible to wait for rescue.</description>
+        <description>The Mucranoid is a long organ installed alongside the spine and connected to the lynphatic system for transport, it detects a chemical stimuli that is usually self-administered in case of emergency and then secretes signals that travel to the skin and close up the pores using a waxy mucus, as more of it is released the entire skin ends up covered and then a neural signal is sent to the brain to enter a deep-coma, reducing metabolism to almost nothing. While protected this way, the neophyte is immune to the vacuum and coldness of space, keeping them alive until he can be rescued. Of course, this can also be used in other circumstances in which he has received mortal wounds, the Mucranoid and the Larraman's cells work together to put him into the best position possible to wait for rescue.</description>
         <iconPath>UI/Genes/Firstborn/BEWH_Firstborn_MucranoidIcon</iconPath>
         <displayOrderInCategory>16</displayOrderInCategory>
         <geneClass>Core40k.Gene_DisabledBy</geneClass>
@@ -452,7 +452,7 @@
     <GeneDef ParentName="BEWH_SpaceMarineParent">
         <defName>BEWH_BetchersGland</defName>
         <label>betcher's gland</label>
-        <description>The Betcher's gland is copmrised of 2 glands that work in tandem, implanted on different parts of the mouth depending on preference, they are able to turn saliva into a corrosive acid using similar processes to the stomach glands, but with stronger acids ingested through the Astartes specific diet and stored after being processed by the preomnor. This saliva is strong enough to melt steel or even be used in combat, blinding or even killing an enemy by spitting in his head, but it is usually used as a last resort as it also hurts the mouth of the neophyte and the healing takes quite a while, sometimes even rendering them mute. The most used case is to digest harshers substances in survival situations, the betcher's gland can output its acid back into the preomnor to help digestion of things like cellulose from grass or bark for emergency carbohydrates. Some chapters forgo this function and instead use them to store specifically tailored poisons to which they are completely immune and drink in their diet, so that it can be later used either in combat or in capture situations.</description>
+        <description>The Betcher's gland consists of two glands working together, implanted in different parts of the mouth. They convert saliva into a highly corrosive acid. This acid saliva can melt steel and be used in combat to blind or kill by spitting. However, it is typically a last resort due to the damage it causes to the Space marine's mouth. Healing can be slow and may cause temporary muteness. Some chapters modify the glands to store custom poisons they are immune to, which can be deployed in combat or capture situations.</description>
         <iconPath>UI/Genes/Firstborn/BEWH_Firstborn_BetchersGlandIcon</iconPath>
         <displayOrderInCategory>17</displayOrderInCategory>
         <geneClass>Core40k.Gene_DisabledBy</geneClass>
@@ -483,7 +483,7 @@
     <GeneDef ParentName="BEWH_SpaceMarineParent">
         <defName>BEWH_ProgenoidGlands</defName>
         <label>progenoid glands</label>
-        <description>The progenoid glands are installed in the neck and in the chest and are by far the most complex of them all, a biological precision machine that detects other gene-seed implants and copies their DNA into seeds that can then be extracted and via proper care by an apothecary, gestated into any of the gene-seed organs. Due to the nature of this reproduction, very similar to cloning, there is an inherent risk of mutation which is then passed down to future neophytes and so, much care is taken in the purification and analysis of the results and sometimes much of it is discarded when chapters are bound to the warp for long periods. This is the reason why chapters with very radioactive worlds tend to have more mutations and a lax attitude towards them.</description>
+        <description>The Progenoid glands, installed in the neck and in the chest, are by far the most complex implants. It is a biological precision machine that detects other gene-seed implants and copies their DNA into the special "seeds". These seeds can then be extracted, and with proper care by on apothecary, gestated into new gene-seed organs.</description>
         <iconPath>UI/Genes/Firstborn/BEWH_Firstborn_ProgenoidsIcon</iconPath>
         <displayOrderInCategory>18</displayOrderInCategory>
         <geneClass>Genes40k.Gene_ProgenoidGlands</geneClass>
@@ -508,7 +508,7 @@
     <GeneDef ParentName="BEWH_SpaceMarineParent">
         <defName>BEWH_BlackCarapace</defName>
         <label>black carapace</label>
-        <description>The black carapace is the last organ to be implanted, a combination of biological and mechanical technology that surpasses most of the implants and is the last step before a neophyte can finally be called an Astartes, in honor of its creator, Amar Astarte. Its design complex but at the same time beautifully simple in its delivery, based on biological fibrous tissue implanted under the skin, which then grows not unlike a cancer throughout the body with invasive and painful fibers that connect themselves to the nervous system. This process lasts for a couple hours and is said to be one of the most painful experiences a neophyte has. Once the Astartes has finally emerged from its arduous final implantation, he is then cut into by an Apothecary to install connection ports to then be used to interact with the machine spirit of their power armor and reach for its full potential, a neurolink between man and machine so that they both can feel and act synchronously.</description>
+        <description>The Black Carapace is the final implant, blending biological and mechanical technology. It is the last step before a neophyte can be called an Astartes. Its design is complex yet elegantly simple: a fibrous biological tissue implanted beneath the skin that spreads invasively throughout a body, connecting painfully to the nervous system. Once fully integrated, an Apothecary surgically installs connection ports that link the Astartes to the machine spirit of their power armor, creating a neural interface that allows man and machine to act and sense as one.</description>
         <iconPath>UI/Genes/Firstborn/BEWH_Firstborn_BlackCarapaceIcon</iconPath>
         <displayOrderInCategory>19</displayOrderInCategory>
         <statFactors>
