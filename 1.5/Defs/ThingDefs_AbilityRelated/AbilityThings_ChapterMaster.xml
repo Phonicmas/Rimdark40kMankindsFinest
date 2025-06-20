@@ -70,8 +70,8 @@
       <li Class="Genes40k.CompProperties_LifespanDropItem">
         <lifespanTicks>10000</lifespanTicks>
         <expireEffect>RaisedRock_Collapse</expireEffect>
-        <droppedThingDef>Steel</droppedThingDef>
-        <amountDropped>30</amountDropped>
+        <droppedThingDef>ChunkSlagSteel</droppedThingDef>
+        <amountDropped>1</amountDropped>
       </li>
     </comps>
     <modExtensions>
