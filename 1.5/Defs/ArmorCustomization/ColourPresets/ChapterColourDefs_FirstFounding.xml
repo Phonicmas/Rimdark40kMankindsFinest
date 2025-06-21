@@ -141,8 +141,8 @@
     <Genes40k.ChapterColourDef ParentName="BEWH_ChapterColourPresets">
         <defName>BEWH_ChapterColourXVII</defName>
         <label>Word Bearers</label>
-        <primaryColour>(114,37,39)</primaryColour>
-        <secondaryColour>(62,63,62)</secondaryColour>
+        <primaryColour>(62,63,62)</primaryColour>
+        <secondaryColour>(99,99,99)</secondaryColour>
         <relatedChapterGene>BEWH_ChapterXVIIWordBearers</relatedChapterGene>
         <relatedChapterIcon>BEWH_ChapterIconXVII</relatedChapterIcon>
     </Genes40k.ChapterColourDef>
