@@ -191,7 +191,7 @@
     </HediffDef>
 
     <!-- Graviton Maul-->
-    <ThingDef ParentName="MeleeWeaponUltratech">
+    <ThingDef ParentName="BEWH_MeleeWeaponUltratech">
         <defName>BEWH_GravitonMaul</defName>
         <label>graviton maul</label>
         <description>A heavy maul originally used by Domitar-class Battle-Automata. Built for raw impact, it was designed to smash through armor, structures, and enemy lines with brute force. Far too large and heavy for an unaugmented human to wield effectively, it requires significant strength or mechanical assistance to use in combat.</description>

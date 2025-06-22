@@ -11,7 +11,7 @@ public class BlockedPsycasting
 {
     public static void Postfix(ref bool __result, Verb_CastAbility __instance, Thing ___caster)
     {
-        if (__instance.ability is not Psycast || __instance.ability.def.category != Genes40kDefOf.Psychic || !(___caster is Pawn pawn))
+        if (__instance.ability is not Psycast || __instance.ability.def.category != Genes40kDefOf.Psychic || ___caster is not Pawn pawn)
         {
             return;
         }

@@ -1,4 +1,5 @@
 ﻿using Core40k;
+using RimWorld;
 using Verse;
 
 namespace Genes40k;
@@ -15,7 +16,7 @@ public class PawnRenderNode_AttachmentBackpack : PawnRenderNode
             
         var apparelColourTwo = (BodyDecorativeApparelColourTwo)apparel;
             
-        if (pawn.apparel.WornApparel.Any(wornApparel => wornApparel.def == Genes40kDefOf.Apparel_PackJump))
+        if (ModsConfig.RoyaltyActive && pawn.apparel.WornApparel.Any(wornApparel => wornApparel.def == Genes40kDefOf.Apparel_PackJump))
         {
             backpackPath += "_Jump";
         }

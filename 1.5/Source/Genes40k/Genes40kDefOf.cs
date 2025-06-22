@@ -149,6 +149,7 @@ public static class Genes40kDefOf
     public static ThingDef BEWH_SteelRainDropPodBuilding;
     public static ThingDef BEWH_SteelRainDropPodSkyfaller;
         
+    [MayRequireRoyalty]
     public static ThingDef Apparel_PackJump;
         
     public static ThingDef BEWH_RawGestationalSlurry;
@@ -193,7 +194,8 @@ public static class Genes40kDefOf
     //FactionDefs
     public static FactionDef BEWH_OffworldMarinesFaction;
         
-    //FactionDefs
+    //AbilityCategoryDef
+    [MayRequireRoyalty]
     public static AbilityCategoryDef Psychic;
     
     //ExtraDecorationDef

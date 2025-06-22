@@ -94,7 +94,7 @@
   </ThingDef>
 
   <!-- Living Saint Sword -->
-  <ThingDef ParentName="MeleeWeaponUltratech">
+  <ThingDef ParentName="BEWH_MeleeWeaponUltratech">
     <defName>BEWH_LSaintSword</defName>
     <label>Ardent Blade</label>
     <description>This power sword is said to be forged from crystallised faith and consecrated alloy. Weightless in the Saint's hand, it strikes with blinding speed and divine fury, burning heretics on impact as if guided by the Emperor Himself. At the wielder's will, the blade unleashes a jet of holy flame - a searing manifestation of His wrath.</description>

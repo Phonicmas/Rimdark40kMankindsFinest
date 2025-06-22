@@ -78,40 +78,6 @@
     </comps>
   </AbilityDef>
 
-
-  <!-- Leman Russ: Deny the Witch -->
-  <AbilityDef>
-    <defName>BEWH_DenyTheWitch</defName>
-    <label>Deny the Witch</label>
-    <description>Blocks target from using psycasts and dampens both their psychic and mental capabilities.</description>
-    <iconPath>UI/Abilities/BEWH_Ability_LemanRussDTW</iconPath>
-    <cooldownTicksRange>30000</cooldownTicksRange>
-    <aiCanUse>true</aiCanUse>
-    <category>BEWH_Primarch</category>
-    <showPsycastEffects>False</showPsycastEffects>
-    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
-    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
-    <verbProperties>
-      <verbClass>Verb_CastAbility</verbClass>
-      <range>46</range>
-      <warmupTime>0.5</warmupTime>
-      <soundCast>PsychicInsanityLanceCast</soundCast>
-      <targetParams>
-        <canTargetLocations>false</canTargetLocations>
-        <canTargetBuildings>false</canTargetBuildings>
-        <canTargetMechs>false</canTargetMechs>
-        <canTargetMutants>false</canTargetMutants>
-        <canTargetAnimals>false</canTargetAnimals>
-      </targetParams>
-    </verbProperties>
-    <comps>
-      <li Class="Genes40k.CompProperties_AbilityDenyTheWitch">
-        <hediffDef>BEWH_DeniedWitch</hediffDef>
-      </li>
-    </comps>
-  </AbilityDef>
-
-
   <!-- Rogal Dorn: Raise Bastion -->
   <VFECore.Abilities.AbilityDef>
     <defName>BEWH_RaiseBastion</defName>
