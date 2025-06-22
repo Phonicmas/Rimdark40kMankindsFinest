@@ -51,10 +51,63 @@
 						<clipPath>BEWH_ChainswordPickup</clipPath>
 					</li>
 				</grains>
-				<volumeRange>35~40</volumeRange>
+				<volumeRange>28</volumeRange>
 				<!-- <pitchRange>1~1</pitchRange> -->
 			</li>
 		</subSounds>
 	</SoundDef>
 
+	<!-- PowerSword -->
+	<SoundDef>
+		<defName>BEWH_SFX_PowerswordHit</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>PowerswordAttack</clipFolderPath>
+					</li>
+				</grains>
+				<volumeRange>30~33</volumeRange>
+				<pitchRange>0.8~1.15</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>BEWH_SFX_PowerswordInteract</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>BEWH_PowerSwordInteract</clipPath>
+					</li>
+				</grains>
+				<volumeRange>28</volumeRange>
+				<!-- <pitchRange>1~1</pitchRange> -->
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<!-- GravitonMaul -->
+	<SoundDef>
+		<defName>BEWH_SFX_GravitonMaulHit</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>BEWH_GravitonMaulIHit</clipPath>
+					</li>
+				</grains>
+				<volumeRange>35~40</volumeRange>
+				<pitchRange>0.85~1.15</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
 </Defs>

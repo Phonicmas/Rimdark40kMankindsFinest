@@ -125,8 +125,8 @@
     <defName>BEWH_AstartesPowerSword</defName>
     <label>power sword</label>
     <description>A melee weapon with an energy field, the Power Sword is capable of slicing through armor with ease. Its energy blade hums with deadly force, allowing the wielder to strike with precision and overwhelming power.</description>
-    <soundInteract>Interact_MonoSword</soundInteract>
-    <meleeHitSound>MeleeHit_MonoSword</meleeHitSound>
+    <soundInteract>BEWH_SFX_PowerswordInteract</soundInteract>
+    <meleeHitSound>BEWH_SFX_PowerswordHit</meleeHitSound>
     <recipeMaker>
       <skillRequirements>
         <Crafting>12</Crafting>

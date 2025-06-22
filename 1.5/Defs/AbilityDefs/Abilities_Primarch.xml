@@ -91,7 +91,7 @@
     <range>25</range>
     <castTime>60</castTime>
     <targetMode>Location</targetMode>
-    <castSound MayRequire="Ludeon.RimWorld.Royalty">PsycastWallraise</castSound>
+    <castSound>BEWH_SFX_RaiseBastion</castSound>
   </VFECore.Abilities.AbilityDef>
 
 

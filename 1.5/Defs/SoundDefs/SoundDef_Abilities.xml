@@ -253,4 +253,42 @@
 	</SoundDef>
 	<!-- Inviolable Aura (sustainer)? -->
 
+	<!--============Primarch=============-->
+  	<!-- Rogal Dorn: Raise Bastion -->
+	<SoundDef>
+		<defName>BEWH_SFX_RaiseBastion</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>BEWH_RaiseBastion</clipPath>
+					</li>
+				</grains>
+				<volumeRange>41</volumeRange>
+				<pitchRange>1</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<!--============Psyker=============-->
+	<!-- Psychic Bolt -->
+	<SoundDef>
+		<defName>BEWH_SFX_PsychicBolt</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>BEWH_PsychicBoltCast</clipPath>
+					</li>
+				</grains>
+				<volumeRange>48</volumeRange>
+				<pitchRange>0.9~1.1</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
 </Defs>

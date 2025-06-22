@@ -16,7 +16,7 @@
       <canTargetBuildings>true</canTargetBuildings>
     </targetingParameters>
     <targetMode>Pawn</targetMode>
-    <castSound>Psycast_Skip_Pulse</castSound>
+    <castSound>BEWH_SFX_PsychicBolt</castSound>
     <power>10</power>
     <powerStatFactors>
       <PsychicSensitivity>1.5</PsychicSensitivity>

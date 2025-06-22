@@ -195,8 +195,8 @@
         <defName>BEWH_GravitonMaul</defName>
         <label>graviton maul</label>
         <description>A heavy maul originally used by Domitar-class Battle-Automata. Built for raw impact, it was designed to smash through armor, structures, and enemy lines with brute force. Far too large and heavy for an unaugmented human to wield effectively, it requires significant strength or mechanical assistance to use in combat.</description>
-        <soundInteract>Interact_ZeusHammer</soundInteract>
-        <meleeHitSound>MeleeHit_ZeusHammer</meleeHitSound>
+        <soundInteract>Interact_ChargeLance</soundInteract> <!-- domitar basically does not pick up its weapon -->
+        <meleeHitSound>BEWH_SFX_GravitonMaulHit</meleeHitSound>
         <equippedAngleOffset>-45</equippedAngleOffset>
         <relicChance>0</relicChance>
         <destroyOnDrop>true</destroyOnDrop>

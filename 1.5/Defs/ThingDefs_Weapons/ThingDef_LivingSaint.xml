@@ -117,8 +117,8 @@
     <thingSetMakerTags Inherit="False" />
     <weaponTags Inherit="false" />
 
-    <soundInteract>Interact_PlasmaSword</soundInteract> 
-    <meleeHitSound>MeleeHit_PlasmaSword</meleeHitSound>
+    <soundInteract>BEWH_SFX_PowerswordInteract</soundInteract> 
+    <meleeHitSound>BEWH_SFX_PowerswordHit</meleeHitSound>
     <statBases>
       <Flammability>0</Flammability>
       <MaxHitPoints>665</MaxHitPoints>
