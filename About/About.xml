@@ -33,5 +33,11 @@
 		<li>ceteam.combatextended</li>
 		<li>Katavrik.CrashLanding</li>
 		<li>Phonicmas.RimDark.Framework</li>
+		<li>vanillaexpanded.vpsycastse</li>
 	</loadAfter>
+	<incompatibleWith>
+		<li>phonicmas.40kideology</li>
+		<li>phonicmas.40kcore</li>
+		<li>phonicmas.40kgenes</li>
+	</incompatibleWith>
 </ModMetaData>

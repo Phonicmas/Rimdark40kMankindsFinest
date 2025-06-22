@@ -20,12 +20,6 @@
 						</li>
 					</value>
 				</li>
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/RecipeDef[defName = "BEWH_MakeCustodesMatrix"]/fixedIngredientFilter/thingDefs</xpath>
-					<value>
-						<li>VPE_Eltex</li>
-					</value>
-				</li>
 
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/RecipeDef[defName = "BEWH_MakePrimarchMatrix"]/ingredients</xpath>
@@ -38,12 +32,6 @@
 							</filter>
 							<count>200</count>
 						</li>
-					</value>
-				</li>
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/RecipeDef[defName = "BEWH_MakePrimarchMatrix"]/fixedIngredientFilter/thingDefs</xpath>
-					<value>
-						<li>VPE_Eltex</li>
 					</value>
 				</li>
 
