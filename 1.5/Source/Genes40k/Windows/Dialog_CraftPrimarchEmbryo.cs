@@ -164,7 +164,7 @@ public class Dialog_CraftPrimarchEmbryo : Window
             var list = new List<FloatMenuOption>();
             foreach (var thing in humanEmbryos)
             {
-                if (!(thing is HumanEmbryo humanEmbryo))
+                if (thing is not HumanEmbryo humanEmbryo)
                 {
                     continue;
                 }
@@ -173,8 +173,8 @@ public class Dialog_CraftPrimarchEmbryo : Window
                     continue;
                 }
                     
-                var floatMenuOptionName = humanEmbryo.def.label.CapitalizeFirst();
-                floatMenuOptionName += ": " + humanEmbryo.Mother.NameShortColored.CapitalizeFirst();
+                var floatMenuOptionName = ThingDefOf.HumanEmbryo.label.CapitalizeFirst();
+                floatMenuOptionName += ": " + (humanEmbryo?.Mother?.NameShortColored ?? "BEWH.MankindsFinest.CommonKeywords.Unknown".Translate()).CapitalizeFirst();
                     
                 var menuOption = new FloatMenuOption(floatMenuOptionName, delegate
                 {
@@ -199,12 +199,10 @@ public class Dialog_CraftPrimarchEmbryo : Window
         }
         else
         {
-            if (chosenEmbryo == null)
-            {
-                chosenEmbryo = (HumanEmbryo)humanEmbryos.First();
-            }
-            toolTipEmbryo = chosenEmbryo.def.label.CapitalizeFirst();
-            toolTipEmbryo += ": " + chosenEmbryo.Mother.NameShortColored.CapitalizeFirst();
+            chosenEmbryo ??= (HumanEmbryo)humanEmbryos.First();
+            
+            toolTipEmbryo = ThingDefOf.HumanEmbryo.label.CapitalizeFirst();
+            toolTipEmbryo += ": " + (chosenEmbryo?.Mother?.NameShortColored ?? "BEWH.MankindsFinest.CommonKeywords.Unknown".Translate()).CapitalizeFirst();
             if (Widgets.ButtonText(embryoInspectRect, "InspectGenes".Translate()))
             {
                 Find.WindowStack.Add(new Dialog_ViewGenesEmbryo(chosenEmbryo));
@@ -234,9 +232,9 @@ public class Dialog_CraftPrimarchEmbryo : Window
         if (Widgets.ButtonInvisible(pawnIconRect))
         {
             var list = new List<FloatMenuOption>();
-            foreach (var thing in playerPawns)
+            foreach (var pawn in playerPawns)
             {
-                if (!(thing is Pawn pawn))
+                if (pawn == null)
                 {
                     continue;
                 }
