@@ -14,6 +14,11 @@ public class PerpetualNoDestroy
         {
             return true;
         }
+
+        if (Current.ProgramState == ProgramState.Entry)
+        {
+            return true;
+        }
             
         //SmashPhil Vehicle case, hopefully doesnt cause any side effects. Pawns shouldn't be targeted by deconstruct anyway.
         if (mode == DestroyMode.Deconstruct)
