@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/HediffDef[defName = "BEWH_Melanochrome"]</xpath>
+        <value>
+            <makeImmuneTo>
+                <li>Rad</li>
+            </makeImmuneTo>
+            <hediffGiversCannotGive>
+                <li>Rad</li>
+            </hediffGiversCannotGive>
+        </value>
+    </Operation>
+
+</Patch>

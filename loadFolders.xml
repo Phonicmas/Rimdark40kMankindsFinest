@@ -5,6 +5,10 @@
 		<li>1.5</li>
 		<li IfModActive="Ludeon.RimWorld.Royalty">1.5/Mods/Royalty</li>
 		<li IfModActive="Ludeon.RimWorld.Ideology">1.5/Mods/Ideology</li>
+		<li IfModActive="dubwise.dubsbadhygiene">1.5/Mods/DubsHygiene</li>
+		<li IfModActive="dubwise.rimatomics">1.5/Mods/DubsRimatomicsRadiation</li>
+		<li IfModActive="oskarpotocki.vfe.empire">1.5/Mods/VanillaFactionExpandedEmpire</li>
+		<li IfModActive="katavrik.crashlanding">1.5/Mods/CrashLanding</li>
 	</v1.5>
-	
+
 </loadFolders>

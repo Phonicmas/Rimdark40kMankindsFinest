@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- ===== Dubs Rimatomics Radiation ===== -->
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/GeneDef[defName = "BEWH_Melanochrome"]/statFactors</xpath>
+        <value>
+            <Radiation>0</Radiation>
+        </value>
+    </Operation>
+
+</Patch>
