@@ -24,19 +24,4 @@
 		</value>
 	</Operation>
 
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/HediffDef[defName = "BEWH_GenetorGrowing"]</xpath>
-		<value>
-			<stages>
-				<li>
-					<statFactors>
-						<ThirstRateMultiplier>0</ThirstRateMultiplier>
-						<HygieneRateMultiplier>0</HygieneRateMultiplier>
-						<BladderRateMultiplier>0</BladderRateMultiplier>
-					</statFactors>
-				</li>
-			</stages>
-		</value>
-	</Operation>
-
 </Patch>

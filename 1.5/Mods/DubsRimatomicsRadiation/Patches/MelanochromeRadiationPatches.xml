@@ -2,6 +2,15 @@
 <Patch>
 
     <!-- ===== Dubs Rimatomics Radiation ===== -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/GeneDef[defName="BEWH_Melanochrome"]/statFactors</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/GeneDef[defName="BEWH_Melanochrome"]</xpath>
+            <value>
+                <statFactors />
+            </value>
+        </nomatch>
+    </Operation>
 
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/GeneDef[defName = "BEWH_Melanochrome"]/statFactors</xpath>
