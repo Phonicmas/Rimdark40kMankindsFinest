@@ -26,7 +26,7 @@ public class Genes40kModSettings : ModSettings
 
     public bool allowFemalePrimarchBirths = false;
         
-    private ChapterColourDef currentlySelectedPreset = null;
+    private ChapterColourDef currentlySelectedPreset = Genes40kDefOf.BEWH_ChapterColourXIII;
         
     public ChapterColourDef CurrentlySelectedPreset
     {
@@ -45,8 +45,9 @@ public class Genes40kModSettings : ModSettings
             relatedChapterIcon = chapterShoulderIcon,
         };
 
-    public Color chapterColorOne = Color.black;
-    public Color chapterColorTwo = Color.red;
+    public Color chapterColorOne = Genes40kDefOf.BEWH_ChapterColourXIII.primaryColour;
+    public Color chapterColorTwo = Genes40kDefOf.BEWH_ChapterColourXIII.secondaryColour;
+    
     public ShoulderIconDef chapterShoulderIcon = Genes40kDefOf.BEWH_ShoulderNone;
 
     public override void ExposeData()
@@ -73,8 +74,8 @@ public class Genes40kModSettings : ModSettings
         
         Scribe_Values.Look(ref psychicCrafting, "psychicCrafting", true);
             
-        Scribe_Values.Look(ref chapterColorOne, "chapterColorOne", Color.black);
-        Scribe_Values.Look(ref chapterColorTwo, "chapterColorTwo", Color.red);
+        Scribe_Values.Look(ref chapterColorOne, "chapterColorOne");
+        Scribe_Values.Look(ref chapterColorTwo, "chapterColorTwo");
         Scribe_Defs.Look(ref chapterShoulderIcon, "chapterShoulderIcon");
         
         if (Scribe.mode == LoadSaveMode.Saving)

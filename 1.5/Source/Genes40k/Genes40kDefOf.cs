@@ -201,6 +201,8 @@ public static class Genes40kDefOf
     //ExtraDecorationDef
     public static ExtraDecorationDef BEWH_LivingSaintHalo_2;
     public static ExtraDecorationDef BEWH_LivingSaintWings_1;
+
+    public static ChapterColourDef BEWH_ChapterColourXIII;
         
     static Genes40kDefOf()
     {
