@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Ultramarine -->
+  <ThoughtDef>
+    <defName>BEWH_ThunderWarriorInstability</defName>
+    <workerClass>Genes40k.ThoughtWorker_ThunderWarrior</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <requiredGenes>
+      <li>BEWH_Furybound</li>
+    </requiredGenes>
+    <stages>
+      <li>
+        <label>Thunder Warrior Mentality</label>
+        <description>My beautiful glory days, full of epicness yeeehaw!</description>
+        <baseMoodEffect>2</baseMoodEffect>
+      </li>
+      <li>
+        <label>Thunder Warrior Mentality</label>
+        <description>Things feel... off. I can't focus.</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+      <li>
+        <label>Thunder Warrior Mentality</label>
+        <description>Voices. Shadows. Everything's watching me.</description>
+        <baseMoodEffect>-18</baseMoodEffect>
+      </li>
+      <li>
+        <label>Thunder Warrior Mentality</label>
+        <description>No sleep. No peace. Blood. Blood will quiet it.</description>
+        <baseMoodEffect>-34</baseMoodEffect>
+      </li>
+      <li>
+        <label>Thunder Warrior Mentality</label>
+        <description>BGHGRLWRBWRLGRRRRRRR!!! DIE DIE DIE!</description>
+        <baseMoodEffect>-48</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>
