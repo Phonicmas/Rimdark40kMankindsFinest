@@ -1,9 +1,10 @@
 ﻿using System.Linq;
+using Core40k;
 using Verse;
 
 namespace Genes40k;
 
-public class Gene_Psyker : Gene
+public class Gene_Psyker : Gene_GiveVFECoreAbility
 {
     public override void PostAdd()
     {
