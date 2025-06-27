@@ -138,7 +138,9 @@
                     <li>BEWH_ExtraDecoration</li>
                 </tabDefs>
             </li>
-            <li Class="Genes40k.DefModExtension_HideJumpPack" />
+            <li Class="Genes40k.DefModExtension_HideJumpPack">
+                <changeBackpackVisual>true</changeBackpackVisual>
+            </li>
         </modExtensions>
     </ThingDef>
 
@@ -226,7 +228,9 @@
                     <li>BEWH_ExtraDecoration</li>
                 </tabDefs>
             </li>
-            <li Class="Genes40k.DefModExtension_HideJumpPack" />
+            <li Class="Genes40k.DefModExtension_HideJumpPack">
+                <changeBackpackVisual>true</changeBackpackVisual>
+            </li>
         </modExtensions>
     </ThingDef>
 
@@ -315,7 +319,9 @@
                     <li>BEWH_ExtraDecoration</li>
                 </tabDefs>
             </li>
-            <li Class="Genes40k.DefModExtension_HideJumpPack" />
+            <li Class="Genes40k.DefModExtension_HideJumpPack">
+                <changeBackpackVisual>true</changeBackpackVisual>
+            </li>
         </modExtensions>
     </ThingDef>
 
