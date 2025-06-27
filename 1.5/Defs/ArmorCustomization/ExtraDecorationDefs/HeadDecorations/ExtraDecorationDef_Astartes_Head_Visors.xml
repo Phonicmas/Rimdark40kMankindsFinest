@@ -43,4 +43,130 @@
         <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
     </Core40k.ExtraDecorationDef>
 
+    <Core40k.ExtraDecorationDef> <!-- MkX Helmet -->
+        <defName>BEWH_Deco_MkVIILenseGlow</defName>
+        <label>Lense Glow</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/Astartes/Headgear/Finest_Deco_LenseGlow_icon</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Headgear/MkVII/BEWH_MkVIIHelmetGlow</drawnTextureIconPath>
+        <drawSize>(0.5, 0.25)</drawSize>
+        <sortOrder>0</sortOrder>
+        <isHelmetDecoration>true</isHelmetDecoration>
+        <defaultShowRotation>
+            <li>South</li>
+            <li>East</li>
+            <li>West</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmorHelmet</li>
+        </appliesTo>
+        <drawData>
+            <dataSouth>
+                <layer>75</layer>
+                <offset>(0, 0, 0)</offset>
+            </dataSouth>
+            <dataEast>
+                <layer>71.4</layer>
+                <offset>(0, 0, 0)</offset>
+            </dataEast>
+            <dataWest>
+                <layer>71.4</layer>
+            </dataWest>
+        </drawData>
+        <shaderType>TransparentPostLight</shaderType>
+        <colourable>true</colourable>
+        <availablePresets>
+            <li>BEWH_DecoPaletteLenseGlowRed</li>
+            <li>BEWH_DecoPaletteLenseGlowGreen</li>
+            <li>BEWH_DecoPaletteLenseGlowBlue</li>
+            <li>BEWH_DecoPaletteLenseGlowYellow</li>
+            <li>BEWH_DecoPaletteLenseGlowOrange</li>
+            <li>BEWH_DecoPaletteLenseGlowWhite</li>
+        </availablePresets>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef> <!-- MkX Helmet -->
+        <defName>BEWH_Deco_MkXLenseGlow</defName>
+        <label>Lense Glow</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/Astartes/Headgear/Finest_Deco_LenseGlow_icon</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Headgear/MkX/BEWH_MkXHelmetGlow</drawnTextureIconPath>
+        <drawSize>(0.5, 0.25)</drawSize>
+        <sortOrder>0</sortOrder>
+        <isHelmetDecoration>true</isHelmetDecoration>
+        <defaultShowRotation>
+            <li>South</li>
+            <li>East</li>
+            <li>West</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkXPowerArmorHelmet</li>
+        </appliesTo>
+        <drawData>
+            <dataSouth>
+                <layer>75</layer>
+                <offset>(0, 0, 0)</offset>
+            </dataSouth>
+            <dataEast>
+                <layer>71.4</layer>
+                <offset>(0, 0, 0)</offset>
+            </dataEast>
+            <dataWest>
+                <layer>71.4</layer>
+            </dataWest>
+        </drawData>
+        <shaderType>TransparentPostLight</shaderType>
+        <colourable>true</colourable>
+        <availablePresets>
+            <li>BEWH_DecoPaletteLenseGlowRed</li>
+            <li>BEWH_DecoPaletteLenseGlowGreen</li>
+            <li>BEWH_DecoPaletteLenseGlowBlue</li>
+            <li>BEWH_DecoPaletteLenseGlowYellow</li>
+            <li>BEWH_DecoPaletteLenseGlowOrange</li>
+            <li>BEWH_DecoPaletteLenseGlowWhite</li>
+        </availablePresets>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef> <!-- MkX Chaplain Helmet -->
+        <defName>BEWH_Deco_MkXCLenseGlow</defName>
+        <label>Lense Glow</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/Astartes/Headgear/Finest_Deco_LenseGlow_icon</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Headgear/MkXC/BEWH_MkXChaplainHelmetGlow</drawnTextureIconPath>
+        <drawSize>(0.5, 0.25)</drawSize>
+        <sortOrder>0</sortOrder>
+        <isHelmetDecoration>true</isHelmetDecoration>
+        <defaultShowRotation>
+            <li>South</li>
+            <li>East</li>
+            <li>West</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkXPowerArmorChaplainHelmet</li>
+        </appliesTo>
+        <drawData>
+            <dataSouth>
+                <layer>75</layer>
+                <offset>(0, 0, 0)</offset>
+            </dataSouth>
+            <dataEast>
+                <layer>71.4</layer>
+                <offset>(0, 0, 0)</offset>
+            </dataEast>
+            <dataWest>
+                <layer>71.4</layer>
+            </dataWest>
+        </drawData>
+        <shaderType>TransparentPostLight</shaderType>
+        <colourable>true</colourable>
+        <availablePresets>
+            <li>BEWH_DecoPaletteLenseGlowRed</li>
+            <li>BEWH_DecoPaletteLenseGlowGreen</li>
+            <li>BEWH_DecoPaletteLenseGlowBlue</li>
+            <li>BEWH_DecoPaletteLenseGlowYellow</li>
+            <li>BEWH_DecoPaletteLenseGlowOrange</li>
+            <li>BEWH_DecoPaletteLenseGlowWhite</li>
+        </availablePresets>
+    </Core40k.ExtraDecorationDef>
+
 </Defs>
