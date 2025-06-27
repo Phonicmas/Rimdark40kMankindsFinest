@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Living Saint Bolt Pistol -->
+  <ThingDef ParentName="BaseGunWithQuality">
+    <defName>BEWH_LSaintBoltPistol</defName>
+    <label>Ascendant Wrath</label>
+    <description>An ancient weapon appearing to resemble a heavy bolt pistol, its true nature obscured by time and conflicting accounts. Some say it was never forged in any traditional sense, but appeared in the midst of battle - formed from blinding light and raw warp energy as the Saint rose to lead the faithful.</description>
+    <graphicData>
+      <texPath>Things/Weapons/BEWH_LSaintBoltPistol</texPath>
+      <drawSize>(0.75, 0.75)</drawSize>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+
+    <techLevel>Spacer</techLevel>
+    <smeltable>false</smeltable>
+    <burnableByRecipe>true</burnableByRecipe>
+
+    <tradeability>None</tradeability>
+    <tradeTags Inherit="False" />
+    <thingSetMakerTags Inherit="False" />
+    <weaponTags Inherit="false" />
+    
+    <soundInteract>Interact_ChargeRifle</soundInteract>
+    <statBases>
+      <Flammability>0</Flammability>
+      <MaxHitPoints>667</MaxHitPoints>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>4.6</Mass>
+      <AccuracyTouch>0.8</AccuracyTouch>
+      <AccuracyShort>0.75</AccuracyShort>
+      <AccuracyMedium>0.65</AccuracyMedium>
+      <AccuracyLong>0.38</AccuracyLong>
+      <RangedWeapon_Cooldown>1.15</RangedWeapon_Cooldown>
+      <Beauty>5</Beauty>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>BEWH_HeavyBolterRound</defaultProjectile>
+        <forcedMissRadius>0.075</forcedMissRadius>
+        <warmupTime>0.6</warmupTime>
+        <range>35.9</range>
+        <ticksBetweenBurstShots>30</ticksBetweenBurstShots>
+        <burstShotCount>2</burstShotCount>
+        <soundCast>BEWH_SFX_BolterShot</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>12</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>Handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+
+    <comps>
+      <li Class="CompProperties_Biocodable"/>
+    </comps>
+    <modExtensions>
+      <li Class="VEF.Things.ThingDefExtension">
+        <weaponCarryDrawOffsets>
+          <north>
+            <drawOffset>(0, 0, -0.2)</drawOffset>
+          </north>
+          <east>
+            <drawOffset>(-0.1, 0, -0.07)</drawOffset>
+          </east>
+          <south>
+            <angleOffset>0</angleOffset>
+            <drawOffset>(0, 0, -0.05)</drawOffset>
+          </south>
+          <west>
+            <drawOffset>(0.1, 0, -0.07)</drawOffset>
+          </west>
+        </weaponCarryDrawOffsets>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Living Saint Sword -->
+  <ThingDef ParentName="BEWH_MeleeWeaponUltratech">
+    <defName>BEWH_LSaintSword</defName>
+    <label>Ardent Blade</label>
+    <description>This power sword is said to be forged from crystallised faith and consecrated alloy. Weightless in the Saint's hand, it strikes with blinding speed and divine fury, burning heretics on impact as if guided by the Emperor Himself. At the wielder's will, the blade unleashes a jet of holy flame - a searing manifestation of His wrath.</description>
+    <graphicData>
+      <texPath>Things/Weapons/BEWH_LSaintSword</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+
+    <techLevel>Spacer</techLevel>
+    <relicChance>0</relicChance>
+    <smeltable>false</smeltable>
+    <weaponClasses>
+      <li>Melee</li>
+      <li>MeleePiercer</li>
+    </weaponClasses>
+    <burnableByRecipe>true</burnableByRecipe>
+    <tradeability>None</tradeability>
+
+    <tradeTags Inherit="False" />
+    <thingSetMakerTags Inherit="False" />
+    <weaponTags Inherit="false" />
+
+    <soundInteract>BEWH_SFX_PowerswordInteract</soundInteract> 
+    <meleeHitSound>BEWH_SFX_PowerswordHit</meleeHitSound>
+    <statBases>
+      <Flammability>0</Flammability>
+      <MaxHitPoints>665</MaxHitPoints>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Beauty>5</Beauty>
+    </statBases>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>16</power>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>36</power>
+        <cooldownTime>1.9</cooldownTime>
+        <armorPenetration>1.4</armorPenetration>
+        <extraMeleeDamages>
+          <li>
+            <def>Flame</def>
+            <amount>10</amount>
+            <chance>0.5</chance>
+          </li>
+        </extraMeleeDamages>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>36</power>
+        <cooldownTime>1.6</cooldownTime>
+        <armorPenetration>1.1</armorPenetration>
+        <extraMeleeDamages>
+          <li>
+            <def>Flame</def>
+            <amount>10</amount>
+            <chance>0.5</chance>
+          </li>
+        </extraMeleeDamages>
+      </li>
+    </tools>
+
+    <comps>
+      <li>
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li Class="CompProperties_EquippableAbilityReloadable" MayRequire="Ludeon.RimWorld.Anomaly"> <!-- I duct-taped the Hellcat fire spew from Anomaly to the Saint's sword basically, sue me -->
+        <abilityDef>BEWH_CleansingFire</abilityDef> 
+      </li>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Biocodable"/>
+    </comps>
+    
+    <modExtensions>
+      <li Class="VEF.Things.ThingDefExtension">
+        <weaponCarryDrawOffsets>
+          <north>
+            <drawOffset>(0, 0, -0.15)</drawOffset>
+          </north>
+          <east>
+            <drawOffset>(0, 0, -0.15)</drawOffset>
+          </east>
+          <south>
+            <drawOffset>(0, 0, 0.05)</drawOffset>
+            <angleOffset>-20</angleOffset>
+          </south>
+          <west>
+            <drawOffset>(0, 0, -0.15)</drawOffset>
+          </west>
+        </weaponCarryDrawOffsets>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+<AbilityDef MayRequire="Ludeon.RimWorld.Anomaly"> 
+  <defName>BEWH_CleansingFire</defName>
+  <label>Cleansing Fire</label>
+  <description>The Ardent Blade unleashes a stream of searing flames upon the unfortunates in its path.</description>
+  <iconPath>UI/Abilities/BEWH_CleansingFlame</iconPath>
+  <cooldownTicksRange>5000</cooldownTicksRange> <!-- about 1 hour -->
+  <showOnCharacterCard>false</showOnCharacterCard>
+  
+  <verbProperties>
+    <verbClass>Verb_CastAbility</verbClass>
+    <requireLineOfSight>true</requireLineOfSight>
+    <range>12.9</range>
+    <warmupTime>0.5</warmupTime>
+    <soundCast>FireSpew_Resolve</soundCast>
+    <targetParams>
+      <canTargetLocations>true</canTargetLocations>
+    </targetParams>
+    <flammabilityAttachFireChanceCurve>
+      <points>
+        <li>(0.2, 0)</li>
+        <li>(1, 1)</li>
+      </points>
+    </flammabilityAttachFireChanceCurve>
+  </verbProperties>
+  <comps>
+    <li Class="CompProperties_AbilityFireSpew">
+      <range>12.9</range>
+      <lineWidthEnd>3</lineWidthEnd>
+      <filthDef>Filth_Ash</filthDef>
+      <damAmount>12</damAmount>
+      <canHitFilledCells>true</canHitFilledCells>
+    </li>
+    <li Class="CompProperties_AbilityBurner">
+      <numStreams>15</numStreams>
+      <range>8</range>
+      <coneSizeDegrees>7.2</coneSizeDegrees>
+      <moteDef>Mote_IncineratorBurst</moteDef>
+      <barrelOffsetDistance>10</barrelOffsetDistance>
+      <sizeReductionDistanceThreshold>8</sizeReductionDistanceThreshold>
+      <lifespanNoise>40</lifespanNoise>
+      <rangeNoise>.4</rangeNoise>
+      <effecterDef>BurnerUsed</effecterDef>
+    </li>
+  </comps>
+</AbilityDef>
+
+</Defs>

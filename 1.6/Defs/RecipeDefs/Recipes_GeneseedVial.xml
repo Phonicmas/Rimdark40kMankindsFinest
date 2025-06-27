@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Change descriptions to something like: undergo surgery to transform into x or whatever. Jobstring too.-->
+
+    <!-- Base Implant Recipe -->
+    <RecipeDef Name="BEWH_RecipeGeneseedVialBase" ParentName="SurgeryFlesh" Abstract="True">
+        <workerClass>Genes40k.WorkerClass_ImplantGeneseed</workerClass>
+        <hideBodyPartNames>true</hideBodyPartNames>
+        <targetsBodyPart>false</targetsBodyPart>
+        <surgeryOutcomeEffect Inherit = "False" />
+        <isViolation>true</isViolation>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>MedicineUltratech</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <recipeUsers>
+            <li>Human</li>
+        </recipeUsers>
+    </RecipeDef>
+
+    <!-- Thunder Warrior -->
+    <RecipeDef ParentName="BEWH_RecipeGeneseedVialBase">
+        <defName>BEWH_MakeThunderWarrior</defName>
+        <label>make thunder warrior</label>
+        <description>Implant Thunder Warrior genetic material into a patient.</description>
+        <jobString>Implanting Thunder Warrior genetic material.</jobString>
+        <researchPrerequisite>BEWH_GeneseedCreation</researchPrerequisite>
+        <workAmount>10000</workAmount>
+        <uiIconThing>BEWH_GeneseedVialThunderWarrior</uiIconThing>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>MedicineUltratech</li>
+                    </thingDefs>
+                </filter>
+                <count>4</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>BEWH_GeneseedVialThunderWarrior</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>BEWH_GeneseedVialThunderWarrior</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <skillRequirements>
+            <Medicine>7</Medicine>
+        </skillRequirements>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
+                <geneseedVial>BEWH_GeneseedVialThunderWarrior</geneseedVial>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!-- Custodes -->
+    <RecipeDef ParentName="BEWH_RecipeGeneseedVialBase">
+        <defName>BEWH_MakeCustodes</defName>
+        <label>make custodes</label>
+        <description>Implant Custodes genetic material into a patient.</description>
+        <jobString>Implanting Custodes genetic material.</jobString>
+        <researchPrerequisite>BEWH_CustodesCreation</researchPrerequisite>
+        <workAmount>15000</workAmount>
+        <uiIconThing>BEWH_GeneseedVialCustodes</uiIconThing>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>MedicineUltratech</li>
+                    </thingDefs>
+                </filter>
+                <count>15</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>BEWH_GeneseedVialCustodes</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>BEWH_GeneseedVialCustodes</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <skillRequirements>
+            <Medicine>13</Medicine>
+        </skillRequirements>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
+                <geneseedVial>BEWH_GeneseedVialCustodes</geneseedVial>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+</Defs>

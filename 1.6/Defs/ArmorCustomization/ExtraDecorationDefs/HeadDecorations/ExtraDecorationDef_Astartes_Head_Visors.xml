@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- Visors -->
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_Visor_1</defName>
+        <label>Apothecary visor</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_ApothecaryVisor_icon</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Headgear/Common/BEWH_Deco_ApothecaryVisor</drawnTextureIconPath>
+        <drawSize>(0.5, 0.5)</drawSize>
+        <sortOrder>3.1</sortOrder>
+        <isHelmetDecoration>true</isHelmetDecoration>
+        <defaultShowRotation>
+            <li>North</li>
+            <li>South</li>
+            <li>East</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmorHelmet</li>
+            <li>BEWH_MkXPowerArmorHelmet</li>
+        </appliesTo>
+        <drawData>
+            <dataNorth>
+                <layer>76.5</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>81</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>71.5</layer>
+            </dataEast>
+            <dataWest>
+                <layer>71.5</layer>
+                <flip>true</flip>
+            </dataWest>
+        </drawData>
+        <shaderType>CutoutComplex</shaderType>
+        <colourable>true</colourable>
+        <useMask>true</useMask>
+        <flipable>true</flipable>
+        <useArmorColourAsDefault>true</useArmorColourAsDefault>
+        <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
+    </Core40k.ExtraDecorationDef>
+
+</Defs>

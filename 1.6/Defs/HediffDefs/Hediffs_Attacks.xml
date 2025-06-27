@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- Wulfen Canines -->
+    <HediffDef>
+        <defName>BEWH_CanisHelixCanines</defName>
+        <label>wulfen canines</label>
+        <description>These elongated canines can dent plasteel, and leathery, resilient skin - a result of the Canis Helix.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_VerbGiver">
+                <tools>
+                    <li>
+                        <label>wulfen canines</label>
+                        <capacities>
+                            <li>Bite</li>
+                        </capacities>
+                        <power>22</power>
+                        <cooldownTime>1.7</cooldownTime>
+                        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+                        <soundMeleeHit>Pawn_Melee_HumanBite_Hit</soundMeleeHit>
+                        <soundMeleeMiss>Pawn_Melee_HumanBite_Miss</soundMeleeMiss>
+                    </li>
+                </tools>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <!-- Elongated Teeth -->
+    <HediffDef>
+        <defName>BEWH_RedThirstElongatedTeeth</defName>
+        <label>elongated teeth</label>
+        <description>These elongated teeth give you an advantages in the direst of naked hand to hand combat.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_VerbGiver">
+                <tools>
+                    <li>
+                        <label>elongated teeth</label>
+                        <capacities>
+                            <li>Bite</li>
+                        </capacities>
+                        <power>14</power>
+                        <cooldownTime>1.95</cooldownTime>
+                        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+                        <soundMeleeHit>Pawn_Melee_HumanBite_Hit</soundMeleeHit>
+                        <soundMeleeMiss>Pawn_Melee_HumanBite_Miss</soundMeleeMiss>
+                    </li>
+                </tools>
+            </li>
+        </comps>
+    </HediffDef>
+
+</Defs>

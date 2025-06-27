@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="BaseBullet">
+        <defName>BEWH_BolterRound</defName>
+        <label>bolt</label>
+        <thingClass>Projectile_Explosive</thingClass>
+        <graphicData>
+            <texPath>Things/Projectiles/BEWH_BolterRound</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.8, 0.8)</drawSize>
+        </graphicData>
+        <projectile>
+            <damageDef>BEWH_Bolt</damageDef>
+            <damageAmountBase>25</damageAmountBase>
+            <armorPenetrationBase>0.68</armorPenetrationBase>
+            <explosionRadius>1.2</explosionRadius>
+            <soundExplode>GunShotA</soundExplode>
+            <screenShakeFactor>0.2</screenShakeFactor>
+            <speed>90</speed>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseBullet">
+        <defName>BEWH_HeavyBolterRound</defName>
+        <label>heavy bolt</label>
+        <thingClass>Projectile_Explosive</thingClass>
+        <graphicData>
+            <texPath>Things/Projectiles/BEWH_BolterRound</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>BEWH_Bolt</damageDef>
+            <damageAmountBase>33</damageAmountBase>
+            <armorPenetrationBase>0.75</armorPenetrationBase>
+            <explosionRadius>1.2</explosionRadius>
+            <soundExplode>GunShotA</soundExplode>
+            <screenShakeFactor>0.2</screenShakeFactor>
+            <speed>80</speed>
+            <stoppingPower>2.0</stoppingPower>
+        </projectile>
+    </ThingDef>
+
+<!--     <ThingDef ParentName="BaseBullet">
+        <defName>BEWH_SaintBolterRound</defName>
+        <label>sanctified bolt</label>
+        <thingClass>Projectile_Explosive</thingClass>
+        <graphicData>
+            <texPath>Things/Projectiles/BEWH_BolterRound</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>BEWH_LivingSaintHoly</damageDef>
+            <damageAmountBase>33</damageAmountBase>
+            <armorPenetrationBase>0.75</armorPenetrationBase>
+            <explosionRadius>1.2</explosionRadius>
+            <soundExplode>GunShotA</soundExplode>
+            <screenShakeFactor>0.2</screenShakeFactor>
+            <speed>80</speed>
+            <stoppingPower>2.0</stoppingPower>
+        </projectile>
+    </ThingDef> -->
+
+</Defs>

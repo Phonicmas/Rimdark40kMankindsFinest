@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingCategoryDef>
+        <defName>BEWH_PrimarchMaterial</defName>
+        <label>primarch material</label>
+        <parent>Items</parent>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+        <defName>BEWH_ChapterMaterial</defName>
+        <label>legion material</label>
+        <parent>Items</parent>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+        <defName>BEWH_GeneticMatrix</defName>
+        <label>genetic matrix</label>
+        <parent>Items</parent>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+        <defName>BEWH_GeneseedVial</defName>
+        <label>ascendance vial</label>
+        <parent>Items</parent>
+    </ThingCategoryDef>
+
+</Defs>

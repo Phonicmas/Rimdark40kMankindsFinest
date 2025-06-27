@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <DamageDef>
+    <defName>BEWH_LivingSaintHoly</defName>
+    <label>holy</label>
+    <workerClass>Core40k.DamageWorker_Holy</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} met their death through holy energy.</deathMessage>
+
+    <!--<explosionColorCenter>(1, 0.7, 0.7)</explosionColorCenter>
+    <explosionColorEdge>(1, 1, 0.7)</explosionColorEdge>
+    <soundExplosion>BEWH_NoSound</soundExplosion>-->
+
+    <defaultDamage>20</defaultDamage>
+    <armorCategory />
+    <hediff>BEWH_HolyBurn</hediff>
+
+    <harmAllLayersUntilOutside>false</harmAllLayersUntilOutside>
+    <overkillPctToDestroyPart>0.4~1.0</overkillPctToDestroyPart>
+    <modExtensions>
+      <li Class="Core40k.DefModExtension_HolyDamageExtension">
+        <chanceToIgnite>37</chanceToIgnite>
+        <minHitAmount>2</minHitAmount>
+        <maxHitAmount>5</maxHitAmount>
+        <healPercentOfDamageToAllies>0.5</healPercentOfDamageToAllies>
+      </li>
+    </modExtensions>
+  </DamageDef>
+
+  <HediffDef ParentName="InjuryBase">
+    <defName>BEWH_HolyBurn</defName>
+    <label>divine burn</label>
+    <labelNoun>a searing divine burn</labelNoun>
+    <description>Flesh scorched not by flame alone, but by the purging light of holy wrath.</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>bandaged</labelTendedWell>
+        <labelTendedWellInner>sutured</labelTendedWellInner>
+        <labelSolidTendedWell>set</labelSolidTendedWell>
+      </li>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>surgical scar</permanentLabel>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.02</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.01</averagePainPerSeverityPermanent>
+      <bleedRate>0.15</bleedRate>
+      <canMerge>false</canMerge>
+      <useRemovedLabel>true</useRemovedLabel>
+    </injuryProps>
+  </HediffDef>
+
+</Defs>

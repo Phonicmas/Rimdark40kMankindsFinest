@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!-- Gold -->
+    <Core40k.DecorationColourPresetDef>
+        <defName>BEWH_DecoPaletteGold</defName>
+        <label>Gold</label>
+        <colour>(240,176,29)</colour>
+    </Core40k.DecorationColourPresetDef>
+
+<!-- Silver -->
+    <Core40k.DecorationColourPresetDef>
+        <defName>BEWH_DecoPaletteSilver</defName>
+        <label>Silver</label>
+        <colour>(0.68,0.7,0.7)</colour>
+    </Core40k.DecorationColourPresetDef>
+
+<!-- Green -->
+    <Core40k.DecorationColourPresetDef>
+        <defName>BEWH_DecoPaletteGreen</defName>
+        <label>Green</label>
+        <colour>(75,97,32)</colour>
+    </Core40k.DecorationColourPresetDef>
+
+<!-- Imperial fist Black -->
+    <Core40k.DecorationColourPresetDef>
+        <defName>BEWH_DecoPaletteIFBlack</defName>
+        <label>Black</label>
+        <colour>(50,51,50)</colour>
+    </Core40k.DecorationColourPresetDef>
+
+<!-- Helmet stripe Red -->
+    <Core40k.DecorationColourPresetDef>
+        <defName>BEWH_DecoPaletteStripeRed</defName>
+        <label>UM Red</label>
+        <colour>(140,3,3)</colour>
+    </Core40k.DecorationColourPresetDef>
+
+<!-- Leather Brown-->
+    <Core40k.DecorationColourPresetDef>
+        <defName>BEWH_DecoPaletteLeatherBrown</defName>
+        <label>Brown</label>
+        <colour>(173, 130, 87)</colour>
+    </Core40k.DecorationColourPresetDef>
+    
+<!-- Leather Grey -->
+    <Core40k.DecorationColourPresetDef>
+        <defName>BEWH_DecoPaletteLeatherGrey</defName>
+        <label>Grey</label>
+        <colour>(114, 114, 114)</colour>
+    </Core40k.DecorationColourPresetDef>
+
+<!-- Fabric Beige -->
+    <Core40k.DecorationColourPresetDef>
+        <defName>BEWH_DecoPaletteFabricBeige</defName>
+        <label>Beige</label>
+        <colour>(160, 158, 137)</colour>
+    </Core40k.DecorationColourPresetDef>
+<!-- Fabric Red -->
+    <Core40k.DecorationColourPresetDef>
+        <defName>BEWH_DecoPaletteFabricRed</defName>
+        <label>Maroon</label>
+        <colour>(104, 24, 33)</colour>
+    </Core40k.DecorationColourPresetDef>
+
+<!-- Apothecary Red -->
+    <Core40k.DecorationColourPresetDef>
+        <defName>BEWH_DecoPaletteApothecaryRed</defName>
+        <label>Apothecary Red</label>
+        <colour>(162, 54, 39)</colour>
+    </Core40k.DecorationColourPresetDef>
+
+<!-- Saint's Light -->
+    <Core40k.DecorationColourPresetDef>
+        <defName>BEWH_DecoPaletteSaintLight</defName>
+        <label>Saint's Light</label>
+        <colour>(245, 245, 210)</colour>
+    </Core40k.DecorationColourPresetDef>
+
+<!-- Saint's Rose -->
+    <Core40k.DecorationColourPresetDef>
+        <defName>BEWH_DecoPaletteSaintRose</defName>
+        <label>Rose</label>
+        <colour>(126, 51, 60)</colour>
+    </Core40k.DecorationColourPresetDef>
+
+<!-- Saint's Vengeance -->
+    <Core40k.DecorationColourPresetDef>
+        <defName>BEWH_DecoPaletteSaintVengeance</defName>
+        <label>Vengeance</label>
+        <colour>(140, 35, 47)</colour>
+    </Core40k.DecorationColourPresetDef>
+</Defs>

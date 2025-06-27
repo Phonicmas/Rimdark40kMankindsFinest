@@ -543,7 +543,13 @@ public class Building_PrimarchGrowthVat : Building_Enterable, IStoreSettingsPare
                 yield return command_Action4;
             }
         }
-        else
+
+        if (!DebugSettings.ShowDevGizmos)
+        {
+            yield break;
+        }
+
+        if (containedEmbryo == null)
         {
             yield return new Command_Action
             {
@@ -554,12 +560,7 @@ public class Building_PrimarchGrowthVat : Building_Enterable, IStoreSettingsPare
                 }
             };
         }
-
-        if (!DebugSettings.ShowDevGizmos)
-        {
-            yield break;
-        }
-            
+        
         //DEV: FILL NUTRITION
         yield return new Command_Action
         {
@@ -620,8 +621,11 @@ public class Building_PrimarchGrowthVat : Building_Enterable, IStoreSettingsPare
     private List<PrimarchEmbryo> AvailableEmbryo()
     {
         var embryos = new List<Thing>();
-        embryos.AddRange(Map.listerThings.ThingsOfDef(Genes40kDefOf.BEWH_PrimarchEmbryo));
-
+        if (Map?.listerThings != null)
+        {
+            embryos.AddRange(Map.listerThings.ThingsOfDef(Genes40kDefOf.BEWH_PrimarchEmbryo));
+        }
+        
         return embryos.Cast<PrimarchEmbryo>().ToList();
     }
 

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- Symbols -->
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_LsSkull</defName>
+        <label>Skull</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/LivingSaint/Armor/BEWH_Deco_LSaintSkull_icon</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/LivingSaint/BEWH_Deco_LSaintSkull</drawnTextureIconPath>
+        <drawSize>(0.125, 0.125)</drawSize>
+        <sortOrder>5</sortOrder>
+        <defaultShowRotation>
+            <li>South</li>           
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_LivingSaintArmor</li>
+        </appliesTo>
+        <drawData>
+            <dataSouth>
+                <layer>45</layer>
+            </dataSouth>
+        </drawData>
+        <shaderType>Cutout</shaderType>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_LsFleurDeLis</defName>
+        <label>Fleur-de-lis</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/LivingSaint/Armor/BEWH_Deco_LSaintLily_icon</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/LivingSaint/BEWH_Deco_LSaintLily</drawnTextureIconPath>
+        <drawSize>(0.125, 0.125)</drawSize>
+        <sortOrder>6</sortOrder>
+        <defaultShowRotation>
+            <li>South</li>           
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_LivingSaintArmor</li>
+        </appliesTo>
+        <drawData>
+            <dataSouth>
+                <layer>45</layer>
+            </dataSouth>
+        </drawData>
+        <shaderType>Cutout</shaderType>
+        <colourable>true</colourable>
+        <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
+        <availablePresets>
+            <li>BEWH_DecoPaletteGold</li>
+            <li>BEWH_DecoPaletteSilver</li>
+            <li>BEWH_DecoPaletteSaintLight</li>
+            <li>BEWH_DecoPaletteSaintRose</li>
+        </availablePresets>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_LsChalice</defName>
+        <label>Chalice</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/LivingSaint/Armor/BEWH_Deco_LSaintChalice_icon</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/LivingSaint/BEWH_Deco_LSaintChalice</drawnTextureIconPath>
+        <drawSize>(0.125, 0.125)</drawSize>
+        <sortOrder>7</sortOrder>
+        <defaultShowRotation>
+            <li>South</li>           
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_LivingSaintArmor</li>
+        </appliesTo>
+        <drawData>
+            <dataSouth>
+                <layer>45</layer>
+            </dataSouth>
+        </drawData>
+        <shaderType>Cutout</shaderType>
+        <colourable>true</colourable>
+        <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
+        <availablePresets>
+            <li>BEWH_DecoPaletteGold</li>
+            <li>BEWH_DecoPaletteSilver</li>
+            <li>BEWH_DecoPaletteSaintLight</li>
+            <li>BEWH_DecoPaletteSaintRose</li>
+        </availablePresets>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_LsRose</defName>
+        <label>Rose</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/LivingSaint/Armor/BEWH_Deco_LSaintRose_icon</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/LivingSaint/BEWH_Deco_LSaintRose</drawnTextureIconPath>
+        <drawSize>(0.125, 0.125)</drawSize>
+        <sortOrder>8</sortOrder>
+        <defaultShowRotation>
+            <li>South</li>           
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_LivingSaintArmor</li>
+        </appliesTo>
+        <drawData>
+            <dataSouth>
+                <layer>45</layer>
+            </dataSouth>
+        </drawData>
+        <shaderType>Cutout</shaderType>
+        <colourable>true</colourable>
+        <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
+        <availablePresets>
+            <li>BEWH_DecoPaletteGold</li>
+            <li>BEWH_DecoPaletteSilver</li>
+            <li>BEWH_DecoPaletteSaintLight</li>
+            <li>BEWH_DecoPaletteSaintRose</li>
+        </availablePresets>
+    </Core40k.ExtraDecorationDef>
+
+</Defs>

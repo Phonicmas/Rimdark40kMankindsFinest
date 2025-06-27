@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Base -->
+  <ThingDef ParentName="BuildingBase" Name="BEWH_GeneticStorage" Abstract="True">
+    <thingClass>Genes40k.Building_GeneticStorage</thingClass>
+    <statBases>
+      <WorkToBuild>2000</WorkToBuild>
+      <Flammability>0.5</Flammability>
+      <Beauty>0</Beauty>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Mass>10</Mass>
+    </statBases>
+    <defaultPlacingRot>North</defaultPlacingRot>
+    <designationCategory>BEWH_RimDarkCategory</designationCategory>
+    <building>
+      <destroySound>BuildingDestroyed_Metal_Small</destroySound>
+      <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+      <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+      <maxItemsInCell>1</maxItemsInCell>
+    </building>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>22</pathCost>
+    <blockWind>false</blockWind>
+    <fillPercent>0.5</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <neverMultiSelect>false</neverMultiSelect>
+    <rotatable>false</rotatable>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <surfaceType>Item</surfaceType>
+    <inspectorTabs>
+      <li>ITab_Storage</li>
+      <li>Genes40k.ITab_ContentsGeneticStorage</li>
+    </inspectorTabs>
+    <comps>
+      <li Class="CompProperties_Flickable" />
+    </comps>
+  </ThingDef>
+
+  <!-- Sangprimus Portum -->
+  <ThingDef ParentName="BEWH_GeneticStorage">
+    <defName>BEWH_SangprimusPortum</defName>
+    <label>Sangprimus Portum vault</label>
+    <description>This device replicates the function of the sanctified Sangprimus Portum. However, it does not contain the full range of genetic materials by default and must be filled with specific Legion and Primarch materials. Once filled, it enables the creation of gene-seed with the chosen traits when linked to a Gene-seed Gestator.\n\nWhilst near a gestator it is able to duplicate the material within to complete the matrices of Firstborn, Primaris and Primarchs.\nCan only store one copy of each material.</description>
+    <thingClass>Genes40k.Building_SangprimusPortum</thingClass>
+    <graphicData>
+      <texPath>Things/Building/SangprimusPortum/BEWH_SangprimusPortum</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shadowData>
+        <volume>(0.9,0.2,0.9)</volume>
+      </shadowData>
+      <drawSize>(4, 4)</drawSize>
+    </graphicData>
+    <size>(3, 1)</size>
+    <rotatable>true</rotatable>
+    <researchPrerequisites>
+      <li>BEWH_GeneseedCreation</li>
+    </researchPrerequisites>
+    <costList>
+      <Steel>100</Steel>
+      <Plasteel>50</Plasteel>
+      <Gold>10</Gold>
+      <ComponentIndustrial>8</ComponentIndustrial>
+      <ComponentSpacer>6</ComponentSpacer>
+    </costList>
+    <inspectorTabs Inherit="False">
+      <li>Genes40k.ITab_SangprimusPortum</li>
+    </inspectorTabs>
+    <building>
+      <maxItemsInCell>20</maxItemsInCell>
+      <fixedStorageSettings>
+        <filter>
+          <categories>
+            <li>BEWH_PrimarchMaterial</li>
+            <li>BEWH_ChapterMaterial</li>
+          </categories>
+        </filter>
+      </fixedStorageSettings>
+      <defaultStorageSettings>
+        <priority>Critical</priority>
+        <filter>
+          <categories>
+            <li>BEWH_PrimarchMaterial</li>
+            <li>BEWH_ChapterMaterial</li>
+          </categories>
+        </filter>
+      </defaultStorageSettings>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+      <li>Core40k.PlaceWorker_OnlyOnePerMap</li>
+    </placeWorkers>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>500</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Facility">
+        <maxSimultaneous>1</maxSimultaneous>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_SangprimusPortum" />
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Genetic matrix storage -->
+  <ThingDef ParentName="BEWH_GeneticStorage">
+    <defName>BEWH_GeneticCryostaticStorage</defName>
+    <label>genetic matrix storage</label>
+    <description>A secure containment unit designed to preserve Genetic Matrices in stasis, shielding them from environmental degradation and the corrupting influence of the Immaterium. Essential for maintaining their integrity.\n\nAble to holster 6 Genetic matrices, keeping them safe and preventing deterioration.</description>
+    <graphicData>
+      <texPath>Things/Building/GeneticMatrixStorage/BEWH_MatrixStorage_Empty</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.9,0.2,0.9)</volume>
+      </shadowData>
+      <drawSize>(2, 2.5)</drawSize>
+    </graphicData>
+    <defaultPlacingRot>North</defaultPlacingRot>
+    <size>(2, 1)</size>
+    <researchPrerequisites>
+      <li>BEWH_GeneseedPurification</li>
+    </researchPrerequisites>
+    <costList>
+      <Steel>100</Steel>
+      <Plasteel>10</Plasteel>
+      <Gold>2</Gold>
+      <ComponentIndustrial>4</ComponentIndustrial>
+      <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+    <building>
+      <fixedStorageSettings>
+        <filter>
+          <categories>
+            <li>BEWH_GeneticMatrix</li>
+          </categories>
+        </filter>
+      </fixedStorageSettings>
+      <defaultStorageSettings>
+        <priority>Critical</priority>
+        <filter>
+          <categories>
+            <li>BEWH_GeneticMatrix</li>
+          </categories>
+        </filter>
+      </defaultStorageSettings>
+      <maxItemsInCell>3</maxItemsInCell>
+    </building>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_GeneStorageGraphicProgression">
+        <halfFullGraphic>Things/Building/GeneticMatrixStorage/BEWH_MatrixStorage_Half</halfFullGraphic>
+        <fullGraphic>Things/Building/GeneticMatrixStorage/BEWH_MatrixStorage_Full</fullGraphic>
+      </li>
+    </modExtensions>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>500</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>2</glowRadius>
+        <glowColor>(244,189,35,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- Ascendance vial storage -->
+  <ThingDef ParentName="BEWH_GeneticStorage">
+    <defName>BEWH_GeneseedVialStorage</defName>
+    <label>vial stasis depository</label>
+    <description>A stasis vault designed to preserve Ascendance Vials in a state of suspended animation. It safeguards the volatile contents from degradation, time drift, and warp corruption, ensuring they remain viable for implantation.\n\nAble to holster 6 Ascendance Vials, keeping them safe and preventing deterioration.</description>
+    <graphicData>
+      <texPath>Things/Building/GeneseedVialStorage/BEWH_GeneseedVialStorage_Empty</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.9,0.2,0.9)</volume>
+      </shadowData>
+      <drawSize>(2, 2)</drawSize>
+      <drawOffset>(0, 0, 0.45)</drawOffset>
+    </graphicData>
+    <uiIconOffset>(0, 0.05)</uiIconOffset>
+    <uiIconScale>0.6</uiIconScale>
+    <altitudeLayer>Building</altitudeLayer>
+    <defaultPlacingRot>North</defaultPlacingRot>
+    <size>(1, 1)</size>
+    <researchPrerequisites>
+      <li>BEWH_GeneseedPerfection</li>
+    </researchPrerequisites>
+    <costList>
+      <Steel>100</Steel>
+      <Plasteel>25</Plasteel>
+      <Gold>5</Gold>
+      <ComponentIndustrial>6</ComponentIndustrial>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <building>
+      <fixedStorageSettings>
+        <filter>
+          <categories>
+            <li>BEWH_GeneseedVial</li>
+          </categories>
+        </filter>
+      </fixedStorageSettings>
+      <defaultStorageSettings>
+        <priority>Critical</priority>
+        <filter>
+          <categories>
+            <li>BEWH_GeneseedVial</li>
+          </categories>
+        </filter>
+      </defaultStorageSettings>
+      <maxItemsInCell>6</maxItemsInCell>
+    </building>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_GeneStorageGraphicProgression">
+        <halfFullGraphic>Things/Building/GeneseedVialStorage/BEWH_GeneseedVialStorage_Half</halfFullGraphic>
+        <fullGraphic>Things/Building/GeneseedVialStorage/BEWH_GeneseedVialStorage_Full</fullGraphic>
+      </li>
+    </modExtensions>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>500</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>2</glowRadius>
+        <glowColor>(244,189,35,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- Primarch embryo container -->
+  <ThingDef ParentName="BEWH_GeneticStorage">
+    <defName>BEWH_PrimarchEmbryoContainer</defName>
+    <label>primarch embryo container</label>
+    <description>A specialized containment unit equipped with advanced life-support systems. It can hold a single Primarch embryo cluster, keeping it stable and preventing rapid deterioration.</description>
+    <graphicData>
+      <texPath>Things/Building/PrimarchEmbryoContainer/BEWH_PrimarchEmbryoContainerEmpty</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shadowData>
+        <volume>(0.6,0.2,0.6)</volume>
+      </shadowData>
+      <drawSize>(1.05, 1.05)</drawSize>
+    </graphicData>
+    <defaultPlacingRot>North</defaultPlacingRot>
+    <researchPrerequisites>
+      <li>BEWH_PrimarchProject</li>
+    </researchPrerequisites>
+    <size>(1,1)</size>
+    <costList>
+      <Steel>40</Steel>
+      <Plasteel>40</Plasteel>
+      <Gold>10</Gold>
+      <ComponentIndustrial>8</ComponentIndustrial>
+      <ComponentSpacer>8</ComponentSpacer>
+    </costList>
+    <building>
+      <fixedStorageSettings>
+        <filter>
+          <thingDefs>
+            <li>BEWH_PrimarchEmbryo</li>
+          </thingDefs>
+        </filter>
+      </fixedStorageSettings>
+      <defaultStorageSettings>
+        <priority>Critical</priority>
+        <filter>
+          <thingDefs>
+            <li>BEWH_PrimarchEmbryo</li>
+          </thingDefs>
+        </filter>
+      </defaultStorageSettings>
+    </building>
+    <placeWorkers Inherit="False" />
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_GeneStorageGraphicProgression">
+        <fullGraphic>Things/Building/PrimarchEmbryoContainer/BEWH_PrimarchEmbryoContainerFull</fullGraphic>
+      </li>
+    </modExtensions>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>300</basePowerConsumption>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

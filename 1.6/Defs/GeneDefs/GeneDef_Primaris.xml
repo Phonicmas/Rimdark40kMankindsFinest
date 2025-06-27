@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Sinew Coil -->
+    <GeneDef ParentName="BEWH_PrimarisSpaceMarineParent">
+        <defName>BEWH_SinewCoil</defName>
+        <label>sinew coil</label>
+        <description>Carriers of this gene have sinews reinforced with durametallic coil-cables that contract with immense force, greatly enhancing their strength and providing an additional layer of defense.</description>
+        <iconPath>UI/Genes/Primaris/BEWH_Primaris_SinewCoilIcon</iconPath>
+        <displayOrderInCategory>21</displayOrderInCategory>
+        <statOffsets>
+            <CarryingCapacity>100</CarryingCapacity>
+            <MeleeDamageFactor>0.3</MeleeDamageFactor>
+            <StaggerDurationFactor>-0.3</StaggerDurationFactor>
+            <IncomingDamageFactor>-0.05</IncomingDamageFactor>
+        </statOffsets>
+        <suppressedTraits>
+            <li>
+                <def>Beauty</def>
+                <degree>-1</degree>
+            </li>
+            <li>
+                <def>Beauty</def>
+                <degree>-2</degree>
+            </li>
+        </suppressedTraits>
+        <minAgeActive>13</minAgeActive>
+        <exclusionTags>
+            <li>PM1</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_GeneExtension">
+                <addedWorldCarryCapacity>100</addedWorldCarryCapacity>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Magnificat -->
+    <GeneDef ParentName="BEWH_PrimarisSpaceMarineParent">
+        <defName>BEWH_Magnificat</defName>
+        <label>magnificat</label>
+        <description>Carriers of this gene possess a small, thumbnail-sized lobe in the brain's cortex that make them physically even larger, stronger and with faster reaction times than his non-Primaris brethren.</description>
+        <iconPath>UI/Genes/Primaris/BEWH_Primaris_MagnificatIcon</iconPath>
+        <displayOrderInCategory>22</displayOrderInCategory>
+        <statOffsets>
+            <MeleeDodgeChance>3</MeleeDodgeChance>
+            <LeatherAmount>15</LeatherAmount>
+            <MeatAmount>15</MeatAmount>
+            <Mass>15</Mass>
+            <VEF_CosmeticBodySize_Multiplier>0.1</VEF_CosmeticBodySize_Multiplier>
+
+            <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">-0.1</CertaintyLossFactor>
+            <SuppressionPower MayRequire="Ludeon.RimWorld.Ideology">0.1</SuppressionPower>
+        </statOffsets>
+        <statFactors>
+            <MeleeWeapon_CooldownMultiplier>0.85</MeleeWeapon_CooldownMultiplier>
+            <RangedCooldownFactor>0.85</RangedCooldownFactor>
+        </statFactors>
+        <minAgeActive>13</minAgeActive>
+        <exclusionTags>
+            <li>PM2</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <!-- Belisarian Furnace -->
+    <GeneDef ParentName="BEWH_PrimarisSpaceMarineParent">
+        <defName>BEWH_BelisarianFurnace</defName>
+        <label>belisarian furnace</label>
+        <description>Carriers of this gene possess a dormant organ connected to both Astartes hearts. In moments of extreme stress or severe trauma, it activates, releasing powerful bursts of self-synthesized chemicals - a hyper-cocktail that mimics the effects of combat stimms while accelerating the regeneration of tissue, bone, and muscle.</description>
+        <iconPath>UI/Genes/Primaris/BEWH_Primaris_BelisarianFurnaceIcon</iconPath>
+        <displayOrderInCategory>23</displayOrderInCategory>
+        <statOffsets>
+            <InjuryHealingFactor>0.5</InjuryHealingFactor>
+        </statOffsets>
+        <abilities>
+            <li>BEWH_BelisarianFurnaceBoost</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>BEWH_BelisarianFurnaceBoost</AbilityDef>
+        </descriptionHyperlinks>
+        <minAgeActive>13</minAgeActive>
+        <exclusionTags>
+            <li>PM3</li>
+        </exclusionTags>
+    </GeneDef>
+
+</Defs>

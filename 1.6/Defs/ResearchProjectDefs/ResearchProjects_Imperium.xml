@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!--=== Gene-seed Research ===-->
+  <!-- Gene-seed creation -->
+  <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
+    <defName>BEWH_GeneseedCreation</defName>
+    <label>Gene-seed creation</label>
+    <description>Unlocks the creation of genetic augmentations, suitable for creation of Proto-Astartes.</description>
+    <prerequisites>
+      <li>FertilityProcedures</li>
+      <li>Xenogermination</li>
+    </prerequisites>
+    <baseCost>6000</baseCost>
+    <researchViewX>0</researchViewX>
+    <researchViewY>1</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- Stasis Resurrection -->
+  <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
+    <defName>BEWH_StasisResurrection</defName>
+    <label>Stasis Resurrection</label>
+    <description>Unlocks the medical surgery required to bring back pawns from self-induced stasis.</description>
+    <prerequisites>
+      <li>MedicineProduction</li>
+      <li>BEWH_GeneseedPurification</li>
+    </prerequisites>
+    <baseCost>1000</baseCost>
+    <researchViewX>2</researchViewX>
+    <researchViewY>0</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- Gene-seed purification -->
+  <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
+    <defName>BEWH_GeneseedPurification</defName>
+    <label>Gene-seed purification</label>
+    <description>Unlocks the creation of more stable astartes, by purifying and futher developing gene-seed creation process.</description>
+    <prerequisites>
+      <li>BEWH_GeneseedCreation</li>
+    </prerequisites>
+    <baseCost>6000</baseCost>
+    <researchViewX>1</researchViewX>
+    <researchViewY>1</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- Gene-seed perfection -->
+  <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
+    <defName>BEWH_GeneseedPerfection</defName>
+    <label>Gene-seed perfection</label>
+    <description>Unlocks the creation of enhanced astartes, by futher improving and refining the gene-seed creation process.</description>
+    <prerequisites>
+      <li>BEWH_GeneseedPurification</li>
+    </prerequisites>
+    <baseCost>6000</baseCost>
+    <researchViewX>2</researchViewX>
+    <researchViewY>1</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- Gene-seed Extraction (Space Marine) -->
+  <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
+    <defName>BEWH_GeneseedExtractionFirstborn</defName>
+    <label>Firstborn gene-seed extraction</label>
+    <description>Unlocks the surgery to extract gene-seeds from a fully grown progenoid gland of a space marine.</description>
+    <prerequisites>
+      <li>BEWH_GeneseedPurification</li>
+    </prerequisites>
+    <baseCost>2500</baseCost>
+    <researchViewX>2</researchViewX>
+    <researchViewY>2</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- Gene-seed Extraction (Priamris Marine) -->
+  <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
+    <defName>BEWH_GeneseedExtractionPrimaris</defName>
+    <label>Primaris gene-seed extracton</label>
+    <description>Unlocks the surgery to extract gene-seeds from a fully grown progenoid gland of a Primaris marine.</description>
+    <prerequisites>
+      <li>BEWH_GeneseedPerfection</li>
+      <li>BEWH_GeneseedExtractionFirstborn</li>
+    </prerequisites>
+    <baseCost>2500</baseCost>
+    <researchViewX>3</researchViewX>
+    <researchViewY>2</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- Rubicon Primaris -->
+  <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
+    <defName>BEWH_RubiconSurgery</defName>
+    <label>Rubicon Surgery</label>
+    <description>Unlocks the Rubicon Surgery, allowing Firstborn to be reborn as Primaris.</description>
+    <prerequisites>
+      <li>BEWH_GeneseedPerfection</li>
+    </prerequisites>
+    <baseCost>5000</baseCost>
+    <researchViewX>3</researchViewX>
+    <researchViewY>1</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- Custodes creation -->
+  <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
+    <defName>BEWH_CustodesCreation</defName>
+    <label>Custodes creation</label>
+    <description>Unlocks the creation of Custodes - a long costly process.</description>
+    <prerequisites>
+      <li>BEWH_GeneseedCreation</li>
+    </prerequisites>
+    <baseCost>15000</baseCost>
+    <researchViewX>0</researchViewX>
+    <researchViewY>0</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- Primarch Project -->
+  <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
+    <defName>BEWH_PrimarchProject</defName>
+    <label>Primarch Project</label>
+    <description>Unlocks the creation of Primarchs - a very long and costly process.</description>
+    <prerequisites>
+      <li>BEWH_CustodesCreation</li>
+      <li>Archogenetics</li>
+    </prerequisites>
+    <baseCost>15000</baseCost>
+    <researchViewX>1</researchViewX>
+    <researchViewY>0</researchViewY>
+  </ResearchProjectDef>
+
+
+
+  <!-- Imperium Power Armor Mk. VII -->
+  <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
+    <defName>BEWH_AstartesPowerArmorMkVII</defName>
+    <label>Mk VII Power Armor</label>
+    <description>Grants access to STCs enabling the manufacture of Mk VII Power Armor.</description>
+    <researchViewX>4</researchViewX>
+    <researchViewY>0</researchViewY>
+    <baseCost>10000</baseCost>
+    <prerequisites>
+      <li>AdvancedFabrication</li>
+      <li>PoweredArmor</li>
+      <li MayRequire="Ludeon.RimWorld.Royalty">CataphractArmor</li>
+    </prerequisites>
+  </ResearchProjectDef>
+
+  <!-- Imperium Power Armor Mk. X -->
+  <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
+    <defName>BEWH_AstartesPowerArmorMkX</defName>
+    <label>Mk X Power Armor</label>
+    <description>Grants access to advanced STCs enabling the manufacture of Mk X Power Armor.</description>
+    <researchViewX>5</researchViewX>
+    <researchViewY>0</researchViewY>
+    <baseCost>3000</baseCost>
+    <prerequisites>
+      <li>BEWH_AstartesPowerArmorMkVII</li>
+    </prerequisites>
+  </ResearchProjectDef>
+
+  <!-- Imperium Weapons -->
+  <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
+    <defName>BEWH_AstartesWeapons</defName>
+    <label>Astartes Weaponry</label>
+    <description>Grants access to STCs enabling the manufacture of essential Astartes armaments.</description>
+    <researchViewX>4</researchViewX>
+    <researchViewY>1</researchViewY>
+    <baseCost>10000</baseCost>
+    <prerequisites>
+      <li>AdvancedFabrication</li>
+    </prerequisites>
+  </ResearchProjectDef>
+
+</Defs>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Gene Category -->
+    <!-- Mankind Finest -->
+    <GeneCategoryDef>
+        <defName>BEWH_ImperialGenes</defName>
+        <label>mandkinds finest</label>
+        <displayPriorityInXenotype>539</displayPriorityInXenotype>
+    </GeneCategoryDef>
+
+    <!-- Parent Genes -->
+    <GeneDef Name="BEWH_GenesOverallParent" Abstract="True">
+        <displayCategory>BEWH_ImperialGenes</displayCategory>
+        <canGenerateInGeneSet>false</canGenerateInGeneSet>
+        <selectionWeight>0</selectionWeight>
+    </GeneDef>
+
+    <!-- Thunder Warrior -->
+    <GeneDef ParentName="BEWH_GenesOverallParent" Name="BEWH_ThunderWarriorParent" Abstract="True">
+        <marketValueFactor>1.1</marketValueFactor>
+        <statOffsets>
+            <CancerRate>0.20</CancerRate>
+        </statOffsets>
+        <statFactors>
+            <LifespanFactor>0.85</LifespanFactor>
+        </statFactors>
+    </GeneDef>
+
+    <!-- Space Marine -->
+    <GeneDef ParentName="BEWH_GenesOverallParent" Name="BEWH_SpaceMarineParent" Abstract="True">
+        <marketValueFactor>1.1</marketValueFactor>
+        <biostatCpx>2</biostatCpx>
+    </GeneDef>
+
+    <!-- Space Marine Legion -->
+    <GeneDef ParentName="BEWH_SpaceMarineParent" Name="BEWH_ChapterGeneParent" Abstract="True">
+        <marketValueFactor>1.05</marketValueFactor>
+        <biostatCpx>1</biostatCpx>
+        <minAgeActive>0</minAgeActive>
+        <exclusionTags>
+            <li>BEWH_ChapterGene</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <!-- Space Marine Legion Flaw -->
+    <GeneDef ParentName="BEWH_SpaceMarineParent" Name="BEWH_ChapterGeneFlawParent" Abstract="True">
+        <marketValueFactor>1</marketValueFactor>
+        <biostatCpx>1</biostatCpx>
+        <minAgeActive>0</minAgeActive>
+        <exclusionTags>
+            <li>BEWH_ChapterGeneFlaw</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <!-- Primaris Marine -->
+    <GeneDef ParentName="BEWH_GenesOverallParent" Name="BEWH_PrimarisSpaceMarineParent" Abstract="True">
+        <marketValueFactor>1.3</marketValueFactor>
+        <biostatCpx>3</biostatCpx>
+    </GeneDef>
+
+    <!-- Custodes: Base -->
+    <GeneDef ParentName="BEWH_GenesOverallParent" Name="BEWH_CustodesBase" Abstract="True">
+        <marketValueFactor>2.5</marketValueFactor>
+        <minAgeActive>8</minAgeActive>
+    </GeneDef>
+
+    <!-- Primarch: Base -->
+    <GeneDef ParentName="BEWH_GenesOverallParent" Name="BEWH_PrimarchBase" Abstract="True">
+        <marketValueFactor>4</marketValueFactor>
+        <minAgeActive>8</minAgeActive>
+    </GeneDef>
+
+
+    <!-- Primarch Specific -->
+    <GeneDef ParentName="BEWH_GenesOverallParent" Name="BEWH_PrimarchSpecific" Abstract="True">
+        <marketValueFactor>3</marketValueFactor>
+        <biostatCpx>1</biostatCpx>
+        <biostatArc>1</biostatArc>
+        <minAgeActive>0</minAgeActive>
+        <exclusionTags>
+            <li>BEWH_PrimarchSpecific</li>
+        </exclusionTags>
+    </GeneDef>
+
+
+    <!-- Living Saint: Base -->
+    <GeneDef ParentName="BEWH_GenesOverallParent" Name="BEWH_LivingSaintBase" Abstract="True">
+        <biostatCpx>3</biostatCpx>
+        <biostatArc>1</biostatArc>
+        <marketValueFactor>2</marketValueFactor>
+        <minAgeActive>3</minAgeActive>
+    </GeneDef>
+
+
+    <!-- Perpetual -->
+    <GeneDef ParentName="BEWH_GenesOverallParent" Name="BEWH_Perpetual" Abstract="True">
+        <marketValueFactor>10</marketValueFactor>
+        <geneClass>Genes40k.Gene_Perpetual</geneClass>
+        <minAgeActive>0</minAgeActive>
+        <exclusionTags>
+            <li>BEWH_Perpetual</li>
+        </exclusionTags>
+        <biologicalAgeTickFactorFromAgeCurve>
+            <points>
+                <li>(0, 1)</li>
+                <li>(20, 1)</li>
+                <li>(21, 0)</li>
+            </points>
+        </biologicalAgeTickFactorFromAgeCurve>
+    </GeneDef>
+
+
+    <!-- Pariah -->
+    <GeneDef ParentName="BEWH_GenesOverallParent" Name="BEWH_PariahParent" Abstract="True">
+        <canGenerateInGeneSet>true</canGenerateInGeneSet>
+        <geneClass>Genes40k.Gene_Pariah</geneClass>
+        <suppressedTraits>
+            <li>
+                <def>PsychicSensitivity</def>
+                <degree>1</degree>
+            </li>
+            <li>
+                <def>PsychicSensitivity</def>
+                <degree>2</degree>
+            </li>
+        </suppressedTraits>
+        <aggroMentalBreakSelectionChanceFactor>0</aggroMentalBreakSelectionChanceFactor>
+        <exclusionTags>
+            <li>Psyker</li>
+            <li>Pariah</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <!-- Psyker -->
+    <GeneDef ParentName="BEWH_GenesOverallParent" Name="BEWH_PsykerParent" Abstract="True">
+        <canGenerateInGeneSet>true</canGenerateInGeneSet>
+        <geneClass>Genes40k.Gene_Psyker</geneClass>
+        <suppressedTraits>
+            <li>
+                <def>PsychicSensitivity</def>
+                <degree>-1</degree>
+            </li>
+            <li>
+                <def>PsychicSensitivity</def>
+                <degree>-2</degree>
+            </li>
+        </suppressedTraits>
+        <aggroMentalBreakSelectionChanceFactor>999</aggroMentalBreakSelectionChanceFactor>
+        <customEffectDescriptions>
+            <li>Gives the ability to fire psychic bolts.</li>
+        </customEffectDescriptions>
+        <exclusionTags>
+            <li>Psyker</li>
+            <li>Pariah</li>
+        </exclusionTags>
+        <minAgeActive>11</minAgeActive>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_GivesVFEAbility">
+                <abilityDefs>
+                    <li>BEWH_PsykerBolt</li>
+                </abilityDefs>
+            </li>
+            <li Class="VEF.Genes.GeneExtension">
+                <backgroundPathXenogenes>UI/Genes/BEWH_GeneBackground_Psyker</backgroundPathXenogenes>
+            </li>
+            <li Class="Genes40k.DefModExtension_Psyker"/>
+        </modExtensions>
+    </GeneDef>
+
+</Defs>

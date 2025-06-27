@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <MVCF.ModDef>
+        <defName>BEWH_MankindsFinest</defName>
+        <label>Mankinds Finest</label>
+        <description>MVCF for Mankinds Finest</description>
+        <ActivateFeatures>
+            <li>RangedAnimals</li>
+            <li>Drawing</li>
+            <li>ApparelVerbs</li>
+            <li>IndependentFire</li>
+            <li>IntegratedToggle</li>
+        </ActivateFeatures>
+    </MVCF.ModDef>
+
+</Defs>

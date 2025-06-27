@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Space Marine Base -->
+    <PawnKindDef ParentName="BEWH_ImperiumPawnBase" Name="BEWH_ImperiumSuperSoldierPawnBase" Abstract="True">
+        <initialWillRange>300~400</initialWillRange>
+        <initialResistanceRange>300~400</initialResistanceRange>
+        <acceptArrestChanceFactor>0</acceptArrestChanceFactor>
+        <fixedGender>Male</fixedGender>
+        <itemQuality>Good</itemQuality>
+        <requiredWorkTags>
+            <li>Violent</li>
+        </requiredWorkTags>
+        <backstoryFiltersOverride>
+            <li>
+                <categories>
+                    <li>ImperialFighter</li>
+                    <li>Offworld</li>
+                </categories>
+            </li>
+        </backstoryFiltersOverride>
+        <weaponMoney>10000~10000</weaponMoney>
+        <specificApparelRequirements>
+            <li>
+                <apparelDef>Apparel_BasicShirt</apparelDef>
+                <stuff>Cloth</stuff>
+            </li>
+            <li>
+                <apparelDef>Apparel_Pants</apparelDef>
+                <stuff>Cloth</stuff>
+            </li>
+        </specificApparelRequirements>
+        <weaponTags>
+            <li>BEWH_AstartesRanged</li>
+            <li>BEWH_AstartesMelee</li>
+        </weaponTags>
+        <disallowedTraits>
+            <li>Brawler</li>
+        </disallowedTraits>
+        <inventoryOptions>
+            <subOptionsChooseOne>
+                <li>
+                    <thingDef>MealSurvivalPack</thingDef>
+                    <countRange>
+                        <min>3</min>
+                        <max>4</max>
+                    </countRange>
+                </li>
+                <li>
+                    <thingDef>MedicineUltratech</thingDef>
+                    <countRange>
+                        <min>2</min>
+                        <max>3</max>
+                    </countRange>
+                </li>
+            </subOptionsChooseOne>
+        </inventoryOptions>
+        <techHediffsRequired>
+            <li>DeathAcidifier</li>
+        </techHediffsRequired>
+    </PawnKindDef>
+
+    <!-- Space Marine -->
+    <PawnKindDef ParentName="BEWH_ImperiumSuperSoldierPawnBase">
+        <defName>BEWH_FirstbornPawn</defName>
+        <label>Tactical Marine</label>
+        <combatPower>170</combatPower>
+        <apparelRequired>
+            <li>BEWH_MkVIIPowerArmor</li>
+            <li>BEWH_MkVIIPowerArmorHelmet</li>
+        </apparelRequired>
+        <skills>
+            <li>
+                <skill>Shooting</skill>
+                <range>9~14</range>
+            </li>
+            <li>
+                <skill>Melee</skill>
+                <range>9~14</range>
+            </li>
+        </skills>
+        <xenotypeSet>
+            <xenotypeChances>
+                <BEWH_SpaceMarine>1</BEWH_SpaceMarine>
+            </xenotypeChances>
+        </xenotypeSet>
+    </PawnKindDef>
+
+    <!-- Primaris Space Marine -->
+    <PawnKindDef ParentName="BEWH_ImperiumSuperSoldierPawnBase">
+        <defName>BEWH_PrimarisSpaceMarinePawn</defName>
+        <label>Tactical Primaris Marine</label>
+        <combatPower>220</combatPower>
+        <apparelRequired>
+            <li>BEWH_MkXPowerArmor</li>
+            <li>BEWH_MkXPowerArmorHelmet</li>
+        </apparelRequired>
+        <skills>
+            <li>
+                <skill>Shooting</skill>
+                <range>14~17</range>
+            </li>
+            <li>
+                <skill>Melee</skill>
+                <range>14~17</range>
+            </li>
+        </skills>
+        <xenotypeSet>
+            <xenotypeChances>
+                <BEWH_PrimarisSpaceMarine>1</BEWH_PrimarisSpaceMarine>
+            </xenotypeChances>
+        </xenotypeSet>
+    </PawnKindDef>
+
+    <!-- Custodes -->
+    <PawnKindDef ParentName="BEWH_ImperiumSuperSoldierPawnBase">
+        <defName>BEWH_CustodesPawn</defName>
+        <label>Custodes</label>
+        <combatPower>750</combatPower>
+        <apparelColor>(240,170,30)</apparelColor>
+        <apparelRequired>
+            <li>BEWH_MkXPowerArmor</li>
+            <li>BEWH_MkXPowerArmorHelmet</li>
+        </apparelRequired>
+        <skills>
+            <li>
+                <skill>Shooting</skill>
+                <range>17~19</range>
+            </li>
+            <li>
+                <skill>Melee</skill>
+                <range>17~19</range>
+            </li>
+        </skills>
+        <xenotypeSet>
+            <xenotypeChances>
+                <BEWH_Custodes>1</BEWH_Custodes>
+            </xenotypeChances>
+        </xenotypeSet>
+    </PawnKindDef>
+
+    <!-- Lord Commander - Primarch -->
+    <PawnKindDef ParentName="BEWH_ImperiumSuperSoldierPawnBase">
+        <defName>BEWH_LordCommanderPawn</defName>
+        <label>Primarch</label>
+        <combatPower>1200</combatPower>
+        <factionLeader>true</factionLeader>
+        <apparelColor>(230,150,0)</apparelColor>
+        <apparelRequired>
+            <li>BEWH_MkXPowerArmor</li>
+            <li>BEWH_MkXPowerArmorHelmet</li>
+        </apparelRequired>
+        <skills>
+            <li>
+                <skill>Shooting</skill>
+                <range>20</range>
+            </li>
+            <li>
+                <skill>Melee</skill>
+                <range>20</range>
+            </li>
+        </skills>
+        <xenotypeSet>
+            <xenotypeChances>
+                <BEWH_Primarch>1</BEWH_Primarch>
+            </xenotypeChances>
+        </xenotypeSet>
+    </PawnKindDef>
+
+</Defs>

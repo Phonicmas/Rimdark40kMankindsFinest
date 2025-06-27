@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Human Base -->
+    <PawnKindDef Name="BEWH_ImperiumPawnBase" Abstract="True">
+        <race>Human</race>
+        <defaultFactionType>BEWH_ImperiumFaction</defaultFactionType>
+        <invNutrition>2.55</invNutrition>
+        <backstoryCryptosleepCommonality>1.0</backstoryCryptosleepCommonality>
+        <ignoreIdeoApparelColors>true</ignoreIdeoApparelColors>
+        <useFactionXenotypes>false</useFactionXenotypes>
+        <minGenerationAge>19</minGenerationAge>
+        <maxGenerationAge>48</maxGenerationAge>
+        <gearHealthRange>
+            <min>1</min>
+            <max>1</max>
+        </gearHealthRange>
+        <apparelRequired>
+            <li>Apparel_BasicShirt</li>
+            <li>Apparel_Pants</li>
+        </apparelRequired>
+    </PawnKindDef>
+
+</Defs>

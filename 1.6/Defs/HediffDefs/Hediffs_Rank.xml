@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!--= Chapter Ancient =-->
+	<!-- Legion Standard -->
+	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
+		<defName>BEWH_ChapterBannerBuff</defName>
+		<label>Legion Standard</label>
+		<description>The sacred banner of my Legion fills me with unwavering resolve, driving me to greater feats in the Emperor's name!</description>
+		<stages>
+			<li>
+				<statOffsets>
+					<MeleeHitChance>3</MeleeHitChance>
+					<ShootingAccuracyPawn>3</ShootingAccuracyPawn>
+					<MentalBreakThreshold>-0.1</MentalBreakThreshold>
+				</statOffsets>
+				<painFactor>0.75</painFactor>
+			</li>
+		</stages>
+	</HediffDef>
+
+
+	<!--= Librarian =-->
+	<!-- Quickening -->
+	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
+		<defName>BEWH_LibrarianQuickeningBuff</defName>
+		<label>Quickening</label>
+		<description>The psyker's senses are heightened through precognitive abilities, greatly enhancing their speed and awareness.</description>
+		<stages>
+			<li>
+				<statFactors>
+					<MoveSpeed>1.3</MoveSpeed>
+					<RangedCooldownFactor>0.85</RangedCooldownFactor>
+					<MeleeCooldownFactor>0.85</MeleeCooldownFactor>
+				</statFactors>
+				<statOffsets>
+					<MeleeDodgeChance>4</MeleeDodgeChance>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<!-- Wave of Lethargy -->
+	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
+		<defName>BEWH_ChiefLibrarianWaveOfLethargyDebuff</defName>
+		<label>Wave of Lethargy</label>
+		<description>This character is under the influence of the wave of lethargy. As overwhelming exhaustion sets in, their limbs grow heavy, every movement a struggle. Their senses are dulled, leaving them sluggish and unable to react with the urgency they once had.</description>
+		<stages>
+			<li>
+				<statFactors>
+					<MoveSpeed>0.8</MoveSpeed>
+					<RangedCooldownFactor>1.15</RangedCooldownFactor>
+					<MeleeCooldownFactor>1.15</MeleeCooldownFactor>
+				</statFactors>
+				<statOffsets>
+					<MeleeDodgeChance>-4</MeleeDodgeChance>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+
+
+	<!--= Apothecary =-->
+	<!-- Stimulants -->
+	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
+		<defName>BEWH_ApothecaryStimulantsBuff</defName>
+		<label>stimulants</label>
+		<description>This character is under the effects of emergency stimulants that relieve pain and increase healing speed. Their body is temporarily revitalized, reducing fatigue and speeding recovery, but the effects are short-lived and they may need further care.</description>
+		<stages>
+			<li>
+				<statOffsets>
+					<InjuryHealingFactor>0.8</InjuryHealingFactor>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.15</offset>
+					</li>
+				</capMods>
+				<painFactor>0.33</painFactor>
+			</li>
+		</stages>
+	</HediffDef>
+
+
+	<!--= Captain =-->
+	<!-- Captains Orders -->
+	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
+		<defName>BEWH_CaptainsOrderBuff</defName>
+		<label>Orders Given!</label>
+		<description>This character has given the command with unwavering authority, empowering those around him.</description>
+		<comps>
+			<li Class="HediffCompProperties_GiveHediffsInRange">
+				<range>11.9</range>
+				<targetingParameters>
+					<canTargetBuildings>false</canTargetBuildings>
+					<canTargetAnimals>false</canTargetAnimals>
+					<canTargetMechs>false</canTargetMechs>
+					<onlyTargetColonists>true</onlyTargetColonists>
+				</targetingParameters>
+				<hediff>BEWH_CaptainsOrderBuffBuff</hediff>
+			</li>
+		</comps>
+	</HediffDef>
+	<!-- Buff given to others -->
+	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
+		<defName>BEWH_CaptainsOrderBuffBuff</defName>
+		<label>Orders Received!</label>
+		<description>This character is under the influence of the Captain's command, which increases their strength, accuracy, and morale. They fight with increased coordination and ferocity, hardening their resolve and increasing their combat effectiveness.</description>
+		<debugLabelExtra>other</debugLabelExtra>
+		<stages>
+			<li>
+				<statOffsets>
+					<MeleeHitChance>4</MeleeHitChance>
+					<ShootingAccuracyPawn>4</ShootingAccuracyPawn>
+					<MeleeCooldownFactor>-0.2</MeleeCooldownFactor>
+					<RangedCooldownFactor>-0.2</RangedCooldownFactor>
+				</statOffsets>
+			</li>
+		</stages>
+		<comps Inherit="False">
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>false</showRemainingTime>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+			<li Class="HediffCompProperties_Link">
+				<requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
+				<maxDistance>15</maxDistance>
+				<customMote>BEWH_MoteLink</customMote>
+			</li>
+		</comps>
+	</HediffDef>
+
+</Defs>

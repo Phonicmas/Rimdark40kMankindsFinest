@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+  <ThingDef Name="BEWH_GeneticBase" Abstract="True">
+    <thingClass>ThingWithComps</thingClass>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>0.6</Mass>
+      <Flammability>0</Flammability>
+      <DeteriorationRate>50</DeteriorationRate>
+    </statBases>
+    <canDeteriorateUnspawned>false</canDeteriorateUnspawned>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <tradeability>Buyable</tradeability>
+    <category>Item</category>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <intricate>true</intricate>
+    <drawerType>MapMeshOnly</drawerType>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>true</alwaysHaulable>
+    <drawGUIOverlay>false</drawGUIOverlay>
+    <rotatable>false</rotatable>
+    <pathCost>14</pathCost>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+  </ThingDef>
+
+  <ThingDef Name="BEWH_GeneticMatrixBase" ParentName="BEWH_GeneticBase" Abstract="True">
+    <thingClass>Genes40k.GeneticMatrix</thingClass>
+    <thingCategories>
+      <li>BEWH_GeneticMatrix</li>
+    </thingCategories>
+    <descriptionHyperlinks>
+      <ThingDef>BEWH_GeneticCryostaticStorage</ThingDef>
+      <ThingDef>BEWH_GeneseedGestator</ThingDef>
+    </descriptionHyperlinks>
+    <comps>
+      <li Class="Genes40k.CompProperties_DeteriorateOutsideBuilding">
+        <antiDeteriorateContainers>
+          <li>BEWH_GeneticCryostaticStorage</li>
+        </antiDeteriorateContainers>
+        <deteriorationRateOutside>50</deteriorationRateOutside>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef Name="BEWH_GeneseedVialBase" ParentName="BEWH_GeneticBase" Abstract="True">
+    <thingClass>Genes40k.GeneseedVial</thingClass>
+    <thingCategories>
+      <li>BEWH_GeneseedVial</li>
+    </thingCategories>
+    <descriptionHyperlinks>
+      <ThingDef>BEWH_GeneseedVialStorage</ThingDef>
+    </descriptionHyperlinks>
+    <comps>
+      <li Class="Genes40k.CompProperties_DeteriorateOutsideBuilding">
+        <antiDeteriorateContainers>
+          <li>BEWH_GeneseedVialStorage</li>
+        </antiDeteriorateContainers>
+        <deteriorationRateOutside>50</deteriorationRateOutside>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

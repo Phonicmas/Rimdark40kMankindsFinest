@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!--=== Living Saint ====-->
+  <!-- Divine Flight -->
+  <AbilityDef>
+    <defName>BEWH_DivineFlight</defName>
+    <label>Divine Flight</label>
+    <description>The Living Saint ascends into the air, sustained by their blessed wings, allowing them to cover great distances quickly.</description>
+    <iconPath>UI/Abilities/BEWH_DivineFlight</iconPath>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <cooldownTicksRange>0</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityJump</verbClass>
+      <label>divine flight</label>
+      <violent>false</violent>
+      <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+      <warmupTime>0.5</warmupTime>
+      <range>100</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <soundCast>BEWH_SFX_DivineFlightStart</soundCast>
+      <soundLanding>BEWH_SFX_DivineFlightEnd</soundLanding>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="Genes40k.CompProperties_AbilityDivineGraceCost">
+        <divineGraceCost>0.05</divineGraceCost>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Holy Blast -->
+  <AbilityDef>
+    <defName>BEWH_LivingSaintHolyBlast</defName>
+    <label>Holy Blast</label>
+    <description>The Living Saint unleashes a powerful burst of divine energy, blasting humanoid enemies in a targeted area with searing light. At the same time, the radiant power heals nearby allies, restoring their strength.</description>
+    <iconPath>UI/Abilities/BEWH_HolyBlast</iconPath>
+    <displayGizmoWhileUndrafted>False</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <cooldownTicksRange>1250</cooldownTicksRange>
+    <hostile>False</hostile>
+    <statBases>
+      <Ability_EffectRadius>11.9</Ability_EffectRadius>
+    </statBases>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>30</range>
+      <!-- warmup time synched to effecter -->
+      <warmupTime>5</warmupTime>
+      <warmupEffecter>HolyBlastWarmupEffect</warmupEffecter>
+      <soundCast>BEWH_SFX_HolyBlastCast</soundCast>
+      <targetParams>
+        <canTargetHumans>True</canTargetHumans>
+        <canTargetMechs>False</canTargetMechs>
+        <canTargetAnimals>False</canTargetAnimals>
+        <canTargetLocations>True</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="Genes40k.CompProperties_AbilityDivineGraceCost">
+        <divineGraceCost>1.00</divineGraceCost>
+      </li>
+      <li Class="Genes40k.CompProperties_AbilityAoeHit">
+        <damageDef>BEWH_LivingSaintHoly</damageDef>
+        <damageAmount>5</damageAmount>
+        <scaleStat>PsychicSensitivity</scaleStat>
+        <scaleFactor>0.6</scaleFactor>
+        <fleckDefTarget>BEWH_HolyBlastSmall</fleckDefTarget>
+        <fleckDefLocation>BEWH_HolyBlastBig</fleckDefLocation>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Proof of Faith -->
+  <AbilityDef>
+    <defName>BEWH_LivingSaintProofOfFaith</defName>
+    <label>Proof of Faith</label>
+    <description>The Living Saint calls upon a willing ally to make the ultimate sacrifice, channeling their life force to replenish the Saint's divine grace. The chosen pawn enters a state of deep, restorative coma for several days or weeks.</description>
+    <iconPath>UI/Abilities/BEWH_ProofOfFaith</iconPath>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <cooldownTicksRange>1250</cooldownTicksRange>
+    <hostile>False</hostile>
+    <jobDef>CastAbilityOnThingMelee</jobDef>
+    <statBases>
+      <Ability_Duration>1000</Ability_Duration>
+    </statBases>
+    <warmupStartSound>BEWH_SFX_PofWarmup</warmupStartSound>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityTouch</verbClass>
+      <range>-1</range>
+      <warmupTime>1</warmupTime>
+      <soundCast>BEWH_SFX_PofResolve</soundCast>
+      <targetParams>
+        <onlyTargetColonists>True</onlyTargetColonists>
+        <canTargetHumans>True</canTargetHumans>
+        <canTargetLocations>false</canTargetLocations>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetMechs>false</canTargetMechs>
+        <canTargetAnimals>false</canTargetAnimals>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="Genes40k.CompProperties_AbilityProofOfFaith">
+        <divineGraceGain>0.50</divineGraceGain>
+        <durationMultiplier>PsychicSensitivity</durationMultiplier>
+      </li>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>BEWH_ProofOfFaithComa</hediffDef>
+        <durationMultiplier>PsychicSensitivity</durationMultiplier>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Inviolable Aura -->
+  <AbilityDef>
+    <defName>BEWH_LivingSaintInviolableAura</defName>
+    <label>Inviolable Aura</label>
+    <description>The Living Saint radiates a divine aura that envelops nearby allies in holy protection, shielding them from harm. The effect remains attached to the caster for 6 hours.</description>
+    <iconPath>UI/Abilities/BEWH_AbilityLivingSaintAura</iconPath>
+    <jobDef>CastAbilityOnThing</jobDef>
+    <targetRequired>False</targetRequired>
+    <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
+    <stunTargetWhileCasting>True</stunTargetWhileCasting>
+    <showPsycastEffects>False</showPsycastEffects>
+    <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <statBases>
+      <Ability_Duration>250</Ability_Duration>
+      <Ability_EffectRadius>11.9</Ability_EffectRadius>
+    </statBases>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>0.5</warmupTime>
+      <range>11.9</range>
+      <drawAimPie>False</drawAimPie>
+      <requireLineOfSight>False</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetAnimals>false</canTargetAnimals>
+        <canTargetHumans>false</canTargetHumans>
+        <canTargetMechs>false</canTargetMechs>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="Genes40k.CompProperties_AbilityDivineGraceCost">
+        <divineGraceCost>1</divineGraceCost>
+      </li>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>BEWH_LivingSaintInviolableAuraSelf</hediffDef>
+        <onlyBrain>True</onlyBrain>
+        <onlyApplyToSelf>True</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>

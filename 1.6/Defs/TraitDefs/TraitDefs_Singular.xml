@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <TraitDef>
+        <defName>BEWH_FieldMedic</defName>
+        <commonality>1</commonality>
+        <degreeDatas>
+            <li>
+                <label>field medic</label>
+                <description>{PAWN_nameDef} used to function as a field medic. {PAWN_pronoun} has learned how to quickly apply first aid to fallen allies, sometimes too fast.</description>
+                <statOffsets>
+                    <MedicalTendSpeed>0.5</MedicalTendSpeed>
+                    <MedicalTendQuality>-0.1</MedicalTendQuality>
+                </statOffsets>
+            </li>
+        </degreeDatas>
+    </TraitDef>
+
+    <TraitDef>
+        <defName>BEWH_Surgeon</defName>
+        <commonality>1</commonality>
+        <degreeDatas>
+            <li>
+                <label>surgeon</label>
+                <description>{PAWN_nameDef} is a trained surgeon. {PAWN_pronoun} has undergone training in the fine arts of cutting people up and stiching them back together, hopefully fixing stuff that needed it midst the cutting.</description>
+                <statOffsets>
+                    <MedicalOperationSpeed>0.4</MedicalOperationSpeed>
+                    <MedicalSurgerySuccessChance>0.15</MedicalSurgerySuccessChance>
+                </statOffsets>
+            </li>
+        </degreeDatas>
+    </TraitDef>
+
+    <TraitDef>
+        <defName>BEWH_Serf</defName>
+        <commonality>0.35</commonality>
+        <degreeDatas>
+            <li>
+                <label>serf</label>
+                <description>{PAWN_nameDef} is a serf. {PAWN_pronoun} sole purpose is to serve his Space Marine masters.</description>
+            </li>
+        </degreeDatas>
+    </TraitDef>
+
+</Defs>

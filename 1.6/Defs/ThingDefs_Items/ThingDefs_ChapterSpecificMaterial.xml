@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Base -->
+    <ThingDef Name="BEWH_ChapterGeneticMaterial" Abstract="True">
+        <thingClass>Genes40k.GeneMaterialExtra</thingClass>
+        <statBases>
+            <MaxHitPoints>200</MaxHitPoints>
+            <MarketValue>4000</MarketValue>
+            <Mass>0.5</Mass>
+            <Flammability>0</Flammability>
+        </statBases>
+        <thingCategories>
+            <li>BEWH_ChapterMaterial</li>
+        </thingCategories>
+        <tradeTags>
+            <li>BEWH_ChapterMaterial</li>
+        </tradeTags>
+        <stackLimit>1</stackLimit>
+        <category>Item</category>
+        <drawerType>MapMeshOnly</drawerType>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <selectable>true</selectable>
+        <altitudeLayer>Item</altitudeLayer>
+        <alwaysHaulable>true</alwaysHaulable>
+        <drawGUIOverlay>true</drawGUIOverlay>
+        <rotatable>false</rotatable>
+        <pathCost>14</pathCost>
+        <thingSetMakerTags>
+            <li>RewardStandardHighFreq</li>
+        </thingSetMakerTags>
+        <descriptionHyperlinks>
+            <ThingDef>BEWH_SangprimusPortum</ThingDef>
+        </descriptionHyperlinks>
+        <comps>
+            <li Class="CompProperties_Forbiddable"/>
+        </comps>
+    </ThingDef>
+
+    <!-- Legion I - Dark Angels -->
+    <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
+        <defName>BEWH_ChapterMaterialI</defName>
+        <label>legion material I - Dark Angels</label>
+        <description>A specialized container designed to store and preserve the sacred genetic data of a specific Astartes Legion. Legion material develops within a Space Marine's body and can be harvested once fully developed and retrieved from the fallen.\n\nThis unit holds the genetic mutation material of Legion I - Dark Angels.</description>
+        <graphicData>
+            <texPath>Things/Item/ChapterMaterial/BEWH_ChapterMaterial_I</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <descriptionHyperlinks>
+            <GeneDef>BEWH_ChapterIDarkAngels</GeneDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>1</orderInt>
+                <shownMaterialName>Dark Angels</shownMaterialName>
+            </li>
+            <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+                <addedGene>BEWH_ChapterIDarkAngels</addedGene>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <!-- Legion II - ??? -->
+    <!--<ThingDef ParentName="BEWH_ChapterGeneticMaterial">
+        <defName>BEWH_ChapterMaterialII</defName>
+        <label>legion material II</label>
+        <description>This unit holds the genetic mutation material of Legion II</description>
+        <graphicData>
+            <texPath>Things/Item/ChapterMaterial/ChapterMaterial_II</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <descriptionHyperlinks>
+            <GeneDef>BEWH_ChapterII</GeneDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>2</orderInt>
+                <shownMaterialName>???</shownMaterialName>
+            </li>
+            <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+                <addedGene>BEWH_ChapterII</addedGene>
+            </li>
+        </modExtensions>
+    </ThingDef>-->
+
+    <!-- Legion III - Emperor's Children -->
+    <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
+        <defName>BEWH_ChapterMaterialIII</defName>
+        <label>legion material III - Emperor's Children</label>
+        <description>A specialized container designed to store and preserve the sacred genetic data of a specific Astartes Legion. Legion material develops within a Space Marine's body and can be harvested once fully developed and retrieved from the fallen.\n\nThis unit holds the genetic mutation material of Legion III - Emperor's Children.</description>
+        <graphicData>
+            <texPath>Things/Item/ChapterMaterial/BEWH_ChapterMaterial_III</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <descriptionHyperlinks>
+            <GeneDef>BEWH_ChapterIIIEmperorsChildren</GeneDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>3</orderInt>
+                <shownMaterialName>Emperor's Children</shownMaterialName>
+            </li>
+            <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+                <addedGene>BEWH_ChapterIIIEmperorsChildren</addedGene>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <!-- Legion IV - Iron Warriors -->
+    <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
+        <defName>BEWH_ChapterMaterialIV</defName>
+        <label>legion material IV - Iron Warriors</label>
+        <description>A specialized container designed to store and preserve the sacred genetic data of a specific Astartes Legion. Legion material develops within a Space Marine's body and can be harvested once fully developed and retrieved from the fallen.\n\nThis unit holds the genetic mutation material of Legion IV - Iron Warriors.</description>
+        <graphicData>
+            <texPath>Things/Item/ChapterMaterial/BEWH_ChapterMaterial_IV</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <descriptionHyperlinks>
+            <GeneDef>BEWH_ChapterIVIronWarriors</GeneDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>4</orderInt>
+                <shownMaterialName>Iron Warriors</shownMaterialName>
+            </li>
+            <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+                <addedGene>BEWH_ChapterIVIronWarriors</addedGene>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <!-- Legion V - White Scars -->
+    <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
+        <defName>BEWH_ChapterMaterialV</defName>
+        <label>legion material V - White Scars</label>
+        <description>A specialized container designed to store and preserve the sacred genetic data of a specific Astartes Legion. Legion material develops within a Space Marine's body and can be harvested once fully developed and retrieved from the fallen.\n\nThis unit holds the genetic mutation material of Legion V - White Scars.</description>
+        <graphicData>
+            <texPath>Things/Item/ChapterMaterial/BEWH_ChapterMaterial_V</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <descriptionHyperlinks>
+            <GeneDef>BEWH_ChapterVWhiteScars</GeneDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>5</orderInt>
+                <shownMaterialName>White Scars</shownMaterialName>
+            </li>
+            <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+                <addedGene>BEWH_ChapterVWhiteScars</addedGene>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <!-- Legion VI - Space Wolves -->
+    <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
+        <defName>BEWH_ChapterMaterialVI</defName>
+        <label>legion material VI - Space Wolves</label>
+        <description>A specialized container designed to store and preserve the sacred genetic data of a specific Astartes Legion. Legion material develops within a Space Marine's body and can be harvested once fully developed and retrieved from the fallen.\n\nThis unit holds the genetic mutation material of Legion VI - Space Wolves.</description>
+        <graphicData>
+            <texPath>Things/Item/ChapterMaterial/BEWH_ChapterMaterial_VI</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <descriptionHyperlinks>
+            <GeneDef>BEWH_ChapterVISpaceWolves</GeneDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>6</orderInt>
+                <shownMaterialName>Space Wolves</shownMaterialName>
+            </li>
+            <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+                <addedGene>BEWH_ChapterVISpaceWolves</addedGene>
+                <extraAddedGeneForDescription>BEWH_ChapterVIFlaw</extraAddedGeneForDescription>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <!-- Legion VII - Imperial Fists -->
+    <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
+        <defName>BEWH_ChapterMaterialVII</defName>
+        <label>legion material VII - Imperial Fists</label>
+        <description>A specialized container designed to store and preserve the sacred genetic data of a specific Astartes Legion. Legion material develops within a Space Marine's body and can be harvested once fully developed and retrieved from the fallen.\n\nThis unit holds the genetic mutation material of Legion VII - Imperial Fists.</description>
+        <graphicData>
+            <texPath>Things/Item/ChapterMaterial/BEWH_ChapterMaterial_VII</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <descriptionHyperlinks>
+            <GeneDef>BEWH_ChapterVIIImperialFists</GeneDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>7</orderInt>
+                <shownMaterialName>Imperial Fists</shownMaterialName>
+            </li>
+            <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+                <addedGene>BEWH_ChapterVIIImperialFists</addedGene>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <!-- Legion VIII - Night Lords -->
+    <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
+        <defName>BEWH_ChapterMaterialVIII</defName>
+        <label>legion material VIII - Night Lords</label>
+        <description>A specialized container designed to store and preserve the sacred genetic data of a specific Astartes Legion. Legion material develops within a Space Marine's body and can be harvested once fully developed and retrieved from the fallen.\n\nThis unit holds the genetic mutation material of Legion VIII - Night Lords.</description>
+        <graphicData>
+            <texPath>Things/Item/ChapterMaterial/BEWH_ChapterMaterial_VIII</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <descriptionHyperlinks>
+            <GeneDef>BEWH_ChapterVIIINightLords</GeneDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>8</orderInt>
+                <shownMaterialName>Night Lords</shownMaterialName>
+            </li>
+            <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+                <addedGene>BEWH_ChapterVIIINightLords</addedGene>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <!-- Legion IX - Blood Angels -->
+    <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
+        <defName>BEWH_ChapterMaterialIX</defName>
+        <label>legion material IX - Blood Angels</label>
+        <description>A specialized container designed to store and preserve the sacred genetic data of a specific Astartes Legion. Legion material develops within a Space Marine's body and can be harvested once fully developed and retrieved from the fallen.\n\nThis unit holds the genetic mutation material of Legion IX - Blood Angels.</description>
+        <graphicData>
+            <texPath>Things/Item/ChapterMaterial/BEWH_ChapterMaterial_IX</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <descriptionHyperlinks>
+            <GeneDef>BEWH_ChapterIXBloodAngels</GeneDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>9</orderInt>
+                <shownMaterialName>Blood Angels</shownMaterialName>
+            </li>
+            <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+                <addedGene>BEWH_ChapterIXBloodAngels</addedGene>
+                <extraAddedGeneForDescription>BEWH_ChapterIXFlaw</extraAddedGeneForDescription>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <!-- Legion X - Iron Hands -->
+    <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
+        <defName>BEWH_ChapterMaterialX</defName>
+        <label>legion material X - Iron Hands</label>
+        <description>A specialized container designed to store and preserve the sacred genetic data of a specific Astartes Legion. Legion material develops within a Space Marine's body and can be harvested once fully developed and retrieved from the fallen.\n\nThis unit holds the genetic mutation material of Legion X - Iron Hands.</description>
+        <graphicData>
+            <texPath>Things/Item/ChapterMaterial/BEWH_ChapterMaterial_X</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <descriptionHyperlinks>
+            <GeneDef>BEWH_ChapterXIronHands</GeneDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>10</orderInt>
+                <shownMaterialName>Iron Hands</shownMaterialName>
+            </li>
+            <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+                <addedGene>BEWH_ChapterXIronHands</addedGene>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <!-- Legion XI - ??? -->
+    <!--<ThingDef ParentName="BEWH_ChapterGeneticMaterial">
+        <defName>BEWH_ChapterMaterialXI</defName>
+        <label>legion material XI</label>
+        <description>This unit holds the genetic mutation material of Legion XI.</description>
+        <graphicData>
+            <texPath>Things/Item/ChapterMaterial/BEWH_ChapterMaterial_XI</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <descriptionHyperlinks>
+            <GeneDef>BEWH_ChapterXI</GeneDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>11</orderInt>
+                <shownMaterialName>???</shownMaterialName>
+            </li>
+            <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+                <addedGene>BEWH_ChapterXI</addedGene>
+            </li>
+        </modExtensions>
+    </ThingDef>-->
+
+    <!-- Legion XII - World Eaters -->
+    <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
+        <defName>BEWH_ChapterMaterialXII</defName>
+        <label>legion material XII - World Eaters</label>
+        <description>A specialized container designed to store and preserve the sacred genetic data of a specific Astartes Legion. Legion material develops within a Space Marine's body and can be harvested once fully developed and retrieved from the fallen.\n\nThis unit holds the genetic mutation material of Legion XII - World Eaters.</description>
+        <graphicData>
+            <texPath>Things/Item/ChapterMaterial/BEWH_ChapterMaterial_XII</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <descriptionHyperlinks>
+            <GeneDef>BEWH_ChapterXIIWorldEaters</GeneDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>12</orderInt>
+                <shownMaterialName>World Eaters</shownMaterialName>
+            </li>
+            <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+                <addedGene>BEWH_ChapterXIIWorldEaters</addedGene>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <!-- Legion XIII - Ultramarines -->
+    <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
+        <defName>BEWH_ChapterMaterialXIII</defName>
+        <label>legion material XIII - Ultramarines</label>
+        <description>A specialized container designed to store and preserve the sacred genetic data of a specific Astartes Legion. Legion material develops within a Space Marine's body and can be harvested once fully developed and retrieved from the fallen.\n\nThis unit holds the genetic mutation material of Legion XIII - Ultramarines.</description>
+        <graphicData>
+            <texPath>Things/Item/ChapterMaterial/BEWH_ChapterMaterial_XIII</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <descriptionHyperlinks>
+            <GeneDef>BEWH_ChapterXIIIUltramarines</GeneDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>13</orderInt>
+                <shownMaterialName>Ultramarines</shownMaterialName>
+            </li>
+            <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+                <addedGene>BEWH_ChapterXIIIUltramarines</addedGene>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <!-- Legion XIV - Death Guard -->
+    <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
+        <defName>BEWH_ChapterMaterialXIV</defName>
+        <label>legion material XIV - Death Guard</label>
+        <description>A specialized container designed to store and preserve the sacred genetic data of a specific Astartes Legion. Legion material develops within a Space Marine's body and can be harvested once fully developed and retrieved from the fallen.\n\nThis unit holds the genetic mutation material of Legion XIV - Death Guard.</description>
+        <graphicData>
+            <texPath>Things/Item/ChapterMaterial/BEWH_ChapterMaterial_XIV</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <descriptionHyperlinks>
+            <GeneDef>BEWH_ChapterXIVDeathGuard</GeneDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>14</orderInt>
+                <shownMaterialName>Death Guard</shownMaterialName>
+            </li>
+            <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+                <addedGene>BEWH_ChapterXIVDeathGuard</addedGene>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <!-- Legion XV - Thousand Sons -->
+    <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
+        <defName>BEWH_ChapterMaterialXV</defName>
+        <label>legion material XV - Thousand Sons</label>
+        <description>A specialized container designed to store and preserve the sacred genetic data of a specific Astartes Legion. Legion material develops within a Space Marine's body and can be harvested once fully developed and retrieved from the fallen.\n\nThis unit holds the genetic mutation material of Legion XV - Thousand Sons.</description>
+        <graphicData>
+            <texPath>Things/Item/ChapterMaterial/BEWH_ChapterMaterial_XV</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <descriptionHyperlinks>
+            <GeneDef>BEWH_ChapterXVThousandSons</GeneDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>15</orderInt>
+                <shownMaterialName>Thousand Sons</shownMaterialName>
+            </li>
+            <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+                <addedGene>BEWH_ChapterXVThousandSons</addedGene>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <!-- Legion XVI - Sons of Horus -->
+    <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
+        <defName>BEWH_ChapterMaterialXVI</defName>
+        <label>legion material XVI - Sons of Horus</label>
+        <description>A specialized container designed to store and preserve the sacred genetic data of a specific Astartes Legion. Legion material develops within a Space Marine's body and can be harvested once fully developed and retrieved from the fallen.\n\nThis unit holds the genetic mutation material of Legion XVI - Sons of Horus.</description>
+        <graphicData>
+            <texPath>Things/Item/ChapterMaterial/BEWH_ChapterMaterial_XVI</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <descriptionHyperlinks>
+            <GeneDef>BEWH_ChapterXVISonsOfHorus</GeneDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>16</orderInt>
+                <shownMaterialName>Sons of Horus</shownMaterialName>
+            </li>
+            <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+                <addedGene>BEWH_ChapterXVISonsOfHorus</addedGene>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <!-- Legion XVII - Word Bearers -->
+    <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
+        <defName>BEWH_ChapterMaterialXVII</defName>
+        <label>legion material XVII - Word Bearers</label>
+        <description>A specialized container designed to store and preserve the sacred genetic data of a specific Astartes Legion. Legion material develops within a Space Marine's body and can be harvested once fully developed and retrieved from the fallen.\n\nThis unit holds the genetic mutation material of Legion XVII - Word Bearers.</description>
+        <graphicData>
+            <texPath>Things/Item/ChapterMaterial/BEWH_ChapterMaterial_XVII</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <descriptionHyperlinks>
+            <GeneDef>BEWH_ChapterXVIIWordBearers</GeneDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>17</orderInt>
+                <shownMaterialName>Word Bearers</shownMaterialName>
+            </li>
+            <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+                <addedGene>BEWH_ChapterXVIIWordBearers</addedGene>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <!-- Legion XVIII - Salamanders -->
+    <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
+        <defName>BEWH_ChapterMaterialXVIII</defName>
+        <label>legion material XVIII - Salamanders</label>
+        <description>A specialized container designed to store and preserve the sacred genetic data of a specific Astartes Legion. Legion material develops within a Space Marine's body and can be harvested once fully developed and retrieved from the fallen.\n\nThis unit holds the genetic mutation material of Legion XVIII - Salamanders.</description>
+        <graphicData>
+            <texPath>Things/Item/ChapterMaterial/BEWH_ChapterMaterial_XVIII</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <descriptionHyperlinks>
+            <GeneDef>BEWH_ChapterXVIIISalamanders</GeneDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>18</orderInt>
+                <shownMaterialName>Salamanders</shownMaterialName>
+            </li>
+            <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+                <addedGene>BEWH_ChapterXVIIISalamanders</addedGene>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <!-- Legion XIX - Raven Guard -->
+    <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
+        <defName>BEWH_ChapterMaterialXIX</defName>
+        <label>legion material XIX - Raven Guard</label>
+        <description>A specialized container designed to store and preserve the sacred genetic data of a specific Astartes Legion. Legion material develops within a Space Marine's body and can be harvested once fully developed and retrieved from the fallen.\n\nThis unit holds the genetic mutation material of Legion XIX - Raven Guard.</description>
+        <graphicData>
+            <texPath>Things/Item/ChapterMaterial/BEWH_ChapterMaterial_XIX</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <descriptionHyperlinks>
+            <GeneDef>BEWH_ChapterXIXRavenGuard</GeneDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>19</orderInt>
+                <shownMaterialName>Raven Guard</shownMaterialName>
+            </li>
+            <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+                <addedGene>BEWH_ChapterXIXRavenGuard</addedGene>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <!-- Legion XX - Alpha Legion -->
+    <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
+        <defName>BEWH_ChapterMaterialXX</defName>
+        <label>legion material XX - Alpha Legion</label>
+        <description>A specialized container designed to store and preserve the sacred genetic data of a specific Astartes Legion. Legion material develops within a Space Marine's body and can be harvested once fully developed and retrieved from the fallen.\n\nThis unit holds the genetic mutation material of Legion XX - Alpha Legion.</description>
+        <graphicData>
+            <texPath>Things/Item/ChapterMaterial/BEWH_ChapterMaterial_XX</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <descriptionHyperlinks>
+            <GeneDef>BEWH_ChapterXXAlphaLegion</GeneDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>20</orderInt>
+                <shownMaterialName>Alpha Legion</shownMaterialName>
+            </li>
+            <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+                <addedGene>BEWH_ChapterXXAlphaLegion</addedGene>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+</Defs>

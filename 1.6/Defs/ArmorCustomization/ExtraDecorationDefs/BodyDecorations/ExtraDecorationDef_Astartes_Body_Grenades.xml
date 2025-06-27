@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- Grenades -->
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_Grenade_1</defName>
+        <label>Grenade 1</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_Grenade1_icon</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/Common/Grenades/BEWH_Deco_Grenade1</drawnTextureIconPath>
+        <sortOrder>7</sortOrder>
+        <defaultShowRotation>
+            <li>North</li>
+            <li>East</li>
+            <li>South</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmor</li>
+            <li>BEWH_MkXPowerArmor</li>
+        </appliesTo>
+        <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>76</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>65</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>64</layer>
+            </dataEast>
+            <dataWest>
+                <layer>64</layer>
+            </dataWest>
+        </drawData>
+        <shaderType>Cutout</shaderType>
+        <flipable>true</flipable>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_Grenade_2</defName>
+        <label>Grenade 2</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_Grenade2_icon</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/Common/Grenades/BEWH_Deco_Grenade2</drawnTextureIconPath>
+        <sortOrder>7.1</sortOrder>
+        <defaultShowRotation>
+            <li>North</li>
+            <li>West</li>
+            <li>South</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmor</li>
+            <li>BEWH_MkXPowerArmor</li>
+        </appliesTo>
+        <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>76</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>65</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>64</layer>
+                <flip>true</flip>
+            </dataEast>
+            <dataWest>
+                <layer>64</layer>
+            </dataWest>
+        </drawData>
+        <shaderType>Cutout</shaderType>
+        <flipable>true</flipable>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_KrGrenade_1</defName>
+        <label>Krak grenade 1</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_KrakGrenade1_icon</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/Common/Grenades/BEWH_Deco_KrakGrenade1</drawnTextureIconPath>
+        <sortOrder>7.2</sortOrder>
+        <defaultShowRotation>
+            <li>North</li>
+            <li>East</li>
+            <li>South</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmor</li>
+            <li>BEWH_MkXPowerArmor</li>
+        </appliesTo>
+        <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>76</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>65</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>64</layer>
+            </dataEast>
+            <dataWest>
+                <layer>64</layer>
+            </dataWest>
+        </drawData>
+        <shaderType>Cutout</shaderType>
+        <flipable>true</flipable>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_KrGrenade_2</defName>
+        <label>Krak grenade 2</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_KrakGrenade2_icon</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/Common/Grenades/BEWH_Deco_KrakGrenade2</drawnTextureIconPath>
+        <sortOrder>7.3</sortOrder>
+        <defaultShowRotation>
+            <li>North</li>
+            <li>West</li>
+            <li>South</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmor</li>
+            <li>BEWH_MkXPowerArmor</li>
+        </appliesTo>
+        <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>76</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>65</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>64</layer>
+                <flip>true</flip>
+            </dataEast>
+            <dataWest>
+                <layer>64</layer>
+            </dataWest>
+        </drawData>
+        <shaderType>Cutout</shaderType>
+        <flipable>true</flipable>
+    </Core40k.ExtraDecorationDef>
+
+</Defs>

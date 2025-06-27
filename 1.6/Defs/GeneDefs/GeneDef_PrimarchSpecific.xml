@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Legion I - Lion El'Jonson -->
+    <GeneDef ParentName="BEWH_PrimarchSpecific">
+        <defName>BEWH_PrimarchSpecificGeneI</defName>
+        <label>Lion El'Jonson</label>
+        <description>The genetic material of Lion El'Jonson.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Lion</iconPath>
+        <displayOrderInCategory>401</displayOrderInCategory>
+        <geneClass>Core40k.Gene_GiveVEFAbility</geneClass>
+        <statOffsets>
+            <MeleeDodgeChance>6</MeleeDodgeChance>
+        </statOffsets>
+        <customEffectDescriptions>
+            <li>Enables Forestwalking.</li>
+        </customEffectDescriptions>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="Core40k.DefModExtension_GivesVFEAbility">
+                <abilityDefs>
+                    <li>BEWH_ForestWalkLong</li>
+                    <li>BEWH_ForestWalkShort</li>
+                </abilityDefs>
+            </li>
+            <li Class="VEF.Genes.GeneExtension">
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Legion II - ??? Redacted by the Emperor's order -->
+    <!--<GeneDef ParentName="BEWH_PrimarchSpecific">
+        <defName>BEWH_PrimarchSpecificGeneII</defName>
+        <label>???</label>
+        <description>The genetic material of ???</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Chillgron</iconPath>
+        <displayOrderInCategory>402</displayOrderInCategory>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+        </modExtensions>
+    </GeneDef>-->
+
+    <!-- Legion III - Fulgrim -->
+    <GeneDef ParentName="BEWH_PrimarchSpecific">
+        <defName>BEWH_PrimarchSpecificGeneIII</defName>
+        <label>Fulgrim</label>
+        <description>The genetic material of Fulgrim.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Fulgrim</iconPath>
+        <displayOrderInCategory>403</displayOrderInCategory>
+        <statOffsets>
+            <PawnBeauty>2</PawnBeauty>
+        </statOffsets>
+        <statFactors>
+            <SocialImpact>2.5</SocialImpact>
+            <ConversionPower MayRequire="Ludeon.RimWorld.Ideology">1.5</ConversionPower>
+        </statFactors>
+        <forcedTraits>
+            <li>
+                <def>Beauty</def>
+                <degree>2</degree>
+            </li>
+        </forcedTraits>
+        <passionMod>
+            <skill>Artistic</skill>
+            <modType>AddOneLevel</modType>
+        </passionMod>
+        <customEffectDescriptions>
+            <li>Increase quality of artistic creations by 1.</li>
+        </customEffectDescriptions>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="Core40k.DefModExtension_BoostQualityCreatedByPawn">
+                <qualityBoostLevel>
+                    <li>
+                        <key>Artistic</key>
+                        <value>1</value>
+                    </li>
+                </qualityBoostLevel>
+            </li>
+            <li Class="VEF.Genes.GeneExtension">
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Legion IV - Perturabo -->
+    <GeneDef ParentName="BEWH_PrimarchSpecific">
+        <defName>BEWH_PrimarchSpecificGeneIV</defName>
+        <label>Perturabo</label>
+        <description>The genetic material of Perturabo.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Perturabo</iconPath>
+        <displayOrderInCategory>404</displayOrderInCategory>
+        <statOffsets>
+            <ResearchSpeed>2</ResearchSpeed>
+            <MechControlGroups>1</MechControlGroups>
+        </statOffsets>
+        <statFactors>
+            <ConstructionSpeed>1.2</ConstructionSpeed>
+        </statFactors>
+        <abilities>
+            <li>BEWH_IronCircle</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>BEWH_IronCircle</AbilityDef>
+        </descriptionHyperlinks>
+        <customEffectDescriptions>
+            <li>Innate mechlink.</li>
+        </customEffectDescriptions>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="VEF.Genes.GeneExtension">
+                <hediffsToBodyParts>
+                    <li>
+                        <hediff>MechlinkImplant</hediff>
+                        <bodyparts>
+                            <li>Brain</li>
+                        </bodyparts>
+                    </li>
+                </hediffsToBodyParts>
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Legion V - Jaghatai Khan -->
+    <GeneDef ParentName="BEWH_PrimarchSpecific">
+        <defName>BEWH_PrimarchSpecificGeneV</defName>
+        <label>Jaghatai Khan</label>
+        <description>The genetic material of Jaghatai Khan.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Khan</iconPath>
+        <displayOrderInCategory>405</displayOrderInCategory>
+        <statFactors>
+            <MoveSpeed>1.2</MoveSpeed>
+            <CaravanRidingSpeedFactor>2</CaravanRidingSpeedFactor>
+        </statFactors>
+        <abilities>
+            <li>BEWH_AlakhGeh</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>BEWH_AlakhGeh</AbilityDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="VEF.Genes.GeneExtension">
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Legion VI - Leman Russ -->
+    <GeneDef ParentName="BEWH_PrimarchSpecific">
+        <defName>BEWH_PrimarchSpecificGeneVI</defName>
+        <label>Leman Russ</label>
+        <description>The genetic material of Leman Russ.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Russ</iconPath>
+        <displayOrderInCategory>406</displayOrderInCategory>
+        <geneClass>Genes40k.Gene_WarpShield</geneClass>
+        <abilities>
+            <li>BEWH_WarpShield</li>
+            <li MayRequire="Ludeon.RimWorld.Royalty">BEWH_DenyTheWitch</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>BEWH_WarpShield</AbilityDef>
+            <AbilityDef MayRequire="Ludeon.RimWorld.Royalty">BEWH_DenyTheWitch</AbilityDef>
+        </descriptionHyperlinks>
+        <socialFightChanceFactor>1.25</socialFightChanceFactor>
+        <statOffsets>
+            <ComfyTemperatureMin>-25</ComfyTemperatureMin>
+        </statOffsets>
+        <conditionalStatAffecters>
+            <li Class="Genes40k.ConditionalStatAffecter_WarpShield">
+                <statFactors>
+                    <PsychicSensitivity>0</PsychicSensitivity>
+                </statFactors>
+            </li>
+        </conditionalStatAffecters>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="VEF.Genes.GeneExtension">
+                <hediffsToBodyParts>
+                    <li>
+                        <hediff>BEWH_CanisHelixCanines</hediff>
+                        <bodyparts>
+                            <li>Head</li>
+                        </bodyparts>
+                    </li>
+                </hediffsToBodyParts>
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Legion VII - Rogal Dorn -->
+    <GeneDef ParentName="BEWH_PrimarchSpecific">
+        <defName>BEWH_PrimarchSpecificGeneVII</defName>
+        <label>Rogal Dorn</label>
+        <description>The genetic material of Rogal Dorn.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Dorn</iconPath>
+        <displayOrderInCategory>407</displayOrderInCategory>
+        <hairColorOverride>(0.65, 0.65, 0.65)</hairColorOverride>
+        <iconColor>(255, 255, 255)</iconColor>
+        <statOffsets>
+            <ConstructionSpeed>0.45</ConstructionSpeed>
+            <ConstructSuccessChance>0.45</ConstructSuccessChance>
+        </statOffsets>
+        <geneClass>Core40k.Gene_GiveVEFAbility</geneClass>
+        <customEffectDescriptions>
+            <li>Gives the power to raise a temporary bastion to hold back attackers.</li>
+        </customEffectDescriptions>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="Core40k.DefModExtension_GivesVFEAbility">
+                <abilityDefs>
+                    <li>BEWH_RaiseBastion</li>
+                </abilityDefs>
+            </li>
+            <li Class="VEF.Genes.GeneExtension">
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Legion VIII - Konrad Curze -->
+    <GeneDef ParentName="BEWH_PrimarchSpecific">
+        <defName>BEWH_PrimarchSpecificGeneVIII</defName>
+        <label>Konrad Curze</label>
+        <description>The genetic material of Konrad Curze.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Curze</iconPath>
+        <displayOrderInCategory>408</displayOrderInCategory>
+        <geneClass>Core40k.Gene_GiveVEFAbility</geneClass>
+        <hairColorOverride>(1, 1, 1)</hairColorOverride>
+        <iconColor>(255, 255, 255)</iconColor>
+        <ignoreDarkness>true</ignoreDarkness>
+        <statOffsets>
+            <MeleeDodgeChance>2</MeleeDodgeChance>
+        </statOffsets>
+        <customEffectDescriptions>
+            <li>Able to let out a psychic scream, destroying lighting sources and stunning enemies.</li>
+        </customEffectDescriptions>
+        <conditionalStatAffecters>
+            <li Class="VEF.Genes.ConditionalStatAffecter_Darkness">
+                <statFactors>
+                    <MoveSpeed>1.25</MoveSpeed>
+                    <MeleeHitChance>1.5</MeleeHitChance>
+                </statFactors>
+                <statOffsets>
+                    <MeleeDodgeChance>3</MeleeDodgeChance>
+                </statOffsets>
+            </li>
+        </conditionalStatAffecters>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="Core40k.DefModExtension_GivesVFEAbility">
+                <abilityDefs>
+                    <li>BEWH_PsychicEmp</li>
+                </abilityDefs>
+            </li>
+            <li Class="VEF.Genes.GeneExtension">
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Legion IX - Sanguinius -->
+    <GeneDef ParentName="BEWH_PrimarchSpecific">
+        <defName>BEWH_PrimarchSpecificGeneIX</defName>
+        <label>Sanguinius</label>
+        <description>The genetic material of Sanguinius, when implanted, grows a set of featered wings, allow for greater speed and flight.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Sanguinius</iconPath>
+        <displayOrderInCategory>409</displayOrderInCategory>
+        <customEffectDescriptions>
+            <li>Ignores speed penalty from obstacles.</li>
+        </customEffectDescriptions>
+        <statOffsets>
+            <MeleeDodgeChance>10</MeleeDodgeChance>
+        </statOffsets>
+        <capMods>
+            <li>
+                <capacity>Moving</capacity>
+                <postFactor>2.5</postFactor>
+            </li>
+        </capMods>
+        <abilities>
+            <li>BEWH_AngelicFlight</li>
+        </abilities>
+        <exclusionTags>
+            <li>Wing</li>
+            <li>Wings</li>
+        </exclusionTags>
+        <renderNodeProperties>
+            <li>
+                <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+                <texPath>Things/Pawn/Humanlike/BodyAttachments/AngelicWings/BEWH_AngelicWings</texPath>
+                <drawSize>1.2</drawSize>
+                <parentTagDef>Body</parentTagDef>
+                <color>(255, 255, 255)</color>
+                <drawData>
+                    <defaultData>
+                        <layer>-1</layer>
+                    </defaultData>
+                    <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+                    <dataNorth>
+                        <layer>79</layer>
+                    </dataNorth>
+                    <dataSouth>
+                        <offset>(0, -0.1, 0)</offset>
+                    </dataSouth>
+                    <dataEast>
+                        <offset>(0, -0.1, 0)</offset>
+                    </dataEast>
+                    <dataWest>
+                        <offset>(0, -0.1, 0)</offset>
+                    </dataWest>
+                </drawData>
+            </li>
+        </renderNodeProperties>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="VEF.Genes.GeneExtension">
+                <hediffToWholeBody>BEWH_WingsHover</hediffToWholeBody>
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Legion X - Ferrus Manus -->
+    <GeneDef ParentName="BEWH_PrimarchSpecific">
+        <defName>BEWH_PrimarchSpecificGeneX</defName>
+        <label>Ferrus Manus</label>
+        <description>The genetic material of Ferrus Manus.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Manus</iconPath>
+        <displayOrderInCategory>410</displayOrderInCategory>
+        <passionMod>
+            <skill>Crafting</skill>
+            <modType>AddOneLevel</modType>
+        </passionMod>
+        <aptitudes>
+            <Crafting>6</Crafting>
+        </aptitudes>
+        <statOffsets>
+            <WorkSpeedGlobal>0.1</WorkSpeedGlobal>
+        </statOffsets>
+        <forcedTraits>
+            <li>
+                <def>Abrasive</def>
+            </li>
+        </forcedTraits>
+        <customEffectDescriptions>
+            <li>Increase quality of crafting creations by 2 tiers.</li>
+        </customEffectDescriptions>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="VEF.Genes.GeneExtension">
+                <hediffsToBodyParts>
+                    <li>
+                        <hediff>BEWH_NecrodermiteArm</hediff>
+                        <bodyparts>
+                            <li>Arm</li>
+                            <li>Arm</li>
+                        </bodyparts>
+                    </li>
+                </hediffsToBodyParts>
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
+            </li>
+            <li Class="Core40k.DefModExtension_BoostQualityCreatedByPawn">
+                <qualityBoostLevel>
+                    <li>
+                        <key>Crafting</key>
+                        <value>2</value>
+                    </li>
+                </qualityBoostLevel>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Legion XI - ??? Redacted by the Emperor's order -->
+    <!--<GeneDef ParentName="BEWH_PrimarchSpecific">
+        <defName>BEWH_PrimarchSpecificGeneXI</defName>
+        <label>???</label>
+        <description>The genetic material of ???</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Chillgron</iconPath>
+        <displayOrderInCategory>411</displayOrderInCategory>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+        </modExtensions>
+    </GeneDef>-->
+
+    <!-- Legion XII - Angron -->
+    <GeneDef ParentName="BEWH_PrimarchSpecific">
+        <defName>BEWH_PrimarchSpecificGeneXII</defName>
+        <label>Angron</label>
+        <description>The genetic material of Angron.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Chillgron</iconPath>
+        <displayOrderInCategory>412</displayOrderInCategory>
+        <forcedTraits>
+            <li>
+                <def>Brawler</def>
+            </li>
+        </forcedTraits>
+        <statOffsets>
+            <MentalBreakThreshold>-0.1</MentalBreakThreshold>
+        </statOffsets>
+        <painFactor>0.1</painFactor>
+        <abilities>
+            <li>BEWH_ChillgronEmpathy</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>BEWH_ChillgronEmpathy</AbilityDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="VEF.Genes.GeneExtension">
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Legion XIII - Roboute Guilliman -->
+    <GeneDef ParentName="BEWH_PrimarchSpecific">
+        <defName>BEWH_PrimarchSpecificGeneXIII</defName>
+        <label>Roboute Guilliman</label>
+        <description>The genetic material of Roboute Guilliman.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Robot</iconPath>
+        <displayOrderInCategory>413</displayOrderInCategory>
+        <geneClass>Core40k.Gene_GiveVEFAbility</geneClass>
+        <customEffectDescriptions>
+            <li>Ability to increase productivity of colony pawns.</li>
+        </customEffectDescriptions>
+        <forcedTraits>
+            <li>
+                <def>Industriousness</def>
+                <degree>2</degree>
+            </li>
+        </forcedTraits>
+        <statOffsets>
+            <TradePriceImprovement>1</TradePriceImprovement>
+            <NegotiationAbility>1</NegotiationAbility>
+        </statOffsets>
+        <statFactors>
+            <WorkSpeedGlobal>1.35</WorkSpeedGlobal>
+        </statFactors>
+        <aptitudes>
+            <Social>4</Social>
+        </aptitudes>
+        <passionMod>
+            <skill>Social</skill>
+            <modType>AddOneLevel</modType>
+        </passionMod>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="Core40k.DefModExtension_GivesVFEAbility">
+                <abilityDefs>
+                    <li>BEWH_OpusMaxima</li>
+                </abilityDefs>
+            </li>
+            <li Class="VEF.Genes.GeneExtension">
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Legion XIV - Mortarion -->
+    <GeneDef ParentName="BEWH_PrimarchSpecific">
+        <defName>BEWH_PrimarchSpecificGeneXIV</defName>
+        <label>Mortarion</label>
+        <description>The genetic material of Mortarion.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Morty</iconPath>
+        <displayOrderInCategory>414</displayOrderInCategory>
+        <statFactors>
+            <ImmunityGainSpeed>100</ImmunityGainSpeed>
+            <IncomingDamageFactor>0.75</IncomingDamageFactor>
+        </statFactors>
+        <immuneToToxGasExposure>true</immuneToToxGasExposure>
+        <statOffsets>
+            <ToxicResistance>10</ToxicResistance>
+            <ToxicEnvironmentResistance>10</ToxicEnvironmentResistance>
+            <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+            <ArmorRating_Heat>0.20</ArmorRating_Heat>
+        </statOffsets>
+        <painFactor>0.5</painFactor>
+        <forcedTraits>
+            <li>
+                <def>Nerves</def>
+                <degree>2</degree>
+            </li>
+        </forcedTraits>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="VEF.Genes.GeneExtension">
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Legion XV - Magnus the Red -->
+    <GeneDef ParentName="BEWH_PrimarchSpecific">
+        <defName>BEWH_PrimarchSpecificGeneXV</defName>
+        <label>Magnus the Red</label>
+        <description>The genetic material of Magnus the Red, when implanted, greatly improves psychic capabilities.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Mangus</iconPath>
+        <displayOrderInCategory>415</displayOrderInCategory>
+        <geneClass>Core40k.Gene_AddRandomGeneAndOrTraitByWeight</geneClass>
+        <statFactors>
+            <PsychicSensitivity>8</PsychicSensitivity>
+            <MeditationFocusGain>4.5</MeditationFocusGain>
+            <PsychicEntropyRecoveryRate>4</PsychicEntropyRecoveryRate>
+        </statFactors>
+        <capMods>
+            <li>
+                <capacity>Consciousness</capacity>
+                <postFactor>1.5</postFactor>
+            </li>
+        </capMods>
+        <skinColorOverride>(150, 62, 62)</skinColorOverride>
+        <iconColor>(255, 255, 255)</iconColor>
+        <customEffectDescriptions>
+            <li>Gives the Beta Psyker gene.</li>
+        </customEffectDescriptions>
+        <descriptionHyperlinks>
+            <GeneDef>BEWH_BetaPsyker</GeneDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="Core40k.DefModExtension_AddRandomGeneByWeight">
+                <possibleGenesToGive>
+                    <li>
+                        <key>BEWH_BetaPsyker</key>
+                        <value>100</value>
+                    </li>
+                </possibleGenesToGive>
+            </li>
+            <li Class="VEF.Genes.GeneExtension">
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Legion XVI - Horus Lupercal -->
+    <GeneDef ParentName="BEWH_PrimarchSpecific">
+        <defName>BEWH_PrimarchSpecificGeneXVI</defName>
+        <label>Horus Lupercal</label>
+        <description>The genetic material of Horus Lupercal.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_TheBaldOne</iconPath>
+        <displayOrderInCategory>416</displayOrderInCategory>
+        <geneClass>Core40k.Gene_GiveVEFAbility</geneClass>
+        <customEffectDescriptions>
+            <li>Ability to increase combat usefulness of colony pawns.</li>
+        </customEffectDescriptions>
+        <statFactors>
+            <ArrestSuccessChance>2</ArrestSuccessChance>
+            <SocialImpact>1.4</SocialImpact>
+            <ShootingAccuracyFactor_Short>1.25</ShootingAccuracyFactor_Short>
+        </statFactors>
+        <aptitudes>
+            <Social>2</Social>
+        </aptitudes>
+        <passionMod>
+            <skill>Social</skill>
+            <modType>AddOneLevel</modType>
+        </passionMod>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="Core40k.DefModExtension_GivesVFEAbility">
+                <abilityDefs>
+                    <li>BEWH_WarPlanning</li>
+                </abilityDefs>
+            </li>
+            <li Class="VEF.Genes.GeneExtension">
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Legion XVII - Lorgar -->
+    <GeneDef ParentName="BEWH_PrimarchSpecific">
+        <defName>BEWH_PrimarchSpecificGeneXVII</defName>
+        <label>Lorgar</label>
+        <description>The genetic material of Lorgar.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Lorgar</iconPath>
+        <displayOrderInCategory>410</displayOrderInCategory>
+        <abilities>
+            <li>BEWH_LorgarWordOfAuthority</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>BEWH_LorgarWordOfAuthority</AbilityDef>
+        </descriptionHyperlinks>
+        <statFactors>
+            <ArrestSuccessChance>2</ArrestSuccessChance>
+            <SocialImpact>1.5</SocialImpact>
+            <ConversionPower MayRequire="Ludeon.RimWorld.Ideology">2</ConversionPower>
+        </statFactors>
+        <statOffsets>
+            <PsychicSensitivity>2</PsychicSensitivity>
+            <MeditationFocusGain>0.75</MeditationFocusGain>
+            <PsychicEntropyRecoveryRate>0.75</PsychicEntropyRecoveryRate>
+        </statOffsets>
+        <aptitudes>
+            <Social>3</Social>
+        </aptitudes>
+        <passionMod>
+            <skill>Social</skill>
+            <modType>AddOneLevel</modType>
+        </passionMod>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="VEF.Genes.GeneExtension">
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Legion XVIII - Vulkan -->
+    <GeneDef ParentName="BEWH_PrimarchSpecific">
+        <defName>BEWH_PrimarchSpecificGeneXVIII</defName>
+        <label>Vulkan</label>
+        <description>The genetic material of Vulkan.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Vulkan</iconPath>
+        <displayOrderInCategory>418</displayOrderInCategory>
+        <geneClass>Core40k.Gene_AddRandomGeneAndOrTraitByWeight</geneClass>
+        <forcedTraits>
+            <li>
+                <def>Kind</def>
+                <degree>0</degree>
+            </li>
+        </forcedTraits>
+        <skinColorOverride>(55, 55, 55)</skinColorOverride>
+        <iconColor>(255, 255, 255)</iconColor>
+        <customEffectDescriptions>
+            <li>Gives the Beta Perpetual gene.</li>
+        </customEffectDescriptions>
+        <descriptionHyperlinks>
+            <GeneDef>BEWH_PerpetualBeta</GeneDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="Core40k.DefModExtension_AddRandomGeneByWeight">
+                <possibleGenesToGive>
+                    <li>
+                        <key>BEWH_PerpetualBeta</key>
+                        <value>100</value>
+                    </li>
+                </possibleGenesToGive>
+            </li>
+            <li Class="VEF.Genes.GeneExtension">
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Legion XIX - Corvus Corax -->
+    <GeneDef ParentName="BEWH_PrimarchSpecific">
+        <defName>BEWH_PrimarchSpecificGeneXIX</defName>
+        <label>Corvus Corax</label>
+        <description>The genetic material of Corvus Corax.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Corvus</iconPath>
+        <displayOrderInCategory>419</displayOrderInCategory>
+        <conditionalStatAffecters>
+            <li Class="VEF.Genes.ConditionalStatAffecter_Darkness">
+                <statFactors>
+                    <MoveSpeed>1.5</MoveSpeed>
+                    <ShootingAccuracyPawn>1.75</ShootingAccuracyPawn>
+                    <MeleeHitChance>1.75</MeleeHitChance>
+                    <HuntingStealth>4</HuntingStealth>
+                </statFactors>
+            </li>
+        </conditionalStatAffecters>
+        <abilities>
+            <li>BEWH_Conceal</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>BEWH_Conceal</AbilityDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="VEF.Genes.GeneExtension">
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Legion XX - Alpharius/Omegon -->
+    <GeneDef ParentName="BEWH_PrimarchSpecific">
+        <defName>BEWH_PrimarchSpecificGeneXX</defName>
+        <label>Alpharius/Omegon</label>
+        <description>The genetic material of Alpharius/Omegon.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_AlphaOmega</iconPath>
+        <displayOrderInCategory>420</displayOrderInCategory>
+        <geneClass>Genes40k.Gene_TwinConnected</geneClass>
+        <customEffectDescriptions>
+            <li>You have a twin!</li>
+        </customEffectDescriptions>
+        <abilities>
+            <li>BEWH_TwinTeleportation</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>BEWH_TwinTeleportation</AbilityDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="Genes40k.DefModExtension_PrimarchVatExtras">
+                <childAmount>2</childAmount>
+            </li>
+            <li Class="VEF.Genes.GeneExtension">
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+</Defs>

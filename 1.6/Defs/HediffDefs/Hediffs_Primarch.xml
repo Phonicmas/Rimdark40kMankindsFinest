@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!-- Jaghatai Khan: Alakh Geh -->
+	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
+		<defName>BEWH_AlakhGeh</defName>
+		<label>Alakh Geh</label>
+		<description>Through thought, will, and intention alone, the Khan is able to move unimpeded and swiftly.</description>
+		<stages>
+			<li>
+				<statFactors>
+					<MoveSpeed>3.5</MoveSpeed>
+					<MeleeCooldownFactor>0.5</MeleeCooldownFactor>
+					<MeleeDodgeChance>3.5</MeleeDodgeChance>
+					<MeleeHitChance>9</MeleeHitChance>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<!-- Corvus: Conceal-->
+	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
+		<defName>BEWH_Concealed</defName>
+		<label>concealed</label>
+		<description>Concealed and undetectable to almost everything.</description>
+		<comps>
+			<li Class="HediffCompProperties_Invisibility">
+				<visibleToPlayer>true</visibleToPlayer>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<!-- Roboute: Opus Maxima -->
+	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
+		<defName>BEWH_OpusMaxima</defName>
+		<label>Opus Maxima</label>
+		<description>No room for rest, no time for doubt!</description>
+		<stages>
+			<li>
+				<statFactors>
+					<WorkSpeedGlobal>1.65</WorkSpeedGlobal>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<!-- Horus: War Planning -->
+	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
+		<defName>BEWH_WarPlanning</defName>
+		<label>War planned</label>
+		<description>Tactics and strategies!</description>
+		<stages>
+			<li>
+				<statFactors>
+					<ShootingAccuracyFactor_Short>1.35</ShootingAccuracyFactor_Short>
+				</statFactors>
+				<statOffsets>
+					<MeleeHitChance>4</MeleeHitChance>
+					<ShootingAccuracyPawn>4</ShootingAccuracyPawn>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<!-- Leman Russ: Denied Witch-->
+	<HediffDef>
+		<defName>BEWH_DeniedWitch</defName>
+		<label>Denied Witch</label>
+		<description>This pawn's psychic and mental abilities have been suppressed, rendering them unable to cast psycasts.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<initialSeverity>1.0 </initialSeverity>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<minSeverity>0</minSeverity>
+				<statFactors>
+					<PsychicSensitivity>0.05</PsychicSensitivity>
+					<PsychicEntropyRecoveryRate>0.05</PsychicEntropyRecoveryRate>
+				</statFactors>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.85</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-2</severityPerDay>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<!-- Ferrus Manus: Necrodermite Arm -->
+	<HediffDef>
+		<defName>BEWH_NecrodermiteArm</defName>
+		<label>necrodermite arm</label>
+		<description>Arm made from necrodermite, durable, heat resistant and strong.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<everCurableByItem>false</everCurableByItem>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<defaultLabelColor>(0.5, 0.05, 0.05)</defaultLabelColor>
+		<stages>
+			<li>
+				<statFactors>
+					<Flammability>0</Flammability>
+					<MeleeDamageFactor>1.2</MeleeDamageFactor>
+				</statFactors>
+				<statOffsets>
+					<ArmorRating_Heat>0.2</ArmorRating_Heat>
+				</statOffsets>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>necrodermite hand</label>
+						<capacities>
+							<li>Blunt</li>
+						</capacities>
+						<power>25</power>
+						<cooldownTime>1</cooldownTime>
+					</li>
+				</tools>
+			</li>
+		</comps>
+	</HediffDef>
+
+</Defs>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Iota Psyker -->
+    <GeneDef ParentName="BEWH_PsykerParent">
+        <defName>BEWH_IotaPsyker</defName>
+        <label>iota psyker</label>
+        <description>Carriers of this gene can unlock their psychic potential, though only a faint sliver of what's truly possible.</description>
+        <iconPath>UI/Genes/Psyker/BEWH_GenePsykerIota</iconPath>
+        <displayOrderInCategory>600</displayOrderInCategory>
+        <biostatCpx>1</biostatCpx>
+        <biostatMet>-1</biostatMet>
+        <statFactors>
+            <PsychicSensitivity>1.35</PsychicSensitivity>
+            <MeditationFocusGain>1.05</MeditationFocusGain>
+            <PsychicEntropyRecoveryRate>1.05</PsychicEntropyRecoveryRate>
+        </statFactors>
+        <capMods>
+            <li>
+                <capacity>Consciousness</capacity>
+                <postFactor>1.05</postFactor>
+            </li>
+        </capMods>
+        <marketValueFactor>1.2</marketValueFactor>
+        <selectionWeight>0.7</selectionWeight>
+    </GeneDef>
+
+    <!-- Epsilon Psyker -->
+    <GeneDef ParentName="BEWH_PsykerParent">
+        <defName>BEWH_EpsilonPsyker</defName>
+        <label>epsilon psyker</label>
+        <description>Carriers of this gene can unlock their true psychic potential. While dangerous, their abilities remain within the bounds of average psykers.</description>
+        <iconPath>UI/Genes/Psyker/BEWH_GenePsyker</iconPath>
+        <displayOrderInCategory>601</displayOrderInCategory>
+        <biostatCpx>3</biostatCpx>
+        <biostatMet>-1</biostatMet>
+        <statFactors>
+            <PsychicSensitivity>1.85</PsychicSensitivity>
+            <MeditationFocusGain>1.15</MeditationFocusGain>
+            <PsychicEntropyRecoveryRate>1.2</PsychicEntropyRecoveryRate>
+        </statFactors>
+        <capMods>
+            <li>
+                <capacity>Consciousness</capacity>
+                <postFactor>1.15</postFactor>
+            </li>
+        </capMods>
+        <marketValueFactor>1.8</marketValueFactor>
+        <selectionWeight>0.4</selectionWeight>
+    </GeneDef>
+
+    <!-- Delta Psyker -->
+    <GeneDef ParentName="BEWH_PsykerParent">
+        <defName>BEWH_DeltaPsyker</defName>
+        <label>delta psyker</label>
+        <description>Carriers of this gene can unlock their true psychic potential. These beings are dangerous and should be treated accordingly.</description>
+        <iconPath>UI/Genes/Psyker/BEWH_GenePsykerDelta</iconPath>
+        <displayOrderInCategory>602</displayOrderInCategory>
+        <biostatCpx>4</biostatCpx>
+        <biostatMet>-2</biostatMet>
+        <statFactors>
+            <PsychicSensitivity>3</PsychicSensitivity>
+            <MeditationFocusGain>1.4</MeditationFocusGain>
+            <PsychicEntropyRecoveryRate>1.7</PsychicEntropyRecoveryRate>
+        </statFactors>
+        <capMods>
+            <li>
+                <capacity>Consciousness</capacity>
+                <postFactor>1.35</postFactor>
+            </li>
+        </capMods>
+        <marketValueFactor>2.5</marketValueFactor>
+        <selectionWeight>0.25</selectionWeight>
+    </GeneDef>
+
+    <!-- Beta Psyker -->
+    <GeneDef ParentName="BEWH_PsykerParent">
+        <defName>BEWH_BetaPsyker</defName>
+        <label>beta psyker</label>
+        <description>Carriers of this gene can unlock their true psychic potential. These beings are extremely dangerous, capable of overwhelming entire armies on their own.</description>
+        <iconPath>UI/Genes/Psyker/BEWH_GenePsykerBeta</iconPath>
+        <displayOrderInCategory>603</displayOrderInCategory>
+        <biostatCpx>6</biostatCpx>
+        <biostatMet>-3</biostatMet>
+        <statFactors>
+            <PsychicSensitivity>6.5</PsychicSensitivity>
+            <MeditationFocusGain>2</MeditationFocusGain>
+            <PsychicEntropyRecoveryRate>2.5</PsychicEntropyRecoveryRate>
+        </statFactors>
+        <capMods>
+            <li>
+                <capacity>Consciousness</capacity>
+                <postFactor>1.85</postFactor>
+            </li>
+        </capMods>
+        <marketValueFactor>4</marketValueFactor>
+        <canGenerateInGeneSet>false</canGenerateInGeneSet>
+        <selectionWeight>0.15</selectionWeight>
+    </GeneDef>
+
+    <!-- Alpha Psyker -->
+    <GeneDef ParentName="BEWH_PsykerParent">
+        <defName>BEWH_AlphaPsyker</defName>
+        <label>alpha psyker</label>
+        <description>Carriers of this gene can unlock their full psychic potential. These beings are extremely dangerous-capable of bringing entire worlds to ruin if their powers are properly honed.</description>
+        <iconPath>UI/Genes/Psyker/BEWH_GenePsykerBeta</iconPath>
+        <displayOrderInCategory>604</displayOrderInCategory>
+        <biostatCpx>6</biostatCpx>
+        <biostatMet>-3</biostatMet>
+        <statFactors>
+            <PsychicSensitivity>12</PsychicSensitivity>
+            <MeditationFocusGain>5</MeditationFocusGain>
+            <PsychicEntropyRecoveryRate>6</PsychicEntropyRecoveryRate>
+        </statFactors>
+        <capMods>
+            <li>
+                <capacity>Consciousness</capacity>
+                <postFactor>3.2</postFactor>
+            </li>
+        </capMods>
+        <marketValueFactor>8</marketValueFactor>
+        <canGenerateInGeneSet>false</canGenerateInGeneSet>
+        <selectionWeight>0.05</selectionWeight>
+    </GeneDef>
+
+</Defs>

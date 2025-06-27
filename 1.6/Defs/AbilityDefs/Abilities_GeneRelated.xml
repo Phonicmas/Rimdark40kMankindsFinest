@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Warp Shield -->
+  <AbilityDef ParentName="BEWH_SelfTargetAbilities">
+    <defName>BEWH_WarpShield</defName>
+    <label>Toggle Warp shield</label>
+    <description>Toggle warp shield on and off. This will affect the psychic sensitivity of this pawn.</description>
+    <iconPath>UI/Abilities/BEWH_MindShieldOn</iconPath>
+    <jobDef Inherit="False" />
+    <abilityClass>Genes40k.Ability_UpdateGizmo</abilityClass>
+    <cooldownTicksRange>0</cooldownTicksRange>
+    <hostile>false</hostile>
+    <category>BEWH_SpaceMarineCategory</category>
+  </AbilityDef>
+
+  <!-- Angelic Flight -->
+  <AbilityDef>
+    <defName>BEWH_AngelicFlight</defName>
+    <label>Angelic Flight</label>
+    <description>Gifted with wings, this pawn is capable of flight.</description>
+    <iconPath>UI/Abilities/BEWH_AngelicFlight</iconPath>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <cooldownTicksRange>100</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityJump</verbClass>
+      <label>angelic flight</label>
+      <violent>false</violent>
+      <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+      <warmupTime>0.5</warmupTime>
+      <range>160</range>
+      <requireLineOfSight>false</requireLineOfSight>
+      <soundCast>BEWH_SFX_DivineFlightStart</soundCast>
+      <soundLanding>BEWH_SFX_DivineFlightEnd</soundLanding>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+  </AbilityDef>
+
+</Defs>

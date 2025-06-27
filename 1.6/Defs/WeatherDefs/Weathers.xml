@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <WeatherDef>
+        <defName>BEWH_BloodRain</defName>
+        <label>blood rain</label>
+        <description>Blood rain reduces the accuracy of ranged weapons, extinguishes fire, slows people down and decreases their mood.</description>
+        <temperatureRange>0~100</temperatureRange>
+        <windSpeedFactor>0</windSpeedFactor>
+        <favorability>Bad</favorability>
+        <perceivePriority>1</perceivePriority>
+        <weatherThought>BEWH_BloodSoaked</weatherThought>
+        <rainRate>1</rainRate>
+        <accuracyMultiplier>0.65</accuracyMultiplier>
+        <moveSpeedMultiplier>0.85</moveSpeedMultiplier>
+        <durationRange>60000~180000</durationRange>
+        <ambientSounds>
+            <li>Ambient_Rain</li>
+        </ambientSounds>
+        <overlayClasses>
+            <li>WeatherOverlay_Rain</li>
+        </overlayClasses>
+        <commonalityRainfallFactor>
+            <points>
+                <li>(0, 0)</li>
+            </points>
+        </commonalityRainfallFactor>
+        <!-- Colors are Overcast -->
+        <skyColorsDay>
+            <sky>(255,0,0)</sky>
+            <shadow>(0.92,0.92,0.92)</shadow>
+            <overlay>(0.7,0.7,0.7)</overlay>
+            <saturation>0.9</saturation>
+        </skyColorsDay>
+        <skyColorsDusk>
+            <sky>(255,0,0)</sky>
+            <shadow>(0.92,0.92,0.92)</shadow>
+            <overlay>(0.6,0.6,0.6)</overlay>
+            <saturation>0.9</saturation>
+        </skyColorsDusk>
+        <skyColorsNightEdge>
+            <sky>(255,0,0)</sky>
+            <shadow>(0.92,0.92,0.92)</shadow>
+            <overlay>(0.5,0.5,0.5)</overlay>
+            <saturation>0.9</saturation>
+        </skyColorsNightEdge>
+        <skyColorsNightMid>
+            <sky>(255,0,0)</sky>
+            <shadow>(0.92,0.92,0.92)</shadow>
+            <overlay>(0.5,0.5,0.5)</overlay>
+            <saturation>0.9</saturation>
+        </skyColorsNightMid>
+    </WeatherDef>
+
+</Defs>

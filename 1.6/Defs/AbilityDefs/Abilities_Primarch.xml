@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <AbilityCategoryDef>
+    <defName>BEWH_Primarch</defName>
+    <displayOrder>900</displayOrder>
+  </AbilityCategoryDef>
+
+
+  <!-- Lion El'Jonson: Forestwalk longrange -->
+  <VEF.Abilities.AbilityDef>
+    <defName>BEWH_ForestWalkLong</defName>
+    <label>Forestwalk longrange</label>
+    <description>By focusing on your destination, you manifest there by striding through the shadowed forests of Caliban until you arrive.</description>
+    <iconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Long</iconPath>
+    <abilityClass>Genes40k.Ability_ForeswalkLong</abilityClass>
+    <cooldownTime>15000</cooldownTime>
+    <castTime>625</castTime>
+    <range>14.9</range>
+    <rangeStatFactors>
+      <PsychicSensitivity>2</PsychicSensitivity>
+    </rangeStatFactors>
+    <radius>4.9</radius>    <!-- Pawns within this radius of the caster is teleported with him -->
+    <targetMode>Tile</targetMode>
+    <worldTargeting>true</worldTargeting>
+    <needsTicking>true</needsTicking>
+    <showGizmoOnWorldView>true</showGizmoOnWorldView>
+  </VEF.Abilities.AbilityDef>
+
+
+  <!-- Lion El'Jonson: Forestwalk shortrange -->
+  <VEF.Abilities.AbilityDef>
+    <defName>BEWH_ForestWalkShort</defName>
+    <label>Forestwalk shortrange</label>
+    <description>By focusing on your destination, you manifest there by striding through the shadowed forests of Caliban until you arrive.</description>
+    <iconPath>UI/Abilities/BEWH_Ability_LionLJohnsonForestwalk_Short</iconPath>
+    <abilityClass>Genes40k.Ability_ForeswalkShort</abilityClass>
+    <targetCount>2</targetCount>
+    <castTime>30</castTime>
+    <needsTicking>true</needsTicking>
+    <requireLineOfSight>false</requireLineOfSight>
+    <cooldownTime>1250</cooldownTime>
+    <range>9999</range>
+    <radius>4.9</radius>    <!-- Pawns within this radius of the caster is teleported with him -->
+    <targetModes>
+      <li>Self</li>
+      <li>Location</li>
+    </targetModes>
+    <targetingParametersList>
+      <li>
+        <canTargetSelf>True</canTargetSelf>
+        <canTargetPawns>True</canTargetPawns>
+        <canTargetBuildings>False</canTargetBuildings>
+        <canTargetItems>True</canTargetItems>
+      </li>
+    </targetingParametersList>
+  </VEF.Abilities.AbilityDef>
+
+
+  <!-- Jaghatai Khan: Alakh Geh -->
+  <AbilityDef ParentName="BEWH_SelfTargetAbilities">
+    <defName>BEWH_AlakhGeh</defName>
+    <label>Alakh Geh</label>
+    <description>The thought and will alone to kill is enough to kill.</description>
+    <iconPath>UI/Abilities/BEWH_Ability_JaghataiKhanAlakhGeh</iconPath>
+    <cooldownTicksRange>60000</cooldownTicksRange>
+    <category>BEWH_Primarch</category>
+    <statBases>
+      <Ability_Duration>250</Ability_Duration>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>BEWH_AlakhGeh</hediffDef>
+        <onlyApplyToSelf>True</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+  </AbilityDef>
+
+
+  <!-- Leman Russ: Deny the Witch -->
+  <AbilityDef>
+    <defName>BEWH_DenyTheWitch</defName>
+    <label>Deny the Witch</label>
+    <description>Blocks target from using psycasts and dampens both their psychic and mental capabilities.</description>
+    <iconPath>UI/Abilities/BEWH_Ability_LemanRussDTW</iconPath>
+    <cooldownTicksRange>30000</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <category>BEWH_Primarch</category>
+    <showPsycastEffects>False</showPsycastEffects>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>46</range>
+      <warmupTime>0.5</warmupTime>
+      <soundCast>PsychicInsanityLanceCast</soundCast>
+      <targetParams>
+        <canTargetLocations>false</canTargetLocations>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetMechs>false</canTargetMechs>
+        <canTargetAnimals>false</canTargetAnimals>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="Genes40k.CompProperties_AbilityDenyTheWitch">
+        <hediffDef>BEWH_DeniedWitch</hediffDef>
+      </li>
+    </comps>
+  </AbilityDef>
+
+
+  <!-- Rogal Dorn: Raise Bastion -->
+  <VEF.Abilities.AbilityDef>
+    <defName>BEWH_RaiseBastion</defName>
+    <label>Raise Bastion</label>
+    <description>Raise a temporary, sturdy bastion equipped with turrets and defensive positions.</description>
+    <iconPath>UI/Abilities/BEWH_Ability_RogalDornFortify</iconPath>
+    <abilityClass>Genes40k.Ability_RaiseBastion</abilityClass>
+    <needsTicking>true</needsTicking>
+    <requireLineOfSight>false</requireLineOfSight>
+    <cooldownTime>120000</cooldownTime>
+    <range>25</range>
+    <castTime>60</castTime>
+    <targetMode>Location</targetMode>
+    <castSound>BEWH_SFX_RaiseBastion</castSound>
+  </VEF.Abilities.AbilityDef>
+
+
+  <!-- Konrad Curze: Veil of Darkness -->
+  <VEF.Abilities.AbilityDef>
+    <defName>BEWH_PsychicEmp</defName>
+    <label>Veil of Darkness</label>
+    <description>Let out a psychic scream, that disrupts electronics, shattering all light sources, plunging the area into darkness and temporary stunning nearby enemies.</description>
+    <iconPath>UI/Abilities/BEWH_Ability_KonradCurzeVOD</iconPath>
+    <abilityClass>Genes40k.Ability_PsychicEmp</abilityClass>
+    <needsTicking>true</needsTicking>
+    <requireLineOfSight>false</requireLineOfSight>
+    <cooldownTime>30000</cooldownTime>
+    <durationTime>5000</durationTime>
+    <range>9.9</range>
+    <radius>9.9</radius>
+    <castTime>30</castTime>
+    <targetMode>Self</targetMode>
+  </VEF.Abilities.AbilityDef>
+
+
+  <!-- Angron: Shared burden -->
+  <AbilityDef>
+    <defName>BEWH_ChillgronEmpathy</defName>
+    <label>Shared burden</label>
+    <description>By psychially tapping into the recipients mind, you're able to feel and share their emotion, taking the burden of negative thoughts they might have onto yourself.</description>
+    <cooldownTicksRange>15000</cooldownTicksRange>
+    <iconPath>UI/Abilities/BEWH_Ability_ChillgronShareBurden</iconPath>
+    <jobDef>CastAbilityOnThingMelee</jobDef>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <targetRequired>true</targetRequired>
+    <showWhenDrafted>true</showWhenDrafted>
+    <hostile>false</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityTouch</verbClass>
+      <range>-1</range>
+      <warmupTime>0.25</warmupTime>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetAnimals>false</canTargetAnimals>
+        <canTargetMechs>false</canTargetMechs>
+        <canTargetBloodfeeders>false</canTargetBloodfeeders>
+        <canTargetCorpses>false</canTargetCorpses>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="Genes40k.CompProperties_AbilitySharedBurden" />
+    </comps>
+  </AbilityDef>
+
+
+  <!-- Lorgar: Word of Authority -->
+  <AbilityDef>
+    <defName>BEWH_LorgarWordOfAuthority</defName>
+    <label>Word of Authority</label>
+    <description>Your words carry great meaning, able to persuade people to join you.n\n\Compels a humanoid pawn to join your cause, instantly becoming one of your colonists.</description>
+    <cooldownTicksRange>900000</cooldownTicksRange>
+    <iconPath>UI/Abilities/BEWH_Ability_LorgarWordOfAuthority</iconPath>
+    <jobDef>CastAbilityOnThingMelee</jobDef>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <targetRequired>true</targetRequired>
+    <showWhenDrafted>true</showWhenDrafted>
+    <hostile>false</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityTouch</verbClass>
+      <range>-1</range>
+      <warmupTime>3</warmupTime>
+      <targetParams>
+        <onlyTargetPrisonersOfColony>True</onlyTargetPrisonersOfColony>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetAnimals>false</canTargetAnimals>
+        <canTargetMechs>false</canTargetMechs>
+        <canTargetBloodfeeders>false</canTargetBloodfeeders>
+        <canTargetCorpses>false</canTargetCorpses>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="Genes40k.CompProperties_AbilityWordOfAuthority" />
+    </comps>
+  </AbilityDef>
+
+
+  <!-- Corvus Corax: Conceal -->
+  <AbilityDef ParentName="BEWH_SelfTargetAbilities">
+    <defName>BEWH_Conceal</defName>
+    <label>Conceal</label>
+    <description>Become one with your surroundings, allowing you to move unnoticed.</description>
+    <iconPath>UI/Abilities/BEWH_Ability_CorvusCoraxConceal</iconPath>
+    <cooldownTicksRange>2500</cooldownTicksRange>
+    <category>BEWH_Primarch</category>
+    <statBases>
+      <Ability_Duration>2000</Ability_Duration>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>BEWH_Concealed</hediffDef>
+        <onlyApplyToSelf>True</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+  </AbilityDef>
+
+
+  <!-- Perturabo: Iron Circle -->
+  <AbilityDef ParentName="BEWH_SelfTargetAbilities">
+    <defName>BEWH_IronCircle</defName>
+    <label>Iron Circle</label>
+    <description>Call in Iron Circle automata - unyielding bodyguards devoted to your defense.</description>
+    <iconPath>UI/Abilities/BEWH_Ability_PerturaboIronCircle</iconPath>
+    <cooldownTicksRange>300000</cooldownTicksRange>    <!-- once every 5 days -->
+    <category>BEWH_Primarch</category>
+    <abilityClass>Genes40k.Ability_IronCircle</abilityClass>
+    <comps>
+      <li Class="Genes40k.CompProperties_AbilitySummonMechsForCaster">
+        <mechKind>BEWH_PerturaboDomitar</mechKind>
+        <amount>6</amount>
+        <cannotHaveMoreThanAmount>true</cannotHaveMoreThanAmount>
+        <trySpawnHere>
+          <li>(1, 0, 2)</li>
+          <li>(-1, 0, 2)</li>
+          <li>(1, 0, -2)</li>
+          <li>(-1, 0, -2)</li>
+          <li>(2, 0, 0)</li>
+          <li>(-2, 0, 0)</li>
+        </trySpawnHere>
+      </li>
+    </comps>
+  </AbilityDef>
+
+
+  <!-- Roboute: Opus Maxima -->
+  <VEF.Abilities.AbilityDef>
+    <defName>BEWH_OpusMaxima</defName>
+    <label>Opus Maxima</label>
+    <description>By meticulous planning, you're able to temporarily increase productivity of other colonists on the map.</description>
+    <iconPath>UI/Abilities/BEWH_Ability_RobotGullymanOpusMaxima</iconPath>
+    <abilityClass>Core40k.Ability_MapWideHediff</abilityClass>
+    <castTime>30</castTime>
+    <needsTicking>true</needsTicking>
+    <requireLineOfSight>false</requireLineOfSight>
+    <cooldownTime>60000</cooldownTime>
+    <durationTime>7500</durationTime>
+    <targetMode>Self</targetMode>
+    <modExtensions>
+      <li Class="Core40k.DefModExtension_MapWideHediff">
+        <affectPlayerColonists>True</affectPlayerColonists>
+        <hediffDef>BEWH_OpusMaxima</hediffDef>
+      </li>
+    </modExtensions>
+  </VEF.Abilities.AbilityDef>
+
+
+  <!-- Horus: War Planning -->
+  <VEF.Abilities.AbilityDef>
+    <defName>BEWH_WarPlanning</defName>
+    <label>War Planning</label>
+    <description>By tactical and strategic planning, you're able to form a war plan, increasing combat effectiveness of other colonists on the map.</description>
+    <iconPath>UI/Abilities/BEWH_Ability_HorusWarPlanning</iconPath>
+    <abilityClass>Core40k.Ability_MapWideHediff</abilityClass>
+    <castTime>30</castTime>
+    <needsTicking>true</needsTicking>
+    <requireLineOfSight>false</requireLineOfSight>
+    <cooldownTime>60000</cooldownTime>
+    <durationTime>7500</durationTime>
+    <targetMode>Self</targetMode>
+    <modExtensions>
+      <li Class="Core40k.DefModExtension_MapWideHediff">
+        <affectPlayerColonists>True</affectPlayerColonists>
+        <hediffDef>BEWH_WarPlanning</hediffDef>
+      </li>
+    </modExtensions>
+  </VEF.Abilities.AbilityDef>
+
+
+  <!-- Alpharius/Omegon: Teleport to Twin -->  <!-- abilityClass to disable if twin is dead.-->
+  <AbilityDef ParentName="BEWH_SelfTargetAbilities">
+    <defName>BEWH_TwinTeleportation</defName>
+    <label>Teleport to Twin</label>
+    <description>You're able to teleport to your twin. This works while the twin is on a map or in a caravan.</description>
+    <iconPath>UI/Abilities/BEWH_TeleportToTwin</iconPath>
+    <cooldownTicksRange>60000</cooldownTicksRange>
+    <category>BEWH_Primarch</category>
+    <comps>
+      <li Class="Genes40k.CompProperties_AbilityTwinDisable" />
+      <li Class="Genes40k.CompProperties_AbilityTwinTeleport" />
+    </comps>
+  </AbilityDef>
+
+</Defs>

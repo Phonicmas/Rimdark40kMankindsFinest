@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- These have been gestated from matrices and are now ready to be implanted into a pawn-->
+
+  <!-- Thunder Warrior -->
+  <ThingDef ParentName="BEWH_GeneseedVialBase">
+    <defName>BEWH_GeneseedVialThunderWarrior</defName>
+    <label>thunder warrior ascendance vial</label>
+    <description>A high-tech containment device holding a potent genetic compound. It is used to initiate the transformation of selected subjects into superhuman warriors. Upon implantation, it triggers rapid genetic enhancements, increasing strength, endurance, and resilience.\n\nThis vial contains the gestated genes ready for implantation into a pawn, creating a Thunder Warrior.\n\nThe safe implantation age is 12~21, implantation into anyone outside this range may kill them.\n\nThis item rapidly deteriorates outside containment.</description>
+    <graphicData>
+      <texPath>Things/Item/GeneseedVial/BEWH_GeneseedVial_ThunderWarrior</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.85, 0.85)</drawSize>
+    </graphicData>
+    <statBases>
+      <MarketValue>6500</MarketValue>
+    </statBases>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_GeneseedVial">
+        <xenotype>BEWH_ThunderWarrior</xenotype>
+        <xenotypeIcon>BEWH_ThunderWarriorIcon</xenotypeIcon>
+        <minAgeImplant>12</minAgeImplant>
+        <maxAgeImplant>21</maxAgeImplant>
+        <failureChancePerAgePast>3</failureChancePerAgePast>
+        <failChanceCap>80</failChanceCap>
+        <baseFailureChance>5</baseFailureChance>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Firstborn -->
+  <ThingDef ParentName="BEWH_GeneseedVialBase">
+    <defName>BEWH_GeneseedVialFirstborn</defName>
+    <label>firstborn ascendance vial</label>
+    <description>A high-tech containment device holding a potent genetic compound. It is used to initiate the transformation of selected subjects into superhuman warriors. Upon implantation, it triggers rapid genetic enhancements, increasing strength, endurance, and resilience.\n\nThis vial contains the gestated genes ready for implantation into a pawn, creating a Firstborn.\n\nThe safe implantation age is 10~14, implantation into anyone outside this range may kill them.\n\nThis item rapidly deteriorates outside containment.</description>
+    <graphicData>
+      <texPath>Things/Item/GeneseedVial/BEWH_GeneseedVial_Firstborn</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.85, 0.85)</drawSize>
+    </graphicData>
+    <statBases>
+      <MarketValue>10000</MarketValue>
+    </statBases>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_GeneseedVial">
+        <xenotype>BEWH_SpaceMarine</xenotype>
+        <xenotypeIcon>BEWH_AstartesIcon</xenotypeIcon>
+        <overrideXenotypeGenesGiven>true</overrideXenotypeGenesGiven>
+        <overridenAddedGenes>
+          <li>BEWH_SecondaryHeart</li>
+          <li>BEWH_Ossmodula</li>
+          <li>BEWH_Biscopea</li>
+          <li>BEWH_Haemastamen</li>
+          <li>BEWH_LarramansOrgan</li>
+        </overridenAddedGenes>
+        <appliesHediff>BEWH_FirstbornPhaseOne</appliesHediff>
+        <minAgeImplant>10</minAgeImplant>
+        <maxAgeImplant>14</maxAgeImplant>
+        <failureChancePerAgePast>5</failureChancePerAgePast>
+        <failChanceCap>85</failChanceCap>
+        <baseFailureChance>10</baseFailureChance>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Primaris -->
+  <ThingDef ParentName="BEWH_GeneseedVialBase">
+    <defName>BEWH_GeneseedVialPrimaris</defName>
+    <label>primaris ascendance vial</label>
+    <description>A high-tech containment device holding a potent genetic compound. It is used to initiate the transformation of selected subjects into superhuman warriors. Upon implantation, it triggers rapid genetic enhancements, increasing strength, endurance, and resilience.\n\nThis vial contains the gestated genes ready for implantation into a pawn, creating a Primaris.\n\nThe safe implantation age is 10~13, implantation into anyone outside this range may kill them.\n\nThis item rapidly deteriorates outside containment.</description>
+    <graphicData>
+      <texPath>Things/Item/GeneseedVial/BEWH_GeneseedVial_Primaris</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.85, 0.85)</drawSize>
+    </graphicData>
+    <statBases>
+      <MarketValue>14000</MarketValue>
+    </statBases>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_GeneseedVial">
+        <xenotype>BEWH_PrimarisSpaceMarine</xenotype>
+        <xenotypeIcon>BEWH_PrimarisIcon</xenotypeIcon>
+        <overrideXenotypeGenesGiven>true</overrideXenotypeGenesGiven>
+        <overridenAddedGenes>
+          <li>BEWH_SecondaryHeart</li>
+          <li>BEWH_Ossmodula</li>
+          <li>BEWH_Biscopea</li>
+          <li>BEWH_Haemastamen</li>
+          <li>BEWH_LarramansOrgan</li>
+          <li>BEWH_SinewCoil</li>
+        </overridenAddedGenes>
+        <appliesHediff>BEWH_PrimarisPhaseOne</appliesHediff>
+        <minAgeImplant>10</minAgeImplant>
+        <maxAgeImplant>13</maxAgeImplant>
+        <failureChancePerAgePast>9</failureChancePerAgePast>
+        <failChanceCap>90</failChanceCap>
+        <baseFailureChance>10</baseFailureChance>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Custodes -->
+  <ThingDef ParentName="BEWH_GeneseedVialBase">
+    <defName>BEWH_GeneseedVialCustodes</defName>
+    <label>custodes ascendance vial</label>
+    <description>A high-tech containment device holding a potent genetic compound. It is used to initiate the transformation of selected subjects into superhuman warriors. Upon implantation, it triggers rapid genetic enhancements, increasing strength, endurance, and resilience.\n\nThis vial contains the gestated genes ready for implantation into a pawn, creating a Custodes.\n\nThe safe implantation age is 0-3, implantation into anyone outside this range may kill them.\n\nThis item rapidly deteriorates outside containment.</description>
+    <graphicData>
+      <texPath>Things/Item/GeneseedVial/BEWH_GeneseedVial_Custodes</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.85, 0.85)</drawSize>
+    </graphicData>
+    <statBases>
+      <MarketValue>20000</MarketValue>
+    </statBases>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_GeneseedVial">
+        <xenotype>BEWH_Custodes</xenotype>
+        <xenotypeIcon>BEWH_CustodesIcon</xenotypeIcon>
+        <minAgeImplant>0</minAgeImplant>
+        <maxAgeImplant>3</maxAgeImplant>
+        <failureChancePerAgePast>19</failureChancePerAgePast>
+        <failChanceCap>95</failChanceCap>
+        <baseFailureChance>20</baseFailureChance>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Primarch -->
+  <ThingDef ParentName="BEWH_GeneseedVialBase">
+    <defName>BEWH_GeneseedVialPrimarch</defName>
+    <label>primarch ascendance vial</label>
+    <description>A high-tech containment device holding a potent genetic compound. It is used to initiate the transformation of selected subjects into superhuman warriors. Upon implantation, it triggers rapid genetic enhancements, increasing strength, endurance, and resilience.\n\nThis vial contains the gestated genes for creation of a Primarch.\n\nDue to the potency of the primarch genes, it needs to be inserted into a human embryo and grown artificially.\n\nThis item rapidly deteriorates outside containment.</description>
+    <graphicData>
+      <texPath>Things/Item/GeneseedVial/BEWH_GeneseedVial_Primarch</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.85, 0.85)</drawSize>
+    </graphicData>
+    <statBases>
+      <MarketValue>30000</MarketValue>
+    </statBases>
+    <descriptionHyperlinks>
+      <ThingDef>BEWH_PrimarchGrowthVat</ThingDef>
+      <ThingDef>HumanEmbryo</ThingDef>
+    </descriptionHyperlinks>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_GeneseedVial">
+        <xenotype>BEWH_Primarch</xenotype>
+        <xenotypeIcon>BEWH_PrimarchIcon</xenotypeIcon>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

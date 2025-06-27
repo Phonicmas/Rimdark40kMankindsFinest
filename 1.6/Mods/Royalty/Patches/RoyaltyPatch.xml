@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationAddModExtension">
+        <xpath>Defs/GeneDef[defName = "BEWH_IotaPsyker" or defName = "BEWH_EpsilonPsyker" or defName = "BEWH_DeltaPsyker" or defName = "BEWH_BetaPsyker"]</xpath>
+        <value>
+            <li Class="VEF.Genes.GeneExtension">
+                <hediffsToBodyParts>
+                    <li>
+                        <hediff>PsychicAmplifier</hediff>
+                        <bodyparts>
+                            <li>Brain</li>
+                        </bodyparts>
+                    </li>
+                </hediffsToBodyParts>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAddModExtension">
+        <xpath>Defs/GeneDef[defName = "BEWH_PrimarchSpecificGeneXV"]</xpath>
+        <value>
+            <li Class="VEF.Genes.GeneExtension">
+                <hediffsToBodyParts>
+                    <li>
+                        <hediff>PsychicAmplifier</hediff>
+                        <bodyparts>
+                            <li>Brain</li>
+                        </bodyparts>
+                    </li>
+                </hediffsToBodyParts>
+            </li>
+        </value>
+    </Operation>
+
+</Patch>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <GeneDef ParentName="BEWH_Perpetual">
+        <defName>BEWH_PerpetualGamma</defName>
+        <label>gamma perpetual</label>
+        <description>Carriers of this gene are effectively immortal, they do not age and can eventually recover from most injuries due to their rapid and efficient cellular regeneration.</description>
+        <iconPath>UI/Genes/Perpetual/BEWH_GeneIcon_PerpetualGamma</iconPath>
+        <displayOrderInCategory>800</displayOrderInCategory>
+    
+        <biostatCpx>10</biostatCpx>
+        <biostatArc>4</biostatArc>
+
+        <customEffectDescriptions>
+            <li>Will resurrect from most lethal injuries after 3-4 days.</li>
+            <li>Self healing capabilities, including healing permanent wounds and restoration of lost limbs.</li>
+        </customEffectDescriptions>
+
+        <statFactors>
+            <ImmunityGainSpeed>2</ImmunityGainSpeed>
+            <InjuryHealingFactor>4</InjuryHealingFactor>
+        </statFactors>
+
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PerpetualGene">
+                <perpetualTier>1</perpetualTier>
+                <perpetualRessurectionRange>180000~240000</perpetualRessurectionRange>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="BEWH_Perpetual">
+        <defName>BEWH_PerpetualBeta</defName>
+        <label>beta perpetual</label>
+        <description>Carriers of this gene are functionally immortal, they do not age and able to recover from severe injuries due to their rapid and efficient cellular regeneration.</description>
+        <iconPath>UI/Genes/Perpetual/BEWH_GeneIcon_PerpetualBeta</iconPath>
+        <displayOrderInCategory>801</displayOrderInCategory>
+        <biostatCpx>13</biostatCpx>
+        <biostatArc>5</biostatArc>
+
+        <customEffectDescriptions>
+            <li>Will resurrect from most lethal injuries after 1-2 days.</li>
+            <li>Enhanced self healing capabilities, including healing permanent wounds and restoration of lost limbs.</li>
+        </customEffectDescriptions>
+
+        <statFactors>
+            <ImmunityGainSpeed>2</ImmunityGainSpeed>
+            <InjuryHealingFactor>8</InjuryHealingFactor>
+        </statFactors>
+
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PerpetualGene">
+                <perpetualTier>2</perpetualTier>
+                <perpetualRessurectionRange>60000~120000</perpetualRessurectionRange>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="BEWH_Perpetual">
+        <defName>BEWH_PerpetualAlpha</defName>
+        <label>alpha perpetual</label>
+        <description>Carriers of this gene are trully immortal, they do not age and able to eventually regenerate from nearly any wound, no matter how devastating, due to their rapid and efficient cellular regeneration.</description>
+        <iconPath>UI/Genes/Perpetual/BEWH_GeneIcon_PerpetualAlpha</iconPath>
+        <displayOrderInCategory>802</displayOrderInCategory>
+        <biostatCpx>18</biostatCpx>
+        <biostatArc>7</biostatArc>
+
+        <customEffectDescriptions>
+            <li>Will resurrect from most lethal injuries within half a day.</li>
+            <li>Greatly enhanced self healing capabilities, including healing permanent wounds and restoration of lost limbs.</li>
+        </customEffectDescriptions>
+
+        <statFactors>
+            <ImmunityGainSpeed>3</ImmunityGainSpeed>
+            <InjuryHealingFactor>20</InjuryHealingFactor>
+        </statFactors>
+
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PerpetualGene">
+                <perpetualTier>3</perpetualTier>
+                <perpetualRessurectionRange>20000~30000</perpetualRessurectionRange>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+</Defs>

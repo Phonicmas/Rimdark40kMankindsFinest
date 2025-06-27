@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <AbilityCategoryDef>
+    <defName>BEWH_SpaceMarineCategory</defName>
+    <displayOrder>999</displayOrder>
+  </AbilityCategoryDef>
+
+  <!-- Betcher's Spit -->
+  <AbilityDef>
+    <defName>BEWH_BetchersSpit</defName>
+    <label>Betcher's spit</label>
+    <description>Carriers of the Betcher's Gland can turn their saliva into a corrosive, blinding acid when consciously triggered.</description>
+    <iconPath>UI/Abilities/AcidSpray</iconPath>
+    <cooldownTicksRange>60000</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <category>BEWH_SpaceMarineCategory</category>
+    <warmupStartSound>AcidSpray_Warmup</warmupStartSound>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>26</range>
+      <warmupTime>0.5</warmupTime>
+      <soundCast>AcidSpray_Resolve</soundCast>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilitySprayLiquid">
+        <projectileDef>BEWH_SpitProjectile</projectileDef>
+        <numCellsToHit>9</numCellsToHit>
+        <sprayEffecter>AcidSpray_Directional</sprayEffecter>
+      </li>
+      <li Class="Genes40k.CompProperties_DisableInactiveGene">
+        <geneDef>BEWH_BetchersGland</geneDef>
+      </li>
+    </comps>
+  </AbilityDef>
+  <!-- Betcher's Spit Projectile-->
+  <ThingDef>
+    <defName>BEWH_SpitProjectile</defName>
+    <label>betcher's acid</label>
+    <thingClass>Projectile_Liquid</thingClass>
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <useHitPoints>False</useHitPoints>
+    <neverMultiSelect>True</neverMultiSelect>
+    <graphicData>
+      <texPath>Things/Projectile/Acid</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shaderType>MoteGlow</shaderType>
+      <drawSize>0.85</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>AcidBurn</damageDef>
+      <speed>35</speed>
+      <damageAmountBase>38</damageAmountBase>
+      <arcHeightFactor>0.4</arcHeightFactor>
+      <armorPenetrationBase>0.92</armorPenetrationBase>
+      <stoppingPower>1</stoppingPower>
+      <shadowSize>0</shadowSize>
+      <filth>Filth_SpentAcid</filth>
+      <filthCount>1</filthCount>
+    </projectile>
+  </ThingDef>
+
+  <!-- Catalepsean Node Unsleeping -->
+  <AbilityDef ParentName="BEWH_SelfTargetAbilities">
+    <defName>BEWH_CatalepseanNodeUnsleeping</defName>
+    <label>Unsleeping</label>
+    <description>Carriers of the Catalepsean Node can consciously "switch off" sections of the brain sequentially, while remaining awake and alert.</description>
+    <jobDef>CastAbilityOnThing</jobDef>
+    <iconPath>UI/Abilities/BEWH_CatalepseanNodeUnsleeping</iconPath>
+    <cooldownTicksRange>180000</cooldownTicksRange>
+    <category>BEWH_SpaceMarineCategory</category>
+    <statBases>
+      <Ability_Duration>600</Ability_Duration>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>BEWH_CatalepseanNodeUnsleeping</hediffDef>
+        <onlyApplyToSelf>True</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Sus-an Membrane Stasis -->
+  <AbilityDef ParentName="BEWH_SelfTargetAbilities">
+    <defName>BEWH_SusAnMembraneStasis</defName>
+    <label>Stasis</label>
+    <description>Carriers of the Sus-an Membrane can enter a state of suspended animation, keeping the them alive for years, even if they has suffered otherwise mortal wounds.</description>
+    <iconPath>UI/Abilities/BEWH_StasisIcon</iconPath>
+    <cooldownTicksRange>240000</cooldownTicksRange>
+    <category>BEWH_SpaceMarineCategory</category>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>BEWH_SusAnMembraneStasis</hediffDef>
+        <onlyApplyToSelf>True</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
+      <li Class="Genes40k.CompProperties_DisableInactiveGene">
+        <geneDef>BEWH_SusAnMembrane</geneDef>
+      </li>
+      <li Class="Genes40k.CompProperties_AbilityStasisConfirmation" />
+    </comps>
+  </AbilityDef>
+
+  <!-- Remembrance -->
+  <AbilityDef>
+    <defName>BEWH_OmophageaCorpseEat</defName>
+    <label>Remembrance</label>
+    <description>Carriers of the Omophagea can consume dead pawns to absorb fragments of their knowledge.</description>
+    <jobDef>CastAbilityOnThingMelee</jobDef>
+    <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
+    <iconPath>UI/Abilities/BEWH_OmophageaRemembrance</iconPath>
+    <showPsycastEffects>False</showPsycastEffects>
+    <cooldownTicksRange>240000</cooldownTicksRange>
+    <category>BEWH_SpaceMarineCategory</category>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityTouch</verbClass>
+      <range>-1</range>
+      <warmupTime>3</warmupTime>
+      <targetParams>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetAnimals>false</canTargetAnimals>
+        <canTargetMechs>false</canTargetMechs>
+        <canTargetBloodfeeders>false</canTargetBloodfeeders>
+        <canTargetCorpses>true</canTargetCorpses>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="Genes40k.CompProperties_AbilityRemembrance"/>
+    </comps>
+  </AbilityDef>
+
+  <!-- Belisarian Furnace -->
+  <AbilityDef ParentName="BEWH_SelfTargetAbilities">
+    <defName>BEWH_BelisarianFurnaceBoost</defName>
+    <label>Revitaliser</label>
+    <description>Carriers of the Belisarian Furnace can produce a hyper-cocktail of self-synthesized chemicals that accelerates the regrowth of tissue, bone, and muscle.</description>
+    <iconPath>UI/Abilities/BEWH_BelisarianFurnaceBoost</iconPath>
+    <cooldownTicksRange>240000</cooldownTicksRange>
+    <category>BEWH_SpaceMarineCategory</category>
+    <statBases>
+      <Ability_Duration>120</Ability_Duration>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>BEWH_BelisarianFurnaceBoost</hediffDef>
+        <onlyApplyToSelf>True</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>

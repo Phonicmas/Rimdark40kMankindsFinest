@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Sigma Pariah -->
+    <GeneDef ParentName="BEWH_PariahParent">
+        <defName>BEWH_SigmaPariah</defName>
+        <label>sigma pariah</label>
+        <description>Carriers of this gene have reduced psychic sensitivity. Additionally they slightly reduce the psychic sensitivity and consciousness of others nearby whilst also slightly increasing their pain.</description>
+        <iconPath>UI/Genes/Pariah/BEWH_PariahSigma</iconPath>
+        <displayOrderInCategory>700</displayOrderInCategory>
+        <biostatCpx>1</biostatCpx>
+        <biostatMet>-1</biostatMet>
+        <statFactors>
+            <PsychicSensitivity>0.55</PsychicSensitivity>
+            <MeditationFocusGain>0.55</MeditationFocusGain>
+            <PsychicEntropyRecoveryRate>0.55</PsychicEntropyRecoveryRate>
+        </statFactors>
+        <customEffectDescriptions>
+            <li>Reduces psychic sensitivity of nearby pawns and self.</li>
+        </customEffectDescriptions>
+        <minAgeActive>6</minAgeActive>
+        <marketValueFactor>1.2</marketValueFactor>
+        <selectionWeight>0.7</selectionWeight>
+        <modExtensions>
+            <li Class="VEF.Genes.GeneExtension">
+                <backgroundPathXenogenes>UI/Genes/BEWH_GeneBackground_Pariah</backgroundPathXenogenes>
+            </li>
+            <li Class="Genes40k.DefModExtension_Pariah">
+                <radius>12</radius>
+                <tier>1</tier>
+                <pariahGene>BEWH_SigmaPariah</pariahGene>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Upsilon Pariah -->
+    <GeneDef ParentName="BEWH_PariahParent">
+        <defName>BEWH_UpsilonPariah</defName>
+        <label>upsilon pariah</label>
+        <description>Carriers of this gene have greatly reduced psychic sensitivity. Additionally, they reduce the psychic sensitivity and consciousness of nearby pawns, while also increasing their pain.</description>
+        <iconPath>UI/Genes/Pariah/BEWH_PariahUpsilon</iconPath>
+        <displayOrderInCategory>701</displayOrderInCategory>
+        <biostatCpx>3</biostatCpx>
+        <biostatMet>-1</biostatMet>
+        <statFactors>
+            <PsychicSensitivity>0.2</PsychicSensitivity>
+            <MeditationFocusGain>0.2</MeditationFocusGain>
+            <PsychicEntropyRecoveryRate>0.2</PsychicEntropyRecoveryRate>
+        </statFactors>
+        <customEffectDescriptions>
+            <li>Greatly reduces psychic sensitivity of nearby pawns and self.</li>
+        </customEffectDescriptions>
+        <minAgeActive>6</minAgeActive>
+        <marketValueFactor>1.8</marketValueFactor>
+        <selectionWeight>0.3</selectionWeight>
+        <modExtensions>
+            <li Class="VEF.Genes.GeneExtension">
+                <backgroundPathXenogenes>UI/Genes/BEWH_GeneBackground_Pariah</backgroundPathXenogenes>
+            </li>
+            <li Class="Genes40k.DefModExtension_Pariah">
+                <radius>16</radius>
+                <tier>2</tier>
+                <pariahGene>BEWH_UpsilonPariah</pariahGene>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Omega Pariah -->
+    <GeneDef ParentName="BEWH_PariahParent">
+        <defName>BEWH_OmegaPariah</defName>
+        <label>omega pariah</label>
+        <description>Carriers of this gene have no psychic sensitivity. Additionally, they nullify the psychic sensitivity and reduce the consciousness of nearby pawns, while greatly increasing their pain.</description>
+        <iconPath>UI/Genes/Pariah/BEWH_PariahOmega</iconPath>
+        <displayOrderInCategory>702</displayOrderInCategory>
+        <biostatCpx>5</biostatCpx>
+        <biostatMet>-2</biostatMet>
+        <statFactors>
+            <PsychicSensitivity>0</PsychicSensitivity>
+            <MeditationFocusGain>0</MeditationFocusGain>
+            <PsychicEntropyRecoveryRate>0</PsychicEntropyRecoveryRate>
+        </statFactors>
+        <customEffectDescriptions>
+            <li>Nullifies psychic sensitivity of nearby pawns and self.</li>
+        </customEffectDescriptions>
+        <minAgeActive>6</minAgeActive>
+        <marketValueFactor>3</marketValueFactor>
+        <canGenerateInGeneSet>false</canGenerateInGeneSet>
+        <selectionWeight>0.05</selectionWeight>
+        <modExtensions>
+            <li Class="VEF.Genes.GeneExtension">
+                <backgroundPathXenogenes>UI/Genes/BEWH_GeneBackground_Pariah</backgroundPathXenogenes>
+            </li>
+            <li Class="Genes40k.DefModExtension_Pariah">
+                <radius>20</radius>
+                <tier>3</tier>
+                <pariahGene>BEWH_OmegaPariah</pariahGene>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+</Defs>

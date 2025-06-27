@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Phase base -->
+    <RecipeDef ParentName="SurgeryFlesh" Name="BEWH_PhaseRecipeBase" Abstract="True">
+        <description>Further develops the implanted gene-seed.</description>
+        <workerClass>Genes40k.WorkerClass_PhaseDevelopment</workerClass>
+        <jobString>Developing {0}'s gene-seed.</jobString>
+        <successfullyRemovedHediffMessage>{0} has successfully further developed {1}'s gene-seed.</successfullyRemovedHediffMessage>
+        <surgeryOutcomeEffect Inherit = "False" />
+        <hideBodyPartNames>true</hideBodyPartNames>
+        <targetsBodyPart>false</targetsBodyPart>
+        <surgerySuccessChanceFactor>1</surgerySuccessChanceFactor>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>MedicineUltratech</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <recipeUsers>
+            <li>Human</li>
+        </recipeUsers>
+    </RecipeDef>
+
+    <!-- Firstborn phase base -->
+    <RecipeDef ParentName="BEWH_PhaseRecipeBase" Name="BEWH_FirstbornPhaseRecipeBase" Abstract="True">
+        <workAmount>5000</workAmount>
+        <researchPrerequisite>BEWH_GeneseedPurification</researchPrerequisite>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>MedicineUltratech</li>
+                    </thingDefs>
+                </filter>
+                <count>3</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>8</Medicine>
+        </skillRequirements>
+    </RecipeDef>
+    <!-- Firstborn phase 1->2 -->
+    <RecipeDef ParentName="BEWH_FirstbornPhaseRecipeBase">
+        <defName>BEWH_FirstbornPhaseOneTwo</defName>
+        <label>phase 2 development</label>
+        <removesHediff>BEWH_FirstbornPhaseOne</removesHediff>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PhaseDevelopment">
+                <addHediff>BEWH_FirstbornPhaseTwo</addHediff>
+                <addsGenes>
+                    <li>BEWH_CatalepseanNode</li>
+                    <li>BEWH_Preomnor</li>
+                    <li>BEWH_Omophagea</li>
+                    <li>BEWH_MultiLung</li>
+                    <li>BEWH_Occulobe</li>
+                    <li>BEWH_LymansEar</li>
+                </addsGenes>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+    <!-- Firstborn phase 2->3 -->
+    <RecipeDef ParentName="BEWH_FirstbornPhaseRecipeBase">
+        <defName>BEWH_FirstbornPhaseTwoThree</defName>
+        <label>phase 3 development</label>
+        <removesHediff>BEWH_FirstbornPhaseTwo</removesHediff>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PhaseDevelopment">
+                <addHediff>BEWH_FirstbornPhaseThree</addHediff>
+                <addsGenes>
+                    <li>BEWH_SusAnMembrane</li>
+                    <li>BEWH_Melanochrome</li>
+                    <li>BEWH_OoliticKidney</li>
+                    <li>BEWH_Neuroglottis</li>
+                    <li>BEWH_Mucranoid</li>
+                    <li>BEWH_BetchersGland</li>
+                    <li>BEWH_ProgenoidGlands</li>
+                </addsGenes>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+    <!-- Firstborn phase 3->End -->
+    <RecipeDef ParentName="BEWH_FirstbornPhaseRecipeBase">
+        <defName>BEWH_FirstbornPhaseThreeFour</defName>
+        <label>final phase development</label>
+        <removesHediff>BEWH_FirstbornPhaseThree</removesHediff>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PhaseDevelopment">
+                <addsGenes>
+                    <li>BEWH_BlackCarapace</li>
+                </addsGenes>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!-- Primaris phase base -->
+    <RecipeDef ParentName="BEWH_PhaseRecipeBase" Name="BEWH_PrimarisPhaseRecipeBase" Abstract="True">
+        <workAmount>6500</workAmount>
+        <researchPrerequisite>BEWH_GeneseedPerfection</researchPrerequisite>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>MedicineUltratech</li>
+                    </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>10</Medicine>
+        </skillRequirements>
+    </RecipeDef>
+    <!-- Primaris phase 1->2 -->
+    <RecipeDef ParentName="BEWH_PrimarisPhaseRecipeBase">
+        <defName>BEWH_PrimarisPhaseOneTwo</defName>
+        <label>phase 2 development</label>
+        <removesHediff>BEWH_PrimarisPhaseOne</removesHediff>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PhaseDevelopment">
+                <addHediff>BEWH_PrimarisPhaseTwo</addHediff>
+                <addsGenes>
+                    <li>BEWH_CatalepseanNode</li>
+                    <li>BEWH_Preomnor</li>
+                    <li>BEWH_Omophagea</li>
+                    <li>BEWH_MultiLung</li>
+                    <li>BEWH_Occulobe</li>
+                    <li>BEWH_LymansEar</li>
+                    <li>BEWH_Magnificat</li>
+                </addsGenes>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+    <!-- Primaris phase 2->3 -->
+    <RecipeDef ParentName="BEWH_PrimarisPhaseRecipeBase">
+        <defName>BEWH_PrimarisPhaseTwoThree</defName>
+        <label>phase 3 development</label>
+        <removesHediff>BEWH_PrimarisPhaseTwo</removesHediff>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PhaseDevelopment">
+                <addHediff>BEWH_PrimarisPhaseThree</addHediff>
+                <addsGenes>
+                    <li>BEWH_SusAnMembrane</li>
+                    <li>BEWH_Melanochrome</li>
+                    <li>BEWH_OoliticKidney</li>
+                    <li>BEWH_Neuroglottis</li>
+                    <li>BEWH_Mucranoid</li>
+                    <li>BEWH_BetchersGland</li>
+                    <li>BEWH_ProgenoidGlands</li>
+                </addsGenes>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+    <!-- Primaris phase 3->End -->
+    <RecipeDef ParentName="BEWH_PrimarisPhaseRecipeBase">
+        <defName>BEWH_PrimarisPhaseThreeFour</defName>
+        <label>final phase development</label>
+        <removesHediff>BEWH_PrimarisPhaseThree</removesHediff>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PhaseDevelopment">
+                <addsGenes>
+                    <li>BEWH_BlackCarapace</li>
+                    <li>BEWH_BelisarianFurnace</li>
+                </addsGenes>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+</Defs>

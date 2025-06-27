@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <FactionDef ParentName="FactionBase">
+        <defName>BEWH_OffworldMarinesFaction</defName>
+        <label>Offworld Marines</label>
+        <description>A company of Space Marines stationed aboard an off-world ship.</description>
+
+        <pawnSingular>Marine</pawnSingular>
+        <pawnsPlural>Marines</pawnsPlural>
+        <fixedName>Offworld Marines</fixedName>
+
+        <backstoryFilters>
+            <li>
+                <categories>
+                    <li>Offworld</li>
+                </categories>
+            </li>
+        </backstoryFilters>
+
+        <requiredCountAtGameStart>1</requiredCountAtGameStart>
+        <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+        <configurationListOrderPriority>3000</configurationListOrderPriority>
+        <displayInFactionSelection>false</displayInFactionSelection>
+
+        <canSiege>false</canSiege>
+        <canStageAttacks>false</canStageAttacks>
+        <permanentEnemyToEveryoneExceptPlayer>true</permanentEnemyToEveryoneExceptPlayer>
+        <techLevel>Ultra</techLevel>
+        <rescueesCanJoin>false</rescueesCanJoin>
+        <hidden>true</hidden>
+        <autoFlee>false</autoFlee>
+
+        <factionIconPath>UI/Xenotypes/BEWH_SpaceMarineXenoIcon</factionIconPath>
+        <settlementTexturePath>UI/Xenotypes/BEWH_SpaceMarineXenoIcon</settlementTexturePath>
+    </FactionDef>
+
+</Defs>

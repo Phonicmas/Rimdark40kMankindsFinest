@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!-- Serf -->
+	<HediffDef>
+		<defName>BEWH_SerfBuff</defName>
+		<hediffClass>Genes40k.Hediff_Serf</hediffClass>
+		<label>Serfdom</label>
+		<description>Serving is the only purpose.</description>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<everCurableByItem>false</everCurableByItem>
+		<isBad>false</isBad>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>3.1</maxSeverity>
+		<stages>
+			<li>
+				<minSeverity>0</minSeverity>
+				<label>supressed</label>
+			</li>
+			<li>
+				<minSeverity>1</minSeverity>
+				<label>No Marines</label>
+				<statOffsets>
+					<WorkSpeedGlobal>-0.35</WorkSpeedGlobal>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>2</minSeverity>
+				<label>Marines in Colony</label>
+				<statOffsets>
+					<WorkSpeedGlobal>0.35</WorkSpeedGlobal>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>3</minSeverity>
+				<label>Marine Nearby</label>
+				<statOffsets>
+					<WorkSpeedGlobal>0.35</WorkSpeedGlobal>
+				</statOffsets>
+				<statFactors>
+					<WorkSpeedGlobal>1.5</WorkSpeedGlobal>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
+</Defs>

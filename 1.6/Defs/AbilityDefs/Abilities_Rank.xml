@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Remove rank ability -->
+    <AbilityDef>
+        <defName>BEWH_StripRanks</defName>
+        <label>Strip ranks</label>
+        <description>Target an underperforming or insubordinate ally, demoting and stripping them of rank, effectively resetting their place in the hierarchy.</description>
+        <cooldownTicksRange>15000</cooldownTicksRange>
+        <iconPath>UI/Abilities/BEWH_Ability_RankStripRank</iconPath>
+        <jobDef>CastAbilityOnThingMelee</jobDef>
+        <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <targetRequired>true</targetRequired>
+        <showWhenDrafted>true</showWhenDrafted>
+        <hostile>false</hostile>
+        <verbProperties>
+            <verbClass>Verb_CastAbilityTouch</verbClass>
+            <range>-1</range>
+            <warmupTime>0.25</warmupTime>
+            <soundCast>BEWH_SFX_StripRanks</soundCast>
+            <targetParams>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetAnimals>false</canTargetAnimals>
+                <canTargetMechs>false</canTargetMechs>
+                <canTargetBloodfeeders>false</canTargetBloodfeeders>
+                <canTargetCorpses>false</canTargetCorpses>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="Core40k.CompProperties_ResetRanks">
+                <rankCategoryDef>BEWH_AstartesRankCategory</rankCategoryDef>
+                <ownRankAsTier>true</ownRankAsTier>
+            </li>
+        </comps>
+    </AbilityDef>
+
+
+    <!-- Ancient: Raise Legion Banner -->
+    <VEF.Abilities.AbilityDef>
+        <defName>BEWH_RaiseChapterBanner</defName>
+        <label>Raise Legion Standard</label>
+        <description>Raise the Legion's sacred banner, inspiring nearby battle brothers with unwavering courage and strength. While the banner is raised, they fight with increased morale and unparalleled determination, embodying the glory of their legion.</description>
+        <iconPath>UI/Abilities/BEWH_Ability_RaiseChapterBanner</iconPath>
+        <abilityClass>Genes40k.Ability_ChapterBanner</abilityClass>
+        <needsTicking>true</needsTicking>
+        <requireLineOfSight>true</requireLineOfSight>
+        <cooldownTime>60000</cooldownTime>
+        <range>1.9</range>
+        <castTime>30</castTime>
+        <targetMode>Location</targetMode>
+        <warmupSound>BEWH_SFX_BannerWarmUp</warmupSound> 
+        <castSound>BEWH_SFX_BannerCast</castSound>
+    </VEF.Abilities.AbilityDef>
+
+
+    <!-- Librarian: Quickening -->
+    <AbilityDef ParentName="BEWH_SelfTargetAbilities">
+        <defName>BEWH_LibrarianQuickening</defName>
+        <label>Quickening</label>
+        <description>The psyker taps into precognitive abilities that greatly increase his speed and awareness. With heightened reflexes and foresight, he can anticipate enemy movements and strike with unparalleled speed, outmaneuvering opponents before they can react.</description>
+        <iconPath>UI/Abilities/BEWH_AbilityLibrarianQuickening</iconPath>
+        <cooldownTicksRange>90000</cooldownTicksRange>
+        <statBases>
+            <Ability_Duration>125</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <soundCast>BEWH_SFX_Quickening</soundCast>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>BEWH_LibrarianQuickeningBuff</hediffDef>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>true</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <!-- Librarian: Wave of Lethargy -->
+    <AbilityDef>
+        <defName>BEWH_LibrarianWaveOfLethargy</defName>
+        <label>Wave of Lethargy</label>
+        <description>Unleashes a psychic wave of exhaustion that drains the strength of all enemies in its path. Those caught in the wave are slowed and overwhelmed, leaving them sluggish and vulnerable to subsequent attacks.</description>
+        <iconPath>UI/Abilities/BEWH_AbilityLibrarianWaveOfLethargy</iconPath>
+        <cooldownTicksRange>120000</cooldownTicksRange>
+        <statBases>
+            <Ability_Duration>125</Ability_Duration>
+        </statBases>
+        <aiCanUse>true</aiCanUse>
+        <warmupStartSound>BEWH_SFX_HolyBlastWarmup</warmupStartSound>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <range>9.9</range>
+            <warmupTime>1</warmupTime>
+            <soundCast>BEWH_SFX_WaveOfLethargy</soundCast>
+            <targetParams>
+                <canTargetLocations>true</canTargetLocations>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="Core40k.CompProperties_AbilityWaveAttack">
+                <hediffDef>BEWH_ChiefLibrarianWaveOfLethargyDebuff</hediffDef>
+                <effecterDef>FoamSpray_Directional</effecterDef>                <!-- Change this to something else (Maybe look at effectDef unfathomable gaze from chaos mod) -->
+                <range>9.9</range>
+                <lineWidthEnd>14</lineWidthEnd>
+                <stunTicks>50</stunTicks>
+                <replaceExisting>true</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+
+    <!-- Apothecary: Emergency Aid -->
+    <AbilityDef>
+        <defName>BEWH_ApothecaryEmergencyAid</defName>
+        <label>Emergency Aid</label>
+        <description>Provides emergency treatment to a downed or bedridden pawn, administering stimulants to ease pain and speed healing. The quick, precise care tends to all the pawn's wounds, providing a slight but immediate recovery.</description>
+        <cooldownTicksRange>5000</cooldownTicksRange>
+        <iconPath>UI/Abilities/BEWH_AbilityApothecaryEAid</iconPath>
+        <jobDef>CastAbilityOnThingMelee</jobDef>
+        <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <targetRequired>true</targetRequired>
+        <showWhenDrafted>true</showWhenDrafted>
+        <hostile>false</hostile>
+        <statBases>
+            <Ability_Duration>50</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <verbClass>Verb_CastAbilityTouch</verbClass>
+            <range>-1</range>
+            <warmupTime>1</warmupTime>
+            <soundCast>BEWH_SFX_EmergencyAid</soundCast>
+            <targetParams>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetAnimals>false</canTargetAnimals>
+                <canTargetMechs>false</canTargetMechs>
+                <canTargetBloodfeeders>false</canTargetBloodfeeders>
+                <canTargetCorpses>false</canTargetCorpses>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="Genes40k.CompProperties_AbilityHealAndTend">
+                <healAmount>1~2</healAmount>
+            </li>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>BEWH_ApothecaryStimulantsBuff</hediffDef>
+                <replaceExisting>true</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+
+    <!-- Chaplain: Inspire -->
+    <VEF.Abilities.AbilityDef>
+        <defName>BEWH_ChaplainInspire</defName>
+        <label>Inspire</label>
+        <description>The Chaplain rallies his allies with strong, heartfelt words, filling them with an unshakable faith in their common cause.</description>
+        <iconPath>UI/Abilities/BEWH_AbilityChaplainInspire</iconPath>
+        <abilityClass>Genes40k.Ability_Inspire</abilityClass>
+        <cooldownTime>90000</cooldownTime>
+        <castTime>200</castTime>
+        <durationTime>5000</durationTime>
+        <range>4.9</range>
+        <radius>4.9</radius>
+        <targetMode>Self</targetMode>
+        <worldTargeting>false</worldTargeting>
+        <needsTicking>false</needsTicking>
+        <showGizmoOnWorldView>false</showGizmoOnWorldView>
+    </VEF.Abilities.AbilityDef>
+
+
+    <!-- Captain: Command -->
+    <AbilityDef>
+        <defName>BEWH_CaptainsOrder</defName>
+        <label>Captain's Order</label>
+        <description>The captain issues a powerful command that rallies nearby allies and increases their combat effectiveness. The command increases their strength, precision, and morale, allowing them to fight with greater coordination and ferocity. The effect remains attached to the caster for 24 hours.</description>
+        <iconPath>UI/Abilities/BEWH_AbilityCaptainsOrder</iconPath>
+        <jobDef>CastAbilityOnThing</jobDef>
+        <targetRequired>False</targetRequired>
+        <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
+        <stunTargetWhileCasting>True</stunTargetWhileCasting>
+        <showPsycastEffects>False</showPsycastEffects>
+        <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+        <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <statBases>
+            <Ability_Duration>1000</Ability_Duration>
+            <Ability_EffectRadius>11.9</Ability_EffectRadius>
+        </statBases>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <warmupTime>0.5</warmupTime>
+            <range>11.9</range>
+            <drawAimPie>False</drawAimPie>
+            <requireLineOfSight>False</requireLineOfSight>
+            <soundCast>BEWH_SFX_CaptainsOrder</soundCast>
+            <targetParams>
+                <canTargetSelf>true</canTargetSelf>
+                <canTargetPawns>false</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetAnimals>false</canTargetAnimals>
+                <canTargetHumans>false</canTargetHumans>
+                <canTargetMechs>false</canTargetMechs>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>BEWH_CaptainsOrderBuff</hediffDef>
+                <onlyBrain>True</onlyBrain>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>true</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+
+    <!-- Chapter Master: Steel Rain -->
+    <VEF.Abilities.AbilityDef>
+        <defName>BEWH_ChapterMasterSteelRain</defName>
+        <label>Steel Rain III</label>
+        <description>Call down a barrage of bolter-equipped drop pods, each carrying a squad of Space Marines. The pods crash onto the battlefield, quickly deploying their deadly occupants to overwhelm enemies with a storm of steel and gunfire.</description>
+        <iconPath>UI/Abilities/BEWH_AbilitySteelRainIII</iconPath>
+        <abilityClass>Genes40k.Ability_SteelRain</abilityClass>
+        <castTime>100</castTime>
+        <range>40.9</range>
+        <radius>15.9</radius>
+        <cooldownTime>180000</cooldownTime>
+        <targetMode>Location</targetMode>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_DropPod">
+                <usePlayerColours>true</usePlayerColours>
+                <dropPodAmount>3</dropPodAmount>
+                <marinesToSpawn>4</marinesToSpawn>
+                <fromFaction>BEWH_OffworldMarinesFaction</fromFaction>
+            </li>
+        </modExtensions>
+    </VEF.Abilities.AbilityDef>
+
+
+    <!-- Chapter Ancient: Steel Rain II -->
+    <VEF.Abilities.AbilityDef>
+        <defName>BEWH_Ability_SteelRain_2</defName>
+        <label>Steel Rain II</label>
+        <description>Call in two bolter-equipped drop pods, each carrying a Space Marine squad. The pods crash onto the battlefield, quickly deploying their deadly occupants to overwhelm enemies with a storm of steel and gunfire.</description>
+        <iconPath>UI/Abilities/BEWH_AbilitySteelRainII</iconPath>
+        <abilityClass>Genes40k.Ability_SteelRain</abilityClass>
+        <castTime>100</castTime>
+        <range>40.9</range>
+        <radius>15.9</radius>
+        <cooldownTime>180000</cooldownTime>
+        <targetMode>Location</targetMode>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_DropPod">
+                <usePlayerColours>true</usePlayerColours>
+                <dropPodAmount>2</dropPodAmount>
+                <marinesToSpawn>4</marinesToSpawn>
+                <fromFaction>BEWH_OffworldMarinesFaction</fromFaction>
+            </li>
+        </modExtensions>
+    </VEF.Abilities.AbilityDef>
+    
+
+    <!-- Master of the Forge: Steel Rain I -->
+    <VEF.Abilities.AbilityDef>
+        <defName>BEWH_Ability_SteelRain_1</defName>
+        <label>Steel Rain I</label>
+        <description>Call down a single bolter-equipped drop pods, each carrying a squad of Space Marines. The pods crash onto the battlefield, quickly deploying their deadly occupants to overwhelm enemies with a storm of steel and gunfire.</description>
+        <iconPath>UI/Abilities/BEWH_AbilitySteelRainI</iconPath>
+        <abilityClass>Genes40k.Ability_SteelRain</abilityClass>
+        <castTime>100</castTime>
+        <range>40.9</range>
+        <radius>15.9</radius>
+        <cooldownTime>180000</cooldownTime>
+        <targetMode>Location</targetMode>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_DropPod">
+                <usePlayerColours>true</usePlayerColours>
+                <dropPodAmount>1</dropPodAmount>
+                <marinesToSpawn>4</marinesToSpawn>
+                <fromFaction>BEWH_OffworldMarinesFaction</fromFaction>
+            </li>
+        </modExtensions>
+    </VEF.Abilities.AbilityDef>
+
+</Defs>

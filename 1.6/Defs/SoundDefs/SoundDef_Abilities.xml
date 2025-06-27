@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--============Rank Abilities=============-->
+	<!-- Strip Ranks -->
+	<SoundDef>
+		<defName>BEWH_SFX_StripRanks</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>BEWH_DrumHit</clipPath>
+					</li>
+				</grains>
+				<volumeRange>40~42</volumeRange>
+				<pitchRange>1</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<!-- Ancient: Raise Legion Standard -->
+	<SoundDef>
+		<defName>BEWH_SFX_BannerWarmUp</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<priorityMode>PrioritizeNearest</priorityMode>
+		<sustain>True</sustain>
+		<sustainFadeoutTime>0.1</sustainFadeoutTime>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>BEWH_BannerWarmup</clipPath>
+					</li>
+				</grains>
+				<volumeRange>40~42</volumeRange>
+				<pitchRange>1</pitchRange>
+				<muteWhenPaused>True</muteWhenPaused>
+			</li>
+		</subSounds>
+	</SoundDef>
+	<SoundDef>
+		<defName>BEWH_SFX_BannerCast</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>BEWH_BannerCast</clipPath>
+					</li>
+				</grains>
+				<volumeRange>40~42</volumeRange>
+				<pitchRange>1</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<!-- Librarian: Quickening -->
+	<SoundDef>
+		<defName>BEWH_SFX_Quickening</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>BEWH_Boost</clipPath>
+					</li>
+				</grains>
+				<volumeRange>40~42</volumeRange>
+				<pitchRange>1</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<!-- Librarian: Wave of Lethargy -->
+	<SoundDef>
+		<defName>BEWH_SFX_WaveOfLethargy</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>BEWH_EnergyPulse</clipPath>
+					</li>
+				</grains>
+				<volumeRange>40~42</volumeRange>
+				<pitchRange>1</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<!-- Apothecary: Emergency Aid -->
+	<SoundDef>
+		<defName>BEWH_SFX_EmergencyAid</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>BEWH_Injection</clipPath>
+					</li>
+				</grains>
+				<volumeRange>40~42</volumeRange>
+				<pitchRange>1</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<!-- Captain: Captain's Order -->
+	<SoundDef>
+		<defName>BEWH_SFX_CaptainsOrder</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>BEWH_DrumHit</clipPath>
+					</li>
+				</grains>
+				<volumeRange>40~42</volumeRange>
+				<pitchRange>1</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<!-- Chapter Master: Drop Pod Thump -->
+	<!-- 	<SoundDef>
+		<defName>BEWH_SFX_DropPodThump</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>3</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>BEWH_Raaar</clipPath>
+					</li>
+				</grains>
+				<volumeRange>40~42</volumeRange>
+				<pitchRange>1</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef> -->
+
+	<!--============Living Saint=============-->
+	<!-- Divine Flight -->
+	<SoundDef>
+		<defName>BEWH_SFX_DivineFlightStart</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>LivingSaint/BEWH_SaintTakeOff</clipPath>
+					</li>
+				</grains>
+				<volumeRange>40~42</volumeRange>
+				<pitchRange>1</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	<SoundDef>
+		<defName>BEWH_SFX_DivineFlightEnd</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>LivingSaint/BEWH_SaintLanding</clipPath>
+					</li>
+				</grains>
+				<volumeRange>40~42</volumeRange>
+				<pitchRange>1</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<!-- Holy Blast -->
+	<SoundDef>
+		<defName>BEWH_SFX_HolyBlastWarmup</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>LivingSaint/BEWH_SaintHolyBlastWarmup</clipPath>
+					</li>
+				</grains>
+				<volumeRange>40~42</volumeRange>
+				<pitchRange>1</pitchRange>
+				<muteWhenPaused>True</muteWhenPaused>
+			</li>
+		</subSounds>
+	</SoundDef>
+	<SoundDef>
+		<defName>BEWH_SFX_HolyBlastCast</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>LivingSaint/BEWH_SaintHolyBlastCast</clipPath>
+					</li>
+				</grains>
+				<volumeRange>40~42</volumeRange>
+				<pitchRange>1</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<!-- Proof of Faith -->
+	<SoundDef>
+		<defName>BEWH_SFX_PofWarmup</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>LivingSaint/BEWH_SaintAbsorbWarmup</clipPath>
+					</li>
+				</grains>
+				<volumeRange>48</volumeRange>
+				<pitchRange>1</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	<SoundDef>
+		<defName>BEWH_SFX_PofResolve</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>LivingSaint/BEWH_SaintAbsorbResolve</clipPath>
+					</li>
+				</grains>
+				<volumeRange>15</volumeRange>
+				<pitchRange>1</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	<!-- Inviolable Aura (sustainer)? -->
+
+	<!--============Primarch=============-->
+  	<!-- Rogal Dorn: Raise Bastion -->
+	<SoundDef>
+		<defName>BEWH_SFX_RaiseBastion</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>BEWH_RaiseBastion</clipPath>
+					</li>
+				</grains>
+				<volumeRange>41</volumeRange>
+				<pitchRange>1</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<!--============Psyker=============-->
+	<!-- Psychic Bolt -->
+	<SoundDef>
+		<defName>BEWH_SFX_PsychicBolt</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>BEWH_PsychicBoltCast</clipPath>
+					</li>
+				</grains>
+				<volumeRange>48</volumeRange>
+				<pitchRange>0.9~1.1</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+</Defs>

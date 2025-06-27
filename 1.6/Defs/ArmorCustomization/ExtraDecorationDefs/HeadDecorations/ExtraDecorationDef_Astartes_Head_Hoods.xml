@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- Hoods -->
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_DecoHood</defName>
+        <label>Hood</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_Hood_icon</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Headgear/Common/BEWH_Deco_Hood</drawnTextureIconPath>
+        <drawSize>(0.5, 0.5)</drawSize>
+        <sortOrder>3</sortOrder>
+        <isHelmetDecoration>true</isHelmetDecoration>
+        <defaultShowRotation>
+            <li>West</li>
+            <li>South</li>
+            <li>East</li>
+            <li>North</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmorHelmet</li>
+            <li>BEWH_MkXPowerArmorHelmet</li>
+            <li>BEWH_MkXPowerArmorChaplainHelmet</li>
+        </appliesTo>
+        <drawData>
+            <dataNorth>
+                <layer>76</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>81</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>73</layer>
+                <offset>(-0.034, 0, 0)</offset>
+            </dataEast>
+            <dataWest>
+                <layer>72.3</layer>
+                <offset>(0.034, 0, 0)</offset>
+            </dataWest>
+        </drawData>
+        <colourable>true</colourable>
+        <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
+        <useArmorColourAsDefault>true</useArmorColourAsDefault>
+        <availablePresets>
+            <li>BEWH_DecoPaletteFabricBeige</li>
+            <li>BEWH_DecoPaletteFabricRed</li>
+            <li>BEWH_DecoPaletteIFBlack</li>
+        </availablePresets>
+        <shaderType>Cutout</shaderType>
+    </Core40k.ExtraDecorationDef>
+
+</Defs>

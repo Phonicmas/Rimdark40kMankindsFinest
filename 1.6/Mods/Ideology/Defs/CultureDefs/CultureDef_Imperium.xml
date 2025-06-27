@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Imperium Culture -->
+  <CultureDef>
+    <defName>BEWH_ImperiumCulture</defName>
+    <label>Imperium</label>
+    <description>The Emperor's finest warriors.</description>
+    <iconPath>UI/Icons/Imperium/ImperiumIcon</iconPath>
+    <ideoNameMaker>BEWH_NamerIdeoImperium</ideoNameMaker>
+    <deityNameMaker>BEWH_NamerDeityImperium</deityNameMaker>
+    <deityTypeMaker>BEWH_DeityTypeMakerImperium</deityTypeMaker>
+    <leaderTitleMaker>BEWH_LeaderTitleMakerImperium</leaderTitleMaker>
+    <festivalNameMaker>BEWH_NamerRitualFestivalImperium</festivalNameMaker>
+    <preferredWeaponClasses>
+      <noble>Ultratech</noble>
+      <despised>Neolithic</despised>
+    </preferredWeaponClasses>
+    <allowedPlaceTags>
+      <li>OriginTechnoFeudal</li>
+    </allowedPlaceTags>
+    <styleItemTags>
+      <li>
+        <tag>Shaved</tag>
+        <baseWeight>1</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>Rookie</tag>
+        <baseWeight>1</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>Topdog</tag>
+        <baseWeight>1</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>Recruit</tag>
+        <baseWeight>1</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>NoTattoo</tag>
+        <baseWeight>1</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+    </styleItemTags>
+  </CultureDef>
+
+
+  <!-- Rule Packs -->
+  <!-- Name of the Faction that has this Ideo (i think, otherwise its the ideo name) -->
+  <RulePackDef>
+    <defName>BEWH_NamerIdeoImperium</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_ideoName->Imperium of Man</li>
+        <li>r_ideoAdjective->Imperial</li>
+        <li>r_memberName->Imperial</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <!-- Deity name of ideology -->
+  <RulePackDef>
+    <defName>BEWH_NamerDeityImperium</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_deityName->Holy God Emperor</li>
+        <li>r_deityName->God Emperor</li>
+        <li>r_deityName->The Emperor</li>
+        <li>r_deityName->The Emperor of Mankind</li>
+        <li>r_deityName->The God Emperor of Mankind</li>
+        <li>r_deityName->God Emperor of Mankind</li>
+        <li>r_deityName->Him on Terra</li>
+        <li>r_deityName->The Allfather</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <!-- Description of ideo deity (i think) -->
+  <RulePackDef>
+    <defName>BEWH_DeityTypeMakerImperium</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_deityType->The Anathema</li>
+        <li>r_deityType->The Revelation</li>
+        <li>r_deityType->The Lord of Man</li>
+        <li>r_deityType->The Ruler of the Imperium</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <!-- Name of leader of faction (i think, otherwise its the name of the leader of the ideo (or can be randomly generated to this) ) -->
+  <RulePackDef>
+    <defName>BEWH_LeaderTitleMakerImperium</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_leaderTitle->Chapter Master</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <!-- Festival ritual name for ideology -->
+  <RulePackDef>
+    <defName>BEWH_NamerRitualFestivalImperium</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_ritualName->Celebration of the Emperor</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>

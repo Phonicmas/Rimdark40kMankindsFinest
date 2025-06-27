@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Iron Circle-->
+    <ThingDef ParentName="HeavyMechanoid">
+        <defName>BEWH_PerturaboDomitar</defName>
+        <label>Domitar Battle-Automata</label>
+        <description>Heavily armed and brutally efficient, these automata wield Olympia bolters and Graviton mauls. Forged for siege warfare, they are relentless, obedient engines of destruction. A manifestation of Perturabo's cold, calculated wrath.</description>
+        <statBases>
+            <MoveSpeed>3.6</MoveSpeed>
+            <ArmorRating_Blunt>1.1</ArmorRating_Blunt>
+            <ArmorRating_Sharp>1.1</ArmorRating_Sharp>
+            <PsychicSensitivity>1</PsychicSensitivity>
+
+            <BandwidthCost>0</BandwidthCost>
+            <WastepacksPerRecharge>0</WastepacksPerRecharge>
+
+        </statBases>
+
+        <butcherProducts />
+
+        <race>
+            <body>Scyther</body>
+            <baseHealthScale>2.5</baseHealthScale>
+
+            <maxMechEnergy>500</maxMechEnergy>
+
+            <lifeStageAges>
+                <li>
+                    <def>MechanoidFullyFormed</def>
+                    <minAge>0</minAge>
+                    <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+                    <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+                    <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+                </li>
+            </lifeStageAges>
+            <detritusLeavings>
+                <li>
+                    <def>ChunkMechanoidSlag</def>
+                    <texOverrideIndex>0</texOverrideIndex>
+                    <spawnChance>0.5</spawnChance>
+                </li>
+                <li>
+                    <def>ChunkMechanoidSlag</def>
+                    <texOverrideIndex>3</texOverrideIndex>
+                    <spawnChance>0.5</spawnChance>
+                </li>
+                <li>
+                    <def>ChunkMechanoidSlag</def>
+                    <texOverrideIndex>1</texOverrideIndex>
+                    <spawnChance>0.5</spawnChance>
+                </li>
+            </detritusLeavings>
+        </race>
+
+        <tools>
+            <li>
+                <label>left fist</label>
+                <labelNoLocation>fist</labelNoLocation>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>16.0</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+                <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+            </li>
+            <li>
+                <label>right fist</label>
+                <labelNoLocation>fist</labelNoLocation>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>16.0</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+                <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+            </li>
+            <li>
+                <label>head</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>10</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                <chanceFactor>0.2</chanceFactor>
+            </li>
+        </tools>
+
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <label>Olympia Bolter</label>
+                <defaultProjectile>BEWH_BolterRound</defaultProjectile>
+                <forcedMissRadius>0.1</forcedMissRadius>
+                <warmupTime>0</warmupTime>
+                <range>35.9</range>
+                <hasStandardCommand>true</hasStandardCommand>
+                <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+                <burstShotCount>3</burstShotCount>
+                <soundCast>BEWH_SFX_BolterShot</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>12</muzzleFlashScale>
+            </li>
+        </verbs>
+
+        <comps>
+            <li Class="MVCF.Comps.CompProperties_VerbGiver">
+                <verbProps>
+                    <li>
+                        <label>Olympia Bolter</label>
+                        <visualLabel>Olympia Bolter</visualLabel>
+                        <description>Olympia Bolter mounted on the shoulder.</description>
+                        <!--<Icon>UI/Abilities/BEWH_OlympiaBolter</Icon>-->
+                        <comps>
+                            <li Class="MVCF.VerbComps.VerbCompProperties_Turret">
+                                <compClass>MVCF.VerbComps.VerbComp_Turret</compClass>
+                                <graphic>
+                                    <texPath>UI/Abilities/BEWH_OlympiaBolter</texPath>
+                                    <graphicClass>Graphic_Single</graphicClass>
+                                </graphic>
+                                <!-- <drawScale>3</drawScale> -->
+                            </li>
+                        </comps>
+                    </li>
+                </verbProps>
+            </li>
+        </comps>
+        
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_ExclusiveMech">
+                <requiredGeneToControl>BEWH_PrimarchSpecificGeneIV</requiredGeneToControl>
+                <totalAmountAllowedToHave>6</totalAmountAllowedToHave>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <PawnKindDef ParentName="HeavyMechanoidKind">
+        <defName>BEWH_PerturaboDomitar</defName>
+        <label>Domitar Battle-Automata</label>
+        <race>BEWH_PerturaboDomitar</race>
+        
+        <defaultFactionType Inherit = "False" />
+        <weaponTags>
+            <li>BEWH_DomitarMelee</li>
+        </weaponTags>
+        <forceNormalGearQuality>false</forceNormalGearQuality>
+        <forceWeaponQuality>Excellent</forceWeaponQuality>
+
+        <allowInMechClusters>false</allowInMechClusters>
+
+        <startingHediffs>
+            <li>
+                <def>BEWH_AdvancedTargetingSystems</def>
+            </li>
+        </startingHediffs>
+
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Things/Pawn/Mechs/Domitar/BEWH_Domitar</texPath>
+                    <shaderType>CutoutWithOverlay</shaderType>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>2</drawSize>
+                    <shadowData>
+                        <volume>(0.4, 0.8, 0.4)</volume>
+                    </shadowData>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+    </PawnKindDef>
+
+    <!-- Domitar Chip -->
+    <HediffDef>
+        <defName>BEWH_AdvancedTargetingSystems</defName>
+        <label>Advanced Targeting System</label>
+        <description>Advanced targeting systems that enhances the combat capabilities of the Domitar.</description>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <everCurableByItem>false</everCurableByItem>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <MeleeHitChance>10</MeleeHitChance>
+                    <ShootingAccuracyPawn>6</ShootingAccuracyPawn>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!-- Graviton Maul-->
+    <ThingDef ParentName="BEWH_MeleeWeaponUltratech">
+        <defName>BEWH_GravitonMaul</defName>
+        <label>graviton maul</label>
+        <description>A heavy maul originally used by Domitar-class Battle-Automata. Built for raw impact, it was designed to smash through armor, structures, and enemy lines with brute force. Far too large and heavy for an unaugmented human to wield effectively, it requires significant strength or mechanical assistance to use in combat.</description>
+        <soundInteract>Interact_ChargeLance</soundInteract> <!-- domitar basically does not pick up its weapon -->
+        <meleeHitSound>BEWH_SFX_GravitonMaulHit</meleeHitSound>
+        <equippedAngleOffset>-45</equippedAngleOffset>
+        <relicChance>0</relicChance>
+        <destroyOnDrop>true</destroyOnDrop>
+        <smeltable>false</smeltable>
+        <burnableByRecipe>true</burnableByRecipe>
+        <tradeability>None</tradeability>
+        <weaponClasses>
+            <li>MeleeBlunt</li>
+        </weaponClasses>
+        <weaponTags Inherit = "False">
+            <li>BEWH_DomitarMelee</li>
+        </weaponTags>
+        <tradeTags Inherit = "False" />
+        <thingSetMakerTags Inherit = "False" />
+        <graphicData>
+            <texPath>Things/Weapons/BEWH_GravitonMaul</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.85</drawSize>
+        </graphicData>
+        <tools>
+            <li>
+                <label>handle</label>
+                <capacities>
+                    <li>Poke</li>
+                </capacities>
+                <power>15</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>head</label>
+                <labelUsedInLogging>false</labelUsedInLogging>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>33</power>
+                <armorPenetration>1.45</armorPenetration>
+                <cooldownTime>2.5</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+
+</Defs>

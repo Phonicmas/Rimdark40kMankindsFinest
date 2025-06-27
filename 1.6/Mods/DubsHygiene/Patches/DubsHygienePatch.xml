@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/HediffDef[defName = "BEWH_SusAnMembraneStasis"]/stages</xpath>
+		<value>
+			<stages>
+				<li>
+					<capMods>
+						<li>
+							<capacity>Consciousness</capacity>
+							<setMax>0.20</setMax>
+						</li>
+					</capMods>
+					<statFactors>
+						<IncomingDamageFactor>0</IncomingDamageFactor>
+						<ThirstRateMultiplier>0</ThirstRateMultiplier>
+						<HygieneRateMultiplier>0</HygieneRateMultiplier>
+						<BladderRateMultiplier>0</BladderRateMultiplier>
+					</statFactors>
+					<totalBleedFactor>0</totalBleedFactor>
+				</li>
+			</stages>
+		</value>
+	</Operation>
+
+</Patch>

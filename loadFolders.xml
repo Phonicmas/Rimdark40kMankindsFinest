@@ -11,4 +11,15 @@
 		<li IfModActive="katavrik.crashlanding">1.5/Mods/CrashLanding</li>
 	</v1.5>
 
+	<v1.6>
+		<li>/</li>
+		<li>1.6</li>
+		<li IfModActive="Ludeon.RimWorld.Royalty">1.6/Mods/Royalty</li>
+		<li IfModActive="Ludeon.RimWorld.Ideology">1.6/Mods/Ideology</li>
+		<li IfModActive="dubwise.dubsbadhygiene">1.6/Mods/DubsHygiene</li>
+		<li IfModActive="dubwise.rimatomics">1.6/Mods/DubsRimatomicsRadiation</li>
+		<li IfModActive="oskarpotocki.vfe.empire">1.6/Mods/VanillaFactionExpandedEmpire</li>
+		<li IfModActive="katavrik.crashlanding">1.6/Mods/CrashLanding</li>
+	</v1.6>
+
 </loadFolders>

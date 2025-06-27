@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Gene manipulation table -->
+  <ThingDef ParentName="BenchBase">
+    <defName>BEWH_GeneManipulationTable</defName>
+    <label>gene manipulation table</label>
+    <description>This specialized workstation is used to create Genetic Matrices, which serve as templates for the Ascendance Vials produced in the Gene-seed Gestator. These vials are later implanted into a subject to initiate the transformation process.\n\nThe Gene manipulation table also plays a critical role in the creation of Primarch embryos for the Primarch Project.</description>
+    <thingClass>Genes40k.Building_GeneTable</thingClass>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <WorkToBuild>5000</WorkToBuild>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <minifiedDef />
+    <thingCategories Inherit="false" />
+    <size>(5,2)</size>
+    <costList>
+      <Steel>200</Steel>
+      <ComponentIndustrial>12</ComponentIndustrial>
+      <ComponentSpacer>2</ComponentSpacer>
+      <Gold>5</Gold>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>250</basePowerConsumption>
+        <shortCircuitInRain>true</shortCircuitInRain>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Glower">
+        <glowRadius>3</glowRadius>
+        <glowColor>(255,255,255,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Breakdownable"/>
+    </comps>
+    <graphicData>
+      <texPath>Things/Building/GeneCraftingTable/BEWH_GeneCraftingTable</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(6,3)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+    </building>
+    <fillPercent>0.5</fillPercent>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <designationCategory>BEWH_RimDarkCategory</designationCategory>
+    <uiOrder>2530</uiOrder>
+    <surfaceType>Item</surfaceType>
+    <designationHotKey>Misc12</designationHotKey>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>BEWH_GeneseedCreation</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+  <!-- Gene-seed gestator -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>BEWH_GeneseedGestator</defName>
+    <label>gene-seed gestator</label>
+    <description>Encased in reinforced adamantium plating and adorned with Mechanicus blessings, this machine carefully nurtures Ascendance Vials. It stabilizes and matures the genetic material for later implantation. Further research enables the creation of legion-specific gene-seeds.</description>
+    <thingClass>Genes40k.Building_GeneGestator</thingClass>
+    <containedPawnsSelectable>true</containedPawnsSelectable>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <fillPercent>0.4</fillPercent>
+    <castEdgeShadows>true</castEdgeShadows>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Building/GeneseedGestator/BEWH_GeneseedGestator</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(4, 4)</drawSize>
+    </graphicData>
+    <size>(3, 2)</size>
+    <canOverlapZones>false</canOverlapZones>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <defaultPlacingRot>North</defaultPlacingRot>
+    <designationCategory>BEWH_RimDarkCategory</designationCategory>
+    <uiOrder>2100</uiOrder>
+    <researchPrerequisites>
+      <li>BEWH_GeneseedCreation</li>
+    </researchPrerequisites>
+    <statBases>
+      <MaxHitPoints>350</MaxHitPoints>
+      <WorkToBuild>9000</WorkToBuild>
+      <Mass>85</Mass>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <costList>
+      <Steel>300</Steel>
+      <Plasteel>30</Plasteel>
+      <Gold>5</Gold>
+      <ComponentIndustrial>10</ComponentIndustrial>
+      <ComponentSpacer>6</ComponentSpacer>
+    </costList>
+    <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>1500</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>BEWH_SangprimusPortum</li>
+        </linkableFacilities>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>2</glowRadius>
+        <glowColor>(255,255,255,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Flickable" />
+    </comps>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_GeneGestator">
+        <gestatableThings>
+          <li>BEWH_GeneseedMatrixThunderWarrior</li>
+          <li>BEWH_GeneseedMatrixFirstborn</li>
+          <li>BEWH_GeneseedMatrixPrimaris</li>
+          <li>BEWH_GeneseedMatrixCustodes</li>
+          <li>BEWH_GeneseedMatrixPrimarch</li>
+        </gestatableThings>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Primarch growth vat -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>BEWH_PrimarchGrowthVat</defName>
+    <label>primarch growth vat</label>
+    <description>A sacred and highly advanced chamber designed to nurture the embryonic development of a Primarch. Encased in reinforced adamantium and adorned with Mechanicus blessings, this vat regulates temperature, nutrient infusion, and genetic stability to ensure the flawless growth of the Emperor's demigods.</description>
+    <thingClass>Genes40k.Building_PrimarchGrowthVat</thingClass>
+    <containedPawnsSelectable>true</containedPawnsSelectable>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Building/PrimarchGrowthVat/BEWH_PrimarchVat</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(6, 5)</drawSize>
+      <shadowData>
+        <volume>(3.8, 3, 2.7)</volume>
+      </shadowData>
+    </graphicData>
+    <uiIconPath>Things/Building/PrimarchGrowthVat/BEWH_PrimarchVat_MenuIcon</uiIconPath>
+    <uiIconScale>1.5</uiIconScale>
+    <interactionCellOffset>(-1,0,-2)</interactionCellOffset>
+    <castEdgeShadows>true</castEdgeShadows>
+    <defaultPlacingRot>North</defaultPlacingRot>
+    <size>(4,3)</size>
+    <statBases>
+      <MaxHitPoints>500</MaxHitPoints>
+      <WorkToBuild>8000</WorkToBuild>
+      <Mass>30</Mass>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <costList>
+      <Steel>300</Steel>
+      <Plasteel>50</Plasteel>
+      <Gold>10</Gold>
+      <ComponentIndustrial>10</ComponentIndustrial>
+      <ComponentSpacer>10</ComponentSpacer>
+    </costList>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <blockWind>true</blockWind>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <fillPercent>0.5</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
+    <designationCategory>BEWH_RimDarkCategory</designationCategory>
+    <uiOrder>2200</uiOrder>
+    <hasInteractionCell>true</hasInteractionCell>
+    <inspectorTabs>
+      <li>ITab_BiosculpterNutritionStorage</li>
+      <li>ITab_Genes</li>
+    </inspectorTabs>
+    <researchPrerequisites>
+      <li>BEWH_PrimarchProject</li>
+    </researchPrerequisites>
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+      <haulToContainerDuration>120</haulToContainerDuration>
+      <fixedStorageSettings>
+        <filter>
+          <thingDefs>
+            <li>BEWH_RawGestationalSlurry</li>
+          </thingDefs>
+        </filter>
+      </fixedStorageSettings>
+      <defaultStorageSettings>
+        <filter>
+          <thingDefs>
+            <li>BEWH_RawGestationalSlurry</li>
+          </thingDefs>
+        </filter>
+      </defaultStorageSettings>
+      <formingMechPerRotationOffset>
+        <li>(0, 0, 0.225)</li>
+        <li>(-0.15, 0, 0.225)</li>
+        <li>(0, 0, 0.225)</li>
+        <li>(0.15, 0, 0.225)</li>
+      </formingMechPerRotationOffset>
+      <mechGestatorCylinderGraphic>
+        <texPath>Things/Building/PrimarchGrowthVat/BEWH_PrimarchVatGlass</texPath>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <drawSize>(6, 5)</drawSize>
+        <shaderType>Transparent</shaderType>
+      </mechGestatorCylinderGraphic>
+      <mechGestatorTopGraphic>
+        <texPath>Things/Building/PrimarchGrowthVat/BEWH_PrimarchVatTop</texPath>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <drawSize>(6, 5)</drawSize>
+      </mechGestatorTopGraphic>
+      <gestatorFormingMote>
+        <north>BEWH_PrimarchVatForming_North</north>
+        <east>BEWH_PrimarchVatForming_East</east>
+        <west>BEWH_PrimarchVatForming_West</west>
+        <south>BEWH_PrimarchVatForming_South</south>
+      </gestatorFormingMote>
+      <gestatorCycleCompleteMote>
+        <north>BEWH_PrimarchVatCycleComplete_North</north>
+        <east>BEWH_PrimarchVatCycleComplete_East</east>
+        <west>BEWH_PrimarchVatCycleComplete_West</west>
+        <south>BEWH_PrimarchVatCycleComplete_South</south>
+      </gestatorCycleCompleteMote>
+      <gestatorFormedMote>
+        <north>BEWH_PrimarchVatFormed_North</north>
+        <east>BEWH_PrimarchVatFormed_North</east>
+        <west>BEWH_PrimarchVatFormed_West</west>
+        <south>BEWH_PrimarchVatFormed_South</south>
+      </gestatorFormedMote>
+    </building>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>2000</basePowerConsumption>
+        <idlePowerDraw>80</idlePowerDraw>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>4</glowRadius>
+        <glowColor>(244,189,35,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+    </comps>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_PrimarchVatTexture">
+        <earlyFetusTexture>Effects/BEWH_GrowingPrimarchFetus_EarlyStage</earlyFetusTexture>
+        <earlyFetusSize>(2,2)</earlyFetusSize>
+        <earlyFetusOffset>(0,0,-0.1)</earlyFetusOffset>
+
+        <lateFetusTexture>Effects/BEWH_GrowingPrimarchFetus_LateStage</lateFetusTexture>
+        <lateFetusSize>(1,1)</lateFetusSize>
+        <lateFetusOffset>(0,0,-0.1)</lateFetusOffset>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

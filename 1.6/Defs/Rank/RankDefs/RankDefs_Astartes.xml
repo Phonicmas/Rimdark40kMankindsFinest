@@ -1,0 +1,913 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- ====Astartes==== -->
+    <!-- =Base= -->
+    <!-- Neophyte -->
+    <Genes40k.ChapterRankDef>
+        <defName>BEWH_AstartesRankNeophyte</defName>
+        <label>Neophyte</label>
+        <description>Neophytes are the newest recruits of a Chapter. They are usually employed along a Chapter's Scout Squads as part of their training.</description>
+        <rankIconPath>UI/Ranks/Astartes/BEWH_Neophyte</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(0, 0)</displayPosition>
+        <defaultFirstRank>True</defaultFirstRank>
+
+        <requiredSkills>
+            <Shooting>5</Shooting>
+            <Melee>5</Melee>
+        </requiredSkills>
+        <requiredGenesAll>
+            <li>BEWH_SecondaryHeart</li>
+            <li>BEWH_Ossmodula</li>
+            <li>BEWH_Biscopea</li>
+            <li>BEWH_Haemastamen</li>
+            <li>BEWH_LarramansOrgan</li>
+        </requiredGenesAll>
+
+        <rankTier>0</rankTier>
+
+        <unlocksRankIcon>BEWH_RankIconNeophyte</unlocksRankIcon>
+
+    </Genes40k.ChapterRankDef>
+    <!-- Battle-Brother -->
+    <Genes40k.ChapterRankDef>
+        <defName>BEWH_AstartesRankBattleBrother</defName>
+        <label>Battle-Brother</label>
+        <description>Battle-Brothers are fully initiated Astartes, proven in both skill and loyalty. They form the backbone of a Chapter's fighting force, deployed across the galaxy in service of the Emperor's will.</description>
+        <rankIconPath>UI/Ranks/Astartes/BEWH_BattleBrother</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(2, 0)</displayPosition>
+
+        <rankRequirements>
+            <BEWH_AstartesRankNeophyte>5</BEWH_AstartesRankNeophyte>
+        </rankRequirements>
+        <requiredSkills>
+            <Shooting>7</Shooting>
+            <Melee>7</Melee>
+        </requiredSkills>
+        <requiredGenesAll>
+            <li>BEWH_BlackCarapace</li>
+        </requiredGenesAll>
+
+        <statOffsets>
+            <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">-0.05</CertaintyLossFactor>
+            <MeleeDodgeChance>0.05</MeleeDodgeChance>
+        </statOffsets>
+
+        <rankTier>1</rankTier>
+
+        <unlocksRankIcon>BEWH_RankIconBattleBrother</unlocksRankIcon>
+
+    </Genes40k.ChapterRankDef>
+    <!-- Veteran -->
+    <Genes40k.ChapterRankDef>
+        <defName>BEWH_AstartesRankVeteran</defName>
+        <label>Veteran</label>
+        <description>Veterans are warriors honed by centuries of battle. These Space Marines are often equipped with the finest relics and serve as mentors, bodyguards, and champions in the Chapter's most vital conflicts.</description>
+        <rankIconPath>UI/Ranks/Astartes/BEWH_Veteran</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(3, -2)</displayPosition>
+
+        <rankRequirements>
+            <BEWH_AstartesRankBattleBrother>12</BEWH_AstartesRankBattleBrother>
+        </rankRequirements>
+        <requiredSkills>
+            <Shooting>10</Shooting>
+            <Melee>10</Melee>
+        </requiredSkills>
+
+        <statOffsets>
+            <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">-0.075</CertaintyLossFactor>
+            <MeleeDodgeChance>0.075</MeleeDodgeChance>
+        </statOffsets>
+
+        <rankTier>2</rankTier>
+
+        <unlocksRankIcon>BEWH_RankIconVeteran</unlocksRankIcon>
+
+    </Genes40k.ChapterRankDef>
+
+    <!-- =Tactical Marine= -->
+    <!-- Sergeant -->
+    <Genes40k.ChapterRankDef>
+        <defName>BEWH_AstartesRankSergeant</defName>
+        <label>Sergeant</label>
+        <description>Sergeants are seasoned warriors appointed to lead squads into battle. Steeped in the Chapter's doctrines, they embody tactical discipline and command the unwavering loyalty of their Battle-Brothers.</description>
+        <rankIconPath>UI/Ranks/Astartes/BEWH_Sergeant</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(5, -2)</displayPosition>
+        <colonyLimitOfRank>(2, 4)</colonyLimitOfRank>
+
+        <rankRequirements>
+            <BEWH_AstartesRankVeteran>10</BEWH_AstartesRankVeteran>
+        </rankRequirements>
+
+        <statOffsets>
+            <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">-0.1</CertaintyLossFactor>
+            <MeleeDodgeChance>1</MeleeDodgeChance>
+        </statOffsets>
+
+        <rankTier>3</rankTier>
+
+        <unlocksRankIcon>BEWH_RankIconSergeant</unlocksRankIcon>
+
+    </Genes40k.ChapterRankDef>
+    <!-- Lieutenant -->
+    <Genes40k.ChapterRankDef>
+        <defName>BEWH_AstartesRankLieutenant</defName>
+        <label>Lieutenant</label>
+        <description>Lieutenants are junior officers who act as trusted aides to Captains. They provide strategic oversight, relay orders, and reinforce the chain of command, ensuring that that the will of the Chapter is carried out with perfect coordination.</description>
+        <rankIconPath>UI/Ranks/Astartes/BEWH_Lieutenant</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(8, 0)</displayPosition>
+        <colonyLimitOfRank>(1, 6)</colonyLimitOfRank>
+
+        <rankRequirements>
+            <BEWH_AstartesRankSergeant>15</BEWH_AstartesRankSergeant>
+            <BEWH_AstartesRankDevastatorSergeant>8</BEWH_AstartesRankDevastatorSergeant>
+            <BEWH_AstartesRankAssaultSergeant>8</BEWH_AstartesRankAssaultSergeant>
+        </rankRequirements>
+        <requiredSkills>
+            <Social>5</Social>
+            <Intellectual>7</Intellectual>
+        </requiredSkills>
+
+        <statOffsets>
+            <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">-0.1</CertaintyLossFactor>
+            <MeleeDodgeChance>1</MeleeDodgeChance>
+            <RangedCooldownFactor>-0.03</RangedCooldownFactor>
+            <MeleeCooldownFactor>-0.03</MeleeCooldownFactor>
+        </statOffsets>
+
+        <statFactors>
+            <ShootingAccuracyPawn>1.04</ShootingAccuracyPawn>
+            <MeleeHitChance>1.04</MeleeHitChance>
+        </statFactors>
+
+        <rankTier>4</rankTier>
+
+        <unlocksRankIcon>BEWH_RankIconLieutenant</unlocksRankIcon>
+
+    </Genes40k.ChapterRankDef>
+    <!-- Captain -->
+    <Genes40k.ChapterRankDef>
+        <defName>BEWH_AstartesRankCaptain</defName>
+        <label>Captain</label>
+        <description>Captains are the commanders of a Chapter's companies. Each is a master of strategy and a paragon of the Chapter's ideals.</description>
+        <rankIconPath>UI/Ranks/Astartes/BEWH_Captain</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(10, 0)</displayPosition>
+        <colonyLimitOfRank>(1, 8)</colonyLimitOfRank>
+
+        <rankRequirements>
+            <BEWH_AstartesRankLieutenant>25</BEWH_AstartesRankLieutenant>
+        </rankRequirements>
+        <requiredSkills>
+            <Shooting>15</Shooting>
+            <Melee>15</Melee>
+            <Social>7</Social>
+            <Intellectual>9</Intellectual>
+        </requiredSkills>
+
+        <statOffsets>
+            <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">-0.1</CertaintyLossFactor>
+            <SocialImpact>0.2</SocialImpact>
+        </statOffsets>
+
+        <rankTier>6</rankTier>
+
+        <givesAbilities>
+            <li>BEWH_CaptainsOrder</li>
+        </givesAbilities>
+
+        <unlocksRankIcon>BEWH_RankIconCaptain</unlocksRankIcon>
+
+    </Genes40k.ChapterRankDef>
+    <!-- Chapter Master -->
+    <Genes40k.ChapterRankDef>
+        <defName>BEWH_AstartesRankChapterMaster</defName>
+        <label>Chapter Master</label>
+        <description>The Chapter Master is the supreme commander of the Chapter, a warlord whose word is the law, a living embodiment of Chapter's legacy, will and strength. Under his leadership, the Chapter wages war across the galaxy in the name of the Emperor.</description>
+        <rankIconPath>UI/Ranks/Astartes/BEWH_ChapterMaster</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(14, 0)</displayPosition>
+        <colonyLimitOfRank>(1, 0)</colonyLimitOfRank>
+
+        <rankRequirements>
+            <BEWH_AstartesRankCaptain>40</BEWH_AstartesRankCaptain>
+        </rankRequirements>
+        <incompatibleRanks>
+            <li>BEWH_AstartesRankChapterAncient</li>
+        </incompatibleRanks>
+        <requiredSkills>
+            <Shooting>18</Shooting>
+            <Melee>18</Melee>
+            <Social>14</Social>
+            <Intellectual>12</Intellectual>
+        </requiredSkills>
+
+        <statOffsets>
+            <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">-0.5</CertaintyLossFactor>
+            <SocialImpact>0.4</SocialImpact>
+        </statOffsets>
+
+        <givesAbilities>
+            <li>BEWH_StripRanks</li>
+        </givesAbilities>
+
+        <givesVFEAbilities>
+            <li>BEWH_ChapterMasterSteelRain</li>
+        </givesVFEAbilities>
+
+        <rankTier>10</rankTier>
+
+        <unlocksRankIcon>BEWH_RankIconChapterMaster</unlocksRankIcon>
+
+    </Genes40k.ChapterRankDef>
+
+    <!-- =Vanguard= -->
+    <Genes40k.ChapterRankDef>
+        <defName>BEWH_AstartesRankVanguard</defName>
+        <label>Vanguard</label>
+        <description>Vanguards are elite warriors trained in stealth, rapid assault, and close-quarters combat. Often equipped with lighter armor and specialized wargear, they strike swiftly behind enemy lines, spreading terror and confusion before vanishing into the shadows.</description>
+        <rankIconPath>UI/Ranks/Astartes/BEWH_Vanguard</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(1, -1)</displayPosition>
+
+        <rankRequirements>
+            <BEWH_AstartesRankBattleBrother>7</BEWH_AstartesRankBattleBrother>
+        </rankRequirements>
+        <requiredSkills>
+            <Intellectual>6</Intellectual>
+        </requiredSkills>
+        <requiredTraitsOneAmong>
+            <Nimble />
+            <SpeedOffset>1</SpeedOffset>
+            <SpeedOffset>2</SpeedOffset>
+        </requiredTraitsOneAmong>
+
+        <statOffsets>
+            <MoveSpeed>0.05</MoveSpeed>
+            <HuntingStealth>0.2</HuntingStealth>
+        </statOffsets>
+
+        <statFactors>
+            <PawnTrapSpringChance>0.5</PawnTrapSpringChance>
+        </statFactors>
+
+        <customEffectDescriptions>
+            <li>Increased stats while in darkness</li>
+        </customEffectDescriptions>
+
+        <conditionalStatAffecters>
+            <li Class="VEF.Genes.ConditionalStatAffecter_Darkness">
+                <statOffsets>
+                    <MoveSpeed>0.15</MoveSpeed>
+                    <MeleeDodgeChance>1</MeleeDodgeChance>
+                </statOffsets>
+                <statFactors>
+                    <HuntingStealth>1.5</HuntingStealth>
+                    <ShootingAccuracyPawn>1.15</ShootingAccuracyPawn>
+                    <MeleeHitChance>1.15</MeleeHitChance>
+                </statFactors>
+            </li>
+        </conditionalStatAffecters>
+
+        <rankTier>3</rankTier>
+
+        <unlocksRankIcon>BEWH_RankIconVanguard</unlocksRankIcon>
+
+    </Genes40k.ChapterRankDef>
+
+    <!-- =Chapter Ancient= -->
+    <Genes40k.ChapterRankDef>
+        <defName>BEWH_AstartesRankChapterAncient</defName>
+        <label>Ancient</label>
+        <description>The Chapter Ancient bears the Chapter Standard into war - a relic of immense symbolic power. Its presence steels the hearts of Battle-Brothers and inspires them to fight with renewed fury and unwavering resolve.</description>
+        <rankIconPath>UI/Ranks/Astartes/BEWH_Ancient</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(9, -1)</displayPosition>
+        <colonyLimitOfRank>(1, 0)</colonyLimitOfRank>
+
+        <rankRequirements>
+            <BEWH_AstartesRankLieutenant>10</BEWH_AstartesRankLieutenant>
+        </rankRequirements>
+        <requiredSkills>
+            <Social>10</Social>
+        </requiredSkills>
+        <requiredTraitsOneAmong>
+            <Nerves>2</Nerves>
+            <Nerves>1</Nerves>
+        </requiredTraitsOneAmong>
+
+        <incompatibleRanks>
+            <li>BEWH_AstartesRankChapterMaster</li>
+        </incompatibleRanks>
+
+        <givesVFEAbilities>
+            <li>BEWH_RaiseChapterBanner</li>
+            <li>BEWH_Ability_SteelRain_2</li>
+        </givesVFEAbilities>
+
+        <statFactors>
+            <SocialImpact>1.15</SocialImpact>
+            <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0</CertaintyLossFactor>
+        </statFactors>
+
+        <rankTier>6</rankTier>
+
+        <unlocksRankIcon>BEWH_RankIconChapterAncient</unlocksRankIcon>
+
+    </Genes40k.ChapterRankDef>
+
+    <!-- =Apothecary= -->
+    <!-- Helix Adept -->
+    <Genes40k.ChapterRankDef>
+        <defName>BEWH_AstartesRankHelixAdept</defName>
+        <label>Helix Adept</label>
+        <description>The Helix Adept is an Apothecary-in-training, versed in battlefield triage and the sacred duty of gene-seed retrieval. They learn the arts of life and death under the watchful eye of experienced Apothecaries.</description>
+        <rankIconPath>UI/Ranks/Astartes/BEWH_HelixAdept</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(4, 1)</displayPosition>
+
+        <rankRequirements>
+            <BEWH_AstartesRankBattleBrother>7</BEWH_AstartesRankBattleBrother>
+        </rankRequirements>
+        <incompatibleRanks>
+            <li>BEWH_AstartesRankJudiciar</li>
+            <li>BEWH_AstartesRankAcolytum</li>
+            <li>BEWH_AstartesRankTechmarineNovitiate</li>
+        </incompatibleRanks>
+        <requiredTraitsOneAmong>
+            <BEWH_FieldMedic />
+            <BEWH_Surgeon />
+            <Kind />
+        </requiredTraitsOneAmong>
+        <requiredSkills>
+            <Medicine>9</Medicine>
+        </requiredSkills>
+
+        <statOffsets>
+            <MedicalTendQuality>0.1</MedicalTendQuality>
+        </statOffsets>
+
+        <givesAbilities>
+            <li>BEWH_HarvestGeneseedsFromDead</li>
+        </givesAbilities>
+
+        <customEffectDescriptions>
+            <li>10% increased chance to succesfully harvest gene-seed from dead marines.</li>
+        </customEffectDescriptions>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneseedHarvest">
+                <chanceOffset>10</chanceOffset>
+            </li>
+        </modExtensions>
+
+        <rankTier>2</rankTier>
+
+        <unlocksRankIcon>BEWH_RankIconHelixAdept</unlocksRankIcon>
+
+    </Genes40k.ChapterRankDef>
+    <!-- Apothecary -->
+    <Genes40k.ChapterRankDef>
+        <defName>BEWH_AstartesRankApothecary</defName>
+        <label>Apothecary</label>
+        <description>Apothecaries are the healers and gene-seed keepers of the Chapter. On the battlefield, they tend the wounded and recover the genetic legacy of fallen brethren - an unbroken chain stretching back to the Chapter's Primarch.</description>
+        <rankIconPath>UI/Ranks/Astartes/BEWH_Apothecary</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(6, 1)</displayPosition>
+        <colonyLimitOfRank>(1, 4)</colonyLimitOfRank>
+
+        <rankRequirements>
+            <BEWH_AstartesRankHelixAdept>15</BEWH_AstartesRankHelixAdept>
+        </rankRequirements>
+        <requiredSkills>
+            <Medicine>14</Medicine>
+        </requiredSkills>
+
+        <statOffsets>
+            <MedicalTendQuality>0.2</MedicalTendQuality>
+            <MedicalSurgerySuccessChance>0.2</MedicalSurgerySuccessChance>
+        </statOffsets>
+
+        <customEffectDescriptions>
+            <li>25% increased chance to succesfully harvest gene-seed from dead marines.</li>
+        </customEffectDescriptions>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneseedHarvest">
+                <chanceOffset>25</chanceOffset>
+            </li>
+        </modExtensions>
+
+        <givesAbilities>
+            <li>BEWH_ApothecaryEmergencyAid</li>
+        </givesAbilities>
+
+        <rankTier>4</rankTier>
+
+        <unlocksRankIcon>BEWH_RankIconApothecary</unlocksRankIcon>
+
+    </Genes40k.ChapterRankDef>
+    <!-- Master of the Apothecarion -->
+    <Genes40k.ChapterRankDef>
+        <defName>BEWH_AstartesRankMasterOfTheApothecarion</defName>
+        <label>Master of the Apothecarion</label>
+        <description>The Master of the Apothecarion oversees all medical and genetic duties within the Chapter. A veteran among healers, they are charged with preserving the purity of the gene-seed and ensuring its sanctity across generations.</description>
+        <rankIconPath>UI/Ranks/Astartes/BEWH_MasterOfTheApothecarion</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(9, 1)</displayPosition>
+        <colonyLimitOfRank>(1, 0)</colonyLimitOfRank>
+
+        <rankRequirements>
+            <BEWH_AstartesRankApothecary>35</BEWH_AstartesRankApothecary>
+        </rankRequirements>
+        <requiredSkills>
+            <Medicine>18</Medicine>
+        </requiredSkills>
+
+        <statOffsets>
+            <MedicalTendQuality>0.4</MedicalTendQuality>
+            <MedicalOperationSpeed>0.3</MedicalOperationSpeed>
+        </statOffsets>
+
+        <customEffectDescriptions>
+            <li>40% increased chance to succesfully harvest gene-seed from dead marines.</li>
+        </customEffectDescriptions>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneseedHarvest">
+                <chanceOffset>40</chanceOffset>
+            </li>
+        </modExtensions>
+
+        <rankTier>7</rankTier>
+
+        <unlocksRankIcon>BEWH_RankIconMasterOfTheApothecarion</unlocksRankIcon>
+
+    </Genes40k.ChapterRankDef>
+
+    <!-- =Techmarine= -->
+    <!-- Techmarine Novitiate -->
+    <Genes40k.ChapterRankDef>
+        <defName>BEWH_AstartesRankTechmarineNovitiate</defName>
+        <label>Techmarine Novitiate</label>
+        <description>Techmarine Novitiates are initiates of the Machine Cult, undergoing rigorous training in the rites of the Omnissiah. Divided in loyalty between their Chapter and Mars, they begin their path by learning to commune with the machine spirit and soothing the "pain" of sacred wargear.</description>
+        <rankIconPath>UI/Ranks/Astartes/BEWH_TechmarineNovitiate</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(4, 2)</displayPosition>
+
+        <rankRequirements>
+            <BEWH_AstartesRankBattleBrother>7</BEWH_AstartesRankBattleBrother>
+        </rankRequirements>
+        <incompatibleRanks>
+            <li>BEWH_AstartesRankJudiciar</li>
+            <li>BEWH_AstartesRankAcolytum</li>
+            <li>BEWH_AstartesRankHelixAdept</li>
+        </incompatibleRanks>
+        <requiredTraitsOneAmong>
+            <Transhumanist />
+            <Pyromaniac />
+            <Industriousness>2</Industriousness>
+            <Industriousness>1</Industriousness>
+        </requiredTraitsOneAmong>
+        <requiredSkills>
+            <Crafting>8</Crafting>
+        </requiredSkills>
+
+        <statOffsets>
+            <DeepDrillingSpeed>0.2</DeepDrillingSpeed>
+            <WorkSpeedGlobal>0.05</WorkSpeedGlobal>
+            <HackingSpeed MayRequire="Ludeon.RimWorld.Ideology">0.1</HackingSpeed>
+        </statOffsets>
+
+        <rankTier>2</rankTier>
+
+        <unlocksRankIcon>BEWH_RankIconTechmarineNovitiate</unlocksRankIcon>
+
+    </Genes40k.ChapterRankDef>
+    <!-- Techmarine -->
+    <Genes40k.ChapterRankDef>
+        <defName>BEWH_AstartesRankTechmarine</defName>
+        <label>Techmarine</label>
+        <description>Techmarines are the sacred bridge between the Chapter and Cult Mechanicus. They maintain war engines, command servitors, and wield powerful mechadendrites and plasma tools in both repair and battle.</description>
+        <rankIconPath>UI/Ranks/Astartes/BEWH_Techmarine</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(6, 2)</displayPosition>
+        <colonyLimitOfRank>(1, 4)</colonyLimitOfRank>
+
+        <rankRequirements>
+            <BEWH_AstartesRankTechmarineNovitiate>15</BEWH_AstartesRankTechmarineNovitiate>
+        </rankRequirements>
+        <requiredSkills>
+            <Crafting>12</Crafting>
+        </requiredSkills>
+
+        <statOffsets>
+            <ConstructionSpeed>0.2</ConstructionSpeed>
+            <FixBrokenDownBuildingSuccessChance>0.25</FixBrokenDownBuildingSuccessChance>
+            <WorkSpeedGlobal>0.05</WorkSpeedGlobal>
+            <MechBandwidth>1</MechBandwidth>
+            <MechFormingSpeed>0.2</MechFormingSpeed>
+            <HackingSpeed MayRequire="Ludeon.RimWorld.Ideology">0.15</HackingSpeed>
+        </statOffsets>
+
+        <rankTier>4</rankTier>
+
+        <unlocksRankIcon>BEWH_RankIconTechmarine</unlocksRankIcon>
+
+    </Genes40k.ChapterRankDef>
+    <!-- Master of the Forge -->
+    <Genes40k.ChapterRankDef>
+        <defName>BEWH_AstartesRankMasterOfTheForge</defName>
+        <label>Master of the Forge</label>
+        <description>The Master of the Forge is the highest Techmarine in a Chapter, responsible for the maintenance of its most sacred machines and relics.</description>
+        <rankIconPath>UI/Ranks/Astartes/BEWH_MasterOfTheForge</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(9, 2)</displayPosition>
+        <colonyLimitOfRank>(1, 0)</colonyLimitOfRank>
+
+        <rankRequirements>
+            <BEWH_AstartesRankTechmarine>35</BEWH_AstartesRankTechmarine>
+        </rankRequirements>
+        <requiredSkills>
+            <Crafting>16</Crafting>
+        </requiredSkills>
+
+        <statOffsets>
+            <ConstructionSpeed>0.1</ConstructionSpeed>
+            <ConstructSuccessChance>0.4</ConstructSuccessChance>
+            <WorkSpeedGlobal>0.1</WorkSpeedGlobal>
+            <MechBandwidth>2</MechBandwidth>
+        </statOffsets>
+
+        <statFactors>
+            <HackingSpeed MayRequire="Ludeon.RimWorld.Ideology">2</HackingSpeed>
+        </statFactors>
+
+        <givesVFEAbilities>
+            <li>BEWH_Ability_SteelRain_1</li>
+        </givesVFEAbilities>
+
+        <rankTier>7</rankTier>
+
+        <unlocksRankIcon>BEWH_RankIconMasterOfTheForge</unlocksRankIcon>
+
+    </Genes40k.ChapterRankDef>
+
+    <!-- =Librarian= -->
+    <!-- Acolytum -->
+    <Genes40k.ChapterRankDef>
+        <defName>BEWH_AstartesRankAcolytum</defName>
+        <label>Acolytum</label>
+        <description>Acolyta are those who take the first steps on the path of the Librarius. Under the guidance of senior Librarians, they learn to harness and control their psychic potential. Their souls are fortified against the Warp, but constant vigilance is required.</description>
+        <rankIconPath>UI/Ranks/Astartes/BEWH_Acolytum</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(4, 3)</displayPosition>
+
+        <rankRequirements>
+            <BEWH_AstartesRankBattleBrother>7</BEWH_AstartesRankBattleBrother>
+        </rankRequirements>
+        <incompatibleRanks>
+            <li>BEWH_AstartesRankTechmarineNovitiate</li>
+            <li>BEWH_AstartesRankHelixAdept</li>
+            <li>BEWH_AstartesRankJudiciar</li>
+        </incompatibleRanks>
+        <requiredGenesOneAmong>
+            <li>BEWH_IotaPsyker</li>
+            <li>BEWH_EpsilonPsyker</li>
+            <li>BEWH_DeltaPsyker</li>
+            <li>BEWH_BetaPsyker</li>
+            <li>BEWH_AlphaPsyker</li>
+        </requiredGenesOneAmong>
+        <requiredSkills>
+            <Intellectual>10</Intellectual>
+        </requiredSkills>
+
+        <statOffsets>
+            <ResearchSpeed>0.1</ResearchSpeed>
+            <PsychicSensitivity>0.2</PsychicSensitivity>
+        </statOffsets>
+
+        <statFactors>
+            <GlobalLearningFactor>1.02</GlobalLearningFactor>
+        </statFactors>
+
+        <rankTier>2</rankTier>
+
+        <unlocksRankIcon>BEWH_RankIconAcolytum</unlocksRankIcon>
+
+    </Genes40k.ChapterRankDef>
+    <!-- Librarian -->
+    <Genes40k.ChapterRankDef>
+        <defName>BEWH_AstartesRankLibrarian</defName>
+        <label>Librarian</label>
+        <description>Librarians are warrior-psykers, sanctioned to wield the power of the Warp in service of the Emperor. Guardians of esoteric knowledge and lore-keepers of the Chapter, they walk a fine line between divine purpose and damnation.</description>
+        <rankIconPath>UI/Ranks/Astartes/BEWH_Librarian</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(6, 3)</displayPosition>
+        <colonyLimitOfRank>(1, 4)</colonyLimitOfRank>
+
+        <rankRequirements>
+            <BEWH_AstartesRankAcolytum>15</BEWH_AstartesRankAcolytum>
+        </rankRequirements>
+        <requiredSkills>
+            <Intellectual>15</Intellectual>
+        </requiredSkills>
+
+        <statOffsets>
+            <ResearchSpeed>0.15</ResearchSpeed>
+            <PsychicSensitivity>0.3</PsychicSensitivity>
+            <ReadingSpeed>0.1</ReadingSpeed>
+        </statOffsets>
+
+        <statFactors>
+            <GlobalLearningFactor>1.03</GlobalLearningFactor>
+        </statFactors>
+
+        <givesAbilities>
+            <li>BEWH_LibrarianQuickening</li>
+        </givesAbilities>
+
+        <rankTier>4</rankTier>
+
+        <unlocksRankIcon>BEWH_RankIconLibrarian</unlocksRankIcon>
+
+    </Genes40k.ChapterRankDef>
+    <!-- Chief Librarian -->
+    <Genes40k.ChapterRankDef>
+        <defName>BEWH_AstartesRankChiefLibrarian</defName>
+        <label>Chief Librarian</label>
+        <description>The strongest and and most psychically attuned Librarian in the Chapter. The master of the Librarium. Chief Librarians often lead troops or assist the Chapter Master in battle.</description>
+        <rankIconPath>UI/Ranks/Astartes/BEWH_ChiefLibrarian</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(9, 3)</displayPosition>
+        <colonyLimitOfRank>(1, 0)</colonyLimitOfRank>
+
+        <rankRequirements>
+            <BEWH_AstartesRankLibrarian>35</BEWH_AstartesRankLibrarian>
+        </rankRequirements>
+        <requiredSkills>
+            <Intellectual>19</Intellectual>
+        </requiredSkills>
+
+        <statOffsets>
+            <ResearchSpeed>0.25</ResearchSpeed>
+            <PsychicSensitivity>0.5</PsychicSensitivity>
+            <ReadingSpeed>0.3</ReadingSpeed>
+        </statOffsets>
+
+        <statFactors>
+            <GlobalLearningFactor>1.05</GlobalLearningFactor>
+        </statFactors>
+
+        <givesAbilities>
+            <li>BEWH_LibrarianWaveOfLethargy</li>
+        </givesAbilities>
+
+        <rankTier>7</rankTier>
+
+        <unlocksRankIcon>BEWH_RankIconChiefLibrarian</unlocksRankIcon>
+
+    </Genes40k.ChapterRankDef>
+
+    <!-- =Chaplain= -->
+    <!-- Judiciar -->
+    <Genes40k.ChapterRankDef>
+        <defName>BEWH_AstartesRankJudiciar</defName>
+        <label>Judiciar</label>
+        <description>Judiciars are grim enforcers of a Chapter's discipline, ensuring their brothers remain true to their oaths.</description>
+        <rankIconPath>UI/Ranks/Astartes/BEWH_Judiciar</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(4, -3)</displayPosition>
+
+        <rankRequirements>
+            <BEWH_AstartesRankVeteran>5</BEWH_AstartesRankVeteran>
+        </rankRequirements>
+        <incompatibleRanks>
+            <li>BEWH_AstartesRankTechmarineNovitiate</li>
+            <li>BEWH_AstartesRankAcolytum</li>
+            <li>BEWH_AstartesRankHelixAdept</li>
+        </incompatibleRanks>
+        <requiredTraitsOneAmong>
+            <NaturalMood>2</NaturalMood>
+            <NaturalMood>1</NaturalMood>
+            <Nerves>2</Nerves>
+            <Nerves>1</Nerves>
+        </requiredTraitsOneAmong>
+        <requiredSkills>
+            <Social>9</Social>
+        </requiredSkills>
+
+        <statOffsets>
+            <SocialImpact>0.05</SocialImpact>
+            <SocialIdeoSpreadFrequencyFactor MayRequire="Ludeon.RimWorld.Ideology">0.5</SocialIdeoSpreadFrequencyFactor>
+            <ConversionPower MayRequire="Ludeon.RimWorld.Ideology">0.5</ConversionPower>
+            <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">-0.5</CertaintyLossFactor>
+        </statOffsets>
+
+        <givesAbilities>
+            <li>BEWH_StripRanks</li>
+        </givesAbilities>
+
+        <rankTier>3</rankTier>
+
+        <unlocksRankIcon>BEWH_RankIconJudiciar</unlocksRankIcon>
+
+    </Genes40k.ChapterRankDef>
+    <!-- Chaplain -->
+    <Genes40k.ChapterRankDef>
+        <defName>BEWH_AstartesRankChaplain</defName>
+        <label>Chaplain</label>
+        <description>Chaplain are spiritual leaders and warriors of unyielding faith. They safeguard souls of their brethren and lead the battle rites. Their skull helms strike terror into the hearts of the unfaithful.</description>
+        <rankIconPath>UI/Ranks/Astartes/BEWH_Chaplain</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(6, -3)</displayPosition>
+        <colonyLimitOfRank>(1, 4)</colonyLimitOfRank>
+
+        <rankRequirements>
+            <BEWH_AstartesRankJudiciar>15</BEWH_AstartesRankJudiciar>
+        </rankRequirements>
+        <requiredSkills>
+            <Social>14</Social>
+        </requiredSkills>
+
+        <statOffsets>
+            <SocialImpact>0.1</SocialImpact>
+            <NegotiationAbility>0.3</NegotiationAbility>
+            <ConversionPower MayRequire="Ludeon.RimWorld.Ideology">0.5</ConversionPower>
+            <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">-1</CertaintyLossFactor>
+        </statOffsets>
+
+        <statFactors>
+            <SocialIdeoSpreadFrequencyFactor MayRequire="Ludeon.RimWorld.Ideology">2</SocialIdeoSpreadFrequencyFactor>
+        </statFactors>
+
+        <rankTier>6</rankTier>
+
+        <givesVFEAbilities>
+            <li>BEWH_ChaplainInspire</li>
+        </givesVFEAbilities>
+
+        <unlocksRankIcon>BEWH_RankIconChaplain</unlocksRankIcon>
+
+    </Genes40k.ChapterRankDef>
+    <!-- Master of Sanctity  -->
+    <Genes40k.ChapterRankDef>
+        <defName>BEWH_AstartesRankMasterOfSanctity</defName>
+        <label>Master of Sanctity</label>
+        <description>The Master of Sanctity is the highest Chaplain of the Chapter, guardian of its spiritual purity and eternal flame. His voice is sacred, his judgment absolute, and his presence an anathema to heresy and weakness.</description>
+        <rankIconPath>UI/Ranks/Astartes/BEWH_MasterOfSanctity</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(9, -3)</displayPosition>
+        <colonyLimitOfRank>(1, 0)</colonyLimitOfRank>
+
+        <rankRequirements>
+            <BEWH_AstartesRankChaplain>35</BEWH_AstartesRankChaplain>
+        </rankRequirements>
+        <requiredSkills>
+            <Social>18</Social>
+        </requiredSkills>
+
+        <statOffsets>
+            <SocialImpact>0.35</SocialImpact>
+            <SocialIdeoSpreadFrequencyFactor MayRequire="Ludeon.RimWorld.Ideology">1</SocialIdeoSpreadFrequencyFactor>
+        </statOffsets>
+
+        <statFactors>
+            <NegotiationAbility>1.5</NegotiationAbility>
+            <ConversionPower MayRequire="Ludeon.RimWorld.Ideology">2</ConversionPower>
+            <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0</CertaintyLossFactor>
+        </statFactors>
+
+        <rankTier>9</rankTier>
+
+        <unlocksRankIcon>BEWH_RankIconMasterOfSanctity</unlocksRankIcon>
+
+    </Genes40k.ChapterRankDef>
+
+    <!-- =Fire Support= -->
+    <!-- Fire Support -->
+    <Genes40k.ChapterRankDef>
+        <defName>BEWH_AstartesRankDevastator</defName>
+        <label>Fire Support</label>
+        <description>Fire Support Space Marines wield heavy weaponry to suppress enemy advances and annihilate armored targets. Positioned at the rear of the battle line, they deliver devastating firepower in support of the main assault.</description>
+        <rankIconPath>UI/Ranks/Astartes/BEWH_FireSupport</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(3, -1)</displayPosition>
+
+        <rankRequirements>
+            <BEWH_AstartesRankBattleBrother>3</BEWH_AstartesRankBattleBrother>
+        </rankRequirements>
+        <requiredSkills>
+            <Shooting>9</Shooting>
+        </requiredSkills>
+
+        <statOffsets>
+            <RangedCooldownFactor>-0.01</RangedCooldownFactor>
+        </statOffsets>
+
+        <statFactors>
+            <ShootingAccuracyPawn>1.02</ShootingAccuracyPawn>
+        </statFactors>
+
+        <rankTier>2</rankTier>
+
+        <unlocksRankIcon>BEWH_RankIconDevastator</unlocksRankIcon>
+
+    </Genes40k.ChapterRankDef>
+
+    <!-- Fire Support Sergeant -->
+    <Genes40k.ChapterRankDef>
+        <defName>BEWH_AstartesRankDevastatorSergeant</defName>
+        <label>Fire Support Sergeant</label>
+        <description>The Fire Support Sergeant commands squads of heavy-weapon specialists, directing fields of fire with precision to break the enemy with overwhelming force.</description>
+        <rankIconPath>UI/Ranks/Astartes/BEWH_FireSupportSergeant</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(5, -1)</displayPosition>
+        <colonyLimitOfRank>(2, 4)</colonyLimitOfRank>
+
+        <rankRequirements>
+            <BEWH_AstartesRankDevastator>8</BEWH_AstartesRankDevastator>
+        </rankRequirements>
+        <requiredSkills>
+            <Shooting>12</Shooting>
+        </requiredSkills>
+
+        <statOffsets>
+            <RangedCooldownFactor>-0.02</RangedCooldownFactor>
+        </statOffsets>
+
+        <statFactors>
+            <ShootingAccuracyPawn>1.03</ShootingAccuracyPawn>
+        </statFactors>
+
+        <rankTier>3</rankTier>
+
+        <unlocksRankIcon>BEWH_RankIconDevastatorSergeant</unlocksRankIcon>
+
+    </Genes40k.ChapterRankDef>
+
+    <!-- =Close Support= -->
+    <!-- Close Support -->
+    <Genes40k.ChapterRankDef>
+        <defName>BEWH_AstartesRankAssault</defName>
+        <label>Close Support</label>
+        <description>Close Support Space Marines excel in fast and aggressive assaults. Armed for melee and close-range engagements, they strike hard and fast, disrupting enemy lines with relentless fury.</description>
+        <rankIconPath>UI/Ranks/Astartes/BEWH_CloseSupport</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(3, 0)</displayPosition>
+
+        <rankRequirements>
+            <BEWH_AstartesRankBattleBrother>3</BEWH_AstartesRankBattleBrother>
+        </rankRequirements>
+        <requiredSkills>
+            <Melee>9</Melee>
+        </requiredSkills>
+
+        <statOffsets>
+            <MeleeCooldownFactor>-0.01</MeleeCooldownFactor>
+        </statOffsets>
+
+        <statFactors>
+            <MeleeHitChance>1.02</MeleeHitChance>
+        </statFactors>
+
+        <rankTier>2</rankTier>
+
+        <unlocksRankIcon>BEWH_RankIconAssault</unlocksRankIcon>
+
+    </Genes40k.ChapterRankDef>
+
+    <!-- Close Support Sergeant -->
+    <Genes40k.ChapterRankDef>
+        <defName>BEWH_AstartesRankAssaultSergeant</defName>
+        <label>Close Support Sergeant</label>
+        <description>The Close Support Sergeant leads from the front, driving his warriors into the heart of battle. His command is one of speed and savagery, ensuring the enemy is overwhelmed before they can respond.</description>
+        <rankIconPath>UI/Ranks/Astartes/BEWH_CloseSupportSergeant</rankIconPath>
+        <rankCategory>BEWH_AstartesRankCategory</rankCategory>
+        <displayPosition>(5, 0)</displayPosition>
+        <colonyLimitOfRank>(2, 4)</colonyLimitOfRank>
+
+        <rankRequirements>
+            <BEWH_AstartesRankAssault>8</BEWH_AstartesRankAssault>
+        </rankRequirements>
+        <requiredSkills>
+            <Melee>12</Melee>
+        </requiredSkills>
+
+        <statOffsets>
+            <MeleeCooldownFactor>-0.02</MeleeCooldownFactor>
+        </statOffsets>
+
+        <statFactors>
+            <MeleeHitChance>1.03</MeleeHitChance>
+        </statFactors>
+
+        <rankTier>3</rankTier>
+
+        <unlocksRankIcon>BEWH_RankIconAssaultSergeant</unlocksRankIcon>
+
+    </Genes40k.ChapterRankDef>
+
+</Defs>

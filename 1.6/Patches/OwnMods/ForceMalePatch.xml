@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="VEF.PatchOperationToggableSequence">
+        <enabled>True</enabled>
+        <mods>
+            <li>RimDark 40k - Mankinds Finest</li>
+        </mods>
+        <label>Force Thunder Warriors, Space Marines and Custodes to be male:</label>
+        <operations>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/GeneDef[defName = "BEWH_ProtoOssmodula"]</xpath>
+                <value>
+                    <modExtensions>
+                        <li Class="VEF.Genes.GeneExtension">
+                            <forceMale>true</forceMale>
+                        </li>
+                    </modExtensions>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/GeneDef[defName = "BEWH_Ossmodula"]</xpath>
+                <value>
+                    <modExtensions>
+                        <li Class="VEF.Genes.GeneExtension">
+                            <forceMale>true</forceMale>
+                        </li>
+                    </modExtensions>
+                </value>
+            </li>
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "BEWH_AtlasMorphogen"]</xpath>
+                <value>
+                    <li Class="VEF.Genes.GeneExtension">
+                        <forceMale>true</forceMale>
+                    </li>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+
+</Patch>

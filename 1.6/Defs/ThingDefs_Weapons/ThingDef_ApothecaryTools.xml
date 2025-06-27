@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BaseHumanMakeableGun" Name="BEWH_ApothecaryToolGeneseed" Abstract="True">
+    <techLevel>Spacer</techLevel>
+    <soundInteract>Interact_ChargeRifle</soundInteract>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+      <displayPriority>200</displayPriority>
+    </recipeMaker>
+    <costList>
+      <Steel>50</Steel>
+      <Plasteel>30</Plasteel>
+      <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_GeneseedHarvest">
+        <chanceOffset>50</chanceOffset>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="BEWH_ApothecaryToolGeneseed">
+    <defName>BEWH_Narthecium</defName>
+    <label>narthecium</label>
+    <description>The Narthecium is a special tool used by Adeptus Astartes apothecaries and Primaris apothecaries to retrieve the crucial gene-seed of their fallen battle-brothers so that new Astartes might be raised from among their Chapter's aspirants. Increases the chance of successfully extracting gene-seeds from dead marines by 50%.\nCan be used as a melee weapon.</description>
+    <graphicData>
+      <texPath>Things/Weapons/BEWH_Narthecium</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <recipeMaker>
+      <researchPrerequisite>BEWH_GeneseedExtractionFirstborn</researchPrerequisite>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>40000</WorkToMake>
+      <Mass>3.5</Mass>
+      <AccuracyTouch>0.60</AccuracyTouch>
+    </statBases>
+    <weaponTags>
+      <li>BEWH_Narthecium</li>
+    </weaponTags>
+    <tradeTags>
+      <li>UltratechMelee</li>
+    </tradeTags>
+    <weaponClasses>
+      <li>Melee</li>
+      <li>Ultratech</li>
+    </weaponClasses>
+    <tools>
+      <li>
+        <label>gauntlet</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>20</power>
+        <cooldownTime>1.4</cooldownTime>
+        <armorPenetration>1.4</armorPenetration>
+      </li>
+      <li>
+        <label>drill</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>26</power>
+        <cooldownTime>1.8</cooldownTime>
+        <armorPenetration>2</armorPenetration>
+      </li>
+    </tools>
+    <modExtensions>
+      <li Class="VEF.Things.ThingDefExtension">
+        <weaponCarryDrawOffsets>
+          <north>
+            <drawOffset>(0, 0, -0.23)</drawOffset>
+          </north>
+          <east>
+            <drawOffset>(-0.2, 0, -0.23)</drawOffset>
+          </east>
+          <south>
+            <angleOffset>-20</angleOffset>
+            <drawOffset>(-0.2, 0, -0.23)</drawOffset>
+          </south>
+          <west>
+            <drawOffset>(0.2, 0, -0.23)</drawOffset>
+          </west>
+        </weaponCarryDrawOffsets>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BEWH_ApothecaryToolGeneseed">
+    <defName>BEWH_Reductor</defName>
+    <label>reductor</label>
+    <description>The Reductor is a special tool used by apothecaries to retrieve the crucial gene-seed of their fallen brothers so that new Astartes might be raised from among their Chapter's aspirants. This tool also doubles as a close ranged pistol.\n\nIncreases the chance of successfully extracting gene-seeds from dead marines by 50%.\nCan be used as a ranged weapon.</description>
+    <graphicData>
+      <texPath>Things/Weapons/BEWH_Reductor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <recipeMaker>
+      <researchPrerequisite>BEWH_GeneseedExtractionPrimaris</researchPrerequisite>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>35000</WorkToMake>
+      <Mass>2.1</Mass>
+      <AccuracyTouch>0.60</AccuracyTouch>
+      <AccuracyShort>0.70</AccuracyShort>
+      <AccuracyMedium>0.35</AccuracyMedium>
+      <AccuracyLong>0.25</AccuracyLong>
+      <RangedWeapon_Cooldown>0.8</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>BEWH_Reductor</li>
+    </weaponTags>
+    <tradeTags>
+      <li>WeaponRanged</li>
+    </tradeTags>
+    <weaponClasses>
+      <li>RangedLight</li>
+    </weaponClasses>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ChargeRifle</defaultProjectile>
+        <warmupTime>1.0</warmupTime>
+        <range>25.9</range>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Shot_ChargeRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>5</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>extractor drill</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <modExtensions>
+      <li Class="VEF.Things.ThingDefExtension">
+        <weaponCarryDrawOffsets>
+          <north>
+            <drawOffset>(0, 0, -0.2)</drawOffset>
+          </north>
+          <east>
+            <drawOffset>(-0.1, 0, -0.2)</drawOffset>
+          </east>
+          <south>
+            <angleOffset>-20</angleOffset>
+            <drawOffset>(0, 0, -0.2)</drawOffset>
+          </south>
+          <west>
+            <drawOffset>(0.1, 0, -0.2)</drawOffset>
+          </west>
+        </weaponCarryDrawOffsets>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

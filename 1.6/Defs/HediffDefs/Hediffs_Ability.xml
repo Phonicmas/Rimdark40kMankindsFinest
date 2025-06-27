@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!-- Sus-an Membrane Stasis -->
+	<HediffDef>
+		<defName>BEWH_SusAnMembraneStasis</defName>
+		<label>Sus-an Membrane stasis</label>
+		<description>Suspended in Sus-an Membrane stasis, requires advanced medical procedure to awaken.</description>
+		<everCurableByItem>false</everCurableByItem>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<disablesNeeds>
+					<li>Food</li>
+					<li>Rest</li>
+					<li>Joy</li>
+				</disablesNeeds>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.20</setMax>
+					</li>
+				</capMods>
+				<statFactors>
+					<IncomingDamageFactor>0.5</IncomingDamageFactor>
+				</statFactors>
+				<totalBleedFactor>0</totalBleedFactor>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<!-- Catalepsean Node Unsleeping -->
+	<HediffDef>
+		<defName>BEWH_CatalepseanNodeUnsleeping</defName>
+		<label>Catalepsean Node unsleeping</label>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>This character's brain cycles rest through different regions, allowing parts to recover while others stay alert.</description>
+		<everCurableByItem>false</everCurableByItem>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.10</offset>
+					</li>
+				</capMods>
+				<statFactors>
+					<RestFallRateFactor>0.05</RestFallRateFactor>
+				</statFactors>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>True</showRemainingTime>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<!-- Belisarian Furnace Boost -->
+	<HediffDef>
+		<defName>BEWH_BelisarianFurnaceBoost</defName>
+		<label>Belisarian Furnace boost</label>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>A hyper-cocktail of chemicals aiding in the rapid regrowth of tissue, bone and muscle.</description>
+		<everCurableByItem>false</everCurableByItem>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.20</offset>
+					</li>
+				</capMods>
+				<statFactors>
+					<InjuryHealingFactor>2000</InjuryHealingFactor>
+					<IncomingDamageFactor>0.5</IncomingDamageFactor>
+				</statFactors>
+				<painFactor>0.3</painFactor>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>True</showRemainingTime>
+			</li>
+		</comps>
+	</HediffDef>
+
+</Defs>

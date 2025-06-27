@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Being of faith -->
+    <GeneDef ParentName="BEWH_LivingSaintBase">
+        <defName>BEWH_LivingSaintBeingOfFaith</defName>
+        <label>being of faith</label>
+        <description>A Living Saint is an extraordinarily devout servant of the Emperor of Mankind, who displays seemingly miraculous, supernatural abilities derived from potent faith in the God-Emperor during his or her lifetime.\nShould the carrier of this gene fall in battle they will vanish, and in time of need, they will return to defend their colony.</description>
+        <iconPath>UI/Genes/LivingSaint/BEWH_LivingSaint_BeingOfFaith</iconPath>
+        <displayOrderInCategory>500</displayOrderInCategory>
+        <immuneToToxGasExposure>true</immuneToToxGasExposure>
+        <geneClass>Genes40k.Gene_LivingSaint</geneClass>
+        <sterilize>true</sterilize>
+        <customEffectDescriptions>
+            <li>This pawn is truly never lost upon death. They may, upon times of great need, return to the colony to help.</li>
+        </customEffectDescriptions>
+        <statOffsets>
+            <ToxicEnvironmentResistance>3</ToxicEnvironmentResistance>
+            <ToxicResistance>3</ToxicResistance>
+            <PsychicSensitivity>4</PsychicSensitivity>
+
+            <VEF_CosmeticBodySize_Multiplier>0.2</VEF_CosmeticBodySize_Multiplier>
+        </statOffsets>
+        <statFactors>
+            <MeditationFocusGain>1.4</MeditationFocusGain>
+            <PsychicEntropyRecoveryRate>1.7</PsychicEntropyRecoveryRate>
+            <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0</CertaintyLossFactor>
+        </statFactors>
+        <suppressedTraits>
+            <li>
+                <def>BEWH_Serf</def>
+            </li>
+        </suppressedTraits>
+        <capMods>
+            <li>
+                <capacity>Manipulation</capacity>
+                <postFactor>1.5</postFactor>
+            </li>
+            <li>
+                <capacity>Sight</capacity>
+                <postFactor>1.8</postFactor>
+            </li>
+            <li>
+                <capacity>Hearing</capacity>
+                <postFactor>1.8</postFactor>
+            </li>
+            <li>
+                <capacity>Breathing</capacity>
+                <postFactor>1.2</postFactor>
+            </li>
+            <li>
+                <capacity>Consciousness</capacity>
+                <postFactor>1.3</postFactor>
+            </li>
+        </capMods>
+        <overdoseChanceFactor>0</overdoseChanceFactor>
+        <biologicalAgeTickFactorFromAgeCurve>
+            <points>
+                <li>(0, 1.5)</li>
+                <li>(20, 1.5)</li>
+                <li>(21, 0)</li>
+            </points>
+        </biologicalAgeTickFactorFromAgeCurve>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_SlaveabilityRecruitability">
+                <canBeEnslaved>false</canBeEnslaved>
+                <canBeRecruited>false</canBeRecruited>
+            </li>
+            <li Class="Genes40k.DefModExtension_LivingSaint">
+                <cantHaveGenes>
+                    <li>BEWH_LivingSaintBeingOfFaith</li>
+                    <li>BEWH_PerpetualGamma</li>
+                    <li>BEWH_PerpetualBeta</li>
+                    <li>BEWH_PerpetualAlpha</li>
+                    <li>BEWH_SigmaPariah</li>
+                    <li>BEWH_UpsilonPariah</li>
+                    <li>BEWH_OmegaPariah</li>
+                </cantHaveGenes>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Divine Grace -->
+    <GeneDef ParentName="BEWH_LivingSaintBase">
+        <defName>BEWH_LivingSaintDivineGrace</defName>
+        <label>Divine Grace</label>
+        <description>Carriers of this gene have a resevoir of energy used to power fantastical abilities and themself.</description>
+        <iconPath>UI/Genes/LivingSaint/BEWH_LivingSaint_DivineGrace</iconPath>
+        <displayOrderInCategory>501</displayOrderInCategory>
+
+        <geneClass>Genes40k.Gene_DivineGrace</geneClass>
+        <resourceGizmoType>Genes40k.GeneGizmo_ResourceDivineGrace</resourceGizmoType>
+        <resourceLabel>Divine Grace</resourceLabel>
+        <resourceGizmoThresholds>
+            <li>0.25</li>
+            <li>0.5</li>
+            <li>0.75</li>
+        </resourceGizmoThresholds>
+        <showGizmoOnWorldView>true</showGizmoOnWorldView>
+        <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
+        <resourceDescription>Warp powered faith used to manifest immense power.</resourceDescription>
+        <customEffectDescriptions>
+            <li>Gives Divine Grace.</li>
+        </customEffectDescriptions>
+
+        <abilities>
+            <li>BEWH_LivingSaintProofOfFaith</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>BEWH_LivingSaintProofOfFaith</AbilityDef>
+        </descriptionHyperlinks>
+
+        <disablesNeeds>
+            <li>Rest</li>
+            <li>Food</li>
+            <li>Comfort</li>
+        </disablesNeeds>
+    </GeneDef>
+
+    <!-- Divine Flight -->
+    <GeneDef ParentName="BEWH_LivingSaintBase">
+        <defName>BEWH_LivingSaintDivineFlight</defName>
+        <label>divine flight</label>
+        <description>Immense faith have conjured forth ethereal wings of warp energy, resembling that of an angels. These wings allows for short flights.</description>
+        <iconPath>UI/Genes/LivingSaint/BEWH_LivingSaint_DivineFlight</iconPath>
+        <displayOrderInCategory>501</displayOrderInCategory>
+        <prerequisite>BEWH_LivingSaintDivineGrace</prerequisite>
+        <statFactors>
+            <MoveSpeed>1.2</MoveSpeed>
+        </statFactors>
+        <statOffsets>
+            <MeleeDodgeChance>5</MeleeDodgeChance>
+        </statOffsets>
+        <capMods>
+            <li>
+                <capacity>Moving</capacity>
+                <postFactor>1.15</postFactor>
+            </li>
+        </capMods>
+        <abilities>
+            <li>BEWH_DivineFlight</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>BEWH_DivineFlight</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Wing</li>
+            <li>Wings</li>
+        </exclusionTags>
+        <renderNodeProperties>
+            <li>
+                <workerClass>Genes40k.PawnRenderNodeWorker_LivingSaintAttachmentBody</workerClass>
+                <texPath>Things/Pawn/Humanlike/BodyAttachments/DivineWings/BEWH_DivineWings_Aethereal</texPath>
+                <drawSize>1</drawSize>
+                <parentTagDef>Body</parentTagDef>
+				<shaderTypeDef>TransparentPostLight</shaderTypeDef>
+                <color>(255, 255, 255, 200)</color>
+                <drawData>
+                    <defaultData>
+                        <layer>-1</layer>
+                    </defaultData>
+                    <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+                    <dataNorth>
+                        <layer>90</layer>
+                    </dataNorth>
+                </drawData>
+            </li>
+        </renderNodeProperties>
+        <modExtensions>
+            <li Class="VEF.Genes.GeneExtension">
+                <hediffToWholeBody>BEWH_WingsHover</hediffToWholeBody>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Sacred Regeneration -->
+    <GeneDef ParentName="BEWH_LivingSaintBase">
+        <defName>BEWH_LivingSaintSacredRegeneration</defName>
+        <label>sacred regeneration</label>
+        <description>Immense faith and connection to the warp allows the carrier of this gene to quickly regenerate their wounds.</description>
+        <iconPath>UI/Genes/LivingSaint/BEWH_LivingSaint_SacredRegeneration</iconPath>
+        <geneClass>Gene_Clotting</geneClass>
+        <displayOrderInCategory>502</displayOrderInCategory>
+        <painFactor>0</painFactor>
+        <capMods>
+            <li>
+                <capacity>BloodPumping</capacity>
+                <offset>0.55</offset>
+            </li>
+            <li>
+                <capacity>BloodFiltration</capacity>
+                <postFactor>1.7</postFactor>
+            </li>
+        </capMods>
+        <statOffsets>
+            <ImmunityGainSpeed>5</ImmunityGainSpeed>
+        </statOffsets>
+        <statFactors>
+            <InjuryHealingFactor>10</InjuryHealingFactor>
+        </statFactors>
+    </GeneDef>
+
+    <!-- Fury of the Emperor -->
+    <GeneDef ParentName="BEWH_LivingSaintBase">
+        <defName>BEWH_LivingSaintFuryOfTheEmperor</defName>
+        <label>fury of the Emperor</label>
+        <description>Filled with the fury of the Emperor, carriers of this gene can feel the power of the Emperor surge through them as they fight his enemies.</description>
+        <iconPath>UI/Genes/LivingSaint/BEWH_LivingSaint_FuryOfTheEmperor</iconPath>
+        <geneClass>Gene_Clotting</geneClass>
+        <displayOrderInCategory>503</displayOrderInCategory>
+        <prerequisite>BEWH_LivingSaintDivineGrace</prerequisite>
+        <statOffsets>
+            <MeleeHitChance>4</MeleeHitChance>
+        </statOffsets>
+        <statFactors>
+            <MeleeDamageFactor>2.75</MeleeDamageFactor>
+            <AimingDelayFactor>0.7</AimingDelayFactor>
+        </statFactors>
+        <suppressedTraits>
+            <li>
+                <def>Wimp</def>
+            </li>
+            <li>
+                <def>Industriousness</def>
+                <degree>-1</degree>
+            </li>
+            <li>
+                <def>Industriousness</def>
+                <degree>-2</degree>
+            </li>
+        </suppressedTraits>
+        <abilities>
+            <li>BEWH_LivingSaintHolyBlast</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>BEWH_LivingSaintHolyBlast</AbilityDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="VEF.Genes.GeneExtension">
+                <noSkillLoss>Melee</noSkillLoss>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Martyr's Endurance -->
+    <GeneDef ParentName="BEWH_LivingSaintBase">
+        <defName>BEWH_LivingSaintMartyrsEndurance</defName>
+        <label>martyr's endurance</label>
+        <description>Having already died once, carriers of this gene have steeled themselves to damage, greatly reducing incoming damage.</description>
+        <iconPath>UI/Genes/LivingSaint/BEWH_LivingSaint_MartyrsEndurance</iconPath>
+        <displayOrderInCategory>504</displayOrderInCategory>
+        <prerequisite>BEWH_LivingSaintDivineGrace</prerequisite>
+        <statOffsets>
+            <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.3</ArmorRating_Sharp>
+            <ArmorRating_Heat>0.65</ArmorRating_Heat>
+            <ComfyTemperatureMin>-200</ComfyTemperatureMin>
+            <ComfyTemperatureMax>200</ComfyTemperatureMax>
+        </statOffsets>
+        <statFactors>
+            <StaggerDurationFactor>0.35</StaggerDurationFactor>
+            <IncomingDamageFactor>0.65</IncomingDamageFactor>
+        </statFactors>
+        <suppressedTraits>
+            <li>
+                <def>Immunity</def>
+                <degree>-1</degree>
+            </li>
+            <li>
+                <def>Delicate</def>
+            </li>
+        </suppressedTraits>
+        <abilities>
+            <li>BEWH_LivingSaintInviolableAura</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>BEWH_LivingSaintInviolableAura</AbilityDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_IgnoreMovespeedDecrease" />
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Holy Radiance -->
+    <GeneDef ParentName="BEWH_LivingSaintBase">
+        <defName>BEWH_LivingSaintHolyRadiance</defName>
+        <label>holy radiance</label>
+        <description>Immense faith have conjured forth an ethereal halo of warp energy, resembling that of an angels. This halo radiates a blissful energy for anyone around them.</description>
+        <iconPath>UI/Genes/LivingSaint/BEWH_LivingSaint_HolyRadiance</iconPath>
+        <displayOrderInCategory>505</displayOrderInCategory>
+        <preventPermanentWounds>true</preventPermanentWounds>
+        <statOffsets>
+            <MentalBreakThreshold>-0.4</MentalBreakThreshold>
+            <PawnBeauty>2</PawnBeauty>
+        </statOffsets>
+        <statFactors>
+            <SuppressionPower MayRequire="Ludeon.RimWorld.Ideology">1.8</SuppressionPower>
+        </statFactors>
+        <capMods>
+            <li>
+                <capacity>Talking</capacity>
+                <postFactor>1.6</postFactor>
+            </li>
+        </capMods>
+        <suppressedTraits>
+            <li>
+                <def>Nerves</def>
+                <degree>-1</degree>
+            </li>
+            <li>
+                <def>Nerves</def>
+                <degree>-2</degree>
+            </li>
+            <li>
+                <def>Beauty</def>
+                <degree>-1</degree>
+            </li>
+            <li>
+                <def>Beauty</def>
+                <degree>-2</degree>
+            </li>
+        </suppressedTraits>
+        <renderNodeProperties>
+            <li>
+                <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+                <workerClass>Genes40k.PawnRenderNodeWorker_LivingSaintAttachmentHead</workerClass>
+                <texPath>Things/Pawn/Humanlike/HeadAttachments/HolyRadiance/BEWH_HolyRadiance</texPath>
+                <drawSize>0.9</drawSize>
+                <parentTagDef>Head</parentTagDef>
+                <shaderTypeDef>TransparentPostLight</shaderTypeDef>
+                <color>(255, 255, 255, 200)</color>
+                <colorType>Custom</colorType>
+                <rotDrawMode>Fresh</rotDrawMode>
+                <drawData>
+                    <defaultData>
+                        <layer>81</layer>
+                        <offset>(0, -0.5, 0)</offset>
+                    </defaultData>
+                    <dataNorth>
+                        <layer>10</layer>
+                        <offset>(0, 0.3, 0.2)</offset>
+                    </dataNorth>
+                    <dataSouth>
+                        <offset>(0, -1, 0.2)</offset>
+                    </dataSouth>
+                    <dataEast>
+                        <offset>(-0.4, -0.3, 0)</offset>
+                    </dataEast>
+                    <dataWest>
+                        <offset>(0.4, -0.3, 0)</offset>
+                    </dataWest>
+                </drawData>
+            </li>
+        </renderNodeProperties>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_IgnoreMovespeedDecrease" />
+            <li Class="VEF.Genes.GeneExtension">
+                <noSkillLoss>Shooting</noSkillLoss>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+</Defs>

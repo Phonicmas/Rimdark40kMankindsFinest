@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!-- Living Saint: Missing Divine Grace -->
+	<HediffDef>
+		<defName>BEWH_DivineGraceFading</defName>
+		<label>Divine Grace fading</label>
+		<description>Without Divine Grace, the Saint's connection to the material plane weakens, causing them to fade and lose stability, unable to remain in the physical world for long.</description>
+		<hediffClass>Hediff_HemogenCraving</hediffClass>
+		<defaultLabelColor>(1, 0.2, 0.2)</defaultLabelColor>
+		<initialSeverity>0.01</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<everCurableByItem>false</everCurableByItem>
+		<stages>
+			<li>
+				<label>minor</label>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.9</setMax>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<label>moderate</label>
+				<minSeverity>0.35</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.65</setMax>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<label>major</label>
+				<minSeverity>0.7</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.4</setMax>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<label>fatal</label>
+				<minSeverity>1</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="Genes40k.HediffCompProperties_SeverityFromDivineGrace">
+				<severityPerHourEmpty>0.2</severityPerHourEmpty>				<!-- Gives 5 hours before pawn dies -->
+				<severityPerHourDivineGrace>-0.1</severityPerHourDivineGrace>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<!-- Living Saint: Overcharge -->
+	<HediffDef>
+		<defName>BEWH_LivingSaintHolyAscension</defName>
+		<label>Holy Ascension</label>
+		<description>By absorbing a sudden burst of warp energy, the Living Saint is elevated to their full celestial form, radiating pure divine energy and gaining increased strength and resilience.</description>
+		<hediffClass>Hediff_HemogenCraving</hediffClass>
+		<defaultLabelColor>(0.8, 0.8, 0.2)</defaultLabelColor>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<everCurableByItem>false</everCurableByItem>
+		<stages>
+			<li>
+				<label>minor</label>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.5</offset>
+					</li>
+				</capMods>
+				<statFactors>
+					<IncomingDamageFactor>0.9</IncomingDamageFactor>
+					<InjuryHealingFactor>1.2</InjuryHealingFactor>
+					<MeleeDamageFactor>1.2</MeleeDamageFactor>
+					<AimingDelayFactor>0.9</AimingDelayFactor>
+					<PsychicSensitivity>1.2</PsychicSensitivity>
+				</statFactors>
+			</li>
+			<li>
+				<label>moderate</label>
+				<minSeverity>0.35</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>1</offset>
+					</li>
+				</capMods>
+				<statFactors>
+					<IncomingDamageFactor>0.7</IncomingDamageFactor>
+					<InjuryHealingFactor>1.6</InjuryHealingFactor>
+					<MeleeDamageFactor>1.6</MeleeDamageFactor>
+					<AimingDelayFactor>0.7</AimingDelayFactor>
+					<PsychicSensitivity>1.6</PsychicSensitivity>
+				</statFactors>
+			</li>
+			<li>
+				<label>major</label>
+				<minSeverity>0.7</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>1.5</offset>
+					</li>
+				</capMods>
+				<statFactors>
+					<IncomingDamageFactor>0.5</IncomingDamageFactor>
+					<InjuryHealingFactor>2</InjuryHealingFactor>
+					<MeleeDamageFactor>2</MeleeDamageFactor>
+					<AimingDelayFactor>0.5</AimingDelayFactor>
+					<PsychicSensitivity>2</PsychicSensitivity>
+				</statFactors>
+			</li>
+		</stages>
+		<comps>
+			<li Class="Genes40k.HediffCompProperties_SeverityFromDivineGrace">
+				<severityPerHourEmpty>-1</severityPerHourEmpty>
+				<severityPerHourDivineGrace>-0.25</severityPerHourDivineGrace>
+				<divineGracePerHour>-0.5</divineGracePerHour>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<!-- Living Saint Coma -->
+	<HediffDef>
+		<defName>BEWH_ProofOfFaithComa</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>divine coma</label>
+		<description>After willingly giving themselves up for a living saint, this person now lies in a coma, drained of psychic energy.</description>
+		<stages>
+			<li>
+				<statFactors>
+					<PsychicSensitivity>0</PsychicSensitivity>
+				</statFactors>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.1</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>90000</disappearsAfterTicks>
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<!-- Inviolable Aura Self -->
+	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
+		<defName>BEWH_LivingSaintInviolableAuraSelf</defName>
+		<label>Inviolable Aura</label>
+		<description>The Living Saint radiates a divine aura that envelops nearby allies in holy protection, reducing incoming damage. The Emperor protects!</description>
+		<comps>
+			<li Class="HediffCompProperties_GiveHediffsInRange">
+				<range>11.9</range>
+				<mote>BEWH_MoteBubble</mote>
+				<targetingParameters>
+					<canTargetBuildings>false</canTargetBuildings>
+					<canTargetAnimals>false</canTargetAnimals>
+					<canTargetMechs>false</canTargetMechs>
+					<onlyTargetColonists>true</onlyTargetColonists>
+				</targetingParameters>
+				<hediff>BEWH_LivingSaintInviolableAuraOther</hediff>
+			</li>
+		</comps>
+	</HediffDef>
+	<!-- Inviolable Aura Other -->
+	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
+		<defName>BEWH_LivingSaintInviolableAuraOther</defName>
+		<label>Aura of Protection</label>
+		<description>This servant of the Emperor is shielded by the inviolable aura of the Living Saint, reducing incoming damage.</description>
+		<debugLabelExtra>other</debugLabelExtra>
+		<stages>
+			<li>
+				<statOffsets>
+					<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+					<ArmorRating_Heat>0.2</ArmorRating_Heat>
+				</statOffsets>
+				<statFactors>
+					<StaggerDurationFactor>0.5</StaggerDurationFactor>
+					<IncomingDamageFactor>0.75</IncomingDamageFactor>
+				</statFactors>
+			</li>
+		</stages>
+		<comps Inherit="False">
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>false</showRemainingTime>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+			<li Class="HediffCompProperties_Link">
+				<requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
+				<maxDistance>15</maxDistance>
+				<customMote>BEWH_MoteLink</customMote>
+			</li>
+		</comps>
+	</HediffDef>
+
+</Defs>

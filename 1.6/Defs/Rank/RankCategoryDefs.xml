@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- Astartes -->
+    <Core40k.RankCategoryDef>
+        <defName>BEWH_AstartesRankCategory</defName>
+        <label>astartes</label>
+        <description>Ranks of the Astartes.</description>
+        <unlockedByGene>BEWH_SecondaryHeart</unlockedByGene>
+    </Core40k.RankCategoryDef>
+
+</Defs>

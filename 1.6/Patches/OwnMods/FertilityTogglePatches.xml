@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- ===== Thunder Warrior ===== -->
+    <Operation Class="VEF.PatchOperationToggableSequence">
+        <enabled>False</enabled>
+        <mods>
+            <li>RimDark 40k - Mankinds Finest</li>
+        </mods>
+        <label>Restore Thunder Warriors fertility:</label>
+        <operations>
+            <li Class="PatchOperationRemove">
+                <xpath>Defs/GeneDef[defName = "BEWH_ProtoOssmodula"]/statFactors/Fertility</xpath>
+            </li>
+        </operations>
+    </Operation>
+
+    <!-- ===== Space Marine ===== -->
+    <Operation Class="VEF.PatchOperationToggableSequence">
+        <enabled>False</enabled>
+        <mods>
+            <li>RimDark 40k - Mankinds Finest</li>
+        </mods>
+        <label>Restore Space Marines fertility:</label>
+        <operations>
+            <li Class="PatchOperationRemove">
+                <xpath>Defs/GeneDef[defName = "BEWH_Ossmodula"]/sterilize</xpath>
+            </li>
+        </operations>
+    </Operation>
+
+    <!-- ===== Custodes ===== -->
+    <Operation Class="VEF.PatchOperationToggableSequence">
+        <enabled>False</enabled>
+        <mods>
+            <li>RimDark 40k - Mankinds Finest</li>
+        </mods>
+        <label>Restore Custodes fertility:</label>
+        <operations>
+            <li Class="PatchOperationRemove">
+                <xpath>Defs/GeneDef[defName = "BEWH_AtlasMorphogen"]/sterilize</xpath>
+            </li>
+        </operations>
+    </Operation>
+
+    <!-- ===== Primarch ===== -->
+    <Operation Class="VEF.PatchOperationToggableSequence">
+        <enabled>False</enabled>
+        <mods>
+            <li>RimDark 40k - Mankinds Finest</li>
+        </mods>
+        <label>Restore Primarchs fertility:</label>
+        <operations>
+            <li Class="PatchOperationRemove">
+                <xpath>Defs/GeneDef[defName = "BEWH_ImmortisGland"]/sterilize</xpath>
+            </li>
+        </operations>
+    </Operation>
+
+    <!-- ===== Livinsg Saint ===== -->
+    <Operation Class="VEF.PatchOperationToggableSequence">
+        <enabled>False</enabled>
+        <mods>
+            <li>RimDark 40k - Mankinds Finest</li>
+        </mods>
+        <label>Restore Living Saints fertility:</label>
+        <operations>
+            <li Class="PatchOperationRemove">
+                <xpath>Defs/GeneDef[defName = "BEWH_LivingSaintBeingOfFaith"]/sterilize</xpath>
+            </li>
+        </operations>
+    </Operation>
+
+</Patch>

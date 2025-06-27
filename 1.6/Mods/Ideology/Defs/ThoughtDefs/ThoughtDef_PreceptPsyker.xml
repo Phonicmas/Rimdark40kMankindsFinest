@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Thoughts : Psyker -->
+    <!-- Respected Psyker Thought -->
+    <ThoughtDef>
+        <defName>BEWH_Psyker_Respected</defName>
+        <workerClass>Genes40k.ThoughtWorker_Precept_Psyker</workerClass>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <stages>
+            <li>
+                <label>psyker</label>
+                <description>Being a psyker is a boon.</description>
+                <baseMoodEffect>5</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>BEWH_Psyker_Respected_Social</defName>
+        <workerClass>Genes40k.ThoughtWorker_Precept_Psyker_Social</workerClass>
+        <thoughtClass>Thought_SituationalSocial</thoughtClass>
+        <stages>
+            <li>
+                <label>psyker</label>
+                <baseOpinionOffset>20</baseOpinionOffset>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <!-- Horrible Psyker Thought -->
+    <ThoughtDef>
+        <defName>BEWH_Psyker_Horrible</defName>
+        <workerClass>Genes40k.ThoughtWorker_Precept_Psyker</workerClass>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <stages>
+            <li>
+                <label>psyker</label>
+                <description>Being a psyker is a curse laid upon me.</description>
+                <baseMoodEffect>-3</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>BEWH_Psyker_Horrible_Social</defName>
+        <workerClass>Genes40k.ThoughtWorker_Precept_Psyker_Social</workerClass>
+        <thoughtClass>Thought_SituationalSocial</thoughtClass>
+        <stages>
+            <li>
+                <label>psyker</label>
+                <baseOpinionOffset>-20</baseOpinionOffset>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+
+</Defs>

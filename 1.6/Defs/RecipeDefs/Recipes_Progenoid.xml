@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Make gene-seed base -->
+    <RecipeDef ParentName="SurgeryFlesh" Name="BEWH_GeneseedFromProgenoid" Abstract="True">
+        <hideBodyPartNames>true</hideBodyPartNames>
+        <targetsBodyPart>false</targetsBodyPart>
+        <surgerySuccessChanceFactor>2</surgerySuccessChanceFactor>
+        <recipeUsers>
+            <li>Human</li>
+        </recipeUsers>
+    </RecipeDef>
+
+    <!-- Make space marine gene-seed -->
+    <RecipeDef ParentName="BEWH_GeneseedFromProgenoid">
+        <defName>BEWH_AstartesPack</defName>
+        <label>extract firstborn gene-seed gland</label>
+        <description>Remove fully grown germ cells from progenoid glands to make an Ascendance Vial of a Firstborn.</description>
+        <jobString>Creating gene-seed from progenoid glands.</jobString>
+        <successfullyRemovedHediffMessage>{0} has successfully created gene-seed from {1}'s progenoid glands.</successfullyRemovedHediffMessage>
+        <workAmount>2200</workAmount>
+        <researchPrerequisite>BEWH_GeneseedExtractionFirstborn</researchPrerequisite>
+        <workerClass>Genes40k.WorkerClass_GeneProgenoidRemovalSpaceMarine</workerClass>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>MedicineUltratech</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>4</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentSpacer</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>MedicineUltratech</li>
+                <li>ComponentIndustrial</li>
+                <li>ComponentSpacer</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <skillRequirements>
+            <Medicine>14</Medicine>
+        </skillRequirements>
+    </RecipeDef>
+
+    <!-- Make primaris gene-seed -->
+    <RecipeDef ParentName="BEWH_GeneseedFromProgenoid">
+        <defName>BEWH_PrimarisPack</defName>
+        <label>extract primaris gene-seed gland</label>
+        <description>Remove fully grown germ cells from the progenoid glands to create a Primaris Ascendance Vial.</description>
+        <jobString>Creating primaris gene-seed from progenoid glands.</jobString>
+        <successfullyRemovedHediffMessage>{0} has successfully created primaris gene-seed from {1}'s progenoid glands.</successfullyRemovedHediffMessage>
+        <workAmount>4200</workAmount>
+        <researchPrerequisite>BEWH_GeneseedExtractionPrimaris</researchPrerequisite>
+        <workerClass>Genes40k.WorkerClass_GeneProgenoidRemovalPrimarisMarine</workerClass>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>MedicineUltratech</li>
+                    </thingDefs>
+                </filter>
+                <count>14</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>4</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentSpacer</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>MedicineUltratech</li>
+                <li>ComponentIndustrial</li>
+                <li>ComponentSpacer</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <skillRequirements>
+            <Medicine>16</Medicine>
+        </skillRequirements>
+    </RecipeDef>
+
+</Defs>

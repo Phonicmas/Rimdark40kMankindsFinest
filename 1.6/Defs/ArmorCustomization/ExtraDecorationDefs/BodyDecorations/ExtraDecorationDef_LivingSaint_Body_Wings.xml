@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- Wings -->
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_LivingSaintWings_1</defName>
+        <label>Wings of Steel</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/LivingSaint/Armor/BEWH_Deco_LSaintWings_icon</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/LivingSaint/BEWH_Deco_LSaintWings</drawnTextureIconPath>
+        <drawSize>(1.5, 0.75)</drawSize>
+        <sortOrder>1</sortOrder>
+        <defaultShowRotation>
+            <li>South</li>
+            <li>West</li>
+            <li>East</li>
+            <li>North</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_LivingSaintArmor</li>
+        </appliesTo>
+        <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>65</layer>
+				<offset>(0, 0, 0.24)</offset>
+            </dataNorth>
+            <dataSouth>
+                <layer>35</layer>
+				<offset>(0, 0, 0.24)</offset>
+            </dataSouth>
+            <dataEast>
+                <layer>50</layer>
+				<offset>(0, 0, 0.33)</offset>
+            </dataEast>
+            <dataWest>
+                <layer>50</layer>
+				<offset>(0, 0, 0.33)</offset>
+            </dataWest>
+        </drawData>
+        <shaderType>CutoutComplex</shaderType>
+        <flipable>false</flipable>
+        <colourable>true</colourable>
+        <useMask>true</useMask>
+        <useArmorColourAsDefault>true</useArmorColourAsDefault>
+        <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption> 
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_LivingSaintWings_2</defName>
+        <label>Wings of Light</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/LivingSaint/Armor/BEWH_Deco_DivineWings_icon</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/LivingSaint/BEWH_Deco_DivineWings</drawnTextureIconPath>
+        <sortOrder>3</sortOrder>
+        <defaultShowRotation>
+            <li>South</li>
+            <li>West</li>
+            <li>East</li>
+            <li>North</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_LivingSaintArmor</li>
+        </appliesTo>
+        <drawData>
+            <defaultData>
+                <layer>-1</layer>
+            </defaultData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>50</layer>
+                <offset>(0, 0, 0)</offset>
+            </dataNorth>
+            <dataSouth>
+                <offset>(0, -0.1, 0)</offset>
+            </dataSouth>
+            <dataEast>
+                <offset>(0, -0.1, 0)</offset>
+            </dataEast>
+            <dataWest>
+                <offset>(0, -0.1, 0)</offset>
+            </dataWest>
+        </drawData>
+        <shaderType>TransparentPostLight</shaderType>
+        <flipable>false</flipable>
+        <colourable>true</colourable>
+        <availablePresets>
+            <li>BEWH_DecoPaletteGold</li>
+            <li>BEWH_DecoPaletteSaintLight</li>
+            <li>BEWH_DecoPaletteSaintVengeance</li>
+        </availablePresets>
+    </Core40k.ExtraDecorationDef>
+</Defs>

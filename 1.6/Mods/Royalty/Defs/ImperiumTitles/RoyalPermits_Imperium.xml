@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Permits from royal titles -->
+
+    <RoyalTitlePermitDef>
+        <defName>TradeSettlement</defName>
+        <label>trade with settlements</label>
+    </RoyalTitlePermitDef>
+
+    <RoyalTitlePermitDef>
+        <defName>TradeOrbital</defName>
+        <label>trade with orbital traders</label>
+    </RoyalTitlePermitDef>
+
+    <RoyalTitlePermitDef>
+        <defName>TradeCaravan</defName>
+        <label>trade with caravans</label>
+    </RoyalTitlePermitDef>
+
+
+    <!-- Faction permits -->
+
+    <!-- Econ -->
+
+    <RoyalTitlePermitDef Name="BEWH_DropResourcesBase" Abstract="True">
+        <workerClass>RoyalTitlePermitWorker_DropResources</workerClass>
+        <faction>BEWH_ImperiumFaction</faction>
+        <permitPointCost>1</permitPointCost>
+        <cooldownDays>45</cooldownDays>
+        <usableOnWorldMap>true</usableOnWorldMap>
+        <royalAid>
+            <targetingRange>39.9</targetingRange>
+        </royalAid>
+    </RoyalTitlePermitDef>
+
+    <!-- Steel drop -->
+    <RoyalTitlePermitDef ParentName="BEWH_DropResourcesBase">
+        <defName>BEWH_SteelDrop</defName>
+        <label>steel drop</label>
+        <description>Call for a drop of 400 steel.</description>
+        <minTitle>BEWH_Title1</minTitle>
+        <faction>BEWH_ImperiumFaction</faction>
+        <uiPosition>(0,0)</uiPosition>
+        <royalAid>
+            <itemsToDrop>
+                <Steel>400</Steel>
+            </itemsToDrop>
+            <favorCost>5</favorCost>
+        </royalAid>
+    </RoyalTitlePermitDef>
+
+    <!-- Food drop -->
+    <RoyalTitlePermitDef ParentName="BEWH_DropResourcesBase">
+        <defName>BEWH_FoodDrop</defName>
+        <label>food drop</label>
+        <description>Call for a drop of 40 packaged survival meals.</description>
+        <minTitle>BEWH_Title1</minTitle>
+        <uiPosition>(0,1)</uiPosition>
+        <royalAid>
+            <itemsToDrop>
+                <MealSurvivalPack>40</MealSurvivalPack>
+            </itemsToDrop>
+            <favorCost>5</favorCost>
+        </royalAid>
+    </RoyalTitlePermitDef>
+
+    <!-- Glitter meds drop -->
+    <RoyalTitlePermitDef ParentName="BEWH_DropResourcesBase">
+        <defName>BEWH_GlitterMedDrop</defName>
+        <label>glitter medicine drop</label>
+        <description>Call for a drop of 25 glitterworld medicine.</description>
+        <minTitle>BEWH_Title3</minTitle>
+        <uiPosition>(1,0)</uiPosition>
+        <prerequisite>BEWH_FoodDrop</prerequisite>
+        <royalAid>
+            <itemsToDrop>
+                <MedicineUltratech>25</MedicineUltratech>
+            </itemsToDrop>
+            <favorCost>14</favorCost>
+        </royalAid>
+    </RoyalTitlePermitDef>
+
+    <!-- x4 Laborer -->
+    <RoyalTitlePermitDef>
+        <defName>BEWH_CallLaborerTeam</defName>
+        <label>call laborer team</label>
+        <description>Call a group of 4 laborers to assist you for 4 days. These workers can only do general labor tasks. You can control them as though they were your own colonists. You are required to keep them safe.</description>
+        <workerClass>RoyalTitlePermitWorker_CallLaborers</workerClass>
+        <minTitle>BEWH_Title2</minTitle>
+        <faction>BEWH_ImperiumFaction</faction>
+        <permitPointCost>1</permitPointCost>
+        <uiPosition>(0,3)</uiPosition>
+        <royalAid>
+            <favorCost>4</favorCost>
+            <pawnKindDef>BEWH_ImperiumLaborerPawn</pawnKindDef>
+            <pawnCount>4</pawnCount>
+            <aidDurationDays>4</aidDurationDays>
+        </royalAid>
+        <cooldownDays>60</cooldownDays>
+    </RoyalTitlePermitDef>
+
+    <!-- x8 Laborer -->
+    <RoyalTitlePermitDef>
+        <defName>BEWH_CallLaborerGang</defName>
+        <label>call laborer gang</label>
+        <description>Call a group of 8 laborers to assist you for 4 days. These workers can only do general labor tasks. You can control them as though they were your own colonists. You are required to keep them safe.</description>
+        <workerClass>RoyalTitlePermitWorker_CallLaborers</workerClass>
+        <minTitle>BEWH_Title4</minTitle>
+        <faction>BEWH_ImperiumFaction</faction>
+        <permitPointCost>1</permitPointCost>
+        <prerequisite>BEWH_CallLaborerTeam</prerequisite>
+        <uiPosition>(1,3)</uiPosition>
+        <royalAid>
+            <favorCost>8</favorCost>
+            <pawnKindDef>BEWH_ImperiumLaborerPawn</pawnKindDef>
+            <pawnCount>8</pawnCount>
+            <aidDurationDays>4</aidDurationDays>
+        </royalAid>
+        <cooldownDays>60</cooldownDays>
+    </RoyalTitlePermitDef>
+
+
+    <!-- Combat -->
+
+    <!-- Space Marine -->
+    <RoyalTitlePermitDef>
+        <defName>BEWH_CallSpaceMarines</defName>
+        <label>call space marine tactical squad</label>
+        <description>Call a tactical squad consisting of 4 space marines.</description>
+        <workerClass>RoyalTitlePermitWorker_CallAid</workerClass>
+        <minTitle>BEWH_Title3</minTitle>
+        <faction>BEWH_ImperiumFaction</faction>
+        <permitPointCost>1</permitPointCost>
+        <uiPosition>(0,4)</uiPosition>
+        <royalAid>
+            <favorCost>4</favorCost>
+            <pawnKindDef>BEWH_FirstbornPawn</pawnKindDef>
+            <pawnCount>4</pawnCount>
+            <targetingRange>39.9</targetingRange>
+        </royalAid>
+        <cooldownDays>20</cooldownDays>
+    </RoyalTitlePermitDef>
+
+    <!-- Primaris Marine -->
+    <RoyalTitlePermitDef>
+        <defName>BEWH_CallPrimarisMarines</defName>
+        <label>call primaris marine tactical squad</label>
+        <description>Call a tactical squad consisting of 4 primaris marines.</description>
+        <workerClass>RoyalTitlePermitWorker_CallAid</workerClass>
+        <minTitle>BEWH_Title5</minTitle>
+        <faction>BEWH_ImperiumFaction</faction>
+        <permitPointCost>1</permitPointCost>
+        <prerequisite>BEWH_CallSpaceMarines</prerequisite>
+        <uiPosition>(1,4)</uiPosition>
+        <royalAid>
+            <favorCost>6</favorCost>
+            <pawnKindDef>BEWH_PrimarisSpaceMarinePawn</pawnKindDef>
+            <pawnCount>4</pawnCount>
+            <targetingRange>39.9</targetingRange>
+        </royalAid>
+        <cooldownDays>35</cooldownDays>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_KeepPrerequisitePermit"/>
+        </modExtensions>
+    </RoyalTitlePermitDef>
+
+    <!-- Custodes -->
+    <RoyalTitlePermitDef>
+        <defName>BEWH_CallCustodes</defName>
+        <label>call custodes</label>
+        <description>Call 2 custodes to aid you in battle.</description>
+        <workerClass>RoyalTitlePermitWorker_CallAid</workerClass>
+        <minTitle>BEWH_Title7</minTitle>
+        <faction>BEWH_ImperiumFaction</faction>
+        <permitPointCost>1</permitPointCost>
+        <prerequisite>BEWH_CallPrimarisMarines</prerequisite>
+        <uiPosition>(2,4)</uiPosition>
+        <royalAid>
+            <favorCost>8</favorCost>
+            <pawnKindDef>BEWH_CustodesPawn</pawnKindDef>
+            <pawnCount>2</pawnCount>
+            <targetingRange>39.9</targetingRange>
+        </royalAid>
+        <cooldownDays>50</cooldownDays>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_KeepPrerequisitePermit"/>
+        </modExtensions>
+    </RoyalTitlePermitDef>
+
+    <!-- Orbital Bombardment -->
+    <RoyalTitlePermitDef>
+        <defName>BEWH_CallOrbitalBombardment</defName>
+        <label>call orbital bombardment</label>
+        <description>Call a single-impact aerodrone strike at a target position.</description>
+        <workerClass>RoyalTitlePermitWorker_OrbitalStrike</workerClass>
+        <minTitle>BEWH_Title4</minTitle>
+        <faction>BEWH_ImperiumFaction</faction>
+        <permitPointCost>1</permitPointCost>
+        <cooldownDays>45</cooldownDays>
+        <uiPosition>(0,5)</uiPosition>
+        <royalAid>
+            <favorCost>6</favorCost>
+            <targetingRange>70.9</targetingRange>
+            <radius>30.9</radius>
+            <explosionRadiusRange>7.9</explosionRadiusRange>
+            <explosionCount>20</explosionCount>
+            <intervalTicks>30</intervalTicks>
+            <warmupTicks>120</warmupTicks>
+        </royalAid>
+    </RoyalTitlePermitDef>
+
+    <!-- Local Exterminatus -->
+    <RoyalTitlePermitDef>
+        <defName>BEWH_CallLocalExterminatus</defName>
+        <label>call localized exterminatus</label>
+        <description>Call a last resort, devastating bombardment salvo at target location.</description>
+        <workerClass>RoyalTitlePermitWorker_OrbitalStrike</workerClass>
+        <minTitle>BEWH_Title7</minTitle>
+        <faction>BEWH_ImperiumFaction</faction>
+        <permitPointCost>1</permitPointCost>
+        <prerequisite>BEWH_CallOrbitalBombardment</prerequisite>
+        <cooldownDays>120</cooldownDays>
+        <uiPosition>(1,5)</uiPosition>
+        <royalAid>
+            <favorCost>14</favorCost>
+            <targetingRange>120.9</targetingRange>
+            <radius>40.9</radius>
+            <explosionRadiusRange>9.9</explosionRadiusRange>
+            <explosionCount>40</explosionCount>
+            <intervalTicks>10</intervalTicks>
+            <warmupTicks>60</warmupTicks>
+        </royalAid>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_KeepPrerequisitePermit"/>
+        </modExtensions>
+    </RoyalTitlePermitDef>
+
+
+    <!-- Utility -->
+    <RoyalTitlePermitDef>
+        <defName>BEWH_CallTransportShuttle</defName>
+        <label>call transport shuttle</label>
+        <description>Call a shuttle for your own use. It will transport colonists, items, and animals anywhere you like within 70 world tiles.</description>
+        <workerClass>RoyalTitlePermitWorker_CallShuttle</workerClass>
+        <minTitle>BEWH_Title4</minTitle>
+        <faction>BEWH_ImperiumFaction</faction>
+        <permitPointCost>1</permitPointCost>
+        <cooldownDays>40</cooldownDays>
+        <usableOnWorldMap>true</usableOnWorldMap>
+        <uiPosition>(0,6)</uiPosition>
+        <royalAid>
+            <favorCost>8</favorCost>
+            <targetingRange>44.9</targetingRange>
+            <targetingRequireLOS>false</targetingRequireLOS>
+        </royalAid>
+    </RoyalTitlePermitDef>
+
+</Defs>

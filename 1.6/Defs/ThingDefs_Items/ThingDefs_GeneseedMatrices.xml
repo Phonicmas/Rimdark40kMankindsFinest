@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- These are made from te gene table, and are then to be gestated-->
+
+  <!-- Thunder Warrior Genetic Matrix -->
+  <ThingDef ParentName="BEWH_GeneticMatrixBase">
+    <defName>BEWH_GeneseedMatrixThunderWarrior</defName>
+    <label>thunder warrior genetic matrix</label>
+    <description>Genetic matrix is a bio-mechanical construct that encodes key genetic modifications, providing the necessary instructions for stable mutations and enhancements. It is used in a Gene-seed Gestator as a template for creation of the Ascendance Vials.\n\nThis genetic matrix contains the template for making Thunder Warriors.\n\nRapidly deteriorates outside containment.</description>
+    <graphicData>
+      <texPath>Things/Item/GeneMatrix/BEWH_GeneMatrix_ThunderWarrior</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>3250</MarketValue>
+    </statBases>
+    <descriptionHyperlinks>
+      <XenotypeDef>BEWH_ThunderWarrior</XenotypeDef>
+    </descriptionHyperlinks>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_GeneMatrix">
+        <ticksToGestate>900000</ticksToGestate>
+        <makesGeneVial>BEWH_GeneseedVialThunderWarrior</makesGeneVial>
+        <researchNeeded>BEWH_GeneseedCreation</researchNeeded>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Firstborn Genetic Matrix -->
+  <ThingDef ParentName="BEWH_GeneticMatrixBase">
+    <defName>BEWH_GeneseedMatrixFirstborn</defName>
+    <label>firstborn genetic matrix</label>
+    <description>Genetic matrix is a bio-mechanical construct that encodes key genetic modifications, providing the necessary instructions for stable mutations and enhancements. It is used in a Gene-seed Gestator as a template for creation of the Ascendance Vials.\n\nThis genetic matrix contains the template for making Firstborn marines.\n\nIt seems that this template has room for additions.\n\nRapidly deteriorates outside containment.</description>
+    <graphicData>
+      <texPath>Things/Item/GeneMatrix/BEWH_GeneMatrix_Firstborn</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>5000</MarketValue>
+    </statBases>
+    <descriptionHyperlinks>
+      <XenotypeDef>BEWH_SpaceMarine</XenotypeDef>
+    </descriptionHyperlinks>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_GeneMatrix">
+        <ticksToGestate>900000</ticksToGestate>
+        <makesGeneVial>BEWH_GeneseedVialFirstborn</makesGeneVial>
+        <researchNeeded>BEWH_GeneseedPurification</researchNeeded>
+        <canUseChapterMaterial>true</canUseChapterMaterial>
+      </li>
+      <!--<li Class="Genes40k.DefModExtension_ChapterMaterial" />-->
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Primaris Genetic Matrix -->
+  <ThingDef ParentName="BEWH_GeneticMatrixBase">
+    <defName>BEWH_GeneseedMatrixPrimaris</defName>
+    <label>primaris genetic matrix</label>
+    <description>Genetic matrix is a bio-mechanical construct that encodes key genetic modifications, providing the necessary instructions for stable mutations and enhancements. It is used in a Gene-seed Gestator as a template for creation of the Ascendance Vials.\n\nThis genetic matrix contains the template for making Primaris marines.\n\nIt seems that this template has room for additions.\n\nRapidly deteriorates outside containment.</description>
+    <graphicData>
+      <texPath>Things/Item/GeneMatrix/BEWH_GeneMatrix_Primaris</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>7000</MarketValue>
+    </statBases>
+    <descriptionHyperlinks>
+      <XenotypeDef>BEWH_PrimarisSpaceMarine</XenotypeDef>
+    </descriptionHyperlinks>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_GeneMatrix">
+        <ticksToGestate>1200000</ticksToGestate>
+        <makesGeneVial>BEWH_GeneseedVialPrimaris</makesGeneVial>
+        <researchNeeded>BEWH_GeneseedPerfection</researchNeeded>
+        <canUseChapterMaterial>true</canUseChapterMaterial>
+      </li>
+      <!--<li Class="Genes40k.DefModExtension_ChapterMaterial" />-->
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Custodes Genetic Matrix -->
+  <ThingDef ParentName="BEWH_GeneticMatrixBase">
+    <defName>BEWH_GeneseedMatrixCustodes</defName>
+    <label>custodes genetic matrix</label>
+    <description>Genetic matrix is a bio-mechanical construct that encodes key genetic modifications, providing the necessary instructions for stable mutations and enhancements. It is used in a Gene-seed Gestator as a template for creation of the Ascendance Vials.\n\nThis genetic matrix contains the template for making Custodes.\n\nRapidly deteriorates outside containment.</description>
+    <graphicData>
+      <texPath>Things/Item/GeneMatrix/BEWH_GeneMatrix_Custodes</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>10000</MarketValue>
+    </statBases>
+    <descriptionHyperlinks>
+      <XenotypeDef>BEWH_Custodes</XenotypeDef>
+    </descriptionHyperlinks>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_GeneMatrix">
+        <ticksToGestate>2400000</ticksToGestate>
+        <makesGeneVial>BEWH_GeneseedVialCustodes</makesGeneVial>
+        <researchNeeded>BEWH_CustodesCreation</researchNeeded>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Primarch Genetic Matrix -->
+  <ThingDef ParentName="BEWH_GeneticMatrixBase">
+    <defName>BEWH_GeneseedMatrixPrimarch</defName>
+    <label>primarch genetic matrix</label>
+    <description>Genetic matrix is a bio-mechanical construct that encodes key genetic modifications, providing the necessary instructions for stable mutations and enhancements. It is used in a Gene-seed Gestator as a template for creation of the Ascendance Vials.\n\nThis genetic matrix contains the template for making Primarchs.\n\nIt seems that this template has room for additions.\n\nRapidly deteriorates outside containment.</description>
+    <graphicData>
+      <texPath>Things/Item/GeneMatrix/BEWH_GeneMatrix_Primarch</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>15000</MarketValue>
+    </statBases>
+    <descriptionHyperlinks>
+      <XenotypeDef>BEWH_Primarch</XenotypeDef>
+    </descriptionHyperlinks>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_GeneMatrix">
+        <ticksToGestate>4800000</ticksToGestate>
+        <makesGeneVial>BEWH_GeneseedVialPrimarch</makesGeneVial>
+        <researchNeeded>BEWH_PrimarchProject</researchNeeded>
+        <canUsePrimarchMaterial>true</canUsePrimarchMaterial>
+      </li>
+      <!--<li Class="Genes40k.DefModExtension_PrimarchMaterial" />-->
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

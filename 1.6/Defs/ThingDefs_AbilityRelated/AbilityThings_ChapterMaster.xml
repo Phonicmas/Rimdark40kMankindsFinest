@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Turret bottom part (drop pod) -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>BEWH_SteelRainDropPodBuilding</defName>
+    <label>Drop Pod</label>
+    <description>A heavily armored, high-velocity capsule used to drop Space Marines right into the heart of battle. With reinforced hulls and rapid descent systems, the Drop Pod blasts through the atmosphere, delivering its deadly payload with devastating impact.</description>
+    <thingClass>Genes40k.Building_DropDrop</thingClass>
+    <drawerType>RealtimeOnly</drawerType>
+    <graphicData>
+      <texPath>Things/Building/DropPod/BEWH_DropPod_Closed</texPath>
+      <maskPath>Things/Building/DropPod/BEWH_DropPod_Closed_m</maskPath>
+      <shaderType>CutoutComplex</shaderType>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(6,6)</drawSize>
+      <drawOffset>(0, 0, -0.5)</drawOffset>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(0.27,0.25,0.27)</volume>
+        <offset>(0,0,0)</offset>
+      </shadowData>
+    </graphicData>
+    <uiIconPath>Things/Building/DropPod/BEWH_DropPodIcon</uiIconPath>
+    <uiIconScale>0.90</uiIconScale>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <stealable>false</stealable>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>5000</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Mass>50</Mass>
+      <Beauty>-10</Beauty>
+      <ShootingAccuracyTurret>1</ShootingAccuracyTurret>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <fillPercent>0.8</fillPercent>
+    <hasTooltip>true</hasTooltip>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <size>(3,3)</size>
+    <building>
+      <combatPower>45</combatPower>
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <deconstructible>true</deconstructible>
+      <claimable>false</claimable>
+      <neverBuildable>true</neverBuildable>
+      <turretGunDef>BEWH_SteelRainDropPodTurret</turretGunDef>
+      <turretTopDrawSize>1</turretTopDrawSize>
+    </building>
+    <stuffCategories Inherit="False" />
+    <designationCategory IsNull="True"/>
+    <placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <wickTicks>240</wickTicks>
+        <explosiveRadius>9.9</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <chanceNeverExplodeFromDamage>0.5</chanceNeverExplodeFromDamage>
+      </li>
+      <li>
+        <compClass>CompColorable</compClass>
+      </li>
+      <li Class="Genes40k.CompProperties_LifespanDropItem">
+        <lifespanTicks>10000</lifespanTicks>
+        <expireEffect>RaisedRock_Collapse</expireEffect>
+        <droppedThingDef>ChunkSlagSteel</droppedThingDef>
+        <amountDropped>1</amountDropped>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_DropPod">
+        <openGraphic>Things/Building/DropPod/BEWH_DropPod</openGraphic>
+        <openGraphicMask>Things/Building/DropPod/BEWH_DropPod_m</openGraphicMask>
+        <!-- sfx placeholder -->
+        <openSound>ThumpCannon_Impact</openSound>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <!-- Turret top part -->
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>BEWH_SteelRainDropPodTurret</defName>
+    <label>Drop Pod Turret</label>
+    <description>A heavy, double-barreled version of the standard .75 caliber bolter mounted on drop pods to unleash devastating firepower on enemy forces. Its increased weight and recoil make it unsuitable for infantry use, but it provides powerful suppression and support during planetary assaults.</description>
+    <graphicData>
+      <texPath>Things/Building/DropPod/BEWH_DropPod_Turret</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <statBases>
+      <AccuracyTouch>0.56</AccuracyTouch>
+      <AccuracyShort>0.66</AccuracyShort>
+      <AccuracyMedium>0.56</AccuracyMedium>
+      <AccuracyLong>0.36</AccuracyLong>
+      <RangedWeapon_Cooldown>2.20</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>5</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <verbs>
+      <li>
+        <label>Storm Bolter</label>
+        <verbClass>Verb_Shoot</verbClass>
+        <defaultProjectile>BEWH_BolterRound</defaultProjectile>
+        <forcedMissRadius>0.1</forcedMissRadius>
+        <warmupTime>0</warmupTime>
+        <range>28.9</range>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <burstShotCount>2</burstShotCount>
+        <soundCast>BEWH_SFX_BolterShot</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+  <!-- Skyfaller -->
+  <ThingDef ParentName="SkyfallerBase">
+    <defName>BEWH_SteelRainDropPodSkyfaller</defName>
+    <label>astartes drop pod</label>
+    <size>(1, 1)</size>
+    <graphicData>
+      <texPath>Things/Building/DropPod/BEWH_DropPod_Closed</texPath>
+      <maskPath>Things/Building/DropPod/BEWH_DropPod_Closed_m</maskPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(5, 5)</drawSize>
+    </graphicData>
+    <skyfaller>
+      <shadowSize>(3, 3)</shadowSize>
+      <shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>
+      <anticipationSound>DropPod_Fall</anticipationSound>
+      <anticipationSoundTicks>100</anticipationSoundTicks>
+      <impactSound>DropPod_Impact</impactSound>
+
+      <explosionRadius>2</explosionRadius>
+      <explosionDamage>Bomb</explosionDamage>
+      <explosionDamageFactor>0.5</explosionDamageFactor>
+    </skyfaller>
+    <comps>
+      <li>
+        <compClass>CompColorable</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!--<ThingDef ParentName="SkyfallerBase">
+    <defName>BEWH_SteelRainDropPodLeaving</defName>
+    <label>astartes drop pod (leaving)</label>
+    <size>(1, 1)</size>
+    <graphicData>
+      <texPath>Things/Building/DropPod/BEWH_DropPod_Closed</texPath>
+      <maskPath>Things/Building/DropPod/BEWH_DropPod_Closed_m</maskPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(10, 10)</drawSize>
+    </graphicData>
+    <skyfaller>
+      <shadowSize>(3, 3)</shadowSize>
+      <shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>
+      <anticipationSound>DropPod_Leaving</anticipationSound>
+      <anticipationSoundTicks>-10</anticipationSoundTicks>
+
+      <movementType>Decelerate</movementType>
+      <reversed>true</reversed>
+
+      <ticksToImpactRange>
+        <min>-40</min>
+        <max>-15</max>
+      </ticksToImpactRange>
+    </skyfaller>
+    <comps>
+      <li>
+        <compClass>CompColorable</compClass>
+      </li>
+    </comps>
+  </ThingDef>-->
+
+</Defs>

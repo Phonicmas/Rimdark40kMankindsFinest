@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Serf -->
+    <ThoughtDef>
+        <defName>BEWH_SerfNearbyMarine</defName>
+        <workerClass>Genes40k.ThoughtWorker_Serf</workerClass>
+        <validWhileDespawned>true</validWhileDespawned>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stackLimit>1</stackLimit>
+        <stages>
+            <li>
+                <label>Serfdom</label>
+                <description>No Space Marines midst our colony, no master to serve...</description>
+                <baseMoodEffect>-5</baseMoodEffect>
+            </li>
+            <li>
+                <label>Serfdom</label>
+                <description>Space Marines roam our colony, it makes me happy.</description>
+                <baseMoodEffect>8</baseMoodEffect>
+            </li>
+            <li>
+                <label>Serfdom</label>
+                <description>Nearby Space Marines make me ecstatic and give me purpose!</description>
+                <baseMoodEffect>15</baseMoodEffect>
+            </li>
+        </stages>
+        <requiredTraits>
+            <li>BEWH_Serf</li>
+        </requiredTraits>
+        <hediff>BEWH_SerfBuff</hediff>
+    </ThoughtDef>
+
+</Defs>

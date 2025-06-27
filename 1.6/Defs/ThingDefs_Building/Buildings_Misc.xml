@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Ancient Banner from ability -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>BEWH_AncientChapterBanner</defName>
+    <label>Legion Standard</label>
+    <description>The Legion Standard is a symbol of honor and unity, a sacred emblem raised in key locations to strengthen the resolve of the Space Marines. When unfurled, the banner inspires all nearby Marines, granting them increased morale and combat effectiveness as they fight in the name of their legion's legacy.</description>
+    <thingClass>Genes40k.Building_ChapterBanner</thingClass>
+    <graphicData>
+      <texPath>Things/Building/ChapterBanner/BEWH_ThingChapterBanner</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(2.5,2.75)</drawSize>
+      <drawOffset>(0, 0, 0.75)</drawOffset>
+      <shadowData>
+        <volume>(0.3, 0.3 ,0.3)</volume>
+        <offset>(0, 0, -0.2)</offset>
+      </shadowData>
+    </graphicData>
+    <size>(1,1)</size>
+    <useHitPoints>false</useHitPoints>
+    <drawerType>RealtimeOnly</drawerType>
+    <rotatable>false</rotatable>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <passability>PassThroughOnly</passability>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <pathCost>42</pathCost>
+    <canOverlapZones>false</canOverlapZones>
+    <fillPercent>0.25</fillPercent>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>6000</WorkToBuild>
+      <Mass>20</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <building>
+      <deconstructible>false</deconstructible>
+    </building>
+    <tickerType>Normal</tickerType>
+
+    <canGenerateDefaultDesignator>false</canGenerateDefaultDesignator>
+    <designationCategory IsNull="True"/>
+    <minifiedDef Inherit="False" />
+    <thingCategories Inherit="False" />
+
+    <comps>
+      <li Class="CompProperties_Lifespan">
+        <lifespanTicks>10000</lifespanTicks>
+        <expireEffect>RaisedRock_Collapse</expireEffect>
+      </li>
+      <li Class="Genes40k.CompProperties_Aura">
+        <givesHediff>BEWH_ChapterBannerBuff</givesHediff>
+        <durationOutsideRange>750</durationOutsideRange>
+        <range>20</range>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>18</glowRadius>
+        <glowColor>(200,200,200,0)</glowColor>
+      </li>
+    </comps>
+
+  </ThingDef>
+
+  <!-- Decorative Banner -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>BEWH_DecorativeChapterBannerImperium</defName>
+    <label>decorative Legion Standard</label>
+    <description>A beautifully crafted banner adorned with the legion's symbols and colors. It stands as a proud testament to the legion's history and glory.</description>
+    <thingClass>Genes40k.Building_DecorativeFlag</thingClass>
+    <graphicData>
+      <texPath>Things/Building/ChapterBanner/BEWH_DecorationChapterBanner</texPath>
+      <maskPath>Things/Building/ChapterBanner/BEWH_DecorationChapterBannerm</maskPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(1.5, 2.5)</drawSize>
+      <drawOffset>(0, 0, 0.7)</drawOffset>
+      <drawRotated>false</drawRotated>
+      <shadowData>
+        <volume>(0.3, 0.3 ,0.3)</volume>
+        <offset>(0, 0, -0.2)</offset>
+      </shadowData>
+    </graphicData>
+    <size>(1,1)</size>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <rotatable>false</rotatable>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <passability>PassThroughOnly</passability>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <pathCost>42</pathCost>
+    <canOverlapZones>false</canOverlapZones>
+    <fillPercent>0.25</fillPercent>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>6000</WorkToBuild>
+      <Mass>20</Mass>
+      <Flammability>1</Flammability>
+    </statBases>
+
+    <costList>
+      <WoodLog>25</WoodLog>
+      <Cloth>40</Cloth>
+      <Gold>1</Gold>
+    </costList>
+
+    <tickerType>Normal</tickerType>
+
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <designationCategory>BEWH_RimDarkCategory</designationCategory>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+
+  </ThingDef>
+
+</Defs>

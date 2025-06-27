@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Name="BEWH_RaisedBuilding" Abstract="True">
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <altitudeLayer>Building</altitudeLayer>
+    <blockWind>true</blockWind>
+    <castEdgeShadows>true</castEdgeShadows>
+    <coversFloor>true</coversFloor>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <blockLight>true</blockLight>
+    <drawerType>MapMeshOnly</drawerType>
+    <building>
+      <paintable>false</paintable>
+      <deconstructible>true</deconstructible>
+      <claimable>false</claimable>
+      <neverBuildable>true</neverBuildable>
+      <isInert>true</isInert>
+    </building>
+    <stuffCategories Inherit="False" />
+    <designationCategory IsNull="True"/>
+    <comps>
+      <li Class="CompProperties_Lifespan">
+        <lifespanTicks>10000</lifespanTicks>
+        <expireEffect>RaisedRock_Collapse</expireEffect>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BEWH_RaisedBuilding">
+    <defName>BEWH_RaisedWall</defName>
+    <label>raised wall</label>
+    <description>A highly durable wall that serves well in defense, but will disappear after a limited time.</description>
+    <uiIconPath>Things/Building/Linked/WallSmooth_MenuIcon</uiIconPath>
+    <graphicData>
+      <texPath>Things/Building/Linked/Wall</texPath>
+      <graphicClass>Graphic_Appearances</graphicClass>
+      <linkType>CornerFiller</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+        <edgeTop>Damage/Edge</edgeTop>
+        <edgeBot>Damage/Edge</edgeBot>
+        <edgeLeft>Damage/Edge</edgeLeft>
+        <edgeRight>Damage/Edge</edgeRight>
+      </damageData>
+      <color>(113,121,126)</color>
+    </graphicData>
+    <passability>Impassable</passability>
+    <statBases>
+      <MaxHitPoints>2000</MaxHitPoints>
+      <Mass>30</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <fillPercent>1</fillPercent>
+  </ThingDef>
+
+  <ThingDef ParentName="BEWH_RaisedBuilding">
+    <defName>BEWH_RaisedBarricade</defName>
+    <label>raised barricade</label>
+    <description>A durable barricade for short-term defense. Will disappear after a limited time.</description>
+    <uiIconPath>Things/Building/Linked/WallSmooth_MenuIcon</uiIconPath>
+    <graphicData>
+      <texPath>Things/Building/Linked/Barricade_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Barricades</li>
+      </linkFlags>
+      <color>(113,121,126)</color>
+    </graphicData>
+    <pathCost>50</pathCost>
+    <passability>PassThroughOnly</passability>
+    <statBases>
+      <MaxHitPoints>1500</MaxHitPoints>
+      <Mass>30</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <fillPercent>0.55</fillPercent>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>BEWH_RaisedTurret</defName>
+    <label>raised turret</label>
+    <description>A heavy, double-barreled turret based on .75 caliber bolter. Will disappear after a limited time.</description>
+    <thingClass>Building_TurretGun</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Things/Building/RogalDorn/BEWH_DornTurretBase</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,2)</drawSize>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(0.27,0.25,0.27)</volume>
+        <offset>(0,0,0)</offset>
+      </shadowData>
+    </graphicData>
+    <uiIconPath>Things/Building/RogalDorn/BEWH_DornTurretIcon</uiIconPath>
+    <uiIconScale>0.90</uiIconScale>
+    <altitudeLayer>Building</altitudeLayer>
+    <stealable>false</stealable>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Mass>8</Mass>
+      <ShootingAccuracyTurret>1</ShootingAccuracyTurret>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompProperties_Stunnable">
+        <affectedDamageDefs>
+          <li>Stun</li>
+          <li>EMP</li>
+        </affectedDamageDefs>
+      </li>
+      <li Class="CompProperties_Lifespan">
+        <lifespanTicks>10000</lifespanTicks>
+        <expireEffect>RaisedRock_Collapse</expireEffect>
+      </li>
+    </comps>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <fillPercent>0.4</fillPercent>
+    <hasTooltip>true</hasTooltip>
+    <stuffCategories Inherit="False" />
+    <building>
+      <combatPower>45</combatPower>      <!-- same as a scavenger -->
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <turretGunDef>BEWH_RaisedTurretTopGun</turretGunDef>
+      <turretBurstCooldownTime>2</turretBurstCooldownTime>
+    </building>
+    <designationHotKey>Misc2</designationHotKey>
+  </ThingDef>
+  <!-- Turret top part -->
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>BEWH_RaisedTurretTopGun</defName>
+    <label>bolter turret</label>
+    <description>Bolter mounted gun.</description>
+    <graphicData>
+      <texPath>Things/Building/RogalDorn/BEWH_DornTurretTop</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,3)</drawSize>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.66</AccuracyTouch>
+      <AccuracyShort>0.76</AccuracyShort>
+      <AccuracyMedium>0.66</AccuracyMedium>
+      <AccuracyLong>0.46</AccuracyLong>
+      <RangedWeapon_Cooldown>2.20</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>5</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <verbs>
+      <li>
+        <label>Storm Bolter</label>
+        <verbClass>Verb_Shoot</verbClass>
+        <defaultProjectile>BEWH_BolterRound</defaultProjectile>
+        <forcedMissRadius>0.1</forcedMissRadius>
+        <warmupTime>0</warmupTime>
+        <range>28.9</range>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <burstShotCount>3</burstShotCount>
+        <soundCast>BEWH_SFX_BolterShot</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+</Defs>

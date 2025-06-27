@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- Misc -->
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_ClawMarks_1</defName>
+        <label>Claw marks</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_ClawMarks1_icon</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_ClawMarks1</drawnTextureIconPath>
+        <sortOrder>8</sortOrder>
+        <defaultShowRotation>
+            <li>North</li>
+            <li>South</li>
+            <li>East</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmor</li>
+            <li>BEWH_MkXPowerArmor</li>
+        </appliesTo>
+        <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>80</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>80</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>76</layer>
+            </dataEast>
+            <dataWest>
+                <layer>76</layer>
+            </dataWest>
+        </drawData>
+        <shaderType>Cutout</shaderType>
+        <flipable>true</flipable>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_Rondel1</defName>
+        <label>Rondel 1</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_Shield1_icon</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_Shield1</drawnTextureIconPath>
+        <sortOrder>1.4</sortOrder>
+        <defaultShowRotation>
+            <li>North</li>
+            <li>South</li>
+            <li>West</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmor</li>
+            <li>BEWH_MkXPowerArmor</li>
+        </appliesTo>
+        <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>76</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>86</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>84</layer>
+                <flip>true</flip>
+            </dataEast>
+            <dataWest>
+                <layer>84</layer>
+            </dataWest>
+        </drawData>
+        <availablePresets>
+            <li>BEWH_DecoPaletteGold</li>
+            <li>BEWH_DecoPaletteSilver</li>
+        </availablePresets>
+        <shaderType>Cutout</shaderType>
+        <colourable>true</colourable>
+        <useArmorColourAsDefault>true</useArmorColourAsDefault>
+        <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
+        <flipable>true</flipable>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_Rondel2</defName>
+        <label>Rondel 2</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_Shield2_icon</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_Shield2</drawnTextureIconPath>
+        <sortOrder>1.5</sortOrder>
+        <defaultShowRotation>
+            <li>North</li>
+            <li>South</li>
+            <li>West</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmor</li>
+            <li>BEWH_MkXPowerArmor</li>
+        </appliesTo>
+        <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>76</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>86</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>84</layer>
+                <flip>true</flip>
+            </dataEast>
+            <dataWest>
+                <layer>84</layer>
+            </dataWest>
+        </drawData>
+        <availablePresets>
+            <li>BEWH_DecoPaletteGold</li>
+            <li>BEWH_DecoPaletteSilver</li>
+        </availablePresets>
+        <shaderType>Cutout</shaderType>
+        <colourable>true</colourable>
+        <useArmorColourAsDefault>true</useArmorColourAsDefault>
+        <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
+        <flipable>true</flipable>
+    </Core40k.ExtraDecorationDef>
+
+</Defs>
