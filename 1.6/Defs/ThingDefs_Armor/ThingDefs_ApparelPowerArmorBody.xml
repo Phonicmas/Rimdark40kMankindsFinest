@@ -91,18 +91,6 @@
                 <li>BEWH_PowerArmorMkVII</li>
             </tags>
             <renderNodeProperties>
-                <!-- Armor itself -->
-                <li>
-                    <workerClass>PawnRenderNodeWorker_Apparel_Body</workerClass>
-                    <nodeClass>PawnRenderNode_Apparel</nodeClass>
-                    <texPath>Things/Armor/Imperium/PowerArmor/MkVIIPowerArmor/BEWH_MkVIIPowerArmor</texPath>
-                    <parentTagDef>Body</parentTagDef>
-                    <drawData>
-                        <defaultData>
-                            <layer>40</layer>
-                        </defaultData>
-                    </drawData>
-                </li>
                 <!-- Backpacks -->
                 <li>
                     <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentBackpack</workerClass>
@@ -118,10 +106,10 @@
                             <layer>71</layer>
                         </dataWest>
                         <dataNorth>
-                            <layer>80</layer>
+                            <layer>88.5</layer>
                         </dataNorth>
                         <dataSouth>
-                            <layer>39</layer>
+                            <layer>20</layer>
                         </dataSouth>
                     </drawData>
                 </li>
@@ -191,18 +179,6 @@
                 <li>BEWH_PowerArmorMkX</li>
             </tags>
             <renderNodeProperties>
-                <!-- Armor itself -->
-                <li>
-                    <workerClass>PawnRenderNodeWorker_Apparel_Body</workerClass>
-                    <nodeClass>PawnRenderNode_Apparel</nodeClass>
-                    <texPath>Things/Armor/Imperium/PowerArmor/MkXPowerArmor/BEWH_MkXPowerArmor</texPath>
-                    <parentTagDef>Body</parentTagDef>
-                    <drawData>
-                        <defaultData>
-                            <layer>40</layer>
-                        </defaultData>
-                    </drawData>
-                </li>
                 <!-- Backpacks -->
                 <li>
                     <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentBackpack</workerClass>
@@ -218,10 +194,10 @@
                             <layer>71</layer>
                         </dataWest>
                         <dataNorth>
-                            <layer>80</layer>
+                            <layer>88.5</layer>
                         </dataNorth>
                         <dataSouth>
-                            <layer>39</layer>
+                            <layer>20</layer>
                         </dataSouth>
                     </drawData>
                 </li>
@@ -292,18 +268,6 @@
                 <li>BEWH_MkXPowerArmorChaplain</li>
             </tags>
             <renderNodeProperties>
-                <!-- Armor itself -->
-                <li>
-                    <workerClass>PawnRenderNodeWorker_Apparel_Body</workerClass>
-                    <nodeClass>PawnRenderNode_Apparel</nodeClass>
-                    <texPath>Things/Armor/Imperium/PowerArmor/MkXPowerArmorChaplain/BEWH_ChaplainArmor</texPath>
-                    <parentTagDef>Body</parentTagDef>
-                    <drawData>
-                        <defaultData>
-                            <layer>40</layer>
-                        </defaultData>
-                    </drawData>
-                </li>
                 <!-- Backpacks -->
                 <li>
                     <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentBackpack</workerClass>
@@ -319,10 +283,10 @@
                             <layer>71</layer>
                         </dataWest>
                         <dataNorth>
-                            <layer>77</layer>
+                            <layer>88.5</layer>
                         </dataNorth>
                         <dataSouth>
-                            <layer>39</layer>
+                            <layer>20</layer>
                         </dataSouth>
                     </drawData>
                 </li>
@@ -401,27 +365,6 @@
                 <li>BEWH_LivingSaintArmor</li>
             </tags>
             <renderNodeProperties Inherit="false">
-                <!-- Armor itself -->
-                <li>
-                    <workerClass>PawnRenderNodeWorker_Apparel_Body</workerClass>
-                    <nodeClass>PawnRenderNode_Apparel</nodeClass>
-                    <texPath>Things/Armor/Imperium/PowerArmor/LivingSaint/BEWH_LSaintArmor</texPath>
-                    <parentTagDef>Body</parentTagDef>
-                    <drawData>
-                        <dataEast>
-                            <layer>40</layer>
-                        </dataEast>
-                        <dataWest>
-                            <layer>40</layer>
-                        </dataWest>
-                        <dataNorth>
-                            <layer>50</layer>
-                        </dataNorth>
-                        <dataSouth>
-                            <layer>40</layer>
-                        </dataSouth>
-                    </drawData>
-                </li>
                 <!-- Backpacks -->
                 <li>
                     <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentBackpack</workerClass>
@@ -437,10 +380,10 @@
                             <layer>71</layer>
                         </dataWest>
                         <dataNorth>
-                            <layer>77</layer>
+                            <layer>88.5</layer>
                         </dataNorth>
                         <dataSouth>
-                            <layer>39</layer>
+                            <layer>20</layer>
                         </dataSouth>
                     </drawData>
                 </li>
@@ -458,5 +401,94 @@
             <li Class="Genes40k.DefModExtension_HideJumpPack" />
         </modExtensions>
     </ThingDef>
+
+    <!-- Thunder Warrior Armor -->
+    <ThingDef ParentName="BEWH_PowerArmorBase">
+        <defName>BEWH_MkIPowerArmor</defName>
+        <label>mk I Power Armor</label>
+        <description>...</description>
+        <recipeMaker>
+            <researchPrerequisite>BEWH_AstartesPowerArmorMkX</researchPrerequisite>
+        </recipeMaker>
+        <graphicData>
+            <texPath>Things/Armor/Imperium/PowerArmor/MkIPowerArmor/BEWH_MkIPowerArmor</texPath>
+        </graphicData>
+        <statBases>
+            <WorkToMake>90000</WorkToMake>
+            <MarketValue>10000</MarketValue>
+
+            <ArmorRating_Sharp>1.79</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.74</ArmorRating_Blunt>
+            <ArmorRating_Heat>1.2</ArmorRating_Heat>
+
+            <Insulation_Cold>40</Insulation_Cold>
+            <Insulation_Heat>30</Insulation_Heat>
+
+        </statBases>
+        <equippedStatOffsets>
+            <TerrorSource MayRequire="Ludeon.RimWorld.Ideology">17</TerrorSource>
+        </equippedStatOffsets>
+        <costList>
+            <ComponentSpacer>8</ComponentSpacer>
+            <Plasteel>175</Plasteel>
+            <Uranium>60</Uranium>
+        </costList>
+        <apparel>
+            <wornGraphicPath>Things/Armor/Imperium/PowerArmor/MkIPowerArmor/BEWH_MkIPowerArmor</wornGraphicPath>
+            <tags>
+                <li>BEWH_PowerArmorMkI</li>
+            </tags>
+            <renderNodeProperties>
+                <!-- Backpacks -->
+                <li>
+                    <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentBackpack</workerClass>
+                    <nodeClass>Genes40k.PawnRenderNode_AttachmentBackpack</nodeClass>
+                    <texPath>Things/Armor/Imperium/PowerArmor/MkIPowerArmor/Backpacks/BEWH_MkIPowerArmor_Backpack</texPath>
+                    <shaderTypeDef>CutoutComplex</shaderTypeDef>
+                    <parentTagDef>Body</parentTagDef>
+                    <drawData>
+                        <dataEast>
+                            <layer>71</layer>
+                        </dataEast>
+                        <dataWest>
+                            <layer>71</layer>
+                        </dataWest>
+                        <dataNorth>
+                            <layer>88.5</layer>
+                        </dataNorth>
+                        <dataSouth>
+                            <layer>20</layer>
+                        </dataSouth>
+                    </drawData>
+                </li>
+                <!-- Shoulder pad -->
+                <li>
+                    <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentShoulderPad</workerClass>
+                    <nodeClass>Genes40k.PawnRenderNode_AttachmentChapterApparelColour</nodeClass>
+                    <texPath>Things/Armor/Imperium/PowerArmor/MkIPowerArmor/Shoulder/BEWH_MkIPowerArmor_Shoulder</texPath>
+                    <shaderTypeDef>CutoutComplex</shaderTypeDef>
+                    <parentTagDef>Body</parentTagDef>
+                    <drawData>
+                        <dataEast>
+                            <layer>72</layer>
+                        </dataEast>
+                        <dataWest>
+                            <layer>72</layer>
+                        </dataWest>
+                    </drawData>
+                </li>
+            </renderNodeProperties>
+        </apparel>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_EnableTabDef">
+                <tabDefs>
+                    <li>BEWH_AstartesShoulderIcon</li>
+                    <li>BEWH_ExtraDecoration</li>
+                </tabDefs>
+            </li>
+            <li Class="Genes40k.DefModExtension_HideJumpPack" />
+        </modExtensions>
+    </ThingDef>
+
 
 </Defs>

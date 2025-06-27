@@ -1,9 +1,11 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using RimWorld;
+using UnityEngine;
 using Verse;
 
 namespace Genes40k;
 
-public class PawnRenderNode_AttachmentShoulderChapterIcon : PawnRenderNode
+public class PawnRenderNode_AttachmentShoulderChapterIcon : PawnRenderNode_Apparel
 {
         
     private Genes40kModSettings modSettings = null;
@@ -13,7 +15,7 @@ public class PawnRenderNode_AttachmentShoulderChapterIcon : PawnRenderNode
     public bool Flipped = true;
     //protected override bool FlipGraphic => Flipped;
     
-    public PawnRenderNode_AttachmentShoulderChapterIcon(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree) : base(pawn, props, tree)
+    public PawnRenderNode_AttachmentShoulderChapterIcon(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree, Apparel apparel) : base(pawn, props, tree, apparel)
     {
     }
 
@@ -44,5 +46,10 @@ public class PawnRenderNode_AttachmentShoulderChapterIcon : PawnRenderNode
         }
         
         return GraphicDatabase.Get<Graphic_Multi>(leftShoulderIcon, ShaderFor(pawn), Props.drawSize, drawColour, drawColour);
+    }
+    
+    protected override IEnumerable<Graphic> GraphicsFor(Pawn pawn)
+    {
+        yield return GraphicFor(pawn);
     }
 }

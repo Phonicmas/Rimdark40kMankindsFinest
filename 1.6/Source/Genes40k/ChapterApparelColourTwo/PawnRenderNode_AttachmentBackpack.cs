@@ -1,12 +1,13 @@
-﻿using Core40k;
+﻿using System.Collections.Generic;
+using Core40k;
 using RimWorld;
 using Verse;
 
 namespace Genes40k;
 
-public class PawnRenderNode_AttachmentBackpack : PawnRenderNode
+public class PawnRenderNode_AttachmentBackpack : PawnRenderNode_Apparel
 {
-    public PawnRenderNode_AttachmentBackpack(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree) : base(pawn, props, tree)
+    public PawnRenderNode_AttachmentBackpack(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree, Apparel apparel) : base(pawn, props, tree, apparel)
     {
     }
         
@@ -22,5 +23,10 @@ public class PawnRenderNode_AttachmentBackpack : PawnRenderNode
         }
             
         return GraphicDatabase.Get<Graphic_Multi>(backpackPath, ShaderFor(pawn), Props.drawSize, apparelColourTwo.DrawColor, apparelColourTwo.DrawColorTwo);
+    }
+    
+    protected override IEnumerable<Graphic> GraphicsFor(Pawn pawn)
+    {
+        yield return GraphicFor(pawn);
     }
 }

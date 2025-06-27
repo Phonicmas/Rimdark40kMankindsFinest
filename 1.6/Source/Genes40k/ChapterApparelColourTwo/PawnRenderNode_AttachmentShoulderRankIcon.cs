@@ -1,14 +1,16 @@
-﻿using Verse;
+﻿using System.Collections.Generic;
+using RimWorld;
+using Verse;
 
 namespace Genes40k;
 
-public class PawnRenderNode_AttachmentShoulderRankIcon : PawnRenderNode
+public class PawnRenderNode_AttachmentShoulderRankIcon : PawnRenderNode_Apparel
 {
     
     public bool Flipped = false;
     //protected override bool FlipGraphic => Flipped;
     
-    public PawnRenderNode_AttachmentShoulderRankIcon(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree) : base(pawn, props, tree)
+    public PawnRenderNode_AttachmentShoulderRankIcon(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree, Apparel apparel) : base(pawn, props, tree, apparel)
     {
     }
     
@@ -35,5 +37,10 @@ public class PawnRenderNode_AttachmentShoulderRankIcon : PawnRenderNode
         }
 
         return GraphicDatabase.Get<Graphic_Multi>(rightShoulderPath, ShaderFor(pawn), Props.drawSize, drawColour, drawColour);
+    }
+    
+    protected override IEnumerable<Graphic> GraphicsFor(Pawn pawn)
+    {
+        yield return GraphicFor(pawn);
     }
 }

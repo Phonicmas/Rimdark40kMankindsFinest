@@ -140,4 +140,49 @@
         </modExtensions>
     </ThingDef>
 
+    <!-- MK 1 Thunder Warrior-->
+    <ThingDef ParentName="BEWH_PowerArmorHelmetBase">
+        <defName>BEWH_MkIPowerArmorHelmet</defName>
+        <label>mk I Power Armor Helmet</label>
+        <description>...</description>
+        <thingClass>Apparel</thingClass>
+        <recipeMaker>
+            <researchPrerequisite>BEWH_AstartesPowerArmorMkX</researchPrerequisite>
+        </recipeMaker>
+        <graphicData>
+            <texPath>Things/Headgear/Imperium/PowerArmorThunder/BEWH_MkIHelmet_south</texPath>
+        </graphicData>
+        <statBases>
+            <WorkToMake>35000</WorkToMake>
+            <MarketValue>4000</MarketValue>
+
+            <ArmorRating_Sharp>1.3</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.8</ArmorRating_Blunt>
+            <ArmorRating_Heat>1.2</ArmorRating_Heat>
+
+            <Insulation_Cold>6</Insulation_Cold>
+            <Insulation_Heat>4</Insulation_Heat>
+        </statBases>
+        <equippedStatOffsets>
+            <TerrorSource MayRequire="Ludeon.RimWorld.Ideology">8</TerrorSource>
+        </equippedStatOffsets>
+        <costList>
+            <ComponentSpacer>2</ComponentSpacer>
+            <Plasteel>65</Plasteel>
+        </costList>
+        <apparel>
+            <wornGraphicPath>Things/Headgear/Imperium/PowerArmorThunder/BEWH_MkIHelmet</wornGraphicPath>
+            <tags>
+                <li>BEWH_PowerArmorHelmetMkI</li>
+            </tags>
+        </apparel>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_EnableTabDef">
+                <tabDefs>
+                    <li>BEWH_ExtraDecoration</li>
+                </tabDefs>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
 </Defs>
