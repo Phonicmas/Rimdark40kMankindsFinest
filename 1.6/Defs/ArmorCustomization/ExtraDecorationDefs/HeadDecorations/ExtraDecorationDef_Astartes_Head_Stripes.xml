@@ -114,10 +114,10 @@
                 <layer>75</layer>
             </dataSouth>
             <dataEast>
-                <layer>72</layer>
+                <layer>70</layer>
             </dataEast>
             <dataWest>
-                <layer>71</layer>
+                <layer>70</layer>
             </dataWest>
         </drawData>
         <shaderType>Cutout</shaderType>
@@ -149,7 +149,7 @@
                 <layer>75</layer>
             </dataSouth>
             <dataEast>
-                <layer>72</layer>
+                <layer>70</layer>
             </dataEast>
             <dataWest>
                 <layer>70</layer>
