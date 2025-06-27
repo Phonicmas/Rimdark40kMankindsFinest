@@ -407,6 +407,7 @@
         <defName>BEWH_MkIPowerArmor</defName>
         <label>mk I Power Armor</label>
         <description>...</description>
+        <thingClass>Genes40k.ChapterBodyDecorativeApparelColourTwo</thingClass>
         <recipeMaker>
             <researchPrerequisite>BEWH_AstartesPowerArmorMkX</researchPrerequisite>
         </recipeMaker>
@@ -482,7 +483,6 @@
         <modExtensions>
             <li Class="Core40k.DefModExtension_EnableTabDef">
                 <tabDefs>
-                    <li>BEWH_AstartesShoulderIcon</li>
                     <li>BEWH_ExtraDecoration</li>
                 </tabDefs>
             </li>

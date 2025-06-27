@@ -17,7 +17,7 @@ public class PawnRenderNode_AttachmentBackpack : PawnRenderNode_Apparel
             
         var apparelColourTwo = (BodyDecorativeApparelColourTwo)apparel;
             
-        if (ModsConfig.RoyaltyActive && pawn.apparel.WornApparel.Any(wornApparel => wornApparel.def == Genes40kDefOf.Apparel_PackJump))
+        if (ModsConfig.RoyaltyActive && pawn.apparel.WornApparel.Any(wornApparel => wornApparel.def == Genes40kDefOf.Apparel_PackJump) && apparelColourTwo.def.HasModExtension<DefModExtension_HideJumpPack>() && apparelColourTwo.def.GetModExtension<DefModExtension_HideJumpPack>().changeBackpackVisual)
         {
             backpackPath += "_Jump";
         }
