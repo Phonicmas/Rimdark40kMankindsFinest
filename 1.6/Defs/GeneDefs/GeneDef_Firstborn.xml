@@ -327,7 +327,7 @@
     <GeneDef ParentName="BEWH_SpaceMarineParent">
         <defName>BEWH_SusAnMembrane</defName>
         <label>sus-an membrane</label>
-        <description>The Sus-an Membrane is a thin bio-engineered layer implanted beneath the skin that enables the Space marine to enter a state of suspended animation. By drastically slowing metabolism and vital signs, it allows the Astartes to survive extreme wounds or environmental hazards that would normally be fatal. Can be activated on demand.</description>
+        <description>The Sus-an membrane, also known as the "hibernator implant," is a thin membrane implanted above the recipient's brain, eventually merging with it. A Space Marine can activate it consciously, effectively entering a state of suspended animation. This allows the Astartes to survive extreme wounds or environmental hazards that would normally be fatal. However, only a specialized medical procedure can revive an Astartes once they have entered this state.</description>
         <iconPath>UI/Genes/Firstborn/BEWH_Firstborn_Sus-anMembraneIcon</iconPath>
         <displayOrderInCategory>12</displayOrderInCategory>
         <geneClass>Core40k.Gene_DisabledBy</geneClass>
@@ -354,7 +354,7 @@
     <GeneDef ParentName="BEWH_SpaceMarineParent">
         <defName>BEWH_Melanochrome</defName>
         <label>melanochrome</label>
-        <description>The Melanochrome is a specialized gland that uses the lymphatic system to distribute its hormones. It enhances radiation protection by regulating melanin production. This gland is responsible for certain distinctive mutations, such as the deep black skin of the Salamanders or the snow-white complexion of the Angels.</description>
+        <description>The Melanochrome is a specialized gland that utilizes the lymphatic system to distribute hormones that enhance radiation protection by regulating melanin production. It is responsible for certain distinctive mutations, such as the deep black skin of the Salamanders or the unusually pale complexion of the Blood Angels and Raven Guard.</description>
         <iconPath>UI/Genes/Firstborn/BEWH_Firstborn_MelanochromeIcon</iconPath>
         <displayOrderInCategory>13</displayOrderInCategory>
         <minAgeActive>16</minAgeActive>

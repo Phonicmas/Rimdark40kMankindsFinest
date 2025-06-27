@@ -90,4 +90,41 @@
         <label>Vengeance</label>
         <colour>(140, 35, 47)</colour>
     </Core40k.DecorationColourPresetDef>
+
+<!-- Lense Glow -->
+    <Core40k.DecorationColourPresetDef>
+        <defName>BEWH_DecoPaletteLenseGlowRed</defName>
+        <label>Red Glow</label>
+        <colour>(189, 28, 28)</colour>
+    </Core40k.DecorationColourPresetDef>
+
+    <Core40k.DecorationColourPresetDef>
+        <defName>BEWH_DecoPaletteLenseGlowGreen</defName>
+        <label>Green Glow</label>
+        <colour>(28, 189, 42)</colour>
+    </Core40k.DecorationColourPresetDef>
+
+    <Core40k.DecorationColourPresetDef>
+        <defName>BEWH_DecoPaletteLenseGlowBlue</defName>
+        <label>Blue Glow</label>
+        <colour>(28, 173, 189)</colour>
+    </Core40k.DecorationColourPresetDef>
+
+    <Core40k.DecorationColourPresetDef>
+        <defName>BEWH_DecoPaletteLenseGlowYellow</defName>
+        <label>Yellow Glow</label>
+        <colour>(189, 148, 28)</colour>
+    </Core40k.DecorationColourPresetDef>
+
+    <Core40k.DecorationColourPresetDef>
+        <defName>BEWH_DecoPaletteLenseGlowOrange</defName>
+        <label>Orange Glow</label>
+        <colour>(233, 101, 11)</colour>
+    </Core40k.DecorationColourPresetDef>
+
+    <Core40k.DecorationColourPresetDef>
+        <defName>BEWH_DecoPaletteLenseGlowWhite</defName>
+        <label>White Glow</label>
+        <colour>(191, 191, 191)</colour>
+    </Core40k.DecorationColourPresetDef>
 </Defs>
