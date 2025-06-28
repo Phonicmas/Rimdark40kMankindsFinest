@@ -21,7 +21,7 @@
         </appliesTo>
         <drawData>
             <dataNorth>
-                <layer>84</layer>
+                <layer>101</layer>
             </dataNorth>
             <dataSouth>
                 <layer>86</layer>
@@ -31,6 +31,7 @@
             </dataEast>
             <dataWest>
                 <layer>87</layer>
+                <flip>true</flip>
             </dataWest>
         </drawData>
         <shaderType>Cutout</shaderType>
@@ -91,7 +92,7 @@
         </appliesTo>
         <drawData>
             <dataNorth>
-                <layer>84</layer>
+                <layer>102</layer>
             </dataNorth>
             <dataSouth>
                 <layer>76</layer>
@@ -101,6 +102,7 @@
             </dataEast>
             <dataWest>
                 <layer>71</layer>
+                <flip>true</flip>
             </dataWest>
         </drawData>
         <shaderType>Cutout</shaderType>

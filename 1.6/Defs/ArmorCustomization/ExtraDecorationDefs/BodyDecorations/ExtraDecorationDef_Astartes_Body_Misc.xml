@@ -27,10 +27,11 @@
                 <layer>80</layer>
             </dataSouth>
             <dataEast>
-                <layer>76</layer>
+                <layer>79</layer>
             </dataEast>
             <dataWest>
-                <layer>76</layer>
+                <layer>77</layer>
+                <flip>true</flip>
             </dataWest>
         </drawData>
         <shaderType>Cutout</shaderType>

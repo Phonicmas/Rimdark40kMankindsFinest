@@ -32,6 +32,7 @@
             </dataEast>
             <dataWest>
                 <layer>64</layer>
+                <flip>true</flip>
             </dataWest>
         </drawData>
         <shaderType>Cutout</shaderType>
@@ -53,7 +54,6 @@
         <defaultShowRotation>
             <li>North</li>
             <li>East</li>
-            <!-- <li>West</li> -->
             <li>South</li>
         </defaultShowRotation>
         <appliesTo>
@@ -73,6 +73,7 @@
             </dataEast>
             <dataWest>
                 <layer>66</layer>
+                <flip>true</flip>
             </dataWest>
         </drawData>
         <shaderType>Cutout</shaderType>

@@ -32,6 +32,7 @@
             </dataEast>
             <dataWest>
                 <layer>64</layer>
+                <flip>true</flip>
             </dataWest>
         </drawData>
         <shaderType>Cutout</shaderType>

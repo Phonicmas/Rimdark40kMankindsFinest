@@ -22,17 +22,17 @@
         <drawData>
             <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
             <dataNorth>
-                <layer>76.5</layer>
+                <layer>96</layer>
             </dataNorth>
             <dataSouth>
-                <layer>69</layer>
+                <layer>76</layer>
             </dataSouth>
             <dataEast>
-                <layer>76</layer>
+                <layer>78</layer>
                 <flip>true</flip>
             </dataEast>
             <dataWest>
-                <layer>76</layer>
+                <layer>78</layer>
             </dataWest>
         </drawData>
         <shaderType>Cutout</shaderType>
@@ -59,7 +59,7 @@
         <drawData>
             <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
             <dataNorth>
-                <layer>71</layer>
+                <layer>90</layer>
             </dataNorth>
             <dataSouth>
                 <layer>68</layer>
@@ -69,7 +69,7 @@
                 <flip>true</flip>
             </dataEast>
             <dataWest>
-                <layer>72</layer>
+                <layer>75</layer>
             </dataWest>
         </drawData>
         <shaderType>Cutout</shaderType>
@@ -99,7 +99,7 @@
         <drawData>
             <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
             <dataNorth>
-                <layer>71</layer>
+                <layer>90</layer>
             </dataNorth>
             <dataSouth>
                 <layer>68</layer>
@@ -109,7 +109,7 @@
                 <flip>true</flip>
             </dataEast>
             <dataWest>
-                <layer>72</layer>
+                <layer>75</layer>
             </dataWest>
         </drawData>
         <shaderType>Cutout</shaderType>

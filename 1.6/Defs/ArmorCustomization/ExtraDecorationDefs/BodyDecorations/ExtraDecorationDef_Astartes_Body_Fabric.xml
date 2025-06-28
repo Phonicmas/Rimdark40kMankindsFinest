@@ -126,7 +126,7 @@
         </appliesTo>
         <drawData>
             <dataNorth>
-                <layer>76.6</layer>
+                <layer>93</layer>
             </dataNorth>
             <dataSouth>
                 <layer>82</layer>
@@ -169,7 +169,7 @@
         </appliesTo>
         <drawData>
             <dataNorth>
-                <layer>76.6</layer>
+                <layer>93</layer>
             </dataNorth>
             <dataSouth>
                 <layer>82</layer>
@@ -200,7 +200,6 @@
         <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_HonourCords</drawnTextureIconPath>
         <sortOrder>1.2</sortOrder>
         <defaultShowRotation>
-            <!-- <li>North</li> -->
             <li>South</li>
             <li>West</li>
             <li>East</li>
@@ -250,7 +249,7 @@
         </appliesTo>
         <drawData>
             <dataNorth>
-                <layer>69</layer>
+                <layer>89</layer>
             </dataNorth>
             <dataSouth>
                 <layer>44</layer>
@@ -289,7 +288,7 @@
         </appliesTo>
         <drawData>
             <dataNorth>
-                <layer>69</layer>
+                <layer>89</layer>
             </dataNorth>
             <dataSouth>
                 <layer>44</layer>
@@ -331,10 +330,10 @@
         </appliesTo>
         <drawData>
             <dataNorth>
-                <layer>70</layer>
+                <layer>94</layer>
             </dataNorth>
             <dataSouth>
-                <layer>34</layer>
+                <layer>20</layer>
             </dataSouth>
             <dataEast>
                 <layer>66</layer>
