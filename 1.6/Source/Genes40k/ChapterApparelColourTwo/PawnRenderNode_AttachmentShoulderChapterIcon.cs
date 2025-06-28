@@ -13,7 +13,6 @@ public class PawnRenderNode_AttachmentShoulderChapterIcon : PawnRenderNode_Appar
     private Genes40kModSettings ModSettings => modSettings ??= LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>();
     
     public bool Flipped = true;
-    //protected override bool FlipGraphic => Flipped;
     
     public PawnRenderNode_AttachmentShoulderChapterIcon(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree, Apparel apparel) : base(pawn, props, tree, apparel)
     {
@@ -21,6 +20,10 @@ public class PawnRenderNode_AttachmentShoulderChapterIcon : PawnRenderNode_Appar
 
     public override bool FlipGraphic(PawnDrawParms parms)
     {
+        if (parms.facing == Rot4.West || parms.facing == Rot4.East)
+        {
+            return base.FlipGraphic(parms);
+        }
         return Flipped;
     }
 

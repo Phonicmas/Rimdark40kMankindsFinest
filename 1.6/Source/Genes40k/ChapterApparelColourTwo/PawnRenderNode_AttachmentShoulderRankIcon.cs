@@ -8,7 +8,6 @@ public class PawnRenderNode_AttachmentShoulderRankIcon : PawnRenderNode_Apparel
 {
     
     public bool Flipped = false;
-    //protected override bool FlipGraphic => Flipped;
     
     public PawnRenderNode_AttachmentShoulderRankIcon(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree, Apparel apparel) : base(pawn, props, tree, apparel)
     {
@@ -16,6 +15,10 @@ public class PawnRenderNode_AttachmentShoulderRankIcon : PawnRenderNode_Apparel
     
     public override bool FlipGraphic(PawnDrawParms parms)
     {
+        if (parms.facing == Rot4.West || parms.facing == Rot4.East)
+        {
+            return base.FlipGraphic(parms);
+        }
         return Flipped;
     }
         
