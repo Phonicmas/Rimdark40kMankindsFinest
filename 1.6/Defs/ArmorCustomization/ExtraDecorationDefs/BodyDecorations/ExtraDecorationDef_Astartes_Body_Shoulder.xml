@@ -22,10 +22,10 @@
         <drawData>
             <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
             <dataNorth>
-                <layer>96</layer>
+                <layer>98</layer>
             </dataNorth>
             <dataSouth>
-                <layer>76</layer>
+                <layer>69</layer>
             </dataSouth>
             <dataEast>
                 <layer>78</layer>
@@ -50,6 +50,7 @@
             <li>North</li>
             <li>South</li>
             <li>West</li>
+            <!-- <li>East</li> -->
         </defaultShowRotation>
         <appliesTo>
             <li>BEWH_MkVIIPowerArmor</li>
@@ -59,21 +60,19 @@
         <drawData>
             <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
             <dataNorth>
-                <layer>90</layer>
+                <layer>89</layer>
             </dataNorth>
             <dataSouth>
-                <layer>68</layer>
+                <layer>61</layer>
             </dataSouth>
             <dataEast>
                 <layer>75</layer>
-                <flip>true</flip>
             </dataEast>
             <dataWest>
                 <layer>75</layer>
             </dataWest>
         </drawData>
         <shaderType>Cutout</shaderType>
-        <flipable>true</flipable>
         <colourable>true</colourable>
         <availablePresets />
         <!-- Custom chapter colors here -->
@@ -83,13 +82,13 @@
         <defName>BEWH_DecoColorPauldron_2</defName>
         <label>Colorable shoulder 2</label>
         <description>...</description>
-        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_Color_Shoulder1_icon</iconPath>
-        <drawnTextureIconPath>Things/Decorations/Armor/Common/Pauldrons/BEWH_Deco_Color_Shoulder1</drawnTextureIconPath>
+        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_Color_Shoulder2_icon</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/Common/Pauldrons/BEWH_Deco_Color_Shoulder2</drawnTextureIconPath>
         <sortOrder>0.2</sortOrder>
         <defaultShowRotation>
             <li>North</li>
             <li>South</li>
-            <li>West</li>
+            <li>East</li>
         </defaultShowRotation>
         <appliesTo>
             <li>BEWH_MkVIIPowerArmor</li>
@@ -99,24 +98,21 @@
         <drawData>
             <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
             <dataNorth>
-                <layer>90</layer>
+                <layer>89</layer>
             </dataNorth>
             <dataSouth>
-                <layer>68</layer>
+                <layer>61</layer>
             </dataSouth>
             <dataEast>
                 <layer>75</layer>
-                <flip>true</flip>
             </dataEast>
             <dataWest>
                 <layer>75</layer>
             </dataWest>
         </drawData>
         <shaderType>Cutout</shaderType>
-        <flipable>true</flipable>
         <colourable>true</colourable>
         <availablePresets />
-        <!-- Custom chapter colors here -->
     </Core40k.ExtraDecorationDef>
 
 </Defs>
