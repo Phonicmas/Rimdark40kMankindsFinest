@@ -46,20 +46,12 @@
         <workerClass>Genes40k.WorkerClass_RubiconPrimaris</workerClass>
         <jobString>Rebirthing {0} into a Primaris.</jobString>
         <successfullyRemovedHediffMessage>{1} has been reborn as a Primaris.</successfullyRemovedHediffMessage>
-        <workAmount>5000</workAmount>
+        <workAmount>10000</workAmount>
         <hideBodyPartNames>true</hideBodyPartNames>
         <targetsBodyPart>false</targetsBodyPart>
-        <surgerySuccessChanceFactor>0.75</surgerySuccessChanceFactor> <!-- Sacrificing lore a bit for the sake of gameplay -->
+        <surgerySuccessChanceFactor>0.75</surgerySuccessChanceFactor>        <!-- Sacrificing lore a bit for the sake of gameplay -->
         <researchPrerequisite>BEWH_RubiconSurgery</researchPrerequisite>
         <ingredients>
-            <li>
-                <filter>
-                    <thingDefs>
-                        <li>MedicineUltratech</li>
-                    </thingDefs>
-                </filter>
-                <count>5</count>
-            </li>
             <li>
                 <filter>
                     <thingDefs>
@@ -71,7 +63,6 @@
         </ingredients>
         <fixedIngredientFilter>
             <thingDefs>
-                <li>MedicineUltratech</li>
                 <li>BEWH_RubiconSurgeryKit</li>
             </thingDefs>
         </fixedIngredientFilter>

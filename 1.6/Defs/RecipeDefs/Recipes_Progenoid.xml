@@ -28,7 +28,7 @@
                         <li>MedicineUltratech</li>
                     </thingDefs>
                 </filter>
-                <count>10</count>
+                <count>6</count>
             </li>
             <li>
                 <filter>
@@ -76,7 +76,7 @@
                         <li>MedicineUltratech</li>
                     </thingDefs>
                 </filter>
-                <count>14</count>
+                <count>8</count>
             </li>
             <li>
                 <filter>

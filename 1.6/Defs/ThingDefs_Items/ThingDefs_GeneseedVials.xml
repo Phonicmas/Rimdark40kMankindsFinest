@@ -20,8 +20,8 @@
       <li Class="Genes40k.DefModExtension_GeneseedVial">
         <xenotype>BEWH_ThunderWarrior</xenotype>
         <xenotypeIcon>BEWH_ThunderWarriorIcon</xenotypeIcon>
-        <minAgeImplant>12</minAgeImplant>
-        <maxAgeImplant>21</maxAgeImplant>
+        <minAgeImplant>18</minAgeImplant>
+        <maxAgeImplant>45</maxAgeImplant>
         <failureChancePerAgePast>3</failureChancePerAgePast>
         <failChanceCap>80</failChanceCap>
         <baseFailureChance>5</baseFailureChance>

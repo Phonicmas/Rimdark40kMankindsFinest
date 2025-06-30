@@ -32,7 +32,7 @@
                         <li>MedicineUltratech</li>
                     </thingDefs>
                 </filter>
-                <count>3</count>
+                <count>1</count>
             </li>
         </ingredients>
         <skillRequirements>
@@ -103,7 +103,7 @@
                         <li>MedicineUltratech</li>
                     </thingDefs>
                 </filter>
-                <count>5</count>
+                <count>1</count>
             </li>
         </ingredients>
         <skillRequirements>

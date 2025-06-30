@@ -155,7 +155,7 @@
     </comps>
     <!-- ===== Recipe ===== -->
     <costList>
-      <MedicineUltratech>8</MedicineUltratech>
+      <MedicineUltratech>2</MedicineUltratech>
       <Luciferium>4</Luciferium>
       <Meat_Human>75</Meat_Human>
       <Neutroamine>65</Neutroamine>
@@ -172,7 +172,7 @@
         <li>BEWH_GeneManipulationTable</li>
       </recipeUsers>
       <researchPrerequisite>BEWH_RubiconSurgery</researchPrerequisite>
-      <workAmount>600000</workAmount>
+      <workAmount>7500</workAmount>
       <workSkill>Crafting</workSkill>
       <skillRequirements>
         <Crafting>10</Crafting>

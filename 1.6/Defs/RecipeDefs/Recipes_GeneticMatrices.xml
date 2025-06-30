@@ -13,7 +13,6 @@
         <fixedIngredientFilter>
             <thingDefs>
                 <li>MedicineUltratech</li>
-                <li>Luciferium</li>
                 <li>Meat_Human</li>
                 <li>Neutroamine</li>
             </thingDefs>
@@ -28,7 +27,7 @@
         <label>make thunder warrior genetic matrix</label>
         <description>Make a Whunder Warrior genetic matrix.</description>
         <jobString>Making Thunder Warrior genetic matrix.</jobString>
-        <workAmount>45000</workAmount>
+        <workAmount>15000</workAmount>
         <researchPrerequisite>BEWH_GeneseedCreation</researchPrerequisite>
         <ingredients>
             <li>
@@ -37,15 +36,7 @@
                         <li>MedicineUltratech</li>
                     </thingDefs>
                 </filter>
-                <count>4</count>
-            </li>
-            <li>
-                <filter>
-                    <thingDefs>
-                        <li>Luciferium</li>
-                    </thingDefs>
-                </filter>
-                <count>2</count>
+                <count>3</count>
             </li>
             <li>
                 <filter>
@@ -80,8 +71,13 @@
         <label>make Firstborn genetic matrix</label>
         <description>Make a Firstborn genetic matrix.</description>
         <jobString>Making Firstborn genetic matrix.</jobString>
-        <workAmount>100000</workAmount>
+        <workAmount>25000</workAmount>
         <researchPrerequisite>BEWH_GeneseedPurification</researchPrerequisite>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Luciferium</li>
+            </thingDefs>
+        </fixedIngredientFilter>
         <ingredients>
             <li>
                 <filter>
@@ -132,8 +128,13 @@
         <label>make Primaris genetic matrix</label>
         <description>Make a Primaris genetic matrix.</description>
         <jobString>Making Primaris genetic matrix.</jobString>
-        <workAmount>150000</workAmount>
+        <workAmount>30000</workAmount>
         <researchPrerequisite>BEWH_GeneseedPerfection</researchPrerequisite>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Luciferium</li>
+            </thingDefs>
+        </fixedIngredientFilter>
         <ingredients>
             <li>
                 <filter>
@@ -184,8 +185,13 @@
         <label>make Custodes genetic matrix</label>
         <description>Make a Custodes genetic matrix.</description>
         <jobString>Making Custodes genetic matrix.</jobString>
-        <workAmount>200000</workAmount>
+        <workAmount>40000</workAmount>
         <researchPrerequisite>BEWH_CustodesCreation</researchPrerequisite>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Luciferium</li>
+            </thingDefs>
+        </fixedIngredientFilter>
         <ingredients>
             <li>
                 <filter>
@@ -241,8 +247,13 @@
         <label>make Primarch genetic matrix</label>
         <description>Make a Primarch genetic matrix.</description>
         <jobString>Making Primarch genetic matrix.</jobString>
-        <workAmount>250000</workAmount>
+        <workAmount>120000</workAmount>
         <researchPrerequisite>BEWH_PrimarchProject</researchPrerequisite>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Luciferium</li>
+            </thingDefs>
+        </fixedIngredientFilter>
         <ingredients>
             <li>
                 <filter>

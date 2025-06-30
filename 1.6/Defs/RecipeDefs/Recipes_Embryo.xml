@@ -14,9 +14,6 @@
         <effectWorking>Cook</effectWorking>
         <soundWorking>Recipe_Drug</soundWorking>
         <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
-        <!--<recipeUsers>
-            <li>BEWH_GeneManipulationTable</li>
-        </recipeUsers>-->
         <workSkill>Intellectual</workSkill>
         <displayPriority>0</displayPriority>
         <ingredients>
