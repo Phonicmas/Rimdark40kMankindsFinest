@@ -5,7 +5,7 @@ using Verse.AI;
 
 namespace Genes40k;
 
-public class WorkGiver_HaulToPrimarchVat : WorkGiver_Scanner
+public class WorkGiver_FillPrimarchVatWithNutrition : WorkGiver_Scanner
 {
 
     private const float NutritionBuffer = 2.5f;
@@ -32,7 +32,7 @@ public class WorkGiver_HaulToPrimarchVat : WorkGiver_Scanner
         {
             return false;
         }
-        if (building_GrowthVat.NutritionNeeded > NutritionBuffer && building_GrowthVat.containedEmbryo != null)
+        if (building_GrowthVat.NutritionNeeded > NutritionBuffer)
         {
             if (FindNutrition(pawn, building_GrowthVat).Thing != null)
             {
@@ -42,10 +42,7 @@ public class WorkGiver_HaulToPrimarchVat : WorkGiver_Scanner
             JobFailReason.Is("BEWH.MankindsFinest.PrimarchGrowthVat.NoSlurry".Translate());
             return false;
         }
-        if (building_GrowthVat.selectedEmbryo != null && !building_GrowthVat.innerContainer.Contains(building_GrowthVat.selectedEmbryo))
-        {
-            return CanHaulSelectedThing(pawn, building_GrowthVat.selectedEmbryo);
-        }
+
         return false;
     }
 
@@ -55,7 +52,7 @@ public class WorkGiver_HaulToPrimarchVat : WorkGiver_Scanner
         {
             return null;
         }
-        if (building_GrowthVat.NutritionNeeded > NutritionBuffer && building_GrowthVat.containedEmbryo != null)
+        if (building_GrowthVat.NutritionNeeded > NutritionBuffer)
         {
             var thingCount = FindNutrition(pawn, building_GrowthVat);
             if (thingCount.Thing != null)
@@ -66,26 +63,7 @@ public class WorkGiver_HaulToPrimarchVat : WorkGiver_Scanner
             }
         }
 
-        if (building_GrowthVat.selectedEmbryo == null ||
-            building_GrowthVat.innerContainer.Contains(building_GrowthVat.selectedEmbryo) ||
-            !CanHaulSelectedThing(pawn, building_GrowthVat.selectedEmbryo))
-        {
-            return null;
-        }
-            
-        var job2 = JobMaker.MakeJob(Genes40kDefOf.BEWH_FillPrimarchGrowthVat, t, building_GrowthVat.selectedEmbryo);
-        job2.count = 1;
-        job2.haulMode = HaulMode.ToContainer;
-        return job2;
-    }
-
-    private static bool CanHaulSelectedThing(Pawn pawn, Thing selectedThing)
-    {
-        if (!selectedThing.Spawned || selectedThing.Map != pawn.Map)
-        {
-            return false;
-        }
-        return !selectedThing.IsForbidden(pawn) && pawn.CanReserveAndReach(selectedThing, PathEndMode.OnCell, Danger.Deadly, 1, 1);
+        return null;
     }
 
     private static ThingCount FindNutrition(Pawn pawn, Building_PrimarchGrowthVat vat)

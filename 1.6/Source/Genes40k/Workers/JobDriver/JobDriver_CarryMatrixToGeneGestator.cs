@@ -4,7 +4,7 @@ using Verse.AI;
 
 namespace Genes40k;
 
-public class JobDriver_FillGeneGestator : JobDriver
+public class JobDriver_CarryMatrixToGeneGestator : JobDriver
 {
 
     private const int Duration = 200;
@@ -17,8 +17,6 @@ public class JobDriver_FillGeneGestator : JobDriver
     {
         if (!pawn.Reserve(GeneGestator, job, 1, 1, null, errorOnFailed)) return false;
         if (!pawn.Reserve(GeneMatrix, job, 1, 1, null, errorOnFailed)) return false;
-            
-        GeneGestator.jobDoer = pawn;
         return true;
     }
 

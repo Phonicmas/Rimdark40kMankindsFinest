@@ -32,10 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="0ColourPicker">
-      <HintPath>..\..\..\..\Rimdark40kFramework\1.5\Assemblies\0ColourPicker.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="0Harmony">
       <HintPath>..\..\..\..\..\..\..\workshop\content\294100\2009463077\Current\Assemblies\0Harmony.dll</HintPath>
       <Private>False</Private>
@@ -203,7 +199,6 @@
     <Compile Include="ThingClasses\Building_GeneGestator.cs" />
     <Compile Include="ThingClasses\Building_GeneTable.cs" />
     <Compile Include="ThingClasses\Building_GeneticStorage.cs" />
-    <Compile Include="ThingClasses\Building_PrimarchGrowthVat.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneseedPurity.cs" />
     <Compile Include="DefModExtensions\DefModExtension_ChapterGene.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneFromMaterial.cs" />
@@ -226,6 +221,7 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_EternalWatchStopMentalState.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_LivingSaintResurrection.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_LivingSaintAscension.cs" />
+    <Compile Include="ThingClasses\Building_PrimarchGrowthVat.cs" />
     <Compile Include="ThingClasses\Building_SangprimusPortum.cs" />
     <Compile Include="ThingClasses\FlagIconDef.cs" />
     <Compile Include="ThingClasses\GeneMaterialExtra.cs" />
@@ -238,8 +234,8 @@
     <Compile Include="Windows\Dialog_ViewGenesEmbryo.cs" />
     <Compile Include="Windows\ITab_ContentsGeneticStorage.cs" />
     <Compile Include="Windows\ITab_SangprimusPortum.cs" />
-    <Compile Include="Workers\JobDriver\JobDriver_FillGeneGestator.cs" />
-    <Compile Include="Workers\JobDriver\JobDriver_FillPrimarchGrowthVat.cs" />
+    <Compile Include="Workers\JobDriver\JobDriver_CarryMatrixToGeneGestator.cs" />
+    <Compile Include="Workers\JobDriver\JobDriver_CarryPrimarchEmbryoToVat.cs" />
     <Compile Include="Workers\JobDriver\JobDriver_FleeInducedFear.cs" />
     <Compile Include="Workers\ThoughtWorkers\ThoughtWorker_HolyRadiance.cs" />
     <Compile Include="Workers\ThoughtWorkers\ThoughtWorker_Pariah.cs" />
@@ -250,12 +246,12 @@
     <Compile Include="Workers\ThoughtWorkers\ThoughtWorker_XXTwinDead.cs" />
     <Compile Include="Workers\WorkerClass_RubiconPrimaris.cs" />
     <Compile Include="Workers\WorkGiver_DoBillPsychic.cs" />
-    <Compile Include="Workers\WorkGiver_FillPrimarchGrowthVat.cs" />
-    <Compile Include="Workers\WorkGiver_HaulToPrimarchVat.cs" />
+    <Compile Include="Workers\WorkGiver_CarryPrimarchEmbryoToVat.cs" />
+    <Compile Include="Workers\WorkGiver_FillPrimarchVatWithNutrition.cs" />
     <Compile Include="Workers\Recipe_MakePrimarchEmbryo.cs" />
     <Compile Include="Workers\WorkerClass_PhaseDevelopment.cs" />
     <Compile Include="Workers\WorkerClass_ImplantGeneseed.cs" />
-    <Compile Include="Workers\WorkGiver_FillGeneGestator.cs" />
+    <Compile Include="Workers\WorkGiver_CarryMatrixToGeneGestator.cs" />
     <Compile Include="Comps\CompProperties_DeteriorateOutsideBuilding.cs" />
     <Compile Include="Comps\Comp_DeteriorateOutsideBuilding.cs" />
     <Compile Include="Comps\CompProperties_GivesAbility.cs" />

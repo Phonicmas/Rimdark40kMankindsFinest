@@ -5,7 +5,7 @@ using Verse.AI;
 
 namespace Genes40k;
 
-public class WorkGiver_FillGeneGestator : WorkGiver_Scanner
+public class WorkGiver_CarryMatrixToGeneGestator : WorkGiver_Scanner
 {
     private static readonly string NoGeneMatrix = "BEWH.MankindsFinest.GeneGestator.ContainsNoGeneMatrix".Translate();
 
@@ -15,7 +15,7 @@ public class WorkGiver_FillGeneGestator : WorkGiver_Scanner
 
     public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
     {
-        if (t is not Building_GeneGestator building_GeneGestator || building_GeneGestator.hasBeenStarted || building_GeneGestator.selectedMatrix == null || building_GeneGestator.containedMatrix != null || !building_GeneGestator.haulJobStarted)
+        if (t is not Building_GeneGestator building_GeneGestator || building_GeneGestator.selectedMatrix == null)
         {
             return false;
         }
@@ -35,14 +35,13 @@ public class WorkGiver_FillGeneGestator : WorkGiver_Scanner
             
         JobFailReason.Is(NoGeneMatrix);
         return false;
-
     }
 
     public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
     {
         var building_GeneGestator = (Building_GeneGestator)t;
         var thing = FindGeneMatrix(pawn, building_GeneGestator);
-        return JobMaker.MakeJob(Genes40kDefOf.BEWH_FillGeneGestator, t, thing);
+        return JobMaker.MakeJob(Genes40kDefOf.BEWH_CarryMatrixToGeneGestator, t, thing);
     }
 
     private static Thing FindGeneMatrix(Pawn pawn, Building_GeneGestator gestator)

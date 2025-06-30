@@ -2,16 +2,16 @@
 <Defs>
 
     <JobDef>
-        <defName>BEWH_FillGeneGestator</defName>
-        <driverClass>Genes40k.JobDriver_FillGeneGestator</driverClass>
+        <defName>BEWH_CarryMatrixToGeneGestator</defName>
+        <driverClass>Genes40k.JobDriver_CarryMatrixToGeneGestator</driverClass>
         <reportString>filling TargetA with TargetB.</reportString>
         <suspendable>false</suspendable>
         <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
     </JobDef>
 
     <JobDef>
-        <defName>BEWH_FillPrimarchGrowthVat</defName>
-        <driverClass>Genes40k.JobDriver_FillPrimarchGrowthVat</driverClass>
+        <defName>BEWH_CarryPrimarchEmbryoToVat</defName>
+        <driverClass>Genes40k.JobDriver_CarryPrimarchEmbryoToVat</driverClass>
         <reportString>filling TargetA with TargetB.</reportString>
         <suspendable>false</suspendable>
         <allowOpportunisticPrefix>true</allowOpportunisticPrefix>

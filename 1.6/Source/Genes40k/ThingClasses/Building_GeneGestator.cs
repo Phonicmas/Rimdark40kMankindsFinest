@@ -1,6 +1,7 @@
 ﻿using RimWorld;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using UnityEngine;
@@ -13,47 +14,30 @@ namespace Genes40k;
 public class Building_GeneGestator : Building
 {
     public ThingDef selectedMatrix = null;
-
     public Thing containedMatrix = null;
 
     public ThingDef selectedMaterial = null;
 
-    public bool haulJobStarted = false;
-
-    public Pawn jobDoer = null;
-
-    public bool hasBeenStarted = false;
-
+    private bool doWork = false;
     private float totalTime = 0;
-
     private float progressInt = 0;
-
-    public bool InProgress => totalTime - progressInt > 0 && hasBeenStarted;
-
+    public bool InProgress => totalTime - progressInt > 0;
     public bool Finished => totalTime - progressInt <= 0 && containedMatrix != null;
-
-
+    
     [Unsaved(false)]
     private Effecter progressBar;
 
     private static readonly Texture2D CancelIcon = ContentFinder<Texture2D>.Get("UI/Designators/Cancel");
-        
     private static readonly Texture2D EjectIcon = ContentFinder<Texture2D>.Get("UI/Gizmos/BEWH_EjectMatrixIcon");
-
     private static readonly Texture2D StartIcon = ContentFinder<Texture2D>.Get("UI/Gizmos/BEWH_GestationStartIcon");
-
     private static readonly Texture2D EmptyChapterMaterialIcon = ContentFinder<Texture2D>.Get("Things/Item/ChapterMaterial/BEWH_ChapterMaterial_None");
-        
     private static readonly Texture2D EmptyPrimarchMaterialIcon = ContentFinder<Texture2D>.Get("Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_None");
-        
     private static readonly Texture2D MatrixSelectionTex = ContentFinder<Texture2D>.Get("Things/Item/GeneMatrix/BEWH_GeneMatrix_Empty");
 
     public bool PowerOn => PowerTraderComp.PowerOn;
-
     [Unsaved(false)]
     private CompPowerTrader cachedPowerComp;
-
-    private CompPowerTrader PowerTraderComp => cachedPowerComp ?? (cachedPowerComp = this.TryGetComp<CompPowerTrader>());
+    private CompPowerTrader PowerTraderComp => cachedPowerComp ??= this.TryGetComp<CompPowerTrader>();
 
     public void AddGeneMatrix(Thing geneMatrix)
     {
@@ -62,7 +46,6 @@ public class Building_GeneGestator : Building
             
         totalTime = containedMatrix.def.GetModExtension<DefModExtension_GeneMatrix>().ticksToGestate;
         progressInt = 0;
-        haulJobStarted = false;
         singleGeneMatrix.Destroy();
     }
 
@@ -92,7 +75,10 @@ public class Building_GeneGestator : Building
     protected override void Tick()
     {
         base.Tick();
-        if (!hasBeenStarted) return;
+        if (!doWork)
+        {
+            return;
+        }
             
         if (PowerOn)
         {
@@ -117,10 +103,7 @@ public class Building_GeneGestator : Building
 
     private void TickEffects()
     {
-        if (progressBar == null)
-        {
-            progressBar = EffecterDefOf.ProgressBarAlwaysVisible.Spawn();
-        }
+        progressBar ??= EffecterDefOf.ProgressBarAlwaysVisible.Spawn();
         progressBar.EffectTick(new TargetInfo(this.TrueCenter().ToIntVec3(), Map), TargetInfo.Invalid);
         var mote = ((SubEffecter_ProgressBar)progressBar.children[0]).mote;
         if (mote == null) return;
@@ -155,12 +138,10 @@ public class Building_GeneGestator : Building
             progressBar.Cleanup();
             progressBar = null;
         }
-        haulJobStarted = false;
-        hasBeenStarted = false;
+        doWork = false;
         selectedMatrix = null;
         containedMatrix = null;
         selectedMaterial = null;
-        jobDoer = null;
     }
 
     public override string GetInspectString()
@@ -177,7 +158,10 @@ public class Building_GeneGestator : Building
             stringBuilder.Append("BEWH.MankindsFinest.GeneGestator.ContainsExtraMaterial".Translate(selectedMaterial.label));
         }
 
-        if (!InProgress) return stringBuilder.ToString();
+        if (!doWork)
+        {
+            return stringBuilder.ToString();
+        }
             
         stringBuilder.Append("\n");
         if (Finished)
@@ -208,190 +192,195 @@ public class Building_GeneGestator : Building
         {
             yield return gizmo;
         }
-        if (DebugSettings.ShowDevGizmos)
-        {
-            if (hasBeenStarted)
-            {
-                //DEV: ALMOST FINISH
-                var command_Action5 = new Command_Action();
-                command_Action5.defaultLabel = "DEV: ALMOST FINISH";
-                command_Action5.icon = CancelIcon;
-                command_Action5.activateSound = SoundDefOf.Designate_Cancel;
-                command_Action5.action = delegate
-                {
-                    progressInt = totalTime - 250;
-                };
-                yield return command_Action5;
-            }
-        }
-        if (!hasBeenStarted && containedMatrix != null)
-        {
-            if (this.HasComp<CompAffectedByFacilities>() && (containedMatrix.def.GetModExtension<DefModExtension_GeneMatrix>().canUsePrimarchMaterial || containedMatrix.def.GetModExtension<DefModExtension_GeneMatrix>().canUseChapterMaterial))
-            {
-                var comp = GetComp<CompAffectedByFacilities>();
-                if (!comp.LinkedFacilitiesListForReading.Where(x => x.def == Genes40kDefOf.BEWH_SangprimusPortum).EnumerableNullOrEmpty())
-                {
-                    var sangprimus = (Building_SangprimusPortum)comp.LinkedFacilitiesListForReading.First(b => b is Building_SangprimusPortum);
-                    var availableMaterial = new List<Thing>();
-                    string geneticType;
 
-                    Texture2D emptyMaterialIcon = null;
-                    if (containedMatrix.def.GetModExtension<DefModExtension_GeneMatrix>().canUsePrimarchMaterial)
+        if (!doWork)
+        {
+            if (containedMatrix != null)
+            { 
+                //SELECT PRIMARCH OR CHAPTER MATERIAL
+                if (this.HasComp<CompAffectedByFacilities>() && (containedMatrix.def.GetModExtension<DefModExtension_GeneMatrix>().canUsePrimarchMaterial || containedMatrix.def.GetModExtension<DefModExtension_GeneMatrix>().canUseChapterMaterial))
+                {
+                    var comp = GetComp<CompAffectedByFacilities>();
+                    if (!comp.LinkedFacilitiesListForReading.Where(x => x.def == Genes40kDefOf.BEWH_SangprimusPortum).EnumerableNullOrEmpty())
                     {
-                        availableMaterial.AddRange(sangprimus.SearchableContentsPrimarch.Where(x => x.def.HasModExtension<DefModExtension_PrimarchMaterial>()));
-                        geneticType = "BEWH.MankindsFinest.CommonKeywords.Primarch".Translate();
-                        emptyMaterialIcon = EmptyPrimarchMaterialIcon;
-                    }
-                    else
-                    {
-                        availableMaterial.AddRange(sangprimus.SearchableContentsChapter.Where(x => x.def.HasModExtension<DefModExtension_ChapterMaterial>()));
-                        geneticType = "BEWH.MankindsFinest.CommonKeywords.Chapter".Translate();
-                        emptyMaterialIcon = EmptyChapterMaterialIcon;
-                    }
-                    //SELECT PRIMARCH OR CHAPTER MATERIAL
-                    var command_Action10 = new Command_Action();
-                    command_Action10.defaultLabel = "BEWH.MankindsFinest.GeneGestator.SelectXMaterial".Translate(geneticType);
-                    command_Action10.defaultDesc = "BEWH.MankindsFinest.GeneGestator.SelectXMaterialDesc".Translate(geneticType);
+                        var sangprimus = (Building_SangprimusPortum)comp.LinkedFacilitiesListForReading.First(b => b is Building_SangprimusPortum);
+                        var availableMaterial = new List<Thing>();
+                        string geneticType;
 
-                    command_Action10.icon = selectedMaterial == null ? emptyMaterialIcon : selectedMaterial.GetModExtension<DefModExtension_GeneFromMaterial>().addedGene.Icon;
+                        Texture2D emptyMaterialIcon = null;
+                        if (containedMatrix.def.GetModExtension<DefModExtension_GeneMatrix>().canUsePrimarchMaterial)
+                        {
+                            availableMaterial.AddRange(sangprimus.SearchableContentsPrimarch.Where(x => x.def.HasModExtension<DefModExtension_PrimarchMaterial>()));
+                            geneticType = "BEWH.MankindsFinest.CommonKeywords.Primarch".Translate();
+                            emptyMaterialIcon = EmptyPrimarchMaterialIcon;
+                        }
+                        else
+                        {
+                            availableMaterial.AddRange(sangprimus.SearchableContentsChapter.Where(x => x.def.HasModExtension<DefModExtension_ChapterMaterial>()));
+                            geneticType = "BEWH.MankindsFinest.CommonKeywords.Chapter".Translate();
+                            emptyMaterialIcon = EmptyChapterMaterialIcon;
+                        }
+                    
+                        var command_Action10 = new Command_Action();
+                        command_Action10.defaultLabel = "BEWH.MankindsFinest.GeneGestator.SelectXMaterial".Translate(geneticType);
+                        command_Action10.defaultDesc = "BEWH.MankindsFinest.GeneGestator.SelectXMaterialDesc".Translate(geneticType);
+
+                        command_Action10.icon = selectedMaterial == null ? emptyMaterialIcon : selectedMaterial.GetModExtension<DefModExtension_GeneFromMaterial>().addedGene.Icon;
                        
-                    command_Action10.action = delegate
-                    {
-                        var list = new List<FloatMenuOption>();
-                        foreach (var material in availableMaterial)
+                        command_Action10.action = delegate
                         {
-                            if (selectedMaterial == material.def)
+                            var list = new List<FloatMenuOption>();
+                            foreach (var material in availableMaterial)
                             {
-                                continue;
+                                if (selectedMaterial == material.def)
+                                {
+                                    continue;
+                                }
+                                var text = material.Label;
+                                list.Add(new FloatMenuOption(text, delegate
+                                {
+                                    selectedMaterial = material.def;
+                                }));
                             }
-                            var text = material.Label;
-                            list.Add(new FloatMenuOption(text, delegate
+                            if (selectedMaterial != null)
                             {
-                                selectedMaterial = material.def;
-                            }));
-                        }
-                        if (selectedMaterial != null)
-                        {
-                            list.Add(new FloatMenuOption("NoneBrackets".Translate(), delegate { selectedMaterial = null; }));
-                        }
-                        if (!list.Any())
-                        {
-                            list.Add(new FloatMenuOption("BEWH.MankindsFinest.GeneGestator.NoAvailableMaterial".Translate(), null));
-                        }
-                        Find.WindowStack.Add(new FloatMenu(list));
-                    };
-                    yield return command_Action10;
+                                list.Add(new FloatMenuOption("NoneBrackets".Translate(), delegate { selectedMaterial = null; }));
+                            }
+                            if (!list.Any())
+                            {
+                                list.Add(new FloatMenuOption("BEWH.MankindsFinest.GeneGestator.NoAvailableMaterial".Translate(), null));
+                            }
+                            Find.WindowStack.Add(new FloatMenu(list));
+                        };
+                        yield return command_Action10;
+                    }
                 }
-            }
-            //STARTS MACHINE
-            var command_Action4 = new Command_Action();
-            command_Action4.defaultLabel = "BEWH.MankindsFinest.GeneGestator.StartGeneGestating".Translate();
-            command_Action4.defaultDesc = "BEWH.MankindsFinest.GeneGestator.StartGeneGestatingDesc".Translate();
-            command_Action4.icon = StartIcon;
-            command_Action4.activateSound = SoundDefOf.Designate_Cancel;
-            command_Action4.action = delegate
-            {
-                hasBeenStarted = true;
-            };
-            yield return command_Action4;
-
-            //EJECT LOADED MATRIX
-            var command_Action2 = new Command_Action();
-            command_Action2.defaultLabel = "BEWH.MankindsFinest.GeneGestator.EjectGeneMatrix".Translate(containedMatrix.Label);
-            command_Action2.defaultDesc = "BEWH.MankindsFinest.GeneGestator.EjectGeneMatrixDesc".Translate(containedMatrix.Label);
-            command_Action2.icon = EjectIcon;
-            command_Action2.activateSound = SoundDefOf.Designate_Cancel;
-            command_Action2.action = delegate
-            {
-                GenSpawn.Spawn(selectedMatrix, InteractionCell, Map);
-                Reset();
-            };
-            yield return command_Action2;
-        }
-        if (containedMatrix == null)
-        {
-            if (!haulJobStarted)
-            {
-                //SELECTS MATRIX TO LOAD AND START HAUL JOB
-                var command_Action1 = new Command_Action();
-                command_Action1.defaultLabel = "BEWH.MankindsFinest.GeneGestator.SelectMatrix".Translate() + "...";
-                command_Action1.defaultDesc = "BEWH.MankindsFinest.GeneGestator.SelectMatrixDesc".Translate();
-                command_Action1.icon = selectedMatrix == null ? MatrixSelectionTex : selectedMatrix.uiIcon;
-                    
-                var gestatablesAvailable = new List<ThingDef>();
-                gestatablesAvailable.AddRange(AvailableGestatables());
-                command_Action1.action = delegate
+                
+                //STARTS MACHINE
+                var command_Action2 = new Command_Action
                 {
-                    var list = new List<FloatMenuOption>();
-                    foreach (var gestatables in gestatablesAvailable)
+                    defaultLabel = "BEWH.MankindsFinest.GeneGestator.StartGeneGestating".Translate(),
+                    defaultDesc = "BEWH.MankindsFinest.GeneGestator.StartGeneGestatingDesc".Translate(),
+                    icon = StartIcon,
+                    activateSound = SoundDefOf.Designate_Cancel,
+                    action = delegate
                     {
-                        var text = gestatables.label;
-                        var floatMenu = new FloatMenuOption(text, delegate
-                        {
-                            selectedMatrix = gestatables;
-                            haulJobStarted = true;
-                            if (containedMatrix == null)
-                            {
-                                return;
-                            }
-                                
-                            GenPlace.TryPlaceThing(containedMatrix, InteractionCell, Map, ThingPlaceMode.Direct);
-                            containedMatrix = null;
-                        });
-
-                        var doesNotHaveMatrix = Map.listerThings.ThingsOfDef(gestatables).NullOrEmpty();
-                            
-                        if (doesNotHaveMatrix)
-                        {
-                            floatMenu.Disabled = true;
-                        }
-
-                        list.Add(floatMenu);
+                        doWork = true;
                     }
-                    if (!list.Any())
-                    {
-                        list.Add(new FloatMenuOption("BEWH.MankindsFinest.GeneGestator.NoAvailableMaterial".Translate(), null));
-                    }
-                    Find.WindowStack.Add(new FloatMenu(list));
                 };
-                if (!PowerOn)
+                yield return command_Action2;
+
+                //EJECT LOADED MATRIX
+                var command_Action3 = new Command_Action
                 {
-                    command_Action1.Disable("NoPower".Translate().CapitalizeFirst());
-                }
-                if (gestatablesAvailable.NullOrEmpty())
-                {
-                    command_Action1.Disable("BEWH.MankindsFinest.GeneGestator.MissingGestateResearch".Translate().CapitalizeFirst());
-                }
-                yield return command_Action1;
-                    
-            }
-            else
-            {
-                //STOPS HAUL JOB
-                var command_Action3 = new Command_Action();
-                command_Action3.defaultLabel = "CommandCancelLoad".Translate();
-                command_Action3.defaultDesc = "CommandCancelLoadDesc".Translate();
-                command_Action3.icon = CancelIcon;
-                command_Action3.activateSound = SoundDefOf.Designate_Cancel;
-                command_Action3.action = delegate
-                {
-                    haulJobStarted = false;
-                    if (jobDoer == null) return;
-                        
-                    foreach (var job in jobDoer.jobs.AllJobs())
+                    defaultLabel = "BEWH.MankindsFinest.GeneGestator.EjectGeneMatrix".Translate(containedMatrix.Label),
+                    defaultDesc = "BEWH.MankindsFinest.GeneGestator.EjectGeneMatrixDesc".Translate(containedMatrix.Label),
+                    icon = EjectIcon,
+                    activateSound = SoundDefOf.Designate_Cancel,
+                    action = delegate
                     {
-                        if (job.def != Genes40kDefOf.BEWH_FillGeneGestator)
-                        {
-                            continue;
-                        }
-                            
-                        jobDoer.jobs.EndCurrentOrQueuedJob(job, JobCondition.InterruptForced);
+                        GenSpawn.Spawn(selectedMatrix, InteractionCell, Map);
                         Reset();
-                        break;
                     }
                 };
                 yield return command_Action3;
             }
+            else
+            {
+                //SELECTS MATRIX TO LOAD AND START HAUL JOB
+                if (selectedMatrix == null)
+                {
+                    var command_Action4 = new Command_Action
+                    {
+
+                        defaultLabel = "BEWH.MankindsFinest.GeneGestator.SelectMatrix".Translate() + "...",
+                        defaultDesc = "BEWH.MankindsFinest.GeneGestator.SelectMatrixDesc".Translate(), 
+                        icon = selectedMatrix == null ? MatrixSelectionTex : selectedMatrix.uiIcon
+                    };
+
+                    var gestatablesAvailable = new List<ThingDef>();
+                    gestatablesAvailable.AddRange(AvailableGestatables());
+                    command_Action4.action = delegate
+                    {
+                        var list = new List<FloatMenuOption>();
+                        foreach (var matrix in gestatablesAvailable)
+                        {
+                            var text = matrix.label;
+                            var floatMenu = new FloatMenuOption(text, delegate
+                            {
+                                selectedMatrix = matrix;
+                                if (containedMatrix == null)
+                                { 
+                                    return;
+                                }
+                                
+                                GenPlace.TryPlaceThing(containedMatrix, InteractionCell, Map, ThingPlaceMode.Direct);
+                                containedMatrix = null;
+                            });
+
+                            var doesNotHaveMatrix = Map.listerThings.ThingsOfDef(matrix).NullOrEmpty();
+                            
+                            if (doesNotHaveMatrix)
+                            {
+                                floatMenu.Disabled = true;
+                            }
+
+                            list.Add(floatMenu);
+                        }
+                        if (!list.Any())
+                        {
+                            list.Add(new FloatMenuOption("BEWH.MankindsFinest.GeneGestator.NoAvailableMaterial".Translate(), null));
+                        } 
+                        Find.WindowStack.Add(new FloatMenu(list));
+                    };
+                    if (!PowerOn)
+                    {
+                        command_Action4.Disable("NoPower".Translate().CapitalizeFirst());
+                    }
+                    if (gestatablesAvailable.NullOrEmpty()) 
+                    {
+                        command_Action4.Disable("BEWH.MankindsFinest.GeneGestator.MissingGestateResearch".Translate().CapitalizeFirst());
+                    }
+                    yield return command_Action4;
+                }
+                //STOPS HAUL JOB
+                else
+                {
+                    var command_Action3 = new Command_Action
+                    {
+                        defaultLabel = "CommandCancelLoad".Translate(),
+                        defaultDesc = "CommandCancelLoadDesc".Translate(),
+                        icon = CancelIcon,
+                        activateSound = SoundDefOf.Designate_Cancel,
+                        action = delegate
+                        {
+                            selectedMatrix = null;
+                        }
+                    };
+                    yield return command_Action3;
+                }
+            }
+        }
+
+        if (!DebugSettings.ShowDevGizmos)
+        {
+            yield break;
+        }
+        
+        if (doWork)
+        {
+            //DEV: ALMOST FINISH
+            var command_Action1 = new Command_Action
+            {
+                defaultLabel = "DEV: ALMOST FINISH",
+                icon = CancelIcon,
+                activateSound = SoundDefOf.Designate_Cancel,
+                action = delegate
+                {
+                    progressInt = totalTime - 250;
+                }
+            };
+            yield return command_Action1;
         }
     }
 
@@ -403,8 +392,5 @@ public class Building_GeneGestator : Building
         Scribe_Defs.Look(ref selectedMatrix, "selectedMatrix");
         Scribe_Defs.Look(ref selectedMaterial, "selectedMaterial");
         Scribe_Deep.Look(ref containedMatrix, "containedMatrix");
-        Scribe_Values.Look(ref haulJobStarted, "haulJobStarted", false);
-        Scribe_Values.Look(ref hasBeenStarted, "hasBeenStarted", false);
-        Scribe_References.Look(ref jobDoer, "jobDoer");
     }
 }

@@ -2,12 +2,12 @@
 <Defs>
 
   <WorkGiverDef>
-    <defName>BEWH_FillGeneGestator</defName>
-    <label>fill gene gestator with matrix</label>
-    <giverClass>Genes40k.WorkGiver_FillGeneGestator</giverClass>
+    <defName>BEWH_CarryMatrixToGeneGestator</defName>
+    <label>carry matrix to gene gestator</label>
+    <giverClass>Genes40k.WorkGiver_CarryMatrixToGeneGestator</giverClass>
     <workType>Hauling</workType>
-    <verb>fill</verb>
-    <gerund>filling</gerund>
+    <verb>carry</verb>
+    <gerund>carrying</gerund>
     <priorityInType>10</priorityInType>
     <requiredCapacities>
       <li>Manipulation</li>
@@ -16,12 +16,12 @@
   </WorkGiverDef>
 
   <WorkGiverDef>
-    <defName>BEWH_FillPrimarchGrowthVat</defName>
-    <label>fill primarch growth vat with embryo</label>
-    <giverClass>Genes40k.WorkGiver_FillPrimarchGrowthVat</giverClass>
+    <defName>BEWH_CarryPrimarchEmbryoToVat</defName>
+    <label>carry embryo to primarch growth</label>
+    <giverClass>Genes40k.WorkGiver_CarryPrimarchEmbryoToVat</giverClass>
     <workType>Hauling</workType>
-    <verb>fill</verb>
-    <gerund>filling</gerund>
+    <verb>carry</verb>
+    <gerund>carrying</gerund>
     <priorityInType>9</priorityInType>
     <requiredCapacities>
       <li>Manipulation</li>
@@ -30,9 +30,9 @@
   </WorkGiverDef>
 
   <WorkGiverDef>
-    <defName>BEWH_HaulToPrimarchVat</defName>
+    <defName>BEWH_FillPrimarchVatWithNutrition</defName>
     <label>haul to primarch vat</label>
-    <giverClass>Genes40k.WorkGiver_HaulToPrimarchVat</giverClass>
+    <giverClass>Genes40k.WorkGiver_FillPrimarchVatWithNutrition</giverClass>
     <workType>Hauling</workType>
     <verb>fill</verb>
     <gerund>filling</gerund>

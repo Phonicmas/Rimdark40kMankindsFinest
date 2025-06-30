@@ -4,9 +4,8 @@ using Verse.AI;
 
 namespace Genes40k;
 
-public class JobDriver_FillPrimarchGrowthVat : JobDriver
+public class JobDriver_CarryPrimarchEmbryoToVat : JobDriver
 {
-
     private const int Duration = 200;
 
     private Building_PrimarchGrowthVat PrimarchGrowthVat => (Building_PrimarchGrowthVat)job.GetTarget(TargetIndex.A).Thing;
@@ -24,8 +23,6 @@ public class JobDriver_FillPrimarchGrowthVat : JobDriver
         {
             return false;
         }
-            
-        PrimarchGrowthVat.jobDoer = pawn;
         return true;
     }
 
@@ -46,7 +43,7 @@ public class JobDriver_FillPrimarchGrowthVat : JobDriver
         var toil = ToilMaker.MakeToil("MakeNewToils");
         toil.initAction = delegate
         {
-            PrimarchGrowthVat.AddPrimarchEmbryo(PrimarchEmbryo, pawn);
+            PrimarchGrowthVat.InsertEmbryo((PrimarchEmbryo)PrimarchEmbryo);
         };
         toil.defaultCompleteMode = ToilCompleteMode.Instant;
         yield return toil;

@@ -1,88 +1,85 @@
-﻿using RimWorld;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using RimWorld;
 using UnityEngine;
 using Verse;
-using Verse.AI;
 using Verse.Sound;
 
 namespace Genes40k;
 
-[StaticConstructorOnStartup]
-public class Building_PrimarchGrowthVat : Building_Enterable, IStoreSettingsParent, IThingHolderWithDrawnPawn
+public class Building_PrimarchGrowthVat : Building, IStoreSettingsParent, IThingHolder
 {
-    public PrimarchEmbryo selectedEmbryo;
-
-    public PrimarchEmbryo containedEmbryo;
-
-    public bool haulJobStarted = false;
-
-    public bool hasBeenStarted = false;
-
-    public Pawn jobDoer = null;
-
-    private float embryoStarvation;
-
-    private float containedNutrition;
-
-    private StorageSettings allowedNutritionSettings;
-
-    [Unsaved(false)]
-    private CompPowerTrader cachedPowerComp;
-
+    private static readonly Texture2D CancelIcon = ContentFinder<Texture2D>.Get("UI/Designators/Cancel");
+    private static readonly Texture2D StartIcon = ContentFinder<Texture2D>.Get("UI/Gizmos/BEWH_PrimarchVatStart");
+    private static readonly Texture2D EjectEmbryoIcon = ContentFinder<Texture2D>.Get("UI/Gizmos/BEWH_EjectPrimarchEmbryo");
+    private static readonly Texture2D InsertEmbryoIcon = ContentFinder<Texture2D>.Get("UI/Gizmos/BEWH_InsertPrimarchEmbryo");
+    
+    private DefModExtension_PrimarchVatTexture DefModTexture => def.GetModExtension<DefModExtension_PrimarchVatTexture>();
     [Unsaved(false)]
     private Graphic fetusEarlyStageGraphic;
-
+    private Graphic FetusEarlyStage => fetusEarlyStageGraphic ??= GraphicDatabase.Get<Graphic_Single>(DefModTexture.earlyFetusTexture, ShaderDatabase.Cutout, DefModTexture.earlyFetusSize, Color.white);
     [Unsaved(false)]
     private Graphic fetusLateStageGraphic;
-
+    private Graphic FetusLateStage => fetusLateStageGraphic ??= GraphicDatabase.Get<Graphic_Single>(DefModTexture.lateFetusTexture, ShaderDatabase.Cutout, DefModTexture.lateFetusSize, Color.white);
+    private Graphic cylinderGraphic;
+    private Graphic topGraphic;
+    
+    [Unsaved(false)]
+    private CompPowerTrader cachedPowerComp;
+    private CompPowerTrader PowerTraderComp => cachedPowerComp ??= this.TryGetComp<CompPowerTrader>();
+    public bool PowerOn => PowerTraderComp.PowerOn;
+    
+    
     [Unsaved(false)]
     private Sustainer sustainerWorking;
-
-    private static readonly Texture2D CancelIcon = ContentFinder<Texture2D>.Get("UI/Designators/Cancel");
-
-    private static readonly Texture2D StartIcon = ContentFinder<Texture2D>.Get("UI/Gizmos/BEWH_PrimarchVatStart");
-        
-    private static readonly Texture2D EjectEmbryoIcon = ContentFinder<Texture2D>.Get("UI/Gizmos/BEWH_EjectPrimarchEmbryo");
-
-    private static readonly CachedTexture InsertEmbryoIcon = new CachedTexture("UI/Gizmos/BEWH_InsertPrimarchEmbryo");
-        
     private Mote workingMote;
-
-    private const float BaseEmbryoConsumedNutritionPerDay = 6f;
-
-    private const float NutritionBuffer = 10f;
-
+    
+    
+    private int startTick = -1;
     private const int EmbryoGestationTicks = 600000;
-        
-    private const int EmbryoLateStageGraphicTicksRemaining = 300000;
-
-    private const float FetusMinSize = 0.4f;
-
-    private const float FetusMaxSize = 0.95f;
-        
+    private int EmbryoGestationTicksRemaining => startTick - Find.TickManager.TicksGame;
+    private const int EmbryoLateStageGraphicTicksRemaining = EmbryoGestationTicks/2;
     private float EmbryoGestationPct => 1f - Mathf.Clamp01((float)EmbryoGestationTicksRemaining / EmbryoGestationTicks);
 
+    
+    private const float FetusMinSize = 0.4f;
+    private const float FetusMaxSize = 0.95f;
+    
+    
     public bool StorageTabVisible => true;
+    private StorageSettings allowedNutritionSettings;
+    public ThingOwner nutritionContainer;
+    
+    private float containedNutrition;
+    private const float NutritionBuffer = 20f;
+    private const float NutritioConsumedPerDayByEmbryo = 6f;
+    private float NutritionConsumedPerDay
+    {
+        get
+        {
+            var consumedNutritionPerDay = containedEmbryo != null ? NutritioConsumedPerDayByEmbryo : 0f;
 
-    public float HeldPawnDrawPos_Y => DrawPos.y + 1f / 26f;
+            if (BiostarvationSeverityPercent <= 0f)
+            {
+                return consumedNutritionPerDay;
+            }
+                
+            var biostarvationMultiplier = 1.1f;
+            consumedNutritionPerDay *= biostarvationMultiplier;
+            return consumedNutritionPerDay;
+        }
+    }
+    private float NutritionStored => containedNutrition + nutritionContainer.Sum(thing => thing.stackCount * thing.GetStatValue(StatDefOf.Nutrition));
+    public float NutritionNeeded => NutritionBuffer - NutritionStored;
 
-    public float HeldPawnBodyAngle => Rotation.AsAngle;
-
-    public PawnPosture HeldPawnPosture => PawnPosture.LayingOnGroundFaceUp;
-
-    public bool PowerOn => PowerTraderComp.PowerOn;
-
-    public override Vector3 PawnDrawOffset => CompBiosculpterPod.FloatingOffset(Find.TickManager.TicksGame);
-
-    private CompPowerTrader PowerTraderComp => cachedPowerComp ??= this.TryGetComp<CompPowerTrader>();
-
+    
+    private float embryoStarvation;
     private float BiostarvationDailyOffset
     {
         get
         {
-            if (!Working || !hasBeenStarted)
+            if (!Working)
             {
                 return 0f;
             }
@@ -93,46 +90,21 @@ public class Building_PrimarchGrowthVat : Building_Enterable, IStoreSettingsPare
             return -0.1f;
         }
     }
+    private float BiostarvationSeverityPercent => containedEmbryo != null ? embryoStarvation : 0f;
+    
+    public bool Working => startTick >= 0;
 
-    private float BiostarvationSeverityPercent => selectedEmbryo != null ? embryoStarvation : 0f;
+    public PrimarchEmbryo selectedEmbryo;
+    private PrimarchEmbryo containedEmbryo;
+    public PrimarchEmbryo ContainedEmbryo => containedEmbryo;
 
-    private float NutritionConsumedPerDay
+    public Building_PrimarchGrowthVat()
     {
-        get
-        {
-            var num = selectedEmbryo != null ? BaseEmbryoConsumedNutritionPerDay : 3f;
-
-            if (!(BiostarvationSeverityPercent > 0f))
-            {
-                return num;
-            }
-                
-            var num2 = 1.1f;
-            num *= num2;
-            return num;
-        }
+        nutritionContainer = new ThingOwner<Thing>(this);
+        selectedEmbryo = null;
+        containedEmbryo = null;
     }
 
-    private float NutritionStored => containedNutrition + innerContainer.Sum(thing => thing.stackCount * thing.GetStatValue(StatDefOf.Nutrition));
-
-    public float NutritionNeeded => selectedEmbryo == null ? 0f : NutritionBuffer - NutritionStored;
-
-    private int EmbryoGestationTicksRemaining => startTick - Find.TickManager.TicksGame;
-
-    private Graphic cylinderGraphic;
-
-    private Graphic topGraphic;
-
-    private Graphic FetusEarlyStage =>
-        fetusEarlyStageGraphic ??= GraphicDatabase.Get<Graphic_Single>(DefModTexture.earlyFetusTexture, ShaderDatabase.Cutout,
-            DefModTexture.earlyFetusSize, Color.white);
-
-    private Graphic FetusLateStage =>
-        fetusLateStageGraphic ??= GraphicDatabase.Get<Graphic_Single>(DefModTexture.lateFetusTexture, ShaderDatabase.Cutout,
-            DefModTexture.lateFetusSize, Color.white);
-
-    private DefModExtension_PrimarchVatTexture DefModTexture => def.GetModExtension<DefModExtension_PrimarchVatTexture>();
-        
     public override void PostMake()
     {
         base.PostMake();
@@ -146,7 +118,7 @@ public class Building_PrimarchGrowthVat : Building_Enterable, IStoreSettingsPare
     public override void SpawnSetup(Map map, bool respawningAfterLoad)
     {
         base.SpawnSetup(map, respawningAfterLoad);
-        if (respawningAfterLoad && selectedEmbryo != null && containedEmbryo != null)
+        if (respawningAfterLoad && containedEmbryo != null)
         {
             LongEventHandler.ExecuteWhenFinished(delegate
             {
@@ -156,14 +128,7 @@ public class Building_PrimarchGrowthVat : Building_Enterable, IStoreSettingsPare
             });
         }
     }
-
-    public override void DeSpawn(DestroyMode mode = DestroyMode.Vanish)
-    {
-        sustainerWorking = null;
-        DestroyEmbryo();
-        base.DeSpawn(mode);
-    }
-
+    
     protected override void Tick()
     {
         base.Tick();
@@ -174,10 +139,10 @@ public class Building_PrimarchGrowthVat : Building_Enterable, IStoreSettingsPare
 
         ThingDef thingDef = null;
             
-        if (hasBeenStarted && Working)
+        if (Working)
         {
             thingDef = def.building.gestatorFormingMote.GetForRotation(Rotation);
-            if (selectedEmbryo != null)
+            if (containedEmbryo != null)
             {
                 if (EmbryoGestationTicksRemaining <= 0)
                 {
@@ -186,11 +151,13 @@ public class Building_PrimarchGrowthVat : Building_Enterable, IStoreSettingsPare
                 }
                 embryoStarvation = Mathf.Clamp01(embryoStarvation + BiostarvationDailyOffset / 60000f);
             }
+            
             if (BiostarvationSeverityPercent >= 1f)
             {
                 Fail();
                 return;
             }
+            
             if (sustainerWorking == null || sustainerWorking.Ended)
             {
                 sustainerWorking = SoundDefOf.GrowthVat_Working.TrySpawnSustainer(SoundInfo.InMap(this, MaintenanceType.PerTick));
@@ -199,15 +166,12 @@ public class Building_PrimarchGrowthVat : Building_Enterable, IStoreSettingsPare
             {
                 sustainerWorking.Maintain();
             }
+            
             containedNutrition = Mathf.Clamp(containedNutrition - NutritionConsumedPerDay / 60000f, 0f, 2.14748365E+09f);
             if (containedNutrition <= 0f)
             {
                 TryAbsorbNutritiousThing();
             }
-        }
-        else
-        {
-            TryGrowEmbryo();
         }
 
         if (thingDef == null)
@@ -224,59 +188,20 @@ public class Building_PrimarchGrowthVat : Building_Enterable, IStoreSettingsPare
         workingMote.Maintain();
     }
 
-    public override AcceptanceReport CanAcceptPawn(Pawn pawn)
+    public void InsertEmbryo(PrimarchEmbryo embryo)
     {
-        return false;
-    }
-
-    public override void TryAcceptPawn(Pawn pawn)
-    {
-    }
-
-    private void TryGrowEmbryo()
-    {
-        if (Working || !PowerOn || selectedEmbryo == null || containedEmbryo == null)
+        if (containedEmbryo != null)
         {
             return;
         }
-            
-        SoundDefOf.GrowthVat_Close.PlayOneShot(SoundInfo.InMap(this));
-        startTick = Find.TickManager.TicksGame + EmbryoGestationTicks;
-        LongEventHandler.ExecuteWhenFinished(delegate
-        {
-            var color = EmbryoColor();
-            fetusEarlyStageGraphic = FetusEarlyStage.GetColoredVersion(ShaderDatabase.Cutout, color, color);
-            fetusLateStageGraphic = FetusLateStage.GetColoredVersion(ShaderDatabase.Cutout, color, color);
-        });
+        
+        embryo.holdingOwner.TryDrop(embryo, ThingPlaceMode.Near, out _);
+        embryo.DeSpawn();
+        containedEmbryo = embryo;
+        selectedEmbryo = null;
     }
-
-    private void TryAbsorbNutritiousThing()
-    {
-        foreach (var thing in innerContainer)
-        {
-            if (thing.def != Genes40kDefOf.BEWH_RawGestationalSlurry)
-            {
-                continue;
-            }
-            var statValue = thing.GetStatValue(StatDefOf.Nutrition);
-            if (!(statValue > 0f))
-            {
-                continue;
-            }
-                    
-            containedNutrition += statValue;
-            thing.SplitOff(1).DeSpawn();
-                
-            break;
-        }
-    }
-
+    
     private void Finish()
-    {
-        FinishEmbryo();
-    }
-
-    private void FinishEmbryo()
     {
         EmbryoBirth();
         DestroyEmbryo();
@@ -288,7 +213,7 @@ public class Building_PrimarchGrowthVat : Building_Enterable, IStoreSettingsPare
         DestroyEmbryo(biostarvation: true);
         OnStop();
     }
-
+    
     private void OnStop()
     {
         selectedEmbryo = null;
@@ -296,48 +221,16 @@ public class Building_PrimarchGrowthVat : Building_Enterable, IStoreSettingsPare
         startTick = -1;
         embryoStarvation = 0f;
         sustainerWorking = null;
-        hasBeenStarted = false;
-        haulJobStarted = false;
-        jobDoer = null;
     }
-
-    private void DestroyEmbryo(bool biostarvation = false)
-    {
-        if (startTick < 0 || selectedEmbryo == null || containedEmbryo == null)
-        {
-            return;
-        }
-            
-        if (startTick > Find.TickManager.TicksGame)
-        {
-            Messages.Message(
-                biostarvation
-                    ? "EmbryoEjectedFromGrowthVatBiostarvation".Translate(selectedEmbryo.Label)
-                    : "EmbryoEjectedFromGrowthVat".Translate(selectedEmbryo.Label), this,
-                MessageTypeDefOf.NegativeEvent);
-        }
-
-        if (!selectedEmbryo.Destroyed)
-        {
-            selectedEmbryo.Destroy();
-        }
-        selectedEmbryo = null;
-            
-        if (!containedEmbryo.Destroyed)
-        {
-            containedEmbryo.Destroy();
-        }
-        containedEmbryo = null;
-    }
-
+    
     private void EmbryoBirth()
     {
-        if (selectedEmbryo == null || containedEmbryo == null || startTick > Find.TickManager.TicksGame)
+        if (containedEmbryo == null || startTick > Find.TickManager.TicksGame)
         {
             return;
         }
 
-        var geneDef = selectedEmbryo.primarchGenes.GenesListForReading.FirstOrDefault(g => g.HasModExtension<DefModExtension_PrimarchVatExtras>());
+        var geneDef = containedEmbryo.primarchGenes.GenesListForReading.FirstOrDefault(g => g.HasModExtension<DefModExtension_PrimarchVatExtras>());
         var childAmount = geneDef == null ? 1 : geneDef.GetModExtension<DefModExtension_PrimarchVatExtras>().childAmount;
             
         var children = new List<Pawn>();
@@ -345,9 +238,9 @@ public class Building_PrimarchGrowthVat : Building_Enterable, IStoreSettingsPare
         var ritual = Faction.OfPlayer.ideos.PrimaryIdeo.GetPrecept(PreceptDefOf.ChildBirth) as Precept_Ritual;
         for (var i = 0; i < childAmount; i++)
         {
-            var thing = PregnancyUtility.ApplyBirthOutcome(((RitualOutcomeEffectWorker_ChildBirth)RitualOutcomeEffectDefOf.ChildBirth.GetInstance()).GetOutcome(100f, null), 100f, ritual, selectedEmbryo.birthGenes.GenesListForReading, selectedEmbryo.mother, this, selectedEmbryo.father);
+            var thing = PregnancyUtility.ApplyBirthOutcome(((RitualOutcomeEffectWorker_ChildBirth)RitualOutcomeEffectDefOf.ChildBirth.GetInstance()).GetOutcome(100f, null), 100f, ritual, containedEmbryo.birthGenes.GenesListForReading, containedEmbryo.mother, this, containedEmbryo.father);
             var pawn2 = (Pawn)thing;
-            foreach (var gene in selectedEmbryo.primarchGenes.GenesListForReading)
+            foreach (var gene in containedEmbryo.primarchGenes.GenesListForReading)
             {
                 pawn2.genes.AddGene(gene, true);
             }
@@ -388,38 +281,123 @@ public class Building_PrimarchGrowthVat : Building_Enterable, IStoreSettingsPare
             }
         }
     }
-
-    public bool CanAcceptNutrition(Thing thing)
+    
+    private void DestroyEmbryo(bool biostarvation = false)
     {
-        return allowedNutritionSettings.AllowedToAccept(thing);
-    }
+        if (startTick < 0 || containedEmbryo == null)
+        {
+            return;
+        }
+            
+        if (startTick > Find.TickManager.TicksGame)
+        {
+            Messages.Message(biostarvation
+                    ? "EmbryoEjectedFromGrowthVatBiostarvation".Translate(containedEmbryo.Label)
+                    : "EmbryoEjectedFromGrowthVat".Translate(containedEmbryo.Label), this, MessageTypeDefOf.NegativeEvent);
+        }
 
-    public StorageSettings GetStoreSettings()
+        if (!containedEmbryo.Destroyed)
+        {
+            containedEmbryo.Destroy();
+        }
+        containedEmbryo = null;
+    }
+    
+    private Color EmbryoColor()
     {
-        return allowedNutritionSettings;
+        var result = PawnSkinColors.GetSkinColor(0.5f);
+        if (containedEmbryo?.GeneSet == null)
+        {
+            return result;
+        }
+            
+        foreach (var item in containedEmbryo.GeneSet.GenesListForReading)
+        {
+            if (item.skinColorOverride.HasValue)
+            {
+                return item.skinColorOverride.Value;
+            }
+            if (item.skinColorBase.HasValue)
+            {
+                result = item.skinColorBase.Value;
+            }
+        }
+        return result;
     }
-
-    public StorageSettings GetParentStoreSettings()
+    
+    private List<PrimarchEmbryo> AvailableEmbryo()
     {
-        return def.building.fixedStorageSettings;
+        var embryos = new List<Thing>();
+        if (Map?.listerThings != null)
+        {
+            embryos.AddRange(Map.listerThings.ThingsOfDef(Genes40kDefOf.BEWH_PrimarchEmbryo));
+        }
+        
+        return embryos.Cast<PrimarchEmbryo>().ToList();
     }
-
-    public void Notify_SettingsChanged()
+    
+    private void TryAbsorbNutritiousThing()
     {
+        foreach (var thing in nutritionContainer)
+        {
+            if (thing.def != Genes40kDefOf.BEWH_RawGestationalSlurry)
+            {
+                continue;
+            }
+            var statValue = thing.GetStatValue(StatDefOf.Nutrition);
+            if (statValue <= 0f)
+            {
+                continue;
+            }
+                    
+            containedNutrition += statValue;
+            thing.SplitOff(1).DeSpawn();
+                
+            break;
+        }
     }
+    
+    protected override void DrawAt(Vector3 drawLoc, bool flip = false)
+    {
+        base.DrawAt(drawLoc, flip);
+        if (Working && containedEmbryo != null)
+        {
+            var loc = drawLoc + def.building.formingMechPerRotationOffset[Rotation.AsInt];
+            loc.y += 1f / 52f;
+            loc.z += Mathf.PingPong(Find.TickManager.TicksGame * def.building.formingMechBobSpeed, def.building.formingMechYBobDistance);
+                
+            if (EmbryoGestationTicksRemaining > EmbryoLateStageGraphicTicksRemaining)
+            {
+                FetusEarlyStage.drawSize = DefModTexture.earlyFetusSize * Mathf.Lerp(FetusMinSize, FetusMaxSize, EmbryoGestationPct);
+                loc += DefModTexture.earlyFetusOffset;
+                FetusEarlyStage.DrawFromDef(loc, Rot4.North, null);
+            }
+            else
+            {
+                FetusLateStage.drawSize = DefModTexture.lateFetusSize * Mathf.Lerp(FetusMinSize, FetusMaxSize, EmbryoGestationPct);
+                loc += DefModTexture.lateFetusOffset;
+                FetusLateStage.DrawFromDef(loc, Rot4.North, null);
+            }
+        }
 
+        topGraphic ??= def.building.mechGestatorTopGraphic.GraphicColoredFor(this);
+        cylinderGraphic ??= def.building.mechGestatorCylinderGraphic.GraphicColoredFor(this);
+            
+        var loc2 = new Vector3(drawLoc.x, AltitudeLayer.BuildingBelowTop.AltitudeFor(), drawLoc.z);
+        cylinderGraphic.Draw(loc2, Rotation, this);
+            
+        var loc3 = new Vector3(drawLoc.x, AltitudeLayer.BuildingOnTop.AltitudeFor(), drawLoc.z);
+        topGraphic.Draw(loc3, Rotation, this);
+    }
+    
     public override IEnumerable<Gizmo> GetGizmos()
     {
         foreach (var gizmo in base.GetGizmos())
         {
             yield return gizmo;
         }
-        foreach (var item in StorageSettingsClipboard.CopyPasteGizmosFor(allowedNutritionSettings))
-        {
-            yield return item;
-        }
-            
-        if (!hasBeenStarted)
+
+        if (!Working)
         {
             //STARTS MACHINE
             var command_Action1 = new Command_Action
@@ -436,7 +414,8 @@ public class Building_PrimarchGrowthVat : Building_Enterable, IStoreSettingsPare
 
                     void Action()
                     {
-                        hasBeenStarted = true;
+                        startTick = Find.TickManager.TicksGame + EmbryoGestationTicks;
+                        selectedEmbryo = null;
                     }
                 }
             };
@@ -449,7 +428,7 @@ public class Building_PrimarchGrowthVat : Building_Enterable, IStoreSettingsPare
             {
                 command_Action1.Disable("NoPower".Translate().CapitalizeFirst());
             }
-
+            
             if (containedEmbryo != null)
             {
                 //EJECT PRIMARCH EMBRYO
@@ -470,18 +449,18 @@ public class Building_PrimarchGrowthVat : Building_Enterable, IStoreSettingsPare
                 yield return command_Action2;
             }
         }
-            
+        
         if(containedEmbryo == null)
         {
             //START HAUL JOB
-            if (!haulJobStarted)
+            if (selectedEmbryo == null)
             {
                 var embryos = AvailableEmbryo();
                 var command_Action3 = new Command_Action
                 {
                     defaultLabel = "ImplantEmbryo".Translate() + "...",
                     defaultDesc = "InsertEmbryoGrowthVatDesc".Translate(EmbryoGestationTicks.ToStringTicksToPeriod()).Resolve(),
-                    icon = InsertEmbryoIcon.Texture,
+                    icon = InsertEmbryoIcon,
                     action = delegate
                     {
                         var list = new List<FloatMenuOption>();
@@ -496,8 +475,7 @@ public class Building_PrimarchGrowthVat : Building_Enterable, IStoreSettingsPare
                             }
                             list.Add(new FloatMenuOption(embryoName, delegate
                             {
-                                SelectEmbryo(embryo);
-                                haulJobStarted = true;
+                                selectedEmbryo = embryo;
                             }, embryo, Color.white));
                         }
                         Find.WindowStack.Add(new FloatMenu(list));
@@ -523,31 +501,26 @@ public class Building_PrimarchGrowthVat : Building_Enterable, IStoreSettingsPare
                     activateSound = SoundDefOf.Designate_Cancel,
                     action = delegate
                     {
-                        if (jobDoer != null)
-                        {
-                            foreach (var job in jobDoer.jobs.AllJobs())
-                            {
-                                if (job.def != Genes40kDefOf.BEWH_FillGeneGestator)
-                                {
-                                    continue;
-                                }
-                                
-                                jobDoer.jobs.EndCurrentOrQueuedJob(job, JobCondition.InterruptForced);
-                                break;
-                            }
-                        }
-                        OnStop();
+                        selectedEmbryo = null;
                     }
                 };
                 yield return command_Action4;
             }
         }
-
+        
         if (!DebugSettings.ShowDevGizmos)
         {
             yield break;
         }
 
+        foreach (var debugGizmo in DebugGizmo())
+        {
+            yield return debugGizmo;
+        }
+    }
+
+    private IEnumerable<Gizmo> DebugGizmo()
+    {
         if (containedEmbryo == null)
         {
             yield return new Command_Action
@@ -577,32 +550,22 @@ public class Building_PrimarchGrowthVat : Building_Enterable, IStoreSettingsPare
             action = delegate
             {
                 containedNutrition = 0f;
+                nutritionContainer.Clear();
             }
         };
 
-        if (!Working || !hasBeenStarted)
+        if (!Working)
         {
             yield break;
         }
-
-        //DEV: INSTA BIRTH
-        yield return new Command_Action
-        {
-            defaultLabel = "DEV: Embryo birth now",
-            action = delegate
-            {
-                startTick = Find.TickManager.TicksGame;
-                Finish();
-            }
-        };
                         
-        //DEV: ALMOST INSTA BIRTH
+        //DEV: ALMOST FINISH BIRTH
         yield return new Command_Action
         {
             defaultLabel = "DEV: Embryo almost done",
             action = delegate
             {
-                startTick = Find.TickManager.TicksGame + 2500;
+                startTick = Find.TickManager.TicksGame + 500;
             }
         };
             
@@ -616,106 +579,7 @@ public class Building_PrimarchGrowthVat : Building_Enterable, IStoreSettingsPare
             }
         };
     }
-
-    private List<PrimarchEmbryo> AvailableEmbryo()
-    {
-        var embryos = new List<Thing>();
-        if (Map?.listerThings != null)
-        {
-            embryos.AddRange(Map.listerThings.ThingsOfDef(Genes40kDefOf.BEWH_PrimarchEmbryo));
-        }
-        
-        return embryos.Cast<PrimarchEmbryo>().ToList();
-    }
-
-    private void SelectEmbryo(PrimarchEmbryo embryo)
-    {
-        selectedEmbryo = embryo;
-    }
-
-    public void AddPrimarchEmbryo(Thing primarchEmbryo, Pawn jobdoer)
-    {
-        if (primarchEmbryo.stackCount > 1)
-        {
-            containedEmbryo = (PrimarchEmbryo)primarchEmbryo.SplitOff(1);
-        }
-        else
-        {
-            containedEmbryo = (PrimarchEmbryo)primarchEmbryo;
-        }
-
-        if (selectedEmbryo == null || selectedEmbryo != containedEmbryo)
-        {
-            selectedEmbryo = containedEmbryo;
-        }
-            
-        if (jobdoer.IsCarryingThing(primarchEmbryo))
-        {
-            jobdoer.carryTracker.TryDropCarriedThing(jobdoer.Position, ThingPlaceMode.Direct, out _);
-        }
-            
-        primarchEmbryo.DeSpawn();
-        haulJobStarted = false;
-    }
-        
-    protected override void DrawAt(Vector3 drawLoc, bool flip = false)
-    {
-        base.DrawAt(drawLoc, flip);
-        if (Working && hasBeenStarted && selectedEmbryo != null && containedEmbryo != null)
-        {
-            var loc = drawLoc + def.building.formingMechPerRotationOffset[Rotation.AsInt];
-            loc.y += 1f / 52f;
-            loc.z += Mathf.PingPong(Find.TickManager.TicksGame * def.building.formingMechBobSpeed, def.building.formingMechYBobDistance);
-                
-            if (EmbryoGestationTicksRemaining > EmbryoLateStageGraphicTicksRemaining)
-            {
-                FetusEarlyStage.drawSize = DefModTexture.earlyFetusSize * Mathf.Lerp(FetusMinSize, FetusMaxSize, EmbryoGestationPct);
-                loc += DefModTexture.earlyFetusOffset;
-                FetusEarlyStage.DrawFromDef(loc, Rot4.North, null);
-            }
-            else
-            {
-                FetusLateStage.drawSize = DefModTexture.lateFetusSize * Mathf.Lerp(FetusMinSize, FetusMaxSize, EmbryoGestationPct);
-                loc += DefModTexture.lateFetusOffset;
-                FetusLateStage.DrawFromDef(loc, Rot4.North, null);
-            }
-        }
-
-        if (topGraphic == null)
-        {
-            topGraphic = def.building.mechGestatorTopGraphic.GraphicColoredFor(this);
-        }
-        if (cylinderGraphic == null)
-        {
-            cylinderGraphic = def.building.mechGestatorCylinderGraphic.GraphicColoredFor(this);
-        }
-            
-        var loc2 = new Vector3(drawLoc.x, AltitudeLayer.BuildingBelowTop.AltitudeFor(), drawLoc.z);
-        cylinderGraphic.Draw(loc2, Rotation, this);
-            
-        var loc3 = new Vector3(drawLoc.x, AltitudeLayer.BuildingOnTop.AltitudeFor(), drawLoc.z);
-        topGraphic.Draw(loc3, Rotation, this);
-    }
-
-    private Color EmbryoColor()
-    {
-        var result = PawnSkinColors.GetSkinColor(0.5f);
-        if (selectedEmbryo?.GeneSet == null) return result;
-            
-        foreach (var item in selectedEmbryo.GeneSet.GenesListForReading)
-        {
-            if (item.skinColorOverride.HasValue)
-            {
-                return item.skinColorOverride.Value;
-            }
-            if (item.skinColorBase.HasValue)
-            {
-                result = item.skinColorBase.Value;
-            }
-        }
-        return result;
-    }
-
+    
     public override void DrawExtraSelectionOverlays()
     {
         base.DrawExtraSelectionOverlays();
@@ -729,9 +593,9 @@ public class Building_PrimarchGrowthVat : Building_Enterable, IStoreSettingsPare
     {
         var stringBuilder = new StringBuilder();
         stringBuilder.Append(base.GetInspectString());
-        if (Working && hasBeenStarted)
+        if (Working)
         {
-            if (selectedEmbryo != null && containedEmbryo != null)
+            if (containedEmbryo != null)
             {
                 stringBuilder.Append("\n");
                 if (EmbryoGestationTicksRemaining > 60000)
@@ -743,26 +607,55 @@ public class Building_PrimarchGrowthVat : Building_Enterable, IStoreSettingsPare
                     stringBuilder.AppendTagged("EmbryoTimeUntilBirth".Translate() + ": " + EmbryoGestationTicksRemaining.ToStringTicksToPeriod(allowYears: false).Colorize(ColoredText.DateTimeColor));
                 }
             }
-                
-            var biostarvationSeverityPercent = BiostarvationSeverityPercent;
-            if (biostarvationSeverityPercent > 0f)
+            
+            if (BiostarvationSeverityPercent > 0f)
             {
                 var text = BiostarvationDailyOffset >= 0f ? "+" : string.Empty;
                 stringBuilder.Append("\n");
-                stringBuilder.Append(string.Format("{0}: {1} ({2})", "Biostarvation".Translate(), biostarvationSeverityPercent.ToStringPercent(), "PerDay".Translate(text + BiostarvationDailyOffset.ToStringPercent())));
+                stringBuilder.Append($"{"Biostarvation".Translate()}: {BiostarvationSeverityPercent.ToStringPercent()} ({"PerDay".Translate(text + BiostarvationDailyOffset.ToStringPercent())})");
             }
         }
-            
-        stringBuilder.Append("\n");
+
+
+        if (!PowerTraderComp.Off)
+        {
+            stringBuilder.Append("\n");
+        }
         stringBuilder.Append("Nutrition".Translate()).Append(": ").Append(NutritionStored.ToStringByStyle(ToStringStyle.FloatMaxOne));
-        if (Working && hasBeenStarted)
+        if (Working)
         {
             stringBuilder.Append(" (-").Append("PerDay".Translate(NutritionConsumedPerDay.ToString("F1"))).Append(")");
         }
             
         return stringBuilder.ToString();
     }
+    
+    public bool CanAcceptNutrition(Thing thing)
+    {
+        return allowedNutritionSettings.AllowedToAccept(thing);
+    }
 
+    public StorageSettings GetStoreSettings()
+    {
+        return allowedNutritionSettings;
+    }
+
+    public StorageSettings GetParentStoreSettings()
+    {
+        return def.building.fixedStorageSettings;
+    }
+
+    public void Notify_SettingsChanged()
+    {
+    }
+
+    public void GetChildHolders(List<IThingHolder> outChildren)
+    {
+        ThingOwnerUtility.AppendThingHoldersFromThings(outChildren, GetDirectlyHeldThings());
+    }
+
+    public ThingOwner GetDirectlyHeldThings() => nutritionContainer;
+    
     public override void ExposeData()
     {
         base.ExposeData();
@@ -770,10 +663,7 @@ public class Building_PrimarchGrowthVat : Building_Enterable, IStoreSettingsPare
         Scribe_References.Look(ref containedEmbryo, "containedEmbryo");
         Scribe_Values.Look(ref embryoStarvation, "embryoStarvation", 0f);
         Scribe_Values.Look(ref containedNutrition, "containedNutrition", 0f);
-        Scribe_Values.Look(ref haulJobStarted, "haulJobStarted", false);
-        Scribe_Values.Look(ref hasBeenStarted, "hasBeenStarted", false);
         Scribe_Deep.Look(ref allowedNutritionSettings, "allowedNutritionSettings", this);
-        Scribe_References.Look(ref jobDoer, "jobDoer");
             
         if (allowedNutritionSettings != null)
         {

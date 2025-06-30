@@ -159,8 +159,8 @@ public static class Genes40kDefOf
     public static ThingDef BEWH_LivingSaintArmor;
 
     //JobDefs
-    public static JobDef BEWH_FillGeneGestator;
-    public static JobDef BEWH_FillPrimarchGrowthVat;
+    public static JobDef BEWH_CarryMatrixToGeneGestator;
+    public static JobDef BEWH_CarryPrimarchEmbryoToVat;
     public static JobDef BEWH_InducedFearJob;
 
     //ThoughtDefs
