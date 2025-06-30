@@ -21,7 +21,7 @@
         </appliesTo>
         <drawData>
             <dataNorth>
-                <layer>80</layer>
+                <layer>98</layer>
                 <offset>(0, 0, 0.1)</offset>
             </dataNorth>
             <dataSouth>
@@ -29,11 +29,11 @@
                 <offset>(0, -1, 0.11)</offset>
             </dataSouth>
             <dataEast>
-                <layer>35</layer>
+                <layer>0</layer>
                 <offset>(-0.31, 0, 0.11)</offset>
             </dataEast>
             <dataWest>
-                <layer>35</layer>
+                <layer>0</layer>
                 <offset>(0.31, 0, 0.11)</offset>
             </dataWest>
         </drawData>
@@ -67,16 +67,16 @@
         <drawData>
             <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
             <dataNorth>
-                <layer>80</layer>
+                <layer>100</layer>
             </dataNorth>
             <dataSouth>
-                <layer>35</layer>
+                <layer>0</layer>
             </dataSouth>
             <dataEast>
-                <layer>35</layer>
+                <layer>0</layer>
             </dataEast>
             <dataWest>
-                <layer>35</layer>
+                <layer>0</layer>
             </dataWest>
         </drawData>
         <shaderType>CutoutComplex</shaderType>
