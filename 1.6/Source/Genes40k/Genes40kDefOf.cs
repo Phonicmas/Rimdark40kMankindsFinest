@@ -202,8 +202,11 @@ public static class Genes40kDefOf
     public static ExtraDecorationDef BEWH_LivingSaintHalo_2;
     public static ExtraDecorationDef BEWH_LivingSaintWings_1;
 
+    //ChapterColourDef
     public static ChapterColourDef BEWH_ChapterColourXIII;
         
+    //BodyPartDef
+    public static BodyPartDef Kidney;
     static Genes40kDefOf()
     {
         DefOfHelper.EnsureInitializedInCtor(typeof(Genes40kDefOf));

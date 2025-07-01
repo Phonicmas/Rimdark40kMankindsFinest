@@ -7,6 +7,7 @@
         <label>proto-ossmodula</label>
         <description>Proto-Ossmodula is the early prototype of an organ, that is capable of rapidly increasing one's bone mass, as well as the density of bone tissue itself. Implanted adjacent to hypophysis, Proto-Ossmodula injects growth hormones into recipient's body, thus making them significantly bulkier and more resistant to damage.</description>
         <iconPath>UI/Genes/ThunderWarrior/BEWH_ThunderWarrior_ProtoOssmodulaIcon</iconPath>
+        <geneClass>Genes40k.Gene_UnstableOrgans</geneClass>
         <displayOrderInCategory>-100</displayOrderInCategory>
         <biostatCpx>3</biostatCpx>
         <biostatMet>-1</biostatMet>

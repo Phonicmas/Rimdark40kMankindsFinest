@@ -122,6 +122,9 @@
   <!-- Thunder Warrior -->
   <BEWH.MankindsFinest.ThunderWarrior.ChanceToBerserk>{0}% chance to go berserk within half a day.</BEWH.MankindsFinest.ThunderWarrior.ChanceToBerserk>
 
+  <BEWH.MankindsFinest.ThunderWarrior.OrganDecayTitle>Organ decay: {0}</BEWH.MankindsFinest.ThunderWarrior.OrganDecayTitle>
+  <BEWH.MankindsFinest.ThunderWarrior.OrganDecayMessage>{0}'s {1} is unable to handle the experimental implanted extra organs!\n\nThe affected organ will slowly lose function, before dying completely.\n\nIf you want {0} to stay healthy, install a replacement {1}. This could be a bionic, or a natural organ taken from a donor.</BEWH.MankindsFinest.ThunderWarrior.OrganDecayMessage>
+
   <!-- Space Marine -->
   <BEWH.MankindsFinest.SpaceMarine.NoProgenoidGlands>Does not have any progenoid glands</BEWH.MankindsFinest.SpaceMarine.NoProgenoidGlands>
   <BEWH.MankindsFinest.SpaceMarine.SecondaryGlandsAlreadyHarvested>Secondary progenoid glands already harvested</BEWH.MankindsFinest.SpaceMarine.SecondaryGlandsAlreadyHarvested>
