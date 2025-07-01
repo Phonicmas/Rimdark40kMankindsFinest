@@ -1,5 +1,6 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Verse;
 
@@ -7,7 +8,7 @@ namespace Genes40k;
 
 public class ITab_SangprimusPortum : ITab
 {
-	private List<Thing> Container => SangprimusPortum.SearchableContents;
+	private List<Thing> Container => SangprimusPortum.GetDirectlyHeldThings().ToList();
 
 	private SortedList<int, (ThingDef chapter, ThingDef primarch)> AllMaterials => SangprimusPortum.AllMaterialsPaired;
 

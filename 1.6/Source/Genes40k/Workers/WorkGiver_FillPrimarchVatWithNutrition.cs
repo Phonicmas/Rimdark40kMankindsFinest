@@ -16,6 +16,10 @@ public class WorkGiver_FillPrimarchVatWithNutrition : WorkGiver_Scanner
 
     public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
     {
+        if (t is not Building_PrimarchGrowthVat building_GrowthVat)
+        {
+            return false;
+        }
         if (t.IsForbidden(pawn) || !pawn.CanReserve(t, 1, -1, null, forced))
         {
             return false;
@@ -25,10 +29,6 @@ public class WorkGiver_FillPrimarchVatWithNutrition : WorkGiver_Scanner
             return false;
         }
         if (t.IsBurning())
-        {
-            return false;
-        }
-        if (t is not Building_PrimarchGrowthVat building_GrowthVat)
         {
             return false;
         }

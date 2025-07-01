@@ -6,26 +6,13 @@ using Verse;
 namespace Genes40k;
 
 [StaticConstructorOnStartup]
-public class Building_SangprimusPortum : Building_Storage
+public class Building_SangprimusPortum : Building, IThingHolder
 {
-    private List<Thing> innerContainerChapter = new List<Thing>();
+    private ThingOwner innerContainer;
         
-    private List<Thing> innerContainerPrimarch = new List<Thing>();
+    public List<Thing> SearchableContentsChapter => innerContainer.Where(thing => thing.def.HasModExtension<DefModExtension_ChapterMaterial>()).ToList();
         
-    public List<Thing> SearchableContentsChapter => innerContainerChapter;
-        
-    public List<Thing> SearchableContentsPrimarch => innerContainerPrimarch;
-
-    public List<Thing> SearchableContents
-    {
-        get
-        {
-            var result = new List<Thing>();
-            result.AddRange(innerContainerPrimarch);
-            result.AddRange(innerContainerChapter);
-            return result;
-        }
-    }
+    public List<Thing> SearchableContentsPrimarch => innerContainer.Where(thing => thing.def.HasModExtension<DefModExtension_PrimarchMaterial>()).ToList();
 
     private List<ThingDef> allChapterMaterials;
         
@@ -48,9 +35,10 @@ public class Building_SangprimusPortum : Building_Storage
         
     public Building_SangprimusPortum()
     {
+        innerContainer = new ThingOwner<Thing>(this);
         UpdateMaterialList();
     }
-
+    
     private void UpdateMaterialList()
     {
         var tempList = DefDatabase<ThingDef>.AllDefs.Where(thingDef => thingDef.HasModExtension<DefModExtension_PrimarchMaterial>() || thingDef.HasModExtension<DefModExtension_ChapterMaterial>()).ToList();
@@ -82,32 +70,16 @@ public class Building_SangprimusPortum : Building_Storage
             AllMaterialsPaired.Add(orderInt, (chapterMaterial, primarchMaterial));
         }
     }
-        
-    public override void Notify_ReceivedThing(Thing newItem)
+
+    public bool CanAcceptMaterial(Thing thing)
     {
-        if (SearchableContents.Select(t => t.def).Any(thingDef => thingDef == newItem.def))
-        {
-            newItem.DeSpawn();
-            return;
-        }
-            
-        if (newItem.def.HasModExtension<DefModExtension_PrimarchMaterial>())
-        {
-            innerContainerPrimarch.Add(newItem);
-        }
-        else
-        {
-            innerContainerChapter.Add(newItem);
-        }
-            
-        base.Notify_ReceivedThing(newItem);
-        newItem.DeSpawn();
+        return innerContainer.All(x => x.def != thing.def);
     }
 
-    public override void ExposeData()
+    public void GetChildHolders(List<IThingHolder> outChildren)
     {
-        base.ExposeData();
-        Scribe_Collections.Look(ref innerContainerChapter, "innerContainerChapter", LookMode.Deep);
-        Scribe_Collections.Look(ref innerContainerPrimarch, "innerContainerPrimarch", LookMode.Deep);
+        ThingOwnerUtility.AppendThingHoldersFromThings(outChildren, GetDirectlyHeldThings());
     }
+
+    public ThingOwner GetDirectlyHeldThings() => innerContainer;
 }

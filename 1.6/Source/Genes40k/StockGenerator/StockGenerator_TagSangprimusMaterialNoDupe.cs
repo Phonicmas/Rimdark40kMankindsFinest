@@ -25,7 +25,7 @@ public class StockGenerator_TagSangprimusMaterialNoDupe : StockGenerator
         foreach (var map in maps)
         {
             var building = (Building_SangprimusPortum)map.listerBuildings.AllBuildingsColonistOfDef(Genes40kDefOf.BEWH_SangprimusPortum).First();
-            excludedMaterials.AddRange(building.SearchableContents.Select(material => material.def));
+            excludedMaterials.AddRange(building.GetDirectlyHeldThings().Select(material => material.def));
         }
         for (var i = 0; i < numThingDefsToUse; i++)
         {

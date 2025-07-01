@@ -8,7 +8,7 @@
     <workType>Hauling</workType>
     <verb>carry</verb>
     <gerund>carrying</gerund>
-    <priorityInType>10</priorityInType>
+    <priorityInType>15</priorityInType>
     <requiredCapacities>
       <li>Manipulation</li>
     </requiredCapacities>
@@ -22,7 +22,7 @@
     <workType>Hauling</workType>
     <verb>carry</verb>
     <gerund>carrying</gerund>
-    <priorityInType>9</priorityInType>
+    <priorityInType>3</priorityInType>
     <requiredCapacities>
       <li>Manipulation</li>
     </requiredCapacities>
@@ -36,7 +36,20 @@
     <workType>Hauling</workType>
     <verb>fill</verb>
     <gerund>filling</gerund>
-    <priorityInType>10</priorityInType>
+    <priorityInType>4</priorityInType>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>BEWH_CarryMaterialToSangprimus</defName>
+    <label>haul to sangprimus portum</label>
+    <giverClass>Genes40k.WorkGiver_CarryMaterialToSangprimus</giverClass>
+    <workType>Hauling</workType>
+    <verb>fill</verb>
+    <gerund>filling</gerund>
+    <priorityInType>20</priorityInType>
     <requiredCapacities>
       <li>Manipulation</li>
     </requiredCapacities>

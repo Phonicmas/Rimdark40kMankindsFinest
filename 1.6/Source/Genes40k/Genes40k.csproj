@@ -179,8 +179,6 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_NaturalBirthPerpetual.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_ReactToMelee.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_RubiconSurgeryChanceIncrease.cs" />
-    <Compile Include="HarmonyPatches\HarmonyPatch_SangprimusNoDuplicateAcceptedThing.cs" />
-    <Compile Include="HarmonyPatches\HarmonyPatch_SangprimusNoDuplicateAcceptedThingDef.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_SecondProgenoidGlandProgress.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_SerfGainTrait.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_SerfGetTrait1.cs" />
@@ -245,6 +243,7 @@
     <Compile Include="Workers\ThoughtWorkers\ThoughtWorker_ThunderWarrior.cs" />
     <Compile Include="Workers\ThoughtWorkers\ThoughtWorker_XXTwinDead.cs" />
     <Compile Include="Workers\WorkerClass_RubiconPrimaris.cs" />
+    <Compile Include="Workers\WorkGiver_CarryMaterialToSangprimus.cs" />
     <Compile Include="Workers\WorkGiver_DoBillPsychic.cs" />
     <Compile Include="Workers\WorkGiver_CarryPrimarchEmbryoToVat.cs" />
     <Compile Include="Workers\WorkGiver_FillPrimarchVatWithNutrition.cs" />
