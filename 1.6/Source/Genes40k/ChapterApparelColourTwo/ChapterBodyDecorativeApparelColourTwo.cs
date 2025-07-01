@@ -56,6 +56,7 @@ public class ChapterBodyDecorativeApparelColourTwo : BodyDecorativeApparelColour
             {
                 rightShoulder ??= new ShoulderIconSettings();
                 rightShoulder.ShoulderIcon = value;
+                rightShoulder.Color = RightShoulderIcon?.defaultColour ?? Color.white;
             }
             
             Notify_ColorChanged();
@@ -63,7 +64,7 @@ public class ChapterBodyDecorativeApparelColourTwo : BodyDecorativeApparelColour
     }
     public Color RightShoulderIconColour
     {
-        get => rightShoulder?.Color ?? Color.white;
+        get => rightShoulder?.Color ?? RightShoulderIcon?.defaultColour ?? Color.white;
         set
         {
             rightShoulder ??= new ShoulderIconSettings();
@@ -88,12 +89,13 @@ public class ChapterBodyDecorativeApparelColourTwo : BodyDecorativeApparelColour
             {
                 leftShoulder ??= new ShoulderIconSettings();
                 leftShoulder.ShoulderIcon = value;
+                leftShoulder.Color = LeftShoulderIcon?.defaultColour ?? Color.white;
             }
             
             Notify_ColorChanged();
         }
     }
-    public Color LeftShoulderIconColour => leftShoulder?.Color ?? Color.white;
+    public Color LeftShoulderIconColour => leftShoulder?.Color ?? LeftShoulderIcon?.defaultColour ?? Color.white;
     
 
     private bool flipShoulderIcons = false;
