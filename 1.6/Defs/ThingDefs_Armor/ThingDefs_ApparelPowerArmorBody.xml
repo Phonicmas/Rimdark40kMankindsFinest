@@ -238,7 +238,7 @@
     <ThingDef ParentName="BEWH_PowerArmorBase_ChapterColour">
         <defName>BEWH_MkXPowerArmorChaplain</defName>
         <label>mk X Chaplain Power Armor</label>
-        <description>This MK X Power Armor is a specialized variant of the Tacticus pattern, worn by Primaris Chaplains. Built upon the same durable and mobile frame, it is adorned with grim iconography to embody the Emperor's judgment and inspire unwavering zeal in those who follow.</description>
+        <description>This MK X Power Armor is a specialized variant of the Tacticus pattern, worn by Primaris Chaplains. Built upon the same durable and mobile frame, it is adorned with grim iconography to embody the Emperor's judgment and inspire unwavering zeal in those who follow.\n\nIncreases the terror of nearby prisoners.</description>
         <recipeMaker>
             <researchPrerequisite>BEWH_AstartesPowerArmorMkX</researchPrerequisite>
         </recipeMaker>
@@ -412,7 +412,7 @@
     <ThingDef ParentName="BEWH_PowerArmorBase">
         <defName>BEWH_MkIPowerArmor</defName>
         <label>mk I Power Armor</label>
-        <description>...</description>
+        <description>The Mk I "Thunder" Power Armor is a prototype battle plate worn by the Emperor's Thunder Warriors during the Unification Wars. Built for brute strength rather than finesse, it features thick plasteel plating, basic servo-motors, and minimal environmental sealing.</description>
         <thingClass>Genes40k.ChapterBodyDecorativeApparelColourTwo</thingClass>
         <recipeMaker>
             <researchPrerequisite>BEWH_AstartesPowerArmorMkX</researchPrerequisite>
@@ -421,24 +421,25 @@
             <texPath>Things/Armor/Imperium/PowerArmor/MkIPowerArmor/BEWH_MkIPowerArmor</texPath>
         </graphicData>
         <statBases>
-            <WorkToMake>90000</WorkToMake>
-            <MarketValue>10000</MarketValue>
+            <WorkToMake>45000</WorkToMake>
+            <MarketValue>5000</MarketValue>
 
-            <ArmorRating_Sharp>1.79</ArmorRating_Sharp>
-            <ArmorRating_Blunt>0.74</ArmorRating_Blunt>
-            <ArmorRating_Heat>1.2</ArmorRating_Heat>
+            <ArmorRating_Sharp>1.56</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.65</ArmorRating_Blunt>
+            <ArmorRating_Heat>1</ArmorRating_Heat>
 
-            <Insulation_Cold>40</Insulation_Cold>
-            <Insulation_Heat>30</Insulation_Heat>
+            <Insulation_Cold>33</Insulation_Cold>
+            <Insulation_Heat>18</Insulation_Heat>
 
         </statBases>
         <equippedStatOffsets>
             <TerrorSource MayRequire="Ludeon.RimWorld.Ideology">17</TerrorSource>
         </equippedStatOffsets>
         <costList>
-            <ComponentSpacer>8</ComponentSpacer>
-            <Plasteel>175</Plasteel>
-            <Uranium>60</Uranium>
+            <ComponentIndustrial>20</ComponentIndustrial>
+            <Steel>200</Steel>
+            <Plasteel>100</Plasteel>
+            <Uranium>25</Uranium>
         </costList>
         <apparel>
             <wornGraphicPath>Things/Armor/Imperium/PowerArmor/MkIPowerArmor/BEWH_MkIPowerArmor</wornGraphicPath>

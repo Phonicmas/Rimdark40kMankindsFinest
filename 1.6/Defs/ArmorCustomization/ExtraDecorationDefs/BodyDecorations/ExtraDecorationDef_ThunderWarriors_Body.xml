@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+   <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_TW_FurShoulders</defName>
+        <label>Fur attachments</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_Color_Shoulder1_icon</iconPath> <!-- temp -->
+        <drawnTextureIconPath>Things/Decorations/Armor/MkI/BEWH_Deco_MkIFurSoulders</drawnTextureIconPath>
+        <drawSize>(1, 0.5)</drawSize>
+        <sortOrder>0.3</sortOrder>
+        <defaultShowRotation>
+            <li>North</li>
+            <li>South</li>
+            <li>West</li>
+            <li>East</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkIPowerArmor</li>
+        </appliesTo>
+        <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>90</layer>
+                <offset>(0, 0, 0.123)</offset>
+            </dataNorth>
+            <dataSouth>
+                <layer>60</layer>
+                <offset>(0, 0, 0.123)</offset>
+            </dataSouth>
+            <dataEast>
+                <layer>75</layer>
+            </dataEast>
+            <dataWest>
+                <layer>75</layer>
+            </dataWest>
+        </drawData>
+        <shaderType>Cutout</shaderType>
+        <colourable>true</colourable>
+        <availablePresets>
+            <li>BEWH_DecoPaletteFurBrown</li>
+            <li>BEWH_DecoPaletteLeatherGrey</li>
+        </availablePresets>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_TW_AmmoBelt</defName>
+        <label>Ammo belt</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_BulwarkUpperTabard_icon</iconPath> <!-- temp -->
+        <drawnTextureIconPath>Things/Decorations/Armor/MkI/BEWH_Deco_MkIBelt</drawnTextureIconPath>
+        <drawSize>(0.5, 0.5)</drawSize>
+        <sortOrder>0.4</sortOrder>
+        <defaultShowRotation>
+            <li>South</li>
+            <li>North</li>
+            <li>West</li>
+            <li>East</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkIPowerArmor</li>
+        </appliesTo>
+        <drawData>
+            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
+            <dataNorth>
+                <layer>88.5</layer>
+                <offset>(0, 0, -0.49)</offset>
+            </dataNorth>
+            <dataSouth>
+                <layer>65</layer>
+                <offset>(0, 0, -0.5)</offset>
+            </dataSouth>
+            <dataEast>
+                <layer>64</layer>
+                <offset>(-0.19, 0, -0.44)</offset>
+            </dataEast>
+            <dataWest>
+                <layer>64</layer>
+                <offset>(0.19, 0, -0.44)</offset>
+            </dataWest>
+        </drawData>
+        <shaderType>Cutout</shaderType>
+        <availablePresets/>
+        <colourable>true</colourable>
+        <useArmorColourAsDefault>true</useArmorColourAsDefault>
+        <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_TW_Skirt</defName>
+        <label>Leather strips</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_BulwarkUpperTabard_icon</iconPath> <!-- temp -->
+        <drawnTextureIconPath>Things/Decorations/Armor/MkI/BEWH_Deco_MkISkirt</drawnTextureIconPath>
+        <drawSize>(0.25, 0.25)</drawSize>
+        <sortOrder>0.5</sortOrder>
+        <defaultShowRotation>
+            <li>South</li>
+            <!-- <li>North</li> -->
+            <li>West</li>
+            <li>East</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkIPowerArmor</li>
+        </appliesTo>
+        <drawData>
+            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+            <dataNorth>
+                <layer>88.5</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>65</layer>
+                <offset>(0, 0, -0.61)</offset>
+            </dataSouth>
+            <dataEast>
+                <layer>64</layer>
+                <offset>(0.01, 0, -0.61)</offset>
+            </dataEast>
+            <dataWest>
+                <layer>64</layer>
+            </dataWest>
+        </drawData>
+        <shaderType>CutoutComplex</shaderType>
+        <colourable>true</colourable>
+        <useMask>true</useMask>
+        <useArmorColourAsDefault>true</useArmorColourAsDefault>
+        <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
+    </Core40k.ExtraDecorationDef>
+
+</Defs>

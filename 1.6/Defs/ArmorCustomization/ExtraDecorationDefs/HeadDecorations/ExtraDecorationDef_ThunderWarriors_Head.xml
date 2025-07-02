@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_TW_Plume1</defName>
+        <label>Plume 1</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_Inquis_icon</iconPath> <!-- temp -->
+        <drawnTextureIconPath>Things/Decorations/Headgear/MkI/BEWH_Deco_MkIHelmetTail</drawnTextureIconPath>
+        <drawSize>(0.5, 0.5)</drawSize>
+        <sortOrder>0</sortOrder>
+        <isHelmetDecoration>true</isHelmetDecoration>
+        <defaultShowRotation>
+            <li>West</li>
+            <li>South</li>
+            <li>North</li>
+            <li>East</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkIPowerArmorHelmet</li>
+        </appliesTo>
+        <drawData>
+            <dataSouth>
+                <layer>65</layer>
+                <offset>(-0.15, 0, 0.29)</offset>
+            </dataSouth>
+            <dataNorth>
+                <layer>88</layer>
+                <offset>(0.15, 0, 0.29)</offset>
+            </dataNorth>
+            <dataEast>
+                <layer>65</layer>
+                <offset>(-0.165, 0, 0.3)</offset>
+            </dataEast>
+            <dataWest>
+                <layer>80</layer>
+                <offset>(0.165, 0, 0.3)</offset>
+            </dataWest>
+        </drawData>
+        <colourable>true</colourable>
+        <availablePresets>
+            <li>BEWH_DecoPaletteGlassRed</li>
+        </availablePresets>
+        <shaderType>Cutout</shaderType>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_TW_Goggles</defName>
+        <label>Balistic goggles</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_Inquis_icon</iconPath> <!-- temp -->
+        <drawnTextureIconPath>Things/Decorations/Headgear/MkI/BEWH_Deco_MkIGlasses</drawnTextureIconPath>
+        <drawSize>(0.5, 0.5)</drawSize>
+        <sortOrder>0</sortOrder>
+        <isHelmetDecoration>true</isHelmetDecoration>
+        <defaultShowRotation>
+            <li>West</li>
+            <li>South</li>
+            <!-- <li>North</li> -->
+            <li>East</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkIPowerArmorHelmet</li>
+        </appliesTo>
+        <drawData>
+            <dataSouth>
+                <layer>88</layer>
+            </dataSouth>
+            <dataNorth>
+                <layer>88</layer>
+            </dataNorth>
+            <dataEast>
+                <layer>65</layer>
+            </dataEast>
+            <dataWest>
+                <layer>80</layer>
+            </dataWest>
+        </drawData>
+        <colourable>true</colourable>
+        <availablePresets>
+            <li>BEWH_DecoPaletteGlassGreen</li>
+            <li>BEWH_DecoPaletteGlassBlue</li>
+            <li>BEWH_DecoPaletteGlassRed</li>
+        </availablePresets>
+        <shaderType>Cutout</shaderType>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_TW_GasMask</defName>
+        <label>Gas mask</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_Inquis_icon</iconPath> <!-- temp -->
+        <drawnTextureIconPath>Things/Decorations/Headgear/MkI/BEWH_Deco_MkIMask</drawnTextureIconPath>
+        <drawSize>(0.5, 0.5)</drawSize>
+        <sortOrder>0</sortOrder>
+        <isHelmetDecoration>true</isHelmetDecoration>
+        <defaultShowRotation>
+            <li>West</li>
+            <li>South</li>
+            <!-- <li>North</li> -->
+            <li>East</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkIPowerArmorHelmet</li>
+        </appliesTo>
+        <drawData>
+            <dataSouth>
+                <layer>88</layer>
+            </dataSouth>
+            <!-- <dataNorth>
+                <layer>88</layer>
+                <offset>(0, 0, 0)</offset>
+            </dataNorth> -->
+            <dataEast>
+                <layer>55</layer>
+            </dataEast>
+            <dataWest>
+                <layer>55</layer>
+            </dataWest>
+        </drawData>
+        <shaderType>Cutout</shaderType>
+    </Core40k.ExtraDecorationDef>
+
+</Defs>
