@@ -230,7 +230,7 @@
         <castTime>100</castTime>
         <range>40.9</range>
         <radius>15.9</radius>
-        <cooldownTime>180000</cooldownTime>
+        <cooldownTime>240000</cooldownTime>
         <targetMode>Location</targetMode>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_DropPod">
@@ -253,7 +253,7 @@
         <castTime>100</castTime>
         <range>40.9</range>
         <radius>15.9</radius>
-        <cooldownTime>180000</cooldownTime>
+        <cooldownTime>240000</cooldownTime>
         <targetMode>Location</targetMode>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_DropPod">
@@ -276,7 +276,7 @@
         <castTime>100</castTime>
         <range>40.9</range>
         <radius>15.9</radius>
-        <cooldownTime>180000</cooldownTime>
+        <cooldownTime>240000</cooldownTime>
         <targetMode>Location</targetMode>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_DropPod">
