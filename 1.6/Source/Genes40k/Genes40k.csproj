@@ -155,6 +155,7 @@
     <Compile Include="DefModExtensions\DefModExtension_IgnoreMovespeedDecrease.cs" />
     <Compile Include="DefModExtensions\DefModExtension_IncreasedJoyFromArt.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneseedVialRecipe.cs" />
+    <Compile Include="DefModExtensions\DefModExtension_LockedByResearch.cs" />
     <Compile Include="DefModExtensions\DefModExtension_PerpetualGene.cs" />
     <Compile Include="DefModExtensions\DefModExtension_PrimarchVatExtras.cs" />
     <Compile Include="DefModExtensions\DefModExtension_PrimarchVatTexture.cs" />
@@ -173,6 +174,7 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_HideJumpPack.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_ImplantGeneseedCorrectIngredient.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_LivingSaintDestroyRemoveCount.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_LockedByResearch.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_MoreArtJoy.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_PerpetualCorpseNoDestroy.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_PerpetualNoDestroy.cs" />

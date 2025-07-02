@@ -353,7 +353,6 @@
             </li>
         </renderNodeProperties>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_IgnoreMovespeedDecrease" />
             <li Class="VEF.Genes.GeneExtension">
                 <noSkillLoss>Shooting</noSkillLoss>
             </li>

@@ -2,7 +2,7 @@
 <Defs>
 
     <!-- Genetic Matrix Base -->
-    <RecipeDef Name="BEWH_RecipeGeneticMatrixBase" Abstract="True">
+    <RecipeDef Name="BEWH_RecipeGeneticMatrixBaseRefined" Abstract="True">
         <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
         <effectWorking>Cook</effectWorking>
         <soundWorking>Recipe_Machining</soundWorking>
@@ -10,25 +10,32 @@
         <recipeUsers>
             <li>BEWH_GeneManipulationTable</li>
         </recipeUsers>
+        <researchPrerequisites>
+            <li>BEWH_GeneseedRefinement</li>
+        </researchPrerequisites>
         <fixedIngredientFilter>
             <thingDefs>
                 <li>MedicineUltratech</li>
-                <li>Meat_Human</li>
                 <li>Neutroamine</li>
             </thingDefs>
+            <categories>
+                <li>MeatRaw</li>
+            </categories>
         </fixedIngredientFilter>
         <workSkill>Crafting</workSkill>
         <displayPriority>0</displayPriority>
     </RecipeDef>
 
     <!-- Thunder Warrior -->
-    <RecipeDef ParentName="BEWH_RecipeGeneticMatrixBase">
-        <defName>BEWH_MakeThunderWarriorMatrix</defName>
+    <RecipeDef ParentName="BEWH_RecipeGeneticMatrixBaseRefined">
+        <defName>BEWH_MakeThunderWarriorMatrixRefined</defName>
         <label>make thunder warrior genetic matrix</label>
         <description>Make a Whunder Warrior genetic matrix.</description>
         <jobString>Making Thunder Warrior genetic matrix.</jobString>
         <workAmount>15000</workAmount>
-        <researchPrerequisite>BEWH_GeneseedCreation</researchPrerequisite>
+        <researchPrerequisites>
+            <li>BEWH_GeneseedCreation</li>
+        </researchPrerequisites>
         <ingredients>
             <li>
                 <filter>
@@ -40,9 +47,9 @@
             </li>
             <li>
                 <filter>
-                    <thingDefs>
-                        <li>Meat_Human</li>
-                    </thingDefs>
+                    <categories>
+                        <li>MeatRaw</li>
+                    </categories>
                 </filter>
                 <count>80</count>
             </li>
@@ -63,23 +70,18 @@
         <products>
             <BEWH_GeneseedMatrixThunderWarrior>1</BEWH_GeneseedMatrixThunderWarrior>
         </products>
-        <modExtensions>
-            <li Class="Genes40k.DefModExtension_LockedByResearch">
-                <researchPrerequisites>
-                    <li>BEWH_GeneseedRefinement</li>
-                </researchPrerequisites>
-            </li>
-        </modExtensions>
     </RecipeDef>
 
     <!-- Firstborn -->
-    <RecipeDef ParentName="BEWH_RecipeGeneticMatrixBase">
-        <defName>BEWH_MakeFirstbornMatrix</defName>
+    <RecipeDef ParentName="BEWH_RecipeGeneticMatrixBaseRefined">
+        <defName>BEWH_MakeFirstbornMatrixRefined</defName>
         <label>make Firstborn genetic matrix</label>
         <description>Make a Firstborn genetic matrix.</description>
         <jobString>Making Firstborn genetic matrix.</jobString>
         <workAmount>25000</workAmount>
-        <researchPrerequisite>BEWH_GeneseedPurification</researchPrerequisite>
+        <researchPrerequisites>
+            <li>BEWH_GeneseedPurification</li>
+        </researchPrerequisites>
         <fixedIngredientFilter>
             <thingDefs>
                 <li>Luciferium</li>
@@ -104,9 +106,9 @@
             </li>
             <li>
                 <filter>
-                    <thingDefs>
-                        <li>Meat_Human</li>
-                    </thingDefs>
+                    <categories>
+                        <li>MeatRaw</li>
+                    </categories>
                 </filter>
                 <count>75</count>
             </li>
@@ -127,23 +129,18 @@
         <products>
             <BEWH_GeneseedMatrixFirstborn>1</BEWH_GeneseedMatrixFirstborn>
         </products>
-        <modExtensions>
-            <li Class="Genes40k.DefModExtension_LockedByResearch">
-                <researchPrerequisites>
-                    <li>BEWH_GeneseedRefinement</li>
-                </researchPrerequisites>
-            </li>
-        </modExtensions>
     </RecipeDef>
 
     <!-- Primaris -->
-    <RecipeDef ParentName="BEWH_RecipeGeneticMatrixBase">
-        <defName>BEWH_MakePrimarisMatrix</defName>
+    <RecipeDef ParentName="BEWH_RecipeGeneticMatrixBaseRefined">
+        <defName>BEWH_MakePrimarisMatrixRefined</defName>
         <label>make Primaris genetic matrix</label>
         <description>Make a Primaris genetic matrix.</description>
         <jobString>Making Primaris genetic matrix.</jobString>
         <workAmount>30000</workAmount>
-        <researchPrerequisite>BEWH_GeneseedPerfection</researchPrerequisite>
+        <researchPrerequisites>
+            <li>BEWH_GeneseedPerfection</li>
+        </researchPrerequisites>
         <fixedIngredientFilter>
             <thingDefs>
                 <li>Luciferium</li>
@@ -168,9 +165,9 @@
             </li>
             <li>
                 <filter>
-                    <thingDefs>
-                        <li>Meat_Human</li>
-                    </thingDefs>
+                    <categories>
+                        <li>MeatRaw</li>
+                    </categories>
                 </filter>
                 <count>150</count>
             </li>
@@ -191,23 +188,18 @@
         <products>
             <BEWH_GeneseedMatrixPrimaris>1</BEWH_GeneseedMatrixPrimaris>
         </products>
-        <modExtensions>
-            <li Class="Genes40k.DefModExtension_LockedByResearch">
-                <researchPrerequisites>
-                    <li>BEWH_GeneseedRefinement</li>
-                </researchPrerequisites>
-            </li>
-        </modExtensions>
     </RecipeDef>
 
     <!-- Custodes -->
-    <RecipeDef ParentName="BEWH_RecipeGeneticMatrixBase">
-        <defName>BEWH_MakeCustodesMatrix</defName>
+    <RecipeDef ParentName="BEWH_RecipeGeneticMatrixBaseRefined">
+        <defName>BEWH_MakeCustodesMatrixRefined</defName>
         <label>make Custodes genetic matrix</label>
         <description>Make a Custodes genetic matrix.</description>
         <jobString>Making Custodes genetic matrix.</jobString>
         <workAmount>40000</workAmount>
-        <researchPrerequisite>BEWH_CustodesCreation</researchPrerequisite>
+        <researchPrerequisites>
+            <li>BEWH_CustodesCreation</li>
+        </researchPrerequisites>
         <fixedIngredientFilter>
             <thingDefs>
                 <li>Luciferium</li>
@@ -232,9 +224,9 @@
             </li>
             <li>
                 <filter>
-                    <thingDefs>
-                        <li>Meat_Human</li>
-                    </thingDefs>
+                    <categories>
+                        <li>MeatRaw</li>
+                    </categories>
                 </filter>
                 <count>200</count>
             </li>
@@ -259,22 +251,19 @@
             <li Class="Genes40k.DefModExtension_GeneMatrixRecipe">
                 <drainsUserWhenMaking>true</drainsUserWhenMaking>
             </li>
-            <li Class="Genes40k.DefModExtension_LockedByResearch">
-                <researchPrerequisites>
-                    <li>BEWH_GeneseedRefinement</li>
-                </researchPrerequisites>
-            </li>
         </modExtensions>
     </RecipeDef>
 
     <!-- Primarch -->
-    <RecipeDef ParentName="BEWH_RecipeGeneticMatrixBase">
-        <defName>BEWH_MakePrimarchMatrix</defName>
+    <RecipeDef ParentName="BEWH_RecipeGeneticMatrixBaseRefined">
+        <defName>BEWH_MakePrimarchMatrixRefined</defName>
         <label>make Primarch genetic matrix</label>
         <description>Make a Primarch genetic matrix.</description>
         <jobString>Making Primarch genetic matrix.</jobString>
         <workAmount>120000</workAmount>
-        <researchPrerequisite>BEWH_PrimarchProject</researchPrerequisite>
+        <researchPrerequisites>
+            <li>BEWH_PrimarchProject</li>
+        </researchPrerequisites>
         <fixedIngredientFilter>
             <thingDefs>
                 <li>Luciferium</li>
@@ -299,9 +288,9 @@
             </li>
             <li>
                 <filter>
-                    <thingDefs>
-                        <li>Meat_Human</li>
-                    </thingDefs>
+                    <categories>
+                        <li>MeatRaw</li>
+                    </categories>
                 </filter>
                 <count>1000</count>
             </li>
@@ -325,11 +314,6 @@
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneMatrixRecipe">
                 <drainsUserWhenMaking>true</drainsUserWhenMaking>
-            </li>
-            <li Class="Genes40k.DefModExtension_LockedByResearch">
-                <researchPrerequisites>
-                    <li>BEWH_GeneseedRefinement</li>
-                </researchPrerequisites>
             </li>
         </modExtensions>
     </RecipeDef>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <!--=== Gene-seed Research ===-->
   <!-- Gene-seed creation -->
   <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
     <defName>BEWH_GeneseedCreation</defName>
@@ -41,6 +40,19 @@
     <baseCost>6000</baseCost>
     <researchViewX>1</researchViewX>
     <researchViewY>1</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- Gene-seed Refinement-->
+  <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
+    <defName>BEWH_GeneseedRefinement</defName>
+    <label>Gene-seed refinement</label>
+    <description>Unlocks the ability to craft matrices with the use of any flesh, and not just human.</description>
+    <prerequisites>
+      <li>BEWH_GeneseedPurification</li>
+    </prerequisites>
+    <baseCost>8000</baseCost>
+    <researchViewX>1</researchViewX>
+    <researchViewY>2</researchViewY>
   </ResearchProjectDef>
 
   <!-- Gene-seed perfection -->
