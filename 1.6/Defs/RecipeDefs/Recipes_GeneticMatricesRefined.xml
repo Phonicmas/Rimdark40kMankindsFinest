@@ -11,7 +11,7 @@
             <li>BEWH_GeneManipulationTable</li>
         </recipeUsers>
         <researchPrerequisites>
-            <li>BEWH_GeneseedRefinement</li>
+            <li>BEWH_AdvancedProteinSubstitution</li>
         </researchPrerequisites>
         <fixedIngredientFilter>
             <thingDefs>

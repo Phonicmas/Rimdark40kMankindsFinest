@@ -42,10 +42,10 @@
     <researchViewY>1</researchViewY>
   </ResearchProjectDef>
 
-  <!-- Gene-seed Refinement-->
+  <!-- Advanced protein substitution -->
   <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
-    <defName>BEWH_GeneseedRefinement</defName>
-    <label>Gene-seed refinement</label>
+    <defName>BEWH_AdvancedProteinSubstitution</defName>
+    <label>Advanced protein substitution</label>
     <description>Unlocks the ability to craft matrices with the use of any flesh, and not just human.</description>
     <prerequisites>
       <li>BEWH_GeneseedPurification</li>

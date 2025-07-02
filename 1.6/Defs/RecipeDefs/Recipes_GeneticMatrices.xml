@@ -66,7 +66,7 @@
         <modExtensions>
             <li Class="Genes40k.DefModExtension_LockedByResearch">
                 <researchPrerequisites>
-                    <li>BEWH_GeneseedRefinement</li>
+                    <li>BEWH_AdvancedProteinSubstitution</li>
                 </researchPrerequisites>
             </li>
         </modExtensions>
@@ -130,7 +130,7 @@
         <modExtensions>
             <li Class="Genes40k.DefModExtension_LockedByResearch">
                 <researchPrerequisites>
-                    <li>BEWH_GeneseedRefinement</li>
+                    <li>BEWH_AdvancedProteinSubstitution</li>
                 </researchPrerequisites>
             </li>
         </modExtensions>
@@ -194,7 +194,7 @@
         <modExtensions>
             <li Class="Genes40k.DefModExtension_LockedByResearch">
                 <researchPrerequisites>
-                    <li>BEWH_GeneseedRefinement</li>
+                    <li>BEWH_AdvancedProteinSubstitution</li>
                 </researchPrerequisites>
             </li>
         </modExtensions>
@@ -261,7 +261,7 @@
             </li>
             <li Class="Genes40k.DefModExtension_LockedByResearch">
                 <researchPrerequisites>
-                    <li>BEWH_GeneseedRefinement</li>
+                    <li>BEWH_AdvancedProteinSubstitution</li>
                 </researchPrerequisites>
             </li>
         </modExtensions>
@@ -328,7 +328,7 @@
             </li>
             <li Class="Genes40k.DefModExtension_LockedByResearch">
                 <researchPrerequisites>
-                    <li>BEWH_GeneseedRefinement</li>
+                    <li>BEWH_AdvancedProteinSubstitution</li>
                 </researchPrerequisites>
             </li>
         </modExtensions>
