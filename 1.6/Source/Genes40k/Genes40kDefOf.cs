@@ -207,6 +207,7 @@ public static class Genes40kDefOf
         
     //BodyPartDef
     public static BodyPartDef Kidney;
+    
     static Genes40kDefOf()
     {
         DefOfHelper.EnsureInitializedInCtor(typeof(Genes40kDefOf));
