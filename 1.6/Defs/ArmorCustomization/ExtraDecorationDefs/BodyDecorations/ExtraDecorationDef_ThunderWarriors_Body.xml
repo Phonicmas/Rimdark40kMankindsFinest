@@ -5,7 +5,7 @@
         <defName>BEWH_Deco_TW_FurShoulders</defName>
         <label>Fur attachments</label>
         <description>...</description>
-        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_Color_Shoulder1_icon</iconPath> <!-- temp -->
+        <iconPath>UI/Decoration/Icons/ThunderWarriors/Armor/BEWH_Deco_MkIFurShoulders_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/MkI/BEWH_Deco_MkIFurSoulders</drawnTextureIconPath>
         <drawSize>(1, 0.5)</drawSize>
         <sortOrder>0.3</sortOrder>
@@ -47,7 +47,7 @@
         <defName>BEWH_Deco_TW_AmmoBelt</defName>
         <label>Ammo belt</label>
         <description>...</description>
-        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_BulwarkUpperTabard_icon</iconPath> <!-- temp -->
+        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_MkIBelt_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/MkI/BEWH_Deco_MkIBelt</drawnTextureIconPath>
         <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>0.4</sortOrder>
@@ -61,7 +61,6 @@
             <li>BEWH_MkIPowerArmor</li>
         </appliesTo>
         <drawData>
-            <!-- <scaleOffsetByBodySize>true</scaleOffsetByBodySize> -->
             <dataNorth>
                 <layer>88.5</layer>
                 <offset>(0, 0, -0.49)</offset>
@@ -90,7 +89,7 @@
         <defName>BEWH_Deco_TW_Skirt</defName>
         <label>Leather strips</label>
         <description>...</description>
-        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_BulwarkUpperTabard_icon</iconPath> <!-- temp -->
+        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_MkISkirt_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/MkI/BEWH_Deco_MkISkirt</drawnTextureIconPath>
         <drawSize>(0.25, 0.25)</drawSize>
         <sortOrder>0.5</sortOrder>

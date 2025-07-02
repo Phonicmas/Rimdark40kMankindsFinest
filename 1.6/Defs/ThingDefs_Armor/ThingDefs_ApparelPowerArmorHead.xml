@@ -150,7 +150,7 @@
             <researchPrerequisite>BEWH_AstartesPowerArmorMkX</researchPrerequisite> <!-- temp research -->
         </recipeMaker>
         <graphicData>
-            <texPath>Things/Headgear/Imperium/PowerArmorThunder/BEWH_MkIHelmet_south</texPath>
+            <texPath>Things/Headgear/Imperium/PowerArmorThunder/BEWH_MkIHelmet</texPath>
         </graphicData>
         <statBases>
             <WorkToMake>35000</WorkToMake>

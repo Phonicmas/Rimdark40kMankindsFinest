@@ -5,7 +5,7 @@
         <defName>BEWH_Deco_TW_Plume1</defName>
         <label>Plume 1</label>
         <description>...</description>
-        <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_Inquis_icon</iconPath> <!-- temp -->
+        <iconPath>UI/Decoration/Icons/ThunderWarriors/Headgear/BEWH_Deco_MkIHelmetTail_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Headgear/MkI/BEWH_Deco_MkIHelmetTail</drawnTextureIconPath>
         <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>0</sortOrder>
@@ -46,9 +46,9 @@
 
     <Core40k.ExtraDecorationDef>
         <defName>BEWH_Deco_TW_Goggles</defName>
-        <label>Balistic goggles</label>
+        <label>Ballistic goggles</label>
         <description>...</description>
-        <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_Inquis_icon</iconPath> <!-- temp -->
+        <iconPath>UI/Decoration/Icons/ThunderWarriors/Headgear/BEWH_Deco_MkIGlasses_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Headgear/MkI/BEWH_Deco_MkIGlasses</drawnTextureIconPath>
         <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>0</sortOrder>
@@ -89,7 +89,7 @@
         <defName>BEWH_Deco_TW_GasMask</defName>
         <label>Gas mask</label>
         <description>...</description>
-        <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_Inquis_icon</iconPath> <!-- temp -->
+        <iconPath>UI/Decoration/Icons/ThunderWarriors/Headgear/BEWH_Deco_MkIMask_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Headgear/MkI/BEWH_Deco_MkIMask</drawnTextureIconPath>
         <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>0</sortOrder>
