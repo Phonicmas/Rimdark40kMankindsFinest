@@ -70,21 +70,19 @@
         <colour>(162, 54, 39)</colour>
     </Core40k.DecorationColourPresetDef>
 
-<!-- Saint's Light -->
+<!-- Living Saint -->
     <Core40k.DecorationColourPresetDef>
         <defName>BEWH_DecoPaletteSaintLight</defName>
         <label>Saint's Light</label>
         <colour>(245, 245, 210)</colour>
     </Core40k.DecorationColourPresetDef>
 
-<!-- Saint's Rose -->
     <Core40k.DecorationColourPresetDef>
         <defName>BEWH_DecoPaletteSaintRose</defName>
         <label>Rose</label>
         <colour>(126, 51, 60)</colour>
     </Core40k.DecorationColourPresetDef>
 
-<!-- Saint's Vengeance -->
     <Core40k.DecorationColourPresetDef>
         <defName>BEWH_DecoPaletteSaintVengeance</defName>
         <label>Vengeance</label>
@@ -126,5 +124,30 @@
         <defName>BEWH_DecoPaletteLenseGlowWhite</defName>
         <label>White Glow</label>
         <colour>(191, 191, 191)</colour>
+    </Core40k.DecorationColourPresetDef>
+
+    <!-- Thunder Warriors -->
+    <Core40k.DecorationColourPresetDef>
+        <defName>BEWH_DecoPaletteGlassGreen</defName>
+        <label>Green</label>
+        <colour>(129, 205, 63)</colour>
+    </Core40k.DecorationColourPresetDef>
+
+    <Core40k.DecorationColourPresetDef>
+        <defName>BEWH_DecoPaletteGlassBlue</defName>
+        <label>Blue</label>
+        <colour>(13, 178, 255)</colour>
+    </Core40k.DecorationColourPresetDef>
+
+    <Core40k.DecorationColourPresetDef>
+        <defName>BEWH_DecoPaletteGlassRed</defName>
+        <label>Red</label>
+        <colour>(178, 0, 0)</colour>
+    </Core40k.DecorationColourPresetDef>
+
+    <Core40k.DecorationColourPresetDef>
+        <defName>BEWH_DecoPaletteFurBrown</defName>
+        <label>Brown</label>
+        <colour>(81, 64, 50)</colour>
     </Core40k.DecorationColourPresetDef>
 </Defs>
