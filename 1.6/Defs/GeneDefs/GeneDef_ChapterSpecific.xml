@@ -615,6 +615,7 @@
         </passionMod>
         <statOffsets>
             <ComfyTemperatureMax>30</ComfyTemperatureMax>
+            <VEF_CosmeticBodySize_Multiplier>0.05</VEF_CosmeticBodySize_Multiplier>
         </statOffsets>
         <statFactors>
             <Flammability>0.5</Flammability>
@@ -654,7 +655,7 @@
         <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXIXRavenGuard</iconPath>
         <displayOrderInCategory>154</displayOrderInCategory>
         <statOffsets>
-            <HuntingStealth>0.3</HuntingStealth>
+            <HuntingStealth>0.4</HuntingStealth>
         </statOffsets>
         <skinColorOverride>(240, 240, 240)</skinColorOverride>
         <hairColorOverride>(20, 20, 20)</hairColorOverride>
