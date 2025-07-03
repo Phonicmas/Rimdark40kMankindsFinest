@@ -8,6 +8,7 @@ using Verse.Sound;
 
 namespace Genes40k;
 
+[StaticConstructorOnStartup]
 public class Building_PrimarchGrowthVat : Building, IStoreSettingsParent, IThingHolder
 {
     private static readonly Texture2D CancelIcon = ContentFinder<Texture2D>.Get("UI/Designators/Cancel");
