@@ -11,7 +11,7 @@
         <description>A standard-issue battle helm of the Adeptus Astartes, offering durable ceramite protection and a reinforced grille design. It provides reliable performance and is well-suited for prolonged combat operations.</description>
         <thingClass>Genes40k.ChapterHeadDecorativeApparelColourTwo</thingClass>
         <recipeMaker>
-            <researchPrerequisite>BEWH_AstartesPowerArmorMkVII</researchPrerequisite>
+            <researchPrerequisite>BEWH_PowerArmorMkVII</researchPrerequisite>
         </recipeMaker>
         <graphicData>
             <texPath>Things/Headgear/Imperium/PowerArmor/BEWH_MkVIIHelmet</texPath>
@@ -57,7 +57,7 @@
         <description>A standard battle helm worn by Primaris Space Marines, designed for increased protection and clarity. Its refined optics and sealed construction support long deployments in hostile environments.</description>
         <thingClass>Genes40k.ChapterHeadDecorativeApparelColourTwo</thingClass>
         <recipeMaker>
-            <researchPrerequisite>BEWH_AstartesPowerArmorMkX</researchPrerequisite>
+            <researchPrerequisite>BEWH_PowerArmorMkX</researchPrerequisite>
         </recipeMaker>
         <graphicData>
             <texPath>Things/Headgear/Imperium/PowerArmorPrimaris/BEWH_MkXHelmet</texPath>
@@ -102,7 +102,7 @@
         <description>Mk X helmet modified for Chaplains, adorned with skull iconography and grim visages to inspire loyalty and fear in equal measure. \n\nIncreases the terror of nearby prisoners.</description>
         <thingClass>Genes40k.ChapterHeadDecorativeApparelColourTwo</thingClass>
         <recipeMaker>
-            <researchPrerequisite>BEWH_AstartesPowerArmorMkX</researchPrerequisite>
+            <researchPrerequisite>BEWH_PowerArmorMkX</researchPrerequisite>
         </recipeMaker>
         <graphicData>
             <texPath>Things/Headgear/Imperium/PowerArmorPrimarisChaplain/BEWH_MkXChaplainHelmet</texPath>
@@ -145,9 +145,9 @@
         <defName>BEWH_MkIPowerArmorHelmet</defName>
         <label>mk I Power Armor Helmet</label>
         <description>A brutal, early battle helm used by the Thunder Warriors during the Unification Wars, the Mk I offers heavy protection with crude optics and minimal environmental sealing. Built for raw durability over finesse, it reflects the uncompromising violence of its era.</description>
-        <thingClass>Genes40k.ChapterHeadDecorativeApparelColourTwo</thingClass>
+        <thingClass>Core40k.HeadDecorativeApparelColourTwo</thingClass>
         <recipeMaker>
-            <researchPrerequisite>BEWH_AstartesPowerArmorMkX</researchPrerequisite> <!-- temp research -->
+            <researchPrerequisite>BEWH_PowerArmorMkI</researchPrerequisite>            <!-- temp research -->
         </recipeMaker>
         <graphicData>
             <texPath>Things/Headgear/Imperium/PowerArmorThunder/BEWH_MkIHelmet</texPath>
@@ -182,6 +182,14 @@
                 <tabDefs>
                     <li>BEWH_ExtraDecoration</li>
                 </tabDefs>
+            </li>
+            <li Class="Core40k.DefModExtension_StandardDecorations">
+                <extraDecorations>
+                    <li>BEWH_Deco_TW_Plume1</li>
+                    <li>BEWH_Deco_TW_Goggles</li>
+                </extraDecorations>
+                <defaultPrimaryColor>(231,148,88)</defaultPrimaryColor>
+                <defaultSecondaryColor>(231,148,88)</defaultSecondaryColor>
             </li>
         </modExtensions>
     </ThingDef>

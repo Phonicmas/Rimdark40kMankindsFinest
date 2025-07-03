@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <!-- Genetic Matrix Base -->
+    <!-- Genetic Matrix Refined Base -->
     <RecipeDef Name="BEWH_RecipeGeneticMatrixBaseRefined" Abstract="True">
         <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
         <effectWorking>Cook</effectWorking>
@@ -10,9 +10,6 @@
         <recipeUsers>
             <li>BEWH_GeneManipulationTable</li>
         </recipeUsers>
-        <researchPrerequisites>
-            <li>BEWH_AdvancedProteinSubstitution</li>
-        </researchPrerequisites>
         <fixedIngredientFilter>
             <thingDefs>
                 <li>MedicineUltratech</li>
@@ -81,6 +78,7 @@
         <workAmount>25000</workAmount>
         <researchPrerequisites>
             <li>BEWH_GeneseedPurification</li>
+            <li>BEWH_AdvancedProteinSubstitution</li>
         </researchPrerequisites>
         <fixedIngredientFilter>
             <thingDefs>
@@ -140,6 +138,7 @@
         <workAmount>30000</workAmount>
         <researchPrerequisites>
             <li>BEWH_GeneseedPerfection</li>
+            <li>BEWH_AdvancedProteinSubstitution</li>
         </researchPrerequisites>
         <fixedIngredientFilter>
             <thingDefs>
@@ -199,6 +198,7 @@
         <workAmount>40000</workAmount>
         <researchPrerequisites>
             <li>BEWH_CustodesCreation</li>
+            <li>BEWH_AdvancedProteinSubstitution</li>
         </researchPrerequisites>
         <fixedIngredientFilter>
             <thingDefs>
@@ -263,6 +263,7 @@
         <workAmount>120000</workAmount>
         <researchPrerequisites>
             <li>BEWH_PrimarchProject</li>
+            <li>BEWH_AdvancedProteinSubstitution</li>
         </researchPrerequisites>
         <fixedIngredientFilter>
             <thingDefs>

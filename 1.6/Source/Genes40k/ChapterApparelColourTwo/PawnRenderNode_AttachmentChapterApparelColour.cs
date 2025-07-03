@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Core40k;
 using RimWorld;
 using Verse;
 
@@ -12,7 +13,7 @@ public class PawnRenderNode_AttachmentChapterApparelColour : PawnRenderNode_Appa
 
     public override Graphic GraphicFor(Pawn pawn)
     {
-        var apparelColourTwo = (ChapterBodyDecorativeApparelColourTwo)apparel;
+        var apparelColourTwo = (BodyDecorativeApparelColourTwo)apparel;
 
         return GraphicDatabase.Get<Graphic_Multi>(Props.texPath, ShaderFor(pawn), Props.drawSize, apparelColourTwo.DrawColor, apparelColourTwo.DrawColorTwo);
     }

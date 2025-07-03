@@ -28,7 +28,9 @@
         <description>Make a Whunder Warrior genetic matrix.</description>
         <jobString>Making Thunder Warrior genetic matrix.</jobString>
         <workAmount>15000</workAmount>
-        <researchPrerequisite>BEWH_GeneseedCreation</researchPrerequisite>
+        <researchPrerequisites>
+            <li>BEWH_GeneseedCreation</li>
+        </researchPrerequisites>
         <ingredients>
             <li>
                 <filter>
@@ -79,7 +81,9 @@
         <description>Make a Firstborn genetic matrix.</description>
         <jobString>Making Firstborn genetic matrix.</jobString>
         <workAmount>25000</workAmount>
-        <researchPrerequisite>BEWH_GeneseedPurification</researchPrerequisite>
+        <researchPrerequisites>
+            <li>BEWH_GeneseedPurification</li>
+        </researchPrerequisites>
         <fixedIngredientFilter>
             <thingDefs>
                 <li>Luciferium</li>
@@ -143,7 +147,9 @@
         <description>Make a Primaris genetic matrix.</description>
         <jobString>Making Primaris genetic matrix.</jobString>
         <workAmount>30000</workAmount>
-        <researchPrerequisite>BEWH_GeneseedPerfection</researchPrerequisite>
+        <researchPrerequisites>
+            <li>BEWH_GeneseedPerfection</li>
+        </researchPrerequisites>
         <fixedIngredientFilter>
             <thingDefs>
                 <li>Luciferium</li>
@@ -207,7 +213,9 @@
         <description>Make a Custodes genetic matrix.</description>
         <jobString>Making Custodes genetic matrix.</jobString>
         <workAmount>40000</workAmount>
-        <researchPrerequisite>BEWH_CustodesCreation</researchPrerequisite>
+        <researchPrerequisites>
+            <li>BEWH_CustodesCreation</li>
+        </researchPrerequisites>
         <fixedIngredientFilter>
             <thingDefs>
                 <li>Luciferium</li>
@@ -274,7 +282,9 @@
         <description>Make a Primarch genetic matrix.</description>
         <jobString>Making Primarch genetic matrix.</jobString>
         <workAmount>120000</workAmount>
-        <researchPrerequisite>BEWH_PrimarchProject</researchPrerequisite>
+        <researchPrerequisites>
+            <li>BEWH_PrimarchProject</li>
+        </researchPrerequisites>
         <fixedIngredientFilter>
             <thingDefs>
                 <li>Luciferium</li>

@@ -60,7 +60,7 @@
         <label>mk VII Power Armor</label>
         <description>The MK VII "Aquila" Power Armor is an advanced battle plate worn by the Adeptus Astartes. It features dense ceramite plating, reinforced servo-musculature, and the iconic Aquila chest plate. It provides excellent protection against ballistic and energy weapons, making it ideal for prolonged engagements in hostile environments.</description>
         <recipeMaker>
-            <researchPrerequisite>BEWH_AstartesPowerArmorMkVII</researchPrerequisite>
+            <researchPrerequisite>BEWH_PowerArmorMkVII</researchPrerequisite>
         </recipeMaker>
         <graphicData>
             <texPath>Things/Armor/Imperium/PowerArmor/MkVIIPowerArmor/BEWH_MkVIIPowerArmor</texPath>
@@ -138,6 +138,9 @@
                     <li>BEWH_ExtraDecoration</li>
                 </tabDefs>
             </li>
+            <li Class="Core40k.DefModExtension_ForcesBodyType">
+                <forcedBodyType>Hulk</forcedBodyType>
+            </li>
             <li Class="Genes40k.DefModExtension_HideJumpPack">
                 <changeBackpackVisual>true</changeBackpackVisual>
             </li>
@@ -150,7 +153,7 @@
         <label>mk X Power Armor</label>
         <description>The MK X "Tacticus" Power Armor is a modernized battle plate worn by Primaris Space Marines. Combining the durability of earlier marks with increased mobility, it features advanced ceramite-composite plating and enhanced servo systems. Its modular design allows for field adaptability across diverse combat roles, offering superior protection and efficiency in extended operations.</description>
         <recipeMaker>
-            <researchPrerequisite>BEWH_AstartesPowerArmorMkX</researchPrerequisite>
+            <researchPrerequisite>BEWH_PowerArmorMkX</researchPrerequisite>
         </recipeMaker>
         <graphicData>
             <texPath>Things/Armor/Imperium/PowerArmor/MkXPowerArmor/BEWH_MkXPowerArmor</texPath>
@@ -228,6 +231,9 @@
                     <li>BEWH_ExtraDecoration</li>
                 </tabDefs>
             </li>
+            <li Class="Core40k.DefModExtension_ForcesBodyType">
+                <forcedBodyType>Hulk</forcedBodyType>
+            </li>
             <li Class="Genes40k.DefModExtension_HideJumpPack">
                 <changeBackpackVisual>true</changeBackpackVisual>
             </li>
@@ -240,7 +246,7 @@
         <label>mk X Chaplain Power Armor</label>
         <description>This MK X Power Armor is a specialized variant of the Tacticus pattern, worn by Primaris Chaplains. Built upon the same durable and mobile frame, it is adorned with grim iconography to embody the Emperor's judgment and inspire unwavering zeal in those who follow.\n\nIncreases the terror of nearby prisoners.</description>
         <recipeMaker>
-            <researchPrerequisite>BEWH_AstartesPowerArmorMkX</researchPrerequisite>
+            <researchPrerequisite>BEWH_PowerArmorMkX</researchPrerequisite>
         </recipeMaker>
         <graphicData>
             <texPath>Things/Armor/Imperium/PowerArmor/MkXPowerArmorChaplain/BEWH_ChaplainArmor</texPath>
@@ -319,6 +325,9 @@
                     <li>BEWH_ExtraDecoration</li>
                 </tabDefs>
             </li>
+            <li Class="Core40k.DefModExtension_ForcesBodyType">
+                <forcedBodyType>Hulk</forcedBodyType>
+            </li>
             <li Class="Genes40k.DefModExtension_HideJumpPack">
                 <changeBackpackVisual>true</changeBackpackVisual>
             </li>
@@ -329,7 +338,7 @@
     <ThingDef ParentName="BEWH_PowerArmorBase">
         <defName>BEWH_LivingSaintArmor</defName>
         <label>Living Saint Armor</label>
-        <thingClass>Genes40k.LivingSaintBodyDecorativeApparelColourTwo</thingClass>
+        <thingClass>Core40k.BodyDecorativeApparelColourTwo</thingClass>
         <description>A sanctified warplate worn by a Living Saint, adorned with the symbols of the Ecclesiarchy. It shines with a faint golden hue and, while lacking advanced systems, offers impressive protection. Some claim it has a calming or inspiring effect on nearby allies. Despite its imposing appearance, it moves easily with the wearer, providing both resilience and mobility.</description>
         <graphicData>
             <texPath>Things/Armor/Imperium/PowerArmor/LivingSaint/BEWH_LSaintArmor</texPath>
@@ -404,6 +413,17 @@
                     <li>BEWH_ExtraDecoration</li>
                 </tabDefs>
             </li>
+            <li Class="Core40k.DefModExtension_ForcesBodyType">
+                <forcedBodyType>Female</forcedBodyType>
+            </li>
+            <li Class="Core40k.DefModExtension_StandardDecorations">
+                <extraDecorations>
+                    <li>BEWH_LivingSaintWings_1</li>
+                    <li>BEWH_LivingSaintHalo_2</li>
+                </extraDecorations>
+                <defaultPrimaryColor>(0.8358, 0.619, 0.298)</defaultPrimaryColor>
+                <defaultSecondaryColor>(0.407, 0.094, 0.129)</defaultSecondaryColor>
+            </li>
             <li Class="Genes40k.DefModExtension_HideJumpPack" />
         </modExtensions>
     </ThingDef>
@@ -413,9 +433,9 @@
         <defName>BEWH_MkIPowerArmor</defName>
         <label>mk I Power Armor</label>
         <description>The Mk I "Thunder" Power Armor is a prototype battle plate worn by the Emperor's Thunder Warriors during the Unification Wars. Built for brute strength rather than finesse, it features thick plasteel plating, basic servo-motors, and minimal environmental sealing.</description>
-        <thingClass>Genes40k.ChapterBodyDecorativeApparelColourTwo</thingClass>
+        <thingClass>Core40k.BodyDecorativeApparelColourTwo</thingClass>
         <recipeMaker>
-            <researchPrerequisite>BEWH_AstartesPowerArmorMkX</researchPrerequisite>
+            <researchPrerequisite>BEWH_PowerArmorMkI</researchPrerequisite>
         </recipeMaker>
         <graphicData>
             <texPath>Things/Armor/Imperium/PowerArmor/MkIPowerArmor/BEWH_MkIPowerArmor</texPath>
@@ -430,7 +450,6 @@
 
             <Insulation_Cold>33</Insulation_Cold>
             <Insulation_Heat>18</Insulation_Heat>
-
         </statBases>
         <equippedStatOffsets>
             <TerrorSource MayRequire="Ludeon.RimWorld.Ideology">17</TerrorSource>
@@ -492,6 +511,13 @@
                 <tabDefs>
                     <li>BEWH_ExtraDecoration</li>
                 </tabDefs>
+            </li>
+            <li Class="Core40k.DefModExtension_ForcesBodyType">
+                <forcedBodyType>Hulk</forcedBodyType>
+            </li>
+            <li Class="Core40k.DefModExtension_StandardDecorations">
+                <defaultPrimaryColor>(231,148,88)</defaultPrimaryColor>
+                <defaultSecondaryColor>(231,148,88)</defaultSecondaryColor>
             </li>
             <li Class="Genes40k.DefModExtension_HideJumpPack" />
         </modExtensions>

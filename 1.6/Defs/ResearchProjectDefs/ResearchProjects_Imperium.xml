@@ -136,36 +136,48 @@
   </ResearchProjectDef>
 
 
-
-  <!-- Imperium Power Armor Mk. VII -->
+  <!-- Power Armor Mk. I -->
   <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
-    <defName>BEWH_AstartesPowerArmorMkVII</defName>
-    <label>Mk VII Power Armor</label>
-    <description>Grants access to STCs enabling the manufacture of Mk VII Power Armor.</description>
+    <defName>BEWH_PowerArmorMkI</defName>
+    <label>Mk I Power Armor</label>
+    <description>Grants access to STCs enabling the manufacture of Mk I Power Armor.</description>
     <researchViewX>4</researchViewX>
     <researchViewY>0</researchViewY>
     <baseCost>10000</baseCost>
     <prerequisites>
       <li>AdvancedFabrication</li>
       <li>PoweredArmor</li>
+    </prerequisites>
+  </ResearchProjectDef>
+
+  <!-- Power Armor Mk. VII -->
+  <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
+    <defName>BEWH_PowerArmorMkVII</defName>
+    <label>Mk VII Power Armor</label>
+    <description>Grants access to STCs enabling the manufacture of Mk VII Power Armor.</description>
+    <researchViewX>5</researchViewX>
+    <researchViewY>0</researchViewY>
+    <baseCost>10000</baseCost>
+    <prerequisites>
+      <li>BEWH_PowerArmorMkI</li>
       <li MayRequire="Ludeon.RimWorld.Royalty">CataphractArmor</li>
     </prerequisites>
   </ResearchProjectDef>
 
-  <!-- Imperium Power Armor Mk. X -->
+  <!-- Power Armor Mk. X -->
   <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
-    <defName>BEWH_AstartesPowerArmorMkX</defName>
+    <defName>BEWH_PowerArmorMkX</defName>
     <label>Mk X Power Armor</label>
     <description>Grants access to advanced STCs enabling the manufacture of Mk X Power Armor.</description>
-    <researchViewX>5</researchViewX>
+    <researchViewX>6</researchViewX>
     <researchViewY>0</researchViewY>
     <baseCost>3000</baseCost>
     <prerequisites>
-      <li>BEWH_AstartesPowerArmorMkVII</li>
+      <li>BEWH_PowerArmorMkVII</li>
     </prerequisites>
   </ResearchProjectDef>
 
-  <!-- Imperium Weapons -->
+  <!-- Astartes Weapons -->
   <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
     <defName>BEWH_AstartesWeapons</defName>
     <label>Astartes Weaponry</label>

@@ -109,8 +109,6 @@ public class ChapterBodyDecorativeApparelColourTwo : BodyDecorativeApparelColour
         }
     }
     
-    private BodyTypeDef originalBodyType = null;
-
     public override void SpawnSetup(Map map, bool respawningAfterLoad)
     {
         base.SpawnSetup(map, respawningAfterLoad);
@@ -147,26 +145,7 @@ public class ChapterBodyDecorativeApparelColourTwo : BodyDecorativeApparelColour
             
         base.Reset();
     }
-
-    public override void Notify_Equipped(Pawn pawn)
-    {
-        if (pawn.story.bodyType != BodyTypeDefOf.Hulk)
-        {
-            originalBodyType = pawn.story.bodyType;
-            pawn.story.bodyType = BodyTypeDefOf.Hulk;
-        }
-        base.Notify_Equipped(pawn);
-    }
-
-    public override void Notify_Unequipped(Pawn pawn)
-    {
-        if (originalBodyType != null)
-        {
-            pawn.story.bodyType = originalBodyType;
-        }
-        base.Notify_Unequipped(pawn);
-    }
-
+    
     public override void ExposeData()
     {
         Scribe_Deep.Look(ref originalRightShoulder, "originalRightShoulder");
@@ -175,8 +154,7 @@ public class ChapterBodyDecorativeApparelColourTwo : BodyDecorativeApparelColour
         Scribe_Deep.Look(ref leftShoulder, "leftShoulder");
         
         Scribe_Values.Look(ref flipShoulderIcons, "flipShoulderIcons", false);
-            
-        Scribe_Defs.Look(ref originalBodyType, "originalBodyType");
+        
         base.ExposeData();
     }
 }

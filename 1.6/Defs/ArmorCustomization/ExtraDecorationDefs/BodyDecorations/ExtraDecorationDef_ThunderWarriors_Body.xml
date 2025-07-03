@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-   <Core40k.ExtraDecorationDef>
+    <Core40k.ExtraDecorationDef>
         <defName>BEWH_Deco_TW_FurShoulders</defName>
         <label>Fur attachments</label>
         <description>...</description>
@@ -47,7 +47,7 @@
         <defName>BEWH_Deco_TW_AmmoBelt</defName>
         <label>Ammo belt</label>
         <description>...</description>
-        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_MkIBelt_icon</iconPath>
+        <iconPath>UI/Decoration/Icons/ThunderWarriors/Armor/BEWH_Deco_MkIBelt_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/MkI/BEWH_Deco_MkIBelt</drawnTextureIconPath>
         <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>0.4</sortOrder>
@@ -89,7 +89,7 @@
         <defName>BEWH_Deco_TW_Skirt</defName>
         <label>Leather strips</label>
         <description>...</description>
-        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_MkISkirt_icon</iconPath>
+        <iconPath>UI/Decoration/Icons/ThunderWarriors/Armor/BEWH_Deco_MkISkirt_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/MkI/BEWH_Deco_MkISkirt</drawnTextureIconPath>
         <drawSize>(0.25, 0.25)</drawSize>
         <sortOrder>0.5</sortOrder>

@@ -90,7 +90,6 @@
     <Compile Include="ChapterApparelColourTwo\ChapterColourDef.cs" />
     <Compile Include="ChapterApparelColourTwo\ChapterHeadDecorativeApparelColourTwo.cs" />
     <Compile Include="ChapterApparelColourTwo\ChapterBodyDecorativeApparelColourTwo.cs" />
-    <Compile Include="ChapterApparelColourTwo\LivingSaintBodyDecorativeApparelColourTwo.cs" />
     <Compile Include="ChapterApparelColourTwo\PawnRenderNodeWorker_AttachmentBackpack.cs" />
     <Compile Include="ChapterApparelColourTwo\PawnRenderNodeWorker_AttachmentShoulderChapterIcon.cs" />
     <Compile Include="ChapterApparelColourTwo\PawnRenderNodeWorker_AttachmentShoulderPad.cs" />
