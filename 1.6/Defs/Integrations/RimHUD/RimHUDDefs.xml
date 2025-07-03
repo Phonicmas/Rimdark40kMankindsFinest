@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <RimHUD.CustomValueDef>
+        <defName>BEWH_ProgenoidGlandProgressBar</defName>
+        <label>Progenoid progress bar</label>
+        <textStyle>Regular</textStyle>
+        <defClass>Genes40k.RimHUDProgenoidGlandProgress</defClass>
+        <apiVersion>1</apiVersion>
+    </RimHUD.CustomValueDef>
+
+</Defs>
