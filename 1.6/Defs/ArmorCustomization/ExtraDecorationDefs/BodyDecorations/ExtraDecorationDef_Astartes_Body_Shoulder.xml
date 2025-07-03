@@ -40,12 +40,12 @@
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
-        <defName>BEWH_DecoColorPauldron_1</defName>
-        <label>Colorable shoulder 1</label>
+        <defName>BEWH_DecoColorPauldron_2</defName>
+        <label>Colorable shoulder 2</label>
         <description>...</description>
         <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_Color_Shoulder1_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/Pauldrons/BEWH_Deco_Color_Shoulder1</drawnTextureIconPath>
-        <sortOrder>0.1</sortOrder>
+        <sortOrder>0.2</sortOrder>
         <defaultShowRotation>
             <li>North</li>
             <li>South</li>
@@ -79,12 +79,12 @@
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
-        <defName>BEWH_DecoColorPauldron_2</defName>
-        <label>Colorable shoulder 2</label>
+        <defName>BEWH_DecoColorPauldron_1</defName>
+        <label>Colorable shoulder 1</label>
         <description>...</description>
         <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_Color_Shoulder2_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/Pauldrons/BEWH_Deco_Color_Shoulder2</drawnTextureIconPath>
-        <sortOrder>0.2</sortOrder>
+        <sortOrder>0.1</sortOrder>
         <defaultShowRotation>
             <li>North</li>
             <li>South</li>
