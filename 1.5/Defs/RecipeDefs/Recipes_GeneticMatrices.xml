@@ -25,8 +25,8 @@
     <!-- Thunder Warrior -->
     <RecipeDef ParentName="BEWH_RecipeGeneticMatrixBase">
         <defName>BEWH_MakeThunderWarriorMatrix</defName>
-        <label>make thunder warrior genetic matrix</label>
-        <description>Make a Whunder Warrior genetic matrix.</description>
+        <label>make Thunder Warrior genetic matrix</label>
+        <description>Make a Thunder Warrior genetic matrix.</description>
         <jobString>Making Thunder Warrior genetic matrix.</jobString>
         <workAmount>45000</workAmount>
         <researchPrerequisite>BEWH_GeneseedCreation</researchPrerequisite>

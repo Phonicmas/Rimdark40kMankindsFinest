@@ -517,7 +517,7 @@
             </li>
             <li Class="Core40k.DefModExtension_StandardDecorations">
                 <defaultPrimaryColor>(231,148,88)</defaultPrimaryColor>
-                <defaultSecondaryColor>(231,148,88)</defaultSecondaryColor>
+                <defaultSecondaryColor>(253,184,110)</defaultSecondaryColor>
             </li>
             <li Class="Genes40k.DefModExtension_HideJumpPack" />
         </modExtensions>
