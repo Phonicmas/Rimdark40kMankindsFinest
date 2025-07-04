@@ -451,7 +451,8 @@
             <Insulation_Cold>33</Insulation_Cold>
             <Insulation_Heat>18</Insulation_Heat>
         </statBases>
-        <equippedStatOffsets>
+        <equippedStatOffsets Inherit="false">
+            <MoveSpeed>0.3</MoveSpeed>
             <TerrorSource MayRequire="Ludeon.RimWorld.Ideology">17</TerrorSource>
         </equippedStatOffsets>
         <costList>
