@@ -20,6 +20,7 @@
 		<li IfModActive="dubwise.rimatomics">1.6/Mods/DubsRimatomicsRadiation</li>
 		<li IfModActive="oskarpotocki.vfe.empire">1.6/Mods/VanillaFactionExpandedEmpire</li>
 		<li IfModActive="katavrik.crashlanding">1.6/Mods/CrashLanding</li>
+		<li IfModActive="jaxe.rimhud">1.6/Mods/RimHUD</li>
 	</v1.6>
 
 </loadFolders>

@@ -14,6 +14,7 @@ public class GeneGizmo_ResourceDivineGrace : GeneGizmo_Resource
 	private const float TotalPulsateTime = 0.85f;
 
 	protected override bool IsDraggable => false;
+	protected override bool DraggingBar { get; set; }
 
 	private List<Pair<IGeneResourceDrain, float>> tmpDrainGenes = new ();
 
