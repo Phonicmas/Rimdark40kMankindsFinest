@@ -4,7 +4,7 @@
     <!-- Fabric -->
     <Core40k.ExtraDecorationDef>
         <defName>BEWH_Deco_BGUpperTabard</defName>
-        <label>Upper tabard</label>
+        <label>Upper tabard 1</label>
         <description>...</description>
         <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_BulwarkUpperTabard_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_BulwarkUpperTabard</drawnTextureIconPath>
@@ -34,6 +34,7 @@
             <li>BEWH_DecoPaletteFabricBeige</li>
             <li>BEWH_DecoPaletteFabricRed</li>
             <li>BEWH_DecoPaletteApothecaryRed</li>
+            <li>BEWH_DecoPaletteIFBlack</li>
         </availablePresets>
         <colourable>true</colourable>
     </Core40k.ExtraDecorationDef>
@@ -104,6 +105,78 @@
         </availablePresets>
         <colourable>true</colourable>
         <useMask>true</useMask>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_MkVIIBlankTabard</defName>        <!-- MkVII -->
+        <label>Upper tabard 2</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_BlankTabard_icon</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/MkVII/BEWH_Deco_MkVIIBlankTabard</drawnTextureIconPath>
+        <sortOrder>2.12</sortOrder>
+        <defaultShowRotation>
+            <li>South</li>
+            <li>West</li>
+            <li>East</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmor</li>
+        </appliesTo>
+        <drawData>
+            <dataSouth>
+                <layer>45</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>45</layer>
+            </dataEast>
+            <dataWest>
+                <layer>45</layer>
+            </dataWest>
+        </drawData>
+        <shaderType>Cutout</shaderType>
+        <availablePresets>
+            <li>BEWH_DecoPaletteFabricBeige</li>
+            <li>BEWH_DecoPaletteFabricRed</li>
+            <li>BEWH_DecoPaletteApothecaryRed</li>
+            <li>BEWH_DecoPaletteIFBlack</li>
+        </availablePresets>
+        <colourable>true</colourable>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_MkXBlankTabard</defName>        <!-- MkX -->
+        <label>Upper tabard 2</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_BlankTabard_icon</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/MkX/BEWH_Deco_MkXBlankTabard</drawnTextureIconPath>
+        <sortOrder>2.12</sortOrder>
+        <defaultShowRotation>
+            <li>South</li>
+            <li>West</li>
+            <li>East</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkXPowerArmor</li>
+        </appliesTo>
+        <drawData>
+            <dataSouth>
+                <layer>45</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>45</layer>
+            </dataEast>
+            <dataWest>
+                <layer>45</layer>
+            </dataWest>
+        </drawData>
+        <shaderType>Cutout</shaderType>
+        <availablePresets>
+            <li>BEWH_DecoPaletteFabricBeige</li>
+            <li>BEWH_DecoPaletteFabricRed</li>
+            <li>BEWH_DecoPaletteApothecaryRed</li>
+            <li>BEWH_DecoPaletteIFBlack</li>
+        </availablePresets>
+        <colourable>true</colourable>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -255,10 +328,10 @@
                 <layer>44</layer>
             </dataSouth>
             <dataEast>
-                <layer>62</layer>
+                <layer>40</layer>
             </dataEast>
             <dataWest>
-                <layer>62</layer>
+                <layer>40</layer>
             </dataWest>
         </drawData>
         <shaderType>Cutout</shaderType>
@@ -266,6 +339,7 @@
             <li>BEWH_DecoPaletteFabricBeige</li>
             <li>BEWH_DecoPaletteFabricRed</li>
             <li>BEWH_DecoPaletteApothecaryRed</li>
+            <li>BEWH_DecoPaletteIFBlack</li>
         </availablePresets>
         <colourable>true</colourable>
     </Core40k.ExtraDecorationDef>
@@ -294,10 +368,10 @@
                 <layer>44</layer>
             </dataSouth>
             <dataEast>
-                <layer>62</layer>
+                <layer>40</layer>
             </dataEast>
             <dataWest>
-                <layer>62</layer>
+                <layer>40</layer>
             </dataWest>
         </drawData>
         <shaderType>Cutout</shaderType>
@@ -305,6 +379,7 @@
             <li>BEWH_DecoPaletteFabricBeige</li>
             <li>BEWH_DecoPaletteFabricRed</li>
             <li>BEWH_DecoPaletteApothecaryRed</li>
+            <li>BEWH_DecoPaletteIFBlack</li>
         </availablePresets>
         <colourable>true</colourable>
     </Core40k.ExtraDecorationDef>
