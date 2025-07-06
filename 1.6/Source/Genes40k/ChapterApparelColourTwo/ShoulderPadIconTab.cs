@@ -86,6 +86,29 @@ public class ShoulderPadIconTab : ApparelColourTwoTabDrawer
             
         var curX = position.x;
         curY = position.y;
+        
+        //Right icon colour selection if possible.
+        if (chapterApparel.LeftShoulderIcon != null && chapterApparel.LeftShoulderIcon.useColour)
+        {
+            var tertiaryColourRect = new Rect(position, new Vector2(viewRect.width, 50f)).ContractedBy(5);
+            Widgets.DrawMenuSection(tertiaryColourRect);
+            tertiaryColourRect = tertiaryColourRect.ContractedBy(1);
+                
+            Widgets.DrawRectFast(tertiaryColourRect, chapterApparel.LeftShoulderIconColour);
+            if (Widgets.ButtonInvisible(tertiaryColourRect))
+            {
+                Find.WindowStack.Add( new Dialog_ColourPicker( chapterApparel.LeftShoulderIconColour, ( newColour ) =>
+                {
+                    chapterApparel.LeftShoulderIconColour = newColour;
+                } ) );
+            }
+
+            curY = tertiaryColourRect.yMax;
+        }
+        else
+        {
+            chapterApparel.RightShoulderIconColour = Color.white;
+        }
             
         //Left icon selection
         for (var i = 0; i < leftShoulderIcons.Count; i++)

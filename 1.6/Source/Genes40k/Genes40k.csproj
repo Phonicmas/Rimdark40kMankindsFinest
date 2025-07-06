@@ -158,7 +158,6 @@
     <Compile Include="DefModExtensions\DefModExtension_PerpetualGene.cs" />
     <Compile Include="DefModExtensions\DefModExtension_PrimarchVatExtras.cs" />
     <Compile Include="DefModExtensions\DefModExtension_PrimarchVatTexture.cs" />
-    <Compile Include="GameConditions\GameConditions.cs" />
     <Compile Include="GeneClasses\Gene_Psyker.cs" />
     <Compile Include="GeneClasses\Gene_UnstableOrgans.cs" />
     <Compile Include="GeneClasses\Gene_WarpShield.cs" />

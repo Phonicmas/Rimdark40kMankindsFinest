@@ -95,7 +95,16 @@ public class ChapterBodyDecorativeApparelColourTwo : BodyDecorativeApparelColour
             Notify_ColorChanged();
         }
     }
-    public Color LeftShoulderIconColour => leftShoulder?.Color ?? LeftShoulderIcon?.defaultColour ?? Color.white;
+    public Color LeftShoulderIconColour
+    {
+        get => leftShoulder?.Color ?? LeftShoulderIcon?.defaultColour ?? Color.white;
+        set
+        {
+            leftShoulder ??= new ShoulderIconSettings();
+            leftShoulder.Color = value;
+            Notify_ColorChanged();
+        }
+    }
     
 
     private bool flipShoulderIcons = false;

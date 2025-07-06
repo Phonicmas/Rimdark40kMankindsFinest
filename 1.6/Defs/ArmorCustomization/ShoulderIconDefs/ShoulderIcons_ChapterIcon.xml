@@ -15,6 +15,7 @@
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_DarkAngelsShoulder</drawnTextureIconPath>
         <sortOrder>1</sortOrder>
         <relatedChapterGene>BEWH_ChapterIDarkAngels</relatedChapterGene>
+        <useColour>true</useColour>
     </Genes40k.ShoulderIconDef>
 
     <!-- Emperor's Children -->
