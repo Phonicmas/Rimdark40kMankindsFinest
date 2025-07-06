@@ -78,6 +78,9 @@
         <Crafting>10</Crafting>
       </skillRequirements>
     </recipeMaker>
+    <statBases>
+      <WorkToMake>45000</WorkToMake>
+    </statBases>
     <costList>
       <Steel>65</Steel>
       <Plasteel>10</Plasteel>
@@ -132,6 +135,9 @@
         <Crafting>12</Crafting>
       </skillRequirements>
     </recipeMaker>
+    <statBases>
+      <WorkToMake>45000</WorkToMake>
+    </statBases>
     <costList>
       <Steel>45</Steel>
       <Plasteel>30</Plasteel>
