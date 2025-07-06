@@ -15,7 +15,25 @@
 						<clipPath>BEWH_BolterShot</clipPath>
 					</li>
 				</grains>
-				<volumeRange>41~43</volumeRange>
+				<volumeRange>26~30</volumeRange>
+				<pitchRange>0.85~1.15</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<!-- Proto-Boltgun -->
+	<SoundDef>
+		<defName>BEWH_SFX_ProtoBoltgunShot</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>BEWH_ProtoBolterShot</clipPath>
+					</li>
+				</grains>
+				<volumeRange>24~28</volumeRange>
 				<pitchRange>0.85~1.15</pitchRange>
 			</li>
 		</subSounds>
@@ -51,8 +69,44 @@
 						<clipPath>BEWH_ChainswordPickup</clipPath>
 					</li>
 				</grains>
-				<volumeRange>28</volumeRange>
+				<volumeRange>24</volumeRange>
 				<!-- <pitchRange>1~1</pitchRange> -->
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<!-- Proto-Chainsword -->
+
+	<SoundDef>
+		<defName>BEWH_SFX_Proto-ChainswordHit</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>ChainswordAttack</clipFolderPath>
+					</li>
+				</grains>
+				<volumeRange>30~33</volumeRange>
+				<pitchRange>1.15~1.35</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>BEWH_SFX_Proto-ChainswordInteract</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>BEWH_ChainswordPickup</clipPath>
+					</li>
+				</grains>
+				<volumeRange>24</volumeRange>
+				<pitchRange>1.35~1.45</pitchRange>
 			</li>
 		</subSounds>
 	</SoundDef>

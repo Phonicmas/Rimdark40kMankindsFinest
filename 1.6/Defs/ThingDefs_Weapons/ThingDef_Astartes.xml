@@ -94,6 +94,14 @@
     </graphicData>
     <tools>
       <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>16</power>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+      <li>
         <label>chain</label>
         <capacities>
           <li>Cut</li>
@@ -150,6 +158,14 @@
       <drawSize>1.15</drawSize>
     </graphicData>
     <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>16</power>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
       <li>
         <label>edge</label>
         <capacities>

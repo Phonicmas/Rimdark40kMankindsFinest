@@ -2,6 +2,26 @@
 <Defs>
 
     <ThingDef ParentName="BaseBullet">
+        <defName>BEWH_CrudeBolt</defName>
+        <label>crude bolt</label>
+        <thingClass>Projectile_Explosive</thingClass>
+        <graphicData>
+            <texPath>Things/Projectiles/BEWH_CrudeBolterRound</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.8, 0.8)</drawSize>
+        </graphicData>
+        <projectile>
+            <damageDef>BEWH_Bolt</damageDef>
+            <damageAmountBase>20</damageAmountBase>
+            <armorPenetrationBase>0.55</armorPenetrationBase>
+            <explosionRadius>1.2</explosionRadius>
+            <soundExplode>GunShotA</soundExplode>
+            <screenShakeFactor>0.2</screenShakeFactor>
+            <speed>90</speed>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseBullet">
         <defName>BEWH_BolterRound</defName>
         <label>bolt</label>
         <thingClass>Projectile_Explosive</thingClass>
