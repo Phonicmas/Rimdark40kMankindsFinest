@@ -15,6 +15,8 @@
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_DarkAngelsShoulder</drawnTextureIconPath>
         <sortOrder>1</sortOrder>
         <relatedChapterGene>BEWH_ChapterIDarkAngels</relatedChapterGene>
+        <useColour>true</useColour>
+        <defaultColour>(0.87, 0.87, 0.87)</defaultColour>
     </Genes40k.ShoulderIconDef>
 
     <!-- Emperor's Children -->
@@ -26,6 +28,8 @@
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_EmperorsChildrenShoulder</drawnTextureIconPath>
         <sortOrder>3</sortOrder>
         <relatedChapterGene>BEWH_ChapterIIIEmperorsChildren</relatedChapterGene>
+        <useColour>true</useColour>
+        <defaultColour>(0.89, 0.66, 0.01)</defaultColour>
     </Genes40k.ShoulderIconDef>
 
     <!-- Iron Warriors -->
@@ -37,6 +41,8 @@
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_IronWarriorsShoulder</drawnTextureIconPath>
         <sortOrder>4</sortOrder>
         <relatedChapterGene>BEWH_ChapterIVIronWarriors</relatedChapterGene>
+        <useColour>true</useColour>
+        <defaultColour>(0.87, 0.87, 0.87)</defaultColour>
     </Genes40k.ShoulderIconDef>
 
     <!-- White Scars -->
@@ -92,6 +98,8 @@
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_BloodAngelsShoulder</drawnTextureIconPath>
         <sortOrder>9</sortOrder>
         <relatedChapterGene>BEWH_ChapterIXBloodAngels</relatedChapterGene>
+        <useColour>true</useColour>
+        <defaultColour>(0.24, 0.24, 0.24)</defaultColour>
     </Genes40k.ShoulderIconDef>
 
     <!-- Iron Hands -->
@@ -103,6 +111,8 @@
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_IronHandsShoulder</drawnTextureIconPath>
         <sortOrder>10</sortOrder>
         <relatedChapterGene>BEWH_ChapterXIronHands</relatedChapterGene>
+        <useColour>true</useColour>
+        <defaultColour>(0.87, 0.87, 0.87)</defaultColour>
     </Genes40k.ShoulderIconDef>
 
     <!-- World Eaters -->
@@ -125,6 +135,8 @@
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_UltramarinesShoulder</drawnTextureIconPath>
         <sortOrder>13</sortOrder>
         <relatedChapterGene>BEWH_ChapterXIIIUltramarines</relatedChapterGene>
+        <useColour>true</useColour>
+        <defaultColour>(0.87, 0.87, 0.87)</defaultColour>
     </Genes40k.ShoulderIconDef>
 
     <!-- Death Guard -->
@@ -147,6 +159,8 @@
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_ThousandSonsShoulder</drawnTextureIconPath>
         <sortOrder>15</sortOrder>
         <relatedChapterGene>BEWH_ChapterXVThousandSons</relatedChapterGene>
+        <useColour>true</useColour>
+        <defaultColour>(0.87, 0.87, 0.87)</defaultColour>
     </Genes40k.ShoulderIconDef>
 
     <!-- Sons of Horus -->
@@ -158,6 +172,8 @@
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_SonsOfHorusShoulder</drawnTextureIconPath>
         <sortOrder>16</sortOrder>
         <relatedChapterGene>BEWH_ChapterXVISonsOfHorus</relatedChapterGene>
+        <useColour>true</useColour>
+        <defaultColour>(0.38, 0.52, 0.43)</defaultColour>
     </Genes40k.ShoulderIconDef>
 
     <!-- Word Bearers -->
@@ -180,6 +196,8 @@
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_SalamandersShoulder</drawnTextureIconPath>
         <sortOrder>18</sortOrder>
         <relatedChapterGene>BEWH_ChapterXVIIISalamanders</relatedChapterGene>
+        <useColour>true</useColour>
+        <defaultColour>(0.87, 0.87, 0.87)</defaultColour>
     </Genes40k.ShoulderIconDef>
 
     <!-- Raven Guard -->
@@ -191,6 +209,8 @@
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_RavenGuardShoulder</drawnTextureIconPath>
         <sortOrder>19</sortOrder>
         <relatedChapterGene>BEWH_ChapterXIXRavenGuard</relatedChapterGene>
+        <useColour>true</useColour>
+        <defaultColour>(0.87, 0.87, 0.87)</defaultColour>
     </Genes40k.ShoulderIconDef>
 
     <!-- Alpha Legion -->
@@ -202,7 +222,8 @@
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/ChapterIcons/BEWH_AlphaLegionShoulder</drawnTextureIconPath>
         <sortOrder>20</sortOrder>
         <relatedChapterGene>BEWH_ChapterXXAlphaLegion</relatedChapterGene>
+        <useColour>true</useColour>
+        <defaultColour>(0.44, 0.57, 0.34)</defaultColour>
     </Genes40k.ShoulderIconDef>
-
 
 </Defs>
