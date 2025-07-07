@@ -95,7 +95,7 @@ public class ChapterBodyDecorativeApparelColourTwo : BodyDecorativeApparelColour
             Notify_ColorChanged();
         }
     }
-    public Color LeftShoulderIconColour
+    public Color LeftShoulderIconColour 
     {
         get => leftShoulder?.Color ?? LeftShoulderIcon?.defaultColour ?? Color.white;
         set
@@ -135,6 +135,7 @@ public class ChapterBodyDecorativeApparelColourTwo : BodyDecorativeApparelColour
         leftShoulder = new ShoulderIconSettings()
         {
             ShoulderIcon = ModSettings?.CurrentlySelectedPreset.relatedChapterIcon,
+            Color = ModSettings?.chapterShoulderIconColor ?? Color.white,
         };
         rightShoulder = null;
     }

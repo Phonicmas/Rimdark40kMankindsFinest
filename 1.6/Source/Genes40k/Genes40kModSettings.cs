@@ -43,12 +43,14 @@ public class Genes40kModSettings : ModSettings
             primaryColour = chapterColorOne,
             secondaryColour = chapterColorTwo,
             relatedChapterIcon = chapterShoulderIcon,
+            chapterIconColour = chapterShoulderIconColor ?? Color.white,
         };
 
     public Color chapterColorOne = Genes40kDefOf.BEWH_ChapterColourXIII.primaryColour;
     public Color chapterColorTwo = Genes40kDefOf.BEWH_ChapterColourXIII.secondaryColour;
     
     public ShoulderIconDef chapterShoulderIcon = Genes40kDefOf.BEWH_ShoulderNone;
+    public Color? chapterShoulderIconColor = null;
 
     public override void ExposeData()
     {
@@ -77,6 +79,7 @@ public class Genes40kModSettings : ModSettings
         Scribe_Values.Look(ref chapterColorOne, "chapterColorOne");
         Scribe_Values.Look(ref chapterColorTwo, "chapterColorTwo");
         Scribe_Defs.Look(ref chapterShoulderIcon, "chapterShoulderIcon");
+        Scribe_Values.Look(ref chapterShoulderIconColor, "chapterShoulderIconColor");
         
         if (Scribe.mode == LoadSaveMode.Saving)
         {

@@ -57,6 +57,7 @@ public class Dialog_ChangeDefaultChapterColour : Window
                 var menuOption = new FloatMenuOption(colour.label.CapitalizeFirst(), delegate
                 {
                     currentlySelectedPreset = colour;
+                    settings.chapterShoulderIconColor = null;
                 }, Core40kUtils.TwoColourPreview(colour.primaryColour, colour.secondaryColour), Color.white);
                 list.Add(menuOption);
             }
@@ -131,8 +132,30 @@ public class Dialog_ChangeDefaultChapterColour : Window
             
             var curY = customIconName.yMax + gap;
 
-            var viewRectHeight = inRect.yMax - customIconName.yMax - CloseButSize.y;
-            //var viewRectHeight = inRect.height - customIconName.height - CloseButSize.y;
+            if (settings.CurrentlySelectedPreset.relatedChapterIcon != null && settings.CurrentlySelectedPreset.relatedChapterIcon.useColour)
+            {
+                var customIconColour = new Rect(customIconName)
+                {
+                    y = customIconName.yMax + gap
+                };
+                
+                Widgets.DrawMenuSection(customIconColour);
+                customIconColour = customIconColour.ContractedBy(1);
+                
+                Widgets.DrawRectFast(customIconColour, settings.CurrentlySelectedPreset.chapterIconColour);
+                if (Widgets.ButtonInvisible(customIconColour))
+                {
+                    Find.WindowStack.Add( new Dialog_ColourPicker( settings.CurrentlySelectedPreset.chapterIconColour, ( newColour ) =>
+                    {
+                        settings.CurrentlySelectedPreset.chapterIconColour = newColour;
+                        settings.chapterShoulderIconColor = newColour;
+                    } ) );
+                }
+
+                curY = customIconColour.yMax;
+            }
+
+            var viewRectHeight = inRect.yMax - customIconName.yMax - CloseButSize.y - CloseButSize.y;
             var outRect = new Rect(inRect.x, curY, inRect.width, viewRectHeight);
             var viewRect = new Rect(inRect.x, curY, inRect.width - 16f, Mathf.Max(scrollViewHeight, viewRectHeight));
             scrollViewHeight = viewRectHeight;
@@ -180,6 +203,7 @@ public class Dialog_ChangeDefaultChapterColour : Window
                 if (Widgets.ButtonInvisible(iconRect))
                 {
                     settings.chapterShoulderIcon = shoulderIcons[i];
+                    settings.chapterShoulderIconColor = shoulderIcons[i].defaultColour;
                     settings.CustomPreset.relatedChapterIcon = shoulderIcons[i];
                 }
             }
@@ -210,6 +234,7 @@ public class Dialog_ChangeDefaultChapterColour : Window
             settings.chapterColorOne = currentlySelectedPreset.primaryColour;
             settings.chapterColorTwo = currentlySelectedPreset.secondaryColour;
             settings.CurrentlySelectedPreset = currentlySelectedPreset;
+            settings.chapterShoulderIconColor = currentlySelectedPreset.chapterIconColour;
             Close();
         }
             

@@ -41,6 +41,10 @@ public class PawnRenderNode_AttachmentShoulderChapterIcon : PawnRenderNode_Appar
         else if (pawn.Faction != null && pawn.Faction.IsPlayer && ModSettings.CurrentlySelectedPreset.relatedChapterIcon != null)
         {
             leftShoulderIcon = ModSettings.CurrentlySelectedPreset.relatedChapterIcon.drawnTextureIconPath;
+            if (ModSettings.chapterShoulderIconColor != null)
+            {
+                drawColour = ModSettings.chapterShoulderIconColor.Value;
+            }
         }
 
         if (apparelColourTwo.FlipShoulderIcons)
