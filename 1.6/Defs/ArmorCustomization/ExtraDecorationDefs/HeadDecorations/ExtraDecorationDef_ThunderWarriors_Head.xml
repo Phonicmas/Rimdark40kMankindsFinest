@@ -39,7 +39,7 @@
         </drawData>
         <colourable>true</colourable>
         <availablePresets>
-            <li>BEWH_DecoPaletteGlassRed</li>
+            <li>BEWH_DecoPaletteApothecaryRed</li>
         </availablePresets>
         <shaderType>Cutout</shaderType>
     </Core40k.ExtraDecorationDef>

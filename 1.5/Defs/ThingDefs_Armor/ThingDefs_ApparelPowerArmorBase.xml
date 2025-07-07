@@ -22,7 +22,7 @@
             <Beauty>-2</Beauty>
         </statBases>
         <equippedStatOffsets>
-            <MoveSpeed>-1.0</MoveSpeed>
+            <MoveSpeed>-3.0</MoveSpeed>
             <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.4</SlaveSuppressionOffset>
         </equippedStatOffsets>
         <graphicData>

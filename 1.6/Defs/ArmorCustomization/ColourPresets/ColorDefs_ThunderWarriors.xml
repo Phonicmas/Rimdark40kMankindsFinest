@@ -4,8 +4,8 @@
     <Genes40k.ChapterColourDef>
         <defName>BEWH_ColorSchemeThunderWarrior_1</defName>
         <label>Thunder Warriors</label>
-        <primaryColour>(231,148,88)</primaryColour>
-        <secondaryColour>(231,148,88)</secondaryColour>
+        <primaryColour>(193, 136, 88)</primaryColour>
+        <secondaryColour>(193, 146, 88)</secondaryColour>
         <appliesTo>
             <li>BEWH_MkIPowerArmor</li>
             <li>BEWH_MkIPowerArmorHelmet</li>
