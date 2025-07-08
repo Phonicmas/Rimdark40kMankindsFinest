@@ -82,6 +82,7 @@ public class ShoulderPadIconTab : ApparelColourTwoTabDrawer
         }
             
         var iconSize = new Vector2(viewRect.width/RowAmount, viewRect.width/RowAmount);
+        var smallIconSize = new Vector2(iconSize.x / 4, iconSize.y / 4);
         var position = new Vector2(viewRect.x, resetChapterIconRect.yMax);
             
         var curX = position.x;
@@ -140,6 +141,12 @@ public class ShoulderPadIconTab : ApparelColourTwoTabDrawer
             GUI.DrawTexture(iconRect, Command.BGTexShrunk);
             GUI.color = Color.white;
             GUI.DrawTexture(iconRect, leftShoulderIcons[i].Icon);
+            
+            if (leftShoulderIcons[i].useColour)
+            {
+                var flippedIconRect = new Rect(new Vector2(position.x + 7f, position.y + 5f), smallIconSize);
+                GUI.DrawTexture(flippedIconRect, Genes40kUtils.PaintableIcon.Texture);
+            }
             
             TooltipHandler.TipRegion(iconRect, leftShoulderIcons[i].label);
 
@@ -224,6 +231,12 @@ public class ShoulderPadIconTab : ApparelColourTwoTabDrawer
             GUI.DrawTexture(iconRect, Command.BGTexShrunk);
             GUI.color = Color.white;
             GUI.DrawTexture(iconRect, rightShoulderIcons[i].Icon);
+            
+            if (rightShoulderIcons[i].useColour)
+            {
+                var flippedIconRect = new Rect(new Vector2(position.x + 7f, position.y + 5f), smallIconSize);
+                GUI.DrawTexture(flippedIconRect, Genes40kUtils.PaintableIcon.Texture);
+            }
                 
             TooltipHandler.TipRegion(iconRect, rightShoulderIcons[i].label);
 

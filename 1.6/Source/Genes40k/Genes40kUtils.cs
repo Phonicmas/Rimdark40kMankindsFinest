@@ -23,6 +23,8 @@ public static class Genes40kUtils
 
     public static readonly Texture2D MindShieldOffIcon = ContentFinder<Texture2D>.Get("UI/Abilities/BEWH_MindShieldOff");
     public static readonly Texture2D MindShieldOnIcon = ContentFinder<Texture2D>.Get("UI/Abilities/BEWH_MindShieldOn");
+    
+    public static readonly CachedTexture PaintableIcon = new ("UI/Misc/PaintableIcon");
         
     public static List<GeneDef> ThunderWarriorGenes => new List<GeneDef>
     {

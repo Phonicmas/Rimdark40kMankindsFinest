@@ -165,6 +165,7 @@ public class Dialog_ChangeDefaultChapterColour : Window
             //Show icons here
             var iconSide = viewRect.width / RowAmount;
             var iconSize = new Vector2(iconSide, iconSide);
+            var smallIconSize = new Vector2(iconSize.x / 4, iconSize.y / 4);
             var position = new Vector2(viewRect.x, curY);
             
             var curX = position.x;
@@ -197,6 +198,12 @@ public class Dialog_ChangeDefaultChapterColour : Window
                 GUI.DrawTexture(iconRect, Command.BGTexShrunk);
                 GUI.color = Color.white;
                 GUI.DrawTexture(iconRect, shoulderIcons[i].Icon);
+                
+                if (shoulderIcons[i].useColour)
+                {
+                    var flippedIconRect = new Rect(new Vector2(position.x + 7f, position.y + 5f), smallIconSize);
+                    GUI.DrawTexture(flippedIconRect, Genes40kUtils.PaintableIcon.Texture);
+                }
                 
                 TooltipHandler.TipRegion(iconRect, shoulderIcons[i].label);
 
