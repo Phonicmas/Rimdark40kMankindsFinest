@@ -20,6 +20,9 @@
       <AccuracyLong>0.3</AccuracyLong>
       <RangedWeapon_Cooldown>2.00</RangedWeapon_Cooldown>
     </statBases>
+    <weaponTags Inherit="False">
+      <li>BEWH_ProtoAstartesRanged</li>
+    </weaponTags>
     <recipeMaker>
       <skillRequirements>
         <Crafting>8</Crafting>
@@ -81,6 +84,9 @@
     <statBases>
       <WorkToMake>30000</WorkToMake>
     </statBases>
+    <weaponTags Inherit="False">
+      <li>BEWH_ProtoAstartesMelee</li>
+    </weaponTags>
     <costList>
       <Steel>72</Steel>
       <Plasteel>8</Plasteel>

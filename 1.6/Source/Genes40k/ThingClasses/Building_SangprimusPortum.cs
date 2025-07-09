@@ -82,4 +82,10 @@ public class Building_SangprimusPortum : Building, IThingHolder
     }
 
     public ThingOwner GetDirectlyHeldThings() => innerContainer;
+
+    public override void ExposeData()
+    {
+        base.ExposeData();
+        Scribe_Deep.Look(ref innerContainer, "innerContainer", this);
+    }
 }
