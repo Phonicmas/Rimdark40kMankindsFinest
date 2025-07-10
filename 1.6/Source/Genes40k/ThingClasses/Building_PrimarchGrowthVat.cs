@@ -665,6 +665,8 @@ public class Building_PrimarchGrowthVat : Building, IStoreSettingsParent, IThing
         Scribe_Values.Look(ref embryoStarvation, "embryoStarvation", 0f);
         Scribe_Values.Look(ref containedNutrition, "containedNutrition", 0f);
         Scribe_Deep.Look(ref allowedNutritionSettings, "allowedNutritionSettings", this);
+        Scribe_Deep.Look(ref nutritionContainer, "nutritionContainer", this);
+        Scribe_Values.Look(ref startTick, "startTick", 0);
             
         if (allowedNutritionSettings != null)
         {
