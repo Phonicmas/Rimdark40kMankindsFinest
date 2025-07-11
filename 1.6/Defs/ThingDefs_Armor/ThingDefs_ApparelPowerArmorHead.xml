@@ -26,6 +26,7 @@
 
             <Insulation_Cold>6</Insulation_Cold>
             <Insulation_Heat>4</Insulation_Heat>
+            <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.67</VacuumResistance>
 
         </statBases>
         <equippedStatOffsets>
@@ -72,6 +73,8 @@
 
             <Insulation_Cold>6</Insulation_Cold>
             <Insulation_Heat>4</Insulation_Heat>
+            <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.67</VacuumResistance>
+
         </statBases>
         <equippedStatOffsets>
             <TerrorSource MayRequire="Ludeon.RimWorld.Ideology">8</TerrorSource>
@@ -117,6 +120,8 @@
 
             <Insulation_Cold>6</Insulation_Cold>
             <Insulation_Heat>4</Insulation_Heat>
+            <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.67</VacuumResistance>
+
         </statBases>
         <equippedStatOffsets>
             <TerrorSource MayRequire="Ludeon.RimWorld.Ideology">35</TerrorSource>

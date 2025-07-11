@@ -17,6 +17,7 @@
         <statOffsets>
             <ToxicEnvironmentResistance>3</ToxicEnvironmentResistance>
             <ToxicResistance>3</ToxicResistance>
+            <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">2</VacuumResistance>
             <PsychicSensitivity>4</PsychicSensitivity>
 
             <VEF_CosmeticBodySize_Multiplier>0.2</VEF_CosmeticBodySize_Multiplier>
@@ -153,7 +154,7 @@
                 <texPath>Things/Pawn/Humanlike/BodyAttachments/DivineWings/BEWH_DivineWings_Aethereal</texPath>
                 <drawSize>1</drawSize>
                 <parentTagDef>Body</parentTagDef>
-				<shaderTypeDef>TransparentPostLight</shaderTypeDef>
+                <shaderTypeDef>TransparentPostLight</shaderTypeDef>
                 <color>(255, 255, 255, 200)</color>
                 <drawData>
                     <defaultData>
