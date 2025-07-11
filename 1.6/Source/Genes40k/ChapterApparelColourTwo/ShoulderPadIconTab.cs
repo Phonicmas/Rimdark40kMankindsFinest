@@ -108,7 +108,7 @@ public class ShoulderPadIconTab : ApparelColourTwoTabDrawer
         }
         else
         {
-            chapterApparel.RightShoulderIconColour = Color.white;
+            chapterApparel.LeftShoulderIconColour = Color.white;
         }
             
         //Left icon selection
