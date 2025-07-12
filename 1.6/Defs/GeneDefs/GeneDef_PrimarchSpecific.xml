@@ -506,6 +506,7 @@
             <PsychicSensitivity>8</PsychicSensitivity>
             <MeditationFocusGain>4.5</MeditationFocusGain>
             <PsychicEntropyRecoveryRate>4</PsychicEntropyRecoveryRate>
+            <ReadingSpeed>4</ReadingSpeed>
         </statFactors>
         <capMods>
             <li>

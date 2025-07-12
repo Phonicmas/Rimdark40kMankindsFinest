@@ -126,4 +126,44 @@
         <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
     </Core40k.ExtraDecorationDef>
 
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_TW_Cape</defName>
+        <label>Cape</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/ThunderWarriors/Armor/BEWH_Deco_CapeMkI_icon</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/MkI/BEWH_Deco_CapeMkI</drawnTextureIconPath>
+        <sortOrder>0.6</sortOrder>
+        <defaultShowRotation>
+            <li>North</li>
+            <li>South</li>
+            <li>West</li>
+            <li>East</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkIPowerArmor</li>
+        </appliesTo>
+        <drawData>
+            <dataNorth>
+                <layer>94</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>20</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>66</layer>
+            </dataEast>
+            <dataWest>
+                <layer>66</layer>
+            </dataWest>
+        </drawData>
+        <shaderType>Cutout</shaderType>
+        <availablePresets>
+            <li>BEWH_DecoPaletteFabricBeige</li>
+            <li>BEWH_DecoPaletteFabricRed</li>
+            <li>BEWH_DecoPaletteApothecaryRed</li>
+            <li>BEWH_DecoPaletteIFBlack</li>
+        </availablePresets>
+        <colourable>true</colourable>
+    </Core40k.ExtraDecorationDef>
+
 </Defs>
