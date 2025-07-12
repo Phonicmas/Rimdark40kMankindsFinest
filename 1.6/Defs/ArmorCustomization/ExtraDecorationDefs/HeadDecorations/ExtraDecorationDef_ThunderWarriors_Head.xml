@@ -92,6 +92,52 @@
         <shaderType>Cutout</shaderType>
     </Core40k.ExtraDecorationDef>
 
+<Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_TW_Plume3</defName>
+        <label>Plume 3</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/ThunderWarriors/Headgear/BEWH_Deco_MkIHelmetTail3_icon</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Headgear/MkI/BEWH_Deco_MkIHelmetTail3</drawnTextureIconPath>
+        <drawSize>(0.5, 0.5)</drawSize>
+        <sortOrder>0.3</sortOrder>
+        <isHelmetDecoration>true</isHelmetDecoration>
+        <defaultShowRotation>
+            <li>West</li>
+            <li>South</li>
+            <li>North</li>
+            <li>East</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkIPowerArmorHelmet</li>
+        </appliesTo>
+        <drawData>
+            <dataSouth>
+                <layer>65</layer>
+                <offset>(0.15, 0, 0.39)</offset>
+            </dataSouth>
+            <dataNorth>
+                <layer>88</layer>
+                <offset>(-0.15, 0, 0.39)</offset>
+            </dataNorth>
+            <dataEast>
+                <layer>65</layer>
+                <offset>(-0.19, 0, 0.39)</offset>
+            </dataEast>
+            <dataWest>
+                <layer>80</layer>
+                <offset>(0.19, 0, 0.39)</offset>
+            </dataWest>
+        </drawData>
+        <colourable>true</colourable>
+        <availablePresets>
+            <li>BEWH_DecoPaletteFabricBeige</li>
+            <li>BEWH_DecoPaletteFabricRed</li>
+            <li>BEWH_DecoPaletteApothecaryRed</li>
+            <li>BEWH_DecoPaletteIFBlack</li>
+        </availablePresets>
+        <shaderType>Cutout</shaderType>
+    </Core40k.ExtraDecorationDef>
+
     <Core40k.ExtraDecorationDef>
         <defName>BEWH_Deco_TW_Goggles</defName>
         <label>Ballistic goggles</label>
