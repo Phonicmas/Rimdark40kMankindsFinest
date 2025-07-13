@@ -44,6 +44,7 @@
             <li>BEWH_DecoPaletteIFBlack</li>
         </availablePresets>
         <shaderType>Cutout</shaderType>
+        <defaultColour>(162, 54, 39)</defaultColour>
     </Core40k.ExtraDecorationDef>
 
 <Core40k.ExtraDecorationDef>
@@ -90,6 +91,7 @@
             <li>BEWH_DecoPaletteIFBlack</li>
         </availablePresets>
         <shaderType>Cutout</shaderType>
+        <defaultColour>(162, 54, 39)</defaultColour>
     </Core40k.ExtraDecorationDef>
 
 <Core40k.ExtraDecorationDef>
@@ -178,6 +180,7 @@
             <li>BEWH_DecoPaletteGlassRed</li>
         </availablePresets>
         <shaderType>Cutout</shaderType>
+        <defaultColour>(129, 205, 63)</defaultColour>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>

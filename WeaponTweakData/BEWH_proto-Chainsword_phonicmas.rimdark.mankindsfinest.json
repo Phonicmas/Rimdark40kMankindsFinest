@@ -1,0 +1,15 @@
+{
+  "TextureModID": "phonicmas.rimdark.mankindsfinest",
+  "ItemDefName": "BEWH_proto-Chainsword",
+  "ItemType": "ThingDef",
+  "ItemTypeNamespace": "Verse",
+  "OffX": 0.0276816618,
+  "OffY": 0.0207612459,
+  "Rotation": 30.0,
+  "ScaleX": 1.1,
+  "ScaleY": 1.1,
+  "HandsMode": 2,
+  "BladeStart": -0.131487891,
+  "BladeEnd": 0.629757762,
+  "MeleeWeaponType": 3
+}
