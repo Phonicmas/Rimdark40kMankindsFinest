@@ -15,7 +15,7 @@ public class WorkGiver_CarryMatrixToGeneGestator : WorkGiver_Scanner
 
     public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
     {
-        if (t is not Building_GeneGestator building_GeneGestator || building_GeneGestator.selectedMatrix == null)
+        if (t is not Building_GeneGestator building_GeneGestator || building_GeneGestator.selectedMatrix == null || building_GeneGestator.containedMatrix != null)
         {
             return false;
         }

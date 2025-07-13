@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Make legin material from primarch -->
+    <RecipeDef ParentName="SurgeryFlesh">
+        <defName>BEWH_LeginoMaterialFromPrimarch</defName>
+        <label>create legion material using the primarchs genetic code.</label>
+        <description>Create legion material using the primarchs genetic code.</description>
+        <jobString>Creating legion material frmo primarch.</jobString>
+        <successfullyRemovedHediffMessage>{0} has successfully created legion material from {1}'s genetic code.</successfullyRemovedHediffMessage>
+        <workAmount>5000</workAmount>
+        <researchPrerequisite>BEWH_LegionAstartes</researchPrerequisite>
+        <workerClass>Genes40k.WorkerClass_LegionMaterialCreation</workerClass>
+        <hideBodyPartNames>true</hideBodyPartNames>
+        <targetsBodyPart>false</targetsBodyPart>
+        <surgerySuccessChanceFactor>2</surgerySuccessChanceFactor>
+        <recipeUsers>
+            <li>Human</li>
+        </recipeUsers>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>MedicineUltratech</li>
+                    </thingDefs>
+                </filter>
+                <count>8</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentSpacer</li>
+                    </thingDefs>
+                </filter>
+                <count>4</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>MedicineUltratech</li>
+                <li>ComponentIndustrial</li>
+                <li>ComponentSpacer</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <skillRequirements>
+            <Medicine>14</Medicine>
+            <Crafting>8</Crafting>
+            <Intellectual>12</Intellectual>
+        </skillRequirements>
+    </RecipeDef>
+
+</Defs>

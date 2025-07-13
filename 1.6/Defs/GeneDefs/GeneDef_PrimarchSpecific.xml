@@ -16,7 +16,9 @@
             <li>Enables Forestwalking.</li>
         </customEffectDescriptions>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+                <relatedMaterial>BEWH_ChapterMaterialI</relatedMaterial>
+            </li>
             <li Class="Core40k.DefModExtension_GivesVFEAbility">
                 <abilityDefs>
                     <li>BEWH_ForestWalkLong</li>
@@ -37,7 +39,9 @@
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_Chillgron</iconPath>
         <displayOrderInCategory>402</displayOrderInCategory>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+                <relatedMaterial>BEWH_ChapterMaterialII</relatedMaterial>
+            </li>
         </modExtensions>
     </GeneDef>-->
 
@@ -69,7 +73,9 @@
             <li>Increase quality of artistic creations by 1.</li>
         </customEffectDescriptions>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+                <relatedMaterial>BEWH_ChapterMaterialIII</relatedMaterial>
+            </li>
             <li Class="Core40k.DefModExtension_BoostQualityCreatedByPawn">
                 <qualityBoostLevel>
                     <li>
@@ -108,7 +114,9 @@
             <li>Innate mechlink.</li>
         </customEffectDescriptions>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+                <relatedMaterial>BEWH_ChapterMaterialIV</relatedMaterial>
+            </li>
             <li Class="VEF.Genes.GeneExtension">
                 <hediffsToBodyParts>
                     <li>
@@ -141,7 +149,9 @@
             <AbilityDef>BEWH_AlakhGeh</AbilityDef>
         </descriptionHyperlinks>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+                <relatedMaterial>BEWH_ChapterMaterialV</relatedMaterial>
+            </li>
             <li Class="VEF.Genes.GeneExtension">
                 <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
             </li>
@@ -176,7 +186,9 @@
             </li>
         </conditionalStatAffecters>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+                <relatedMaterial>BEWH_ChapterMaterialVI</relatedMaterial>
+            </li>
             <li Class="VEF.Genes.GeneExtension">
                 <hediffsToBodyParts>
                     <li>
@@ -209,7 +221,9 @@
             <li>Gives the power to raise a temporary bastion to hold back attackers.</li>
         </customEffectDescriptions>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+                <relatedMaterial>BEWH_ChapterMaterialVII</relatedMaterial>
+            </li>
             <li Class="Core40k.DefModExtension_GivesVFEAbility">
                 <abilityDefs>
                     <li>BEWH_RaiseBastion</li>
@@ -250,7 +264,9 @@
             </li>
         </conditionalStatAffecters>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+                <relatedMaterial>BEWH_ChapterMaterialVIII</relatedMaterial>
+            </li>
             <li Class="Core40k.DefModExtension_GivesVFEAbility">
                 <abilityDefs>
                     <li>BEWH_PsychicEmp</li>
@@ -316,7 +332,9 @@
             </li>
         </renderNodeProperties>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+                <relatedMaterial>BEWH_ChapterMaterialIX</relatedMaterial>
+            </li>
             <li Class="VEF.Genes.GeneExtension">
                 <hediffToWholeBody>BEWH_WingsHover</hediffToWholeBody>
                 <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
@@ -350,7 +368,9 @@
             <li>Increase quality of crafting creations by 2 tiers.</li>
         </customEffectDescriptions>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+                <relatedMaterial>BEWH_ChapterMaterialX</relatedMaterial>
+            </li>
             <li Class="VEF.Genes.GeneExtension">
                 <hediffsToBodyParts>
                     <li>
@@ -382,7 +402,9 @@
         <iconPath>UI/Genes/PrimarchSpecific/BEWH_Chillgron</iconPath>
         <displayOrderInCategory>411</displayOrderInCategory>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+                <relatedMaterial>BEWH_ChapterMaterialXI</relatedMaterial>
+            </li>
         </modExtensions>
     </GeneDef>-->
 
@@ -409,7 +431,9 @@
             <AbilityDef>BEWH_ChillgronEmpathy</AbilityDef>
         </descriptionHyperlinks>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+                <relatedMaterial>BEWH_ChapterMaterialXII</relatedMaterial>
+            </li>
             <li Class="VEF.Genes.GeneExtension">
                 <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
             </li>
@@ -448,7 +472,9 @@
             <modType>AddOneLevel</modType>
         </passionMod>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+                <relatedMaterial>BEWH_ChapterMaterialXIII</relatedMaterial>
+            </li>
             <li Class="Core40k.DefModExtension_GivesVFEAbility">
                 <abilityDefs>
                     <li>BEWH_OpusMaxima</li>
@@ -487,7 +513,9 @@
             </li>
         </forcedTraits>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+                <relatedMaterial>BEWH_ChapterMaterialXIV</relatedMaterial>
+            </li>
             <li Class="VEF.Genes.GeneExtension">
                 <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
             </li>
@@ -522,7 +550,9 @@
             <GeneDef>BEWH_BetaPsyker</GeneDef>
         </descriptionHyperlinks>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+                <relatedMaterial>BEWH_ChapterMaterialXV</relatedMaterial>
+            </li>
             <li Class="Core40k.DefModExtension_AddRandomGeneByWeight">
                 <possibleGenesToGive>
                     <li>
@@ -561,7 +591,9 @@
             <modType>AddOneLevel</modType>
         </passionMod>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+                <relatedMaterial>BEWH_ChapterMaterialXVI</relatedMaterial>
+            </li>
             <li Class="Core40k.DefModExtension_GivesVFEAbility">
                 <abilityDefs>
                     <li>BEWH_WarPlanning</li>
@@ -604,7 +636,9 @@
             <modType>AddOneLevel</modType>
         </passionMod>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+                <relatedMaterial>BEWH_ChapterMaterialXVII</relatedMaterial>
+            </li>
             <li Class="VEF.Genes.GeneExtension">
                 <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
             </li>
@@ -634,7 +668,9 @@
             <GeneDef>BEWH_PerpetualBeta</GeneDef>
         </descriptionHyperlinks>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+                <relatedMaterial>BEWH_ChapterMaterialXVIII</relatedMaterial>
+            </li>
             <li Class="Core40k.DefModExtension_AddRandomGeneByWeight">
                 <possibleGenesToGive>
                     <li>
@@ -673,7 +709,9 @@
             <AbilityDef>BEWH_Conceal</AbilityDef>
         </descriptionHyperlinks>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+                <relatedMaterial>BEWH_ChapterMaterialXIX</relatedMaterial>
+            </li>
             <li Class="VEF.Genes.GeneExtension">
                 <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
             </li>
@@ -698,7 +736,9 @@
             <AbilityDef>BEWH_TwinTeleportation</AbilityDef>
         </descriptionHyperlinks>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_PrimarchMaterial" />
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+                <relatedMaterial>BEWH_ChapterMaterialXX</relatedMaterial>
+            </li>
             <li Class="Genes40k.DefModExtension_PrimarchVatExtras">
                 <childAmount>2</childAmount>
             </li>

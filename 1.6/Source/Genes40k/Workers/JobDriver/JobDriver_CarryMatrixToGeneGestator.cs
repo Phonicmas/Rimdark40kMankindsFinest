@@ -15,8 +15,14 @@ public class JobDriver_CarryMatrixToGeneGestator : JobDriver
 
     public override bool TryMakePreToilReservations(bool errorOnFailed)
     {
-        if (!pawn.Reserve(GeneGestator, job, 1, 1, null, errorOnFailed)) return false;
-        if (!pawn.Reserve(GeneMatrix, job, 1, 1, null, errorOnFailed)) return false;
+        if (!pawn.Reserve(GeneGestator, job, 1, 1, null, errorOnFailed))
+        {
+            return false;
+        }
+        if (!pawn.Reserve(GeneMatrix, job, 1, 1, null, errorOnFailed))
+        {
+            return false;
+        }
         return true;
     }
 

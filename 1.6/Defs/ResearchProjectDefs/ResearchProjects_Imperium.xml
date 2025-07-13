@@ -25,7 +25,7 @@
       <li>BEWH_GeneseedPurification</li>
     </prerequisites>
     <baseCost>1000</baseCost>
-    <researchViewX>2</researchViewX>
+    <researchViewX>3</researchViewX>
     <researchViewY>0</researchViewY>
   </ResearchProjectDef>
 
@@ -132,6 +132,20 @@
     </prerequisites>
     <baseCost>15000</baseCost>
     <researchViewX>1</researchViewX>
+    <researchViewY>0</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- Legion Astartes -->
+  <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
+    <defName>BEWH_LegionAstartes</defName>
+    <label>Legion Astartes</label>
+    <description>Unlocks the medical surgery required to create legion material from a primarchs genetic code. Requires the primarch to have legion specific genes</description>
+    <prerequisites>
+      <li>BEWH_GeneseedPurification</li>
+      <li>BEWH_PrimarchProject</li>
+    </prerequisites>
+    <baseCost>6000</baseCost>
+    <researchViewX>2</researchViewX>
     <researchViewY>0</researchViewY>
   </ResearchProjectDef>
 

@@ -18,7 +18,10 @@ public class WorkerClass_GeneProgenoidRemovalBase : Recipe_Surgery
             return false;
         }
 
-        if (!(pawn.genes.GetGene(Genes40kDefOf.BEWH_ProgenoidGlands) is Gene_ProgenoidGlands progenoidGlands)) return false;
+        if (!(pawn.genes.GetGene(Genes40kDefOf.BEWH_ProgenoidGlands) is Gene_ProgenoidGlands progenoidGlands))
+        {
+            return false;
+        }
 
         return progenoidGlands.CanHarvestFirstProgenoidGland();
     }
@@ -45,7 +48,6 @@ public class WorkerClass_GeneProgenoidRemovalBase : Recipe_Surgery
             return;
         }
             
-        Genes40kUtils.MakeGeneseedVial(pawn, Genes40kUtils.IsPrimaris(pawn));
+        Genes40kUtils.MakeGeneseedVial(pawn, pawn.IsPrimaris());
     }
-
 }

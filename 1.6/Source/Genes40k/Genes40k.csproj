@@ -158,6 +158,7 @@
     <Compile Include="DefModExtensions\DefModExtension_PerpetualGene.cs" />
     <Compile Include="DefModExtensions\DefModExtension_PrimarchVatExtras.cs" />
     <Compile Include="DefModExtensions\DefModExtension_PrimarchVatTexture.cs" />
+    <Compile Include="GeneClasses\Gene_ImmortisGland.cs" />
     <Compile Include="GeneClasses\Gene_Psyker.cs" />
     <Compile Include="GeneClasses\Gene_UnstableOrgans.cs" />
     <Compile Include="GeneClasses\Gene_WarpShield.cs" />
@@ -245,6 +246,7 @@
     <Compile Include="Workers\ThoughtWorkers\ThoughtWorker_Serf.cs" />
     <Compile Include="Workers\ThoughtWorkers\ThoughtWorker_ThunderWarrior.cs" />
     <Compile Include="Workers\ThoughtWorkers\ThoughtWorker_XXTwinDead.cs" />
+    <Compile Include="Workers\WorkerClass_LegionMaterialCreation.cs" />
     <Compile Include="Workers\WorkerClass_RubiconPrimaris.cs" />
     <Compile Include="Workers\WorkGiver_CarryMaterialToSangprimus.cs" />
     <Compile Include="Workers\WorkGiver_DoBillPsychic.cs" />

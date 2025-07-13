@@ -42,6 +42,7 @@
             <li>BEWH_DecoPaletteApothecaryRed</li>
         </availablePresets>
         <shaderType>Cutout</shaderType>
+        <defaultColour>(162, 54, 39)</defaultColour>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>

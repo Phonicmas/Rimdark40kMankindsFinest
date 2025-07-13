@@ -47,6 +47,7 @@ public class Building_GeneGestator : Building
         totalTime = containedMatrix.def.GetModExtension<DefModExtension_GeneMatrix>().ticksToGestate;
         progressInt = 0;
         singleGeneMatrix.Destroy();
+        selectedMatrix = null;
     }
 
     private List<ThingDef> AvailableGestatables()

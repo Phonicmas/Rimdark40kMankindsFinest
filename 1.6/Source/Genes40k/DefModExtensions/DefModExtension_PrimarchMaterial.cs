@@ -6,4 +6,6 @@ public class DefModExtension_PrimarchMaterial : DefModExtension
 {
     public int orderInt = 0;
     public string shownMaterialName = string.Empty;
+
+    public ThingDef relatedMaterial = null;
 }

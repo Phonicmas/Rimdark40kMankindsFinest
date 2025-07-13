@@ -7,6 +7,7 @@
         <label>immortis gland</label>
         <description>The Immortis gland, or the "God-Maker", is a small thumbnail-sized lobe, that is inserted directly into the brain's core. The implant secretes hormones that increases the body's growth functions while also intensifying its advanced systems, adjusting their shape and function to suit the primarch's advanced physiology. Two parts of this gland, i.e. the "dextrophic" lobe (right half) and "sintarius" (left half) both are present in the organ, that is provided by this gene. This gene has the unfortunate side effect of practically sterilizing the carrier.</description>
         <iconPath>UI/Genes/Primarch/BEWH_PrimarchImmortisGland</iconPath>
+        <geneClass>Genes40k.Gene_ImmortisGland</geneClass>
         <displayOrderInCategory>300</displayOrderInCategory>
 
         <biostatCpx>18</biostatCpx>
