@@ -3,10 +3,8 @@
   <Excluded>
     <exclude>.git</exclude>
     <exclude>1.5\Source</exclude>
-    <exclude>LegionAstartesIdeas.md</exclude>
+    <exclude>1.6\Source</exclude>
     <exclude>Notes.md</exclude>
     <exclude>README.md</exclude>
-    <exclude>ResearchsAndMechanicsRevised.md</exclude>
-    <exclude>TODOLIST.md</exclude>
   </Excluded>
 </Configuration>
