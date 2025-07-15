@@ -7,6 +7,9 @@
         <effectWorking>Cook</effectWorking>
         <soundWorking>Recipe_Machining</soundWorking>
         <unfinishedThingDef>BEWH_UnfinishedGeneMatrix</unfinishedThingDef>
+        <researchPrerequisites>
+            <li>BEWH_AdvancedProteinSubstitution</li>
+        </researchPrerequisites>
         <recipeUsers>
             <li>BEWH_GeneManipulationTable</li>
         </recipeUsers>
