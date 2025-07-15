@@ -181,6 +181,7 @@ public class GeneseedVial : ThingWithComps
     {
         base.ExposeData();
         Scribe_Values.Look(ref xenotypeName, "xenotypeName");
+        Scribe_Defs.Look(ref xenotype, "xenotype");
         Scribe_Defs.Look(ref iconDef, "iconDef");
         Scribe_Defs.Look(ref extraGeneFromMaterial, "extraGeneFromMaterial");
         Scribe_Deep.Look(ref geneSet, "geneSet");

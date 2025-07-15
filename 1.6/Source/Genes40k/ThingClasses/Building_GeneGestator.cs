@@ -116,16 +116,16 @@ public class Building_GeneGestator : Building
     private void Finish()
     {
         var geneseedVial = (GeneseedVial)ThingMaker.MakeThing(containedMatrix.def.GetModExtension<DefModExtension_GeneMatrix>().makesGeneVial);
-
+        
         if (selectedMaterial != null)
         {
             geneseedVial.extraGeneFromMaterial = selectedMaterial.GetModExtension<DefModExtension_GeneFromMaterial>().addedGene;
         }
-
+        
         GenSpawn.Spawn(geneseedVial, InteractionCell, Map);
-
-        var letter = LetterMaker.MakeLetter("BEWH.MankindsFinest.GeneGestator.GestateFinishLetter".Translate(), "BEWH.MankindsFinest.GeneGestator.GestateFinishMessage".Translate(selectedMatrix.label, geneseedVial.Label), LetterDefOf.PositiveEvent, geneseedVial);
-
+        
+        var letter = LetterMaker.MakeLetter("BEWH.MankindsFinest.GeneGestator.GestateFinishLetter".Translate(), "BEWH.MankindsFinest.GeneGestator.GestateFinishMessage".Translate(containedMatrix.def.label, geneseedVial.Label), LetterDefOf.PositiveEvent, geneseedVial);
+        
         Find.LetterStack.ReceiveLetter(letter);
         Reset();
     }
@@ -390,6 +390,7 @@ public class Building_GeneGestator : Building
         base.ExposeData();
         Scribe_Values.Look(ref totalTime, "totalTime", 0f);
         Scribe_Values.Look(ref progressInt, "progress", 0f);
+        Scribe_Values.Look(ref doWork, "doWork");
         Scribe_Defs.Look(ref selectedMatrix, "selectedMatrix");
         Scribe_Defs.Look(ref selectedMaterial, "selectedMaterial");
         Scribe_Deep.Look(ref containedMatrix, "containedMatrix");
