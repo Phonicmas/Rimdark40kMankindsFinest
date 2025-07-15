@@ -194,7 +194,7 @@
                     <li>BEWH_Deco_TW_Goggles</li>
                 </extraDecorations>
                 <defaultPrimaryColor>(231,148,88)</defaultPrimaryColor>
-                <defaultSecondaryColor>(231,148,88)</defaultSecondaryColor>
+                <defaultSecondaryColor>(253,184,110)</defaultSecondaryColor>
             </li>
         </modExtensions>
     </ThingDef>
