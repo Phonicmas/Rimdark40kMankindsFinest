@@ -18,7 +18,6 @@
 		<li IfModActive="Ludeon.RimWorld.Ideology">1.6/Mods/Ideology</li>
 		<li IfModActive="dubwise.dubsbadhygiene">1.6/Mods/DubsHygiene</li>
 		<li IfModActive="dubwise.rimatomics">1.6/Mods/DubsRimatomicsRadiation</li>
-		<li IfModActive="oskarpotocki.vfe.empire">1.6/Mods/VanillaFactionExpandedEmpire</li>
 		<li IfModActive="katavrik.crashlanding">1.6/Mods/CrashLanding</li>
 		<li IfModActive="jaxe.rimhud">1.6/Mods/RimHUD</li>
 		<li IfModActive="kentington.saveourship2">1.6/Mods/SOS2</li>
