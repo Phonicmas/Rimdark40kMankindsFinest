@@ -23,6 +23,7 @@
 				</capMods>
 				<statFactors>
 					<IncomingDamageFactor>0.5</IncomingDamageFactor>
+					<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0</VacuumResistance>
 				</statFactors>
 				<totalBleedFactor>0</totalBleedFactor>
 			</li>

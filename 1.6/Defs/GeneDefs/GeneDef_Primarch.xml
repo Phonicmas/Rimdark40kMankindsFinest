@@ -275,6 +275,7 @@
             <ToxicResistance>2</ToxicResistance>
             <ComfyTemperatureMin>-100</ComfyTemperatureMin>
             <ComfyTemperatureMax>100</ComfyTemperatureMax>
+            <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.3</VacuumResistance>
         </statOffsets>
 
         <capMods>

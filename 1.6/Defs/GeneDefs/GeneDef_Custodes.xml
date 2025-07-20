@@ -333,6 +333,10 @@
         <biostatArc>3</biostatArc>
         <minAgeActive>6</minAgeActive>
 
+        <statOffsets>
+            <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.25</VacuumResistance>
+        </statOffsets>
+
         <statFactors>
             <MeleeHitChance>1.8</MeleeHitChance>
         </statFactors>
