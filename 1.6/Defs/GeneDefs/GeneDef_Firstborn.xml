@@ -437,6 +437,7 @@
         <statOffsets>
             <ComfyTemperatureMin>-40</ComfyTemperatureMin>
             <ComfyTemperatureMax>40</ComfyTemperatureMax>
+            <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.1</VacuumResistance>
         </statOffsets>
         <minAgeActive>16</minAgeActive>
         <modExtensions>

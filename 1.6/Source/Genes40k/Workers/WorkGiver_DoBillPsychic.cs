@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using System.Collections.Generic;
+using RimWorld;
 using Verse;
 using Verse.AI;
 
@@ -8,16 +9,42 @@ public class WorkGiver_DoBillPsychic : WorkGiver_DoBill
 {
     public override Job JobOnThing(Pawn pawn, Thing thing, bool forced = false)
     {
-        if (pawn.story?.traits == null)
-        {
-            return null;
-        }
-
-        if (pawn.story.traits.HasTrait(Genes40kDefOf.PsychicSensitivity, -1) || pawn.story.traits.HasTrait(Genes40kDefOf.PsychicSensitivity, -2) || pawn.GetStatValue(StatDefOf.PsychicSensitivity) == 0)
+        if (thing is not Building_WorkTable building_WorkTable)
         {
             return null;
         }
         
-        return base.JobOnThing(pawn, thing, forced);
+        var orgBills = new List<Bill>();
+        orgBills.AddRange(building_WorkTable.billStack.Bills);
+        
+        var billAddPost = new List<Bill>();
+
+        foreach (var bill in building_WorkTable.billStack.Bills)
+        {
+            if (!bill.recipe.HasModExtension<DefModExtension_GeneMatrixRecipe>() || !bill.recipe.GetModExtension<DefModExtension_GeneMatrixRecipe>().drainsUserWhenMaking)
+            {
+                continue;
+            }
+
+            if (pawn.GetStatValue(StatDefOf.PsychicSensitivity) > 0)
+            {
+                continue;
+            }
+            
+            billAddPost.Add(bill);
+            JobFailReason.Is("PsychicSensitivityRequired", bill.Label);
+        }
+
+        foreach (var bill in billAddPost)
+        {
+            building_WorkTable.billStack.Bills.Remove(bill);
+        }
+        
+        var job = base.JobOnThing(pawn, thing, forced);
+
+        building_WorkTable.billStack.Bills.RemoveRange(0, building_WorkTable.billStack.Bills.Count);
+        building_WorkTable.billStack.Bills.AddRange(orgBills);
+
+        return job;
     }
 }

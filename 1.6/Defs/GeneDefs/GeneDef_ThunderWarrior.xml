@@ -129,6 +129,9 @@
             <RestFallRateFactor>0.8</RestFallRateFactor>
             <ImmunityGainSpeed>0.9</ImmunityGainSpeed>
         </statFactors>
+        <statOffsets>
+            <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.05</VacuumResistance>
+        </statOffsets>
         <minAgeActive>10</minAgeActive>
     </GeneDef>
 
