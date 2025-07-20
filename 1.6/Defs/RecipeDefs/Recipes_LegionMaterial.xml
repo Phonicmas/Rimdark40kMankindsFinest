@@ -4,10 +4,10 @@
     <!-- Make legin material from primarch -->
     <RecipeDef ParentName="SurgeryFlesh">
         <defName>BEWH_LeginoMaterialFromPrimarch</defName>
-        <label>create legion material using the primarchs genetic code.</label>
-        <description>Create legion material using the primarchs genetic code.</description>
-        <jobString>Creating legion material frmo primarch.</jobString>
-        <successfullyRemovedHediffMessage>{0} has successfully created legion material from {1}'s genetic code.</successfullyRemovedHediffMessage>
+        <label>create Legion material using the Primarch's genetic code</label>
+        <description>Create Legion material using the Primarch's genetic code.</description>
+        <jobString>Creating Legion material from Primarch.</jobString>
+        <successfullyRemovedHediffMessage>{0} has successfully created Legion material from {1}'s genetic code.</successfullyRemovedHediffMessage>
         <workAmount>5000</workAmount>
         <researchPrerequisite>BEWH_LegionAstartes</researchPrerequisite>
         <workerClass>Genes40k.WorkerClass_LegionMaterialCreation</workerClass>

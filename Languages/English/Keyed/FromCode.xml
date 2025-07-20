@@ -107,7 +107,7 @@
 
   <!-- Containers -->
   <BEWH.MankindsFinest.Containers.DeterioratingOutsideContainer>Deteriorates outside suitable container.</BEWH.MankindsFinest.Containers.DeterioratingOutsideContainer>
-  <BEWH.MankindsFinest.Containers.SuitableContainers>Suiteable containers:</BEWH.MankindsFinest.Containers.SuitableContainers>
+  <BEWH.MankindsFinest.Containers.SuitableContainers>Suitable containers:</BEWH.MankindsFinest.Containers.SuitableContainers>
   <BEWH.MankindsFinest.Containers.ItemDeterioratingNotInContainer>not in safe container</BEWH.MankindsFinest.Containers.ItemDeterioratingNotInContainer>
 
   <BEWH.MankindsFinest.Containers.SangprimusPortumAcquired>Materials</BEWH.MankindsFinest.Containers.SangprimusPortumAcquired>
