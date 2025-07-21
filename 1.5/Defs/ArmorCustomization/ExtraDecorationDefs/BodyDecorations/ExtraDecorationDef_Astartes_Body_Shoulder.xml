@@ -105,7 +105,6 @@
             </dataSouth>
             <dataEast>
                 <layer>75</layer>
-                <flip>true</flip>
             </dataEast>
             <dataWest>
                 <layer>72</layer>
