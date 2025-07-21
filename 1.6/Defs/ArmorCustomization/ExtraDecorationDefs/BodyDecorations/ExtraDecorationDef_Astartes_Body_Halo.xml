@@ -23,7 +23,7 @@
         </appliesTo>
         <drawData>
             <dataNorth>
-                <layer>100</layer>
+                <layer>80</layer>
                 <offset>(0, 0, 0.37)</offset>
             </dataNorth>
             <dataSouth>
@@ -44,8 +44,10 @@
             <li>BEWH_DecoPaletteGold</li>
             <li>BEWH_DecoPaletteSilver</li>
             <li>BEWH_DecoPaletteIFBlack</li>
+            <li>BEWH_DecoPaletteBronze</li>
         </availablePresets>
         <shaderType>Cutout</shaderType>
+        <defaultColour>(240,176,29)</defaultColour>
         <flipable>false</flipable>
         <drawInHeadSpace>true</drawInHeadSpace>
     </Core40k.ExtraDecorationDef>
@@ -71,7 +73,7 @@
         </appliesTo>
         <drawData>
             <dataNorth>
-                <layer>100</layer>
+                <layer>72</layer>
                 <offset>(0, 0, 0.37)</offset>
             </dataNorth>
             <dataSouth>
@@ -92,8 +94,10 @@
             <li>BEWH_DecoPaletteGold</li>
             <li>BEWH_DecoPaletteSilver</li>
             <li>BEWH_DecoPaletteIFBlack</li>
+            <li>BEWH_DecoPaletteBronze</li>
         </availablePresets>
         <shaderType>Cutout</shaderType>
+        <defaultColour>(240,176,29)</defaultColour>
         <flipable>false</flipable>
         <drawInHeadSpace>true</drawInHeadSpace>
     </Core40k.ExtraDecorationDef>

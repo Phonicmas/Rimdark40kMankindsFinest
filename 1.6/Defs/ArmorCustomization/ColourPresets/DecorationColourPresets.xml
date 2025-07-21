@@ -8,6 +8,13 @@
         <colour>(240,176,29)</colour>
     </Core40k.DecorationColourPresetDef>
 
+<!-- Bronze -->
+    <Core40k.DecorationColourPresetDef>
+        <defName>BEWH_DecoPaletteBronze</defName>
+        <label>Bronze</label>
+        <colour>(230,163,92)</colour>
+    </Core40k.DecorationColourPresetDef>
+
 <!-- Silver -->
     <Core40k.DecorationColourPresetDef>
         <defName>BEWH_DecoPaletteSilver</defName>

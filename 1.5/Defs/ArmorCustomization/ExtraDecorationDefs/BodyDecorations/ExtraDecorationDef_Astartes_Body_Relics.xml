@@ -34,7 +34,14 @@
                 <layer>64</layer>
             </dataWest>
         </drawData>
+        <availablePresets>
+            <li>BEWH_DecoPaletteSilver</li>
+            <li>BEWH_DecoPaletteGold</li>
+            <li>BEWH_DecoPaletteBronze</li>
+        </availablePresets>
         <shaderType>Cutout</shaderType>
+        <defaultColour>(240,176,29)</defaultColour>
+        <colourable>true</colourable>
         <flipable>true</flipable>
     </Core40k.ExtraDecorationDef>
 
@@ -71,7 +78,14 @@
                 <layer>64</layer>
             </dataWest>
         </drawData>
+        <availablePresets>
+            <li>BEWH_DecoPaletteSilver</li>
+            <li>BEWH_DecoPaletteGold</li>
+            <li>BEWH_DecoPaletteBronze</li>
+        </availablePresets>
         <shaderType>Cutout</shaderType>
+        <defaultColour>(240,176,29)</defaultColour>
+        <colourable>true</colourable>
         <flipable>true</flipable>
     </Core40k.ExtraDecorationDef>
 
