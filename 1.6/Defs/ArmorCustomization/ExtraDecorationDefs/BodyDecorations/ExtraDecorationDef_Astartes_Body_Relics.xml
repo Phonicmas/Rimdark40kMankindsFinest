@@ -20,7 +20,6 @@
             <li>BEWH_MkXPowerArmorChaplain</li>
         </appliesTo>
         <drawData>
-            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
             <dataNorth>
                 <layer>76</layer>
             </dataNorth>
@@ -35,7 +34,14 @@
                 <flip>true</flip>
             </dataWest>
         </drawData>
+        <availablePresets>
+            <li>BEWH_DecoPaletteSilver</li>
+            <li>BEWH_DecoPaletteGold</li>
+            <li>BEWH_DecoPaletteBronze</li>
+        </availablePresets>
         <shaderType>Cutout</shaderType>
+        <defaultColour>(240,176,29)</defaultColour>
+        <colourable>true</colourable>
         <flipable>true</flipable>
     </Core40k.ExtraDecorationDef>
 
@@ -57,7 +63,6 @@
             <li>BEWH_MkXPowerArmorChaplain</li>
         </appliesTo>
         <drawData>
-            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
             <dataNorth>
                 <layer>76</layer>
             </dataNorth>
@@ -72,7 +77,14 @@
                 <layer>64</layer>
             </dataWest>
         </drawData>
+        <availablePresets>
+            <li>BEWH_DecoPaletteSilver</li>
+            <li>BEWH_DecoPaletteGold</li>
+            <li>BEWH_DecoPaletteBronze</li>
+        </availablePresets>
         <shaderType>Cutout</shaderType>
+        <defaultColour>(240,176,29)</defaultColour>
+        <colourable>true</colourable>
         <flipable>true</flipable>
     </Core40k.ExtraDecorationDef>
 

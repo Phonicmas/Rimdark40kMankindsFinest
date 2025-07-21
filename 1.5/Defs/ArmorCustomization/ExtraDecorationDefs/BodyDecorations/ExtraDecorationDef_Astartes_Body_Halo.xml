@@ -44,8 +44,10 @@
             <li>BEWH_DecoPaletteGold</li>
             <li>BEWH_DecoPaletteSilver</li>
             <li>BEWH_DecoPaletteIFBlack</li>
+            <li>BEWH_DecoPaletteBronze</li>
         </availablePresets>
         <shaderType>Cutout</shaderType>
+        <defaultColour>(240,176,29)</defaultColour>
         <flipable>false</flipable>
         <drawInHeadSpace>true</drawInHeadSpace>
     </Core40k.ExtraDecorationDef>
@@ -92,8 +94,10 @@
             <li>BEWH_DecoPaletteGold</li>
             <li>BEWH_DecoPaletteSilver</li>
             <li>BEWH_DecoPaletteIFBlack</li>
+            <li>BEWH_DecoPaletteBronze</li>
         </availablePresets>
         <shaderType>Cutout</shaderType>
+        <defaultColour>(240,176,29)</defaultColour>
         <flipable>false</flipable>
         <drawInHeadSpace>true</drawInHeadSpace>
     </Core40k.ExtraDecorationDef>
