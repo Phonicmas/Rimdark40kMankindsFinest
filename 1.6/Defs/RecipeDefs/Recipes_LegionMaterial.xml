@@ -63,7 +63,7 @@
         <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
         <effectWorking>Cook</effectWorking>
         <soundWorking>Recipe_Machining</soundWorking>
-        <unfinishedThingDef>BEWH_ChapterMaterial_None</unfinishedThingDef>
+        <unfinishedThingDef>BEWH_UnfinishedChapterMaterial</unfinishedThingDef>
         <recipeUsers>
             <li>BEWH_GeneManipulationTable</li>
         </recipeUsers>

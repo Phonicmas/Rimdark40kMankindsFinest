@@ -14,7 +14,7 @@
     </graphicData>
     <stuffCategories Inherit="false" />
   </ThingDef>
-  
+
   <ThingDef ParentName="UnfinishedBase">
     <defName>BEWH_UnfinishedGeneMatrix</defName>
     <label>unfinished gene matrix</label>
@@ -24,6 +24,20 @@
     </statBases>
     <graphicData>
       <texPath>Things/Item/GeneMatrix/BEWH_GeneMatrix_Empty</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stuffCategories Inherit="false" />
+  </ThingDef>
+
+  <ThingDef ParentName="UnfinishedBase">
+    <defName>BEWH_UnfinishedChapterMaterial</defName>
+    <label>unfinished chapter material</label>
+    <description>An unfinished chapter material.</description>
+    <statBases>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Item/ChapterMaterial/BEWH_ChapterMaterial_None</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <stuffCategories Inherit="false" />

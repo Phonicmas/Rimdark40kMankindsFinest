@@ -3,7 +3,7 @@ using Verse;
 
 namespace Genes40k;
 
-public class ThoughtWorker_BlackTemplar : ThoughtWorker
+public class ThoughtWorker_Xenophobia : ThoughtWorker
 {
     protected override ThoughtState CurrentSocialStateInternal(Pawn pawn, Pawn other)
     {
@@ -17,21 +17,29 @@ public class ThoughtWorker_BlackTemplar : ThoughtWorker
             return false;
         }
         
-        if (!other.IsFirstborn() && !other.IsPrimaris() && !other.IsPrimarch() && !other.IsCustodes())
+        var defMod = def.GetModExtension<DefModExtension_ThoughtXenophobiaWhitelist>();
+        
+        if (defMod != null)
         {
-            return true;
+            if (!defMod.xenotypesNotHated.Contains(other.genes.Xenotype))
+            {
+                return true;
+            }
         }
 
         if (!ModsConfig.IdeologyActive)
         {
             return false;
         }
-        
-        if (other.Ideo != pawn.Ideo)
-        {
-            return true;
-        }
 
+        if (defMod != null)
+        {
+            if (defMod.hateIfDifferentIdeo && other.Ideo != pawn.Ideo)
+            {
+                return true;
+            }
+        }
+        
         return false;
     }
 }

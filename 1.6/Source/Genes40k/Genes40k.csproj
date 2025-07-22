@@ -145,6 +145,7 @@
     <Compile Include="Comps\SpaceMarine\CompProperties_AbilityRemembrance.cs" />
     <Compile Include="Comps\SpaceMarine\CompProperties_AbilityStasisConfirmation.cs" />
     <Compile Include="ConditionalStatAffecters\ConditionalStatAffecter_WarpShield.cs" />
+    <Compile Include="DefModExtensions\DefModExtension_ThoughtXenophobiaWhitelist.cs" />
     <Compile Include="DefModExtensions\DefModExtension_DropPod.cs" />
     <Compile Include="DefModExtensions\DefModExtension_ExclusiveMech.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneInducedFear.cs" />
@@ -243,7 +244,7 @@
     <Compile Include="Workers\JobDriver\JobDriver_CarryMatrixToGeneGestator.cs" />
     <Compile Include="Workers\JobDriver\JobDriver_CarryPrimarchEmbryoToVat.cs" />
     <Compile Include="Workers\JobDriver\JobDriver_FleeInducedFear.cs" />
-    <Compile Include="Workers\ThoughtWorkers\ThoughtWorker_BlackTemplar.cs" />
+    <Compile Include="Workers\ThoughtWorkers\ThoughtWorker_Xenophobia.cs" />
     <Compile Include="Workers\ThoughtWorkers\ThoughtWorker_HolyRadiance.cs" />
     <Compile Include="Workers\ThoughtWorkers\ThoughtWorker_Pariah.cs" />
     <Compile Include="Workers\ThoughtWorkers\ThoughtWorker_Precept_Psyker.cs" />
