@@ -21,9 +21,14 @@ public class ThoughtWorker_Xenophobia : ThoughtWorker
         
         if (defMod != null)
         {
+            if (defMod.xenotypesImpure.Contains(other.genes.Xenotype))
+            {
+                return ThoughtState.ActiveAtStage(0);
+            }
+            
             if (!defMod.xenotypesNotHated.Contains(other.genes.Xenotype))
             {
-                return true;
+                return ThoughtState.ActiveAtStage(1);
             }
         }
 
@@ -36,7 +41,7 @@ public class ThoughtWorker_Xenophobia : ThoughtWorker
         {
             if (defMod.hateIfDifferentIdeo && other.Ideo != pawn.Ideo)
             {
-                return true;
+                return ThoughtState.ActiveAtStage(0);
             }
         }
         
