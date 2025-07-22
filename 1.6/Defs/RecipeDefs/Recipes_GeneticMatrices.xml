@@ -18,7 +18,6 @@
             </thingDefs>
         </fixedIngredientFilter>
         <workSkill>Crafting</workSkill>
-        <displayPriority>0</displayPriority>
     </RecipeDef>
 
     <!-- Thunder Warrior -->
@@ -28,6 +27,7 @@
         <description>Make a Thunder Warrior genetic matrix.</description>
         <jobString>Making Thunder Warrior genetic matrix.</jobString>
         <workAmount>15000</workAmount>
+        <displayPriority>0</displayPriority>
         <researchPrerequisites>
             <li>BEWH_GeneseedCreation</li>
         </researchPrerequisites>
@@ -81,6 +81,7 @@
         <description>Make a Firstborn genetic matrix.</description>
         <jobString>Making Firstborn genetic matrix.</jobString>
         <workAmount>25000</workAmount>
+        <displayPriority>1</displayPriority>
         <researchPrerequisites>
             <li>BEWH_GeneseedPurification</li>
         </researchPrerequisites>
@@ -147,6 +148,7 @@
         <description>Make a Primaris genetic matrix.</description>
         <jobString>Making Primaris genetic matrix.</jobString>
         <workAmount>30000</workAmount>
+        <displayPriority>2</displayPriority>
         <researchPrerequisites>
             <li>BEWH_GeneseedPerfection</li>
         </researchPrerequisites>
@@ -213,6 +215,7 @@
         <description>Make a Custodes genetic matrix.</description>
         <jobString>Making Custodes genetic matrix.</jobString>
         <workAmount>40000</workAmount>
+        <displayPriority>3</displayPriority>
         <researchPrerequisites>
             <li>BEWH_CustodesCreation</li>
         </researchPrerequisites>
@@ -282,6 +285,7 @@
         <description>Make a Primarch genetic matrix.</description>
         <jobString>Making Primarch genetic matrix.</jobString>
         <workAmount>120000</workAmount>
+        <displayPriority>4</displayPriority>
         <researchPrerequisites>
             <li>BEWH_PrimarchProject</li>
         </researchPrerequisites>

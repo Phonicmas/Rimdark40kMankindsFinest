@@ -35,6 +35,11 @@
         <glowRadius>3</glowRadius>
         <glowColor>(255,255,255,0)</glowColor>
       </li>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>BEWH_SangprimusPortum</li>
+        </linkableFacilities>
+      </li>
       <li Class="CompProperties_Breakdownable"/>
     </comps>
     <graphicData>

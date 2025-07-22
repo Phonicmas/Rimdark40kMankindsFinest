@@ -9,7 +9,10 @@ public class EternalWatchStartMentalUndraft
 {
     public static void Postfix(Pawn ___pawn, ref bool value)
     {
-        if (value || ___pawn.genes == null) return;
+        if (value || ___pawn.genes == null)
+        {
+            return;
+        }
             
         var gene_EternalWatch = ___pawn.genes.GetFirstGeneOfType<Gene_EternalWatch>();
         gene_EternalWatch?.TryDoMentalBreak();

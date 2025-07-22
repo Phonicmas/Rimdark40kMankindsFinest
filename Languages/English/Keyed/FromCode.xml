@@ -105,6 +105,9 @@
   <BEWH.MankindsFinest.GeneManupulationTable.CraftPrimarchEmbryo>Craft primarch embryo</BEWH.MankindsFinest.GeneManupulationTable.CraftPrimarchEmbryo>
   <BEWH.MankindsFinest.GeneManupulationTable.CraftPrimarchEmbryoDesc>Select ascendance vial and human embryo for creation of a primarch embryo.</BEWH.MankindsFinest.GeneManupulationTable.CraftPrimarchEmbryoDesc>
 
+  <BEWH.MankindsFinest.GeneManupulationTable.PsychicSensitivityRequired>Cannot craft {0}, requires psychic sensitivity higher than 0%</BEWH.MankindsFinest.GeneManupulationTable.PsychicSensitivityRequired>
+  <BEWH.MankindsFinest.GeneManupulationTable.MissingLegionMaterial>Cannot craft {0}, requires {1} to be in linked Sangprimus</BEWH.MankindsFinest.GeneManupulationTable.MissingLegionMaterial>
+
   <!-- Containers -->
   <BEWH.MankindsFinest.Containers.DeterioratingOutsideContainer>Deteriorates outside suitable container.</BEWH.MankindsFinest.Containers.DeterioratingOutsideContainer>
   <BEWH.MankindsFinest.Containers.SuitableContainers>Suitable containers:</BEWH.MankindsFinest.Containers.SuitableContainers>

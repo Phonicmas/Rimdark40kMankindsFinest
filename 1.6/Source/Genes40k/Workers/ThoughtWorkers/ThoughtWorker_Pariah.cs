@@ -7,7 +7,7 @@ public class ThoughtWorker_Pariah : ThoughtWorker
 {
     protected override ThoughtState CurrentSocialStateInternal(Pawn pawn, Pawn other)
     {
-        if (!other.RaceProps.Humanlike || !RelationsUtility.PawnsKnowEachOther(pawn, other))
+        if (!other.RaceProps.Humanlike)
         {
             return false;
         }

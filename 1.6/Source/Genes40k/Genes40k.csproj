@@ -154,6 +154,7 @@
     <Compile Include="DefModExtensions\DefModExtension_IgnoreMovespeedDecrease.cs" />
     <Compile Include="DefModExtensions\DefModExtension_IncreasedJoyFromArt.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneseedVialRecipe.cs" />
+    <Compile Include="DefModExtensions\DefModExtension_LegionMaterialCreation.cs" />
     <Compile Include="DefModExtensions\DefModExtension_LockedByResearch.cs" />
     <Compile Include="DefModExtensions\DefModExtension_PerpetualGene.cs" />
     <Compile Include="DefModExtensions\DefModExtension_PrimarchVatExtras.cs" />
@@ -169,6 +170,7 @@
     <Compile Include="GeneClasses\Gene_Perpetual.cs" />
     <Compile Include="GeneClasses\Gene_ProgenoidGlands.cs" />
     <Compile Include="GeneClasses\Gene_TwinConnected.cs" />
+    <Compile Include="GeneClasses\Gene_ZealousFury.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_BlockedPsycasting.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_DomitarMechExclusive.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_HideJumpPack.cs" />
@@ -188,6 +190,8 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_SerfGetTrait2.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_SpaceMarineChapterSpawn.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_UpdateRankIconOnRankUp.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_ZealousFuryStopMentalBreak.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_ZealousFuryStopMentalState.cs" />
     <Compile Include="Hediffs\Hediff_Serf.cs" />
     <Compile Include="Integrations\RimHUDProgenoidGlandProgress.cs" />
     <Compile Include="Rank\ChapterRankDef.cs" />
@@ -239,6 +243,7 @@
     <Compile Include="Workers\JobDriver\JobDriver_CarryMatrixToGeneGestator.cs" />
     <Compile Include="Workers\JobDriver\JobDriver_CarryPrimarchEmbryoToVat.cs" />
     <Compile Include="Workers\JobDriver\JobDriver_FleeInducedFear.cs" />
+    <Compile Include="Workers\ThoughtWorkers\ThoughtWorker_BlackTemplar.cs" />
     <Compile Include="Workers\ThoughtWorkers\ThoughtWorker_HolyRadiance.cs" />
     <Compile Include="Workers\ThoughtWorkers\ThoughtWorker_Pariah.cs" />
     <Compile Include="Workers\ThoughtWorkers\ThoughtWorker_Precept_Psyker.cs" />
