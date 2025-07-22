@@ -139,7 +139,7 @@
   <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
     <defName>BEWH_LegionAstartes</defName>
     <label>Legion Astartes</label>
-    <description>Unlocks the medical surgery required to create legion material from a primarchs genetic code. Requires the primarch to have legion specific genes</description>
+    <description>Unlocks the medical surgery required to create legion material from a primarchs genetic code. Requires the primarch to have legion specific genes. Addional successor legion material may become craftable.</description>
     <prerequisites>
       <li>BEWH_GeneseedPurification</li>
       <li>BEWH_PrimarchProject</li>

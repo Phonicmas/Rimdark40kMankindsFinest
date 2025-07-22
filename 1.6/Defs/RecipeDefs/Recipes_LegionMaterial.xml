@@ -63,14 +63,14 @@
         <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
         <effectWorking>Cook</effectWorking>
         <soundWorking>Recipe_Machining</soundWorking>
-        <unfinishedThingDef>BEWH_UnfinishedGeneMatrix</unfinishedThingDef>
+        <unfinishedThingDef>BEWH_ChapterMaterial_None</unfinishedThingDef>
         <recipeUsers>
             <li>BEWH_GeneManipulationTable</li>
         </recipeUsers>
         <researchPrerequisites>
             <li>BEWH_LegionAstartes</li>
         </researchPrerequisites>
-         <fixedIngredientFilter>
+        <fixedIngredientFilter>
             <thingDefs>
                 <li>MedicineUltratech</li>
                 <li>ComponentSpacer</li>
