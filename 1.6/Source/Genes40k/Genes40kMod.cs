@@ -36,6 +36,8 @@ public class Genes40kMod : Mod
         scrollViewHeight += listingHeightIncrease;
 
         //Default Chapter Colour
+        listingStandard.Label("BEWH.MankindsFinest.ModSettings.DefaultChapterColoursDesc".Translate());
+        scrollViewHeight += listingHeightIncrease;
         listingStandard.Indent(inRect.width * 0.25f);
         if (listingStandard.ButtonText("BEWH.MankindsFinest.ModSettings.DefaultChapterColours".Translate(Settings.CurrentlySelectedPreset.label), widthPct: 0.5f))
         {
