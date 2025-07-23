@@ -19,6 +19,7 @@
         <li>FabricationBench</li>
       </recipeUsers>
     </recipeMaker>
+    <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
     <tools>
       <li>
         <label>handle</label>
@@ -48,6 +49,7 @@
         <li>FabricationBench</li>
       </recipeUsers>
     </recipeMaker>
+    <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
     <tools>
       <li>
         <label>stock</label>

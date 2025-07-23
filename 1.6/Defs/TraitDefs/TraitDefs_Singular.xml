@@ -37,7 +37,7 @@
         <degreeDatas>
             <li>
                 <label>serf</label>
-                <description>{PAWN_nameDef} is a serf. {PAWN_pronoun} sole purpose is to serve his Space Marine masters.</description>
+                <description>{PAWN_nameDef} is a serf. {PAWN_pronoun} lives to serve their Space Marine masters.</description>
             </li>
         </degreeDatas>
     </TraitDef>
