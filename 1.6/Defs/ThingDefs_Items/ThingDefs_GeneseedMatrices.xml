@@ -6,7 +6,7 @@
   <!-- Thunder Warrior Genetic Matrix -->
   <ThingDef ParentName="BEWH_GeneticMatrixBase">
     <defName>BEWH_GeneseedMatrixThunderWarrior</defName>
-    <label>thunder warrior genetic matrix</label>
+    <label>Thunder Warrior genetic matrix</label>
     <description>Genetic matrix is a bio-mechanical construct that encodes key genetic modifications, providing the necessary instructions for stable mutations and enhancements. It is used in a Gene-seed Gestator as a template for creation of the Ascendance Vials.\n\nThis genetic matrix contains the template for making Thunder Warriors.\n\nRapidly deteriorates outside containment.</description>
     <graphicData>
       <texPath>Things/Item/GeneMatrix/BEWH_GeneMatrix_ThunderWarrior</texPath>
@@ -30,7 +30,7 @@
   <!-- Firstborn Genetic Matrix -->
   <ThingDef ParentName="BEWH_GeneticMatrixBase">
     <defName>BEWH_GeneseedMatrixFirstborn</defName>
-    <label>firstborn genetic matrix</label>
+    <label>Firstborn genetic matrix</label>
     <description>Genetic matrix is a bio-mechanical construct that encodes key genetic modifications, providing the necessary instructions for stable mutations and enhancements. It is used in a Gene-seed Gestator as a template for creation of the Ascendance Vials.\n\nThis genetic matrix contains the template for making Firstborn marines.\n\nIt seems that this template has room for additions.\n\nRapidly deteriorates outside containment.</description>
     <graphicData>
       <texPath>Things/Item/GeneMatrix/BEWH_GeneMatrix_Firstborn</texPath>
@@ -56,7 +56,7 @@
   <!-- Primaris Genetic Matrix -->
   <ThingDef ParentName="BEWH_GeneticMatrixBase">
     <defName>BEWH_GeneseedMatrixPrimaris</defName>
-    <label>primaris genetic matrix</label>
+    <label>Primaris genetic matrix</label>
     <description>Genetic matrix is a bio-mechanical construct that encodes key genetic modifications, providing the necessary instructions for stable mutations and enhancements. It is used in a Gene-seed Gestator as a template for creation of the Ascendance Vials.\n\nThis genetic matrix contains the template for making Primaris marines.\n\nIt seems that this template has room for additions.\n\nRapidly deteriorates outside containment.</description>
     <graphicData>
       <texPath>Things/Item/GeneMatrix/BEWH_GeneMatrix_Primaris</texPath>
@@ -82,7 +82,7 @@
   <!-- Custodes Genetic Matrix -->
   <ThingDef ParentName="BEWH_GeneticMatrixBase">
     <defName>BEWH_GeneseedMatrixCustodes</defName>
-    <label>custodes genetic matrix</label>
+    <label>Custodes genetic matrix</label>
     <description>Genetic matrix is a bio-mechanical construct that encodes key genetic modifications, providing the necessary instructions for stable mutations and enhancements. It is used in a Gene-seed Gestator as a template for creation of the Ascendance Vials.\n\nThis genetic matrix contains the template for making Custodes.\n\nRapidly deteriorates outside containment.</description>
     <graphicData>
       <texPath>Things/Item/GeneMatrix/BEWH_GeneMatrix_Custodes</texPath>
@@ -106,7 +106,7 @@
   <!-- Primarch Genetic Matrix -->
   <ThingDef ParentName="BEWH_GeneticMatrixBase">
     <defName>BEWH_GeneseedMatrixPrimarch</defName>
-    <label>primarch genetic matrix</label>
+    <label>Primarch genetic matrix</label>
     <description>Genetic matrix is a bio-mechanical construct that encodes key genetic modifications, providing the necessary instructions for stable mutations and enhancements. It is used in a Gene-seed Gestator as a template for creation of the Ascendance Vials.\n\nThis genetic matrix contains the template for making Primarchs.\n\nIt seems that this template has room for additions.\n\nRapidly deteriorates outside containment.</description>
     <graphicData>
       <texPath>Things/Item/GeneMatrix/BEWH_GeneMatrix_Primarch</texPath>

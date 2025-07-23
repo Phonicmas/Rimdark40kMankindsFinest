@@ -7,7 +7,7 @@
     <!-- MK 7 -->
     <ThingDef ParentName="BEWH_PowerArmorHelmetBase">
         <defName>BEWH_MkVIIPowerArmorHelmet</defName>
-        <label>mk VII Power Armor Helmet</label>
+        <label>Mk VII Power Armor Helmet</label>
         <description>A standard-issue battle helm of the Adeptus Astartes, offering durable ceramite protection and a reinforced grille design. It provides reliable performance and is well-suited for prolonged combat operations.</description>
         <thingClass>Genes40k.ChapterHeadDecorativeApparelColourTwo</thingClass>
         <recipeMaker>
@@ -54,7 +54,7 @@
     <!-- MK 10-->
     <ThingDef ParentName="BEWH_PowerArmorHelmetBase">
         <defName>BEWH_MkXPowerArmorHelmet</defName>
-        <label>mk X Power Armor Helmet</label>
+        <label>Mk X Power Armor Helmet</label>
         <description>A standard battle helm worn by Primaris Space Marines, designed for increased protection and clarity. Its refined optics and sealed construction support long deployments in hostile environments.</description>
         <thingClass>Genes40k.ChapterHeadDecorativeApparelColourTwo</thingClass>
         <recipeMaker>
@@ -101,7 +101,7 @@
     <!-- MK 10 Chaplain-->
     <ThingDef ParentName="BEWH_PowerArmorHelmetBase">
         <defName>BEWH_MkXPowerArmorChaplainHelmet</defName>
-        <label>mk X Chaplain Helmet</label>
+        <label>Mk X Chaplain Helmet</label>
         <description>Mk X helmet modified for Chaplains, adorned with skull iconography and grim visages to inspire loyalty and fear in equal measure. \n\nIncreases the terror of nearby prisoners.</description>
         <thingClass>Genes40k.ChapterHeadDecorativeApparelColourTwo</thingClass>
         <recipeMaker>
@@ -148,7 +148,7 @@
     <!-- MK 1 Thunder Warrior-->
     <ThingDef ParentName="BEWH_PowerArmorHelmetBase">
         <defName>BEWH_MkIPowerArmorHelmet</defName>
-        <label>mk I Power Armor Helmet</label>
+        <label>Mk I Power Armor Helmet</label>
         <description>A brutal, early battle helm used by the Thunder Warriors during the Unification Wars, the Mk I offers heavy protection with crude optics and minimal environmental sealing. Built for raw durability over finesse, it reflects the uncompromising violence of its era.</description>
         <thingClass>Core40k.HeadDecorativeApparelColourTwo</thingClass>
         <recipeMaker>

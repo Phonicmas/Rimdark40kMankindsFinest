@@ -25,8 +25,8 @@
       <li>BEWH_GeneseedPurification</li>
     </prerequisites>
     <baseCost>1000</baseCost>
-    <researchViewX>3</researchViewX>
-    <researchViewY>0</researchViewY>
+    <researchViewX>0</researchViewX>
+    <researchViewY>2</researchViewY>
   </ResearchProjectDef>
 
   <!-- Gene-seed purification -->
@@ -191,15 +191,29 @@
     </prerequisites>
   </ResearchProjectDef>
 
+  <!-- Proto Weapons -->
+  <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
+    <defName>BEWH_ProtoWeapons</defName>
+    <label>Proto Weaponry</label>
+    <description>Grants access to STCs enabling the manufacture of old Proto weaponry.</description>
+    <researchViewX>4</researchViewX>
+    <researchViewY>1</researchViewY>
+    <baseCost>10000</baseCost>
+    <prerequisites>
+      <li>AdvancedFabrication</li>
+    </prerequisites>
+  </ResearchProjectDef>
+
   <!-- Astartes Weapons -->
   <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
     <defName>BEWH_AstartesWeapons</defName>
     <label>Astartes Weaponry</label>
     <description>Grants access to STCs enabling the manufacture of essential Astartes armaments.</description>
-    <researchViewX>4</researchViewX>
+    <researchViewX>5</researchViewX>
     <researchViewY>1</researchViewY>
     <baseCost>10000</baseCost>
     <prerequisites>
+      <li>BEWH_ProtoWeapons</li>
       <li>AdvancedFabrication</li>
     </prerequisites>
   </ResearchProjectDef>
