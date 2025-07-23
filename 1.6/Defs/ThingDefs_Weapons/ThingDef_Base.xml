@@ -18,8 +18,8 @@
       <recipeUsers Inherit="False">
         <li>FabricationBench</li>
       </recipeUsers>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
     </recipeMaker>
-    <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
     <tools>
       <li>
         <label>handle</label>
@@ -48,8 +48,8 @@
       <recipeUsers Inherit="False">
         <li>FabricationBench</li>
       </recipeUsers>
+      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
     </recipeMaker>
-    <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
     <tools>
       <li>
         <label>stock</label>
