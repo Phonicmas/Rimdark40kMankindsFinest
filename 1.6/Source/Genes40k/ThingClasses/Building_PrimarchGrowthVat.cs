@@ -239,7 +239,7 @@ public class Building_PrimarchGrowthVat : Building, IStoreSettingsParent, IThing
         var ritual = Faction.OfPlayer.ideos.PrimaryIdeo.GetPrecept(PreceptDefOf.ChildBirth) as Precept_Ritual;
         for (var i = 0; i < childAmount; i++)
         {
-            var thing = PregnancyUtility.ApplyBirthOutcome(((RitualOutcomeEffectWorker_ChildBirth)RitualOutcomeEffectDefOf.ChildBirth.GetInstance()).GetOutcome(100f, null), 100f, ritual, containedEmbryo.birthGenes.GenesListForReading, containedEmbryo.mother, this, containedEmbryo.father);
+            var thing = PregnancyUtility.ApplyBirthOutcome(((RitualOutcomeEffectWorker_ChildBirth)RitualOutcomeEffectDefOf.ChildBirth.GetInstance()).GetOutcome(100f, null), 100f, ritual, containedEmbryo.birthGenes.GenesListForReading, containedEmbryo.Mother, this, containedEmbryo.father);
             var pawn2 = (Pawn)thing;
             foreach (var gene in containedEmbryo.primarchGenes.GenesListForReading)
             {
@@ -467,7 +467,7 @@ public class Building_PrimarchGrowthVat : Building, IStoreSettingsParent, IThing
                         var list = new List<FloatMenuOption>();
                         foreach (var embryo in embryos)
                         {
-                            var embryoName = "BEWH.MankindsFinest.PrimarchGrowthVat.PrimarchMother".Translate(embryo.mother.Name.ToStringFull);
+                            var embryoName = "BEWH.MankindsFinest.PrimarchGrowthVat.PrimarchMother".Translate(embryo.Mother.Name.ToStringFull);
                             var primarchChapterGenes = embryo.primarchGenes.GenesListForReading.Where(gene => gene.HasModExtension<DefModExtension_PrimarchMaterial>()).ToList();
                             if (primarchChapterGenes.Any())
                             {

@@ -12,7 +12,25 @@ public class PrimarchEmbryo : GeneSetHolderBase
     public XenotypeIconDef iconDef;
     public XenotypeDef xenotype;
 
-    public Pawn mother;
+    private Pawn mother;
+
+    public Pawn Mother
+    {
+        get
+        {
+            if (mother == null)
+            {
+                var randomMother = Find.WorldPawns.AllPawnsAlive.FirstOrFallback(pawn => pawn.gender == Gender.Female && pawn.genes.Xenotype == XenotypeDefOf.Baseliner);
+                if (randomMother == null)
+                {
+                    PawnGenerator.GeneratePawn(new PawnGenerationRequest(Faction.OfPlayer.def.basicMemberKind, Faction.OfPlayer, fixedGender: Gender.Female, biologicalAgeRange: new FloatRange(21, 46), allowedXenotypes: new List<XenotypeDef>() { XenotypeDefOf.Baseliner }));
+                }
+                mother = randomMother;
+            }
+
+            return mother;
+        }
+    }
     public Pawn father;
 
     public GeneSet primarchGenes;
