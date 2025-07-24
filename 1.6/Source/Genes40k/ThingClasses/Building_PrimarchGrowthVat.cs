@@ -661,7 +661,7 @@ public class Building_PrimarchGrowthVat : Building, IStoreSettingsParent, IThing
     {
         base.ExposeData();
         Scribe_Deep.Look(ref selectedEmbryo, "selectedEmbryo");
-        Scribe_References.Look(ref containedEmbryo, "containedEmbryo");
+        Scribe_Deep.Look(ref containedEmbryo, "containedEmbryo");
         Scribe_Values.Look(ref embryoStarvation, "embryoStarvation", 0f);
         Scribe_Values.Look(ref containedNutrition, "containedNutrition", 0f);
         Scribe_Deep.Look(ref allowedNutritionSettings, "allowedNutritionSettings", this);
