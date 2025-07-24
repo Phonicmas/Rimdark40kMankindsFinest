@@ -211,6 +211,8 @@
 
   <!-- Misc -->
   <BEWH.MankindsFinest.Ability.DoesNotHaveGene>{0} does not have the {1} gene.</BEWH.MankindsFinest.Ability.DoesNotHaveGene>
+  <BEWH.MankindsFinest.Ability.CantUseInVacuum>Cannot use {0} in vacuum.</BEWH.MankindsFinest.Ability.CantUseInVacuum>
+
 
   <!--=== Apparel Two ===-->
   <!-- Shoulder Icons -->

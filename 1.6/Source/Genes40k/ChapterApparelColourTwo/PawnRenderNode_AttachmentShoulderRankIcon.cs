@@ -6,12 +6,11 @@ namespace Genes40k;
 
 public class PawnRenderNode_AttachmentShoulderRankIcon : PawnRenderNode_Apparel
 {
-    
-    public bool Flipped = false;
-    
     public PawnRenderNode_AttachmentShoulderRankIcon(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree, Apparel apparel) : base(pawn, props, tree, apparel)
     {
     }
+    
+    public bool Flipped = false;
     
     public override bool FlipGraphic(PawnDrawParms parms)
     {

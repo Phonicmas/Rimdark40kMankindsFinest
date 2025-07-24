@@ -7,16 +7,16 @@ namespace Genes40k;
 
 public class PawnRenderNode_AttachmentShoulderChapterIcon : PawnRenderNode_Apparel
 {
-        
+    public PawnRenderNode_AttachmentShoulderChapterIcon(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree, Apparel apparel) : base(pawn, props, tree, apparel)
+    {
+    }
+    
     private Genes40kModSettings modSettings = null;
 
     private Genes40kModSettings ModSettings => modSettings ??= LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>();
     
     public bool Flipped = true;
     
-    public PawnRenderNode_AttachmentShoulderChapterIcon(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree, Apparel apparel) : base(pawn, props, tree, apparel)
-    {
-    }
 
     public override bool FlipGraphic(PawnDrawParms parms)
     {

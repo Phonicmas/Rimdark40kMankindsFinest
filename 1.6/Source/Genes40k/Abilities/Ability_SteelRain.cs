@@ -10,7 +10,25 @@ namespace Genes40k;
 public class Ability_SteelRain : VEF.Abilities.Ability
 {
     private DefModExtension_DropPod defMod = null;
-        
+
+    public override bool CanHitTarget(LocalTargetInfo target, bool sightCheck)
+    {
+        if (CasterPawn?.Map?.Biome != null && CasterPawn.Map.Biome.inVacuum)
+        {
+            return false;
+        }
+        return base.CanHitTarget(target, sightCheck);
+    }
+    
+    public override string ExtraLabelMouseAttachment(LocalTargetInfo target)
+    {
+        if (CasterPawn?.Map?.Biome != null && CasterPawn.Map.Biome.inVacuum)
+        {
+            return "BEWH.MankindsFinest.Ability.CantUseInVacuum".Translate(def.label);
+        }
+        return null;
+    }
+    
     public override void Cast(params GlobalTargetInfo[] targets)
     {
         base.Cast(targets);
