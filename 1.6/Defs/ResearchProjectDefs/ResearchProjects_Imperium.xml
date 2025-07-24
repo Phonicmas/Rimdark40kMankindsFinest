@@ -198,7 +198,7 @@
     <description>Grants access to STCs enabling the manufacture of old Proto weaponry.</description>
     <researchViewX>4</researchViewX>
     <researchViewY>1</researchViewY>
-    <baseCost>10000</baseCost>
+    <baseCost>6000</baseCost>
     <prerequisites>
       <li>AdvancedFabrication</li>
     </prerequisites>

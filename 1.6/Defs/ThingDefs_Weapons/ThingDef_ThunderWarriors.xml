@@ -24,6 +24,7 @@
       <li>BEWH_ProtoAstartesRanged</li>
     </weaponTags>
     <recipeMaker>
+      <researchPrerequisite Inherit="False">BEWH_ProtoWeapons</researchPrerequisite>
       <skillRequirements>
         <Crafting>8</Crafting>
       </skillRequirements>
@@ -77,6 +78,7 @@
     <soundInteract>BEWH_SFX_Proto-ChainswordInteract</soundInteract>
     <meleeHitSound>BEWH_SFX_Proto-ChainswordHit</meleeHitSound>
     <recipeMaker>
+      <researchPrerequisite Inherit="False">BEWH_ProtoWeapons</researchPrerequisite>
       <skillRequirements>
         <Crafting>8</Crafting>
       </skillRequirements>
