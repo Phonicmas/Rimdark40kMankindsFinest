@@ -13,6 +13,7 @@ public class PrimarchEmbryo : GeneSetHolderBase
     public XenotypeDef xenotype;
 
     private Pawn mother;
+    private Pawn father;
 
     public Pawn Mother
     {
@@ -31,9 +32,47 @@ public class PrimarchEmbryo : GeneSetHolderBase
             return mother;
         }
     }
-    public Pawn father;
 
-    public GeneSet primarchGenes;
+    public Pawn Father
+    {
+        get
+        {
+            if (father == null)
+            {
+                var randomFather = Find.WorldPawns?.AllPawnsAlive?.FirstOrFallback(pawn => pawn.gender == Gender.Male && pawn.genes.Xenotype == XenotypeDefOf.Baseliner);
+                if (randomFather == null)
+                {
+                    PawnGenerator.GeneratePawn(new PawnGenerationRequest(Faction.OfPlayer.def.basicMemberKind, Faction.OfPlayer, fixedGender: Gender.Male, biologicalAgeRange: new FloatRange(21, 46), allowedXenotypes: new List<XenotypeDef>() { XenotypeDefOf.Baseliner }));
+                }
+                father = randomFather;
+            }
+
+            return father;
+        }
+    }
+    
+
+    public GeneSet PrimarchGenes
+    {
+        get
+        {
+            if (primarchGenes == null)
+            {
+                primarchGenes = new GeneSet();
+            }
+
+            if (primarchGenes.GenesListForReading.NullOrEmpty())
+            {
+                foreach (var gene in Genes40kUtils.PrimarchGenes)
+                {
+                    primarchGenes.AddGene(gene);
+                }
+            }
+
+            return primarchGenes;
+        }
+    }
+    private GeneSet primarchGenes;
     public GeneSet birthGenes;
         
     private bool invisible = false;
@@ -54,6 +93,7 @@ public class PrimarchEmbryo : GeneSetHolderBase
     {
         base.PostMake();
         geneSet = new GeneSet();
+        birthGenes = new GeneSet();
         primarchGenes = new GeneSet();
     }
 
@@ -67,6 +107,7 @@ public class PrimarchEmbryo : GeneSetHolderBase
         {
             mother = result2;
         }
+        
         birthGenes = PregnancyUtility.GetInheritedGeneSet(father, Mother);
         geneSet = birthGenes;
 
@@ -87,10 +128,7 @@ public class PrimarchEmbryo : GeneSetHolderBase
         this.iconDef = iconDef;
         this.xenotype = xenotype;
 
-        if (birthGenes == null)
-        {
-            return;
-        }
+        birthGenes ??= PregnancyUtility.GetInheritedGeneSet(father, Mother);
         
         foreach (var gene in birthGenes.GenesListForReading)
         {

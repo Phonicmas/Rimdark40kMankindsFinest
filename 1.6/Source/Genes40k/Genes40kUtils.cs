@@ -323,7 +323,7 @@ public static class Genes40kUtils
             pawn.genes.AddGene(gene, false);
         }
             
-        foreach (var gene in embryo.primarchGenes.GenesListForReading)
+        foreach (var gene in embryo.PrimarchGenes.GenesListForReading)
         {
             pawn.genes.AddGene(gene, true);
         }
