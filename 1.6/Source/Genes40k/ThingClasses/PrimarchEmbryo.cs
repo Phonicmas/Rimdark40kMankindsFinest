@@ -20,7 +20,7 @@ public class PrimarchEmbryo : GeneSetHolderBase
         {
             if (mother == null)
             {
-                var randomMother = Find.WorldPawns.AllPawnsAlive.FirstOrFallback(pawn => pawn.gender == Gender.Female && pawn.genes.Xenotype == XenotypeDefOf.Baseliner);
+                var randomMother = Find.WorldPawns?.AllPawnsAlive?.FirstOrFallback(pawn => pawn.gender == Gender.Female && pawn.genes.Xenotype == XenotypeDefOf.Baseliner);
                 if (randomMother == null)
                 {
                     PawnGenerator.GeneratePawn(new PawnGenerationRequest(Faction.OfPlayer.def.basicMemberKind, Faction.OfPlayer, fixedGender: Gender.Female, biologicalAgeRange: new FloatRange(21, 46), allowedXenotypes: new List<XenotypeDef>() { XenotypeDefOf.Baseliner }));
@@ -67,7 +67,7 @@ public class PrimarchEmbryo : GeneSetHolderBase
         {
             mother = result2;
         }
-        birthGenes = PregnancyUtility.GetInheritedGeneSet(father, mother);
+        birthGenes = PregnancyUtility.GetInheritedGeneSet(father, Mother);
         geneSet = birthGenes;
 
         foreach (var gene in Genes40kUtils.PrimarchGenes)
@@ -86,7 +86,12 @@ public class PrimarchEmbryo : GeneSetHolderBase
         this.birthGenes = birthGenes;
         this.iconDef = iconDef;
         this.xenotype = xenotype;
-            
+
+        if (birthGenes == null)
+        {
+            return;
+        }
+        
         foreach (var gene in birthGenes.GenesListForReading)
         {
             geneSet.AddGene(gene);
