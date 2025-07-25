@@ -38,24 +38,28 @@ public class CompAbilityEffect_GeneseedHarvest : CompAbilityEffect
 
         if (random.Next(0, 100) > chance)
         {
+            var failLetter = LetterMaker.MakeLetter("BEWH.MankindsFinest.SpaceMarine.GeneseedExtractionFail".Translate(), "BEWH.MankindsFinest.SpaceMarine.GeneseedExtractionFailDesc".Translate(corpse.InnerPawn), LetterDefOf.NegativeEvent, pawn);
+            Find.LetterStack.ReceiveLetter(failLetter);
             return;
         }
 
         Genes40kUtils.MakeGeneseedVial(pawn, pawn.IsPrimaris());
+        var successLetter = LetterMaker.MakeLetter("BEWH.MankindsFinest.SpaceMarine.GeneseedExtractionSuccess".Translate(), "BEWH.MankindsFinest.SpaceMarine.GeneseedExtractionSuccessDesc".Translate(corpse.InnerPawn), LetterDefOf.PositiveEvent, pawn);
+        Find.LetterStack.ReceiveLetter(successLetter);
     }
 
     public override bool Valid(LocalTargetInfo target, bool throwMessages = false)
     {
         base.Valid(target, throwMessages);
-        if (!Genes40kDefOf.BEWH_GeneseedExtractionFirstborn.IsFinished)
-        {
-            return false;
-        }
         if (target.Thing is not Corpse corpse)
         {
             return false;
         }
         if (corpse.InnerPawn.genes == null)
+        {
+            return false;
+        }
+        if (corpse.InnerPawn.IsFirstborn() && !Genes40kDefOf.BEWH_GeneseedExtractionFirstborn.IsFinished)
         {
             return false;
         }
@@ -82,7 +86,7 @@ public class CompAbilityEffect_GeneseedHarvest : CompAbilityEffect
         {
             return null;
         }
-        if (!Genes40kDefOf.BEWH_GeneseedExtractionFirstborn.IsFinished)
+        if (corpse.InnerPawn.IsFirstborn() && !Genes40kDefOf.BEWH_GeneseedExtractionFirstborn.IsFinished)
         {
             return "BEWH.MankindsFinest.SpaceMarine.SMGeneseedExtractionNotResearched".Translate();
         }
@@ -98,8 +102,18 @@ public class CompAbilityEffect_GeneseedHarvest : CompAbilityEffect
         {
             return "BEWH.MankindsFinest.SpaceMarine.SecondaryGlandsAlreadyHarvested".Translate();
         }
+        
+        var caster = parent.pawn;
+        var chance = 0;
+
+        if (caster.HasComp<CompRankInfo>())
+        {
+            chance += caster.GetComp<CompRankInfo>().UnlockedRanks.Where(rank => rank.HasModExtension<DefModExtension_GeneseedHarvest>()).Sum(rank => rank.GetModExtension<DefModExtension_GeneseedHarvest>().chanceOffset);
+        }
+
+        chance += caster.equipment.AllEquipmentListForReading.Where(equipment => equipment.def.HasModExtension<DefModExtension_GeneseedHarvest>()).Sum(equipment => equipment.def.GetModExtension<DefModExtension_GeneseedHarvest>().chanceOffset);
             
-        return null;
+        return "BEWH.MankindsFinest.SpaceMarine.GeneseedExtractionChance".Translate(chance);
     }
 
 }

@@ -146,6 +146,14 @@
   <BEWH.MankindsFinest.SpaceMarine.SecondGeneseedsHarvested>Gene-seeds have already been harvested.</BEWH.MankindsFinest.SpaceMarine.SecondGeneseedsHarvested>
   <BEWH.MankindsFinest.SpaceMarine.SecondGeneseedsHarvestable>Gene-seeds ready to be harvested.</BEWH.MankindsFinest.SpaceMarine.SecondGeneseedsHarvestable>
 
+  <BEWH.MankindsFinest.SpaceMarine.GeneseedExtractionChance>{0}% chance of succesfully extracting the geneseed.</BEWH.MankindsFinest.SpaceMarine.GeneseedExtractionChance>
+  
+  <BEWH.MankindsFinest.SpaceMarine.GeneseedExtractionFail>Gene-seed extraction failed.</BEWH.MankindsFinest.SpaceMarine.GeneseedExtractionFail>
+  <BEWH.MankindsFinest.SpaceMarine.GeneseedExtractionFailDesc>Gene-seed extraction of {0} failed and was ruined in the process.</BEWH.MankindsFinest.SpaceMarine.GeneseedExtractionFailDesc>
+
+  <BEWH.MankindsFinest.SpaceMarine.GeneseedExtractionSuccess>Gene-seed extraction succeeded.</BEWH.MankindsFinest.SpaceMarine.GeneseedExtractionSuccess>
+  <BEWH.MankindsFinest.SpaceMarine.GeneseedExtractionSuccessDesc>Gene-seed extraction of {0} succeeded and a vial was created.</BEWH.MankindsFinest.SpaceMarine.GeneseedExtractionSuccessDesc>
+
   <!-- Living Saint -->
   <BEWH.MankindsFinest.LivingSaint.DivineGraceCost>Divine Grace Cost: {0}</BEWH.MankindsFinest.LivingSaint.DivineGraceCost>
 
