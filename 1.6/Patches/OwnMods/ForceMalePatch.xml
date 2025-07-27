@@ -2,7 +2,7 @@
 <Patch>
 
     <Operation Class="VEF.PatchOperationToggableSequence">
-        <enabled>True</enabled>
+        <enabled>False</enabled>
         <mods>
             <li>RimDark 40k - Mankinds Finest</li>
         </mods>
