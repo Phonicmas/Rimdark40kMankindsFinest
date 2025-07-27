@@ -61,6 +61,8 @@
     </inspectorTabs>
     <building>
       <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <workTableRoomRole>Laboratory</workTableRoomRole>
+      <workTableNotInRoomRoleFactor>0.8</workTableNotInRoomRoleFactor>
     </building>
     <fillPercent>0.5</fillPercent>
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
@@ -125,6 +127,9 @@
       <li>PlaceWorker_ShowFacilitiesConnections</li>
       <li>PlaceWorker_PreventInteractionSpotOverlap</li>
     </placeWorkers>
+    <building>
+      <workTableRoomRole>Laboratory</workTableRoomRole>
+    </building>
     <comps>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
@@ -208,6 +213,7 @@
     </researchPrerequisites>
     <building>
       <ai_chillDestination>false</ai_chillDestination>
+      <workTableRoomRole>Laboratory</workTableRoomRole>
       <haulToContainerDuration>120</haulToContainerDuration>
       <fixedStorageSettings>
         <filter>

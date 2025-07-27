@@ -5,5 +5,5 @@ namespace Genes40k;
 
 public class DefModExtension_LockedByResearch : DefModExtension
 {
-    public List<ResearchProjectDef> researchPrerequisites = new List<ResearchProjectDef>();
+    public List<ResearchProjectDef> researchs = new List<ResearchProjectDef>();
 }

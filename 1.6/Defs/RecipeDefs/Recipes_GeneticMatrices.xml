@@ -67,9 +67,9 @@
         </products>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_LockedByResearch">
-                <researchPrerequisites>
+                <researchs>
                     <li>BEWH_AdvancedProteinSubstitution</li>
-                </researchPrerequisites>
+                </researchs>
             </li>
         </modExtensions>
     </RecipeDef>
@@ -134,9 +134,9 @@
         </products>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_LockedByResearch">
-                <researchPrerequisites>
+                <researchs>
                     <li>BEWH_AdvancedProteinSubstitution</li>
-                </researchPrerequisites>
+                </researchs>
             </li>
         </modExtensions>
     </RecipeDef>
@@ -201,9 +201,9 @@
         </products>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_LockedByResearch">
-                <researchPrerequisites>
+                <researchs>
                     <li>BEWH_AdvancedProteinSubstitution</li>
-                </researchPrerequisites>
+                </researchs>
             </li>
         </modExtensions>
     </RecipeDef>
@@ -271,9 +271,9 @@
                 <drainsUserWhenMaking>true</drainsUserWhenMaking>
             </li>
             <li Class="Genes40k.DefModExtension_LockedByResearch">
-                <researchPrerequisites>
+                <researchs>
                     <li>BEWH_AdvancedProteinSubstitution</li>
-                </researchPrerequisites>
+                </researchs>
             </li>
         </modExtensions>
     </RecipeDef>
@@ -341,9 +341,9 @@
                 <drainsUserWhenMaking>true</drainsUserWhenMaking>
             </li>
             <li Class="Genes40k.DefModExtension_LockedByResearch">
-                <researchPrerequisites>
+                <researchs>
                     <li>BEWH_AdvancedProteinSubstitution</li>
-                </researchPrerequisites>
+                </researchs>
             </li>
         </modExtensions>
     </RecipeDef>

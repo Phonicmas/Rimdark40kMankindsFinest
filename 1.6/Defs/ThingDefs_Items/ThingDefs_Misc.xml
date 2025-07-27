@@ -84,27 +84,6 @@
       <optimalityOffsetFeedingAnimals>-10</optimalityOffsetFeedingAnimals>
       <ingestSound>Meal_Eat</ingestSound>
     </ingestible>
-    <!-- ===== Recipe ===== -->
-    <costList>
-      <Meat_Human>20</Meat_Human>
-      <Luciferium>1</Luciferium>
-    </costList>
-    <recipeMaker>
-      <productCount>10</productCount>
-      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-      <effectWorking>CutStone</effectWorking>
-      <soundWorking>Recipe_Drug</soundWorking>
-      <recipeUsers>
-        <li>BEWH_GeneManipulationTable</li>
-      </recipeUsers>
-      <researchPrerequisite>BEWH_PrimarchProject</researchPrerequisite>
-      <workAmount>1250</workAmount>
-      <workSkill>Crafting</workSkill>
-      <skillRequirements>
-        <Crafting>6</Crafting>
-      </skillRequirements>
-      <unfinishedThingDef>BEWH_UnfinishedGestationSlurry</unfinishedThingDef>
-    </recipeMaker>
   </ThingDef>
 
   <!-- Rubicon Surgery Kit -->
@@ -153,33 +132,6 @@
     <comps>
       <li Class="CompProperties_Forbiddable"/>
     </comps>
-    <!-- ===== Recipe ===== -->
-    <costList>
-      <MedicineUltratech>2</MedicineUltratech>
-      <Luciferium>4</Luciferium>
-      <Meat_Human>75</Meat_Human>
-      <Neutroamine>65</Neutroamine>
-      <Steel>40</Steel>
-      <Plasteel>10</Plasteel>
-      <ComponentSpacer>2</ComponentSpacer>
-    </costList>
-    <recipeMaker>
-      <productCount>1</productCount>
-      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-      <effectWorking>CutStone</effectWorking>
-      <soundWorking>Recipe_Machining</soundWorking>
-      <recipeUsers>
-        <li>BEWH_GeneManipulationTable</li>
-      </recipeUsers>
-      <researchPrerequisite>BEWH_RubiconSurgery</researchPrerequisite>
-      <workAmount>7500</workAmount>
-      <workSkill>Crafting</workSkill>
-      <skillRequirements>
-        <Crafting>10</Crafting>
-        <Medicine>12</Medicine>
-      </skillRequirements>
-      <unfinishedThingDef>BEWH_UnfinishedGestationSlurry</unfinishedThingDef>
-    </recipeMaker>
   </ThingDef>
 
 </Defs>

@@ -1,20 +1,33 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <!-- Stasis Resurrection -->
-    <RecipeDef ParentName="SurgeryFlesh">
-        <defName>BEWH_StasisWake</defName>
-        <label>resurrect from stasis</label>
-        <description>Ressurects pawn from self-induced stasis.</description>
-        <jobString>Resurrecting {0} from stasis.</jobString>
-        <workerClass>Recipe_RemoveHediff</workerClass>
-        <successfullyRemovedHediffMessage>{0} has successfully awoken {1} from stasis.</successfullyRemovedHediffMessage>
-        <workAmount>2200</workAmount>
-        <hideBodyPartNames>true</hideBodyPartNames>
-        <removesHediff>BEWH_SusAnMembraneStasis</removesHediff>
-        <targetsBodyPart>false</targetsBodyPart>
-        <surgerySuccessChanceFactor>1</surgerySuccessChanceFactor>
-        <researchPrerequisite>BEWH_StasisResurrection</researchPrerequisite>
+    <!-- Rubicon Surgery Kit Base -->
+    <RecipeDef Name="BEWH_RecipeRubiconSurgeryKitBase" Abstract="True">
+        <label>make rubicon surgery kit</label>
+        <description>Make a rubicon surgery kit.</description>
+        <jobString>Making rubicon surgery kit.</jobString>
+        <workAmount>7500</workAmount>
+        <displayPriority>-2</displayPriority>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>CutStone</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+        <researchPrerequisites>
+            <li>BEWH_RubiconSurgery</li>
+        </researchPrerequisites>
+        <recipeUsers>
+            <li>BEWH_GeneManipulationTable</li>
+        </recipeUsers>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>MedicineUltratech</li>
+                <li>Neutroamine</li>
+                <li>Luciferium</li>
+                <li>Steel</li>
+                <li>Plasteel</li>
+                <li>ComponentSpacer</li>
+            </thingDefs>
+        </fixedIngredientFilter>
         <ingredients>
             <li>
                 <filter>
@@ -24,54 +37,193 @@
                 </filter>
                 <count>3</count>
             </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Neutroamine</li>
+                    </thingDefs>
+                </filter>
+                <count>65</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Luciferium</li>
+                    </thingDefs>
+                </filter>
+                <count>2</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>40</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Plasteel</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentSpacer</li>
+                    </thingDefs>
+                </filter>
+                <count>2</count>
+            </li>
         </ingredients>
+        <products>
+            <BEWH_RubiconSurgeryKit>1</BEWH_RubiconSurgeryKit>
+        </products>
+        <skillRequirements>
+            <Crafting>10</Crafting>
+            <Medicine>12</Medicine>
+        </skillRequirements>
+        <workSkill>Crafting</workSkill>
+    </RecipeDef>
+    <!-- Rubicon Surgery Kit -->
+    <RecipeDef ParentName="BEWH_RecipeRubiconSurgeryKitBase">
+        <defName>BEWH_MakeRubiconSurgeryKit</defName>
         <fixedIngredientFilter>
             <thingDefs>
-                <li>MedicineUltratech</li>
+                <li>Meat_Human</li>
             </thingDefs>
         </fixedIngredientFilter>
-        <skillRequirements>
-            <Medicine>14</Medicine>
-        </skillRequirements>
-        <recipeUsers>
-            <li>Human</li>
-        </recipeUsers>
-    </RecipeDef>
-
-    <!-- Rubicon Surgery -->
-    <RecipeDef ParentName="SurgeryFlesh">
-        <defName>BEWH_RubiconSurgery</defName>
-        <label>rubicon surgery</label>
-        <description>Extensive surgery that elevates a Firstborn Astartes to Primaris status. Increases physical capabilities but may result in death during the procedure.</description>
-        <workerClass>Genes40k.WorkerClass_RubiconPrimaris</workerClass>
-        <jobString>Rebirthing {0} into a Primaris.</jobString>
-        <successfullyRemovedHediffMessage>{1} has been reborn as a Primaris.</successfullyRemovedHediffMessage>
-        <workAmount>10000</workAmount>
-        <hideBodyPartNames>true</hideBodyPartNames>
-        <targetsBodyPart>false</targetsBodyPart>
-        <surgerySuccessChanceFactor>0.75</surgerySuccessChanceFactor>        <!-- Sacrificing lore a bit for the sake of gameplay -->
-        <researchPrerequisite>BEWH_RubiconSurgery</researchPrerequisite>
         <ingredients>
             <li>
                 <filter>
                     <thingDefs>
-                        <li>BEWH_RubiconSurgeryKit</li>
+                        <li>Meat_Human</li>
                     </thingDefs>
                 </filter>
-                <count>1</count>
+                <count>75</count>
             </li>
         </ingredients>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_LockedByResearch">
+                <researchs>
+                    <li>BEWH_AdvancedProteinSubstitution</li>
+                </researchs>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+    <!-- Rubicon Surgery Kit Refined -->
+    <RecipeDef ParentName="BEWH_RecipeRubiconSurgeryKitBase">
+        <defName>BEWH_MakeRubiconSurgeryKitRefined</defName>
+        <researchPrerequisites>
+            <li>BEWH_AdvancedProteinSubstitution</li>
+        </researchPrerequisites>
+        <fixedIngredientFilter>
+            <categories>
+                <li>MeatRaw</li>
+            </categories>
+        </fixedIngredientFilter>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>MeatRaw</li>
+                    </categories>
+                </filter>
+                <count>75</count>
+            </li>
+        </ingredients>
+    </RecipeDef>
+
+
+    <!-- Raw Gestational Slurry Base -->
+    <RecipeDef Name="BEWH_RecipeRawGestationalSlurryBase" Abstract="True">
+        <label>make raw gestational slurry</label>
+        <description>Make a raw gestational slurry.</description>
+        <jobString>Making raw gestational slurry.</jobString>
+        <workAmount>1250</workAmount>
+        <displayPriority>-1</displayPriority>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>CutStone</effectWorking>
+        <soundWorking>Recipe_Drug</soundWorking>
+        <unfinishedThingDef>BEWH_UnfinishedGestationSlurry</unfinishedThingDef>
+        <researchPrerequisites>
+            <li>BEWH_PrimarchProject</li>
+        </researchPrerequisites>
+        <recipeUsers>
+            <li>BEWH_GeneManipulationTable</li>
+        </recipeUsers>
         <fixedIngredientFilter>
             <thingDefs>
-                <li>BEWH_RubiconSurgeryKit</li>
+                <li>Luciferium</li>
             </thingDefs>
         </fixedIngredientFilter>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Luciferium</li>
+                    </thingDefs>
+                </filter>
+                <count>2</count>
+            </li>
+        </ingredients>
+        <products>
+            <BEWH_RawGestationalSlurry>10</BEWH_RawGestationalSlurry>
+        </products>
         <skillRequirements>
-            <Medicine>16</Medicine>
+            <Crafting>6</Crafting>
         </skillRequirements>
-        <recipeUsers>
-            <li>Human</li>
-        </recipeUsers>
+        <workSkill>Crafting</workSkill>
+    </RecipeDef>
+    <!-- Raw Gestational Slurry -->
+    <RecipeDef ParentName="BEWH_RecipeRawGestationalSlurryBase">
+        <defName>BEWH_MakeRawGestationalSlurry</defName>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Meat_Human</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Meat_Human</li>
+                    </thingDefs>
+                </filter>
+                <count>20</count>
+            </li>
+        </ingredients>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_LockedByResearch">
+                <researchs>
+                    <li>BEWH_AdvancedProteinSubstitution</li>
+                </researchs>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+    <!-- Raw Gestational Slurry Refined -->
+    <RecipeDef ParentName="BEWH_RecipeRawGestationalSlurryBase">
+        <defName>BEWH_MakeRawGestationalSlurryRefined</defName>
+        <researchPrerequisites>
+            <li>BEWH_AdvancedProteinSubstitution</li>
+        </researchPrerequisites>
+        <fixedIngredientFilter>
+            <categories>
+                <li>MeatRaw</li>
+            </categories>
+        </fixedIngredientFilter>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>MeatRaw</li>
+                    </categories>
+                </filter>
+                <count>20</count>
+            </li>
+        </ingredients>
     </RecipeDef>
 
 </Defs>

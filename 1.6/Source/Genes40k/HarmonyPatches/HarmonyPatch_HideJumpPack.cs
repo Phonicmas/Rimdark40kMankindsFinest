@@ -14,6 +14,11 @@ public class HideJumpPack
             return;
         }
 
+        if (__instance.Wearer?.apparel?.WornApparel == null)
+        {
+            return;
+        }
+
         if (!__instance.Wearer.apparel.WornApparel.Any(apparel => apparel.def.HasModExtension<DefModExtension_HideJumpPack>()))
         {
             return;
