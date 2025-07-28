@@ -59,7 +59,7 @@
     <RoyalTitleDef ParentName="BEWH_ImperiumTitleBase">
         <defName>BEWH_Title4</defName>
         <label>Honorary Lieutenant</label>
-        <description>The title of honorary citizen is used by the Imperium to signify an individual whose military and economic prowess has been noticed and subsequently wanted by the Imperium. The title is offered to outsiders who act with honor in the eyes of the Imperium.</description>
+        <description>The title of honorary Lieutenant is used by the Imperium to signify an individual whose military and economic prowess has useful to the Imperium and has warranted a promotion. The title is offered to outsiders who act with honor in the eyes of the Imperium.</description>
         <seniority>300</seniority>
         <commonality>0.4</commonality>
         <favorCost>8</favorCost>
