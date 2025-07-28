@@ -3,7 +3,7 @@
 
   <LetterDef>
     <defName>BEWH_NaturalBornX</defName>
-    <letterClass>Core40k.Letter_JumpTo</letterClass>
+    <letterClass>StandardLetter</letterClass>
     <color>(148, 0, 211)</color>
     <flashColor>(138, 43, 226)</flashColor>
     <flashInterval>90</flashInterval>
@@ -12,7 +12,7 @@
 
   <LetterDef>
     <defName>BEWH_GoldenPositive</defName>
-    <letterClass>Core40k.Letter_JumpTo</letterClass>
+    <letterClass>StandardLetter</letterClass>
     <color>(214, 142, 9)</color>
     <flashColor>(237, 158, 12)</flashColor>
     <flashInterval>90</flashInterval>

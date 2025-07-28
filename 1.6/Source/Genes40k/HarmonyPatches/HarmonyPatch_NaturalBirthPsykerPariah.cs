@@ -55,7 +55,7 @@ public static class NaturalBirthPsykerPariah
         var chosenGene = weightedSelection.GetRandomUnique();
         var typeBorn = chosenGene.HasModExtension<DefModExtension_Pariah>() ? "BEWH.MankindsFinest.CommonKeywords.Pariah".Translate() : "BEWH.MankindsFinest.CommonKeywords.Psyker".Translate();
             
-        var letter = new Letter_JumpTo
+        var letter = new StandardLetter
         {
             lookTargets = pawn,
             def = Genes40kDefOf.BEWH_NaturalBornX,

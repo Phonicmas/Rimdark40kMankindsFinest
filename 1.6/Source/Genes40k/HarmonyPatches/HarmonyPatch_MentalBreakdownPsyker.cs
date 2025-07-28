@@ -34,7 +34,7 @@ public class MentalBreakdownPsyker
 
         if (!pawn.genes.GenesListForReading.Where(gene => gene.def.HasModExtension<DefModExtension_Psyker>()).Any(gene => gene.Active)) return;
             
-        var letter = new Letter_JumpTo
+        var letter = new StandardLetter
         {
             lookTargets = pawn,
             def = Genes40kDefOf.BEWH_NaturalBornX,

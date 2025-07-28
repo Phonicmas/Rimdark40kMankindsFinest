@@ -49,7 +49,7 @@ public static class NaturalBirthPerpetual
         var chosenGene = weightedSelection.GetRandomUnique();
         var typeBorn = "BEWH.MankindsFinest.CommonKeywords.Perpetual".Translate();
             
-        var letter = new Letter_JumpTo
+        var letter = new StandardLetter
         {
             lookTargets = pawn,
             def = Genes40kDefOf.BEWH_NaturalBornX,
