@@ -15,9 +15,9 @@ public class PawnRenderNodeWorker_AttachmentShoulderChapterIcon : PawnRenderNode
     {
         var pawn = parms.pawn;
             
-        var apparelColourTwo = (ChapterBodyDecorativeApparelColourTwo)node.apparel;
+        var apparelMultiColor = (ChapterBodyDecorativeApparelMultiColor)node.apparel;
 
-        if (apparelColourTwo.LeftShoulderIcon == Genes40kDefOf.BEWH_ShoulderNone || apparelColourTwo.LeftShoulderIcon == null)
+        if (apparelMultiColor.LeftShoulderIcon == Genes40kDefOf.BEWH_ShoulderNone || apparelMultiColor.LeftShoulderIcon == null)
         {
             return false;
         }
@@ -28,12 +28,12 @@ public class PawnRenderNodeWorker_AttachmentShoulderChapterIcon : PawnRenderNode
         
         if (parms.facing == Rot4.East)
         {
-            return apparelColourTwo.FlipShoulderIcons;
+            return apparelMultiColor.FlipShoulderIcons;
         }
             
         if (parms.facing == Rot4.West)
         {
-            return !apparelColourTwo.FlipShoulderIcons;
+            return !apparelMultiColor.FlipShoulderIcons;
         }
         
         if (parms.Portrait)

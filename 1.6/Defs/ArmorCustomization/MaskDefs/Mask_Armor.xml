@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <Core40k.MaskDef>
+        <defName>BEWH_MkVIIArmorSplitMask</defName>
+        <label>Split</label>
+        <description>Split</description>
+        <maskPath>Things/Armor/Imperium/PowerArmor/MkVIIPowerArmor/Masks/Split/Split</maskPath>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmor</li>
+        </appliesTo>
+        <sortOrder>1</sortOrder>
+        <maskExtraFlags>
+            <li>HasShoulder</li>
+        </maskExtraFlags>
+    </Core40k.MaskDef>
+
+    <Core40k.MaskDef>
+        <defName>BEWH_MkVIIArmorVarOneMask</defName>
+        <label>Variant 1</label>
+        <description>Variant 1</description>
+        <maskPath>Things/Armor/Imperium/PowerArmor/MkVIIPowerArmor/Masks/Var_One/Var_One</maskPath>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmor</li>
+        </appliesTo>
+        <sortOrder>2</sortOrder>
+        <maskExtraFlags>
+            <li>HasShoulder</li>
+            <!--<li>HasBackpack</li>-->
+        </maskExtraFlags>
+    </Core40k.MaskDef>
+
+</Defs>

@@ -32,10 +32,9 @@
     </costList>
     <verbs>
       <li>
-        <verbClass>Verb_Shoot</verbClass>
+        <verbClass>Core40k.Verb_ShootChangeableBullets</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>BEWH_BolterRound</defaultProjectile>
-        <forcedMissRadius>0.1</forcedMissRadius>
         <warmupTime>1.0</warmupTime>
         <range>35.9</range>
         <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
@@ -45,6 +44,26 @@
         <muzzleFlashScale>12</muzzleFlashScale>
       </li>
     </verbs>
+    <comps Inherit="False">
+      <li Class="Core40k.CompProperties_AmmoChanger">
+        <compClass>Core40k.Comp_AmmoChanger</compClass>
+        <availableProjectiles>
+          <li>BEWH_BolterRound</li>
+          <li>BEWH_BolterRoundMetalStorm</li>
+        </availableProjectiles>
+      </li>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Styleable"/>
+      <li Class="CompProperties_Biocodable"/>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtWeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
     <modExtensions>
       <li Class="VEF.Things.ThingDefExtension">
         <weaponCarryDrawOffsets>
@@ -77,18 +96,23 @@
       <skillRequirements>
         <Crafting>10</Crafting>
       </skillRequirements>
+      <workSkill>Crafting</workSkill>
     </recipeMaker>
     <statBases>
       <WorkToMake>45000</WorkToMake>
     </statBases>
     <costList>
-      <Steel>65</Steel>
       <Plasteel>10</Plasteel>
       <ComponentIndustrial>4</ComponentIndustrial>
       <ComponentSpacer>1</ComponentSpacer>
     </costList>
+    <costStuffCount>65</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
     <graphicData>
       <texPath>Things/Weapons/BEWH_Chainsword</texPath>
+      <shaderType>CutoutComplex</shaderType>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>1.15</drawSize>
     </graphicData>

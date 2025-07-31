@@ -39,7 +39,7 @@ public class Gene_UnstableOrgans : Gene
             var letterTitle = "BEWH.MankindsFinest.ThunderWarrior.OrganDecayTitle".Translate(pawn.LabelShort);
             var letterText = "BEWH.MankindsFinest.ThunderWarrior.OrganDecayMessage".Translate(pawn.LabelShort, part);
             
-            var letter = new StandardLetter
+            var letter = new StandardLetter 
             {
                 def = LetterDefOf.NegativeEvent,
                 Label = letterTitle,

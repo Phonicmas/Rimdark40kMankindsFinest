@@ -5,7 +5,7 @@ using Verse;
 
 namespace Genes40k;
 
-public class ChapterBodyDecorativeApparelColourTwo : BodyDecorativeApparelColourTwo
+public class ChapterBodyDecorativeApparelMultiColor : BodyDecorativeApparelMultiColor
 {
     private Genes40kModSettings modSettings = null;
 
@@ -126,7 +126,7 @@ public class ChapterBodyDecorativeApparelColourTwo : BodyDecorativeApparelColour
             return;
         }
         
-        SetInitialColours(ModSettings?.chapterColorOne ?? base.DrawColor, ModSettings?.chapterColorTwo ?? base.DrawColorTwo);
+        SetInitialColours(ModSettings?.chapterColorOne ?? base.DrawColor, ModSettings?.chapterColorTwo ?? base.DrawColorTwo, ModSettings?.chapterColorThree ?? DrawColorThree);
         SetUpMisc();
     }
         

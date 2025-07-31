@@ -95,7 +95,6 @@
                 <verbClass>Verb_Shoot</verbClass>
                 <label>Olympia Bolter</label>
                 <defaultProjectile>BEWH_BolterRound</defaultProjectile>
-                <forcedMissRadius>0.1</forcedMissRadius>
                 <warmupTime>0</warmupTime>
                 <range>35.9</range>
                 <hasStandardCommand>true</hasStandardCommand>

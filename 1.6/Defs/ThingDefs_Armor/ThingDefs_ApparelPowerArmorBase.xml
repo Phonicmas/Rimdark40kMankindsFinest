@@ -27,7 +27,7 @@
         </equippedStatOffsets>
         <graphicData>
             <graphicClass>Graphic_Single</graphicClass>
-            <shaderType>CutoutComplex</shaderType>
+            <shaderType>BEWH_CutoutThreeColor</shaderType>
             <drawSize>1.5</drawSize>
         </graphicData>
         <thingCategories>
@@ -96,7 +96,7 @@
         </costList>
         <graphicData>
             <graphicClass>Graphic_Single</graphicClass>
-            <shaderType>CutoutComplex</shaderType>
+            <shaderType>BEWH_CutoutThreeColor</shaderType>
             <drawSize>1.5</drawSize>
         </graphicData>
         <thingCategories>

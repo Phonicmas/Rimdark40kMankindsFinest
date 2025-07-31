@@ -169,7 +169,6 @@
         <label>Storm Bolter</label>
         <verbClass>Verb_Shoot</verbClass>
         <defaultProjectile>BEWH_BolterRound</defaultProjectile>
-        <forcedMissRadius>0.1</forcedMissRadius>
         <warmupTime>0</warmupTime>
         <range>28.9</range>
         <ticksBetweenBurstShots>5</ticksBetweenBurstShots>

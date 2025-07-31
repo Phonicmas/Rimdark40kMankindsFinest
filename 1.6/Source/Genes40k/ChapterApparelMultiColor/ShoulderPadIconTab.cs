@@ -7,7 +7,7 @@ using Verse;
 
 namespace Genes40k;
 
-public class ShoulderPadIconTab : ApparelColourTwoTabDrawer
+public class ShoulderPadIconTab : ApparelMultiColorTabDrawer
 {
     private List<ShoulderIconDef> rightShoulderIcons = new ();
     private List<ShoulderIconDef> leftShoulderIcons = new ();
@@ -45,7 +45,7 @@ public class ShoulderPadIconTab : ApparelColourTwoTabDrawer
             Setup(pawn);
         }
             
-        var chapterApparel = (ChapterBodyDecorativeApparelColourTwo)pawn.apparel.WornApparel.First(a => a is ChapterBodyDecorativeApparelColourTwo);
+        var chapterApparel = (ChapterBodyDecorativeApparelMultiColor)pawn.apparel.WornApparel.First(a => a is ChapterBodyDecorativeApparelMultiColor);
             
         GUI.BeginGroup(rect);
         var outRect = new Rect(0f, 0f, rect.width, rect.height);

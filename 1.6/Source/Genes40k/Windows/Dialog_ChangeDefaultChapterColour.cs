@@ -49,7 +49,7 @@ public class Dialog_ChangeDefaultChapterColour : Window
             var customMenuOption = new FloatMenuOption("BEWH.MankindsFinest.ModSettings.CustomColour".Translate(), delegate
             {
                 currentlySelectedPreset = settings.CustomPreset;
-            }, Core40kUtils.TwoColourPreview(settings.CustomPreset.primaryColour, settings.CustomPreset.secondaryColour), Color.white);
+            }, Core40kUtils.ThreeColourPreview(settings.CustomPreset.primaryColour, settings.CustomPreset.secondaryColour, settings.CustomPreset.tertiaryColour), Color.white);
             
             list.Add(customMenuOption);
             foreach (var colour in chapterColours.Where(ccd => ccd.relatedChapterGene != null))
@@ -58,7 +58,7 @@ public class Dialog_ChangeDefaultChapterColour : Window
                 {
                     currentlySelectedPreset = colour;
                     settings.chapterShoulderIconColor = null;
-                }, Core40kUtils.TwoColourPreview(colour.primaryColour, colour.secondaryColour), Color.white);
+                }, Core40kUtils.ThreeColourPreview(colour.primaryColour, colour.secondaryColour, colour.tertiaryColour), Color.white);
                 list.Add(menuOption);
             }
                 
@@ -73,15 +73,29 @@ public class Dialog_ChangeDefaultChapterColour : Window
         colourFields.height /= 3;
             
         var primaryColorRect = new Rect(colourFields);
-        primaryColorRect.width /= 2f;
+        primaryColorRect.width /= 3;
+        
+        //primaryColorRect.x = inRect.xMin + 1f;
+        
+        var secondaryColorRect = new Rect(primaryColorRect)
+        {
+            x = primaryColorRect.xMax
+        };
+        
+        var tertiaryColorRect = new Rect(secondaryColorRect)
+        {
+            x = secondaryColorRect.xMax
+        };
+        
         primaryColorRect = primaryColorRect.ContractedBy(5);
-        primaryColorRect.x = inRect.xMin + 1f;
+        secondaryColorRect = secondaryColorRect.ContractedBy(5);
+        tertiaryColorRect = tertiaryColorRect.ContractedBy(5);
             
         Widgets.DrawMenuSection(primaryColorRect.ContractedBy(-1));
         Widgets.DrawRectFast(primaryColorRect, currentlySelectedPreset.primaryColour);
         Text.Anchor = TextAnchor.MiddleCenter;
-        Widgets.Label(primaryColorRect, "BEWH.Framework.ApparelColourTwo.PrimaryColor".Translate());
-        TooltipHandler.TipRegion(primaryColorRect, "BEWH.Framework.ApparelColourTwo.ChooseCustomColour".Translate());
+        Widgets.Label(primaryColorRect, "BEWH.Framework.ApparelMultiColor.PrimaryColor".Translate());
+        TooltipHandler.TipRegion(primaryColorRect, "BEWH.Framework.ApparelMultiColor.ChooseCustomColour".Translate());
         Text.Anchor = TextAnchor.UpperLeft;
         if (Widgets.ButtonInvisible(primaryColorRect))
         {
@@ -89,21 +103,16 @@ public class Dialog_ChangeDefaultChapterColour : Window
             {
                 settings.CustomPreset.primaryColour = newColour;
                 settings.CustomPreset.secondaryColour = currentlySelectedPreset.secondaryColour;
+                settings.CustomPreset.tertiaryColour = currentlySelectedPreset.tertiaryColour;
                 currentlySelectedPreset = settings.CustomPreset;
             } ) );
         }
-
-        var secondaryColorRect = new Rect(colourFields);
-        secondaryColorRect.width /= 2f;
-        secondaryColorRect.x = primaryColorRect.xMax;
-        secondaryColorRect = secondaryColorRect.ContractedBy(5);
-        secondaryColorRect.x = inRect.xMax - secondaryColorRect.width - 1f;
-            
+        
         Widgets.DrawMenuSection(secondaryColorRect.ContractedBy(-1));
         Widgets.DrawRectFast(secondaryColorRect, currentlySelectedPreset.secondaryColour);
         Text.Anchor = TextAnchor.MiddleCenter;
-        Widgets.Label(secondaryColorRect, "BEWH.Framework.ApparelColourTwo.SecondaryColor".Translate());
-        TooltipHandler.TipRegion(secondaryColorRect, "BEWH.Framework.ApparelColourTwo.ChooseCustomColour".Translate());
+        Widgets.Label(secondaryColorRect, "BEWH.Framework.ApparelMultiColor.SecondaryColor".Translate());
+        TooltipHandler.TipRegion(secondaryColorRect, "BEWH.Framework.ApparelMultiColor.ChooseCustomColour".Translate());
         Text.Anchor = TextAnchor.UpperLeft;
         if (Widgets.ButtonInvisible(secondaryColorRect))
         {
@@ -111,6 +120,24 @@ public class Dialog_ChangeDefaultChapterColour : Window
             {
                 settings.CustomPreset.secondaryColour = newColour;
                 settings.CustomPreset.primaryColour = currentlySelectedPreset.primaryColour;
+                settings.CustomPreset.tertiaryColour = currentlySelectedPreset.tertiaryColour;
+                currentlySelectedPreset = settings.CustomPreset;
+            } ) );
+        }
+        
+        Widgets.DrawMenuSection(tertiaryColorRect.ContractedBy(-1));
+        Widgets.DrawRectFast(tertiaryColorRect, currentlySelectedPreset.tertiaryColour);
+        Text.Anchor = TextAnchor.MiddleCenter;
+        Widgets.Label(tertiaryColorRect, "BEWH.Framework.ApparelMultiColor.TertiaryColor".Translate());
+        TooltipHandler.TipRegion(tertiaryColorRect, "BEWH.Framework.ApparelMultiColor.ChooseCustomColour".Translate());
+        Text.Anchor = TextAnchor.UpperLeft;
+        if (Widgets.ButtonInvisible(tertiaryColorRect))
+        {
+            Find.WindowStack.Add( new Dialog_ColourPicker( currentlySelectedPreset.tertiaryColour, ( newColour ) =>
+            {
+                settings.CustomPreset.tertiaryColour = newColour;
+                settings.CustomPreset.primaryColour = currentlySelectedPreset.primaryColour;
+                settings.CustomPreset.secondaryColour = currentlySelectedPreset.secondaryColour;
                 currentlySelectedPreset = settings.CustomPreset;
             } ) );
         }
@@ -152,7 +179,7 @@ public class Dialog_ChangeDefaultChapterColour : Window
                     } ) );
                 }
 
-                curY = customIconColour.yMax;
+                curY = customIconColour.yMax + gap;
             }
 
             var viewRectHeight = inRect.yMax - customIconName.yMax - CloseButSize.y - CloseButSize.y;
@@ -240,6 +267,7 @@ public class Dialog_ChangeDefaultChapterColour : Window
         {
             settings.chapterColorOne = currentlySelectedPreset.primaryColour;
             settings.chapterColorTwo = currentlySelectedPreset.secondaryColour;
+            settings.chapterColorThree = currentlySelectedPreset.tertiaryColour;
             settings.CurrentlySelectedPreset = currentlySelectedPreset;
             settings.chapterShoulderIconColor = currentlySelectedPreset.chapterIconColour;
             Close();

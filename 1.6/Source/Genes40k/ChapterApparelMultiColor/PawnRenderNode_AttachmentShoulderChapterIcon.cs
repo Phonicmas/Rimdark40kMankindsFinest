@@ -7,6 +7,9 @@ namespace Genes40k;
 
 public class PawnRenderNode_AttachmentShoulderChapterIcon : PawnRenderNode_Apparel
 {
+    public PawnRenderNode_AttachmentShoulderChapterIcon(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree) : base(pawn, props, tree)
+    {
+    }
     public PawnRenderNode_AttachmentShoulderChapterIcon(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree, Apparel apparel) : base(pawn, props, tree, apparel)
     {
     }
@@ -31,12 +34,12 @@ public class PawnRenderNode_AttachmentShoulderChapterIcon : PawnRenderNode_Appar
     {
         var leftShoulderIcon = Props.texPath;
             
-        var apparelColourTwo = (ChapterBodyDecorativeApparelColourTwo)apparel;
-        var drawColour = apparelColourTwo.LeftShoulderIconColour;
+        var apparelMultiColor = (ChapterBodyDecorativeApparelMultiColor)apparel;
+        var drawColour = apparelMultiColor.LeftShoulderIconColour;
             
-        if (apparelColourTwo.LeftShoulderIcon != null)
+        if (apparelMultiColor.LeftShoulderIcon != null)
         {
-            leftShoulderIcon = apparelColourTwo.LeftShoulderIcon.drawnTextureIconPath;
+            leftShoulderIcon = apparelMultiColor.LeftShoulderIcon.drawnTextureIconPath;
         }
         else if (pawn.Faction != null && pawn.Faction.IsPlayer && ModSettings.CurrentlySelectedPreset.relatedChapterIcon != null)
         {
@@ -47,7 +50,7 @@ public class PawnRenderNode_AttachmentShoulderChapterIcon : PawnRenderNode_Appar
             }
         }
 
-        if (apparelColourTwo.FlipShoulderIcons)
+        if (apparelMultiColor.FlipShoulderIcons)
         {
             Flipped = !Flipped;
         }

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <Core40k.MaskDef>
+        <defName>BEWH_MkVIIHelmetSplitMask</defName>
+        <label>Split</label>
+        <description>Split</description>
+        <maskPath>Things/Headgear/Imperium/PowerArmor/MkVIIPowerArmorHelmet/Masks/Split/Split</maskPath>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmorHelmet</li>
+        </appliesTo>
+        <sortOrder>1</sortOrder>
+    </Core40k.MaskDef>
+
+    <Core40k.MaskDef>
+        <defName>BEWH_MkVIIHelmetMouthpieceMask</defName>
+        <label>Mouthpiece</label>
+        <description>Moutpiece</description>
+        <maskPath>Things/Headgear/Imperium/PowerArmor/MkVIIPowerArmorHelmet/Masks/Mouthpiece/Mouthpiece</maskPath>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmorHelmet</li>
+        </appliesTo>
+        <sortOrder>2</sortOrder>
+    </Core40k.MaskDef>
+
+</Defs>

@@ -3,7 +3,7 @@ using Verse;
 
 namespace Genes40k;
 
-public class ChapterHeadDecorativeApparelColourTwo : HeadDecorativeApparelColourTwo
+public class ChapterHeadDecorativeApparelMultiColor : HeadDecorativeApparelMultiColor
 {
     private Genes40kModSettings modSettings = null;
 
@@ -17,6 +17,6 @@ public class ChapterHeadDecorativeApparelColourTwo : HeadDecorativeApparelColour
             return;
         }
 
-        SetInitialColours(ModSettings?.chapterColorOne ?? base.DrawColor, ModSettings?.chapterColorTwo ?? base.DrawColorTwo);
+        SetInitialColours(ModSettings?.chapterColorOne ?? base.DrawColor, ModSettings?.chapterColorTwo ?? base.DrawColorTwo, ModSettings?.chapterColorThree ?? DrawColorThree);
     }
 }

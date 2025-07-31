@@ -24,7 +24,7 @@ public class UpdateRankIconOnRankUp
             return;
         }
 
-        var apparel = pawn.apparel.WornApparel.FirstOrFallback(a => a is ChapterBodyDecorativeApparelColourTwo, null);
+        var apparel = pawn.apparel.WornApparel.FirstOrFallback(a => a is ChapterBodyDecorativeApparelMultiColor, null);
 
         apparel?.Notify_ColorChanged();
     }

@@ -231,31 +231,25 @@ public class Building_PrimarchGrowthVat : Building, IStoreSettingsParent, IThing
             return;
         }
 
-        Log.Message("HERE1");
         var geneDef = containedEmbryo.PrimarchGenes.GenesListForReading.FirstOrDefault(g => g.HasModExtension<DefModExtension_PrimarchVatExtras>());
         var childAmount = geneDef == null ? 1 : geneDef.GetModExtension<DefModExtension_PrimarchVatExtras>().childAmount;
-        Log.Message("HERE2");   
         var children = new List<Pawn>();
 
         var ritual = Faction.OfPlayer.ideos.PrimaryIdeo.GetPrecept(PreceptDefOf.ChildBirth) as Precept_Ritual;
-        Log.Message("HERE3");
         for (var i = 0; i < childAmount; i++)
         {
             var thing = PregnancyUtility.ApplyBirthOutcome(((RitualOutcomeEffectWorker_ChildBirth)RitualOutcomeEffectDefOf.ChildBirth.GetInstance()).GetOutcome(100f, null), 100f, ritual, containedEmbryo.birthGenes.GenesListForReading, containedEmbryo.Mother, this, containedEmbryo.Father);
             var pawn2 = (Pawn)thing;
-            Log.Message("HERE4");
             foreach (var gene in containedEmbryo.PrimarchGenes.GenesListForReading)
             {
                 pawn2.genes.AddGene(gene, true);
             }
-            Log.Message("HERE5");
             pawn2.genes.SetXenotypeDirect(Genes40kDefOf.BEWH_Primarch);
             if (!Genes40kUtils.ModSettings.allowFemalePrimarchBirths)
             {
                 pawn2.gender = Gender.Male;
             }
             children.Add(pawn2);
-            Log.Message("HERE6");
             if (thing == null || !(embryoStarvation > 0f))
             {
                 continue;
@@ -263,12 +257,9 @@ public class Building_PrimarchGrowthVat : Building, IStoreSettingsParent, IThing
             
             var pawn = thing is Corpse corpse ? corpse.InnerPawn : (Pawn)thing;
             var hediff = HediffMaker.MakeHediff(HediffDefOf.BioStarvation, pawn);
-            Log.Message("HERE7");
             hediff.Severity = Mathf.Lerp(0f, HediffDefOf.BioStarvation.maxSeverity, embryoStarvation);
             pawn.health.AddHediff(hediff);
         }
-        Log.Message("HERE8");
-
         Pawn firstTwin = null;
             
         foreach (var pawn3 in children.Where(pawn3 => pawn3.genes.HasActiveGene(Genes40kDefOf.BEWH_PrimarchSpecificGeneXX)))

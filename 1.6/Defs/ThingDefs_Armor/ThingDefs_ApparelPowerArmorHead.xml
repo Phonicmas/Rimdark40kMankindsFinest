@@ -9,12 +9,12 @@
         <defName>BEWH_MkVIIPowerArmorHelmet</defName>
         <label>Mk VII Power Armor Helmet</label>
         <description>A standard-issue battle helm of the Adeptus Astartes, offering durable ceramite protection and a reinforced grille design. It provides reliable performance and is well-suited for prolonged combat operations.</description>
-        <thingClass>Genes40k.ChapterHeadDecorativeApparelColourTwo</thingClass>
+        <thingClass>Genes40k.ChapterHeadDecorativeApparelMultiColor</thingClass>
         <recipeMaker>
             <researchPrerequisite>BEWH_PowerArmorMkVII</researchPrerequisite>
         </recipeMaker>
         <graphicData>
-            <texPath>Things/Headgear/Imperium/PowerArmor/BEWH_MkVIIHelmet</texPath>
+            <texPath>Things/Headgear/Imperium/PowerArmor/MkVIIPowerArmorHelmet/BEWH_MkVIIHelmet</texPath>
         </graphicData>
         <statBases>
             <WorkToMake>26250</WorkToMake>
@@ -37,7 +37,7 @@
             <Plasteel>50</Plasteel>
         </costList>
         <apparel>
-            <wornGraphicPath>Things/Headgear/Imperium/PowerArmor/BEWH_MkVIIHelmet</wornGraphicPath>
+            <wornGraphicPath>Things/Headgear/Imperium/PowerArmor/MkVIIPowerArmorHelmet/BEWH_MkVIIHelmet</wornGraphicPath>
             <tags>
                 <li>BEWH_PowerArmorHelmetMkVII</li>
             </tags>
@@ -56,12 +56,12 @@
         <defName>BEWH_MkXPowerArmorHelmet</defName>
         <label>Mk X Power Armor Helmet</label>
         <description>A standard battle helm worn by Primaris Space Marines, designed for increased protection and clarity. Its refined optics and sealed construction support long deployments in hostile environments.</description>
-        <thingClass>Genes40k.ChapterHeadDecorativeApparelColourTwo</thingClass>
+        <thingClass>Genes40k.ChapterHeadDecorativeApparelMultiColor</thingClass>
         <recipeMaker>
             <researchPrerequisite>BEWH_PowerArmorMkX</researchPrerequisite>
         </recipeMaker>
         <graphicData>
-            <texPath>Things/Headgear/Imperium/PowerArmorPrimaris/BEWH_MkXHelmet</texPath>
+            <texPath>Things/Headgear/Imperium/PowerArmor/MkXPowerArmorHelmet/BEWH_MkXHelmet</texPath>
         </graphicData>
         <statBases>
             <WorkToMake>35000</WorkToMake>
@@ -84,7 +84,7 @@
             <Plasteel>65</Plasteel>
         </costList>
         <apparel>
-            <wornGraphicPath>Things/Headgear/Imperium/PowerArmorPrimaris/BEWH_MkXHelmet</wornGraphicPath>
+            <wornGraphicPath>Things/Headgear/Imperium/PowerArmor/MkXPowerArmorHelmet/BEWH_MkXHelmet</wornGraphicPath>
             <tags>
                 <li>BEWH_PowerArmorHelmetMkX</li>
             </tags>
@@ -103,12 +103,12 @@
         <defName>BEWH_MkXPowerArmorChaplainHelmet</defName>
         <label>Mk X Chaplain Helmet</label>
         <description>Mk X helmet modified for Chaplains, adorned with skull iconography and grim visages to inspire loyalty and fear in equal measure. \n\nIncreases the terror of nearby prisoners.</description>
-        <thingClass>Genes40k.ChapterHeadDecorativeApparelColourTwo</thingClass>
+        <thingClass>Genes40k.ChapterHeadDecorativeApparelMultiColor</thingClass>
         <recipeMaker>
             <researchPrerequisite>BEWH_PowerArmorMkX</researchPrerequisite>
         </recipeMaker>
         <graphicData>
-            <texPath>Things/Headgear/Imperium/PowerArmorPrimarisChaplain/BEWH_MkXChaplainHelmet</texPath>
+            <texPath>Things/Headgear/Imperium/PowerArmor/MkXPowerArmorHelmetChaplain/BEWH_MkXChaplainHelmet</texPath>
         </graphicData>
         <statBases>
             <WorkToMake>35000</WorkToMake>
@@ -131,7 +131,7 @@
             <Plasteel>65</Plasteel>
         </costList>
         <apparel>
-            <wornGraphicPath>Things/Headgear/Imperium/PowerArmorPrimarisChaplain/BEWH_MkXChaplainHelmet</wornGraphicPath>
+            <wornGraphicPath>Things/Headgear/Imperium/PowerArmor/MkXPowerArmorHelmetChaplain/BEWH_MkXChaplainHelmet</wornGraphicPath>
             <tags>
                 <li>BEWH_PowerArmorHelmetMkXChaplain</li>
             </tags>
@@ -150,12 +150,12 @@
         <defName>BEWH_MkIPowerArmorHelmet</defName>
         <label>Mk I Power Armor Helmet</label>
         <description>A brutal, early battle helm used by the Thunder Warriors during the Unification Wars, the Mk I offers heavy protection with crude optics and minimal environmental sealing. Built for raw durability over finesse, it reflects the uncompromising violence of its era.</description>
-        <thingClass>Core40k.HeadDecorativeApparelColourTwo</thingClass>
+        <thingClass>Core40k.HeadDecorativeApparelMultiColor</thingClass>
         <recipeMaker>
             <researchPrerequisite>BEWH_PowerArmorMkI</researchPrerequisite>            <!-- temp research -->
         </recipeMaker>
         <graphicData>
-            <texPath>Things/Headgear/Imperium/PowerArmorThunder/BEWH_MkIHelmet</texPath>
+            <texPath>Things/Headgear/Imperium/PowerArmor/MkIPowerArmor/BEWH_MkIHelmet</texPath>
         </graphicData>
         <statBases>
             <WorkToMake>35000</WorkToMake>
@@ -177,7 +177,7 @@
             <Plasteel>30</Plasteel>
         </costList>
         <apparel>
-            <wornGraphicPath>Things/Headgear/Imperium/PowerArmorThunder/BEWH_MkIHelmet</wornGraphicPath>
+            <wornGraphicPath>Things/Headgear/Imperium/PowerArmor/MkIPowerArmor/BEWH_MkIHelmet</wornGraphicPath>
             <tags>
                 <li>BEWH_PowerArmorHelmetMkI</li>
             </tags>

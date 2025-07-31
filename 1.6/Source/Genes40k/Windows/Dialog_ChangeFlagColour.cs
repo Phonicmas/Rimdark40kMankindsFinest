@@ -68,7 +68,7 @@ public class Dialog_ChangeFlagColour : Window
                 currentlySelectedIcon = currentlySelectedPreset.relatedChapterIcon.iconPath;
                 
                 decoFlag.currentlySelectedPreset = null;
-            }, Core40kUtils.TwoColourPreview(modSettings.CustomPreset.primaryColour, modSettings.CustomPreset.secondaryColour), Color.white);
+            }, Core40kUtils.ThreeColourPreview(modSettings.CustomPreset.primaryColour, modSettings.CustomPreset.secondaryColour, modSettings.CustomPreset.tertiaryColour), Color.white);
             
             list.Add(customMenuOption);
             foreach (var colour in chapterColours.Where(ccd => ccd.relatedChapterGene != null))
@@ -82,7 +82,7 @@ public class Dialog_ChangeFlagColour : Window
                     currentlySelectedIcon = currentlySelectedPreset.relatedChapterIcon.iconPath;
                     
                     decoFlag.currentlySelectedPreset = currentlySelectedPreset;
-                }, Core40kUtils.TwoColourPreview(colour.primaryColour, colour.secondaryColour), Color.white);
+                }, Core40kUtils.ThreeColourPreview(colour.primaryColour, colour.secondaryColour, colour.tertiaryColour), Color.white);
                 list.Add(menuOption);
             }
                 
@@ -101,8 +101,8 @@ public class Dialog_ChangeFlagColour : Window
         Widgets.DrawMenuSection(primaryColorRect.ContractedBy(-1));
         Widgets.DrawRectFast(primaryColorRect, currentlySelectedPrimaryColour);
         Text.Anchor = TextAnchor.MiddleCenter;
-        Widgets.Label(primaryColorRect, "BEWH.Framework.ApparelColourTwo.PrimaryColor".Translate());
-        TooltipHandler.TipRegion(primaryColorRect, "BEWH.Framework.ApparelColourTwo.ChooseCustomColour".Translate());
+        Widgets.Label(primaryColorRect, "BEWH.Framework.ApparelMultiColor.PrimaryColor".Translate());
+        TooltipHandler.TipRegion(primaryColorRect, "BEWH.Framework.ApparelMultiColor.ChooseCustomColour".Translate());
         Text.Anchor = TextAnchor.UpperLeft;
         if (Widgets.ButtonInvisible(primaryColorRect))
         {
@@ -122,8 +122,8 @@ public class Dialog_ChangeFlagColour : Window
         Widgets.DrawMenuSection(secondaryColorRect.ContractedBy(-1));
         Widgets.DrawRectFast(secondaryColorRect, currentlySelectedSecondaryColour);
         Text.Anchor = TextAnchor.MiddleCenter;
-        Widgets.Label(secondaryColorRect, "BEWH.Framework.ApparelColourTwo.SecondaryColor".Translate());
-        TooltipHandler.TipRegion(secondaryColorRect, "BEWH.Framework.ApparelColourTwo.ChooseCustomColour".Translate());
+        Widgets.Label(secondaryColorRect, "BEWH.Framework.ApparelMultiColor.SecondaryColor".Translate());
+        TooltipHandler.TipRegion(secondaryColorRect, "BEWH.Framework.ApparelMultiColor.ChooseCustomColour".Translate());
         Text.Anchor = TextAnchor.UpperLeft;
         if (Widgets.ButtonInvisible(secondaryColorRect))
         {

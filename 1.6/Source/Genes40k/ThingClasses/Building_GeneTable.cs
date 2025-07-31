@@ -129,12 +129,12 @@ public class Building_GeneTable : Building_WorkTable
             yield return floatMenu;
         }
             
-        if (!selPawn.apparel.WornApparel.Any(a => a is ApparelColourTwo))
+        if (!selPawn.apparel.WornApparel.Any(a => a is ApparelMultiColor))
         {
             yield break;
         }
             
-        var secondColourChangeFloatMenu = FloatMenuUtility.DecoratePrioritizedTask(new FloatMenuOption("BEWH.Framework.ApparelColourTwo.ArmourDecorationFeature".Translate().CapitalizeFirst(), delegate
+        var secondColourChangeFloatMenu = FloatMenuUtility.DecoratePrioritizedTask(new FloatMenuOption("BEWH.Framework.ApparelMultiColor.ArmourDecorationFeature".Translate().CapitalizeFirst(), delegate
         {
             selPawn.jobs.TryTakeOrderedJob(JobMaker.MakeJob(Core40kDefOf.BEWH_OpenStylingStationDialogForSecondColour, this), JobTag.Misc);
         }), selPawn, this);

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <Core40k.MaskDef>
+        <defName>BEWH_DefaultMask</defName>
+        <label>Default</label>
+        <description>Default</description>
+        <setsNull>True</setsNull>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmor</li>
+            <li>BEWH_MkVIIPowerArmorHelmet</li>
+        </appliesTo>
+        <sortOrder>-100</sortOrder>
+    </Core40k.MaskDef>
+
+</Defs>

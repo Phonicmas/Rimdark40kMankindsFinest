@@ -39,7 +39,6 @@
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>BEWH_CrudeBolt</defaultProjectile>
-        <forcedMissRadius>0.1</forcedMissRadius>
         <warmupTime>1.0</warmupTime>
         <range>28.5</range>
         <ticksBetweenBurstShots>16</ticksBetweenBurstShots>

@@ -218,4 +218,17 @@
     </prerequisites>
   </ResearchProjectDef>
 
+  <!-- Astartes Weapons -->
+  <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
+    <defName>BEWH_ExpandedBolterRound</defName>
+    <label>Expanded Bolter Ammunition</label>
+    <description>Grants access to STCs enabling the usage of new ammo types on Astartes Bolters.</description>
+    <researchViewX>6</researchViewX>
+    <researchViewY>1</researchViewY>
+    <baseCost>4000</baseCost>
+    <prerequisites>
+      <li>BEWH_AstartesWeapons</li>
+    </prerequisites>
+  </ResearchProjectDef>
+
 </Defs>

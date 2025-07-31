@@ -230,6 +230,7 @@ public static class Genes40kUtils
             
         var chapterColourPrimary = chapter.primaryColour;
         var chapterColourSecondary = chapter.secondaryColour;
+        var chapterColourTertiary = chapter.tertiaryColour;
         var shoulderIconDef = chapter.relatedChapterIcon;
         GeneDef chapterGene = null;
 
@@ -261,12 +262,12 @@ public static class Genes40kUtils
         {
             switch (apparel)
             {
-                case ChapterBodyDecorativeApparelColourTwo extraIconsChapterApparelColourTwo:
-                    extraIconsChapterApparelColourTwo.SetInitialColours(chapterColourPrimary, chapterColourSecondary);
-                    extraIconsChapterApparelColourTwo.LeftShoulderIcon = shoulderIconDef;
+                case ChapterBodyDecorativeApparelMultiColor extraIconsChapterApparelMultiColor:
+                    extraIconsChapterApparelMultiColor.SetInitialColours(chapterColourPrimary, chapterColourSecondary, chapterColourTertiary);
+                    extraIconsChapterApparelMultiColor.LeftShoulderIcon = shoulderIconDef;
                     break;
-                case ChapterHeadDecorativeApparelColourTwo chapterApparelColourTwo:
-                    chapterApparelColourTwo.SetInitialColours(chapterColourPrimary, chapterColourSecondary);
+                case ChapterHeadDecorativeApparelMultiColor chapterApparelMultiColor:
+                    chapterApparelMultiColor.SetInitialColours(chapterColourPrimary, chapterColourSecondary, chapterColourTertiary);
                     break;
             }
         }

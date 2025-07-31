@@ -6,6 +6,9 @@ namespace Genes40k;
 
 public class PawnRenderNode_AttachmentShoulderRankIcon : PawnRenderNode_Apparel
 {
+    public PawnRenderNode_AttachmentShoulderRankIcon(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree) : base(pawn, props, tree)
+    {
+    }
     public PawnRenderNode_AttachmentShoulderRankIcon(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree, Apparel apparel) : base(pawn, props, tree, apparel)
     {
     }
@@ -25,15 +28,15 @@ public class PawnRenderNode_AttachmentShoulderRankIcon : PawnRenderNode_Apparel
     {
         var rightShoulderPath = Props.texPath;
             
-        var apparelColourTwo = (ChapterBodyDecorativeApparelColourTwo)apparel;
-        var drawColour = apparelColourTwo.RightShoulderIconColour;
+        var apparelMultiColor = (ChapterBodyDecorativeApparelMultiColor)apparel;
+        var drawColour = apparelMultiColor.RightShoulderIconColour;
             
-        if (apparelColourTwo.RightShoulderIcon != null)
+        if (apparelMultiColor.RightShoulderIcon != null)
         {
-            rightShoulderPath = apparelColourTwo.RightShoulderIcon.drawnTextureIconPath;
+            rightShoulderPath = apparelMultiColor.RightShoulderIcon.drawnTextureIconPath;
         }
         
-        if (apparelColourTwo.FlipShoulderIcons)
+        if (apparelMultiColor.FlipShoulderIcons)
         {
             Flipped = !Flipped;
         }
