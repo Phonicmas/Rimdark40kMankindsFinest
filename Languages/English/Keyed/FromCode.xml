@@ -12,7 +12,7 @@
   <BEWH.MankindsFinest.ModSettings.PerpetualBirthChance>Chance for newly born children to be a perpetual: {0}%</BEWH.MankindsFinest.ModSettings.PerpetualBirthChance>
 
   <BEWH.MankindsFinest.ModSettings.DefaultChapterColours>Default legion colors: {0}</BEWH.MankindsFinest.ModSettings.DefaultChapterColours>
-  <BEWH.MankindsFinest.ModSettings.DefaultChapterColoursDesc>Changes the default color of: crafted armor, drop pods, chapter banner and other things related to the players "chapter".</BEWH.MankindsFinest.ModSettings.DefaultChapterColoursDesc>
+  <BEWH.MankindsFinest.ModSettings.DefaultChapterColoursDesc>Changes the default color of crafted armor, drop pods, NPC Astartes, Legion decorative banners, and other items related to the player's Legion or Chapter.</BEWH.MankindsFinest.ModSettings.DefaultChapterColoursDesc>
   <BEWH.MankindsFinest.ModSettings.SelectDefaultChapterIcon>Default legion icon: {0}</BEWH.MankindsFinest.ModSettings.SelectDefaultChapterIcon>
   <BEWH.MankindsFinest.ModSettings.ColourPreset>Color Preset: {0}</BEWH.MankindsFinest.ModSettings.ColourPreset>
   <BEWH.MankindsFinest.ModSettings.CustomColour>Custom Color</BEWH.MankindsFinest.ModSettings.CustomColour>
@@ -146,7 +146,7 @@
   <BEWH.MankindsFinest.SpaceMarine.SecondGeneseedsHarvested>Gene-seeds have already been harvested.</BEWH.MankindsFinest.SpaceMarine.SecondGeneseedsHarvested>
   <BEWH.MankindsFinest.SpaceMarine.SecondGeneseedsHarvestable>Gene-seeds ready to be harvested.</BEWH.MankindsFinest.SpaceMarine.SecondGeneseedsHarvestable>
 
-  <BEWH.MankindsFinest.SpaceMarine.GeneseedExtractionChance>{0}% chance of succesfully extracting the geneseed.</BEWH.MankindsFinest.SpaceMarine.GeneseedExtractionChance>
+  <BEWH.MankindsFinest.SpaceMarine.GeneseedExtractionChance>{0}% chance of successfully extracting the gene-seed.</BEWH.MankindsFinest.SpaceMarine.GeneseedExtractionChance>
   
   <BEWH.MankindsFinest.SpaceMarine.GeneseedExtractionFail>Gene-seed extraction failed.</BEWH.MankindsFinest.SpaceMarine.GeneseedExtractionFail>
   <BEWH.MankindsFinest.SpaceMarine.GeneseedExtractionFailDesc>Gene-seed extraction of {0} failed and was ruined in the process.</BEWH.MankindsFinest.SpaceMarine.GeneseedExtractionFailDesc>
@@ -157,7 +157,7 @@
   <!-- Living Saint -->
   <BEWH.MankindsFinest.LivingSaint.DivineGraceCost>Divine Grace Cost: {0}</BEWH.MankindsFinest.LivingSaint.DivineGraceCost>
 
-  <BEWH.MankindsFinest.LivingSaint.LivingSaintMessage>In {0}'s final moments they felt a surge of energy surging through them, invigorating and strengthening them. {0} was born anew as a living saint, stronger, faster and evermore loyal.</BEWH.MankindsFinest.LivingSaint.LivingSaintMessage>
+  <BEWH.MankindsFinest.LivingSaint.LivingSaintMessage>In {0}'s final moments they felt a surge of energy coursing through them, invigorating and strengthening them. {0} was reborn as a Living Saint - stronger, faster, and more devoted than ever.</BEWH.MankindsFinest.LivingSaint.LivingSaintMessage>
 
   <BEWH.MankindsFinest.LivingSaint.LivingSaintReturn>Living Saint Returns</BEWH.MankindsFinest.LivingSaint.LivingSaintReturn>
   <BEWH.MankindsFinest.LivingSaint.LivingSaintReturnMessage>Though thought dead, {0}'s miracles keep coming. It seems {0} sensed our situation from beyond and returned to help.</BEWH.MankindsFinest.LivingSaint.LivingSaintReturnMessage>
