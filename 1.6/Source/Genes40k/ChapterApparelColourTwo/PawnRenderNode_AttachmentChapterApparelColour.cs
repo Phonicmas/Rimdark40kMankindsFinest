@@ -7,7 +7,7 @@ namespace Genes40k;
 
 public class PawnRenderNode_AttachmentChapterApparelColour : PawnRenderNode_Apparel
 {
-    public PawnRenderNode_AttachmentChapterApparelColour(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree, Apparel apparel) : base(pawn, props, tree, apparel)
+    public PawnRenderNode_AttachmentChapterApparelColour(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree) : base(pawn, props, tree)
     {
     }
 

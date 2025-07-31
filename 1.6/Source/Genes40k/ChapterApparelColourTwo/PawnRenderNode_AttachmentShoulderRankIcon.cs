@@ -6,7 +6,7 @@ namespace Genes40k;
 
 public class PawnRenderNode_AttachmentShoulderRankIcon : PawnRenderNode_Apparel
 {
-    public PawnRenderNode_AttachmentShoulderRankIcon(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree, Apparel apparel) : base(pawn, props, tree, apparel)
+    public PawnRenderNode_AttachmentShoulderRankIcon(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree) : base(pawn, props, tree)
     {
     }
     
