@@ -27,7 +27,7 @@ public class WorkGiver_DoBillPsychic : WorkGiver_DoBill
                 if (pawn.GetStatValue(StatDefOf.PsychicSensitivity) <= 0)
                 {
                     billAddPost.Add(bill);
-                    JobFailReason.Is("BEWH.MankindsFinest.GeneManupulationTable.MissingLegionMaterial".Translate(bill.recipe.products.First().Label), bill.Label);
+                    JobFailReason.Is("BEWH.MankindsFinest.GeneManupulationTable.PsychicSensitivityRequired".Translate(bill.recipe.products.First().Label), bill.Label);
                     continue;
                 }
             }

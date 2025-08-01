@@ -68,7 +68,7 @@ public class Dialog_ChangeFlagColour : Window
                 currentlySelectedIcon = currentlySelectedPreset.relatedChapterIcon.iconPath;
                 
                 decoFlag.currentlySelectedPreset = null;
-            }, Core40kUtils.ThreeColourPreview(modSettings.CustomPreset.primaryColour, modSettings.CustomPreset.secondaryColour, modSettings.CustomPreset.tertiaryColour), Color.white);
+            }, Core40kUtils.ThreeColourPreview(modSettings.CustomPreset.primaryColour, modSettings.CustomPreset.secondaryColour, modSettings.CustomPreset.tertiaryColour, 3), Color.white);
             
             list.Add(customMenuOption);
             foreach (var colour in chapterColours.Where(ccd => ccd.relatedChapterGene != null))
@@ -82,7 +82,7 @@ public class Dialog_ChangeFlagColour : Window
                     currentlySelectedIcon = currentlySelectedPreset.relatedChapterIcon.iconPath;
                     
                     decoFlag.currentlySelectedPreset = currentlySelectedPreset;
-                }, Core40kUtils.ThreeColourPreview(colour.primaryColour, colour.secondaryColour, colour.tertiaryColour), Color.white);
+                }, Core40kUtils.ThreeColourPreview(colour.primaryColour, colour.secondaryColour, colour.tertiaryColour, colour.colorAmount), Color.white);
                 list.Add(menuOption);
             }
                 

@@ -49,7 +49,7 @@ public class Dialog_ChangeDefaultChapterColour : Window
             var customMenuOption = new FloatMenuOption("BEWH.MankindsFinest.ModSettings.CustomColour".Translate(), delegate
             {
                 currentlySelectedPreset = settings.CustomPreset;
-            }, Core40kUtils.ThreeColourPreview(settings.CustomPreset.primaryColour, settings.CustomPreset.secondaryColour, settings.CustomPreset.tertiaryColour), Color.white);
+            }, Core40kUtils.ThreeColourPreview(settings.CustomPreset.primaryColour, settings.CustomPreset.secondaryColour, settings.CustomPreset.tertiaryColour, 3), Color.white);
             
             list.Add(customMenuOption);
             foreach (var colour in chapterColours.Where(ccd => ccd.relatedChapterGene != null))
@@ -58,7 +58,7 @@ public class Dialog_ChangeDefaultChapterColour : Window
                 {
                     currentlySelectedPreset = colour;
                     settings.chapterShoulderIconColor = null;
-                }, Core40kUtils.ThreeColourPreview(colour.primaryColour, colour.secondaryColour, colour.tertiaryColour), Color.white);
+                }, Core40kUtils.ThreeColourPreview(colour.primaryColour, colour.secondaryColour, colour.tertiaryColour, colour.colorAmount), Color.white);
                 list.Add(menuOption);
             }
                 

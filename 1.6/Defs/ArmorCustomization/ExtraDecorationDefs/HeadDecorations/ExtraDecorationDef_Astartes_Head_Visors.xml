@@ -7,7 +7,7 @@
         <label>Apothecary visor</label>
         <description>...</description>
         <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_ApothecaryVisor_icon</iconPath>
-        <drawnTextureIconPath>Things/Decorations/Headgear/Common/BEWH_Deco_ApothecaryVisor</drawnTextureIconPath>
+        <drawnTextureIconPath>Things/Decorations/Headgear/Common/Visor/BEWH_Deco_ApothecaryVisor</drawnTextureIconPath>
         <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>3.1</sortOrder>
         <isHelmetDecoration>true</isHelmetDecoration>
@@ -39,11 +39,14 @@
         <colourable>true</colourable>
         <useMask>true</useMask>
         <flipable>true</flipable>
+        <colorAmount>3</colorAmount>
         <useArmorColourAsDefault>true</useArmorColourAsDefault>
+        <defaultColourTwo>(1,0,0)</defaultColourTwo>
+        <defaultColourThree>(0,1,0)</defaultColourThree>
         <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
     </Core40k.ExtraDecorationDef>
 
-    <Core40k.ExtraDecorationDef> <!-- MkX Helmet -->
+    <Core40k.ExtraDecorationDef>        <!-- MkX Helmet -->
         <defName>BEWH_Deco_MkVIILenseGlow</defName>
         <label>Lense Glow</label>
         <description>...</description>
@@ -85,7 +88,7 @@
         </availablePresets>
     </Core40k.ExtraDecorationDef>
 
-    <Core40k.ExtraDecorationDef> <!-- MkX Helmet -->
+    <Core40k.ExtraDecorationDef>        <!-- MkX Helmet -->
         <defName>BEWH_Deco_MkXLenseGlow</defName>
         <label>Lense Glow</label>
         <description>...</description>
@@ -127,7 +130,7 @@
         </availablePresets>
     </Core40k.ExtraDecorationDef>
 
-    <Core40k.ExtraDecorationDef> <!-- MkX Chaplain Helmet -->
+    <Core40k.ExtraDecorationDef>        <!-- MkX Chaplain Helmet -->
         <defName>BEWH_Deco_MkXCLenseGlow</defName>
         <label>Lense Glow</label>
         <description>...</description>

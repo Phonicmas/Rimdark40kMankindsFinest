@@ -5,6 +5,7 @@
         <appliesTo>
             <li>BEWH_LivingSaintArmor</li>
         </appliesTo>
+        <colorAmount>2</colorAmount>
     </Genes40k.ChapterColourDef>
 
     <!-- St.Celestine -->

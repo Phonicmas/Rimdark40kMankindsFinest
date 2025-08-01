@@ -8,7 +8,7 @@
         <description>...</description>
         <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_Stripe_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_MkVIIStripe</drawnTextureIconPath>
-		<drawSize>(0.5, 0.5)</drawSize>
+        <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>6</sortOrder>
         <isHelmetDecoration>true</isHelmetDecoration>
         <defaultShowRotation>
@@ -42,6 +42,7 @@
             <li>BEWH_DecoPaletteIFBlack</li>
             <li>BEWH_DecoPaletteStripeRed</li>
         </availablePresets>
+        <useMask>true</useMask>
         <shaderType>Cutout</shaderType>
     </Core40k.ExtraDecorationDef>
 
@@ -92,8 +93,8 @@
         <label>Lieutenant stripe</label>
         <description>...</description>
         <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_LieutenantStripe_icon</iconPath>
-        <drawnTextureIconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_MkVIILieutenantStripe</drawnTextureIconPath>
-		<drawSize>(0.5, 0.5)</drawSize>
+        <drawnTextureIconPath>Things/Decorations/Headgear/MkVII/StripeDeco/BEWH_Deco_MkVIILieutenantStripe</drawnTextureIconPath>
+        <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>6</sortOrder>
         <isHelmetDecoration>true</isHelmetDecoration>
         <defaultShowRotation>
@@ -120,6 +121,9 @@
                 <layer>70</layer>
             </dataWest>
         </drawData>
+        <useMask>true</useMask>
+        <colourable>true</colourable>
+        <colorAmount>2</colorAmount>
         <shaderType>Cutout</shaderType>
     </Core40k.ExtraDecorationDef>
 

@@ -144,7 +144,6 @@ public class ChapterBodyDecorativeApparelMultiColor : BodyDecorativeApparelMulti
     {
         originalRightShoulder = rightShoulder;
         originalLeftShoulder = leftShoulder;
-            
         base.SetOriginals();
     }
         
@@ -152,7 +151,6 @@ public class ChapterBodyDecorativeApparelMultiColor : BodyDecorativeApparelMulti
     {
         rightShoulder = originalRightShoulder;
         leftShoulder = originalLeftShoulder;
-            
         base.Reset();
     }
     
