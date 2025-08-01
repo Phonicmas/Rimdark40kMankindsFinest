@@ -89,6 +89,7 @@
   <ThingDef ParentName="BEWH_AstartesMeleeBase">
     <defName>BEWH_AstartesChainsword</defName>
     <label>chainsword</label>
+    <thingClass>Core40k.WeaponMultiColor</thingClass>
     <description>A vicious and brutal weapon, the Chainsword is an iconic tool of the Adeptus Astartes. It tears through flesh with ease and is relatively inexpensive to produce. However, it lacks the armor-penetrating capability of more advanced power weapons.</description>
     <soundInteract>BEWH_SFX_ChainswordInteract</soundInteract>
     <meleeHitSound>BEWH_SFX_ChainswordHit</meleeHitSound>
@@ -112,7 +113,7 @@
     </stuffCategories>
     <graphicData>
       <texPath>Things/Weapons/BEWH_Chainsword</texPath>
-      <shaderType>CutoutComplex</shaderType>
+      <shaderType>BEWH_CutoutThreeColor</shaderType>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>1.15</drawSize>
     </graphicData>
@@ -159,6 +160,7 @@
   <ThingDef ParentName="BEWH_AstartesMeleeBase">
     <defName>BEWH_AstartesPowerSword</defName>
     <label>power sword</label>
+    <thingClass>Core40k.WeaponMultiColor</thingClass>
     <description>A melee weapon with an energy field, the Power Sword is capable of slicing through armor with ease. Its energy blade hums with deadly force, allowing the wielder to strike with precision and overwhelming power.</description>
     <soundInteract>BEWH_SFX_PowerswordInteract</soundInteract>
     <meleeHitSound>BEWH_SFX_PowerswordHit</meleeHitSound>
@@ -166,16 +168,20 @@
       <skillRequirements>
         <Crafting>12</Crafting>
       </skillRequirements>
+      <workSkill>Crafting</workSkill>
     </recipeMaker>
     <statBases>
       <WorkToMake>45000</WorkToMake>
     </statBases>
     <costList>
-      <Steel>45</Steel>
       <Plasteel>30</Plasteel>
       <ComponentIndustrial>2</ComponentIndustrial>
       <ComponentSpacer>4</ComponentSpacer>
     </costList>
+    <costStuffCount>45</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
     <graphicData>
       <texPath>Things/Weapons/BEWH_Powersword</texPath>
       <graphicClass>Graphic_Single</graphicClass>

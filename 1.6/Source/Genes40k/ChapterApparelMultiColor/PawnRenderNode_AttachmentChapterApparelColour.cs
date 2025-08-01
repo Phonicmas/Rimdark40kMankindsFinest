@@ -31,7 +31,7 @@ public class PawnRenderNode_AttachmentChapterApparelColour : PawnRenderNode_Appa
         
         var shader = Core40kDefOf.BEWH_CutoutThreeColor.Shader;
         
-        return ApparelMultiColorUtils.GetGraphic<Graphic_Multi>(Props.texPath, shader, Props.drawSize, apparelMultiColor.DrawColor, apparelMultiColor.DrawColorTwo, apparelMultiColor.DrawColorThree, apparelMultiColor.Graphic.data, maskPath);
+        return MultiColorUtils.GetGraphic<Graphic_Multi>(Props.texPath, shader, Props.drawSize, apparelMultiColor.DrawColor, apparelMultiColor.DrawColorTwo, apparelMultiColor.DrawColorThree, apparelMultiColor.Graphic.data, maskPath);
     }
     
     protected override IEnumerable<Graphic> GraphicsFor(Pawn pawn)
