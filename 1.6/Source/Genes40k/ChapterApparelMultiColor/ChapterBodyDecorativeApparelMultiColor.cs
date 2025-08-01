@@ -142,15 +142,15 @@ public class ChapterBodyDecorativeApparelMultiColor : BodyDecorativeApparelMulti
         
     public override void SetOriginals()
     {
-        originalRightShoulder = rightShoulder;
-        originalLeftShoulder = leftShoulder;
+        originalRightShoulder = rightShoulder != null ? new ShoulderIconSettings(rightShoulder) : rightShoulder;
+        originalLeftShoulder = leftShoulder != null ? new ShoulderIconSettings(leftShoulder) : leftShoulder;
         base.SetOriginals();
     }
         
-    public override void Reset()
+    public override void Reset()    
     {
-        rightShoulder = originalRightShoulder;
-        leftShoulder = originalLeftShoulder;
+        rightShoulder = originalRightShoulder != null ? new ShoulderIconSettings(originalRightShoulder) : originalRightShoulder;
+        leftShoulder = originalLeftShoulder != null ? new ShoulderIconSettings(originalLeftShoulder) : originalLeftShoulder;
         base.Reset();
     }
     
