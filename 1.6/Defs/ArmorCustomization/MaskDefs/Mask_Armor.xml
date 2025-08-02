@@ -2,16 +2,17 @@
 <Defs>
 
     <Core40k.MaskDef>
-        <defName>BEWH_MkVIIArmorSplitMask</defName>
-        <label>Split</label>
-        <description>Split</description>
-        <maskPath>Things/Armor/Imperium/PowerArmor/MkVIIPowerArmor/Masks/Split/Split</maskPath>
+        <defName>BEWH_MkVIIArmorHalvedMask</defName>
+        <label>Halved</label>
+        <description>Halved armor paint pattern.</description>
+        <maskPath>Things/Armor/Imperium/PowerArmor/MkVIIPowerArmor/Masks/Halved/BEWH_HalvedBody</maskPath>
         <appliesTo>
             <li>BEWH_MkVIIPowerArmor</li>
         </appliesTo>
         <sortOrder>1</sortOrder>
         <maskExtraFlags>
             <li>HasShoulder</li>
+			<li>HasBackpack</li>
         </maskExtraFlags>
     </Core40k.MaskDef>
 
