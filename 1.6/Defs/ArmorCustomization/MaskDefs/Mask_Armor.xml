@@ -12,7 +12,8 @@
         <sortOrder>1</sortOrder>
         <maskExtraFlags>
             <li>HasShoulder</li>
-			<li>HasBackpack</li>
+            <li>HasBackpack</li>
+            <li>HasJumppack</li>
         </maskExtraFlags>
     </Core40k.MaskDef>
 
