@@ -33,8 +33,9 @@
 
         <xenotypeSet Inherit="False">
             <xenotypeChances>
-                <BEWH_SpaceMarine>0.40</BEWH_SpaceMarine>
-                <BEWH_PrimarisSpaceMarine>0.20</BEWH_PrimarisSpaceMarine>
+                <Baseliner>0.5</Baseliner>
+                <BEWH_SpaceMarine>0.3</BEWH_SpaceMarine>
+                <BEWH_PrimarisSpaceMarine>0.2</BEWH_PrimarisSpaceMarine>
                 <BEWH_Custodes>0.02</BEWH_Custodes>
             </xenotypeChances>
         </xenotypeSet>
