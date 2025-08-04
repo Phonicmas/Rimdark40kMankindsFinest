@@ -8,6 +8,7 @@ namespace Genes40k;
 public class GameComponent_Perpetual : GameComponent
 {
     private Dictionary<Pawn ,int> perpetuals = new ();
+    public Dictionary<Pawn ,int> Perpetuals => perpetuals;
         
     private const int CheckInterval = 4000;
     private int currentTick;

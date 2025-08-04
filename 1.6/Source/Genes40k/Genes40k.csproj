@@ -145,6 +145,7 @@
     <Compile Include="Comps\SpaceMarine\CompProperties_AbilityRemembrance.cs" />
     <Compile Include="Comps\SpaceMarine\CompProperties_AbilityStasisConfirmation.cs" />
     <Compile Include="ConditionalStatAffecters\ConditionalStatAffecter_WarpShield.cs" />
+    <Compile Include="Debug\DebugActions.cs" />
     <Compile Include="DefModExtensions\DefModExtension_ThoughtXenophobiaWhitelist.cs" />
     <Compile Include="DefModExtensions\DefModExtension_DropPod.cs" />
     <Compile Include="DefModExtensions\DefModExtension_ExclusiveMech.cs" />
