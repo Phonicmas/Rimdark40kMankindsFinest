@@ -5,7 +5,7 @@
 
     <Operation Class="PatchOperationFindMod">
         <mods>
-            <li>Big and Small + Prerequisites Framework</li>
+            <li>Big and Small - Framework</li>
         </mods>
         <match Class="PatchOperationSequence">
             <operations>
@@ -67,7 +67,7 @@
             <!-- IF Big and small is used -->
             <li Class="PatchOperationFindMod">
                 <mods>
-                    <li>Big and Small + Prerequisites Framework</li>
+                    <li>Big and Small - Framework</li>
                 </mods>
                 <match Class="PatchOperationSequence">
                     <operations>

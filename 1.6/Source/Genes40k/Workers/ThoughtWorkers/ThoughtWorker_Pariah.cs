@@ -11,10 +11,6 @@ public class ThoughtWorker_Pariah : ThoughtWorker
         {
             return false;
         }
-        if (pawn.story.traits.HasTrait(TraitDefOf.Kind))
-        {
-            return false;
-        }
 
         if (other.genes == null)
         {

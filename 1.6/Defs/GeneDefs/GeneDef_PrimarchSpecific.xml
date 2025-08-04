@@ -19,7 +19,7 @@
             <li Class="Genes40k.DefModExtension_PrimarchMaterial">
                 <relatedMaterial>BEWH_ChapterMaterialI</relatedMaterial>
             </li>
-            <li Class="Core40k.DefModExtension_GivesVFEAbility">
+            <li Class="Core40k.DefModExtension_GivesVEFAbility">
                 <abilityDefs>
                     <li>BEWH_ForestWalkLong</li>
                     <li>BEWH_ForestWalkShort</li>
@@ -224,7 +224,7 @@
             <li Class="Genes40k.DefModExtension_PrimarchMaterial">
                 <relatedMaterial>BEWH_ChapterMaterialVII</relatedMaterial>
             </li>
-            <li Class="Core40k.DefModExtension_GivesVFEAbility">
+            <li Class="Core40k.DefModExtension_GivesVEFAbility">
                 <abilityDefs>
                     <li>BEWH_RaiseBastion</li>
                 </abilityDefs>
@@ -267,7 +267,7 @@
             <li Class="Genes40k.DefModExtension_PrimarchMaterial">
                 <relatedMaterial>BEWH_ChapterMaterialVIII</relatedMaterial>
             </li>
-            <li Class="Core40k.DefModExtension_GivesVFEAbility">
+            <li Class="Core40k.DefModExtension_GivesVEFAbility">
                 <abilityDefs>
                     <li>BEWH_PsychicEmp</li>
                 </abilityDefs>
@@ -475,7 +475,7 @@
             <li Class="Genes40k.DefModExtension_PrimarchMaterial">
                 <relatedMaterial>BEWH_ChapterMaterialXIII</relatedMaterial>
             </li>
-            <li Class="Core40k.DefModExtension_GivesVFEAbility">
+            <li Class="Core40k.DefModExtension_GivesVEFAbility">
                 <abilityDefs>
                     <li>BEWH_OpusMaxima</li>
                 </abilityDefs>
@@ -595,7 +595,7 @@
             <li Class="Genes40k.DefModExtension_PrimarchMaterial">
                 <relatedMaterial>BEWH_ChapterMaterialXVI</relatedMaterial>
             </li>
-            <li Class="Core40k.DefModExtension_GivesVFEAbility">
+            <li Class="Core40k.DefModExtension_GivesVEFAbility">
                 <abilityDefs>
                     <li>BEWH_WarPlanning</li>
                 </abilityDefs>

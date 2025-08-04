@@ -21,11 +21,10 @@ public class PawnRenderNode_AttachmentBackpack : PawnRenderNode_Apparel
         var texPath = Props.texPath;
         string maskPath = null;
 
-        var jumpPackVisual = ModsConfig.RoyaltyActive &&
-                             pawn.apparel.WornApparel.Any(wornApparel =>
-                                 wornApparel.def == Genes40kDefOf.Apparel_PackJump) &&
-                             apparelMultiColor.def.HasModExtension<DefModExtension_HideJumpPack>() && apparelMultiColor
-                                 .def.GetModExtension<DefModExtension_HideJumpPack>().changeBackpackVisual;
+        var jumpPackVisual = ModsConfig.RoyaltyActive 
+                             && pawn.apparel.WornApparel.Any(wornApparel => wornApparel.def == Genes40kDefOf.Apparel_PackJump) 
+                             && apparelMultiColor.def.HasModExtension<DefModExtension_HideJumpPack>() 
+                             && apparelMultiColor.def.GetModExtension<DefModExtension_HideJumpPack>().changeBackpackVisual;
 
         if (jumpPackVisual)
         {

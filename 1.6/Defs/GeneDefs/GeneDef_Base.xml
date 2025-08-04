@@ -156,7 +156,7 @@
         </exclusionTags>
         <minAgeActive>11</minAgeActive>
         <modExtensions>
-            <li Class="Core40k.DefModExtension_GivesVFEAbility">
+            <li Class="Core40k.DefModExtension_GivesVEFAbility">
                 <abilityDefs>
                     <li>BEWH_PsykerBolt</li>
                 </abilityDefs>

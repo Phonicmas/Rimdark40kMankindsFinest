@@ -172,6 +172,7 @@
     <Compile Include="GeneClasses\Gene_TwinConnected.cs" />
     <Compile Include="GeneClasses\Gene_ZealousFury.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_BlockedPsycasting.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_DeathacidifierProgenoidGlands.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_DomitarMechExclusive.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_HideJumpPack.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_ImplantGeneseedCorrectIngredient.cs" />
