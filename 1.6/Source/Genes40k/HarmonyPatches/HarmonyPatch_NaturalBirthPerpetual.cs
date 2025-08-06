@@ -32,6 +32,14 @@ public static class NaturalBirthPerpetual
         {
             return;
         }
+        
+        foreach (var gene in pawn.genes.GenesListForReading)
+        {
+            if (gene.def.exclusionTags.Contains("Perpetual"))
+            {
+                return;
+            }
+        }
 
         var unnaturalChance = modSettings.perpetualBirthChance;
         var rand = new Random();

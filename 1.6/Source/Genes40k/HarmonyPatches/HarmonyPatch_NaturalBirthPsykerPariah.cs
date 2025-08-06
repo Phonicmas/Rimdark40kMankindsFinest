@@ -39,19 +39,46 @@ public static class NaturalBirthPsykerPariah
         {
             return;
         }
+
+        var canBecomePsyker = true;
+        var canBecomePariah = true;
+        foreach (var gene in pawn.genes.GenesListForReading)
+        {
+            if (gene.def.exclusionTags.Contains("Psyker"))
+            {
+                canBecomePsyker = false;
+            }
+            if (gene.def.exclusionTags.Contains("Pariah"))
+            {
+                canBecomePariah = false;
+            }
+        }
+
+        if (!canBecomePsyker && !canBecomePariah)
+        {
+            return;
+        }
             
         var weightedSelection = new WeightedSelection<GeneDef>();
-        //Psyker genes
-        weightedSelection.AddEntry(Genes40kDefOf.BEWH_IotaPsyker, 60);
-        weightedSelection.AddEntry(Genes40kDefOf.BEWH_EpsilonPsyker, 40);
-        weightedSelection.AddEntry(Genes40kDefOf.BEWH_DeltaPsyker, 12);
-        weightedSelection.AddEntry(Genes40kDefOf.BEWH_BetaPsyker, 4);
-        weightedSelection.AddEntry(Genes40kDefOf.BEWH_AlphaPsyker, 1);
-        //Pariah Genes
-        weightedSelection.AddEntry(Genes40kDefOf.BEWH_SigmaPariah, 40);
-        weightedSelection.AddEntry(Genes40kDefOf.BEWH_UpsilonPariah, 12);
-        weightedSelection.AddEntry(Genes40kDefOf.BEWH_OmegaPariah, 4);
-            
+        
+        if (canBecomePsyker)
+        {
+            //Psyker genes
+            weightedSelection.AddEntry(Genes40kDefOf.BEWH_IotaPsyker, 60);
+            weightedSelection.AddEntry(Genes40kDefOf.BEWH_EpsilonPsyker, 40);
+            weightedSelection.AddEntry(Genes40kDefOf.BEWH_DeltaPsyker, 12);
+            weightedSelection.AddEntry(Genes40kDefOf.BEWH_BetaPsyker, 4);
+            weightedSelection.AddEntry(Genes40kDefOf.BEWH_AlphaPsyker, 1);
+        }
+
+        if (canBecomePariah)
+        {
+            //Pariah Genes
+            weightedSelection.AddEntry(Genes40kDefOf.BEWH_SigmaPariah, 40);
+            weightedSelection.AddEntry(Genes40kDefOf.BEWH_UpsilonPariah, 12);
+            weightedSelection.AddEntry(Genes40kDefOf.BEWH_OmegaPariah, 4);
+        }
+        
         var chosenGene = weightedSelection.GetRandomUnique();
         var typeBorn = chosenGene.HasModExtension<DefModExtension_Pariah>() ? "BEWH.MankindsFinest.CommonKeywords.Pariah".Translate() : "BEWH.MankindsFinest.CommonKeywords.Psyker".Translate();
             

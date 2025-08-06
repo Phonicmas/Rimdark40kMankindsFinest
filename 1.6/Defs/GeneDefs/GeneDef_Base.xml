@@ -99,7 +99,7 @@
         <geneClass>Genes40k.Gene_Perpetual</geneClass>
         <minAgeActive>0</minAgeActive>
         <exclusionTags>
-            <li>BEWH_Perpetual</li>
+            <li>Perpetual</li>
         </exclusionTags>
         <biologicalAgeTickFactorFromAgeCurve>
             <points>
