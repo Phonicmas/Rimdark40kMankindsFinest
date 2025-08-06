@@ -22,7 +22,7 @@ public static class DebugActions
     private static void DeadLivingSaintInfo()
     {
         var gameComponentLivingSaint = Current.Game.GetComponent<GameComponent_LivingSaint>();
-        Log.Message("Current dead perpetual amount: " + gameComponentLivingSaint.LivingSaintsCount);
+        Log.Message("Current dead living saint amount: " + gameComponentLivingSaint.LivingSaintsCount);
         foreach (var livingSaint in gameComponentLivingSaint.LivingSaints)
         {
             Log.Message("Living Saint: " + livingSaint);

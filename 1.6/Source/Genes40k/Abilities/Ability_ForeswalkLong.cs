@@ -38,23 +38,23 @@ public class Ability_ForeswalkLong : VEF.Abilities.Ability
 		var homeMap = pawn.Map.IsPlayerHome;
 		foreach (var item in GenRadial.RadialDistinctThingsAround(pawn.Position, pawn.Map, GetRadiusForPawn(), useCenter: true))
 		{
-			if (!(item is Pawn pawn) || pawn.Dead)
+			if (item is not Pawn mapPawn || mapPawn.Dead)
 			{
 				continue;
 			}
-			if (!pawn.IsColonist && !pawn.IsPrisonerOfColony)
+			if (!mapPawn.IsColonist && !mapPawn.IsPrisonerOfColony)
 			{
-				if (homeMap || !pawn.RaceProps.Animal)
+				if (homeMap || !mapPawn.RaceProps.Animal)
 				{
 					continue;
 				}
-				var faction = pawn.Faction;
+				var faction = mapPawn.Faction;
 				if (faction == null || !faction.IsPlayer)
 				{
 					continue;
 				}
 			}
-			yield return pawn;
+			yield return mapPawn;
 		}
 	}
 
@@ -97,15 +97,15 @@ public class Ability_ForeswalkLong : VEF.Abilities.Ability
 			{
 				return;
 			}
-			foreach (var item in PawnsToSkip())
+			foreach (var pawnToSkip in PawnsToSkip())
 			{
-				if (item == CasterPawn)
+				if (pawnToSkip == CasterPawn)
 				{
 					MakeStaticFleck(CasterPawn.DrawPos, CasterPawn.Map, FleckDefOf.PsycastSkipFlashEntry, def.castFleckScaleWithRadius ? GetRadiusForPawn() : def.castFleckScale, def.castFleckSpeed);
 				}
 				_ = Caster.Map;
-				FleckMaker.ThrowSmoke(item.DrawPos, item.Map, 1f);
-				FleckMaker.ThrowDustPuffThick(item.DrawPos, item.Map, 2f, new Color(1f, 1f, 1f, 2.5f));
+				FleckMaker.ThrowSmoke(pawnToSkip.DrawPos, pawnToSkip.Map, 1f);
+				FleckMaker.ThrowDustPuffThick(pawnToSkip.DrawPos, pawnToSkip.Map, 2f, new Color(1f, 1f, 1f, 2.5f));
 			}
 		});
 	}
@@ -115,45 +115,45 @@ public class Ability_ForeswalkLong : VEF.Abilities.Ability
 		var caravan = pawn.GetCaravan();
 		var targetMap = (targets[0].WorldObject is MapParent mapParent) ? mapParent.Map : null;
 		var targetCell = IntVec3.Invalid;
-		var list = PawnsToSkip().ToList();
+		var pawnsToSkip = PawnsToSkip().ToList();
 		if (pawn.Spawned)
 		{
 			SoundDefOf.Psycast_Skip_Pulse.PlayOneShot(new TargetInfo(targets[0].Cell, pawn.Map));
 		}
 		if (targetMap != null)
 		{
-			var pawn = AlliedPawnOnMap(targetMap);
-			if (pawn != null)
+			var alliedPawnOnMap = AlliedPawnOnMap(targetMap);
+			if (alliedPawnOnMap != null)
 			{
-				targetCell = pawn.Position;
+				targetCell = alliedPawnOnMap.Position;
 			}
 		}
 		if (targetCell.IsValid)
 		{
-			foreach (var item in list)
+			foreach (var pawnToSkip in pawnsToSkip)
 			{
-				if (item.Spawned)
+				if (pawnToSkip.Spawned)
 				{
-					item.teleporting = true;
-					item.ExitMap(allowedToJoinOrCreateCaravan: false, Rot4.Invalid);
-					item.teleporting = false;
+					pawnToSkip.teleporting = true;
+					pawnToSkip.ExitMap(allowedToJoinOrCreateCaravan: false, Rot4.Invalid);
+					pawnToSkip.teleporting = false;
 				}
 				CellFinder.TryFindRandomSpawnCellForPawnNear(targetCell, targetMap, out var result, 4, (IntVec3 cell) => cell != targetCell && cell.GetRoom(targetMap) == targetCell.GetRoom(targetMap));
-				GenSpawn.Spawn(item, result, targetMap);
-				if (item.drafter != null && item.IsColonistPlayerControlled)
+				GenSpawn.Spawn(pawnToSkip, result, targetMap);
+				if (pawnToSkip.drafter != null && pawnToSkip.IsColonistPlayerControlled)
 				{
-					item.drafter.Drafted = true;
+					pawnToSkip.drafter.Drafted = true;
 				}
-				item.Notify_Teleported();
-				if (item.IsPrisoner)
+				pawnToSkip.Notify_Teleported();
+				if (pawnToSkip.IsPrisoner)
 				{
-					item.guest.WaitInsteadOfEscapingForDefaultTicks();
+					pawnToSkip.guest.WaitInsteadOfEscapingForDefaultTicks();
 				}
-				FleckMaker.ThrowSmoke(item.DrawPos, item.Map, 1f);
-				FleckMaker.ThrowDustPuffThick(item.DrawPos, item.Map, 2f, Color.green);
-				if ((item.IsColonist || item.RaceProps.packAnimal) && item.Map.IsPlayerHome)
+				FleckMaker.ThrowSmoke(pawnToSkip.DrawPos, pawnToSkip.Map, 1f);
+				FleckMaker.ThrowDustPuffThick(pawnToSkip.DrawPos, pawnToSkip.Map, 2f, Color.green);
+				if ((pawnToSkip.IsColonist || pawnToSkip.RaceProps.packAnimal) && pawnToSkip.Map.IsPlayerHome)
 				{
-					item.inventory.UnloadEverything = true;
+					pawnToSkip.inventory.UnloadEverything = true;
 				}
 			}
 			if (Find.WorldSelector.IsSelected(caravan))
@@ -173,7 +173,7 @@ public class Ability_ForeswalkLong : VEF.Abilities.Ability
 			}
 			else
 			{
-				foreach (Pawn item2 in list)
+				foreach (Pawn item2 in pawnsToSkip)
 				{
 					caravan2.AddPawn(item2, addCarriedPawnToWorldPawnsIfAny: true);
 					item2.ExitMap(allowedToJoinOrCreateCaravan: false, Rot4.Invalid);
@@ -187,8 +187,8 @@ public class Ability_ForeswalkLong : VEF.Abilities.Ability
 		}
 		else
 		{
-			CaravanMaker.MakeCaravan(list, base.pawn.Faction, targets[0].Tile, addToWorldPawnsIfNotAlready: false);
-			foreach (var item3 in list)
+			CaravanMaker.MakeCaravan(pawnsToSkip, base.pawn.Faction, targets[0].Tile, addToWorldPawnsIfNotAlready: false);
+			foreach (var item3 in pawnsToSkip)
 			{
 				item3.ExitMap(allowedToJoinOrCreateCaravan: false, Rot4.Invalid);
 			}
@@ -198,6 +198,10 @@ public class Ability_ForeswalkLong : VEF.Abilities.Ability
 
 	public override void GizmoUpdateOnMouseover()
 	{
+		if (WorldRendererUtility.WorldSelected)
+		{
+			return;
+		}
 		var radiusForPawn = GetRadiusForPawn();
 		GenDraw.DrawRadiusRing(pawn.Position, radiusForPawn, Color.green);
 	}

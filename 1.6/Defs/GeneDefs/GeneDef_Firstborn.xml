@@ -107,6 +107,9 @@
         <minAgeActive>12</minAgeActive>
 
         <modExtensions>
+            <li Class="Core40k.DefModExtension_GeneExtension">
+                <addedWorldCarryCapacity>80</addedWorldCarryCapacity>
+            </li>
             <li Class="VEF.Genes.GeneExtension">
                 <noSkillLoss>Melee</noSkillLoss>
                 <skillRecreation>Melee</skillRecreation>
