@@ -10,9 +10,6 @@ public class PawnRenderNode_AttachmentBackpack : PawnRenderNode_Apparel
     public PawnRenderNode_AttachmentBackpack(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree) : base(pawn, props, tree)
     {
     }
-    public PawnRenderNode_AttachmentBackpack(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree, Apparel apparel) : base(pawn, props, tree, apparel)
-    {
-    }
         
     public override Graphic GraphicFor(Pawn pawn)
     {

@@ -10,9 +10,6 @@ public class PawnRenderNode_AttachmentShoulderChapterIcon : PawnRenderNode_Appar
     public PawnRenderNode_AttachmentShoulderChapterIcon(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree) : base(pawn, props, tree)
     {
     }
-    public PawnRenderNode_AttachmentShoulderChapterIcon(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree, Apparel apparel) : base(pawn, props, tree, apparel)
-    {
-    }
     
     private Genes40kModSettings modSettings = null;
 
