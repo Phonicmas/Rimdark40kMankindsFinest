@@ -26,6 +26,7 @@
     <ThingDef ParentName="BaseBullet">
         <defName>BEWH_BolterRound</defName>
         <label>bolt</label>
+        <description>???</description>
         <thingClass>Bullet</thingClass>
         <uiIconPath>Things/Ammo/Bolter/Standard_Small</uiIconPath>
         <graphicData>
@@ -49,6 +50,7 @@
     <ThingDef ParentName="BaseBullet">
         <defName>BEWH_BolterRoundMetalStorm</defName>
         <label>bolt - Metal storm</label>
+        <description>???</description>
         <thingClass>Projectile_Explosive</thingClass>
         <uiIconPath>Things/Ammo/Bolter/MetalStorm_Small</uiIconPath>
         <graphicData>
@@ -81,6 +83,7 @@
     <ThingDef ParentName="BaseBullet">
         <defName>BEWH_BolterRoundKraken</defName>
         <label>bolt - Kraken</label>
+        <description>???</description>
         <thingClass>Projectile_Explosive</thingClass>
         <uiIconPath>Things/Ammo/Bolter/Kraken_Small</uiIconPath>
         <graphicData>
@@ -113,6 +116,7 @@
     <ThingDef ParentName="BaseBullet">
         <defName>BEWH_BolterRoundInferno</defName>
         <label>bolt - Inferno</label>
+        <description>???</description>
         <thingClass>Projectile_Explosive</thingClass>
         <uiIconPath>Things/Ammo/Bolter/Inferno_Small</uiIconPath>
         <graphicData>
@@ -145,6 +149,7 @@
     <ThingDef ParentName="BaseBullet">
         <defName>BEWH_BolterRoundTempest</defName>
         <label>bolt - Tempest</label>
+        <description>???</description>
         <thingClass>Projectile_Explosive</thingClass>
         <uiIconPath>Things/Ammo/Bolter/Tempest_Small</uiIconPath>
         <graphicData>
