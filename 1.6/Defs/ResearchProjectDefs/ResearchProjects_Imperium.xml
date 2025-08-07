@@ -218,7 +218,7 @@
     </prerequisites>
   </ResearchProjectDef>
 
-  <!-- Astartes Weapons -->
+  <!-- Expanded Bolter Ammunition -->
   <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
     <defName>BEWH_ExpandedBolterRound</defName>
     <label>Expanded Bolter Ammunition</label>

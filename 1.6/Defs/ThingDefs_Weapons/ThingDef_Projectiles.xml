@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+    <!-- CRUDE BOLT -->
     <ThingDef ParentName="BaseBullet">
         <defName>BEWH_CrudeBolt</defName>
         <label>crude bolt</label>
@@ -20,6 +21,8 @@
         </projectile>
     </ThingDef>
 
+    <!-- REGULAR BOLT -->
+    <!-- Standard -->
     <ThingDef ParentName="BaseBullet">
         <defName>BEWH_BolterRound</defName>
         <label>bolt</label>
@@ -42,7 +45,7 @@
             <li Class="Core40k.DefModExtension_AmmoChanger" />
         </modExtensions>
     </ThingDef>
-
+    <!-- Metal Storm -->
     <ThingDef ParentName="BaseBullet">
         <defName>BEWH_BolterRoundMetalStorm</defName>
         <label>bolt - metal storm</label>
@@ -68,7 +71,86 @@
             </li>
         </modExtensions>
     </ThingDef>
+    <!-- Kraken -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>BEWH_BolterRoundKraken</defName>
+        <label>bolt - kraken</label>
+        <thingClass>Projectile_Explosive</thingClass>
+        <uiIconPath>Things/Ammo/Bolter/Kraken_Small</uiIconPath>
+        <graphicData>
+            <texPath>Things/Projectiles/BEWH_BolterRound</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.8, 0.8)</drawSize>
+        </graphicData>
+        <projectile>
+            <damageDef>BEWH_Bolt</damageDef>
+            <damageAmountBase>20</damageAmountBase>
+            <armorPenetrationBase>0.98</armorPenetrationBase>
+            <stoppingPower>0.8</stoppingPower>
+            <soundExplode>GunShotA</soundExplode>
+            <screenShakeFactor>0.2</screenShakeFactor>
+            <speed>90</speed>
+        </projectile>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_AmmoChanger">
+                <unlockedBy>BEWH_ExpandedBolterRound</unlockedBy>
+            </li>
+        </modExtensions>
+    </ThingDef>
+    <!-- Inferno -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>BEWH_BolterRoundInferno</defName>
+        <label>bolt - Inferno</label>
+        <thingClass>Projectile_Explosive</thingClass>
+        <uiIconPath>Things/Ammo/Bolter/Inferno_Small</uiIconPath>
+        <graphicData>
+            <texPath>Things/Projectiles/BEWH_BolterRound</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.8, 0.8)</drawSize>
+        </graphicData>
+        <projectile>
+            <damageDef>BEWH_BoltInferno</damageDef>
+            <damageAmountBase>20</damageAmountBase>
+            <armorPenetrationBase>0.98</armorPenetrationBase>
+            <stoppingPower>0.8</stoppingPower>
+            <soundExplode>GunShotA</soundExplode>
+            <screenShakeFactor>0.2</screenShakeFactor>
+            <speed>90</speed>
+        </projectile>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_AmmoChanger">
+                <unlockedBy>BEWH_ExpandedBolterRound</unlockedBy>
+            </li>
+        </modExtensions>
+    </ThingDef>
+    <!-- Tempest -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>BEWH_BolterRoundTempest</defName>
+        <label>bolt - Tempest</label>
+        <thingClass>Projectile_Explosive</thingClass>
+        <uiIconPath>Things/Ammo/Bolter/Tempest_Small</uiIconPath>
+        <graphicData>
+            <texPath>Things/Projectiles/BEWH_BolterRound</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.8, 0.8)</drawSize>
+        </graphicData>
+        <projectile>
+            <damageDef>EMP</damageDef>
+            <damageAmountBase>20</damageAmountBase>
+            <armorPenetrationBase>0.58</armorPenetrationBase>
+            <stoppingPower>0.8</stoppingPower>
+            <soundExplode>GunShotA</soundExplode>
+            <screenShakeFactor>0.2</screenShakeFactor>
+            <speed>90</speed>
+        </projectile>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_AmmoChanger">
+                <unlockedBy>BEWH_ExpandedBolterRound</unlockedBy>
+            </li>
+        </modExtensions>
+    </ThingDef>
 
+    <!-- HEAVY BOLT -->
     <ThingDef ParentName="BaseBullet">
         <defName>BEWH_HeavyBolterRound</defName>
         <label>heavy bolt</label>

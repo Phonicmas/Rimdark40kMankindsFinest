@@ -45,12 +45,15 @@
         <muzzleFlashScale>12</muzzleFlashScale>
       </li>
     </verbs>
-    <comps Inherit="False">
+    <comps Inherit="False">      <!-- CompProperties_AmmoChanger needs the weapon to not have CompEquipable, if it does you need to not inherit any comps and instead pu them in yourself from parents-->
       <li Class="Core40k.CompProperties_AmmoChanger">
         <compClass>Core40k.Comp_AmmoChanger</compClass>
         <availableProjectiles>
           <li>BEWH_BolterRound</li>
           <li>BEWH_BolterRoundMetalStorm</li>
+          <li>BEWH_BolterRoundKraken</li>
+          <li>BEWH_BolterRoundInferno</li>
+          <li>BEWH_BolterRoundTempest</li>
         </availableProjectiles>
       </li>
       <li Class="CompProperties_Forbiddable"/>
