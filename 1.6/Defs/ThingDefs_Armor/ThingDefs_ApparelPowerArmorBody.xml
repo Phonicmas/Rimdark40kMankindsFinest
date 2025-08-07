@@ -337,6 +337,10 @@
             <li Class="Genes40k.DefModExtension_HideJumpPack">
                 <changeBackpackVisual>true</changeBackpackVisual>
             </li>
+            <li Class="Core40k.DefModExtension_StandardDecorations">
+                <defaultPrimaryColor>(61,61,61)</defaultPrimaryColor>
+                <defaultSecondaryColor>(223,164,29)</defaultSecondaryColor>
+            </li>
         </modExtensions>
     </ThingDef>
 
