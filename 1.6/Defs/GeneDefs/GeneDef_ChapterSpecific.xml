@@ -96,19 +96,13 @@
                 <possibleTraitsToGive>
                     <li>
                         <key>
-                            <li>
-                                <key>Psychopath</key>
-                                <value>0</value>
-                            </li>
+                            <Psychopath>0</Psychopath>
                         </key>
                         <value>100</value>
                     </li>
                     <li>
                         <key>
-                            <li>
-                                <key>Transhumanist</key>
-                                <value>0</value>
-                            </li>
+                            <Transhumanist>0</Transhumanist>
                         </key>
                         <value>100</value>
                     </li>
@@ -174,19 +168,13 @@
                 <possibleTraitsToGive>
                     <li>
                         <key>
-                            <li>
-                                <key>Abrasive</key>
-                                <value>0</value>
-                            </li>
+                            <Abrasive>0</Abrasive>
                         </key>
                         <value>100</value>
                     </li>
                     <li>
                         <key>
-                            <li>
-                                <key>Brawler</key>
-                                <value>0</value>
-                            </li>
+                            <Brawler>0</Brawler>
                         </key>
                         <value>100</value>
                     </li>
@@ -440,19 +428,13 @@
                 <possibleTraitsToGive>
                     <li>
                         <key>
-                            <li>
-                                <key>Bloodlust</key>
-                                <value>0</value>
-                            </li>
+                            <Bloodlust>0</Bloodlust>
                         </key>
                         <value>100</value>
                     </li>
                     <li>
                         <key>
-                            <li>
-                                <key>Psychopath</key>
-                                <value>0</value>
-                            </li>
+                            <Psychopath>0</Psychopath>
                         </key>
                         <value>80</value>
                     </li>
@@ -634,10 +616,7 @@
                 <possibleTraitsToGive>
                     <li>
                         <key>
-                            <li>
-                                <key>Kind</key>
-                                <value>0</value>
-                            </li>
+                            <Kind>0</Kind>
                         </key>
                         <value>100</value>
                     </li>
