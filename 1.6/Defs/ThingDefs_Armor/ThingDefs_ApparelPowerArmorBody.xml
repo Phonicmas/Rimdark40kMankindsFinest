@@ -141,6 +141,7 @@
             </li>
             <li Class="Core40k.DefModExtension_ForcesBodyType">
                 <forcedBodyType>Hulk</forcedBodyType>
+                <hideBodyGraphic>true</hideBodyGraphic>
             </li>
             <li Class="Genes40k.DefModExtension_HideJumpPack">
                 <changeBackpackVisual>true</changeBackpackVisual>
@@ -235,6 +236,7 @@
             </li>
             <li Class="Core40k.DefModExtension_ForcesBodyType">
                 <forcedBodyType>Hulk</forcedBodyType>
+                <hideBodyGraphic>true</hideBodyGraphic>
             </li>
             <li Class="Genes40k.DefModExtension_HideJumpPack">
                 <changeBackpackVisual>true</changeBackpackVisual>
@@ -330,6 +332,7 @@
             </li>
             <li Class="Core40k.DefModExtension_ForcesBodyType">
                 <forcedBodyType>Hulk</forcedBodyType>
+                <hideBodyGraphic>true</hideBodyGraphic>
             </li>
             <li Class="Genes40k.DefModExtension_HideJumpPack">
                 <changeBackpackVisual>true</changeBackpackVisual>
@@ -418,6 +421,7 @@
             </li>
             <li Class="Core40k.DefModExtension_ForcesBodyType">
                 <forcedBodyType>Female</forcedBodyType>
+                <hideBodyGraphic>true</hideBodyGraphic>
             </li>
             <li Class="Core40k.DefModExtension_StandardDecorations">
                 <extraDecorations>
@@ -518,6 +522,7 @@
             </li>
             <li Class="Core40k.DefModExtension_ForcesBodyType">
                 <forcedBodyType>Hulk</forcedBodyType>
+                <hideBodyGraphic>true</hideBodyGraphic>
             </li>
             <li Class="Core40k.DefModExtension_StandardDecorations">
                 <defaultPrimaryColor>(231,148,88)</defaultPrimaryColor>

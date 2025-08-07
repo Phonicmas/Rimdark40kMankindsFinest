@@ -94,18 +94,8 @@
             </li>
             <li Class="Core40k.DefModExtension_AddRandomTraitByWeight">
                 <possibleTraitsToGive>
-                    <li>
-                        <key>
-                            <Psychopath>0</Psychopath>
-                        </key>
-                        <value>100</value>
-                    </li>
-                    <li>
-                        <key>
-                            <Transhumanist>0</Transhumanist>
-                        </key>
-                        <value>100</value>
-                    </li>
+                    <Psychopath>0</Psychopath>
+                    <Transhumanist>0</Transhumanist>
                 </possibleTraitsToGive>
                 <chanceToGrantTrait>60</chanceToGrantTrait>
             </li>
@@ -166,18 +156,8 @@
             </li>
             <li Class="Core40k.DefModExtension_AddRandomTraitByWeight">
                 <possibleTraitsToGive>
-                    <li>
-                        <key>
-                            <Abrasive>0</Abrasive>
-                        </key>
-                        <value>100</value>
-                    </li>
-                    <li>
-                        <key>
-                            <Brawler>0</Brawler>
-                        </key>
-                        <value>100</value>
-                    </li>
+                    <Abrasive>0</Abrasive>
+                    <Brawler>0</Brawler>
                 </possibleTraitsToGive>
                 <chanceToGrantTrait>75</chanceToGrantTrait>
             </li>
@@ -426,18 +406,8 @@
             </li>
             <li Class="Core40k.DefModExtension_AddRandomTraitByWeight">
                 <possibleTraitsToGive>
-                    <li>
-                        <key>
-                            <Bloodlust>0</Bloodlust>
-                        </key>
-                        <value>100</value>
-                    </li>
-                    <li>
-                        <key>
-                            <Psychopath>0</Psychopath>
-                        </key>
-                        <value>80</value>
-                    </li>
+                    <Bloodlust>0</Bloodlust>
+                    <Psychopath>0</Psychopath>
                 </possibleTraitsToGive>
                 <chanceToGrantTrait>60</chanceToGrantTrait>
             </li>
@@ -614,12 +584,7 @@
             </li>
             <li Class="Core40k.DefModExtension_AddRandomTraitByWeight">
                 <possibleTraitsToGive>
-                    <li>
-                        <key>
-                            <Kind>0</Kind>
-                        </key>
-                        <value>100</value>
-                    </li>
+                    <Kind>0</Kind>
                 </possibleTraitsToGive>
                 <chanceToGrantTrait>35</chanceToGrantTrait>
             </li>
