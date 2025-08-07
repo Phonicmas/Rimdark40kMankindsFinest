@@ -109,6 +109,9 @@
         <modExtensions>
             <li Class="Core40k.DefModExtension_AmmoChanger">
                 <unlockedBy>BEWH_ExpandedBolterRound</unlockedBy>
+                <effectiveRange>15.9</effectiveRange>
+                <warmupTime>3</warmupTime>
+                <shotsPerBurst>5</shotsPerBurst>
             </li>
         </modExtensions>
     </ThingDef>
