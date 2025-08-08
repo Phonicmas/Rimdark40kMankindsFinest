@@ -40,7 +40,8 @@ public static class OutfitStandShoulder
                     var vector = Vector3.zero;
                     if (__instance.Rotation == Rot4.West || __instance.Rotation == Rot4.East)
                     {
-                        vector.y += 2;
+                        var vectorOffset = BodyTypeDefOf.Hulk.headOffset.y;
+                        vector.y = vectorOffset;
                     }
                     var cachedGraphicRenderInfo = new CachedGraphicRenderInfo(graphic, layer, Vector3.one, vector);
                     ___cachedApparelGraphicsNonHeadgear.Add(cachedGraphicRenderInfo);

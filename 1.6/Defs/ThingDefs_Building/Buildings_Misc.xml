@@ -96,6 +96,7 @@
       <MaxHitPoints>100</MaxHitPoints>
       <WorkToBuild>6000</WorkToBuild>
       <Mass>20</Mass>
+      <Beauty>60</Beauty>
       <Flammability>1</Flammability>
     </statBases>
 

@@ -38,13 +38,14 @@ public static class OutfitStandBackpack
                     var graphic = MultiColorUtils.GetGraphic<Graphic_Multi>(pawnRenderNode.texPath, shader, pawnRenderNode.drawSize, chapterApparel.DrawColor, chapterApparel.DrawColorTwo, chapterApparel.DrawColorThree, chapterApparel.def.graphicData, maskPath);
                     var layer = (int)pawnRenderNode.drawData.LayerForRot(__instance.Rotation, (int)pawnRenderNode.baseLayer);
                     var vector = Vector3.zero;
+                    var vectorOffset = BodyTypeDefOf.Hulk.headOffset.y;
                     if (__instance.Rotation == Rot4.North)
                     {
-                        vector.y += 2;
+                        vector.y = vectorOffset;
                     }
                     if (__instance.Rotation == Rot4.West || __instance.Rotation == Rot4.East)
                     {
-                        vector.y += 1;
+                        vector.y = vectorOffset;
                     }
                     var cachedGraphicRenderInfo = new CachedGraphicRenderInfo(graphic, layer, Vector3.one, vector);
                     ___cachedApparelGraphicsNonHeadgear.Add(cachedGraphicRenderInfo);
