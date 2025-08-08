@@ -28,7 +28,7 @@ public static class OutfitStandShoulder
                     var maskPath = chapterApparel.MaskDef?.maskPath;
                     if (maskPath != null && chapterApparel.MaskDef.maskExtraFlags.Contains("HasShoulder"))
                     {
-                        maskPath += "Shoulder";
+                        maskPath += "_Shoulder";
                     }
                     else
                     {
