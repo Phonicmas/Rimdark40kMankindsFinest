@@ -21,6 +21,7 @@
 		<li IfModActive="katavrik.crashlanding">1.6/Mods/CrashLanding</li>
 		<li IfModActive="jaxe.rimhud">1.6/Mods/RimHUD</li>
 		<li IfModActive="kentington.saveourship2">1.6/Mods/SOS2</li>
+		<li IfModActive="sicefe.senseofdepth">1.6/Mods/SenseOfDepthForTallBuildings</li>
 	</v1.6>
 
 </loadFolders>
