@@ -522,6 +522,4 @@ public static class Genes40kUtils
 
         return text;
     }
-        
-        
 }

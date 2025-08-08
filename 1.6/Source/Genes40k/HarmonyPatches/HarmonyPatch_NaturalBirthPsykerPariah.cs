@@ -17,6 +17,10 @@ public static class NaturalBirthPsykerPariah
 
     public static void Postfix(ref Thing __result, Pawn geneticMother)
     {
+        if (__result == null)
+        {
+            return;
+        }
         var modSettings = LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>();
         if (!modSettings.psykerPariahBirth)
         {
@@ -81,12 +85,14 @@ public static class NaturalBirthPsykerPariah
         
         var chosenGene = weightedSelection.GetRandomUnique();
         var typeBorn = chosenGene.HasModExtension<DefModExtension_Pariah>() ? "BEWH.MankindsFinest.CommonKeywords.Pariah".Translate() : "BEWH.MankindsFinest.CommonKeywords.Psyker".Translate();
-            
+
+        var geneticMomName = geneticMother?.Named("PAWN") ?? "BEWH.MankindsFinest.CommonKeywords.Unknown".Translate();
+        
         var letter = new StandardLetter
         {
             lookTargets = pawn,
             def = Genes40kDefOf.BEWH_NaturalBornX,
-            Text = "BEWH.MankindsFinest.Event.NaturalBornXMessage".Translate(geneticMother.Named("PAWN"), pawn.Named("PAWN"), typeBorn),
+            Text = "BEWH.MankindsFinest.Event.NaturalBornXMessage".Translate(geneticMomName, pawn.Named("PAWN"), typeBorn),
             Label = "BEWH.MankindsFinest.Event.NaturalBornXLetter".Translate(typeBorn),
 
         };
