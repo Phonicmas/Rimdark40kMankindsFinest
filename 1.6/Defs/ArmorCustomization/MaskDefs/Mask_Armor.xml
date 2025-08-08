@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-
+    <!-- MkVII -->
     <Core40k.MaskDef>
         <defName>BEWH_MkVIIArmorHalvedMask</defName>
         <label>Halved</label>
         <description>Halved armor paint pattern.</description>
-        <maskPath>Things/Armor/Imperium/PowerArmor/MkVIIPowerArmor/Masks/Halved/BEWH_HalvedBody</maskPath>
+        <maskPath>Things/Armor/Imperium/PowerArmor/MkVIIPowerArmor/Masks/Halved/BEWH_MkVII_HalvedBody</maskPath>
         <appliesTo>
             <li>BEWH_MkVIIPowerArmor</li>
         </appliesTo>
@@ -18,17 +18,51 @@
     </Core40k.MaskDef>
 
     <Core40k.MaskDef>
-        <defName>BEWH_MkVIIArmorVarOneMask</defName>
-        <label>Variant 1</label>
-        <description>Variant 1</description>
-        <maskPath>Things/Armor/Imperium/PowerArmor/MkVIIPowerArmor/Masks/Var_One/Var_One</maskPath>
+        <defName>BEWH_MkVIIArmorCheckeredMask</defName>
+        <label>Checkered</label>
+        <description>Checkered armor paint pattern.</description>
+        <maskPath>Things/Armor/Imperium/PowerArmor/MkVIIPowerArmor/Masks/Checkered/BEWH_MkVII_CheckeredBody</maskPath>
         <appliesTo>
             <li>BEWH_MkVIIPowerArmor</li>
         </appliesTo>
         <sortOrder>2</sortOrder>
         <maskExtraFlags>
             <li>HasShoulder</li>
-            <!--<li>HasBackpack</li>-->
+            <li>HasBackpack</li>
+            <li>HasJumppack</li>
+        </maskExtraFlags>
+    </Core40k.MaskDef>
+
+    <!-- MkX -->
+    <Core40k.MaskDef>
+        <defName>BEWH_MkXArmorHalvedMask</defName>
+        <label>Halved</label>
+        <description>Halved armor paint pattern.</description>
+        <maskPath>Things/Armor/Imperium/PowerArmor/MkXPowerArmor/Masks/Halved/BEWH_MkX_HalvedBody</maskPath>
+        <appliesTo>
+            <li>BEWH_MkXPowerArmor</li>
+        </appliesTo>
+        <sortOrder>1</sortOrder>
+        <maskExtraFlags>
+            <li>HasShoulder</li>
+            <li>HasBackpack</li>
+            <li>HasJumppack</li>
+        </maskExtraFlags>
+    </Core40k.MaskDef>
+
+    <Core40k.MaskDef>
+        <defName>BEWH_MkXArmorCheckeredMask</defName>
+        <label>Checkered</label>
+        <description>Checkered armor paint pattern.</description>
+        <maskPath>Things/Armor/Imperium/PowerArmor/MkXPowerArmor/Masks/Checkered/BEWH_MkX_CheckeredBody</maskPath>
+        <appliesTo>
+            <li>BEWH_MkXPowerArmor</li>
+        </appliesTo>
+        <sortOrder>2</sortOrder>
+        <maskExtraFlags>
+            <li>HasShoulder</li>
+            <li>HasBackpack</li>
+            <li>HasJumppack</li>
         </maskExtraFlags>
     </Core40k.MaskDef>
 

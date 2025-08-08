@@ -9,6 +9,8 @@
         <appliesTo>
             <li>BEWH_MkVIIPowerArmor</li>
             <li>BEWH_MkVIIPowerArmorHelmet</li>
+            <li>BEWH_MkXPowerArmor</li>
+            <li>BEWH_MkXPowerArmorHelmet</li>
         </appliesTo>
         <sortOrder>-100</sortOrder>
     </Core40k.MaskDef>
