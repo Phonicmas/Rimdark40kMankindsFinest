@@ -162,7 +162,7 @@
       </li>
       <li Class="Core40k.DefModExtension_WeaponMultiColor">
         <colorMaskAmount>3</colorMaskAmount>
-        <defaultPrimaryColor /> <!-- If this is not set, it will default to use colour of the stuff its made out of (if any)-->
+        <!--<defaultPrimaryColor />-->        <!-- If this is not set, it will default to use colour of the stuff its made out of (if any)-->
         <defaultSecondaryColor>(71,71,71)</defaultSecondaryColor>
         <defaultTertiaryColor>(71,71,71)</defaultTertiaryColor>
       </li>

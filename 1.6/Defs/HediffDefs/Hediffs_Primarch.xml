@@ -69,7 +69,7 @@
 		<description>This pawn's psychic and mental abilities have been suppressed, rendering them unable to cast psycasts.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<scenarioCanAdd>false</scenarioCanAdd>
-		<initialSeverity>1.0 </initialSeverity>
+		<initialSeverity>1.0</initialSeverity>
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>
 		<stages>

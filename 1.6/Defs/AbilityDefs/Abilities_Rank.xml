@@ -50,7 +50,7 @@
         <range>1.9</range>
         <castTime>30</castTime>
         <targetMode>Location</targetMode>
-        <warmupSound>BEWH_SFX_BannerWarmUp</warmupSound> 
+        <warmupSound>BEWH_SFX_BannerWarmUp</warmupSound>
         <castSound>BEWH_SFX_BannerCast</castSound>
     </VEF.Abilities.AbilityDef>
 
@@ -264,7 +264,7 @@
             </li>
         </modExtensions>
     </VEF.Abilities.AbilityDef>
-    
+
 
     <!-- Master of the Forge: Steel Rain I -->
     <VEF.Abilities.AbilityDef>
