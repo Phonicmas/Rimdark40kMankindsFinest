@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
+
     <!-- MkVII -->
+    <Core40k.MaskDef>
+        <defName>BEWH_MkVIIArmorPauldronsMask</defName>
+        <label>Pauldrons</label>
+        <description>Colorable pauldrons paint pattern.</description>
+        <maskPath>Things/Armor/Imperium/PowerArmor/MkVIIPowerArmor/Masks/Pauldrons/BEWH_MkVII_PauldronsBody</maskPath>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmor</li>
+        </appliesTo>
+        <sortOrder>1</sortOrder>
+        <maskExtraFlags>
+            <li>HasShoulder</li>
+        </maskExtraFlags>
+    </Core40k.MaskDef>
+
     <Core40k.MaskDef>
         <defName>BEWH_MkVIIArmorHalvedMask</defName>
         <label>Halved</label>
@@ -9,7 +24,7 @@
         <appliesTo>
             <li>BEWH_MkVIIPowerArmor</li>
         </appliesTo>
-        <sortOrder>1</sortOrder>
+        <sortOrder>2</sortOrder>
         <maskExtraFlags>
             <li>HasShoulder</li>
             <li>HasBackpack</li>
@@ -25,7 +40,7 @@
         <appliesTo>
             <li>BEWH_MkVIIPowerArmor</li>
         </appliesTo>
-        <sortOrder>2</sortOrder>
+        <sortOrder>3</sortOrder>
         <maskExtraFlags>
             <li>HasShoulder</li>
             <li>HasBackpack</li>
@@ -33,7 +48,22 @@
         </maskExtraFlags>
     </Core40k.MaskDef>
 
+
     <!-- MkX -->
+    <Core40k.MaskDef>
+        <defName>BEWH_MkXArmorPauldronsMask</defName>
+        <label>Pauldrons</label>
+        <description>Colorable pauldrons paint pattern.</description>
+        <maskPath>Things/Armor/Imperium/PowerArmor/MkXPowerArmor/Masks/Pauldrons/BEWH_MkX_PauldronsBody</maskPath>
+        <appliesTo>
+            <li>BEWH_MkXPowerArmor</li>
+        </appliesTo>
+        <sortOrder>1</sortOrder>
+        <maskExtraFlags>
+            <li>HasShoulder</li>
+        </maskExtraFlags>
+    </Core40k.MaskDef>
+
     <Core40k.MaskDef>
         <defName>BEWH_MkXArmorHalvedMask</defName>
         <label>Halved</label>
@@ -42,7 +72,7 @@
         <appliesTo>
             <li>BEWH_MkXPowerArmor</li>
         </appliesTo>
-        <sortOrder>1</sortOrder>
+        <sortOrder>2</sortOrder>
         <maskExtraFlags>
             <li>HasShoulder</li>
             <li>HasBackpack</li>
@@ -58,7 +88,7 @@
         <appliesTo>
             <li>BEWH_MkXPowerArmor</li>
         </appliesTo>
-        <sortOrder>2</sortOrder>
+        <sortOrder>3</sortOrder>
         <maskExtraFlags>
             <li>HasShoulder</li>
             <li>HasBackpack</li>
