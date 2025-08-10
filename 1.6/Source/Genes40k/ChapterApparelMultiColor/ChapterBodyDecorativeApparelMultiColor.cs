@@ -43,6 +43,8 @@ public class ChapterBodyDecorativeApparelMultiColor : BodyDecorativeApparelMulti
                 return rightShoulder.ShoulderIcon;
             }
                 
+            //When pawn ranks up their icon does not auto get correct colour!!
+            
             var highestRankDef = RankInfoComp.HighestRankDef(true, Genes40kDefOf.BEWH_AstartesRankCategory) ?? RankInfoComp.HighestRankDef(false, Genes40kDefOf.BEWH_AstartesRankCategory);
             return ((ChapterRankDef)highestRankDef)?.unlocksRankIcon;
         }
@@ -51,6 +53,8 @@ public class ChapterBodyDecorativeApparelMultiColor : BodyDecorativeApparelMulti
             if (value != null && value.setsNull)
             {
                 rightShoulder = new ShoulderIconSettings();
+                var highestRankDef = RankInfoComp.HighestRankDef(true, Genes40kDefOf.BEWH_AstartesRankCategory) ?? RankInfoComp.HighestRankDef(false, Genes40kDefOf.BEWH_AstartesRankCategory);
+                rightShoulder.Color = ((ChapterRankDef)highestRankDef)?.unlocksRankIcon?.defaultColour ?? Color.white;
             }
             else
             {

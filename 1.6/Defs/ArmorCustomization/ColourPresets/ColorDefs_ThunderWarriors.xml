@@ -10,6 +10,7 @@
             <li>BEWH_MkIPowerArmor</li>
             <li>BEWH_MkIPowerArmorHelmet</li>
         </appliesTo>
+        <appliesToKind>Armor</appliesToKind>
         <colorAmount>2</colorAmount>
     </Genes40k.ChapterColourDef>
 
