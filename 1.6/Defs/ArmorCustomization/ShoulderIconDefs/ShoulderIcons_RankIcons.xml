@@ -4,8 +4,8 @@
     <!-- Base -->
     <Genes40k.ShoulderIconDef Name="BEWH_RankShoulderIcon" Abstract="True">
         <rightShoulder>true</rightShoulder>
-        <!--<useColour>True</useColour>-->        <!-- - This one allows players to colours their icons-->
-        <!--<defaultColour>(255, 0, 0)</defaultColour>-->        <!-- - This one sets the default colour of the icon (Default is white, which does nothing to the icon)   -->
+        <!--<useColour>True</useColour>-->   <!-- - This one allows players to colours their icons-->
+        <!--<defaultColour>(255, 0, 0)</defaultColour>-->    <!-- - This one sets the default colour of the icon (Default is white, which does nothing to the icon)   -->
     </Genes40k.ShoulderIconDef>
 
     <!-- Follow Rank Up -->
@@ -168,6 +168,8 @@
         <iconPath>UI/Ranks/Astartes/BEWH_HelixAdept</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankHelixAdept</drawnTextureIconPath>
         <sortOrder>7</sortOrder>
+        <useColour>true</useColour>
+        <defaultColour>(0.64, 0.21, 0.15)</defaultColour>
         <mustHaveRank>BEWH_AstartesRankHelixAdept</mustHaveRank>
     </Genes40k.ShoulderIconDef>
 
@@ -214,6 +216,8 @@
         <iconPath>UI/Ranks/Astartes/BEWH_Apothecary</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankApothecary</drawnTextureIconPath>
         <sortOrder>8</sortOrder>
+        <useColour>true</useColour>
+        <defaultColour>(0.64, 0.21, 0.15)</defaultColour>
         <mustHaveRank>BEWH_AstartesRankApothecary</mustHaveRank>
     </Genes40k.ShoulderIconDef>
 
@@ -248,6 +252,8 @@
         <iconPath>UI/Ranks/Astartes/BEWH_Chaplain</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankChaplain</drawnTextureIconPath>
         <sortOrder>8.75</sortOrder>
+        <useColour>true</useColour>
+        <defaultColour>(0.94, 0.69, 0.11)</defaultColour>
         <mustHaveRank>BEWH_AstartesRankChaplain</mustHaveRank>
     </Genes40k.ShoulderIconDef>
 

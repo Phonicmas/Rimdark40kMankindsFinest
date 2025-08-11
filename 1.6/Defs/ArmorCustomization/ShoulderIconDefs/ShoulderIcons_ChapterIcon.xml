@@ -223,7 +223,7 @@
         <sortOrder>20</sortOrder>
         <relatedChapterGene>BEWH_ChapterXXAlphaLegion</relatedChapterGene>
         <useColour>true</useColour>
-        <defaultColour>(0.44, 0.57, 0.34)</defaultColour>
+        <defaultColour>(0.45, 0.57, 0.36)</defaultColour>
     </Genes40k.ShoulderIconDef>
 
 </Defs>
