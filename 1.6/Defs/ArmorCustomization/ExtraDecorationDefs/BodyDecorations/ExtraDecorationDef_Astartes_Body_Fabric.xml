@@ -70,7 +70,6 @@
             <li>BEWH_DecoPaletteApothecaryRed</li>
         </availablePresets>
         <colourable>true</colourable>
-        <useMask>true</useMask>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -104,7 +103,6 @@
             <li>BEWH_DecoPaletteApothecaryRed</li>
         </availablePresets>
         <colourable>true</colourable>
-        <useMask>true</useMask>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -219,7 +217,6 @@
         </availablePresets>
         <shaderType>CutoutComplex</shaderType>
         <colourable>true</colourable>
-        <useMask>true</useMask>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -262,7 +259,6 @@
         </availablePresets>
         <shaderType>CutoutComplex</shaderType>
         <colourable>true</colourable>
-        <useMask>true</useMask>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -301,7 +297,6 @@
         </availablePresets>
         <shaderType>CutoutComplex</shaderType>
         <colourable>true</colourable>
-        <useMask>true</useMask>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>        <!-- MARK VII -->

@@ -82,7 +82,6 @@
         <shaderType>CutoutComplex</shaderType>
         <flipable>false</flipable>
         <colourable>true</colourable>
-        <useMask>true</useMask>
         <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption> 
         <availablePresets>
             <li>BEWH_DecoPaletteGold</li>

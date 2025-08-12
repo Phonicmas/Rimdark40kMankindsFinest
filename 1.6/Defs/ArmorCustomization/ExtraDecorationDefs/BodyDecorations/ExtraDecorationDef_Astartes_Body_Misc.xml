@@ -43,7 +43,7 @@
         <label>Rondel 1</label>
         <description>...</description>
         <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_Shield1_icon</iconPath>
-        <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_Shield1</drawnTextureIconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/Common/Rondel/BEWH_Deco_Shield1</drawnTextureIconPath>
         <sortOrder>1.4</sortOrder>
         <defaultShowRotation>
             <li>North</li>
@@ -79,6 +79,7 @@
         <useArmorColourAsDefault>true</useArmorColourAsDefault>
         <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
         <flipable>true</flipable>
+        <defaultMask>BEWH_RondelTest1</defaultMask>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -86,7 +87,7 @@
         <label>Rondel 2</label>
         <description>...</description>
         <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_Shield2_icon</iconPath>
-        <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_Shield2</drawnTextureIconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/Common/Rondel/BEWH_Deco_Shield2</drawnTextureIconPath>
         <sortOrder>1.5</sortOrder>
         <defaultShowRotation>
             <li>North</li>

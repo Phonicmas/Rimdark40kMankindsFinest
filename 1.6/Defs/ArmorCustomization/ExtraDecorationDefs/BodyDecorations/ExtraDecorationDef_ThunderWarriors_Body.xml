@@ -121,7 +121,6 @@
         </drawData>
         <shaderType>CutoutComplex</shaderType>
         <colourable>true</colourable>
-        <useMask>true</useMask>
         <useArmorColourAsDefault>true</useArmorColourAsDefault>
         <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
     </Core40k.ExtraDecorationDef>

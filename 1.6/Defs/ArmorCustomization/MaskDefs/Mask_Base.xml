@@ -15,4 +15,12 @@
         <sortOrder>-100</sortOrder>
     </Core40k.MaskDef>
 
+    <Core40k.MaskDef Name="BEWH_MaskDef_ExtraDecoration" Abstract="true">
+        <appliesToKind>ExtraDecoration</appliesToKind>
+    </Core40k.MaskDef>
+
+    <Core40k.MaskDef Name="BEWH_MaskDef_Thing" Abstract="true">
+        <appliesToKind>Thing</appliesToKind>
+    </Core40k.MaskDef>
+
 </Defs>

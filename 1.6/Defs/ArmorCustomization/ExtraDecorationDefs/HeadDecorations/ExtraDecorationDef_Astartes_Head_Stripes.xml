@@ -42,7 +42,6 @@
             <li>BEWH_DecoPaletteIFBlack</li>
             <li>BEWH_DecoPaletteStripeRed</li>
         </availablePresets>
-        <useMask>true</useMask>
         <shaderType>Cutout</shaderType>
     </Core40k.ExtraDecorationDef>
 
@@ -121,7 +120,6 @@
                 <layer>70</layer>
             </dataWest>
         </drawData>
-        <useMask>true</useMask>
         <colourable>true</colourable>
         <colorAmount>2</colorAmount>
         <shaderType>Cutout</shaderType>

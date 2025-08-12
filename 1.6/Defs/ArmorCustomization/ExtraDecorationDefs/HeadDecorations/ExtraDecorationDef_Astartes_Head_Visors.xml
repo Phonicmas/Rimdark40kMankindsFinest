@@ -37,7 +37,6 @@
         </drawData>
         <shaderType>CutoutComplex</shaderType>
         <colourable>true</colourable>
-        <useMask>true</useMask>
         <flipable>true</flipable>
         <colorAmount>3</colorAmount>
         <useArmorColourAsDefault>true</useArmorColourAsDefault>
