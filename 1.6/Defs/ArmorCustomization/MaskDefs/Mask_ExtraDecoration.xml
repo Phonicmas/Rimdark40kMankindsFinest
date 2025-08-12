@@ -3,21 +3,8 @@
 
     <!-- ??? -->
     <Core40k.MaskDef ParentName="BEWH_MaskDef_ExtraDecoration">
-        <defName>BEWH_RondelTest1</defName>
-        <label>test 1</label>
-        <description>???</description>
-        <maskPath>Things/Decorations/Armor/Common/Rondel/BEWH_Deco_Shield1_mask</maskPath>
-        <appliesTo>
-            <li>BEWH_Deco_Rondel1</li>
-        </appliesTo>
-        <colorAmount>2</colorAmount>
-        <sortOrder>1</sortOrder>
-    </Core40k.MaskDef>
-
-    <!-- ??? -->
-    <Core40k.MaskDef ParentName="BEWH_MaskDef_ExtraDecoration">
-        <defName>BEWH_RondelTest2</defName>
-        <label>test 2</label>
+        <defName>BEWH_RondelBtTest</defName>
+        <label>bt test</label>
         <description>???</description>
         <maskPath>Things/Decorations/Armor/Common/Rondel/BEWH_Deco_Shield1_BT_mask</maskPath>
         <appliesTo>

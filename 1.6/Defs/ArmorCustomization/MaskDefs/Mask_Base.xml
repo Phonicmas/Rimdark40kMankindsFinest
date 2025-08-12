@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-    <Core40k.MaskDef>
-        <defName>BEWH_DefaultMask</defName>
-        <label>Default</label>
-        <description>Default</description>
-        <setsNull>True</setsNull>
-        <appliesTo>
-            <li>BEWH_MkVIIPowerArmor</li>
-            <li>BEWH_MkVIIPowerArmorHelmet</li>
-            <li>BEWH_MkXPowerArmor</li>
-            <li>BEWH_MkXPowerArmorHelmet</li>
-        </appliesTo>
-        <sortOrder>-100</sortOrder>
-    </Core40k.MaskDef>
-
     <Core40k.MaskDef Name="BEWH_MaskDef_ExtraDecoration" Abstract="true">
         <appliesToKind>ExtraDecoration</appliesToKind>
     </Core40k.MaskDef>
