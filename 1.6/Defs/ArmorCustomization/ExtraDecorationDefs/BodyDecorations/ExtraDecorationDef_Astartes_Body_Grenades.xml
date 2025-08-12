@@ -34,7 +34,6 @@
                 <flip>true</flip>
             </dataWest>
         </drawData>
-        <shaderType>Cutout</shaderType>
         <flipable>true</flipable>
     </Core40k.ExtraDecorationDef>
 
@@ -70,7 +69,6 @@
                 <layer>64</layer>
             </dataWest>
         </drawData>
-        <shaderType>Cutout</shaderType>
         <flipable>true</flipable>
     </Core40k.ExtraDecorationDef>
 
@@ -106,7 +104,6 @@
                 <flip>true</flip>
             </dataWest>
         </drawData>
-        <shaderType>Cutout</shaderType>
         <flipable>true</flipable>
     </Core40k.ExtraDecorationDef>
 
@@ -142,7 +139,6 @@
                 <layer>64</layer>
             </dataWest>
         </drawData>
-        <shaderType>Cutout</shaderType>
         <flipable>true</flipable>
     </Core40k.ExtraDecorationDef>
 

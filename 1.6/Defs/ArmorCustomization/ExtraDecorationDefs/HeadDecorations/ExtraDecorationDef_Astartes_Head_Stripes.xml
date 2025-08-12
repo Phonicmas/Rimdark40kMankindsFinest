@@ -21,6 +21,7 @@
             <li>BEWH_MkVIIPowerArmorHelmet</li>
         </appliesTo>
         <colourable>true</colourable>
+        <shaderType>Cutout</shaderType>
         <drawData>
             <dataNorth>
                 <layer>76</layer>
@@ -42,7 +43,6 @@
             <li>BEWH_DecoPaletteIFBlack</li>
             <li>BEWH_DecoPaletteStripeRed</li>
         </availablePresets>
-        <shaderType>Cutout</shaderType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -63,6 +63,7 @@
             <li>BEWH_MkXPowerArmorHelmet</li>
         </appliesTo>
         <colourable>true</colourable>
+        <shaderType>Cutout</shaderType>
         <drawData>
             <dataNorth>
                 <layer>70</layer>
@@ -84,7 +85,6 @@
             <li>BEWH_DecoPaletteIFBlack</li>
             <li>BEWH_DecoPaletteStripeRed</li>
         </availablePresets>
-        <shaderType>Cutout</shaderType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -121,8 +121,8 @@
             </dataWest>
         </drawData>
         <colourable>true</colourable>
+        <useMask>true</useMask>
         <colorAmount>2</colorAmount>
-        <shaderType>Cutout</shaderType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -157,7 +157,6 @@
                 <layer>70</layer>
             </dataWest>
         </drawData>
-        <shaderType>Cutout</shaderType>
     </Core40k.ExtraDecorationDef>
 
 </Defs>

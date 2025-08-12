@@ -35,12 +35,12 @@
             </dataWest>
         </drawData>
         <colourable>true</colourable>
+        <shaderType>Cutout</shaderType>
         <availablePresets>
             <li>BEWH_DecoPaletteGold</li>
             <li>BEWH_DecoPaletteSilver</li>
             <li>BEWH_DecoPaletteIFBlack</li>
         </availablePresets>
-        <shaderType>Cutout</shaderType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -73,7 +73,6 @@
                 <offset>(-0.186, 0, 0)</offset>
             </dataWest>
         </drawData>
-        <shaderType>Cutout</shaderType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -106,7 +105,6 @@
                 <offset>(-0.186, 0, 0)</offset>
             </dataWest>
         </drawData>
-        <shaderType>Cutout</shaderType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -145,12 +143,12 @@
             </dataWest>
         </drawData>
         <colourable>true</colourable>
+        <shaderType>Cutout</shaderType>
         <availablePresets>
             <li>BEWH_DecoPaletteGold</li>
             <li>BEWH_DecoPaletteSilver</li>
             <li>BEWH_DecoPaletteIFBlack</li>
         </availablePresets>
-        <shaderType>Cutout</shaderType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>

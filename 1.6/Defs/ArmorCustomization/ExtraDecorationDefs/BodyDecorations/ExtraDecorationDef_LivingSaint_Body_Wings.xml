@@ -38,9 +38,9 @@
 				<offset>(0, 0, 0.33)</offset>
             </dataWest>
         </drawData>
-        <shaderType>CutoutComplex</shaderType>
         <flipable>false</flipable>
         <colourable>true</colourable>
+        <useMask>true</useMask>
         <useArmorColourAsDefault>true</useArmorColourAsDefault>
         <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption> 
     </Core40k.ExtraDecorationDef>

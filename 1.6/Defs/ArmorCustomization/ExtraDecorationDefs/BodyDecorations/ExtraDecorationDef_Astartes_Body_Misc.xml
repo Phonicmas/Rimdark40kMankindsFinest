@@ -34,7 +34,6 @@
                 <flip>true</flip>
             </dataWest>
         </drawData>
-        <shaderType>Cutout</shaderType>
         <flipable>true</flipable>
     </Core40k.ExtraDecorationDef>
 
@@ -74,8 +73,9 @@
             <li>BEWH_DecoPaletteGold</li>
             <li>BEWH_DecoPaletteSilver</li>
         </availablePresets>
-        <shaderType>Cutout</shaderType>
         <colourable>true</colourable>
+        <useMask>true</useMask>
+        <colorAmount>2</colorAmount>
         <useArmorColourAsDefault>true</useArmorColourAsDefault>
         <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
         <flipable>true</flipable>
@@ -117,7 +117,6 @@
             <li>BEWH_DecoPaletteGold</li>
             <li>BEWH_DecoPaletteSilver</li>
         </availablePresets>
-        <shaderType>Cutout</shaderType>
         <colourable>true</colourable>
         <useArmorColourAsDefault>true</useArmorColourAsDefault>
         <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>

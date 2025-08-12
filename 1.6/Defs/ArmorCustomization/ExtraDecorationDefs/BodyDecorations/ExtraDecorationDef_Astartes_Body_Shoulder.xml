@@ -35,7 +35,6 @@
                 <layer>78</layer>
             </dataWest>
         </drawData>
-        <shaderType>Cutout</shaderType>
         <flipable>true</flipable>
     </Core40k.ExtraDecorationDef>
 
@@ -72,8 +71,8 @@
                 <layer>75</layer>
             </dataWest>
         </drawData>
-        <shaderType>Cutout</shaderType>
         <colourable>true</colourable>
+        <shaderType>Cutout</shaderType>
         <availablePresets />
         <!-- Custom chapter colors here -->
     </Core40k.ExtraDecorationDef>
@@ -110,8 +109,8 @@
                 <layer>75</layer>
             </dataWest>
         </drawData>
-        <shaderType>Cutout</shaderType>
         <colourable>true</colourable>
+        <shaderType>Cutout</shaderType>
         <availablePresets />
     </Core40k.ExtraDecorationDef>
 
