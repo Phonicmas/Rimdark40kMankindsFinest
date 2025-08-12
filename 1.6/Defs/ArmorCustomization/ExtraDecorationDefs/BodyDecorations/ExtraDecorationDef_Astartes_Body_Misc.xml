@@ -79,7 +79,6 @@
         <useArmorColourAsDefault>true</useArmorColourAsDefault>
         <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
         <flipable>true</flipable>
-        <defaultMask>BEWH_RondelTest1</defaultMask>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
