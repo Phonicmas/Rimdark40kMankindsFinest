@@ -2,7 +2,7 @@
 <Defs>
 
     <!-- MkVII -->
-    <Core40k.MaskDef>
+    <Core40k.MaskDef ParentName="BEWH_MaskDef_Thing">
         <defName>BEWH_MkVIIArmorPauldronsMask</defName>
         <label>Pauldrons</label>
         <description>Colorable pauldrons paint pattern.</description>
@@ -16,7 +16,7 @@
         </maskExtraFlags>
     </Core40k.MaskDef>
 
-    <Core40k.MaskDef>
+    <Core40k.MaskDef ParentName="BEWH_MaskDef_Thing">
         <defName>BEWH_MkVIIArmorHalvedMask</defName>
         <label>Halved</label>
         <description>Halved armor paint pattern.</description>
@@ -32,7 +32,7 @@
         </maskExtraFlags>
     </Core40k.MaskDef>
 
-    <Core40k.MaskDef>
+    <Core40k.MaskDef ParentName="BEWH_MaskDef_Thing">
         <defName>BEWH_MkVIIArmorCheckeredMask</defName>
         <label>Checkered</label>
         <description>Checkered armor paint pattern.</description>
@@ -50,7 +50,7 @@
 
 
     <!-- MkX -->
-    <Core40k.MaskDef>
+    <Core40k.MaskDef ParentName="BEWH_MaskDef_Thing">
         <defName>BEWH_MkXArmorPauldronsMask</defName>
         <label>Pauldrons</label>
         <description>Colorable pauldrons paint pattern.</description>
@@ -64,7 +64,7 @@
         </maskExtraFlags>
     </Core40k.MaskDef>
 
-    <Core40k.MaskDef>
+    <Core40k.MaskDef ParentName="BEWH_MaskDef_Thing">
         <defName>BEWH_MkXArmorHalvedMask</defName>
         <label>Halved</label>
         <description>Halved armor paint pattern.</description>
@@ -80,7 +80,7 @@
         </maskExtraFlags>
     </Core40k.MaskDef>
 
-    <Core40k.MaskDef>
+    <Core40k.MaskDef ParentName="BEWH_MaskDef_Thing">
         <defName>BEWH_MkXArmorCheckeredMask</defName>
         <label>Checkered</label>
         <description>Checkered armor paint pattern.</description>

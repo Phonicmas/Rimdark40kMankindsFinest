@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
     <!-- MkVII -->
-    <Core40k.MaskDef>
+    <Core40k.MaskDef ParentName="BEWH_MaskDef_Thing">
         <defName>BEWH_MkVIIHelmetHalvedMask</defName>
         <label>Halved</label>
         <description>Halved helmet paint pattern.</description>
@@ -12,7 +12,7 @@
         <sortOrder>1</sortOrder>
     </Core40k.MaskDef>
 
-    <Core40k.MaskDef>
+    <Core40k.MaskDef ParentName="BEWH_MaskDef_Thing">
         <defName>BEWH_MkVIIHelmetFaceplateMask</defName>
         <label>Faceplate</label>
         <description>Colorable faceplate paint pattern.</description>
@@ -23,7 +23,7 @@
         <sortOrder>2</sortOrder>
     </Core40k.MaskDef>
 
-    <Core40k.MaskDef>
+    <Core40k.MaskDef ParentName="BEWH_MaskDef_Thing">
         <defName>BEWH_MkVIIHelmetFaceplateStripeMask</defName>
         <label>Faceplate with Stripe</label>
         <description>Colorable faceplate with a vertical stripe paint pattern.</description>
@@ -33,9 +33,9 @@
         </appliesTo>
         <sortOrder>3</sortOrder>
     </Core40k.MaskDef>
-	
-	<!-- MkX -->
-    <Core40k.MaskDef>
+
+    <!-- MkX -->
+    <Core40k.MaskDef ParentName="BEWH_MaskDef_Thing">
         <defName>BEWH_MkXHelmetHalvedMask</defName>
         <label>Halved</label>
         <description>Halved helmet paint pattern.</description>
@@ -46,7 +46,7 @@
         <sortOrder>1</sortOrder>
     </Core40k.MaskDef>
 
-    <Core40k.MaskDef>
+    <Core40k.MaskDef ParentName="BEWH_MaskDef_Thing">
         <defName>BEWH_MkXHelmetFaceplateMask</defName>
         <label>Faceplate</label>
         <description>Colorable faceplate paint pattern.</description>
@@ -57,7 +57,7 @@
         <sortOrder>2</sortOrder>
     </Core40k.MaskDef>
 
-    <Core40k.MaskDef>
+    <Core40k.MaskDef ParentName="BEWH_MaskDef_Thing">
         <defName>BEWH_MkXHelmetFaceplateStripeMask</defName>
         <label>Faceplate with Stripe</label>
         <description>Colorable faceplate with a vertical stripe paint pattern.</description>
