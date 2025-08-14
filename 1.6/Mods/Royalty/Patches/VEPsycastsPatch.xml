@@ -16,7 +16,7 @@
 									<li>VPE_Eltex</li>
 								</thingDefs>
 							</filter>
-							<count>50</count>
+							<count>5</count>
 						</li>
 					</value>
 				</li>
@@ -30,7 +30,7 @@
 									<li>VPE_Eltex</li>
 								</thingDefs>
 							</filter>
-							<count>200</count>
+							<count>20</count>
 						</li>
 					</value>
 				</li>
