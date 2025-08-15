@@ -80,7 +80,7 @@
         </modExtensions>
     </ThingDef>
     <!-- Kraken -->
-    <ThingDef ParentName="BaseBullet">
+    <!--<ThingDef ParentName="BaseBullet">
         <defName>BEWH_BolterRoundKraken</defName>
         <label>bolt - Kraken</label>
         <description>???</description>
@@ -114,9 +114,9 @@
                 <shotsPerBurst>5</shotsPerBurst>
             </li>
         </modExtensions>
-    </ThingDef>
+    </ThingDef>-->
     <!-- Inferno -->
-    <ThingDef ParentName="BaseBullet">
+    <!--<ThingDef ParentName="BaseBullet">
         <defName>BEWH_BolterRoundInferno</defName>
         <label>bolt - Inferno</label>
         <description>???</description>
@@ -147,9 +147,9 @@
                 <unlockedBy>BEWH_ExpandedBolterRound</unlockedBy>
             </li>
         </modExtensions>
-    </ThingDef>
+    </ThingDef>-->
     <!-- Tempest -->
-    <ThingDef ParentName="BaseBullet">
+    <!--<ThingDef ParentName="BaseBullet">
         <defName>BEWH_BolterRoundTempest</defName>
         <label>bolt - Tempest</label>
         <description>???</description>
@@ -180,7 +180,7 @@
                 <unlockedBy>BEWH_ExpandedBolterRound</unlockedBy>
             </li>
         </modExtensions>
-    </ThingDef>
+    </ThingDef>-->
 
     <!-- HEAVY BOLT -->
     <ThingDef ParentName="BaseBullet">

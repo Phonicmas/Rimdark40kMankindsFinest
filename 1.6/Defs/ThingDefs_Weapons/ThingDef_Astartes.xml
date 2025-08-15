@@ -51,9 +51,9 @@
         <availableProjectiles>
           <li>BEWH_BolterRound</li>
           <li>BEWH_BolterRoundMetalStorm</li>
-          <li>BEWH_BolterRoundKraken</li>
+          <!--<li>BEWH_BolterRoundKraken</li>
           <li>BEWH_BolterRoundInferno</li>
-          <li>BEWH_BolterRoundTempest</li>
+          <li>BEWH_BolterRoundTempest</li>-->
         </availableProjectiles>
       </li>
       <li Class="CompProperties_Forbiddable"/>
@@ -162,7 +162,7 @@
       </li>
       <li Class="Core40k.DefModExtension_WeaponMultiColor">
         <colorMaskAmount>3</colorMaskAmount>
-        <defaultPrimaryColor>(179,179,179)</defaultPrimaryColor> <!-- If this is not set, it will default to use color of the stuff its made out of (if any)-->
+        <defaultPrimaryColor>(179,179,179)</defaultPrimaryColor>        <!-- If this is not set, it will default to use color of the stuff its made out of (if any)-->
         <defaultSecondaryColor>(213,158,76)</defaultSecondaryColor>
         <defaultTertiaryColor>(111,111,111)</defaultTertiaryColor>
       </li>
