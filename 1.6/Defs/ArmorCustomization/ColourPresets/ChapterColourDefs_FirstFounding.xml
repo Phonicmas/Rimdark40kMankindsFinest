@@ -11,12 +11,13 @@
             <li>BEWH_MkXPowerArmorChaplainHelmet</li>
         </appliesTo>
         <appliesToKind>Armor</appliesToKind>
-        <colorAmount>3</colorAmount>
+        <colorAmount>2</colorAmount>
     </Genes40k.ChapterColourDef>
 
     <Genes40k.ChapterColourDef ParentName="BEWH_ChapterColourPresets">
         <defName>BEWH_ChapterColourI</defName>
         <label>Dark Angels</label>
+        <colorAmount>3</colorAmount>
         <primaryColour>(38,65,54)</primaryColour>
         <secondaryColour>(71,71,71)</secondaryColour>
         <tertiaryColour>(216,192,150)</tertiaryColour>

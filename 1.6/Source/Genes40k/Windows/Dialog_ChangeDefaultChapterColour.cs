@@ -32,7 +32,67 @@ public class Dialog_ChangeDefaultChapterColour : Window
     
     private const int RowAmount = 6;
     private const float gap = 5f;
-        
+
+    private void PrimaryColorBox(Rect primaryColorRect)
+    {
+        Widgets.DrawMenuSection(primaryColorRect.ContractedBy(-1));
+        Widgets.DrawRectFast(primaryColorRect, currentlySelectedPreset.primaryColour);
+        Text.Anchor = TextAnchor.MiddleCenter;
+        Widgets.Label(primaryColorRect, "BEWH.Framework.ApparelMultiColor.PrimaryColor".Translate());
+        TooltipHandler.TipRegion(primaryColorRect, "BEWH.Framework.ApparelMultiColor.ChooseCustomColour".Translate());
+        Text.Anchor = TextAnchor.UpperLeft;
+        if (Widgets.ButtonInvisible(primaryColorRect))
+        {
+            Find.WindowStack.Add( new Dialog_ColourPicker( currentlySelectedPreset.primaryColour, ( newColour ) =>
+            {
+                settings.CustomPreset.primaryColour = newColour;
+                settings.CustomPreset.secondaryColour = currentlySelectedPreset.secondaryColour;
+                settings.CustomPreset.tertiaryColour = currentlySelectedPreset.tertiaryColour;
+                currentlySelectedPreset = settings.CustomPreset;
+            } ) );
+        }
+    }
+    
+    private void SecondaryColorBox(Rect secondaryColorRect)
+    {
+        Widgets.DrawMenuSection(secondaryColorRect.ContractedBy(-1));
+        Widgets.DrawRectFast(secondaryColorRect, currentlySelectedPreset.secondaryColour);
+        Text.Anchor = TextAnchor.MiddleCenter;
+        Widgets.Label(secondaryColorRect, "BEWH.Framework.ApparelMultiColor.SecondaryColor".Translate());
+        TooltipHandler.TipRegion(secondaryColorRect, "BEWH.Framework.ApparelMultiColor.ChooseCustomColour".Translate());
+        Text.Anchor = TextAnchor.UpperLeft;
+        if (Widgets.ButtonInvisible(secondaryColorRect))
+        {
+            Find.WindowStack.Add( new Dialog_ColourPicker( currentlySelectedPreset.secondaryColour, ( newColour ) =>
+            {
+                settings.CustomPreset.secondaryColour = newColour;
+                settings.CustomPreset.primaryColour = currentlySelectedPreset.primaryColour;
+                settings.CustomPreset.tertiaryColour = currentlySelectedPreset.tertiaryColour;
+                currentlySelectedPreset = settings.CustomPreset;
+            } ) );
+        }
+    }
+    
+    private void TertiaryColorBox(Rect tertiaryColorRect)
+    {
+        Widgets.DrawMenuSection(tertiaryColorRect.ContractedBy(-1));
+        Widgets.DrawRectFast(tertiaryColorRect, currentlySelectedPreset.tertiaryColour.Value);
+        Text.Anchor = TextAnchor.MiddleCenter;
+        Widgets.Label(tertiaryColorRect, "BEWH.Framework.ApparelMultiColor.TertiaryColor".Translate());
+        TooltipHandler.TipRegion(tertiaryColorRect, "BEWH.Framework.ApparelMultiColor.ChooseCustomColour".Translate());
+        Text.Anchor = TextAnchor.UpperLeft;
+        if (Widgets.ButtonInvisible(tertiaryColorRect))
+        {
+            Find.WindowStack.Add( new Dialog_ColourPicker( currentlySelectedPreset.tertiaryColour.Value, ( newColour ) =>
+            {
+                settings.CustomPreset.tertiaryColour = newColour;
+                settings.CustomPreset.primaryColour = currentlySelectedPreset.primaryColour;
+                settings.CustomPreset.secondaryColour = currentlySelectedPreset.secondaryColour;
+                currentlySelectedPreset = settings.CustomPreset;
+            } ) );
+        }
+    }
+    
     public override void DoWindowContents(Rect inRect)
     {
         inRect.xMin += 50f;
@@ -73,73 +133,50 @@ public class Dialog_ChangeDefaultChapterColour : Window
         colourFields.height /= 3;
             
         var primaryColorRect = new Rect(colourFields);
-        primaryColorRect.width /= 3;
+        Rect secondaryColorRect;
+        Rect tertiaryColorRect;
         
-        //primaryColorRect.x = inRect.xMin + 1f;
-        
-        var secondaryColorRect = new Rect(primaryColorRect)
+        switch (currentlySelectedPreset.colorAmount)
         {
-            x = primaryColorRect.xMax
-        };
+            case 1:
+                primaryColorRect = primaryColorRect.ContractedBy(5);
+                PrimaryColorBox(primaryColorRect);  
+                break;
+            case 2:
+                primaryColorRect.width /= 2;
         
-        var tertiaryColorRect = new Rect(secondaryColorRect)
-        {
-            x = secondaryColorRect.xMax
-        };
+                secondaryColorRect = new Rect(primaryColorRect)
+                {
+                    x = primaryColorRect.xMax
+                };
+                
+                primaryColorRect = primaryColorRect.ContractedBy(5);
+                secondaryColorRect = secondaryColorRect.ContractedBy(5);
+                    
+                PrimaryColorBox(primaryColorRect);
+                SecondaryColorBox(secondaryColorRect);
+                break;
+            case 3:
+                primaryColorRect.width /= 3;
         
-        primaryColorRect = primaryColorRect.ContractedBy(5);
-        secondaryColorRect = secondaryColorRect.ContractedBy(5);
-        tertiaryColorRect = tertiaryColorRect.ContractedBy(5);
-            
-        Widgets.DrawMenuSection(primaryColorRect.ContractedBy(-1));
-        Widgets.DrawRectFast(primaryColorRect, currentlySelectedPreset.primaryColour);
-        Text.Anchor = TextAnchor.MiddleCenter;
-        Widgets.Label(primaryColorRect, "BEWH.Framework.ApparelMultiColor.PrimaryColor".Translate());
-        TooltipHandler.TipRegion(primaryColorRect, "BEWH.Framework.ApparelMultiColor.ChooseCustomColour".Translate());
-        Text.Anchor = TextAnchor.UpperLeft;
-        if (Widgets.ButtonInvisible(primaryColorRect))
-        {
-            Find.WindowStack.Add( new Dialog_ColourPicker( currentlySelectedPreset.primaryColour, ( newColour ) =>
-            {
-                settings.CustomPreset.primaryColour = newColour;
-                settings.CustomPreset.secondaryColour = currentlySelectedPreset.secondaryColour;
-                settings.CustomPreset.tertiaryColour = currentlySelectedPreset.tertiaryColour;
-                currentlySelectedPreset = settings.CustomPreset;
-            } ) );
-        }
+                secondaryColorRect = new Rect(primaryColorRect)
+                {
+                    x = primaryColorRect.xMax
+                };
         
-        Widgets.DrawMenuSection(secondaryColorRect.ContractedBy(-1));
-        Widgets.DrawRectFast(secondaryColorRect, currentlySelectedPreset.secondaryColour);
-        Text.Anchor = TextAnchor.MiddleCenter;
-        Widgets.Label(secondaryColorRect, "BEWH.Framework.ApparelMultiColor.SecondaryColor".Translate());
-        TooltipHandler.TipRegion(secondaryColorRect, "BEWH.Framework.ApparelMultiColor.ChooseCustomColour".Translate());
-        Text.Anchor = TextAnchor.UpperLeft;
-        if (Widgets.ButtonInvisible(secondaryColorRect))
-        {
-            Find.WindowStack.Add( new Dialog_ColourPicker( currentlySelectedPreset.secondaryColour, ( newColour ) =>
-            {
-                settings.CustomPreset.secondaryColour = newColour;
-                settings.CustomPreset.primaryColour = currentlySelectedPreset.primaryColour;
-                settings.CustomPreset.tertiaryColour = currentlySelectedPreset.tertiaryColour;
-                currentlySelectedPreset = settings.CustomPreset;
-            } ) );
-        }
-        
-        Widgets.DrawMenuSection(tertiaryColorRect.ContractedBy(-1));
-        Widgets.DrawRectFast(tertiaryColorRect, currentlySelectedPreset.tertiaryColour);
-        Text.Anchor = TextAnchor.MiddleCenter;
-        Widgets.Label(tertiaryColorRect, "BEWH.Framework.ApparelMultiColor.TertiaryColor".Translate());
-        TooltipHandler.TipRegion(tertiaryColorRect, "BEWH.Framework.ApparelMultiColor.ChooseCustomColour".Translate());
-        Text.Anchor = TextAnchor.UpperLeft;
-        if (Widgets.ButtonInvisible(tertiaryColorRect))
-        {
-            Find.WindowStack.Add( new Dialog_ColourPicker( currentlySelectedPreset.tertiaryColour, ( newColour ) =>
-            {
-                settings.CustomPreset.tertiaryColour = newColour;
-                settings.CustomPreset.primaryColour = currentlySelectedPreset.primaryColour;
-                settings.CustomPreset.secondaryColour = currentlySelectedPreset.secondaryColour;
-                currentlySelectedPreset = settings.CustomPreset;
-            } ) );
+                tertiaryColorRect = new Rect(secondaryColorRect)
+                {
+                    x = secondaryColorRect.xMax
+                };
+                
+                primaryColorRect = primaryColorRect.ContractedBy(5);
+                secondaryColorRect = secondaryColorRect.ContractedBy(5);
+                tertiaryColorRect = tertiaryColorRect.ContractedBy(5);
+                    
+                PrimaryColorBox(primaryColorRect);
+                SecondaryColorBox(secondaryColorRect);
+                TertiaryColorBox(tertiaryColorRect);
+                break;
         }
         
         if (currentlySelectedPreset.defName == "BEWH_CustomChapterDef")
@@ -267,7 +304,7 @@ public class Dialog_ChangeDefaultChapterColour : Window
         {
             settings.chapterColorOne = currentlySelectedPreset.primaryColour;
             settings.chapterColorTwo = currentlySelectedPreset.secondaryColour;
-            settings.chapterColorThree = currentlySelectedPreset.tertiaryColour;
+            settings.chapterColorThree = currentlySelectedPreset.tertiaryColour ?? currentlySelectedPreset.secondaryColour;
             settings.CurrentlySelectedPreset = currentlySelectedPreset;
             settings.chapterShoulderIconColor = currentlySelectedPreset.chapterIconColour;
             Close();

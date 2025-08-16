@@ -45,6 +45,7 @@ public class Genes40kModSettings : ModSettings
             tertiaryColour = chapterColorThree,
             relatedChapterIcon = chapterShoulderIcon,
             chapterIconColour = chapterShoulderIconColor ?? Color.white,
+            colorAmount = 3,
         };
 
     public Color chapterColorOne = Genes40kDefOf.BEWH_ChapterColourXIII.primaryColour;
