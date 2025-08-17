@@ -14,6 +14,11 @@ public class Comp_TwinDisable : AbilityComp
         if (caster.genes != null && caster.genes.HasActiveGene(Genes40kDefOf.BEWH_PrimarchSpecificGeneXX))
         {
             var gene = (Gene_TwinConnected)caster.genes.GetGene(Genes40kDefOf.BEWH_PrimarchSpecificGeneXX);
+            if (gene.Twin == null)
+            {
+                reason = "BEWH.MankindsFinest.Ability.NoTwin".Translate();
+                return true;
+            }
             if (Props.disableIfDead && gene.Twin.Dead)
             {
                 reason = "BEWH.MankindsFinest.Ability.TwinConnectedDead".Translate();

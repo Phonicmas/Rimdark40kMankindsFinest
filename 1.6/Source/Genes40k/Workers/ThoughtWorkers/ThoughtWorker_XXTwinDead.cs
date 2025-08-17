@@ -19,6 +19,10 @@ public class ThoughtWorker_XXTwinDead : ThoughtWorker
         }
 
         var twinGene = (Gene_TwinConnected)gene;
+        if (twinGene.Twin == null)
+        {
+            return false;
+        }
         return twinGene.Twin.Dead;
     }
 }

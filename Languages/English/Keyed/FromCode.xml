@@ -147,7 +147,7 @@
   <BEWH.MankindsFinest.SpaceMarine.SecondGeneseedsHarvestable>Gene-seeds ready to be harvested.</BEWH.MankindsFinest.SpaceMarine.SecondGeneseedsHarvestable>
 
   <BEWH.MankindsFinest.SpaceMarine.GeneseedExtractionChance>{0}% chance of successfully extracting the gene-seed.</BEWH.MankindsFinest.SpaceMarine.GeneseedExtractionChance>
-  
+
   <BEWH.MankindsFinest.SpaceMarine.GeneseedExtractionFail>Gene-seed extraction failed.</BEWH.MankindsFinest.SpaceMarine.GeneseedExtractionFail>
   <BEWH.MankindsFinest.SpaceMarine.GeneseedExtractionFailDesc>Gene-seed extraction of {0} failed and was ruined in the process.</BEWH.MankindsFinest.SpaceMarine.GeneseedExtractionFailDesc>
 
@@ -187,6 +187,7 @@
   <BEWH.MankindsFinest.Ability.CurrentToggle>Warp shield is currently toggled {0}</BEWH.MankindsFinest.Ability.CurrentToggle>
 
   <!-- Twin Teleport -->
+  <BEWH.MankindsFinest.Ability.NoTwin>No twin</BEWH.MankindsFinest.Ability.NoTwin>
   <BEWH.MankindsFinest.Ability.TwinConnectedDead>The twin is dead</BEWH.MankindsFinest.Ability.TwinConnectedDead>
   <BEWH.MankindsFinest.Ability.TwinConnectedDifferentMap>The twin is on a different map</BEWH.MankindsFinest.Ability.TwinConnectedDifferentMap>
 
