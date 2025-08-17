@@ -35,6 +35,7 @@
             </dataWest>
         </drawData>
         <colourable>true</colourable>
+        <defaultColour>(240,176,29)</defaultColour>
         <shaderType>Cutout</shaderType>
         <availablePresets>
             <li>BEWH_DecoPaletteGold</li>
@@ -144,6 +145,7 @@
         </drawData>
         <colourable>true</colourable>
         <shaderType>Cutout</shaderType>
+        <defaultColour>(240,176,29)</defaultColour>
         <availablePresets>
             <li>BEWH_DecoPaletteGold</li>
             <li>BEWH_DecoPaletteSilver</li>
@@ -192,6 +194,7 @@
         </availablePresets>
         <colourable>true</colourable>
         <shaderType>Cutout</shaderType>
+        <defaultColour>(240,176,29)</defaultColour>
     </Core40k.ExtraDecorationDef>
 
 </Defs>

@@ -25,8 +25,8 @@
     <!-- Standard -->
     <ThingDef ParentName="BaseBullet">
         <defName>BEWH_BolterRound</defName>
-        <label>bolt</label>
-        <description>???</description>
+        <label>Standard Bolt</label>
+        <description>A standard gyrojet-stabilized, mass-reactive round that penetrates armor and detonates inside the target.</description>
         <thingClass>Bullet</thingClass>
         <uiIconPath>Things/Ammo/Bolter/Standard_Small</uiIconPath>
         <graphicData>
@@ -35,7 +35,7 @@
             <drawSize>(0.8, 0.8)</drawSize>
         </graphicData>
         <projectile>
-            <damageDef>BEWH_Bolt</damageDef>
+            <damageDef>Bullet</damageDef>
             <damageAmountBase>25</damageAmountBase>
             <armorPenetrationBase>0.68</armorPenetrationBase>
             <soundExplode>GunShotA</soundExplode>
@@ -46,26 +46,26 @@
             <li Class="Core40k.DefModExtension_AmmoChanger" />
         </modExtensions>
     </ThingDef>
-    <!-- Metal Storm -->
+    <!-- Metal Storm Shrapnel -->
     <ThingDef ParentName="BaseBullet">
-        <defName>BEWH_BolterRoundMetalStorm</defName>
-        <label>bolt - Metal storm</label>
-        <description>???</description>
+        <defName>BEWH_BolterShrapnel</defName>
+        <label>Metal Storm Shrapnel</label>
+        <description>...</description>
         <thingClass>Projectile_Explosive</thingClass>
         <uiIconPath>Things/Ammo/Bolter/MetalStorm_Small</uiIconPath>
         <graphicData>
-            <texPath>Things/Projectiles/BEWH_BolterRound</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
-            <drawSize>(0.8, 0.8)</drawSize>
+            <texPath>Things/Projectiles/MsShrapnel</texPath>
+            <graphicClass>Graphic_Random</graphicClass>
+            <drawSize>(0.7, 0.7)</drawSize>
         </graphicData>
         <projectile>
-            <damageDef>BEWH_Bolt</damageDef>
+            <damageDef>BEWH_BoltMetalStorm</damageDef>
             <damageAmountBase>16</damageAmountBase>
             <armorPenetrationBase>0.48</armorPenetrationBase>
-            <explosionRadius>3.9</explosionRadius>
+            <explosionRadius>1.25</explosionRadius>
             <soundExplode>GunShotA</soundExplode>
-            <screenShakeFactor>0.2</screenShakeFactor>
-            <speed>90</speed>
+            <screenShakeFactor>0.1</screenShakeFactor>
+            <speed>75</speed>
         </projectile>
         <costList>
             <ComponentIndustrial>1</ComponentIndustrial>
@@ -79,6 +79,44 @@
             </li>
         </modExtensions>
     </ThingDef>
+    <!-- Metal Storm Bolt (VEF dependable) -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>BEWH_BolterRoundMetalStorm</defName>
+        <label>Metal Storm Bolt</label>
+        <description>Specialized ammunition designed to devastate large groups of lightly armored enemies. It detonates mid-air, scattering sharp shrapnel that tears through flesh and light armor, clears vegetation, and saturates enemy positions.</description>
+        <thingClass>VEF.Weapons.Projectile_Shrapnel</thingClass>
+        <uiIconPath>Things/Ammo/Bolter/MetalStorm_Small</uiIconPath>
+        <graphicData>
+            <texPath>Things/Projectiles/BEWH_BolterRoundMS</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1, 1)</drawSize>
+        </graphicData>
+        <projectile Class="VEF.Weapons.ProjectileProperties_Shrapnel">
+            <damageDef>BEWH_Bolt</damageDef>
+            <explosionRadius>1.25</explosionRadius>
+            <soundExplode>GunShotA</soundExplode>
+            <screenShakeFactor>0.1</screenShakeFactor>
+            <speed>70</speed>
+            <!-- Spawns "Metal Storm Shrapnel" according to the parameters specified below -->
+            <shrapnelProjectile>BEWH_BolterShrapnel</shrapnelProjectile>
+            <shrapnelCount>3</shrapnelCount>
+            <shrapnelRange>14</shrapnelRange>
+            <angleVariance>15</angleVariance>
+        </projectile>
+        <costList>
+            <ComponentIndustrial>1</ComponentIndustrial>
+        </costList>
+        <recipeMaker>
+            <researchPrerequisite>BEWH_ExpandedBolterRound</researchPrerequisite>
+        </recipeMaker>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_AmmoChanger">
+                <unlockedBy>BEWH_ExpandedBolterRound</unlockedBy>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+
     <!-- Kraken -->
     <!--<ThingDef ParentName="BaseBullet">
         <defName>BEWH_BolterRoundKraken</defName>
@@ -185,7 +223,7 @@
     <!-- HEAVY BOLT -->
     <ThingDef ParentName="BaseBullet">
         <defName>BEWH_HeavyBolterRound</defName>
-        <label>heavy bolt</label>
+        <label>Heavy Bolt</label>
         <thingClass>Bullet</thingClass>
         <graphicData>
             <texPath>Things/Projectiles/BEWH_BolterRound</texPath>

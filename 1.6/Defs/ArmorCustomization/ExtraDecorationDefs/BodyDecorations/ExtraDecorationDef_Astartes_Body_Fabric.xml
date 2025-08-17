@@ -70,6 +70,8 @@
             <li>BEWH_DecoPaletteApothecaryRed</li>
         </availablePresets>
         <colourable>true</colourable>
+        <defaultColour>(162, 54, 39)</defaultColour>
+        <useMask>true</useMask>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -103,6 +105,8 @@
             <li>BEWH_DecoPaletteApothecaryRed</li>
         </availablePresets>
         <colourable>true</colourable>
+        <defaultColour>(162, 54, 39)</defaultColour>
+        <useMask>true</useMask>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -217,6 +221,10 @@
         </availablePresets>
         <shaderType>CutoutComplex</shaderType>
         <colourable>true</colourable>
+        <useMask>true</useMask>
+        <colorAmount>2</colorAmount>
+        <defaultColour>(104,24,33)</defaultColour>
+        <defaultColourTwo>(240,176,29)</defaultColourTwo>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -259,6 +267,10 @@
         </availablePresets>
         <shaderType>CutoutComplex</shaderType>
         <colourable>true</colourable>
+        <useMask>true</useMask>
+        <colorAmount>2</colorAmount>
+        <defaultColour>(104,24,33)</defaultColour>
+        <defaultColourTwo>(240,176,29)</defaultColourTwo>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -297,6 +309,10 @@
         </availablePresets>
         <shaderType>CutoutComplex</shaderType>
         <colourable>true</colourable>
+        <useMask>true</useMask>
+        <colorAmount>2</colorAmount>
+        <defaultColour>(162, 54, 39)</defaultColour>
+        <defaultColourTwo>(240,176,29)</defaultColourTwo>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>        <!-- MARK VII -->
@@ -420,6 +436,7 @@
             <li>BEWH_DecoPaletteIFBlack</li>
         </availablePresets>
         <colourable>true</colourable>
+        <defaultColour>(104,24,33)</defaultColour>
     </Core40k.ExtraDecorationDef>
 
 </Defs>
