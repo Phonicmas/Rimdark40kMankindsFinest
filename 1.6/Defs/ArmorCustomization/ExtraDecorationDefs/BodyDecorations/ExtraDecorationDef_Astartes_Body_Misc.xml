@@ -69,15 +69,12 @@
                 <layer>84</layer>
             </dataWest>
         </drawData>
-        <availablePresets>
-            <li>BEWH_DecoPaletteGold</li>
-            <li>BEWH_DecoPaletteSilver</li>
-        </availablePresets>
+        <availablePresets/>
         <colourable>true</colourable>
         <useMask>true</useMask>
         <colorAmount>2</colorAmount>
         <useArmorColourAsDefault>true</useArmorColourAsDefault>
-        <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
+        <!-- <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption> -->
         <flipable>true</flipable>
     </Core40k.ExtraDecorationDef>
 
@@ -113,13 +110,13 @@
                 <layer>84</layer>
             </dataWest>
         </drawData>
-        <availablePresets>
-            <li>BEWH_DecoPaletteGold</li>
-            <li>BEWH_DecoPaletteSilver</li>
-        </availablePresets>
+        <availablePresets/>
         <colourable>true</colourable>
+        <shaderType>CutoutComplex</shaderType>
+        <useMask>true</useMask>
+        <colorAmount>2</colorAmount>
         <useArmorColourAsDefault>true</useArmorColourAsDefault>
-        <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
+        <!-- <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption> -->
         <flipable>true</flipable>
     </Core40k.ExtraDecorationDef>
 

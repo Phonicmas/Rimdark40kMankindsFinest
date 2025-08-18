@@ -37,6 +37,7 @@
     <Genes40k.ChapterColourDef ParentName="BEWH_ChapterColourPresets">
         <defName>BEWH_ChapterColourIV</defName>
         <label>Iron Warriors</label>
+        <colorAmount>3</colorAmount>
         <primaryColour>(110,110,110)</primaryColour>
         <secondaryColour>(170,152,77)</secondaryColour>
         <tertiaryColour>(170,170,170)</tertiaryColour>
@@ -74,6 +75,7 @@
     <Genes40k.ChapterColourDef ParentName="BEWH_ChapterColourPresets">
         <defName>BEWH_ChapterColourVIII</defName>
         <label>Night Lords</label>
+        <colorAmount>3</colorAmount>
         <primaryColour>(39,60,86)</primaryColour>
         <secondaryColour>(143,143,143)</secondaryColour>
         <tertiaryColour>(134,48,54)</tertiaryColour>
@@ -102,6 +104,7 @@
     <Genes40k.ChapterColourDef ParentName="BEWH_ChapterColourPresets">
         <defName>BEWH_ChapterColourXII</defName>
         <label>World Eaters</label>
+        <colorAmount>3</colorAmount>
         <primaryColour>(191,191,191)</primaryColour>
         <secondaryColour>(34,68,128)</secondaryColour>
         <tertiaryColour>(231,169,54)</tertiaryColour>
@@ -121,6 +124,7 @@
     <Genes40k.ChapterColourDef ParentName="BEWH_ChapterColourPresets">
         <defName>BEWH_ChapterColourXIV</defName>
         <label>Death Guard</label>
+        <colorAmount>3</colorAmount>
         <primaryColour>(196,195,166)</primaryColour>
         <secondaryColour>(66,85,44)</secondaryColour>
         <tertiaryColour>(207,164,63)</tertiaryColour>
@@ -140,6 +144,7 @@
     <Genes40k.ChapterColourDef ParentName="BEWH_ChapterColourPresets">
         <defName>BEWH_ChapterColourXVI</defName>
         <label>Sons of Horus</label>
+        <colorAmount>3</colorAmount>
         <primaryColour>(75,108,100)</primaryColour>
         <secondaryColour>(50,51,50)</secondaryColour>
         <tertiaryColour>(215,169,77)</tertiaryColour>
@@ -159,6 +164,7 @@
     <Genes40k.ChapterColourDef ParentName="BEWH_ChapterColourPresets">
         <defName>BEWH_ChapterColourXVIII</defName>
         <label>Salamanders</label>
+        <colorAmount>3</colorAmount>
         <primaryColour>(36,98,55)</primaryColour>
         <secondaryColour>(43,43,43)</secondaryColour>
         <tertiaryColour>(221,152,49)</tertiaryColour>
@@ -178,6 +184,7 @@
     <Genes40k.ChapterColourDef ParentName="BEWH_ChapterColourPresets">
         <defName>BEWH_ChapterColourXX</defName>
         <label>Alpha Legion</label>
+        <colorAmount>3</colorAmount>
         <primaryColour>(51,113,123)</primaryColour>
         <secondaryColour>(145,154,156)</secondaryColour>
         <tertiaryColour>(115,145,92)</tertiaryColour>
@@ -188,6 +195,7 @@
     <Genes40k.ChapterColourDef ParentName="BEWH_ChapterColourPresets">
         <defName>BEWH_ChapterColourDW</defName>
         <label>Deathwatch</label>
+        <colorAmount>3</colorAmount>
         <primaryColour>(71,71,71)</primaryColour>
         <secondaryColour>(106,106,106)</secondaryColour>
         <tertiaryColour>(50,50,50)</tertiaryColour>
@@ -196,6 +204,7 @@
     <Genes40k.ChapterColourDef ParentName="BEWH_ChapterColourPresets">
         <defName>BEWH_ChapterColourApothecary</defName>
         <label>Apothecary</label>
+        <colorAmount>3</colorAmount>
         <primaryColour>(218,210,199)</primaryColour>
         <secondaryColour>(178,178,173)</secondaryColour>
         <tertiaryColour>(130,43,30)</tertiaryColour>

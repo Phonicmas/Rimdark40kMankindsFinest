@@ -39,8 +39,8 @@
             </dataWest>
         </drawData>
         <colourable>true</colourable>
+        <defaultColour>(104, 24, 33)</defaultColour>
         <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
-        <useArmorColourAsDefault>true</useArmorColourAsDefault>
         <availablePresets>
             <li>BEWH_DecoPaletteFabricBeige</li>
             <li>BEWH_DecoPaletteFabricRed</li>

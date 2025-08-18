@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-    <!-- ??? -->
+    <!--
     <Core40k.MaskDef ParentName="BEWH_MaskDef_ExtraDecoration">
         <defName>BEWH_RondelBtTest</defName>
         <label>bt test</label>
@@ -12,6 +12,6 @@
         </appliesTo>
         <colorAmount>3</colorAmount>
         <sortOrder>2</sortOrder>
-    </Core40k.MaskDef>
+    </Core40k.MaskDef> -->
 
 </Defs>

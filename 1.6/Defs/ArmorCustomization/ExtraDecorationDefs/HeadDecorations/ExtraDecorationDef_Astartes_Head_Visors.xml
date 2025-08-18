@@ -4,7 +4,7 @@
     <!-- Visors -->
     <Core40k.ExtraDecorationDef>
         <defName>BEWH_Deco_Visor_1</defName>
-        <label>Apothecary visor</label>
+        <label>Visor</label>
         <description>...</description>
         <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_ApothecaryVisor_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Headgear/Common/Visor/BEWH_Deco_ApothecaryVisor</drawnTextureIconPath>
@@ -40,8 +40,9 @@
         <flipable>true</flipable>
         <colorAmount>3</colorAmount>
         <useArmorColourAsDefault>true</useArmorColourAsDefault>
-        <defaultColourTwo>(1,0,0)</defaultColourTwo>
-        <defaultColourThree>(0,1,0)</defaultColourThree>
+        <!-- DefaultColor uses armor color option -->
+        <defaultColourTwo>(203,39,39)</defaultColourTwo>
+        <defaultColourThree>(31,128,31)</defaultColourThree>
         <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
     </Core40k.ExtraDecorationDef>
 
@@ -77,6 +78,7 @@
         </drawData>
         <shaderType>TransparentPostLight</shaderType>
         <colourable>true</colourable>
+        <defaultColour>(28,189,42)</defaultColour>
         <availablePresets>
             <li>BEWH_DecoPaletteLenseGlowRed</li>
             <li>BEWH_DecoPaletteLenseGlowGreen</li>
@@ -119,6 +121,7 @@
         </drawData>
         <shaderType>TransparentPostLight</shaderType>
         <colourable>true</colourable>
+        <defaultColour>(28,189,42)</defaultColour>
         <availablePresets>
             <li>BEWH_DecoPaletteLenseGlowRed</li>
             <li>BEWH_DecoPaletteLenseGlowGreen</li>
@@ -161,6 +164,7 @@
         </drawData>
         <shaderType>TransparentPostLight</shaderType>
         <colourable>true</colourable>
+        <defaultColour>(28,189,42)</defaultColour>
         <availablePresets>
             <li>BEWH_DecoPaletteLenseGlowRed</li>
             <li>BEWH_DecoPaletteLenseGlowGreen</li>

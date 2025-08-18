@@ -42,6 +42,7 @@
             <li>BEWH_DecoPaletteLeatherGrey</li>
         </availablePresets>
         <flipable>true</flipable>
+        <defaultColour>(114,114,114)</defaultColour>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -83,6 +84,7 @@
             <li>BEWH_DecoPaletteLeatherGrey</li>
         </availablePresets>
         <flipable>true</flipable>
+        <defaultColour>(114,114,114)</defaultColour>
     </Core40k.ExtraDecorationDef>
 
 </Defs>

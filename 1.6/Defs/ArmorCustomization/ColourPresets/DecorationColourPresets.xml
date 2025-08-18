@@ -1,39 +1,46 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <!-- Gold -->
+    <!-- Gold 3 channels-->
     <Core40k.DecorationColourPresetDef>
         <defName>BEWH_DecoPaletteGold</defName>
         <label>Gold</label>
         <colour>(240,176,29)</colour>
+        <colourTwo>(240,176,29)</colourTwo>
+        <colourThree>(240,176,29)</colourThree>
     </Core40k.DecorationColourPresetDef>
 
-    <!-- Bronze -->
+    <!-- Bronze 3 channels-->
     <Core40k.DecorationColourPresetDef>
         <defName>BEWH_DecoPaletteBronze</defName>
         <label>Bronze</label>
         <colour>(230,163,92)</colour>
+        <colourTwo>(230,163,92)</colourTwo>
+        <colourThree>(230,163,92)</colourThree>
     </Core40k.DecorationColourPresetDef>
 
-    <!-- Silver -->
+    <!-- Silver 3 channels-->
     <Core40k.DecorationColourPresetDef>
         <defName>BEWH_DecoPaletteSilver</defName>
         <label>Silver</label>
-        <colour>(0.68,0.7,0.7)</colour>
+        <colour>(173, 179, 179)</colour>
+        <colourTwo>(173, 179, 179)</colourTwo>
+        <colourThree>(173, 179, 179)</colourThree>
     </Core40k.DecorationColourPresetDef>
 
-    <!-- Green -->
+    <!-- Green 3 channels-->
     <Core40k.DecorationColourPresetDef>
         <defName>BEWH_DecoPaletteGreen</defName>
         <label>Green</label>
         <colour>(75,97,32)</colour>
     </Core40k.DecorationColourPresetDef>
 
-    <!-- Imperial fist Black -->
+    <!-- Black -->
     <Core40k.DecorationColourPresetDef>
         <defName>BEWH_DecoPaletteIFBlack</defName>
         <label>Black</label>
         <colour>(50,51,50)</colour>
+        <colourTwo>(240,176,29)</colourTwo> <!-- +gold -->
     </Core40k.DecorationColourPresetDef>
 
     <!-- Helmet stripe Red -->
@@ -62,12 +69,15 @@
         <defName>BEWH_DecoPaletteFabricBeige</defName>
         <label>Beige</label>
         <colour>(160, 158, 137)</colour>
+        <colourTwo>(240,176,29)</colourTwo> <!-- +gold -->
     </Core40k.DecorationColourPresetDef>
+    
     <!-- Fabric Red -->
     <Core40k.DecorationColourPresetDef>
         <defName>BEWH_DecoPaletteFabricRed</defName>
         <label>Maroon</label>
         <colour>(104, 24, 33)</colour>
+        <colourTwo>(240,176,29)</colourTwo> <!-- +gold -->
     </Core40k.DecorationColourPresetDef>
 
     <!-- Apothecary Red -->
@@ -75,6 +85,7 @@
         <defName>BEWH_DecoPaletteApothecaryRed</defName>
         <label>Light Red</label>
         <colour>(162, 54, 39)</colour>
+        <colourTwo>(240,176,29)</colourTwo> <!-- +gold -->
     </Core40k.DecorationColourPresetDef>
 
     <!-- Living Saint -->

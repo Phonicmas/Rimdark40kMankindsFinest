@@ -4,12 +4,14 @@
   <!-- Bolter -->
   <ThingDef ParentName="BEWH_AstartesRangedBase">
     <defName>BEWH_AstartesBolter</defName>
-    <label>bolt carbine</label>
-    <description>The Bolt Carbine is a compact, rapid-fire firearm of the Adeptus Astartes that fires explosive bolt rounds. Lightweight and versatile, it delivers powerful shots with deadly accuracy, ideal for close to mid-range combat.</description>
+    <label>bolter</label>
+    <description>The Mk Vb boltgun is the iconic standard-issue firearm of the Adeptus Astartes. Firing mass-reactive rounds with deadly efficiency, it combines reliability, adaptability, adn stopping power, making it the definitive Space Marine weapon. \n\nAvalible Loadout: Standard, Metal Storm</description>
     <thingClass>Core40k.WeaponMultiColor</thingClass>
     <graphicData>
       <texPath>Things/Weapons/BEWH_BoltCarbine</texPath>
+      <shaderType>BEWH_CutoutThreeColor</shaderType>
       <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.1</drawSize>
     </graphicData>
     <soundInteract>Interact_ChargeRifle</soundInteract>
     <statBases>
@@ -45,7 +47,7 @@
         <muzzleFlashScale>12</muzzleFlashScale>
       </li>
     </verbs>
-    <comps Inherit="False">      <!-- CompProperties_AmmoChanger needs the weapon to not have CompEquipable, if it does you need to not inherit any comps and instead pu them in yourself from parents-->
+    <comps Inherit="False">      <!-- CompProperties_AmmoChanger needs the weapon to not have CompEquipable, if it does you need to not inherit any comps and instead put them in yourself from parents-->
       <li Class="Core40k.CompProperties_AmmoChanger">
         <compClass>Core40k.Comp_AmmoChanger</compClass>
         <availableProjectiles>
@@ -87,7 +89,10 @@
         </weaponCarryDrawOffsets>
       </li>
       <li Class="Core40k.DefModExtension_WeaponMultiColor">
-        <colorMaskAmount>1</colorMaskAmount>
+        <colorMaskAmount>3</colorMaskAmount>
+        <defaultPrimaryColor>(0.23,0.23,0.23)</defaultPrimaryColor> <!-- If this is not set, it will default to use color of the stuff its made out of (if any)-->
+        <defaultSecondaryColor>(0.38,0.38,0.38)</defaultSecondaryColor>
+        <defaultTertiaryColor>(0.79,0.58,0.08)</defaultTertiaryColor>
       </li>
     </modExtensions>
   </ThingDef>
