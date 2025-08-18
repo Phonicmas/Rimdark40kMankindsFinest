@@ -38,10 +38,13 @@
 				<offset>(0, 0, 0.33)</offset>
             </dataWest>
         </drawData>
+        <shaderType>CutoutComplex</shaderType>
         <flipable>false</flipable>
         <colourable>true</colourable>
         <useMask>true</useMask>
+        <colorAmount>2</colorAmount>
         <useArmorColourAsDefault>true</useArmorColourAsDefault>
+        <defaultColourTwo>(187,197,206)</defaultColourTwo>
         <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption> 
     </Core40k.ExtraDecorationDef>
 
@@ -83,6 +86,7 @@
         <shaderType>TransparentPostLight</shaderType>
         <flipable>false</flipable>
         <colourable>true</colourable>
+        <defaultColour>(245, 245, 210)</defaultColour>
         <availablePresets>
             <li>BEWH_DecoPaletteGold</li>
             <li>BEWH_DecoPaletteSaintLight</li>

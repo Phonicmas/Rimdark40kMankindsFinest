@@ -28,9 +28,11 @@
   <ThingDef ParentName="BEWH_ApothecaryToolGeneseed">
     <defName>BEWH_Narthecium</defName>
     <label>narthecium</label>
+    <thingClass>Core40k.WeaponMultiColor</thingClass>
     <description>The Narthecium is a special tool used by Adeptus Astartes apothecaries and Primaris apothecaries to retrieve the crucial gene-seed of their fallen battle-brothers so that new Astartes might be raised from among their Chapter's aspirants. Increases the chance of successfully extracting gene-seeds from dead marines by 50%.\nCan be used as a melee weapon.</description>
     <graphicData>
       <texPath>Things/Weapons/BEWH_Narthecium</texPath>
+      <shaderType>BEWH_CutoutThreeColor</shaderType>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <recipeMaker>
@@ -88,6 +90,10 @@
             <drawOffset>(0.2, 0, -0.23)</drawOffset>
           </west>
         </weaponCarryDrawOffsets>
+      </li>
+      <li Class="Core40k.DefModExtension_WeaponMultiColor">
+        <colorMaskAmount>1</colorMaskAmount>
+        <defaultPrimaryColor>(195,183,165)</defaultPrimaryColor>
       </li>
     </modExtensions>
   </ThingDef>

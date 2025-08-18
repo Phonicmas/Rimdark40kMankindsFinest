@@ -41,6 +41,7 @@
         <flipable>false</flipable>
         <drawInHeadSpace>true</drawInHeadSpace>
         <colourable>true</colourable>
+        <defaultColour>(245, 245, 210)</defaultColour>
         <availablePresets>
             <li>BEWH_DecoPaletteGold</li>
             <li>BEWH_DecoPaletteSaintLight</li>
@@ -68,6 +69,8 @@
             <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
             <dataNorth>
                 <layer>100</layer>
+                <!-- +1 z offset to override a layer 100 cap -->
+                <offset>(0, 1, 0)</offset>
             </dataNorth>
             <dataSouth>
                 <layer>0</layer>
@@ -81,6 +84,7 @@
         </drawData>
         <flipable>false</flipable>
         <colourable>true</colourable>
+        <defaultColour>(173, 179, 179)</defaultColour>
         <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption> 
         <availablePresets>
             <li>BEWH_DecoPaletteGold</li>

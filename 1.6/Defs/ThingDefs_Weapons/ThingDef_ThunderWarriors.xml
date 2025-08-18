@@ -145,8 +145,8 @@
       </li>
       <li Class="Core40k.DefModExtension_WeaponMultiColor">
         <colorMaskAmount>3</colorMaskAmount>
-        <defaultPrimaryColor>(124,124,124)</defaultPrimaryColor>
-        <defaultSecondaryColor>(163,118,72)</defaultSecondaryColor>
+        <defaultPrimaryColor>(163,118,72)</defaultPrimaryColor>
+        <defaultSecondaryColor>(124,124,124)</defaultSecondaryColor>
         <defaultTertiaryColor>(124,124,124)</defaultTertiaryColor>
       </li>
     </modExtensions>

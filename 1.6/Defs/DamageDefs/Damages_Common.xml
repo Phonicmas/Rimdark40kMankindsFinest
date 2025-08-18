@@ -36,9 +36,9 @@
   <!-- Metal Storm -->
   <DamageDef ParentName="BEWH_BoltRoundBase">
     <defName>BEWH_BoltMetalStorm</defName>
-    <label>bolt explosion</label>
+    <label>shrapnel explosion</label>
     <workerClass>DamageWorker_Cut</workerClass>
-    <deathMessage>{0} has been cut to death by sharp fragments.</deathMessage>
+    <deathMessage>{0} discovered that the air itself can turn into shrapnel.</deathMessage>
     <hediff>Cut</hediff>
     <hediffSolid>Crack</hediffSolid>
     <plantDamageFactor>10</plantDamageFactor>
@@ -47,10 +47,11 @@
     <explosionColorEdge>(15, 15, 15)</explosionColorEdge>
   </DamageDef>
 
+  <!-- Inferno -->
   <DamageDef ParentName="BEWH_BoltRoundBase">
     <defName>BEWH_BoltInferno</defName>
-    <label>bolt inferno explosion</label>
-    <deathMessage>{0} learned the meaning of "mass-reactive" the hard way.</deathMessage>
+    <label>inferno bolt explosion</label>
+    <deathMessage>{0} found out what "Inferno" stands for in an Inferno bolt.</deathMessage>
     <armorCategory>Heat</armorCategory>
     <defaultDamage>20</defaultDamage>
     <igniteChanceByTargetFlammability>

@@ -123,6 +123,7 @@
         <colourable>true</colourable>
         <useMask>true</useMask>
         <colorAmount>2</colorAmount>
+        <defaultColourTwo>(168,35,32)</defaultColourTwo>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -157,6 +158,10 @@
                 <layer>70</layer>
             </dataWest>
         </drawData>
+<!--         <colourable>true</colourable>
+        <useMask>true</useMask>
+        <colorAmount>2</colorAmount>
+        <defaultColourTwo>(168,35,32)</defaultColourTwo> -->
     </Core40k.ExtraDecorationDef>
 
 </Defs>
