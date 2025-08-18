@@ -47,7 +47,7 @@
     <explosionColorEdge>(15, 15, 15)</explosionColorEdge>
   </DamageDef>
 
-  <!--<DamageDef ParentName="BEWH_BoltRoundBase">
+  <DamageDef ParentName="BEWH_BoltRoundBase">
     <defName>BEWH_BoltInferno</defName>
     <label>bolt inferno explosion</label>
     <deathMessage>{0} learned the meaning of "mass-reactive" the hard way.</deathMessage>
@@ -60,6 +60,6 @@
       </points>
     </igniteChanceByTargetFlammability>
     <igniteCellChance>1</igniteCellChance>
-  </DamageDef>-->
+  </DamageDef>
 
 </Defs>

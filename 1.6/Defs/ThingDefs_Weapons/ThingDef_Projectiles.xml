@@ -46,6 +46,42 @@
             <li Class="Core40k.DefModExtension_AmmoChanger" />
         </modExtensions>
     </ThingDef>
+    <!-- Metal Storm Bolt (VEF dependable) -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>BEWH_BolterRoundMetalStorm</defName>
+        <label>Metal Storm Bolt</label>
+        <description>Specialized ammunition designed to devastate large groups of lightly armored enemies. It detonates mid-air, scattering sharp shrapnel that tears through flesh and light armor, clears vegetation, and saturates enemy positions.</description>
+        <thingClass>VEF.Weapons.Projectile_Shrapnel</thingClass>
+        <uiIconPath>Things/Ammo/Bolter/MetalStorm_Small</uiIconPath>
+        <graphicData>
+            <texPath>Things/Projectiles/BEWH_BolterRoundMS</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1, 1)</drawSize>
+        </graphicData>
+        <projectile Class="VEF.Weapons.ProjectileProperties_Shrapnel">
+            <damageDef>BEWH_Bolt</damageDef>
+            <explosionRadius>1.25</explosionRadius>
+            <soundExplode>GunShotA</soundExplode>
+            <screenShakeFactor>0.1</screenShakeFactor>
+            <speed>70</speed>
+            <!-- Spawns "Metal Storm Shrapnel" according to the parameters specified below -->
+            <shrapnelProjectile>BEWH_BolterShrapnel</shrapnelProjectile>
+            <shrapnelCount>3</shrapnelCount>
+            <shrapnelRange>14</shrapnelRange>
+            <angleVariance>15</angleVariance>
+        </projectile>
+        <costList>
+            <ComponentIndustrial>1</ComponentIndustrial>
+        </costList>
+        <recipeMaker>
+            <researchPrerequisite>BEWH_ExpandedBolterRound</researchPrerequisite>
+        </recipeMaker>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_AmmoChanger">
+                <unlockedBy>BEWH_ExpandedBolterRound</unlockedBy>
+            </li>
+        </modExtensions>
+    </ThingDef>
     <!-- Metal Storm Shrapnel -->
     <ThingDef ParentName="BaseBullet">
         <defName>BEWH_BolterShrapnel</defName>
@@ -79,29 +115,26 @@
             </li>
         </modExtensions>
     </ThingDef>
-    <!-- Metal Storm Bolt (VEF dependable) -->
+    <!-- Inferno -->
     <ThingDef ParentName="BaseBullet">
-        <defName>BEWH_BolterRoundMetalStorm</defName>
-        <label>Metal Storm Bolt</label>
-        <description>Specialized ammunition designed to devastate large groups of lightly armored enemies. It detonates mid-air, scattering sharp shrapnel that tears through flesh and light armor, clears vegetation, and saturates enemy positions.</description>
-        <thingClass>VEF.Weapons.Projectile_Shrapnel</thingClass>
-        <uiIconPath>Things/Ammo/Bolter/MetalStorm_Small</uiIconPath>
+        <defName>BEWH_BolterRoundInferno</defName>
+        <label>Inferno Bolt</label>
+        <description>???</description>
+        <thingClass>Projectile_Explosive</thingClass>
+        <uiIconPath>Things/Ammo/Bolter/Inferno_Small</uiIconPath>
         <graphicData>
-            <texPath>Things/Projectiles/BEWH_BolterRoundMS</texPath>
+            <texPath>Things/Projectiles/BEWH_BolterRound</texPath>
             <graphicClass>Graphic_Single</graphicClass>
-            <drawSize>(1, 1)</drawSize>
+            <drawSize>(0.8, 0.8)</drawSize>
         </graphicData>
-        <projectile Class="VEF.Weapons.ProjectileProperties_Shrapnel">
-            <damageDef>BEWH_Bolt</damageDef>
-            <explosionRadius>1.25</explosionRadius>
+        <projectile>
+            <damageDef>BEWH_BoltInferno</damageDef>
+            <damageAmountBase>20</damageAmountBase>
+            <armorPenetrationBase>0.98</armorPenetrationBase>
+            <stoppingPower>0.8</stoppingPower>
             <soundExplode>GunShotA</soundExplode>
-            <screenShakeFactor>0.1</screenShakeFactor>
-            <speed>70</speed>
-            <!-- Spawns "Metal Storm Shrapnel" according to the parameters specified below -->
-            <shrapnelProjectile>BEWH_BolterShrapnel</shrapnelProjectile>
-            <shrapnelCount>3</shrapnelCount>
-            <shrapnelRange>14</shrapnelRange>
-            <angleVariance>15</angleVariance>
+            <screenShakeFactor>0.2</screenShakeFactor>
+            <speed>90</speed>
         </projectile>
         <costList>
             <ComponentIndustrial>1</ComponentIndustrial>
@@ -150,39 +183,6 @@
                 <effectiveRange>15.9</effectiveRange>
                 <warmupTime>3</warmupTime>
                 <shotsPerBurst>5</shotsPerBurst>
-            </li>
-        </modExtensions>
-    </ThingDef>-->
-    <!-- Inferno -->
-    <!--<ThingDef ParentName="BaseBullet">
-        <defName>BEWH_BolterRoundInferno</defName>
-        <label>bolt - Inferno</label>
-        <description>???</description>
-        <thingClass>Projectile_Explosive</thingClass>
-        <uiIconPath>Things/Ammo/Bolter/Inferno_Small</uiIconPath>
-        <graphicData>
-            <texPath>Things/Projectiles/BEWH_BolterRound</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
-            <drawSize>(0.8, 0.8)</drawSize>
-        </graphicData>
-        <projectile>
-            <damageDef>BEWH_BoltInferno</damageDef>
-            <damageAmountBase>20</damageAmountBase>
-            <armorPenetrationBase>0.98</armorPenetrationBase>
-            <stoppingPower>0.8</stoppingPower>
-            <soundExplode>GunShotA</soundExplode>
-            <screenShakeFactor>0.2</screenShakeFactor>
-            <speed>90</speed>
-        </projectile>
-        <costList>
-            <ComponentIndustrial>1</ComponentIndustrial>
-        </costList>
-        <recipeMaker>
-            <researchPrerequisite>BEWH_ExpandedBolterRound</researchPrerequisite>
-        </recipeMaker>
-        <modExtensions>
-            <li Class="Core40k.DefModExtension_AmmoChanger">
-                <unlockedBy>BEWH_ExpandedBolterRound</unlockedBy>
             </li>
         </modExtensions>
     </ThingDef>-->
