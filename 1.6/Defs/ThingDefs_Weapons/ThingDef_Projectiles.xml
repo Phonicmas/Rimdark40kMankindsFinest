@@ -119,7 +119,7 @@
     <ThingDef ParentName="BaseBullet">
         <defName>BEWH_BolterRoundInferno</defName>
         <label>Inferno Bolt</label>
-        <description>???</description>
+        <description>Specialized ammunition designed to immolate their targets. The dense core of the standard bolt is replaced with an oxy-phosphorous gel, derived from promethium.</description>
         <thingClass>Projectile_Explosive</thingClass>
         <uiIconPath>Things/Ammo/Bolter/Inferno_Small</uiIconPath>
         <graphicData>
