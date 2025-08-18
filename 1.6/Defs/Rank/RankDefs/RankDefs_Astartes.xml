@@ -476,6 +476,7 @@
         </requiredSkills>
 
         <statOffsets>
+            <BEWH_ArtificialPartsAffinityFactor>0.05</BEWH_ArtificialPartsAffinityFactor>
             <DeepDrillingSpeed>0.2</DeepDrillingSpeed>
             <WorkSpeedGlobal>0.05</WorkSpeedGlobal>
             <HackingSpeed MayRequire="Ludeon.RimWorld.Ideology">0.1</HackingSpeed>
@@ -504,6 +505,7 @@
         </requiredSkills>
 
         <statOffsets>
+            <BEWH_ArtificialPartsAffinityFactor>0.05</BEWH_ArtificialPartsAffinityFactor>
             <ConstructionSpeed>0.2</ConstructionSpeed>
             <FixBrokenDownBuildingSuccessChance>0.25</FixBrokenDownBuildingSuccessChance>
             <WorkSpeedGlobal>0.05</WorkSpeedGlobal>
@@ -535,6 +537,7 @@
         </requiredSkills>
 
         <statOffsets>
+            <BEWH_ArtificialPartsAffinityFactor>0.1</BEWH_ArtificialPartsAffinityFactor>
             <ConstructionSpeed>0.1</ConstructionSpeed>
             <ConstructSuccessChance>0.4</ConstructSuccessChance>
             <WorkSpeedGlobal>0.1</WorkSpeedGlobal>
