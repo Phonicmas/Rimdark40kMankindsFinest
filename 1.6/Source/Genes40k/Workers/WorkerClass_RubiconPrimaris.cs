@@ -9,10 +9,11 @@ public class WorkerClass_RubiconPrimaris : Recipe_Surgery
 {
     public override bool AvailableOnNow(Thing thing, BodyPartRecord part = null)
     {
-        if (!base.AvailableOnNow(thing, part) || !(thing is Pawn pawn))
+        if (!base.AvailableOnNow(thing, part) || thing is not Pawn pawn)
         {
             return false;
         }
+        
         if (pawn.genes == null)
         {
             return false;
@@ -30,11 +31,6 @@ public class WorkerClass_RubiconPrimaris : Recipe_Surgery
                 return;
             }
             TaleRecorder.RecordTale(TaleDefOf.DidSurgery, billDoer, pawn);
-            if (PawnUtility.ShouldSendNotificationAbout(pawn) || PawnUtility.ShouldSendNotificationAbout(billDoer))
-            {
-                var text = (recipe.successfullyRemovedHediffMessage.NullOrEmpty() ? ((string)"MessageSuccessfullyRemovedHediff".Translate(billDoer.LabelShort, pawn.LabelShort, recipe.removesHediff.label.Named("HEDIFF"), billDoer.Named("SURGEON"), pawn.Named("PATIENT"))) : ((string)recipe.successfullyRemovedHediffMessage.Formatted(billDoer.LabelShort, pawn.LabelShort)));
-                Messages.Message(text, pawn, MessageTypeDefOf.PositiveEvent);
-            }
         }
         OnSurgerySuccess(pawn, part, billDoer, ingredients, bill);
     }
@@ -44,8 +40,7 @@ public class WorkerClass_RubiconPrimaris : Recipe_Surgery
         foreach (var gene in Genes40kUtils.PrimarisGenes.Where(gene => !pawn.genes.HasActiveGene(gene)))
         {
             pawn.genes.AddGene(gene, true);
-            pawn.genes.SetXenotypeDirect(Genes40kDefOf.BEWH_PrimarisSpaceMarine);
         }
+        pawn.genes.SetXenotypeDirect(Genes40kDefOf.BEWH_PrimarisSpaceMarine);
     }
-
 }

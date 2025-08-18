@@ -254,6 +254,7 @@
     <Compile Include="Workers\ThoughtWorkers\ThoughtWorker_Serf.cs" />
     <Compile Include="Workers\ThoughtWorkers\ThoughtWorker_ThunderWarrior.cs" />
     <Compile Include="Workers\ThoughtWorkers\ThoughtWorker_XXTwinDead.cs" />
+    <Compile Include="Workers\WorkerClass_ImplantLegionMaterial.cs" />
     <Compile Include="Workers\WorkerClass_LegionMaterialCreation.cs" />
     <Compile Include="Workers\WorkerClass_RubiconPrimaris.cs" />
     <Compile Include="Workers\WorkGiver_CarryMaterialToSangprimus.cs" />

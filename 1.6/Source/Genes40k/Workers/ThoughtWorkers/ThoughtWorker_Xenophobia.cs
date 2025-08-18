@@ -1,4 +1,6 @@
-﻿using RimWorld;
+﻿using System.Linq;
+using Core40k;
+using RimWorld;
 using Verse;
 
 namespace Genes40k;
@@ -21,12 +23,12 @@ public class ThoughtWorker_Xenophobia : ThoughtWorker
         
         if (defMod != null)
         {
-            if (defMod.xenotypesImpure.Contains(other.genes.Xenotype))
+            if (Enumerable.Any(defMod.xenotypesNotHated, xenotype => xenotype.genes.ContainsAllItems(other.genes.Xenotype.genes)))
             {
                 return ThoughtState.ActiveAtStage(0);
             }
-            
-            if (!defMod.xenotypesNotHated.Contains(other.genes.Xenotype))
+
+            if (Enumerable.Any(defMod.xenotypesImpure, xenotype => xenotype.genes.ContainsAllItems(other.genes.Xenotype.genes)))
             {
                 return ThoughtState.ActiveAtStage(1);
             }
