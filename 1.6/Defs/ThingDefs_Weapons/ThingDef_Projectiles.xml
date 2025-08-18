@@ -35,7 +35,7 @@
             <drawSize>(0.8, 0.8)</drawSize>
         </graphicData>
         <projectile>
-            <damageDef>Bullet</damageDef>
+            <damageDef>BEWH_Bolt</damageDef>
             <damageAmountBase>25</damageAmountBase>
             <armorPenetrationBase>0.68</armorPenetrationBase>
             <soundExplode>GunShotA</soundExplode>

@@ -2,7 +2,7 @@
 <Defs>
 
   <!-- Bolt Standard -->
-<!--   <DamageDef ParentName="Bomb" Name="BEWH_BoltRoundBase">
+  <DamageDef ParentName="Bomb" Name="BEWH_BoltRoundBase">
     <defName>BEWH_Bolt</defName>
     <label>bolt explosion</label>
     <workerClass>DamageWorker_AddInjury</workerClass>
@@ -31,38 +31,20 @@
     <makesAnimalsFlee>true</makesAnimalsFlee>
     <soundExplosion>GunShotA</soundExplosion>
     <combatLogRules>Damage_Bomb</combatLogRules>
-  </DamageDef> -->
+  </DamageDef>
 
   <!-- Metal Storm -->
-  <DamageDef ParentName="Bomb" Name="BEWH_MetalStormBase">
+  <DamageDef ParentName="BEWH_BoltRoundBase">
     <defName>BEWH_BoltMetalStorm</defName>
     <label>bolt explosion</label>
     <workerClass>DamageWorker_Cut</workerClass>
-    <externalViolence>true</externalViolence>
-    <isExplosive>true</isExplosive>
     <deathMessage>{0} has been cut to death by sharp fragments.</deathMessage>
     <hediff>Cut</hediff>
     <hediffSolid>Crack</hediffSolid>
-    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
-    <impactSoundType>Blunt</impactSoundType>
-    <armorCategory>Sharp</armorCategory>
-    <minDamageToFragment>15</minDamageToFragment>
-    <defaultDamage>25</defaultDamage>
-    <defaultStoppingPower>0.5</defaultStoppingPower>
-    <defaultArmorPenetration>0.10</defaultArmorPenetration>
-    <buildingDamageFactorImpassable>4</buildingDamageFactorImpassable>
-    <buildingDamageFactorPassable>2</buildingDamageFactorPassable>
     <plantDamageFactor>10</plantDamageFactor>
-    <corpseDamageFactor>0.03</corpseDamageFactor>
-    <explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
-    <explosionHeatEnergyPerCell>5</explosionHeatEnergyPerCell>
     <explosionCellFleck>PlainFlash</explosionCellFleck>
     <explosionColorCenter>(30, 30, 30)</explosionColorCenter>
     <explosionColorEdge>(15, 15, 15)</explosionColorEdge>
-    <isRanged>true</isRanged>
-    <makesAnimalsFlee>true</makesAnimalsFlee>
-    <soundExplosion>GunShotA</soundExplosion>
-    <combatLogRules>Damage_Bomb</combatLogRules>
   </DamageDef>
 
   <!--<DamageDef ParentName="BEWH_BoltRoundBase">
