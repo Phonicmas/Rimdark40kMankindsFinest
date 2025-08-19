@@ -18,7 +18,7 @@
 			<displayName>Biotech</displayName>
 		</li>
 		<li>
-			<packageId>Phonicmas.RimDark.Framework</packageId>
+			<packageId>Phonicmas.RimDark.FrameworkCore</packageId>
 			<displayName>RimDark 40k - Framework</displayName>
 			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3267464767</steamWorkshopUrl>
 		</li>

@@ -18,25 +18,30 @@ public class ThoughtWorker_Xenophobia : ThoughtWorker
         {
             return false;
         }
+
+        if (other.genes.Xenotype == XenotypeDefOf.Baseliner)
+        {
+            return false;
+        }
         
         var defMod = def.GetModExtension<DefModExtension_ThoughtXenophobiaWhitelist>();
         
         if (defMod != null)
         {
-            if (Enumerable.Any(defMod.xenotypesNotHated, xenotype => xenotype.genes.ContainsAllItems(other.genes.Xenotype.genes)))
+            if (Enumerable.Any(defMod.xenotypesImpure, xenotype => other.genes.GenesListForReading.Select(gene => gene.def).ContainsAllItems(xenotype.genes)))
             {
                 return ThoughtState.ActiveAtStage(0);
             }
 
-            if (Enumerable.Any(defMod.xenotypesImpure, xenotype => xenotype.genes.ContainsAllItems(other.genes.Xenotype.genes)))
+            if (Enumerable.Any(defMod.xenotypesNotHated, xenotype => other.genes.GenesListForReading.Select(gene => gene.def).ContainsAllItems(xenotype.genes)))
             {
-                return ThoughtState.ActiveAtStage(1);
+                return false;
             }
         }
 
         if (!ModsConfig.IdeologyActive)
         {
-            return false;
+            return ThoughtState.ActiveAtStage(1);;
         }
 
         if (defMod != null)
@@ -47,6 +52,6 @@ public class ThoughtWorker_Xenophobia : ThoughtWorker
             }
         }
         
-        return false;
+        return ThoughtState.ActiveAtStage(1);;
     }
 }
