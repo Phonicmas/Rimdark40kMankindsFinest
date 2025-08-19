@@ -5,7 +5,7 @@
   <ThingDef ParentName="BEWH_AstartesRangedBase">
     <defName>BEWH_AstartesBolter</defName>
     <label>bolter</label>
-    <description>The Mk Vb boltgun is the iconic standard-issue firearm of the Adeptus Astartes. Firing mass-reactive rounds with deadly efficiency, it combines reliability, adaptability, adn stopping power, making it the definitive Space Marine weapon. \n\nAvalible Loadout: Standard, Metal Storm</description>
+    <description>The Mk Vb boltgun is the iconic standard-issue firearm of the Adeptus Astartes. Firing mass-reactive rounds with deadly efficiency, it combines reliability, adaptability, and stopping power, making it the definitive Space Marine weapon. \n\nAvalible Loadout: Standard, Metal Storm</description>
     <thingClass>Core40k.WeaponMultiColor</thingClass>
     <graphicData>
       <texPath>Things/Weapons/BEWH_BoltCarbine</texPath>
@@ -167,9 +167,9 @@
       </li>
       <li Class="Core40k.DefModExtension_WeaponMultiColor">
         <colorMaskAmount>3</colorMaskAmount>
-        <defaultPrimaryColor>(179,179,179)</defaultPrimaryColor>        <!-- If this is not set, it will default to use color of the stuff its made out of (if any)-->
+        <defaultPrimaryColor>(111,111,111)</defaultPrimaryColor>        <!-- If this is not set, it will default to use color of the stuff its made out of (if any)-->
         <defaultSecondaryColor>(213,158,76)</defaultSecondaryColor>
-        <defaultTertiaryColor>(111,111,111)</defaultTertiaryColor>
+        <defaultTertiaryColor>(179,179,179)</defaultTertiaryColor>
       </li>
     </modExtensions>
   </ThingDef>

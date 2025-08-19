@@ -46,11 +46,12 @@
             <li Class="Core40k.DefModExtension_AmmoChanger" />
         </modExtensions>
     </ThingDef>
+
     <!-- Metal Storm Bolt (VEF dependable) -->
     <ThingDef ParentName="BaseBullet">
         <defName>BEWH_BolterRoundMetalStorm</defName>
         <label>Metal Storm Bolt</label>
-        <description>Specialized ammunition designed to devastate large groups of lightly armored enemies. It detonates mid-air, scattering sharp shrapnel that tears through flesh and light armor, clears vegetation, and saturates enemy positions.</description>
+        <description>Specialized ammunition designed to devastate large groups of lightly armored enemies. It detonates mid-air, scattering sharp shrapnel that tears through flesh and light armor, clears vegetation, and saturates enemy positions.\n\nNot suitable for hunting, for obvious reasons.</description>
         <thingClass>VEF.Weapons.Projectile_Shrapnel</thingClass>
         <uiIconPath>Things/Ammo/Bolter/MetalStorm_Small</uiIconPath>
         <graphicData>
@@ -64,7 +65,7 @@
             <soundExplode>GunShotA</soundExplode>
             <screenShakeFactor>0.1</screenShakeFactor>
             <speed>70</speed>
-            <!-- Spawns "Metal Storm Shrapnel" according to the parameters specified below -->
+            <!-- Spawns BEWH_BolterShrapnel according to the parameters specified below -->
             <shrapnelProjectile>BEWH_BolterShrapnel</shrapnelProjectile>
             <shrapnelCount>3</shrapnelCount>
             <shrapnelRange>14</shrapnelRange>
@@ -82,6 +83,7 @@
             </li>
         </modExtensions>
     </ThingDef>
+
     <!-- Metal Storm Shrapnel -->
     <ThingDef ParentName="BaseBullet">
         <defName>BEWH_BolterShrapnel</defName>
@@ -115,17 +117,18 @@
             </li>
         </modExtensions>
     </ThingDef>
+
     <!-- Inferno -->
     <ThingDef ParentName="BaseBullet">
         <defName>BEWH_BolterRoundInferno</defName>
         <label>Inferno Bolt</label>
-        <description>Specialized ammunition designed to immolate their targets. The dense core of the standard bolt is replaced with an oxy-phosphorous gel, derived from promethium.</description>
+        <description>Specialized ammunition designed to immolate its targets. The dense core of the standard bolt is replaced with an oxy-phosphorous gel, derived from promethium.</description>
         <thingClass>Projectile_Explosive</thingClass>
         <uiIconPath>Things/Ammo/Bolter/Inferno_Small</uiIconPath>
         <graphicData>
-            <texPath>Things/Projectiles/BEWH_BolterRound</texPath>
+            <texPath>Things/Projectiles/BEWH_BolterRoundINF</texPath>
             <graphicClass>Graphic_Single</graphicClass>
-            <drawSize>(0.8, 0.8)</drawSize>
+            <drawSize>(1, 1)</drawSize>
         </graphicData>
         <projectile>
             <damageDef>BEWH_BoltInferno</damageDef>
@@ -134,7 +137,7 @@
             <stoppingPower>0.8</stoppingPower>
             <soundExplode>GunShotA</soundExplode>
             <screenShakeFactor>0.2</screenShakeFactor>
-            <speed>90</speed>
+            <speed>75</speed>
         </projectile>
         <costList>
             <ComponentIndustrial>1</ComponentIndustrial>
@@ -148,7 +151,6 @@
             </li>
         </modExtensions>
     </ThingDef>
-
 
     <!-- Kraken -->
     <!--<ThingDef ParentName="BaseBullet">

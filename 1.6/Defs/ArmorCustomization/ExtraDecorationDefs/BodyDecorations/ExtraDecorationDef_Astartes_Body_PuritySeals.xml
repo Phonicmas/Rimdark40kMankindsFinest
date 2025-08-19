@@ -91,6 +91,8 @@
         <drawData>
             <dataNorth>
                 <layer>100</layer>
+                <!-- +1 z offset to override a 100 cap -->
+                <offset>(0, 1, 0)</offset>
             </dataNorth>
             <dataSouth>
                 <layer>76</layer>

@@ -282,11 +282,11 @@
       <li Class="Genes40k.DefModExtension_PrimarchVatTexture">
         <earlyFetusTexture>Effects/BEWH_GrowingPrimarchFetus_EarlyStage</earlyFetusTexture>
         <earlyFetusSize>(2,2)</earlyFetusSize>
-        <earlyFetusOffset>(0,0,-0.1)</earlyFetusOffset>
+        <earlyFetusOffset>(0,0,0.15)</earlyFetusOffset>
 
         <lateFetusTexture>Effects/BEWH_GrowingPrimarchFetus_LateStage</lateFetusTexture>
         <lateFetusSize>(1,1)</lateFetusSize>
-        <lateFetusOffset>(0,0,-0.1)</lateFetusOffset>
+        <lateFetusOffset>(0,0,0.1)</lateFetusOffset>
       </li>
     </modExtensions>
   </ThingDef>

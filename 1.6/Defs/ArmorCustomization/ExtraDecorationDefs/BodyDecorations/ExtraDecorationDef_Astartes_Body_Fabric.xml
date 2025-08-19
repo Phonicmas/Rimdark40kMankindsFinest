@@ -8,6 +8,7 @@
         <description>...</description>
         <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_BulwarkUpperTabard_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_BulwarkUpperTabard</drawnTextureIconPath>
+        <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>2.1</sortOrder>
         <defaultShowRotation>
             <li>South</li>
@@ -21,12 +22,15 @@
         <drawData>
             <dataSouth>
                 <layer>45</layer>
+                <offset>(0, 0, -0.01)</offset>
             </dataSouth>
             <dataEast>
                 <layer>45</layer>
+                <offset>(0, 0, 0.01)</offset>
             </dataEast>
             <dataWest>
                 <layer>45</layer>
+                <offset>(0, 0, 0.01)</offset>
             </dataWest>
         </drawData>
         <shaderType>Cutout</shaderType>
@@ -37,6 +41,7 @@
             <li>BEWH_DecoPaletteIFBlack</li>
         </availablePresets>
         <colourable>true</colourable>
+        <defaultColour>(222,222,222)</defaultColour>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -143,6 +148,7 @@
             <li>BEWH_DecoPaletteIFBlack</li>
         </availablePresets>
         <colourable>true</colourable>
+        <defaultColour>(222,222,222)</defaultColour>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -179,6 +185,7 @@
             <li>BEWH_DecoPaletteIFBlack</li>
         </availablePresets>
         <colourable>true</colourable>
+        <defaultColour>(222,222,222)</defaultColour>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -353,6 +360,7 @@
             <li>BEWH_DecoPaletteIFBlack</li>
         </availablePresets>
         <colourable>true</colourable>
+        <defaultColour>(222,222,222)</defaultColour>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>        <!-- MARK X -->
@@ -393,6 +401,7 @@
             <li>BEWH_DecoPaletteIFBlack</li>
         </availablePresets>
         <colourable>true</colourable>
+        <defaultColour>(222,222,222)</defaultColour>
     </Core40k.ExtraDecorationDef>
 
 
