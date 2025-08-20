@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
+    <!-- ===== Thunder Warrior ===== -->
     <Operation Class="VEF.PatchOperationToggableSequence">
         <enabled>False</enabled>
         <mods>
             <li>RimDark 40k - Mankinds Finest</li>
         </mods>
-        <label>Force Thunder Warriors, Space Marines and Custodes to be male:</label>
+        <label>Force Thunder Warriors to be male:</label>
         <operations>
             <li Class="PatchOperationAdd">
                 <xpath>Defs/GeneDef[defName = "BEWH_ProtoOssmodula"]</xpath>
@@ -18,6 +19,17 @@
                     </modExtensions>
                 </value>
             </li>
+        </operations>
+    </Operation>
+
+    <!-- ===== Space Marine ===== -->
+    <Operation Class="VEF.PatchOperationToggableSequence">
+        <enabled>False</enabled>
+        <mods>
+            <li>RimDark 40k - Mankinds Finest</li>
+        </mods>
+        <label>Force Space Marines to be male:</label>
+        <operations>
             <li Class="PatchOperationAdd">
                 <xpath>Defs/GeneDef[defName = "BEWH_Ossmodula"]</xpath>
                 <value>
@@ -28,6 +40,17 @@
                     </modExtensions>
                 </value>
             </li>
+        </operations>
+    </Operation>
+
+    <!-- ===== Custodes ===== -->
+    <Operation Class="VEF.PatchOperationToggableSequence">
+        <enabled>False</enabled>
+        <mods>
+            <li>RimDark 40k - Mankinds Finest</li>
+        </mods>
+        <label>Force Custodes to be male:</label>
+        <operations>
             <li Class="PatchOperationAddModExtension">
                 <xpath>Defs/GeneDef[defName = "BEWH_AtlasMorphogen"]</xpath>
                 <value>
