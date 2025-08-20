@@ -318,4 +318,34 @@
     </comps>
   </AbilityDef>
 
+  <!-- Alpharius/Omegon: Link Unlinked Twin -->
+  <AbilityDef>
+    <defName>BEWH_TwinLink</defName>
+    <label>Form twin connection</label>
+    <description>Used to form a connection with another primarch that has the genetic material of Alpharius/Omegon and has no linked twin (Dead twin counts as linked)</description>
+    <iconPath>Placeholder</iconPath>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <cooldownTicksRange>1250</cooldownTicksRange>
+    <hostile>False</hostile>
+    <jobDef>CastAbilityOnThingMelee</jobDef>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityTouch</verbClass>
+      <range>-1</range>
+      <warmupTime>1</warmupTime>
+      <targetParams>
+        <onlyTargetColonists>True</onlyTargetColonists>
+        <canTargetHumans>True</canTargetHumans>
+        <canTargetLocations>false</canTargetLocations>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetMechs>false</canTargetMechs>
+        <canTargetAnimals>false</canTargetAnimals>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="Genes40k.CompProperties_AbilityTwinLink" />
+    </comps>
+  </AbilityDef>
+
+
 </Defs>

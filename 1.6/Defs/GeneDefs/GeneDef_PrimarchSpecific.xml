@@ -732,6 +732,7 @@
         </customEffectDescriptions>
         <abilities>
             <li>BEWH_TwinTeleportation</li>
+            <li>BEWH_TwinLink</li>
         </abilities>
         <descriptionHyperlinks>
             <AbilityDef>BEWH_TwinTeleportation</AbilityDef>

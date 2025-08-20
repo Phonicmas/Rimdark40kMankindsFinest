@@ -191,6 +191,9 @@
   <BEWH.MankindsFinest.Ability.TwinConnectedDead>The twin is dead</BEWH.MankindsFinest.Ability.TwinConnectedDead>
   <BEWH.MankindsFinest.Ability.TwinConnectedDifferentMap>The twin is on a different map</BEWH.MankindsFinest.Ability.TwinConnectedDifferentMap>
 
+  <BEWH.MankindsFinest.Ability.DoesNotHaveAlphariusGene>Does not have the Alpharius/Omegon primarch specific gene</BEWH.MankindsFinest.Ability.DoesNotHaveAlphariusGene>
+  <BEWH.MankindsFinest.Ability.HaveTwin>Already have a twin</BEWH.MankindsFinest.Ability.HaveTwin>
+
   <!-- Denied Witch -->
   <BEWH.MankindsFinest.Ability.DeniedWitch>{0} psychic powers have been severed (Deny the Witch)</BEWH.MankindsFinest.Ability.DeniedWitch>
 

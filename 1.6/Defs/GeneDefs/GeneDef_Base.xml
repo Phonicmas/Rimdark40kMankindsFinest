@@ -13,6 +13,7 @@
     <GeneDef Name="BEWH_GenesOverallParent" Abstract="True">
         <displayCategory>BEWH_ImperialGenes</displayCategory>
         <canGenerateInGeneSet>false</canGenerateInGeneSet>
+        <passOnDirectly>false</passOnDirectly>
         <selectionWeight>0</selectionWeight>
     </GeneDef>
 

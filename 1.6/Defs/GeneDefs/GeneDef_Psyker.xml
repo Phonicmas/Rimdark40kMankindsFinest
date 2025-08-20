@@ -8,6 +8,7 @@
         <description>Carriers of this gene can unlock their psychic potential, though only a faint sliver of what's truly possible.</description>
         <iconPath>UI/Genes/Psyker/BEWH_GenePsykerIota</iconPath>
         <displayOrderInCategory>600</displayOrderInCategory>
+        <selectionWeight>1</selectionWeight>
         <biostatCpx>1</biostatCpx>
         <biostatMet>-1</biostatMet>
         <statFactors>
@@ -32,6 +33,7 @@
         <description>Carriers of this gene can unlock their true psychic potential. While dangerous, their abilities remain within the bounds of average psykers.</description>
         <iconPath>UI/Genes/Psyker/BEWH_GenePsyker</iconPath>
         <displayOrderInCategory>601</displayOrderInCategory>
+        <selectionWeight>0.8</selectionWeight>
         <biostatCpx>3</biostatCpx>
         <biostatMet>-1</biostatMet>
         <statFactors>
@@ -56,6 +58,7 @@
         <description>Carriers of this gene can unlock their true psychic potential. These beings are dangerous and should be treated accordingly.</description>
         <iconPath>UI/Genes/Psyker/BEWH_GenePsykerDelta</iconPath>
         <displayOrderInCategory>602</displayOrderInCategory>
+        <selectionWeight>0.5</selectionWeight>
         <biostatCpx>4</biostatCpx>
         <biostatMet>-2</biostatMet>
         <statFactors>
@@ -80,6 +83,7 @@
         <description>Carriers of this gene can unlock their true psychic potential. These beings are extremely dangerous, capable of overwhelming entire armies on their own.</description>
         <iconPath>UI/Genes/Psyker/BEWH_GenePsykerBeta</iconPath>
         <displayOrderInCategory>603</displayOrderInCategory>
+        <selectionWeight>0.2</selectionWeight>
         <biostatCpx>6</biostatCpx>
         <biostatMet>-3</biostatMet>
         <statFactors>
@@ -105,6 +109,7 @@
         <description>Carriers of this gene can unlock their full psychic potential. These beings are extremely dangerous-capable of bringing entire worlds to ruin if their powers are properly honed.</description>
         <iconPath>UI/Genes/Psyker/BEWH_GenePsykerBeta</iconPath>
         <displayOrderInCategory>604</displayOrderInCategory>
+        <selectionWeight>0.05</selectionWeight>
         <biostatCpx>6</biostatCpx>
         <biostatMet>-3</biostatMet>
         <statFactors>

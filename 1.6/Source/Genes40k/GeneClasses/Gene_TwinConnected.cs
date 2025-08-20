@@ -8,12 +8,9 @@ public class Gene_TwinConnected : Gene
     public Pawn Twin => twin;
     private bool twinSet = false;
         
-    public void SetTwin(Pawn pawn)
+    public void SetTwin(Pawn twinPawn)
     {
-        if (!twinSet)
-        {
-            twin = pawn;
-        }
+        twin = twinPawn;
     }
 
     public override void ExposeData()

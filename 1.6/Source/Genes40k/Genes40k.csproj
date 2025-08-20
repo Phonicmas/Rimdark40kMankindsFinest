@@ -131,10 +131,12 @@
     <Compile Include="Comps\Primarch\CompProperties_AbilitySharedBurden.cs" />
     <Compile Include="Comps\Primarch\CompProperties_AbilitySummonMechsForCaster.cs" />
     <Compile Include="Comps\Primarch\CompProperties_AbilityTwinDisable.cs" />
+    <Compile Include="Comps\Primarch\CompProperties_AbilityTwinLink.cs" />
     <Compile Include="Comps\Primarch\CompProperties_AbilityTwinTeleport.cs" />
     <Compile Include="Comps\Primarch\CompProperties_AbilityWordOfAuthority.cs" />
     <Compile Include="Comps\Primarch\CompProperties_AbilityWordOfDivination.cs" />
     <Compile Include="Comps\Primarch\Comp_TwinDisable.cs" />
+    <Compile Include="Comps\Primarch\Comp_TwinLink.cs" />
     <Compile Include="Comps\Primarch\Comp_TwinTeleport.cs" />
     <Compile Include="Comps\Rank\CompAbilityEffect_GeneseedHarvest.cs" />
     <Compile Include="Comps\Rank\CompAbilityEffect_HealAndTend.cs" />
