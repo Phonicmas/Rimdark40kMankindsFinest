@@ -292,10 +292,10 @@
                     <parentTagDef>Body</parentTagDef>
                     <drawData>
                         <dataEast>
-                            <layer>71</layer>
+                            <layer>70</layer>
                         </dataEast>
                         <dataWest>
-                            <layer>71</layer>
+                            <layer>70</layer>
                         </dataWest>
                         <dataNorth>
                             <layer>98</layer>

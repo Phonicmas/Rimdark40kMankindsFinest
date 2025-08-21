@@ -317,7 +317,7 @@
                     </defaultData>
                     <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
                     <dataNorth>
-                        <layer>79</layer>
+                        <layer>97</layer>
                     </dataNorth>
                     <dataSouth>
                         <offset>(0, -0.1, 0)</offset>

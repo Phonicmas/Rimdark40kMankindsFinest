@@ -20,7 +20,6 @@
         <appliesTo>
             <li>BEWH_MkVIIPowerArmorHelmet</li>
             <li>BEWH_MkXPowerArmorHelmet</li>
-            <li>BEWH_MkXPowerArmorChaplainHelmet</li>
         </appliesTo>
         <drawData>
             <dataNorth>
@@ -35,6 +34,51 @@
             </dataEast>
             <dataWest>
                 <layer>72.3</layer>
+                <offset>(0.034, 0, 0)</offset>
+            </dataWest>
+        </drawData>
+        <colourable>true</colourable>
+        <defaultColour>(104, 24, 33)</defaultColour>
+        <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
+        <availablePresets>
+            <li>BEWH_DecoPaletteFabricBeige</li>
+            <li>BEWH_DecoPaletteFabricRed</li>
+            <li>BEWH_DecoPaletteIFBlack</li>
+        </availablePresets>
+        <shaderType>Cutout</shaderType>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_DecoHoodChaplain</defName> <!-- temporary hack till we figure out how to do with layering -->
+        <label>Hood</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_Hood_icon</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Headgear/Common/BEWH_Deco_Hood</drawnTextureIconPath>
+        <drawSize>(0.5, 0.5)</drawSize>
+        <sortOrder>3</sortOrder>
+        <isHelmetDecoration>true</isHelmetDecoration>
+        <defaultShowRotation>
+            <li>West</li>
+            <li>South</li>
+            <li>East</li>
+            <li>North</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkXPowerArmorChaplainHelmet</li>
+        </appliesTo>
+        <drawData>
+            <dataNorth>
+                <layer>76</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>81</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>71.5</layer>
+                <offset>(-0.034, 0, 0)</offset>
+            </dataEast>
+            <dataWest>
+                <layer>71.5</layer>
                 <offset>(0.034, 0, 0)</offset>
             </dataWest>
         </drawData>
