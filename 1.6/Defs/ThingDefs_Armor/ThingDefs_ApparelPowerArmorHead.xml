@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-    <!-- Helmet has a layer of 69 or 70.  -->
-
     <!-- ===== IMPERIUM ===== -->
     <!-- MK 7 -->
     <ThingDef ParentName="BEWH_PowerArmorHelmetBase">
