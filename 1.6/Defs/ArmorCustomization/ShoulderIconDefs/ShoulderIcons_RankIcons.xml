@@ -4,8 +4,8 @@
     <!-- Base -->
     <Genes40k.ShoulderIconDef Name="BEWH_RankShoulderIcon" Abstract="True">
         <rightShoulder>true</rightShoulder>
-        <!--<useColour>True</useColour>-->   <!-- - This one allows players to colours their icons-->
-        <!--<defaultColour>(255, 0, 0)</defaultColour>-->    <!-- - This one sets the default colour of the icon (Default is white, which does nothing to the icon)   -->
+        <!--<useColour>True</useColour>-->        <!-- - This one allows players to colours their icons-->
+        <!--<defaultColour>(255, 0, 0)</defaultColour>-->        <!-- - This one sets the default colour of the icon (Default is white, which does nothing to the icon)   -->
     </Genes40k.ShoulderIconDef>
 
     <!-- Follow Rank Up -->
@@ -29,7 +29,9 @@
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankNeophyte</drawnTextureIconPath>
         <sortOrder>1</sortOrder>
         <useColour>true</useColour>
-        <mustHaveRank>BEWH_AstartesRankNeophyte</mustHaveRank>
+        <mustHaveRank>
+            <li>BEWH_AstartesRankNeophyte</li>
+        </mustHaveRank>
     </Genes40k.ShoulderIconDef>
 
     <!-- Battle-Brother -->
@@ -41,7 +43,9 @@
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankBattleBrother</drawnTextureIconPath>
         <sortOrder>2</sortOrder>
         <useColour>true</useColour>
-        <mustHaveRank>BEWH_AstartesRankBattleBrother</mustHaveRank>
+        <mustHaveRank>
+            <li>BEWH_AstartesRankBattleBrother</li>
+        </mustHaveRank>
     </Genes40k.ShoulderIconDef>
 
     <!-- Vanguard -->
@@ -53,7 +57,9 @@
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankVanguard</drawnTextureIconPath>
         <sortOrder>2.5</sortOrder>
         <useColour>true</useColour>
-        <mustHaveRank>BEWH_AstartesRankVanguard</mustHaveRank>
+        <mustHaveRank>
+            <li>BEWH_AstartesRankVanguard</li>
+        </mustHaveRank>
     </Genes40k.ShoulderIconDef>
 
     <!-- Veteran -->
@@ -65,7 +71,9 @@
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankVeteran</drawnTextureIconPath>
         <sortOrder>3</sortOrder>
         <useColour>true</useColour>
-        <mustHaveRank>BEWH_AstartesRankVeteran</mustHaveRank>
+        <mustHaveRank>
+            <li>BEWH_AstartesRankVeteran</li>
+        </mustHaveRank>
     </Genes40k.ShoulderIconDef>
 
     <!-- Devastator -->
@@ -77,7 +85,9 @@
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankFireSupport</drawnTextureIconPath>
         <sortOrder>3.33</sortOrder>
         <useColour>true</useColour>
-        <mustHaveRank>BEWH_AstartesRankDevastator</mustHaveRank>
+        <mustHaveRank>
+            <li>BEWH_AstartesRankDevastator</li>
+        </mustHaveRank>
     </Genes40k.ShoulderIconDef>
 
     <!-- Assault -->
@@ -89,7 +99,9 @@
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankCloseSupport</drawnTextureIconPath>
         <sortOrder>3.66</sortOrder>
         <useColour>true</useColour>
-        <mustHaveRank>BEWH_AstartesRankAssault</mustHaveRank>
+        <mustHaveRank>
+            <li>BEWH_AstartesRankAssault</li>
+        </mustHaveRank>
     </Genes40k.ShoulderIconDef>
 
     <!-- Sergeant -->
@@ -100,7 +112,9 @@
         <iconPath>UI/Ranks/Astartes/BEWH_Sergeant</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankSergeant</drawnTextureIconPath>
         <sortOrder>4</sortOrder>
-        <mustHaveRank>BEWH_AstartesRankSergeant</mustHaveRank>
+        <mustHaveRank>
+            <li>BEWH_AstartesRankSergeant</li>
+        </mustHaveRank>
     </Genes40k.ShoulderIconDef>
 
     <!-- Devastator Sergeant -->
@@ -111,7 +125,9 @@
         <iconPath>UI/Ranks/Astartes/BEWH_FireSupportSergeant</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankFireSupportSergeant</drawnTextureIconPath>
         <sortOrder>4.33</sortOrder>
-        <mustHaveRank>BEWH_AstartesRankDevastatorSergeant</mustHaveRank>
+        <mustHaveRank>
+            <li>BEWH_AstartesRankDevastatorSergeant</li>
+        </mustHaveRank>
     </Genes40k.ShoulderIconDef>
 
     <!-- Assault Sergeant -->
@@ -122,7 +138,9 @@
         <iconPath>UI/Ranks/Astartes/BEWH_CloseSupportSergeant</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankCloseSupportSergeant</drawnTextureIconPath>
         <sortOrder>4.66</sortOrder>
-        <mustHaveRank>BEWH_AstartesRankAssaultSergeant</mustHaveRank>
+        <mustHaveRank>
+            <li>BEWH_AstartesRankAssaultSergeant</li>
+        </mustHaveRank>
     </Genes40k.ShoulderIconDef>
 
     <!-- Lieutenant -->
@@ -133,7 +151,9 @@
         <iconPath>UI/Ranks/Astartes/BEWH_Lieutenant</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankLieutenant</drawnTextureIconPath>
         <sortOrder>5</sortOrder>
-        <mustHaveRank>BEWH_AstartesRankLieutenant</mustHaveRank>
+        <mustHaveRank>
+            <li>BEWH_AstartesRankLieutenant</li>
+        </mustHaveRank>
     </Genes40k.ShoulderIconDef>
 
     <!-- Chapter Ancient -->
@@ -144,7 +164,9 @@
         <iconPath>UI/Ranks/Astartes/BEWH_Ancient</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankAncient</drawnTextureIconPath>
         <sortOrder>5.5</sortOrder>
-        <mustHaveRank>BEWH_AstartesRankChapterAncient</mustHaveRank>
+        <mustHaveRank>
+            <li>BEWH_AstartesRankChapterAncient</li>
+        </mustHaveRank>
     </Genes40k.ShoulderIconDef>
 
     <!-- Captain -->
@@ -157,7 +179,9 @@
         <sortOrder>6</sortOrder>
         <useColour>true</useColour>
         <defaultColour>(0.94, 0.69, 0.11)</defaultColour>
-        <mustHaveRank>BEWH_AstartesRankCaptain</mustHaveRank>
+        <mustHaveRank>
+            <li>BEWH_AstartesRankCaptain</li>
+        </mustHaveRank>
     </Genes40k.ShoulderIconDef>
 
     <!-- Helix Adept -->
@@ -170,7 +194,9 @@
         <sortOrder>7</sortOrder>
         <useColour>true</useColour>
         <defaultColour>(0.64, 0.21, 0.15)</defaultColour>
-        <mustHaveRank>BEWH_AstartesRankHelixAdept</mustHaveRank>
+        <mustHaveRank>
+            <li>BEWH_AstartesRankHelixAdept</li>
+        </mustHaveRank>
     </Genes40k.ShoulderIconDef>
 
     <!-- Techmarine Novitiate -->
@@ -181,7 +207,9 @@
         <iconPath>UI/Ranks/Astartes/BEWH_TechmarineNovitiate</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankTechmarineNovitiate</drawnTextureIconPath>
         <sortOrder>7.25</sortOrder>
-        <mustHaveRank>BEWH_AstartesRankTechmarineNovitiate</mustHaveRank>
+        <mustHaveRank>
+            <li>BEWH_AstartesRankTechmarineNovitiate</li>
+        </mustHaveRank>
     </Genes40k.ShoulderIconDef>
 
     <!-- Acolytum -->
@@ -193,7 +221,9 @@
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankAcolytum</drawnTextureIconPath>
         <sortOrder>7.50</sortOrder>
         <useColour>true</useColour>
-        <mustHaveRank>BEWH_AstartesRankAcolytum</mustHaveRank>
+        <mustHaveRank>
+            <li>BEWH_AstartesRankAcolytum</li>
+        </mustHaveRank>
     </Genes40k.ShoulderIconDef>
 
     <!-- Judiciar -->
@@ -205,7 +235,9 @@
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankJudiciar</drawnTextureIconPath>
         <sortOrder>7.75</sortOrder>
         <useColour>true</useColour>
-        <mustHaveRank>BEWH_AstartesRankJudiciar</mustHaveRank>
+        <mustHaveRank>
+            <li>BEWH_AstartesRankJudiciar</li>
+        </mustHaveRank>
     </Genes40k.ShoulderIconDef>
 
     <!-- Apothecary -->
@@ -218,7 +250,9 @@
         <sortOrder>8</sortOrder>
         <useColour>true</useColour>
         <defaultColour>(0.64, 0.21, 0.15)</defaultColour>
-        <mustHaveRank>BEWH_AstartesRankApothecary</mustHaveRank>
+        <mustHaveRank>
+            <li>BEWH_AstartesRankApothecary</li>
+        </mustHaveRank>
     </Genes40k.ShoulderIconDef>
 
     <!-- Techmarine -->
@@ -229,7 +263,9 @@
         <iconPath>UI/Ranks/Astartes/BEWH_Techmarine</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankTechmarine</drawnTextureIconPath>
         <sortOrder>8.25</sortOrder>
-        <mustHaveRank>BEWH_AstartesRankTechmarine</mustHaveRank>
+        <mustHaveRank>
+            <li>BEWH_AstartesRankTechmarine</li>
+        </mustHaveRank>
     </Genes40k.ShoulderIconDef>
 
     <!-- Librarian -->
@@ -241,7 +277,9 @@
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankLibrarian</drawnTextureIconPath>
         <sortOrder>8.50</sortOrder>
         <useColour>true</useColour>
-        <mustHaveRank>BEWH_AstartesRankLibrarian</mustHaveRank>
+        <mustHaveRank>
+            <li>BEWH_AstartesRankLibrarian</li>
+        </mustHaveRank>
     </Genes40k.ShoulderIconDef>
 
     <!-- Chaplain -->
@@ -254,7 +292,9 @@
         <sortOrder>8.75</sortOrder>
         <useColour>true</useColour>
         <defaultColour>(0.94, 0.69, 0.11)</defaultColour>
-        <mustHaveRank>BEWH_AstartesRankChaplain</mustHaveRank>
+        <mustHaveRank>
+            <li>BEWH_AstartesRankChaplain</li>
+        </mustHaveRank>
     </Genes40k.ShoulderIconDef>
 
     <!-- Master of the Apothecarion -->
@@ -265,7 +305,9 @@
         <iconPath>UI/Ranks/Astartes/BEWH_MasterOfTheApothecarion</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankMasterOfTheApothecarion</drawnTextureIconPath>
         <sortOrder>9</sortOrder>
-        <mustHaveRank>BEWH_AstartesRankMasterOfTheApothecarion</mustHaveRank>
+        <mustHaveRank>
+            <li>BEWH_AstartesRankMasterOfTheApothecarion</li>
+        </mustHaveRank>
     </Genes40k.ShoulderIconDef>
 
     <!-- Master of the Forge -->
@@ -276,7 +318,9 @@
         <iconPath>UI/Ranks/Astartes/BEWH_MasterOfTheForge</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankMasterOfTheForge</drawnTextureIconPath>
         <sortOrder>9.25</sortOrder>
-        <mustHaveRank>BEWH_AstartesRankMasterOfTheForge</mustHaveRank>
+        <mustHaveRank>
+            <li>BEWH_AstartesRankMasterOfTheForge</li>
+        </mustHaveRank>
     </Genes40k.ShoulderIconDef>
 
     <!-- Chief Librarian -->
@@ -287,7 +331,9 @@
         <iconPath>UI/Ranks/Astartes/BEWH_ChiefLibrarian</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankChiefLibrarian</drawnTextureIconPath>
         <sortOrder>9.50</sortOrder>
-        <mustHaveRank>BEWH_AstartesRankChiefLibrarian</mustHaveRank>
+        <mustHaveRank>
+            <li>BEWH_AstartesRankChiefLibrarian</li>
+        </mustHaveRank>
     </Genes40k.ShoulderIconDef>
 
     <!-- Master of Sanctity -->
@@ -298,7 +344,9 @@
         <iconPath>UI/Ranks/Astartes/BEWH_MasterOfSanctity</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankMasterOfSanctity</drawnTextureIconPath>
         <sortOrder>9.75</sortOrder>
-        <mustHaveRank>BEWH_AstartesRankMasterOfSanctity</mustHaveRank>
+        <mustHaveRank>
+            <li>BEWH_AstartesRankMasterOfSanctity</li>
+        </mustHaveRank>
     </Genes40k.ShoulderIconDef>
 
     <!-- Chapter Master -->
@@ -309,7 +357,9 @@
         <iconPath>UI/Ranks/Astartes/BEWH_ChapterMaster</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankChapterMaster</drawnTextureIconPath>
         <sortOrder>10</sortOrder>
-        <mustHaveRank>BEWH_AstartesRankChapterMaster</mustHaveRank>
+        <mustHaveRank>
+            <li>BEWH_AstartesRankChapterMaster</li>
+        </mustHaveRank>
     </Genes40k.ShoulderIconDef>
 
 </Defs>
