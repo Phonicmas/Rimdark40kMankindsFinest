@@ -92,15 +92,11 @@
     <Compile Include="ChapterApparelMultiColor\ChapterBodyDecorativeApparelMultiColor.cs" />
     <Compile Include="ChapterApparelMultiColor\HarmonyPatch_OutfitStandBackpack.cs" />
     <Compile Include="ChapterApparelMultiColor\HarmonyPatch_OutfitStandShoulder.cs" />
-    <Compile Include="ChapterApparelMultiColor\PawnRenderNodeWorker_AttachmentBackpack.cs" />
     <Compile Include="ChapterApparelMultiColor\PawnRenderNodeWorker_AttachmentShoulderChapterIcon.cs" />
-    <Compile Include="ChapterApparelMultiColor\PawnRenderNodeWorker_AttachmentShoulderPad.cs" />
     <Compile Include="ChapterApparelMultiColor\PawnRenderNodeWorker_AttachmentShoulderRankIcon.cs" />
     <Compile Include="ChapterApparelMultiColor\PawnRenderNodeWorker_LivingSaintAttachmentBody.cs" />
     <Compile Include="ChapterApparelMultiColor\PawnRenderNodeWorker_LivingSaintAttachmentHead.cs" />
-    <Compile Include="ChapterApparelMultiColor\PawnRenderNode_AttachmentBackpack.cs" />
     <Compile Include="ChapterApparelMultiColor\PawnRenderNode_AttachmentShoulderChapterIcon.cs" />
-    <Compile Include="ChapterApparelMultiColor\PawnRenderNode_AttachmentChapterApparelColour.cs" />
     <Compile Include="ChapterApparelMultiColor\PawnRenderNode_AttachmentShoulderRankIcon.cs" />
     <Compile Include="ChapterApparelMultiColor\ShoulderIconDef.cs" />
     <Compile Include="ChapterApparelMultiColor\ShoulderIconSettings.cs" />
@@ -156,7 +152,6 @@
     <Compile Include="DefModExtensions\DefModExtension_GeneInducedFear.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneseedHarvest.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneStorageGraphicProgression.cs" />
-    <Compile Include="DefModExtensions\DefModExtension_HideJumpPack.cs" />
     <Compile Include="DefModExtensions\DefModExtension_IgnoreMovespeedDecrease.cs" />
     <Compile Include="DefModExtensions\DefModExtension_IncreasedJoyFromArt.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneseedVialRecipe.cs" />
@@ -179,7 +174,6 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_BlockedPsycasting.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_DeathacidifierProgenoidGlands.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_DomitarMechExclusive.cs" />
-    <Compile Include="HarmonyPatches\HarmonyPatch_HideJumpPack.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_ImplantGeneseedCorrectIngredient.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_LivingSaintDestroyRemoveCount.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_MoreArtJoy.cs" />

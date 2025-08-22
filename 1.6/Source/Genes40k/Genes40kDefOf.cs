@@ -149,9 +149,6 @@ public static class Genes40kDefOf
     public static ThingDef BEWH_SteelRainDropPodBuilding;
     public static ThingDef BEWH_SteelRainDropPodSkyfaller;
         
-    [MayRequireRoyalty]
-    public static ThingDef Apparel_PackJump;
-        
     public static ThingDef BEWH_RawGestationalSlurry;
         
     public static ThingDef BEWH_LSaintSword;

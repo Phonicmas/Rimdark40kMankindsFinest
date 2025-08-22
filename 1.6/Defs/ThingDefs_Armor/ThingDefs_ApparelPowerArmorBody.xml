@@ -94,8 +94,8 @@
             <renderNodeProperties>
                 <!-- Backpacks -->
                 <li>
-                    <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentBackpack</workerClass>
-                    <nodeClass>Genes40k.PawnRenderNode_AttachmentBackpack</nodeClass>
+                    <workerClass>Core40k.PawnRenderNodeWorker_AttachmentBackpack</workerClass>
+                    <nodeClass>Core40k.PawnRenderNode_AttachmentBackpack</nodeClass>
                     <texPath>Things/Armor/Imperium/PowerArmor/MkVIIPowerArmor/Backpacks/BEWH_MkVIIPowerArmor_Backpack</texPath>
                     <shaderTypeDef>CutoutComplex</shaderTypeDef>
                     <parentTagDef>Body</parentTagDef>
@@ -116,8 +116,8 @@
                 </li>
                 <!-- Shoulder pad -->
                 <li>
-                    <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentShoulderPad</workerClass>
-                    <nodeClass>Genes40k.PawnRenderNode_AttachmentChapterApparelColour</nodeClass>
+                    <workerClass>Core40k.PawnRenderNodeWorker_AttachmentShoulderPad</workerClass>
+                    <nodeClass>Core40k.PawnRenderNode_AttachmentApparelMultiColor</nodeClass>
                     <texPath>Things/Armor/Imperium/PowerArmor/MkVIIPowerArmor/Shoulder/BEWH_MkVIIPowerArmor_Shoulder</texPath>
                     <shaderTypeDef>CutoutComplex</shaderTypeDef>
                     <parentTagDef>Body</parentTagDef>
@@ -143,7 +143,7 @@
                 <forcedBodyType>Hulk</forcedBodyType>
                 <hideBodyGraphic>true</hideBodyGraphic>
             </li>
-            <li Class="Genes40k.DefModExtension_HideJumpPack">
+            <li Class="Core40k.DefModExtension_HideJumpPack">
                 <changeBackpackVisual>true</changeBackpackVisual>
             </li>
         </modExtensions>
@@ -189,8 +189,8 @@
             <renderNodeProperties>
                 <!-- Backpacks -->
                 <li>
-                    <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentBackpack</workerClass>
-                    <nodeClass>Genes40k.PawnRenderNode_AttachmentBackpack</nodeClass>
+                    <workerClass>Core40k.PawnRenderNodeWorker_AttachmentBackpack</workerClass>
+                    <nodeClass>Core40k.PawnRenderNode_AttachmentBackpack</nodeClass>
                     <texPath>Things/Armor/Imperium/PowerArmor/MkXPowerArmor/Backpacks/BEWH_MkXPowerArmor_Backpack</texPath>
                     <shaderTypeDef>CutoutComplex</shaderTypeDef>
                     <parentTagDef>Body</parentTagDef>
@@ -211,8 +211,8 @@
                 </li>
                 <!-- Shoulder pad -->
                 <li>
-                    <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentShoulderPad</workerClass>
-                    <nodeClass>Genes40k.PawnRenderNode_AttachmentChapterApparelColour</nodeClass>
+                    <workerClass>Core40k.PawnRenderNodeWorker_AttachmentShoulderPad</workerClass>
+                    <nodeClass>Core40k.PawnRenderNode_AttachmentApparelMultiColor</nodeClass>
                     <texPath>Things/Armor/Imperium/PowerArmor/MkXPowerArmor/Shoulder/BEWH_MkXPowerArmor_Shoulder</texPath>
                     <shaderTypeDef>CutoutComplex</shaderTypeDef>
                     <parentTagDef>Body</parentTagDef>
@@ -238,7 +238,7 @@
                 <forcedBodyType>Hulk</forcedBodyType>
                 <hideBodyGraphic>true</hideBodyGraphic>
             </li>
-            <li Class="Genes40k.DefModExtension_HideJumpPack">
+            <li Class="Core40k.DefModExtension_HideJumpPack">
                 <changeBackpackVisual>true</changeBackpackVisual>
             </li>
         </modExtensions>
@@ -285,8 +285,8 @@
             <renderNodeProperties>
                 <!-- Backpacks -->
                 <li>
-                    <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentBackpack</workerClass>
-                    <nodeClass>Genes40k.PawnRenderNode_AttachmentBackpack</nodeClass>
+                    <workerClass>Core40k.PawnRenderNodeWorker_AttachmentBackpack</workerClass>
+                    <nodeClass>Core40k.PawnRenderNode_AttachmentBackpack</nodeClass>
                     <texPath>Things/Armor/Imperium/PowerArmor/MkXPowerArmorChaplain/Backpacks/BEWH_ChaplainArmor_Backpack</texPath>
                     <shaderTypeDef>CutoutComplex</shaderTypeDef>
                     <parentTagDef>Body</parentTagDef>
@@ -307,8 +307,8 @@
                 </li>
                 <!-- Shoulder pad -->
                 <li>
-                    <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentShoulderPad</workerClass>
-                    <nodeClass>Genes40k.PawnRenderNode_AttachmentChapterApparelColour</nodeClass>
+                    <workerClass>Core40k.PawnRenderNodeWorker_AttachmentShoulderPad</workerClass>
+                    <nodeClass>Core40k.PawnRenderNode_AttachmentApparelMultiColor</nodeClass>
                     <texPath>Things/Armor/Imperium/PowerArmor/MkXPowerArmorChaplain/Shoulder/BEWH_ChaplainArmor_Shoulder</texPath>
                     <shaderTypeDef>CutoutComplex</shaderTypeDef>
                     <parentTagDef>Body</parentTagDef>
@@ -334,7 +334,7 @@
                 <forcedBodyType>Hulk</forcedBodyType>
                 <hideBodyGraphic>true</hideBodyGraphic>
             </li>
-            <li Class="Genes40k.DefModExtension_HideJumpPack">
+            <li Class="Core40k.DefModExtension_HideJumpPack">
                 <changeBackpackVisual>true</changeBackpackVisual>
             </li>
             <li Class="Core40k.DefModExtension_StandardDecorations">
@@ -392,8 +392,8 @@
             <renderNodeProperties Inherit="false">
                 <!-- Backpacks -->
                 <li>
-                    <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentBackpack</workerClass>
-                    <nodeClass>Genes40k.PawnRenderNode_AttachmentBackpack</nodeClass>
+                    <workerClass>Core40k.PawnRenderNodeWorker_AttachmentBackpack</workerClass>
+                    <nodeClass>Core40k.PawnRenderNode_AttachmentBackpack</nodeClass>
                     <texPath>Things/Armor/Imperium/PowerArmor/LivingSaint/Backpacks/BEWH_LSaintArmor_Backpack</texPath>
                     <shaderTypeDef>CutoutComplex</shaderTypeDef>
                     <parentTagDef>Body</parentTagDef>
@@ -435,7 +435,7 @@
                 <defaultPrimaryColor>(0.8358, 0.619, 0.298)</defaultPrimaryColor>
                 <defaultSecondaryColor>(0.407, 0.094, 0.129)</defaultSecondaryColor>
             </li>
-            <li Class="Genes40k.DefModExtension_HideJumpPack" />
+            <li Class="Core40k.DefModExtension_HideJumpPack" />
         </modExtensions>
     </ThingDef>
 
@@ -480,8 +480,8 @@
             <renderNodeProperties>
                 <!-- Backpacks -->
                 <li>
-                    <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentBackpack</workerClass>
-                    <nodeClass>Genes40k.PawnRenderNode_AttachmentBackpack</nodeClass>
+                    <workerClass>Core40k.PawnRenderNodeWorker_AttachmentBackpack</workerClass>
+                    <nodeClass>Core40k.PawnRenderNode_AttachmentBackpack</nodeClass>
                     <texPath>Things/Armor/Imperium/PowerArmor/MkIPowerArmor/Backpacks/BEWH_MkIPowerArmor_Backpack</texPath>
                     <shaderTypeDef>CutoutComplex</shaderTypeDef>
                     <parentTagDef>Body</parentTagDef>
@@ -502,8 +502,8 @@
                 </li>
                 <!-- Shoulder pad -->
                 <li>
-                    <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentShoulderPad</workerClass>
-                    <nodeClass>Genes40k.PawnRenderNode_AttachmentChapterApparelColour</nodeClass>
+                    <workerClass>Core40k.PawnRenderNodeWorker_AttachmentShoulderPad</workerClass>
+                    <nodeClass>Core40k.PawnRenderNode_AttachmentApparelMultiColor</nodeClass>
                     <texPath>Things/Armor/Imperium/PowerArmor/MkIPowerArmor/Shoulder/BEWH_MkIPowerArmor_Shoulder</texPath>
                     <shaderTypeDef>CutoutComplex</shaderTypeDef>
                     <parentTagDef>Body</parentTagDef>
@@ -532,7 +532,7 @@
                 <defaultPrimaryColor>(231,148,88)</defaultPrimaryColor>
                 <defaultSecondaryColor>(253,184,110)</defaultSecondaryColor>
             </li>
-            <li Class="Genes40k.DefModExtension_HideJumpPack" />
+            <li Class="Core40k.DefModExtension_HideJumpPack" />
         </modExtensions>
     </ThingDef>
 
