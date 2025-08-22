@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/RecipeDef[defName="BEWH_MakeThunderWarriorMatrixRefined"]/label</xpath>
+        <value>
+            <label>make Thunder Warrior genetic matrix (refined recipe)</label>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/RecipeDef[defName="BEWH_MakeFirstbornMatrixRefined"]/label</xpath>
+        <value>
+            <label>make Firstborn genetic matrix (refined recipe)</label>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/RecipeDef[defName="BEWH_MakePrimarisMatrixRefined"]/label</xpath>
+        <value>
+            <label>make Primaris genetic matrix (refined recipe)</label>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/RecipeDef[defName="BEWH_MakeCustodesMatrixRefined"]/label</xpath>
+        <value>
+            <label>make Custodes genetic matrix (refined recipe)</label>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/RecipeDef[defName="BEWH_MakePrimarchMatrixRefined"]/label</xpath>
+        <value>
+            <label>make Primarch genetic matrix (refined recipe)</label>
+        </value>
+    </Operation>
+
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/RecipeDef[defName="BEWH_MakeRubiconSurgeryKitRefined"]/label</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="BEWH_MakeRubiconSurgeryKitRefined"]</xpath>
+            <value>
+                <label />
+            </value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/RecipeDef[defName="BEWH_MakeRubiconSurgeryKitRefined"]/label</xpath>
+        <value>
+            <label>make rubicon surgery kit (refined recipe)</label>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/RecipeDef[defName="BEWH_MakeRawGestationalSlurryRefined"]/label</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="BEWH_MakeRawGestationalSlurryRefined"]</xpath>
+            <value>
+                <label />
+            </value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/RecipeDef[defName="BEWH_MakeRawGestationalSlurryRefined"]/label</xpath>
+        <value>
+            <label>make raw gestational slurry (refined recipe)</label>
+        </value>
+    </Operation>
+
+</Patch>

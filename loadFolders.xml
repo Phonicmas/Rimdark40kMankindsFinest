@@ -22,6 +22,8 @@
 		<li IfModActive="jaxe.rimhud">1.6/Mods/RimHUD</li>
 		<li IfModActive="kentington.saveourship2">1.6/Mods/SOS2</li>
 		<li IfModActive="sicefe.senseofdepth">1.6/Mods/SenseOfDepthForTallBuildings</li>
+		<li IfModActive="scorpio.resourcedictionary">1.6/Mods/ResourceDictionary</li>
+		<li IfModActive="ferny.replacelib">1.6/Mods/ReplaceLib</li>
 	</v1.6>
 
 </loadFolders>
