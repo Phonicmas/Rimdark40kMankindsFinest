@@ -76,6 +76,10 @@
                     <li>BEWH_SigmaPariah</li>
                     <li>BEWH_UpsilonPariah</li>
                     <li>BEWH_OmegaPariah</li>
+                    <li>BEWH_SecondaryHeart</li>
+                    <li>BEWH_ImmortisGland</li>
+                    <li>BEWH_ProtoOssmodula</li>
+                    <li>BEWH_AtlasMorphogen</li>
                 </cantHaveGenes>
             </li>
         </modExtensions>

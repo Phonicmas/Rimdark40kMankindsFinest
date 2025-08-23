@@ -61,6 +61,7 @@
       </points>
     </igniteChanceByTargetFlammability>
     <igniteCellChance>1</igniteCellChance>
+    <explosionCellFleck>PlainFlash</explosionCellFleck>
   </DamageDef>
 
 </Defs>

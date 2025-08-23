@@ -51,44 +51,45 @@ public class LivingSaintAscension
 
         var shootingSkill = __instance.skills.GetSkill(SkillDefOf.Shooting).levelInt;
         var meleeSkill = __instance.skills.GetSkill(SkillDefOf.Melee).levelInt;
-
+        
         if (shootingSkill + meleeSkill < 12)
         {
             return;
         }
-
-        var shootingLevelMult = shootingSkill > 10 ? 0.5f : 0f;
-        var meleeLevelMult = meleeSkill > 10 ? 0.5f : 0f;
         
-        if (shootingSkill >= 15)
-        {
-            shootingLevelMult = shootingSkill >= 20 ? 1.5f : 1;
-        }
-        if (meleeSkill >= 15)
-        {
-            meleeLevelMult = meleeSkill >= 20 ? 1.5f : 1;
-        }
-
         var baseChance = Genes40kUtils.ModSettings.livingSaintBaseChance;
-        if (__instance.gender == Gender.Female)
+
+        var skillAddChance = 0f;
+        if (Genes40kUtils.ModSettings.livingSaintAddedChanceFromViolenceSkills)
         {
-            baseChance++;
-        }
+            var shootingLevelMult = shootingSkill > 10 ? 0.25f : 0f;
+            var meleeLevelMult = meleeSkill > 10 ? 0.25f : 0f;
+        
+            if (shootingSkill >= 15)
+            {
+                shootingLevelMult = shootingSkill >= 20 ? 0.75f : 0.5f;
+            }
+            if (meleeSkill >= 15)
+            {
+                meleeLevelMult = meleeSkill >= 20 ? 0.75f : 0.5f;
+            }    
             
-        var skillAddChance = (meleeSkill - 10) * meleeLevelMult + (shootingSkill - 10) * shootingLevelMult;
+            skillAddChance = (meleeSkill - 10) * meleeLevelMult + (shootingSkill - 10) * shootingLevelMult;
+        }
+        
         var traitAddChance = 0f;
 
         if (__instance.story.traits.HasTrait(Genes40kDefOf.PsychicSensitivity, 2))
         {
-            traitAddChance = 10f;
+            traitAddChance = 5f;
         }
         else if (__instance.story.traits.HasTrait(Genes40kDefOf.PsychicSensitivity, 1))
         {
-            traitAddChance = 5f;
+            traitAddChance = 2f;
         }
         else if (__instance.story.traits.HasTrait(Genes40kDefOf.PsychicSensitivity, -1))
         {
-            traitAddChance = -10f;
+            traitAddChance = -5f;
         }
         else if (__instance.story.traits.HasTrait(Genes40kDefOf.PsychicSensitivity, -2))
         {

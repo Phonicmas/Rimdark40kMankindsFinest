@@ -531,10 +531,10 @@
         <displayOrderInCategory>415</displayOrderInCategory>
         <geneClass>Core40k.Gene_AddRandomGeneAndOrTraitByWeight</geneClass>
         <statFactors>
-            <PsychicSensitivity>8</PsychicSensitivity>
-            <MeditationFocusGain>4.5</MeditationFocusGain>
-            <PsychicEntropyRecoveryRate>4</PsychicEntropyRecoveryRate>
-            <ReadingSpeed>4</ReadingSpeed>
+            <PsychicSensitivity>6</PsychicSensitivity>
+            <MeditationFocusGain>3.5</MeditationFocusGain>
+            <PsychicEntropyRecoveryRate>3</PsychicEntropyRecoveryRate>
+            <ReadingSpeed>3</ReadingSpeed>
         </statFactors>
         <capMods>
             <li>

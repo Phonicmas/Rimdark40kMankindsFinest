@@ -122,33 +122,6 @@ public class Building_GeneTable : Building_WorkTable
         yield return command_Action;
     }
 
-    public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Pawn selPawn)
-    {
-        foreach (var floatMenu in base.GetFloatMenuOptions(selPawn))
-        {
-            yield return floatMenu;
-        }
-            
-        if (selPawn.apparel.WornApparel.Any(a => a is ApparelMultiColor))
-        {
-            var apparelColorChangeFloatMenu = FloatMenuUtility.DecoratePrioritizedTask(new FloatMenuOption("BEWH.Framework.ApparelMultiColor.ArmourDecorationFeature".Translate().CapitalizeFirst(), delegate
-            {
-                selPawn.jobs.TryTakeOrderedJob(JobMaker.MakeJob(Core40kDefOf.BEWH_OpenStylingStationDialogForApparelMultiColor, this), JobTag.Misc);
-            }), selPawn, this);
-            
-            yield return apparelColorChangeFloatMenu;
-        }
-
-        if (selPawn.equipment.Primary is WeaponMultiColor)
-        {
-            var meleeColorChangeFloatMenu = FloatMenuUtility.DecoratePrioritizedTask(new FloatMenuOption("BEWH.Framework.WeaponMultiColor.WeaponDecorationFeature".Translate().CapitalizeFirst(), delegate
-            {
-                selPawn.jobs.TryTakeOrderedJob(JobMaker.MakeJob(Core40kDefOf.BEWH_OpenStylingStationDialogForWeaponMultiColor, this), JobTag.Misc);
-            }), selPawn, this);
-            yield return meleeColorChangeFloatMenu;
-        }
-    }
-
     public override void ExposeData()
     {
         base.ExposeData();

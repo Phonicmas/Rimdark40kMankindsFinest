@@ -14,7 +14,7 @@
             <researchPrerequisite>BEWH_AstartesPowerArmorMkVII</researchPrerequisite>
         </recipeMaker>
         <graphicData>
-            <texPath>Things/Headgear/Imperium/PowerArmor/BEWH_MkVIIHelmet</texPath>
+            <texPath>Things/Headgear/Imperium/PowerArmor/MkVIIPowerArmorHelmet/BEWH_MkVIIHelmet</texPath>
         </graphicData>
         <statBases>
             <WorkToMake>26250</WorkToMake>
@@ -36,7 +36,7 @@
             <Plasteel>50</Plasteel>
         </costList>
         <apparel>
-            <wornGraphicPath>Things/Headgear/Imperium/PowerArmor/BEWH_MkVIIHelmet</wornGraphicPath>
+            <wornGraphicPath>Things/Headgear/Imperium/PowerArmor/MkVIIPowerArmorHelmet/BEWH_MkVIIHelmet</wornGraphicPath>
             <tags>
                 <li>BEWH_PowerArmorHelmetMkVII</li>
             </tags>
@@ -60,7 +60,7 @@
             <researchPrerequisite>BEWH_AstartesPowerArmorMkX</researchPrerequisite>
         </recipeMaker>
         <graphicData>
-            <texPath>Things/Headgear/Imperium/PowerArmorPrimaris/BEWH_MkXHelmet</texPath>
+            <texPath>Things/Headgear/Imperium/PowerArmor/MkXPowerArmorHelmet/BEWH_MkXHelmet</texPath>
         </graphicData>
         <statBases>
             <WorkToMake>35000</WorkToMake>
@@ -81,7 +81,7 @@
             <Plasteel>65</Plasteel>
         </costList>
         <apparel>
-            <wornGraphicPath>Things/Headgear/Imperium/PowerArmorPrimaris/BEWH_MkXHelmet</wornGraphicPath>
+            <wornGraphicPath>Things/Headgear/Imperium/PowerArmor/MkXPowerArmorHelmet/BEWH_MkXHelmet</wornGraphicPath>
             <tags>
                 <li>BEWH_PowerArmorHelmetMkX</li>
             </tags>
@@ -105,7 +105,7 @@
             <researchPrerequisite>BEWH_AstartesPowerArmorMkX</researchPrerequisite>
         </recipeMaker>
         <graphicData>
-            <texPath>Things/Headgear/Imperium/PowerArmorPrimarisChaplain/BEWH_MkXChaplainHelmet</texPath>
+            <texPath>Things/Headgear/Imperium/PowerArmor/MkXPowerArmorHelmetChaplain/BEWH_MkXChaplainHelmet</texPath>
         </graphicData>
         <statBases>
             <WorkToMake>35000</WorkToMake>
@@ -126,7 +126,7 @@
             <Plasteel>65</Plasteel>
         </costList>
         <apparel>
-            <wornGraphicPath>Things/Headgear/Imperium/PowerArmorPrimarisChaplain/BEWH_MkXChaplainHelmet</wornGraphicPath>
+            <wornGraphicPath>Things/Headgear/Imperium/PowerArmor/MkXPowerArmorHelmetChaplain/BEWH_MkXChaplainHelmet</wornGraphicPath>
             <tags>
                 <li>BEWH_PowerArmorHelmetMkXChaplain</li>
             </tags>

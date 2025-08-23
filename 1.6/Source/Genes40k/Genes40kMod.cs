@@ -86,6 +86,9 @@ public class Genes40kMod : Mod
             listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.LivingSaintMale".Translate(), ref Settings.livingSaintMale);
             scrollViewHeight += listingHeightIncrease;
             
+            listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.LivingSaintExtraChanceFromViolence".Translate(), ref Settings.livingSaintAddedChanceFromViolenceSkills);
+            scrollViewHeight += listingHeightIncrease;
+            
             listingStandard.Label("BEWH.MankindsFinest.ModSettings.LivingSaintChance".Translate());
             scrollViewHeight += listingHeightIncrease;
             listingStandard.Label("BEWH.MankindsFinest.ModSettings.LivingSaintBigThreat".Translate(Settings.livingSaintBigThreat));

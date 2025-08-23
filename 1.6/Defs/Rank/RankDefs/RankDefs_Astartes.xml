@@ -339,11 +339,6 @@
             <li>BEWH_AstartesRankAcolytum</li>
             <li>BEWH_AstartesRankTechmarineNovitiate</li>
         </incompatibleRanks>
-        <requiredTraitsOneAmong>
-            <BEWH_FieldMedic />
-            <BEWH_Surgeon />
-            <Kind />
-        </requiredTraitsOneAmong>
         <requiredSkills>
             <Medicine>9</Medicine>
         </requiredSkills>
@@ -465,12 +460,6 @@
             <li>BEWH_AstartesRankAcolytum</li>
             <li>BEWH_AstartesRankHelixAdept</li>
         </incompatibleRanks>
-        <requiredTraitsOneAmong>
-            <Transhumanist />
-            <Pyromaniac />
-            <Industriousness>2</Industriousness>
-            <Industriousness>1</Industriousness>
-        </requiredTraitsOneAmong>
         <requiredSkills>
             <Crafting>8</Crafting>
         </requiredSkills>
@@ -692,12 +681,6 @@
             <li>BEWH_AstartesRankAcolytum</li>
             <li>BEWH_AstartesRankHelixAdept</li>
         </incompatibleRanks>
-        <requiredTraitsOneAmong>
-            <NaturalMood>2</NaturalMood>
-            <NaturalMood>1</NaturalMood>
-            <Nerves>2</Nerves>
-            <Nerves>1</Nerves>
-        </requiredTraitsOneAmong>
         <requiredSkills>
             <Social>9</Social>
         </requiredSkills>

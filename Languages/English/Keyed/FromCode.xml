@@ -24,6 +24,7 @@
   <BEWH.MankindsFinest.ModSettings.LivingSaintMale>Male colonists can become Living Saints</BEWH.MankindsFinest.ModSettings.LivingSaintMale>
   <BEWH.MankindsFinest.ModSettings.LivingSaintBaseChance>Living Saints base chance: {0}% (other modifiers may increase beyond this)</BEWH.MankindsFinest.ModSettings.LivingSaintBaseChance>
   <BEWH.MankindsFinest.ModSettings.LivingSaintPawnLimit>Living Saint pawn limit: {0}</BEWH.MankindsFinest.ModSettings.LivingSaintPawnLimit>
+  <BEWH.MankindsFinest.ModSettings.LivingSaintExtraChanceFromViolence>Extra chance to become living saint depending on shooting and melee skill.</BEWH.MankindsFinest.ModSettings.LivingSaintExtraChanceFromViolence>
 
   <BEWH.MankindsFinest.ModSettings.ImplantationDesc>Gene-seed implantation offsets.</BEWH.MankindsFinest.ModSettings.ImplantationDesc>
   <BEWH.MankindsFinest.ModSettings.ImplantationSuccessChange>Implantation success offset: {0}%</BEWH.MankindsFinest.ModSettings.ImplantationSuccessChange>
