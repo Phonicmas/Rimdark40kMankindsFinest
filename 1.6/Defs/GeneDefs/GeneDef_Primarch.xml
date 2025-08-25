@@ -219,7 +219,6 @@
         <hediffGiversCannotGive>
             <li>Carcinoma</li>
             <li>Cirrhosis</li>
-            <li>DrugOverdose</li>
         </hediffGiversCannotGive>
 
         <customEffectDescriptions>

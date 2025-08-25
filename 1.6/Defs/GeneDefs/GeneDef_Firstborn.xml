@@ -398,9 +398,6 @@
             <li>Plague</li>
             <li>GutWorms</li>
         </makeImmuneTo>
-        <hediffGiversCannotGive>
-            <li>DrugOverdose</li>
-        </hediffGiversCannotGive>
         <suppressedTraits>
             <li>
                 <def>Immunity</def>
