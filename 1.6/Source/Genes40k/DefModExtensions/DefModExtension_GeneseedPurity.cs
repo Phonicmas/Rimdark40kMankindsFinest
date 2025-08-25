@@ -6,5 +6,5 @@ public class DefModExtension_GeneseedPurity : DefModExtension
 {
     public int additionalChanceOffset = 0;
     public int additionalChanceCapOffset = 0;
-    public int rubiconAdditionalChanceOffset = 0;
+    public float rubiconAdditionalChanceOffset = 0;
 }
