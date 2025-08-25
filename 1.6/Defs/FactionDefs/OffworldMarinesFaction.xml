@@ -10,6 +10,22 @@
             <li>BEWH_LordCommanderPawn</li>
         </fixedLeaderKinds>
 
+        <maxPawnCostPerTotalPointsCurve>
+            <points>
+                <li>(0,0)</li>
+                <li>(100000, 0)</li>
+            </points>
+        </maxPawnCostPerTotalPointsCurve>
+        <pawnGroupMakers>
+            <li>
+                <kindDef>Combat</kindDef>
+                <commonality>1</commonality>
+                <options>
+                    <BEWH_FirstbornPawn>1</BEWH_FirstbornPawn>
+                </options>
+            </li>
+        </pawnGroupMakers>
+
         <pawnSingular>Marine</pawnSingular>
         <pawnsPlural>Marines</pawnsPlural>
         <fixedName>Offworld Marines</fixedName>
