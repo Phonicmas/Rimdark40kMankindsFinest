@@ -25,9 +25,6 @@
             </li>
         </suppressedTraits>
         <minAgeActive>13</minAgeActive>
-        <exclusionTags>
-            <li>PM1</li>
-        </exclusionTags>
         <modExtensions>
             <li Class="Core40k.DefModExtension_GeneExtension">
                 <addedWorldCarryCapacity>100</addedWorldCarryCapacity>
@@ -57,9 +54,6 @@
             <RangedCooldownFactor>0.85</RangedCooldownFactor>
         </statFactors>
         <minAgeActive>13</minAgeActive>
-        <exclusionTags>
-            <li>PM2</li>
-        </exclusionTags>
     </GeneDef>
 
     <!-- Belisarian Furnace -->
@@ -79,9 +73,6 @@
             <AbilityDef>BEWH_BelisarianFurnaceBoost</AbilityDef>
         </descriptionHyperlinks>
         <minAgeActive>13</minAgeActive>
-        <exclusionTags>
-            <li>PM3</li>
-        </exclusionTags>
     </GeneDef>
 
 </Defs>

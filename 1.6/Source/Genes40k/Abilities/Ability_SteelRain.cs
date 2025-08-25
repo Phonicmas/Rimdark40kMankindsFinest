@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Core40k;
 using RimWorld;
 using RimWorld.Planet;
 using UnityEngine;
@@ -87,7 +88,10 @@ public class Ability_SteelRain : VEF.Abilities.Ability
 
             innerThing.DrawColor = drawColor;
             innerThing.MarinesToSpawn = pawnsToSpawn;
-                
+            
+            var offworldMarine = Find.FactionManager.FirstFactionOfDef(Genes40kDefOf.BEWH_OffworldMarinesFaction);
+            //Check GoodwillSituationManager and set goodwill to something neutral
+            
             var skyfaller = SkyfallerMaker.SpawnSkyfaller(Genes40kDefOf.BEWH_SteelRainDropPodSkyfaller, innerThing, cell, pawn.Map);
             skyfaller.DrawColor = drawColor;
         }

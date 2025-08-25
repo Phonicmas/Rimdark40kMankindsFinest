@@ -177,6 +177,7 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_ImplantGeneseedCorrectIngredient.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_LivingSaintDestroyRemoveCount.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_MoreArtJoy.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_OffworldMarineMimicPlayerRelation.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_PerpetualCorpseNoDestroy.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_PerpetualNoDestroy.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_ProgenoidGlandProgress.cs" />

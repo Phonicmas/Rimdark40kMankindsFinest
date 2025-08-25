@@ -11,19 +11,19 @@
         <operations>
 
             <li Class="PatchOperationRemove">
-                <xpath>Defs/GeneDef[defName = "BEWH_Ossmodula"]/statFactors/VEF_CosmeticBodySize_Multiplier</xpath>
+                <xpath>Defs/GeneDef[defName = "BEWH_Ossmodula"]/statOffsets/VEF_CosmeticBodySize_Multiplier</xpath>
             </li>
 
             <li Class="PatchOperationRemove">
-                <xpath>Defs/GeneDef[defName = "BEWH_Magnificat"]/statFactors/VEF_CosmeticBodySize_Multiplier</xpath>
+                <xpath>Defs/GeneDef[defName = "BEWH_Magnificat"]/statOffsets/VEF_CosmeticBodySize_Multiplier</xpath>
             </li>
 
             <li Class="PatchOperationRemove">
-                <xpath>Defs/GeneDef[defName = "BEWH_CustodesStature"]/statFactors/VEF_CosmeticBodySize_Multiplier</xpath>
+                <xpath>Defs/GeneDef[defName = "BEWH_AtlasMorphogen"]/statOffsets/VEF_CosmeticBodySize_Multiplier</xpath>
             </li>
 
             <li Class="PatchOperationRemove">
-                <xpath>Defs/GeneDef[defName = "BEWH_PrimarchStature"]/statFactors/VEF_CosmeticBodySize_Multiplier</xpath>
+                <xpath>Defs/GeneDef[defName = "BEWH_ImmortisGland"]/statOffsets/VEF_CosmeticBodySize_Multiplier</xpath>
             </li>
 
         </operations>

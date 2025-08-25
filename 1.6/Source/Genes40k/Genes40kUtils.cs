@@ -1,6 +1,7 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
 using System.Linq;
+using Core40k;
 using UnityEngine;
 using Verse;
 
@@ -230,7 +231,7 @@ public static class Genes40kUtils
             
         var chapterColourPrimary = chapter.primaryColour;
         var chapterColourSecondary = chapter.secondaryColour;
-        var chapterColourTertiary = chapter.tertiaryColour;
+        var chapterColourTertiary = chapter.tertiaryColour ?? chapter.secondaryColour;
         var shoulderIconDef = chapter.relatedChapterIcon;
         GeneDef chapterGene = null;
 
@@ -270,6 +271,12 @@ public static class Genes40kUtils
                     chapterApparelMultiColor.SetInitialColours(chapterColourPrimary, chapterColourSecondary, chapterColourTertiary);
                     break;
             }
+        }
+        
+        var equipment = pawn.equipment.PrimaryEq.parent;
+        if (equipment is WeaponMultiColor weaponMultiColor)
+        {
+            weaponMultiColor.SetColors(chapter);
         }
 
         return chapter;
