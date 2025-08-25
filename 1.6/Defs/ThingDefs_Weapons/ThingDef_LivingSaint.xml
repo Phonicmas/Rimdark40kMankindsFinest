@@ -22,7 +22,7 @@
     <tradeTags Inherit="False" />
     <thingSetMakerTags Inherit="False" />
     <weaponTags Inherit="false" />
-    
+
     <soundInteract>Interact_ChargeRifle</soundInteract>
     <statBases>
       <Flammability>0</Flammability>
@@ -125,7 +125,7 @@
     <thingSetMakerTags Inherit="False" />
     <weaponTags Inherit="false" />
 
-    <soundInteract>BEWH_SFX_PowerswordInteract</soundInteract> 
+    <soundInteract>BEWH_SFX_PowerswordInteract</soundInteract>
     <meleeHitSound>BEWH_SFX_PowerswordHit</meleeHitSound>
     <statBases>
       <Flammability>0</Flammability>
@@ -176,17 +176,23 @@
       </li>
     </tools>
 
-    <comps>
-      <li>
-        <compClass>CompEquippable</compClass>
-      </li>
-      <li Class="CompProperties_EquippableAbilityReloadable" MayRequire="Ludeon.RimWorld.Anomaly"> <!-- I duct-taped the Hellcat fire spew from Anomaly to the Saint's sword basically, sue me -->
-        <abilityDef>BEWH_CleansingFire</abilityDef> 
+    <comps Inherit="False">
+      <li Class="CompProperties_EquippableAbilityReloadable" MayRequire="Ludeon.RimWorld.Anomaly">        <!-- I duct-taped the Hellcat fire spew from Anomaly to the Saint's sword basically, sue me -->
+        <abilityDef>BEWH_CleansingFire</abilityDef>
       </li>
       <li Class="CompProperties_Forbiddable"/>
       <li Class="CompProperties_Biocodable"/>
+      <li Class="CompProperties_Styleable"/>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtWeaponMelee</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
     </comps>
-    
+
     <modExtensions>
       <li Class="VEF.Things.ThingDefExtension">
         <weaponCarryDrawOffsets>
@@ -214,50 +220,50 @@
     </modExtensions>
   </ThingDef>
 
-<AbilityDef MayRequire="Ludeon.RimWorld.Anomaly"> 
-  <defName>BEWH_CleansingFire</defName>
-  <label>Cleansing Fire</label>
-  <description>The Ardent Blade unleashes a stream of searing flames upon the unfortunates in its path.</description>
-  <iconPath>UI/Abilities/BEWH_CleansingFlame</iconPath>
-  <cooldownTicksRange>5000</cooldownTicksRange> <!-- about 1 hour -->
-  <showOnCharacterCard>false</showOnCharacterCard>
-  
-  <verbProperties>
-    <verbClass>Verb_CastAbility</verbClass>
-    <requireLineOfSight>true</requireLineOfSight>
-    <range>12.9</range>
-    <warmupTime>0.5</warmupTime>
-    <soundCast>FireSpew_Resolve</soundCast>
-    <targetParams>
-      <canTargetLocations>true</canTargetLocations>
-    </targetParams>
-    <flammabilityAttachFireChanceCurve>
-      <points>
-        <li>(0.2, 0)</li>
-        <li>(1, 1)</li>
-      </points>
-    </flammabilityAttachFireChanceCurve>
-  </verbProperties>
-  <comps>
-    <li Class="CompProperties_AbilityFireSpew">
+  <AbilityDef MayRequire="Ludeon.RimWorld.Anomaly">
+    <defName>BEWH_CleansingFire</defName>
+    <label>Cleansing Fire</label>
+    <description>The Ardent Blade unleashes a stream of searing flames upon the unfortunates in its path.</description>
+    <iconPath>UI/Abilities/BEWH_CleansingFlame</iconPath>
+    <cooldownTicksRange>5000</cooldownTicksRange>    <!-- about 1 hour -->
+    <showOnCharacterCard>false</showOnCharacterCard>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <requireLineOfSight>true</requireLineOfSight>
       <range>12.9</range>
-      <lineWidthEnd>3</lineWidthEnd>
-      <filthDef>Filth_Ash</filthDef>
-      <damAmount>12</damAmount>
-      <canHitFilledCells>true</canHitFilledCells>
-    </li>
-    <li Class="CompProperties_AbilityBurner">
-      <numStreams>15</numStreams>
-      <range>8</range>
-      <coneSizeDegrees>7.2</coneSizeDegrees>
-      <moteDef>Mote_IncineratorBurst</moteDef>
-      <barrelOffsetDistance>10</barrelOffsetDistance>
-      <sizeReductionDistanceThreshold>8</sizeReductionDistanceThreshold>
-      <lifespanNoise>40</lifespanNoise>
-      <rangeNoise>.4</rangeNoise>
-      <effecterDef>BurnerUsed</effecterDef>
-    </li>
-  </comps>
-</AbilityDef>
+      <warmupTime>0.5</warmupTime>
+      <soundCast>FireSpew_Resolve</soundCast>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+      <flammabilityAttachFireChanceCurve>
+        <points>
+          <li>(0.2, 0)</li>
+          <li>(1, 1)</li>
+        </points>
+      </flammabilityAttachFireChanceCurve>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityFireSpew">
+        <range>12.9</range>
+        <lineWidthEnd>3</lineWidthEnd>
+        <filthDef>Filth_Ash</filthDef>
+        <damAmount>12</damAmount>
+        <canHitFilledCells>true</canHitFilledCells>
+      </li>
+      <li Class="CompProperties_AbilityBurner">
+        <numStreams>15</numStreams>
+        <range>8</range>
+        <coneSizeDegrees>7.2</coneSizeDegrees>
+        <moteDef>Mote_IncineratorBurst</moteDef>
+        <barrelOffsetDistance>10</barrelOffsetDistance>
+        <sizeReductionDistanceThreshold>8</sizeReductionDistanceThreshold>
+        <lifespanNoise>40</lifespanNoise>
+        <rangeNoise>.4</rangeNoise>
+        <effecterDef>BurnerUsed</effecterDef>
+      </li>
+    </comps>
+  </AbilityDef>
 
 </Defs>
