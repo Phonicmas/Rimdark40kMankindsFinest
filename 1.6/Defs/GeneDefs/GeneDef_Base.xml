@@ -109,6 +109,18 @@
                 <li>(21, 0)</li>
             </points>
         </biologicalAgeTickFactorFromAgeCurve>
+        <hediffGiversCannotGive>
+            <li>BadBack</li>
+            <li>Frail</li>
+            <li>Dementia</li>
+            <li>Alzheimers</li>
+            <li>Asthma</li>
+            <li>Cataract</li>
+            <li>Carcinoma</li>
+            <li>Cirrhosis</li>
+            <li>HeartAttack</li>
+            <li>HeartArteryBlockage</li>
+        </hediffGiversCannotGive>
     </GeneDef>
 
 
