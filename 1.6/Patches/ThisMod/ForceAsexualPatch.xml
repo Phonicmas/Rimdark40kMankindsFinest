@@ -7,14 +7,16 @@
         <mods>
             <li>RimDark 40k - Mankinds Finest</li>
         </mods>
-        <label>Force Thunder Warriors to be male:</label>
+        <label>Force Thunder Warriors to be asexual:</label>
         <operations>
-            <li Class="PatchOperationAddModExtension">
+            <li Class="PatchOperationAdd">
                 <xpath>Defs/GeneDef[defName = "BEWH_ProtoOssmodula"]</xpath>
                 <value>
-                    <li Class="VEF.Genes.GeneExtension">
-                        <forceMale>true</forceMale>
-                    </li>
+                    <forcedTraits>
+                        <li>
+                            <def>Asexual</def>
+                        </li>
+                    </forcedTraits>
                 </value>
             </li>
         </operations>
@@ -26,14 +28,16 @@
         <mods>
             <li>RimDark 40k - Mankinds Finest</li>
         </mods>
-        <label>Force Space Marines to be male:</label>
+        <label>Force Space Marines to be asexual:</label>
         <operations>
-            <li Class="PatchOperationAddModExtension">
+            <li Class="PatchOperationAdd">
                 <xpath>Defs/GeneDef[defName = "BEWH_Ossmodula"]</xpath>
                 <value>
-                    <li Class="VEF.Genes.GeneExtension">
-                        <forceMale>true</forceMale>
-                    </li>
+                    <forcedTraits>
+                        <li>
+                            <def>Asexual</def>
+                        </li>
+                    </forcedTraits>
                 </value>
             </li>
         </operations>
@@ -45,14 +49,16 @@
         <mods>
             <li>RimDark 40k - Mankinds Finest</li>
         </mods>
-        <label>Force Custodes to be male:</label>
+        <label>Force Custodes to be asexual:</label>
         <operations>
-            <li Class="PatchOperationAddModExtension">
+            <li Class="PatchOperationAdd">
                 <xpath>Defs/GeneDef[defName = "BEWH_AtlasMorphogen"]</xpath>
                 <value>
-                    <li Class="VEF.Genes.GeneExtension">
-                        <forceMale>true</forceMale>
-                    </li>
+                    <forcedTraits>
+                        <li>
+                            <def>Asexual</def>
+                        </li>
+                    </forcedTraits>
                 </value>
             </li>
         </operations>

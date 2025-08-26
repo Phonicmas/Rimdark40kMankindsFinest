@@ -244,18 +244,21 @@ public static class Genes40kUtils
             chapterGene = shoulderIconDef.relatedChapterGene;
         }
             
-        if (chapterGene != null && chapterGene.HasModExtension<DefModExtension_ChapterGene>())
+        if (chapterGene != null)
         {
-            xenotypeName = chapterGene.GetModExtension<DefModExtension_ChapterGene>().chapterName;
-        }
-
-        if (chapterGene != null && !pawn.genes.HasActiveGene(chapterGene))
-        {
-            pawn.genes.AddGene(chapterGene, true);
-            if (xenotypeName != string.Empty)
+            if (chapterGene.HasModExtension<DefModExtension_ChapterGene>())
             {
-                pawn.genes.xenotypeName = xenotypeName;
-                pawn.genes.iconDef = Genes40kDefOf.BEWH_AstartesIcon;
+                xenotypeName = chapterGene.GetModExtension<DefModExtension_ChapterGene>().chapterName;
+            }
+            
+            if (!pawn.genes.HasActiveGene(chapterGene))
+            {
+                pawn.genes.AddGene(chapterGene, true);
+                if (xenotypeName != string.Empty)
+                {
+                    pawn.genes.xenotypeName = xenotypeName;
+                    pawn.genes.iconDef = Genes40kDefOf.BEWH_AstartesIcon;
+                }
             }
         }
             

@@ -278,6 +278,7 @@
         <statFactors>
             <AimingDelayFactor>0.9</AimingDelayFactor>
         </statFactors>
+        <ignoreDarkness>true</ignoreDarkness>
         <capMods>
             <li>
                 <capacity>Sight</capacity>

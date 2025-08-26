@@ -5,15 +5,14 @@ namespace Genes40k;
 
 public class GameComponent_MankindFinestUtils : GameComponent
 {
-
     private const int CheckInterval = 500;
     private int currentTick;
 
-    public bool useNewRandomChapter = true;
+    private bool useNewRandomChapter = true;
         
     private Genes40kModSettings modSettings = null;
 
-    private Genes40kModSettings ModSettings => modSettings ?? (modSettings = LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>());
+    private Genes40kModSettings ModSettings => modSettings ??= LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>();
 
     private ChapterColourDef currentChapterColour;
 

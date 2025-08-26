@@ -8,6 +8,7 @@ namespace Genes40k
     {
         public static void Postfix(Pawn __instance)
         {
+            //This patch is for factions not related to the player that uses chapter stuff
             if (__instance.Faction == null || __instance.Faction.IsPlayer || __instance.Faction.def == Genes40kDefOf.BEWH_OffworldMarinesFaction)
             {
                 return;

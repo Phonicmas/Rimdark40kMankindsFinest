@@ -249,7 +249,6 @@
         <customEffectDescriptions>
             <li>Chance to induce fear in enemies, causing them to flee.</li>
         </customEffectDescriptions>
-        <ignoreDarkness>true</ignoreDarkness>
         <forcedTraits>
             <li>
                 <def>Psychopath</def>
@@ -304,7 +303,7 @@
             <li Class="Core40k.DefModExtension_AddRandomGeneByWeight">
                 <possibleGenesToGive>
                     <li>
-                        <key>BEWH_ChapterIXFlaw</key>
+                        <key>BEWH_ChapterIXBloodAngelsFlaw</key>
                         <value>100</value>
                     </li>
                 </possibleGenesToGive>
@@ -312,6 +311,47 @@
         </modExtensions>
     </GeneDef>
     <!-- Legion IX - Flaw -->
+    <GeneDef ParentName="BEWH_ChapterGeneFlawParent">
+        <defName>BEWH_ChapterIXBloodAngelsFlaw</defName>
+        <label>Red Thirst</label>
+        <description>The Red Thirst causes warriors to suffer an unusual bloodlust, instilling them with a thirst for the blood of their enemies. They also possess elongated teeth and pale skin.</description>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterIXBloodAngelsFlaw</iconPath>
+        <displayOrderInCategory>125</displayOrderInCategory>
+        <geneClass>Core40k.Gene_AddRandomGeneAndOrTraitByWeight</geneClass>
+        <customEffectDescriptions>
+            <li>Gives hemogenic gene.</li>
+            <li>Gives bloodfeeder gene.</li>
+            <li>Gives elongated teeth.</li>
+        </customEffectDescriptions>
+        <aggroMentalBreakSelectionChanceFactor>20</aggroMentalBreakSelectionChanceFactor>
+        <skinColorOverride>(252, 225, 194)</skinColorOverride>
+        <modExtensions>
+            <li Class="VEF.Genes.GeneExtension">
+                <hediffsToBodyParts>
+                    <li>
+                        <hediff>BEWH_RedThirstElongatedTeeth</hediff>
+                        <bodyparts>
+                            <li>Head</li>
+                        </bodyparts>
+                    </li>
+                </hediffsToBodyParts>
+            </li>
+            <li Class="Core40k.DefModExtension_AddRandomGeneByWeight">
+                <possibleGenesToGive>
+                    <li>
+                        <key>Hemogenic</key>
+                        <value>100</value>
+                    </li>
+                    <li>
+                        <key>Bloodfeeder</key>
+                        <value>100</value>
+                    </li>
+                </possibleGenesToGive>
+                <amountToGive>2</amountToGive>
+            </li>
+        </modExtensions>
+    </GeneDef>
+    <!-- OBSOLETE, SHOULD BE REMOVED AT SOME POINT-->
     <GeneDef ParentName="BEWH_ChapterGeneFlawParent">
         <defName>BEWH_ChapterIXFlaw</defName>
         <label>Red Thirst</label>
