@@ -45,7 +45,7 @@ public class ShoulderPadIconTab : ApparelMultiColorTabDrawer
             Setup(pawn);
         }
             
-        var chapterApparel = (ChapterBodyDecorativeApparelMultiColor)pawn.apparel.WornApparel.First(a => a is ChapterBodyDecorativeApparelMultiColor);
+        var chapterColorComp = pawn.apparel.WornApparel.First(a => a.HasComp<CompChapterColorWithShoulderDecoration>()).GetComp<CompChapterColorWithShoulderDecoration>();
             
         GUI.BeginGroup(rect);
         var outRect = new Rect(0f, 0f, rect.width, rect.height);
@@ -58,7 +58,7 @@ public class ShoulderPadIconTab : ApparelMultiColorTabDrawer
         flipRect.x += flipRect.width;
         if (Widgets.ButtonText(flipRect, "BEWH.MankindsFinest.ShoulderIcon.Flip".Translate()))
         {
-            chapterApparel.FlipShoulderIcons = !chapterApparel.FlipShoulderIcons;
+            chapterColorComp.FlipShoulderIcons = !chapterColorComp.FlipShoulderIcons;
         }
 
         var curY = flipRect.yMax + 5f;
@@ -78,7 +78,7 @@ public class ShoulderPadIconTab : ApparelMultiColorTabDrawer
         resetChapterIconRect.x = nameRect.xMin - resetChapterIconRect.width - nameRect.width/20;
         if (Widgets.ButtonText(resetChapterIconRect, "BEWH.MankindsFinest.ShoulderIcon.ResetToDefault".Translate()))
         {
-            chapterApparel.LeftShoulderIcon = LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>().CurrentlySelectedPreset.relatedChapterIcon;
+            chapterColorComp.LeftShoulderIcon = LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>().CurrentlySelectedPreset.relatedChapterIcon;
         }
             
         var iconSize = new Vector2(viewRect.width/RowAmount, viewRect.width/RowAmount);
@@ -89,18 +89,18 @@ public class ShoulderPadIconTab : ApparelMultiColorTabDrawer
         curY = position.y;
         
         //Right icon colour selection if possible.
-        if (chapterApparel.LeftShoulderIcon != null && chapterApparel.LeftShoulderIcon.useColour)
+        if (chapterColorComp.LeftShoulderIcon != null && chapterColorComp.LeftShoulderIcon.useColour)
         {
             var tertiaryColourRect = new Rect(position, new Vector2(viewRect.width, 50f)).ContractedBy(5);
             Widgets.DrawMenuSection(tertiaryColourRect);
             tertiaryColourRect = tertiaryColourRect.ContractedBy(1);
                 
-            Widgets.DrawRectFast(tertiaryColourRect, chapterApparel.LeftShoulderIconColour);
+            Widgets.DrawRectFast(tertiaryColourRect, chapterColorComp.LeftShoulderIconColour);
             if (Widgets.ButtonInvisible(tertiaryColourRect))
             {
-                Find.WindowStack.Add( new Dialog_ColourPicker( chapterApparel.LeftShoulderIconColour, ( newColour ) =>
+                Find.WindowStack.Add( new Dialog_ColourPicker( chapterColorComp.LeftShoulderIconColour, ( newColour ) =>
                 {
-                    chapterApparel.LeftShoulderIconColour = newColour;
+                    chapterColorComp.LeftShoulderIconColour = newColour;
                 } ) );
             }
 
@@ -108,7 +108,7 @@ public class ShoulderPadIconTab : ApparelMultiColorTabDrawer
         }
         else
         {
-            chapterApparel.LeftShoulderIconColour = Color.white;
+            chapterColorComp.LeftShoulderIconColour = Color.white;
         }
             
         //Left icon selection
@@ -131,7 +131,7 @@ public class ShoulderPadIconTab : ApparelMultiColorTabDrawer
                 
             iconRect = iconRect.ContractedBy(5f);
                     
-            if (chapterApparel.LeftShoulderIcon == leftShoulderIcons[i])
+            if (chapterColorComp.LeftShoulderIcon == leftShoulderIcons[i])
             {
                 Widgets.DrawStrongHighlight(iconRect.ExpandedBy(3f));
             }
@@ -152,7 +152,7 @@ public class ShoulderPadIconTab : ApparelMultiColorTabDrawer
 
             if (Widgets.ButtonInvisible(iconRect))
             {
-                chapterApparel.LeftShoulderIcon = leftShoulderIcons[i];
+                chapterColorComp.LeftShoulderIcon = leftShoulderIcons[i];
             }
         }
 
@@ -174,7 +174,7 @@ public class ShoulderPadIconTab : ApparelMultiColorTabDrawer
         resetRankIconRect.x = nameRect.xMin - resetRankIconRect.width - nameRect.width/20;
         if (Widgets.ButtonText(resetRankIconRect, "BEWH.MankindsFinest.ShoulderIcon.ResetToDefault".Translate()))
         {
-            chapterApparel.RightShoulderIcon = null;
+            chapterColorComp.RightShoulderIcon = null;
         }
 
         position = new Vector2(viewRect.x, resetRankIconRect.yMax);
@@ -183,18 +183,18 @@ public class ShoulderPadIconTab : ApparelMultiColorTabDrawer
         curY = position.y;
             
         //Right icon colour selection if possible.
-        if (chapterApparel.RightShoulderIcon != null && chapterApparel.RightShoulderIcon.useColour)
+        if (chapterColorComp.RightShoulderIcon != null && chapterColorComp.RightShoulderIcon.useColour)
         {
             var tertiaryColourRect = new Rect(position, new Vector2(viewRect.width, 50f)).ContractedBy(5);
             Widgets.DrawMenuSection(tertiaryColourRect);
             tertiaryColourRect = tertiaryColourRect.ContractedBy(1);
                 
-            Widgets.DrawRectFast(tertiaryColourRect, chapterApparel.RightShoulderIconColour);
+            Widgets.DrawRectFast(tertiaryColourRect, chapterColorComp.RightShoulderIconColour);
             if (Widgets.ButtonInvisible(tertiaryColourRect))
             {
-                Find.WindowStack.Add( new Dialog_ColourPicker( chapterApparel.RightShoulderIconColour, ( newColour ) =>
+                Find.WindowStack.Add( new Dialog_ColourPicker( chapterColorComp.RightShoulderIconColour, ( newColour ) =>
                 {
-                    chapterApparel.RightShoulderIconColour = newColour;
+                    chapterColorComp.RightShoulderIconColour = newColour;
                 } ) );
             }
 
@@ -202,7 +202,7 @@ public class ShoulderPadIconTab : ApparelMultiColorTabDrawer
         }
         else
         {
-            chapterApparel.RightShoulderIconColour = Color.white;
+            chapterColorComp.RightShoulderIconColour = Color.white;
         }
                 
         //Right Shoulder Icons
@@ -221,7 +221,7 @@ public class ShoulderPadIconTab : ApparelMultiColorTabDrawer
                 
             iconRect = iconRect.ContractedBy(5f);
              
-            if (chapterApparel.RightShoulderIcon == rightShoulderIcons[i])
+            if (chapterColorComp.RightShoulderIcon == rightShoulderIcons[i])
             {
                 Widgets.DrawStrongHighlight(iconRect.ExpandedBy(3f));
             }
@@ -242,7 +242,7 @@ public class ShoulderPadIconTab : ApparelMultiColorTabDrawer
 
             if (Widgets.ButtonInvisible(iconRect))
             {
-                chapterApparel.RightShoulderIcon = rightShoulderIcons[i];
+                chapterColorComp.RightShoulderIcon = rightShoulderIcons[i];
             }
         }
 

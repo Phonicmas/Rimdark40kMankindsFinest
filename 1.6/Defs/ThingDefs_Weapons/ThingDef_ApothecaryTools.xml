@@ -73,6 +73,12 @@
         <armorPenetration>2</armorPenetration>
       </li>
     </tools>
+    <comps>
+      <li Class="Core40k.CompProperties_MultiColor">
+        <colorMaskAmount>1</colorMaskAmount>
+        <defaultPrimaryColor>(195,183,165)</defaultPrimaryColor>
+      </li>
+    </comps>
     <modExtensions>
       <li Class="VEF.Things.ThingDefExtension">
         <weaponCarryDrawOffsets>
@@ -90,10 +96,6 @@
             <drawOffset>(0.2, 0, -0.23)</drawOffset>
           </west>
         </weaponCarryDrawOffsets>
-      </li>
-      <li Class="Core40k.DefModExtension_WeaponMultiColor">
-        <colorMaskAmount>1</colorMaskAmount>
-        <defaultPrimaryColor>(195,183,165)</defaultPrimaryColor>
       </li>
     </modExtensions>
   </ThingDef>
@@ -162,6 +164,12 @@
         <cooldownTime>2</cooldownTime>
       </li>
     </tools>
+    <comps>
+      <li Class="Core40k.CompProperties_MultiColor">
+        <colorMaskAmount>1</colorMaskAmount>
+        <defaultPrimaryColor>(195,183,165)</defaultPrimaryColor>
+      </li>
+    </comps>
     <modExtensions>
       <li Class="VEF.Things.ThingDefExtension">
         <weaponCarryDrawOffsets>
@@ -179,10 +187,6 @@
             <drawOffset>(0.1, 0, -0.2)</drawOffset>
           </west>
         </weaponCarryDrawOffsets>
-      </li>
-      <li Class="Core40k.DefModExtension_WeaponMultiColor">
-        <colorMaskAmount>1</colorMaskAmount>
-        <defaultPrimaryColor>(195,183,165)</defaultPrimaryColor>
       </li>
     </modExtensions>
   </ThingDef>

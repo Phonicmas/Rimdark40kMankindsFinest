@@ -132,13 +132,18 @@
                 </li>
             </renderNodeProperties>
         </apparel>
-        <modExtensions>
-            <li Class="Core40k.DefModExtension_EnableTabDef">
+        <comps>
+            <li Class="Genes40k.CompProperties_ChapterColorWithShoulderDecoration">
                 <tabDefs>
                     <li>BEWH_AstartesShoulderIcon</li>
                     <li>BEWH_ExtraDecoration</li>
                 </tabDefs>
             </li>
+            <li Class="Core40k.CompProperties_Decorative">
+                <decorativeType>Body</decorativeType>
+            </li>
+        </comps>
+        <modExtensions>
             <li Class="Core40k.DefModExtension_ForcesBodyType">
                 <forcedBodyType>Hulk</forcedBodyType>
                 <hideBodyGraphic>true</hideBodyGraphic>
@@ -227,13 +232,18 @@
                 </li>
             </renderNodeProperties>
         </apparel>
-        <modExtensions>
-            <li Class="Core40k.DefModExtension_EnableTabDef">
+        <comps>
+            <li Class="Genes40k.CompProperties_ChapterColorWithShoulderDecoration">
                 <tabDefs>
                     <li>BEWH_AstartesShoulderIcon</li>
                     <li>BEWH_ExtraDecoration</li>
                 </tabDefs>
             </li>
+            <li Class="Core40k.CompProperties_Decorative">
+                <decorativeType>Body</decorativeType>
+            </li>
+        </comps>
+        <modExtensions>
             <li Class="Core40k.DefModExtension_ForcesBodyType">
                 <forcedBodyType>Hulk</forcedBodyType>
                 <hideBodyGraphic>true</hideBodyGraphic>
@@ -323,23 +333,26 @@
                 </li>
             </renderNodeProperties>
         </apparel>
-        <modExtensions>
-            <li Class="Core40k.DefModExtension_EnableTabDef">
+        <comps>
+            <li Class="Genes40k.CompProperties_ChapterColorWithShoulderDecoration">
+                <defaultPrimaryColor>(61,61,61)</defaultPrimaryColor>
+                <defaultSecondaryColor>(223,164,29)</defaultSecondaryColor>
                 <tabDefs>
                     <li>BEWH_AstartesShoulderIcon</li>
                     <li>BEWH_ExtraDecoration</li>
                 </tabDefs>
             </li>
+            <li Class="Core40k.CompProperties_Decorative">
+                <decorativeType>Body</decorativeType>
+            </li>
+        </comps>
+        <modExtensions>
             <li Class="Core40k.DefModExtension_ForcesBodyType">
                 <forcedBodyType>Hulk</forcedBodyType>
                 <hideBodyGraphic>true</hideBodyGraphic>
             </li>
             <li Class="Core40k.DefModExtension_HideJumpPack">
                 <changeBackpackVisual>true</changeBackpackVisual>
-            </li>
-            <li Class="Core40k.DefModExtension_StandardDecorations">
-                <defaultPrimaryColor>(61,61,61)</defaultPrimaryColor>
-                <defaultSecondaryColor>(223,164,29)</defaultSecondaryColor>
             </li>
         </modExtensions>
     </ThingDef>
@@ -416,24 +429,25 @@
         </apparel>
         <comps>
             <li Class="CompProperties_Biocodable"/>
-        </comps>
-        <modExtensions>
-            <li Class="Core40k.DefModExtension_EnableTabDef">
+            <li Class="Core40k.CompProperties_MultiColor">
+                <defaultPrimaryColor>(0.8358, 0.619, 0.298)</defaultPrimaryColor>
+                <defaultSecondaryColor>(0.407, 0.094, 0.129)</defaultSecondaryColor>
                 <tabDefs>
                     <li>BEWH_ExtraDecoration</li>
                 </tabDefs>
             </li>
-            <li Class="Core40k.DefModExtension_ForcesBodyType">
-                <forcedBodyType>Female</forcedBodyType>
-                <hideBodyGraphic>true</hideBodyGraphic>
-            </li>
-            <li Class="Core40k.DefModExtension_StandardDecorations">
+            <li Class="Core40k.CompProperties_Decorative">
+                <decorativeType>Body</decorativeType>
                 <extraDecorations>
                     <li>BEWH_LivingSaintWings_1</li>
                     <li>BEWH_LivingSaintHalo_2</li>
                 </extraDecorations>
-                <defaultPrimaryColor>(0.8358, 0.619, 0.298)</defaultPrimaryColor>
-                <defaultSecondaryColor>(0.407, 0.094, 0.129)</defaultSecondaryColor>
+            </li>
+        </comps>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_ForcesBodyType">
+                <forcedBodyType>Female</forcedBodyType>
+                <hideBodyGraphic>true</hideBodyGraphic>
             </li>
             <li Class="Core40k.DefModExtension_HideJumpPack" />
         </modExtensions>
@@ -518,19 +532,22 @@
                 </li>
             </renderNodeProperties>
         </apparel>
-        <modExtensions>
-            <li Class="Core40k.DefModExtension_EnableTabDef">
+        <comps>
+            <li Class="Core40k.CompProperties_MultiColor">
+                <defaultPrimaryColor>(231,148,88)</defaultPrimaryColor>
+                <defaultSecondaryColor>(253,184,110)</defaultSecondaryColor>
                 <tabDefs>
                     <li>BEWH_ExtraDecoration</li>
                 </tabDefs>
             </li>
+            <li Class="Core40k.CompProperties_Decorative">
+                <decorativeType>Body</decorativeType>
+            </li>
+        </comps>
+        <modExtensions>
             <li Class="Core40k.DefModExtension_ForcesBodyType">
                 <forcedBodyType>Hulk</forcedBodyType>
                 <hideBodyGraphic>true</hideBodyGraphic>
-            </li>
-            <li Class="Core40k.DefModExtension_StandardDecorations">
-                <defaultPrimaryColor>(231,148,88)</defaultPrimaryColor>
-                <defaultSecondaryColor>(253,184,110)</defaultSecondaryColor>
             </li>
             <li Class="Core40k.DefModExtension_HideJumpPack" />
         </modExtensions>

@@ -45,14 +45,12 @@ public class Ability_SteelRain : VEF.Abilities.Ability
             possibleCells.Remove(initialCell);
 
             defMod = def.GetModExtension<DefModExtension_DropPod>();
-                
             for (var i = 0; i < defMod.dropPodAmount-1; i++)
             {
                 var spawnCell = possibleCells.Where(c => cellsToSpawn.All(c2 => c2.DistanceTo(c) > 5) && c.GetEdifice(pawn.Map) == null).RandomElement();
                 cellsToSpawn.Add(spawnCell);
                 possibleCells.Remove(spawnCell);
             }
-
             SpawnSkyfaller(cellsToSpawn);
         }
     }
@@ -63,9 +61,8 @@ public class Ability_SteelRain : VEF.Abilities.Ability
         {
             return;
         }
-
+        
         var faction = Find.FactionManager.FirstFactionOfDef(defMod.fromFaction);
-            
         foreach (var cell in cellsToSpawn)
         {
             var innerThing = (Building_DropDrop)ThingMaker.MakeThing(Genes40kDefOf.BEWH_SteelRainDropPodBuilding);
@@ -75,18 +72,15 @@ public class Ability_SteelRain : VEF.Abilities.Ability
             var pawnsToSpawn = new List<Pawn>();
 
             var drawColor = new Color(1f, 1f, 1f, 0.2f);
-
+            
             for (var i = 0; i < defMod.marinesToSpawn; i++)
             {
                 var spawnPawn = PawnGenerator.GeneratePawn(Genes40kDefOf.BEWH_FirstbornPawn, faction);
-                
                 var chapter = Genes40kUtils.SetupChapterForPawn(spawnPawn, !defMod.usePlayerColours);
-
                 drawColor = chapter.primaryColour;
                     
                 pawnsToSpawn.Add(spawnPawn);
             }
-
             innerThing.DrawColor = drawColor;
             innerThing.MarinesToSpawn = pawnsToSpawn;
             
@@ -95,9 +89,7 @@ public class Ability_SteelRain : VEF.Abilities.Ability
             if (goodwill < 0f)
             {
                 Faction.OfPlayer.TryAffectGoodwillWith(offworldMarine, Math.Abs(goodwill), canSendMessage: false, canSendHostilityLetter: false, HistoryEventDefOf.PeaceTalksSuccess);
-
             }
-
             var skyfaller = SkyfallerMaker.SpawnSkyfaller(Genes40kDefOf.BEWH_SteelRainDropPodSkyfaller, innerThing, cell, pawn.Map);
             skyfaller.DrawColor = drawColor;
         }

@@ -224,7 +224,6 @@ public static class Genes40kUtils
         {
             return null;
         }
-
         var xenotypeName = string.Empty;
             
         var chapter = randomChapter ? Current.Game.GetComponent<GameComponent_MankindFinestUtils>().CurrentChapterColour : ModSettings.CurrentlySelectedPreset;
@@ -243,14 +242,12 @@ public static class Genes40kUtils
         {
             chapterGene = shoulderIconDef.relatedChapterGene;
         }
-            
         if (chapterGene != null)
         {
             if (chapterGene.HasModExtension<DefModExtension_ChapterGene>())
             {
                 xenotypeName = chapterGene.GetModExtension<DefModExtension_ChapterGene>().chapterName;
             }
-            
             if (!pawn.genes.HasActiveGene(chapterGene))
             {
                 pawn.genes.AddGene(chapterGene, true);
@@ -261,27 +258,26 @@ public static class Genes40kUtils
                 }
             }
         }
-            
         foreach (var apparel in pawn.apparel.WornApparel)
         {
-            switch (apparel)
+            var comp = apparel.GetComp<CompChapterColor>();
+            if (comp == null)
             {
-                case ChapterBodyDecorativeApparelMultiColor extraIconsChapterApparelMultiColor:
-                    extraIconsChapterApparelMultiColor.SetInitialColours(chapterColourPrimary, chapterColourSecondary, chapterColourTertiary);
-                    extraIconsChapterApparelMultiColor.LeftShoulderIcon = shoulderIconDef;
-                    break;
-                case ChapterHeadDecorativeApparelMultiColor chapterApparelMultiColor:
-                    chapterApparelMultiColor.SetInitialColours(chapterColourPrimary, chapterColourSecondary, chapterColourTertiary);
-                    break;
+                continue;
+            }
+            
+            comp.SetColors(chapterColourPrimary, chapterColourSecondary, chapterColourTertiary);
+
+            if (comp is CompChapterColorWithShoulderDecoration compExtended)
+            {
+                compExtended.LeftShoulderIcon = shoulderIconDef;
             }
         }
-        
         var equipment = pawn.equipment.PrimaryEq.parent;
-        if (equipment is WeaponMultiColor weaponMultiColor)
+        if (equipment.HasComp<CompMultiColor>())
         {
-            weaponMultiColor.SetColors(chapter);
+            equipment.GetComp<CompMultiColor>().SetColors(chapter);
         }
-
         return chapter;
     }
 

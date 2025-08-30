@@ -23,9 +23,13 @@ public class UpdateRankIconOnRankUp
         {
             return;
         }
-
-        var apparel = pawn.apparel.WornApparel.FirstOrFallback(a => a is ChapterBodyDecorativeApparelMultiColor, null);
-
+        
+        var apparel = pawn.apparel.WornApparel.FirstOrFallback(a =>
+        {
+            var temp = a.GetComp<CompChapterColorWithShoulderDecoration>();
+            return temp != null;
+        });
+        
         apparel?.Notify_ColorChanged();
     }
 }

@@ -69,6 +69,12 @@
         <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
         <minQualityForArtistic>Excellent</minQualityForArtistic>
       </li>
+      <li Class="Core40k.CompProperties_MultiColor">
+        <colorMaskAmount>3</colorMaskAmount>
+        <defaultPrimaryColor>(0.23,0.23,0.23)</defaultPrimaryColor>        <!-- If this is not set, it will default to use color of the stuff its made out of (if any)-->
+        <defaultSecondaryColor>(0.38,0.38,0.38)</defaultSecondaryColor>
+        <defaultTertiaryColor>(0.79,0.58,0.08)</defaultTertiaryColor>
+      </li>
     </comps>
     <modExtensions>
       <li Class="VEF.Things.ThingDefExtension">
@@ -87,12 +93,6 @@
             <drawOffset>(0.1, 0, -0.2)</drawOffset>
           </west>
         </weaponCarryDrawOffsets>
-      </li>
-      <li Class="Core40k.DefModExtension_WeaponMultiColor">
-        <colorMaskAmount>3</colorMaskAmount>
-        <defaultPrimaryColor>(0.23,0.23,0.23)</defaultPrimaryColor>        <!-- If this is not set, it will default to use color of the stuff its made out of (if any)-->
-        <defaultSecondaryColor>(0.38,0.38,0.38)</defaultSecondaryColor>
-        <defaultTertiaryColor>(0.79,0.58,0.08)</defaultTertiaryColor>
       </li>
     </modExtensions>
   </ThingDef>
@@ -148,6 +148,14 @@
         <armorPenetration>0.65</armorPenetration>
       </li>
     </tools>
+    <comps>
+      <li Class="Core40k.CompProperties_MultiColor">
+        <colorMaskAmount>3</colorMaskAmount>
+        <defaultPrimaryColor>(111,111,111)</defaultPrimaryColor>        <!-- If this is not set, it will default to use color of the stuff its made out of (if any)-->
+        <defaultSecondaryColor>(213,158,76)</defaultSecondaryColor>
+        <defaultTertiaryColor>(179,179,179)</defaultTertiaryColor>
+      </li>
+    </comps>
     <modExtensions>
       <li Class="VEF.Things.ThingDefExtension">
         <weaponCarryDrawOffsets>
@@ -164,12 +172,6 @@
             <drawOffset>(0, 0, -0.15)</drawOffset>
           </west>
         </weaponCarryDrawOffsets>
-      </li>
-      <li Class="Core40k.DefModExtension_WeaponMultiColor">
-        <colorMaskAmount>3</colorMaskAmount>
-        <defaultPrimaryColor>(111,111,111)</defaultPrimaryColor>        <!-- If this is not set, it will default to use color of the stuff its made out of (if any)-->
-        <defaultSecondaryColor>(213,158,76)</defaultSecondaryColor>
-        <defaultTertiaryColor>(179,179,179)</defaultTertiaryColor>
       </li>
     </modExtensions>
   </ThingDef>
@@ -225,6 +227,14 @@
         <armorPenetration>1.2</armorPenetration>
       </li>
     </tools>
+    <comps>
+      <li Class="Core40k.CompProperties_MultiColor">
+        <colorMaskAmount>3</colorMaskAmount>
+        <defaultPrimaryColor>(213,158,76)</defaultPrimaryColor>
+        <defaultSecondaryColor>(98,98,98)</defaultSecondaryColor>
+        <defaultTertiaryColor>(116,219,232)</defaultTertiaryColor>
+      </li>
+    </comps>
     <modExtensions>
       <li Class="VEF.Things.ThingDefExtension">
         <weaponCarryDrawOffsets>
@@ -241,12 +251,6 @@
             <drawOffset>(0, 0, -0.15)</drawOffset>
           </west>
         </weaponCarryDrawOffsets>
-      </li>
-      <li Class="Core40k.DefModExtension_WeaponMultiColor">
-        <colorMaskAmount>3</colorMaskAmount>
-        <defaultPrimaryColor>(213,158,76)</defaultPrimaryColor>
-        <defaultSecondaryColor>(98,98,98)</defaultSecondaryColor>
-        <defaultTertiaryColor>(116,219,232)</defaultTertiaryColor>
       </li>
     </modExtensions>
   </ThingDef>

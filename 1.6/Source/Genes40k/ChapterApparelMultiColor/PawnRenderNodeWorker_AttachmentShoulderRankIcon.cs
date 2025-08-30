@@ -10,21 +10,26 @@ public class PawnRenderNodeWorker_AttachmentShoulderRankIcon : PawnRenderNodeWor
     {
         var pawn = parms.pawn;
         
-        var apparelMultiColor = (ChapterBodyDecorativeApparelMultiColor)node.apparel;
+        if (!node.apparel.HasComp<CompChapterColorWithShoulderDecoration>())
+        {
+            return false;
+        }
 
-        if (apparelMultiColor.RightShoulderIcon == Genes40kDefOf.BEWH_ShoulderNone)
+        var chapterDecoComp = node.apparel.GetComp<CompChapterColorWithShoulderDecoration>();
+
+        if (chapterDecoComp.RightShoulderIcon == Genes40kDefOf.BEWH_ShoulderNone)
         {
             return false;
         }
         
         if (parms.facing == Rot4.East)
         {
-            return !apparelMultiColor.FlipShoulderIcons;
+            return !chapterDecoComp.FlipShoulderIcons;
         }
             
         if (parms.facing == Rot4.West)
         {
-            return apparelMultiColor.FlipShoulderIcons;
+            return chapterDecoComp.FlipShoulderIcons;
         }
             
         if (parms.Portrait)

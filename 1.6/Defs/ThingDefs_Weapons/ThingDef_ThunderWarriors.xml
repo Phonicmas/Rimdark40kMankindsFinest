@@ -50,6 +50,13 @@
         <muzzleFlashScale>12</muzzleFlashScale>
       </li>
     </verbs>
+    <comps>
+      <li Class="Core40k.CompProperties_MultiColor">
+        <colorMaskAmount>2</colorMaskAmount>
+        <defaultPrimaryColor>(163,118,72)</defaultPrimaryColor>
+        <defaultSecondaryColor>(201,149,66)</defaultSecondaryColor>
+      </li>
+    </comps>
     <modExtensions>
       <li Class="VEF.Things.ThingDefExtension">
         <weaponCarryDrawOffsets>
@@ -67,11 +74,6 @@
             <drawOffset>(0.1, 0, -0.2)</drawOffset>
           </west>
         </weaponCarryDrawOffsets>
-      </li>
-      <li Class="Core40k.DefModExtension_WeaponMultiColor">
-        <colorMaskAmount>2</colorMaskAmount>
-        <defaultPrimaryColor>(163,118,72)</defaultPrimaryColor>
-        <defaultSecondaryColor>(201,149,66)</defaultSecondaryColor>
       </li>
     </modExtensions>
   </ThingDef>
@@ -126,6 +128,14 @@
         <armorPenetration>0.55</armorPenetration>
       </li>
     </tools>
+    <comps>
+      <li Class="Core40k.CompProperties_MultiColor">
+        <colorMaskAmount>3</colorMaskAmount>
+        <defaultPrimaryColor>(163,118,72)</defaultPrimaryColor>
+        <defaultSecondaryColor>(124,124,124)</defaultSecondaryColor>
+        <defaultTertiaryColor>(124,124,124)</defaultTertiaryColor>
+      </li>
+    </comps>
     <modExtensions>
       <li Class="VEF.Things.ThingDefExtension">
         <weaponCarryDrawOffsets>
@@ -142,12 +152,6 @@
             <drawOffset>(0, 0, -0.15)</drawOffset>
           </west>
         </weaponCarryDrawOffsets>
-      </li>
-      <li Class="Core40k.DefModExtension_WeaponMultiColor">
-        <colorMaskAmount>3</colorMaskAmount>
-        <defaultPrimaryColor>(163,118,72)</defaultPrimaryColor>
-        <defaultSecondaryColor>(124,124,124)</defaultSecondaryColor>
-        <defaultTertiaryColor>(124,124,124)</defaultTertiaryColor>
       </li>
     </modExtensions>
   </ThingDef>

@@ -40,13 +40,16 @@
                 <li>BEWH_PowerArmorHelmetMkVII</li>
             </tags>
         </apparel>
-        <modExtensions>
-            <li Class="Core40k.DefModExtension_EnableTabDef">
+        <comps>
+            <li Class="Genes40k.CompProperties_ChapterColor">
                 <tabDefs>
                     <li>BEWH_ExtraDecoration</li>
                 </tabDefs>
             </li>
-        </modExtensions>
+            <li Class="Core40k.CompProperties_Decorative">
+                <decorativeType>Head</decorativeType>
+            </li>
+        </comps>
     </ThingDef>
 
     <!-- MK 10-->
@@ -87,13 +90,16 @@
                 <li>BEWH_PowerArmorHelmetMkX</li>
             </tags>
         </apparel>
-        <modExtensions>
-            <li Class="Core40k.DefModExtension_EnableTabDef">
+        <comps>
+            <li Class="Genes40k.CompProperties_ChapterColor">
                 <tabDefs>
                     <li>BEWH_ExtraDecoration</li>
                 </tabDefs>
             </li>
-        </modExtensions>
+            <li Class="Core40k.CompProperties_Decorative">
+                <decorativeType>Head</decorativeType>
+            </li>
+        </comps>
     </ThingDef>
 
     <!-- MK 10 Chaplain-->
@@ -134,13 +140,16 @@
                 <li>BEWH_PowerArmorHelmetMkXChaplain</li>
             </tags>
         </apparel>
-        <modExtensions>
-            <li Class="Core40k.DefModExtension_EnableTabDef">
+        <comps>
+            <li Class="Genes40k.CompProperties_ChapterColor">
                 <tabDefs>
                     <li>BEWH_ExtraDecoration</li>
                 </tabDefs>
             </li>
-        </modExtensions>
+            <li Class="Core40k.CompProperties_Decorative">
+                <decorativeType>Head</decorativeType>
+            </li>
+        </comps>
     </ThingDef>
 
     <!-- MK 1 Thunder Warrior-->
@@ -180,21 +189,22 @@
                 <li>BEWH_PowerArmorHelmetMkI</li>
             </tags>
         </apparel>
-        <modExtensions>
-            <li Class="Core40k.DefModExtension_EnableTabDef">
+        <comps>
+            <li Class="Core40k.CompProperties_MultiColor">
+                <defaultPrimaryColor>(231,148,88)</defaultPrimaryColor>
+                <defaultSecondaryColor>(253,184,110)</defaultSecondaryColor>
                 <tabDefs>
                     <li>BEWH_ExtraDecoration</li>
                 </tabDefs>
             </li>
-            <li Class="Core40k.DefModExtension_StandardDecorations">
+            <li Class="Core40k.CompProperties_Decorative">
+                <decorativeType>Head</decorativeType>
                 <extraDecorations>
                     <li>BEWH_Deco_TW_Plume1</li>
                     <li>BEWH_Deco_TW_Goggles</li>
                 </extraDecorations>
-                <defaultPrimaryColor>(231,148,88)</defaultPrimaryColor>
-                <defaultSecondaryColor>(253,184,110)</defaultSecondaryColor>
             </li>
-        </modExtensions>
+        </comps>
     </ThingDef>
 
 </Defs>

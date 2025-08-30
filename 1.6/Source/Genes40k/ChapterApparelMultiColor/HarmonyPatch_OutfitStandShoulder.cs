@@ -16,17 +16,19 @@ public static class OutfitStandShoulder
         var list = ___innerContainer.InnerListForReading.OfType<Apparel>().ToList();
         foreach (var item in list)
         {
-            if (item is not ChapterBodyDecorativeApparelMultiColor chapterApparel)
+            if (!item.HasComp<CompChapterColorWithShoulderDecoration>())
             {
                 continue;
             }
+            
+            var chapterColorComp = item.GetComp<CompChapterColorWithShoulderDecoration>();
 
-            foreach (var pawnRenderNode in chapterApparel.def.apparel.RenderNodeProperties)
+            foreach (var pawnRenderNode in item.def.apparel.RenderNodeProperties)
             {
                 if (pawnRenderNode.texPath.Contains("Shoulder"))
                 {
-                    var maskPath = chapterApparel.MaskDef?.maskPath;
-                    if (maskPath != null && chapterApparel.MaskDef.maskExtraFlags.Contains("HasShoulder"))
+                    var maskPath = chapterColorComp.MaskDef?.maskPath;
+                    if (maskPath != null && chapterColorComp.MaskDef.maskExtraFlags.Contains("HasShoulder"))
                     {
                         maskPath += "_Shoulder";
                     }
@@ -35,7 +37,7 @@ public static class OutfitStandShoulder
                         maskPath = null;
                     }
                     var shader = Core40kDefOf.BEWH_CutoutThreeColor.Shader;
-                    var graphic = MultiColorUtils.GetGraphic<Graphic_Multi>(pawnRenderNode.texPath, shader, pawnRenderNode.drawSize, chapterApparel.DrawColor, chapterApparel.DrawColorTwo, chapterApparel.DrawColorThree, chapterApparel.def.graphicData, maskPath);
+                    var graphic = MultiColorUtils.GetGraphic<Graphic_Multi>(pawnRenderNode.texPath, shader, pawnRenderNode.drawSize, chapterColorComp.DrawColor, chapterColorComp.DrawColorTwo, chapterColorComp.DrawColorThree, item.def.graphicData, maskPath);
                     var layer = (int)pawnRenderNode.drawData.LayerForRot(__instance.Rotation, (int)pawnRenderNode.baseLayer);
                     var vector = Vector3.zero;
                     if (__instance.Rotation == Rot4.West || __instance.Rotation == Rot4.East)

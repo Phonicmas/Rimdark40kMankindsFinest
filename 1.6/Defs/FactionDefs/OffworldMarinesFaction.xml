@@ -6,7 +6,14 @@
         <label>Offworld Marines</label>
         <description>A company of Space Marines stationed aboard an off-world ship.</description>
 
-        <fixedLeaderKinds>
+        <techLevel>Ultra</techLevel>
+        <rescueesCanJoin>false</rescueesCanJoin>
+        <autoFlee>false</autoFlee>
+
+        <hiddenIdeo>true</hiddenIdeo>
+        <hidden>true</hidden>
+
+        <!--<fixedLeaderKinds>
             <li>BEWH_LordCommanderPawn</li>
         </fixedLeaderKinds>
 
@@ -24,7 +31,7 @@
                     <BEWH_FirstbornPawn>1</BEWH_FirstbornPawn>
                 </options>
             </li>
-        </pawnGroupMakers>
+        </pawnGroupMakers>-->
 
         <pawnSingular>Marine</pawnSingular>
         <pawnsPlural>Marines</pawnsPlural>
@@ -45,32 +52,28 @@
 
         <canSiege>false</canSiege>
         <canStageAttacks>false</canStageAttacks>
-        <techLevel>Ultra</techLevel>
-        <rescueesCanJoin>false</rescueesCanJoin>
-        <autoFlee>false</autoFlee>
-
-        <hiddenIdeo>true</hiddenIdeo>
-
-        <canRequestTraders>false</canRequestTraders>
-        <canRequestMilitaryAid>false</canRequestMilitaryAid>
-        <canGenerateQuestSites>false</canGenerateQuestSites>
         <raidsForbidden>true</raidsForbidden>
 
-        <xenotypeSet Inherit="False">
+        <!--<canRequestTraders>false</canRequestTraders>
+        <canRequestMilitaryAid>false</canRequestMilitaryAid>
+        <canGenerateQuestSites>false</canGenerateQuestSites>-->
+
+
+        <!--<xenotypeSet Inherit="False">
             <xenotypeChances>
                 <BEWH_SpaceMarine>1</BEWH_SpaceMarine>
             </xenotypeChances>
-        </xenotypeSet>
+        </xenotypeSet>-->
 
         <factionIconPath>UI/Xenotypes/BEWH_SpaceMarineXenoIcon</factionIconPath>
         <settlementTexturePath>UI/Xenotypes/BEWH_SpaceMarineXenoIcon</settlementTexturePath>
-        <modExtensions>
+        <!--<modExtensions>
             <li Class="Core40k.DefModExtension_InitialGoodwill">
                 <initialGoodwill>30</initialGoodwill>
                 <applyToPlayer>true</applyToPlayer>
                 <onlyApplyToPlayer>true</onlyApplyToPlayer>
             </li>
-        </modExtensions>
+        </modExtensions>-->
     </FactionDef>
 
 </Defs>
