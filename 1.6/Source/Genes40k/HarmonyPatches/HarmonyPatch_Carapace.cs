@@ -35,9 +35,19 @@ public static class StatWorker_StatOffsetFromGear_Patch
 
     public static float ChangeValueIfNeeded(float val, Thing gear, StatDef stat)
     {
-        if (stat == StatDefOf.MoveSpeed && val < 0f && gear.ParentHolder is Pawn_ApparelTracker pawn_ApparelTracker && pawn_ApparelTracker.pawn.genes != null && pawn_ApparelTracker.pawn.genes.GenesListForReading.Any(genes => genes.def.HasModExtension<DefModExtension_IgnoreMovespeedDecrease>()))
+        if (stat == StatDefOf.MoveSpeed && val < 0f && gear.ParentHolder is Pawn_ApparelTracker pawn_ApparelTracker)
         {
-            return 0f;
+            if (!gear.def.HasModExtension<DefModExtension_IgnoreMovespeedDecrease>() || pawn_ApparelTracker.pawn.genes == null)
+            {
+                return val;
+            }
+
+            var defMod = gear.def.GetModExtension<DefModExtension_IgnoreMovespeedDecrease>();
+
+            if (Enumerable.Any(pawn_ApparelTracker.pawn.genes.GenesListForReading, gene => gene.def.HasModExtension<DefModExtension_IgnoreMovespeedDecrease>()))
+            {
+                return defMod.newMoveSpeedOffset;
+            }
         }
         return val;
     }

@@ -32,6 +32,7 @@
         <secondaryColour>(203,150,43)</secondaryColour>
         <relatedChapterGene>BEWH_ChapterIIIEmperorsChildren</relatedChapterGene>
         <relatedChapterIcon>BEWH_ChapterIconIII</relatedChapterIcon>
+        <loyalist>false</loyalist>
     </Genes40k.ChapterColourDef>
 
     <Genes40k.ChapterColourDef ParentName="BEWH_ChapterColourPresets">
@@ -43,6 +44,7 @@
         <tertiaryColour>(170,170,170)</tertiaryColour>
         <relatedChapterGene>BEWH_ChapterIVIronWarriors</relatedChapterGene>
         <relatedChapterIcon>BEWH_ChapterIconIV</relatedChapterIcon>
+        <loyalist>false</loyalist>
     </Genes40k.ChapterColourDef>
 
     <Genes40k.ChapterColourDef ParentName="BEWH_ChapterColourPresets">
@@ -81,6 +83,7 @@
         <tertiaryColour>(134,48,54)</tertiaryColour>
         <relatedChapterGene>BEWH_ChapterVIIINightLords</relatedChapterGene>
         <relatedChapterIcon>BEWH_ChapterIconVIII</relatedChapterIcon>
+        <loyalist>false</loyalist>
     </Genes40k.ChapterColourDef>
 
     <Genes40k.ChapterColourDef ParentName="BEWH_ChapterColourPresets">
@@ -110,6 +113,7 @@
         <tertiaryColour>(231,169,54)</tertiaryColour>
         <relatedChapterGene>BEWH_ChapterXIIWorldEaters</relatedChapterGene>
         <relatedChapterIcon>BEWH_ChapterIconXII</relatedChapterIcon>
+        <loyalist>false</loyalist>
     </Genes40k.ChapterColourDef>
 
     <Genes40k.ChapterColourDef ParentName="BEWH_ChapterColourPresets">
@@ -130,6 +134,7 @@
         <tertiaryColour>(207,164,63)</tertiaryColour>
         <relatedChapterGene>BEWH_ChapterXIVDeathGuard</relatedChapterGene>
         <relatedChapterIcon>BEWH_ChapterIconXIV</relatedChapterIcon>
+        <loyalist>false</loyalist>
     </Genes40k.ChapterColourDef>
 
     <Genes40k.ChapterColourDef ParentName="BEWH_ChapterColourPresets">
@@ -139,6 +144,7 @@
         <secondaryColour>(219,183,95)</secondaryColour>
         <relatedChapterGene>BEWH_ChapterXVThousandSons</relatedChapterGene>
         <relatedChapterIcon>BEWH_ChapterIconXV</relatedChapterIcon>
+        <loyalist>false</loyalist>
     </Genes40k.ChapterColourDef>
 
     <Genes40k.ChapterColourDef ParentName="BEWH_ChapterColourPresets">
@@ -150,6 +156,7 @@
         <tertiaryColour>(215,169,77)</tertiaryColour>
         <relatedChapterGene>BEWH_ChapterXVISonsOfHorus</relatedChapterGene>
         <relatedChapterIcon>BEWH_ChapterIconXVI</relatedChapterIcon>
+        <loyalist>false</loyalist>
     </Genes40k.ChapterColourDef>
 
     <Genes40k.ChapterColourDef ParentName="BEWH_ChapterColourPresets">
@@ -159,6 +166,7 @@
         <secondaryColour>(99,99,99)</secondaryColour>
         <relatedChapterGene>BEWH_ChapterXVIIWordBearers</relatedChapterGene>
         <relatedChapterIcon>BEWH_ChapterIconXVII</relatedChapterIcon>
+        <loyalist>false</loyalist>
     </Genes40k.ChapterColourDef>
 
     <Genes40k.ChapterColourDef ParentName="BEWH_ChapterColourPresets">
@@ -190,6 +198,7 @@
         <tertiaryColour>(115,145,92)</tertiaryColour>
         <relatedChapterGene>BEWH_ChapterXXAlphaLegion</relatedChapterGene>
         <relatedChapterIcon>BEWH_ChapterIconXX</relatedChapterIcon>
+        <loyalist>false</loyalist>
     </Genes40k.ChapterColourDef>
 
     <Genes40k.ChapterColourDef ParentName="BEWH_ChapterColourPresets">
