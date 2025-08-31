@@ -81,6 +81,20 @@ public class Ability_SteelRain : VEF.Abilities.Ability
                     
                 pawnsToSpawn.Add(spawnPawn);
             }
+
+            foreach (var pawnToSpawn in pawnsToSpawn)
+            {
+                foreach (var apparel in pawnToSpawn.apparel.WornApparel.Where(apparel => apparel.HasComp<CompBiocodable>()))
+                {
+                    apparel.GetComp<CompBiocodable>().CodeFor(pawnToSpawn);
+                }
+
+                if (pawnToSpawn.equipment.Primary.HasComp<CompBiocodable>())
+                {
+                    pawnToSpawn.equipment.Primary.GetComp<CompBiocodable>().CodeFor(pawnToSpawn);
+                }
+            }
+            
             innerThing.DrawColor = drawColor;
             innerThing.MarinesToSpawn = pawnsToSpawn;
             
