@@ -20,16 +20,7 @@
             </li>
         </backstoryFiltersOverride>
         <weaponMoney>10000~10000</weaponMoney>
-        <specificApparelRequirements>
-            <li>
-                <apparelDef>Apparel_BasicShirt</apparelDef>
-                <stuff>Cloth</stuff>
-            </li>
-            <li>
-                <apparelDef>Apparel_Pants</apparelDef>
-                <stuff>Cloth</stuff>
-            </li>
-        </specificApparelRequirements>
+        <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
         <weaponTags>
             <li>BEWH_AstartesRanged</li>
             <li>BEWH_AstartesMelee</li>
