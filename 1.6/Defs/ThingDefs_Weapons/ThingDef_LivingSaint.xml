@@ -5,7 +5,6 @@
   <ThingDef ParentName="BaseGunWithQuality">
     <defName>BEWH_LSaintBoltPistol</defName>
     <label>Ascendant Wrath</label>
-    <thingClass>Core40k.WeaponMultiColor</thingClass>
     <description>An ancient weapon appearing to resemble a heavy bolt pistol, its true nature obscured by time and conflicting accounts. Some say it was never forged in any traditional sense, but appeared in the midst of battle - formed from blinding light and raw warp energy as the Saint rose to lead the faithful.</description>
     <graphicData>
       <texPath>Things/Weapons/BEWH_LSaintBoltPistol</texPath>
@@ -102,7 +101,6 @@
   <ThingDef ParentName="BEWH_MeleeWeaponUltratech">
     <defName>BEWH_LSaintSword</defName>
     <label>Ardent Blade</label>
-    <thingClass>Core40k.WeaponMultiColor</thingClass>
     <description>This power sword is said to be forged from crystallised faith and consecrated alloy. Weightless in the Saint's hand, it strikes with blinding speed and divine fury, burning heretics on impact as if guided by the Emperor Himself. At the wielder's will, the blade unleashes a jet of holy flame - a searing manifestation of His wrath.</description>
     <graphicData>
       <texPath>Things/Weapons/BEWH_LSaintSword</texPath>

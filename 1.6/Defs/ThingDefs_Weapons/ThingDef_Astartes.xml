@@ -6,7 +6,6 @@
     <defName>BEWH_AstartesBolter</defName>
     <label>bolter</label>
     <description>The Mk Vb boltgun is the iconic standard-issue firearm of the Adeptus Astartes. Firing mass-reactive rounds with deadly efficiency, it combines reliability, adaptability, and stopping power, making it the definitive Space Marine weapon. \n\nAvalible Loadout: Standard, Metal Storm</description>
-    <thingClass>Core40k.WeaponMultiColor</thingClass>
     <graphicData>
       <texPath>Things/Weapons/BEWH_BoltCarbine</texPath>
       <shaderType>BEWH_CutoutThreeColor</shaderType>
@@ -101,7 +100,6 @@
   <ThingDef ParentName="BEWH_AstartesMeleeBase">
     <defName>BEWH_AstartesChainsword</defName>
     <label>chainsword</label>
-    <thingClass>Core40k.WeaponMultiColor</thingClass>
     <description>A vicious and brutal weapon, the Chainsword is an iconic tool of the Adeptus Astartes. It tears through flesh with ease and is relatively inexpensive to produce. However, it lacks the armor-penetrating capability of more advanced power weapons.</description>
     <soundInteract>BEWH_SFX_ChainswordInteract</soundInteract>
     <meleeHitSound>BEWH_SFX_ChainswordHit</meleeHitSound>
@@ -180,7 +178,6 @@
   <ThingDef ParentName="BEWH_AstartesMeleeBase">
     <defName>BEWH_AstartesPowerSword</defName>
     <label>power sword</label>
-    <thingClass>Core40k.WeaponMultiColor</thingClass>
     <description>A melee weapon with an energy field, the Power Sword is capable of slicing through armor with ease. Its energy blade hums with deadly force, allowing the wielder to strike with precision and overwhelming power.</description>
     <soundInteract>BEWH_SFX_PowerswordInteract</soundInteract>
     <meleeHitSound>BEWH_SFX_PowerswordHit</meleeHitSound>

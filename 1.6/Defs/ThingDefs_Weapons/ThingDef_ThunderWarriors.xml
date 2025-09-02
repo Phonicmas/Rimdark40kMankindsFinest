@@ -5,7 +5,6 @@
   <ThingDef ParentName="BEWH_AstartesRangedBase">
     <defName>BEWH_ProtoBoltGun</defName>
     <label>Proto-boltgun</label>
-    <thingClass>Core40k.WeaponMultiColor</thingClass>
     <description>The proto-boltgun is an early, experimental firearm developed in the dark days before the rise of the Adeptus Astartes. Designed to fire primitive explosive projectiles, it represents the first successful attempt to harness the devastating power of bolt rounds in a man-portable weapon. Best suited to close-range combat, it embodies the raw, brutal beginnings of bolt weaponry.</description>
     <graphicData>
       <texPath>Things/Weapons/BEWH_ProtoBolter</texPath>
@@ -82,7 +81,6 @@
   <ThingDef ParentName="BEWH_AstartesMeleeBase">
     <defName>BEWH_proto-Chainsword</defName>
     <label>Proto-chainsword</label>
-    <thingClass>Core40k.WeaponMultiColor</thingClass>
     <description>An early and crude predecessor of the iconic chainsword, the proto-chainsword is a brutal weapon that shreds flesh and bone with a crude chain of teeth.</description>
     <soundInteract>BEWH_SFX_Proto-ChainswordInteract</soundInteract>
     <meleeHitSound>BEWH_SFX_Proto-ChainswordHit</meleeHitSound>

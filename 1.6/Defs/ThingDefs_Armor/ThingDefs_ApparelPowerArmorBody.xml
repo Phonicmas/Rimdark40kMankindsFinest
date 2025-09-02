@@ -2,7 +2,6 @@
 <Defs>
 
     <ThingDef Name="BEWH_PowerArmorBase_ChapterColour" ParentName="BEWH_PowerArmorBase" Abstract="True">
-        <thingClass>Genes40k.ChapterBodyDecorativeApparelMultiColor</thingClass>
         <apparel>
             <renderNodeProperties>
                 <!-- Left shoulder pad/legion icon -->
@@ -361,7 +360,6 @@
     <ThingDef ParentName="BEWH_PowerArmorBase">
         <defName>BEWH_LivingSaintArmor</defName>
         <label>Living Saint Armor</label>
-        <thingClass>Core40k.BodyDecorativeApparelMultiColor</thingClass>
         <description>A sanctified warplate worn by a Living Saint, adorned with the symbols of the Ecclesiarchy. It shines with a faint golden hue and, while lacking advanced systems, offers impressive protection. Some claim it has a calming or inspiring effect on nearby allies. Despite its imposing appearance, it moves easily with the wearer, providing both resilience and mobility.</description>
         <graphicData>
             <texPath>Things/Armor/Imperium/PowerArmor/LivingSaint/BEWH_LSaintArmor</texPath>
@@ -458,7 +456,6 @@
         <defName>BEWH_MkIPowerArmor</defName>
         <label>Mk I Power Armor</label>
         <description>The Mk I "Thunder" Power Armor is a prototype battle plate worn by the Emperor's Thunder Warriors during the Unification Wars. Built for brute strength rather than finesse, it features thick plasteel plating, basic servo-motors, and minimal environmental sealing.</description>
-        <thingClass>Core40k.BodyDecorativeApparelMultiColor</thingClass>
         <recipeMaker>
             <researchPrerequisite>BEWH_PowerArmorMkI</researchPrerequisite>
         </recipeMaker>
