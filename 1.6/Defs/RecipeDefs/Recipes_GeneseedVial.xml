@@ -17,6 +17,7 @@
         </fixedIngredientFilter>
         <recipeUsers>
             <li>Human</li>
+            <li MayRequire="Ludeon.RimWorld.Anomaly">CreepJoiner</li>
         </recipeUsers>
     </RecipeDef>
 

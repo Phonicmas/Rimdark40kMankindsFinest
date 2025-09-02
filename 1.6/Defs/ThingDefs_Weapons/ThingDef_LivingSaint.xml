@@ -176,7 +176,7 @@
     </tools>
 
     <comps Inherit="False">
-      <li Class="CompProperties_EquippableAbilityReloadable" MayRequire="Ludeon.RimWorld.Anomaly">        <!-- I duct-taped the Hellcat fire spew from Anomaly to the Saint's sword basically, sue me -->
+      <li Class="CompProperties_EquippableAbilityReloadable">        <!-- I duct-taped the Hellcat fire spew from Anomaly to the Saint's sword basically, sue me -->
         <abilityDef>BEWH_CleansingFire</abilityDef>
       </li>
       <li Class="CompProperties_Forbiddable"/>

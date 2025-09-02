@@ -8,6 +8,7 @@
         <surgerySuccessChanceFactor>2</surgerySuccessChanceFactor>
         <recipeUsers>
             <li>Human</li>
+            <li MayRequire="Ludeon.RimWorld.Anomaly">CreepJoiner</li>
         </recipeUsers>
     </RecipeDef>
 
