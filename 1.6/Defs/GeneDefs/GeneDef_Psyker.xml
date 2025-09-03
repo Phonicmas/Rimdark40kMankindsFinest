@@ -8,7 +8,6 @@
         <description>Carriers of this gene can unlock their psychic potential, though only a faint sliver of what's truly possible.</description>
         <iconPath>UI/Genes/Psyker/BEWH_GenePsykerIota</iconPath>
         <displayOrderInCategory>600</displayOrderInCategory>
-        <selectionWeight>1</selectionWeight>
         <biostatCpx>1</biostatCpx>
         <biostatMet>-1</biostatMet>
         <statFactors>
@@ -33,18 +32,17 @@
         <description>Carriers of this gene can unlock their true psychic potential. While dangerous, their abilities remain within the bounds of average psykers.</description>
         <iconPath>UI/Genes/Psyker/BEWH_GenePsyker</iconPath>
         <displayOrderInCategory>601</displayOrderInCategory>
-        <selectionWeight>0.8</selectionWeight>
         <biostatCpx>3</biostatCpx>
         <biostatMet>-1</biostatMet>
         <statFactors>
-            <PsychicSensitivity>1.85</PsychicSensitivity>
+            <PsychicSensitivity>1.7</PsychicSensitivity>
             <MeditationFocusGain>1.15</MeditationFocusGain>
             <PsychicEntropyRecoveryRate>1.2</PsychicEntropyRecoveryRate>
         </statFactors>
         <capMods>
             <li>
                 <capacity>Consciousness</capacity>
-                <postFactor>1.15</postFactor>
+                <postFactor>1.2</postFactor>
             </li>
         </capMods>
         <marketValueFactor>1.8</marketValueFactor>
@@ -58,18 +56,17 @@
         <description>Carriers of this gene can unlock their true psychic potential. These beings are dangerous and should be treated accordingly.</description>
         <iconPath>UI/Genes/Psyker/BEWH_GenePsykerDelta</iconPath>
         <displayOrderInCategory>602</displayOrderInCategory>
-        <selectionWeight>0.5</selectionWeight>
         <biostatCpx>4</biostatCpx>
         <biostatMet>-2</biostatMet>
         <statFactors>
-            <PsychicSensitivity>3</PsychicSensitivity>
+            <PsychicSensitivity>2.5</PsychicSensitivity>
             <MeditationFocusGain>1.4</MeditationFocusGain>
-            <PsychicEntropyRecoveryRate>1.7</PsychicEntropyRecoveryRate>
+            <PsychicEntropyRecoveryRate>1.5</PsychicEntropyRecoveryRate>
         </statFactors>
         <capMods>
             <li>
                 <capacity>Consciousness</capacity>
-                <postFactor>1.35</postFactor>
+                <postFactor>1.45</postFactor>
             </li>
         </capMods>
         <marketValueFactor>2.5</marketValueFactor>
@@ -83,18 +80,17 @@
         <description>Carriers of this gene can unlock their true psychic potential. These beings are extremely dangerous, capable of overwhelming entire armies on their own.</description>
         <iconPath>UI/Genes/Psyker/BEWH_GenePsykerBeta</iconPath>
         <displayOrderInCategory>603</displayOrderInCategory>
-        <selectionWeight>0.2</selectionWeight>
         <biostatCpx>6</biostatCpx>
         <biostatMet>-3</biostatMet>
         <statFactors>
-            <PsychicSensitivity>6.5</PsychicSensitivity>
+            <PsychicSensitivity>4.5</PsychicSensitivity>
             <MeditationFocusGain>2</MeditationFocusGain>
-            <PsychicEntropyRecoveryRate>2.5</PsychicEntropyRecoveryRate>
+            <PsychicEntropyRecoveryRate>1.75</PsychicEntropyRecoveryRate>
         </statFactors>
         <capMods>
             <li>
                 <capacity>Consciousness</capacity>
-                <postFactor>1.85</postFactor>
+                <postFactor>1.7</postFactor>
             </li>
         </capMods>
         <marketValueFactor>4</marketValueFactor>
@@ -109,18 +105,17 @@
         <description>Carriers of this gene can unlock their full psychic potential. These beings are extremely dangerous-capable of bringing entire worlds to ruin if their powers are properly honed.</description>
         <iconPath>UI/Genes/Psyker/BEWH_GenePsykerBeta</iconPath>
         <displayOrderInCategory>604</displayOrderInCategory>
-        <selectionWeight>0.05</selectionWeight>
         <biostatCpx>6</biostatCpx>
         <biostatMet>-3</biostatMet>
         <statFactors>
-            <PsychicSensitivity>12</PsychicSensitivity>
-            <MeditationFocusGain>5</MeditationFocusGain>
-            <PsychicEntropyRecoveryRate>6</PsychicEntropyRecoveryRate>
+            <PsychicSensitivity>8</PsychicSensitivity>
+            <MeditationFocusGain>3</MeditationFocusGain>
+            <PsychicEntropyRecoveryRate>2</PsychicEntropyRecoveryRate>
         </statFactors>
         <capMods>
             <li>
                 <capacity>Consciousness</capacity>
-                <postFactor>3.2</postFactor>
+                <postFactor>2</postFactor>
             </li>
         </capMods>
         <marketValueFactor>8</marketValueFactor>

@@ -531,10 +531,10 @@
         <displayOrderInCategory>415</displayOrderInCategory>
         <geneClass>Core40k.Gene_AddRandomGeneAndOrTraitByWeight</geneClass>
         <statFactors>
-            <PsychicSensitivity>6</PsychicSensitivity>
-            <MeditationFocusGain>3.5</MeditationFocusGain>
-            <PsychicEntropyRecoveryRate>3</PsychicEntropyRecoveryRate>
-            <ReadingSpeed>3</ReadingSpeed>
+            <PsychicSensitivity>2</PsychicSensitivity>
+            <MeditationFocusGain>1.5</MeditationFocusGain>
+            <PsychicEntropyRecoveryRate>1.5</PsychicEntropyRecoveryRate>
+            <ReadingSpeed>2</ReadingSpeed>
         </statFactors>
         <capMods>
             <li>
@@ -545,10 +545,10 @@
         <skinColorOverride>(150, 62, 62)</skinColorOverride>
         <iconColor>(255, 255, 255)</iconColor>
         <customEffectDescriptions>
-            <li>Gives the Beta Psyker gene.</li>
+            <li>Gives the Alpha Psyker gene.</li>
         </customEffectDescriptions>
         <descriptionHyperlinks>
-            <GeneDef>BEWH_BetaPsyker</GeneDef>
+            <GeneDef>BEWH_AlphaPsyker</GeneDef>
         </descriptionHyperlinks>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_PrimarchMaterial">
@@ -557,7 +557,7 @@
             <li Class="Core40k.DefModExtension_AddRandomGeneByWeight">
                 <possibleGenesToGive>
                     <li>
-                        <key>BEWH_BetaPsyker</key>
+                        <key>BEWH_AlphaPsyker</key>
                         <value>100</value>
                     </li>
                 </possibleGenesToGive>
@@ -625,9 +625,9 @@
             <ConversionPower MayRequire="Ludeon.RimWorld.Ideology">2</ConversionPower>
         </statFactors>
         <statOffsets>
-            <PsychicSensitivity>2</PsychicSensitivity>
-            <MeditationFocusGain>0.75</MeditationFocusGain>
-            <PsychicEntropyRecoveryRate>0.75</PsychicEntropyRecoveryRate>
+            <PsychicSensitivity>1.5</PsychicSensitivity>
+            <MeditationFocusGain>0.4</MeditationFocusGain>
+            <PsychicEntropyRecoveryRate>0.4</PsychicEntropyRecoveryRate>
         </statOffsets>
         <aptitudes>
             <Social>3</Social>

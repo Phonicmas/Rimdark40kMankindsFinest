@@ -40,7 +40,7 @@
         <iconPath>UI/Genes/Primaris/BEWH_Primaris_MagnificatIcon</iconPath>
         <displayOrderInCategory>22</displayOrderInCategory>
         <statOffsets>
-            <MeleeDodgeChance>3</MeleeDodgeChance>
+            <MeleeDodgeChance>2</MeleeDodgeChance>
             <LeatherAmount>15</LeatherAmount>
             <MeatAmount>15</MeatAmount>
             <Mass>15</Mass>
@@ -50,8 +50,8 @@
             <SuppressionPower MayRequire="Ludeon.RimWorld.Ideology">0.1</SuppressionPower>
         </statOffsets>
         <statFactors>
-            <MeleeWeapon_CooldownMultiplier>0.85</MeleeWeapon_CooldownMultiplier>
-            <RangedCooldownFactor>0.85</RangedCooldownFactor>
+            <MeleeWeapon_CooldownMultiplier>0.9</MeleeWeapon_CooldownMultiplier>
+            <RangedCooldownFactor>0.9</RangedCooldownFactor>
         </statFactors>
         <minAgeActive>13</minAgeActive>
     </GeneDef>

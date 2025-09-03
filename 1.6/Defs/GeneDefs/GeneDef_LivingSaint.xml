@@ -18,7 +18,7 @@
             <ToxicEnvironmentResistance>3</ToxicEnvironmentResistance>
             <ToxicResistance>3</ToxicResistance>
             <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">2</VacuumResistance>
-            <PsychicSensitivity>4</PsychicSensitivity>
+            <PsychicSensitivity>3</PsychicSensitivity>
 
             <VEF_CosmeticBodySize_Multiplier>0.2</VEF_CosmeticBodySize_Multiplier>
         </statOffsets>

@@ -20,7 +20,7 @@
     </descriptionHyperlinks>
     <modExtensions>
       <li Class="Genes40k.DefModExtension_GeneMatrix">
-        <ticksToGestate>480000</ticksToGestate>
+        <ticksToGestate>360000</ticksToGestate>
         <makesGeneVial>BEWH_GeneseedVialThunderWarrior</makesGeneVial>
         <researchNeeded>BEWH_GeneseedCreation</researchNeeded>
       </li>
@@ -44,7 +44,7 @@
     </descriptionHyperlinks>
     <modExtensions>
       <li Class="Genes40k.DefModExtension_GeneMatrix">
-        <ticksToGestate>600000</ticksToGestate>
+        <ticksToGestate>480000</ticksToGestate>
         <makesGeneVial>BEWH_GeneseedVialFirstborn</makesGeneVial>
         <researchNeeded>BEWH_GeneseedPurification</researchNeeded>
         <canUseChapterMaterial>true</canUseChapterMaterial>
@@ -70,7 +70,7 @@
     </descriptionHyperlinks>
     <modExtensions>
       <li Class="Genes40k.DefModExtension_GeneMatrix">
-        <ticksToGestate>660000</ticksToGestate>
+        <ticksToGestate>600000</ticksToGestate>
         <makesGeneVial>BEWH_GeneseedVialPrimaris</makesGeneVial>
         <researchNeeded>BEWH_GeneseedPerfection</researchNeeded>
         <canUseChapterMaterial>true</canUseChapterMaterial>
@@ -96,7 +96,7 @@
     </descriptionHyperlinks>
     <modExtensions>
       <li Class="Genes40k.DefModExtension_GeneMatrix">
-        <ticksToGestate>1200000</ticksToGestate>
+        <ticksToGestate>900000</ticksToGestate>
         <makesGeneVial>BEWH_GeneseedVialCustodes</makesGeneVial>
         <researchNeeded>BEWH_CustodesCreation</researchNeeded>
       </li>
@@ -120,7 +120,7 @@
     </descriptionHyperlinks>
     <modExtensions>
       <li Class="Genes40k.DefModExtension_GeneMatrix">
-        <ticksToGestate>2400000</ticksToGestate>
+        <ticksToGestate>1500000</ticksToGestate>
         <makesGeneVial>BEWH_GeneseedVialPrimarch</makesGeneVial>
         <researchNeeded>BEWH_PrimarchProject</researchNeeded>
         <canUsePrimarchMaterial>true</canUsePrimarchMaterial>

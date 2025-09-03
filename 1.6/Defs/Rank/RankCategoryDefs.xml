@@ -7,6 +7,204 @@
         <label>astartes</label>
         <description>Ranks of the Astartes.</description>
         <unlockedByGene>BEWH_SecondaryHeart</unlockedByGene>
+        <ranks>
+            <!-- Main line -->
+            <li>
+                <rankDef>BEWH_AstartesRankNeophyte</rankDef>
+                <displayPosition>(0, 0)</displayPosition>
+            </li>
+            <li>
+                <rankDef>BEWH_AstartesRankBattleBrother</rankDef>
+                <displayPosition>(2, 0)</displayPosition>
+                <rankRequirements>
+                    <BEWH_AstartesRankNeophyte>5</BEWH_AstartesRankNeophyte>
+                </rankRequirements>
+            </li>
+            <li>
+                <rankDef>BEWH_AstartesRankVeteran</rankDef>
+                <displayPosition>(3, -2)</displayPosition>
+                <rankRequirements>
+                    <BEWH_AstartesRankBattleBrother>12</BEWH_AstartesRankBattleBrother>
+                </rankRequirements>
+            </li>
+            <li>
+                <rankDef>BEWH_AstartesRankSergeant</rankDef>
+                <displayPosition>(5, -2)</displayPosition>
+                <rankRequirements>
+                    <BEWH_AstartesRankVeteran>10</BEWH_AstartesRankVeteran>
+                </rankRequirements>
+            </li>
+            <li>
+                <rankDef>BEWH_AstartesRankLieutenant</rankDef>
+                <displayPosition>(8, 0)</displayPosition>
+                <rankRequirements>
+                    <BEWH_AstartesRankSergeant>15</BEWH_AstartesRankSergeant>
+                    <BEWH_AstartesRankDevastatorSergeant>8</BEWH_AstartesRankDevastatorSergeant>
+                    <BEWH_AstartesRankAssaultSergeant>8</BEWH_AstartesRankAssaultSergeant>
+                </rankRequirements>
+            </li>
+            <li>
+                <rankDef>BEWH_AstartesRankCaptain</rankDef>
+                <displayPosition>(10, 0)</displayPosition>
+                <rankRequirements>
+                    <BEWH_AstartesRankLieutenant>25</BEWH_AstartesRankLieutenant>
+                </rankRequirements>
+            </li>
+            <li>
+                <rankDef>BEWH_AstartesRankChapterMaster</rankDef>
+                <displayPosition>(14, 0)</displayPosition>
+                <rankRequirements>
+                    <BEWH_AstartesRankCaptain>40</BEWH_AstartesRankCaptain>
+                </rankRequirements>
+            </li>
+            <!-- Misc -->
+            <li>
+                <rankDef>BEWH_AstartesRankVanguard</rankDef>
+                <displayPosition>(1, -1)</displayPosition>
+                <rankRequirements>
+                    <BEWH_AstartesRankBattleBrother>7</BEWH_AstartesRankBattleBrother>
+                </rankRequirements>
+            </li>
+            <li>
+                <rankDef>BEWH_AstartesRankChapterAncient</rankDef>
+                <displayPosition>(9, -1)</displayPosition>
+                <rankRequirements>
+                    <BEWH_AstartesRankLieutenant>10</BEWH_AstartesRankLieutenant>
+                </rankRequirements>
+            </li>
+            <!-- Apothecary -->
+            <li>
+                <rankDef>BEWH_AstartesRankHelixAdept</rankDef>
+                <displayPosition>(4, 1)</displayPosition>
+                <rankRequirements>
+                    <BEWH_AstartesRankBattleBrother>7</BEWH_AstartesRankBattleBrother>
+                </rankRequirements>
+            </li>
+            <li>
+                <rankDef>BEWH_AstartesRankApothecary</rankDef>
+                <displayPosition>(6, 1)</displayPosition>
+                <rankRequirements>
+                    <BEWH_AstartesRankHelixAdept>15</BEWH_AstartesRankHelixAdept>
+                </rankRequirements>
+            </li>
+            <li>
+                <rankDef>BEWH_AstartesRankMasterOfTheApothecarion</rankDef>
+                <displayPosition>(9, 1)</displayPosition>
+                <rankRequirements>
+                    <BEWH_AstartesRankApothecary>35</BEWH_AstartesRankApothecary>
+                </rankRequirements>
+            </li>
+            <!-- Techmarine -->
+            <li>
+                <rankDef>BEWH_AstartesRankTechmarineNovitiate</rankDef>
+                <displayPosition>(4, 2)</displayPosition>
+                <rankRequirements>
+                    <BEWH_AstartesRankBattleBrother>7</BEWH_AstartesRankBattleBrother>
+                </rankRequirements>
+            </li>
+            <li>
+                <rankDef>BEWH_AstartesRankTechmarine</rankDef>
+                <displayPosition>(6, 2)</displayPosition>
+                <rankRequirements>
+                    <BEWH_AstartesRankTechmarineNovitiate>15</BEWH_AstartesRankTechmarineNovitiate>
+                </rankRequirements>
+            </li>
+            <li>
+                <rankDef>BEWH_AstartesRankMasterOfTheForge</rankDef>
+                <displayPosition>(9, 2)</displayPosition>
+                <rankRequirements>
+                    <BEWH_AstartesRankTechmarine>35</BEWH_AstartesRankTechmarine>
+                </rankRequirements>
+            </li>
+            <!-- Librarian -->
+            <li>
+                <rankDef>BEWH_AstartesRankAcolytum</rankDef>
+                <displayPosition>(4, 3)</displayPosition>
+                <rankRequirements>
+                    <BEWH_AstartesRankBattleBrother>7</BEWH_AstartesRankBattleBrother>
+                </rankRequirements>
+            </li>
+            <li>
+                <rankDef>BEWH_AstartesRankLibrarian</rankDef>
+                <displayPosition>(6, 3)</displayPosition>
+                <rankRequirements>
+                    <BEWH_AstartesRankAcolytum>15</BEWH_AstartesRankAcolytum>
+                </rankRequirements>
+            </li>
+            <li>
+                <rankDef>BEWH_AstartesRankChiefLibrarian</rankDef>
+                <displayPosition>(9, 3)</displayPosition>
+                <rankRequirements>
+                    <BEWH_AstartesRankLibrarian>35</BEWH_AstartesRankLibrarian>
+                </rankRequirements>
+            </li>
+            <!-- Chaplain -->
+            <li>
+                <rankDef>BEWH_AstartesRankJudiciar</rankDef>
+                <displayPosition>(4, -3)</displayPosition>
+                <rankRequirements>
+                    <BEWH_AstartesRankVeteran>5</BEWH_AstartesRankVeteran>
+                </rankRequirements>
+            </li>
+            <li>
+                <rankDef>BEWH_AstartesRankChaplain</rankDef>
+                <displayPosition>(6, -3)</displayPosition>
+                <rankRequirements>
+                    <BEWH_AstartesRankJudiciar>15</BEWH_AstartesRankJudiciar>
+                </rankRequirements>
+            </li>
+            <li>
+                <rankDef>BEWH_AstartesRankMasterOfSanctity</rankDef>
+                <displayPosition>(9, -3)</displayPosition>
+                <rankRequirements>
+                    <BEWH_AstartesRankChaplain>35</BEWH_AstartesRankChaplain>
+                </rankRequirements>
+            </li>
+            <!-- Fire Support -->
+            <li>
+                <rankDef>BEWH_AstartesRankDevastator</rankDef>
+                <displayPosition>(3, -1)</displayPosition>
+                <rankRequirements>
+                    <BEWH_AstartesRankBattleBrother>3</BEWH_AstartesRankBattleBrother>
+                </rankRequirements>
+            </li>
+            <li>
+                <rankDef>BEWH_AstartesRankDevastatorSergeant</rankDef>
+                <displayPosition>(5, -1)</displayPosition>
+                <rankRequirements>
+                    <BEWH_AstartesRankDevastator>8</BEWH_AstartesRankDevastator>
+                </rankRequirements>
+            </li>
+            <!-- Close Support -->
+            <li>
+                <rankDef>BEWH_AstartesRankAssault</rankDef>
+                <displayPosition>(3, 0)</displayPosition>
+                <rankRequirements>
+                    <BEWH_AstartesRankBattleBrother>3</BEWH_AstartesRankBattleBrother>
+                </rankRequirements>
+            </li>
+            <li>
+                <rankDef>BEWH_AstartesRankAssaultSergeant</rankDef>
+                <displayPosition>(5, 0)</displayPosition>
+                <rankRequirements>
+                    <BEWH_AstartesRankAssault>8</BEWH_AstartesRankAssault>
+                </rankRequirements>
+            </li>
+        </ranks>
+    </Core40k.RankCategoryDef>
+
+    <!-- Primarch -->
+    <Core40k.RankCategoryDef>
+        <defName>BEWH_PrimarchRankCategory</defName>
+        <label>primarch</label>
+        <description>Ranks of the Primarchs.</description>
+        <unlockedByGene>BEWH_ImmortisGland</unlockedByGene>
+        <ranks>
+            <li>
+                <rankDef>BEWH_AstartesRankChapterMaster</rankDef>
+                <displayPosition>(7, 0)</displayPosition>
+            </li>
+        </ranks>
     </Core40k.RankCategoryDef>
 
 </Defs>

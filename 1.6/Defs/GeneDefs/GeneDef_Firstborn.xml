@@ -367,7 +367,7 @@
         </statOffsets>
         <modExtensions>
             <li Class="VEF.Genes.GeneExtension">
-                <diseaseProgressionFactor>0.55</diseaseProgressionFactor>
+                <diseaseProgressionFactor>0.85</diseaseProgressionFactor>
             </li>
         </modExtensions>
     </GeneDef>
