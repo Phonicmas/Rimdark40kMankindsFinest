@@ -35,14 +35,14 @@ public class Gene_Pariah : Gene
         {
             return;
         }
-        foreach (var pawn in pawns)
+        foreach (var affectedPawn in pawns)
         {
-            if (pawn == null || p == pawn || !p.RaceProps.Humanlike || pawn.needs?.mood?.thoughts == null || pawn.genes == null || Genes40kUtils.IsPariah(pawn))
+            if (affectedPawn == null || p == affectedPawn || !p.RaceProps.Humanlike || affectedPawn.needs?.mood?.thoughts == null || affectedPawn.genes == null || Genes40kUtils.IsPariah(affectedPawn))
             {
                 continue;
             }
             var defMod = def.GetModExtension<DefModExtension_Pariah>();
-            var hediff = pawn.health.hediffSet.hediffs.Find(x => x.def.HasModExtension<DefModExtension_Pariah>());
+            var hediff = affectedPawn.health.hediffSet.hediffs.Find(x => x.def.HasModExtension<DefModExtension_Pariah>());
             if (hediff != null)
             {
                 if (hediff.Severity < defMod.tier)
@@ -65,7 +65,15 @@ public class Gene_Pariah : Gene
             }
             else
             {
-                pawn.health.AddHediff(Genes40kDefOf.BEWH_PariahEffecter);
+                if (affectedPawn.Faction.IsPlayer)
+                {
+                    affectedPawn.health.AddHediff(Genes40kDefOf.BEWH_PariahEffecter);
+                }
+                else
+                {
+                    affectedPawn.health.AddHediff(Genes40kDefOf.BEWH_PariahEffecterEnemies);
+                }
+                
             }
         }
     }

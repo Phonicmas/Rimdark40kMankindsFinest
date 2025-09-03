@@ -37,16 +37,11 @@ public static class StatWorker_StatOffsetFromGear_Patch
     {
         if (stat == StatDefOf.MoveSpeed && val < 0f && gear.ParentHolder is Pawn_ApparelTracker pawn_ApparelTracker)
         {
-            if (!gear.def.HasModExtension<DefModExtension_IgnoreMovespeedDecrease>() || pawn_ApparelTracker.pawn.genes == null)
-            {
-                return val;
-            }
-
             var defMod = gear.def.GetModExtension<DefModExtension_IgnoreMovespeedDecrease>();
 
-            if (Enumerable.Any(pawn_ApparelTracker.pawn.genes.GenesListForReading, gene => gene.def.HasModExtension<DefModExtension_IgnoreMovespeedDecrease>()))
+            if (pawn_ApparelTracker.pawn.genes != null && Enumerable.Any(pawn_ApparelTracker.pawn.genes.GenesListForReading, gene => gene.def.HasModExtension<DefModExtension_IgnoreMovespeedDecrease>()))
             {
-                return defMod.newMoveSpeedOffset;
+                return defMod?.newMoveSpeedOffset ?? 0f;
             }
         }
         return val;

@@ -9,7 +9,7 @@ public class UpdateRankIconOnRankUp
 {
     public static void Postfix(CompRankInfo __instance, RankDef rank)
     {
-        if (rank.rankCategory != Genes40kDefOf.BEWH_AstartesRankCategory)
+        if (!Genes40kDefOf.BEWH_AstartesRankCategory.ranks.Any(data => data.rankDef == rank))
         {
             return;
         }

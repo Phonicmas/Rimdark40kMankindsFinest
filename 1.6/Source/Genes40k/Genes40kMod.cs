@@ -10,7 +10,6 @@ public class Genes40kMod : Mod
     public static Harmony harmony;
 
     private Genes40kModSettings settings;
-
     public Genes40kModSettings Settings => settings ??= GetSettings<Genes40kModSettings>();
 
     public Genes40kMod(ModContentPack content) : base(content)
@@ -18,137 +17,68 @@ public class Genes40kMod : Mod
         harmony = new Harmony("Genes40k.Mod");
         harmony.PatchAll();
     }
-        
-    private Vector2 scrollPos;
 
-    private float scrollViewHeight = 0f;
-    private const float listingHeightIncrease = 24f;
-    private const float listingHeightIncreaseGap = 36f;
+    private static List<TabRecord> tabs = new List<TabRecord>();
+    private bool tabsInitialized = false;
+    private static ModSettingTab currentSettingTab;
+    
+    public ModSettingTab_Main mainSettings = new ModSettingTab_Main();
+    public ModSettingTab_Geneseed geneseedSettings = new ModSettingTab_Geneseed();
+    public ModSettingTab_LivingSaint livingSaintSettings = new ModSettingTab_LivingSaint();
+    public ModSettingTab_Misc miscSettings = new ModSettingTab_Misc();
+    public ModSettingTab_Psychic psychicSettings = new ModSettingTab_Psychic();
+    
+    public void InitializeTabs()
+    {
+        tabs = new List<TabRecord>();
+
+        var mainTab = new TabRecord("BEWH.MankindsFinest.ModSettings.TabMain".Translate(), delegate
+        {
+            currentSettingTab = mainSettings;
+        }, () => currentSettingTab == mainSettings);
+        tabs.Add(mainTab);
         
+        var geneseedTab = new TabRecord("BEWH.MankindsFinest.ModSettings.TabGeneseed".Translate(), delegate
+        {
+            currentSettingTab = geneseedSettings;
+        }, () => currentSettingTab == geneseedSettings);
+        tabs.Add(geneseedTab);
+        
+        var psychicTab = new TabRecord("BEWH.MankindsFinest.ModSettings.TabPsychic".Translate(), delegate
+        {
+            currentSettingTab = psychicSettings;
+        }, () => currentSettingTab == psychicSettings);
+        tabs.Add(psychicTab);
+        
+        var livingSaintTab = new TabRecord("BEWH.MankindsFinest.ModSettings.TabLivingSaint".Translate(), delegate
+        {
+            currentSettingTab = livingSaintSettings;
+        }, () => currentSettingTab == livingSaintSettings);
+        tabs.Add(livingSaintTab);
+        
+        var miscTab = new TabRecord("BEWH.MankindsFinest.ModSettings.TabMisc".Translate(), delegate
+        {
+            currentSettingTab = miscSettings;
+        }, () => currentSettingTab == miscSettings);
+        tabs.Add(miscTab);
+
+        currentSettingTab = mainSettings;
+        tabsInitialized = true;
+    }
+    
     public override void DoSettingsWindowContents(Rect inRect)
     {
-        var viewRect = new Rect(inRect.x, inRect.y, inRect.width - 16f, scrollViewHeight);
-        scrollViewHeight = 0f;
-            
-        Widgets.BeginScrollView(inRect, ref scrollPos, viewRect);
-        var listingStandard = new Listing_Standard();
-        listingStandard.Begin(viewRect);
-        scrollViewHeight += listingHeightIncrease;
-
-        //Default Chapter Colour
-        listingStandard.Label("BEWH.MankindsFinest.ModSettings.DefaultChapterColoursDesc".Translate());
-        scrollViewHeight += listingHeightIncrease;
-        listingStandard.Indent(inRect.width * 0.25f);
-        if (listingStandard.ButtonText("BEWH.MankindsFinest.ModSettings.DefaultChapterColours".Translate(Settings.CurrentlySelectedPreset.label), widthPct: 0.5f))
+        if (!tabsInitialized)
         {
-            Find.WindowStack.Add(new Dialog_ChangeDefaultChapterColour(Settings));
+            InitializeTabs();
         }
-        scrollViewHeight += listingHeightIncreaseGap;
-        listingStandard.Outdent(inRect.width * 0.25f);
-
-        //Psychic Phenomena
-        listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.PsychicPhenomena".Translate(), ref Settings.psychicPhenomena);
-        scrollViewHeight += listingHeightIncrease;
-  
-        //Psyker/Pariah Birth
-        listingStandard.GapLine(36);
-        scrollViewHeight += listingHeightIncreaseGap;
-        listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.PsykerPariahBirth".Translate(), ref Settings.psykerPariahBirth);
-        scrollViewHeight += listingHeightIncrease;
-        if (Settings.psykerPariahBirth)
-        {
-            listingStandard.Label("BEWH.MankindsFinest.ModSettings.PsykerPariahBirthChance".Translate(Settings.psykerPariahBirthChance));
-            scrollViewHeight += listingHeightIncrease;
-            Settings.psykerPariahBirthChance = (int)listingStandard.Slider(Settings.psykerPariahBirthChance, 0, 100);
-            scrollViewHeight += listingHeightIncrease;
-        }
-            
-        //Perpetual Birth
-        listingStandard.GapLine(36);
-        scrollViewHeight += listingHeightIncreaseGap;
-        listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.PerpetualBirth".Translate(), ref Settings.perpetualBirth);
-        scrollViewHeight += listingHeightIncrease;
-        if (Settings.perpetualBirth)
-        {
-            listingStandard.Label("BEWH.MankindsFinest.ModSettings.PerpetualBirthChance".Translate(Settings.perpetualBirthChance));
-            scrollViewHeight += listingHeightIncrease;
-            Settings.perpetualBirthChance = (int)listingStandard.Slider(Settings.perpetualBirthChance, 0, 100);
-            scrollViewHeight += listingHeightIncrease;
-        }
-
-        //Living Saint System
-        listingStandard.GapLine(36);
-        scrollViewHeight += listingHeightIncreaseGap;
-        listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.LivingSaintSystem".Translate(), ref Settings.livingSaintSystem);
-        scrollViewHeight += listingHeightIncrease;
-        if (Settings.livingSaintSystem)
-        {
-            listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.LivingSaintMale".Translate(), ref Settings.livingSaintMale);
-            scrollViewHeight += listingHeightIncrease;
-            
-            listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.LivingSaintExtraChanceFromViolence".Translate(), ref Settings.livingSaintAddedChanceFromViolenceSkills);
-            scrollViewHeight += listingHeightIncrease;
-            
-            listingStandard.Label("BEWH.MankindsFinest.ModSettings.LivingSaintChance".Translate());
-            scrollViewHeight += listingHeightIncrease;
-            listingStandard.Label("BEWH.MankindsFinest.ModSettings.LivingSaintBigThreat".Translate(Settings.livingSaintBigThreat));
-            scrollViewHeight += listingHeightIncrease;
-            Settings.livingSaintBigThreat = (int)listingStandard.Slider(Settings.livingSaintBigThreat, 0, 100);
-            scrollViewHeight += listingHeightIncrease;
-            
-            listingStandard.Label("BEWH.MankindsFinest.ModSettings.LivingSaintSmallThreat".Translate(Settings.livingSaintSmallThreat));
-            scrollViewHeight += listingHeightIncrease;
-            Settings.livingSaintSmallThreat = (int)listingStandard.Slider(Settings.livingSaintSmallThreat, 0, 100);
-            scrollViewHeight += listingHeightIncrease;
-            
-            listingStandard.Label("BEWH.MankindsFinest.ModSettings.LivingSaintBaseChance".Translate(Settings.livingSaintBaseChance));
-            scrollViewHeight += listingHeightIncrease;
-            Settings.livingSaintBaseChance = (int)listingStandard.Slider(Settings.livingSaintBaseChance, 0, 100);
-            scrollViewHeight += listingHeightIncrease;    
-            
-            listingStandard.Label("BEWH.MankindsFinest.ModSettings.LivingSaintPawnLimit".Translate(Settings.livingSaintLimit));
-            scrollViewHeight += listingHeightIncrease;
-            Settings.livingSaintLimit = (int)listingStandard.Slider(Settings.livingSaintLimit, 1, 100);
-            scrollViewHeight += listingHeightIncrease;
-        }
-
-        //Geneseed Implantation Offset
-        listingStandard.GapLine(36);
-        scrollViewHeight += listingHeightIncreaseGap;
-        listingStandard.Label("BEWH.MankindsFinest.ModSettings.ImplantationDesc".Translate());
-        scrollViewHeight += listingHeightIncrease;
-        listingStandard.Label("BEWH.MankindsFinest.ModSettings.ImplantationSuccessChange".Translate(Settings.implantationSuccessOffset));
-        scrollViewHeight += listingHeightIncrease;
-        Settings.implantationSuccessOffset = (int)listingStandard.Slider(Settings.implantationSuccessOffset, -200, 200);
-        scrollViewHeight += listingHeightIncrease;
-        //Geneseed Implantation Cap Offset
-        listingStandard.Label("BEWH.MankindsFinest.ModSettings.ImplantationCapOffset".Translate(Settings.implantationCapOffset));
-        scrollViewHeight += listingHeightIncrease;
-        Settings.implantationCapOffset = (int)listingStandard.Slider(Settings.implantationCapOffset, -100, 100);
-        scrollViewHeight += listingHeightIncrease;
-
-        //Only male Primarch
-        listingStandard.GapLine(36);
-        scrollViewHeight += listingHeightIncreaseGap;
-        listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.AllowFemalePrimarchs".Translate(), ref Settings.allowFemalePrimarchBirths);
-        scrollViewHeight += listingHeightIncrease;
-        
-        //Psychic Crafting
-        listingStandard.GapLine(36);
-        scrollViewHeight += listingHeightIncreaseGap;
-        listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.PsychicCrafting".Translate(), ref Settings.psychicCrafting);
-        scrollViewHeight += listingHeightIncrease;
-        scrollViewHeight += listingHeightIncrease;
-
-        listingStandard.GapLine(36);
-        scrollViewHeight += listingHeightIncreaseGap;
-        listingStandard.Label("\n" + "BEWH.ModSettings.CheckVEFPatches".Translate());
-        scrollViewHeight += listingHeightIncrease;
-        listingStandard.Gap(24);
-        scrollViewHeight += listingHeightIncrease;
-        listingStandard.End();
-        
-        Widgets.EndScrollView();
+        base.DoSettingsWindowContents(inRect);
+        var menuRect = inRect.ContractedBy(10f);
+        menuRect.y += 20f;
+        menuRect.height -= 20f;
+        Widgets.DrawMenuSection(menuRect);
+        TabDrawer.DrawTabs(menuRect, tabs);
+        currentSettingTab.DrawTab(menuRect.ContractedBy(5f), Settings);
     }
 
     public override string SettingsCategory()

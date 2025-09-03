@@ -105,6 +105,7 @@ public static class Genes40kDefOf
     public static HediffDef BEWH_DeniedWitch;
 
     public static HediffDef BEWH_PariahEffecter;
+    public static HediffDef BEWH_PariahEffecterEnemies;
         
     public static HediffDef BEWH_FirstbornPhaseOne;
     public static HediffDef BEWH_FirstbornPhaseTwo;

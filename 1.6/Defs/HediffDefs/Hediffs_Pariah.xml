@@ -18,6 +18,65 @@
                     <PsychicSensitivity>0.55</PsychicSensitivity>
                     <PsychicEntropyRecoveryRate>0.55</PsychicEntropyRecoveryRate>
                 </statFactors>
+                <painOffset>0.05</painOffset>
+            </li>
+            <li>
+                <minSeverity>2</minSeverity>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.05</offset>
+                    </li>
+                </capMods>
+                <statFactors>
+                    <PsychicSensitivity>0.3</PsychicSensitivity>
+                    <PsychicEntropyRecoveryRate>0.3</PsychicEntropyRecoveryRate>
+                </statFactors>
+                <painOffset>0.1</painOffset>
+            </li>
+            <li>
+                <minSeverity>3</minSeverity>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.15</offset>
+                    </li>
+                </capMods>
+                <statFactors>
+                    <PsychicSensitivity>0</PsychicSensitivity>
+                    <PsychicEntropyRecoveryRate>0</PsychicEntropyRecoveryRate>
+                </statFactors>
+                <painOffset>0.2</painOffset>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>1000</disappearsAfterTicks>
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+        </comps>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_Pariah" />
+        </modExtensions>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>BEWH_PariahEffecterEnemies</defName>
+        <label>pariah nearby</label>
+        <labelNoun>pariah nearby</labelNoun>
+        <description>A pariah is nearby, weakening the connection to the Warp and intensifying the pain.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <makesSickThought>false</makesSickThought>
+        <everCurableByItem>false</everCurableByItem>
+        <maxSeverity>3</maxSeverity>
+        <stages>
+            <li>
+                <minSeverity>1</minSeverity>
+                <statFactors>
+                    <PsychicSensitivity>0.55</PsychicSensitivity>
+                    <PsychicEntropyRecoveryRate>0.55</PsychicEntropyRecoveryRate>
+                </statFactors>
                 <painOffset>0.1</painOffset>
             </li>
             <li>

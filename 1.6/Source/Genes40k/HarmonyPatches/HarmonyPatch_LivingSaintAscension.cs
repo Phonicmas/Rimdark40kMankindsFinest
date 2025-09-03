@@ -36,6 +36,11 @@ public class LivingSaintAscension
         {
             return;
         }
+        
+        if (Genes40kUtils.ModSettings.livingSaintOnlyBaselinerAscension && __instance.genes.Xenotype != XenotypeDefOf.Baseliner)
+        {
+            return;
+        }
 
         if (__instance.IsGhoul || __instance.IsSlave || __instance.IsPrisoner)
         {

@@ -5,11 +5,15 @@
   <BEWH.MankindsFinest.ModSettings.ModName>RimDark 40k - Mankinds Finest</BEWH.MankindsFinest.ModSettings.ModName>
 
   <BEWH.MankindsFinest.ModSettings.PsychicPhenomena>When enabled, psykers suffering a mental breakdown will trigger psychic phenomena.</BEWH.MankindsFinest.ModSettings.PsychicPhenomena>
+  <BEWH.MankindsFinest.ModSettings.PsychicPhenomenaDesc>When a psychic phenomena occur and table is rolled on a random effect is chosen, these can wary from harmless to severly destructive.</BEWH.MankindsFinest.ModSettings.PsychicPhenomenaDesc>
+
   <BEWH.MankindsFinest.ModSettings.PsykerPariahBirth>When enabled, children may rarely and randomly be born as psykers or pariahs.</BEWH.MankindsFinest.ModSettings.PsykerPariahBirth>
   <BEWH.MankindsFinest.ModSettings.PsykerPariahBirthChance>Chance for newly born children to be psykers or pariahs: {0}%</BEWH.MankindsFinest.ModSettings.PsykerPariahBirthChance>
+  <BEWH.MankindsFinest.ModSettings.PsykerPariahBirthChanceDesc>Chance for newly born children to have a psyker or pariah gene. Parent genes have no effect on this.</BEWH.MankindsFinest.ModSettings.PsykerPariahBirthChanceDesc>
 
   <BEWH.MankindsFinest.ModSettings.PerpetualBirth>When enabled, children may rarely and randomly be born as perpetuals.</BEWH.MankindsFinest.ModSettings.PerpetualBirth>
   <BEWH.MankindsFinest.ModSettings.PerpetualBirthChance>Chance for newly born children to be a perpetual: {0}%</BEWH.MankindsFinest.ModSettings.PerpetualBirthChance>
+  <BEWH.MankindsFinest.ModSettings.PerpetualBirthChanceDesc>Chance for newly born children to have a perpetual gene. Parent genes have no effect on this.</BEWH.MankindsFinest.ModSettings.PerpetualBirthChanceDesc>
 
   <BEWH.MankindsFinest.ModSettings.DefaultChapterColours>Default legion colors: {0}</BEWH.MankindsFinest.ModSettings.DefaultChapterColours>
   <BEWH.MankindsFinest.ModSettings.DefaultChapterColoursDesc>Changes the default color of crafted armor, drop pods, NPC Astartes, Legion decorative banners, and other items related to the player's Legion or Chapter.</BEWH.MankindsFinest.ModSettings.DefaultChapterColoursDesc>
@@ -17,22 +21,44 @@
   <BEWH.MankindsFinest.ModSettings.ColourPreset>Color Preset: {0}</BEWH.MankindsFinest.ModSettings.ColourPreset>
   <BEWH.MankindsFinest.ModSettings.CustomColour>Custom Color</BEWH.MankindsFinest.ModSettings.CustomColour>
 
-  <BEWH.MankindsFinest.ModSettings.LivingSaintChance>Chances for a character to be reborn as a Living Saint upon death.</BEWH.MankindsFinest.ModSettings.LivingSaintChance>
-  <BEWH.MankindsFinest.ModSettings.LivingSaintBigThreat>Big threat: {0}%</BEWH.MankindsFinest.ModSettings.LivingSaintBigThreat>
-  <BEWH.MankindsFinest.ModSettings.LivingSaintSmallThreat>Small threat: {0}%</BEWH.MankindsFinest.ModSettings.LivingSaintSmallThreat>
+  <BEWH.MankindsFinest.ModSettings.TabMain>Main</BEWH.MankindsFinest.ModSettings.TabMain>
+  <BEWH.MankindsFinest.ModSettings.TabLivingSaint>Living Saint</BEWH.MankindsFinest.ModSettings.TabLivingSaint>
+  <BEWH.MankindsFinest.ModSettings.TabPsychic>Psychic</BEWH.MankindsFinest.ModSettings.TabPsychic>
+  <BEWH.MankindsFinest.ModSettings.TabGeneseed>Geneseed</BEWH.MankindsFinest.ModSettings.TabGeneseed>
+  <BEWH.MankindsFinest.ModSettings.TabMisc>Misc</BEWH.MankindsFinest.ModSettings.TabMisc>
+
   <BEWH.MankindsFinest.ModSettings.LivingSaintSystem>Enabling this will allow colonist being killed to resurrect as Living Saints.</BEWH.MankindsFinest.ModSettings.LivingSaintSystem>
-  <BEWH.MankindsFinest.ModSettings.LivingSaintMale>Male colonists can become Living Saints</BEWH.MankindsFinest.ModSettings.LivingSaintMale>
-  <BEWH.MankindsFinest.ModSettings.LivingSaintBaseChance>Living Saints base chance: {0}% (other modifiers may increase beyond this)</BEWH.MankindsFinest.ModSettings.LivingSaintBaseChance>
   <BEWH.MankindsFinest.ModSettings.LivingSaintPawnLimit>Living Saint pawn limit: {0}</BEWH.MankindsFinest.ModSettings.LivingSaintPawnLimit>
+  <BEWH.MankindsFinest.ModSettings.LivingSaintPawnLimitDesc>This is the limit of how many Living Saints may exist at any time, both living and dead</BEWH.MankindsFinest.ModSettings.LivingSaintPawnLimitDesc>
+  <BEWH.MankindsFinest.ModSettings.LivingSaintMale>Male colonists can become Living Saints</BEWH.MankindsFinest.ModSettings.LivingSaintMale>
+  <BEWH.MankindsFinest.ModSettings.LivingSaintMaleDesc>Only females can become Living Saints normally, this enables males to also be able</BEWH.MankindsFinest.ModSettings.LivingSaintMaleDesc>
+
+  <BEWH.MankindsFinest.ModSettings.LivingSaintChance>Chances for a lost Living Saint to return in a time of threat to the colony.</BEWH.MankindsFinest.ModSettings.LivingSaintChance>
+  <BEWH.MankindsFinest.ModSettings.LivingSaintBigThreat>Big threat: {0}%</BEWH.MankindsFinest.ModSettings.LivingSaintBigThreat>
+  <BEWH.MankindsFinest.ModSettings.LivingSaintBigThreatDesc>Chance for Living Saints to resurrect on a big threat raid</BEWH.MankindsFinest.ModSettings.LivingSaintBigThreatDesc>
+  <BEWH.MankindsFinest.ModSettings.LivingSaintSmallThreat>Small threat: {0}%</BEWH.MankindsFinest.ModSettings.LivingSaintSmallThreat>
+  <BEWH.MankindsFinest.ModSettings.LivingSaintSmallThreatDesc>Chance for Living Saints to resurrect on a small threat raid</BEWH.MankindsFinest.ModSettings.LivingSaintSmallThreatDesc>
+
+  <BEWH.MankindsFinest.ModSettings.LivingSaintBaseChance>Living Saints base chance: {0}%</BEWH.MankindsFinest.ModSettings.LivingSaintBaseChance>
+  <BEWH.MankindsFinest.ModSettings.LivingSaintBaseChanceDesc>Other modifiers may increase beyond this, such as psysensitivity traits or violence skills if enabled</BEWH.MankindsFinest.ModSettings.LivingSaintBaseChanceDesc>
   <BEWH.MankindsFinest.ModSettings.LivingSaintExtraChanceFromViolence>Extra chance to become living saint depending on shooting and melee skill.</BEWH.MankindsFinest.ModSettings.LivingSaintExtraChanceFromViolence>
+  <BEWH.MankindsFinest.ModSettings.LivingSaintExtraChanceFromViolenceDesc>For each skill point in melee and/or shooting above 10 your pawn get higher chance to become a saint.</BEWH.MankindsFinest.ModSettings.LivingSaintExtraChanceFromViolenceDesc>
+
+  <BEWH.MankindsFinest.ModSettings.LivingSaintAscensionLimit>Limit Living Saint ascension to baseliners</BEWH.MankindsFinest.ModSettings.LivingSaintAscensionLimit>
+  <BEWH.MankindsFinest.ModSettings.LivingSaintAscensionLimitDesc>This limits the the Living Saint ascension system to only apply to baseliners \nAny xenotype such as Impids will not be able to ascend</BEWH.MankindsFinest.ModSettings.LivingSaintAscensionLimitDesc>
 
   <BEWH.MankindsFinest.ModSettings.ImplantationDesc>Gene-seed implantation offsets.</BEWH.MankindsFinest.ModSettings.ImplantationDesc>
-  <BEWH.MankindsFinest.ModSettings.ImplantationSuccessChange>Implantation success offset: {0}%</BEWH.MankindsFinest.ModSettings.ImplantationSuccessChange>
+  <BEWH.MankindsFinest.ModSettings.ImplantationSuccessOffset>Implantation success offset: {0}%</BEWH.MankindsFinest.ModSettings.ImplantationSuccessOffset>
+  <BEWH.MankindsFinest.ModSettings.ImplantationSuccessOffsetDesc>Base implantation success chance is increased or decreased by this value</BEWH.MankindsFinest.ModSettings.ImplantationSuccessOffsetDesc>
   <BEWH.MankindsFinest.ModSettings.ImplantationCapOffset>Implantation cap offset: {0}%</BEWH.MankindsFinest.ModSettings.ImplantationCapOffset>
+  <BEWH.MankindsFinest.ModSettings.ImplantationCapOffsetDesc>Base implantation cap is increased or decreased by this value</BEWH.MankindsFinest.ModSettings.ImplantationCapOffsetDesc>
+  <BEWH.MankindsFinest.ModSettings.MatrixGestationFactor>Matrix gestation time factor of default: {0}%</BEWH.MankindsFinest.ModSettings.MatrixGestationFactor>
+  <BEWH.MankindsFinest.ModSettings.MatrixGestationFactorDesc>Gestation time of all matrices are modified by this value</BEWH.MankindsFinest.ModSettings.MatrixGestationFactorDesc>
 
   <BEWH.MankindsFinest.ModSettings.AllowFemalePrimarchs>Allow vat-grown Primarchs to be female</BEWH.MankindsFinest.ModSettings.AllowFemalePrimarchs>
 
-  <BEWH.MankindsFinest.ModSettings.PsychicCrafting>When enabled, pawns will slowly lose consciousness while creating genetic matrices.\nIf the Royalty DLC is installed and the pawn is psychic, they will lose psyfocus first.</BEWH.MankindsFinest.ModSettings.PsychicCrafting>
+  <BEWH.MankindsFinest.ModSettings.PsychicCrafting>Enable psychic crafting for custodes and primarch matrices</BEWH.MankindsFinest.ModSettings.PsychicCrafting>
+  <BEWH.MankindsFinest.ModSettings.PsychicCraftingDesc>When enabled, pawns will slowly lose consciousness while creating genetic matrices.\nIf the Royalty DLC is installed and the pawn is psychic, they will lose psyfocus first.</BEWH.MankindsFinest.ModSettings.PsychicCraftingDesc>
 
   <!--=== Common keywords ===-->
   <BEWH.MankindsFinest.CommonKeywords.Primarch>primarch</BEWH.MankindsFinest.CommonKeywords.Primarch>

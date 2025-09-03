@@ -120,7 +120,7 @@
     </descriptionHyperlinks>
     <modExtensions>
       <li Class="Genes40k.DefModExtension_GeneMatrix">
-        <ticksToGestate>1500000</ticksToGestate>
+        <ticksToGestate>1200000</ticksToGestate>
         <makesGeneVial>BEWH_GeneseedVialPrimarch</makesGeneVial>
         <researchNeeded>BEWH_PrimarchProject</researchNeeded>
         <canUsePrimarchMaterial>true</canUsePrimarchMaterial>

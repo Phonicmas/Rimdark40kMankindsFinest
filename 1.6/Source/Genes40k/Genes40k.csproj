@@ -199,6 +199,12 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_ZealousFuryStopMentalState.cs" />
     <Compile Include="Hediffs\Hediff_Serf.cs" />
     <Compile Include="Integrations\RimHUDProgenoidGlandProgress.cs" />
+    <Compile Include="ModSettings\ModSettingTab.cs" />
+    <Compile Include="ModSettings\ModSettingTab_Geneseed.cs" />
+    <Compile Include="ModSettings\ModSettingTab_LivingSaint.cs" />
+    <Compile Include="ModSettings\ModSettingTab_Main.cs" />
+    <Compile Include="ModSettings\ModSettingTab_Misc.cs" />
+    <Compile Include="ModSettings\ModSettingTab_Psychic.cs" />
     <Compile Include="Rank\ChapterRankDef.cs" />
     <Compile Include="RoleRequirement\RoleRequirement_MustBeSpaceMarine.cs" />
     <Compile Include="StockGenerator\StockGenerator_TagSangprimusMaterialNoDupe.cs" />
