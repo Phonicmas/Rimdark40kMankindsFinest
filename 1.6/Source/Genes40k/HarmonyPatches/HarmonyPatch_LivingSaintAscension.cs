@@ -2,6 +2,7 @@
 using RimWorld;
 using System;
 using System.Linq;
+using Core40k;
 using Verse;
 
 namespace Genes40k;
@@ -138,10 +139,12 @@ public class LivingSaintAscension
         var lSSword = (ThingWithComps)ThingMaker.MakeThing(Genes40kDefOf.BEWH_LSaintSword);
         lSSword.TryGetComp<CompBiocodable>().CodeFor(__instance);
         lSSword.TryGetComp<CompQuality>().SetQuality(QualityCategory.Legendary, ArtGenerationContext.Outsider);
-            
+        lSSword.TryGetComp<CompMultiColor>().InitialSetup();    
+        
         var lSPistol = (ThingWithComps)ThingMaker.MakeThing(Genes40kDefOf.BEWH_LSaintBoltPistol);
         lSPistol.TryGetComp<CompBiocodable>().CodeFor(__instance);
         lSPistol.TryGetComp<CompQuality>().SetQuality(QualityCategory.Legendary, ArtGenerationContext.Outsider);
+        lSPistol.TryGetComp<CompMultiColor>().InitialSetup();
 
         if (__instance.equipment.PrimaryEq != null)
         {
@@ -164,6 +167,8 @@ public class LivingSaintAscension
             var lSArmor = (Apparel)ThingMaker.MakeThing(Genes40kDefOf.BEWH_LivingSaintArmor);
             lSArmor.TryGetComp<CompBiocodable>().CodeFor(__instance);
             lSArmor.TryGetComp<CompQuality>().SetQuality(QualityCategory.Legendary, ArtGenerationContext.Outsider);
+            lSArmor.TryGetComp<CompMultiColor>().InitialSetup();;
+            lSArmor.TryGetComp<CompDecorative>().InitialSetup();;
 
             if (!__instance.apparel.CanWearWithoutDroppingAnything(Genes40kDefOf.BEWH_LivingSaintArmor))
             {
