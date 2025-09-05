@@ -154,7 +154,6 @@
         <defName>BEWH_MkIPowerArmorHelmet</defName>
         <label>Mk I Power Armor Helmet</label>
         <description>A brutal, early battle helm used by the Thunder Warriors during the Unification Wars, the Mk I offers heavy protection with crude optics and minimal environmental sealing. Built for raw durability over finesse, it reflects the uncompromising violence of its era.</description>
-        <thingClass>Core40k.HeadDecorativeApparelMultiColor</thingClass>
         <recipeMaker>
             <researchPrerequisite>BEWH_PowerArmorMkI</researchPrerequisite>            <!-- temp research -->
         </recipeMaker>
