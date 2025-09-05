@@ -90,6 +90,10 @@
     <Compile Include="ChapterApparelMultiColor\ChapterColourDef.cs" />
     <Compile Include="ChapterApparelMultiColor\ChapterHeadDecorativeApparelMultiColor.cs" />
     <Compile Include="ChapterApparelMultiColor\ChapterBodyDecorativeApparelMultiColor.cs" />
+    <Compile Include="ChapterApparelMultiColor\CompChapterColor.cs" />
+    <Compile Include="ChapterApparelMultiColor\CompChapterColorWithShoulderDecoration.cs" />
+    <Compile Include="ChapterApparelMultiColor\CompProperties_ChapterColor.cs" />
+    <Compile Include="ChapterApparelMultiColor\CompProperties_ChapterColorWithShoulderDecoration.cs" />
     <Compile Include="ChapterApparelMultiColor\HarmonyPatch_OutfitStandBackpack.cs" />
     <Compile Include="ChapterApparelMultiColor\HarmonyPatch_OutfitStandShoulder.cs" />
     <Compile Include="ChapterApparelMultiColor\PawnRenderNodeWorker_AttachmentShoulderChapterIcon.cs" />
@@ -146,6 +150,7 @@
     <Compile Include="Comps\SpaceMarine\CompProperties_AbilityStasisConfirmation.cs" />
     <Compile Include="ConditionalStatAffecters\ConditionalStatAffecter_WarpShield.cs" />
     <Compile Include="Debug\DebugActions.cs" />
+    <Compile Include="DefModExtensions\DefModExtension_SpawnAsChapter.cs" />
     <Compile Include="DefModExtensions\DefModExtension_ThoughtXenophobiaWhitelist.cs" />
     <Compile Include="DefModExtensions\DefModExtension_DropPod.cs" />
     <Compile Include="DefModExtensions\DefModExtension_ExclusiveMech.cs" />
@@ -194,6 +199,12 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_ZealousFuryStopMentalState.cs" />
     <Compile Include="Hediffs\Hediff_Serf.cs" />
     <Compile Include="Integrations\RimHUDProgenoidGlandProgress.cs" />
+    <Compile Include="ModSettings\ModSettingTab.cs" />
+    <Compile Include="ModSettings\ModSettingTab_Geneseed.cs" />
+    <Compile Include="ModSettings\ModSettingTab_LivingSaint.cs" />
+    <Compile Include="ModSettings\ModSettingTab_Main.cs" />
+    <Compile Include="ModSettings\ModSettingTab_Misc.cs" />
+    <Compile Include="ModSettings\ModSettingTab_Psychic.cs" />
     <Compile Include="Rank\ChapterRankDef.cs" />
     <Compile Include="RoleRequirement\RoleRequirement_MustBeSpaceMarine.cs" />
     <Compile Include="StockGenerator\StockGenerator_TagSangprimusMaterialNoDupe.cs" />

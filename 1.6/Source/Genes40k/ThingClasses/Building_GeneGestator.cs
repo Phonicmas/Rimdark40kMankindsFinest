@@ -20,9 +20,10 @@ public class Building_GeneGestator : Building
 
     private bool doWork = false;
     private float totalTime = 0;
+    private float TotalTimeAdjusted => totalTime * (Genes40kUtils.ModSettings.matrixGestationTimeFactor/100f);
     private float progressInt = 0;
-    public bool InProgress => totalTime - progressInt > 0;
-    public bool Finished => totalTime - progressInt <= 0 && containedMatrix != null;
+    public bool InProgress => TotalTimeAdjusted - progressInt > 0;
+    public bool Finished => TotalTimeAdjusted - progressInt <= 0 && containedMatrix != null;
     
     [Unsaved(false)]
     private Effecter progressBar;
@@ -109,7 +110,7 @@ public class Building_GeneGestator : Building
         var mote = ((SubEffecter_ProgressBar)progressBar.children[0]).mote;
         if (mote == null) return;
             
-        mote.progress = Mathf.Clamp01(progressInt / totalTime);
+        mote.progress = Mathf.Clamp01(progressInt / TotalTimeAdjusted);
         mote.offsetZ = Rotation == Rot4.North ? 0.5f : -0.5f;
     }
 
@@ -174,7 +175,7 @@ public class Building_GeneGestator : Building
             var divider = 60000f;
             string timeDenoter = "LetterDay".Translate();
 
-            var timeLeft = totalTime - progressInt;
+            var timeLeft = TotalTimeAdjusted - progressInt;
 
             if (timeLeft < 60000)
             {

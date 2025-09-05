@@ -6,7 +6,6 @@
     <defName>BEWH_AstartesBolter</defName>
     <label>bolter</label>
     <description>The Mk Vb boltgun is the iconic standard-issue firearm of the Adeptus Astartes. Firing mass-reactive rounds with deadly efficiency, it combines reliability, adaptability, and stopping power, making it the definitive Space Marine weapon. \n\nAvalible Loadout: Standard, Metal Storm</description>
-    <thingClass>Core40k.WeaponMultiColor</thingClass>
     <graphicData>
       <texPath>Things/Weapons/BEWH_BoltCarbine</texPath>
       <shaderType>BEWH_CutoutThreeColor</shaderType>
@@ -69,6 +68,12 @@
         <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
         <minQualityForArtistic>Excellent</minQualityForArtistic>
       </li>
+      <li Class="Core40k.CompProperties_MultiColor">
+        <colorMaskAmount>3</colorMaskAmount>
+        <defaultPrimaryColor>(0.23,0.23,0.23)</defaultPrimaryColor>        <!-- If this is not set, it will default to use color of the stuff its made out of (if any)-->
+        <defaultSecondaryColor>(0.38,0.38,0.38)</defaultSecondaryColor>
+        <defaultTertiaryColor>(0.79,0.58,0.08)</defaultTertiaryColor>
+      </li>
     </comps>
     <modExtensions>
       <li Class="VEF.Things.ThingDefExtension">
@@ -88,12 +93,6 @@
           </west>
         </weaponCarryDrawOffsets>
       </li>
-      <li Class="Core40k.DefModExtension_WeaponMultiColor">
-        <colorMaskAmount>3</colorMaskAmount>
-        <defaultPrimaryColor>(0.23,0.23,0.23)</defaultPrimaryColor>        <!-- If this is not set, it will default to use color of the stuff its made out of (if any)-->
-        <defaultSecondaryColor>(0.38,0.38,0.38)</defaultSecondaryColor>
-        <defaultTertiaryColor>(0.79,0.58,0.08)</defaultTertiaryColor>
-      </li>
     </modExtensions>
   </ThingDef>
 
@@ -101,7 +100,6 @@
   <ThingDef ParentName="BEWH_AstartesMeleeBase">
     <defName>BEWH_AstartesChainsword</defName>
     <label>chainsword</label>
-    <thingClass>Core40k.WeaponMultiColor</thingClass>
     <description>A vicious and brutal weapon, the Chainsword is an iconic tool of the Adeptus Astartes. It tears through flesh with ease and is relatively inexpensive to produce. However, it lacks the armor-penetrating capability of more advanced power weapons.</description>
     <soundInteract>BEWH_SFX_ChainswordInteract</soundInteract>
     <meleeHitSound>BEWH_SFX_ChainswordHit</meleeHitSound>
@@ -148,6 +146,14 @@
         <armorPenetration>0.65</armorPenetration>
       </li>
     </tools>
+    <comps>
+      <li Class="Core40k.CompProperties_MultiColor">
+        <colorMaskAmount>3</colorMaskAmount>
+        <defaultPrimaryColor>(111,111,111)</defaultPrimaryColor>        <!-- If this is not set, it will default to use color of the stuff its made out of (if any)-->
+        <defaultSecondaryColor>(213,158,76)</defaultSecondaryColor>
+        <defaultTertiaryColor>(179,179,179)</defaultTertiaryColor>
+      </li>
+    </comps>
     <modExtensions>
       <li Class="VEF.Things.ThingDefExtension">
         <weaponCarryDrawOffsets>
@@ -165,12 +171,6 @@
           </west>
         </weaponCarryDrawOffsets>
       </li>
-      <li Class="Core40k.DefModExtension_WeaponMultiColor">
-        <colorMaskAmount>3</colorMaskAmount>
-        <defaultPrimaryColor>(111,111,111)</defaultPrimaryColor>        <!-- If this is not set, it will default to use color of the stuff its made out of (if any)-->
-        <defaultSecondaryColor>(213,158,76)</defaultSecondaryColor>
-        <defaultTertiaryColor>(179,179,179)</defaultTertiaryColor>
-      </li>
     </modExtensions>
   </ThingDef>
 
@@ -178,7 +178,6 @@
   <ThingDef ParentName="BEWH_AstartesMeleeBase">
     <defName>BEWH_AstartesPowerSword</defName>
     <label>power sword</label>
-    <thingClass>Core40k.WeaponMultiColor</thingClass>
     <description>A melee weapon with an energy field, the Power Sword is capable of slicing through armor with ease. Its energy blade hums with deadly force, allowing the wielder to strike with precision and overwhelming power.</description>
     <soundInteract>BEWH_SFX_PowerswordInteract</soundInteract>
     <meleeHitSound>BEWH_SFX_PowerswordHit</meleeHitSound>
@@ -225,6 +224,14 @@
         <armorPenetration>1.2</armorPenetration>
       </li>
     </tools>
+    <comps>
+      <li Class="Core40k.CompProperties_MultiColor">
+        <colorMaskAmount>3</colorMaskAmount>
+        <defaultPrimaryColor>(213,158,76)</defaultPrimaryColor>
+        <defaultSecondaryColor>(98,98,98)</defaultSecondaryColor>
+        <defaultTertiaryColor>(116,219,232)</defaultTertiaryColor>
+      </li>
+    </comps>
     <modExtensions>
       <li Class="VEF.Things.ThingDefExtension">
         <weaponCarryDrawOffsets>
@@ -241,12 +248,6 @@
             <drawOffset>(0, 0, -0.15)</drawOffset>
           </west>
         </weaponCarryDrawOffsets>
-      </li>
-      <li Class="Core40k.DefModExtension_WeaponMultiColor">
-        <colorMaskAmount>3</colorMaskAmount>
-        <defaultPrimaryColor>(213,158,76)</defaultPrimaryColor>
-        <defaultSecondaryColor>(98,98,98)</defaultSecondaryColor>
-        <defaultTertiaryColor>(116,219,232)</defaultTertiaryColor>
       </li>
     </modExtensions>
   </ThingDef>

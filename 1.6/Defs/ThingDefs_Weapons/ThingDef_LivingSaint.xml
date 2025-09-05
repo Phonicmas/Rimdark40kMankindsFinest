@@ -5,7 +5,6 @@
   <ThingDef ParentName="BaseGunWithQuality">
     <defName>BEWH_LSaintBoltPistol</defName>
     <label>Ascendant Wrath</label>
-    <thingClass>Core40k.WeaponMultiColor</thingClass>
     <description>An ancient weapon appearing to resemble a heavy bolt pistol, its true nature obscured by time and conflicting accounts. Some say it was never forged in any traditional sense, but appeared in the midst of battle - formed from blinding light and raw warp energy as the Saint rose to lead the faithful.</description>
     <graphicData>
       <texPath>Things/Weapons/BEWH_LSaintBoltPistol</texPath>
@@ -69,9 +68,13 @@
         <cooldownTime>2</cooldownTime>
       </li>
     </tools>
-
     <comps>
       <li Class="CompProperties_Biocodable"/>
+      <li Class="Core40k.CompProperties_MultiColor">
+        <colorMaskAmount>2</colorMaskAmount>
+        <defaultPrimaryColor>(213,158,76)</defaultPrimaryColor>
+        <defaultSecondaryColor>(209,204,178)</defaultSecondaryColor>
+      </li>
     </comps>
     <modExtensions>
       <li Class="VEF.Things.ThingDefExtension">
@@ -91,11 +94,6 @@
           </west>
         </weaponCarryDrawOffsets>
       </li>
-      <li Class="Core40k.DefModExtension_WeaponMultiColor">
-        <colorMaskAmount>2</colorMaskAmount>
-        <defaultPrimaryColor>(213,158,76)</defaultPrimaryColor>
-        <defaultSecondaryColor>(209,204,178)</defaultSecondaryColor>
-      </li>
     </modExtensions>
   </ThingDef>
 
@@ -103,7 +101,6 @@
   <ThingDef ParentName="BEWH_MeleeWeaponUltratech">
     <defName>BEWH_LSaintSword</defName>
     <label>Ardent Blade</label>
-    <thingClass>Core40k.WeaponMultiColor</thingClass>
     <description>This power sword is said to be forged from crystallised faith and consecrated alloy. Weightless in the Saint's hand, it strikes with blinding speed and divine fury, burning heretics on impact as if guided by the Emperor Himself. At the wielder's will, the blade unleashes a jet of holy flame - a searing manifestation of His wrath.</description>
     <graphicData>
       <texPath>Things/Weapons/BEWH_LSaintSword</texPath>
@@ -177,7 +174,7 @@
     </tools>
 
     <comps Inherit="False">
-      <li Class="CompProperties_EquippableAbilityReloadable" MayRequire="Ludeon.RimWorld.Anomaly">        <!-- I duct-taped the Hellcat fire spew from Anomaly to the Saint's sword basically, sue me -->
+      <li Class="CompProperties_EquippableAbilityReloadable">        <!-- I duct-taped the Hellcat fire spew from Anomaly to the Saint's sword basically, sue me -->
         <abilityDef>BEWH_CleansingFire</abilityDef>
       </li>
       <li Class="CompProperties_Forbiddable"/>
@@ -190,6 +187,12 @@
       </li>
       <li>
         <compClass>CompQuality</compClass>
+      </li>
+      <li Class="Core40k.CompProperties_MultiColor">
+        <colorMaskAmount>3</colorMaskAmount>
+        <defaultPrimaryColor>(213,158,76)</defaultPrimaryColor>
+        <defaultSecondaryColor>(104,24,33)</defaultSecondaryColor>
+        <defaultTertiaryColor>(252,255,225)</defaultTertiaryColor>
       </li>
     </comps>
 
@@ -210,12 +213,6 @@
             <drawOffset>(0, 0, -0.15)</drawOffset>
           </west>
         </weaponCarryDrawOffsets>
-      </li>
-      <li Class="Core40k.DefModExtension_WeaponMultiColor">
-        <colorMaskAmount>3</colorMaskAmount>
-        <defaultPrimaryColor>(213,158,76)</defaultPrimaryColor>
-        <defaultSecondaryColor>(104,24,33)</defaultSecondaryColor>
-        <defaultTertiaryColor>(252,255,225)</defaultTertiaryColor>
       </li>
     </modExtensions>
   </ThingDef>

@@ -1,6 +1,4 @@
-﻿using System;
-using RimWorld;
-using UnityEngine;
+﻿using RimWorld;
 using Verse;
 
 namespace Genes40k;
@@ -14,10 +12,15 @@ public class PawnRenderNodeWorker_AttachmentShoulderChapterIcon : PawnRenderNode
     public override bool CanDrawNow(PawnRenderNode node, PawnDrawParms parms)
     {
         var pawn = parms.pawn;
-            
-        var apparelMultiColor = (ChapterBodyDecorativeApparelMultiColor)node.apparel;
+        
+        if (!node.apparel.HasComp<CompChapterColorWithShoulderDecoration>())
+        {
+            return false;
+        }
 
-        if (apparelMultiColor.LeftShoulderIcon == Genes40kDefOf.BEWH_ShoulderNone || apparelMultiColor.LeftShoulderIcon == null)
+        var chapterDecoComp = node.apparel.GetComp<CompChapterColorWithShoulderDecoration>();
+
+        if (chapterDecoComp.LeftShoulderIcon == Genes40kDefOf.BEWH_ShoulderNone || chapterDecoComp.LeftShoulderIcon == null)
         {
             return false;
         }
@@ -28,12 +31,12 @@ public class PawnRenderNodeWorker_AttachmentShoulderChapterIcon : PawnRenderNode
         
         if (parms.facing == Rot4.East)
         {
-            return apparelMultiColor.FlipShoulderIcons;
+            return chapterDecoComp.FlipShoulderIcons;
         }
             
         if (parms.facing == Rot4.West)
         {
-            return !apparelMultiColor.FlipShoulderIcons;
+            return !chapterDecoComp.FlipShoulderIcons;
         }
         
         if (parms.Portrait)

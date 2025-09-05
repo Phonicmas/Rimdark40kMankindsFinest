@@ -13,6 +13,7 @@ public class Genes40kModSettings : ModSettings
     public int perpetualBirthChance = 3;
 
     public bool livingSaintSystem = true;
+    public bool livingSaintOnlyBaselinerAscension = true;
     public bool livingSaintMale = false;
     public bool livingSaintAddedChanceFromViolenceSkills = false;
     public int livingSaintLimit = 1;
@@ -22,6 +23,8 @@ public class Genes40kModSettings : ModSettings
         
     public int implantationSuccessOffset = 0;
     public int implantationCapOffset = 0;
+    
+    public int matrixGestationTimeFactor = 100;
 
     public bool psychicCrafting = true;
 
@@ -67,6 +70,7 @@ public class Genes40kModSettings : ModSettings
         Scribe_Values.Look(ref perpetualBirthChance, "perpetualBirthChance", 3);
             
         Scribe_Values.Look(ref livingSaintSystem, "livingSaintSystem", true);
+        Scribe_Values.Look(ref livingSaintOnlyBaselinerAscension, "livingSaintOnlyBaselinerAscension", true);
         Scribe_Values.Look(ref livingSaintMale, "livingSaintMale", false);
         Scribe_Values.Look(ref livingSaintAddedChanceFromViolenceSkills, "livingSaintAddedChanceFromViolenceSkills", false);
         Scribe_Values.Look(ref livingSaintLimit, "livingSaintLimit", 1);
@@ -76,6 +80,8 @@ public class Genes40kModSettings : ModSettings
             
         Scribe_Values.Look(ref implantationSuccessOffset, "implantationSuccessOffset", 0);
         Scribe_Values.Look(ref implantationCapOffset, "implantationCapOffset", 0);
+        
+        Scribe_Values.Look(ref matrixGestationTimeFactor, "matrixGestationTimeFactor", 0);
         
         Scribe_Values.Look(ref allowFemalePrimarchBirths, "allowFemalePrimarchBirths", false);
         

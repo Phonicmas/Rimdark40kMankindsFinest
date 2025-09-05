@@ -7,7 +7,6 @@
         <defName>BEWH_MkVIIPowerArmorHelmet</defName>
         <label>Mk VII Power Armor Helmet</label>
         <description>A standard-issue battle helm of the Adeptus Astartes, offering durable ceramite protection and a reinforced grille design. It provides reliable performance and is well-suited for prolonged combat operations.</description>
-        <thingClass>Genes40k.ChapterHeadDecorativeApparelMultiColor</thingClass>
         <recipeMaker>
             <researchPrerequisite>BEWH_PowerArmorMkVII</researchPrerequisite>
         </recipeMaker>
@@ -40,13 +39,16 @@
                 <li>BEWH_PowerArmorHelmetMkVII</li>
             </tags>
         </apparel>
-        <modExtensions>
-            <li Class="Core40k.DefModExtension_EnableTabDef">
+        <comps>
+            <li Class="Genes40k.CompProperties_ChapterColor">
                 <tabDefs>
                     <li>BEWH_ExtraDecoration</li>
                 </tabDefs>
             </li>
-        </modExtensions>
+            <li Class="Core40k.CompProperties_Decorative">
+                <decorativeType>Head</decorativeType>
+            </li>
+        </comps>
     </ThingDef>
 
     <!-- MK 10-->
@@ -54,7 +56,6 @@
         <defName>BEWH_MkXPowerArmorHelmet</defName>
         <label>Mk X Power Armor Helmet</label>
         <description>A standard battle helm worn by Primaris Space Marines, designed for increased protection and clarity. Its refined optics and sealed construction support long deployments in hostile environments.</description>
-        <thingClass>Genes40k.ChapterHeadDecorativeApparelMultiColor</thingClass>
         <recipeMaker>
             <researchPrerequisite>BEWH_PowerArmorMkX</researchPrerequisite>
         </recipeMaker>
@@ -87,13 +88,16 @@
                 <li>BEWH_PowerArmorHelmetMkX</li>
             </tags>
         </apparel>
-        <modExtensions>
-            <li Class="Core40k.DefModExtension_EnableTabDef">
+        <comps>
+            <li Class="Genes40k.CompProperties_ChapterColor">
                 <tabDefs>
                     <li>BEWH_ExtraDecoration</li>
                 </tabDefs>
             </li>
-        </modExtensions>
+            <li Class="Core40k.CompProperties_Decorative">
+                <decorativeType>Head</decorativeType>
+            </li>
+        </comps>
     </ThingDef>
 
     <!-- MK 10 Chaplain-->
@@ -101,7 +105,6 @@
         <defName>BEWH_MkXPowerArmorChaplainHelmet</defName>
         <label>Mk X Chaplain Helmet</label>
         <description>Mk X helmet modified for Chaplains, adorned with skull iconography and grim visages to inspire loyalty and fear in equal measure. \n\nIncreases the terror of nearby prisoners.</description>
-        <thingClass>Genes40k.ChapterHeadDecorativeApparelMultiColor</thingClass>
         <recipeMaker>
             <researchPrerequisite>BEWH_PowerArmorMkX</researchPrerequisite>
         </recipeMaker>
@@ -134,13 +137,16 @@
                 <li>BEWH_PowerArmorHelmetMkXChaplain</li>
             </tags>
         </apparel>
-        <modExtensions>
-            <li Class="Core40k.DefModExtension_EnableTabDef">
+        <comps>
+            <li Class="Genes40k.CompProperties_ChapterColor">
                 <tabDefs>
                     <li>BEWH_ExtraDecoration</li>
                 </tabDefs>
             </li>
-        </modExtensions>
+            <li Class="Core40k.CompProperties_Decorative">
+                <decorativeType>Head</decorativeType>
+            </li>
+        </comps>
     </ThingDef>
 
     <!-- MK 1 Thunder Warrior-->
@@ -180,21 +186,22 @@
                 <li>BEWH_PowerArmorHelmetMkI</li>
             </tags>
         </apparel>
-        <modExtensions>
-            <li Class="Core40k.DefModExtension_EnableTabDef">
+        <comps>
+            <li Class="Core40k.CompProperties_MultiColor">
+                <defaultPrimaryColor>(231,148,88)</defaultPrimaryColor>
+                <defaultSecondaryColor>(253,184,110)</defaultSecondaryColor>
                 <tabDefs>
                     <li>BEWH_ExtraDecoration</li>
                 </tabDefs>
             </li>
-            <li Class="Core40k.DefModExtension_StandardDecorations">
+            <li Class="Core40k.CompProperties_Decorative">
+                <decorativeType>Head</decorativeType>
                 <extraDecorations>
                     <li>BEWH_Deco_TW_Plume1</li>
                     <li>BEWH_Deco_TW_Goggles</li>
                 </extraDecorations>
-                <defaultPrimaryColor>(231,148,88)</defaultPrimaryColor>
-                <defaultSecondaryColor>(253,184,110)</defaultSecondaryColor>
             </li>
-        </modExtensions>
+        </comps>
     </ThingDef>
 
 </Defs>

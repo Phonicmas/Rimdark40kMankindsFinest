@@ -25,15 +25,16 @@ public class PawnRenderNode_AttachmentShoulderRankIcon : PawnRenderNode_Apparel
     {
         var rightShoulderPath = Props.texPath;
             
-        var apparelMultiColor = (ChapterBodyDecorativeApparelMultiColor)apparel;
-        var drawColour = apparelMultiColor.RightShoulderIconColour;
+        var chapterDecoComp = apparel.GetComp<CompChapterColorWithShoulderDecoration>();
+        
+        var drawColour = chapterDecoComp.RightShoulderIconColour;
             
-        if (apparelMultiColor.RightShoulderIcon != null)
+        if (chapterDecoComp.RightShoulderIcon != null)
         {
-            rightShoulderPath = apparelMultiColor.RightShoulderIcon.drawnTextureIconPath;
+            rightShoulderPath = chapterDecoComp.RightShoulderIcon.drawnTextureIconPath;
         }
         
-        if (apparelMultiColor.FlipShoulderIcons)
+        if (chapterDecoComp.FlipShoulderIcons)
         {
             Flipped = !Flipped;
         }

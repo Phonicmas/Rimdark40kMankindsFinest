@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Anomaly</li>
+        </mods>
+        <nomatch Class="PatchOperationSequence">
+            <operations>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="BEWH_LSaintSword"]/comps</xpath>
+                    <value>
+                        <li>
+                            <compClass>CompEquippable</compClass>
+                        </li>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/ThingDef[defName="BEWH_LSaintSword"]/comps/li[@Class="CompProperties_EquippableAbilityReloadable"]</xpath>
+                </li>
+
+            </operations>
+        </nomatch>
+    </Operation>
+
+</Patch>

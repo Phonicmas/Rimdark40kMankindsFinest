@@ -10,16 +10,18 @@ namespace Genes40k;
 [StaticConstructorOnStartup]
 public static class Genes40kUtils
 {
-    private static Genes40kModSettings modSettings = null;
+    private static List<ChapterColourDef> chapterColourDefs = null;
 
+    public static List<ChapterColourDef> ChapterColourDefs => chapterColourDefs ??= DefDatabase<ChapterColourDef>.AllDefsListForReading.ToList();
+    
+    
+    private static Genes40kModSettings modSettings = null;
     public static Genes40kModSettings ModSettings => modSettings ??= LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>();
 
     private static List<ShoulderIconDef> rightShoulderIconDef = null;
-        
     public static List<ShoulderIconDef> RightShoulderIconDef => rightShoulderIconDef ??= DefDatabase<ShoulderIconDef>.AllDefsListForReading.Where(rightShoulderDef => rightShoulderDef.rightShoulder).ToList();
         
     private static List<ShoulderIconDef> leftShoulderIconDef = null;
-        
     public static List<ShoulderIconDef> LeftShoulderIconDef => leftShoulderIconDef ??= DefDatabase<ShoulderIconDef>.AllDefsListForReading.Where(leftShoulderDef => leftShoulderDef.leftShoulder).ToList();
 
     public static readonly Texture2D MindShieldOffIcon = ContentFinder<Texture2D>.Get("UI/Abilities/BEWH_MindShieldOff");
@@ -224,11 +226,43 @@ public static class Genes40kUtils
         {
             return null;
         }
-
         var xenotypeName = string.Empty;
-            
-        var chapter = randomChapter ? Current.Game.GetComponent<GameComponent_MankindFinestUtils>().CurrentChapterColour : ModSettings.CurrentlySelectedPreset;
-            
+
+        ChapterColourDef chapter;
+
+        if (randomChapter)
+        {
+            var defMod = pawn.kindDef.GetModExtension<DefModExtension_SpawnAsChapter>();
+        
+            if (defMod != null)
+            {
+                if (defMod.specificChapters != null)
+                {
+                    chapter = defMod.specificChapters.RandomElement();
+                }
+                else
+                {
+                    var chapList = ChapterColourDefs.Where(chapterCol => chapterCol.loyalist == defMod.loyalist).ToList();
+                    if (!chapList.NullOrEmpty())
+                    {
+                        chapter = chapList.RandomElement();
+                    }
+                    else
+                    {
+                        chapter = Current.Game.GetComponent<GameComponent_MankindFinestUtils>().CurrentChapterColour;
+                    }
+                }
+            }
+            else
+            {
+                chapter = Current.Game.GetComponent<GameComponent_MankindFinestUtils>().CurrentChapterColour;
+            }
+        }
+        else
+        {
+            chapter = ModSettings.CurrentlySelectedPreset;
+        }
+        
         var chapterColourPrimary = chapter.primaryColour;
         var chapterColourSecondary = chapter.secondaryColour;
         var chapterColourTertiary = chapter.tertiaryColour ?? chapter.secondaryColour;
@@ -243,14 +277,12 @@ public static class Genes40kUtils
         {
             chapterGene = shoulderIconDef.relatedChapterGene;
         }
-            
         if (chapterGene != null)
         {
             if (chapterGene.HasModExtension<DefModExtension_ChapterGene>())
             {
                 xenotypeName = chapterGene.GetModExtension<DefModExtension_ChapterGene>().chapterName;
             }
-            
             if (!pawn.genes.HasActiveGene(chapterGene))
             {
                 pawn.genes.AddGene(chapterGene, true);
@@ -261,27 +293,26 @@ public static class Genes40kUtils
                 }
             }
         }
-            
         foreach (var apparel in pawn.apparel.WornApparel)
         {
-            switch (apparel)
+            var comp = apparel.GetComp<CompChapterColor>();
+            if (comp == null)
             {
-                case ChapterBodyDecorativeApparelMultiColor extraIconsChapterApparelMultiColor:
-                    extraIconsChapterApparelMultiColor.SetInitialColours(chapterColourPrimary, chapterColourSecondary, chapterColourTertiary);
-                    extraIconsChapterApparelMultiColor.LeftShoulderIcon = shoulderIconDef;
-                    break;
-                case ChapterHeadDecorativeApparelMultiColor chapterApparelMultiColor:
-                    chapterApparelMultiColor.SetInitialColours(chapterColourPrimary, chapterColourSecondary, chapterColourTertiary);
-                    break;
+                continue;
+            }
+            
+            comp.SetColors(chapterColourPrimary, chapterColourSecondary, chapterColourTertiary);
+
+            if (comp is CompChapterColorWithShoulderDecoration compExtended)
+            {
+                compExtended.LeftShoulderIcon = shoulderIconDef;
             }
         }
-        
         var equipment = pawn.equipment.PrimaryEq.parent;
-        if (equipment is WeaponMultiColor weaponMultiColor)
+        if (equipment.HasComp<CompMultiColor>())
         {
-            weaponMultiColor.SetColors(chapter);
+            equipment.GetComp<CompMultiColor>().SetColors(chapter);
         }
-
         return chapter;
     }
 

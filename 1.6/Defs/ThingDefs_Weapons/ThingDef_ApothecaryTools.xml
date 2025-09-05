@@ -28,7 +28,6 @@
   <ThingDef ParentName="BEWH_ApothecaryToolGeneseed">
     <defName>BEWH_Narthecium</defName>
     <label>narthecium</label>
-    <thingClass>Core40k.WeaponMultiColor</thingClass>
     <description>The Narthecium is a special tool used by Adeptus Astartes apothecaries and Primaris apothecaries to retrieve the crucial gene-seed of their fallen battle-brothers so that new Astartes might be raised from among their Chapter's aspirants. Increases the chance of successfully extracting gene-seeds from dead marines by 50%.\nCan be used as a melee weapon.</description>
     <graphicData>
       <texPath>Things/Weapons/BEWH_Narthecium</texPath>
@@ -73,6 +72,12 @@
         <armorPenetration>2</armorPenetration>
       </li>
     </tools>
+    <comps>
+      <li Class="Core40k.CompProperties_MultiColor">
+        <colorMaskAmount>1</colorMaskAmount>
+        <defaultPrimaryColor>(195,183,165)</defaultPrimaryColor>
+      </li>
+    </comps>
     <modExtensions>
       <li Class="VEF.Things.ThingDefExtension">
         <weaponCarryDrawOffsets>
@@ -91,10 +96,6 @@
           </west>
         </weaponCarryDrawOffsets>
       </li>
-      <li Class="Core40k.DefModExtension_WeaponMultiColor">
-        <colorMaskAmount>1</colorMaskAmount>
-        <defaultPrimaryColor>(195,183,165)</defaultPrimaryColor>
-      </li>
     </modExtensions>
   </ThingDef>
 
@@ -102,7 +103,6 @@
   <ThingDef ParentName="BEWH_ApothecaryToolGeneseed">
     <defName>BEWH_Reductor</defName>
     <label>reductor</label>
-    <thingClass>Core40k.WeaponMultiColor</thingClass>
     <description>The Reductor is a special tool used by apothecaries to retrieve the crucial gene-seed of their fallen brothers so that new Astartes might be raised from among their Chapter's aspirants. This tool also doubles as a close ranged pistol.\n\nIncreases the chance of successfully extracting gene-seeds from dead marines by 50%.\nCan be used as a ranged weapon.</description>
     <graphicData>
       <texPath>Things/Weapons/BEWH_Reductor</texPath>
@@ -162,6 +162,12 @@
         <cooldownTime>2</cooldownTime>
       </li>
     </tools>
+    <comps>
+      <li Class="Core40k.CompProperties_MultiColor">
+        <colorMaskAmount>1</colorMaskAmount>
+        <defaultPrimaryColor>(195,183,165)</defaultPrimaryColor>
+      </li>
+    </comps>
     <modExtensions>
       <li Class="VEF.Things.ThingDefExtension">
         <weaponCarryDrawOffsets>
@@ -179,10 +185,6 @@
             <drawOffset>(0.1, 0, -0.2)</drawOffset>
           </west>
         </weaponCarryDrawOffsets>
-      </li>
-      <li Class="Core40k.DefModExtension_WeaponMultiColor">
-        <colorMaskAmount>1</colorMaskAmount>
-        <defaultPrimaryColor>(195,183,165)</defaultPrimaryColor>
       </li>
     </modExtensions>
   </ThingDef>

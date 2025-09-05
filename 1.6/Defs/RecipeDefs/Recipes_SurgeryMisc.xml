@@ -35,6 +35,7 @@
         </skillRequirements>
         <recipeUsers>
             <li>Human</li>
+            <li MayRequire="Ludeon.RimWorld.Anomaly">CreepJoiner</li>
         </recipeUsers>
     </RecipeDef>
 
@@ -71,6 +72,7 @@
         </skillRequirements>
         <recipeUsers>
             <li>Human</li>
+            <li MayRequire="Ludeon.RimWorld.Anomaly">CreepJoiner</li>
         </recipeUsers>
     </RecipeDef>
 

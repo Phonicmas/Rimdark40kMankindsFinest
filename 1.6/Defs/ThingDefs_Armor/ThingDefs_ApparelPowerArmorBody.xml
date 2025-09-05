@@ -2,7 +2,6 @@
 <Defs>
 
     <ThingDef Name="BEWH_PowerArmorBase_ChapterColour" ParentName="BEWH_PowerArmorBase" Abstract="True">
-        <thingClass>Genes40k.ChapterBodyDecorativeApparelMultiColor</thingClass>
         <apparel>
             <renderNodeProperties>
                 <!-- Left shoulder pad/legion icon -->
@@ -132,13 +131,18 @@
                 </li>
             </renderNodeProperties>
         </apparel>
-        <modExtensions>
-            <li Class="Core40k.DefModExtension_EnableTabDef">
+        <comps>
+            <li Class="Genes40k.CompProperties_ChapterColorWithShoulderDecoration">
                 <tabDefs>
                     <li>BEWH_AstartesShoulderIcon</li>
                     <li>BEWH_ExtraDecoration</li>
                 </tabDefs>
             </li>
+            <li Class="Core40k.CompProperties_Decorative">
+                <decorativeType>Body</decorativeType>
+            </li>
+        </comps>
+        <modExtensions>
             <li Class="Core40k.DefModExtension_ForcesBodyType">
                 <forcedBodyType>Hulk</forcedBodyType>
                 <hideBodyGraphic>true</hideBodyGraphic>
@@ -227,13 +231,18 @@
                 </li>
             </renderNodeProperties>
         </apparel>
-        <modExtensions>
-            <li Class="Core40k.DefModExtension_EnableTabDef">
+        <comps>
+            <li Class="Genes40k.CompProperties_ChapterColorWithShoulderDecoration">
                 <tabDefs>
                     <li>BEWH_AstartesShoulderIcon</li>
                     <li>BEWH_ExtraDecoration</li>
                 </tabDefs>
             </li>
+            <li Class="Core40k.CompProperties_Decorative">
+                <decorativeType>Body</decorativeType>
+            </li>
+        </comps>
+        <modExtensions>
             <li Class="Core40k.DefModExtension_ForcesBodyType">
                 <forcedBodyType>Hulk</forcedBodyType>
                 <hideBodyGraphic>true</hideBodyGraphic>
@@ -323,23 +332,26 @@
                 </li>
             </renderNodeProperties>
         </apparel>
-        <modExtensions>
-            <li Class="Core40k.DefModExtension_EnableTabDef">
+        <comps>
+            <li Class="Genes40k.CompProperties_ChapterColorWithShoulderDecoration">
+                <defaultPrimaryColor>(61,61,61)</defaultPrimaryColor>
+                <defaultSecondaryColor>(223,164,29)</defaultSecondaryColor>
                 <tabDefs>
                     <li>BEWH_AstartesShoulderIcon</li>
                     <li>BEWH_ExtraDecoration</li>
                 </tabDefs>
             </li>
+            <li Class="Core40k.CompProperties_Decorative">
+                <decorativeType>Body</decorativeType>
+            </li>
+        </comps>
+        <modExtensions>
             <li Class="Core40k.DefModExtension_ForcesBodyType">
                 <forcedBodyType>Hulk</forcedBodyType>
                 <hideBodyGraphic>true</hideBodyGraphic>
             </li>
             <li Class="Core40k.DefModExtension_HideJumpPack">
                 <changeBackpackVisual>true</changeBackpackVisual>
-            </li>
-            <li Class="Core40k.DefModExtension_StandardDecorations">
-                <defaultPrimaryColor>(61,61,61)</defaultPrimaryColor>
-                <defaultSecondaryColor>(223,164,29)</defaultSecondaryColor>
             </li>
         </modExtensions>
     </ThingDef>
@@ -348,7 +360,6 @@
     <ThingDef ParentName="BEWH_PowerArmorBase">
         <defName>BEWH_LivingSaintArmor</defName>
         <label>Living Saint Armor</label>
-        <thingClass>Core40k.BodyDecorativeApparelMultiColor</thingClass>
         <description>A sanctified warplate worn by a Living Saint, adorned with the symbols of the Ecclesiarchy. It shines with a faint golden hue and, while lacking advanced systems, offers impressive protection. Some claim it has a calming or inspiring effect on nearby allies. Despite its imposing appearance, it moves easily with the wearer, providing both resilience and mobility.</description>
         <graphicData>
             <texPath>Things/Armor/Imperium/PowerArmor/LivingSaint/BEWH_LSaintArmor</texPath>
@@ -416,24 +427,25 @@
         </apparel>
         <comps>
             <li Class="CompProperties_Biocodable"/>
-        </comps>
-        <modExtensions>
-            <li Class="Core40k.DefModExtension_EnableTabDef">
+            <li Class="Core40k.CompProperties_MultiColor">
+                <defaultPrimaryColor>(0.8358, 0.619, 0.298)</defaultPrimaryColor>
+                <defaultSecondaryColor>(0.407, 0.094, 0.129)</defaultSecondaryColor>
                 <tabDefs>
                     <li>BEWH_ExtraDecoration</li>
                 </tabDefs>
             </li>
-            <li Class="Core40k.DefModExtension_ForcesBodyType">
-                <forcedBodyType>Female</forcedBodyType>
-                <hideBodyGraphic>true</hideBodyGraphic>
-            </li>
-            <li Class="Core40k.DefModExtension_StandardDecorations">
+            <li Class="Core40k.CompProperties_Decorative">
+                <decorativeType>Body</decorativeType>
                 <extraDecorations>
                     <li>BEWH_LivingSaintWings_1</li>
                     <li>BEWH_LivingSaintHalo_2</li>
                 </extraDecorations>
-                <defaultPrimaryColor>(0.8358, 0.619, 0.298)</defaultPrimaryColor>
-                <defaultSecondaryColor>(0.407, 0.094, 0.129)</defaultSecondaryColor>
+            </li>
+        </comps>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_ForcesBodyType">
+                <forcedBodyType>Female</forcedBodyType>
+                <hideBodyGraphic>true</hideBodyGraphic>
             </li>
             <li Class="Core40k.DefModExtension_HideJumpPack" />
         </modExtensions>
@@ -444,7 +456,6 @@
         <defName>BEWH_MkIPowerArmor</defName>
         <label>Mk I Power Armor</label>
         <description>The Mk I "Thunder" Power Armor is a prototype battle plate worn by the Emperor's Thunder Warriors during the Unification Wars. Built for brute strength rather than finesse, it features thick plasteel plating, basic servo-motors, and minimal environmental sealing.</description>
-        <thingClass>Core40k.BodyDecorativeApparelMultiColor</thingClass>
         <recipeMaker>
             <researchPrerequisite>BEWH_PowerArmorMkI</researchPrerequisite>
         </recipeMaker>
@@ -518,19 +529,22 @@
                 </li>
             </renderNodeProperties>
         </apparel>
-        <modExtensions>
-            <li Class="Core40k.DefModExtension_EnableTabDef">
+        <comps>
+            <li Class="Core40k.CompProperties_MultiColor">
+                <defaultPrimaryColor>(231,148,88)</defaultPrimaryColor>
+                <defaultSecondaryColor>(253,184,110)</defaultSecondaryColor>
                 <tabDefs>
                     <li>BEWH_ExtraDecoration</li>
                 </tabDefs>
             </li>
+            <li Class="Core40k.CompProperties_Decorative">
+                <decorativeType>Body</decorativeType>
+            </li>
+        </comps>
+        <modExtensions>
             <li Class="Core40k.DefModExtension_ForcesBodyType">
                 <forcedBodyType>Hulk</forcedBodyType>
                 <hideBodyGraphic>true</hideBodyGraphic>
-            </li>
-            <li Class="Core40k.DefModExtension_StandardDecorations">
-                <defaultPrimaryColor>(231,148,88)</defaultPrimaryColor>
-                <defaultSecondaryColor>(253,184,110)</defaultSecondaryColor>
             </li>
             <li Class="Core40k.DefModExtension_HideJumpPack" />
         </modExtensions>

@@ -1,19 +1,26 @@
-﻿using Core40k;
-using RimWorld;
+using Core40k;
 using UnityEngine;
 using Verse;
 
 namespace Genes40k;
 
-public class ChapterBodyDecorativeApparelMultiColor : BodyDecorativeApparelMultiColor
+public class CompChapterColorWithShoulderDecoration : CompChapterColor
 {
-    private Genes40kModSettings modSettings = null;
-
-    protected Genes40kModSettings ModSettings => modSettings ??= LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>();
+    public void TempSetInitialValues(ChapterBodyDecorativeApparelMultiColor multiColor)
+    {
+        rightShoulder = multiColor.RightShoulderTemp;
+        originalRightShoulder = multiColor.RightShoulderTemp;
         
+        leftShoulder = multiColor.LeftShoulderTemp;
+        originalLeftShoulder = multiColor.LeftShoulderTemp;
+        
+        flipShoulderIcons = multiColor.FlipShoulderIcons;
+    }
+    
+    public new CompProperties_ChapterColorWithShoulderDecoration Props => (CompProperties_ChapterColorWithShoulderDecoration)props;
+
     [Unsaved]
     private CompRankInfo rankInfoComp = null;
-
     private CompRankInfo RankInfoComp
     {
         get
@@ -29,7 +36,6 @@ public class ChapterBodyDecorativeApparelMultiColor : BodyDecorativeApparelMulti
         
     private ShoulderIconSettings originalRightShoulder = null;
     private ShoulderIconSettings rightShoulder = null;
-    public ShoulderIconSettings RightShoulderTemp => rightShoulder;
     public ShoulderIconDef RightShoulderIcon
     {
         get
@@ -64,7 +70,7 @@ public class ChapterBodyDecorativeApparelMultiColor : BodyDecorativeApparelMulti
                 rightShoulder.Color = RightShoulderIcon?.defaultColour ?? Color.white;
             }
             
-            Notify_ColorChanged();
+            Notify_GraphicChanged();
         }
     }
     public Color RightShoulderIconColour
@@ -74,14 +80,13 @@ public class ChapterBodyDecorativeApparelMultiColor : BodyDecorativeApparelMulti
         {
             rightShoulder ??= new ShoulderIconSettings();
             rightShoulder.Color = value;
-            Notify_ColorChanged();
+            Notify_GraphicChanged();
         }
     }
     
 
     private ShoulderIconSettings originalLeftShoulder = null;
     private ShoulderIconSettings leftShoulder = null;
-    public ShoulderIconSettings LeftShoulderTemp => leftShoulder;
     public ShoulderIconDef LeftShoulderIcon
     {
         get => leftShoulder?.ShoulderIcon;
@@ -98,7 +103,7 @@ public class ChapterBodyDecorativeApparelMultiColor : BodyDecorativeApparelMulti
                 leftShoulder.Color = LeftShoulderIcon?.defaultColour ?? Color.white;
             }
             
-            Notify_ColorChanged();
+            Notify_GraphicChanged();
         }
     }
     public Color LeftShoulderIconColour 
@@ -108,7 +113,7 @@ public class ChapterBodyDecorativeApparelMultiColor : BodyDecorativeApparelMulti
         {
             leftShoulder ??= new ShoulderIconSettings();
             leftShoulder.Color = value;
-            Notify_ColorChanged();
+            Notify_GraphicChanged();
         }
     }
     
@@ -120,32 +125,49 @@ public class ChapterBodyDecorativeApparelMultiColor : BodyDecorativeApparelMulti
         set
         {
             flipShoulderIcons = value;
-            Notify_ColorChanged();
+            Notify_GraphicChanged();
         }
     }
-
-    private bool movedToComp = false;
     
-    public override void ExposeData()
+    public override void InitialColors()
     {
-        base.ExposeData();
+        base.InitialColors();
+        SetUpMisc();
+    }
+        
+    private void SetUpMisc()
+    {
+        leftShoulder = new ShoulderIconSettings()
+        {
+            ShoulderIcon = ModSettings?.CurrentlySelectedPreset.relatedChapterIcon,
+            Color = ModSettings?.chapterShoulderIconColor ?? Color.white,
+        };
+        rightShoulder = null;
+    }
+        
+    public override void SetOriginals()
+    {
+        originalRightShoulder = rightShoulder != null ? new ShoulderIconSettings(rightShoulder) : rightShoulder;
+        originalLeftShoulder = leftShoulder != null ? new ShoulderIconSettings(leftShoulder) : leftShoulder;
+        base.SetOriginals();
+    }
+        
+    public override void Reset()    
+    {
+        rightShoulder = originalRightShoulder != null ? new ShoulderIconSettings(originalRightShoulder) : originalRightShoulder;
+        leftShoulder = originalLeftShoulder != null ? new ShoulderIconSettings(originalLeftShoulder) : originalLeftShoulder;
+        base.Reset();
+    }
+    
+    public override void PostExposeData()
+    {
         Scribe_Deep.Look(ref originalRightShoulder, "originalRightShoulder");
         Scribe_Deep.Look(ref rightShoulder, "rightShoulder");
+        
         Scribe_Deep.Look(ref originalLeftShoulder, "originalLeftShoulder");
         Scribe_Deep.Look(ref leftShoulder, "leftShoulder");
         
         Scribe_Values.Look(ref flipShoulderIcons, "flipShoulderIcons", false);
-        
-        Scribe_Values.Look(ref movedToComp, "movedToComp");
-        
-        if (Scribe.mode == LoadSaveMode.PostLoadInit)
-        {
-            if (!movedToComp && this.HasComp<CompChapterColorWithShoulderDecoration>())
-            {
-                var multiColor = GetComp<CompChapterColorWithShoulderDecoration>();
-                multiColor.TempSetInitialValues(this);
-                movedToComp = true;
-            }
-        }
+        base.PostExposeData();
     }
 }

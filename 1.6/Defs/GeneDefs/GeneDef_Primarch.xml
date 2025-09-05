@@ -79,11 +79,11 @@
         <minAgeActive>2</minAgeActive>
 
         <statOffsets>
-            <PsychicSensitivity>2</PsychicSensitivity>
+            <PsychicSensitivity>1</PsychicSensitivity>
         </statOffsets>
         <statFactors>
-            <AimingDelayFactor>0.65</AimingDelayFactor>
-            <RangedCooldownFactor>0.65</RangedCooldownFactor>
+            <AimingDelayFactor>0.7</AimingDelayFactor>
+            <RangedCooldownFactor>0.7</RangedCooldownFactor>
         </statFactors>
 
         <hediffGiversCannotGive>
@@ -91,26 +91,26 @@
         </hediffGiversCannotGive>
 
         <aptitudes>
-            <Shooting>10</Shooting>
+            <Shooting>8</Shooting>
             <Social>4</Social>
         </aptitudes>
 
         <capMods>
             <li>
                 <capacity>Consciousness</capacity>
-                <offset>1.25</offset>
+                <offset>1</offset>
             </li>
             <li>
                 <capacity>Sight</capacity>
-                <offset>3</offset>
+                <offset>1.5</offset>
             </li>
             <li>
                 <capacity>Hearing</capacity>
-                <offset>2.5</offset>
+                <offset>1.4</offset>
             </li>
             <li>
                 <capacity>Talking</capacity>
-                <offset>1.45</offset>
+                <offset>0.8</offset>
             </li>
         </capMods>
 
@@ -158,7 +158,7 @@
         </statOffsets>
         <statFactors>
             <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.35</CertaintyLossFactor>
-            <GlobalLearningFactor>2.5</GlobalLearningFactor>
+            <GlobalLearningFactor>2</GlobalLearningFactor>
         </statFactors>
 
         <suppressedTraits>
@@ -172,7 +172,7 @@
             </li>
         </suppressedTraits>
         <aptitudes>
-            <Intellectual>6</Intellectual>
+            <Intellectual>4</Intellectual>
         </aptitudes>
 
         <modExtensions>
@@ -198,8 +198,8 @@
         <preventPermanentWounds>true</preventPermanentWounds>
 
         <statFactors>
-            <ImmunityGainSpeed>5</ImmunityGainSpeed>
-            <InjuryHealingFactor>11</InjuryHealingFactor>
+            <ImmunityGainSpeed>4.5</ImmunityGainSpeed>
+            <InjuryHealingFactor>8.5</InjuryHealingFactor>
         </statFactors>
 
         <biologicalAgeTickFactorFromAgeCurve>
@@ -233,7 +233,7 @@
         </suppressedTraits>
         <modExtensions>
             <li Class="VEF.Genes.GeneExtension">
-                <diseaseProgressionFactor>0.05</diseaseProgressionFactor>
+                <diseaseProgressionFactor>0.2</diseaseProgressionFactor>
                 <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
             </li>
         </modExtensions>
@@ -267,7 +267,7 @@
 
         <statFactors>
             <RawNutritionFactor>3.5</RawNutritionFactor>
-            <RestFallRateFactor>0.25</RestFallRateFactor>
+            <RestFallRateFactor>0.45</RestFallRateFactor>
         </statFactors>
         <statOffsets>
             <ToxicEnvironmentResistance>2</ToxicEnvironmentResistance>
@@ -280,15 +280,15 @@
         <capMods>
             <li>
                 <capacity>BloodPumping</capacity>
-                <offset>2.75</offset>
+                <offset>1.6</offset>
             </li>
             <li>
                 <capacity>BloodFiltration</capacity>
-                <offset>2.5</offset>
+                <offset>1.3</offset>
             </li>
             <li>
                 <capacity>Breathing</capacity>
-                <offset>2.75</offset>
+                <offset>1.4</offset>
             </li>
             <li>
                 <capacity>Eating</capacity>
@@ -322,18 +322,18 @@
         <biostatArc>3</biostatArc>
 
         <statOffsets>
-            <MeleeDodgeChance>12</MeleeDodgeChance>
+            <MeleeDodgeChance>8</MeleeDodgeChance>
         </statOffsets>
 
         <statFactors>
-            <MeleeWeapon_CooldownMultiplier>0.65</MeleeWeapon_CooldownMultiplier>
-            <MeleeHitChance>2.5</MeleeHitChance>
+            <MeleeWeapon_CooldownMultiplier>0.7</MeleeWeapon_CooldownMultiplier>
+            <MeleeHitChance>2</MeleeHitChance>
         </statFactors>
 
         <capMods>
             <li>
                 <capacity>Manipulation</capacity>
-                <offset>2.9</offset>
+                <offset>1.6</offset>
             </li>
         </capMods>
         <suppressedTraits>
@@ -378,15 +378,15 @@
             <li>Frail</li>
         </hediffGiversCannotGive>
 
-        <painFactor>0.2</painFactor>
+        <painFactor>0.3</painFactor>
         <statOffsets>
-            <ArmorRating_Blunt>0.75</ArmorRating_Blunt>
-            <ArmorRating_Sharp>0.75</ArmorRating_Sharp>
-            <ArmorRating_Heat>0.45</ArmorRating_Heat>
+            <ArmorRating_Blunt>0.55</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.55</ArmorRating_Sharp>
+            <ArmorRating_Heat>0.3</ArmorRating_Heat>
         </statOffsets>
         <statFactors>
-            <IncomingDamageFactor>0.2</IncomingDamageFactor>
-            <MeleeDamageFactor>6</MeleeDamageFactor>
+            <IncomingDamageFactor>0.35</IncomingDamageFactor>
+            <MeleeDamageFactor>4</MeleeDamageFactor>
         </statFactors>
 
         <suppressedTraits>
@@ -396,7 +396,7 @@
         </suppressedTraits>
 
         <aptitudes>
-            <Melee>10</Melee>
+            <Melee>8</Melee>
         </aptitudes>
 
         <customEffectDescriptions>

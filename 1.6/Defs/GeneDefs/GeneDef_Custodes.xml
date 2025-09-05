@@ -21,12 +21,12 @@
             <li>BadBack</li>
             <li>Frail</li>
         </hediffGiversCannotGive>
-        
+
         <statOffsets>
-            <CarryingCapacity>300</CarryingCapacity>
-            <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
-            <ArmorRating_Sharp>0.5</ArmorRating_Sharp>
-            <ArmorRating_Heat>0.3</ArmorRating_Heat>
+            <CarryingCapacity>200</CarryingCapacity>
+            <ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+            <ArmorRating_Heat>0.2</ArmorRating_Heat>
 
             <ComfyTemperatureMin>-80</ComfyTemperatureMin>
             <ComfyTemperatureMax>80</ComfyTemperatureMax>
@@ -40,8 +40,8 @@
         </statOffsets>
         <statFactors>
             <StaggerDurationFactor>0</StaggerDurationFactor>
-            <IncomingDamageFactor>0.5</IncomingDamageFactor>
-            <MeleeDamageFactor>3.5</MeleeDamageFactor>
+            <IncomingDamageFactor>0.7</IncomingDamageFactor>
+            <MeleeDamageFactor>2.65</MeleeDamageFactor>
         </statFactors>
 
         <suppressedTraits>
@@ -63,7 +63,7 @@
 
         <modExtensions>
             <li Class="Core40k.DefModExtension_GeneExtension">
-                <addedWorldCarryCapacity>300</addedWorldCarryCapacity>
+                <addedWorldCarryCapacity>200</addedWorldCarryCapacity>
             </li>
             <li Class="Genes40k.DefModExtension_IgnoreMovespeedDecrease" />
         </modExtensions>
@@ -82,7 +82,7 @@
         <biostatArc>3</biostatArc>
 
         <preventPermanentWounds>true</preventPermanentWounds>
-        <painFactor>0.45</painFactor>
+        <painFactor>0.6</painFactor>
 
         <makeImmuneTo>
             <li>WoundInfection</li>
@@ -93,7 +93,7 @@
             <ToxicResistance>2</ToxicResistance>
         </statOffsets>
         <statFactors>
-            <InjuryHealingFactor>7</InjuryHealingFactor>
+            <InjuryHealingFactor>5</InjuryHealingFactor>
         </statFactors>
 
         <suppressedTraits>
@@ -137,12 +137,12 @@
         </hediffGiversCannotGive>
 
         <statOffsets>
-            <MeleeDodgeChance>8</MeleeDodgeChance>
+            <MeleeDodgeChance>5</MeleeDodgeChance>
         </statOffsets>
         <statFactors>
-            <MeleeWeapon_CooldownMultiplier>0.8</MeleeWeapon_CooldownMultiplier>
-            <AimingDelayFactor>0.8</AimingDelayFactor>
-            <RangedCooldownFactor>0.8</RangedCooldownFactor>
+            <MeleeWeapon_CooldownMultiplier>0.85</MeleeWeapon_CooldownMultiplier>
+            <AimingDelayFactor>0.85</AimingDelayFactor>
+            <RangedCooldownFactor>0.85</RangedCooldownFactor>
             <RawNutritionFactor>2.5</RawNutritionFactor>
         </statFactors>
 
@@ -154,7 +154,7 @@
         </suppressedTraits>
 
         <aptitudes>
-            <Shooting>8</Shooting>
+            <Shooting>6</Shooting>
         </aptitudes>
 
         <customEffectDescriptions>
@@ -170,15 +170,15 @@
         <capMods>
             <li>
                 <capacity>Sight</capacity>
-                <offset>1.75</offset>
+                <offset>0.8</offset>
             </li>
             <li>
                 <capacity>Hearing</capacity>
-                <offset>1.5</offset>
+                <offset>0.8</offset>
             </li>
             <li>
                 <capacity>Talking</capacity>
-                <offset>0.8</offset>
+                <offset>0.25</offset>
             </li>
             <li>
                 <capacity>Eating</capacity>
@@ -208,13 +208,13 @@
         <foodPoisoningChanceFactor>0</foodPoisoningChanceFactor>
 
         <statFactors>
-            <ImmunityGainSpeed>3.5</ImmunityGainSpeed>
+            <ImmunityGainSpeed>2.75</ImmunityGainSpeed>
         </statFactors>
 
         <capMods>
             <li>
                 <capacity>BloodFiltration</capacity>
-                <offset>1.3</offset>
+                <offset>0.6</offset>
             </li>
         </capMods>
 
@@ -238,7 +238,7 @@
         </suppressedTraits>
         <modExtensions>
             <li Class="VEF.Genes.GeneExtension">
-                <diseaseProgressionFactor>0.1</diseaseProgressionFactor>
+                <diseaseProgressionFactor>0.55</diseaseProgressionFactor>
             </li>
         </modExtensions>
     </GeneDef>
@@ -260,9 +260,9 @@
             <MentalBreakThreshold>-0.15</MentalBreakThreshold>
         </statOffsets>
         <statFactors>
-            <GlobalLearningFactor>2</GlobalLearningFactor>
+            <GlobalLearningFactor>1.5</GlobalLearningFactor>
             <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0</CertaintyLossFactor>
-            <RestFallRateFactor>0.4</RestFallRateFactor>
+            <RestFallRateFactor>0.6</RestFallRateFactor>
         </statFactors>
 
         <hediffGiversCannotGive>
@@ -280,7 +280,7 @@
 
 
         <aptitudes>
-            <Intellectual>4</Intellectual>
+            <Intellectual>3</Intellectual>
         </aptitudes>
         <suppressedTraits>
             <li>
@@ -296,7 +296,7 @@
         <capMods>
             <li>
                 <capacity>Consciousness</capacity>
-                <offset>0.85</offset>
+                <offset>0.3</offset>
             </li>
         </capMods>
 
@@ -337,7 +337,7 @@
         </statOffsets>
 
         <statFactors>
-            <MeleeHitChance>1.8</MeleeHitChance>
+            <MeleeHitChance>1.3</MeleeHitChance>
         </statFactors>
 
         <makeImmuneTo>
@@ -355,15 +355,15 @@
         <capMods>
             <li>
                 <capacity>BloodPumping</capacity>
-                <offset>1.2</offset>
+                <offset>0.75</offset>
             </li>
             <li>
                 <capacity>Manipulation</capacity>
-                <offset>1.5</offset>
+                <offset>0.9</offset>
             </li>
             <li>
                 <capacity>Breathing</capacity>
-                <offset>1.5</offset>
+                <offset>0.6</offset>
             </li>
         </capMods>
 
@@ -379,7 +379,7 @@
         </suppressedTraits>
 
         <aptitudes>
-            <Melee>8</Melee>
+            <Melee>6</Melee>
         </aptitudes>
 
         <customEffectDescriptions>

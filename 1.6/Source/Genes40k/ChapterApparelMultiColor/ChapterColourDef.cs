@@ -11,4 +11,6 @@ public class ChapterColourDef : ColourPresetDef
     public ShoulderIconDef relatedChapterIcon = null;
     
     public Color chapterIconColour = Color.white; 
+    
+    public bool loyalist = true;
 }

@@ -9,7 +9,7 @@ public class UpdateRankIconOnRankUp
 {
     public static void Postfix(CompRankInfo __instance, RankDef rank)
     {
-        if (rank.rankCategory != Genes40kDefOf.BEWH_AstartesRankCategory)
+        if (!Genes40kDefOf.BEWH_AstartesRankCategory.ranks.Any(data => data.rankDef == rank))
         {
             return;
         }
@@ -23,9 +23,13 @@ public class UpdateRankIconOnRankUp
         {
             return;
         }
-
-        var apparel = pawn.apparel.WornApparel.FirstOrFallback(a => a is ChapterBodyDecorativeApparelMultiColor, null);
-
+        
+        var apparel = pawn.apparel.WornApparel.FirstOrFallback(a =>
+        {
+            var temp = a.GetComp<CompChapterColorWithShoulderDecoration>();
+            return temp != null;
+        });
+        
         apparel?.Notify_ColorChanged();
     }
 }

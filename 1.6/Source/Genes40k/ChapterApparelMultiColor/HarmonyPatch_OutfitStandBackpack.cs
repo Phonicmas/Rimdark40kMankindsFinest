@@ -16,17 +16,19 @@ public static class OutfitStandBackpack
         var list = ___innerContainer.InnerListForReading.OfType<Apparel>().ToList();
         foreach (var item in list)
         {
-            if (item is not ChapterBodyDecorativeApparelMultiColor chapterApparel)
+            if (!item.HasComp<CompChapterColorWithShoulderDecoration>())
             {
                 continue;
             }
             
-            foreach (var pawnRenderNode in chapterApparel.def.apparel.RenderNodeProperties)
+            var chapterColorComp = item.GetComp<CompChapterColorWithShoulderDecoration>();
+            
+            foreach (var pawnRenderNode in item.def.apparel.RenderNodeProperties)
             {
                 if (pawnRenderNode.texPath.Contains("_Backpack"))
                 {
-                    var maskPath = chapterApparel.MaskDef?.maskPath;
-                    if (maskPath != null && chapterApparel.MaskDef.maskExtraFlags.Contains("HasBackpack"))
+                    var maskPath = chapterColorComp.MaskDef?.maskPath;
+                    if (maskPath != null && chapterColorComp.MaskDef.maskExtraFlags.Contains("HasBackpack"))
                     {
                         maskPath += "_Backpack";
                     }
@@ -35,7 +37,7 @@ public static class OutfitStandBackpack
                         maskPath = null;
                     }
                     var shader = Core40kDefOf.BEWH_CutoutThreeColor.Shader;
-                    var graphic = MultiColorUtils.GetGraphic<Graphic_Multi>(pawnRenderNode.texPath, shader, pawnRenderNode.drawSize, chapterApparel.DrawColor, chapterApparel.DrawColorTwo, chapterApparel.DrawColorThree, chapterApparel.def.graphicData, maskPath);
+                    var graphic = MultiColorUtils.GetGraphic<Graphic_Multi>(pawnRenderNode.texPath, shader, pawnRenderNode.drawSize, chapterColorComp.DrawColor, chapterColorComp.DrawColorTwo, chapterColorComp.DrawColorThree, item.def.graphicData, maskPath);
                     var layer = (int)pawnRenderNode.drawData.LayerForRot(__instance.Rotation, (int)pawnRenderNode.baseLayer);
                     var vector = Vector3.zero;
                     var vectorOffset = BodyTypeDefOf.Hulk.headOffset.y;

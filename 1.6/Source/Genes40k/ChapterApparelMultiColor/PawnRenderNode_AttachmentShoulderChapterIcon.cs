@@ -31,12 +31,13 @@ public class PawnRenderNode_AttachmentShoulderChapterIcon : PawnRenderNode_Appar
     {
         var leftShoulderIcon = Props.texPath;
             
-        var apparelMultiColor = (ChapterBodyDecorativeApparelMultiColor)apparel;
-        var drawColour = apparelMultiColor.LeftShoulderIconColour;
+        var chapterDecoComp = apparel.GetComp<CompChapterColorWithShoulderDecoration>();
+        
+        var drawColour = chapterDecoComp.LeftShoulderIconColour;
             
-        if (apparelMultiColor.LeftShoulderIcon != null)
+        if (chapterDecoComp.LeftShoulderIcon != null)
         {
-            leftShoulderIcon = apparelMultiColor.LeftShoulderIcon.drawnTextureIconPath;
+            leftShoulderIcon = chapterDecoComp.LeftShoulderIcon.drawnTextureIconPath;
         }
         else if (pawn.Faction != null && pawn.Faction.IsPlayer && ModSettings.CurrentlySelectedPreset.relatedChapterIcon != null)
         {
@@ -47,7 +48,7 @@ public class PawnRenderNode_AttachmentShoulderChapterIcon : PawnRenderNode_Appar
             }
         }
 
-        if (apparelMultiColor.FlipShoulderIcons)
+        if (chapterDecoComp.FlipShoulderIcons)
         {
             Flipped = !Flipped;
         }

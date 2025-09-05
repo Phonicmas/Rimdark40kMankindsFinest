@@ -184,8 +184,8 @@ public class Building_PrimarchGrowthVat : Building, IStoreSettingsParent, IThing
         {
             workingMote = MoteMaker.MakeAttachedOverlay(this, thingDef, Vector3.zero);
         }
-            
-        workingMote.yOffset = -4.9f;
+
+        workingMote.yOffset = -4.4f;
         workingMote.Maintain();
     }
 
@@ -520,7 +520,7 @@ public class Building_PrimarchGrowthVat : Building, IStoreSettingsParent, IThing
 
     private IEnumerable<Gizmo> DebugGizmo()
     {
-        if (containedEmbryo == null)
+        if (containedEmbryo != null)
         {
             yield return new Command_Action
             {
