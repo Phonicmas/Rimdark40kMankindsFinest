@@ -16,7 +16,7 @@
     </Genes40k.ChapterColourDef>
     
     <Genes40k.ChapterColourDef ParentName="BEWH_WeaponColourPresets">
-        <defName>BEWH_WeaponColourI</defName>
+        <defName>BEWH_WeaponRangedColourI</defName>
         <label>Dark Angels</label>
         <colorAmount>3</colorAmount>
         <primaryColour>(38,65,54)</primaryColour>
@@ -25,14 +25,14 @@
     </Genes40k.ChapterColourDef>
 
     <Genes40k.ChapterColourDef ParentName="BEWH_WeaponColourPresets">
-        <defName>BEWH_WeaponColourIII</defName>
+        <defName>BEWH_WeaponRangedColourIII</defName>
         <label>Emperor's Children</label>
         <primaryColour>(119,77,118)</primaryColour>
         <secondaryColour>(203,150,43)</secondaryColour>
     </Genes40k.ChapterColourDef>
 
     <Genes40k.ChapterColourDef ParentName="BEWH_WeaponColourPresets">
-        <defName>BEWH_WeaponColourIV</defName>
+        <defName>BEWH_WeaponRangedColourIV</defName>
         <label>Iron Warriors</label>
         <colorAmount>3</colorAmount>
         <primaryColour>(110,110,110)</primaryColour>
@@ -41,21 +41,21 @@
     </Genes40k.ChapterColourDef>
 
     <Genes40k.ChapterColourDef ParentName="BEWH_WeaponColourPresets">
-        <defName>BEWH_WeaponColourV</defName>
+        <defName>BEWH_WeaponRangedColourV</defName>
         <label>White Scars</label>
         <primaryColour>(186,185,179)</primaryColour>
         <secondaryColour>(137,34,34)</secondaryColour>
     </Genes40k.ChapterColourDef>
 
     <Genes40k.ChapterColourDef ParentName="BEWH_WeaponColourPresets">
-        <defName>BEWH_WeaponColourVI</defName>
+        <defName>BEWH_WeaponRangedColourVI</defName>
         <label>Space Wolves</label>
         <primaryColour>(77,94,116)</primaryColour>
         <secondaryColour>(213,170,68)</secondaryColour>
     </Genes40k.ChapterColourDef>
 
     <Genes40k.ChapterColourDef ParentName="BEWH_WeaponColourPresets">
-        <defName>BEWH_WeaponColourVII</defName>
+        <defName>BEWH_WeaponRangedColourVII</defName>
         <label>Imperial Fists</label>
         <primaryColour>(202,149,21)</primaryColour>
         <secondaryColour>(202,149,21)</secondaryColour>
@@ -63,7 +63,7 @@
     </Genes40k.ChapterColourDef>
 
     <Genes40k.ChapterColourDef ParentName="BEWH_WeaponColourPresets">
-        <defName>BEWH_WeaponColourVIII</defName>
+        <defName>BEWH_WeaponRangedColourVIII</defName>
         <label>Night Lords</label>
         <colorAmount>3</colorAmount>
         <primaryColour>(39,60,86)</primaryColour>
@@ -72,21 +72,21 @@
     </Genes40k.ChapterColourDef>
 
     <Genes40k.ChapterColourDef ParentName="BEWH_WeaponColourPresets">
-        <defName>BEWH_WeaponColourIX</defName>
+        <defName>BEWH_WeaponRangedColourIX</defName>
         <label>Blood Angels</label>
         <primaryColour>(145,33,34)</primaryColour>
         <secondaryColour>(42,42,42)</secondaryColour>
     </Genes40k.ChapterColourDef>
 
     <Genes40k.ChapterColourDef ParentName="BEWH_WeaponColourPresets">
-        <defName>BEWH_WeaponColourX</defName>
+        <defName>BEWH_WeaponRangedColourX</defName>
         <label>Iron Hands</label>
         <primaryColour>(57,57,57)</primaryColour>
         <secondaryColour>(141,141,141)</secondaryColour>
     </Genes40k.ChapterColourDef>
 
     <Genes40k.ChapterColourDef ParentName="BEWH_WeaponColourPresets">
-        <defName>BEWH_WeaponColourXII</defName>
+        <defName>BEWH_WeaponRangedColourXII</defName>
         <label>World Eaters</label>
         <colorAmount>3</colorAmount>
         <primaryColour>(191,191,191)</primaryColour>
@@ -95,7 +95,7 @@
     </Genes40k.ChapterColourDef>
 
     <Genes40k.ChapterColourDef ParentName="BEWH_WeaponColourPresets">
-        <defName>BEWH_WeaponColourXIII</defName>
+        <defName>BEWH_WeaponRangedColourXIII</defName>
         <label>Ultramarines</label>
         <primaryColour>(37,79,152)</primaryColour>
         <secondaryColour>(37,79,152)</secondaryColour>
@@ -103,7 +103,7 @@
     </Genes40k.ChapterColourDef>
 
     <Genes40k.ChapterColourDef ParentName="BEWH_WeaponColourPresets">
-        <defName>BEWH_WeaponColourXIV</defName>
+        <defName>BEWH_WeaponRangedColourXIV</defName>
         <label>Death Guard</label>
         <colorAmount>3</colorAmount>
         <primaryColour>(196,195,166)</primaryColour>
@@ -112,14 +112,14 @@
     </Genes40k.ChapterColourDef>
 
     <Genes40k.ChapterColourDef ParentName="BEWH_WeaponColourPresets">
-        <defName>BEWH_WeaponColourXV</defName>
+        <defName>BEWH_WeaponRangedColourXV</defName>
         <label>Thousand Sons</label>
         <primaryColour>(152,51,48)</primaryColour>
         <secondaryColour>(219,183,95)</secondaryColour>
     </Genes40k.ChapterColourDef>
 
     <Genes40k.ChapterColourDef ParentName="BEWH_WeaponColourPresets">
-        <defName>BEWH_WeaponColourXVI</defName>
+        <defName>BEWH_WeaponRangedColourXVI</defName>
         <label>Sons of Horus</label>
         <colorAmount>3</colorAmount>
         <primaryColour>(75,108,100)</primaryColour>
@@ -128,14 +128,14 @@
     </Genes40k.ChapterColourDef>
 
     <Genes40k.ChapterColourDef ParentName="BEWH_WeaponColourPresets">
-        <defName>BEWH_WeaponColourXVII</defName>
+        <defName>BEWH_WeaponRangedColourXVII</defName>
         <label>Word Bearers</label>
         <primaryColour>(62,63,62)</primaryColour>
         <secondaryColour>(99,99,99)</secondaryColour>
     </Genes40k.ChapterColourDef>
 
     <Genes40k.ChapterColourDef ParentName="BEWH_WeaponColourPresets">
-        <defName>BEWH_WeaponColourXVIII</defName>
+        <defName>BEWH_WeaponRangedColourXVIII</defName>
         <label>Salamanders</label>
         <colorAmount>3</colorAmount>
         <primaryColour>(36,98,55)</primaryColour>
@@ -144,14 +144,14 @@
     </Genes40k.ChapterColourDef>
 
     <Genes40k.ChapterColourDef ParentName="BEWH_WeaponColourPresets">
-        <defName>BEWH_WeaponColourXIX</defName>
+        <defName>BEWH_WeaponRangedColourXIX</defName>
         <label>Raven Guard</label>
         <primaryColour>(42,42,42)</primaryColour>
         <secondaryColour>(191,191,191)</secondaryColour>
     </Genes40k.ChapterColourDef>
 
     <Genes40k.ChapterColourDef ParentName="BEWH_WeaponColourPresets">
-        <defName>BEWH_WeaponColourXX</defName>
+        <defName>BEWH_WeaponRangedColourXX</defName>
         <label>Alpha Legion</label>
         <colorAmount>3</colorAmount>
         <primaryColour>(51,113,123)</primaryColour>
@@ -160,7 +160,7 @@
     </Genes40k.ChapterColourDef>
 
     <Genes40k.ChapterColourDef ParentName="BEWH_WeaponColourPresets">
-        <defName>BEWH_WeaponColourDW</defName>
+        <defName>BEWH_WeaponRangedColourDW</defName>
         <label>Deathwatch</label>
         <colorAmount>3</colorAmount>
         <primaryColour>(71,71,71)</primaryColour>
@@ -169,7 +169,7 @@
     </Genes40k.ChapterColourDef>
 
     <Genes40k.ChapterColourDef ParentName="BEWH_WeaponColourPresets">
-        <defName>BEWH_WeaponColourApothecary</defName>
+        <defName>BEWH_WeaponRangedColourApothecary</defName>
         <label>Apothecary</label>
         <colorAmount>3</colorAmount>
         <primaryColour>(218,210,199)</primaryColour>

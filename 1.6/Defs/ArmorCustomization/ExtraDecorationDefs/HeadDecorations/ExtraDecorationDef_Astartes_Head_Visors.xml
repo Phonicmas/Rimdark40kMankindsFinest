@@ -46,7 +46,7 @@
         <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
     </Core40k.ExtraDecorationDef>
 
-    <Core40k.ExtraDecorationDef>        <!-- MkX Helmet -->
+    <Core40k.ExtraDecorationDef>        <!-- MkVII Helmet -->
         <defName>BEWH_Deco_MkVIILenseGlow</defName>
         <label>Lense Glow</label>
         <description>...</description>

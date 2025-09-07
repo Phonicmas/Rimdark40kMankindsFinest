@@ -121,6 +121,7 @@
             </dataWest>
         </drawData>
         <colourable>true</colourable>
+        <shaderType>CutoutComplex</shaderType>
         <useMask>true</useMask>
         <colorAmount>2</colorAmount>
         <defaultColourTwo>(168,35,32)</defaultColourTwo>
@@ -132,6 +133,7 @@
         <description>...</description>
         <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_LieutenantStripe_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_MkXLieutenantStripe</drawnTextureIconPath>
+        <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>6</sortOrder>
         <isHelmetDecoration>true</isHelmetDecoration>
         <defaultShowRotation>
@@ -158,10 +160,11 @@
                 <layer>70</layer>
             </dataWest>
         </drawData>
-<!--         <colourable>true</colourable>
+        <colourable>true</colourable>
+        <shaderType>CutoutComplex</shaderType>
         <useMask>true</useMask>
         <colorAmount>2</colorAmount>
-        <defaultColourTwo>(168,35,32)</defaultColourTwo> -->
+        <defaultColourTwo>(168,35,32)</defaultColourTwo>
     </Core40k.ExtraDecorationDef>
 
 </Defs>

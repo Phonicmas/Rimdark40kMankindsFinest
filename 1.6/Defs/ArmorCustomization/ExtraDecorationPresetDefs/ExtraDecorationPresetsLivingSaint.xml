@@ -26,6 +26,7 @@ Saint's Light: (245, 245, 210)
             <BEWH_LivingSaintWings_1>
                 <flipped>false</flipped>
                 <colour>(213, 158, 76)</colour>                <!-- Default primary color -->
+                <colourTwo>(173, 178, 178)</colourTwo>                
             </BEWH_LivingSaintWings_1>
             <BEWH_LivingSaintHalo_2>
                 <flipped>false</flipped>
