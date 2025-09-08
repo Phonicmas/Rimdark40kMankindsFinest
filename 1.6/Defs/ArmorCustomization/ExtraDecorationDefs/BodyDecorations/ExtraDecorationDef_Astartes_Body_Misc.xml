@@ -19,7 +19,6 @@
             <li>BEWH_MkXPowerArmor</li>
         </appliesTo>
         <drawData>
-            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
             <dataNorth>
                 <layer>80</layer>
             </dataNorth>
@@ -54,7 +53,6 @@
             <li>BEWH_MkXPowerArmor</li>
         </appliesTo>
         <drawData>
-            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
             <dataNorth>
                 <layer>76</layer>
             </dataNorth>
@@ -71,6 +69,7 @@
         </drawData>
         <availablePresets/>
         <colourable>true</colourable>
+        <shaderType>CutoutComplex</shaderType>
         <useMask>true</useMask>
         <colorAmount>2</colorAmount>
         <useArmorColourAsDefault>true</useArmorColourAsDefault>
@@ -95,7 +94,6 @@
             <li>BEWH_MkXPowerArmor</li>
         </appliesTo>
         <drawData>
-            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
             <dataNorth>
                 <layer>76</layer>
             </dataNorth>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <Genes40k.ChapterColourDef Name="BEWH_WeaponSaintColourPresets" Abstract="True">
+        <appliesTo>
+            <li>BEWH_LSaintBoltPistol</li>
+            <li>BEWH_LSaintSword</li>
+        </appliesTo>
+        <appliesToKind>Weapon</appliesToKind>
+        <colorAmount>3</colorAmount>
+    </Genes40k.ChapterColourDef>
+    
+    <Genes40k.ChapterColourDef ParentName="BEWH_WeaponSaintColourPresets">
+        <defName>BEWH_WeaponSaintColour</defName>
+        <label>Silver Maiden</label>
+        <colorAmount>3</colorAmount>
+        <primaryColour>(134, 136, 136)</primaryColour>
+        <secondaryColour>(255, 255, 255)</secondaryColour>
+        <tertiaryColour>(252, 255, 225)</tertiaryColour>
+    </Genes40k.ChapterColourDef>
+
+    <Genes40k.ChapterColourDef ParentName="BEWH_WeaponSaintColourPresets">
+        <defName>BEWH_WeaponSaintColour2</defName>
+        <label>Martyr's Vengeance</label>
+        <colorAmount>2</colorAmount>
+        <primaryColour>(70, 70, 70)</primaryColour> 
+        <secondaryColour>(126, 51, 60)</secondaryColour>
+        <tertiaryColour>(190, 0, 0)</tertiaryColour>
+    </Genes40k.ChapterColourDef>
+
+</Defs>

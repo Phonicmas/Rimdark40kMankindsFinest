@@ -19,7 +19,6 @@
             <li>BEWH_MkIPowerArmor</li>
         </appliesTo>
         <drawData>
-            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
             <dataNorth>
                 <layer>90</layer>
                 <offset>(0, 0, 0.123)</offset>
@@ -37,6 +36,7 @@
         </drawData>
         <shaderType>Cutout</shaderType>
         <colourable>true</colourable>
+        <defaultColour>(81,64,50)</defaultColour>
         <availablePresets>
             <li>BEWH_DecoPaletteFurBrown</li>
             <li>BEWH_DecoPaletteLeatherGrey</li>
@@ -82,7 +82,6 @@
         <availablePresets/>
         <colourable>true</colourable>
         <useArmorColourAsDefault>true</useArmorColourAsDefault>
-        <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -103,26 +102,25 @@
             <li>BEWH_MkIPowerArmor</li>
         </appliesTo>
         <drawData>
-            <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
             <dataNorth>
                 <layer>88.5</layer>
             </dataNorth>
             <dataSouth>
                 <layer>65</layer>
-                <offset>(0, 0, -0.61)</offset>
+                <offset>(0, 0, -0.69)</offset>
             </dataSouth>
             <dataEast>
                 <layer>64</layer>
-                <offset>(0.01, 0, -0.61)</offset>
+                <offset>(0.01, 0, -0.69)</offset>
             </dataEast>
             <dataWest>
                 <layer>64</layer>
+                <offset>(-0.01, 0, -0.69)</offset>
             </dataWest>
         </drawData>
-        <shaderType>CutoutComplex</shaderType>
+        <shaderType>Cutout</shaderType>
         <colourable>true</colourable>
         <useArmorColourAsDefault>true</useArmorColourAsDefault>
-        <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -163,6 +161,7 @@
             <li>BEWH_DecoPaletteIFBlack</li>
         </availablePresets>
         <colourable>true</colourable>
+        <defaultColour>(162,54,39)</defaultColour>
     </Core40k.ExtraDecorationDef>
 
 </Defs>
