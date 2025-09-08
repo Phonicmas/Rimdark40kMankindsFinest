@@ -40,6 +40,7 @@
         <flipable>true</flipable>
         <colorAmount>3</colorAmount>
         <useArmorColourAsDefault>true</useArmorColourAsDefault>
+        <shaderType>BEWH_CutoutThreeColor</shaderType>
         <!-- DefaultColor uses armor color option -->
         <defaultColourTwo>(203,39,39)</defaultColourTwo>
         <defaultColourThree>(31,128,31)</defaultColourThree>
