@@ -226,7 +226,7 @@
                         <li>Luciferium</li>
                     </thingDefs>
                 </filter>
-                <count>25</count>
+                <count>20</count>
             </li>
             <li>
                 <filter>
@@ -292,7 +292,7 @@
                         <li>Luciferium</li>
                     </thingDefs>
                 </filter>
-                <count>75</count>
+                <count>50</count>
             </li>
             <li>
                 <filter>
@@ -300,7 +300,7 @@
                         <li>MeatRaw</li>
                     </categories>
                 </filter>
-                <count>1000</count>
+                <count>500</count>
             </li>
             <li>
                 <filter>
@@ -308,8 +308,9 @@
                         <li>Neutroamine</li>
                     </thingDefs>
                 </filter>
-                <count>500</count>
+                <count>350</count>
             </li>
+
         </ingredients>
         <skillRequirements>
             <Medicine>15</Medicine>

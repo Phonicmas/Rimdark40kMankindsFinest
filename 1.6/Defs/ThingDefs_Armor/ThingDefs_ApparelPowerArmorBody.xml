@@ -466,15 +466,15 @@
             <WorkToMake>45000</WorkToMake>
             <MarketValue>5000</MarketValue>
 
-            <ArmorRating_Sharp>1.56</ArmorRating_Sharp>
-            <ArmorRating_Blunt>0.65</ArmorRating_Blunt>
-            <ArmorRating_Heat>1</ArmorRating_Heat>
+            <ArmorRating_Sharp>1.36</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.9</ArmorRating_Heat>
 
             <Insulation_Cold>33</Insulation_Cold>
             <Insulation_Heat>18</Insulation_Heat>
         </statBases>
         <equippedStatOffsets Inherit="false">
-            <MoveSpeed>0.3</MoveSpeed>
+            <MoveSpeed>-0.2</MoveSpeed>
             <TerrorSource MayRequire="Ludeon.RimWorld.Ideology">17</TerrorSource>
         </equippedStatOffsets>
         <costList>
