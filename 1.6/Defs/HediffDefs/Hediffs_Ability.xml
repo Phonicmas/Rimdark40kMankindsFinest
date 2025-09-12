@@ -71,12 +71,11 @@
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
-						<offset>0.20</offset>
+						<offset>0.10</offset>
 					</li>
 				</capMods>
 				<statFactors>
-					<InjuryHealingFactor>2000</InjuryHealingFactor>
-					<IncomingDamageFactor>0.5</IncomingDamageFactor>
+					<InjuryHealingFactor>500</InjuryHealingFactor>
 				</statFactors>
 				<painFactor>0.3</painFactor>
 			</li>

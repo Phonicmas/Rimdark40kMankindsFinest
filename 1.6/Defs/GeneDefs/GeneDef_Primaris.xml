@@ -9,7 +9,7 @@
         <iconPath>UI/Genes/Primaris/BEWH_Primaris_SinewCoilIcon</iconPath>
         <displayOrderInCategory>21</displayOrderInCategory>
         <statOffsets>
-            <CarryingCapacity>100</CarryingCapacity>
+            <CarryingCapacity>45</CarryingCapacity>
             <MeleeDamageFactor>0.3</MeleeDamageFactor>
             <StaggerDurationFactor>-0.3</StaggerDurationFactor>
             <IncomingDamageFactor>-0.05</IncomingDamageFactor>
@@ -27,7 +27,7 @@
         <minAgeActive>13</minAgeActive>
         <modExtensions>
             <li Class="Core40k.DefModExtension_GeneExtension">
-                <addedWorldCarryCapacity>100</addedWorldCarryCapacity>
+                <addedWorldCarryCapacity>45</addedWorldCarryCapacity>
             </li>
         </modExtensions>
     </GeneDef>

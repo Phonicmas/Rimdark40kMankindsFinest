@@ -385,7 +385,7 @@
             <ArmorRating_Heat>0.3</ArmorRating_Heat>
         </statOffsets>
         <statFactors>
-            <IncomingDamageFactor>0.35</IncomingDamageFactor>
+            <IncomingDamageFactor>0.3</IncomingDamageFactor>
             <MeleeDamageFactor>4</MeleeDamageFactor>
         </statFactors>
 

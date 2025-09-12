@@ -45,7 +45,7 @@
 
         <statOffsets>
             <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">-0.05</CertaintyLossFactor>
-            <MeleeDodgeChance>0.05</MeleeDodgeChance>
+            <MeleeDodgeChance>0.5</MeleeDodgeChance>
         </statOffsets>
 
         <rankTier>1</rankTier>
@@ -67,7 +67,7 @@
 
         <statOffsets>
             <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">-0.075</CertaintyLossFactor>
-            <MeleeDodgeChance>0.075</MeleeDodgeChance>
+            <MeleeDodgeChance>0.75</MeleeDodgeChance>
         </statOffsets>
 
         <rankTier>2</rankTier>
@@ -87,7 +87,7 @@
 
         <statOffsets>
             <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">-0.1</CertaintyLossFactor>
-            <MeleeDodgeChance>1</MeleeDodgeChance>
+            <MeleeDodgeChance>1.25</MeleeDodgeChance>
         </statOffsets>
 
         <rankTier>3</rankTier>
@@ -110,7 +110,7 @@
 
         <statOffsets>
             <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">-0.1</CertaintyLossFactor>
-            <MeleeDodgeChance>1</MeleeDodgeChance>
+            <MeleeDodgeChance>1.5</MeleeDodgeChance>
             <RangedCooldownFactor>-0.03</RangedCooldownFactor>
             <MeleeCooldownFactor>-0.03</MeleeCooldownFactor>
         </statOffsets>
@@ -238,6 +238,7 @@
 
         <unlocksRankIcon>BEWH_RankIconVanguard</unlocksRankIcon>
 
+        <specialistRank>true</specialistRank>
     </Genes40k.ChapterRankDef>
 
     <!-- =Chapter Ancient= -->
@@ -274,6 +275,7 @@
 
         <unlocksRankIcon>BEWH_RankIconChapterAncient</unlocksRankIcon>
 
+        <specialistRank>true</specialistRank>
     </Genes40k.ChapterRankDef>
 
     <!-- =Apothecary= -->
@@ -314,6 +316,7 @@
 
         <unlocksRankIcon>BEWH_RankIconHelixAdept</unlocksRankIcon>
 
+        <specialistRank>true</specialistRank>
     </Genes40k.ChapterRankDef>
     <!-- Apothecary -->
     <Genes40k.ChapterRankDef>
@@ -349,6 +352,7 @@
 
         <unlocksRankIcon>BEWH_RankIconApothecary</unlocksRankIcon>
 
+        <specialistRank>true</specialistRank>
     </Genes40k.ChapterRankDef>
     <!-- Master of the Apothecarion -->
     <Genes40k.ChapterRankDef>
@@ -380,6 +384,7 @@
 
         <unlocksRankIcon>BEWH_RankIconMasterOfTheApothecarion</unlocksRankIcon>
 
+        <specialistRank>true</specialistRank>
     </Genes40k.ChapterRankDef>
 
     <!-- =Techmarine= -->
@@ -410,6 +415,7 @@
 
         <unlocksRankIcon>BEWH_RankIconTechmarineNovitiate</unlocksRankIcon>
 
+        <specialistRank>true</specialistRank>
     </Genes40k.ChapterRankDef>
     <!-- Techmarine -->
     <Genes40k.ChapterRankDef>
@@ -437,6 +443,7 @@
 
         <unlocksRankIcon>BEWH_RankIconTechmarine</unlocksRankIcon>
 
+        <specialistRank>true</specialistRank>
     </Genes40k.ChapterRankDef>
     <!-- Master of the Forge -->
     <Genes40k.ChapterRankDef>
@@ -470,6 +477,7 @@
 
         <unlocksRankIcon>BEWH_RankIconMasterOfTheForge</unlocksRankIcon>
 
+        <specialistRank>true</specialistRank>
     </Genes40k.ChapterRankDef>
 
     <!-- =Librarian= -->
@@ -509,6 +517,7 @@
 
         <unlocksRankIcon>BEWH_RankIconAcolytum</unlocksRankIcon>
 
+        <specialistRank>true</specialistRank>
     </Genes40k.ChapterRankDef>
     <!-- Librarian -->
     <Genes40k.ChapterRankDef>
@@ -540,6 +549,7 @@
 
         <unlocksRankIcon>BEWH_RankIconLibrarian</unlocksRankIcon>
 
+        <specialistRank>true</specialistRank>
     </Genes40k.ChapterRankDef>
     <!-- Chief Librarian -->
     <Genes40k.ChapterRankDef>
@@ -571,6 +581,7 @@
 
         <unlocksRankIcon>BEWH_RankIconChiefLibrarian</unlocksRankIcon>
 
+        <specialistRank>true</specialistRank>
     </Genes40k.ChapterRankDef>
 
     <!-- =Chaplain= -->
@@ -605,6 +616,7 @@
 
         <unlocksRankIcon>BEWH_RankIconJudiciar</unlocksRankIcon>
 
+        <specialistRank>true</specialistRank>
     </Genes40k.ChapterRankDef>
     <!-- Chaplain -->
     <Genes40k.ChapterRankDef>
@@ -637,6 +649,7 @@
 
         <unlocksRankIcon>BEWH_RankIconChaplain</unlocksRankIcon>
 
+        <specialistRank>true</specialistRank>
     </Genes40k.ChapterRankDef>
     <!-- Master of Sanctity  -->
     <Genes40k.ChapterRankDef>
@@ -665,6 +678,7 @@
 
         <unlocksRankIcon>BEWH_RankIconMasterOfSanctity</unlocksRankIcon>
 
+        <specialistRank>true</specialistRank>
     </Genes40k.ChapterRankDef>
 
     <!-- =Fire Support= -->

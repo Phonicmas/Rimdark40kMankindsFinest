@@ -6,8 +6,7 @@
     <TraderKindDef>
         <defName>BEWH_ImperiumTraderCaravan</defName>
         <label>imperium trader</label>
-        <commonality>1</commonality>
-        <requestable>False</requestable>
+        <commonality>0.9</commonality>
         <faction>BEWH_ImperiumFaction</faction>
         <stockGenerators>
 

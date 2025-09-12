@@ -33,11 +33,21 @@ public class WorkGiver_CarryMaterialToSangprimus : WorkGiver_Scanner
         
         foreach (var geneMaterial in t.Map.listerThings.GetThingsOfType<GeneMaterialExtra>())
         {
-            if (building_SangprimusPortum.CanAcceptMaterial(geneMaterial))
+            if (!building_SangprimusPortum.CanAcceptMaterial(geneMaterial))
             {
-                thingToCarry = geneMaterial;
-                return true;
+                continue;
             }
+            if (geneMaterial.IsForbidden(pawn) || !pawn.CanReserve(geneMaterial, 1, -1, null, forced))
+            {
+                continue;
+            }
+            if (geneMaterial.IsBurning())
+            {
+                continue;
+            }
+            
+            thingToCarry = geneMaterial;
+            return true;
         }
 
         return false;

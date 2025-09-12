@@ -40,7 +40,7 @@
         </statOffsets>
         <statFactors>
             <StaggerDurationFactor>0</StaggerDurationFactor>
-            <IncomingDamageFactor>0.7</IncomingDamageFactor>
+            <IncomingDamageFactor>0.55</IncomingDamageFactor>
             <MeleeDamageFactor>2.65</MeleeDamageFactor>
         </statFactors>
 

@@ -8,7 +8,7 @@ using Verse;
 
 namespace Genes40k;
 
-//Thanks VE Team for letting me use this!
+//Thanks VE Team for letting theirs as a base!
 [HarmonyPatch(typeof(StatWorker), "StatOffsetFromGear")]
 public static class StatWorker_StatOffsetFromGear_Patch
 {
