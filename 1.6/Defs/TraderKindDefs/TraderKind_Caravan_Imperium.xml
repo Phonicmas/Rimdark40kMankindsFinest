@@ -7,7 +7,7 @@
         <defName>BEWH_ImperiumTraderCaravan</defName>
         <label>imperium trader</label>
         <commonality>1</commonality>
-        <requestable>False</requestable>
+        <requestable>True</requestable>
         <faction>BEWH_ImperiumFaction</faction>
         <stockGenerators>
 
