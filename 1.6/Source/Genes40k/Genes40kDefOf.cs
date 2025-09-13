@@ -206,6 +206,9 @@ public static class Genes40kDefOf
     //BodyPartDef
     public static BodyPartDef Kidney;
     
+    //StatDefs
+    public static StatDef BEWH_JoyFromArtFactor;
+    
     static Genes40kDefOf()
     {
         DefOfHelper.EnsureInitializedInCtor(typeof(Genes40kDefOf));

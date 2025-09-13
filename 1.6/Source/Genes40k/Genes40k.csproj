@@ -13,6 +13,7 @@
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <LangVersion>latestmajor</LangVersion>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>false</DebugSymbols>
@@ -22,14 +23,16 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
+    <DebugType>none</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\..\Assemblies\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="0Harmony">
@@ -158,7 +161,6 @@
     <Compile Include="DefModExtensions\DefModExtension_GeneseedHarvest.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneStorageGraphicProgression.cs" />
     <Compile Include="DefModExtensions\DefModExtension_IgnoreMovespeedDecrease.cs" />
-    <Compile Include="DefModExtensions\DefModExtension_IncreasedJoyFromArt.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneseedVialRecipe.cs" />
     <Compile Include="DefModExtensions\DefModExtension_LegionMaterialCreation.cs" />
     <Compile Include="DefModExtensions\DefModExtension_PerpetualGene.cs" />

@@ -49,21 +49,20 @@
         <displayOrderInCategory>106</displayOrderInCategory>
         <statOffsets>
             <MeleeHitChance>3</MeleeHitChance>
+            <MeleeDodgeChance>1</MeleeDodgeChance>
+            <MoveSpeed>0.3</MoveSpeed>
         </statOffsets>
+        <statFactors>
+            <BEWH_JoyFromArtFactor>3</BEWH_JoyFromArtFactor>
+        </statFactors>
         <forcedTraits>
             <li>
                 <def>Jealous</def>
             </li>
         </forcedTraits>
-        <customEffectDescriptions>
-            <li>Increased joy from viewing art.</li>
-        </customEffectDescriptions>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene">
                 <chapterName>Emperor's Children</chapterName>
-            </li>
-            <li Class="Genes40k.DefModExtension_IncreasedJoyFromArt">
-                <joyFromArtFactor>2</joyFromArtFactor>
             </li>
         </modExtensions>
     </GeneDef>
@@ -408,6 +407,7 @@
         <statOffsets>
             <WorkSpeedGlobal>0.05</WorkSpeedGlobal>            <!-- Replace this with increase based on bionic amount, or something else based on bionic amount-->
             <ResearchSpeed>0.1</ResearchSpeed>
+            <BEWH_ArtificialPartsAffinityFactor>0.1</BEWH_ArtificialPartsAffinityFactor>
         </statOffsets>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene">
@@ -478,7 +478,7 @@
             <li>5% decrease to gene-seed implantation failure chance cap.</li>
         </customEffectDescriptions>
         <statFactors>
-            <WorkSpeedGlobal>1.3</WorkSpeedGlobal>
+            <WorkSpeedGlobal>1.35</WorkSpeedGlobal>
         </statFactors>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene">

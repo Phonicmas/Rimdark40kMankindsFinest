@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <StatDef>
+    <defName>BEWH_JoyFromArtFactor</defName>
+    <label>joy from art multiplier</label>
+    <description>A multiplier on how much joy a pawn gets from viewing art.</description>
+    <category>BasicsPawn</category>
+    <toStringStyle>PercentZero</toStringStyle>
+    <defaultBaseValue>1</defaultBaseValue>
+    <hideAtValue>1</hideAtValue>
+    <minValue>0</minValue>
+    <showOnAnimals>false</showOnAnimals>
+    <showOnDrones>false</showOnDrones>
+  </StatDef>
+
+</Defs>

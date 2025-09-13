@@ -2,10 +2,7 @@
 <Defs>
 
     <!-- Remove rank ability -->
-    <AbilityDef>
-        <defName>BEWH_StripRanks</defName>
-        <label>Strip ranks</label>
-        <description>Target an underperforming or insubordinate ally, demoting and stripping them of rank, effectively resetting their place in the hierarchy.</description>
+    <AbilityDef Name="BEWH_StripRank" Abstract="True">
         <cooldownTicksRange>15000</cooldownTicksRange>
         <iconPath>UI/Abilities/BEWH_Ability_RankStripRank</iconPath>
         <jobDef>CastAbilityOnThingMelee</jobDef>
@@ -28,6 +25,12 @@
                 <canTargetCorpses>false</canTargetCorpses>
             </targetParams>
         </verbProperties>
+    </AbilityDef>
+
+    <AbilityDef ParentName="BEWH_StripRank">
+        <defName>BEWH_StripRanks</defName>
+        <label>Strip ranks</label>
+        <description>Target an underperforming or insubordinate ally, demoting and stripping them of rank, effectively resetting their place in the hierarchy.\nWorks on astartes ranks.</description>
         <comps>
             <li Class="Core40k.CompProperties_ResetRanks">
                 <rankCategoryDef>BEWH_AstartesRankCategory</rankCategoryDef>
@@ -35,6 +38,18 @@
             </li>
         </comps>
     </AbilityDef>
+
+    <!--<AbilityDef ParentName="BEWH_StripRank">
+        <defName>BEWH_StripRanksCustodes</defName>
+        <label>Strip ranks</label>
+        <description>Target an underperforming or insubordinate ally, demoting and stripping them of rank, effectively resetting their place in the hierarchy.\nWorks on custodes ranks.</description>
+        <comps>
+            <li Class="Core40k.CompProperties_ResetRanks">
+                <rankCategoryDef>BEWH_CustodesRankCategory</rankCategoryDef>
+                <ownRankAsTier>true</ownRankAsTier>
+            </li>
+        </comps>
+    </AbilityDef>-->
 
 
     <!-- Ancient: Raise Legion Banner -->

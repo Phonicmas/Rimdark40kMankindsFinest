@@ -1,6 +1,7 @@
 ﻿using HarmonyLib;
 using RimWorld;
 using System.Linq;
+using UnityEngine;
 using Verse;
 
 namespace Genes40k;
@@ -10,19 +11,12 @@ public class MoreArtJoy
 {
     public static void Prefix(Pawn pawn, ref float extraJoyGainFactor)
     {
-        if (pawn.genes == null)
+        var pawnJoyFromArtFactor = pawn?.GetStatValue(Genes40kDefOf.BEWH_JoyFromArtFactor) ?? 1f;
+        if (Mathf.Approximately(pawnJoyFromArtFactor, 1f))
         {
             return;
         }
-
-        var genes = pawn.genes.GenesListForReading.Where(gene => gene.def.HasModExtension<DefModExtension_IncreasedJoyFromArt>()).ToList();
-
-        if (!genes.Any())
-        {
-            return;
-        }
-            
-        var multiplier = genes.Aggregate(1f, (current, gene) => current * gene.def.GetModExtension<DefModExtension_IncreasedJoyFromArt>().joyFromArtFactor);
-        extraJoyGainFactor = multiplier;
+        
+        extraJoyGainFactor *= pawnJoyFromArtFactor;
     }
 }
