@@ -3,7 +3,7 @@
 <Defs>
 
 	<!--============Ranged=============-->
-	<!-- Bolt Carabine -->
+	<!-- Bolters -->
 	<SoundDef>
 		<defName>BEWH_SFX_BolterShot</defName>
 		<context>MapOnly</context>
@@ -15,7 +15,7 @@
 						<clipPath>BEWH_BolterShot</clipPath>
 					</li>
 				</grains>
-				<volumeRange>26~30</volumeRange>
+				<volumeRange>24~26</volumeRange>
 				<pitchRange>0.85~1.15</pitchRange>
 			</li>
 		</subSounds>
@@ -140,7 +140,7 @@
 						<clipPath>BEWH_PowerSwordInteract</clipPath>
 					</li>
 				</grains>
-				<volumeRange>28</volumeRange>
+				<volumeRange>8</volumeRange>
 				<!-- <pitchRange>1~1</pitchRange> -->
 			</li>
 		</subSounds>

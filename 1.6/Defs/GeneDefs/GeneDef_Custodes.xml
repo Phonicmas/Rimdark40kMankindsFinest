@@ -324,7 +324,7 @@
     <GeneDef ParentName="BEWH_CustodesBase">
         <defName>BEWH_FulgurVitaliumstrand</defName>
         <label>fulgur vitaliumstrand</label>
-        <description>The Fulgur Vitaliumstrand binds itself to the carriers sinew and some vital organs such as the lungs and heart, enhancing them in various ways. The Fulgur Vitaliumstrand allows great flexibility and enhaces functionality for bound tissue, this results in faster manipulation, better breathing and blood pumping. The Fulgur Vitaliumstrand also seems to have it own memory, allowing the carrier to quickly learn combat forms. Additionally it allows the carrier to secrete a thick fluid from their pores that forms around their entire body, putting them into a stasis.</description>
+        <description>The Fulgur Vitaliumstrand binds itself to the carrier's sinew and vital organs such as the lungs and heart, enhancing them in various ways. It grants greater flexibility and enhaces the function of the bound tissue, this results in faster manipulation, better breathing and blood pumping. This organ also seems to have its own memory, allowing the carrier to quickly learn various combat forms. Additionally, it allows the carrier to secrete a thick fluid from their pores that envelops their entire body, putting them in a state of stasis.</description>
         <iconPath>UI/Genes/Custodes/BEWH_Custodes_FulgurVitaliumstrand</iconPath>
         <displayOrderInCategory>205</displayOrderInCategory>
 
