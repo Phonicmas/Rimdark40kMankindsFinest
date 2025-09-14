@@ -2,7 +2,7 @@
 <LanguageData>
 
   <!--=== Mod Setting related ===-->
-  <BEWH.MankindsFinest.ModSettings.ModName>RimDark 40k - Mankinds Finest</BEWH.MankindsFinest.ModSettings.ModName>
+  <BEWH.MankindsFinest.ModSettings.ModName>RimDark 40k - Mankinds Finest - {0}</BEWH.MankindsFinest.ModSettings.ModName>
 
   <BEWH.MankindsFinest.ModSettings.PsychicPhenomena>When enabled, psykers suffering a mental breakdown will trigger psychic phenomena.</BEWH.MankindsFinest.ModSettings.PsychicPhenomena>
   <BEWH.MankindsFinest.ModSettings.PsychicPhenomenaDesc>When a psychic phenomena occur and table is rolled on a random effect is chosen, these can wary from harmless to severely destructive.</BEWH.MankindsFinest.ModSettings.PsychicPhenomenaDesc>

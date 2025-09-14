@@ -7,6 +7,8 @@ namespace Genes40k;
 
 public class Genes40kMod : Mod
 {
+    public string version = "1.0.0";
+        
     public static Harmony harmony;
 
     private Genes40kModSettings settings;
@@ -83,6 +85,6 @@ public class Genes40kMod : Mod
 
     public override string SettingsCategory()
     {
-        return "BEWH.MankindsFinest.ModSettings.ModName".Translate();
+        return "BEWH.MankindsFinest.ModSettings.ModName".Translate(version);
     }
 }

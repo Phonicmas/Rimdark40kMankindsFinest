@@ -12,7 +12,7 @@ public static class NaturalBirthPerpetual
 {
     static NaturalBirthPerpetual()
     {
-        Genes40kMod.harmony.Patch(AccessTools.Method(typeof(PregnancyUtility), "ApplyBirthOutcome"), null, new HarmonyMethod(AccessTools.Method(typeof(NaturalBirthPsykerPariah), "Postfix")));
+        Genes40kMod.harmony.Patch(AccessTools.Method(typeof(PregnancyUtility), "ApplyBirthOutcome"), null, new HarmonyMethod(AccessTools.Method(typeof(NaturalBirthPerpetual), "Postfix")));
     }
 
     public static void Postfix(ref Thing __result, Pawn geneticMother)
@@ -31,12 +31,10 @@ public static class NaturalBirthPerpetual
         {
             return;
         }
-            
         if (pawn.genes == null || Enumerable.Any(pawn.genes.GenesListForReading, gene => gene.def.HasModExtension<DefModExtension_PerpetualGene>()))
         {
             return;
         }
-        
         foreach (var gene in pawn.genes.GenesListForReading)
         {
             if (gene.def.exclusionTags.Contains("Perpetual"))
@@ -44,14 +42,14 @@ public static class NaturalBirthPerpetual
                 return;
             }
         }
-
+        
         var unnaturalChance = modSettings.perpetualBirthChance;
         var rand = new Random();
         if (rand.Next(0, 100) > unnaturalChance)
         {
             return;
         }
-            
+        
         var weightedSelection = new WeightedSelection<GeneDef>();
         //Perpetual genes
         weightedSelection.AddEntry(Genes40kDefOf.BEWH_PerpetualGamma, 50);
