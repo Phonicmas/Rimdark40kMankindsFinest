@@ -7,12 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genes40k", "Genes40k.csproj
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7FED8F4B-10DB-4B7A-8C0E-6824A55CF2C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7FED8F4B-10DB-4B7A-8C0E-6824A55CF2C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FED8F4B-10DB-4B7A-8C0E-6824A55CF2C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FED8F4B-10DB-4B7A-8C0E-6824A55CF2C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
