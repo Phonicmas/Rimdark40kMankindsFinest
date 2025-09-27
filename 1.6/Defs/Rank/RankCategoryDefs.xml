@@ -36,7 +36,7 @@
             </li>
             <li>
                 <rankDef>BEWH_AstartesRankLieutenant</rankDef>
-                <displayPosition>(8, 0)</displayPosition>
+                <displayPosition>(7.5, 0)</displayPosition>
                 <rankRequirements>
                     <BEWH_AstartesRankSergeant>15</BEWH_AstartesRankSergeant>
                     <BEWH_AstartesRankDevastatorSergeant>8</BEWH_AstartesRankDevastatorSergeant>
@@ -52,7 +52,7 @@
             </li>
             <li>
                 <rankDef>BEWH_AstartesRankChapterMaster</rankDef>
-                <displayPosition>(14, 0)</displayPosition>
+                <displayPosition>(12, 0)</displayPosition>
                 <rankRequirements>
                     <BEWH_AstartesRankCaptain>40</BEWH_AstartesRankCaptain>
                 </rankRequirements>
@@ -235,14 +235,14 @@
             </li>
             <li>
                 <rankDef>BEWH_ThunderWarriorRankThunderlord</rankDef>
-                <displayPosition>(10, 0)</displayPosition>
+                <displayPosition>(9, 0)</displayPosition>
                 <rankRequirements>
                     <BEWH_ThunderWarriorRankStormCaptain>10</BEWH_ThunderWarriorRankStormCaptain>
                 </rankRequirements>
             </li>
             <li>
                 <rankDef>BEWH_ThunderWarriorRankPrimarch</rankDef>
-                <displayPosition>(14, 0)</displayPosition>
+                <displayPosition>(11, 0)</displayPosition>
                 <rankRequirements>
                     <BEWH_ThunderWarriorRankThunderlord>20</BEWH_ThunderWarriorRankThunderlord>
                 </rankRequirements>

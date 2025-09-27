@@ -16,7 +16,24 @@
 					</li>
 				</grains>
 				<volumeRange>24~26</volumeRange>
-				<pitchRange>0.85~1.15</pitchRange>
+				<pitchRange>1.1~1.15</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>BEWH_SFX_BolterShotHeavy</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>BEWH_BolterShot</clipPath>
+					</li>
+				</grains>
+				<volumeRange>24~26</volumeRange>
+				<pitchRange>0.83</pitchRange>
 			</li>
 		</subSounds>
 	</SoundDef>

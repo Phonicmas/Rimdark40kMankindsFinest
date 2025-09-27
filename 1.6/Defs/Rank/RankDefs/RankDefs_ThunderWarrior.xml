@@ -8,7 +8,7 @@
         <defName>BEWH_ThunderWarriorRankInitiate</defName>
         <label>Initiate</label>
         <description>...</description>
-        <rankIconPath>UI/Ranks/Astartes/BEWH_Neophyte</rankIconPath>
+        <rankIconPath>UI/Ranks/ThunderWarriors/BEWH_Initiate</rankIconPath>
         <defaultFirstRank>True</defaultFirstRank>
 
         <statOffsets>
@@ -36,7 +36,7 @@
         <defName>BEWH_ThunderWarriorRankLinebreaker</defName>
         <label>Linebreaker</label>
         <description>...</description>
-        <rankIconPath>UI/Ranks/Astartes/BEWH_Neophyte</rankIconPath>
+        <rankIconPath>UI/Ranks/ThunderWarriors/BEWH_Linebreaker</rankIconPath>
 
         <statOffsets>
             <RangedCooldownFactor>-0.02</RangedCooldownFactor>
@@ -55,7 +55,7 @@
         <defName>BEWH_ThunderWarriorRankStormCaptain</defName>
         <label>Storm-Captain</label>
         <description>...</description>
-        <rankIconPath>UI/Ranks/Astartes/BEWH_Neophyte</rankIconPath>
+        <rankIconPath>UI/Ranks/ThunderWarriors/BEWH_Stormcaptain</rankIconPath>
 
         <statOffsets>
             <RangedCooldownFactor>-0.02</RangedCooldownFactor>
@@ -75,7 +75,7 @@
         <defName>BEWH_ThunderWarriorRankThunderlord</defName>
         <label>Thunderlord</label>
         <description>...</description>
-        <rankIconPath>UI/Ranks/Astartes/BEWH_Neophyte</rankIconPath>
+        <rankIconPath>UI/Ranks/ThunderWarriors/BEWH_Thunderlord</rankIconPath>
 
         <statOffsets>
             <SocialImpact>0.1</SocialImpact>
@@ -98,7 +98,7 @@
         <defName>BEWH_ThunderWarriorRankPrimarch</defName>
         <label>Primarch</label>
         <description>...</description>
-        <rankIconPath>UI/Ranks/Astartes/BEWH_Neophyte</rankIconPath>
+        <rankIconPath>UI/Ranks/ThunderWarriors/BEWH_Primarch</rankIconPath>
 
         <statOffsets>
             <ShootingAccuracyPawn>0.03</ShootingAccuracyPawn>
@@ -124,7 +124,7 @@
         <defName>BEWH_ThunderWarriorRankMedic</defName>
         <label>Vitalseer</label>
         <description>...</description>
-        <rankIconPath>UI/Ranks/Astartes/BEWH_Neophyte</rankIconPath>
+        <rankIconPath>UI/Ranks/ThunderWarriors/BEWH_Vitalseer</rankIconPath>
 
         <requiredSkills>
             <Medicine>8</Medicine>
@@ -147,7 +147,7 @@
         <defName>BEWH_ThunderWarriorRankMedicUpgrade</defName>
         <label>Veteran Vitalseer</label>
         <description>...</description>
-        <rankIconPath>UI/Ranks/Astartes/BEWH_Neophyte</rankIconPath>
+        <rankIconPath>UI/Ranks/ThunderWarriors/BEWH_VitalseerVeteran</rankIconPath>
 
         <requiredSkills>
             <Medicine>13</Medicine>
@@ -171,7 +171,7 @@
         <defName>BEWH_ThunderWarriorRankBeserker</defName>
         <label>Beserker</label>
         <description>...</description>
-        <rankIconPath>UI/Ranks/Astartes/BEWH_Neophyte</rankIconPath>
+        <rankIconPath>UI/Ranks/ThunderWarriors/BEWH_Shockzerker</rankIconPath>
 
         <requiredSkills>
             <Melee>8</Melee>
@@ -194,7 +194,7 @@
         <defName>BEWH_ThunderWarriorRankBeserkerUpgrade</defName>
         <label>Veteran Beserker</label>
         <description>...</description>
-        <rankIconPath>UI/Ranks/Astartes/BEWH_Neophyte</rankIconPath>
+        <rankIconPath>UI/Ranks/ThunderWarriors/BEWH_ShockzerkerVeteran</rankIconPath>
 
         <requiredSkills>
             <Melee>10</Melee>
@@ -215,7 +215,7 @@
         <defName>BEWH_ThunderWarriorRankRanged</defName>
         <label>Stormtrooper</label>
         <description>...</description>
-        <rankIconPath>UI/Ranks/Astartes/BEWH_Neophyte</rankIconPath>
+        <rankIconPath>UI/Ranks/ThunderWarriors/BEWH_Stormtrooper</rankIconPath>
 
         <requiredSkills>
             <Shooting>8</Shooting>
@@ -237,7 +237,7 @@
         <defName>BEWH_ThunderWarriorRankRangedUpgrade</defName>
         <label>Veteran Stormtrooper</label>
         <description>...</description>
-        <rankIconPath>UI/Ranks/Astartes/BEWH_Neophyte</rankIconPath>
+        <rankIconPath>UI/Ranks/ThunderWarriors/BEWH_StormtrooperVeteran</rankIconPath>
 
         <requiredSkills>
             <Shooting>10</Shooting>

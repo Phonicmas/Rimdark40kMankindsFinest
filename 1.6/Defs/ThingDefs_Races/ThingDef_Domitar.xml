@@ -198,6 +198,7 @@
         <soundInteract>Interact_ChargeLance</soundInteract> <!-- domitar basically does not pick up its weapon -->
         <meleeHitSound>BEWH_SFX_GravitonMaulHit</meleeHitSound>
         <equippedAngleOffset>-45</equippedAngleOffset>
+        <uiIconScale>0.65</uiIconScale>
         <relicChance>0</relicChance>
         <destroyOnDrop>true</destroyOnDrop>
         <smeltable>false</smeltable>
