@@ -5,7 +5,7 @@
   <ThingDef ParentName="BEWH_AstartesRangedBase">
     <defName>BEWH_AstartesBolter</defName>
     <label>bolter</label>
-    <description>The Mk Vb boltgun is the iconic standard-issue firearm of the Adeptus Astartes. Firing mass-reactive rounds with deadly efficiency, it combines reliability, adaptability, and stopping power, making it the definitive Space Marine weapon. \n\nAvalible Loadout: Standard, Metal Storm</description>
+    <description>The Mk Vb boltgun is the iconic standard-issue firearm of the Adeptus Astartes. Firing mass-reactive rounds with deadly efficiency, it combines reliability, adaptability, and stopping power, making it the definitive Space Marine weapon. \n\nAvalible Loadout: Standard, Inferno, Metal Storm</description>
     <graphicData>
       <texPath>Things/Weapons/BEWH_BoltCarbine</texPath>
       <shaderType>BEWH_CutoutThreeColor</shaderType>
