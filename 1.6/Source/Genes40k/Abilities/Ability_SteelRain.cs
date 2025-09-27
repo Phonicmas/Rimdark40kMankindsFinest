@@ -76,7 +76,7 @@ public class Ability_SteelRain : VEF.Abilities.Ability
             for (var i = 0; i < defMod.marinesToSpawn; i++)
             {
                 var spawnPawn = PawnGenerator.GeneratePawn(Genes40kDefOf.BEWH_FirstbornPawn, faction);
-                var chapter = Genes40kUtils.SetupChapterForPawn(spawnPawn, !defMod.usePlayerColours);
+                var chapter = defMod.chapterColour ?? Genes40kUtils.SetupChapterForPawn(spawnPawn, !defMod.usePlayerColours);
                 drawColor = chapter.primaryColour;
                     
                 pawnsToSpawn.Add(spawnPawn);

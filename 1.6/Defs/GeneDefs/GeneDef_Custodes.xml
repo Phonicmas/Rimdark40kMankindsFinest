@@ -61,6 +61,10 @@
             </li>
         </suppressedTraits>
 
+        <customEffectDescriptions>
+            <li>Ignores movespeed decrease from armor.</li>
+        </customEffectDescriptions>
+
         <modExtensions>
             <li Class="Core40k.DefModExtension_GeneExtension">
                 <addedWorldCarryCapacity>200</addedWorldCarryCapacity>

@@ -30,6 +30,7 @@
                 <radius>12</radius>
                 <tier>1</tier>
                 <pariahGene>BEWH_SigmaPariah</pariahGene>
+                <naturalBornSelectionWeight>40</naturalBornSelectionWeight>
             </li>
         </modExtensions>
     </GeneDef>
@@ -63,6 +64,7 @@
                 <radius>16</radius>
                 <tier>2</tier>
                 <pariahGene>BEWH_UpsilonPariah</pariahGene>
+                <naturalBornSelectionWeight>12</naturalBornSelectionWeight>
             </li>
         </modExtensions>
     </GeneDef>
@@ -97,6 +99,7 @@
                 <radius>20</radius>
                 <tier>3</tier>
                 <pariahGene>BEWH_OmegaPariah</pariahGene>
+                <naturalBornSelectionWeight>4</naturalBornSelectionWeight>
             </li>
         </modExtensions>
     </GeneDef>

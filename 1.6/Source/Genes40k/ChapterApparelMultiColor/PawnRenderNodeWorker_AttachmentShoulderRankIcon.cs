@@ -62,4 +62,18 @@ public class PawnRenderNodeWorker_AttachmentShoulderRankIcon : PawnRenderNodeWor
 
         return true;
     }
+    
+    public override Vector3 OffsetFor(PawnRenderNode node, PawnDrawParms parms, out Vector3 pivot)
+    {
+        var res = base.OffsetFor(node, parms, out pivot);
+        if (node.apparel.GetComp<CompChapterColorWithShoulderDecoration>().FlipShoulderIcons && node.apparel.def.HasModExtension<DefModExtension_ShoulderFlippedData>())
+        {
+            var flippedData = node.apparel.def.GetModExtension<DefModExtension_ShoulderFlippedData>();
+            if (flippedData.offsetForRankWhenFacing.TryGetValue(parms.facing, out var offset))
+            {
+                return offset;
+            }
+        }
+        return res; 
+    }
 }

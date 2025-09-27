@@ -9,4 +9,6 @@ public class DefModExtension_Pariah : DefModExtension
     public int radius;
 
     public int tier;
+    
+    public int naturalBornSelectionWeight = 0;
 }

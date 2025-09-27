@@ -23,6 +23,19 @@
         </capMods>
         <marketValueFactor>1.2</marketValueFactor>
         <selectionWeight>0.7</selectionWeight>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_GivesVEFAbility">
+                <abilityDefs>
+                    <li>BEWH_PsykerBolt</li>
+                </abilityDefs>
+            </li>
+            <li Class="VEF.Genes.GeneExtension">
+                <backgroundPathXenogenes>UI/Genes/BEWH_GeneBackground_Psyker</backgroundPathXenogenes>
+            </li>
+            <li Class="Genes40k.DefModExtension_Psyker">
+                <naturalBornSelectionWeight>60</naturalBornSelectionWeight>
+            </li>
+        </modExtensions>
     </GeneDef>
 
     <!-- Epsilon Psyker -->
@@ -47,6 +60,19 @@
         </capMods>
         <marketValueFactor>1.8</marketValueFactor>
         <selectionWeight>0.4</selectionWeight>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_GivesVEFAbility">
+                <abilityDefs>
+                    <li>BEWH_PsykerBolt</li>
+                </abilityDefs>
+            </li>
+            <li Class="VEF.Genes.GeneExtension">
+                <backgroundPathXenogenes>UI/Genes/BEWH_GeneBackground_Psyker</backgroundPathXenogenes>
+            </li>
+            <li Class="Genes40k.DefModExtension_Psyker">
+                <naturalBornSelectionWeight>40</naturalBornSelectionWeight>
+            </li>
+        </modExtensions>
     </GeneDef>
 
     <!-- Delta Psyker -->
@@ -71,6 +97,19 @@
         </capMods>
         <marketValueFactor>2.5</marketValueFactor>
         <selectionWeight>0.25</selectionWeight>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_GivesVEFAbility">
+                <abilityDefs>
+                    <li>BEWH_PsykerBolt</li>
+                </abilityDefs>
+            </li>
+            <li Class="VEF.Genes.GeneExtension">
+                <backgroundPathXenogenes>UI/Genes/BEWH_GeneBackground_Psyker</backgroundPathXenogenes>
+            </li>
+            <li Class="Genes40k.DefModExtension_Psyker">
+                <naturalBornSelectionWeight>12</naturalBornSelectionWeight>
+            </li>
+        </modExtensions>
     </GeneDef>
 
     <!-- Beta Psyker -->
@@ -96,6 +135,19 @@
         <marketValueFactor>4</marketValueFactor>
         <canGenerateInGeneSet>false</canGenerateInGeneSet>
         <selectionWeight>0.15</selectionWeight>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_GivesVEFAbility">
+                <abilityDefs>
+                    <li>BEWH_PsykerBolt</li>
+                </abilityDefs>
+            </li>
+            <li Class="VEF.Genes.GeneExtension">
+                <backgroundPathXenogenes>UI/Genes/BEWH_GeneBackground_Psyker</backgroundPathXenogenes>
+            </li>
+            <li Class="Genes40k.DefModExtension_Psyker">
+                <naturalBornSelectionWeight>4</naturalBornSelectionWeight>
+            </li>
+        </modExtensions>
     </GeneDef>
 
     <!-- Alpha Psyker -->
@@ -121,6 +173,19 @@
         <marketValueFactor>8</marketValueFactor>
         <canGenerateInGeneSet>false</canGenerateInGeneSet>
         <selectionWeight>0.05</selectionWeight>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_GivesVEFAbility">
+                <abilityDefs>
+                    <li>BEWH_PsykerBolt</li>
+                </abilityDefs>
+            </li>
+            <li Class="VEF.Genes.GeneExtension">
+                <backgroundPathXenogenes>UI/Genes/BEWH_GeneBackground_Psyker</backgroundPathXenogenes>
+            </li>
+            <li Class="Genes40k.DefModExtension_Psyker">
+                <naturalBornSelectionWeight>1</naturalBornSelectionWeight>
+            </li>
+        </modExtensions>
     </GeneDef>
 
 </Defs>

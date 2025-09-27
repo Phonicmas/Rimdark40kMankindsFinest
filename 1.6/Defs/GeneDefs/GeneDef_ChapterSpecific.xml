@@ -143,7 +143,7 @@
             <li>Gives the Canis Helix gene.</li>
         </customEffectDescriptions>
         <descriptionHyperlinks>
-            <GeneDef>BEWH_ChapterIXFlaw</GeneDef>
+            <GeneDef>BEWH_ChapterVIFlaw</GeneDef>
         </descriptionHyperlinks>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene">
@@ -293,7 +293,7 @@
             <li>Gives the Red Thirst gene.</li>
         </customEffectDescriptions>
         <descriptionHyperlinks>
-            <GeneDef>BEWH_ChapterIXFlaw</GeneDef>
+            <GeneDef>BEWH_ChapterIXBloodAngelsFlaw</GeneDef>
         </descriptionHyperlinks>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene">

@@ -1,24 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <!-- Ancient Banner from ability -->
-  <ThingDef ParentName="BuildingBase">
-    <defName>BEWH_AncientChapterBanner</defName>
-    <label>Legion Standard</label>
-    <description>The Legion Standard is a symbol of honor and unity, a sacred emblem raised in key locations to strengthen the resolve of the Space Marines. When unfurled, the banner inspires all nearby Marines, granting them increased morale and combat effectiveness as they fight in the name of their legion's legacy.</description>
-    <thingClass>Genes40k.Building_ChapterBanner</thingClass>
-    <graphicData>
-      <texPath>Things/Building/ChapterBanner/BEWH_ThingChapterBanner</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>CutoutComplex</shaderType>
-      <drawSize>(2.5,2.75)</drawSize>
-      <drawOffset>(0, 0, 0.75)</drawOffset>
-      <shadowData>
-        <volume>(0.3, 0.3 ,0.3)</volume>
-        <offset>(0, 0, -0.2)</offset>
-      </shadowData>
-    </graphicData>
-    <size>(1,1)</size>
+  <!-- Flag Base -->
+  <ThingDef ParentName="BuildingBase" Name="BEWH_BannerStandard" Abstract="True">
+    <thingClass>Building</thingClass>
     <useHitPoints>false</useHitPoints>
     <drawerType>RealtimeOnly</drawerType>
     <rotatable>false</rotatable>
@@ -30,7 +15,7 @@
     <fillPercent>0.25</fillPercent>
     <defaultPlacingRot>South</defaultPlacingRot>
     <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
+      <MaxHitPoints>200</MaxHitPoints>
       <WorkToBuild>6000</WorkToBuild>
       <Mass>20</Mass>
       <Flammability>0</Flammability>
@@ -50,17 +35,39 @@
         <lifespanTicks>10000</lifespanTicks>
         <expireEffect>RaisedRock_Collapse</expireEffect>
       </li>
-      <li Class="Genes40k.CompProperties_Aura">
-        <givesHediff>BEWH_ChapterBannerBuff</givesHediff>
-        <durationOutsideRange>750</durationOutsideRange>
-        <range>20</range>
-      </li>
       <li Class="CompProperties_Glower">
         <glowRadius>18</glowRadius>
         <glowColor>(200,200,200,0)</glowColor>
       </li>
     </comps>
 
+  </ThingDef>
+
+  <!-- Ancient Banner from ability -->
+  <ThingDef ParentName="BEWH_BannerStandard">
+    <defName>BEWH_AncientChapterBanner</defName>
+    <label>Legion Standard</label>
+    <description>The Legion Standard is a symbol of honor and unity, a sacred emblem raised in key locations to strengthen the resolve of the Space Marines. When unfurled, the banner inspires all nearby Marines, granting them increased morale and combat effectiveness as they fight in the name of their legion's legacy.</description>
+    <thingClass>Genes40k.Building_ChapterBanner</thingClass>
+    <graphicData>
+      <texPath>Things/Building/ChapterBanner/BEWH_ThingChapterBanner</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(2.5,2.75)</drawSize>
+      <drawOffset>(0, 0, 0.75)</drawOffset>
+      <shadowData>
+        <volume>(0.3, 0.3 ,0.3)</volume>
+        <offset>(0, 0, -0.2)</offset>
+      </shadowData>
+    </graphicData>
+    <size>(1,1)</size>
+    <comps>
+      <li Class="Genes40k.CompProperties_Aura">
+        <givesHediff>BEWH_ChapterBannerBuff</givesHediff>
+        <durationOutsideRange>750</durationOutsideRange>
+        <range>20</range>
+      </li>
+    </comps>
   </ThingDef>
 
   <!-- Decorative Banner -->
@@ -102,7 +109,7 @@
 
     <costList>
       <WoodLog>25</WoodLog>
-      <Cloth>40</Cloth>
+      <Cloth>30</Cloth>
       <Gold>1</Gold>
     </costList>
 
@@ -113,6 +120,10 @@
     <thingCategories>
       <li>BuildingsMisc</li>
     </thingCategories>
+
+    <researchPrerequisites>
+      <li>ComplexFurniture</li>
+    </researchPrerequisites>
 
   </ThingDef>
 

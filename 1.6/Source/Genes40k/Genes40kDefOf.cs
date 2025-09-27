@@ -145,8 +145,6 @@ public static class Genes40kDefOf
     public static ThingDef BEWH_RaisedBarricade;
     public static ThingDef BEWH_RaisedTurret;
         
-    public static ThingDef BEWH_AncientChapterBanner;
-        
     public static ThingDef BEWH_SteelRainDropPodBuilding;
     public static ThingDef BEWH_SteelRainDropPodSkyfaller;
         

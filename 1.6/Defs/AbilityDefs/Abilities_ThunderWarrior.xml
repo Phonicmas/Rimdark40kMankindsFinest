@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Sear Wounds -->
+    <AbilityDef>
+        <defName>BEWH_SearWounds</defName>
+        <label>sear wounds</label>
+        <description>Sear the wounds of an ally, stopping all bleeding instantly, but slightly damages their wounds in the process.</description>
+        <cooldownTicksRange>10000</cooldownTicksRange>
+        <iconPath>Placeholder</iconPath>
+        <jobDef>CastAbilityOnThingMelee</jobDef>
+        <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <targetRequired>true</targetRequired>
+        <showWhenDrafted>true</showWhenDrafted>
+        <hostile>false</hostile>
+        <verbProperties>
+            <verbClass>Verb_CastAbilityTouch</verbClass>
+            <range>-1</range>
+            <warmupTime>1</warmupTime>
+            <targetParams>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetAnimals>false</canTargetAnimals>
+                <canTargetMechs>false</canTargetMechs>
+                <canTargetBloodfeeders>false</canTargetBloodfeeders>
+                <canTargetCorpses>false</canTargetCorpses>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="Genes40k.CompProperties_AbilitySearWounds" />
+        </comps>
+    </AbilityDef>
+
+    <!-- Resurrecting Shock -->
+    <AbilityDef>
+        <defName>BEWH_ResurrectingShock</defName>
+        <label>resurrecting shock</label>
+        <description>Applies a quick shock, which energizes yet to dissipate restorative fluids the vigoranis, kick starting the pawn back into life. Resurrection beyond the 2nd dead hour can result in brain damage.</description>
+        <cooldownTicksRange>180000</cooldownTicksRange>
+        <iconPath>Placeholder</iconPath>
+        <jobDef>CastAbilityOnThingMelee</jobDef>
+        <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <targetRequired>true</targetRequired>
+        <showWhenDrafted>true</showWhenDrafted>
+        <hostile>false</hostile>
+        <verbProperties>
+            <verbClass>Verb_CastAbilityTouch</verbClass>
+            <range>-1</range>
+            <warmupTime>4</warmupTime>
+            <targetParams>
+                <canTargetPawns>false</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetAnimals>false</canTargetAnimals>
+                <canTargetMechs>false</canTargetMechs>
+                <canTargetBloodfeeders>false</canTargetBloodfeeders>
+                <canTargetCorpses>true</canTargetCorpses>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="Genes40k.CompProperties_AbilityResurrectingShock" />
+        </comps>
+    </AbilityDef>
+
+    <!-- Berserker -->
+    <AbilityDef ParentName="BEWH_SelfTargetAbilities">
+        <defName>BEWH_BerserkerPainBoost</defName>
+        <label>unyielding rage</label>
+        <description>The beserker is able to tap into their innate rage, fueling their power through pain.</description>
+        <iconPath>UI/Abilities/BEWH_Ability_JaghataiKhanAlakhGeh</iconPath>
+        <cooldownTicksRange>40000</cooldownTicksRange>
+        <statBases>
+            <Ability_Duration>125</Ability_Duration>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>BEWH_BerserkerPainBoost</hediffDef>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>true</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <!-- Ranged -->
+    <AbilityDef ParentName="BEWH_SelfTargetAbilities">
+        <defName>BEWH_RangedThunderBoost</defName>
+        <label>shooting frenzy</label>
+        <description>The Stormtrooper is able to enter a shooting frenzy, massively increasing their their firepower but at the cost of accuracy</description>
+        <iconPath>UI/Abilities/BEWH_Ability_JaghataiKhanAlakhGeh</iconPath>
+        <cooldownTicksRange>20000</cooldownTicksRange>
+        <statBases>
+            <Ability_Duration>82</Ability_Duration>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>BEWH_RangedThunderBoost</hediffDef>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>true</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <!-- Primarch -->
+    <AbilityDef ParentName="BEWH_SelfTargetAbilities">
+        <defName>BEWH_PrimarchImmortality</defName>
+        <label>immortal will</label>
+        <description>By sheer will, the Primarch is able to withstand any and all attacks for a short period.</description>
+        <iconPath>UI/Abilities/BEWH_Ability_JaghataiKhanAlakhGeh</iconPath>
+        <cooldownTicksRange>120000</cooldownTicksRange>
+        <statBases>
+            <Ability_Duration>20</Ability_Duration>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>BEWH_PrimarchImmortality</hediffDef>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>true</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+</Defs>

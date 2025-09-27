@@ -21,10 +21,10 @@
     <GeneDef ParentName="BEWH_GenesOverallParent" Name="BEWH_ThunderWarriorParent" Abstract="True">
         <marketValueFactor>1.1</marketValueFactor>
         <statOffsets>
-            <CancerRate>0.20</CancerRate>
+            <CancerRate>0.10</CancerRate>
         </statOffsets>
         <statFactors>
-            <LifespanFactor>0.85</LifespanFactor>
+            <LifespanFactor>0.95</LifespanFactor>
         </statFactors>
     </GeneDef>
 
@@ -168,17 +168,6 @@
             <li>Pariah</li>
         </exclusionTags>
         <minAgeActive>11</minAgeActive>
-        <modExtensions>
-            <li Class="Core40k.DefModExtension_GivesVEFAbility">
-                <abilityDefs>
-                    <li>BEWH_PsykerBolt</li>
-                </abilityDefs>
-            </li>
-            <li Class="VEF.Genes.GeneExtension">
-                <backgroundPathXenogenes>UI/Genes/BEWH_GeneBackground_Psyker</backgroundPathXenogenes>
-            </li>
-            <li Class="Genes40k.DefModExtension_Psyker"/>
-        </modExtensions>
     </GeneDef>
 
 </Defs>

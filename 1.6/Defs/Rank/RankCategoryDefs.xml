@@ -207,5 +207,171 @@
         </ranks>
     </Core40k.RankCategoryDef>
 
+    <!-- Thunder Warrior -->
+    <Core40k.RankCategoryDef>
+        <defName>BEWH_ThunderWarriorRankCategory</defName>
+        <label>thunder warrior</label>
+        <description>Ranks of the Thunder Warriors.</description>
+        <unlockedByGene>BEWH_ProtoOssmodula</unlockedByGene>
+        <ranks>
+            <!-- Main line -->
+            <li>
+                <rankDef>BEWH_ThunderWarriorRankInitiate</rankDef>
+                <displayPosition>(0, 0)</displayPosition>
+            </li>
+            <li>
+                <rankDef>BEWH_ThunderWarriorRankLinebreaker</rankDef>
+                <displayPosition>(2, 0)</displayPosition>
+                <rankRequirements>
+                    <BEWH_ThunderWarriorRankInitiate>8</BEWH_ThunderWarriorRankInitiate>
+                </rankRequirements>
+            </li>
+            <li>
+                <rankDef>BEWH_ThunderWarriorRankStormCaptain</rankDef>
+                <displayPosition>(6, 0)</displayPosition>
+                <rankRequirements>
+                    <BEWH_ThunderWarriorRankLinebreaker>15</BEWH_ThunderWarriorRankLinebreaker>
+                </rankRequirements>
+            </li>
+            <li>
+                <rankDef>BEWH_ThunderWarriorRankThunderlord</rankDef>
+                <displayPosition>(10, 0)</displayPosition>
+                <rankRequirements>
+                    <BEWH_ThunderWarriorRankStormCaptain>10</BEWH_ThunderWarriorRankStormCaptain>
+                </rankRequirements>
+            </li>
+            <li>
+                <rankDef>BEWH_ThunderWarriorRankPrimarch</rankDef>
+                <displayPosition>(14, 0)</displayPosition>
+                <rankRequirements>
+                    <BEWH_ThunderWarriorRankThunderlord>20</BEWH_ThunderWarriorRankThunderlord>
+                </rankRequirements>
+            </li>
+            <!-- Medic -->
+            <li>
+                <rankDef>BEWH_ThunderWarriorRankMedic</rankDef>
+                <displayPosition>(5, 1)</displayPosition>
+                <rankRequirements>
+                    <BEWH_ThunderWarriorRankLinebreaker>15</BEWH_ThunderWarriorRankLinebreaker>
+                </rankRequirements>
+            </li>
+            <li>
+                <rankDef>BEWH_ThunderWarriorRankMedicUpgrade</rankDef>
+                <displayPosition>(7, 1)</displayPosition>
+                <rankRequirements>
+                    <BEWH_ThunderWarriorRankMedic>15</BEWH_ThunderWarriorRankMedic>
+                </rankRequirements>
+            </li>
+            <!-- Beserker -->
+            <li>
+                <rankDef>BEWH_ThunderWarriorRankBeserker</rankDef>
+                <displayPosition>(5, 3)</displayPosition>
+                <rankRequirements>
+                    <BEWH_ThunderWarriorRankLinebreaker>15</BEWH_ThunderWarriorRankLinebreaker>
+                </rankRequirements>
+            </li>
+            <li>
+                <rankDef>BEWH_ThunderWarriorRankBeserkerUpgrade</rankDef>
+                <displayPosition>(7, 3)</displayPosition>
+                <rankRequirements>
+                    <BEWH_ThunderWarriorRankBeserker>15</BEWH_ThunderWarriorRankBeserker>
+                </rankRequirements>
+            </li>
+            <!-- Ranged -->
+            <li>
+                <rankDef>BEWH_ThunderWarriorRankRanged</rankDef>
+                <displayPosition>(5, -1)</displayPosition>
+                <rankRequirements>
+                    <BEWH_ThunderWarriorRankLinebreaker>15</BEWH_ThunderWarriorRankLinebreaker>
+                </rankRequirements>
+            </li>
+            <li>
+                <rankDef>BEWH_ThunderWarriorRankRangedUpgrade</rankDef>
+                <displayPosition>(7, -1)</displayPosition>
+                <rankRequirements>
+                    <BEWH_ThunderWarriorRankRanged>15</BEWH_ThunderWarriorRankRanged>
+                </rankRequirements>
+            </li>
+        </ranks>
+    </Core40k.RankCategoryDef>
+
+    <!--<Core40k.RankCategoryDef>
+        <defName>BEWH_CustodesRankCategory</defName>
+        <label>custodes</label>
+        <description>Ranks of the Custodes.</description>
+        <unlockedByGene>BEWH_AtlasMorphogen</unlockedByGene>
+        <ranks>
+            <li>
+                <rankDef>BEWH_CustodesRankCustodianGuard</rankDef>
+                <displayPosition>(2, 0)</displayPosition>
+            </li>
+            <li>
+                <rankDef>BEWH_CustodesRankShieldCaptain</rankDef>
+                <displayPosition>(6, 0)</displayPosition>
+                <rankRequirements>
+                    <BEWH_CustodesRankCustodianGuard>15</BEWH_CustodesRankCustodianGuard>
+                </rankRequirements>
+            </li>
+            <li>
+                <rankDef>BEWH_CustodesRankCaptainCommander</rankDef>
+                <displayPosition>(10, 0)</displayPosition>
+                <rankRequirements>
+                    <BEWH_CustodesRankShieldCaptain>20</BEWH_CustodesRankShieldCaptain>
+                </rankRequirements>
+            </li>
+            <li>
+                <rankDef>BEWH_CustodesRankCaptainGeneral</rankDef>
+                <displayPosition>(14, 0)</displayPosition>
+                <rankRequirements>
+                    <BEWH_CustodesRankCaptainCommander>30</BEWH_CustodesRankCaptainCommander>
+                </rankRequirements>
+            </li>
+
+            <li>
+                <rankDef>BEWH_CustodesRankVexilusPraetor</rankDef>
+                <displayPosition>(2, -3)</displayPosition>
+                <rankRequirements>
+                    <BEWH_CustodesRankCustodianGuard>30</BEWH_CustodesRankCustodianGuard>
+                </rankRequirements>
+            </li>
+
+            <li>
+                <rankDef>BEWH_CustodesRankEmissaryImperatus</rankDef>
+                <displayPosition>(0, 0)</displayPosition>
+                <rankRequirements>
+                    <BEWH_CustodesRankCustodianGuard>30</BEWH_CustodesRankCustodianGuard>
+                </rankRequirements>
+            </li>
+            <li>
+                <rankDef>BEWH_CustodesRankAquilanShield</rankDef>
+                <displayPosition>(0, 1)</displayPosition>
+                <rankRequirements>
+                    <BEWH_CustodesRankCustodianGuard>30</BEWH_CustodesRankCustodianGuard>
+                </rankRequirements>
+            </li>
+            <li>
+                <rankDef>BEWH_CustodesRankSolarWatch</rankDef>
+                <displayPosition>(0, 2)</displayPosition>
+                <rankRequirements>
+                    <BEWH_CustodesRankCustodianGuard>30</BEWH_CustodesRankCustodianGuard>
+                </rankRequirements>
+            </li>
+            <li>
+                <rankDef>BEWH_CustodesRankDreadHost</rankDef>
+                <displayPosition>(0, -1)</displayPosition>
+                <rankRequirements>
+                    <BEWH_CustodesRankCustodianGuard>30</BEWH_CustodesRankCustodianGuard>
+                </rankRequirements>
+            </li>
+            <li>
+                <rankDef>BEWH_CustodesRankShadowkeepers</rankDef>
+                <displayPosition>(0, -2)</displayPosition>
+                <rankRequirements>
+                    <BEWH_CustodesRankCustodianGuard>30</BEWH_CustodesRankCustodianGuard>
+                </rankRequirements>
+            </li>
+        </ranks>
+    </Core40k.RankCategoryDef>-->
+    <!-- Custodes -->
 
 </Defs>

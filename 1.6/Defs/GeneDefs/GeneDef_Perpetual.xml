@@ -7,7 +7,7 @@
         <description>Carriers of this gene are effectively immortal, they do not age and can eventually recover from most injuries due to their rapid and efficient cellular regeneration.</description>
         <iconPath>UI/Genes/Perpetual/BEWH_GeneIcon_PerpetualGamma</iconPath>
         <displayOrderInCategory>800</displayOrderInCategory>
-    
+
         <biostatCpx>10</biostatCpx>
         <biostatArc>4</biostatArc>
 
@@ -25,6 +25,7 @@
             <li Class="Genes40k.DefModExtension_PerpetualGene">
                 <perpetualTier>1</perpetualTier>
                 <perpetualRessurectionRange>180000~240000</perpetualRessurectionRange>
+                <naturalBornSelectionWeight>50</naturalBornSelectionWeight>
             </li>
         </modExtensions>
     </GeneDef>
@@ -52,6 +53,7 @@
             <li Class="Genes40k.DefModExtension_PerpetualGene">
                 <perpetualTier>2</perpetualTier>
                 <perpetualRessurectionRange>60000~120000</perpetualRessurectionRange>
+                <naturalBornSelectionWeight>10</naturalBornSelectionWeight>
             </li>
         </modExtensions>
     </GeneDef>
@@ -79,6 +81,7 @@
             <li Class="Genes40k.DefModExtension_PerpetualGene">
                 <perpetualTier>3</perpetualTier>
                 <perpetualRessurectionRange>20000~30000</perpetualRessurectionRange>
+                <naturalBornSelectionWeight>1</naturalBornSelectionWeight>
             </li>
         </modExtensions>
     </GeneDef>

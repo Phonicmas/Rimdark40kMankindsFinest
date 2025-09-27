@@ -51,6 +51,10 @@
             <StaggerDurationFactor>0</StaggerDurationFactor>
         </statFactors>
 
+        <customEffectDescriptions>
+            <li>Ignores movespeed decrease from armor.</li>
+        </customEffectDescriptions>
+
         <modExtensions>
             <li Class="Core40k.DefModExtension_GeneExtension">
                 <addedWorldCarryCapacity>500</addedWorldCarryCapacity>

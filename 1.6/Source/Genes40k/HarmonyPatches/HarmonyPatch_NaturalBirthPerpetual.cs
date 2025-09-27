@@ -17,26 +17,33 @@ public static class NaturalBirthPerpetual
 
     public static void Postfix(ref Thing __result, Pawn geneticMother)
     {
-        if (__result == null)
+        if (__result is not Pawn pawn)
         {
             return;
         }
-        var modSettings = LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>();
+
+        var modSettings = Genes40kUtils.ModSettings;
         if (!modSettings.perpetualBirth)
         {
             return;
         }
-        var pawn = (Pawn)__result;
-        if (pawn.Faction != Faction.OfPlayer)
+        
+        if (pawn.Faction == null || pawn.Faction != Faction.OfPlayer)
         {
             return;
         }
-        if (pawn.genes == null || Enumerable.Any(pawn.genes.GenesListForReading, gene => gene.def.HasModExtension<DefModExtension_PerpetualGene>()))
+        
+        if (pawn.genes == null || pawn.genes.GenesListForReading.NullOrEmpty() || Enumerable.Any(pawn.genes.GenesListForReading, gene => gene.def.HasModExtension<DefModExtension_PerpetualGene>()))
         {
             return;
         }
+        
         foreach (var gene in pawn.genes.GenesListForReading)
         {
+            if (gene.def.exclusionTags.NullOrEmpty())
+            {
+                continue;
+            }
             if (gene.def.exclusionTags.Contains("Perpetual"))
             {
                 return;
@@ -51,10 +58,11 @@ public static class NaturalBirthPerpetual
         }
         
         var weightedSelection = new WeightedSelection<GeneDef>();
-        //Perpetual genes
-        weightedSelection.AddEntry(Genes40kDefOf.BEWH_PerpetualGamma, 50);
-        weightedSelection.AddEntry(Genes40kDefOf.BEWH_PerpetualBeta, 10);
-        weightedSelection.AddEntry(Genes40kDefOf.BEWH_PerpetualAlpha, 1);
+        
+        foreach (var perpetualGene in Genes40kUtils.PerpetualGenes)
+        {
+            weightedSelection.AddEntry(perpetualGene, perpetualGene.GetModExtension<DefModExtension_PerpetualGene>().naturalBornSelectionWeight);
+        }
             
         var chosenGene = weightedSelection.GetRandomUnique();
         var typeBorn = "BEWH.MankindsFinest.CommonKeywords.Perpetual".Translate();

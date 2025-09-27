@@ -6,14 +6,14 @@ using Verse;
 
 namespace Genes40k;
 
-public class Ability_ChapterBanner : VEF.Abilities.Ability
+public class Ability_PlaceBanner : VEF.Abilities.Ability
 {
     public override void Cast(params GlobalTargetInfo[] targets)
     {
         base.Cast(targets);
         var intVec = targets[0].Cell;
             
-        var flag = GenSpawn.Spawn(Genes40kDefOf.BEWH_AncientChapterBanner, intVec, pawn.Map);
+        var flag = GenSpawn.Spawn(def.GetModExtension<DefModExtension_PlaceBanner>().bannerType, intVec, pawn.Map);
         flag.SetFaction(Faction.OfPlayer);
     }
     

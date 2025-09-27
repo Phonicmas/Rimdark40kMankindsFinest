@@ -58,7 +58,7 @@
         <label>Raise Legion Standard</label>
         <description>Raise the Legion's sacred banner, inspiring nearby battle brothers with unwavering courage and strength. While the banner is raised, they fight with increased morale and unparalleled determination, embodying the glory of their legion.</description>
         <iconPath>UI/Abilities/BEWH_Ability_RaiseChapterBanner</iconPath>
-        <abilityClass>Genes40k.Ability_ChapterBanner</abilityClass>
+        <abilityClass>Genes40k.Ability_PlaceBanner</abilityClass>
         <needsTicking>true</needsTicking>
         <requireLineOfSight>true</requireLineOfSight>
         <cooldownTime>60000</cooldownTime>
@@ -67,6 +67,11 @@
         <targetMode>Location</targetMode>
         <warmupSound>BEWH_SFX_BannerWarmUp</warmupSound>
         <castSound>BEWH_SFX_BannerCast</castSound>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PlaceBanner">
+                <bannerType>BEWH_AncientChapterBanner</bannerType>
+            </li>
+        </modExtensions>
     </VEF.Abilities.AbilityDef>
 
 

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- ====Custodes==== -->
+    <!-- =Base= -->
+    <!-- Custodian Guard -->
+    <Genes40k.ChapterRankDef>
+        <defName>BEWH_CustodesRankCustodianGuard</defName>
+        <label>Custodian Guard</label>
+        <description>...</description>
+        <rankIconPath>UI/Ranks/Astartes/BEWH_Neophyte</rankIconPath>
+        <defaultFirstRank>True</defaultFirstRank>
+
+        <requiredSkills>
+            <Shooting>9</Shooting>
+            <Melee>9</Melee>
+        </requiredSkills>
+
+        <statOffsets>
+            <MeleeDodgeChance>1</MeleeDodgeChance>
+            <RangedCooldownFactor>-0.05</RangedCooldownFactor>
+            <MeleeCooldownFactor>-0.05</MeleeCooldownFactor>
+            <RestFallRateFactor>-0.05</RestFallRateFactor>
+        </statOffsets>
+
+        <requiredGenesAll>
+            <li>BEWH_ImmunisLeucocyte</li>
+            <li>BEWH_AthanaticVitae</li>
+            <li>BEWH_FulguriteNervePlexus</li>
+            <li>BEWH_AtlasMorphogen</li>
+            <li>BEWH_MnemosyneMindshield</li>
+            <li>BEWH_FulgurVitaliumstrand</li>
+        </requiredGenesAll>
+
+        <rankTier>0</rankTier>
+    </Genes40k.ChapterRankDef>
+    <!-- Shield-Captain -->
+    <Genes40k.ChapterRankDef>
+        <defName>BEWH_CustodesRankShieldCaptain</defName>
+        <label>Shield-Captain</label>
+        <description>...</description>
+        <rankIconPath>UI/Ranks/Astartes/BEWH_BattleBrother</rankIconPath>
+        <colonyLimitOfRank>(3, 6)</colonyLimitOfRank>
+
+        <requiredSkills>
+            <Shooting>12</Shooting>
+            <Melee>12</Melee>
+        </requiredSkills>
+
+        <statOffsets>
+            <MeleeDodgeChance>2</MeleeDodgeChance>
+            <RangedCooldownFactor>-0.05</RangedCooldownFactor>
+            <MeleeCooldownFactor>-0.05</MeleeCooldownFactor>
+            <RestFallRateFactor>-0.05</RestFallRateFactor>
+        </statOffsets>
+
+        <rankTier>4</rankTier>
+    </Genes40k.ChapterRankDef>
+    <!-- Captain-Commander -->
+    <Genes40k.ChapterRankDef>
+        <defName>BEWH_CustodesRankCaptainCommander</defName>
+        <label>Captain-Commander</label>
+        <description>...</description>
+        <rankIconPath>UI/Ranks/Astartes/BEWH_BattleBrother</rankIconPath>
+        <colonyLimitOfRank>(2, 8)</colonyLimitOfRank>
+
+        <requiredSkills>
+            <Shooting>14</Shooting>
+            <Melee>14</Melee>
+            <Social>7</Social>
+            <Intellectual>5</Intellectual>
+        </requiredSkills>
+
+        <statOffsets>
+            <RestFallRateFactor>-0.05</RestFallRateFactor>
+        </statOffsets>
+
+        <rankTier>6</rankTier>
+    </Genes40k.ChapterRankDef>
+    <!-- Captain-General -->
+    <Genes40k.ChapterRankDef>
+        <defName>BEWH_CustodesRankCaptainGeneral</defName>
+        <label>Captain-General</label>
+        <description>...</description>
+        <rankIconPath>UI/Ranks/Astartes/BEWH_BattleBrother</rankIconPath>
+        <colonyLimitOfRank>(1, 0)</colonyLimitOfRank>
+
+        <requiredSkills>
+            <Shooting>18</Shooting>
+            <Melee>18</Melee>
+            <Social>10</Social>
+            <Intellectual>8</Intellectual>
+        </requiredSkills>
+
+        <statOffsets>
+            <RestFallRateFactor>-0.05</RestFallRateFactor>
+            <SocialImpact>0.5</SocialImpact>
+        </statOffsets>
+
+        <givesAbilities>
+            <li>BEWH_StripRanksCustodes</li>
+        </givesAbilities>
+
+        <rankTier>10</rankTier>
+    </Genes40k.ChapterRankDef>
+
+    <!-- Vexilus Praetor -->
+    <Genes40k.ChapterRankDef>
+        <defName>BEWH_CustodesRankVexilusPraetor</defName>
+        <label>Vexilus Praetor</label>
+        <description>...</description>
+        <rankIconPath>UI/Ranks/Astartes/BEWH_BattleBrother</rankIconPath>
+
+        <requiredSkills>
+            <Social>10</Social>
+        </requiredSkills>
+        <requiredTraitsOneAmong>
+            <Nerves>2</Nerves>
+            <Nerves>1</Nerves>
+        </requiredTraitsOneAmong>
+
+        <!-- Raise banner ability -->
+
+        <statFactors>
+            <SocialImpact>1.2</SocialImpact>
+        </statFactors>
+
+        <rankTier>2</rankTier>
+
+        <specialistRank>true</specialistRank>
+    </Genes40k.ChapterRankDef>
+
+    <!-- Aquilan Shield - ability to take some damage the target recieves to themselves + bit of defense stuff -->
+    <Genes40k.ChapterRankDef>
+        <defName>BEWH_CustodesRankAquilanShield</defName>
+        <label>Aquilan Shield</label>
+        <description>...</description>
+        <rankIconPath>UI/Ranks/Astartes/BEWH_BattleBrother</rankIconPath>
+
+        <rankTier>3</rankTier>
+
+        <specialistRank>true</specialistRank>
+    </Genes40k.ChapterRankDef>
+    <!-- Solar Watch - increased fighting stat when on home map : decreased anywhere else -->
+    <Genes40k.ChapterRankDef>
+        <defName>BEWH_CustodesRankSolarWatch</defName>
+        <label>Solar Watch</label>
+        <description>...</description>
+        <rankIconPath>UI/Ranks/Astartes/BEWH_BattleBrother</rankIconPath>
+
+        <rankTier>3</rankTier>
+
+        <specialistRank>true</specialistRank>
+    </Genes40k.ChapterRankDef>
+    <!-- Shadowkeepers - prisoner related stuff? better recruitments, increased terror maybe? -->
+    <Genes40k.ChapterRankDef>
+        <defName>BEWH_CustodesRankShadowkeepers</defName>
+        <label>Shadowkeepers</label>
+        <description>...</description>
+        <rankIconPath>UI/Ranks/Astartes/BEWH_BattleBrother</rankIconPath>
+
+        <rankTier>3</rankTier>
+
+        <specialistRank>true</specialistRank>
+    </Genes40k.ChapterRankDef>
+    <!-- Emissary Imperatus - better reading and diplomacy, chance to make quest for random unique item (requires odyssey) -->
+    <Genes40k.ChapterRankDef>
+        <defName>BEWH_CustodesRankEmissaryImperatus</defName>
+        <label>Emissary Imperatus</label>
+        <description>...</description>
+        <rankIconPath>UI/Ranks/Astartes/BEWH_BattleBrother</rankIconPath>
+
+        <rankTier>3</rankTier>
+
+        <specialistRank>true</specialistRank>
+    </Genes40k.ChapterRankDef>
+    <!-- Dread Host - ability to mark an enemy, marked enemy takes vastly increased damage from dread host custodes (shared cd between all dread hosts) -->
+    <Genes40k.ChapterRankDef>
+        <defName>BEWH_CustodesRankDreadHost</defName>
+        <label>Dread Host</label>
+        <description>...</description>
+        <rankIconPath>UI/Ranks/Astartes/BEWH_BattleBrother</rankIconPath>
+
+        <rankTier>3</rankTier>
+
+        <specialistRank>true</specialistRank>
+    </Genes40k.ChapterRankDef>
+
+
+
+
+
+
+
+</Defs>

@@ -70,7 +70,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abilities\Ability_ChapterBanner.cs" />
+    <Compile Include="Abilities\Ability_PlaceBanner.cs" />
     <Compile Include="Abilities\Ability_ForeswalkLong.cs" />
     <Compile Include="Abilities\Ability_ForeswalkShort.cs" />
     <Compile Include="Abilities\Ability_Inspire.cs" />
@@ -140,8 +140,14 @@
     <Compile Include="Comps\SpaceMarine\CompAbilityEffect_StasisConfirmation.cs" />
     <Compile Include="Comps\SpaceMarine\CompProperties_AbilityRemembrance.cs" />
     <Compile Include="Comps\SpaceMarine\CompProperties_AbilityStasisConfirmation.cs" />
+    <Compile Include="Comps\ThunderWarrior\CompAbilityEffect_ResurrectingShock.cs" />
+    <Compile Include="Comps\ThunderWarrior\CompAbilityEffect_SearWounds.cs" />
+    <Compile Include="Comps\ThunderWarrior\CompProperties_AbilityResurrectingShock.cs" />
+    <Compile Include="Comps\ThunderWarrior\CompProperties_AbilitySearWounds.cs" />
     <Compile Include="ConditionalStatAffecters\ConditionalStatAffecter_WarpShield.cs" />
     <Compile Include="Debug\DebugActions.cs" />
+    <Compile Include="DefModExtensions\DefModExtension_PlaceBanner.cs" />
+    <Compile Include="DefModExtensions\DefModExtension_ShoulderFlippedData.cs" />
     <Compile Include="DefModExtensions\DefModExtension_SpawnAsChapter.cs" />
     <Compile Include="DefModExtensions\DefModExtension_ThoughtXenophobiaWhitelist.cs" />
     <Compile Include="DefModExtensions\DefModExtension_DropPod.cs" />
@@ -189,6 +195,7 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_ZealousFuryStopMentalBreak.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_ZealousFuryStopMentalState.cs" />
     <Compile Include="Hediffs\Hediff_Serf.cs" />
+    <Compile Include="Hediffs\Hediff_SeverityByPain.cs" />
     <Compile Include="Integrations\RimHUDProgenoidGlandProgress.cs" />
     <Compile Include="ModSettings\ModSettingTab.cs" />
     <Compile Include="ModSettings\ModSettingTab_Geneseed.cs" />

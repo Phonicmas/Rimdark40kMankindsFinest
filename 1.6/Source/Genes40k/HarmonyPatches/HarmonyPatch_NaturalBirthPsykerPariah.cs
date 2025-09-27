@@ -17,29 +17,23 @@ public static class NaturalBirthPsykerPariah
 
     public static void Postfix(ref Thing __result, Pawn geneticMother)
     {
-        if (__result == null)
+        if (__result is not Pawn pawn)
         {
             return;
         }
-        var modSettings = LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>();
+        
+        var modSettings = Genes40kUtils.ModSettings;
         if (!modSettings.psykerPariahBirth)
         {
             return;
         }
-        var pawn = (Pawn)__result;
-        if (pawn.Faction != Faction.OfPlayer)
+        
+        if (pawn.Faction == null || pawn.Faction != Faction.OfPlayer)
         {
             return;
         }
 
-        var unnaturalChance = modSettings.psykerPariahBirthChance;
-        var rand = new Random();
-        if (rand.Next(0, 100) > unnaturalChance)
-        {
-            return;
-        }
-
-        if (pawn.genes == null || Enumerable.Any(pawn.genes.GenesListForReading, gene => gene.def.HasModExtension<DefModExtension_Pariah>() || gene.def.HasModExtension<DefModExtension_Psyker>()))
+        if (pawn.genes == null || pawn.genes.GenesListForReading.NullOrEmpty() || Enumerable.Any(pawn.genes.GenesListForReading, gene => gene.def.HasModExtension<DefModExtension_Pariah>() || gene.def.HasModExtension<DefModExtension_Psyker>()))
         {
             return;
         }
@@ -48,6 +42,10 @@ public static class NaturalBirthPsykerPariah
         var canBecomePariah = true;
         foreach (var gene in pawn.genes.GenesListForReading)
         {
+            if (gene.def.exclusionTags.NullOrEmpty())
+            {
+                continue;
+            }
             if (gene.def.exclusionTags.Contains("Psyker"))
             {
                 canBecomePsyker = false;
@@ -62,25 +60,30 @@ public static class NaturalBirthPsykerPariah
         {
             return;
         }
+        
+        var unnaturalChance = modSettings.psykerPariahBirthChance;
+        var rand = new Random();
+        if (rand.Next(0, 100) > unnaturalChance)
+        {
+            return;
+        }
             
         var weightedSelection = new WeightedSelection<GeneDef>();
         
         if (canBecomePsyker)
         {
-            //Psyker genes
-            weightedSelection.AddEntry(Genes40kDefOf.BEWH_IotaPsyker, 60);
-            weightedSelection.AddEntry(Genes40kDefOf.BEWH_EpsilonPsyker, 40);
-            weightedSelection.AddEntry(Genes40kDefOf.BEWH_DeltaPsyker, 12);
-            weightedSelection.AddEntry(Genes40kDefOf.BEWH_BetaPsyker, 4);
-            weightedSelection.AddEntry(Genes40kDefOf.BEWH_AlphaPsyker, 1);
+            foreach (var psykerGene in Genes40kUtils.PsykerGenes)
+            {
+                weightedSelection.AddEntry(psykerGene, psykerGene.GetModExtension<DefModExtension_Psyker>().naturalBornSelectionWeight);
+            }
         }
 
         if (canBecomePariah)
         {
-            //Pariah Genes
-            weightedSelection.AddEntry(Genes40kDefOf.BEWH_SigmaPariah, 40);
-            weightedSelection.AddEntry(Genes40kDefOf.BEWH_UpsilonPariah, 12);
-            weightedSelection.AddEntry(Genes40kDefOf.BEWH_OmegaPariah, 4);
+            foreach (var pariahGene in Genes40kUtils.PariahGenes)
+            {
+                weightedSelection.AddEntry(pariahGene, pariahGene.GetModExtension<DefModExtension_Pariah>().naturalBornSelectionWeight);
+            }
         }
         
         var chosenGene = weightedSelection.GetRandomUnique();

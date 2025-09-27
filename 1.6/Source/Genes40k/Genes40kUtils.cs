@@ -89,22 +89,35 @@ public static class Genes40kUtils
         Genes40kDefOf.BEWH_CelerityNexus,
         Genes40kDefOf.BEWH_HyperionMuscleStrands
     };
-        
-    public static List<GeneDef> PsykerGenes => new List<GeneDef>
+
+    private static List<GeneDef> psykerGenes = null;
+    public static List<GeneDef> PsykerGenes
     {
-        Genes40kDefOf.BEWH_IotaPsyker,
-        Genes40kDefOf.BEWH_EpsilonPsyker,
-        Genes40kDefOf.BEWH_DeltaPsyker,
-        Genes40kDefOf.BEWH_BetaPsyker,
-        Genes40kDefOf.BEWH_AlphaPsyker
-    };
-        
-    public static List<GeneDef> PariahGenes => new List<GeneDef>
+        get
+        {
+            psykerGenes ??= DefDatabase<GeneDef>.AllDefs.Where(def => def.HasModExtension<DefModExtension_Psyker>()).ToList();
+            return psykerGenes;
+        }
+    }
+    
+    private static List<GeneDef> perpetualGenes = null;
+    public static List<GeneDef> PerpetualGenes
     {
-        Genes40kDefOf.BEWH_OmegaPariah,
-        Genes40kDefOf.BEWH_SigmaPariah,
-        Genes40kDefOf.BEWH_UpsilonPariah,
-    };
+        get
+        {
+            perpetualGenes ??= DefDatabase<GeneDef>.AllDefs.Where(def => def.HasModExtension<DefModExtension_PerpetualGene>()).ToList();
+            return perpetualGenes;
+        }
+    }
+        
+    private static List<GeneDef> pariahGenes = null;
+    public static List<GeneDef> PariahGenes{
+        get
+        {
+            pariahGenes ??= DefDatabase<GeneDef>.AllDefs.Where(def => def.HasModExtension<DefModExtension_Pariah>()).ToList();
+            return pariahGenes;
+        }
+    }
         
     public static List<GeneDef> LivingSaintGenes => new List<GeneDef>
     {

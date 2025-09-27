@@ -7,7 +7,7 @@ namespace Genes40k;
 
 public class Genes40kMod : Mod
 {
-    public string version = "1.0.0";
+    public static string CurrentVersion;
         
     public static Harmony harmony;
 
@@ -17,6 +17,7 @@ public class Genes40kMod : Mod
     public Genes40kMod(ModContentPack content) : base(content)
     {
         harmony = new Harmony("Genes40k.Mod");
+        CurrentVersion = content.ModMetaData.ModVersion;
         harmony.PatchAll();
     }
 
@@ -85,6 +86,6 @@ public class Genes40kMod : Mod
 
     public override string SettingsCategory()
     {
-        return "BEWH.MankindsFinest.ModSettings.ModName".Translate(version);
+        return "BEWH.MankindsFinest.ModSettings.ModName".Translate(CurrentVersion);
     }
 }

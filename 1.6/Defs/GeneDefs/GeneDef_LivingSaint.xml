@@ -281,6 +281,9 @@
         <descriptionHyperlinks>
             <AbilityDef>BEWH_LivingSaintInviolableAura</AbilityDef>
         </descriptionHyperlinks>
+        <customEffectDescriptions>
+            <li>Ignores movespeed decrease from armor.</li>
+        </customEffectDescriptions>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_IgnoreMovespeedDecrease" />
         </modExtensions>

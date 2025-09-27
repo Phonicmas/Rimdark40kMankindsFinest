@@ -6,6 +6,8 @@ namespace Genes40k;
 public class DefModExtension_DropPod : DefModExtension
 {
     public bool usePlayerColours = false;
+    
+    public ChapterColourDef chapterColour;
 
     public int dropPodAmount = 1;
         

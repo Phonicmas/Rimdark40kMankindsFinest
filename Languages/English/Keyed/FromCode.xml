@@ -48,10 +48,10 @@
   <BEWH.MankindsFinest.ModSettings.LivingSaintAscensionLimitDesc>This limits the the Living Saint ascension system to only apply to baseliners.\nAny xenotype such as Impids will not be able to ascend.</BEWH.MankindsFinest.ModSettings.LivingSaintAscensionLimitDesc>
 
   <BEWH.MankindsFinest.ModSettings.ImplantationDesc>Gene-seed implantation offsets.</BEWH.MankindsFinest.ModSettings.ImplantationDesc>
-  <BEWH.MankindsFinest.ModSettings.ImplantationSuccessOffset>Implantation success offset: {0}%</BEWH.MankindsFinest.ModSettings.ImplantationSuccessOffset>
+  <BEWH.MankindsFinest.ModSettings.ImplantationSuccessOffset>Implantation success chance offset: {0}%</BEWH.MankindsFinest.ModSettings.ImplantationSuccessOffset>
   <BEWH.MankindsFinest.ModSettings.ImplantationSuccessOffsetDesc>Base implantation success chance is increased or decreased by this value.</BEWH.MankindsFinest.ModSettings.ImplantationSuccessOffsetDesc>
-  <BEWH.MankindsFinest.ModSettings.ImplantationCapOffset>Implantation cap offset: {0}%</BEWH.MankindsFinest.ModSettings.ImplantationCapOffset>
-  <BEWH.MankindsFinest.ModSettings.ImplantationCapOffsetDesc>Base implantation cap is increased or decreased by this value.</BEWH.MankindsFinest.ModSettings.ImplantationCapOffsetDesc>
+  <BEWH.MankindsFinest.ModSettings.ImplantationCapOffset>Implantation success cap offset: {0}%</BEWH.MankindsFinest.ModSettings.ImplantationCapOffset>
+  <BEWH.MankindsFinest.ModSettings.ImplantationCapOffsetDesc>Base implantation cap is increased or decreased by this value. Implantation cap is the maximum value of success an implantation can have.</BEWH.MankindsFinest.ModSettings.ImplantationCapOffsetDesc>
   <BEWH.MankindsFinest.ModSettings.MatrixGestationFactor>Matrix gestation time factor of default: {0}%</BEWH.MankindsFinest.ModSettings.MatrixGestationFactor>
   <BEWH.MankindsFinest.ModSettings.MatrixGestationFactorDesc>Gestation time of all matrices are modified by this value.</BEWH.MankindsFinest.ModSettings.MatrixGestationFactorDesc>
 
@@ -240,6 +240,11 @@
   <!-- Space Marine -->
   <BEWH.MankindsFinest.Ability.StasisResearchNotCompleted>{0} is about to enter stasis. You have not researched {1} and will have a hard time resurrecting {0} from stasis.\n\nUse with caution!</BEWH.MankindsFinest.Ability.StasisResearchNotCompleted>
 
+  <!-- Thunder Warrior -->
+  <BEWH.MankindsFinest.Ability.NoBleedingWounds>{0} does not have any bleeding wounds.</BEWH.MankindsFinest.Ability.NoBleedingWounds>
+  <BEWH.MankindsFinest.Ability.MustHaveVigoranis>{0} does not have {1}.</BEWH.MankindsFinest.Ability.MustHaveVigoranis>
+  <BEWH.MankindsFinest.Ability.MustBeCorpse>Target must be a corpse.</BEWH.MankindsFinest.Ability.MustBeCorpse>
+
   <!-- Apothecary -->
   <BEWH.MankindsFinest.Ability.MustBePawn>Target must be a pawn.</BEWH.MankindsFinest.Ability.MustBePawn>
   <BEWH.MankindsFinest.Ability.MustBeDownedOrInBed>{0} is not downed or in bed.</BEWH.MankindsFinest.Ability.MustBeDownedOrInBed>
@@ -251,7 +256,6 @@
   <!-- Misc -->
   <BEWH.MankindsFinest.Ability.DoesNotHaveGene>{0} does not have the {1} gene.</BEWH.MankindsFinest.Ability.DoesNotHaveGene>
   <BEWH.MankindsFinest.Ability.CantUseInVacuum>Cannot use {0} in vacuum.</BEWH.MankindsFinest.Ability.CantUseInVacuum>
-
 
   <!--=== Apparel Two ===-->
   <!-- Shoulder Icons -->

@@ -6,6 +6,7 @@
         <xpath>Defs/ThingDef[defName = "BEWH_MkVIIPowerArmor"]/equippedStatOffsets</xpath>
         <value>
             <DecompressionResistance>0.75</DecompressionResistance>
+            <HypoxiaResistance>0.75</HypoxiaResistance>
             <VacuumSpeedMultiplier>4</VacuumSpeedMultiplier>
         </value>
     </Operation>
@@ -14,6 +15,7 @@
         <xpath>Defs/ThingDef[defName = "BEWH_MkXPowerArmor"]/equippedStatOffsets</xpath>
         <value>
             <DecompressionResistance>0.75</DecompressionResistance>
+            <HypoxiaResistance>0.75</HypoxiaResistance>
             <VacuumSpeedMultiplier>4</VacuumSpeedMultiplier>
         </value>
     </Operation>
@@ -22,6 +24,7 @@
         <xpath>Defs/ThingDef[defName = "BEWH_MkXPowerArmorChaplain"]/equippedStatOffsets</xpath>
         <value>
             <DecompressionResistance>0.75</DecompressionResistance>
+            <HypoxiaResistance>0.75</HypoxiaResistance>
             <VacuumSpeedMultiplier>4</VacuumSpeedMultiplier>
         </value>
     </Operation>
@@ -31,6 +34,7 @@
         <xpath>Defs/ThingDef[defName = "BEWH_MkVIIPowerArmorHelmet"]/equippedStatOffsets</xpath>
         <value>
             <DecompressionResistance>0.75</DecompressionResistance>
+            <HypoxiaResistance>0.75</HypoxiaResistance>
             <VacuumSpeedMultiplier>4</VacuumSpeedMultiplier>
         </value>
     </Operation>
@@ -39,6 +43,7 @@
         <xpath>Defs/ThingDef[defName = "BEWH_MkXPowerArmorHelmet"]/equippedStatOffsets</xpath>
         <value>
             <DecompressionResistance>0.75</DecompressionResistance>
+            <HypoxiaResistance>0.75</HypoxiaResistance>
             <VacuumSpeedMultiplier>4</VacuumSpeedMultiplier>
         </value>
     </Operation>
@@ -47,6 +52,7 @@
         <xpath>Defs/ThingDef[defName = "BEWH_MkXPowerArmorChaplainHelmet"]/equippedStatOffsets</xpath>
         <value>
             <DecompressionResistance>0.75</DecompressionResistance>
+            <HypoxiaResistance>0.75</HypoxiaResistance>
             <VacuumSpeedMultiplier>4</VacuumSpeedMultiplier>
         </value>
     </Operation>

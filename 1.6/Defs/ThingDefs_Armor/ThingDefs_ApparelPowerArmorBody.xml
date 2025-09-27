@@ -57,7 +57,7 @@
     <ThingDef ParentName="BEWH_PowerArmorBase_ChapterColour">
         <defName>BEWH_MkVIIPowerArmor</defName>
         <label>Mk VII Power Armor</label>
-        <description>The MK VII "Aquila" Power Armor is an advanced battle plate worn by the Adeptus Astartes. It features dense ceramite plating, reinforced servo-musculature, and the iconic Aquila chest plate. It provides excellent protection against ballistic and energy weapons, making it ideal for prolonged engagements in hostile environments.\n\nThis armor can be worn even by a colonist without the Black Carapace gene, but their movement speed will be significantly reduced.</description>
+        <description>The MK VII "Aquila" Power Armor is an advanced battle plate worn by the Adeptus Astartes. It features dense ceramite plating, reinforced servo-musculature, and the iconic Aquila chest plate. It provides excellent protection against ballistic and energy weapons, making it ideal for prolonged engagements in hostile environments.</description>
         <recipeMaker>
             <researchPrerequisite>BEWH_PowerArmorMkVII</researchPrerequisite>
         </recipeMaker>
@@ -157,7 +157,7 @@
     <ThingDef ParentName="BEWH_PowerArmorBase_ChapterColour">
         <defName>BEWH_MkXPowerArmor</defName>
         <label>Mk X Power Armor</label>
-        <description>The MK X "Tacticus" Power Armor is a modernized battle plate worn by Primaris Space Marines. Combining the durability of earlier marks with increased mobility, it features advanced ceramite-composite plating and enhanced servo systems. Its modular design allows for field adaptability across diverse combat roles, offering superior protection and efficiency in extended operations.\n\nThis armor can be worn even by a colonist without the Black Carapace gene, but their movement speed will be significantly reduced.</description>
+        <description>The MK X "Tacticus" Power Armor is a modernized battle plate worn by Primaris Space Marines. Combining the durability of earlier marks with increased mobility, it features advanced ceramite-composite plating and enhanced servo systems. Its modular design allows for field adaptability across diverse combat roles, offering superior protection and efficiency in extended operations.</description>
         <recipeMaker>
             <researchPrerequisite>BEWH_PowerArmorMkX</researchPrerequisite>
         </recipeMaker>
@@ -257,7 +257,7 @@
     <ThingDef ParentName="BEWH_PowerArmorBase_ChapterColour">
         <defName>BEWH_MkXPowerArmorChaplain</defName>
         <label>Mk X Chaplain Power Armor</label>
-        <description>This MK X Power Armor is a specialized variant of the Tacticus pattern, worn by Primaris Chaplains. Built upon the same durable and mobile frame, it is adorned with grim iconography to embody the Emperor's judgment and inspire unwavering zeal in those who follow.\n\nIncreases the terror of nearby prisoners.\n\nThis armor can be worn even by a colonist without the Black Carapace gene, but their movement speed will be significantly reduced.</description>
+        <description>This MK X Power Armor is a specialized variant of the Tacticus pattern, worn by Primaris Chaplains. Built upon the same durable and mobile frame, it is adorned with grim iconography to embody the Emperor's judgment and inspire unwavering zeal in those who follow.\n\nIncreases the terror of nearby prisoners.</description>
         <recipeMaker>
             <researchPrerequisite>BEWH_PowerArmorMkX</researchPrerequisite>
         </recipeMaker>
