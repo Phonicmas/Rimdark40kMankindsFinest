@@ -4,10 +4,10 @@
     <!-- Sear Wounds -->
     <AbilityDef>
         <defName>BEWH_SearWounds</defName>
-        <label>sear wounds</label>
-        <description>Sear the wounds of an ally, stopping all bleeding instantly, but slightly damages their wounds in the process.</description>
+        <label>staple wounds</label>
+        <description>Roughly staple the wounds of an ally, stopping all bleeding instantly, but causing additional damage in the process.</description>
         <cooldownTicksRange>10000</cooldownTicksRange>
-        <iconPath>Placeholder</iconPath>
+        <iconPath>UI/Abilities/BEWH_AbilityVitalseerSearWounds</iconPath>
         <jobDef>CastAbilityOnThingMelee</jobDef>
         <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
@@ -36,9 +36,9 @@
     <AbilityDef>
         <defName>BEWH_ResurrectingShock</defName>
         <label>resurrecting shock</label>
-        <description>Applies a quick shock, which energizes yet to dissipate restorative fluids the vigoranis, kick starting the pawn back into life. Resurrection beyond the 2nd dead hour can result in brain damage.</description>
+        <description>Applies a quick shock that energizes the still active restorative fluids of the Vigoranis, effectively jump-starting the pawn back to life. Resurrection beyond the second hour of death may result in brain damage.</description>
         <cooldownTicksRange>180000</cooldownTicksRange>
-        <iconPath>Placeholder</iconPath>
+        <iconPath>UI/Abilities/BEWH_AbilityVitalseerRessurect</iconPath>
         <jobDef>CastAbilityOnThingMelee</jobDef>
         <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
@@ -87,8 +87,8 @@
     <AbilityDef ParentName="BEWH_SelfTargetAbilities">
         <defName>BEWH_RangedThunderBoost</defName>
         <label>shooting frenzy</label>
-        <description>The Stormtrooper is able to enter a shooting frenzy, massively increasing their their firepower but at the cost of accuracy</description>
-        <iconPath>UI/Abilities/BEWH_Ability_JaghataiKhanAlakhGeh</iconPath>
+        <description>The Stormtrooper is able to enter a shooting frenzy, massively increasing their their firepower at the cost of reduced accuracy.</description>
+        <iconPath>UI/Abilities/BEWH_AbilityShootingFrenzy</iconPath>
         <cooldownTicksRange>20000</cooldownTicksRange>
         <statBases>
             <Ability_Duration>82</Ability_Duration>
@@ -107,8 +107,8 @@
     <AbilityDef ParentName="BEWH_SelfTargetAbilities">
         <defName>BEWH_PrimarchImmortality</defName>
         <label>immortal will</label>
-        <description>By sheer will, the Primarch is able to withstand any and all attacks for a short period.</description>
-        <iconPath>UI/Abilities/BEWH_Ability_JaghataiKhanAlakhGeh</iconPath>
+        <description>By sheer force of will, the Primarch is able to withstand any and all attacks for a short time.</description>
+        <iconPath>UI/Abilities/BEWH_AbilityImmortalWill</iconPath>
         <cooldownTicksRange>120000</cooldownTicksRange>
         <statBases>
             <Ability_Duration>20</Ability_Duration>
