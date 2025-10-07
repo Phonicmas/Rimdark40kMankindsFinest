@@ -55,7 +55,7 @@
         </customEffectDescriptions>
 
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_Pariah">
+            <li Class="Genes40k.DefModExtension_OrganDecayResistance">
                 <organDecayResistance>10</organDecayResistance>                <!-- 100 means immune, its a flat chance to not apply organ decay on organd ecay tick -->
             </li>
         </modExtensions>
@@ -85,7 +85,7 @@
         </customEffectDescriptions>
 
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_Pariah">
+            <li Class="Genes40k.DefModExtension_OrganDecayResistance">
                 <organDecayResistance>20</organDecayResistance>                <!-- 100 means immune, its a flat chance to not apply organ decay on organd ecay tick -->
             </li>
         </modExtensions>
@@ -118,7 +118,7 @@
         </customEffectDescriptions>
 
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_Pariah">
+            <li Class="Genes40k.DefModExtension_OrganDecayResistance">
                 <organDecayResistance>30</organDecayResistance>                <!-- 100 means immune, its a flat chance to not apply organ decay on organd ecay tick -->
             </li>
         </modExtensions>
@@ -153,7 +153,7 @@
         </customEffectDescriptions>
 
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_Pariah">
+            <li Class="Genes40k.DefModExtension_OrganDecayResistance">
                 <organDecayResistance>40</organDecayResistance>                <!-- 100 means immune, its a flat chance to not apply organ decay on organd ecay tick -->
             </li>
         </modExtensions>
