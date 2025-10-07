@@ -146,6 +146,7 @@
     <Compile Include="Comps\ThunderWarrior\CompProperties_AbilitySearWounds.cs" />
     <Compile Include="ConditionalStatAffecters\ConditionalStatAffecter_WarpShield.cs" />
     <Compile Include="Debug\DebugActions.cs" />
+    <Compile Include="DefModExtensions\DefModExtension_OrganDecayResistance.cs" />
     <Compile Include="DefModExtensions\DefModExtension_PlaceBanner.cs" />
     <Compile Include="DefModExtensions\DefModExtension_ShoulderFlippedData.cs" />
     <Compile Include="DefModExtensions\DefModExtension_SpawnAsChapter.cs" />

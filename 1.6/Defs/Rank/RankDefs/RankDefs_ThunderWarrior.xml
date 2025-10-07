@@ -4,10 +4,10 @@
     <!-- ====Thunder Warrior==== -->
     <!-- =Base= -->
     <!-- Initiate -->
-    <Genes40k.ChapterRankDef>
+    <Core40k.RankDef>
         <defName>BEWH_ThunderWarriorRankInitiate</defName>
         <label>Initiate</label>
-        <description>...</description>
+        <description>Initiates are freshly forged recruits of the Thunder Warriors, they often serve in the support roles while prepearing themselves for the brutal challanges of the eternal war.</description>
         <rankIconPath>UI/Ranks/ThunderWarriors/BEWH_Initiate</rankIconPath>
         <defaultFirstRank>True</defaultFirstRank>
 
@@ -30,12 +30,12 @@
         </requiredGenesAll>
 
         <rankTier>0</rankTier>
-    </Genes40k.ChapterRankDef>
+    </Core40k.RankDef>
     <!-- Linebreaker -->
-    <Genes40k.ChapterRankDef>
+    <Core40k.RankDef>
         <defName>BEWH_ThunderWarriorRankLinebreaker</defName>
         <label>Linebreaker</label>
-        <description>...</description>
+        <description>Linebreakers are experienced Thunder Warriors who form the primary assault unit. They charge into enemy lines with unparalleled strength and ferocity.</description>
         <rankIconPath>UI/Ranks/ThunderWarriors/BEWH_Linebreaker</rankIconPath>
 
         <statOffsets>
@@ -49,12 +49,22 @@
         </requiredSkills>
 
         <rankTier>2</rankTier>
-    </Genes40k.ChapterRankDef>
+
+        <customEffectDescriptions>
+            <li>10% chance to not get organ decay</li>
+        </customEffectDescriptions>
+
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_Pariah">
+                <organDecayResistance>10</organDecayResistance>                <!-- 100 means immune, its a flat chance to not apply organ decay on organd ecay tick -->
+            </li>
+        </modExtensions>
+    </Core40k.RankDef>
     <!-- Storm-Captain -->
-    <Genes40k.ChapterRankDef>
+    <Core40k.RankDef>
         <defName>BEWH_ThunderWarriorRankStormCaptain</defName>
         <label>Storm-Captain</label>
-        <description>...</description>
+        <description>Storm Captains are veteran Thunder Warriors who lead assault formations. They command with strength and brutal efficiency.</description>
         <rankIconPath>UI/Ranks/ThunderWarriors/BEWH_Stormcaptain</rankIconPath>
 
         <statOffsets>
@@ -69,12 +79,22 @@
         </requiredSkills>
 
         <rankTier>5</rankTier>
-    </Genes40k.ChapterRankDef>
+
+        <customEffectDescriptions>
+            <li>20% chance to not get organ decay</li>
+        </customEffectDescriptions>
+
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_Pariah">
+                <organDecayResistance>20</organDecayResistance>                <!-- 100 means immune, its a flat chance to not apply organ decay on organd ecay tick -->
+            </li>
+        </modExtensions>
+    </Core40k.RankDef>
     <!-- Thunderlord -->
-    <Genes40k.ChapterRankDef>
+    <Core40k.RankDef>
         <defName>BEWH_ThunderWarriorRankThunderlord</defName>
         <label>Thunderlord</label>
-        <description>...</description>
+        <description>Thunderlords are firce commanders who lead entire units, having earned their authority through unmatched skills and numerous victories.</description>
         <rankIconPath>UI/Ranks/ThunderWarriors/BEWH_Thunderlord</rankIconPath>
 
         <statOffsets>
@@ -92,12 +112,22 @@
         </requiredSkills>
 
         <rankTier>7</rankTier>
-    </Genes40k.ChapterRankDef>
+
+        <customEffectDescriptions>
+            <li>30% chance to not get organ decay</li>
+        </customEffectDescriptions>
+
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_Pariah">
+                <organDecayResistance>30</organDecayResistance>                <!-- 100 means immune, its a flat chance to not apply organ decay on organd ecay tick -->
+            </li>
+        </modExtensions>
+    </Core40k.RankDef>
     <!-- Primarch -->
-    <Genes40k.ChapterRankDef>
+    <Core40k.RankDef>
         <defName>BEWH_ThunderWarriorRankPrimarch</defName>
         <label>Primarch</label>
-        <description>...</description>
+        <description>The Primarch is the highest rank figure that commands the entire legion of Thunder Warriors. Despite the title, Thunder Warrior Primarchs are no different from their subordinates mentally physically. Instead, they are simply exceptional warriors and superb tactitians. \n\nSome evinedces say that Primarchs could withstand incredible damage through their sheer willpower alone.</description>
         <rankIconPath>UI/Ranks/ThunderWarriors/BEWH_Primarch</rankIconPath>
 
         <statOffsets>
@@ -117,13 +147,23 @@
         </requiredSkills>
 
         <rankTier>9</rankTier>
-    </Genes40k.ChapterRankDef>
+
+        <customEffectDescriptions>
+            <li>40% chance to not get organ decay</li>
+        </customEffectDescriptions>
+
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_Pariah">
+                <organDecayResistance>40</organDecayResistance>                <!-- 100 means immune, its a flat chance to not apply organ decay on organd ecay tick -->
+            </li>
+        </modExtensions>
+    </Core40k.RankDef>
 
     <!-- Vitalseer (Medic Specialist) -->
-    <Genes40k.ChapterRankDef>
+    <Core40k.RankDef>
         <defName>BEWH_ThunderWarriorRankMedic</defName>
         <label>Vitalseer</label>
-        <description>...</description>
+        <description>Vitalseers are Thunder Warrior battlefield medics who use brutal yet highly effective methods to heal their fallen brothers, even reviving them with powerfull electric charges.</description>
         <rankIconPath>UI/Ranks/ThunderWarriors/BEWH_Vitalseer</rankIconPath>
 
         <requiredSkills>
@@ -141,12 +181,12 @@
 
         <rankTier>4</rankTier>
         <specialistRank>true</specialistRank>
-    </Genes40k.ChapterRankDef>
+    </Core40k.RankDef>
     <!-- Veteran Vitalseer (Medic Specialist) -->
-    <Genes40k.ChapterRankDef>
+    <Core40k.RankDef>
         <defName>BEWH_ThunderWarriorRankMedicUpgrade</defName>
         <label>Veteran Vitalseer</label>
-        <description>...</description>
+        <description>Veteran Vitalseers are experienced Thunder Warrior battlefield medics, exceptionally effective at keeping their brothers alive, even in the most brutal conditions.</description>
         <rankIconPath>UI/Ranks/ThunderWarriors/BEWH_VitalseerVeteran</rankIconPath>
 
         <requiredSkills>
@@ -164,13 +204,13 @@
 
         <rankTier>6</rankTier>
         <specialistRank>true</specialistRank>
-    </Genes40k.ChapterRankDef>
+    </Core40k.RankDef>
 
     <!-- Shockzerker (Melee Specialist) -->
-    <Genes40k.ChapterRankDef>
+    <Core40k.RankDef>
         <defName>BEWH_ThunderWarriorRankBeserker</defName>
         <label>Beserker</label>
-        <description>...</description>
+        <description>Berserkers are highly skilled melee specialists who thrive in the heat of battle. They channel pain into furry, growing deadlier with each injury they sustain.</description>
         <rankIconPath>UI/Ranks/ThunderWarriors/BEWH_Shockzerker</rankIconPath>
 
         <requiredSkills>
@@ -182,18 +222,18 @@
             <MoveSpeed>0.1</MoveSpeed>
         </statOffsets>
 
-        <givesAbilities>
+        <givesHediffs>
             <li>BEWH_BerserkerPainBoost</li>
-        </givesAbilities>
+        </givesHediffs>
 
         <rankTier>4</rankTier>
         <specialistRank>true</specialistRank>
-    </Genes40k.ChapterRankDef>
+    </Core40k.RankDef>
     <!-- Veteran Shockzerker (Melee Specialist) -->
-    <Genes40k.ChapterRankDef>
+    <Core40k.RankDef>
         <defName>BEWH_ThunderWarriorRankBeserkerUpgrade</defName>
         <label>Veteran Beserker</label>
-        <description>...</description>
+        <description>Veteran Berserkers are exceptionally skilled melee specialists who mastered the art of close combat, making them extrely dangerous opponents. Very few would dare face a Veteran Berserker in melee.</description>
         <rankIconPath>UI/Ranks/ThunderWarriors/BEWH_ShockzerkerVeteran</rankIconPath>
 
         <requiredSkills>
@@ -208,13 +248,13 @@
 
         <rankTier>6</rankTier>
         <specialistRank>true</specialistRank>
-    </Genes40k.ChapterRankDef>
+    </Core40k.RankDef>
 
     <!-- Stormtrooper (Ranged Specialist) -->
-    <Genes40k.ChapterRankDef>
+    <Core40k.RankDef>
         <defName>BEWH_ThunderWarriorRankRanged</defName>
         <label>Stormtrooper</label>
-        <description>...</description>
+        <description>Stormtroopers are ranged specialists who unleash relentless firepower upon the enemy. They prioritize damage output over precision, making them trigger-hungry but extremely dangerous.</description>
         <rankIconPath>UI/Ranks/ThunderWarriors/BEWH_Stormtrooper</rankIconPath>
 
         <requiredSkills>
@@ -231,12 +271,12 @@
 
         <rankTier>4</rankTier>
         <specialistRank>true</specialistRank>
-    </Genes40k.ChapterRankDef>
+    </Core40k.RankDef>
     <!-- Veteran Stormtrooper (Ranged Specialist) -->
-    <Genes40k.ChapterRankDef>
+    <Core40k.RankDef>
         <defName>BEWH_ThunderWarriorRankRangedUpgrade</defName>
         <label>Veteran Stormtrooper</label>
-        <description>...</description>
+        <description>Veteran Stormtroopers are highly skilled ranged specialists who fire with deadly efficiency. Their experience allows them to maintain overwhelming firepower even in the chaos of battle.</description>
         <rankIconPath>UI/Ranks/ThunderWarriors/BEWH_StormtrooperVeteran</rankIconPath>
 
         <requiredSkills>
@@ -250,6 +290,6 @@
 
         <rankTier>6</rankTier>
         <specialistRank>true</specialistRank>
-    </Genes40k.ChapterRankDef>
+    </Core40k.RankDef>
 
 </Defs>

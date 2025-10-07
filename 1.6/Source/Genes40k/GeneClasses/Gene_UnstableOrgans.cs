@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Core40k;
 using RimWorld;
 using Verse;
@@ -15,6 +17,21 @@ public class Gene_UnstableOrgans : Gene
     {
         base.TickInterval(delta);
         if (!pawn.IsHashIntervalTick(tickInterval, delta))
+        {
+            return;
+        }
+
+        var chanceToIgnore = 0f;
+        if (pawn.HasComp<CompRankInfo>())
+        {
+            foreach (var rank in pawn.GetComp<CompRankInfo>().UnlockedRanks.Where(rank => rank.HasModExtension<DefModExtension_OrganDecayResistance>()))
+            {
+                chanceToIgnore += rank.GetModExtension<DefModExtension_OrganDecayResistance>().organDecayResistance;
+            }
+        }
+
+        var rand = new Random();
+        if (chanceToIgnore > rand.Next(0, 100))
         {
             return;
         }

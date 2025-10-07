@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <!-- Sear Wounds -->
+    <!-- Staple Wounds -->
     <AbilityDef>
         <defName>BEWH_SearWounds</defName>
         <label>staple wounds</label>
@@ -60,26 +60,6 @@
         </verbProperties>
         <comps>
             <li Class="Genes40k.CompProperties_AbilityResurrectingShock" />
-        </comps>
-    </AbilityDef>
-
-    <!-- Berserker -->
-    <AbilityDef ParentName="BEWH_SelfTargetAbilities">
-        <defName>BEWH_BerserkerPainBoost</defName>
-        <label>unyielding rage</label>
-        <description>The beserker is able to tap into their innate rage, fueling their power through pain.</description>
-        <iconPath>UI/Abilities/BEWH_Ability_JaghataiKhanAlakhGeh</iconPath>
-        <cooldownTicksRange>40000</cooldownTicksRange>
-        <statBases>
-            <Ability_Duration>125</Ability_Duration>
-        </statBases>
-        <comps>
-            <li Class="CompProperties_AbilityGiveHediff">
-                <compClass>CompAbilityEffect_GiveHediff</compClass>
-                <hediffDef>BEWH_BerserkerPainBoost</hediffDef>
-                <onlyApplyToSelf>True</onlyApplyToSelf>
-                <replaceExisting>true</replaceExisting>
-            </li>
         </comps>
     </AbilityDef>
 
