@@ -72,6 +72,7 @@
 				</statOffsets>
 			</li>
 		</stages>
+		<comps Inherit="False"/>
 	</HediffDef>
 
 	<!-- Ranged -->

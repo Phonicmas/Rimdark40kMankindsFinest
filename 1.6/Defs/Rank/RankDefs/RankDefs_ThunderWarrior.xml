@@ -223,7 +223,9 @@
         </statOffsets>
 
         <givesHediffs>
-            <li>BEWH_BerserkerPainBoost</li>
+            <BEWH_BerserkerPainBoost>
+                <initialSeverity>0.01</initialSeverity>
+            </BEWH_BerserkerPainBoost>
         </givesHediffs>
 
         <rankTier>4</rankTier>
