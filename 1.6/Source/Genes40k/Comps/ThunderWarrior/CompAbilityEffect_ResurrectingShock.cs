@@ -15,7 +15,12 @@ public class CompAbilityEffect_ResurrectingShock : CompAbilityEffect
 
         var pawn = corpse.InnerPawn;
 
-        ResurrectionUtility.TryResurrectWithSideEffects(pawn);
+        var resurrectionParams = new ResurrectionParams
+        {
+            restoreMissingParts = false
+        };
+
+        ResurrectionUtility.TryResurrect(pawn, resurrectionParams);
         
         if (timeDead <= 5000)
         {
