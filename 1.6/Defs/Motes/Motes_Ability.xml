@@ -20,6 +20,7 @@
 		</graphicData>
 	</ThingDef>
 
+	<!-- Saint Bubble -->
 	<ThingDef ParentName="MoteBase">
 		<defName>BEWH_MoteBubble</defName>
 		<thingClass>MoteAttached</thingClass>
@@ -37,4 +38,54 @@
 			<drawSize>20</drawSize>
 		</graphicData>
 	</ThingDef>
+
+	<ThingDef ParentName="MoteBase">
+		<defName>BEWH_MoteBubbleSmall</defName>
+		<thingClass>MoteAttached</thingClass>
+		<altitudeLayer>LightingOverlay</altitudeLayer>
+		<drawOffscreen>true</drawOffscreen>
+		<mote>
+			<solidTime>9999999</solidTime>
+			<needsMaintenance>true</needsMaintenance>
+		</mote>
+		<graphicData>
+			<graphicClass>Graphic_Mote</graphicClass>
+			<texPath>Effects/Mote/BEWH_MoteCircleFlat</texPath>
+			<shaderType>MoteGlow</shaderType>
+			<color>(233, 87, 21)</color>
+			<drawSize>2.6</drawSize>
+		</graphicData>
+	</ThingDef>
+
+	<!-- Resurrecting shock glow -->
+	<ThingDef ParentName="MoteBase">
+    <defName>BEWH_Mote_ResurrectAbility</defName>
+    <thingClass>MoteAttached</thingClass>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <mote>
+      <fadeInTime>0.35</fadeInTime>
+      <fadeOutTime>0.25</fadeOutTime>
+      <solidTime>999999</solidTime>
+      <needsMaintenance>True</needsMaintenance>
+    </mote>
+    <graphicData>
+      <graphicClass>Graphic_PawnBodySilhouette</graphicClass>
+      <color>(0.95, 0.89, 0.68, 1.0)</color>
+      <shaderType>MoteMultiplyAddScroll</shaderType>
+      <texPath>Things/Mote/Transparent</texPath>
+      <shaderParameters>
+        <_MultiplyTexA>/Things/Mote/Cloudy_B</_MultiplyTexA>
+        <_MultiplyTexB>/Things/Mote/Cloudy_C</_MultiplyTexB>
+        <_DetailTex>/Things/Mote/Speckles</_DetailTex>
+        <_detailIntensity>1.2</_detailIntensity>
+        <_texAScale>0.4</_texAScale>
+        <_texBScale>0.3</_texBScale>
+        <_DetailScale>1.25</_DetailScale>
+        <_texAScrollSpeed>(0, 0.1, 0)</_texAScrollSpeed>
+        <_texBScrollSpeed>(0.7, 0, 0)</_texBScrollSpeed>
+        <_detailScrollSpeed>(0.10, 0.10, 0)</_detailScrollSpeed>
+      </shaderParameters>
+    </graphicData>
+  </ThingDef>
+
 </Defs>

@@ -6,7 +6,7 @@
 		<defName>BEWH_BerserkerPainBoost</defName>
 		<hediffClass>Genes40k.Hediff_SeverityByPain</hediffClass>
 		<label>unyielding rage</label>
-		<description>Power fueled through pain.</description>
+		<description>Berserkers channel their pain into raw fury. The greater the pain, the deadlier their strikes become...</description>
 		<stages>
 			<li>
 				<minSeverity>0</minSeverity>
@@ -30,7 +30,7 @@
 			<li>
 				<minSeverity>0.3</minSeverity>
 				<painFactor>1.3</painFactor>
-				<label>?? pain</label>
+				<label>stinging pain</label>
 				<statOffsets>
 					<PainShockThreshold>2</PainShockThreshold>
 					<MoveSpeed>0.2</MoveSpeed>
@@ -41,7 +41,7 @@
 			<li>
 				<minSeverity>0.55</minSeverity>
 				<painFactor>1.3</painFactor>
-				<label>?? pain</label>
+				<label>searing pain</label>
 				<statOffsets>
 					<PainShockThreshold>2</PainShockThreshold>
 					<MoveSpeed>0.4</MoveSpeed>
@@ -52,7 +52,7 @@
 			<li>
 				<minSeverity>0.65</minSeverity>
 				<painFactor>1.3</painFactor>
-				<label>?? pain</label>
+				<label>enraging pain</label>
 				<statOffsets>
 					<PainShockThreshold>2</PainShockThreshold>
 					<MoveSpeed>0.6</MoveSpeed>
@@ -63,7 +63,7 @@
 			<li>
 				<minSeverity>0.8</minSeverity>
 				<painFactor>1.3</painFactor>
-				<label>enraging pain</label>
+				<label>wrathful pain</label>
 				<statOffsets>
 					<PainShockThreshold>2</PainShockThreshold>
 					<MoveSpeed>1</MoveSpeed>
@@ -79,7 +79,7 @@
 	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
 		<defName>BEWH_RangedThunderBoost</defName>
 		<label>shooting frenzy</label>
-		<description>Rattatatatatata.</description>
+		<description>Ratatatatatata! Make it rain lead!</description>
 		<stages>
 			<li>
 				<statOffsets>
@@ -91,13 +91,18 @@
 				</statFactors>
 			</li>
 		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>BEWH_BerserkEffecter</stateEffecter>
+			</li>
+    	</comps>
 	</HediffDef>
 
 	<!-- Primarch -->
 	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
 		<defName>BEWH_PrimarchImmortality</defName>
 		<label>immortal will</label>
-		<description>FOR THE EMPEROR!</description>
+		<description>Virtual immortality. FOR THE EMPEROR!</description>
 		<stages>
 			<li>
 				<statFactors>
@@ -105,6 +110,11 @@
 				</statFactors>
 			</li>
 		</stages>
+		<comps>
+			<li Class="HediffCompProperties_GiveHediffsInRange"> <!-- That's effed up, but I have no idea how to slap motes to hediffs the other way ~Cheese -->
+				<mote>BEWH_MoteBubbleSmall</mote>
+			</li>
+    	</comps>
 	</HediffDef>
 
 </Defs>

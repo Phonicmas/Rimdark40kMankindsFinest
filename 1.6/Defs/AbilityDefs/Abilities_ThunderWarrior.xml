@@ -61,6 +61,8 @@
         <comps>
             <li Class="Genes40k.CompProperties_AbilityResurrectingShock" />
         </comps>
+        <warmupMote>BEWH_Mote_ResurrectAbility</warmupMote>
+        <warmupEffecter>BEWH_ResurrectWarmupEffecter</warmupEffecter>
     </AbilityDef>
 
     <!-- Ranged -->
