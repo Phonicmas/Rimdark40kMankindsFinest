@@ -36,7 +36,7 @@ public class CompAbilityEffect_SearWounds : CompAbilityEffect
     {
         base.Valid(target, throwMessages);
         
-        return target.Thing is Pawn pawn && pawn.health.hediffSet.hediffs.Any(hediff => hediff is Hediff_Injury { Bleeding: true });
+        return target.Thing is Pawn pawn && pawn.health.hediffSet.hediffs.Any(hediff => hediff is Hediff_Injury { Bleeding: true } or Hediff_MissingPart { Bleeding: true });
     }
 
     public override string ExtraLabelMouseAttachment(LocalTargetInfo target)
