@@ -4,29 +4,64 @@
   <EffecterDef>
     <defName>HolyBlastWarmupEffect</defName>
         <children>
-        <li>
-            <subEffecterClass>SubEffecter_SoundTriggered</subEffecterClass>
-            <spawnLocType>OnSource</spawnLocType>
-            <soundDef>BEWH_SFX_HolyBlastWarmup</soundDef>
-        </li>
-        <li>
-            <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
-            <positionRadius>0</positionRadius>
-            <moteDef>Mote_LongSparkThrown</moteDef>
-            <burstCount>4~5</burstCount>
-            <speed>3.3~5</speed>
-            <scale>0.5~0.6</scale>
-            <spawnLocType>OnSource</spawnLocType>
-        </li>
-        <li>
-            <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
-            <fleckDef>Fleck_HeatWaveDistortion</fleckDef>
-            <burstCount>4</burstCount>
-            <speed>0.2</speed>
-            <scale>1.1~1.2</scale>
-            <spawnLocType>OnTarget</spawnLocType>
-        </li>
+            <li>
+                <subEffecterClass>SubEffecter_SoundTriggered</subEffecterClass>
+                <spawnLocType>OnSource</spawnLocType>
+                <soundDef>BEWH_SFX_HolyBlastWarmup</soundDef>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+                <positionRadius>0</positionRadius>
+                <moteDef>Mote_LongSparkThrown</moteDef>
+                <burstCount>4~5</burstCount>
+                <speed>3.3~5</speed>
+                <scale>0.5~0.6</scale>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+                <fleckDef>Fleck_HeatWaveDistortion</fleckDef>
+                <burstCount>4</burstCount>
+                <speed>0.2</speed>
+                <scale>1.1~1.2</scale>
+                <spawnLocType>OnTarget</spawnLocType>
+            </li>
         </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>BEWH_ResurrectWarmupEffecter</defName>
+        <children>
+            <li>
+                <subEffecterClass>SubEffecter_Sustainer</subEffecterClass>
+                <soundDef>Interact_Drill</soundDef> <!-- placeholder to be changed for Electric Discharge -->
+                <spawnLocType>OnTarget</spawnLocType>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+                <positionRadius>0.02</positionRadius>
+                <moteDef>Mote_SparkThrownFast</moteDef>
+                <burstCount>4~5</burstCount>
+                <speed>3.3~5</speed>
+                <scale>0.1~0.2</scale>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+        </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>BEWH_BerserkEffecter</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_DrifterEmoteChance</subEffecterClass>
+        <scale>0.5~0.7</scale>
+        <chancePerTick>0.1</chancePerTick>
+        <positionRadius>0.1</positionRadius>
+        <moteDef>Mote_BerserkBit</moteDef>
+        <speed>0.72~0.72</speed>
+        <angle>0~0</angle>
+      </li>
+    </children>
   </EffecterDef>
 
 </Defs>
