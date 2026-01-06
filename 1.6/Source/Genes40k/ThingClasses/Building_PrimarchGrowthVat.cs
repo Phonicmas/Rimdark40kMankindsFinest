@@ -231,7 +231,7 @@ public class Building_PrimarchGrowthVat : Building, IStoreSettingsParent, IThing
             return;
         }
 
-        var geneDef = containedEmbryo?.PrimarchGenes?.GenesListForReading?.FirstOrDefault(g => g.HasModExtension<DefModExtension_PrimarchVatExtras>());
+        var geneDef = containedEmbryo.PrimarchGenes.GenesListForReading.FirstOrDefault(g => g.HasModExtension<DefModExtension_PrimarchVatExtras>());
         var childAmount = geneDef == null ? 1 : geneDef.GetModExtension<DefModExtension_PrimarchVatExtras>().childAmount;
         var children = new List<Pawn>();
 
@@ -240,12 +240,9 @@ public class Building_PrimarchGrowthVat : Building, IStoreSettingsParent, IThing
         {
             var thing = PregnancyUtility.ApplyBirthOutcome(((RitualOutcomeEffectWorker_ChildBirth)RitualOutcomeEffectDefOf.ChildBirth.GetInstance()).GetOutcome(100f, null), 100f, ritual, containedEmbryo.birthGenes.GenesListForReading, containedEmbryo.Mother, this, containedEmbryo.Father);
             var pawn2 = (Pawn)thing;
-            if (containedEmbryo?.PrimarchGenes != null && !containedEmbryo.PrimarchGenes.GenesListForReading.NullOrEmpty())
+            foreach (var gene in containedEmbryo.PrimarchGenes.GenesListForReading)
             {
-                foreach (var gene in containedEmbryo.PrimarchGenes.GenesListForReading)
-                {
-                    pawn2.genes.AddGene(gene, true);
-                }
+                pawn2.genes.AddGene(gene, true);
             }
             pawn2.genes.SetXenotypeDirect(Genes40kDefOf.BEWH_Primarch);
             if (!Genes40kUtils.ModSettings.allowFemalePrimarchBirths)
