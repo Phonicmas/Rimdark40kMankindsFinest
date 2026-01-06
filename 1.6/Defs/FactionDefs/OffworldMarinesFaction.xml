@@ -54,9 +54,11 @@
         <canStageAttacks>false</canStageAttacks>
         <raidsForbidden>true</raidsForbidden>
 
+
+
         <!--<canRequestTraders>false</canRequestTraders>
-        <canRequestMilitaryAid>false</canRequestMilitaryAid>
-        <canGenerateQuestSites>false</canGenerateQuestSites>-->
+        <canRequestMilitaryAid>false</canRequestMilitaryAid>-->
+        <canGenerateQuestSites>false</canGenerateQuestSites>
 
 
         <!--<xenotypeSet Inherit="False">

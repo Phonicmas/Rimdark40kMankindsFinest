@@ -33,10 +33,7 @@
 
             <SuppressionPower MayRequire="Ludeon.RimWorld.Ideology">0.85</SuppressionPower>
 
-            <LeatherAmount>45</LeatherAmount>
-            <MeatAmount>45</MeatAmount>
-            <Mass>45</Mass>
-            <VEF_CosmeticBodySize_Multiplier>0.45</VEF_CosmeticBodySize_Multiplier>
+            <VEF_BodySize_Offset>0.45</VEF_BodySize_Offset> <!-- change to body size offset stat instead -->
         </statOffsets>
         <statFactors>
             <StaggerDurationFactor>0</StaggerDurationFactor>

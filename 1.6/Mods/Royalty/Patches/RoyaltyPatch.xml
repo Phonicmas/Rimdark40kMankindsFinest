@@ -1,34 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-    <Operation Class="PatchOperationAddModExtension">
-        <xpath>Defs/GeneDef[defName = "BEWH_IotaPsyker" or defName = "BEWH_EpsilonPsyker" or defName = "BEWH_DeltaPsyker" or defName = "BEWH_BetaPsyker"]</xpath>
-        <value>
-            <li Class="VEF.Genes.GeneExtension">
-                <hediffsToBodyParts>
-                    <li>
-                        <hediff>PsychicAmplifier</hediff>
-                        <bodyparts>
-                            <li>Brain</li>
-                        </bodyparts>
-                    </li>
-                </hediffsToBodyParts>
+    <Operation Class="PatchOperationSequence">
+        <operations>
+            <li Class="PatchOperationRemove">
+                <xpath>Defs/GeneDef[defName = "BEWH_IotaPsyker" or defName = "BEWH_EpsilonPsyker" or defName = "BEWH_DeltaPsyker" or defName = "BEWH_BetaPsyker" or defName = "BEWH_AlphaPsyker"]/modExtensions/li[@Class="VEF.Genes.GeneExtension"]</xpath>
             </li>
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "BEWH_IotaPsyker" or defName = "BEWH_EpsilonPsyker" or defName = "BEWH_DeltaPsyker" or defName = "BEWH_BetaPsyker" or defName = "BEWH_AlphaPsyker"]</xpath>
+                <value>
+                    <li Class="VEF.Genes.GeneExtension">
+                        <backgroundPathXenogenes>UI/Genes/BEWH_GeneBackground_Psyker</backgroundPathXenogenes>
+                        <hediffsToBodyParts>
+                            <li>
+                                <hediff>PsychicAmplifier</hediff>
+                                <bodyparts>
+                                    <li>Brain</li>
+                                </bodyparts>
+                            </li>
+                        </hediffsToBodyParts>
+                    </li>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/GeneDef[defName = "BEWH_IotaPsyker" or defName = "BEWH_EpsilonPsyker" or defName = "BEWH_DeltaPsyker" or defName = "BEWH_BetaPsyker" or defName = "BEWH_AlphaPsyker"]</xpath>
+        <value>
+            <customEffectDescriptions>
+                <li>Makes pawn a psycaster.</li>
+            </customEffectDescriptions>
         </value>
     </Operation>
 
     <Operation Class="PatchOperationAddModExtension">
-        <xpath>Defs/GeneDef[defName = "BEWH_PrimarchSpecificGeneXV"]</xpath>
+        <xpath>Defs/VEF.Abilities.AbilityDef[defName = "BEWH_PsykerBolt"]</xpath>
         <value>
-            <li Class="VEF.Genes.GeneExtension">
-                <hediffsToBodyParts>
-                    <li>
-                        <hediff>PsychicAmplifier</hediff>
-                        <bodyparts>
-                            <li>Brain</li>
-                        </bodyparts>
-                    </li>
-                </hediffsToBodyParts>
+            <li Class="Genes40k.AbilityExtension_PsyfocusCost">
+                <psyfocusCost>0.07</psyfocusCost>
+                <entropyGain>15</entropyGain>
             </li>
         </value>
     </Operation>

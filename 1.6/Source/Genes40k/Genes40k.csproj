@@ -70,6 +70,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abilities\Ability_ChapterBanner.cs" />
     <Compile Include="Abilities\Ability_PlaceBanner.cs" />
     <Compile Include="Abilities\Ability_ForeswalkLong.cs" />
     <Compile Include="Abilities\Ability_ForeswalkShort.cs" />
@@ -146,6 +147,7 @@
     <Compile Include="Comps\ThunderWarrior\CompProperties_AbilitySearWounds.cs" />
     <Compile Include="ConditionalStatAffecters\ConditionalStatAffecter_WarpShield.cs" />
     <Compile Include="Debug\DebugActions.cs" />
+    <Compile Include="DefModExtensions\AbilityExtension_PsyfocusCost.cs" />
     <Compile Include="DefModExtensions\DefModExtension_OrganDecayResistance.cs" />
     <Compile Include="DefModExtensions\DefModExtension_PlaceBanner.cs" />
     <Compile Include="DefModExtensions\DefModExtension_ShoulderFlippedData.cs" />

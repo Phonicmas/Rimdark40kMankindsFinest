@@ -19,10 +19,7 @@
 
             <SuppressionPower MayRequire="Ludeon.RimWorld.Ideology">0.4</SuppressionPower>
 
-            <LeatherAmount>50</LeatherAmount>
-            <MeatAmount>50</MeatAmount>
-            <Mass>50</Mass>
-            <VEF_CosmeticBodySize_Multiplier>0.35</VEF_CosmeticBodySize_Multiplier>
+            <VEF_BodySize_Offset>0.35</VEF_BodySize_Offset>
         </statOffsets>
         <statFactors>
             <Fertility>0.5</Fertility>

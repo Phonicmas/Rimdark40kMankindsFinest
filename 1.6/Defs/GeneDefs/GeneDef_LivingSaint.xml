@@ -20,7 +20,7 @@
             <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">2</VacuumResistance>
             <PsychicSensitivity>3</PsychicSensitivity>
 
-            <VEF_CosmeticBodySize_Multiplier>0.2</VEF_CosmeticBodySize_Multiplier>
+            <VEF_BodySize_Offset>0.15</VEF_BodySize_Offset>
         </statOffsets>
         <statFactors>
             <MeditationFocusGain>1.4</MeditationFocusGain>

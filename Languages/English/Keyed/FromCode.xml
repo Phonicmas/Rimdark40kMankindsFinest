@@ -106,6 +106,8 @@
 
   <BEWH.MankindsFinest.GeneGestator.NoGeneMatrix>No gene matrices</BEWH.MankindsFinest.GeneGestator.NoGeneMatrix>
 
+  <BEWH.MankindsFinest.GeneGestator.NoGeneMaterialSelectedProceed>No gene material have been selected, but you have available material.\nProceed?</BEWH.MankindsFinest.GeneGestator.NoGeneMaterialSelectedProceed>
+
   <!-- Primarch Growth Vat -->
   <BEWH.MankindsFinest.PrimarchGrowthVat.StartPrimarchGrowth>Start primarch growth</BEWH.MankindsFinest.PrimarchGrowthVat.StartPrimarchGrowth>
   <BEWH.MankindsFinest.PrimarchGrowthVat.StartPrimarchGrowthDesc>Starts the primarch growth process, once started it cannot be stopped.</BEWH.MankindsFinest.PrimarchGrowthVat.StartPrimarchGrowthDesc>

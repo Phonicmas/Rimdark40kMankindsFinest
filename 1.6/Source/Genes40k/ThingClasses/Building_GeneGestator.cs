@@ -39,6 +39,10 @@ public class Building_GeneGestator : Building
     [Unsaved(false)]
     private CompPowerTrader cachedPowerComp;
     private CompPowerTrader PowerTraderComp => cachedPowerComp ??= this.TryGetComp<CompPowerTrader>();
+    
+    [Unsaved(false)]
+    private Building_SangprimusPortum cachedNearbySangprimusPortum;
+    private Building_SangprimusPortum NearbySangprimusPortum => cachedNearbySangprimusPortum ??= (Building_SangprimusPortum)GetComp<CompAffectedByFacilities>()?.LinkedFacilitiesListForReading.FirstOrFallback(b => b is Building_SangprimusPortum);
 
     public void AddGeneMatrix(Thing geneMatrix)
     {
@@ -200,12 +204,11 @@ public class Building_GeneGestator : Building
             if (containedMatrix != null)
             { 
                 //SELECT PRIMARCH OR CHAPTER MATERIAL
-                if (this.HasComp<CompAffectedByFacilities>() && (containedMatrix.def.GetModExtension<DefModExtension_GeneMatrix>().canUsePrimarchMaterial || containedMatrix.def.GetModExtension<DefModExtension_GeneMatrix>().canUseChapterMaterial))
+                if (CanUseAnyMaterial())
                 {
-                    var comp = GetComp<CompAffectedByFacilities>();
-                    if (!comp.LinkedFacilitiesListForReading.Where(x => x.def == Genes40kDefOf.BEWH_SangprimusPortum).EnumerableNullOrEmpty())
+                    if (NearbySangprimusPortum != null)
                     {
-                        var sangprimus = (Building_SangprimusPortum)comp.LinkedFacilitiesListForReading.First(b => b is Building_SangprimusPortum);
+                        var sangprimus = NearbySangprimusPortum;
                         var availableMaterial = new List<Thing>();
                         string geneticType;
 
@@ -267,7 +270,33 @@ public class Building_GeneGestator : Building
                     activateSound = SoundDefOf.Designate_Cancel,
                     action = delegate
                     {
-                        doWork = true;
+                        if (selectedMaterial == null && CanUseAnyMaterial())
+                        {
+                            var sangprimus = NearbySangprimusPortum;
+                            var availableMaterialAmount = 0;
+                            
+                            if (containedMatrix.def.GetModExtension<DefModExtension_GeneMatrix>().canUsePrimarchMaterial)
+                            {
+                                availableMaterialAmount += sangprimus.SearchableContentsPrimarch.Count(x => x.def.HasModExtension<DefModExtension_PrimarchMaterial>());
+                            }
+                            else
+                            {
+                                availableMaterialAmount += sangprimus.SearchableContentsChapter.Count(x => x.def.HasModExtension<DefModExtension_ChapterMaterial>());
+                            }
+
+                            if (availableMaterialAmount > 0)
+                            {
+                                var confirmationText = "BEWH.MankindsFinest.GeneGestator.NoGeneMaterialSelectedProceed".Translate();
+                                Find.WindowStack.Add(new Dialog_MessageBox(confirmationText, "Yes".Translate(), delegate
+                                {
+                                    doWork = true;
+                                }, "No".Translate()));
+                            }
+                        }
+                        else
+                        {
+                            doWork = true;
+                        }
                     }
                 };
                 yield return command_Action2;
@@ -384,6 +413,12 @@ public class Building_GeneGestator : Building
             };
             yield return command_Action1;
         }
+    }
+
+    private bool CanUseAnyMaterial()
+    {
+        return containedMatrix.def.GetModExtension<DefModExtension_GeneMatrix>().canUsePrimarchMaterial ||
+                containedMatrix.def.GetModExtension<DefModExtension_GeneMatrix>().canUseChapterMaterial;
     }
 
     public override void ExposeData()

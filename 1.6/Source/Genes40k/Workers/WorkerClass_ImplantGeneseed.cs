@@ -117,5 +117,7 @@ public class WorkerClass_ImplantGeneseed : Recipe_Surgery
         {
             pawn.health.AddHediff(defMod.appliesHediff);
         }
+
+        pawn.genes.iconDef = geneseedVial.iconDef;
     }
 }

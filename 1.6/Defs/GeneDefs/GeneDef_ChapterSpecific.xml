@@ -619,7 +619,7 @@
         </passionMod>
         <statOffsets>
             <ComfyTemperatureMax>30</ComfyTemperatureMax>
-            <VEF_CosmeticBodySize_Multiplier>0.05</VEF_CosmeticBodySize_Multiplier>
+            <VEF_BodySize_Offset>0.05</VEF_BodySize_Offset>
         </statOffsets>
         <statFactors>
             <Flammability>0.5</Flammability>

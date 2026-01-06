@@ -41,10 +41,7 @@
         <displayOrderInCategory>22</displayOrderInCategory>
         <statOffsets>
             <MeleeDodgeChance>2</MeleeDodgeChance>
-            <LeatherAmount>15</LeatherAmount>
-            <MeatAmount>15</MeatAmount>
-            <Mass>15</Mass>
-            <VEF_CosmeticBodySize_Multiplier>0.1</VEF_CosmeticBodySize_Multiplier>
+            <VEF_BodySize_Offset>0.1</VEF_BodySize_Offset>
 
             <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">-0.1</CertaintyLossFactor>
             <SuppressionPower MayRequire="Ludeon.RimWorld.Ideology">0.1</SuppressionPower>
