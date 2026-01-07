@@ -208,8 +208,11 @@ public static class Genes40kDefOf
     public static StatDef BEWH_JoyFromArtFactor;
     
     //Altered Carbon Stuff
+    [MayRequireAlteredCarbon]
     public static HediffDef AC_NeuralStack;
+    [MayRequireAlteredCarbon]
     public static HediffDef AC_RemoteStack;
+    [MayRequireAlteredCarbon]
     public static HediffDef AC_ArchotechStack;
     
     static Genes40kDefOf()

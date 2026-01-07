@@ -1,13 +1,11 @@
-﻿using AlteredCarbon;
-using HarmonyLib;
-using Verse;
+﻿using Verse;
 
 namespace Genes40k;
 
-[HarmonyPatch(typeof(Recipe_RemoveNeuralStack), "ApplyOnPawn")]
-public class StackRemovalDontTriggerPerpetual
+//Is manually patched
+public class ManualHarmonyPatches
 {
-    public static void Prefix(Pawn pawn)
+    public static void StackRemovalDontTriggerPerpetual(Pawn pawn)
     {
         var perpetualGene = pawn?.genes?.GetFirstGeneOfType<Gene_Perpetual>();
         if (perpetualGene == null)

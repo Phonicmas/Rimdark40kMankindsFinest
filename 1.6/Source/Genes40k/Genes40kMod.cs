@@ -18,7 +18,18 @@ public class Genes40kMod : Mod
     {
         harmony = new Harmony("Genes40k.Mod");
         CurrentVersion = content.ModMetaData.ModVersion;
-        harmony.PatchAll();
+        
+        HarmonyPatch();
+    }
+
+    private static void HarmonyPatch()
+    {
+        if (ModLister.GetActiveModWithIdentifier("hlx.UltratechAlteredCarbon") != null)
+        {
+            harmony.Patch(AccessTools.Method(AccessTools.TypeByName("AlteredCarbon.Recipe_RemoveNeuralStack"), "ApplyOnPawn"), prefix: new HarmonyMethod(typeof(ManualHarmonyPatches), "StackRemovalDontTriggerPerpetual"));
+        }
+        
+        harmony.PatchAllUncategorized();
     }
 
     private static List<TabRecord> tabs = new List<TabRecord>();

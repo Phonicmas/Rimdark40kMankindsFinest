@@ -24,9 +24,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-      <Reference Include="AlteredCarbon">
-        <HintPath>..\..\..\..\..\..\..\workshop\content\294100\2196278117\1.6\Assemblies\AlteredCarbon.dll</HintPath>
-      </Reference>
       <Reference Include="System" />
       <Reference Include="System.Core" />
       <Reference Include="System.Xml.Linq" />
@@ -185,7 +182,7 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_ImplantGeneseedCorrectIngredient.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_LivingSaintDestroyRemoveCount.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_MoreArtJoy.cs" />
-    <Compile Include="HarmonyPatches\HarmonyPatch_StackRemovalDontTriggerPerpetual.cs" />
+    <Compile Include="HarmonyPatches\ManualHarmonyPatches.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_OffworldMarineMimicPlayerRelation.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_PerpetualCorpseNoDestroy.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_PerpetualNoDestroy.cs" />
@@ -204,6 +201,7 @@
     <Compile Include="Hediffs\Hediff_Serf.cs" />
     <Compile Include="Hediffs\Hediff_SeverityByPain.cs" />
     <Compile Include="Integrations\RimHUDProgenoidGlandProgress.cs" />
+    <Compile Include="MayRequire\MayRequireAlteredCarbonAttribute.cs" />
     <Compile Include="ModSettings\ModSettingTab.cs" />
     <Compile Include="ModSettings\ModSettingTab_Geneseed.cs" />
     <Compile Include="ModSettings\ModSettingTab_LivingSaint.cs" />

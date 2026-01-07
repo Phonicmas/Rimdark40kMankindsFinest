@@ -579,6 +579,11 @@ public static class Genes40kUtils
 
     public static bool PawnHasAlteredCarbonStack(this Pawn pawn)
     {
+        if (ModLister.GetActiveModWithIdentifier("hlx.UltratechAlteredCarbon") == null)
+        {
+            return false;
+        }
+        
         if (pawn.health.hediffSet.HasHediff(Genes40kDefOf.AC_NeuralStack))
         {
             return true;

@@ -76,7 +76,7 @@ public class Gene_Perpetual : Gene
         
     public override void Notify_PawnDied(DamageInfo? dinfo, Hediff culprit = null)
     {
-        if ((ModLister.GetActiveModWithIdentifier("hlx.UltratechAlteredCarbon") != null && pawn.PawnHasAlteredCarbonStack()) || DontAddToPerpetualTracker)
+        if (pawn.PawnHasAlteredCarbonStack() || DontAddToPerpetualTracker)
         {
             //Pawns with altered carbon stacks should not be added for respawning
             base.Notify_PawnDied(dinfo, culprit);
