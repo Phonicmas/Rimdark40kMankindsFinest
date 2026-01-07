@@ -20,6 +20,8 @@ public class Gene_Perpetual : Gene
 
     private int perpetualTier => defMod.perpetualTier;
 
+    public bool DontAddToPerpetualTracker = false;
+
     public override void Tick()
     {
         base.Tick();
@@ -74,8 +76,21 @@ public class Gene_Perpetual : Gene
         
     public override void Notify_PawnDied(DamageInfo? dinfo, Hediff culprit = null)
     {
-        Current.Game.GetComponent<GameComponent_Perpetual>().AddPerpetual(pawn, Find.TickManager.TicksGame + defMod.perpetualRessurectionRange.RandomInRange);
+        if ((ModLister.GetActiveModWithIdentifier("hlx.UltratechAlteredCarbon") != null && pawn.PawnHasAlteredCarbonStack()) || DontAddToPerpetualTracker)
+        {
+            //Pawns with altered carbon stacks should not be added for respawning
+            base.Notify_PawnDied(dinfo, culprit);
+            DontAddToPerpetualTracker = false;
+            return;
+        }
+        
+        AddPawnToPerpetualTracker();
         base.Notify_PawnDied(dinfo, culprit);
+    }
+
+    public void AddPawnToPerpetualTracker()
+    {
+        Current.Game.GetComponent<GameComponent_Perpetual>().AddPerpetual(pawn, Find.TickManager.TicksGame + defMod.perpetualRessurectionRange.RandomInRange);
     }
         
     public override void PostAdd()

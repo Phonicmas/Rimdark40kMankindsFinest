@@ -207,6 +207,11 @@ public static class Genes40kDefOf
     //StatDefs
     public static StatDef BEWH_JoyFromArtFactor;
     
+    //Altered Carbon Stuff
+    public static HediffDef AC_NeuralStack;
+    public static HediffDef AC_RemoteStack;
+    public static HediffDef AC_ArchotechStack;
+    
     static Genes40kDefOf()
     {
         DefOfHelper.EnsureInitializedInCtor(typeof(Genes40kDefOf));

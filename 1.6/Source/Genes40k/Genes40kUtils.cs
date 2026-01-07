@@ -576,4 +576,24 @@ public static class Genes40kUtils
 
         return text;
     }
+
+    public static bool PawnHasAlteredCarbonStack(this Pawn pawn)
+    {
+        if (pawn.health.hediffSet.HasHediff(Genes40kDefOf.AC_NeuralStack))
+        {
+            return true;
+        }
+        
+        if (pawn.health.hediffSet.HasHediff(Genes40kDefOf.AC_RemoteStack))
+        {
+            return true;
+        }
+
+        if (pawn.health.hediffSet.HasHediff(Genes40kDefOf.AC_ArchotechStack))
+        {
+            return true;
+        }
+
+        return false;
+    }
 }

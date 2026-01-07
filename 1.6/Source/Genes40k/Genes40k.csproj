@@ -24,6 +24,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+      <Reference Include="AlteredCarbon">
+        <HintPath>..\..\..\..\..\..\..\workshop\content\294100\2196278117\1.6\Assemblies\AlteredCarbon.dll</HintPath>
+      </Reference>
       <Reference Include="System" />
       <Reference Include="System.Core" />
       <Reference Include="System.Xml.Linq" />
@@ -182,6 +185,7 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_ImplantGeneseedCorrectIngredient.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_LivingSaintDestroyRemoveCount.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_MoreArtJoy.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_StackRemovalDontTriggerPerpetual.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_OffworldMarineMimicPlayerRelation.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_PerpetualCorpseNoDestroy.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_PerpetualNoDestroy.cs" />

@@ -23,14 +23,21 @@ public class PerpetualCorpseNoDestroy
             return true;
         }
 
-        if (__instance.InnerPawn.genes == null || !__instance.InnerPawn.genes.GenesListForReading.Any(gene => gene.def.HasModExtension<DefModExtension_PerpetualGene>()))
+        var perpetualGene = __instance.InnerPawn.genes?.GetFirstGeneOfType<Gene_Perpetual>();
+
+        if (perpetualGene == null)
         {
             return true;
         }
-
+        
         if (!__instance.Spawned)
         {
             return true;
+        }
+        
+        if (__instance.InnerPawn.PawnHasAlteredCarbonStack())
+        {
+            perpetualGene.AddPawnToPerpetualTracker();
         }
         
         __instance.DeSpawn(); 

@@ -28,7 +28,9 @@ public class PerpetualNoDestroy
             return true;
         }
 
-        if (__instance.genes == null || !__instance.genes.GenesListForReading.Any(gene => gene.def.HasModExtension<DefModExtension_PerpetualGene>()))
+        var perpetualGene = __instance.genes?.GetFirstGeneOfType<Gene_Perpetual>();
+
+        if (perpetualGene == null)
         {
             return true;
         }
@@ -41,6 +43,10 @@ public class PerpetualNoDestroy
 
         if (__instance.Spawned)
         {
+            if (__instance.PawnHasAlteredCarbonStack())
+            {
+                perpetualGene.AddPawnToPerpetualTracker();
+            }
             __instance.DeSpawn(); 
             return false;
         }
