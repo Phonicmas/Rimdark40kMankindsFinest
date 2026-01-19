@@ -75,6 +75,8 @@ public class Building_GeneGestator : Building
             progressBar.Cleanup();
             progressBar = null;
         }
+        
+        TryDropContainedMatrix();
         base.DeSpawn(mode);
     }
 
@@ -150,6 +152,14 @@ public class Building_GeneGestator : Building
         selectedMaterial = null;
     }
 
+    private void TryDropContainedMatrix()
+    {
+        if (containedMatrix == null)
+        {
+            return;
+        }
+        GenSpawn.Spawn(containedMatrix.def, InteractionCell, Map);
+    }
     public override string GetInspectString()
     {
         var stringBuilder = new StringBuilder();
@@ -310,7 +320,7 @@ public class Building_GeneGestator : Building
                     activateSound = SoundDefOf.Designate_Cancel,
                     action = delegate
                     {
-                        GenSpawn.Spawn(containedMatrix.def, InteractionCell, Map);
+                        TryDropContainedMatrix();
                         Reset();
                     }
                 };
