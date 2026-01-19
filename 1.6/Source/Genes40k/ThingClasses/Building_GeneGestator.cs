@@ -270,7 +270,7 @@ public class Building_GeneGestator : Building
                     activateSound = SoundDefOf.Designate_Cancel,
                     action = delegate
                     {
-                        if (selectedMaterial == null && CanUseAnyMaterial())
+                        if (selectedMaterial == null && CanUseAnyMaterial() && NearbySangprimusPortum != null)
                         {
                             var sangprimus = NearbySangprimusPortum;
                             var availableMaterialAmount = 0;
@@ -310,7 +310,7 @@ public class Building_GeneGestator : Building
                     activateSound = SoundDefOf.Designate_Cancel,
                     action = delegate
                     {
-                        GenSpawn.Spawn(selectedMatrix, InteractionCell, Map);
+                        GenSpawn.Spawn(containedMatrix.def, InteractionCell, Map);
                         Reset();
                     }
                 };
