@@ -40,9 +40,7 @@ public class Building_GeneGestator : Building
     private CompPowerTrader cachedPowerComp;
     private CompPowerTrader PowerTraderComp => cachedPowerComp ??= this.TryGetComp<CompPowerTrader>();
     
-    [Unsaved(false)]
-    private Building_SangprimusPortum cachedNearbySangprimusPortum;
-    private Building_SangprimusPortum NearbySangprimusPortum => cachedNearbySangprimusPortum ??= (Building_SangprimusPortum)GetComp<CompAffectedByFacilities>()?.LinkedFacilitiesListForReading.FirstOrFallback(b => b is Building_SangprimusPortum);
+    private Building_SangprimusPortum NearbySangprimusPortum => (Building_SangprimusPortum)GetComp<CompAffectedByFacilities>()?.LinkedFacilitiesListForReading.FirstOrFallback(b => b is Building_SangprimusPortum);
 
     public void AddGeneMatrix(Thing geneMatrix)
     {
@@ -75,8 +73,12 @@ public class Building_GeneGestator : Building
             progressBar.Cleanup();
             progressBar = null;
         }
+
+        if (mode == DestroyMode.Deconstruct)
+        {
+            TryDropContainedMatrix();
+        }
         
-        TryDropContainedMatrix();
         base.DeSpawn(mode);
     }
 

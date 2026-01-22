@@ -83,6 +83,18 @@ public class Building_SangprimusPortum : Building, IThingHolder
 
     public ThingOwner GetDirectlyHeldThings() => innerContainer;
 
+    public override void DeSpawn(DestroyMode mode = DestroyMode.Vanish)
+    {
+        if (mode == DestroyMode.Deconstruct)
+        {
+            foreach (var thing in innerContainer)
+            {
+                GenPlace.TryPlaceThing(thing, InteractionCell, Map, ThingPlaceMode.Near);
+            }
+        }
+        
+        base.DeSpawn(mode);
+    }
     public override void ExposeData()
     {
         base.ExposeData();
