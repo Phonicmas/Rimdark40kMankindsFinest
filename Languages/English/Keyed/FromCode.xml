@@ -81,6 +81,7 @@
   <!-- Gestator -->
   <BEWH.MankindsFinest.GeneGestator.GestateFinishLetter>Matrix Gestated</BEWH.MankindsFinest.GeneGestator.GestateFinishLetter>
   <BEWH.MankindsFinest.GeneGestator.GestateFinishMessage>{0} has been gestated into {1} and can now be implanted into a suitable pawn.</BEWH.MankindsFinest.GeneGestator.GestateFinishMessage>
+  <BEWH.MankindsFinest.GeneGestator.GestatePrimarchFinishMessage>{0} has been gestated into {1} and can now be used to create a Primarch Embryo.</BEWH.MankindsFinest.GeneGestator.GestatePrimarchFinishMessage>
 
   <BEWH.MankindsFinest.GeneGestator.ContainsNoGeneMatrix>Contains no gene matrix</BEWH.MankindsFinest.GeneGestator.ContainsNoGeneMatrix>
   <BEWH.MankindsFinest.GeneGestator.ContainsGeneMatrix>Contains matrix: {0}</BEWH.MankindsFinest.GeneGestator.ContainsGeneMatrix>

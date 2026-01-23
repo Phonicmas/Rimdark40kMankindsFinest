@@ -132,8 +132,10 @@ public class Building_GeneGestator : Building
         }
         
         GenSpawn.Spawn(geneseedVial, InteractionCell, Map);
+
+        var message = geneseedVial.def.defName == Genes40kDefOf.BEWH_GeneseedVialPrimarch.defName ? "BEWH.MankindsFinest.GeneGestator.GestatePrimarchFinishMessage" : "BEWH.MankindsFinest.GeneGestator.GestateFinishMessage";
         
-        var letter = LetterMaker.MakeLetter("BEWH.MankindsFinest.GeneGestator.GestateFinishLetter".Translate(), "BEWH.MankindsFinest.GeneGestator.GestateFinishMessage".Translate(containedMatrix.def.label, geneseedVial.Label), LetterDefOf.PositiveEvent, geneseedVial);
+        var letter = LetterMaker.MakeLetter("BEWH.MankindsFinest.GeneGestator.GestateFinishLetter".Translate(), message.Translate(containedMatrix.def.label, geneseedVial.Label), LetterDefOf.PositiveEvent, geneseedVial);
         
         Find.LetterStack.ReceiveLetter(letter);
         Reset();
@@ -303,6 +305,10 @@ public class Building_GeneGestator : Building
                                 {
                                     doWork = true;
                                 }, "No".Translate()));
+                            }
+                            else
+                            {
+                                doWork = true;
                             }
                         }
                         else
