@@ -46,7 +46,7 @@
         <muzzleFlashScale>12</muzzleFlashScale>
       </li>
     </verbs>
-    <comps Inherit="False">      <!-- CompProperties_AmmoChanger needs the weapon to not have CompEquipable, if it does you need to not inherit any comps and instead put them in yourself from parents-->
+    <comps>
       <li Class="Core40k.CompProperties_AmmoChanger">
         <compClass>Core40k.Comp_AmmoChanger</compClass>
         <availableProjectiles>
@@ -56,17 +56,6 @@
           <!--<li>BEWH_BolterRoundKraken</li>
           <li>BEWH_BolterRoundTempest</li>-->
         </availableProjectiles>
-      </li>
-      <li Class="CompProperties_Forbiddable"/>
-      <li Class="CompProperties_Styleable"/>
-      <li Class="CompProperties_Biocodable"/>
-      <li>
-        <compClass>CompQuality</compClass>
-      </li>
-      <li Class="CompProperties_Art">
-        <nameMaker>NamerArtWeaponGun</nameMaker>
-        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
-        <minQualityForArtistic>Excellent</minQualityForArtistic>
       </li>
       <li Class="Core40k.CompProperties_MultiColor">
         <colorMaskAmount>3</colorMaskAmount>

@@ -104,7 +104,10 @@ public class Building_GeneGestator : Building
         }
         else
         {
-            if (progressBar == null) return;
+            if (progressBar == null)
+            {
+                return;
+            }
                 
             progressBar.Cleanup();
             progressBar = null;

@@ -21,7 +21,7 @@ public class ShoulderPadIconTab : ApparelMultiColorTabDrawer
     private void Setup(Pawn pawn)
     {
         var allShoulderIcons = DefDatabase<ShoulderIconDef>.AllDefsListForReading;
-        foreach (var shoulderIcon in allShoulderIcons.Where(shoulderIcon => shoulderIcon.HasRequirements(pawn)))
+        foreach (var shoulderIcon in allShoulderIcons.Where(shoulderIcon => shoulderIcon.HasRequirements(pawn, out var reason)))
         {
             if (shoulderIcon.leftShoulder)
             {

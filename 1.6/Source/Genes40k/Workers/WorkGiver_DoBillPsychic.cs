@@ -42,7 +42,6 @@ public class WorkGiver_DoBillPsychic : WorkGiver_DoBill
                 {
                     billAddPost.Add(bill);
                     JobFailReason.Is("BEWH.MankindsFinest.GeneManupulationTable.MissingLegionMaterial".Translate(bill.recipe.products.First().Label, defMod.requiredLegionMaterial.label), bill.Label);
-                    continue;
                 }
             }
         }
