@@ -10,7 +10,7 @@ public class ZealousFuryStopMentalBreak
 {
     public static bool Prefix(ref bool __result, MentalBreakWorker __instance, Pawn pawn, string reason, bool causedByMood)
     {
-        var geneZealousFury = pawn.genes?.GetFirstGeneOfType<Gene_ZealousFury>();
+        var geneZealousFury = pawn?.genes?.GetFirstGeneOfType<Gene_ZealousFury>();
         if (geneZealousFury == null || !pawn.IsCombatant())
         {
             return true;

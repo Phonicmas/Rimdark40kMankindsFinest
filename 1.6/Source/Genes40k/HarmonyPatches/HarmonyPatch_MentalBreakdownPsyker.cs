@@ -12,9 +12,9 @@ namespace Genes40k;
 [HarmonyPatch(typeof(MentalStateHandler), "TryStartMentalState")]
 public class MentalBreakdownPsyker
 {
-    public static void Postfix(MentalStateDef stateDef, MentalStateHandler __instance, bool __result)
+    public static void Postfix(MentalStateHandler __instance, bool __result)
     {
-        var modSettings = LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>();
+        var modSettings = Genes40kUtils.ModSettings;
         if (!modSettings.psychicPhenomena)
         {
             return;
@@ -25,14 +25,17 @@ public class MentalBreakdownPsyker
             return;
         }
 
-        var pawn = __instance.CurState.pawn;
+        var pawn = __instance?.CurState?.pawn;
 
-        if (pawn?.genes == null)
+        if (pawn?.genes == null || pawn.genes.GenesListForReading.NullOrEmpty())
         {
             return;
         }
 
-        if (!pawn.genes.GenesListForReading.Where(gene => gene.def.HasModExtension<DefModExtension_Psyker>()).Any(gene => gene.Active)) return;
+        if (!pawn.genes.GenesListForReading.Where(gene => gene.def.HasModExtension<DefModExtension_Psyker>()).Any(gene => gene.Active))
+        {
+            return;
+        }
             
         var letter = new StandardLetter
         {
@@ -53,38 +56,35 @@ public class MentalBreakdownPsyker
                 GenExplosion.DoExplosion(pawn.Corpse.Position, pawn.Corpse.Map, pawn.GetStatValue(StatDefOf.PsychicSensitivity) * 5, Genes40kDefOf.BEWH_WarpEnergy, pawn, damAmount: (int)(pawn.GetStatValue(StatDefOf.PsychicSensitivity) * 100), armorPenetration: 10f);
                 letter.Text = "BEWH.MankindsFinest.Event.Annihilation".Translate(pawn.Named("PAWN"));
                 break;
-            case int n when n >= 99:
+            case >= 99:
                 SummonDaemons(pawn);
                 letter.Text = "BEWH.MankindsFinest.Event.DaemonHost".Translate(pawn.Named("PAWN"));
                 break;
-            case int n when n >= 95:
-                GenExplosion.DoExplosion(pawn.Position, pawn.Map, pawn.GetStatValue(StatDefOf.PsychicSensitivity) * 2, Genes40kDefOf.BEWH_WarpEnergy, pawn);
+            case >= 95:
+                GenExplosion.DoExplosion(pawn.Position, pawn.Map, pawn.GetStatValue(StatDefOf.PsychicSensitivity) * 5, Genes40kDefOf.BEWH_WarpEnergy, pawn);
                 letter.Text = "BEWH.MankindsFinest.Event.UncontrollablePowers".Translate(pawn.Named("PAWN"));
                 break;
-            case int n when n >= 90:
-                pawn.health.AddHediff(Genes40kDefOf.BEWH_PsychicComa);
+            case >= 90:
+                pawn.health?.AddHediff(Genes40kDefOf.BEWH_PsychicComa);
                 letter.Text = "BEWH.MankindsFinest.Event.PsychicComa".Translate(pawn.Named("PAWN"));
                 break;
             /*case int n when n >= 80:
                         //??
                         break;*/
-            case int n when n >= 70:
-                pawn.health.AddHediff(Genes40kDefOf.BEWH_PsychicConnectionSevered);
+            case >= 70:
+                pawn.health?.AddHediff(Genes40kDefOf.BEWH_PsychicConnectionSevered);
                 letter.Text = "BEWH.MankindsFinest.Event.PsychicConnectionSevered".Translate(pawn.Named("PAWN"));
                 break;
-            case int n when n >= 60:
-                pawn.Map.weatherManager.TransitionTo(Genes40kDefOf.BEWH_BloodRain);
+            case >= 60:
+                pawn.Map?.weatherManager?.TransitionTo(Genes40kDefOf.BEWH_BloodRain);
                 letter.Text = "BEWH.MankindsFinest.Event.BloodRain".Translate();
                 break;
-            case int n when n >= 30:
-                IEnumerable<IntVec3> t = GenRadial.RadialCellsAround(pawn.Position, 8, true);
-                foreach (IntVec3 c in t)
+            case >= 30:
+                var t = GenRadial.RadialCellsAround(pawn.Position, 8, true);
+                foreach (var c in t)
                 {
-                    Plant plant = c.GetPlant(pawn.Map);
-                    if (plant != null)
-                    {
-                        plant.Kill();
-                    }
+                    var plant = c.GetPlant(pawn.Map);
+                    plant?.Kill();
                 }
                 letter.Text = "BEWH.MankindsFinest.Event.PlantRot".Translate(pawn.Named("PAWN"));
                 break;

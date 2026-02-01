@@ -24,4 +24,12 @@
 		</value>
 	</Operation>
 
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[@Name="BEWH_PowerArmorBase"]/equippedStatOffsets</xpath>
+		<value>
+			<HygieneRateMultiplier>-0.35</HygieneRateMultiplier>
+			<BladderRateMultiplier>-0.95</BladderRateMultiplier>
+		</value>
+	</Operation>
+
 </Patch>
