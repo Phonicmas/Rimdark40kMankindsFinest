@@ -7,18 +7,16 @@ using Verse;
 
 namespace Genes40k;
 
-public class ShoulderPadIconTab : ApparelMultiColorTabDrawer
+public class ShoulderPadIconTab : CustomizerTabDrawer
 {
-    private List<ShoulderIconDef> rightShoulderIcons = new ();
-    private List<ShoulderIconDef> leftShoulderIcons = new ();
+    private List<ShoulderIconDef> rightShoulderIcons = [];
+    private List<ShoulderIconDef> leftShoulderIcons = [];
 
     private const int RowAmount = 6;
 
-    private bool setupDone = false;
-
     private static float listScrollViewHeight = 0f;
 
-    private void Setup(Pawn pawn)
+    public override void Setup(Pawn pawn)
     {
         var allShoulderIcons = DefDatabase<ShoulderIconDef>.AllDefsListForReading;
         foreach (var shoulderIcon in allShoulderIcons.Where(shoulderIcon => shoulderIcon.HasRequirements(pawn, out var reason)))
@@ -38,13 +36,7 @@ public class ShoulderPadIconTab : ApparelMultiColorTabDrawer
     }
         
     public override void DrawTab(Rect rect, Pawn pawn, ref Vector2 apparelColorScrollPosition)
-    {
-        if (!setupDone)
-        {
-            setupDone = true;
-            Setup(pawn);
-        }
-            
+    {            
         var chapterColorComp = pawn.apparel.WornApparel.First(a => a.HasComp<CompChapterColorWithShoulderDecoration>()).GetComp<CompChapterColorWithShoulderDecoration>();
             
         GUI.BeginGroup(rect);
@@ -250,5 +242,28 @@ public class ShoulderPadIconTab : ApparelMultiColorTabDrawer
             
         Widgets.EndScrollView();
         GUI.EndGroup();
+    }
+    
+    public override void OnClose(Pawn pawn, bool closeOnCancel, bool closeOnClickedOutside)
+    {
+            
+    }
+
+    public override void OnAccept(Pawn pawn)
+    {
+        var apparels = pawn.apparel.WornApparel.Where(a => a.HasComp<CompChapterColorWithShoulderDecoration>()).ToList();
+        foreach (var apparel in apparels)
+        {
+            apparel.GetComp<CompChapterColorWithShoulderDecoration>().SetOriginals();
+        }
+    }
+    
+    public override void OnReset(Pawn pawn)
+    {
+        var apparels = pawn.apparel.WornApparel.Where(a => a.HasComp<CompChapterColorWithShoulderDecoration>()).ToList();
+        foreach (var apparel in apparels)
+        {
+            apparel.GetComp<CompChapterColorWithShoulderDecoration>().Reset();
+        }
     }
 }

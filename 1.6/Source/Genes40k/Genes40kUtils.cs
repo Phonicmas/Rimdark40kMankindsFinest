@@ -315,6 +315,7 @@ public static class Genes40kUtils
             }
             
             comp.SetColors(chapterColourPrimary, chapterColourSecondary, chapterColourTertiary);
+            comp.SetOriginals();
 
             if (comp is CompChapterColorWithShoulderDecoration compExtended)
             {
@@ -325,6 +326,7 @@ public static class Genes40kUtils
         if (equipment.HasComp<CompMultiColor>())
         {
             equipment.GetComp<CompMultiColor>().SetColors(chapter);
+            equipment.GetComp<CompMultiColor>().SetOriginals();
         }
         return chapter;
     }

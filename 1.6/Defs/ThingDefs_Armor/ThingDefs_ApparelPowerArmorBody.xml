@@ -132,12 +132,7 @@
             </renderNodeProperties>
         </apparel>
         <comps>
-            <li Class="Genes40k.CompProperties_ChapterColorWithShoulderDecoration">
-                <tabDefs>
-                    <li>BEWH_AstartesShoulderIcon</li>
-                    <li>BEWH_ExtraDecoration</li>
-                </tabDefs>
-            </li>
+            <li Class="Genes40k.CompProperties_ChapterColorWithShoulderDecoration" />
             <li Class="Core40k.CompProperties_Decorative">
                 <decorativeType>Body</decorativeType>
             </li>
@@ -149,6 +144,13 @@
             </li>
             <li Class="Core40k.DefModExtension_HideJumpPack">
                 <changeBackpackVisual>true</changeBackpackVisual>
+            </li>
+            <li Class="Core40k.DefModExtension_AvailableDrawerTabDefs">
+                <tabDefs>
+                    <li>BEWH_ArmorColoring</li>
+                    <li>BEWH_AstartesShoulderIcon</li>
+                    <li>BEWH_ArmorDecoration</li>
+                </tabDefs>
             </li>
         </modExtensions>
     </ThingDef>
@@ -232,12 +234,7 @@
             </renderNodeProperties>
         </apparel>
         <comps>
-            <li Class="Genes40k.CompProperties_ChapterColorWithShoulderDecoration">
-                <tabDefs>
-                    <li>BEWH_AstartesShoulderIcon</li>
-                    <li>BEWH_ExtraDecoration</li>
-                </tabDefs>
-            </li>
+            <li Class="Genes40k.CompProperties_ChapterColorWithShoulderDecoration" />
             <li Class="Core40k.CompProperties_Decorative">
                 <decorativeType>Body</decorativeType>
             </li>
@@ -249,6 +246,13 @@
             </li>
             <li Class="Core40k.DefModExtension_HideJumpPack">
                 <changeBackpackVisual>true</changeBackpackVisual>
+            </li>
+            <li Class="Core40k.DefModExtension_AvailableDrawerTabDefs">
+                <tabDefs>
+                    <li>BEWH_ArmorColoring</li>
+                    <li>BEWH_AstartesShoulderIcon</li>
+                    <li>BEWH_ArmorDecoration</li>
+                </tabDefs>
             </li>
         </modExtensions>
     </ThingDef>
@@ -336,10 +340,6 @@
             <li Class="Genes40k.CompProperties_ChapterColorWithShoulderDecoration">
                 <defaultPrimaryColor>(61,61,61)</defaultPrimaryColor>
                 <defaultSecondaryColor>(223,164,29)</defaultSecondaryColor>
-                <tabDefs>
-                    <li>BEWH_AstartesShoulderIcon</li>
-                    <li>BEWH_ExtraDecoration</li>
-                </tabDefs>
             </li>
             <li Class="Core40k.CompProperties_Decorative">
                 <decorativeType>Body</decorativeType>
@@ -352,6 +352,13 @@
             </li>
             <li Class="Core40k.DefModExtension_HideJumpPack">
                 <changeBackpackVisual>true</changeBackpackVisual>
+            </li>
+            <li Class="Core40k.DefModExtension_AvailableDrawerTabDefs">
+                <tabDefs>
+                    <li>BEWH_ArmorColoring</li>
+                    <li>BEWH_AstartesShoulderIcon</li>
+                    <li>BEWH_ArmorDecoration</li>
+                </tabDefs>
             </li>
         </modExtensions>
     </ThingDef>
@@ -430,9 +437,6 @@
             <li Class="Core40k.CompProperties_MultiColor">
                 <defaultPrimaryColor>(0.8358, 0.619, 0.298)</defaultPrimaryColor>
                 <defaultSecondaryColor>(0.407, 0.094, 0.129)</defaultSecondaryColor>
-                <tabDefs>
-                    <li>BEWH_ExtraDecoration</li>
-                </tabDefs>
             </li>
             <li Class="Core40k.CompProperties_Decorative">
                 <decorativeType>Body</decorativeType>
@@ -448,6 +452,12 @@
                 <hideBodyGraphic>true</hideBodyGraphic>
             </li>
             <li Class="Core40k.DefModExtension_HideJumpPack" />
+            <li Class="Core40k.DefModExtension_AvailableDrawerTabDefs">
+                <tabDefs>
+                    <li>BEWH_ArmorColoring</li>
+                    <li>BEWH_ArmorDecoration</li>
+                </tabDefs>
+            </li>
         </modExtensions>
     </ThingDef>
 
@@ -533,9 +543,6 @@
             <li Class="Core40k.CompProperties_MultiColor">
                 <defaultPrimaryColor>(231,148,88)</defaultPrimaryColor>
                 <defaultSecondaryColor>(253,184,110)</defaultSecondaryColor>
-                <tabDefs>
-                    <li>BEWH_ExtraDecoration</li>
-                </tabDefs>
             </li>
             <li Class="Core40k.CompProperties_Decorative">
                 <decorativeType>Body</decorativeType>
@@ -547,6 +554,12 @@
                 <hideBodyGraphic>true</hideBodyGraphic>
             </li>
             <li Class="Core40k.DefModExtension_HideJumpPack" />
+            <li Class="Core40k.DefModExtension_AvailableDrawerTabDefs">
+                <tabDefs>
+                    <li>BEWH_ArmorColoring</li>
+                    <li>BEWH_ArmorDecoration</li>
+                </tabDefs>
+            </li>
         </modExtensions>
     </ThingDef>
 

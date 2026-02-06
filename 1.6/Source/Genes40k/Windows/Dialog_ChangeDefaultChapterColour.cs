@@ -38,8 +38,8 @@ public class Dialog_ChangeDefaultChapterColour : Window
         Widgets.DrawMenuSection(primaryColorRect.ContractedBy(-1));
         Widgets.DrawRectFast(primaryColorRect, currentlySelectedPreset.primaryColour);
         Text.Anchor = TextAnchor.MiddleCenter;
-        Widgets.Label(primaryColorRect, "BEWH.Framework.ApparelMultiColor.PrimaryColor".Translate());
-        TooltipHandler.TipRegion(primaryColorRect, "BEWH.Framework.ApparelMultiColor.ChooseCustomColour".Translate());
+        Widgets.Label(primaryColorRect, "BEWH.Framework.Customization.PrimaryColor".Translate());
+        TooltipHandler.TipRegion(primaryColorRect, "BEWH.Framework.Customization.ChooseCustomColour".Translate());
         Text.Anchor = TextAnchor.UpperLeft;
         if (Widgets.ButtonInvisible(primaryColorRect))
         {
@@ -58,8 +58,8 @@ public class Dialog_ChangeDefaultChapterColour : Window
         Widgets.DrawMenuSection(secondaryColorRect.ContractedBy(-1));
         Widgets.DrawRectFast(secondaryColorRect, currentlySelectedPreset.secondaryColour);
         Text.Anchor = TextAnchor.MiddleCenter;
-        Widgets.Label(secondaryColorRect, "BEWH.Framework.ApparelMultiColor.SecondaryColor".Translate());
-        TooltipHandler.TipRegion(secondaryColorRect, "BEWH.Framework.ApparelMultiColor.ChooseCustomColour".Translate());
+        Widgets.Label(secondaryColorRect, "BEWH.Framework.Customization.SecondaryColor".Translate());
+        TooltipHandler.TipRegion(secondaryColorRect, "BEWH.Framework.Customization.ChooseCustomColour".Translate());
         Text.Anchor = TextAnchor.UpperLeft;
         if (Widgets.ButtonInvisible(secondaryColorRect))
         {
@@ -78,8 +78,8 @@ public class Dialog_ChangeDefaultChapterColour : Window
         Widgets.DrawMenuSection(tertiaryColorRect.ContractedBy(-1));
         Widgets.DrawRectFast(tertiaryColorRect, currentlySelectedPreset.tertiaryColour.Value);
         Text.Anchor = TextAnchor.MiddleCenter;
-        Widgets.Label(tertiaryColorRect, "BEWH.Framework.ApparelMultiColor.TertiaryColor".Translate());
-        TooltipHandler.TipRegion(tertiaryColorRect, "BEWH.Framework.ApparelMultiColor.ChooseCustomColour".Translate());
+        Widgets.Label(tertiaryColorRect, "BEWH.Framework.Customization.TertiaryColor".Translate());
+        TooltipHandler.TipRegion(tertiaryColorRect, "BEWH.Framework.Customization.ChooseCustomColour".Translate());
         Text.Anchor = TextAnchor.UpperLeft;
         if (Widgets.ButtonInvisible(tertiaryColorRect))
         {

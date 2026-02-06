@@ -40,15 +40,19 @@
             </tags>
         </apparel>
         <comps>
-            <li Class="Genes40k.CompProperties_ChapterColor">
-                <tabDefs>
-                    <li>BEWH_ExtraDecoration</li>
-                </tabDefs>
-            </li>
+            <li Class="Genes40k.CompProperties_ChapterColor" />
             <li Class="Core40k.CompProperties_Decorative">
                 <decorativeType>Head</decorativeType>
             </li>
         </comps>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_AvailableDrawerTabDefs">
+                <tabDefs>
+                    <li>BEWH_ArmorColoring</li>
+                    <li>BEWH_ArmorDecoration</li>
+                </tabDefs>
+            </li>
+        </modExtensions>
     </ThingDef>
 
     <!-- MK 10-->
@@ -89,15 +93,19 @@
             </tags>
         </apparel>
         <comps>
-            <li Class="Genes40k.CompProperties_ChapterColor">
-                <tabDefs>
-                    <li>BEWH_ExtraDecoration</li>
-                </tabDefs>
-            </li>
+            <li Class="Genes40k.CompProperties_ChapterColor" />
             <li Class="Core40k.CompProperties_Decorative">
                 <decorativeType>Head</decorativeType>
             </li>
         </comps>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_AvailableDrawerTabDefs">
+                <tabDefs>
+                    <li>BEWH_ArmorColoring</li>
+                    <li>BEWH_ArmorDecoration</li>
+                </tabDefs>
+            </li>
+        </modExtensions>
     </ThingDef>
 
     <!-- MK 10 Chaplain-->
@@ -138,15 +146,19 @@
             </tags>
         </apparel>
         <comps>
-            <li Class="Genes40k.CompProperties_ChapterColor">
-                <tabDefs>
-                    <li>BEWH_ExtraDecoration</li>
-                </tabDefs>
-            </li>
+            <li Class="Genes40k.CompProperties_ChapterColor" />
             <li Class="Core40k.CompProperties_Decorative">
                 <decorativeType>Head</decorativeType>
             </li>
         </comps>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_AvailableDrawerTabDefs">
+                <tabDefs>
+                    <li>BEWH_ArmorColoring</li>
+                    <li>BEWH_ArmorDecoration</li>
+                </tabDefs>
+            </li>
+        </modExtensions>
     </ThingDef>
 
     <!-- MK 1 Thunder Warrior-->
@@ -189,9 +201,6 @@
             <li Class="Core40k.CompProperties_MultiColor">
                 <defaultPrimaryColor>(231,148,88)</defaultPrimaryColor>
                 <defaultSecondaryColor>(253,184,110)</defaultSecondaryColor>
-                <tabDefs>
-                    <li>BEWH_ExtraDecoration</li>
-                </tabDefs>
             </li>
             <li Class="Core40k.CompProperties_Decorative">
                 <decorativeType>Head</decorativeType>
@@ -201,6 +210,14 @@
                 </extraDecorations>
             </li>
         </comps>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_AvailableDrawerTabDefs">
+                <tabDefs>
+                    <li>BEWH_ArmorColoring</li>
+                    <li>BEWH_ArmorDecoration</li>
+                </tabDefs>
+            </li>
+        </modExtensions>
     </ThingDef>
 
 </Defs>

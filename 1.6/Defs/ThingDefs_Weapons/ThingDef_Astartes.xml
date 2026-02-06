@@ -82,6 +82,11 @@
           </west>
         </weaponCarryDrawOffsets>
       </li>
+      <li Class="Core40k.DefModExtension_AvailableDrawerTabDefs">
+        <tabDefs>
+          <li>BEWH_WeaponColoring</li>
+        </tabDefs>
+      </li>
     </modExtensions>
   </ThingDef>
 
@@ -160,6 +165,11 @@
           </west>
         </weaponCarryDrawOffsets>
       </li>
+      <li Class="Core40k.DefModExtension_AvailableDrawerTabDefs">
+        <tabDefs>
+          <li>BEWH_WeaponColoring</li>
+        </tabDefs>
+      </li>
     </modExtensions>
   </ThingDef>
 
@@ -237,6 +247,11 @@
             <drawOffset>(0, 0, -0.15)</drawOffset>
           </west>
         </weaponCarryDrawOffsets>
+      </li>
+      <li Class="Core40k.DefModExtension_AvailableDrawerTabDefs">
+        <tabDefs>
+          <li>BEWH_WeaponColoring</li>
+        </tabDefs>
       </li>
     </modExtensions>
   </ThingDef>
