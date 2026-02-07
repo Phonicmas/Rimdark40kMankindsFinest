@@ -13,6 +13,8 @@
     <baseCost>6000</baseCost>
     <researchViewX>0</researchViewX>
     <researchViewY>1</researchViewY>
+    <discoveredLetterTitle>About: Gene-seed creation</discoveredLetterTitle>
+    <discoveredLetterText>You now have the technology to start making superhuman.\nThe first steps is to ensure you have a Gene manipulation table and a Gene-seed gestator.\nFrom the gene table you can create matrices (of which you can research more types) and put them into the gestator to acquire ascendancy vial.\nThunder warrior vials are inserted into pawns via medical bills and take effect immediatly.</discoveredLetterText>
   </ResearchProjectDef>
 
   <!-- Stasis Resurrection -->
@@ -79,6 +81,9 @@
     <baseCost>2500</baseCost>
     <researchViewX>2</researchViewX>
     <researchViewY>2</researchViewY>
+    <discoveredLetterTitle>About: Gene-seed extraction</discoveredLetterTitle>
+    <discoveredLetterText>You now have the technology to extract gene-seeds.\nThe first steps is to ensure you have a Space Marine with a rank in the Apothecary line. Upon death of a space marine and/or after 60days, a space marines gene-seed(s) can be harvested by said Apothecary.</discoveredLetterText>
+  
   </ResearchProjectDef>
 
   <!-- Gene-seed Extraction (Priamris Marine) -->
@@ -133,6 +138,8 @@
     <baseCost>15000</baseCost>
     <researchViewX>1</researchViewX>
     <researchViewY>0</researchViewY>
+    <discoveredLetterTitle>About: Primarch creation</discoveredLetterTitle>
+    <discoveredLetterText>You now have the technology to start making primarchs.\nThe first step is the creation of a primarch ascendacy vial, after this you need to create a primarch embryo by using said vial and a human embryo, this is done at the Gene manipulation table using one of its Gizmos. Finally you gestate the child anew in the Primarch Growth Vat.</discoveredLetterText>
   </ResearchProjectDef>
 
   <!-- Legion Astartes -->
@@ -176,6 +183,8 @@
       <li>BEWH_PowerArmorMkI</li>
       <li MayRequire="Ludeon.RimWorld.Royalty">CataphractArmor</li>
     </prerequisites>
+    <discoveredLetterTitle>About: Armor Customization</discoveredLetterTitle>
+    <discoveredLetterText>The Mk I, Mk VII and Mk X power armors can all be decorated and colored at the Gene-Manipulation table, Art Table or Styling Bench (With Ideology).</discoveredLetterText>
   </ResearchProjectDef>
 
   <!-- Power Armor Mk. X -->
