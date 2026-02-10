@@ -35,7 +35,7 @@
     <pathCost>14</pathCost>
     <comps>
       <li Class="CompProperties_HasPawnSources"/>
-      <li Class="Genes40k.CompProperties_DeteriorateOutsideBuilding">
+      <li Class="Core40k.CompProperties_DeteriorateOutsideBuilding">
         <antiDeteriorateContainers>
           <li>BEWH_PrimarchEmbryoContainer</li>
         </antiDeteriorateContainers>

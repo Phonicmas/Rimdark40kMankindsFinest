@@ -65,7 +65,7 @@
       <li Class="Genes40k.CompProperties_AbilityDivineGraceCost">
         <divineGraceCost>1.00</divineGraceCost>
       </li>
-      <li Class="Genes40k.CompProperties_AbilityAoeHit">
+      <li Class="Core40k.CompProperties_AbilityAoeHit">
         <damageDef>BEWH_LivingSaintHoly</damageDef>
         <damageAmount>5</damageAmount>
         <scaleStat>PsychicSensitivity</scaleStat>

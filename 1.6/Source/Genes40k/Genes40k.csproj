@@ -98,13 +98,7 @@
     <Compile Include="ChapterApparelMultiColor\ShoulderIconDef.cs" />
     <Compile Include="ChapterApparelMultiColor\ShoulderIconSettings.cs" />
     <Compile Include="ChapterApparelMultiColor\ShoulderPadIconTab.cs" />
-    <Compile Include="Comps\CompAbilityEffect_AoeHit.cs" />
-    <Compile Include="Comps\CompProperties_AbilityAoeHit.cs" />
-    <Compile Include="Comps\CompProperties_Aura.cs" />
-    <Compile Include="Comps\CompProperties_DisableInactiveGene.cs" />
     <Compile Include="Comps\CompProperties_LifespanDropItem.cs" />
-    <Compile Include="Comps\Comp_Aura.cs" />
-    <Compile Include="Comps\Comp_DisableInactiveGene.cs" />
     <Compile Include="Comps\Comp_LifespanDropItem.cs" />
     <Compile Include="Comps\GameComponent_MankindFinestUtils.cs" />
     <Compile Include="Comps\GameComponent_Perpetual.cs" />
@@ -276,13 +270,8 @@
     <Compile Include="Workers\WorkerClass_PhaseDevelopment.cs" />
     <Compile Include="Workers\WorkerClass_ImplantGeneseed.cs" />
     <Compile Include="Workers\WorkGiver_CarryMatrixToGeneGestator.cs" />
-    <Compile Include="Comps\CompProperties_DeteriorateOutsideBuilding.cs" />
-    <Compile Include="Comps\Comp_DeteriorateOutsideBuilding.cs" />
-    <Compile Include="Comps\CompProperties_GivesAbility.cs" />
     <Compile Include="DefModExtensions\DefModExtension_Psyker.cs" />
-    <Compile Include="Comps\Comp_GivesAbility.cs" />
     <Compile Include="GeneClasses\Gene_Pariah.cs" />
-    <Compile Include="HarmonyPatches\HarmonyPatch_StopDeterioation.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_MentalBreakdownPsyker.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_NaturalBirthPsykerPariah.cs" />
     <Compile Include="DefModExtensions\DefModExtension_Pariah.cs" />

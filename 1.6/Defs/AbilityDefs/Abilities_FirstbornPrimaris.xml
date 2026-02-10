@@ -31,7 +31,13 @@
         <numCellsToHit>9</numCellsToHit>
         <sprayEffecter>AcidSpray_Directional</sprayEffecter>
       </li>
-      <li Class="Genes40k.CompProperties_DisableInactiveGene">
+      <li Class="Core40k.CompProperties_DisableIfApparelCovers">
+        <disabledIfCovered>
+          <li>Mouth</li>
+          <li>FullHead</li>
+        </disabledIfCovered>
+      </li>
+      <li Class="Core40k.CompProperties_DisableInactiveGene">
         <geneDef>BEWH_BetchersGland</geneDef>
       </li>
     </comps>
@@ -102,7 +108,7 @@
         <onlyApplyToSelf>True</onlyApplyToSelf>
         <replaceExisting>true</replaceExisting>
       </li>
-      <li Class="Genes40k.CompProperties_DisableInactiveGene">
+      <li Class="Core40k.CompProperties_DisableInactiveGene">
         <geneDef>BEWH_SusAnMembrane</geneDef>
       </li>
       <li Class="Genes40k.CompProperties_AbilityStasisConfirmation" />

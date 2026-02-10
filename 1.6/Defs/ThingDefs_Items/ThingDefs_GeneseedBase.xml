@@ -43,7 +43,7 @@
       <ThingDef>BEWH_GeneseedGestator</ThingDef>
     </descriptionHyperlinks>
     <comps>
-      <li Class="Genes40k.CompProperties_DeteriorateOutsideBuilding">
+      <li Class="Core40k.CompProperties_DeteriorateOutsideBuilding">
         <antiDeteriorateContainers>
           <li>BEWH_GeneticCryostaticStorage</li>
         </antiDeteriorateContainers>
@@ -61,7 +61,7 @@
       <ThingDef>BEWH_GeneseedVialStorage</ThingDef>
     </descriptionHyperlinks>
     <comps>
-      <li Class="Genes40k.CompProperties_DeteriorateOutsideBuilding">
+      <li Class="Core40k.CompProperties_DeteriorateOutsideBuilding">
         <antiDeteriorateContainers>
           <li>BEWH_GeneseedVialStorage</li>
         </antiDeteriorateContainers>

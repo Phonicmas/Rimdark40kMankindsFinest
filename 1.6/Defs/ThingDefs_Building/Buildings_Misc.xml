@@ -62,7 +62,7 @@
     </graphicData>
     <size>(1,1)</size>
     <comps>
-      <li Class="Genes40k.CompProperties_Aura">
+      <li Class="Core40k.CompProperties_Aura">
         <givesHediff>BEWH_ChapterBannerBuff</givesHediff>
         <durationOutsideRange>750</durationOutsideRange>
         <range>20</range>
