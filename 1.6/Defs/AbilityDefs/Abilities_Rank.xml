@@ -163,7 +163,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class="Genes40k.CompProperties_AbilityHealAndTend">
+            <li Class="Core40k.CompProperties_AbilityHealAndTend">
                 <healAmount>1~2</healAmount>
             </li>
             <li Class="CompProperties_AbilityGiveHediff">

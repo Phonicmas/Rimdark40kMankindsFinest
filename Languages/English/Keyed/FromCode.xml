@@ -300,4 +300,7 @@
   <!-- Ideology -->
   <BEWH.MankindsFinest.Ideology.MustBeSpaceMarine>Must be a Space Marine</BEWH.MankindsFinest.Ideology.MustBeSpaceMarine>
 
+  <!-- Other -->
+  <BEWH.MankindsFinest.Other.AlreadyUnlocked>This material is already unlocked and present in the Sangprimus Archive for usage in gestators.</BEWH.MankindsFinest.Other.AlreadyUnlocked>
+
 </LanguageData>
