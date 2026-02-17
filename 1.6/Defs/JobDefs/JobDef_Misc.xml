@@ -18,6 +18,14 @@
     </JobDef>
 
     <JobDef>
+        <defName>BEWH_CarryMaterialToSangprimus</defName>
+        <driverClass>Genes40k.JobDriver_CarryMaterialToSangprimus</driverClass>
+        <reportString>filling TargetA with TargetB.</reportString>
+        <suspendable>false</suspendable>
+        <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+    </JobDef>
+
+    <JobDef>
         <defName>BEWH_InducedFearJob</defName>
         <driverClass>Genes40k.JobDriver_FleeInducedFear</driverClass>
         <reportString>fleeing.</reportString>

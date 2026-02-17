@@ -7,6 +7,7 @@ namespace Genes40k;
 
 public class WorkerClass_ImplantLegionMaterial : Recipe_Surgery
 {
+    private GameComponent_MankindFinestUtils GameComp => Current.Game?.GetComponent<GameComponent_MankindFinestUtils>();
     public override bool AvailableOnNow(Thing thing, BodyPartRecord part = null)
     {
         if (!base.AvailableOnNow(thing, part) || thing is not Pawn pawn)
@@ -28,13 +29,10 @@ public class WorkerClass_ImplantLegionMaterial : Recipe_Surgery
         {
             return false;
         }
-        var sangprimus = (Building_SangprimusPortum)pawn.Map.listerThings.ThingsOfDef(Genes40kDefOf.BEWH_SangprimusPortum).FirstOrFallback();
+        
         var neededMaterial = recipe.GetModExtension<DefModExtension_LegionMaterialCreation>().requiredLegionMaterial;
-        if (sangprimus == null || (!sangprimus.SearchableContentsChapter.Any(thing1 => thing1.def == neededMaterial) && !sangprimus.SearchableContentsPrimarch.Any(thing1 => thing1.def == neededMaterial)))
-        {
-            return false;
-        }
-        return true;
+
+        return GameComp.HasMaterial(neededMaterial);
     }
 
     public override void ApplyOnPawn(Pawn pawn, BodyPartRecord part, Pawn billDoer, List<Thing> ingredients, Bill bill)

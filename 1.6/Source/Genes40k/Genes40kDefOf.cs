@@ -157,6 +157,7 @@ public static class Genes40kDefOf
     //JobDefs
     public static JobDef BEWH_CarryMatrixToGeneGestator;
     public static JobDef BEWH_CarryPrimarchEmbryoToVat;
+    public static JobDef BEWH_CarryMaterialToSangprimus;
     public static JobDef BEWH_InducedFearJob;
 
     //ThoughtDefs

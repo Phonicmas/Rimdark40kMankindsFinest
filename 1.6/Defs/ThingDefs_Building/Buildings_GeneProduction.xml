@@ -141,11 +141,6 @@
         <compClass>CompPowerTrader</compClass>
         <basePowerConsumption>1500</basePowerConsumption>
       </li>
-      <li Class="CompProperties_AffectedByFacilities">
-        <linkableFacilities>
-          <li>BEWH_SangprimusPortum</li>
-        </linkableFacilities>
-      </li>
       <li Class="CompProperties_Glower">
         <glowRadius>2</glowRadius>
         <glowColor>(255,255,255,0)</glowColor>

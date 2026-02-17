@@ -17,15 +17,9 @@ public static class ChapterMaterialCheckboxedPatch
             return;
         }
 
-        var maps = Find.Maps.Where(m => m.listerBuildings.ColonistsHaveBuilding(Genes40kDefOf.BEWH_SangprimusPortum));
-        var excludedMaterials = new List<ThingDef>();
-        foreach (var map in maps)
-        {
-            var building = (Building_SangprimusPortum)map.listerBuildings.AllBuildingsColonistOfDef(Genes40kDefOf.BEWH_SangprimusPortum).First();
-            excludedMaterials.AddRange(building.GetDirectlyHeldThings().Select(material => material.def));
-        }
+        var gameComp = Current.Game?.GetComponent<GameComponent_MankindFinestUtils>();
 
-        if (!excludedMaterials.Contains(materialExtra.def))
+        if (gameComp == null || !gameComp.HasMaterial(materialExtra.def))
         {
             return;
         }

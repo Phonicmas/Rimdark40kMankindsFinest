@@ -8,6 +8,7 @@ namespace Genes40k;
 
 public class WorkGiver_DoBillPsychic : WorkGiver_DoBill
 {
+    private GameComponent_MankindFinestUtils GameComp => Current.Game?.GetComponent<GameComponent_MankindFinestUtils>();
     public override Job JobOnThing(Pawn pawn, Thing thing, bool forced = false)
     {
         if (thing is not Building_GeneTable building_GeneTable)
@@ -36,9 +37,8 @@ public class WorkGiver_DoBillPsychic : WorkGiver_DoBill
             {
                 var defMod = bill.recipe.GetModExtension<DefModExtension_LegionMaterialCreation>();
                 var comp = building_GeneTable.GetComp<CompAffectedByFacilities>();
-                var sangprimus = (Building_SangprimusPortum)comp.LinkedFacilitiesListForReading.First(b => b is Building_SangprimusPortum);
 
-                if (!sangprimus.SearchableContentsChapter.Any(material => material.def == defMod.requiredLegionMaterial) && !sangprimus.SearchableContentsPrimarch.Any(material => material.def == defMod.requiredLegionMaterial))
+                if (!GameComp.HasMaterial(defMod.requiredLegionMaterial))
                 {
                     billAddPost.Add(bill);
                     JobFailReason.Is("BEWH.MankindsFinest.GeneManupulationTable.MissingLegionMaterial".Translate(bill.recipe.products.First().Label, defMod.requiredLegionMaterial.label), bill.Label);

@@ -39,9 +39,7 @@ public class Building_GeneGestator : Building
     [Unsaved(false)]
     private CompPowerTrader cachedPowerComp;
     private CompPowerTrader PowerTraderComp => cachedPowerComp ??= this.TryGetComp<CompPowerTrader>();
-    
-    private Building_SangprimusPortum NearbySangprimusPortum => (Building_SangprimusPortum)GetComp<CompAffectedByFacilities>()?.LinkedFacilitiesListForReading.FirstOrFallback(b => b is Building_SangprimusPortum);
-
+    private GameComponent_MankindFinestUtils GameComp => Current.Game?.GetComponent<GameComponent_MankindFinestUtils>();
     public void AddGeneMatrix(Thing geneMatrix)
     {
         var singleGeneMatrix = geneMatrix.stackCount > 1 ? geneMatrix.SplitOff(1) : geneMatrix;
@@ -223,45 +221,40 @@ public class Building_GeneGestator : Building
                 //SELECT PRIMARCH OR CHAPTER MATERIAL
                 if (CanUseAnyMaterial())
                 {
-                    if (NearbySangprimusPortum != null)
+                    var availableMaterial = new List<ThingDef>();
+                    string geneticType;
+
+                    Texture2D emptyMaterialIcon = null;
+                    if (containedMatrix.def.GetModExtension<DefModExtension_GeneMatrix>().canUsePrimarchMaterial)
                     {
-                        var sangprimus = NearbySangprimusPortum;
-                        var availableMaterial = new List<Thing>();
-                        string geneticType;
-
-                        Texture2D emptyMaterialIcon = null;
-                        if (containedMatrix.def.GetModExtension<DefModExtension_GeneMatrix>().canUsePrimarchMaterial)
-                        {
-                            availableMaterial.AddRange(sangprimus.SearchableContentsPrimarch.Where(x => x.def.HasModExtension<DefModExtension_PrimarchMaterial>()));
-                            geneticType = "BEWH.MankindsFinest.CommonKeywords.Primarch".Translate();
-                            emptyMaterialIcon = EmptyPrimarchMaterialIcon;
-                        }
-                        else
-                        {
-                            availableMaterial.AddRange(sangprimus.SearchableContentsChapter.Where(x => x.def.HasModExtension<DefModExtension_ChapterMaterial>()));
-                            geneticType = "BEWH.MankindsFinest.CommonKeywords.Chapter".Translate();
-                            emptyMaterialIcon = EmptyChapterMaterialIcon;
-                        }
+                        availableMaterial.AddRange(GameComp.UnlockedPrimarchMaterial);
+                        geneticType = "BEWH.MankindsFinest.CommonKeywords.Primarch".Translate();
+                        emptyMaterialIcon = EmptyPrimarchMaterialIcon;
+                    }
+                    else
+                    {
+                        availableMaterial.AddRange(GameComp.UnlockedChapterMaterial);
+                        geneticType = "BEWH.MankindsFinest.CommonKeywords.Chapter".Translate();
+                        emptyMaterialIcon = EmptyChapterMaterialIcon;
+                    }
                     
-                        var command_Action10 = new Command_Action();
-                        command_Action10.defaultLabel = "BEWH.MankindsFinest.GeneGestator.SelectXMaterial".Translate(geneticType);
-                        command_Action10.defaultDesc = "BEWH.MankindsFinest.GeneGestator.SelectXMaterialDesc".Translate(geneticType);
-
-                        command_Action10.icon = selectedMaterial == null ? emptyMaterialIcon : selectedMaterial.GetModExtension<DefModExtension_GeneFromMaterial>().addedGene.Icon;
-                       
-                        command_Action10.action = delegate
+                    var command_Action10 = new Command_Action
+                    {
+                        defaultLabel = "BEWH.MankindsFinest.GeneGestator.SelectXMaterial".Translate(geneticType),
+                        defaultDesc = "BEWH.MankindsFinest.GeneGestator.SelectXMaterialDesc".Translate(geneticType),
+                        icon = selectedMaterial == null ? emptyMaterialIcon : selectedMaterial.GetModExtension<DefModExtension_GeneFromMaterial>().addedGene.Icon,
+                        action = delegate
                         {
                             var list = new List<FloatMenuOption>();
                             foreach (var material in availableMaterial)
                             {
-                                if (selectedMaterial == material.def)
+                                if (selectedMaterial == material)
                                 {
                                     continue;
                                 }
-                                var text = material.Label;
-                                list.Add(new FloatMenuOption(text, delegate
+                                list.Add(new FloatMenuOption(material.LabelCap, delegate
                                 {
-                                    selectedMaterial = material.def;
+                                    selectedMaterial = material;
                                 }));
                             }
                             if (selectedMaterial != null)
@@ -273,9 +266,21 @@ public class Building_GeneGestator : Building
                                 list.Add(new FloatMenuOption("BEWH.MankindsFinest.GeneGestator.NoAvailableMaterial".Translate(), null));
                             }
                             Find.WindowStack.Add(new FloatMenu(list));
-                        };
-                        yield return command_Action10;
+                        }
+                    };
+
+                    if (!Map.listerBuildings.ColonistsHaveBuilding(Genes40kDefOf.BEWH_SangprimusPortum))
+                    {
+                        command_Action10.Disabled = true;
+                        command_Action10.disabledReason = "BEWH.MankindsFinest.GeneGestator.NoSangprimus".Translate();
                     }
+                    else if (!Map.listerBuildings.ColonistsHaveBuildingWithPowerOn(Genes40kDefOf.BEWH_SangprimusPortum))
+                    {
+                        command_Action10.Disabled = true;
+                        command_Action10.disabledReason = "BEWH.MankindsFinest.GeneGestator.NoPoweredSangprimus".Translate();
+                    }
+
+                    yield return command_Action10;
                 }
                 
                 //STARTS MACHINE
@@ -287,18 +292,17 @@ public class Building_GeneGestator : Building
                     activateSound = SoundDefOf.Designate_Cancel,
                     action = delegate
                     {
-                        if (selectedMaterial == null && CanUseAnyMaterial() && NearbySangprimusPortum != null)
+                        if (selectedMaterial == null && CanUseAnyMaterial())
                         {
-                            var sangprimus = NearbySangprimusPortum;
                             var availableMaterialAmount = 0;
                             
                             if (containedMatrix.def.GetModExtension<DefModExtension_GeneMatrix>().canUsePrimarchMaterial)
                             {
-                                availableMaterialAmount += sangprimus.SearchableContentsPrimarch.Count(x => x.def.HasModExtension<DefModExtension_PrimarchMaterial>());
+                                availableMaterialAmount += GameComp.UnlockedPrimarchMaterial.Count;
                             }
                             else
                             {
-                                availableMaterialAmount += sangprimus.SearchableContentsChapter.Count(x => x.def.HasModExtension<DefModExtension_ChapterMaterial>());
+                                availableMaterialAmount += GameComp.UnlockedChapterMaterial.Count;
                             }
 
                             if (availableMaterialAmount > 0)

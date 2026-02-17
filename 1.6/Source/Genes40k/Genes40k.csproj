@@ -140,6 +140,7 @@
     <Compile Include="ConditionalStatAffecters\ConditionalStatAffecter_WarpShield.cs" />
     <Compile Include="Debug\DebugActions.cs" />
     <Compile Include="DefModExtensions\AbilityExtension_PsyfocusCost.cs" />
+    <Compile Include="DefModExtensions\DefModExtension_BaseMaterial.cs" />
     <Compile Include="DefModExtensions\DefModExtension_OrganDecayResistance.cs" />
     <Compile Include="DefModExtensions\DefModExtension_PlaceBanner.cs" />
     <Compile Include="DefModExtensions\DefModExtension_ShoulderFlippedData.cs" />
@@ -247,6 +248,7 @@
     <Compile Include="Windows\Dialog_ViewGenesEmbryo.cs" />
     <Compile Include="Windows\ITab_ContentsGeneticStorage.cs" />
     <Compile Include="Windows\ITab_SangprimusPortum.cs" />
+    <Compile Include="Workers\JobDriver\JobDriver_CarryMaterialToSangprimus.cs" />
     <Compile Include="Workers\JobDriver\JobDriver_CarryMatrixToGeneGestator.cs" />
     <Compile Include="Workers\JobDriver\JobDriver_CarryPrimarchEmbryoToVat.cs" />
     <Compile Include="Workers\JobDriver\JobDriver_FleeInducedFear.cs" />

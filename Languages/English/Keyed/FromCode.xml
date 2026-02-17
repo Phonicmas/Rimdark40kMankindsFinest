@@ -111,6 +111,9 @@
 
   <BEWH.MankindsFinest.GeneGestator.NoGeneMaterialSelectedProceed>No gene material have been selected, but you have available material.\nProceed?</BEWH.MankindsFinest.GeneGestator.NoGeneMaterialSelectedProceed>
 
+  <BEWH.MankindsFinest.GeneGestator.NoSangprimus>No Sangprimus on map</BEWH.MankindsFinest.GeneGestator.NoSangprimus>
+  <BEWH.MankindsFinest.GeneGestator.NoPoweredSangprimus>no powered Sangprimus on map</BEWH.MankindsFinest.GeneGestator.NoPoweredSangprimus>
+
   <!-- Primarch Growth Vat -->
   <BEWH.MankindsFinest.PrimarchGrowthVat.StartPrimarchGrowth>Start primarch growth</BEWH.MankindsFinest.PrimarchGrowthVat.StartPrimarchGrowth>
   <BEWH.MankindsFinest.PrimarchGrowthVat.StartPrimarchGrowthDesc>Starts the primarch growth process, once started it cannot be stopped.</BEWH.MankindsFinest.PrimarchGrowthVat.StartPrimarchGrowthDesc>

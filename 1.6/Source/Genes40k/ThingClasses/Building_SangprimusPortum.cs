@@ -9,73 +9,26 @@ namespace Genes40k;
 public class Building_SangprimusPortum : Building, IThingHolder
 {
     private ThingOwner innerContainer;
-        
-    public List<Thing> SearchableContentsChapter => innerContainer.Where(thing => thing.def.HasModExtension<DefModExtension_ChapterMaterial>()).ToList();
-        
-    public List<Thing> SearchableContentsPrimarch => innerContainer.Where(thing => thing.def.HasModExtension<DefModExtension_PrimarchMaterial>()).ToList();
 
-    private List<ThingDef> allChapterMaterials;
-        
-    private List<ThingDef> allPrimarchMaterials;
-
-    private SortedList<int, (ThingDef chapter, ThingDef primarch)> allMaterialsPaired;
-        
-    public SortedList<int, (ThingDef chapter, ThingDef primarch)> AllMaterialsPaired
-    {
-        get
-        {
-            if (allChapterMaterials == null)
-            {
-                UpdateMaterialList();
-            }
-
-            return allMaterialsPaired;
-        }
-    }
-        
+    private GameComponent_MankindFinestUtils GameComp => Current.Game?.GetComponent<GameComponent_MankindFinestUtils>();
+    private bool gameCompChangeDone = false;
+    
     public Building_SangprimusPortum()
     {
         innerContainer = new ThingOwner<Thing>(this);
-        UpdateMaterialList();
-    }
-    
-    private void UpdateMaterialList()
-    {
-        var tempList = DefDatabase<ThingDef>.AllDefs.Where(thingDef => thingDef.HasModExtension<DefModExtension_PrimarchMaterial>() || thingDef.HasModExtension<DefModExtension_ChapterMaterial>()).ToList();
-            
-        allPrimarchMaterials = tempList.Where(thingDef => thingDef.HasModExtension<DefModExtension_PrimarchMaterial>()).ToList();
-        allChapterMaterials = tempList.Where(thingDef => thingDef.HasModExtension<DefModExtension_ChapterMaterial>()).ToList();
-            
-        allMaterialsPaired = new SortedList<int, (ThingDef, ThingDef)>();
-            
-        foreach (var chapterMaterial in allChapterMaterials)
-        {
-            var orderInt = chapterMaterial.GetModExtension<DefModExtension_ChapterMaterial>().orderInt;
-            if (AllMaterialsPaired.ContainsKey(orderInt))
-            {
-                continue;
-            }
-            var primarchMaterial = allPrimarchMaterials.Find(g => g.GetModExtension<DefModExtension_PrimarchMaterial>().orderInt == orderInt);
-            AllMaterialsPaired.Add(orderInt, (chapterMaterial, primarchMaterial));
-        }
-            
-        foreach (var primarchMaterial in allPrimarchMaterials)
-        {
-            var orderInt = primarchMaterial.GetModExtension<DefModExtension_PrimarchMaterial>().orderInt;
-            if (AllMaterialsPaired.ContainsKey(orderInt))
-            {
-                continue;
-            }
-            var chapterMaterial = allChapterMaterials.Find(g => g.GetModExtension<DefModExtension_ChapterMaterial>().orderInt == orderInt);
-            AllMaterialsPaired.Add(orderInt, (chapterMaterial, primarchMaterial));
-        }
     }
 
     public bool CanAcceptMaterial(Thing thing)
     {
-        return innerContainer.All(x => x.def != thing.def);
+        return !GameComp.HasMaterial(thing.def);
     }
 
+    public void AddMaterial(Thing thing)
+    {
+        GameComp.UnlockMaterial(thing.def);
+        thing.Destroy();
+    }
+    
     public void GetChildHolders(List<IThingHolder> outChildren)
     {
         ThingOwnerUtility.AppendThingHoldersFromThings(outChildren, GetDirectlyHeldThings());
@@ -83,21 +36,23 @@ public class Building_SangprimusPortum : Building, IThingHolder
 
     public ThingOwner GetDirectlyHeldThings() => innerContainer;
 
-    public override void DeSpawn(DestroyMode mode = DestroyMode.Vanish)
-    {
-        if (mode == DestroyMode.Deconstruct)
-        {
-            foreach (var thing in innerContainer)
-            {
-                GenPlace.TryPlaceThing(thing, InteractionCell, Map, ThingPlaceMode.Near);
-            }
-        }
-        
-        base.DeSpawn(mode);
-    }
     public override void ExposeData()
     {
         base.ExposeData();
         Scribe_Deep.Look(ref innerContainer, "innerContainer", this);
+        Scribe_Values.Look(ref gameCompChangeDone, "gameCompChangeDone");
+        
+        if (Scribe.mode == LoadSaveMode.PostLoadInit && !gameCompChangeDone)
+        {
+            if (innerContainer != null)
+            {
+                foreach (var thing in innerContainer)
+                {
+                    GameComp.UnlockMaterial(thing.def); 
+                }
+            }
+            innerContainer = new ThingOwner<Thing>(this);
+            gameCompChangeDone = true;
+        }
     }
 }

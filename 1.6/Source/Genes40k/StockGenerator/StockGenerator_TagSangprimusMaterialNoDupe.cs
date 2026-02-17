@@ -19,17 +19,11 @@ public class StockGenerator_TagSangprimusMaterialNoDupe : StockGenerator
     {
         var generatedDefs = new List<ThingDef>();
         var numThingDefsToUse = thingDefCountRange.RandomInRange;
-        var maps = Find.Maps.Where(m => m.listerBuildings.ColonistsHaveBuilding(Genes40kDefOf.BEWH_SangprimusPortum));
-        var excludedMaterials = new List<ThingDef>();
-        //In case it is ever a problem; count amount of maps with a sangprimus then make that the limit of the amount of materials
-        foreach (var map in maps)
-        {
-            var building = (Building_SangprimusPortum)map.listerBuildings.AllBuildingsColonistOfDef(Genes40kDefOf.BEWH_SangprimusPortum).First();
-            excludedMaterials.AddRange(building.GetDirectlyHeldThings().Select(material => material.def));
-        }
+        var gameComp = Current.Game.GetComponent<GameComponent_MankindFinestUtils>();
+
         for (var i = 0; i < numThingDefsToUse; i++)
         {
-            if (!DefDatabase<ThingDef>.AllDefs.Where(d => HandlesThingDef(d) && d.tradeability.TraderCanSell() && d.PlayerAcquirable && !excludedMaterials.Contains(d) && (excludedThingDefs == null || !excludedThingDefs.Contains(d)) && !generatedDefs.Contains(d)).TryRandomElementByWeight(SelectionWeight, out var chosenThingDef))
+            if (!DefDatabase<ThingDef>.AllDefs.Where(d => HandlesThingDef(d) && d.tradeability.TraderCanSell() && d.PlayerAcquirable && !gameComp.HasMaterial(d) && (excludedThingDefs == null || !excludedThingDefs.Contains(d)) && !generatedDefs.Contains(d)).TryRandomElementByWeight(SelectionWeight, out var chosenThingDef))
             {
                 break;
             }

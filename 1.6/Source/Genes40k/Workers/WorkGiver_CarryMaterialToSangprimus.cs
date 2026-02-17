@@ -62,7 +62,7 @@ public class WorkGiver_CarryMaterialToSangprimus : WorkGiver_Scanner
 
         if (thingToCarry != null)
         {
-            var job = HaulAIUtility.HaulToContainerJob(pawn, thingToCarry, building_SangprimusPortum);
+            var job = JobMaker.MakeJob(Genes40kDefOf.BEWH_CarryMaterialToSangprimus, building_SangprimusPortum, thingToCarry);
             job.count = 1;
             return job;
         }

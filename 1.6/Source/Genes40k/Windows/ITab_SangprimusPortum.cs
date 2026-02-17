@@ -8,13 +8,10 @@ namespace Genes40k;
 
 public class ITab_SangprimusPortum : ITab
 {
-	private List<Thing> Container => SangprimusPortum.GetDirectlyHeldThings().ToList();
-
-	private SortedList<int, (ThingDef chapter, ThingDef primarch)> AllMaterials => SangprimusPortum.AllMaterialsPaired;
+	private GameComponent_MankindFinestUtils GameComp => Current.Game?.GetComponent<GameComponent_MankindFinestUtils>();
+	private SortedList<int, (ThingDef chapter, ThingDef primarch)> AllMaterials => GameComp.AllMaterialsPaired;
 
 	public override bool IsVisible => SelThing != null && base.IsVisible;
-
-	private Building_SangprimusPortum SangprimusPortum => SelThing as Building_SangprimusPortum;
 
 	private static readonly Color ThingLabelColor = ITab_Pawn_Gear.ThingLabelColor;
         
@@ -101,7 +98,7 @@ public class ITab_SangprimusPortum : ITab
 	{
 		var height = 28f;
 		var rect = new Rect(0f + xOffset, curY, width, height);
-		var acquired = Container.Any(t => t.def == thingDef);
+		var acquired = GameComp.HasMaterial(thingDef);
 		if (acquired)
 		{
 			GUI.color = ThingHighlightColor;
