@@ -103,8 +103,8 @@
         <basePowerConsumption>500</basePowerConsumption>
       </li>
       <li Class="CompProperties_Facility">
-        <maxSimultaneous>5</maxSimultaneous>
-        <maxDistance>20</maxDistance>
+        <maxSimultaneous>0</maxSimultaneous>
+        <maxDistance>0</maxDistance>
       </li>
     </comps>
     <modExtensions>
