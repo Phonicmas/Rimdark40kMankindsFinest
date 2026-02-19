@@ -18,6 +18,24 @@ public class GeneseedVial : ThingWithComps
 
     public GeneDef extraGeneFromMaterial = null;
 
+    public string newGeneseedVialTexture = null;
+
+    [Unsaved]
+    private Graphic cachednewGeneseedVialTexture;
+    private Graphic NewGeneseedVialTexture => cachednewGeneseedVialTexture ??= GraphicDatabase.Get<Graphic_Single>(newGeneseedVialTexture, def.graphicData.shaderType.Shader);
+
+    public override Graphic Graphic
+    {
+        get
+        {
+            var graphic = DefaultGraphic.GetCopy(def.graphicData.drawSize, null);
+                
+            graphic.drawSize = !invisible ? def.graphicData.drawSize : Vector2.zero;
+                
+            return newGeneseedVialTexture != null ? NewGeneseedVialTexture : DefaultGraphic;;
+        }
+    }
+    
     private bool invisible = false;
         
     private static readonly CachedTexture GeneticInfoTex = new CachedTexture("UI/Gizmos/ViewGenes");
@@ -74,18 +92,6 @@ public class GeneseedVial : ThingWithComps
     public void ChangeVisibility(bool newValue)
     {
         invisible = newValue;
-    }
-        
-    public override Graphic Graphic
-    {
-        get
-        {
-            var graphic = DefaultGraphic.GetCopy(def.graphicData.drawSize, null);
-                
-            graphic.drawSize = !invisible ? def.graphicData.drawSize : Vector2.zero;
-                
-            return graphic;
-        }
     }
 
     public void Initialize()
@@ -184,6 +190,7 @@ public class GeneseedVial : ThingWithComps
         Scribe_Defs.Look(ref xenotype, "xenotype");
         Scribe_Defs.Look(ref iconDef, "iconDef");
         Scribe_Defs.Look(ref extraGeneFromMaterial, "extraGeneFromMaterial");
+        Scribe_Values.Look(ref newGeneseedVialTexture, "newGeneseedVialTexture");
         Scribe_Deep.Look(ref geneSet, "geneSet");
         Scribe_Values.Look(ref invisible, "invisible");
             
