@@ -11,6 +11,7 @@
             <li>BEWH_MkVIIPowerArmor</li>
         </appliesTo>
         <shaderType>BEWH_CutoutThreeColor</shaderType>
+        <colorAmount>3</colorAmount>
         <sortOrder>1</sortOrder>
         <maskExtraFlags>
             <li>HasShoulder</li>
@@ -26,6 +27,7 @@
             <li>BEWH_MkVIIPowerArmor</li>
         </appliesTo>
         <shaderType>BEWH_CutoutThreeColor</shaderType>
+        <colorAmount>3</colorAmount>
         <sortOrder>2</sortOrder>
         <maskExtraFlags>
             <li>HasShoulder</li>
@@ -43,6 +45,7 @@
             <li>BEWH_MkVIIPowerArmor</li>
         </appliesTo>
         <shaderType>BEWH_CutoutThreeColor</shaderType>
+        <colorAmount>3</colorAmount>
         <sortOrder>3</sortOrder>
         <maskExtraFlags>
             <li>HasShoulder</li>
@@ -62,6 +65,7 @@
             <li>BEWH_MkXPowerArmor</li>
         </appliesTo>
         <shaderType>BEWH_CutoutThreeColor</shaderType>
+        <colorAmount>3</colorAmount>
         <sortOrder>1</sortOrder>
         <maskExtraFlags>
             <li>HasShoulder</li>
@@ -77,6 +81,7 @@
             <li>BEWH_MkXPowerArmor</li>
         </appliesTo>
         <shaderType>BEWH_CutoutThreeColor</shaderType>
+        <colorAmount>3</colorAmount>
         <sortOrder>2</sortOrder>
         <maskExtraFlags>
             <li>HasShoulder</li>
@@ -94,6 +99,7 @@
             <li>BEWH_MkXPowerArmor</li>
         </appliesTo>
         <shaderType>BEWH_CutoutThreeColor</shaderType>
+        <colorAmount>3</colorAmount>
         <sortOrder>3</sortOrder>
         <maskExtraFlags>
             <li>HasShoulder</li>

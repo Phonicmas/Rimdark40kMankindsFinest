@@ -258,6 +258,8 @@
                 <dropPodAmount>3</dropPodAmount>
                 <marinesToSpawn>4</marinesToSpawn>
                 <fromFaction>BEWH_OffworldMarinesFaction</fromFaction>
+                <innerThing>BEWH_SteelRainDropPodBuilding</innerThing>
+                <skyFaller>BEWH_SteelRainDropPodSkyfaller</skyFaller>
             </li>
         </modExtensions>
     </VEF.Abilities.AbilityDef>
@@ -281,6 +283,8 @@
                 <dropPodAmount>2</dropPodAmount>
                 <marinesToSpawn>4</marinesToSpawn>
                 <fromFaction>BEWH_OffworldMarinesFaction</fromFaction>
+                <innerThing>BEWH_SteelRainDropPodBuilding</innerThing>
+                <skyFaller>BEWH_SteelRainDropPodSkyfaller</skyFaller>
             </li>
         </modExtensions>
     </VEF.Abilities.AbilityDef>
@@ -304,6 +308,8 @@
                 <dropPodAmount>1</dropPodAmount>
                 <marinesToSpawn>4</marinesToSpawn>
                 <fromFaction>BEWH_OffworldMarinesFaction</fromFaction>
+                <innerThing>BEWH_SteelRainDropPodBuilding</innerThing>
+                <skyFaller>BEWH_SteelRainDropPodSkyfaller</skyFaller>
             </li>
         </modExtensions>
     </VEF.Abilities.AbilityDef>

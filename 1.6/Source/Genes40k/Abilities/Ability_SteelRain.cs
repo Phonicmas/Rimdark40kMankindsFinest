@@ -54,8 +54,8 @@ public class Ability_SteelRain : VEF.Abilities.Ability
             SpawnSkyfaller(cellsToSpawn);
         }
     }
-        
-    private void SpawnSkyfaller(List<IntVec3> cellsToSpawn)
+
+    protected virtual void SpawnSkyfaller(List<IntVec3> cellsToSpawn)
     {
         if (defMod.fromFaction == null)
         {
@@ -65,7 +65,7 @@ public class Ability_SteelRain : VEF.Abilities.Ability
         var faction = Find.FactionManager.FirstFactionOfDef(defMod.fromFaction);
         foreach (var cell in cellsToSpawn)
         {
-            var innerThing = (Building_DropDrop)ThingMaker.MakeThing(Genes40kDefOf.BEWH_SteelRainDropPodBuilding);
+            var innerThing = (Building_DropDrop)ThingMaker.MakeThing(defMod.innerThing);
                 
             innerThing.SetFactionDirect(faction);
                 
@@ -104,7 +104,7 @@ public class Ability_SteelRain : VEF.Abilities.Ability
             {
                 Faction.OfPlayer.TryAffectGoodwillWith(offworldMarine, Math.Abs(goodwill), canSendMessage: false, canSendHostilityLetter: false, HistoryEventDefOf.PeaceTalksSuccess);
             }
-            var skyfaller = SkyfallerMaker.SpawnSkyfaller(Genes40kDefOf.BEWH_SteelRainDropPodSkyfaller, innerThing, cell, pawn.Map);
+            var skyfaller = SkyfallerMaker.SpawnSkyfaller(defMod.skyFaller, innerThing, cell, pawn.Map);
             skyfaller.DrawColor = drawColor;
         }
     }

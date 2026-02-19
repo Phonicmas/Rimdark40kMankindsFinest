@@ -10,6 +10,7 @@
             <li>BEWH_MkVIIPowerArmorHelmet</li>
         </appliesTo>
         <shaderType>BEWH_CutoutThreeColor</shaderType>
+        <colorAmount>3</colorAmount>
         <sortOrder>1</sortOrder>
     </Core40k.MaskDef>
 
@@ -22,6 +23,7 @@
             <li>BEWH_MkVIIPowerArmorHelmet</li>
         </appliesTo>
         <shaderType>BEWH_CutoutThreeColor</shaderType>
+        <colorAmount>3</colorAmount>
         <sortOrder>2</sortOrder>
     </Core40k.MaskDef>
 
@@ -34,6 +36,7 @@
             <li>BEWH_MkVIIPowerArmorHelmet</li>
         </appliesTo>
         <shaderType>BEWH_CutoutThreeColor</shaderType>
+        <colorAmount>3</colorAmount>
         <sortOrder>3</sortOrder>
     </Core40k.MaskDef>
 
@@ -47,6 +50,7 @@
             <li>BEWH_MkXPowerArmorHelmet</li>
         </appliesTo>
         <shaderType>BEWH_CutoutThreeColor</shaderType>
+        <colorAmount>3</colorAmount>
         <sortOrder>1</sortOrder>
     </Core40k.MaskDef>
 
@@ -59,6 +63,7 @@
             <li>BEWH_MkXPowerArmorHelmet</li>
         </appliesTo>
         <shaderType>BEWH_CutoutThreeColor</shaderType>
+        <colorAmount>3</colorAmount>
         <sortOrder>2</sortOrder>
     </Core40k.MaskDef>
 
@@ -71,6 +76,7 @@
             <li>BEWH_MkXPowerArmorHelmet</li>
         </appliesTo>
         <shaderType>BEWH_CutoutThreeColor</shaderType>
+        <colorAmount>3</colorAmount>
         <sortOrder>3</sortOrder>
     </Core40k.MaskDef>
 

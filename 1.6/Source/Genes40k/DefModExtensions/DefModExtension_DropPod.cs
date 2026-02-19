@@ -20,4 +20,8 @@ public class DefModExtension_DropPod : DefModExtension
     public string openGraphicMask;
         
     public SoundDef openSound;
+
+    public ThingDef skyFaller;
+
+    public ThingDef innerThing;
 }

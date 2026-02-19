@@ -149,36 +149,4 @@
     </comps>
   </ThingDef>
 
-  <!--<ThingDef ParentName="SkyfallerBase">
-    <defName>BEWH_SteelRainDropPodLeaving</defName>
-    <label>astartes drop pod (leaving)</label>
-    <size>(1, 1)</size>
-    <graphicData>
-      <texPath>Things/Building/DropPod/BEWH_DropPod_Closed</texPath>
-      <maskPath>Things/Building/DropPod/BEWH_DropPod_Closed_m</maskPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>CutoutComplex</shaderType>
-      <drawSize>(10, 10)</drawSize>
-    </graphicData>
-    <skyfaller>
-      <shadowSize>(3, 3)</shadowSize>
-      <shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>
-      <anticipationSound>DropPod_Leaving</anticipationSound>
-      <anticipationSoundTicks>-10</anticipationSoundTicks>
-
-      <movementType>Decelerate</movementType>
-      <reversed>true</reversed>
-
-      <ticksToImpactRange>
-        <min>-40</min>
-        <max>-15</max>
-      </ticksToImpactRange>
-    </skyfaller>
-    <comps>
-      <li>
-        <compClass>CompColorable</compClass>
-      </li>
-    </comps>
-  </ThingDef>-->
-
 </Defs>
