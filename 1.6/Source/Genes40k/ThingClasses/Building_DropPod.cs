@@ -11,13 +11,13 @@ namespace Genes40k;
 [StaticConstructorOnStartup]
 public class Building_DropDrop : Building_TurretGun
 {
-    private bool hasSpawnedMarines = false;
+    private bool hasDoneThing;
 
-    private Lord lord = null;
+    private Lord lord;
 
     private const string LeaveSignal = "BEWH_SpaceMarineHelpEnd";
 
-    public List<Pawn> MarinesToSpawn = new List<Pawn>();
+    public List<Pawn> marinesToSpawn = [];
 
     [Unsaved]
     private Graphic cachedOpenGraphic;
@@ -26,34 +26,39 @@ public class Building_DropDrop : Building_TurretGun
         cachedOpenGraphic ??= GraphicDatabase.Get<Graphic_Single>(def.GetModExtension<DefModExtension_DropPod>().openGraphic, def.graphicData.shaderType.Shader,
             def.graphicData.drawSize, DrawColor, Color.white, DefaultGraphic.data, def.GetModExtension<DefModExtension_DropPod>().openGraphicMask);
         
-    public override Graphic Graphic => hasSpawnedMarines ? OpenGraphic : DefaultGraphic;
+    public override Graphic Graphic => hasDoneThing ? OpenGraphic : DefaultGraphic;
 
     protected override void TickInterval(int delta)
     {
         base.TickInterval(delta);
-        if (hasSpawnedMarines || !Spawned || Map == null || !this.IsHashIntervalTick(125, delta))
+        if (hasDoneThing || !Spawned || Map == null || !this.IsHashIntervalTick(125, delta))
         {
             return;
         }
+        
+        hasDoneThing = true;
 
-        hasSpawnedMarines = true;
-            
+        OnDropPodOpen();
+    }
+
+    protected virtual void OnDropPodOpen()
+    {
         var positions = new List<Vector3>
         {
-            new Vector3(1, 0, 0),
-            new Vector3(-1, 0, 0),
-            new Vector3(0, 0, 1),
-            new Vector3(0, 0, -1)
+            new(1, 0, 0),
+            new(-1, 0, 0),
+            new(0, 0, 1),
+            new(0, 0, -1)
         };
 
         var pawns = new List<Pawn>();
             
         def.GetModExtension<DefModExtension_DropPod>().openSound.PlayOneShot(new TargetInfo(Position, Map));
 
-        for (var i = 0; i < MarinesToSpawn.Count; i++)
+        for (var i = 0; i < marinesToSpawn.Count; i++)
         {
             var actualPosition = Position;
-            if (i+1 < MarinesToSpawn.Count)
+            if (i+1 < marinesToSpawn.Count)
             {
                 actualPosition += positions[i].ToIntVec3();
             }
@@ -63,16 +68,16 @@ public class Building_DropDrop : Building_TurretGun
             }
 
             FleckMaker.ThrowDustPuff(actualPosition, Map, 1f);
-            GenSpawn.Spawn(MarinesToSpawn[i], actualPosition, Map);
+            GenSpawn.Spawn(marinesToSpawn[i], actualPosition, Map);
                 
-            pawns.Add(MarinesToSpawn[i]);
+            pawns.Add(marinesToSpawn[i]);
         }
             
         var lordJob = new LordJob_AssistColony(Faction, Position + positions.First().ToIntVec3());
         lord = LordMaker.MakeNewLord(Faction, lordJob, Map, pawns);
         lord.inSignalLeave = LeaveSignal;
     }
-
+    
     public override void Destroy(DestroyMode mode = DestroyMode.Vanish)
     {
         lord?.Notify_SignalReceived(new Signal(LeaveSignal));
@@ -82,8 +87,8 @@ public class Building_DropDrop : Building_TurretGun
     public override void ExposeData()
     {
         base.ExposeData();
-        Scribe_Values.Look(ref hasSpawnedMarines, "hasSpawnedMarines");
-        Scribe_Collections.Look(ref MarinesToSpawn, "MarinesToSpawn");
+        Scribe_Values.Look(ref hasDoneThing, "hasSpawnedMarines");
+        Scribe_Collections.Look(ref marinesToSpawn, "MarinesToSpawn");
         Scribe_References.Look(ref lord, "lord");
     }
 }

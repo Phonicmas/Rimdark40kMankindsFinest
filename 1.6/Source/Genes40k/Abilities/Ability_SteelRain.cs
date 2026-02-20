@@ -96,7 +96,7 @@ public class Ability_SteelRain : VEF.Abilities.Ability
             }
             
             innerThing.DrawColor = drawColor;
-            innerThing.MarinesToSpawn = pawnsToSpawn;
+            innerThing.marinesToSpawn = pawnsToSpawn;
             
             var offworldMarine = Find.FactionManager.FirstFactionOfDef(Genes40kDefOf.BEWH_OffworldMarinesFaction);
             var goodwill = offworldMarine.PlayerGoodwill;
