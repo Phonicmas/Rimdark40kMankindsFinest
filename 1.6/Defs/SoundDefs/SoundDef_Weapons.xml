@@ -140,7 +140,7 @@
 						<clipFolderPath>PowerswordAttack</clipFolderPath>
 					</li>
 				</grains>
-				<volumeRange>30~33</volumeRange>
+				<volumeRange>20</volumeRange>
 				<pitchRange>0.8~1.15</pitchRange>
 			</li>
 		</subSounds>
