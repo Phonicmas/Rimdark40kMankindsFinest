@@ -39,7 +39,7 @@ public class Building_GeneGestator : Building
     [Unsaved(false)]
     private CompPowerTrader cachedPowerComp;
     private CompPowerTrader PowerTraderComp => cachedPowerComp ??= this.TryGetComp<CompPowerTrader>();
-    private GameComponent_MankindFinestUtils GameComp => Current.Game?.GetComponent<GameComponent_MankindFinestUtils>();
+    private GameComponent_UnlockedMaterials GameComp => Current.Game?.GetComponent<GameComponent_UnlockedMaterials>();
     public void AddGeneMatrix(Thing geneMatrix)
     {
         var singleGeneMatrix = geneMatrix.stackCount > 1 ? geneMatrix.SplitOff(1) : geneMatrix;

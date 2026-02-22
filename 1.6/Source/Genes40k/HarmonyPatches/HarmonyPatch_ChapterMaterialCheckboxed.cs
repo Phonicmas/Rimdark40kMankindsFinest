@@ -17,7 +17,7 @@ public static class ChapterMaterialCheckboxedPatch
             return;
         }
 
-        var gameComp = Current.Game?.GetComponent<GameComponent_MankindFinestUtils>();
+        var gameComp = Current.Game?.GetComponent<GameComponent_UnlockedMaterials>();
 
         if (gameComp == null || !gameComp.HasMaterial(materialExtra.def))
         {

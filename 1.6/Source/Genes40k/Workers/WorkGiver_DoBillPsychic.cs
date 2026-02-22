@@ -8,7 +8,7 @@ namespace Genes40k;
 
 public class WorkGiver_DoBillPsychic : WorkGiver_DoBill
 {
-    private GameComponent_MankindFinestUtils GameComp => Current.Game?.GetComponent<GameComponent_MankindFinestUtils>();
+    private GameComponent_UnlockedMaterials GameComp => Current.Game?.GetComponent<GameComponent_UnlockedMaterials>();
     public override Job JobOnThing(Pawn pawn, Thing thing, bool forced = false)
     {
         if (thing is not Building_GeneTable building_GeneTable)
@@ -36,7 +36,6 @@ public class WorkGiver_DoBillPsychic : WorkGiver_DoBill
             if (bill.recipe.HasModExtension<DefModExtension_LegionMaterialCreation>())
             {
                 var defMod = bill.recipe.GetModExtension<DefModExtension_LegionMaterialCreation>();
-                var comp = building_GeneTable.GetComp<CompAffectedByFacilities>();
 
                 if (!GameComp.HasMaterial(defMod.requiredLegionMaterial))
                 {

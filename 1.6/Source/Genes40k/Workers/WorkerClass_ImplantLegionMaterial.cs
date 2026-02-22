@@ -7,7 +7,7 @@ namespace Genes40k;
 
 public class WorkerClass_ImplantLegionMaterial : Recipe_Surgery
 {
-    private GameComponent_MankindFinestUtils GameComp => Current.Game?.GetComponent<GameComponent_MankindFinestUtils>();
+    private GameComponent_UnlockedMaterials GameComp => Current.Game?.GetComponent<GameComponent_UnlockedMaterials>();
     public override bool AvailableOnNow(Thing thing, BodyPartRecord part = null)
     {
         if (!base.AvailableOnNow(thing, part) || thing is not Pawn pawn)

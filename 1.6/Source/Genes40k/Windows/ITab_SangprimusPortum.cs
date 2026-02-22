@@ -8,7 +8,7 @@ namespace Genes40k;
 
 public class ITab_SangprimusPortum : ITab
 {
-	private GameComponent_MankindFinestUtils GameComp => Current.Game?.GetComponent<GameComponent_MankindFinestUtils>();
+	private GameComponent_UnlockedMaterials GameComp => Current.Game?.GetComponent<GameComponent_UnlockedMaterials>();
 	private SortedList<int, (ThingDef chapter, ThingDef primarch)> AllMaterials => GameComp.AllMaterialsPaired;
 
 	public override bool IsVisible => SelThing != null && base.IsVisible;

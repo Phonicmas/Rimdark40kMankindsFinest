@@ -102,6 +102,7 @@
     <Compile Include="Comps\Comp_LifespanDropItem.cs" />
     <Compile Include="Comps\GameComponent_MankindFinestUtils.cs" />
     <Compile Include="Comps\GameComponent_Perpetual.cs" />
+    <Compile Include="Comps\GameComponent_UnlockedMaterials.cs" />
     <Compile Include="Comps\LivingSaint\CompAbilityEffect_DivineGraceCost.cs" />
     <Compile Include="Comps\LivingSaint\CompAbilityEffect_ProofOfFaith.cs" />
     <Compile Include="Comps\LivingSaint\CompProperties_AbilityDivineGraceCost.cs" />

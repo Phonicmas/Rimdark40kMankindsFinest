@@ -19,7 +19,7 @@ public class StockGenerator_TagSangprimusMaterialNoDupe : StockGenerator
     {
         var generatedDefs = new List<ThingDef>();
         var numThingDefsToUse = thingDefCountRange.RandomInRange;
-        var gameComp = Current.Game.GetComponent<GameComponent_MankindFinestUtils>();
+        var gameComp = Current.Game.GetComponent<GameComponent_UnlockedMaterials>();
 
         for (var i = 0; i < numThingDefsToUse; i++)
         {
