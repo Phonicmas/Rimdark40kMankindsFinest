@@ -28,11 +28,11 @@ public class GeneseedVial : ThingWithComps
     {
         get
         {
-            var graphic = DefaultGraphic.GetCopy(def.graphicData.drawSize, null);
+            var graphic = (newGeneseedVialTexture != null ? NewGeneseedVialTexture : DefaultGraphic).GetCopy(def.graphicData.drawSize, null);
                 
             graphic.drawSize = !invisible ? def.graphicData.drawSize : Vector2.zero;
-                
-            return newGeneseedVialTexture != null ? NewGeneseedVialTexture : DefaultGraphic;;
+
+            return graphic;
         }
     }
     
