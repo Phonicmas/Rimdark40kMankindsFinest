@@ -11,7 +11,7 @@ namespace Genes40k;
 
 public class Ability_SteelRain : VEF.Abilities.Ability
 {
-    private DefModExtension_DropPod defMod = null;
+    protected DefModExtension_DropPod defMod = null;
 
     public override bool CanHitTarget(LocalTargetInfo target, bool sightCheck)
     {

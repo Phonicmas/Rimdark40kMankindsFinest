@@ -4,9 +4,9 @@ namespace Genes40k;
 
 public class Gene_EternalWatch : Gene_WarpShield
 {
-    public MentalBreakDef mentalBreak;
+    private MentalBreakDef mentalBreak;
 
-    public MentalStateDef stateDef;
+    private MentalStateDef stateDef;
 
     private string reason;
 

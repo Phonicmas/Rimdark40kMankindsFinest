@@ -42,5 +42,6 @@ public class WorkerClass_RubiconPrimaris : Recipe_Surgery
             pawn.genes.AddGene(gene, true);
         }
         pawn.genes.SetXenotypeDirect(Genes40kDefOf.BEWH_PrimarisSpaceMarine);
+        pawn.genes.iconDef = Genes40kDefOf.BEWH_PrimarisIcon;
     }
 }

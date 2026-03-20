@@ -9,7 +9,7 @@ namespace Genes40k;
 public class ITab_SangprimusPortum : ITab
 {
 	private GameComponent_UnlockedMaterials GameComp => Current.Game?.GetComponent<GameComponent_UnlockedMaterials>();
-	private SortedList<int, (ThingDef chapter, ThingDef primarch)> AllMaterials => GameComp.AllMaterialsPaired;
+	private SortedList<int, (ThingDef chapter, ThingDef primarch)> AllMaterials => GameComp?.AllMaterialsPaired ?? new SortedList<int, (ThingDef chapter, ThingDef primarch)>();
 
 	public override bool IsVisible => SelThing != null && base.IsVisible;
 
@@ -60,32 +60,35 @@ public class ITab_SangprimusPortum : ITab
             
 		var list = AllMaterials;
 		var flag = false;
-		foreach (var t in list)
+		if (!list.EnumerableNullOrEmpty())
 		{
-			flag = true;
-			var singleEntity = false;
-			var width = inRect.width / 2f;
-			var offset = width;
+			foreach (var t in list)
+			{
+				flag = true;
+				var singleEntity = false;
+				var width = inRect.width / 2f;
+				var offset = width;
 	            
-			if (t.Value.chapter == null || t.Value.primarch == null)
-			{
-				width *= 2f;
-				offset = 0f;
-				singleEntity = true;
-			}
-			if (t.Value.chapter != null)
-			{
-				ThingRow(t.Value.chapter, width, ref curY, 0, t.Value.chapter.GetModExtension<DefModExtension_ChapterMaterial>().shownMaterialName, singleEntity);
-			}
+				if (t.Value.chapter == null || t.Value.primarch == null)
+				{
+					width *= 2f;
+					offset = 0f;
+					singleEntity = true;
+				}
+				if (t.Value.chapter != null)
+				{
+					ThingRow(t.Value.chapter, width, ref curY, 0, t.Value.chapter.GetModExtension<DefModExtension_ChapterMaterial>().shownMaterialName, singleEntity);
+				}
 
-			if (t.Value.primarch != null)
-			{
-				ThingRow(t.Value.primarch, width, ref curY, offset, t.Value.primarch.GetModExtension<DefModExtension_PrimarchMaterial>().shownMaterialName, singleEntity);
-			}
+				if (t.Value.primarch != null)
+				{
+					ThingRow(t.Value.primarch, width, ref curY, offset, t.Value.primarch.GetModExtension<DefModExtension_PrimarchMaterial>().shownMaterialName, singleEntity);
+				}
 	            
-			curY += 28f;
-			//Seperates each row of materials
-			Widgets.DrawBoxSolid(new Rect(0f, curY, inRect.width, 1f), LineColour);
+				curY += 28f;
+				//Seperates each row of materials
+				Widgets.DrawBoxSolid(new Rect(0f, curY, inRect.width, 1f), LineColour);
+			}
 		}
 		if (!flag)
 		{
@@ -98,7 +101,7 @@ public class ITab_SangprimusPortum : ITab
 	{
 		var height = 28f;
 		var rect = new Rect(0f + xOffset, curY, width, height);
-		var acquired = GameComp.HasMaterial(thingDef);
+		var acquired = GameComp?.HasMaterial(thingDef) ?? false;
 		if (acquired)
 		{
 			GUI.color = ThingHighlightColor;

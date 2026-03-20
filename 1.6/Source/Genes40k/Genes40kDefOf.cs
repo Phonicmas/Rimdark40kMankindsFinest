@@ -93,6 +93,7 @@ public static class Genes40kDefOf
         
     //XenotypeIcon
     public static XenotypeIconDef BEWH_AstartesIcon;
+    public static XenotypeIconDef BEWH_PrimarisIcon;
 
     //Researchprojects
     public static ResearchProjectDef BEWH_GeneseedExtractionFirstborn;

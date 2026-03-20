@@ -61,7 +61,7 @@
     <GeneDef ParentName="BEWH_Perpetual">
         <defName>BEWH_PerpetualAlpha</defName>
         <label>alpha perpetual</label>
-        <description>Carriers of this gene are trully immortal, they do not age and able to eventually regenerate from nearly any wound, no matter how devastating, due to their rapid and efficient cellular regeneration.</description>
+        <description>Carriers of this gene are truly immortal, they do not age and able to eventually regenerate from nearly any wound, no matter how devastating, due to their rapid and efficient cellular regeneration.</description>
         <iconPath>UI/Genes/Perpetual/BEWH_GeneIcon_PerpetualAlpha</iconPath>
         <displayOrderInCategory>802</displayOrderInCategory>
         <biostatCpx>18</biostatCpx>
