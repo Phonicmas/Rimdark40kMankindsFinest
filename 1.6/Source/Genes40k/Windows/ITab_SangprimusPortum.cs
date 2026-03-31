@@ -57,32 +57,30 @@ public class ITab_SangprimusPortum : ITab
 		Widgets.Label(rect, containedItemsKey.Translate());
 		curY += 28f;
 		Widgets.DrawLineHorizontal(0f, curY, inRect.width);
-            
+		
 		var list = AllMaterials;
 		var flag = false;
 		if (!list.EnumerableNullOrEmpty())
 		{
-			foreach (var t in list)
+			foreach (var materialPair in list)
 			{
 				flag = true;
 				var singleEntity = false;
 				var width = inRect.width / 2f;
 				var offset = width;
-	            
-				if (t.Value.chapter == null || t.Value.primarch == null)
+				if (materialPair.Value.chapter == null || materialPair.Value.primarch == null)
 				{
 					width *= 2f;
 					offset = 0f;
 					singleEntity = true;
 				}
-				if (t.Value.chapter != null)
+				if (materialPair.Value.chapter != null)
 				{
-					ThingRow(t.Value.chapter, width, ref curY, 0, t.Value.chapter.GetModExtension<DefModExtension_ChapterMaterial>().shownMaterialName, singleEntity);
+					ThingRow(materialPair.Value.chapter, width, ref curY, 0, materialPair.Value.chapter.GetModExtension<DefModExtension_ChapterMaterial>().shownMaterialName, singleEntity);
 				}
-
-				if (t.Value.primarch != null)
+				if (materialPair.Value.primarch != null)
 				{
-					ThingRow(t.Value.primarch, width, ref curY, offset, t.Value.primarch.GetModExtension<DefModExtension_PrimarchMaterial>().shownMaterialName, singleEntity);
+					ThingRow(materialPair.Value.primarch, width, ref curY, offset, materialPair.Value.primarch.GetModExtension<DefModExtension_PrimarchMaterial>().shownMaterialName, singleEntity);
 				}
 	            
 				curY += 28f;

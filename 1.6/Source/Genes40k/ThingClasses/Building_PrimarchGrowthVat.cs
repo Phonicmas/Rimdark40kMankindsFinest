@@ -3,6 +3,7 @@ using System.Linq;
 using System.Text;
 using RimWorld;
 using UnityEngine;
+using VEF.Genes;
 using Verse;
 using Verse.Sound;
 
@@ -245,7 +246,33 @@ public class Building_PrimarchGrowthVat : Building, IStoreSettingsParent, IThing
                 pawn2.genes.AddGene(gene, true);
             }
             pawn2.genes.SetXenotypeDirect(Genes40kDefOf.BEWH_Primarch);
-            if (!Genes40kUtils.ModSettings.allowFemalePrimarchBirths)
+            var externalGenderForced = pawn2.genes.GenesListForReading.Any(gene =>
+            {
+                var isActive = gene.Active;
+                var defMod = gene.def.GetModExtension<GeneExtension>();
+                if (defMod == null)
+                {
+                    return false;
+                }
+
+                if (!defMod.forceFemale && !defMod.forceMale)
+                {
+                    return false;
+                }
+
+                return isActive;
+            });
+            if (externalGenderForced)
+            {
+                var forcedGender = pawn2.genes.GenesListForReading.FirstOrDefault(gene => 
+                    gene.Active
+                    && gene.def.HasModExtension<GeneExtension>()
+                    && (gene.def.GetModExtension<GeneExtension>().forceFemale || gene.def.GetModExtension<GeneExtension>().forceMale));
+                
+                var defMod = forcedGender.def.GetModExtension<GeneExtension>();
+                pawn2.gender = defMod.forceFemale ? Gender.Female : Gender.Male;
+            }
+            else if (!Genes40kUtils.ModSettings.allowFemalePrimarchBirths)
             {
                 pawn2.gender = Gender.Male;
             }
