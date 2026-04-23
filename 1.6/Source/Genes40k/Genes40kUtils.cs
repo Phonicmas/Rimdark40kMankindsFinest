@@ -275,6 +275,11 @@ public static class Genes40kUtils
         {
             chapter = ModSettings.CurrentlySelectedPreset;
         }
+
+        if (chapter == null)
+        {
+            return null;
+        }
         
         var chapterColourPrimary = chapter.primaryColour;
         var chapterColourSecondary = chapter.secondaryColour;
@@ -306,24 +311,29 @@ public static class Genes40kUtils
                 }
             }
         }
-        foreach (var apparel in pawn.apparel.WornApparel)
-        {
-            var comp = apparel.GetComp<CompChapterColor>();
-            if (comp == null)
-            {
-                continue;
-            }
-            
-            comp.SetColors(chapterColourPrimary, chapterColourSecondary, chapterColourTertiary);
-            comp.SetOriginals();
 
-            if (comp is CompChapterColorWithShoulderDecoration compExtended)
+        if (pawn.apparel?.WornApparel != null)
+        {
+            foreach (var apparel in pawn.apparel.WornApparel)
             {
-                compExtended.LeftShoulderIcon = shoulderIconDef;
+                var comp = apparel.GetComp<CompChapterColor>();
+                if (comp == null)
+                {
+                    continue;
+                }
+            
+                comp.SetColors(chapterColourPrimary, chapterColourSecondary, chapterColourTertiary);
+                comp.SetOriginals();
+
+                if (comp is CompChapterColorWithShoulderDecoration compExtended)
+                {
+                    compExtended.LeftShoulderIcon = shoulderIconDef;
+                }
             }
         }
-        var equipment = pawn.equipment.PrimaryEq.parent;
-        if (equipment.HasComp<CompMultiColor>())
+        
+        var equipment = pawn.equipment?.PrimaryEq?.parent;
+        if (equipment != null && equipment.HasComp<CompMultiColor>())
         {
             equipment.GetComp<CompMultiColor>().SetColors(chapter);
             equipment.GetComp<CompMultiColor>().SetOriginals();
