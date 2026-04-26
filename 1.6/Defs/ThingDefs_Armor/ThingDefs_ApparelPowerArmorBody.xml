@@ -433,7 +433,7 @@
             </renderNodeProperties>
         </apparel>
         <comps>
-            <li Class="CompProperties_Biocodable"/>
+            <li Class="CompProperties_Biocodable" />
             <li Class="Core40k.CompProperties_MultiColor">
                 <defaultPrimaryColor>(0.8358, 0.619, 0.298)</defaultPrimaryColor>
                 <defaultSecondaryColor>(0.407, 0.094, 0.129)</defaultSecondaryColor>

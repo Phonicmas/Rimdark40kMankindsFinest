@@ -5,15 +5,13 @@ using Verse;
 
 namespace Genes40k;
 
-[HarmonyPatch(typeof(TraitSet), "GetTrait", new Type[]
-{
+[HarmonyPatch(typeof(TraitSet), "GetTrait", [
     typeof(TraitDef),
-    typeof(int),
-}, new ArgumentType[]
-{
+    typeof(int)
+], [
     ArgumentType.Normal,
-    ArgumentType.Normal,
-})]
+    ArgumentType.Normal
+])]
 public class SerfGetTrait1
 {
     public static void Postfix(Pawn ___pawn, TraitDef tDef)
