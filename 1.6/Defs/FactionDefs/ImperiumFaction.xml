@@ -26,8 +26,8 @@
         <techLevel>Ultra</techLevel>
         <rescueesCanJoin>false</rescueesCanJoin>
 
-        <factionNameMaker>BEWH_FactionNameMaker</factionNameMaker>
-        <settlementNameMaker>BEWH_SettlementNameMaker</settlementNameMaker>
+        <factionNameMaker>BEWH_ImperiumFactionNameMaker</factionNameMaker>
+        <settlementNameMaker>BEWH_ImperiumSettlementNameMaker</settlementNameMaker>
         <factionIconPath>UI/Icons/Imperium/ImperiumIcon</factionIconPath>
         <settlementTexturePath>UI/Icons/Imperium/ImperiumIcon</settlementTexturePath>
 
@@ -194,7 +194,7 @@
 
     <!-- Name of Imperium Faction -->
     <RulePackDef>
-        <defName>BEWH_FactionNameMaker</defName>
+        <defName>BEWH_ImperiumFactionNameMaker</defName>
         <rulePack>
             <rulesStrings>
                 <li>r_name->The Imperium</li>
@@ -204,15 +204,15 @@
 
     <!-- Name of Imperium settlements -->
     <RulePackDef>
-        <defName>BEWH_SettlementNameMaker</defName>
+        <defName>BEWH_ImperiumSettlementNameMaker</defName>
         <rulePack>
             <rulesStrings>
-                <li>r_name->Outpost [Letters]</li>
+                <li>r_name->Outpost [BEWH_ImperiumLetters]</li>
             </rulesStrings>
             <rulesRaw>
                 <li Class="Rule_File">
-                    <keyword>Letters</keyword>
-                    <path>NameBanks/BEWH_SettlementNames</path>
+                    <keyword>BEWH_ImperiumLetters</keyword>
+                    <path>NameBanks/BEWH_ImperiumSettlementNames</path>
                 </li>
             </rulesRaw>
         </rulePack>
