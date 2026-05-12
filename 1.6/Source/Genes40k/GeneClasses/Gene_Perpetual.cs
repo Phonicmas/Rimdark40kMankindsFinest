@@ -106,10 +106,8 @@ public class Gene_Perpetual : Gene
         var toggleCommand = new Command_Action
         {
             defaultLabel = "BEWH.MankindsFinest.Perpetual.TurnResurrectionX".Translate(DontAddToPerpetualTracker ? "BEWH.MankindsFinest.CommonKeywords.On".Translate() : "BEWH.MankindsFinest.CommonKeywords.Off".Translate()),
-            action = () =>
-            {
-                DontAddToPerpetualTracker = !DontAddToPerpetualTracker;
-            },
+            icon = !DontAddToPerpetualTracker ? Genes40kUtils.MindShieldOffIcon : Genes40kUtils.MindShieldOnIcon,
+            action = () => DontAddToPerpetualTracker = !DontAddToPerpetualTracker,
         };
 
         yield return toggleCommand;

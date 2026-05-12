@@ -147,9 +147,6 @@ public static class Genes40kDefOf
     public static ThingDef BEWH_RaisedBarricade;
     public static ThingDef BEWH_RaisedTurret;
         
-    public static ThingDef BEWH_SteelRainDropPodBuilding;
-    public static ThingDef BEWH_SteelRainDropPodSkyfaller;
-        
     public static ThingDef BEWH_RawGestationalSlurry;
         
     public static ThingDef BEWH_LSaintSword;
@@ -196,10 +193,6 @@ public static class Genes40kDefOf
     //AbilityCategoryDef
     [MayRequireRoyalty]
     public static AbilityCategoryDef Psychic;
-    
-    //ExtraDecorationDef
-    public static ExtraDecorationDef BEWH_LivingSaintHalo_2;
-    public static ExtraDecorationDef BEWH_LivingSaintWings_1;
 
     //ChapterColourDef
     public static ChapterColourDef BEWH_ChapterColourXIII;

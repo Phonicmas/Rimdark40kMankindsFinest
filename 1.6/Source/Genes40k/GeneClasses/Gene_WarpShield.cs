@@ -14,10 +14,7 @@ public class Gene_WarpShield : Gene
         {
             defaultLabel = "BEWH.MankindsFinest.WarpShield.TurnX".Translate(IsShielded ? "BEWH.MankindsFinest.CommonKeywords.Off".Translate() : "BEWH.MankindsFinest.CommonKeywords.On".Translate()),
             icon = IsShielded ? Genes40kUtils.MindShieldOffIcon : Genes40kUtils.MindShieldOnIcon,
-            action = () =>
-            {
-                IsShielded = !IsShielded;
-            },
+            action = () => IsShielded = !IsShielded,
         };
 
         yield return toggleCommand;
