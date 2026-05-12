@@ -1,4 +1,5 @@
-﻿using Core40k;
+﻿using System;
+using Core40k;
 using RimWorld;
 using Verse;
 
@@ -208,6 +209,10 @@ public static class Genes40kDefOf
     
     //StatDefs
     public static StatDef BEWH_JoyFromArtFactor;
+    
+    //AbilityDefs
+    [Obsolete]
+    public static AbilityDef BEWH_WarpShield;
     
     //Altered Carbon Stuff
     [MayRequireAlteredCarbon]

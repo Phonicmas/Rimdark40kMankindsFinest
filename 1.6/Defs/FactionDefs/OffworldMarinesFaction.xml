@@ -13,26 +13,6 @@
         <hiddenIdeo>true</hiddenIdeo>
         <hidden>true</hidden>
 
-        <!--<fixedLeaderKinds>
-            <li>BEWH_LordCommanderPawn</li>
-        </fixedLeaderKinds>
-
-        <maxPawnCostPerTotalPointsCurve>
-            <points>
-                <li>(0,0)</li>
-                <li>(100000, 0)</li>
-            </points>
-        </maxPawnCostPerTotalPointsCurve>
-        <pawnGroupMakers>
-            <li>
-                <kindDef>Combat</kindDef>
-                <commonality>1</commonality>
-                <options>
-                    <BEWH_FirstbornPawn>1</BEWH_FirstbornPawn>
-                </options>
-            </li>
-        </pawnGroupMakers>-->
-
         <pawnSingular>Marine</pawnSingular>
         <pawnsPlural>Marines</pawnsPlural>
         <fixedName>Offworld Marines</fixedName>
@@ -54,28 +34,10 @@
         <canStageAttacks>false</canStageAttacks>
         <raidsForbidden>true</raidsForbidden>
 
-
-
-        <!--<canRequestTraders>false</canRequestTraders>
-        <canRequestMilitaryAid>false</canRequestMilitaryAid>-->
         <canGenerateQuestSites>false</canGenerateQuestSites>
-
-
-        <!--<xenotypeSet Inherit="False">
-            <xenotypeChances>
-                <BEWH_SpaceMarine>1</BEWH_SpaceMarine>
-            </xenotypeChances>
-        </xenotypeSet>-->
 
         <factionIconPath>UI/Xenotypes/BEWH_SpaceMarineXenoIcon</factionIconPath>
         <settlementTexturePath>UI/Xenotypes/BEWH_SpaceMarineXenoIcon</settlementTexturePath>
-        <!--<modExtensions>
-            <li Class="Core40k.DefModExtension_InitialGoodwill">
-                <initialGoodwill>30</initialGoodwill>
-                <applyToPlayer>true</applyToPlayer>
-                <onlyApplyToPlayer>true</onlyApplyToPlayer>
-            </li>
-        </modExtensions>-->
     </FactionDef>
 
 </Defs>

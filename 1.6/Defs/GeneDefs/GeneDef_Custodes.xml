@@ -271,15 +271,6 @@
             <li>Alzheimers</li>
         </hediffGiversCannotGive>
 
-        <abilities>
-            <li>BEWH_WarpShield</li>
-        </abilities>
-
-        <descriptionHyperlinks>
-            <AbilityDef>BEWH_WarpShield</AbilityDef>
-        </descriptionHyperlinks>
-
-
         <aptitudes>
             <Intellectual>3</Intellectual>
         </aptitudes>

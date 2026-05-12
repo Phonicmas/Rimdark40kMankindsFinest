@@ -2,10 +2,4 @@
 
 namespace Genes40k;
 
-public class MayRequireAlteredCarbonAttribute : MayRequireAttribute
-{
-    public MayRequireAlteredCarbonAttribute()
-        : base("hlx.UltratechAlteredCarbon")
-    {
-    }
-}
+public class MayRequireAlteredCarbonAttribute() : MayRequireAttribute("hlx.UltratechAlteredCarbon");

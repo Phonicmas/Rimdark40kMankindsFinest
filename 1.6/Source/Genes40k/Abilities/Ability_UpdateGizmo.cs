@@ -1,16 +1,12 @@
-﻿using RimWorld;
-using UnityEngine;
+﻿using System;
+using RimWorld;
 using Verse;
 
 namespace Genes40k;
 
+[Obsolete]
 public class Ability_UpdateGizmo : Ability
 {
-    private void SetIcon(Texture2D texture)
-    {
-        gizmo.icon = texture;
-    }
-
     public override string Tooltip
     {
         get
@@ -58,26 +54,5 @@ public class Ability_UpdateGizmo : Ability
         this.def = def;
         this.sourcePrecept = sourcePrecept;
         Initialize();
-    }
-
-    public override bool Activate(LocalTargetInfo target, LocalTargetInfo dest)
-    {
-        if (!base.Activate(target, dest))
-        {
-            return false;
-        }
-
-        var warpShield = pawn?.genes?.GetFirstGeneOfType<Gene_WarpShield>();
-
-        if (warpShield == null)
-        {
-            return false;
-        }
-            
-        warpShield.SwitchShieldState();
-
-        SetIcon(warpShield.IsShielded ? Genes40kUtils.MindShieldOffIcon : Genes40kUtils.MindShieldOnIcon);
-
-        return true;
     }
 }

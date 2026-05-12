@@ -167,11 +167,9 @@
         <displayOrderInCategory>406</displayOrderInCategory>
         <geneClass>Genes40k.Gene_WarpShield</geneClass>
         <abilities>
-            <li>BEWH_WarpShield</li>
             <li MayRequire="Ludeon.RimWorld.Royalty">BEWH_DenyTheWitch</li>
         </abilities>
         <descriptionHyperlinks>
-            <AbilityDef>BEWH_WarpShield</AbilityDef>
             <AbilityDef MayRequire="Ludeon.RimWorld.Royalty">BEWH_DenyTheWitch</AbilityDef>
         </descriptionHyperlinks>
         <socialFightChanceFactor>1.25</socialFightChanceFactor>

@@ -133,9 +133,7 @@
         </apparel>
         <comps>
             <li Class="Genes40k.CompProperties_ChapterColorWithShoulderDecoration" />
-            <li Class="Core40k.CompProperties_Decorative">
-                <decorativeType>Body</decorativeType>
-            </li>
+            <li Class="Core40k.CompProperties_Decorative" />
         </comps>
         <modExtensions>
             <li Class="Core40k.DefModExtension_ForcesBodyType">
@@ -235,9 +233,7 @@
         </apparel>
         <comps>
             <li Class="Genes40k.CompProperties_ChapterColorWithShoulderDecoration" />
-            <li Class="Core40k.CompProperties_Decorative">
-                <decorativeType>Body</decorativeType>
-            </li>
+            <li Class="Core40k.CompProperties_Decorative" />
         </comps>
         <modExtensions>
             <li Class="Core40k.DefModExtension_ForcesBodyType">

@@ -16,6 +16,14 @@ public class LivingSaintAscension
         {
             return;
         }
+        
+        if (ModsConfig.IsActive("SmashPhil.VehicleFramework"))
+        {
+            if (__instance.GetType().Name == "VehiclePawn")
+            {
+                return;
+            }
+        }
 
         var gComp = Current.Game.GetComponent<GameComponent_LivingSaint>();
         if (gComp.LivingSaintsCount >= Genes40kUtils.ModSettings.livingSaintLimit)

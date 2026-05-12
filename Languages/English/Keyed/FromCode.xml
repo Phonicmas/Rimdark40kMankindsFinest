@@ -198,11 +198,12 @@
   <!-- Perpetual -->
   <BEWH.MankindsFinest.Perpetual.PerpetualReturn>Perpetual Resurrects</BEWH.MankindsFinest.Perpetual.PerpetualReturn>
   <BEWH.MankindsFinest.Perpetual.PerpetualReturnMessage>Though thought dead, it seems {0} has regenerated even their most dire wounds.</BEWH.MankindsFinest.Perpetual.PerpetualReturnMessage>
+  <BEWH.MankindsFinest.Perpetual.TurnResurrectionX>Turn resurrection {0}</BEWH.MankindsFinest.Perpetual.TurnResurrectionX>
 
 
   <!-- Shared Gene -->
   <BEWH.MankindsFinest.WarpShield.Conditional>Warp Shield</BEWH.MankindsFinest.WarpShield.Conditional>
-  <BEWH.MankindsFinest.WarpShield.Tooltip>Currently turned {0}</BEWH.MankindsFinest.WarpShield.Tooltip>
+  <BEWH.MankindsFinest.WarpShield.TurnX>Turn warp shield {0}</BEWH.MankindsFinest.WarpShield.TurnX>
 
 
   <!--=== Abilities ===-->

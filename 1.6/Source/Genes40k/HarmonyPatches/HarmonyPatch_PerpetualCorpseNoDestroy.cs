@@ -1,5 +1,4 @@
 ﻿using HarmonyLib;
-using RimWorld;
 using Verse;
 
 namespace Genes40k;
@@ -14,18 +13,23 @@ public class PerpetualCorpseNoDestroy
         {
             return true;
         }
-            
-        //SmashPhil Vehicle case, hopefully doesnt cause any side effects. Pawns shouldn't be targeted by deconstruct anyway.
-        if (mode == DestroyMode.Deconstruct)
+        
+        if (ModsConfig.IsActive("SmashPhil.VehicleFramework"))
         {
-            mode = DestroyMode.Vanish;
-            GenLeaving.DoLeavingsFor(__instance, __instance.Map, DestroyMode.Deconstruct);
-            return true;
+            if (__instance.GetType().Name == "VehiclePawn")
+            {
+                return true;
+            }
         }
 
         var perpetualGene = __instance.InnerPawn.genes?.GetFirstGeneOfType<Gene_Perpetual>();
 
         if (perpetualGene == null)
+        {
+            return true;
+        }
+
+        if (perpetualGene.DontAddToPerpetualTracker)
         {
             return true;
         }

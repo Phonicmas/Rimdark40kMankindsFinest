@@ -19,18 +19,25 @@ public class PerpetualNoDestroy
         {
             return true;
         }
-            
-        //SmashPhil Vehicle case, hopefully doesnt cause any side effects. Pawns shouldn't be targeted by deconstruct anyway.
-        if (mode == DestroyMode.Deconstruct)
-        {
-            mode = DestroyMode.Vanish;
-            GenLeaving.DoLeavingsFor(__instance, __instance.Map, DestroyMode.Deconstruct);
-            return true;
-        }
 
+        if (ModsConfig.IsActive("SmashPhil.VehicleFramework"))
+        {
+            if (__instance.GetType().Name == "VehiclePawn")
+            {
+                GenLeaving.DoLeavingsFor(__instance, __instance.Map, mode);
+                mode = DestroyMode.Vanish;
+                return true;
+            }
+        }
+        
         var perpetualGene = __instance.genes?.GetFirstGeneOfType<Gene_Perpetual>();
 
         if (perpetualGene == null)
+        {
+            return true;
+        }
+        
+        if (perpetualGene.DontAddToPerpetualTracker)
         {
             return true;
         }

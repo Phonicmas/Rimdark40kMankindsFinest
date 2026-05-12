@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using RimWorld;
 using Verse;
 
@@ -99,9 +101,24 @@ public class Gene_Perpetual : Gene
         base.PostAdd();
     }
 
+    public override IEnumerable<Gizmo> GetGizmos()
+    {
+        var toggleCommand = new Command_Action
+        {
+            defaultLabel = "BEWH.MankindsFinest.Perpetual.TurnResurrectionX".Translate(DontAddToPerpetualTracker ? "BEWH.MankindsFinest.CommonKeywords.On".Translate() : "BEWH.MankindsFinest.CommonKeywords.Off".Translate()),
+            action = () =>
+            {
+                DontAddToPerpetualTracker = !DontAddToPerpetualTracker;
+            },
+        };
+
+        yield return toggleCommand;
+    }
+    
     public override void ExposeData()
     {
         base.ExposeData();
+        Scribe_Values.Look(ref DontAddToPerpetualTracker, "DontAddToPerpetualTracker");
         if (Scribe.mode == LoadSaveMode.PostLoadInit)
         {
             defMod = def.GetModExtension<DefModExtension_PerpetualGene>();
