@@ -38,13 +38,13 @@ public class GeneseedVial : ThingWithComps
     
     private bool invisible = false;
         
-    private static readonly CachedTexture GeneticInfoTex = new CachedTexture("UI/Gizmos/ViewGenes");
+    private static readonly CachedTexture GeneticInfoTex = new("UI/Gizmos/ViewGenes");
 
     private const int MaxGeneLabels = 5;
 
-    private List<string> tmpGeneLabelsDesc = new List<string>();
+    private List<string> tmpGeneLabelsDesc = new();
 
-    private List<string> tmpGeneLabels = new List<string>();
+    private List<string> tmpGeneLabels = new();
 
     public GeneSet GeneSet => geneSet;
 

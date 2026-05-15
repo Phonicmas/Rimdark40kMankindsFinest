@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <IncidentDef>
+    <defName>BEWH_LegionMaterialHeist</defName>
+    <label>crashed astartes</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>Genes40k.IncidentWorker_LegionMaterialHeist</workerClass>
+    <baseChance>0.5</baseChance>
+    <populationEffect>IncreaseMedium</populationEffect>
+    <letterLabel>astartes crash land</letterLabel>
+    <letterText>An astartes have crashed area and seem to be carring something in their hands.\n\nYou can attempt to stop {PAWN_objective} and retrieve their gear and geneseed before they get away.</letterText>
+    <letterDef>NeutralEvent</letterDef>
+  </IncidentDef>
+
+  <!-- Space Marine Heister -->
+  <PawnKindDef ParentName="BEWH_ImperiumFirstbornMarine">
+    <defName>BEWH_FirstbornPawnLegionMaterialHeist</defName>
+    <label>Tactical Marine</label>
+    <defaultFactionType Inherit="False" />
+    <modExtensions>
+      <li Class="Core40k.DefModExtension_PawnKindCustomization">
+        <defaultColorSelection>
+          <li>
+            <key>BEWH_ChapterColourDW</key>
+            <value>Default</value>
+          </li>
+        </defaultColorSelection>
+        <extraDecorationPreset>
+          <li>
+            <key>BEWH_MkVIIPowerArmor</key>
+            <value>
+              <li>BEWH_DeathwatchBody</li>
+            </value>
+          </li>
+          <li>
+            <key>BEWH_MkVIIPowerArmorHelmet</key>
+            <value>
+              <li>BEWH_DeathwatchHead</li>
+            </value>
+          </li>
+        </extraDecorationPreset>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <JobDef>
+    <defName>BEWH_WaitLegionHeist</defName>
+    <driverClass>Genes40k.JobDriver_WaitAndExit</driverClass>
+    <reportString>triagulating...</reportString>
+    <alwaysShowWeapon>true</alwaysShowWeapon>
+    <suspendable>false</suspendable>
+    <carryThingAfterJob>true</carryThingAfterJob>
+    <dropThingBeforeJob>false</dropThingBeforeJob>
+  </JobDef>
+
+</Defs>

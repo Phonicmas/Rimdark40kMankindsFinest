@@ -1,18 +1,19 @@
 ﻿using System.Collections.Generic;
+using Core40k;
 using HarmonyLib;
 using UnityEngine;
 using Verse;
 
 namespace Genes40k;
 
-public class Genes40kMod : Mod
+public class Genes40kMod : CoreMod
 {
     public static string CurrentVersion;
         
     public static Harmony harmony;
 
     private Genes40kModSettings settings;
-    public Genes40kModSettings Settings => settings ??= GetSettings<Genes40kModSettings>();
+    public override ModSettings Settings => settings ??= GetSettings<Genes40kModSettings>();
 
     public Genes40kMod(ModContentPack content) : base(content)
     {
@@ -32,24 +33,18 @@ public class Genes40kMod : Mod
         harmony.PatchAllUncategorized();
     }
 
-    private static List<TabRecord> tabs = new List<TabRecord>();
-    private bool tabsInitialized = false;
-    private static ModSettingTab currentSettingTab;
+    private readonly ModSettingTab_GeneMain geneMainSettings = new();
+    private readonly ModSettingTab_Geneseed geneseedSettings = new();
+    private readonly ModSettingTab_LivingSaint livingSaintSettings = new();
+    private readonly ModSettingTab_GeneMisc geneMiscSettings = new();
+    private readonly ModSettingTab_Psychic psychicSettings = new();
     
-    public ModSettingTab_Main mainSettings = new ModSettingTab_Main();
-    public ModSettingTab_Geneseed geneseedSettings = new ModSettingTab_Geneseed();
-    public ModSettingTab_LivingSaint livingSaintSettings = new ModSettingTab_LivingSaint();
-    public ModSettingTab_Misc miscSettings = new ModSettingTab_Misc();
-    public ModSettingTab_Psychic psychicSettings = new ModSettingTab_Psychic();
-    
-    public void InitializeTabs()
+    public override void InitializeTabs()
     {
-        tabs = new List<TabRecord>();
-
-        var mainTab = new TabRecord("BEWH.MankindsFinest.ModSettings.TabMain".Translate(), delegate
+        var mainTab = new TabRecord("BEWH.ModSettings.TabMain".Translate(), delegate
         {
-            currentSettingTab = mainSettings;
-        }, () => currentSettingTab == mainSettings);
+            currentSettingTab = geneMainSettings;
+        }, () => currentSettingTab == geneMainSettings);
         tabs.Add(mainTab);
         
         var geneseedTab = new TabRecord("BEWH.MankindsFinest.ModSettings.TabGeneseed".Translate(), delegate
@@ -70,29 +65,14 @@ public class Genes40kMod : Mod
         }, () => currentSettingTab == livingSaintSettings);
         tabs.Add(livingSaintTab);
         
-        var miscTab = new TabRecord("BEWH.MankindsFinest.ModSettings.TabMisc".Translate(), delegate
+        var miscTab = new TabRecord("BEWH.ModSettings.TabMisc".Translate(), delegate
         {
-            currentSettingTab = miscSettings;
-        }, () => currentSettingTab == miscSettings);
+            currentSettingTab = geneMiscSettings;
+        }, () => currentSettingTab == geneMiscSettings);
         tabs.Add(miscTab);
 
-        currentSettingTab = mainSettings;
-        tabsInitialized = true;
-    }
-    
-    public override void DoSettingsWindowContents(Rect inRect)
-    {
-        if (!tabsInitialized)
-        {
-            InitializeTabs();
-        }
-        base.DoSettingsWindowContents(inRect);
-        var menuRect = inRect.ContractedBy(10f);
-        menuRect.y += 20f;
-        menuRect.height -= 20f;
-        Widgets.DrawMenuSection(menuRect);
-        TabDrawer.DrawTabs(menuRect, tabs);
-        currentSettingTab.DrawTab(menuRect.ContractedBy(5f), Settings);
+        currentSettingTab = geneMainSettings;
+        base.InitializeTabs();
     }
 
     public override string SettingsCategory()

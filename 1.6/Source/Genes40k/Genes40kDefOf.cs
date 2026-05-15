@@ -158,6 +158,7 @@ public static class Genes40kDefOf
     public static JobDef BEWH_CarryPrimarchEmbryoToVat;
     public static JobDef BEWH_CarryMaterialToSangprimus;
     public static JobDef BEWH_InducedFearJob;
+    public static JobDef BEWH_WaitLegionHeist;
 
     //ThoughtDefs
     public static ThoughtDef BEWH_LivingSaintHolyRadianceThought;
@@ -186,6 +187,7 @@ public static class Genes40kDefOf
         
     //PawnKindDefs
     public static PawnKindDef BEWH_FirstbornPawn;
+    public static PawnKindDef BEWH_FirstbornPawnLegionMaterialHeist;
         
     //FactionDefs
     public static FactionDef BEWH_OffworldMarinesFaction;

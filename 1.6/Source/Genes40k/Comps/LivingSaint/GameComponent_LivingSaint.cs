@@ -8,7 +8,7 @@ namespace Genes40k;
 
 public class GameComponent_LivingSaint : GameComponent
 {
-    private List<Pawn> livingSaints = new List<Pawn>();
+    private List<Pawn> livingSaints = new();
     public List<Pawn> LivingSaints => livingSaints;
         
     private Genes40kModSettings modSettings;

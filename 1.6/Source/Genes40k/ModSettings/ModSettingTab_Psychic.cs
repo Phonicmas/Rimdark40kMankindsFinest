@@ -1,17 +1,19 @@
-﻿using UnityEngine;
+﻿using Core40k;
+using UnityEngine;
 using Verse;
 
 namespace Genes40k;
 
 public class ModSettingTab_Psychic : ModSettingTab
 {
-    private Vector2 scrollPos;
-
-    private float scrollViewHeight = 0f;
-    private const float listingHeightIncrease = 24f;
-    private const float listingHeightIncreaseGap = 36f;
-    public override void DrawTab(Rect inRect, Genes40kModSettings settings)
+    public override void DrawTab(Rect inRect, ModSettings settings)
     {
+        if (settings is not Genes40kModSettings genes40KModSettings)
+        {
+            Log.Error("Settings not correct type");
+            return;
+        }
+        
         var viewRect = new Rect(inRect.x, inRect.y, inRect.width - 16f, scrollViewHeight);
         scrollViewHeight = 0f;
             
@@ -19,36 +21,36 @@ public class ModSettingTab_Psychic : ModSettingTab
         var listingStandard = new Listing_Standard();
         listingStandard.Begin(viewRect);
         listingStandard.Gap(36);
-        scrollViewHeight += listingHeightIncreaseGap;
-        scrollViewHeight += listingHeightIncrease;
+        scrollViewHeight += ListingHeightIncreaseGap;
+        scrollViewHeight += ListingHeightIncrease;
 
         //Psychic Phenomena
-        listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.PsychicPhenomena".Translate(), ref settings.psychicPhenomena, tooltip: "BEWH.MankindsFinest.ModSettings.PsychicPhenomenaDesc".Translate());
-        scrollViewHeight += listingHeightIncrease;
+        listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.PsychicPhenomena".Translate(), ref genes40KModSettings.psychicPhenomena, tooltip: "BEWH.MankindsFinest.ModSettings.PsychicPhenomenaDesc".Translate());
+        scrollViewHeight += ListingHeightIncrease;
   
         //Psyker/Pariah Birth
         listingStandard.GapLine(36);
-        scrollViewHeight += listingHeightIncreaseGap;
-        listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.PsykerPariahBirth".Translate(), ref settings.psykerPariahBirth);
-        scrollViewHeight += listingHeightIncrease;
-        if (settings.psykerPariahBirth)
+        scrollViewHeight += ListingHeightIncreaseGap;
+        listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.PsykerPariahBirth".Translate(), ref genes40KModSettings.psykerPariahBirth);
+        scrollViewHeight += ListingHeightIncrease;
+        if (genes40KModSettings.psykerPariahBirth)
         {
-            settings.psykerPariahBirthChance = (int)listingStandard.SliderLabeled("BEWH.MankindsFinest.ModSettings.PsykerPariahBirthChance".Translate(settings.psykerPariahBirthChance), settings.psykerPariahBirthChance, 0, 100, tooltip: "BEWH.MankindsFinest.ModSettings.PsykerPariahBirthChanceDesc".Translate());
-            scrollViewHeight += listingHeightIncrease;
+            genes40KModSettings.psykerPariahBirthChance = (int)listingStandard.SliderLabeled("BEWH.MankindsFinest.ModSettings.PsykerPariahBirthChance".Translate(genes40KModSettings.psykerPariahBirthChance), genes40KModSettings.psykerPariahBirthChance, 0, 100, tooltip: "BEWH.MankindsFinest.ModSettings.PsykerPariahBirthChanceDesc".Translate());
+            scrollViewHeight += ListingHeightIncrease;
         }
             
         //Perpetual Birth
         listingStandard.GapLine(36);
-        scrollViewHeight += listingHeightIncreaseGap;
-        listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.PerpetualBirth".Translate(), ref settings.perpetualBirth);
-        scrollViewHeight += listingHeightIncrease;
-        if (settings.perpetualBirth)
+        scrollViewHeight += ListingHeightIncreaseGap;
+        listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.PerpetualBirth".Translate(), ref genes40KModSettings.perpetualBirth);
+        scrollViewHeight += ListingHeightIncrease;
+        if (genes40KModSettings.perpetualBirth)
         {
-            settings.perpetualBirthChance = (int)listingStandard.SliderLabeled("BEWH.MankindsFinest.ModSettings.PerpetualBirthChance".Translate(settings.perpetualBirthChance), settings.perpetualBirthChance, 0, 100, tooltip: "BEWH.MankindsFinest.ModSettings.PerpetualBirthChanceDesc".Translate());
-            scrollViewHeight += listingHeightIncrease;
+            genes40KModSettings.perpetualBirthChance = (int)listingStandard.SliderLabeled("BEWH.MankindsFinest.ModSettings.PerpetualBirthChance".Translate(genes40KModSettings.perpetualBirthChance), genes40KModSettings.perpetualBirthChance, 0, 100, tooltip: "BEWH.MankindsFinest.ModSettings.PerpetualBirthChanceDesc".Translate());
+            scrollViewHeight += ListingHeightIncrease;
         }
         
-        scrollViewHeight += listingHeightIncrease;
+        scrollViewHeight += ListingHeightIncrease;
         
         listingStandard.End();
         Widgets.EndScrollView();

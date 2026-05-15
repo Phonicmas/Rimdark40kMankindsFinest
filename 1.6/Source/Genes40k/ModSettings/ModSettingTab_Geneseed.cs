@@ -1,18 +1,19 @@
-﻿using UnityEngine;
+﻿using Core40k;
+using UnityEngine;
 using Verse;
 
 namespace Genes40k;
 
 public class ModSettingTab_Geneseed : ModSettingTab
 {
-    private Vector2 scrollPos;
-
-    private float scrollViewHeight = 0f;
-    private const float listingHeightIncrease = 24f;
-    private const float listingHeightIncreaseGap = 36f;
-    
-    public override void DrawTab(Rect inRect, Genes40kModSettings settings)
+    public override void DrawTab(Rect inRect, ModSettings settings)
     {
+        if (settings is not Genes40kModSettings genes40KModSettings)
+        {
+            Log.Error("Settings not correct type");
+            return;
+        }
+        
         var viewRect = new Rect(inRect.x, inRect.y, inRect.width - 16f, scrollViewHeight);
         scrollViewHeight = 0f;
             
@@ -20,39 +21,39 @@ public class ModSettingTab_Geneseed : ModSettingTab
         var listingStandard = new Listing_Standard();
         listingStandard.Begin(viewRect);
         listingStandard.Gap(36);
-        scrollViewHeight += listingHeightIncreaseGap;
-        scrollViewHeight += listingHeightIncrease;
+        scrollViewHeight += ListingHeightIncreaseGap;
+        scrollViewHeight += ListingHeightIncrease;
         
         //Default Chapter Colour
         listingStandard.Label("BEWH.MankindsFinest.ModSettings.DefaultChapterColoursDesc".Translate());
-        scrollViewHeight += listingHeightIncrease;
+        scrollViewHeight += ListingHeightIncrease;
         listingStandard.Indent(inRect.width * 0.25f);
-        if (listingStandard.ButtonText("BEWH.MankindsFinest.ModSettings.DefaultChapterColours".Translate(settings.CurrentlySelectedPreset.label), widthPct: 0.5f))
+        if (listingStandard.ButtonText("BEWH.MankindsFinest.ModSettings.DefaultChapterColours".Translate(genes40KModSettings.CurrentlySelectedPreset.label), widthPct: 0.5f))
         {
-            Find.WindowStack.Add(new Dialog_ChangeDefaultChapterColour(settings));
+            Find.WindowStack.Add(new Dialog_ChangeDefaultChapterColour(genes40KModSettings));
         }
-        scrollViewHeight += listingHeightIncreaseGap;
+        scrollViewHeight += ListingHeightIncreaseGap;
         listingStandard.Outdent(inRect.width * 0.25f);
         
         //Geneseed Implantation Offset
         listingStandard.GapLine(36);
-        scrollViewHeight += listingHeightIncreaseGap;
+        scrollViewHeight += ListingHeightIncreaseGap;
         listingStandard.Label("BEWH.MankindsFinest.ModSettings.ImplantationDesc".Translate());
-        scrollViewHeight += listingHeightIncrease;
+        scrollViewHeight += ListingHeightIncrease;
         //Geneseed Implantation Success Offset
-        settings.implantationSuccessOffset = (int)listingStandard.SliderLabeled("BEWH.MankindsFinest.ModSettings.ImplantationSuccessOffset".Translate(settings.implantationSuccessOffset),settings.implantationSuccessOffset, -200, 200, tooltip: "BEWH.MankindsFinest.ModSettings.ImplantationSuccessOffsetDesc".Translate());
-        scrollViewHeight += listingHeightIncrease;
+        genes40KModSettings.implantationSuccessOffset = (int)listingStandard.SliderLabeled("BEWH.MankindsFinest.ModSettings.ImplantationSuccessOffset".Translate(genes40KModSettings.implantationSuccessOffset),genes40KModSettings.implantationSuccessOffset, -200, 200, tooltip: "BEWH.MankindsFinest.ModSettings.ImplantationSuccessOffsetDesc".Translate());
+        scrollViewHeight += ListingHeightIncrease;
         //Geneseed Implantation Cap Offset
-        settings.implantationCapOffset = (int)listingStandard.SliderLabeled("BEWH.MankindsFinest.ModSettings.ImplantationCapOffset".Translate(settings.implantationCapOffset), settings.implantationCapOffset, -100, 100, tooltip: "BEWH.MankindsFinest.ModSettings.ImplantationCapOffsetDesc".Translate());
-        scrollViewHeight += listingHeightIncrease;
+        genes40KModSettings.implantationCapOffset = (int)listingStandard.SliderLabeled("BEWH.MankindsFinest.ModSettings.ImplantationCapOffset".Translate(genes40KModSettings.implantationCapOffset), genes40KModSettings.implantationCapOffset, -100, 100, tooltip: "BEWH.MankindsFinest.ModSettings.ImplantationCapOffsetDesc".Translate());
+        scrollViewHeight += ListingHeightIncrease;
         
         //Matrix gestation time factor
         listingStandard.GapLine(36);
-        scrollViewHeight += listingHeightIncreaseGap;
-        settings.matrixGestationTimeFactor = (int)listingStandard.SliderLabeled("BEWH.MankindsFinest.ModSettings.MatrixGestationFactor".Translate(settings.matrixGestationTimeFactor), settings.matrixGestationTimeFactor, 0, 200, tooltip: "BEWH.MankindsFinest.ModSettings.MatrixGestationFactorDesc".Translate());
-        scrollViewHeight += listingHeightIncrease;
+        scrollViewHeight += ListingHeightIncreaseGap;
+        genes40KModSettings.matrixGestationTimeFactor = (int)listingStandard.SliderLabeled("BEWH.MankindsFinest.ModSettings.MatrixGestationFactor".Translate(genes40KModSettings.matrixGestationTimeFactor), genes40KModSettings.matrixGestationTimeFactor, 0, 200, tooltip: "BEWH.MankindsFinest.ModSettings.MatrixGestationFactorDesc".Translate());
+        scrollViewHeight += ListingHeightIncrease;
         
-        scrollViewHeight += listingHeightIncrease;
+        scrollViewHeight += ListingHeightIncrease;
         
         listingStandard.End();
         Widgets.EndScrollView();

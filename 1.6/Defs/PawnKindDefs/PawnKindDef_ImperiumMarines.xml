@@ -52,7 +52,7 @@
     </PawnKindDef>
 
     <!-- Space Marine -->
-    <PawnKindDef ParentName="BEWH_ImperiumSuperSoldierPawnBase">
+    <PawnKindDef ParentName="BEWH_ImperiumSuperSoldierPawnBase" Name="BEWH_ImperiumFirstbornMarine">
         <defName>BEWH_FirstbornPawn</defName>
         <label>Tactical Marine</label>
         <combatPower>170</combatPower>

@@ -15,11 +15,11 @@ public class ITab_SangprimusPortum : ITab
 
 	private static readonly Color ThingLabelColor = ITab_Pawn_Gear.ThingLabelColor;
         
-	private static readonly Color ThingLabelColorMissing = new Color(0.5f, 0.5f, 0.5f, 1f);
+	private static readonly Color ThingLabelColorMissing = new(0.5f, 0.5f, 0.5f, 1f);
 
 	private static readonly Color ThingHighlightColor = ITab_Pawn_Gear.HighlightColor;
         
-	private static readonly Color LineColour = new Color(0.3f, 0.3f, 0.3f, 1f);
+	private static readonly Color LineColour = new(0.3f, 0.3f, 0.3f, 1f);
 
 	public override bool VisibleInBlueprintMode => false;
         

@@ -7,5 +7,5 @@ public class DefModExtension_SpawnAsChapter : DefModExtension
 {
     public bool loyalist = true;
     
-    public List<ChapterColourDef> specificChapters = new List<ChapterColourDef>();
+    public List<ChapterColourDef> specificChapters = new();
 }

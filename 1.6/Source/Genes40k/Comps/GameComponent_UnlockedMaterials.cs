@@ -13,7 +13,6 @@ public class GameComponent_UnlockedMaterials : GameComponent
     public List<ThingDef> UnlockedChapterMaterial => unlockedMaterials.Where(def => def.HasModExtension<DefModExtension_ChapterMaterial>()).ToList();
     public List<ThingDef> UnlockedPrimarchMaterial => unlockedMaterials.Where(def => def.HasModExtension<DefModExtension_PrimarchMaterial>()).ToList();
     
-    
     private SortedList<int, (ThingDef chapter, ThingDef primarch)> allMaterialsPaired = [];
     public SortedList<int, (ThingDef chapter, ThingDef primarch)> AllMaterialsPaired => allMaterialsPaired;
 
@@ -30,6 +29,21 @@ public class GameComponent_UnlockedMaterials : GameComponent
     public bool HasMaterial(ThingDef material)
     {
         return unlockedMaterials.Contains(material);
+    }
+
+    private List<ThingDef> GetLockedLegionMaterials()
+    {
+        return AllMaterialsPaired.Values.Select(thing => thing.chapter).Where(def => !unlockedMaterials.Contains(def) && def.HasModExtension<DefModExtension_ChapterMaterial>()).ToList();
+    }
+
+    public ThingDef GetRandomLockedLegionMaterial()
+    {
+        return GetLockedLegionMaterials().RandomElement();
+    }
+
+    public bool AnyLockedLegionMaterialRemaining()
+    {
+        return GetLockedLegionMaterials().Count > 0;
     }
     
     private void SetupMaterialList()

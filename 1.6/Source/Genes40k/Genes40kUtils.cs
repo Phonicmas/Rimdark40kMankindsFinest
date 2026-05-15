@@ -29,7 +29,7 @@ public static class Genes40kUtils
     
     public static readonly CachedTexture PaintableIcon = new ("UI/Misc/PaintableIcon");
         
-    public static List<GeneDef> ThunderWarriorGenes => new List<GeneDef>
+    public static List<GeneDef> ThunderWarriorGenes => new()
     {
         Genes40kDefOf.BEWH_ProtoOssmodula,
         Genes40kDefOf.BEWH_Musculeator,
@@ -39,7 +39,7 @@ public static class Genes40kUtils
         Genes40kDefOf.BEWH_Furybound,
     };
 
-    public static List<GeneDef> SpaceMarineGenes => new List<GeneDef>
+    public static List<GeneDef> SpaceMarineGenes => new()
     {
         Genes40kDefOf.BEWH_SecondaryHeart,
         Genes40kDefOf.BEWH_Ossmodula,
@@ -62,14 +62,14 @@ public static class Genes40kUtils
         Genes40kDefOf.BEWH_BlackCarapace
     };
 
-    public static List<GeneDef> PrimarisGenes => new List<GeneDef>
+    public static List<GeneDef> PrimarisGenes => new()
     {
         Genes40kDefOf.BEWH_SinewCoil,
         Genes40kDefOf.BEWH_Magnificat,
         Genes40kDefOf.BEWH_BelisarianFurnace
     };
 
-    public static List<GeneDef> CustodesGenes => new List<GeneDef>
+    public static List<GeneDef> CustodesGenes => new()
     {
         Genes40kDefOf.BEWH_ImmunisLeucocyte,
         Genes40kDefOf.BEWH_AthanaticVitae,
@@ -79,7 +79,7 @@ public static class Genes40kUtils
         Genes40kDefOf.BEWH_FulgurVitaliumstrand
     };
 
-    public static List<GeneDef> PrimarchGenes => new List<GeneDef>
+    public static List<GeneDef> PrimarchGenes => new()
     {
         Genes40kDefOf.BEWH_ImmortisGland,
         Genes40kDefOf.BEWH_TempestusOcularium,
@@ -119,7 +119,7 @@ public static class Genes40kUtils
         }
     }
         
-    public static List<GeneDef> LivingSaintGenes => new List<GeneDef>
+    public static List<GeneDef> LivingSaintGenes => new()
     {
         Genes40kDefOf.BEWH_LivingSaintBeingOfFaith,
         Genes40kDefOf.BEWH_LivingSaintDivineGrace,
@@ -130,7 +130,7 @@ public static class Genes40kUtils
         Genes40kDefOf.BEWH_LivingSaintHolyRadiance,
     };
 
-    public static List<HediffDef> DevelopmentPhases => new List<HediffDef>
+    public static List<HediffDef> DevelopmentPhases => new()
     {
         Genes40kDefOf.BEWH_FirstbornPhaseOne,
         Genes40kDefOf.BEWH_FirstbornPhaseTwo,
@@ -168,7 +168,7 @@ public static class Genes40kUtils
         }
         var genesListForReading = geneTracker.GenesListForReading.Select(gene => gene.def).ToList();
 
-        return geneDefs.All(geneDef => genesListForReading.Contains(geneDef));
+        return geneDefs.All(genesListForReading.Contains);
     }
         
     public static bool IsThunderWarrior(this Pawn pawn)

@@ -21,11 +21,9 @@
   <BEWH.MankindsFinest.ModSettings.ColourPreset>Color Preset: {0}</BEWH.MankindsFinest.ModSettings.ColourPreset>
   <BEWH.MankindsFinest.ModSettings.CustomColour>Custom Color</BEWH.MankindsFinest.ModSettings.CustomColour>
 
-  <BEWH.MankindsFinest.ModSettings.TabMain>Main</BEWH.MankindsFinest.ModSettings.TabMain>
   <BEWH.MankindsFinest.ModSettings.TabLivingSaint>Living Saint</BEWH.MankindsFinest.ModSettings.TabLivingSaint>
   <BEWH.MankindsFinest.ModSettings.TabPsychic>Psychic</BEWH.MankindsFinest.ModSettings.TabPsychic>
   <BEWH.MankindsFinest.ModSettings.TabGeneseed>Gene-seed</BEWH.MankindsFinest.ModSettings.TabGeneseed>
-  <BEWH.MankindsFinest.ModSettings.TabMisc>Misc</BEWH.MankindsFinest.ModSettings.TabMisc>
 
   <BEWH.MankindsFinest.ModSettings.LivingSaintSystem>Enabling this will allow colonist being killed to resurrect as Living Saints.</BEWH.MankindsFinest.ModSettings.LivingSaintSystem>
   <BEWH.MankindsFinest.ModSettings.LivingSaintPawnLimit>Living Saint pawn limit: {0}</BEWH.MankindsFinest.ModSettings.LivingSaintPawnLimit>

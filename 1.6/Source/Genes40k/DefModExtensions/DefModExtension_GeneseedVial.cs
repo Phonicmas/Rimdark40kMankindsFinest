@@ -10,7 +10,7 @@ public class DefModExtension_GeneseedVial : DefModExtension
     public XenotypeIconDef xenotypeIcon = null;
 
     public bool overrideXenotypeGenesGiven = false;
-    public List<GeneDef> overridenAddedGenes = new List<GeneDef>();
+    public List<GeneDef> overridenAddedGenes = new();
 
     public HediffDef appliesHediff = null;
 

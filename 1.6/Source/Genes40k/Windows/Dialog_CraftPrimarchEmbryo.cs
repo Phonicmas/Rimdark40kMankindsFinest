@@ -14,7 +14,7 @@ public class Dialog_CraftPrimarchEmbryo : Window
     private GeneseedVial chosenGeneseedVial = null;
     private HumanEmbryo chosenEmbryo = null;
     private Pawn chosenPawn = null;
-    private List<Pawn> playerPawnWithSkills = new List<Pawn>();
+    private List<Pawn> playerPawnWithSkills = new();
 
     private readonly RecipeDef recipe = Genes40kDefOf.BEWH_MakePrimarchEmbryo;
 

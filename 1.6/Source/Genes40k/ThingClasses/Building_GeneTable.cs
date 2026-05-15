@@ -25,7 +25,7 @@ public class Building_GeneTable : Building_WorkTable
 
     public static Genes40kModSettings ModSettings => modSettings ??= LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>();
         
-    private static readonly CachedTexture CraftPrimarchEmbryo = new CachedTexture("UI/Gizmos/BEWH_GestationStartIcon");
+    private static readonly CachedTexture CraftPrimarchEmbryo = new("UI/Gizmos/BEWH_GestationStartIcon");
 
     public Building_GeneTable()
     {

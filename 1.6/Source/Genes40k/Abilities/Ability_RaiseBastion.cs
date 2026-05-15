@@ -9,7 +9,7 @@ namespace Genes40k;
 
 public class Ability_RaiseBastion : VEF.Abilities.Ability
 {
-    List<IntVec3> affectCellsWalls = new List<IntVec3>
+    List<IntVec3> affectCellsWalls = new()
     {
         new (4, 0, 1),
         new (4, 0, -1),
@@ -45,7 +45,7 @@ public class Ability_RaiseBastion : VEF.Abilities.Ability
         new (-3, 0, 3),
     };
         
-    List<IntVec3> affectCellsTurrets = new List<IntVec3>
+    List<IntVec3> affectCellsTurrets = new()
     {
         new (4, 0, 2),
         new (4, 0, -2),
@@ -60,7 +60,7 @@ public class Ability_RaiseBastion : VEF.Abilities.Ability
         new (-2, 0, -4),
     };
         
-    List<IntVec3> affectCellsBarricade = new List<IntVec3>
+    List<IntVec3> affectCellsBarricade = new()
     {
         new (4, 0, 0),
         new (-4, 0, 0),

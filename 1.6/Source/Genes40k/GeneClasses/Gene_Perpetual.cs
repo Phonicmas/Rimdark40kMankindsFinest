@@ -14,11 +14,11 @@ public class Gene_Perpetual : Gene
         
     private const int MissingLimbRegenerationInterval = 120000;
 
-    private static readonly FloatRange TendingQualityRange = new FloatRange(0.2f, 0.7f);
+    private static readonly FloatRange TendingQualityRange = new(0.2f, 0.7f);
         
-    private static readonly FloatRange HealPermanentRange = new FloatRange(0.2f, 0.4f);
+    private static readonly FloatRange HealPermanentRange = new(0.2f, 0.4f);
 
-    private DefModExtension_PerpetualGene defMod = new DefModExtension_PerpetualGene();
+    private DefModExtension_PerpetualGene defMod = new();
 
     private int perpetualTier => defMod.perpetualTier;
 

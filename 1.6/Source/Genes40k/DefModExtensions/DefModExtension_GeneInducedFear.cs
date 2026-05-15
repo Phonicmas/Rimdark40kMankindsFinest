@@ -6,7 +6,7 @@ namespace Genes40k;
 
 public class DefModExtension_GeneInducedFear : DefModExtension
 {
-    public List<GeneDef> genesCausesImmunityToFear = new List<GeneDef>();
+    public List<GeneDef> genesCausesImmunityToFear = new();
         
-    public List<TraitData> traitCausesImmunityToFear = new List<TraitData>();
+    public List<TraitData> traitCausesImmunityToFear = new();
 }

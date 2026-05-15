@@ -1,18 +1,19 @@
-﻿using UnityEngine;
+﻿using Core40k;
+using UnityEngine;
 using Verse;
 
 namespace Genes40k;
 
 public class ModSettingTab_LivingSaint : ModSettingTab
 {
-    private Vector2 scrollPos;
-
-    private float scrollViewHeight = 0f;
-    private const float listingHeightIncrease = 24f;
-    private const float listingHeightIncreaseGap = 36f;
-    
-    public override void DrawTab(Rect inRect, Genes40kModSettings settings)
+    public override void DrawTab(Rect inRect, ModSettings settings)
     {
+        if (settings is not Genes40kModSettings genes40KModSettings)
+        {
+            Log.Error("Settings not correct type");
+            return;
+        }
+        
         var viewRect = new Rect(inRect.x, inRect.y, inRect.width - 16f, scrollViewHeight);
         scrollViewHeight = 0f;
             
@@ -20,42 +21,42 @@ public class ModSettingTab_LivingSaint : ModSettingTab
         var listingStandard = new Listing_Standard();
         listingStandard.Begin(viewRect);
         listingStandard.Gap(36);
-        scrollViewHeight += listingHeightIncreaseGap;
-        scrollViewHeight += listingHeightIncrease;
+        scrollViewHeight += ListingHeightIncreaseGap;
+        scrollViewHeight += ListingHeightIncrease;
         
         //Living Saint System
-        listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.LivingSaintSystem".Translate(), ref settings.livingSaintSystem);
-        scrollViewHeight += listingHeightIncrease;
-        if (settings.livingSaintSystem)
+        listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.LivingSaintSystem".Translate(), ref genes40KModSettings.livingSaintSystem);
+        scrollViewHeight += ListingHeightIncrease;
+        if (genes40KModSettings.livingSaintSystem)
         {
             listingStandard.GapLine(36);
-            scrollViewHeight += listingHeightIncreaseGap;
-            settings.livingSaintLimit = (int)listingStandard.SliderLabeled("BEWH.MankindsFinest.ModSettings.LivingSaintPawnLimit".Translate(settings.livingSaintLimit), settings.livingSaintLimit, 1, 100, tooltip: "BEWH.MankindsFinest.ModSettings.LivingSaintPawnLimitDesc".Translate());
-            scrollViewHeight += listingHeightIncrease;
+            scrollViewHeight += ListingHeightIncreaseGap;
+            genes40KModSettings.livingSaintLimit = (int)listingStandard.SliderLabeled("BEWH.MankindsFinest.ModSettings.LivingSaintPawnLimit".Translate(genes40KModSettings.livingSaintLimit), genes40KModSettings.livingSaintLimit, 1, 100, tooltip: "BEWH.MankindsFinest.ModSettings.LivingSaintPawnLimitDesc".Translate());
+            scrollViewHeight += ListingHeightIncrease;
             
-            listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.LivingSaintMale".Translate(), ref settings.livingSaintMale, tooltip: "BEWH.MankindsFinest.ModSettings.LivingSaintMaleDesc".Translate());
-            scrollViewHeight += listingHeightIncrease;
+            listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.LivingSaintMale".Translate(), ref genes40KModSettings.livingSaintMale, tooltip: "BEWH.MankindsFinest.ModSettings.LivingSaintMaleDesc".Translate());
+            scrollViewHeight += ListingHeightIncrease;
             
-            listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.LivingSaintAscensionLimit".Translate(), ref settings.livingSaintOnlyBaselinerAscension, tooltip: "BEWH.MankindsFinest.ModSettings.LivingSaintAscensionLimitDesc".Translate());
-            scrollViewHeight += listingHeightIncrease;
-            
-            listingStandard.GapLine(36);
-            scrollViewHeight += listingHeightIncreaseGap;
-            settings.livingSaintBaseChance = (int)listingStandard.SliderLabeled("BEWH.MankindsFinest.ModSettings.LivingSaintBaseChance".Translate(settings.livingSaintBaseChance), settings.livingSaintBaseChance, 0, 100, tooltip: "BEWH.MankindsFinest.ModSettings.LivingSaintBaseChanceDesc".Translate());
-            scrollViewHeight += listingHeightIncrease;
-            listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.LivingSaintExtraChanceFromViolence".Translate(), ref settings.livingSaintAddedChanceFromViolenceSkills, tooltip: "BEWH.MankindsFinest.ModSettings.LivingSaintExtraChanceFromViolenceDesc".Translate());
-            scrollViewHeight += listingHeightIncrease;
+            listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.LivingSaintAscensionLimit".Translate(), ref genes40KModSettings.livingSaintOnlyBaselinerAscension, tooltip: "BEWH.MankindsFinest.ModSettings.LivingSaintAscensionLimitDesc".Translate());
+            scrollViewHeight += ListingHeightIncrease;
             
             listingStandard.GapLine(36);
-            scrollViewHeight += listingHeightIncreaseGap;
+            scrollViewHeight += ListingHeightIncreaseGap;
+            genes40KModSettings.livingSaintBaseChance = (int)listingStandard.SliderLabeled("BEWH.MankindsFinest.ModSettings.LivingSaintBaseChance".Translate(genes40KModSettings.livingSaintBaseChance), genes40KModSettings.livingSaintBaseChance, 0, 100, tooltip: "BEWH.MankindsFinest.ModSettings.LivingSaintBaseChanceDesc".Translate());
+            scrollViewHeight += ListingHeightIncrease;
+            listingStandard.CheckboxLabeled("BEWH.MankindsFinest.ModSettings.LivingSaintExtraChanceFromViolence".Translate(), ref genes40KModSettings.livingSaintAddedChanceFromViolenceSkills, tooltip: "BEWH.MankindsFinest.ModSettings.LivingSaintExtraChanceFromViolenceDesc".Translate());
+            scrollViewHeight += ListingHeightIncrease;
+            
+            listingStandard.GapLine(36);
+            scrollViewHeight += ListingHeightIncreaseGap;
             listingStandard.Label("BEWH.MankindsFinest.ModSettings.LivingSaintChance".Translate());
-            scrollViewHeight += listingHeightIncrease;
-            settings.livingSaintBigThreat = (int)listingStandard.SliderLabeled("BEWH.MankindsFinest.ModSettings.LivingSaintBigThreat".Translate(settings.livingSaintBigThreat), settings.livingSaintBigThreat, 0, 100, tooltip: "BEWH.MankindsFinest.ModSettings.LivingSaintBigThreatDesc".Translate());
-            scrollViewHeight += listingHeightIncrease;
-            settings.livingSaintSmallThreat = (int)listingStandard.SliderLabeled("BEWH.MankindsFinest.ModSettings.LivingSaintSmallThreat".Translate(settings.livingSaintSmallThreat), settings.livingSaintSmallThreat, 0, 100, tooltip: "BEWH.MankindsFinest.ModSettings.LivingSaintSmallThreatDesc".Translate());
-            scrollViewHeight += listingHeightIncrease;
+            scrollViewHeight += ListingHeightIncrease;
+            genes40KModSettings.livingSaintBigThreat = (int)listingStandard.SliderLabeled("BEWH.MankindsFinest.ModSettings.LivingSaintBigThreat".Translate(genes40KModSettings.livingSaintBigThreat), genes40KModSettings.livingSaintBigThreat, 0, 100, tooltip: "BEWH.MankindsFinest.ModSettings.LivingSaintBigThreatDesc".Translate());
+            scrollViewHeight += ListingHeightIncrease;
+            genes40KModSettings.livingSaintSmallThreat = (int)listingStandard.SliderLabeled("BEWH.MankindsFinest.ModSettings.LivingSaintSmallThreat".Translate(genes40KModSettings.livingSaintSmallThreat), genes40KModSettings.livingSaintSmallThreat, 0, 100, tooltip: "BEWH.MankindsFinest.ModSettings.LivingSaintSmallThreatDesc".Translate());
+            scrollViewHeight += ListingHeightIncrease;
         }
-        scrollViewHeight += listingHeightIncrease;
+        scrollViewHeight += ListingHeightIncrease;
         
         listingStandard.End();
         Widgets.EndScrollView();

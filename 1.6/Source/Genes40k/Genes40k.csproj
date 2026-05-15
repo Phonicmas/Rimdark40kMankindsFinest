@@ -197,12 +197,12 @@
     <Compile Include="Hediffs\Hediff_SeverityByPain.cs" />
     <Compile Include="Integrations\RimHUDProgenoidGlandProgress.cs" />
     <Compile Include="MayRequire\MayRequireAlteredCarbonAttribute.cs" />
-    <Compile Include="ModSettings\ModSettingTab.cs" />
     <Compile Include="ModSettings\ModSettingTab_Geneseed.cs" />
     <Compile Include="ModSettings\ModSettingTab_LivingSaint.cs" />
-    <Compile Include="ModSettings\ModSettingTab_Main.cs" />
-    <Compile Include="ModSettings\ModSettingTab_Misc.cs" />
+    <Compile Include="ModSettings\ModSettingTab_GeneMain.cs" />
+    <Compile Include="ModSettings\ModSettingTab_GeneMisc.cs" />
     <Compile Include="ModSettings\ModSettingTab_Psychic.cs" />
+    <Compile Include="Quest\IncidentWorker_LegionHeist.cs" />
     <Compile Include="Rank\ChapterRankDef.cs" />
     <Compile Include="RoleRequirement\RoleRequirement_MustBeSpaceMarine.cs" />
     <Compile Include="StockGenerator\StockGenerator_TagSangprimusMaterialNoDupe.cs" />
@@ -252,6 +252,7 @@
     <Compile Include="Workers\JobDriver\JobDriver_CarryMaterialToSangprimus.cs" />
     <Compile Include="Workers\JobDriver\JobDriver_CarryMatrixToGeneGestator.cs" />
     <Compile Include="Workers\JobDriver\JobDriver_CarryPrimarchEmbryoToVat.cs" />
+    <Compile Include="Workers\JobDriver\JobDriver_EmptyContainerAndFlee.cs" />
     <Compile Include="Workers\JobDriver\JobDriver_FleeInducedFear.cs" />
     <Compile Include="Workers\ThoughtWorkers\ThoughtWorker_Xenophobia.cs" />
     <Compile Include="Workers\ThoughtWorkers\ThoughtWorker_HolyRadiance.cs" />
