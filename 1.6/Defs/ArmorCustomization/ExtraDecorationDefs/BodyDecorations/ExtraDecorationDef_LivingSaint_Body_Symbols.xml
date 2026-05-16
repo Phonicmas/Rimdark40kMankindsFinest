@@ -22,6 +22,15 @@
             </dataSouth>
         </drawData>
         <shaderType>Cutout</shaderType>
+        <colourable>true</colourable>
+        <defaultColour>(245, 245, 210)</defaultColour>
+        <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
+        <availablePresets>
+            <li>BEWH_DecoPaletteGold</li>
+            <li>BEWH_DecoPaletteSilver</li>
+            <li>BEWH_DecoPaletteSaintLight</li>
+            <li>BEWH_DecoPaletteSaintRose</li>
+        </availablePresets>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
