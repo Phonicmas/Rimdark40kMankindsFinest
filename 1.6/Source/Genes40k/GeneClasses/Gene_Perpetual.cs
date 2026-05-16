@@ -103,11 +103,15 @@ public class Gene_Perpetual : Gene
 
     public override IEnumerable<Gizmo> GetGizmos()
     {
-        var toggleCommand = new Command_Action
+        var toggleCommand = new Command_Toggle
         {
-            defaultLabel = "BEWH.MankindsFinest.Perpetual.TurnResurrectionX".Translate(DontAddToPerpetualTracker ? "BEWH.MankindsFinest.CommonKeywords.On".Translate() : "BEWH.MankindsFinest.CommonKeywords.Off".Translate()),
-            icon = !DontAddToPerpetualTracker ? Genes40kUtils.MindShieldOffIcon : Genes40kUtils.MindShieldOnIcon,
-            action = () => DontAddToPerpetualTracker = !DontAddToPerpetualTracker,
+            defaultLabel = "BEWH.MankindsFinest.Perpetual.TurnResurrectionX".Translate(!DontAddToPerpetualTracker ? "BEWH.MankindsFinest.CommonKeywords.On".Translate() : "BEWH.MankindsFinest.CommonKeywords.Off".Translate()),
+            icon = Genes40kUtils.PermaDeathPerpetualIcon,
+            isActive = () => !DontAddToPerpetualTracker,
+            toggleAction = delegate
+            {
+                DontAddToPerpetualTracker = !DontAddToPerpetualTracker;
+            },
         };
 
         yield return toggleCommand;

@@ -10,11 +10,15 @@ public class Gene_WarpShield : Gene
 
     public override IEnumerable<Gizmo> GetGizmos()
     {
-        var toggleCommand = new Command_Action
+        var toggleCommand = new Command_Toggle
         {
-            defaultLabel = "BEWH.MankindsFinest.WarpShield.TurnX".Translate(IsShielded ? "BEWH.MankindsFinest.CommonKeywords.Off".Translate() : "BEWH.MankindsFinest.CommonKeywords.On".Translate()),
-            icon = IsShielded ? Genes40kUtils.MindShieldOffIcon : Genes40kUtils.MindShieldOnIcon,
-            action = () => IsShielded = !IsShielded,
+            defaultLabel = "BEWH.MankindsFinest.WarpShield.TurnX".Translate(IsShielded ? "BEWH.MankindsFinest.CommonKeywords.On".Translate() : "BEWH.MankindsFinest.CommonKeywords.Off".Translate()),
+            icon = Genes40kUtils.MindShieldIcon,
+            isActive = () => IsShielded,
+            toggleAction = delegate
+            {
+                IsShielded = !IsShielded;
+            },
         };
 
         yield return toggleCommand;

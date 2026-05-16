@@ -23,9 +23,9 @@ public static class Genes40kUtils
         
     private static List<ShoulderIconDef> leftShoulderIconDef = null;
     public static List<ShoulderIconDef> LeftShoulderIconDef => leftShoulderIconDef ??= DefDatabase<ShoulderIconDef>.AllDefsListForReading.Where(leftShoulderDef => leftShoulderDef.leftShoulder).ToList();
-
-    public static readonly Texture2D MindShieldOffIcon = ContentFinder<Texture2D>.Get("UI/Abilities/BEWH_MindShieldOff");
-    public static readonly Texture2D MindShieldOnIcon = ContentFinder<Texture2D>.Get("UI/Abilities/BEWH_MindShieldOn");
+    
+    public static readonly Texture2D MindShieldIcon = ContentFinder<Texture2D>.Get("UI/Abilities/BEWH_MindShield");
+    public static readonly Texture2D PermaDeathPerpetualIcon = ContentFinder<Texture2D>.Get("UI/Abilities/BEWH_PerpetrualPermaDeath");
     
     public static readonly CachedTexture PaintableIcon = new ("UI/Misc/PaintableIcon");
         
