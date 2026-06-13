@@ -10,7 +10,7 @@
         <drawnTextureIconPath>Things/Decorations/Headgear/Common/BEWH_Deco_BladeguardShield</drawnTextureIconPath>
         <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>4</sortOrder>
-        <isHelmetDecoration>true</isHelmetDecoration>
+        
         <defaultShowRotation>
             <li>West</li>
             <li>South</li>
@@ -21,8 +21,8 @@
             <li>BEWH_MkVIIPowerArmorHelmet</li>
         </appliesTo>
         <colourable>true</colourable>
-        <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
-        <useArmorColourAsDefault>true</useArmorColourAsDefault>
+        <hasParentColourPaletteOption>true</hasParentColourPaletteOption>
+        <useParentColourAsDefault>true</useParentColourAsDefault>
         <drawData>
             <dataNorth>
                 <layer>76</layer>
@@ -48,7 +48,7 @@
         <drawnTextureIconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_VictrixHelmMkVII</drawnTextureIconPath>
         <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>5</sortOrder>
-        <isHelmetDecoration>true</isHelmetDecoration>
+        
         <defaultShowRotation>
             <li>West</li>
             <li>South</li>
@@ -58,7 +58,7 @@
             <li>BEWH_MkVIIPowerArmorHelmet</li>
         </appliesTo>
         <colourable>true</colourable>
-        <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
+        <hasParentColourPaletteOption>true</hasParentColourPaletteOption>
         <drawData>
             <dataNorth>
                 <layer>76</layer>
@@ -92,7 +92,7 @@
         <drawnTextureIconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_VictrixHelmMkX</drawnTextureIconPath>
         <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>5</sortOrder>
-        <isHelmetDecoration>true</isHelmetDecoration>
+        
         <defaultShowRotation>
             <li>West</li>
             <li>South</li>
@@ -102,7 +102,7 @@
             <li>BEWH_MkXPowerArmorHelmet</li>
         </appliesTo>
         <colourable>true</colourable>
-        <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
+        <hasParentColourPaletteOption>true</hasParentColourPaletteOption>
         <drawData>
             <dataNorth>
                 <layer>76</layer>

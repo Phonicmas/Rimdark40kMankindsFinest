@@ -81,8 +81,6 @@
     <Compile Include="Abilities\Ability_SteelRain.cs" />
     <Compile Include="Abilities\Ability_UpdateGizmo.cs" />
     <Compile Include="ChapterApparelMultiColor\ChapterColourDef.cs" />
-    <Compile Include="ChapterApparelMultiColor\ChapterHeadDecorativeApparelMultiColor.cs" />
-    <Compile Include="ChapterApparelMultiColor\ChapterBodyDecorativeApparelMultiColor.cs" />
     <Compile Include="ChapterApparelMultiColor\CompChapterColor.cs" />
     <Compile Include="ChapterApparelMultiColor\CompChapterColorWithShoulderDecoration.cs" />
     <Compile Include="ChapterApparelMultiColor\CompProperties_ChapterColor.cs" />

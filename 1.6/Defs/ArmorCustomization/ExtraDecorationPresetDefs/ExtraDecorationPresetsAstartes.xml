@@ -15,7 +15,7 @@ Apothecary red: (162, 54, 39)
 
     <!-- Apothecary -->
     <!-- Body -->
-    <Core40k.ExtraDecorationPresetDef>        <!-- MkVII -->
+    <Core40k.DecorationPresetDef>        <!-- MkVII -->
         <defName>BEWH_ApothecaryBodyMkVII</defName>
         <label>Apothecary</label>
         <appliesTo>
@@ -31,9 +31,9 @@ Apothecary red: (162, 54, 39)
                 
             </BEWH_DecoPSeal_5>
         </presetData>
-    </Core40k.ExtraDecorationPresetDef>
+    </Core40k.DecorationPresetDef>
 
-    <Core40k.ExtraDecorationPresetDef>        <!-- MkX -->
+    <Core40k.DecorationPresetDef>        <!-- MkX -->
         <defName>BEWH_ApothecaryBodyMkX</defName>
         <label>Apothecary</label>
         <appliesTo>
@@ -49,10 +49,10 @@ Apothecary red: (162, 54, 39)
                 
             </BEWH_DecoPSeal_5>
         </presetData>
-    </Core40k.ExtraDecorationPresetDef>
+    </Core40k.DecorationPresetDef>
 
     <!-- Head -->
-    <Core40k.ExtraDecorationPresetDef>
+    <Core40k.DecorationPresetDef>
         <defName>BEWH_ApothecaryHeadMkVII</defName>        <!-- MkVII -->
         <label>Apothecary</label>
         <appliesTo>
@@ -70,9 +70,9 @@ Apothecary red: (162, 54, 39)
                 
             </BEWH_Deco_MkVIIApothecarySymbol>
         </presetData>
-    </Core40k.ExtraDecorationPresetDef>
+    </Core40k.DecorationPresetDef>
 
-    <Core40k.ExtraDecorationPresetDef>
+    <Core40k.DecorationPresetDef>
         <defName>BEWH_ApothecaryHeadMkX</defName>        <!-- MkX -->
         <label>Apothecary</label>
         <appliesTo>
@@ -90,12 +90,12 @@ Apothecary red: (162, 54, 39)
                 
             </BEWH_Deco_MkXApothecarySymbol>
         </presetData>
-    </Core40k.ExtraDecorationPresetDef>
+    </Core40k.DecorationPresetDef>
 
     <!-- Bladeguard Veteran -->
 
     <!-- Body -->
-    <Core40k.ExtraDecorationPresetDef>
+    <Core40k.DecorationPresetDef>
         <defName>BEWH_MkVIIBGVeteranBody</defName>
         <label>Bladeguard Veteran</label>
         <appliesTo>
@@ -121,9 +121,9 @@ Apothecary red: (162, 54, 39)
                 <colour>(160, 158, 137)</colour>
             </BEWH_Deco_BGLowerTabardMkVII>
         </presetData>
-    </Core40k.ExtraDecorationPresetDef>
+    </Core40k.DecorationPresetDef>
 
-    <Core40k.ExtraDecorationPresetDef>
+    <Core40k.DecorationPresetDef>
         <defName>BEWH_MkXBGVeteranBody</defName>
         <label>Bladeguard Veteran</label>
         <appliesTo>
@@ -151,10 +151,10 @@ Apothecary red: (162, 54, 39)
                 <colour>(160, 158, 137)</colour>
             </BEWH_Deco_BGLowerTabardMkX>
         </presetData>
-    </Core40k.ExtraDecorationPresetDef>
+    </Core40k.DecorationPresetDef>
 
     <!-- Head -->
-    <Core40k.ExtraDecorationPresetDef>
+    <Core40k.DecorationPresetDef>
         <defName>BEWH_MkVIIBGVeteranHead</defName>
         <label>Bladeguard Veteran</label>
         <appliesTo>
@@ -166,9 +166,9 @@ Apothecary red: (162, 54, 39)
                 
             </BEWH_MkXBladeguardBrim>
         </presetData>
-    </Core40k.ExtraDecorationPresetDef>
+    </Core40k.DecorationPresetDef>
 
-    <Core40k.ExtraDecorationPresetDef>
+    <Core40k.DecorationPresetDef>
         <defName>BEWH_MkXBGVeteranHead</defName>
         <label>Bladeguard Veteran</label>
         <appliesTo>
@@ -180,12 +180,12 @@ Apothecary red: (162, 54, 39)
                 
             </BEWH_MkXBladeguardBrim>
         </presetData>
-    </Core40k.ExtraDecorationPresetDef>
+    </Core40k.DecorationPresetDef>
 
     <!-- Bulwark -->
 
     <!-- Body -->
-    <Core40k.ExtraDecorationPresetDef> <!-- MkVII -->
+    <Core40k.DecorationPresetDef> <!-- MkVII -->
         <defName>BEWH_MkVIIBGBody</defName>
         <label>Bulwark</label>
         <appliesTo>
@@ -210,9 +210,9 @@ Apothecary red: (162, 54, 39)
                 <colourTwo>(240,176,29)</colourTwo>
             </BEWH_Deco_BGShoulderDrape>
         </presetData>
-    </Core40k.ExtraDecorationPresetDef>
+    </Core40k.DecorationPresetDef>
 
-    <Core40k.ExtraDecorationPresetDef> <!-- MkX -->
+    <Core40k.DecorationPresetDef> <!-- MkX -->
         <defName>BEWH_MkXBGBody</defName>
         <label>Bulwark</label>
         <appliesTo>
@@ -237,10 +237,10 @@ Apothecary red: (162, 54, 39)
                 <colourTwo>(240,176,29)</colourTwo>
             </BEWH_Deco_BGShoulderDrape>
         </presetData>
-    </Core40k.ExtraDecorationPresetDef>
+    </Core40k.DecorationPresetDef>
 
     <!-- Head -->
-    <Core40k.ExtraDecorationPresetDef>
+    <Core40k.DecorationPresetDef>
         <defName>BEWH_MkVIIBGHead</defName>
         <label>Bulwark</label>
         <appliesTo>
@@ -256,9 +256,9 @@ Apothecary red: (162, 54, 39)
                 
             </BEWH_MkXBladeguardBrim>
         </presetData>
-    </Core40k.ExtraDecorationPresetDef>
+    </Core40k.DecorationPresetDef>
 
-    <Core40k.ExtraDecorationPresetDef>
+    <Core40k.DecorationPresetDef>
         <defName>BEWH_MkXBGHead</defName>
         <label>Bulwark</label>
         <appliesTo>
@@ -274,11 +274,11 @@ Apothecary red: (162, 54, 39)
                 
             </BEWH_MkXBladeguardBrim>
         </presetData>
-    </Core40k.ExtraDecorationPresetDef>
+    </Core40k.DecorationPresetDef>
 
     <!-- Deathwatch -->
     <!-- Body -->
-    <Core40k.ExtraDecorationPresetDef>
+    <Core40k.DecorationPresetDef>
         <defName>BEWH_DeathwatchBody</defName>
         <label>Deathwatch</label>
         <appliesTo>
@@ -303,10 +303,10 @@ Apothecary red: (162, 54, 39)
                 <colour>(104,24,33)</colour>
             </BEWH_Deco_Cape>
         </presetData>
-    </Core40k.ExtraDecorationPresetDef>
+    </Core40k.DecorationPresetDef>
 
     <!-- Head -->
-    <Core40k.ExtraDecorationPresetDef>
+    <Core40k.DecorationPresetDef>
         <defName>BEWH_DeathwatchHead</defName>
         <label>Deathwatch</label>
         <appliesTo>
@@ -319,11 +319,11 @@ Apothecary red: (162, 54, 39)
                 <colour>(104,24,33)</colour>
             </BEWH_DecoHood>
         </presetData>
-    </Core40k.ExtraDecorationPresetDef>
+    </Core40k.DecorationPresetDef>
 
     <!-- Venerated Champion -->
     <!-- Body -->
-    <Core40k.ExtraDecorationPresetDef>
+    <Core40k.DecorationPresetDef>
         <defName>BEWH_VeneratedChampionBody</defName>
         <label>Venerated Champion</label>
         <appliesTo>
@@ -341,10 +341,10 @@ Apothecary red: (162, 54, 39)
                 <colour>(104,24,33)</colour>
             </BEWH_Deco_Cape>
         </presetData>
-    </Core40k.ExtraDecorationPresetDef>
+    </Core40k.DecorationPresetDef>
 
     <!-- Head -->
-    <Core40k.ExtraDecorationPresetDef>
+    <Core40k.DecorationPresetDef>
         <defName>BEWH_VeneratedChampionHeadMkVII</defName>        <!-- MkVII -->
         <label>Venerated Champion</label>
         <appliesTo>
@@ -360,9 +360,9 @@ Apothecary red: (162, 54, 39)
                 
             </BEWH_MkVIIclawMarks_1>
         </presetData>
-    </Core40k.ExtraDecorationPresetDef>
+    </Core40k.DecorationPresetDef>
 
-    <Core40k.ExtraDecorationPresetDef>
+    <Core40k.DecorationPresetDef>
         <defName>BEWH_VeneratedChampionHeadMkX</defName>        <!-- MkX -->
         <label>Venerated Champion</label>
         <appliesTo>
@@ -378,11 +378,11 @@ Apothecary red: (162, 54, 39)
                 
             </BEWH_MkXclawMarks_1>
         </presetData>
-    </Core40k.ExtraDecorationPresetDef>
+    </Core40k.DecorationPresetDef>
 
     <!-- Victrix Guard -->
     <!-- Body -->
-    <Core40k.ExtraDecorationPresetDef>
+    <Core40k.DecorationPresetDef>
         <defName>BEWH_VictrixGuardBody</defName>
         <label>Victrix Guard</label>
         <appliesTo>
@@ -400,10 +400,10 @@ Apothecary red: (162, 54, 39)
                 <colour>(104,24,33)</colour>
             </BEWH_Deco_Cape>
         </presetData>
-    </Core40k.ExtraDecorationPresetDef>
+    </Core40k.DecorationPresetDef>
 
     <!-- Head -->
-    <Core40k.ExtraDecorationPresetDef>
+    <Core40k.DecorationPresetDef>
         <defName>BEWH_VictrixGuardHeadMkVII</defName>        <!-- MkVII -->
         <label>Victrix Guard</label>
         <appliesTo>
@@ -415,9 +415,9 @@ Apothecary red: (162, 54, 39)
                 <colour>(240,176,29)</colour>
             </BEWH_Deco_MkVII_VictrixBrim>
         </presetData>
-    </Core40k.ExtraDecorationPresetDef>
+    </Core40k.DecorationPresetDef>
 
-    <Core40k.ExtraDecorationPresetDef>
+    <Core40k.DecorationPresetDef>
         <defName>BEWH_VictrixGuardHeadMkX</defName>        <!-- MkX -->
         <label>Victrix Guard</label>
         <appliesTo>
@@ -429,11 +429,11 @@ Apothecary red: (162, 54, 39)
                 <colour>(240,176,29)</colour>
             </BEWH_Deco_MkX_VictrixBrim>
         </presetData>
-    </Core40k.ExtraDecorationPresetDef>
+    </Core40k.DecorationPresetDef>
 
     <!-- Revered Chaplain -->
     <!-- Body -->
-    <Core40k.ExtraDecorationPresetDef>
+    <Core40k.DecorationPresetDef>
         <defName>BEWH_ChaplainBody</defName>
         <label>Revered Chaplain</label>
         <appliesTo>
@@ -445,10 +445,10 @@ Apothecary red: (162, 54, 39)
                 <colour>(240,176,29)</colour>
             </BEWH_DecoRelic_2>
         </presetData>
-    </Core40k.ExtraDecorationPresetDef>
+    </Core40k.DecorationPresetDef>
 
     <!-- Head -->
-    <Core40k.ExtraDecorationPresetDef>
+    <Core40k.DecorationPresetDef>
         <defName>BEWH_ChaplainHead</defName>
         <label>Revered Chaplain</label>
         <appliesTo>
@@ -460,11 +460,11 @@ Apothecary red: (162, 54, 39)
                 <colour>(50,51,50)</colour>
             </BEWH_DecoHoodChaplain>
         </presetData>
-    </Core40k.ExtraDecorationPresetDef>
+    </Core40k.DecorationPresetDef>
 
     <!-- Master Of Sanctity -->
     <!-- Body -->
-    <Core40k.ExtraDecorationPresetDef>
+    <Core40k.DecorationPresetDef>
         <defName>BEWH_ChaplainBody2</defName>
         <label>Master of Sanctity</label>
         <appliesTo>
@@ -493,10 +493,10 @@ Apothecary red: (162, 54, 39)
                 <colourTwo>(240,176,29)</colourTwo>
             </BEWH_Deco_ShoulderDrape2>
         </presetData>
-    </Core40k.ExtraDecorationPresetDef>
+    </Core40k.DecorationPresetDef>
 
     <!-- Head -->
-    <Core40k.ExtraDecorationPresetDef>
+    <Core40k.DecorationPresetDef>
         <defName>BEWH_ChaplainHead2</defName>
         <label>Master Of Sanctity</label>
         <appliesTo>
@@ -508,5 +508,5 @@ Apothecary red: (162, 54, 39)
                 <colour>(50,51,50)</colour>
             </BEWH_DecoHoodChaplain>
         </presetData>
-    </Core40k.ExtraDecorationPresetDef>
+    </Core40k.DecorationPresetDef>
 </Defs>

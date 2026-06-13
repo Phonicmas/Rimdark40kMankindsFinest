@@ -43,9 +43,9 @@
         <colourable>true</colourable>
         <useMask>true</useMask>
         <colorAmount>2</colorAmount>
-        <useArmorColourAsDefault>true</useArmorColourAsDefault>
+        <useParentColourAsDefault>true</useParentColourAsDefault>
         <defaultColourTwo>(187,197,206)</defaultColourTwo>
-        <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption> 
+        <hasParentColourPaletteOption>true</hasParentColourPaletteOption> 
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>

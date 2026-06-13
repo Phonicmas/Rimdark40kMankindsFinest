@@ -25,10 +25,11 @@ public static class OutfitStandShoulder
 
             foreach (var pawnRenderNode in item.def.apparel.RenderNodeProperties)
             {
+                var defMod = item.def.GetModExtension<DefModExtension_TextureFlags>();
                 if (pawnRenderNode.texPath.Contains("Shoulder"))
                 {
                     var maskPath = chapterColorComp.MaskDef?.maskPath;
-                    if (maskPath != null && chapterColorComp.MaskDef.maskExtraFlags.Contains("HasShoulder"))
+                    if (maskPath != null && defMod.maskExpansions.Select(m => m.pathExpansionOnMask).Contains("_Shoulder"))
                     {
                         maskPath += "_Shoulder";
                     }

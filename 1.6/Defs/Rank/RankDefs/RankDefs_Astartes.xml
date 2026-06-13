@@ -210,29 +210,19 @@
         <statOffsets>
             <MoveSpeed>0.05</MoveSpeed>
             <HuntingStealth>0.2</HuntingStealth>
+            <MeleeDodgeChance>1</MeleeDodgeChance>
         </statOffsets>
 
         <statFactors>
-            <PawnTrapSpringChance>0.5</PawnTrapSpringChance>
+            <PawnTrapSpringChance>0.45</PawnTrapSpringChance>
+            <HuntingStealth>2</HuntingStealth>
+            <ShootingAccuracyPawn>1.05</ShootingAccuracyPawn>
+            <MeleeHitChance>1.05</MeleeHitChance>
         </statFactors>
 
         <customEffectDescriptions>
             <li>Increased stats while in darkness</li>
         </customEffectDescriptions>
-
-        <conditionalStatAffecters>
-            <li Class="VEF.Genes.ConditionalStatAffecter_Darkness">
-                <statOffsets>
-                    <MoveSpeed>0.15</MoveSpeed>
-                    <MeleeDodgeChance>1</MeleeDodgeChance>
-                </statOffsets>
-                <statFactors>
-                    <HuntingStealth>1.5</HuntingStealth>
-                    <ShootingAccuracyPawn>1.15</ShootingAccuracyPawn>
-                    <MeleeHitChance>1.15</MeleeHitChance>
-                </statFactors>
-            </li>
-        </conditionalStatAffecters>
 
         <rankTier>3</rankTier>
 

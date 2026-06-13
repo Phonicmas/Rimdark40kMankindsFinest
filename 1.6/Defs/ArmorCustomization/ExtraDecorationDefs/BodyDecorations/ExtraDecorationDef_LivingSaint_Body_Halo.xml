@@ -86,7 +86,7 @@
         <flipable>false</flipable>
         <colourable>true</colourable>
         <defaultColour>(173, 179, 179)</defaultColour>
-        <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption> 
+        <hasParentColourPaletteOption>true</hasParentColourPaletteOption> 
         <availablePresets>
             <li>BEWH_DecoPaletteGold</li>
             <li>BEWH_DecoPaletteSilver</li>

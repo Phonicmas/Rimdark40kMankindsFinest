@@ -204,10 +204,10 @@
             </li>
             <li Class="Core40k.CompProperties_Decorative">
                 <decorativeType>Head</decorativeType>
-                <extraDecorations>
+                <decorations>
                     <li>BEWH_Deco_TW_Plume1</li>
                     <li>BEWH_Deco_TW_Goggles</li>
-                </extraDecorations>
+                </decorations>
             </li>
         </comps>
         <modExtensions>

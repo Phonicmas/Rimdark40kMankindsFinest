@@ -3,7 +3,7 @@ using Verse;
 
 namespace Genes40k;
 
-public class ShoulderIconSettings : ExtraDecorationSettings
+public class ShoulderIconSettings : DecorationSettings
 {
     public ShoulderIconDef ShoulderIcon = null;
 

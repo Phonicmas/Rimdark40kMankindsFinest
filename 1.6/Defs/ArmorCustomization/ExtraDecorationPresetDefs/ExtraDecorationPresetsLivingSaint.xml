@@ -16,7 +16,7 @@ Saint's Light: (245, 245, 210)
 
     <!-- St. Celestine -->
     <!-- Body -->
-    <Core40k.ExtraDecorationPresetDef>
+    <Core40k.DecorationPresetDef>
         <defName>BEWH_Preset_StCelestine</defName>
         <label>St. Celestine</label>
         <appliesTo>
@@ -37,11 +37,11 @@ Saint's Light: (245, 245, 210)
                 
             </BEWH_Deco_LsSkull>
         </presetData>
-    </Core40k.ExtraDecorationPresetDef>
+    </Core40k.DecorationPresetDef>
 
     <!-- Being of light -->
     <!-- Body -->
-    <Core40k.ExtraDecorationPresetDef>
+    <Core40k.DecorationPresetDef>
         <defName>BEWH_Preset_BeingOfLight</defName>
         <label>Being of Light</label>
         <appliesTo>
@@ -61,11 +61,11 @@ Saint's Light: (245, 245, 210)
                 <colour>(245, 245, 210)</colour>
             </BEWH_Deco_LsFleurDeLis>
         </presetData>
-    </Core40k.ExtraDecorationPresetDef>
+    </Core40k.DecorationPresetDef>
 
     <!-- Martyr's Vengeance -->
     <!-- Body -->
-    <Core40k.ExtraDecorationPresetDef>
+    <Core40k.DecorationPresetDef>
         <defName>BEWH_Preset_Vengeance</defName>
         <label>Martyr's Vengeance</label>
         <appliesTo>
@@ -85,6 +85,6 @@ Saint's Light: (245, 245, 210)
                 <colour>(126, 51, 60)</colour>
             </BEWH_Deco_LsRose>
         </presetData>
-    </Core40k.ExtraDecorationPresetDef>
+    </Core40k.DecorationPresetDef>
 
 </Defs>

@@ -81,7 +81,7 @@
         <shaderType>Cutout</shaderType>
         <availablePresets/>
         <colourable>true</colourable>
-        <useArmorColourAsDefault>true</useArmorColourAsDefault>
+        <useParentColourAsDefault>true</useParentColourAsDefault>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -120,7 +120,7 @@
         </drawData>
         <shaderType>Cutout</shaderType>
         <colourable>true</colourable>
-        <useArmorColourAsDefault>true</useArmorColourAsDefault>
+        <useParentColourAsDefault>true</useParentColourAsDefault>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>

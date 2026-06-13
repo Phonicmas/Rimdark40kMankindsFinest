@@ -6,17 +6,6 @@ namespace Genes40k;
 
 public class CompChapterColorWithShoulderDecoration : CompChapterColor
 {
-    public void TempSetInitialValues(ChapterBodyDecorativeApparelMultiColor multiColor)
-    {
-        rightShoulder = multiColor.RightShoulderTemp;
-        originalRightShoulder = multiColor.RightShoulderTemp;
-        
-        leftShoulder = multiColor.LeftShoulderTemp;
-        originalLeftShoulder = multiColor.LeftShoulderTemp;
-        
-        flipShoulderIcons = multiColor.FlipShoulderIcons;
-    }
-    
     public new CompProperties_ChapterColorWithShoulderDecoration Props => (CompProperties_ChapterColorWithShoulderDecoration)props;
 
     [Unsaved]

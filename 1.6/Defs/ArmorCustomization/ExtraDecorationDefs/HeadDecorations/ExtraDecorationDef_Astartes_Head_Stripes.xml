@@ -10,7 +10,7 @@
         <drawnTextureIconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_MkVIIStripe</drawnTextureIconPath>
         <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>6</sortOrder>
-        <isHelmetDecoration>true</isHelmetDecoration>
+        
         <defaultShowRotation>
             <li>West</li>
             <li>South</li>
@@ -53,7 +53,7 @@
         <drawnTextureIconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_MkXStripe</drawnTextureIconPath>
         <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>6</sortOrder>
-        <isHelmetDecoration>true</isHelmetDecoration>
+        
         <defaultShowRotation>
             <li>West</li>
             <li>South</li>
@@ -96,7 +96,7 @@
         <drawnTextureIconPath>Things/Decorations/Headgear/MkVII/StripeDeco/BEWH_Deco_MkVIILieutenantStripe</drawnTextureIconPath>
         <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>6</sortOrder>
-        <isHelmetDecoration>true</isHelmetDecoration>
+        
         <defaultShowRotation>
             <li>West</li>
             <li>South</li>
@@ -136,7 +136,7 @@
         <drawnTextureIconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_MkXLieutenantStripe</drawnTextureIconPath>
         <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>6</sortOrder>
-        <isHelmetDecoration>true</isHelmetDecoration>
+        
         <defaultShowRotation>
             <li>West</li>
             <li>South</li>

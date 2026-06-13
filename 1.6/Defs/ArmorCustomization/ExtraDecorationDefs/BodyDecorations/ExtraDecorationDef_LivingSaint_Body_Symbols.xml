@@ -24,7 +24,7 @@
         <shaderType>Cutout</shaderType>
         <colourable>true</colourable>
         <defaultColour>(245, 245, 210)</defaultColour>
-        <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
+        <hasParentColourPaletteOption>true</hasParentColourPaletteOption>
         <availablePresets>
             <li>BEWH_DecoPaletteGold</li>
             <li>BEWH_DecoPaletteSilver</li>
@@ -55,7 +55,7 @@
         <shaderType>Cutout</shaderType>
         <colourable>true</colourable>
         <defaultColour>(245, 245, 210)</defaultColour>
-        <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
+        <hasParentColourPaletteOption>true</hasParentColourPaletteOption>
         <availablePresets>
             <li>BEWH_DecoPaletteGold</li>
             <li>BEWH_DecoPaletteSilver</li>
@@ -86,7 +86,7 @@
         <shaderType>Cutout</shaderType>
         <colourable>true</colourable>
         <defaultColour>(245, 245, 210)</defaultColour>
-        <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
+        <hasParentColourPaletteOption>true</hasParentColourPaletteOption>
         <availablePresets>
             <li>BEWH_DecoPaletteGold</li>
             <li>BEWH_DecoPaletteSilver</li>
@@ -117,7 +117,7 @@
         <shaderType>Cutout</shaderType>
         <colourable>true</colourable>
         <defaultColour>(126, 51, 60)</defaultColour>
-        <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
+        <hasParentColourPaletteOption>true</hasParentColourPaletteOption>
         <availablePresets>
             <li>BEWH_DecoPaletteGold</li>
             <li>BEWH_DecoPaletteSilver</li>

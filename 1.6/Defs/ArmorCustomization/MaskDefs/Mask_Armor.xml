@@ -13,9 +13,6 @@
         <shaderType>BEWH_CutoutThreeColor</shaderType>
         <colorAmount>3</colorAmount>
         <sortOrder>1</sortOrder>
-        <maskExtraFlags>
-            <li>HasShoulder</li>
-        </maskExtraFlags>
     </Core40k.MaskDef>
 
     <Core40k.MaskDef ParentName="BEWH_MaskDef_Thing">
@@ -29,11 +26,6 @@
         <shaderType>BEWH_CutoutThreeColor</shaderType>
         <colorAmount>3</colorAmount>
         <sortOrder>2</sortOrder>
-        <maskExtraFlags>
-            <li>HasShoulder</li>
-            <li>HasBackpack</li>
-            <li>HasJumppack</li>
-        </maskExtraFlags>
     </Core40k.MaskDef>
 
     <Core40k.MaskDef ParentName="BEWH_MaskDef_Thing">
@@ -47,11 +39,6 @@
         <shaderType>BEWH_CutoutThreeColor</shaderType>
         <colorAmount>3</colorAmount>
         <sortOrder>3</sortOrder>
-        <maskExtraFlags>
-            <li>HasShoulder</li>
-            <li>HasBackpack</li>
-            <li>HasJumppack</li>
-        </maskExtraFlags>
     </Core40k.MaskDef>
 
 
@@ -67,9 +54,6 @@
         <shaderType>BEWH_CutoutThreeColor</shaderType>
         <colorAmount>3</colorAmount>
         <sortOrder>1</sortOrder>
-        <maskExtraFlags>
-            <li>HasShoulder</li>
-        </maskExtraFlags>
     </Core40k.MaskDef>
 
     <Core40k.MaskDef ParentName="BEWH_MaskDef_Thing">
@@ -83,11 +67,6 @@
         <shaderType>BEWH_CutoutThreeColor</shaderType>
         <colorAmount>3</colorAmount>
         <sortOrder>2</sortOrder>
-        <maskExtraFlags>
-            <li>HasShoulder</li>
-            <li>HasBackpack</li>
-            <li>HasJumppack</li>
-        </maskExtraFlags>
     </Core40k.MaskDef>
 
     <Core40k.MaskDef ParentName="BEWH_MaskDef_Thing">
@@ -101,11 +80,6 @@
         <shaderType>BEWH_CutoutThreeColor</shaderType>
         <colorAmount>3</colorAmount>
         <sortOrder>3</sortOrder>
-        <maskExtraFlags>
-            <li>HasShoulder</li>
-            <li>HasBackpack</li>
-            <li>HasJumppack</li>
-        </maskExtraFlags>
     </Core40k.MaskDef>
 
 </Defs>

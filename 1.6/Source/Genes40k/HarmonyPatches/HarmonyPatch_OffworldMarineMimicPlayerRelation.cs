@@ -9,6 +9,10 @@ public class OffworldMarineMimicPlayerRelation
 {
     public static void Postfix(Faction __instance, Faction other)
     {
+        if (__instance == null || other == null)
+        {
+            return;
+        }
         if (__instance.IsPlayer && other.def == Genes40kDefOf.BEWH_OffworldMarinesFaction)
         {
             return;

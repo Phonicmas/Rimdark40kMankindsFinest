@@ -25,10 +25,11 @@ public static class OutfitStandBackpack
             
             foreach (var pawnRenderNode in item.def.apparel.RenderNodeProperties)
             {
-                if (pawnRenderNode.texPath.Contains("_Backpack"))
+                var defMod = item.def.GetModExtension<DefModExtension_TextureFlags>();
+                if (pawnRenderNode.texPath.Contains("_Backpack") && defMod != null)
                 {
                     var maskPath = chapterColorComp.MaskDef?.maskPath;
-                    if (maskPath != null && chapterColorComp.MaskDef.maskExtraFlags.Contains("HasBackpack"))
+                    if (maskPath != null && defMod.maskExpansions.Select(m => m.pathExpansionOnMask).Contains("_Backpack"))
                     {
                         maskPath += "_Backpack";
                     }

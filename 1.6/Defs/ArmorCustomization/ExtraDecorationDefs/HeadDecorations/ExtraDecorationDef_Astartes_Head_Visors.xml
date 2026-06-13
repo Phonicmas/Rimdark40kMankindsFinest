@@ -10,7 +10,7 @@
         <drawnTextureIconPath>Things/Decorations/Headgear/Common/Visor/BEWH_Deco_ApothecaryVisor</drawnTextureIconPath>
         <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>3.1</sortOrder>
-        <isHelmetDecoration>true</isHelmetDecoration>
+        
         <defaultShowRotation>
             <li>North</li>
             <li>South</li>
@@ -39,12 +39,12 @@
         <useMask>true</useMask>
         <flipable>true</flipable>
         <colorAmount>3</colorAmount>
-        <useArmorColourAsDefault>true</useArmorColourAsDefault>
+        <useParentColourAsDefault>true</useParentColourAsDefault>
         <shaderType>BEWH_CutoutThreeColor</shaderType>
         <!-- DefaultColor uses armor color option -->
         <defaultColourTwo>(203,39,39)</defaultColourTwo>
         <defaultColourThree>(31,128,31)</defaultColourThree>
-        <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption>
+        <hasParentColourPaletteOption>true</hasParentColourPaletteOption>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>        <!-- MkVII Helmet -->
@@ -55,7 +55,7 @@
         <drawnTextureIconPath>Things/Decorations/Headgear/MkVII/BEWH_MkVIIHelmetGlow</drawnTextureIconPath>
         <drawSize>(0.5, 0.25)</drawSize>
         <sortOrder>0</sortOrder>
-        <isHelmetDecoration>true</isHelmetDecoration>
+        
         <defaultShowRotation>
             <li>South</li>
             <li>East</li>
@@ -98,7 +98,7 @@
         <drawnTextureIconPath>Things/Decorations/Headgear/MkX/BEWH_MkXHelmetGlow</drawnTextureIconPath>
         <drawSize>(0.5, 0.25)</drawSize>
         <sortOrder>0</sortOrder>
-        <isHelmetDecoration>true</isHelmetDecoration>
+        
         <defaultShowRotation>
             <li>South</li>
             <li>East</li>
@@ -141,7 +141,7 @@
         <drawnTextureIconPath>Things/Decorations/Headgear/MkXC/BEWH_MkXChaplainHelmetGlow</drawnTextureIconPath>
         <drawSize>(0.5, 0.25)</drawSize>
         <sortOrder>0</sortOrder>
-        <isHelmetDecoration>true</isHelmetDecoration>
+        
         <defaultShowRotation>
             <li>South</li>
             <li>East</li>

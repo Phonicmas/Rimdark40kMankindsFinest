@@ -72,8 +72,7 @@
         <shaderType>CutoutComplex</shaderType>
         <useMask>true</useMask>
         <colorAmount>2</colorAmount>
-        <useArmorColourAsDefault>true</useArmorColourAsDefault>
-        <!-- <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption> -->
+        <useParentColourAsDefault>true</useParentColourAsDefault>
         <flipable>true</flipable>
     </Core40k.ExtraDecorationDef>
 
@@ -113,8 +112,7 @@
         <shaderType>CutoutComplex</shaderType>
         <useMask>true</useMask>
         <colorAmount>2</colorAmount>
-        <useArmorColourAsDefault>true</useArmorColourAsDefault>
-        <!-- <hasArmorColourPaletteOption>true</hasArmorColourPaletteOption> -->
+        <useParentColourAsDefault>true</useParentColourAsDefault>
         <flipable>true</flipable>
     </Core40k.ExtraDecorationDef>
 

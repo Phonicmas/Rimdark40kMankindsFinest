@@ -94,7 +94,7 @@
                 <!-- Backpacks -->
                 <li>
                     <workerClass>Core40k.PawnRenderNodeWorker_AttachmentBackpack</workerClass>
-                    <nodeClass>Core40k.PawnRenderNode_AttachmentBackpack</nodeClass>
+                    <nodeClass>Core40k.PawnRenderNode_FlagEdit</nodeClass>
                     <texPath>Things/Armor/Imperium/PowerArmor/MkVIIPowerArmor/Backpacks/BEWH_MkVIIPowerArmor_Backpack</texPath>
                     <shaderTypeDef>CutoutComplex</shaderTypeDef>
                     <parentTagDef>Body</parentTagDef>
@@ -112,11 +112,12 @@
                             <layer>-1</layer>
                         </dataSouth>
                     </drawData>
+                    <texSeed>1</texSeed>
                 </li>
                 <!-- Shoulder pad -->
                 <li>
                     <workerClass>Core40k.PawnRenderNodeWorker_AttachmentShoulderPad</workerClass>
-                    <nodeClass>Core40k.PawnRenderNode_AttachmentApparelMultiColor</nodeClass>
+                    <nodeClass>Core40k.PawnRenderNode_FlagEdit</nodeClass>
                     <texPath>Things/Armor/Imperium/PowerArmor/MkVIIPowerArmor/Shoulder/BEWH_MkVIIPowerArmor_Shoulder</texPath>
                     <shaderTypeDef>CutoutComplex</shaderTypeDef>
                     <parentTagDef>Body</parentTagDef>
@@ -128,6 +129,7 @@
                             <layer>72</layer>
                         </dataWest>
                     </drawData>
+                    <texSeed>2</texSeed>
                 </li>
             </renderNodeProperties>
         </apparel>
@@ -140,8 +142,37 @@
                 <forcedBodyType>Hulk</forcedBodyType>
                 <hideBodyGraphic>true</hideBodyGraphic>
             </li>
-            <li Class="Core40k.DefModExtension_HideJumpPack">
-                <changeBackpackVisual>true</changeBackpackVisual>
+            <li Class="Core40k.DefModExtension_TextureFlags">
+                <textureFlags>
+                    <li>
+                        <order>1</order>
+                        <maskIdentifiers>
+                            <li>1</li>
+                        </maskIdentifiers>
+                        <pathExpansion>_Jump</pathExpansion>
+                        <thingActivator>Apparel_PackJump</thingActivator>
+                        <hideThing>true</hideThing>
+                    </li>
+                </textureFlags>
+                <maskExpansions>
+                    <li>
+                        <identifier>1</identifier>
+                        <pathExpansionOnMask>_Backpack</pathExpansionOnMask>
+                        <maskDefsWithExpansion>
+                            <li>BEWH_MkVIIArmorHalvedMask</li>
+                            <li>BEWH_MkVIIArmorCheckeredMask</li>
+                        </maskDefsWithExpansion>
+                    </li>
+                    <li>
+                        <identifier>2</identifier>
+                        <pathExpansionOnMask>_Shoulder</pathExpansionOnMask>
+                        <maskDefsWithExpansion>
+                            <li>BEWH_MkVIIArmorPauldronsMask</li>
+                            <li>BEWH_MkVIIArmorHalvedMask</li>
+                            <li>BEWH_MkVIIArmorCheckeredMask</li>
+                        </maskDefsWithExpansion>
+                    </li>
+                </maskExpansions>
             </li>
             <li Class="Core40k.DefModExtension_AvailableDrawerTabDefs">
                 <tabDefs>
@@ -194,7 +225,7 @@
                 <!-- Backpacks -->
                 <li>
                     <workerClass>Core40k.PawnRenderNodeWorker_AttachmentBackpack</workerClass>
-                    <nodeClass>Core40k.PawnRenderNode_AttachmentBackpack</nodeClass>
+                    <nodeClass>Core40k.PawnRenderNode_FlagEdit</nodeClass>
                     <texPath>Things/Armor/Imperium/PowerArmor/MkXPowerArmor/Backpacks/BEWH_MkXPowerArmor_Backpack</texPath>
                     <shaderTypeDef>CutoutComplex</shaderTypeDef>
                     <parentTagDef>Body</parentTagDef>
@@ -212,11 +243,12 @@
                             <layer>-1</layer>
                         </dataSouth>
                     </drawData>
+                    <texSeed>1</texSeed>
                 </li>
                 <!-- Shoulder pad -->
                 <li>
                     <workerClass>Core40k.PawnRenderNodeWorker_AttachmentShoulderPad</workerClass>
-                    <nodeClass>Core40k.PawnRenderNode_AttachmentApparelMultiColor</nodeClass>
+                    <nodeClass>Core40k.PawnRenderNode_FlagEdit</nodeClass>
                     <texPath>Things/Armor/Imperium/PowerArmor/MkXPowerArmor/Shoulder/BEWH_MkXPowerArmor_Shoulder</texPath>
                     <shaderTypeDef>CutoutComplex</shaderTypeDef>
                     <parentTagDef>Body</parentTagDef>
@@ -228,6 +260,7 @@
                             <layer>72</layer>
                         </dataWest>
                     </drawData>
+                    <texSeed>2</texSeed>
                 </li>
             </renderNodeProperties>
         </apparel>
@@ -240,8 +273,37 @@
                 <forcedBodyType>Hulk</forcedBodyType>
                 <hideBodyGraphic>true</hideBodyGraphic>
             </li>
-            <li Class="Core40k.DefModExtension_HideJumpPack">
-                <changeBackpackVisual>true</changeBackpackVisual>
+            <li Class="Core40k.DefModExtension_TextureFlags">
+                <textureFlags>
+                    <li>
+                        <order>0</order>
+                        <maskIdentifiers>
+                            <li>1</li>
+                        </maskIdentifiers>
+                        <pathExpansion>_Jump</pathExpansion>
+                        <thingActivator>Apparel_PackJump</thingActivator>
+                        <hideThing>true</hideThing>
+                    </li>
+                </textureFlags>
+                <maskExpansions>
+                    <li>
+                        <identifier>1</identifier>
+                        <pathExpansionOnMask>_Backpack</pathExpansionOnMask>
+                        <maskDefsWithExpansion>
+                            <li>BEWH_MkXArmorHalvedMask</li>
+                            <li>BEWH_MkXArmorCheckeredMask</li>
+                        </maskDefsWithExpansion>
+                    </li>
+                    <li>
+                        <identifier>2</identifier>
+                        <pathExpansionOnMask>_Shoulder</pathExpansionOnMask>
+                        <maskDefsWithExpansion>
+                            <li>BEWH_MkXArmorPauldronsMask</li>
+                            <li>BEWH_MkXArmorHalvedMask</li>
+                            <li>BEWH_MkXArmorCheckeredMask</li>
+                        </maskDefsWithExpansion>
+                    </li>
+                </maskExpansions>
             </li>
             <li Class="Core40k.DefModExtension_AvailableDrawerTabDefs">
                 <tabDefs>
@@ -295,7 +357,7 @@
                 <!-- Backpacks -->
                 <li>
                     <workerClass>Core40k.PawnRenderNodeWorker_AttachmentBackpack</workerClass>
-                    <nodeClass>Core40k.PawnRenderNode_AttachmentBackpack</nodeClass>
+                    <nodeClass>Core40k.PawnRenderNode_FlagEdit</nodeClass>
                     <texPath>Things/Armor/Imperium/PowerArmor/MkXPowerArmorChaplain/Backpacks/BEWH_ChaplainArmor_Backpack</texPath>
                     <shaderTypeDef>CutoutComplex</shaderTypeDef>
                     <parentTagDef>Body</parentTagDef>
@@ -317,7 +379,7 @@
                 <!-- Shoulder pad -->
                 <li>
                     <workerClass>Core40k.PawnRenderNodeWorker_AttachmentShoulderPad</workerClass>
-                    <nodeClass>Core40k.PawnRenderNode_AttachmentApparelMultiColor</nodeClass>
+                    <nodeClass>Core40k.PawnRenderNode_FlagEdit</nodeClass>
                     <texPath>Things/Armor/Imperium/PowerArmor/MkXPowerArmorChaplain/Shoulder/BEWH_ChaplainArmor_Shoulder</texPath>
                     <shaderTypeDef>CutoutComplex</shaderTypeDef>
                     <parentTagDef>Body</parentTagDef>
@@ -346,8 +408,15 @@
                 <forcedBodyType>Hulk</forcedBodyType>
                 <hideBodyGraphic>true</hideBodyGraphic>
             </li>
-            <li Class="Core40k.DefModExtension_HideJumpPack">
-                <changeBackpackVisual>true</changeBackpackVisual>
+            <li Class="Core40k.DefModExtension_TextureFlags">
+                <textureFlags>
+                    <li>
+                        <order>0</order>
+                        <pathExpansion>_Jump</pathExpansion>
+                        <thingActivator>Apparel_PackJump</thingActivator>
+                        <hideThing>true</hideThing>
+                    </li>
+                </textureFlags>
             </li>
             <li Class="Core40k.DefModExtension_AvailableDrawerTabDefs">
                 <tabDefs>
@@ -407,7 +476,7 @@
                 <!-- Backpacks -->
                 <li>
                     <workerClass>Core40k.PawnRenderNodeWorker_AttachmentBackpack</workerClass>
-                    <nodeClass>Core40k.PawnRenderNode_AttachmentBackpack</nodeClass>
+                    <nodeClass>Core40k.PawnRenderNode_FlagEdit</nodeClass>
                     <texPath>Things/Armor/Imperium/PowerArmor/LivingSaint/Backpacks/BEWH_LSaintArmor_Backpack</texPath>
                     <shaderTypeDef>CutoutComplex</shaderTypeDef>
                     <parentTagDef>Body</parentTagDef>
@@ -436,10 +505,10 @@
             </li>
             <li Class="Core40k.CompProperties_Decorative">
                 <decorativeType>Body</decorativeType>
-                <extraDecorations>
+                <decorations>
                     <li>BEWH_LivingSaintWings_1</li>
                     <li>BEWH_LivingSaintHalo_2</li>
-                </extraDecorations>
+                </decorations>
             </li>
         </comps>
         <modExtensions>
@@ -447,7 +516,16 @@
                 <forcedBodyType>Female</forcedBodyType>
                 <hideBodyGraphic>true</hideBodyGraphic>
             </li>
-            <li Class="Core40k.DefModExtension_HideJumpPack" />
+            <li Class="Core40k.DefModExtension_TextureFlags">
+                <textureFlags>
+                    <li>
+                        <order>0</order>
+                        <pathExpansion>_Jump</pathExpansion>
+                        <thingActivator>Apparel_PackJump</thingActivator>
+                        <hideThing>true</hideThing>
+                    </li>
+                </textureFlags>
+            </li>
             <li Class="Core40k.DefModExtension_AvailableDrawerTabDefs">
                 <tabDefs>
                     <li>BEWH_ArmorColoring</li>
@@ -498,7 +576,7 @@
                 <!-- Backpacks -->
                 <li>
                     <workerClass>Core40k.PawnRenderNodeWorker_AttachmentBackpack</workerClass>
-                    <nodeClass>Core40k.PawnRenderNode_AttachmentBackpack</nodeClass>
+                    <nodeClass>Core40k.PawnRenderNode_FlagEdit</nodeClass>
                     <texPath>Things/Armor/Imperium/PowerArmor/MkIPowerArmor/Backpacks/BEWH_MkIPowerArmor_Backpack</texPath>
                     <shaderTypeDef>CutoutComplex</shaderTypeDef>
                     <parentTagDef>Body</parentTagDef>
@@ -520,7 +598,7 @@
                 <!-- Shoulder pad -->
                 <li>
                     <workerClass>Core40k.PawnRenderNodeWorker_AttachmentShoulderPad</workerClass>
-                    <nodeClass>Core40k.PawnRenderNode_AttachmentApparelMultiColor</nodeClass>
+                    <nodeClass>Core40k.PawnRenderNode_FlagEdit</nodeClass>
                     <texPath>Things/Armor/Imperium/PowerArmor/MkIPowerArmor/Shoulder/BEWH_MkIPowerArmor_Shoulder</texPath>
                     <shaderTypeDef>CutoutComplex</shaderTypeDef>
                     <parentTagDef>Body</parentTagDef>
@@ -549,7 +627,15 @@
                 <forcedBodyType>Hulk</forcedBodyType>
                 <hideBodyGraphic>true</hideBodyGraphic>
             </li>
-            <li Class="Core40k.DefModExtension_HideJumpPack" />
+            <li Class="Core40k.DefModExtension_TextureFlags">
+                <textureFlags>
+                    <li>
+                        <order>0</order>
+                        <thingActivator>Apparel_PackJump</thingActivator>
+                        <hideThing>true</hideThing>
+                    </li>
+                </textureFlags>
+            </li>
             <li Class="Core40k.DefModExtension_AvailableDrawerTabDefs">
                 <tabDefs>
                     <li>BEWH_ArmorColoring</li>
