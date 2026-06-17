@@ -23,19 +23,19 @@
             <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
             <dataNorth>
                 <layer>90</layer>
-				<offset>(0, 0, 0.24)</offset>
+                <offset>(0, 0, 0.24)</offset>
             </dataNorth>
             <dataSouth>
                 <layer>20</layer>
-				<offset>(0, 0, 0.24)</offset>
+                <offset>(0, 0, 0.24)</offset>
             </dataSouth>
             <dataEast>
                 <layer>50</layer>
-				<offset>(0, 0, 0.33)</offset>
+                <offset>(0, 0, 0.33)</offset>
             </dataEast>
             <dataWest>
                 <layer>50</layer>
-				<offset>(0, 0, 0.33)</offset>
+                <offset>(0, 0, 0.33)</offset>
             </dataWest>
         </drawData>
         <shaderType>CutoutComplex</shaderType>
@@ -45,7 +45,8 @@
         <colorAmount>2</colorAmount>
         <useParentColourAsDefault>true</useParentColourAsDefault>
         <defaultColourTwo>(187,197,206)</defaultColourTwo>
-        <hasParentColourPaletteOption>true</hasParentColourPaletteOption> 
+        <hasParentColourPaletteOption>true</hasParentColourPaletteOption>
+        <decorationType>BEWH_DecoCategory_Wings</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -92,5 +93,7 @@
             <li>BEWH_DecoPaletteSaintLight</li>
             <li>BEWH_DecoPaletteSaintVengeance</li>
         </availablePresets>
+        <decorationType>BEWH_DecoCategory_Wings</decorationType>
     </Core40k.ExtraDecorationDef>
+
 </Defs>

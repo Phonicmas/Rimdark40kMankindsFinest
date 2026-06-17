@@ -47,6 +47,7 @@
             <li>BEWH_DecoPaletteSaintLight</li>
             <li>BEWH_DecoPaletteSaintVengeance</li>
         </availablePresets>
+        <decorationType>BEWH_DecoCategory_Halo</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -86,12 +87,13 @@
         <flipable>false</flipable>
         <colourable>true</colourable>
         <defaultColour>(173, 179, 179)</defaultColour>
-        <hasParentColourPaletteOption>true</hasParentColourPaletteOption> 
+        <hasParentColourPaletteOption>true</hasParentColourPaletteOption>
         <availablePresets>
             <li>BEWH_DecoPaletteGold</li>
             <li>BEWH_DecoPaletteSilver</li>
         </availablePresets>
         <drawInHeadSpace>true</drawInHeadSpace>
         <useMask>true</useMask>
+        <decorationType>BEWH_DecoCategory_Halo</decorationType>
     </Core40k.ExtraDecorationDef>
 </Defs>

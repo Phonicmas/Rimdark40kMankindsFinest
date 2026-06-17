@@ -10,7 +10,7 @@
         <drawnTextureIconPath>Things/Decorations/Headgear/Common/BEWH_Deco_BladeguardShield</drawnTextureIconPath>
         <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>4</sortOrder>
-        
+
         <defaultShowRotation>
             <li>West</li>
             <li>South</li>
@@ -38,6 +38,7 @@
             </dataWest>
         </drawData>
         <shaderType>Cutout</shaderType>
+        <decorationType>BEWH_DecoCategory_Brims</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -48,7 +49,7 @@
         <drawnTextureIconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_VictrixHelmMkVII</drawnTextureIconPath>
         <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>5</sortOrder>
-        
+
         <defaultShowRotation>
             <li>West</li>
             <li>South</li>
@@ -82,6 +83,7 @@
         </availablePresets>
         <shaderType>Cutout</shaderType>
         <defaultColour>(240,176,29)</defaultColour>
+        <decorationType>BEWH_DecoCategory_Brims</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -92,7 +94,7 @@
         <drawnTextureIconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_VictrixHelmMkX</drawnTextureIconPath>
         <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>5</sortOrder>
-        
+
         <defaultShowRotation>
             <li>West</li>
             <li>South</li>
@@ -126,6 +128,7 @@
         </availablePresets>
         <shaderType>Cutout</shaderType>
         <defaultColour>(240,176,29)</defaultColour>
+        <decorationType>BEWH_DecoCategory_Brims</decorationType>
     </Core40k.ExtraDecorationDef>
 
 </Defs>

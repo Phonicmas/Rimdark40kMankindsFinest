@@ -10,7 +10,7 @@
         <drawnTextureIconPath>Things/Decorations/Headgear/Common/BEWH_Deco_Hood</drawnTextureIconPath>
         <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>3</sortOrder>
-        
+
         <defaultShowRotation>
             <li>West</li>
             <li>South</li>
@@ -46,6 +46,7 @@
             <li>BEWH_DecoPaletteIFBlack</li>
         </availablePresets>
         <shaderType>Cutout</shaderType>
+        <decorationType>BEWH_DecoCategory_Fabrics</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -56,7 +57,7 @@
         <drawnTextureIconPath>Things/Decorations/Headgear/Common/BEWH_Deco_Hood</drawnTextureIconPath>
         <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>3</sortOrder>
-        
+
         <defaultShowRotation>
             <li>West</li>
             <li>South</li>
@@ -91,6 +92,7 @@
             <li>BEWH_DecoPaletteIFBlack</li>
         </availablePresets>
         <shaderType>Cutout</shaderType>
+        <decorationType>BEWH_DecoCategory_Fabrics</decorationType>
     </Core40k.ExtraDecorationDef>
 
 </Defs>

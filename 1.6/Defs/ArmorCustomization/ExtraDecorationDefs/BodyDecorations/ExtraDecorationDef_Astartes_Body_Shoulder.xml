@@ -36,6 +36,7 @@
             </dataWest>
         </drawData>
         <flipable>true</flipable>
+        <decorationType>BEWH_DecoCategory_Shoulder</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -74,6 +75,7 @@
         <colourable>true</colourable>
         <shaderType>Cutout</shaderType>
         <availablePresets />
+        <decorationType>BEWH_DecoCategory_Shoulder</decorationType>
         <!-- Custom chapter colors here -->
     </Core40k.ExtraDecorationDef>
 
@@ -112,6 +114,7 @@
         <colourable>true</colourable>
         <shaderType>Cutout</shaderType>
         <availablePresets />
+        <decorationType>BEWH_DecoCategory_Shoulder</decorationType>
     </Core40k.ExtraDecorationDef>
 
 </Defs>

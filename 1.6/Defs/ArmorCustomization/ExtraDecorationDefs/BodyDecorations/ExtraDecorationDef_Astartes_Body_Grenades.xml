@@ -35,6 +35,7 @@
             </dataWest>
         </drawData>
         <flipable>true</flipable>
+        <decorationType>BEWH_DecoCategory_Grenades</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -70,6 +71,7 @@
             </dataWest>
         </drawData>
         <flipable>true</flipable>
+        <decorationType>BEWH_DecoCategory_Grenades</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -105,6 +107,7 @@
             </dataWest>
         </drawData>
         <flipable>true</flipable>
+        <decorationType>BEWH_DecoCategory_Grenades</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -140,6 +143,7 @@
             </dataWest>
         </drawData>
         <flipable>true</flipable>
+        <decorationType>BEWH_DecoCategory_Grenades</decorationType>
     </Core40k.ExtraDecorationDef>
 
 </Defs>

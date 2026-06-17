@@ -10,7 +10,7 @@
         <drawnTextureIconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_MkVIIStripe</drawnTextureIconPath>
         <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>6</sortOrder>
-        
+
         <defaultShowRotation>
             <li>West</li>
             <li>South</li>
@@ -43,6 +43,7 @@
             <li>BEWH_DecoPaletteIFBlack</li>
             <li>BEWH_DecoPaletteStripeRed</li>
         </availablePresets>
+        <decorationType>BEWH_DecoCategory_Decals</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -53,7 +54,7 @@
         <drawnTextureIconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_MkXStripe</drawnTextureIconPath>
         <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>6</sortOrder>
-        
+
         <defaultShowRotation>
             <li>West</li>
             <li>South</li>
@@ -86,6 +87,7 @@
             <li>BEWH_DecoPaletteIFBlack</li>
             <li>BEWH_DecoPaletteStripeRed</li>
         </availablePresets>
+        <decorationType>BEWH_DecoCategory_Decals</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -96,7 +98,7 @@
         <drawnTextureIconPath>Things/Decorations/Headgear/MkVII/StripeDeco/BEWH_Deco_MkVIILieutenantStripe</drawnTextureIconPath>
         <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>6</sortOrder>
-        
+
         <defaultShowRotation>
             <li>West</li>
             <li>South</li>
@@ -126,6 +128,7 @@
         <useMask>true</useMask>
         <colorAmount>2</colorAmount>
         <defaultColourTwo>(168,35,32)</defaultColourTwo>
+        <decorationType>BEWH_DecoCategory_Decals</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -136,7 +139,7 @@
         <drawnTextureIconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_MkXLieutenantStripe</drawnTextureIconPath>
         <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>6</sortOrder>
-        
+
         <defaultShowRotation>
             <li>West</li>
             <li>South</li>
@@ -166,6 +169,7 @@
         <useMask>true</useMask>
         <colorAmount>2</colorAmount>
         <defaultColourTwo>(168,35,32)</defaultColourTwo>
+        <decorationType>BEWH_DecoCategory_Decals</decorationType>
     </Core40k.ExtraDecorationDef>
 
 </Defs>

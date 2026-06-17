@@ -41,6 +41,7 @@
             <li>BEWH_DecoPaletteFurBrown</li>
             <li>BEWH_DecoPaletteLeatherGrey</li>
         </availablePresets>
+        <decorationType>BEWH_DecoCategory_Shoulder</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -79,9 +80,10 @@
             </dataWest>
         </drawData>
         <shaderType>Cutout</shaderType>
-        <availablePresets/>
+        <availablePresets />
         <colourable>true</colourable>
         <useParentColourAsDefault>true</useParentColourAsDefault>
+        <decorationType>BEWH_DecoCategory_Pouches</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -121,6 +123,7 @@
         <shaderType>Cutout</shaderType>
         <colourable>true</colourable>
         <useParentColourAsDefault>true</useParentColourAsDefault>
+        <decorationType>BEWH_DecoCategory_Fabrics</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -162,6 +165,7 @@
         </availablePresets>
         <colourable>true</colourable>
         <defaultColour>(162,54,39)</defaultColour>
+        <decorationType>BEWH_DecoCategory_Fabrics</decorationType>
     </Core40k.ExtraDecorationDef>
 
 </Defs>

@@ -10,7 +10,7 @@
         <drawnTextureIconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_ClawMarks1MkVII</drawnTextureIconPath>
         <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>7</sortOrder>
-        
+
         <defaultShowRotation>
             <li>West</li>
             <li>South</li>
@@ -35,6 +35,7 @@
             </dataWest>
         </drawData>
         <flipable>true</flipable>
+        <decorationType>BEWH_DecoCategory_Misc</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -45,7 +46,7 @@
         <drawnTextureIconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_ClawMarks1MkX</drawnTextureIconPath>
         <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>7</sortOrder>
-        
+
         <defaultShowRotation>
             <li>West</li>
             <li>South</li>
@@ -70,6 +71,7 @@
             </dataWest>
         </drawData>
         <flipable>true</flipable>
+        <decorationType>BEWH_DecoCategory_Misc</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -80,7 +82,7 @@
         <drawnTextureIconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_ClawMarks2MkVII</drawnTextureIconPath>
         <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>7</sortOrder>
-        
+
         <defaultShowRotation>
             <li>West</li>
             <li>South</li>
@@ -105,6 +107,7 @@
             </dataWest>
         </drawData>
         <flipable>true</flipable>
+        <decorationType>BEWH_DecoCategory_Misc</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -115,7 +118,7 @@
         <drawnTextureIconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_ClawMarks2MkX</drawnTextureIconPath>
         <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>7</sortOrder>
-        
+
         <defaultShowRotation>
             <li>West</li>
             <li>South</li>
@@ -140,6 +143,7 @@
             </dataWest>
         </drawData>
         <flipable>true</flipable>
+        <decorationType>BEWH_DecoCategory_Misc</decorationType>
     </Core40k.ExtraDecorationDef>
 
 </Defs>

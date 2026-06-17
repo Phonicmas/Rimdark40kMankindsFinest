@@ -50,6 +50,7 @@
         <defaultColour>(240,176,29)</defaultColour>
         <flipable>false</flipable>
         <drawInHeadSpace>true</drawInHeadSpace>
+        <decorationType>BEWH_DecoCategory_Halo</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -100,6 +101,7 @@
         <defaultColour>(240,176,29)</defaultColour>
         <flipable>false</flipable>
         <drawInHeadSpace>true</drawInHeadSpace>
+        <decorationType>BEWH_DecoCategory_Halo</decorationType>
     </Core40k.ExtraDecorationDef>
 
 </Defs>

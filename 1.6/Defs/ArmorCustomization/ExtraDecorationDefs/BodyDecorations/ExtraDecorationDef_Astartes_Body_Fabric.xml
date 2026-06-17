@@ -42,6 +42,7 @@
         </availablePresets>
         <colourable>true</colourable>
         <defaultColour>(222,222,222)</defaultColour>
+        <decorationType>BEWH_DecoCategory_Fabrics</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -77,6 +78,7 @@
         <colourable>true</colourable>
         <defaultColour>(162, 54, 39)</defaultColour>
         <useMask>true</useMask>
+        <decorationType>BEWH_DecoCategory_Fabrics</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -112,6 +114,7 @@
         <colourable>true</colourable>
         <defaultColour>(162, 54, 39)</defaultColour>
         <useMask>true</useMask>
+        <decorationType>BEWH_DecoCategory_Fabrics</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -149,6 +152,7 @@
         </availablePresets>
         <colourable>true</colourable>
         <defaultColour>(222,222,222)</defaultColour>
+        <decorationType>BEWH_DecoCategory_Fabrics</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -186,6 +190,7 @@
         </availablePresets>
         <colourable>true</colourable>
         <defaultColour>(222,222,222)</defaultColour>
+        <decorationType>BEWH_DecoCategory_Fabrics</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -232,6 +237,7 @@
         <colorAmount>2</colorAmount>
         <defaultColour>(104,24,33)</defaultColour>
         <defaultColourTwo>(240,176,29)</defaultColourTwo>
+        <decorationType>BEWH_DecoCategory_Shoulder</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -278,6 +284,7 @@
         <colorAmount>2</colorAmount>
         <defaultColour>(104,24,33)</defaultColour>
         <defaultColourTwo>(240,176,29)</defaultColourTwo>
+        <decorationType>BEWH_DecoCategory_Shoulder</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -320,6 +327,7 @@
         <colorAmount>2</colorAmount>
         <defaultColour>(162, 54, 39)</defaultColour>
         <defaultColourTwo>(240,176,29)</defaultColourTwo>
+        <decorationType>BEWH_DecoCategory_Fabrics</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>        <!-- MARK VII -->
@@ -361,6 +369,7 @@
         </availablePresets>
         <colourable>true</colourable>
         <defaultColour>(222,222,222)</defaultColour>
+        <decorationType>BEWH_DecoCategory_Fabrics</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>        <!-- MARK X -->
@@ -402,6 +411,7 @@
         </availablePresets>
         <colourable>true</colourable>
         <defaultColour>(222,222,222)</defaultColour>
+        <decorationType>BEWH_DecoCategory_Fabrics</decorationType>
     </Core40k.ExtraDecorationDef>
 
 
@@ -446,6 +456,7 @@
         </availablePresets>
         <colourable>true</colourable>
         <defaultColour>(104,24,33)</defaultColour>
+        <decorationType>BEWH_DecoCategory_Fabrics</decorationType>
     </Core40k.ExtraDecorationDef>
 
 </Defs>

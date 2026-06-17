@@ -10,7 +10,7 @@
         <drawnTextureIconPath>Things/Decorations/Headgear/Common/Visor/BEWH_Deco_ApothecaryVisor</drawnTextureIconPath>
         <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>3.1</sortOrder>
-        
+
         <defaultShowRotation>
             <li>North</li>
             <li>South</li>
@@ -45,6 +45,7 @@
         <defaultColourTwo>(203,39,39)</defaultColourTwo>
         <defaultColourThree>(31,128,31)</defaultColourThree>
         <hasParentColourPaletteOption>true</hasParentColourPaletteOption>
+        <decorationType>BEWH_DecoCategory_Misc</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>        <!-- MkVII Helmet -->
@@ -55,7 +56,7 @@
         <drawnTextureIconPath>Things/Decorations/Headgear/MkVII/BEWH_MkVIIHelmetGlow</drawnTextureIconPath>
         <drawSize>(0.5, 0.25)</drawSize>
         <sortOrder>0</sortOrder>
-        
+
         <defaultShowRotation>
             <li>South</li>
             <li>East</li>
@@ -88,6 +89,7 @@
             <li>BEWH_DecoPaletteLenseGlowOrange</li>
             <li>BEWH_DecoPaletteLenseGlowWhite</li>
         </availablePresets>
+        <decorationType>BEWH_DecoCategory_Misc</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>        <!-- MkX Helmet -->
@@ -98,7 +100,7 @@
         <drawnTextureIconPath>Things/Decorations/Headgear/MkX/BEWH_MkXHelmetGlow</drawnTextureIconPath>
         <drawSize>(0.5, 0.25)</drawSize>
         <sortOrder>0</sortOrder>
-        
+
         <defaultShowRotation>
             <li>South</li>
             <li>East</li>
@@ -131,6 +133,7 @@
             <li>BEWH_DecoPaletteLenseGlowOrange</li>
             <li>BEWH_DecoPaletteLenseGlowWhite</li>
         </availablePresets>
+        <decorationType>BEWH_DecoCategory_Misc</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>        <!-- MkX Chaplain Helmet -->
@@ -141,7 +144,7 @@
         <drawnTextureIconPath>Things/Decorations/Headgear/MkXC/BEWH_MkXChaplainHelmetGlow</drawnTextureIconPath>
         <drawSize>(0.5, 0.25)</drawSize>
         <sortOrder>0</sortOrder>
-        
+
         <defaultShowRotation>
             <li>South</li>
             <li>East</li>
@@ -174,6 +177,7 @@
             <li>BEWH_DecoPaletteLenseGlowOrange</li>
             <li>BEWH_DecoPaletteLenseGlowWhite</li>
         </availablePresets>
+        <decorationType>BEWH_DecoCategory_Misc</decorationType>
     </Core40k.ExtraDecorationDef>
 
 </Defs>

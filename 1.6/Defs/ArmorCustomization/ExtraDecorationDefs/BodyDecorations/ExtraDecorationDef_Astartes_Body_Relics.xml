@@ -43,6 +43,7 @@
         <defaultColour>(240,176,29)</defaultColour>
         <colourable>true</colourable>
         <flipable>true</flipable>
+        <decorationType>BEWH_DecoCategory_Relics</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -86,6 +87,7 @@
         <defaultColour>(240,176,29)</defaultColour>
         <colourable>true</colourable>
         <flipable>true</flipable>
+        <decorationType>BEWH_DecoCategory_Relics</decorationType>
     </Core40k.ExtraDecorationDef>
 
 </Defs>

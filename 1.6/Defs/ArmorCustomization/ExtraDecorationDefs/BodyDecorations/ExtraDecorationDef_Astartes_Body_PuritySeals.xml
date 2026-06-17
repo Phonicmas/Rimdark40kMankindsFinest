@@ -35,6 +35,7 @@
             </dataWest>
         </drawData>
         <flipable>true</flipable>
+        <decorationType>BEWH_DecoCategory_Pseals</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -70,6 +71,7 @@
             </dataWest>
         </drawData>
         <flipable>true</flipable>
+        <decorationType>BEWH_DecoCategory_Pseals</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -106,6 +108,7 @@
             </dataWest>
         </drawData>
         <flipable>true</flipable>
+        <decorationType>BEWH_DecoCategory_Pseals</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -137,6 +140,7 @@
             </dataWest>
         </drawData>
         <flipable>true</flipable>
+        <decorationType>BEWH_DecoCategory_Pseals</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -169,6 +173,7 @@
             </dataWest>
         </drawData>
         <flipable>true</flipable>
+        <decorationType>BEWH_DecoCategory_Pseals</decorationType>
     </Core40k.ExtraDecorationDef>
 
 </Defs>
