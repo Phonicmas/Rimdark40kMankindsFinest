@@ -2,7 +2,7 @@
 <Defs>
 
   <!-- Imperium Culture -->
-  <CultureDef MayRequire="Ludeon.RimWorld.Ideology">
+  <CultureDef>
     <defName>BEWH_ImperiumCulture</defName>
     <label>Imperium</label>
     <description>The Emperor's finest warriors.</description>

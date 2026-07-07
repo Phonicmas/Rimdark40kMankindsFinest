@@ -49,8 +49,8 @@
         </backstoryFilters>
 
 
-        <allowedCultures MayRequire="Ludeon.RimWorld.Ideology">
-            <li>BEWH_ImperiumCulture</li>
+        <allowedCultures>
+            <li MayRequire="Ludeon.RimWorld.Ideology">BEWH_ImperiumCulture</li>
         </allowedCultures>
 
         <fixedIdeo MayRequire="Ludeon.RimWorld.Ideology">true</fixedIdeo>
