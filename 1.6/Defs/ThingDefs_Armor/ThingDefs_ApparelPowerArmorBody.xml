@@ -144,7 +144,7 @@
             </li>
             <li Class="Core40k.DefModExtension_TextureFlags">
                 <textureFlags>
-                    <li>
+                    <li MayRequire="Ludeon.RimWorld.Royalty">
                         <order>1</order>
                         <maskIdentifiers>
                             <li>1</li>
@@ -275,7 +275,7 @@
             </li>
             <li Class="Core40k.DefModExtension_TextureFlags">
                 <textureFlags>
-                    <li>
+                    <li MayRequire="Ludeon.RimWorld.Royalty">
                         <order>0</order>
                         <maskIdentifiers>
                             <li>1</li>
@@ -410,7 +410,7 @@
             </li>
             <li Class="Core40k.DefModExtension_TextureFlags">
                 <textureFlags>
-                    <li>
+                    <li MayRequire="Ludeon.RimWorld.Royalty">
                         <order>0</order>
                         <pathExpansion>_Jump</pathExpansion>
                         <thingActivator>Apparel_PackJump</thingActivator>
@@ -518,7 +518,7 @@
             </li>
             <li Class="Core40k.DefModExtension_TextureFlags">
                 <textureFlags>
-                    <li>
+                    <li MayRequire="Ludeon.RimWorld.Royalty">
                         <order>0</order>
                         <pathExpansion>_Jump</pathExpansion>
                         <thingActivator>Apparel_PackJump</thingActivator>
@@ -629,7 +629,7 @@
             </li>
             <li Class="Core40k.DefModExtension_TextureFlags">
                 <textureFlags>
-                    <li>
+                    <li MayRequire="Ludeon.RimWorld.Royalty">
                         <order>0</order>
                         <thingActivator>Apparel_PackJump</thingActivator>
                         <hideThing>true</hideThing>
