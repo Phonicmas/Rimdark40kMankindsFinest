@@ -36,7 +36,6 @@
             </dataWest>
         </drawData>
         <colourable>true</colourable>
-        <useMask>true</useMask>
         <flipable>true</flipable>
         <colorAmount>3</colorAmount>
         <useParentColourAsDefault>true</useParentColourAsDefault>

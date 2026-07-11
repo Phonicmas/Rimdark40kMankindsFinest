@@ -93,7 +93,6 @@
             <li>BEWH_DecoPaletteSilver</li>
         </availablePresets>
         <drawInHeadSpace>true</drawInHeadSpace>
-        <useMask>true</useMask>
         <decorationType>BEWH_DecoCategory_Halo</decorationType>
     </Core40k.ExtraDecorationDef>
 </Defs>

@@ -125,7 +125,6 @@
         </drawData>
         <colourable>true</colourable>
         <shaderType>CutoutComplex</shaderType>
-        <useMask>true</useMask>
         <colorAmount>2</colorAmount>
         <defaultColourTwo>(168,35,32)</defaultColourTwo>
         <decorationType>BEWH_DecoCategory_Decals</decorationType>
@@ -166,7 +165,6 @@
         </drawData>
         <colourable>true</colourable>
         <shaderType>CutoutComplex</shaderType>
-        <useMask>true</useMask>
         <colorAmount>2</colorAmount>
         <defaultColourTwo>(168,35,32)</defaultColourTwo>
         <decorationType>BEWH_DecoCategory_Decals</decorationType>

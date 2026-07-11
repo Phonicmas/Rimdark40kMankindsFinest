@@ -77,7 +77,6 @@
         </availablePresets>
         <colourable>true</colourable>
         <defaultColour>(162, 54, 39)</defaultColour>
-        <useMask>true</useMask>
         <decorationType>BEWH_DecoCategory_Fabrics</decorationType>
     </Core40k.ExtraDecorationDef>
 
@@ -113,7 +112,6 @@
         </availablePresets>
         <colourable>true</colourable>
         <defaultColour>(162, 54, 39)</defaultColour>
-        <useMask>true</useMask>
         <decorationType>BEWH_DecoCategory_Fabrics</decorationType>
     </Core40k.ExtraDecorationDef>
 
@@ -233,7 +231,6 @@
         </availablePresets>
         <shaderType>CutoutComplex</shaderType>
         <colourable>true</colourable>
-        <useMask>true</useMask>
         <colorAmount>2</colorAmount>
         <defaultColour>(104,24,33)</defaultColour>
         <defaultColourTwo>(240,176,29)</defaultColourTwo>
@@ -280,7 +277,6 @@
         </availablePresets>
         <shaderType>CutoutComplex</shaderType>
         <colourable>true</colourable>
-        <useMask>true</useMask>
         <colorAmount>2</colorAmount>
         <defaultColour>(104,24,33)</defaultColour>
         <defaultColourTwo>(240,176,29)</defaultColourTwo>
@@ -323,7 +319,6 @@
         </availablePresets>
         <shaderType>CutoutComplex</shaderType>
         <colourable>true</colourable>
-        <useMask>true</useMask>
         <colorAmount>2</colorAmount>
         <defaultColour>(162, 54, 39)</defaultColour>
         <defaultColourTwo>(240,176,29)</defaultColourTwo>

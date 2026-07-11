@@ -143,17 +143,6 @@
                 <hideBodyGraphic>true</hideBodyGraphic>
             </li>
             <li Class="Core40k.DefModExtension_TextureFlags">
-                <textureFlags>
-                    <li MayRequire="Ludeon.RimWorld.Royalty">
-                        <order>1</order>
-                        <maskIdentifiers>
-                            <li>1</li>
-                        </maskIdentifiers>
-                        <pathExpansion>_Jump</pathExpansion>
-                        <thingActivator>Apparel_PackJump</thingActivator>
-                        <hideThing>true</hideThing>
-                    </li>
-                </textureFlags>
                 <maskExpansions>
                     <li>
                         <identifier>1</identifier>
@@ -274,17 +263,6 @@
                 <hideBodyGraphic>true</hideBodyGraphic>
             </li>
             <li Class="Core40k.DefModExtension_TextureFlags">
-                <textureFlags>
-                    <li MayRequire="Ludeon.RimWorld.Royalty">
-                        <order>0</order>
-                        <maskIdentifiers>
-                            <li>1</li>
-                        </maskIdentifiers>
-                        <pathExpansion>_Jump</pathExpansion>
-                        <thingActivator>Apparel_PackJump</thingActivator>
-                        <hideThing>true</hideThing>
-                    </li>
-                </textureFlags>
                 <maskExpansions>
                     <li>
                         <identifier>1</identifier>
@@ -408,16 +386,7 @@
                 <forcedBodyType>Hulk</forcedBodyType>
                 <hideBodyGraphic>true</hideBodyGraphic>
             </li>
-            <li Class="Core40k.DefModExtension_TextureFlags">
-                <textureFlags>
-                    <li MayRequire="Ludeon.RimWorld.Royalty">
-                        <order>0</order>
-                        <pathExpansion>_Jump</pathExpansion>
-                        <thingActivator>Apparel_PackJump</thingActivator>
-                        <hideThing>true</hideThing>
-                    </li>
-                </textureFlags>
-            </li>
+            <li Class="Core40k.DefModExtension_TextureFlags" />
             <li Class="Core40k.DefModExtension_AvailableDrawerTabDefs">
                 <tabDefs>
                     <li>BEWH_ArmorColoring</li>
@@ -516,16 +485,7 @@
                 <forcedBodyType>Female</forcedBodyType>
                 <hideBodyGraphic>true</hideBodyGraphic>
             </li>
-            <li Class="Core40k.DefModExtension_TextureFlags">
-                <textureFlags>
-                    <li MayRequire="Ludeon.RimWorld.Royalty">
-                        <order>0</order>
-                        <pathExpansion>_Jump</pathExpansion>
-                        <thingActivator>Apparel_PackJump</thingActivator>
-                        <hideThing>true</hideThing>
-                    </li>
-                </textureFlags>
-            </li>
+            <li Class="Core40k.DefModExtension_TextureFlags" />
             <li Class="Core40k.DefModExtension_AvailableDrawerTabDefs">
                 <tabDefs>
                     <li>BEWH_ArmorColoring</li>
@@ -627,15 +587,7 @@
                 <forcedBodyType>Hulk</forcedBodyType>
                 <hideBodyGraphic>true</hideBodyGraphic>
             </li>
-            <li Class="Core40k.DefModExtension_TextureFlags">
-                <textureFlags>
-                    <li MayRequire="Ludeon.RimWorld.Royalty">
-                        <order>0</order>
-                        <thingActivator>Apparel_PackJump</thingActivator>
-                        <hideThing>true</hideThing>
-                    </li>
-                </textureFlags>
-            </li>
+            <li Class="Core40k.DefModExtension_TextureFlags" />
             <li Class="Core40k.DefModExtension_AvailableDrawerTabDefs">
                 <tabDefs>
                     <li>BEWH_ArmorColoring</li>

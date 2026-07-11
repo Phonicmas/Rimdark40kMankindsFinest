@@ -28,7 +28,7 @@ Apothecary red: (162, 54, 39)
             </BEWH_Deco_MkVIIApothecaryTabard>
             <BEWH_DecoPSeal_5>
                 <flipped>false</flipped>
-                
+
             </BEWH_DecoPSeal_5>
         </presetData>
     </Core40k.DecorationPresetDef>
@@ -46,7 +46,7 @@ Apothecary red: (162, 54, 39)
             </BEWH_Deco_MkXApothecaryTabard>
             <BEWH_DecoPSeal_5>
                 <flipped>false</flipped>
-                
+
             </BEWH_DecoPSeal_5>
         </presetData>
     </Core40k.DecorationPresetDef>
@@ -67,7 +67,7 @@ Apothecary red: (162, 54, 39)
             </BEWH_Deco_Visor_1>
             <BEWH_Deco_MkVIIApothecarySymbol>
                 <flipped>false</flipped>
-                
+
             </BEWH_Deco_MkVIIApothecarySymbol>
         </presetData>
     </Core40k.DecorationPresetDef>
@@ -87,7 +87,7 @@ Apothecary red: (162, 54, 39)
             </BEWH_Deco_Visor_1>
             <BEWH_Deco_MkXApothecarySymbol>
                 <flipped>false</flipped>
-                
+
             </BEWH_Deco_MkXApothecarySymbol>
         </presetData>
     </Core40k.DecorationPresetDef>
@@ -163,7 +163,7 @@ Apothecary red: (162, 54, 39)
         <presetData>
             <BEWH_MkXBladeguardBrim>
                 <flipped>false</flipped>
-                
+
             </BEWH_MkXBladeguardBrim>
         </presetData>
     </Core40k.DecorationPresetDef>
@@ -177,7 +177,7 @@ Apothecary red: (162, 54, 39)
         <presetData>
             <BEWH_MkXBladeguardBrim>
                 <flipped>false</flipped>
-                
+
             </BEWH_MkXBladeguardBrim>
         </presetData>
     </Core40k.DecorationPresetDef>
@@ -194,7 +194,6 @@ Apothecary red: (162, 54, 39)
         <presetData>
             <BEWH_Deco_Rondel2>
                 <flipped>false</flipped>
-                <colourTwo>(160, 158, 137)</colourTwo>
             </BEWH_Deco_Rondel2>
             <BEWH_Deco_BGUpperTabard>
                 <flipped>false</flipped>
@@ -253,7 +252,6 @@ Apothecary red: (162, 54, 39)
             </BEWH_DecoHood>
             <BEWH_MkXBladeguardBrim>
                 <flipped>false</flipped>
-                
             </BEWH_MkXBladeguardBrim>
         </presetData>
     </Core40k.DecorationPresetDef>
@@ -271,7 +269,6 @@ Apothecary red: (162, 54, 39)
             </BEWH_DecoHood>
             <BEWH_MkXBladeguardBrim>
                 <flipped>false</flipped>
-                
             </BEWH_MkXBladeguardBrim>
         </presetData>
     </Core40k.DecorationPresetDef>
@@ -288,7 +285,7 @@ Apothecary red: (162, 54, 39)
         <presetData>
             <BEWH_DecoDWatchPauldron>
                 <flipped>false</flipped>
-                
+
             </BEWH_DecoDWatchPauldron>
             <BEWH_DecoPouch_1>
                 <flipped>false</flipped>
@@ -296,7 +293,7 @@ Apothecary red: (162, 54, 39)
             </BEWH_DecoPouch_1>
             <BEWH_Deco_Grenade_1>
                 <flipped>true</flipped>
-                
+
             </BEWH_Deco_Grenade_1>
             <BEWH_Deco_Cape>
                 <flipped>false</flipped>
@@ -357,7 +354,7 @@ Apothecary red: (162, 54, 39)
             </BEWH_DecoLaurels>
             <BEWH_MkVIIclawMarks_1>
                 <flipped>false</flipped>
-                
+
             </BEWH_MkVIIclawMarks_1>
         </presetData>
     </Core40k.DecorationPresetDef>
@@ -375,7 +372,7 @@ Apothecary red: (162, 54, 39)
             </BEWH_DecoLaurels>
             <BEWH_MkXclawMarks_1>
                 <flipped>false</flipped>
-                
+
             </BEWH_MkXclawMarks_1>
         </presetData>
     </Core40k.DecorationPresetDef>

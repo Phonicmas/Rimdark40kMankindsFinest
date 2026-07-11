@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="BEWH_MkVIIPowerArmor"]/modExtensions/li[@Class="Core40k.DefModExtension_TextureFlags"]/textureFlags</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="BEWH_MkVIIPowerArmor"]/modExtensions/li[@Class="Core40k.DefModExtension_TextureFlags"]</xpath>
+            <value>
+                <textureFlags />
+            </value>
+        </nomatch>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="BEWH_MkVIIPowerArmor"]/modExtensions/li[@Class="Core40k.DefModExtension_TextureFlags"]/textureFlags</xpath>
+        <value>
+            <li>
+                <order>1</order>
+                <maskIdentifiers>
+                    <li>1</li>
+                </maskIdentifiers>
+                <pathExpansion>_Jump</pathExpansion>
+                <thingActivator>Apparel_PackJump</thingActivator>
+                <hideThing>true</hideThing>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="BEWH_MkXPowerArmor"]/modExtensions/li[@Class="Core40k.DefModExtension_TextureFlags"]/textureFlags</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="BEWH_MkXPowerArmor"]/modExtensions/li[@Class="Core40k.DefModExtension_TextureFlags"]</xpath>
+            <value>
+                <textureFlags />
+            </value>
+        </nomatch>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="BEWH_MkXPowerArmor"]/modExtensions/li[@Class="Core40k.DefModExtension_TextureFlags"]/textureFlags</xpath>
+        <value>
+            <li>
+                <order>1</order>
+                <maskIdentifiers>
+                    <li>1</li>
+                </maskIdentifiers>
+                <pathExpansion>_Jump</pathExpansion>
+                <thingActivator>Apparel_PackJump</thingActivator>
+                <hideThing>true</hideThing>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="BEWH_MkXPowerArmorChaplain"]/modExtensions/li[@Class="Core40k.DefModExtension_TextureFlags"]/textureFlags</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="BEWH_MkXPowerArmorChaplain"]/modExtensions/li[@Class="Core40k.DefModExtension_TextureFlags"]</xpath>
+            <value>
+                <textureFlags />
+            </value>
+        </nomatch>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="BEWH_MkXPowerArmorChaplain"]/modExtensions/li[@Class="Core40k.DefModExtension_TextureFlags"]/textureFlags</xpath>
+        <value>
+            <li>
+                <order>1</order>
+                <maskIdentifiers>
+                    <li>1</li>
+                </maskIdentifiers>
+                <pathExpansion>_Jump</pathExpansion>
+                <thingActivator>Apparel_PackJump</thingActivator>
+                <hideThing>true</hideThing>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="BEWH_LivingSaintArmor"]/modExtensions/li[@Class="Core40k.DefModExtension_TextureFlags"]/textureFlags</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="BEWH_LivingSaintArmor"]/modExtensions/li[@Class="Core40k.DefModExtension_TextureFlags"]</xpath>
+            <value>
+                <textureFlags />
+            </value>
+        </nomatch>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="BEWH_LivingSaintArmor"]/modExtensions/li[@Class="Core40k.DefModExtension_TextureFlags"]/textureFlags</xpath>
+        <value>
+            <li>
+                <order>1</order>
+                <maskIdentifiers>
+                    <li>1</li>
+                </maskIdentifiers>
+                <pathExpansion>_Jump</pathExpansion>
+                <thingActivator>Apparel_PackJump</thingActivator>
+                <hideThing>true</hideThing>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="BEWH_MkIPowerArmor"]/modExtensions/li[@Class="Core40k.DefModExtension_TextureFlags"]/textureFlags</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="BEWH_MkIPowerArmor"]/modExtensions/li[@Class="Core40k.DefModExtension_TextureFlags"]</xpath>
+            <value>
+                <textureFlags />
+            </value>
+        </nomatch>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="BEWH_MkIPowerArmor"]/modExtensions/li[@Class="Core40k.DefModExtension_TextureFlags"]/textureFlags</xpath>
+        <value>
+            <li>
+                <order>0</order>
+                <thingActivator>Apparel_PackJump</thingActivator>
+                <hideThing>true</hideThing>
+            </li>
+        </value>
+    </Operation>
+
+</Patch>

@@ -71,7 +71,6 @@
         <availablePresets />
         <colourable>true</colourable>
         <shaderType>CutoutComplex</shaderType>
-        <useMask>true</useMask>
         <colorAmount>2</colorAmount>
         <useParentColourAsDefault>true</useParentColourAsDefault>
         <flipable>true</flipable>
@@ -112,7 +111,6 @@
         <availablePresets />
         <colourable>true</colourable>
         <shaderType>CutoutComplex</shaderType>
-        <useMask>true</useMask>
         <colorAmount>2</colorAmount>
         <useParentColourAsDefault>true</useParentColourAsDefault>
         <flipable>true</flipable>
