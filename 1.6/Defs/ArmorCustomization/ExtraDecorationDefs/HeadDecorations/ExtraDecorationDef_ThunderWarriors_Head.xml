@@ -45,6 +45,10 @@
         </availablePresets>
         <shaderType>Cutout</shaderType>
         <defaultColour>(162, 54, 39)</defaultColour>
+        <incompatibleDecorations>
+            <li>BEWH_Deco_TW_Plume2</li>
+            <li>BEWH_Deco_TW_Plume3</li>
+        </incompatibleDecorations>
     </Core40k.ExtraDecorationDef>
 
 <Core40k.ExtraDecorationDef>
@@ -92,6 +96,9 @@
         </availablePresets>
         <shaderType>Cutout</shaderType>
         <defaultColour>(162, 54, 39)</defaultColour>
+        <incompatibleDecorations>
+            <li>BEWH_Deco_TW_Plume3</li>
+        </incompatibleDecorations>
     </Core40k.ExtraDecorationDef>
 
 <Core40k.ExtraDecorationDef>
@@ -153,7 +160,6 @@
         <defaultShowRotation>
             <li>West</li>
             <li>South</li>
-            <!-- <li>North</li> -->
             <li>East</li>
         </defaultShowRotation>
         <appliesTo>
@@ -163,9 +169,6 @@
             <dataSouth>
                 <layer>88</layer>
             </dataSouth>
-            <dataNorth>
-                <layer>88</layer>
-            </dataNorth>
             <dataEast>
                 <layer>65</layer>
             </dataEast>
@@ -195,7 +198,6 @@
         <defaultShowRotation>
             <li>West</li>
             <li>South</li>
-            <!-- <li>North</li> -->
             <li>East</li>
         </defaultShowRotation>
         <appliesTo>
@@ -205,10 +207,6 @@
             <dataSouth>
                 <layer>88</layer>
             </dataSouth>
-            <!-- <dataNorth>
-                <layer>88</layer>
-                <offset>(0, 0, 0)</offset>
-            </dataNorth> -->
             <dataEast>
                 <layer>55</layer>
             </dataEast>

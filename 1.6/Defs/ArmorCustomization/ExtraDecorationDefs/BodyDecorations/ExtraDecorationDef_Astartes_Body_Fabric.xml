@@ -71,13 +71,15 @@
                 <layer>45</layer>
             </dataWest>
         </drawData>
-        <shaderType>CutoutComplex</shaderType>
         <availablePresets>
             <li>BEWH_DecoPaletteApothecaryRed</li>
         </availablePresets>
         <colourable>true</colourable>
         <defaultColour>(162, 54, 39)</defaultColour>
         <decorationType>BEWH_DecoCategory_Fabrics</decorationType>
+        <incompatibleDecorations>
+            <li>BEWH_Deco_MkVIIBlankTabard</li>
+        </incompatibleDecorations>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -106,13 +108,15 @@
                 <layer>45</layer>
             </dataWest>
         </drawData>
-        <shaderType>CutoutComplex</shaderType>
         <availablePresets>
             <li>BEWH_DecoPaletteApothecaryRed</li>
         </availablePresets>
         <colourable>true</colourable>
         <defaultColour>(162, 54, 39)</defaultColour>
         <decorationType>BEWH_DecoCategory_Fabrics</decorationType>
+        <incompatibleDecorations>
+            <li>BEWH_Deco_MkXBlankTabard</li>
+        </incompatibleDecorations>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -229,12 +233,14 @@
             <li>BEWH_DecoPaletteApothecaryRed</li>
             <li>BEWH_DecoPaletteIFBlack</li>
         </availablePresets>
-        <shaderType>CutoutComplex</shaderType>
         <colourable>true</colourable>
         <colorAmount>2</colorAmount>
         <defaultColour>(104,24,33)</defaultColour>
         <defaultColourTwo>(240,176,29)</defaultColourTwo>
         <decorationType>BEWH_DecoCategory_Shoulder</decorationType>
+        <incompatibleDecorations>
+            <li>BEWH_Deco_ShoulderDrape2</li>
+        </incompatibleDecorations>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -275,12 +281,14 @@
             <li>BEWH_DecoPaletteApothecaryRed</li>
             <li>BEWH_DecoPaletteIFBlack</li>
         </availablePresets>
-        <shaderType>CutoutComplex</shaderType>
         <colourable>true</colourable>
         <colorAmount>2</colorAmount>
         <defaultColour>(104,24,33)</defaultColour>
         <defaultColourTwo>(240,176,29)</defaultColourTwo>
         <decorationType>BEWH_DecoCategory_Shoulder</decorationType>
+        <incompatibleDecorations>
+            <li>BEWH_Deco_BGShoulderDrape</li>
+        </incompatibleDecorations>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -317,7 +325,6 @@
             <li>BEWH_DecoPaletteIFBlack</li>
             <li>BEWH_DecoPaletteGold</li>
         </availablePresets>
-        <shaderType>CutoutComplex</shaderType>
         <colourable>true</colourable>
         <colorAmount>2</colorAmount>
         <defaultColour>(162, 54, 39)</defaultColour>

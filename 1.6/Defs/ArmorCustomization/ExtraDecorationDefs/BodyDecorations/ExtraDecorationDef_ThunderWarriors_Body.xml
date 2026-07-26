@@ -96,7 +96,6 @@
         <sortOrder>0.5</sortOrder>
         <defaultShowRotation>
             <li>South</li>
-            <!-- <li>North</li> -->
             <li>West</li>
             <li>East</li>
         </defaultShowRotation>
@@ -120,9 +119,10 @@
                 <offset>(-0.01, 0, -0.69)</offset>
             </dataWest>
         </drawData>
-        <shaderType>Cutout</shaderType>
         <colourable>true</colourable>
+        <colorAmount>2</colorAmount>
         <useParentColourAsDefault>true</useParentColourAsDefault>
+        <defaultColourTwo>(162,54,39)</defaultColourTwo>
         <decorationType>BEWH_DecoCategory_Fabrics</decorationType>
     </Core40k.ExtraDecorationDef>
 
