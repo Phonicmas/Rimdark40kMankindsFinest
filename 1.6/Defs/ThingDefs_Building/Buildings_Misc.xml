@@ -85,11 +85,12 @@
       <drawOffset>(0, 0, 0.7)</drawOffset>
       <drawRotated>false</drawRotated>
       <shadowData>
-        <volume>(0.3, 0.3 ,0.3)</volume>
-        <offset>(0, 0, -0.2)</offset>
+        <volume>(1,0.6,0.3)</volume>
+        <offset>(0, 0, 0)</offset>
       </shadowData>
     </graphicData>
     <size>(1,1)</size>
+    <uiIconScale>0.85</uiIconScale>
     <drawerType>MapMeshAndRealTime</drawerType>
     <rotatable>false</rotatable>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
@@ -103,7 +104,7 @@
       <MaxHitPoints>100</MaxHitPoints>
       <WorkToBuild>6000</WorkToBuild>
       <Mass>20</Mass>
-      <Beauty>60</Beauty>
+      <Beauty>6</Beauty>
       <Flammability>1</Flammability>
     </statBases>
 
