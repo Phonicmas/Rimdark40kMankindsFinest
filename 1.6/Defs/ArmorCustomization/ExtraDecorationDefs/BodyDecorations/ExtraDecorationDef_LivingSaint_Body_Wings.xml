@@ -38,7 +38,6 @@
                 <offset>(0, 0, 0.33)</offset>
             </dataWest>
         </drawData>
-        <shaderType>CutoutComplex</shaderType>
         <flipable>false</flipable>
         <colourable>true</colourable>
         <colorAmount>2</colorAmount>
@@ -46,6 +45,9 @@
         <defaultColourTwo>(187,197,206)</defaultColourTwo>
         <hasParentColourPaletteOption>true</hasParentColourPaletteOption>
         <decorationType>BEWH_DecoCategory_Wings</decorationType>
+        <incompatibleDecorations>
+            <li>BEWH_LivingSaintWings_2</li>
+        </incompatibleDecorations>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>

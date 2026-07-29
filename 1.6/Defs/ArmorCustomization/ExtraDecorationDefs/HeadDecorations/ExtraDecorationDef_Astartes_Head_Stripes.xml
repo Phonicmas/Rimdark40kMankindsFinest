@@ -44,6 +44,9 @@
             <li>BEWH_DecoPaletteStripeRed</li>
         </availablePresets>
         <decorationType>BEWH_DecoCategory_Decals</decorationType>
+        <incompatibleDecorations>
+            <li>BEWH_MkVIILieutenantStripe</li>
+        </incompatibleDecorations>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -88,6 +91,9 @@
             <li>BEWH_DecoPaletteStripeRed</li>
         </availablePresets>
         <decorationType>BEWH_DecoCategory_Decals</decorationType>
+        <incompatibleDecorations>
+            <li>BEWH_MkXLieutenantStripe</li>
+        </incompatibleDecorations>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -124,7 +130,6 @@
             </dataWest>
         </drawData>
         <colourable>true</colourable>
-        <shaderType>CutoutComplex</shaderType>
         <colorAmount>2</colorAmount>
         <defaultColourTwo>(168,35,32)</defaultColourTwo>
         <decorationType>BEWH_DecoCategory_Decals</decorationType>
@@ -164,7 +169,6 @@
             </dataWest>
         </drawData>
         <colourable>true</colourable>
-        <shaderType>CutoutComplex</shaderType>
         <colorAmount>2</colorAmount>
         <defaultColourTwo>(168,35,32)</defaultColourTwo>
         <decorationType>BEWH_DecoCategory_Decals</decorationType>

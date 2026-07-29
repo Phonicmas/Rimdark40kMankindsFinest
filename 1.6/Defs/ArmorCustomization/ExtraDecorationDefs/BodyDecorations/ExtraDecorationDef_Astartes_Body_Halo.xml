@@ -51,6 +51,9 @@
         <flipable>false</flipable>
         <drawInHeadSpace>true</drawInHeadSpace>
         <decorationType>BEWH_DecoCategory_Halo</decorationType>
+        <incompatibleDecorations>
+            <li>BEWH_IronHalo_2</li>
+        </incompatibleDecorations>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
