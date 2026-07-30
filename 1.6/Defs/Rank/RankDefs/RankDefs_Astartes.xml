@@ -220,10 +220,6 @@
             <MeleeHitChance>1.05</MeleeHitChance>
         </statFactors>
 
-        <customEffectDescriptions>
-            <li>Increased stats while in darkness</li>
-        </customEffectDescriptions>
-
         <rankTier>3</rankTier>
 
         <unlocksRankIcon>BEWH_RankIconVanguard</unlocksRankIcon>
