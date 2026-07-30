@@ -43,6 +43,11 @@
             <li>BEWH_DecoPaletteIFBlack</li>
         </availablePresets>
         <decorationType>BEWH_DecoCategory_Insignia</decorationType>
+        <incompatibleDecorations>
+            <li>BEWH_Deco_MkVIIApothecarySymbol</li>
+            <li>BEWH_Deco_MkXApothecarySymbol</li>
+            <li>BEWH_DecoSkull</li>
+        </incompatibleDecorations>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -76,6 +81,9 @@
             </dataWest>
         </drawData>
         <decorationType>BEWH_DecoCategory_Insignia</decorationType>
+        <incompatibleDecorations>
+            <li>BEWH_DecoSkull</li>
+        </incompatibleDecorations>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -109,6 +117,9 @@
             </dataWest>
         </drawData>
         <decorationType>BEWH_DecoCategory_Insignia</decorationType>
+        <incompatibleDecorations>
+            <li>BEWH_DecoSkull</li>
+        </incompatibleDecorations>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -200,6 +211,10 @@
         <shaderType>Cutout</shaderType>
         <defaultColour>(240,176,29)</defaultColour>
         <decorationType>BEWH_DecoCategory_Insignia</decorationType>
+        <incompatibleDecorations>
+            <li>BEWH_Deco_MkVII_VictrixBrim</li>
+            <li>BEWH_Deco_MkX_VictrixBrim</li>
+        </incompatibleDecorations>
     </Core40k.ExtraDecorationDef>
 
 </Defs>

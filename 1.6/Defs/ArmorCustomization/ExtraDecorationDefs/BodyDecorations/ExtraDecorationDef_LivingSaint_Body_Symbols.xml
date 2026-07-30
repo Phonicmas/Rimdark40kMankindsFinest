@@ -32,6 +32,11 @@
             <li>BEWH_DecoPaletteSaintRose</li>
         </availablePresets>
         <decorationType>BEWH_DecoCategory_Insignia</decorationType>
+        <incompatibleDecorations>
+            <li>BEWH_Deco_LsFleurDeLis</li>
+            <li>BEWH_Deco_LsChalice</li>
+            <li>BEWH_Deco_LsRose</li>
+        </incompatibleDecorations>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -64,6 +69,10 @@
             <li>BEWH_DecoPaletteSaintRose</li>
         </availablePresets>
         <decorationType>BEWH_DecoCategory_Insignia</decorationType>
+        <incompatibleDecorations>
+            <li>BEWH_Deco_LsChalice</li>
+            <li>BEWH_Deco_LsRose</li>
+        </incompatibleDecorations>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -96,6 +105,9 @@
             <li>BEWH_DecoPaletteSaintRose</li>
         </availablePresets>
         <decorationType>BEWH_DecoCategory_Insignia</decorationType>
+        <incompatibleDecorations>
+            <li>BEWH_Deco_LsRose</li>
+        </incompatibleDecorations>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>

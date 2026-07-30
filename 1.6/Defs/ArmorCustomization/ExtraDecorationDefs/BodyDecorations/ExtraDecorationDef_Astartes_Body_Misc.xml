@@ -70,7 +70,6 @@
         </drawData>
         <availablePresets />
         <colourable>true</colourable>
-        <shaderType>CutoutComplex</shaderType>
         <colorAmount>2</colorAmount>
         <useParentColourAsDefault>true</useParentColourAsDefault>
         <flipable>true</flipable>
@@ -110,7 +109,6 @@
         </drawData>
         <availablePresets />
         <colourable>true</colourable>
-        <shaderType>CutoutComplex</shaderType>
         <colorAmount>2</colorAmount>
         <useParentColourAsDefault>true</useParentColourAsDefault>
         <flipable>true</flipable>
