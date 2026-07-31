@@ -12,7 +12,7 @@
     <baseChance>0.5</baseChance>
     <populationEffect>IncreaseMedium</populationEffect>
     <letterLabel>astartes crash land</letterLabel>
-    <letterText>An astartes have crashed area and seem to be carring something in their hands.\n\nYou can attempt to stop {PAWN_objective} and retrieve their gear and geneseed before they get away.</letterText>
+    <letterText>An astartes has crashed in the area, and appears to be carrying something in their hands.\n\nYou can attempt to stop {PAWN_objective} to retrieve their gear and geneseed before they get away.</letterText>
     <letterDef>NeutralEvent</letterDef>
   </IncidentDef>
 
