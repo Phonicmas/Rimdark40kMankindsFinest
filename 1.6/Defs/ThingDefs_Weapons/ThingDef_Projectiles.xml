@@ -88,7 +88,6 @@
     <ThingDef ParentName="BaseBullet">
         <defName>BEWH_BolterShrapnel</defName>
         <label>Metal Storm Shrapnel</label>
-        <description>...</description>
         <thingClass>Projectile_Explosive</thingClass>
         <uiIconPath>Things/Ammo/Bolter/MetalStorm_Small</uiIconPath>
         <graphicData>
@@ -99,7 +98,7 @@
         <projectile>
             <damageDef>BEWH_BoltMetalStorm</damageDef>
             <damageAmountBase>16</damageAmountBase>
-            <armorPenetrationBase>0.48</armorPenetrationBase>
+            <armorPenetrationBase>0.23</armorPenetrationBase>
             <explosionRadius>1.25</explosionRadius>
             <soundExplode>GunShotA</soundExplode>
             <screenShakeFactor>0.1</screenShakeFactor>

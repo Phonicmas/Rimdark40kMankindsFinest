@@ -31,9 +31,8 @@
       </skillRequirements>
     </recipeMaker>
     <costList>
-      <Steel>68</Steel>
-      <Plasteel>10</Plasteel>
-      <ComponentIndustrial>10</ComponentIndustrial>
+      <Steel>67</Steel>
+      <ComponentIndustrial>5</ComponentIndustrial>
     </costList>
     <verbs>
       <li>
