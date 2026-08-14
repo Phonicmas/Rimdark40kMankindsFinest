@@ -38,10 +38,12 @@
     <defName>BEWH_BoltMetalStorm</defName>
     <label>shrapnel explosion</label>
     <workerClass>DamageWorker_Cut</workerClass>
-    <deathMessage>{0} discovered that the air itself can turn into shrapnel.</deathMessage>
+    <deathMessage>{0} was riddled with Metal Storm shrapnel.</deathMessage>
     <hediff>Cut</hediff>
     <hediffSolid>Crack</hediffSolid>
     <plantDamageFactor>10</plantDamageFactor>
+    <buildingDamageFactorImpassable Inherit="False">1.33</buildingDamageFactorImpassable>
+    <buildingDamageFactorPassable Inherit="False">0.66</buildingDamageFactorPassable>
     <explosionCellFleck>PlainFlash</explosionCellFleck>
     <explosionColorCenter>(30, 30, 30)</explosionColorCenter>
     <explosionColorEdge>(15, 15, 15)</explosionColorEdge>
