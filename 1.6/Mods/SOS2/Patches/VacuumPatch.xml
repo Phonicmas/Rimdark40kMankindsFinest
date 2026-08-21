@@ -11,6 +11,13 @@
         </value>
     </Operation>
 
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName = "BEWH_MkVIIPowerArmor"]/statBases/Insulation_Cold</xpath>
+        <value>
+            <Insulation_Cold>100</Insulation_Cold>
+        </value>
+    </Operation>
+
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/ThingDef[defName = "BEWH_MkXPowerArmor"]/equippedStatOffsets</xpath>
         <value>
@@ -20,12 +27,26 @@
         </value>
     </Operation>
 
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName = "BEWH_MkXPowerArmor"]/statBases/Insulation_Cold</xpath>
+        <value>
+            <Insulation_Cold>100</Insulation_Cold>
+        </value>
+    </Operation>
+
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/ThingDef[defName = "BEWH_MkXPowerArmorChaplain"]/equippedStatOffsets</xpath>
         <value>
             <DecompressionResistance>0.75</DecompressionResistance>
             <HypoxiaResistance>0.75</HypoxiaResistance>
             <VacuumSpeedMultiplier>4</VacuumSpeedMultiplier>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName = "BEWH_MkXPowerArmorChaplain"]/statBases/Insulation_Cold</xpath>
+        <value>
+            <Insulation_Cold>100</Insulation_Cold>
         </value>
     </Operation>
 
@@ -39,6 +60,13 @@
         </value>
     </Operation>
 
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName = "BEWH_MkXPowerArmor"]/statBases/Insulation_Cold</xpath>
+        <value>
+            <Insulation_Cold>50</Insulation_Cold>
+        </value>
+    </Operation>
+
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/ThingDef[defName = "BEWH_MkXPowerArmorHelmet"]/equippedStatOffsets</xpath>
         <value>
@@ -48,12 +76,26 @@
         </value>
     </Operation>
 
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName = "BEWH_MkXPowerArmorHelmet"]/statBases/Insulation_Cold</xpath>
+        <value>
+            <Insulation_Cold>50</Insulation_Cold>
+        </value>
+    </Operation>
+
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/ThingDef[defName = "BEWH_MkXPowerArmorChaplainHelmet"]/equippedStatOffsets</xpath>
         <value>
             <DecompressionResistance>0.75</DecompressionResistance>
             <HypoxiaResistance>0.75</HypoxiaResistance>
             <VacuumSpeedMultiplier>4</VacuumSpeedMultiplier>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName = "BEWH_MkXPowerArmorChaplainHelmet"]/statBases/Insulation_Cold</xpath>
+        <value>
+            <Insulation_Cold>50</Insulation_Cold>
         </value>
     </Operation>
 
