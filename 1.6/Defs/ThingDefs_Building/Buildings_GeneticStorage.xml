@@ -56,7 +56,7 @@
       <shadowData>
         <volume>(0.9,0.2,0.9)</volume>
       </shadowData>
-      <drawSize>(4, 4)</drawSize>
+      <drawSize>(3.5, 2)</drawSize>
     </graphicData>
     <size>(3, 1)</size>
     <rotatable>true</rotatable>
@@ -119,14 +119,15 @@
     <description>A secure containment unit designed to preserve Genetic Matrices in stasis, shielding them from environmental degradation and the corrupting influence of the Immaterium. Essential for maintaining their integrity.\n\nAble to holster 6 Genetic matrices, keeping them safe and preventing deterioration.</description>
     <graphicData>
       <texPath>Things/Building/GeneticMatrixStorage/BEWH_MatrixStorage_Empty</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <graphicClass>Graphic_Multi</graphicClass>
       <shadowData>
         <volume>(0.9,0.2,0.9)</volume>
       </shadowData>
-      <drawSize>(2, 2.5)</drawSize>
+      <drawSize>(2.5, 2.5)</drawSize>
     </graphicData>
-    <defaultPlacingRot>North</defaultPlacingRot>
+    <defaultPlacingRot>South</defaultPlacingRot>
     <size>(2, 1)</size>
+    <rotatable>true</rotatable>
     <researchPrerequisites>
       <li>BEWH_GeneseedPurification</li>
     </researchPrerequisites>
