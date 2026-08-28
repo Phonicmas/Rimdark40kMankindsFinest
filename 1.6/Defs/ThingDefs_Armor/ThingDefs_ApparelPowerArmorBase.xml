@@ -47,6 +47,7 @@
             </bodyPartGroups>
             <layers>
                 <li>Shell</li>
+                <li>Middle</li>
             </layers>
             <defaultOutfitTags>
                 <li>Soldier</li>
