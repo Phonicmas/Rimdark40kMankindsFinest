@@ -137,6 +137,16 @@ public class Building_PrimarchGrowthVat : Building, IStoreSettingsParent, IThing
         if (this.IsHashIntervalTick(250))
         {
             PowerTraderComp.PowerOutput = Working ? 0f - PowerComp.Props.PowerConsumption : 0f - PowerComp.Props.idlePowerDraw;
+
+            // FIX: drop a selection that can no longer be hauled (destroyed, despawned,
+            // moved off-map, or a phantom duplicate restored from an old save). Left in
+            // place it made WorkGiver_CarryPrimarchEmbryoToVat hand out a job that failed
+            // instantly, every tick, to every hauler and hauler drone on the map.
+            if (!Working && containedEmbryo == null && selectedEmbryo != null
+                && (selectedEmbryo.Destroyed || !selectedEmbryo.Spawned || selectedEmbryo.MapHeld != Map))
+            {
+                selectedEmbryo = null;
+            }
         }
 
         ThingDef thingDef = null;
@@ -192,13 +202,27 @@ public class Building_PrimarchGrowthVat : Building, IStoreSettingsParent, IThing
 
     public void InsertEmbryo(PrimarchEmbryo embryo)
     {
-        if (containedEmbryo != null)
+        if (embryo == null || embryo.Destroyed || containedEmbryo != null)
         {
             return;
         }
-        
-        embryo.holdingOwner.TryDrop(embryo, ThingPlaceMode.Near, out _);
-        embryo.DeSpawn();
+
+        // FIX: the old code did holdingOwner.TryDrop(...Near) then DeSpawn().
+        // If the drop failed (no free cell, hauler standing in a doorway, etc.) the
+        // embryo stayed inside the hauler's carry tracker while this field also
+        // pointed at it - two owners for one Thing, which is a second way to get the
+        // duplicate-ID error on the next load. Take it out of whatever holds it
+        // instead of routing it through the floor. A null holdingOwner would also
+        // have thrown here.
+        if (embryo.holdingOwner != null)
+        {
+            embryo.holdingOwner.Remove(embryo);
+        }
+        else if (embryo.Spawned)
+        {
+            embryo.DeSpawn();
+        }
+
         containedEmbryo = embryo;
         selectedEmbryo = null;
     }
@@ -353,13 +377,31 @@ public class Building_PrimarchGrowthVat : Building, IStoreSettingsParent, IThing
     
     private List<PrimarchEmbryo> AvailableEmbryo()
     {
-        var embryos = new List<Thing>();
-        if (Map?.listerThings != null)
+        var embryos = new List<PrimarchEmbryo>();
+        if (Map?.listerThings == null)
         {
-            embryos.AddRange(Map.listerThings.ThingsOfDef(Genes40kDefOf.BEWH_PrimarchEmbryo));
+            return embryos;
         }
-        
-        return embryos.Cast<PrimarchEmbryo>().ToList();
+
+        // FIX: OfType instead of Cast (a hard cast throws if anything else ever ends
+        // up under this def), and skip embryos that are gone or forbidden so the
+        // player cannot select one that no hauler is allowed to fetch.
+        foreach (var thing in Map.listerThings.ThingsOfDef(Genes40kDefOf.BEWH_PrimarchEmbryo))
+        {
+            if (thing is not PrimarchEmbryo embryo || embryo.Destroyed || !embryo.Spawned)
+            {
+                continue;
+            }
+
+            if (embryo.IsForbidden(Faction.OfPlayer))
+            {
+                continue;
+            }
+
+            embryos.Add(embryo);
+        }
+
+        return embryos;
     }
     
     private void TryAbsorbNutritiousThing()
@@ -377,7 +419,10 @@ public class Building_PrimarchGrowthVat : Building, IStoreSettingsParent, IThing
             }
                     
             containedNutrition += statValue;
-            thing.SplitOff(1).DeSpawn();
+            // FIX: was SplitOff(1).DeSpawn(). SplitOff returns an unspawned Thing, so
+            // DeSpawn logged "Tried to despawn ... when it's unspawned" every time and
+            // leaked the split-off stack. Vanilla Building_GrowthVat uses Destroy().
+            thing.SplitOff(1).Destroy();
                 
             break;
         }
@@ -466,9 +511,16 @@ public class Building_PrimarchGrowthVat : Building, IStoreSettingsParent, IThing
                     activateSound = SoundDefOf.Designate_Cancel,
                     action = delegate
                     {
-                        GenPlace.TryPlaceThing(containedEmbryo, InteractionCell, Map, ThingPlaceMode.Direct);
+                        // FIX: only clear the field if the embryo actually made it out,
+                        // otherwise the ejected embryo is lost for good.
+                        if (!GenPlace.TryPlaceThing(containedEmbryo, InteractionCell, Map, ThingPlaceMode.Near))
+                        {
+                            Messages.Message("NoEmptyPlaceLower".Translate().CapitalizeFirst(),
+                                this, MessageTypeDefOf.RejectInput, historical: false);
+                            return;
+                        }
+
                         containedEmbryo = null;
-                            
                         OnStop();
                     }
                 };
@@ -685,14 +737,43 @@ public class Building_PrimarchGrowthVat : Building, IStoreSettingsParent, IThing
     public override void ExposeData()
     {
         base.ExposeData();
-        Scribe_Deep.Look(ref selectedEmbryo, "selectedEmbryo");
+        // ROOT CAUSE FIX.
+        // selectedEmbryo is a normal Thing that is still spawned on the map, so the map
+        // already saves it. Scribe_Deep wrote a SECOND full copy of it into the vat,
+        // and on load the game tried to register the same thing ID twice:
+        //   "Cannot register Genes40k.PrimarchEmbryo BEWH_PrimarchEmbryo1041543,
+        //    id already used by Genes40k.PrimarchEmbryo BEWH_PrimarchEmbryo1041543."
+        // The vat then pointed at the phantom, unspawned copy, which no pawn can ever
+        // pick up -> the endless BEWH_CarryPrimarchEmbryoToVat job spam.
+        // Vanilla Building_GrowthVat saves its own selectedEmbryo by reference; do the same.
+        Scribe_References.Look(ref selectedEmbryo, "selectedEmbryo");
+        // containedEmbryo is correct as Deep: it is despawned and held by nothing else.
         Scribe_Deep.Look(ref containedEmbryo, "containedEmbryo");
         Scribe_Values.Look(ref embryoStarvation, "embryoStarvation", 0f);
         Scribe_Values.Look(ref containedNutrition, "containedNutrition", 0f);
         Scribe_Deep.Look(ref allowedNutritionSettings, "allowedNutritionSettings", this);
         Scribe_Deep.Look(ref nutritionContainer, "nutritionContainer", this);
-        Scribe_Values.Look(ref startTick, "startTick", 0);
-            
+        // FIX: default was 0, but 0 is a *valid working* value (Working => startTick >= 0)
+        // and -1 is the "idle" value. With the old default a vat whose startTick happened
+        // to be 0 was written as absent and came back as 0 = permanently "working".
+        Scribe_Values.Look(ref startTick, "startTick", -1);
+
+        if (Scribe.mode == LoadSaveMode.PostLoadInit)
+        {
+            // Recovery for saves written by the old Scribe_Deep code: the duplicate is
+            // destroyed/never spawned, so drop it. The player just re-picks the embryo.
+            if (selectedEmbryo is { Destroyed: true })
+            {
+                selectedEmbryo = null;
+            }
+
+            // A vat that already holds an embryo must not also have one selected.
+            if (containedEmbryo != null)
+            {
+                selectedEmbryo = null;
+            }
+        }
+
         if (allowedNutritionSettings != null)
         {
             return;

@@ -26,7 +26,7 @@
     <tickerType>Normal</tickerType>
 
     <canGenerateDefaultDesignator>false</canGenerateDefaultDesignator>
-    <designationCategory IsNull="True"/>
+    <designationCategory IsNull="True" />
     <minifiedDef Inherit="False" />
     <thingCategories Inherit="False" />
 
@@ -78,8 +78,7 @@
     <thingClass>Genes40k.Building_DecorativeFlag</thingClass>
     <graphicData>
       <texPath>Things/Building/ChapterBanner/BEWH_DecorationChapterBanner</texPath>
-      <maskPath>Things/Building/ChapterBanner/BEWH_DecorationChapterBannerm</maskPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <graphicClass>Graphic_Multi</graphicClass>
       <shaderType>CutoutComplex</shaderType>
       <drawSize>(1.5, 2.5)</drawSize>
       <drawOffset>(0, 0, 0.7)</drawOffset>
@@ -92,7 +91,7 @@
     <size>(1,1)</size>
     <uiIconScale>0.85</uiIconScale>
     <drawerType>MapMeshAndRealTime</drawerType>
-    <rotatable>false</rotatable>
+    <rotatable>true</rotatable>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <passability>PassThroughOnly</passability>
     <altitudeLayer>BuildingOnTop</altitudeLayer>
@@ -125,6 +124,28 @@
     <researchPrerequisites>
       <li>ComplexFurniture</li>
     </researchPrerequisites>
+
+    <modExtensions>
+      <li Class="Genes40k.DefModExtension_DecorativeFlag">
+        <!-- Fallback used by every rotation that does not override it below. -->
+        <insigniaDrawOffset>(0, 0.1, 0.8)</insigniaDrawOffset>
+        <insigniaDrawSize>(1, 1)</insigniaDrawSize>
+        <!-- All four rotations draw the insignia by default.
+             Add a rotation node to nudge it, or set <draw>false</draw> to turn that side off. -->
+        <south>
+          <drawOffset>(0, 0.1, 0.8)</drawOffset>
+        </south>
+        <north>
+          <draw>false</draw>
+        </north>
+        <east>
+          <draw>false</draw>
+        </east>
+        <west>
+          <draw>false</draw>
+        </west>
+      </li>
+    </modExtensions>
 
   </ThingDef>
 

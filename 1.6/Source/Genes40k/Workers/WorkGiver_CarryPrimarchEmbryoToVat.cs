@@ -1,5 +1,4 @@
 ﻿using RimWorld;
-using System;
 using Verse;
 using Verse.AI;
 
@@ -7,7 +6,9 @@ namespace Genes40k;
 
 public class WorkGiver_CarryPrimarchEmbryoToVat : WorkGiver_Scanner
 {
-    private static readonly string NoPrimarchEmbryo = "BEWH.MankindsFinest.PrimarchGrowthVat.NoPrimarchEmbryo".Translate();
+    // NOTE: was a static readonly field. Static readonly + Translate() caches the
+    // string for the whole session and goes stale if the language is changed.
+    private static string NoPrimarchEmbryo => "BEWH.MankindsFinest.PrimarchGrowthVat.NoPrimarchEmbryo".Translate();
 
     public override ThingRequest PotentialWorkThingRequest => ThingRequest.ForDef(Genes40kDefOf.BEWH_PrimarchGrowthVat);
 
@@ -15,25 +16,77 @@ public class WorkGiver_CarryPrimarchEmbryoToVat : WorkGiver_Scanner
 
     public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
     {
-        if (t is not Building_PrimarchGrowthVat building_PrimarchGrowthVat || building_PrimarchGrowthVat.Working || building_PrimarchGrowthVat.selectedEmbryo == null || building_PrimarchGrowthVat.ContainedEmbryo != null)
+        if (t is not Building_PrimarchGrowthVat vat)
         {
             return false;
         }
-        if (building_PrimarchGrowthVat.IsForbidden(pawn) || !pawn.CanReserve(building_PrimarchGrowthVat, 1, 1, null, forced))
+
+        if (vat.Working || vat.ContainedEmbryo != null)
         {
             return false;
         }
-        if (pawn.Map.designationManager.DesignationOn(building_PrimarchGrowthVat, DesignationDefOf.Deconstruct) != null)
+
+        var embryo = vat.selectedEmbryo;
+        if (embryo == null)
         {
             return false;
         }
-        
-        return !building_PrimarchGrowthVat.IsBurning();
+
+        // FIX: a selection that can no longer be hauled used to keep returning true
+        // here forever. JobOnThing then handed out a job that died on its first toil,
+        // so every hauler (and every VQE hauler drone) re-took it every tick:
+        //   "VQE_HaulerDrone... started 10 jobs in one tick. newJob=BEWH_CarryPrimarchEmbryoToVat"
+        // Clear the dead selection instead so the vat goes back to offering
+        // "Implant embryo..." in its gizmo bar.
+        if (embryo.Destroyed || !embryo.Spawned || embryo.MapHeld != vat.Map)
+        {
+            vat.selectedEmbryo = null;
+            return false;
+        }
+
+        if (vat.IsBurning() || vat.IsForbidden(pawn))
+        {
+            return false;
+        }
+
+        if (pawn.Map.designationManager.DesignationOn(vat, DesignationDefOf.Deconstruct) != null)
+        {
+            return false;
+        }
+
+        if (!pawn.CanReserve(vat, 1, 1, null, forced))
+        {
+            return false;
+        }
+
+        if (embryo.IsForbidden(pawn))
+        {
+            JobFailReason.Is(NoPrimarchEmbryo);
+            return false;
+        }
+
+        // FIX: this is the check vanilla's WorkGiver_HaulToGrowthVat does
+        // (CanHaulSelectedThing). Without it the work giver happily hands out jobs
+        // for embryos that are unreachable, already reserved by another hauler,
+        // or held by a pawn.
+        if (!pawn.CanReserveAndReach(embryo, PathEndMode.ClosestTouch, forced ? Danger.Deadly : pawn.NormalMaxDanger(), 1, 1, null, forced))
+        {
+            JobFailReason.Is(NoPrimarchEmbryo);
+            return false;
+        }
+
+        return true;
     }
 
     public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
     {
-        var building_PrimarchGrowthVat = (Building_PrimarchGrowthVat)t;
-        return JobMaker.MakeJob(Genes40kDefOf.BEWH_CarryPrimarchEmbryoToVat, t, building_PrimarchGrowthVat.selectedEmbryo);
+        if (t is not Building_PrimarchGrowthVat vat || vat.selectedEmbryo == null)
+        {
+            return null;
+        }
+
+        var job = JobMaker.MakeJob(Genes40kDefOf.BEWH_CarryPrimarchEmbryoToVat, vat, vat.selectedEmbryo);
+        job.count = 1;
+        return job;
     }
 }

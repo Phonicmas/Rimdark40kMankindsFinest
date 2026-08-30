@@ -145,6 +145,7 @@
     <Compile Include="DefModExtensions\DefModExtension_ShoulderFlippedData.cs" />
     <Compile Include="DefModExtensions\DefModExtension_SpawnAsChapter.cs" />
     <Compile Include="DefModExtensions\DefModExtension_ThoughtXenophobiaWhitelist.cs" />
+    <Compile Include="DefModExtensions\DefModExtension_DecorativeFlag.cs" />
     <Compile Include="DefModExtensions\DefModExtension_DropPod.cs" />
     <Compile Include="DefModExtensions\DefModExtension_ExclusiveMech.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneInducedFear.cs" />

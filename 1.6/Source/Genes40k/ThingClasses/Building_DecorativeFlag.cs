@@ -35,32 +35,55 @@ public class Building_DecorativeFlag : Building
     public override Graphic Graphic => GetGraphic();
     private Graphic GetGraphic()
     {
-        var maskPath = def.graphicData.maskPath;
-        var shader = ShaderDatabase.CutoutComplex;
-        if (def.graphicData.shaderType != null)
-        {
-            shader = def.graphicData.shaderType.Shader;
-        }
+        var graphicData = def.graphicData;
         
-        return GraphicDatabase.Get<Graphic_Single>(def.graphicData.texPath, shader, def.graphicData.drawSize, DrawColor, DrawColorTwo, def.graphicData, maskPath);
+        var shader = ShaderDatabase.CutoutComplex;
+        if (graphicData.shaderType != null)
+        {
+            shader = graphicData.shaderType.Shader;
+        }
+
+        //Respect whatever graphicClass the def asks for, Graphic_Multi gives us _north/_east/_south/_west banners.
+        var graphicClass = graphicData.graphicClass ?? typeof(Graphic_Single);
+        
+        return GraphicDatabase.Get(graphicClass, graphicData.texPath, shader, graphicData.drawSize, DrawColor, DrawColorTwo, graphicData, graphicData.shaderParameters, graphicData.maskPath);
     }
     
     private static readonly CachedTexture EditFlagIcon = new ("UI/Gizmos/BEWH_CogIcon");
-        
+
+    private static readonly DefModExtension_DecorativeFlag DefaultFlagExtension = new DefModExtension_DecorativeFlag();
+    
     [Unsaved(false)]
-    private Graphic flagInsigniaGraphic;
+    private DefModExtension_DecorativeFlag flagExtension;
+    private DefModExtension_DecorativeFlag FlagExtension => flagExtension ??= def.GetModExtension<DefModExtension_DecorativeFlag>() ?? DefaultFlagExtension;
+    
+    [Unsaved(false)]
+    private readonly Graphic[] flagInsigniaGraphics = new Graphic[4];
     
     private string originalFlagInsigniaFilePath = "UI/Decoration/LegionBadges/BEWH_iconUI_Aquila";
     private string flagInsigniaFilePath;
     public string FlagInsigniaFilePath => flagInsigniaFilePath;
     
     private const string NoIcon = "UI/Decoration/LegionBadges/BEWH_NoneSingle";
-    private Graphic FlagInsigniaGraphic => flagInsigniaGraphic ??= GraphicDatabase.Get<Graphic_Single>(flagInsigniaFilePath, ShaderDatabase.Cutout, Vector2.one, Color.white);
+
+    private Graphic FlagInsigniaGraphicFor(Rot4 rotation)
+    {
+        var index = rotation.AsInt;
+        return flagInsigniaGraphics[index] ??= GraphicDatabase.Get<Graphic_Single>(flagInsigniaFilePath, ShaderDatabase.Cutout, FlagExtension.InsigniaDrawSize(rotation), Color.white);
+    }
+
+    private void ClearInsigniaGraphicCache()
+    {
+        for (var i = 0; i < flagInsigniaGraphics.Length; i++)
+        {
+            flagInsigniaGraphics[i] = null;
+        }
+    }
 
     public void SetFlagInsignia(string path, bool noIcon = false)
     {
         flagInsigniaFilePath = noIcon ? NoIcon : path;
-        flagInsigniaGraphic = GraphicDatabase.Get<Graphic_Single>(flagInsigniaFilePath, ShaderDatabase.Cutout, Vector2.one, Color.white);
+        ClearInsigniaGraphicCache();
         Notify_ColorChanged();
     }
     
@@ -68,12 +91,19 @@ public class Building_DecorativeFlag : Building
     {
         base.DrawAt(drawLoc, flip);
 
-        var newDrawLoc = drawLoc;
+        var rotation = Rotation;
+        var extension = FlagExtension;
 
-        newDrawLoc.y += 0.1f;
-        newDrawLoc.z += 0.8f;
+        //Each direction can be turned off individually, all four are on by default.
+        if (!extension.DrawsInsignia(rotation))
+        {
+            return;
+        }
+
+        var newDrawLoc = drawLoc + extension.InsigniaDrawOffset(rotation);
         
-        FlagInsigniaGraphic.DrawFromDef(newDrawLoc, Rot4.North, null);
+        //Rot4.North keeps the insignia upright, the offset above is what places it for this rotation.
+        FlagInsigniaGraphicFor(rotation).DrawFromDef(newDrawLoc, Rot4.North, null, extension.InsigniaExtraRotation(rotation));
     }
 
     public override IEnumerable<Gizmo> GetGizmos()
@@ -107,6 +137,7 @@ public class Building_DecorativeFlag : Building
         flagInsigniaFilePath = originalFlagInsigniaFilePath;
         drawColorOne = originalColorOne;
         drawColorTwo = originalColorTwo;
+        ClearInsigniaGraphicCache();
         Notify_ColorChanged();
     }
     
@@ -135,6 +166,7 @@ public class Building_DecorativeFlag : Building
 
         if (Scribe.mode == LoadSaveMode.PostLoadInit)
         {
+            ClearInsigniaGraphicCache();
             Notify_ColorChanged();
         }
     }
