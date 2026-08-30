@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using RimWorld;
@@ -229,9 +230,24 @@ public class Building_PrimarchGrowthVat : Building, IStoreSettingsParent, IThing
     
     private void Finish()
     {
-        EmbryoBirth();
-        DestroyEmbryo();
-        OnStop();
+        // FIX: EmbryoBirth() could throw, and the exception skipped DestroyEmbryo()
+        // and OnStop(). startTick and containedEmbryo were left untouched, Thing.DoTick
+        // swallowed the error, and the next tick found the gestation finished all over
+        // again - one newborn per tick, forever, until the player noticed. The vat now
+        // always shuts itself down, whatever the birth does.
+        try
+        {
+            EmbryoBirth();
+        }
+        catch (Exception ex)
+        {
+            Log.Error($"[Mankind's Finest] Primarch birth failed in {this}: {ex}");
+        }
+        finally
+        {
+            DestroyEmbryo();
+            OnStop();
+        }
     }
 
     private void Fail()
@@ -251,87 +267,260 @@ public class Building_PrimarchGrowthVat : Building, IStoreSettingsParent, IThing
     
     private void EmbryoBirth()
     {
-        if (containedEmbryo == null || startTick > Find.TickManager.TicksGame)
+        if (containedEmbryo == null || Map == null || startTick > Find.TickManager.TicksGame)
         {
             return;
         }
 
         var geneDef = containedEmbryo.PrimarchGenes.GenesListForReading.FirstOrDefault(g => g.HasModExtension<DefModExtension_PrimarchVatExtras>());
         var childAmount = geneDef == null ? 1 : geneDef.GetModExtension<DefModExtension_PrimarchVatExtras>().childAmount;
+
         var children = new List<Pawn>();
 
-        var ritual = Faction.OfPlayer.ideos.PrimaryIdeo.GetPrecept(PreceptDefOf.ChildBirth) as Precept_Ritual;
         for (var i = 0; i < childAmount; i++)
         {
-            var thing = PregnancyUtility.ApplyBirthOutcome(((RitualOutcomeEffectWorker_ChildBirth)RitualOutcomeEffectDefOf.ChildBirth.GetInstance()).GetOutcome(100f, null), 100f, ritual, containedEmbryo.birthGenes.GenesListForReading, containedEmbryo.Mother, this, containedEmbryo.Father);
-            var pawn2 = (Pawn)thing;
-            foreach (var gene in containedEmbryo.PrimarchGenes.GenesListForReading)
+            var child = GenerateNewbornPrimarch();
+            if (child == null)
             {
-                pawn2.genes.AddGene(gene, true);
-            }
-            pawn2.genes.SetXenotypeDirect(Genes40kDefOf.BEWH_Primarch);
-            var externalGenderForced = pawn2.genes.GenesListForReading.Any(gene =>
-            {
-                var isActive = gene.Active;
-                var defMod = gene.def.GetModExtension<GeneExtension>();
-                if (defMod == null)
-                {
-                    return false;
-                }
-
-                if (!defMod.forceFemale && !defMod.forceMale)
-                {
-                    return false;
-                }
-
-                return isActive;
-            });
-            if (externalGenderForced)
-            {
-                var forcedGender = pawn2.genes.GenesListForReading.FirstOrDefault(gene => 
-                    gene.Active
-                    && gene.def.HasModExtension<GeneExtension>()
-                    && (gene.def.GetModExtension<GeneExtension>().forceFemale || gene.def.GetModExtension<GeneExtension>().forceMale));
-                
-                var defMod = forcedGender.def.GetModExtension<GeneExtension>();
-                pawn2.gender = defMod.forceFemale ? Gender.Female : Gender.Male;
-            }
-            else if (!Genes40kUtils.ModSettings.allowFemalePrimarchBirths)
-            {
-                pawn2.gender = Gender.Male;
-            }
-            children.Add(pawn2);
-            if (thing == null || !(embryoStarvation > 0f))
-            {
+                Log.Error($"[Mankind's Finest] {this} failed to generate a primarch newborn.");
                 continue;
             }
-            
-            var pawn = thing is Corpse corpse ? corpse.InnerPawn : (Pawn)thing;
+
+            children.Add(child);
+        }
+
+        ConnectTwins(children);
+
+        foreach (var child in children)
+        {
+            PlaceNewborn(child);
+        }
+
+        if (children.Count == 0)
+        {
+            return;
+        }
+
+        SendBirthLetter(children);
+        ApplyNaturalBirthRolls(children);
+    }
+
+    // These two are Harmony postfixes on ApplyBirthOutcome, so they used to fire on vat
+    // births for free. Now that the vat generates its own pawn they have to be invoked
+    // by hand, or vat-born primarchs would silently lose the chance to be born a
+    // perpetual/psyker/pariah. They are run after the pawn is spawned because both send
+    // a letter pointing at it, and after the primarch genes are applied so that their
+    // exclusion-tag checks actually see those genes.
+    private void ApplyNaturalBirthRolls(List<Pawn> children)
+    {
+        var embryoMother = containedEmbryo?.Mother;
+
+        foreach (var child in children)
+        {
+            Thing born = child;
+            NaturalBirthPerpetual.Postfix(ref born, embryoMother);
+            NaturalBirthPsykerPariah.Postfix(ref born, embryoMother);
+        }
+    }
+
+    // FIX: this used to call PregnancyUtility.ApplyBirthOutcome and immediately
+    // dereference whatever came back. That method is patched by several mods, and at
+    // least one of them (Big and Small) runs a prefix that spawns the babies itself
+    // and then returns false WITHOUT assigning __result - so the call handed back null
+    // and the next line threw a NullReferenceException. The vat never needed the
+    // vanilla childbirth ritual for anything, so it now builds the newborn itself and
+    // no other mod's birth patch sits between the vat and its primarch.
+    private Pawn GenerateNewbornPrimarch()
+    {
+        var embryoMother = containedEmbryo.Mother;
+        var embryoFather = containedEmbryo.Father;
+        var faction = Faction.OfPlayer;
+
+        var lastName = ((embryoFather ?? embryoMother)?.Name as NameTriple)?.Last;
+
+        var pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(
+            faction?.def?.basicMemberKind ?? PawnKindDefOf.Colonist,
+            faction,
+            forceGenerateNewPawn: true,
+            allowDowned: true,
+            canGeneratePawnRelations: false,
+            colonistRelationChanceFactor: 0f,
+            allowFood: false,
+            allowAddictions: false,
+            fixedGender: ForcedGenderFromGeneDefs(),
+            fixedLastName: lastName,
+            developmentalStages: DevelopmentalStage.Newborn));
+
+        if (pawn?.genes == null)
+        {
+            return pawn;
+        }
+
+        ApplyEmbryoGenes(pawn);
+        ApplyForcedGender(pawn);
+
+        if (embryoMother != null)
+        {
+            pawn.relations.AddDirectRelation(PawnRelationDefOf.Parent, embryoMother);
+        }
+        if (embryoFather != null)
+        {
+            pawn.relations.AddDirectRelation(PawnRelationDefOf.Parent, embryoFather);
+        }
+
+        // FIX: the old code read Faction.OfPlayer.ideos.PrimaryIdeo unguarded, which is
+        // a NullReferenceException on its own for anyone playing without Ideology.
+        if (ModsConfig.IdeologyActive && pawn.ideo != null)
+        {
+            var ideo = embryoMother?.Ideo ?? embryoFather?.Ideo ?? faction?.ideos?.PrimaryIdeo;
+            if (ideo != null)
+            {
+                pawn.ideo.SetIdeo(ideo);
+            }
+        }
+
+        if (embryoStarvation > 0f)
+        {
             var hediff = HediffMaker.MakeHediff(HediffDefOf.BioStarvation, pawn);
             hediff.Severity = Mathf.Lerp(0f, HediffDefOf.BioStarvation.maxSeverity, embryoStarvation);
             pawn.health.AddHediff(hediff);
         }
+
+        return pawn;
+    }
+
+    private void ApplyEmbryoGenes(Pawn pawn)
+    {
+        foreach (var gene in pawn.genes.GenesListForReading.ToList())
+        {
+            pawn.genes.RemoveGene(gene);
+        }
+
+        if (containedEmbryo.birthGenes != null)
+        {
+            foreach (var birthGene in containedEmbryo.birthGenes.GenesListForReading)
+            {
+                pawn.genes.AddGene(birthGene, false);
+            }
+        }
+
+        foreach (var primarchGene in containedEmbryo.PrimarchGenes.GenesListForReading)
+        {
+            pawn.genes.AddGene(primarchGene, true);
+        }
+
+        pawn.genes.SetXenotypeDirect(Genes40kDefOf.BEWH_Primarch);
+    }
+
+    // Read off the gene defs before generation so the pawn is built with the right
+    // gender in the first place - the name and portrait are picked from it.
+    private Gender? ForcedGenderFromGeneDefs()
+    {
+        var geneDefs = containedEmbryo.PrimarchGenes.GenesListForReading
+            .Concat(containedEmbryo.birthGenes?.GenesListForReading ?? Enumerable.Empty<GeneDef>());
+
+        foreach (var defMod in geneDefs.Select(g => g?.GetModExtension<GeneExtension>()))
+        {
+            if (defMod == null)
+            {
+                continue;
+            }
+            if (defMod.forceFemale)
+            {
+                return Gender.Female;
+            }
+            if (defMod.forceMale)
+            {
+                return Gender.Male;
+            }
+        }
+
+        if (!Genes40kUtils.ModSettings.allowFemalePrimarchBirths)
+        {
+            return Gender.Male;
+        }
+
+        return null;
+    }
+
+    // Re-checked once the genes are actually on the pawn, because only then is it
+    // known which of them ended up active.
+    private static void ApplyForcedGender(Pawn pawn)
+    {
+        var forcedGenderGene = pawn.genes.GenesListForReading.FirstOrDefault(gene =>
+        {
+            if (!gene.Active)
+            {
+                return false;
+            }
+
+            var defMod = gene.def?.GetModExtension<GeneExtension>();
+            return defMod != null && (defMod.forceFemale || defMod.forceMale);
+        });
+
+        if (forcedGenderGene != null)
+        {
+            var defMod = forcedGenderGene.def.GetModExtension<GeneExtension>();
+            pawn.gender = defMod.forceFemale ? Gender.Female : Gender.Male;
+            return;
+        }
+
+        if (!Genes40kUtils.ModSettings.allowFemalePrimarchBirths)
+        {
+            pawn.gender = Gender.Male;
+        }
+    }
+
+    private static void ConnectTwins(List<Pawn> children)
+    {
         Pawn firstTwin = null;
-            
-        foreach (var pawn3 in children.Where(pawn3 => pawn3.genes.HasActiveGene(Genes40kDefOf.BEWH_PrimarchSpecificGeneXX)))
+
+        foreach (var child in children.Where(c => c.genes != null && c.genes.HasActiveGene(Genes40kDefOf.BEWH_PrimarchSpecificGeneXX)))
         {
             if (firstTwin == null)
             {
-                firstTwin = pawn3;
+                firstTwin = child;
+                continue;
             }
-            else
-            {
-                ((Gene_TwinConnected)firstTwin.genes.GetGene(Genes40kDefOf.BEWH_PrimarchSpecificGeneXX)).SetTwin(pawn3);
-                ((Gene_TwinConnected)pawn3.genes.GetGene(Genes40kDefOf.BEWH_PrimarchSpecificGeneXX)).SetTwin(firstTwin);
-                    
-                firstTwin.relations.AddDirectRelation(PawnRelationDefOf.Sibling, pawn3);
-                pawn3.relations.AddDirectRelation(PawnRelationDefOf.Sibling, firstTwin);
-                    
-                firstTwin = null;
-            }
+
+            ((Gene_TwinConnected)firstTwin.genes.GetGene(Genes40kDefOf.BEWH_PrimarchSpecificGeneXX)).SetTwin(child);
+            ((Gene_TwinConnected)child.genes.GetGene(Genes40kDefOf.BEWH_PrimarchSpecificGeneXX)).SetTwin(firstTwin);
+
+            firstTwin.relations.AddDirectRelation(PawnRelationDefOf.Sibling, child);
+            child.relations.AddDirectRelation(PawnRelationDefOf.Sibling, firstTwin);
+
+            firstTwin = null;
         }
     }
-    
+
+    private void PlaceNewborn(Pawn child)
+    {
+        var cell = InteractionCell;
+
+        if (!cell.IsValid || !cell.Standable(Map))
+        {
+            cell = CellFinder.StandableCellNear(Position, Map, 3f);
+        }
+
+        if (!cell.IsValid)
+        {
+            cell = Position;
+        }
+
+        GenSpawn.Spawn(child, cell, Map);
+    }
+
+    private void SendBirthLetter(List<Pawn> children)
+    {
+        var names = children.Select(child => child.LabelShortCap).ToCommaList(useAnd: true);
+
+        Find.LetterStack.ReceiveLetter(
+            "BEWH.MankindsFinest.PrimarchGrowthVat.PrimarchBorn".Translate(),
+            "BEWH.MankindsFinest.PrimarchGrowthVat.PrimarchBornDesc".Translate(names),
+            LetterDefOf.PositiveEvent,
+            new LookTargets(children.Cast<Thing>()));
+    }
+
     private void DestroyEmbryo(bool biostarvation = false)
     {
         if (startTick < 0 || containedEmbryo == null)
@@ -737,37 +926,21 @@ public class Building_PrimarchGrowthVat : Building, IStoreSettingsParent, IThing
     public override void ExposeData()
     {
         base.ExposeData();
-        // ROOT CAUSE FIX.
-        // selectedEmbryo is a normal Thing that is still spawned on the map, so the map
-        // already saves it. Scribe_Deep wrote a SECOND full copy of it into the vat,
-        // and on load the game tried to register the same thing ID twice:
-        //   "Cannot register Genes40k.PrimarchEmbryo BEWH_PrimarchEmbryo1041543,
-        //    id already used by Genes40k.PrimarchEmbryo BEWH_PrimarchEmbryo1041543."
-        // The vat then pointed at the phantom, unspawned copy, which no pawn can ever
-        // pick up -> the endless BEWH_CarryPrimarchEmbryoToVat job spam.
-        // Vanilla Building_GrowthVat saves its own selectedEmbryo by reference; do the same.
         Scribe_References.Look(ref selectedEmbryo, "selectedEmbryo");
-        // containedEmbryo is correct as Deep: it is despawned and held by nothing else.
         Scribe_Deep.Look(ref containedEmbryo, "containedEmbryo");
         Scribe_Values.Look(ref embryoStarvation, "embryoStarvation", 0f);
         Scribe_Values.Look(ref containedNutrition, "containedNutrition", 0f);
         Scribe_Deep.Look(ref allowedNutritionSettings, "allowedNutritionSettings", this);
         Scribe_Deep.Look(ref nutritionContainer, "nutritionContainer", this);
-        // FIX: default was 0, but 0 is a *valid working* value (Working => startTick >= 0)
-        // and -1 is the "idle" value. With the old default a vat whose startTick happened
-        // to be 0 was written as absent and came back as 0 = permanently "working".
         Scribe_Values.Look(ref startTick, "startTick", -1);
 
         if (Scribe.mode == LoadSaveMode.PostLoadInit)
         {
-            // Recovery for saves written by the old Scribe_Deep code: the duplicate is
-            // destroyed/never spawned, so drop it. The player just re-picks the embryo.
             if (selectedEmbryo is { Destroyed: true })
             {
                 selectedEmbryo = null;
             }
-
-            // A vat that already holds an embryo must not also have one selected.
+            
             if (containedEmbryo != null)
             {
                 selectedEmbryo = null;

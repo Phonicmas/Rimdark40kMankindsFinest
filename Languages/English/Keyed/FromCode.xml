@@ -125,6 +125,9 @@
   <BEWH.MankindsFinest.PrimarchGrowthVat.PrimarchFather>Primarch Father: {0}</BEWH.MankindsFinest.PrimarchGrowthVat.PrimarchFather>
   <BEWH.MankindsFinest.PrimarchGrowthVat.PrimarchMother>Mother: {0}</BEWH.MankindsFinest.PrimarchGrowthVat.PrimarchMother>
 
+  <BEWH.MankindsFinest.PrimarchGrowthVat.PrimarchBorn>Primarch born</BEWH.MankindsFinest.PrimarchGrowthVat.PrimarchBorn>
+  <BEWH.MankindsFinest.PrimarchGrowthVat.PrimarchBornDesc>The growth vat has finished its work. {0} has emerged from the gestation fluid.</BEWH.MankindsFinest.PrimarchGrowthVat.PrimarchBornDesc>
+
   <BEWH.MankindsFinest.PrimarchGrowthVat.NoPrimarchEmbryo>No primarch embryos</BEWH.MankindsFinest.PrimarchGrowthVat.NoPrimarchEmbryo>
   <BEWH.MankindsFinest.PrimarchGrowthVat.NoSlurry>No genetic slurry</BEWH.MankindsFinest.PrimarchGrowthVat.NoSlurry>
 

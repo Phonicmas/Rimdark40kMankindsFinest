@@ -4,7 +4,13 @@ using Verse;
 
 namespace Genes40k;
 
-[HarmonyPatch(typeof(CompRankInfo), "UnlockRank")]
+[HarmonyPatch(typeof(CompRankInfo), "UnlockRank",[
+    typeof(RankDef),
+    typeof(bool)
+], [
+    ArgumentType.Normal,
+    ArgumentType.Normal,
+] )]
 public class UpdateRankIconOnRankUp
 {
     public static void Postfix(CompRankInfo __instance, RankDef rank)

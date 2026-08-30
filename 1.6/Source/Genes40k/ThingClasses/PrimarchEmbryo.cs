@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using RimWorld;
+using RimWorld.Planet;
 using UnityEngine;
 using Verse;
 
@@ -15,42 +16,44 @@ public class PrimarchEmbryo : GeneSetHolderBase
     private Pawn mother;
     private Pawn father;
 
-    public Pawn Mother
-    {
-        get
-        {
-            if (mother == null)
-            {
-                var randomMother = Find.WorldPawns?.AllPawnsAlive?.FirstOrFallback(pawn => pawn.gender == Gender.Female && pawn.genes.Xenotype == XenotypeDefOf.Baseliner);
-                if (randomMother == null)
-                {
-                    PawnGenerator.GeneratePawn(new PawnGenerationRequest(Faction.OfPlayer.def.basicMemberKind, Faction.OfPlayer, fixedGender: Gender.Female, biologicalAgeRange: new FloatRange(21, 46), allowedXenotypes: new List<XenotypeDef>() { XenotypeDefOf.Baseliner }));
-                }
-                mother = randomMother;
-            }
+    public Pawn Mother => mother ??= FindOrGenerateParent(Gender.Female);
 
-            return mother;
+    public Pawn Father => father ??= FindOrGenerateParent(Gender.Male);
+
+    private static Pawn FindOrGenerateParent(Gender gender)
+    {
+        var existing = Find.WorldPawns?.AllPawnsAlive?.FirstOrFallback(pawn =>
+            pawn.gender == gender
+            && pawn.RaceProps != null
+            && pawn.RaceProps.Humanlike
+            && pawn.genes != null
+            && pawn.genes.Xenotype == XenotypeDefOf.Baseliner);
+
+        if (existing != null)
+        {
+            return existing;
         }
+
+        var faction = Faction.OfPlayer;
+
+        var generated = PawnGenerator.GeneratePawn(new PawnGenerationRequest(
+            faction?.def?.basicMemberKind ?? PawnKindDefOf.Colonist,
+            faction,
+            forceGenerateNewPawn: true,
+            canGeneratePawnRelations: false,
+            colonistRelationChanceFactor: 0f,
+            fixedGender: gender,
+            biologicalAgeRange: new FloatRange(21, 46),
+            allowedXenotypes: [XenotypeDefOf.Baseliner]));
+
+        if (generated != null && !generated.IsWorldPawn() && Find.WorldPawns != null)
+        {
+            Find.WorldPawns.PassToWorld(generated);
+        }
+
+        return generated;
     }
 
-    public Pawn Father
-    {
-        get
-        {
-            if (father == null)
-            {
-                var randomFather = Find.WorldPawns?.AllPawnsAlive?.FirstOrFallback(pawn => pawn.gender == Gender.Male && pawn.genes.Xenotype == XenotypeDefOf.Baseliner);
-                if (randomFather == null)
-                {
-                    PawnGenerator.GeneratePawn(new PawnGenerationRequest(Faction.OfPlayer.def.basicMemberKind, Faction.OfPlayer, fixedGender: Gender.Male, biologicalAgeRange: new FloatRange(21, 46), allowedXenotypes: new List<XenotypeDef>() { XenotypeDefOf.Baseliner }));
-                }
-                father = randomFather;
-            }
-
-            return father;
-        }
-    }
-    
 
     public GeneSet PrimarchGenes
     {
