@@ -80,7 +80,7 @@
       <texPath>Things/Building/ChapterBanner/BEWH_DecorationChapterBanner</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <shaderType>CutoutComplex</shaderType>
-      <drawSize>(1.5, 2.5)</drawSize>
+      <drawSize>(2.5, 2.5)</drawSize>
       <drawOffset>(0, 0, 0.7)</drawOffset>
       <drawRotated>false</drawRotated>
       <shadowData>
