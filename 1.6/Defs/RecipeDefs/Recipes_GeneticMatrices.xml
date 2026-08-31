@@ -66,7 +66,7 @@
             <BEWH_GeneseedMatrixThunderWarrior>1</BEWH_GeneseedMatrixThunderWarrior>
         </products>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_LockedByResearch">
+            <li Class="Core40k.DefModExtension_LockedByResearch">
                 <researchs>
                     <li>BEWH_AdvancedProteinSubstitution</li>
                 </researchs>
@@ -133,7 +133,7 @@
             <BEWH_GeneseedMatrixFirstborn>1</BEWH_GeneseedMatrixFirstborn>
         </products>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_LockedByResearch">
+            <li Class="Core40k.DefModExtension_LockedByResearch">
                 <researchs>
                     <li>BEWH_AdvancedProteinSubstitution</li>
                 </researchs>
@@ -200,7 +200,7 @@
             <BEWH_GeneseedMatrixPrimaris>1</BEWH_GeneseedMatrixPrimaris>
         </products>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_LockedByResearch">
+            <li Class="Core40k.DefModExtension_LockedByResearch">
                 <researchs>
                     <li>BEWH_AdvancedProteinSubstitution</li>
                 </researchs>
@@ -270,7 +270,7 @@
             <li Class="Genes40k.DefModExtension_GeneMatrixRecipe">
                 <drainsUserWhenMaking>true</drainsUserWhenMaking>
             </li>
-            <li Class="Genes40k.DefModExtension_LockedByResearch">
+            <li Class="Core40k.DefModExtension_LockedByResearch">
                 <researchs>
                     <li>BEWH_AdvancedProteinSubstitution</li>
                 </researchs>
@@ -340,7 +340,7 @@
             <li Class="Genes40k.DefModExtension_GeneMatrixRecipe">
                 <drainsUserWhenMaking>true</drainsUserWhenMaking>
             </li>
-            <li Class="Genes40k.DefModExtension_LockedByResearch">
+            <li Class="Core40k.DefModExtension_LockedByResearch">
                 <researchs>
                     <li>BEWH_AdvancedProteinSubstitution</li>
                 </researchs>

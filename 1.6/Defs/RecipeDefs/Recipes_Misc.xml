@@ -106,7 +106,7 @@
             </li>
         </ingredients>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_LockedByResearch">
+            <li Class="Core40k.DefModExtension_LockedByResearch">
                 <researchs>
                     <li>BEWH_AdvancedProteinSubstitution</li>
                 </researchs>
@@ -196,7 +196,7 @@
             </li>
         </ingredients>
         <modExtensions>
-            <li Class="Genes40k.DefModExtension_LockedByResearch">
+            <li Class="Core40k.DefModExtension_LockedByResearch">
                 <researchs>
                     <li>BEWH_AdvancedProteinSubstitution</li>
                 </researchs>
