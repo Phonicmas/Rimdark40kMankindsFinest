@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Core40k;
 using RimWorld;
 using Verse;
 
@@ -39,7 +40,9 @@ public class PawnRenderNode_AttachmentShoulderRankIcon : PawnRenderNode_Apparel
             Flipped = !Flipped;
         }
 
-        return GraphicDatabase.Get<Graphic_Multi>(rightShoulderPath, ShaderFor(pawn), Props.drawSize, drawColour, drawColour);
+        //Built through MultiColorUtils so the framework recognises it as one of its own and leaves the
+        //icon colour alone instead of repainting it in the armour colours.
+        return MultiColorUtils.GetGraphic<Graphic_Multi>(rightShoulderPath, ShaderFor(pawn), Props.drawSize, drawColour, drawColour, drawColour, null);
     }
     
     protected override IEnumerable<Graphic> GraphicsFor(Pawn pawn)
