@@ -19,6 +19,7 @@
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene">
                 <chapterName>Dark Angels</chapterName>
+                <relatedPrimarchGene>BEWH_PrimarchSpecificGeneI</relatedPrimarchGene>
             </li>
             <li Class="Genes40k.DefModExtension_GeneseedPurity">
                 <additionalChanceOffset>-15</additionalChanceOffset>
@@ -63,6 +64,7 @@
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene">
                 <chapterName>Emperor's Children</chapterName>
+                <relatedPrimarchGene>BEWH_PrimarchSpecificGeneIII</relatedPrimarchGene>
             </li>
         </modExtensions>
     </GeneDef>
@@ -86,6 +88,7 @@
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene">
                 <chapterName>Iron Warriors</chapterName>
+                <relatedPrimarchGene>BEWH_PrimarchSpecificGeneIV</relatedPrimarchGene>
             </li>
             <li Class="Genes40k.DefModExtension_GeneseedPurity">
                 <additionalChanceOffset>-7</additionalChanceOffset>
@@ -123,6 +126,7 @@
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene">
                 <chapterName>White Scars</chapterName>
+                <relatedPrimarchGene>BEWH_PrimarchSpecificGeneV</relatedPrimarchGene>
             </li>
         </modExtensions>
     </GeneDef>
@@ -148,6 +152,7 @@
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene">
                 <chapterName>Space Wolves</chapterName>
+                <relatedPrimarchGene>BEWH_PrimarchSpecificGeneVI</relatedPrimarchGene>
             </li>
             <li Class="Core40k.DefModExtension_AddRandomGeneByWeight">
                 <possibleGenesToGive>
@@ -230,6 +235,7 @@
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene">
                 <chapterName>Imperial Fists</chapterName>
+                <relatedPrimarchGene>BEWH_PrimarchSpecificGeneVII</relatedPrimarchGene>
             </li>
         </modExtensions>
     </GeneDef>
@@ -256,6 +262,7 @@
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene">
                 <chapterName>Night Lords</chapterName>
+                <relatedPrimarchGene>BEWH_PrimarchSpecificGeneVIII</relatedPrimarchGene>
             </li>
             <li Class="Genes40k.DefModExtension_GeneInducedFear">
                 <genesCausesImmunityToFear>
@@ -298,6 +305,7 @@
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene">
                 <chapterName>Blood Angels</chapterName>
+                <relatedPrimarchGene>BEWH_PrimarchSpecificGeneIX</relatedPrimarchGene>
             </li>
             <li Class="Core40k.DefModExtension_AddRandomGeneByWeight">
                 <possibleGenesToGive>
@@ -412,6 +420,7 @@
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene">
                 <chapterName>Iron Hands</chapterName>
+                <relatedPrimarchGene>BEWH_PrimarchSpecificGeneX</relatedPrimarchGene>
             </li>
         </modExtensions>
     </GeneDef>
@@ -451,6 +460,7 @@
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene">
                 <chapterName>World Eaters</chapterName>
+                <relatedPrimarchGene>BEWH_PrimarchSpecificGeneXII</relatedPrimarchGene>
             </li>
             <li Class="Core40k.DefModExtension_AddRandomTraitByWeight">
                 <possibleTraitsToGive>
@@ -483,6 +493,7 @@
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene">
                 <chapterName>Ultramarines</chapterName>
+                <relatedPrimarchGene>BEWH_PrimarchSpecificGeneXIII</relatedPrimarchGene>
             </li>
             <li Class="Genes40k.DefModExtension_GeneseedPurity">
                 <additionalChanceOffset>-10</additionalChanceOffset>
@@ -513,6 +524,7 @@
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene">
                 <chapterName>Death Guard</chapterName>
+                <relatedPrimarchGene>BEWH_PrimarchSpecificGeneXIV</relatedPrimarchGene>
             </li>
         </modExtensions>
     </GeneDef>
@@ -541,6 +553,7 @@
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene">
                 <chapterName>Thousand Sons</chapterName>
+                <relatedPrimarchGene>BEWH_PrimarchSpecificGeneXV</relatedPrimarchGene>
             </li>
             <li Class="Core40k.DefModExtension_AddRandomGeneByWeight">
                 <possibleGenesToGive>
@@ -576,6 +589,7 @@
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene">
                 <chapterName>Sons of Horus</chapterName>
+                <relatedPrimarchGene>BEWH_PrimarchSpecificGeneXVI</relatedPrimarchGene>
             </li>
         </modExtensions>
     </GeneDef>
@@ -598,6 +612,7 @@
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene">
                 <chapterName>Word Bearers</chapterName>
+                <relatedPrimarchGene>BEWH_PrimarchSpecificGeneXVII</relatedPrimarchGene>
             </li>
         </modExtensions>
     </GeneDef>
@@ -633,6 +648,7 @@
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene">
                 <chapterName>Salamanders</chapterName>
+                <relatedPrimarchGene>BEWH_PrimarchSpecificGeneXVIII</relatedPrimarchGene>
             </li>
             <li Class="Core40k.DefModExtension_AddRandomTraitByWeight">
                 <possibleTraitsToGive>
@@ -673,6 +689,7 @@
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene">
                 <chapterName>Raven Guard</chapterName>
+                <relatedPrimarchGene>BEWH_PrimarchSpecificGeneXIX</relatedPrimarchGene>
             </li>
         </modExtensions>
     </GeneDef>
@@ -704,6 +721,7 @@
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene">
                 <chapterName>Alpha Legion</chapterName>
+                <relatedPrimarchGene>BEWH_PrimarchSpecificGeneXX</relatedPrimarchGene>
             </li>
         </modExtensions>
     </GeneDef>

@@ -256,6 +256,7 @@
     <Compile Include="Workers\ThoughtWorkers\ThoughtWorker_Xenophobia.cs" />
     <Compile Include="Workers\ThoughtWorkers\ThoughtWorker_HolyRadiance.cs" />
     <Compile Include="Workers\ThoughtWorkers\ThoughtWorker_Pariah.cs" />
+    <Compile Include="Workers\ThoughtWorkers\ThoughtWorker_PrimarchPresence.cs" />
     <Compile Include="Workers\ThoughtWorkers\ThoughtWorker_Precept_Psyker.cs" />
     <Compile Include="Workers\ThoughtWorkers\ThoughtWorker_Precept_Psyker_Social.cs" />
     <Compile Include="Workers\ThoughtWorkers\ThoughtWorker_Serf.cs" />

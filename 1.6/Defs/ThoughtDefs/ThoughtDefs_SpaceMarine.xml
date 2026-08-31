@@ -14,7 +14,7 @@
       <li>
         <label>genetic joy</label>
         <description>Natural bonus from the Ultramarine gene-seed.</description>
-        <baseMoodEffect>4</baseMoodEffect>
+        <baseMoodEffect>6</baseMoodEffect>
       </li>
     </stages>
   </ThoughtDef>
