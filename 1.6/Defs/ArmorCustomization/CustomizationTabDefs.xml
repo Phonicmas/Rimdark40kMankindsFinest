@@ -5,6 +5,7 @@
         <defName>BEWH_AstartesShoulderIcon</defName>
         <label>Shoulder Icons</label>
         <description>Selection of shoulder pad icons.</description>
+        <sortOrder>1</sortOrder>
         <tabDrawerClass>Genes40k.ShoulderPadIconTab</tabDrawerClass>
     </Core40k.CustomizationTabDef>
 

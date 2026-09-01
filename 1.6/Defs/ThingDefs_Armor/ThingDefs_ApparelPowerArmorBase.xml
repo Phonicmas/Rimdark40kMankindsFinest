@@ -14,7 +14,7 @@
             </recipeUsers>
         </recipeMaker>
         <statBases Inherit="false">
-            <MaxHitPoints>500</MaxHitPoints>
+            <MaxHitPoints>5000</MaxHitPoints>
             <Mass>15</Mass>
             <Flammability>0</Flammability>
             <EquipDelay>18</EquipDelay>
@@ -79,7 +79,7 @@
             </recipeUsers>
         </recipeMaker>
         <statBases>
-            <MaxHitPoints>400</MaxHitPoints>
+            <MaxHitPoints>4000</MaxHitPoints>
             <Mass>3</Mass>
             <Flammability>0</Flammability>
             <EquipDelay>4</EquipDelay>
