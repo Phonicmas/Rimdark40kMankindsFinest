@@ -163,7 +163,7 @@ public class Ability_ForeswalkLong : VEF.Abilities.Ability
 			}
 			caravan?.Destroy();
 		}
-		else if (targets[0].WorldObject is Caravan caravan2 && caravan2.Faction == base.pawn.Faction)
+		else if (targets[0].WorldObject is Caravan caravan2 && caravan2.Faction == pawn.Faction)
 		{
 			if (caravan != null)
 			{
@@ -187,7 +187,7 @@ public class Ability_ForeswalkLong : VEF.Abilities.Ability
 		}
 		else
 		{
-			CaravanMaker.MakeCaravan(pawnsToSkip, base.pawn.Faction, targets[0].Tile, addToWorldPawnsIfNotAlready: false);
+			CaravanMaker.MakeCaravan(pawnsToSkip, pawn.Faction, targets[0].Tile, addToWorldPawnsIfNotAlready: false);
 			foreach (var item3 in pawnsToSkip)
 			{
 				item3.ExitMap(allowedToJoinOrCreateCaravan: false, Rot4.Invalid);

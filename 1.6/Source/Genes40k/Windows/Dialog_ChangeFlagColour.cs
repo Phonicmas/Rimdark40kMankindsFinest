@@ -16,7 +16,8 @@ public class Dialog_ChangeFlagColour : Window
     private Color currentlySelectedSecondaryColour;
     private string currentlySelectedIcon;
 
-    private Texture2D CurrentlySelectedIconTexture => ContentFinder<Texture2D>.Get(currentlySelectedIcon);
+    //Empty means no insignia is selected, a FlagIconDef with setsNull picked.
+    private Texture2D CurrentlySelectedIconTexture => currentlySelectedIcon.NullOrEmpty() ? null : ContentFinder<Texture2D>.Get(currentlySelectedIcon);
 
     private readonly Building_DecorativeFlag decoFlag;
     
@@ -182,7 +183,8 @@ public class Dialog_ChangeFlagColour : Window
                 
                 iconRect = iconRect.ContractedBy(5f);
             
-                if (currentlySelectedIcon == flagIcons[i].iconPath)
+                var iconSelected = flagIcons[i].setsNull ? currentlySelectedIcon.NullOrEmpty() : currentlySelectedIcon == flagIcons[i].iconPath;
+                if (iconSelected)
                 {
                     Widgets.DrawStrongHighlight(iconRect.ExpandedBy(3f));
                 }
@@ -197,7 +199,7 @@ public class Dialog_ChangeFlagColour : Window
 
                 if (Widgets.ButtonInvisible(iconRect))
                 {
-                    currentlySelectedIcon = flagIcons[i].iconPath;
+                    currentlySelectedIcon = flagIcons[i].setsNull ? null : flagIcons[i].iconPath;
                 }
             }
 
@@ -218,14 +220,18 @@ public class Dialog_ChangeFlagColour : Window
             };
             
             GUI.DrawTexture(iconRect, Command.BGTexShrunk);
-            GUI.DrawTexture(iconRect, CurrentlySelectedIconTexture);
+            var selectedIconTexture = CurrentlySelectedIconTexture;
+            if (selectedIconTexture != null)
+            {
+                GUI.DrawTexture(iconRect, selectedIconTexture);
+            }
         }
         
         if (Widgets.ButtonText(new Rect(inRect.xMax - CloseButSize.x, inRect.yMax - CloseButSize.y, CloseButSize.x, CloseButSize.y), "Accept".Translate()))
         {
             decoFlag.SetPrimaryColor(currentlySelectedPrimaryColour);
             decoFlag.SetSecondaryColor(currentlySelectedSecondaryColour);
-            decoFlag.SetFlagInsignia(currentlySelectedIcon);
+            decoFlag.SetFlagInsignia(currentlySelectedIcon, currentlySelectedIcon.NullOrEmpty());
             decoFlag.SetOriginals();
             decoFlag.Notify_ColorChanged();
             _ = decoFlag.Graphic;

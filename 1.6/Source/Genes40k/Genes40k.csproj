@@ -285,7 +285,7 @@
     <Compile Include="Workers\WorkerClass_GeneProgenoidRemovalBase.cs" />
     <Compile Include="Genes40kUtils.cs" />
     <Compile Include="Genes40kDefOf.cs" />
-    <Compile Include="HarmonyPatches\HarmonyPatch_Carapace.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_IgnoreMovespeedDecrease.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

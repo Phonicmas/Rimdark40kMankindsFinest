@@ -22,10 +22,8 @@
         <marketValueFactor>1.1</marketValueFactor>
         <statOffsets>
             <CancerRate>0.10</CancerRate>
+            <LifespanFactor>-0.05</LifespanFactor>
         </statOffsets>
-        <statFactors>
-            <LifespanFactor>0.95</LifespanFactor>
-        </statFactors>
     </GeneDef>
 
     <!-- Space Marine -->

@@ -64,10 +64,14 @@ public class Building_DecorativeFlag : Building
     private string flagInsigniaFilePath;
     public string FlagInsigniaFilePath => flagInsigniaFilePath;
     
-    private const string NoIcon = "UI/Decoration/LegionBadges/BEWH_NoneSingle";
-
     private Graphic FlagInsigniaGraphicFor(Rot4 rotation)
     {
+        //No path means no insignia, see SetFlagInsignia.
+        if (flagInsigniaFilePath.NullOrEmpty())
+        {
+            return null;
+        }
+
         var index = rotation.AsInt;
         return flagInsigniaGraphics[index] ??= GraphicDatabase.Get<Graphic_Single>(flagInsigniaFilePath, ShaderDatabase.Cutout, FlagExtension.InsigniaDrawSize(rotation), Color.white);
     }
@@ -82,7 +86,7 @@ public class Building_DecorativeFlag : Building
 
     public void SetFlagInsignia(string path, bool noIcon = false)
     {
-        flagInsigniaFilePath = noIcon ? NoIcon : path;
+        flagInsigniaFilePath = noIcon ? null : path;
         ClearInsigniaGraphicCache();
         Notify_ColorChanged();
     }
@@ -94,8 +98,9 @@ public class Building_DecorativeFlag : Building
         var rotation = Rotation;
         var extension = FlagExtension;
 
-        //Each direction can be turned off individually, all four are on by default.
-        if (!extension.DrawsInsignia(rotation))
+        //A FlagIconDef with setsNull leaves the path empty, which means no insignia at all.
+        //Each direction can also be turned off individually, all four are on by default.
+        if (flagInsigniaFilePath.NullOrEmpty() || !extension.DrawsInsignia(rotation))
         {
             return;
         }

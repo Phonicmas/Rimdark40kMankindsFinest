@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <!-- Ultramarine -->
   <ThoughtDef>
     <defName>BEWH_ThunderWarriorInstability</defName>
     <workerClass>Genes40k.ThoughtWorker_ThunderWarrior</workerClass>

@@ -48,7 +48,7 @@ public class Ability_ForeswalkShort : VEF.Abilities.Ability
 						break;
 				}
 
-				var globalTargetInfo = base.Comp.currentlyCastingTargets[i + 1];
+				var globalTargetInfo = Comp.currentlyCastingTargets[i + 1];
 				FleckMaker.Static(globalTargetInfo.Cell, globalTargetInfo.Map, effectSet[1]);
 				FleckMaker.Static(globalTargetInfo.Cell, globalTargetInfo.Map, effectSet[2]);
 				SoundDefOf.Psycast_Skip_Entry.PlayOneShot(thing);
