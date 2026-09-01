@@ -248,15 +248,6 @@ public class ShoulderPadIconTab : CustomizerTabDrawer
     {
             
     }
-
-    public override void OnAccept(Pawn pawn)
-    {
-        var apparels = pawn.apparel.WornApparel.Where(a => a.HasComp<CompChapterColorWithShoulderDecoration>()).ToList();
-        foreach (var apparel in apparels)
-        {
-            apparel.GetComp<CompChapterColorWithShoulderDecoration>().SetOriginals();
-        }
-    }
     
     public override void OnReset(Pawn pawn)
     {
