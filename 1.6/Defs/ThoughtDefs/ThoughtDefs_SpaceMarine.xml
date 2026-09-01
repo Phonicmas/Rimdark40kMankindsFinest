@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
   <!-- Ultramarine -->
@@ -15,6 +15,21 @@
         <label>genetic joy</label>
         <description>Natural bonus from the Ultramarine gene-seed.</description>
         <baseMoodEffect>6</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- Any legion pawn whose own primarch is also on the map -->
+  <ThoughtDef>
+    <defName>BEWH_PrimarchPresenceMood</defName>
+    <workerClass>Genes40k.ThoughtWorker_PrimarchPresence</workerClass>
+    <validWhileDespawned>false</validWhileDespawned>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>primarch on the battlefield</label>
+        <description>My primarch fights at my side. There is no greater honour.</description>
+        <baseMoodEffect>4</baseMoodEffect>
       </li>
     </stages>
   </ThoughtDef>
