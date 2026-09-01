@@ -151,7 +151,6 @@
     <Compile Include="DefModExtensions\DefModExtension_GeneInducedFear.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneseedHarvest.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneStorageGraphicProgression.cs" />
-    <Compile Include="DefModExtensions\DefModExtension_IgnoreMovespeedDecrease.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneseedVialRecipe.cs" />
     <Compile Include="DefModExtensions\DefModExtension_LegionMaterialCreation.cs" />
     <Compile Include="DefModExtensions\DefModExtension_PerpetualGene.cs" />
@@ -285,7 +284,6 @@
     <Compile Include="Workers\WorkerClass_GeneProgenoidRemovalBase.cs" />
     <Compile Include="Genes40kUtils.cs" />
     <Compile Include="Genes40kDefOf.cs" />
-    <Compile Include="HarmonyPatches\HarmonyPatch_IgnoreMovespeedDecrease.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

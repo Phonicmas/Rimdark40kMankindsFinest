@@ -205,7 +205,6 @@
   <!-- Shared Gene -->
   <BEWH.MankindsFinest.WarpShield.Conditional>Warp Shield</BEWH.MankindsFinest.WarpShield.Conditional>
   <BEWH.MankindsFinest.WarpShield.TurnX>warp shield is {0}</BEWH.MankindsFinest.WarpShield.TurnX>
-  <BEWH.MankindsFinest.MovespeedPenaltyIgnored>ignored due to {0}</BEWH.MankindsFinest.MovespeedPenaltyIgnored>
 
 
   <!--=== Abilities ===-->

@@ -66,7 +66,7 @@
             <li Class="Core40k.DefModExtension_GeneExtension">
                 <addedWorldCarryCapacity>200</addedWorldCarryCapacity>
             </li>
-            <li Class="Genes40k.DefModExtension_IgnoreMovespeedDecrease" />
+            <li Class="Core40k.DefModExtension_IgnoreMovespeedDecrease" />
         </modExtensions>
     </GeneDef>
 

@@ -63,7 +63,7 @@
             <li Class="VEF.Genes.GeneExtension">
                 <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
             </li>
-            <li Class="Genes40k.DefModExtension_IgnoreMovespeedDecrease" />
+            <li Class="Core40k.DefModExtension_IgnoreMovespeedDecrease" />
         </modExtensions>
     </GeneDef>
 
