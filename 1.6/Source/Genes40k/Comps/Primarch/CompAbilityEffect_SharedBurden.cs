@@ -8,15 +8,30 @@ public class CompAbilityEffect_SharedBurden : CompAbilityEffect
 {
     public new CompProperties_AbilitySharedBurden Props => (CompProperties_AbilitySharedBurden)props;
 
+    private static bool HasSharableBurden(Pawn pawn)
+    {
+        return pawn?.needs?.mood?.thoughts?.memories != null;
+    }
+
     public override bool CanApplyOn(LocalTargetInfo target, LocalTargetInfo dest)
     {
         var pawn = target.Pawn;
+        if (!HasSharableBurden(pawn))
+        {
+            return false;
+        }
+
         return pawn.needs.mood.thoughts.memories.Memories.Any(memory => memory.MoodOffset() < 0) || pawn.InMentalState;
     }
         
     public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
     {
         var pawn = target.Pawn;
+
+        if (!HasSharableBurden(pawn))
+        {
+            return;
+        }
 
         if (pawn.InMentalState)
         {
@@ -46,8 +61,12 @@ public class CompAbilityEffect_SharedBurden : CompAbilityEffect
         
     public override bool Valid(LocalTargetInfo target, bool throwMessages = false)
     {
-        base.Valid(target, throwMessages);
-        if (target.Pawn == null)
+        if (!base.Valid(target, throwMessages))
+        {
+            return false;
+        }
+
+        if (!HasSharableBurden(target.Pawn))
         {
             return false;
         }
@@ -57,7 +76,7 @@ public class CompAbilityEffect_SharedBurden : CompAbilityEffect
         
     public override string ExtraLabelMouseAttachment(LocalTargetInfo target)
     {
-        if (target.Pawn == null)
+        if (!HasSharableBurden(target.Pawn))
         {
             return null;
         }

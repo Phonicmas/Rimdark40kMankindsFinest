@@ -16,7 +16,7 @@ public class ShoulderPadIconTab : CustomizerTabDrawer
 
     private const int RowAmount = 6;
 
-    private static float listScrollViewHeight = 0f;
+    private float listScrollViewHeight = 0f;
 
     public override IEnumerable<CompGraphicParent> Comps
     {
@@ -121,7 +121,7 @@ public class ShoulderPadIconTab : CustomizerTabDrawer
 
             curY = tertiaryColourRect.yMax;
         }
-        else
+        else if (chapterColorComp.LeftShoulderIconColour != Color.white)
         {
             chapterColorComp.LeftShoulderIconColour = Color.white;
         }
@@ -215,7 +215,7 @@ public class ShoulderPadIconTab : CustomizerTabDrawer
 
             curY = tertiaryColourRect.yMax;
         }
-        else
+        else if (chapterColorComp.RightShoulderIconColour != Color.white)
         {
             chapterColorComp.RightShoulderIconColour = Color.white;
         }

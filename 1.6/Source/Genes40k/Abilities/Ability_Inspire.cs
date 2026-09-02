@@ -17,6 +17,10 @@ public class Ability_Inspire : VEF.Abilities.Ability
 			{
 				continue;
 			}
+			if (targetPawn.needs?.mood?.thoughts?.memories == null)
+			{
+				continue;
+			}
 			if (!targetPawn.IsColonist && !targetPawn.IsPrisonerOfColony)
 			{
 				if (targetPawn.RaceProps.Animal)

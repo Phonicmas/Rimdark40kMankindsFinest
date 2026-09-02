@@ -31,14 +31,12 @@ public class CompAbilityEffect_ProofOfFaith : CompAbilityEffect_WithDuration
             
         var pawn = target.Pawn;
 
-        if (pawn != null && !pawn.Faction.IsPlayer)
+        if (pawn?.Faction == null || !pawn.Faction.IsPlayer)
         {
             return false;
         }
             
-        var requiredStat = pawn?.GetStatValue(Props.durationMultiplier);
-            
-        return requiredStat > 0;
+        return pawn.GetStatValue(Props.durationMultiplier) > 0;
     }
         
     public override string ExtraLabelMouseAttachment(LocalTargetInfo target)

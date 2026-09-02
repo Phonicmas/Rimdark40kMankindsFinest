@@ -29,7 +29,8 @@ public static class Genes40kUtils
     
     public static readonly CachedTexture PaintableIcon = new ("UI/Misc/PaintableIcon");
         
-    public static List<GeneDef> ThunderWarriorGenes => new()
+    private static List<GeneDef> thunderWarriorGenes = null;
+    public static List<GeneDef> ThunderWarriorGenes => thunderWarriorGenes ??= new List<GeneDef>
     {
         Genes40kDefOf.BEWH_ProtoOssmodula,
         Genes40kDefOf.BEWH_Musculeator,
@@ -39,7 +40,8 @@ public static class Genes40kUtils
         Genes40kDefOf.BEWH_Furybound,
     };
 
-    public static List<GeneDef> SpaceMarineGenes => new()
+    private static List<GeneDef> spaceMarineGenes = null;
+    public static List<GeneDef> SpaceMarineGenes => spaceMarineGenes ??= new List<GeneDef>
     {
         Genes40kDefOf.BEWH_SecondaryHeart,
         Genes40kDefOf.BEWH_Ossmodula,
@@ -62,14 +64,16 @@ public static class Genes40kUtils
         Genes40kDefOf.BEWH_BlackCarapace
     };
 
-    public static List<GeneDef> PrimarisGenes => new()
+    private static List<GeneDef> primarisGenes = null;
+    public static List<GeneDef> PrimarisGenes => primarisGenes ??= new List<GeneDef>
     {
         Genes40kDefOf.BEWH_SinewCoil,
         Genes40kDefOf.BEWH_Magnificat,
         Genes40kDefOf.BEWH_BelisarianFurnace
     };
 
-    public static List<GeneDef> CustodesGenes => new()
+    private static List<GeneDef> custodesGenes = null;
+    public static List<GeneDef> CustodesGenes => custodesGenes ??= new List<GeneDef>
     {
         Genes40kDefOf.BEWH_ImmunisLeucocyte,
         Genes40kDefOf.BEWH_AthanaticVitae,
@@ -79,7 +83,8 @@ public static class Genes40kUtils
         Genes40kDefOf.BEWH_FulgurVitaliumstrand
     };
 
-    public static List<GeneDef> PrimarchGenes => new()
+    private static List<GeneDef> primarchGenes = null;
+    public static List<GeneDef> PrimarchGenes => primarchGenes ??= new List<GeneDef>
     {
         Genes40kDefOf.BEWH_ImmortisGland,
         Genes40kDefOf.BEWH_TempestusOcularium,
@@ -119,7 +124,8 @@ public static class Genes40kUtils
         }
     }
         
-    public static List<GeneDef> LivingSaintGenes => new()
+    private static List<GeneDef> livingSaintGenes = null;
+    public static List<GeneDef> LivingSaintGenes => livingSaintGenes ??= new List<GeneDef>
     {
         Genes40kDefOf.BEWH_LivingSaintBeingOfFaith,
         Genes40kDefOf.BEWH_LivingSaintDivineGrace,
@@ -130,7 +136,8 @@ public static class Genes40kUtils
         Genes40kDefOf.BEWH_LivingSaintHolyRadiance,
     };
 
-    public static List<HediffDef> DevelopmentPhases => new()
+    private static List<HediffDef> developmentPhases = null;
+    public static List<HediffDef> DevelopmentPhases => developmentPhases ??= new List<HediffDef>
     {
         Genes40kDefOf.BEWH_FirstbornPhaseOne,
         Genes40kDefOf.BEWH_FirstbornPhaseTwo,
@@ -141,6 +148,56 @@ public static class Genes40kUtils
         Genes40kDefOf.BEWH_PrimarisPhaseThree,
     };
         
+    private static Dictionary<GeneDef, GeneDef> chapterGeneToPrimarchGene = null;
+    private static Dictionary<GeneDef, GeneDef> ChapterGeneToPrimarchGene
+    {
+        get
+        {
+            if (chapterGeneToPrimarchGene != null)
+            {
+                return chapterGeneToPrimarchGene;
+            }
+
+            chapterGeneToPrimarchGene = new Dictionary<GeneDef, GeneDef>();
+
+            foreach (var geneDef in DefDatabase<GeneDef>.AllDefsListForReading)
+            {
+                var relatedPrimarchGene = geneDef.GetModExtension<DefModExtension_ChapterGene>()?.relatedPrimarchGene;
+
+                if (relatedPrimarchGene != null)
+                {
+                    chapterGeneToPrimarchGene[geneDef] = relatedPrimarchGene;
+                }
+            }
+
+            return chapterGeneToPrimarchGene;
+        }
+    }
+
+    private static HashSet<GeneDef> relatedPrimarchGenes = null;
+    public static HashSet<GeneDef> RelatedPrimarchGenes => relatedPrimarchGenes ??= new HashSet<GeneDef>(ChapterGeneToPrimarchGene.Values);
+
+    /// <summary>
+    /// The primarch gene tied to whichever chapter gene this pawn carries, or null if they carry none.
+    /// </summary>
+    public static GeneDef RelatedPrimarchGeneFor(this Pawn pawn)
+    {
+        if (pawn?.genes == null)
+        {
+            return null;
+        }
+
+        foreach (var gene in pawn.genes.GenesListForReading)
+        {
+            if (ChapterGeneToPrimarchGene.TryGetValue(gene.def, out var relatedPrimarchGene))
+            {
+                return relatedPrimarchGene;
+            }
+        }
+
+        return null;
+    }
+
     public static bool HasGene(this Pawn_GeneTracker geneTracker, GeneDef geneDef)
     {
         if (geneDef == null)
@@ -162,13 +219,20 @@ public static class Genes40kUtils
         
     public static bool HasGenes(this Pawn_GeneTracker geneTracker, List<GeneDef> geneDefs)
     {
-        if (geneDefs.NullOrEmpty())
+        if (geneTracker == null || geneDefs.NullOrEmpty())
         {
             return false;
         }
-        var genesListForReading = geneTracker.GenesListForReading.Select(gene => gene.def).ToList();
 
-        return geneDefs.All(genesListForReading.Contains);
+        foreach (var geneDef in geneDefs)
+        {
+            if (!geneTracker.HasGene(geneDef))
+            {
+                return false;
+            }
+        }
+
+        return true;
     }
         
     public static bool IsThunderWarrior(this Pawn pawn)

@@ -98,6 +98,7 @@
     <Compile Include="Comps\CompProperties_LifespanDropItem.cs" />
     <Compile Include="Comps\Comp_LifespanDropItem.cs" />
     <Compile Include="Comps\GameComponent_MankindFinestUtils.cs" />
+    <Compile Include="Comps\MapComponent_PrimarchPresence.cs" />
     <Compile Include="Comps\GameComponent_Perpetual.cs" />
     <Compile Include="Comps\GameComponent_UnlockedMaterials.cs" />
     <Compile Include="Comps\LivingSaint\CompAbilityEffect_DivineGraceCost.cs" />
@@ -183,9 +184,8 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_ReactToMelee.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_RubiconSurgeryChanceIncrease.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_SecondProgenoidGlandProgress.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_SerfBuffOnSpawn.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_SerfGainTrait.cs" />
-    <Compile Include="HarmonyPatches\HarmonyPatch_SerfGetTrait1.cs" />
-    <Compile Include="HarmonyPatches\HarmonyPatch_SerfGetTrait2.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_SpaceMarineChapterSpawn.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_UpdateRankIconOnRankUp.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_ZealousFuryStopMentalBreak.cs" />

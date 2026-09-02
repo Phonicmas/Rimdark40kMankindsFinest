@@ -12,7 +12,13 @@ public class Comp_TwinTeleport : CompAbilityEffect
     public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
     {
         var caster = parent.pawn;
-        var twin = ((Gene_TwinConnected)caster.genes.GetGene(Genes40kDefOf.BEWH_PrimarchSpecificGeneXX)).Twin;
+
+        if (caster.genes?.GetGene(Genes40kDefOf.BEWH_PrimarchSpecificGeneXX) is not Gene_TwinConnected twinGene || twinGene.Twin == null)
+        {
+            return;
+        }
+
+        var twin = twinGene.Twin;
             
         if (twin.Map != null && twin.Position.IsValid)
         {
@@ -25,7 +31,7 @@ public class Comp_TwinTeleport : CompAbilityEffect
 
         var caravan = twin.GetCaravan();
 
-        if (caravan != null && caravan.Faction.IsPlayer)
+        if (caravan?.Faction is { IsPlayer: true })
         {
             caravan.AddPawn(caster, addCarriedPawnToWorldPawnsIfAny: true);
             caster.ExitMap(allowedToJoinOrCreateCaravan: false, Rot4.Invalid);

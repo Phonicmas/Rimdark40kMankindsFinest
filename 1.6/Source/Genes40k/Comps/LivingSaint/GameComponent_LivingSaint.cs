@@ -27,7 +27,7 @@ public class GameComponent_LivingSaint : GameComponent
             return;
         }
 
-        if (!Enumerable.Any(livingSaints, p => p.Dead))
+        if (!Enumerable.Any(livingSaints, p => p is { Dead: true }))
         {
             return;
         }
@@ -58,14 +58,21 @@ public class GameComponent_LivingSaint : GameComponent
 
     private void SpawnSaint()
     {
-        var toSpawn = livingSaints.RandomElement();
+        var deadSaints = livingSaints.Where(saint => saint is { Dead: true }).ToList();
 
-        if (!toSpawn.Dead)
+        if (!deadSaints.Any())
         {
             return;
         }
 
-        var map = Find.CurrentMap;
+        var toSpawn = deadSaints.RandomElement();
+
+        var map = Find.CurrentMap ?? Find.AnyPlayerHomeMap;
+
+        if (map == null)
+        {
+            return;
+        }
 
         ResurrectionUtility.TryResurrect(toSpawn);
 
@@ -102,5 +109,13 @@ public class GameComponent_LivingSaint : GameComponent
     {
         base.ExposeData();
         Scribe_Collections.Look(ref livingSaints, "livingSaints", LookMode.Reference);
+
+        if (Scribe.mode != LoadSaveMode.PostLoadInit)
+        {
+            return;
+        }
+
+        livingSaints ??= new List<Pawn>();
+        livingSaints.RemoveAll(saint => saint == null);
     }
 }

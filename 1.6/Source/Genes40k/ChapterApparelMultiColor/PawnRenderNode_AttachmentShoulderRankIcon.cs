@@ -11,7 +11,10 @@ public class PawnRenderNode_AttachmentShoulderRankIcon : PawnRenderNode_Apparel
     {
     }
     
-    public bool Flipped = false;
+    private CompChapterColorWithShoulderDecoration cachedChapterDecoComp;
+    private CompChapterColorWithShoulderDecoration ChapterDecoComp => cachedChapterDecoComp ??= apparel?.GetComp<CompChapterColorWithShoulderDecoration>();
+
+    private bool Flipped => ChapterDecoComp?.FlipShoulderIcons == true;
     
     public override bool FlipGraphic(PawnDrawParms parms)
     {
@@ -26,7 +29,7 @@ public class PawnRenderNode_AttachmentShoulderRankIcon : PawnRenderNode_Apparel
     {
         var rightShoulderPath = Props.texPath;
             
-        var chapterDecoComp = apparel.GetComp<CompChapterColorWithShoulderDecoration>();
+        var chapterDecoComp = ChapterDecoComp;
         
         var drawColour = chapterDecoComp.RightShoulderIconColour;
             
@@ -35,11 +38,6 @@ public class PawnRenderNode_AttachmentShoulderRankIcon : PawnRenderNode_Apparel
             rightShoulderPath = chapterDecoComp.RightShoulderIcon.drawnTextureIconPath;
         }
         
-        if (chapterDecoComp.FlipShoulderIcons)
-        {
-            Flipped = !Flipped;
-        }
-
         //Built through MultiColorUtils so the framework recognises it as one of its own and leaves the
         //icon colour alone instead of repainting it in the armour colours.
         return MultiColorUtils.GetGraphic<Graphic_Multi>(rightShoulderPath, ShaderFor(pawn), Props.drawSize, drawColour, drawColour, drawColour, null);

@@ -16,7 +16,10 @@ public class PawnRenderNode_AttachmentShoulderChapterIcon : PawnRenderNode_Appar
 
     private Genes40kModSettings ModSettings => modSettings ??= LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>();
     
-    public bool Flipped = true;
+    private CompChapterColorWithShoulderDecoration cachedChapterDecoComp;
+    private CompChapterColorWithShoulderDecoration ChapterDecoComp => cachedChapterDecoComp ??= apparel?.GetComp<CompChapterColorWithShoulderDecoration>();
+
+    private bool Flipped => ChapterDecoComp?.FlipShoulderIcons != true;
     
 
     public override bool FlipGraphic(PawnDrawParms parms)
@@ -32,7 +35,7 @@ public class PawnRenderNode_AttachmentShoulderChapterIcon : PawnRenderNode_Appar
     {
         var leftShoulderIcon = Props.texPath;
             
-        var chapterDecoComp = apparel.GetComp<CompChapterColorWithShoulderDecoration>();
+        var chapterDecoComp = ChapterDecoComp;
         
         var drawColour = chapterDecoComp.LeftShoulderIconColour;
             
@@ -49,11 +52,6 @@ public class PawnRenderNode_AttachmentShoulderChapterIcon : PawnRenderNode_Appar
             }
         }
 
-        if (chapterDecoComp.FlipShoulderIcons)
-        {
-            Flipped = !Flipped;
-        }
-        
         //Built through MultiColorUtils so the framework recognises it as one of its own and leaves the
         //icon colour alone instead of repainting it in the armour colours.
         return MultiColorUtils.GetGraphic<Graphic_Multi>(leftShoulderIcon, ShaderFor(pawn), Props.drawSize, drawColour, drawColour, drawColour, null);

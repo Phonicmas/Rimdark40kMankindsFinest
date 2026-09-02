@@ -1,5 +1,4 @@
-using System.Linq;
-using RimWorld;
+﻿using RimWorld;
 using Verse;
 
 namespace Genes40k;
@@ -13,24 +12,24 @@ public class ThoughtWorker_PrimarchPresence : ThoughtWorker
             return false;
         }
 
-        var chapterGene = p.genes.GenesListForReading
-            .FirstOrDefault(gene => gene.def.HasModExtension<DefModExtension_ChapterGene>());
-
-        var relatedPrimarchGene = chapterGene?.def
-            .GetModExtension<DefModExtension_ChapterGene>()?.relatedPrimarchGene;
+        var relatedPrimarchGene = p.RelatedPrimarchGeneFor();
 
         if (relatedPrimarchGene == null)
         {
             return false;
         }
 
-        var primarchPresent = p.Map.mapPawns.AllPawnsSpawned.Any(other =>
-            other != p
-            && !other.Dead
-            && other.RaceProps.Humanlike
-            && other.genes != null
-            && other.genes.HasActiveGene(relatedPrimarchGene));
+        var presence = p.Map.GetComponent<MapComponent_PrimarchPresence>();
 
-        return primarchPresent;
+        if (presence == null)
+        {
+            return false;
+        }
+
+        //A primarch carries their own gene and is counted by the map component, so they only feel
+        //the presence of a second carrier.
+        var selfCounted = p.Spawned && p.genes.HasActiveGene(relatedPrimarchGene);
+
+        return presence.CountOf(relatedPrimarchGene) > (selfCounted ? 1 : 0);
     }
 }

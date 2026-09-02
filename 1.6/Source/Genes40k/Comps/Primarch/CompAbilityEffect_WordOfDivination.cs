@@ -11,6 +11,11 @@ public class CompAbilityEffect_WordOfDivination : CompAbilityEffect
     {
         var pawn = target.Pawn;
 
+        if (pawn?.ideo == null)
+        {
+            return;
+        }
+
         pawn.ideo.SetIdeo(parent.pawn.Ideo);
     }
         
@@ -21,7 +26,12 @@ public class CompAbilityEffect_WordOfDivination : CompAbilityEffect
             return false;
         }
 
-        if (target.Pawn?.Ideo == parent?.pawn?.Ideo)
+        if (target.Pawn?.ideo == null)
+        {
+            return false;
+        }
+
+        if (target.Pawn.Ideo == parent.pawn.Ideo)
         {
             return false;
         }

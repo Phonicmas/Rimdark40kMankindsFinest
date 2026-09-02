@@ -28,8 +28,23 @@ public class OffworldMarineMimicPlayerRelation
 
         var nonPlayerFaction = __instance.IsPlayer ? other : __instance;
         
-        var playerFaction = Faction.OfPlayer;
-        var offworldMarine = Find.FactionManager.FirstFactionOfDef(Genes40kDefOf.BEWH_OffworldMarinesFaction);
-        offworldMarine.SetRelation(playerFaction.RelationWith(nonPlayerFaction));
+        var offworldMarine = Find.FactionManager?.FirstFactionOfDef(Genes40kDefOf.BEWH_OffworldMarinesFaction);
+
+        if (offworldMarine == null || offworldMarine == nonPlayerFaction)
+        {
+            return;
+        }
+
+        var playerRelation = Faction.OfPlayer?.RelationWith(nonPlayerFaction, true);
+
+        if (playerRelation == null)
+        {
+            return;
+        }
+
+        offworldMarine.SetRelation(new FactionRelation(nonPlayerFaction, playerRelation.kind)
+        {
+            baseGoodwill = playerRelation.baseGoodwill,
+        });
     }
 }

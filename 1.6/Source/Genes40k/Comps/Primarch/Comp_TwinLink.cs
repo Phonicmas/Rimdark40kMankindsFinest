@@ -14,8 +14,7 @@ public class Comp_TwinLink : CompAbilityEffect
         get
         {
             var caster = parent.pawn;
-            var casterGene = (Gene_TwinConnected)caster.genes.GetGene(Genes40kDefOf.BEWH_PrimarchSpecificGeneXX);
-            if (casterGene == null)
+            if (caster.genes?.GetGene(Genes40kDefOf.BEWH_PrimarchSpecificGeneXX) is not Gene_TwinConnected casterGene)
             {
                 return true;
             }
@@ -29,8 +28,11 @@ public class Comp_TwinLink : CompAbilityEffect
         var caster = parent.pawn;
         var targetPawn = target.Pawn;
         
-        var casterGene = (Gene_TwinConnected)caster.genes.GetGene(Genes40kDefOf.BEWH_PrimarchSpecificGeneXX);
-        var targetGene = (Gene_TwinConnected)targetPawn.genes.GetGene(Genes40kDefOf.BEWH_PrimarchSpecificGeneXX);
+        if (caster.genes?.GetGene(Genes40kDefOf.BEWH_PrimarchSpecificGeneXX) is not Gene_TwinConnected casterGene ||
+            targetPawn?.genes?.GetGene(Genes40kDefOf.BEWH_PrimarchSpecificGeneXX) is not Gene_TwinConnected targetGene)
+        {
+            return;
+        }
         
         casterGene.SetTwin(targetPawn);
         targetGene.SetTwin(caster);
@@ -47,7 +49,7 @@ public class Comp_TwinLink : CompAbilityEffect
         
         var targetPawn = target.Pawn;
 
-        var targetGene = (Gene_TwinConnected)targetPawn?.genes?.GetGene(Genes40kDefOf.BEWH_PrimarchSpecificGeneXX);
+        var targetGene = targetPawn?.genes?.GetGene(Genes40kDefOf.BEWH_PrimarchSpecificGeneXX) as Gene_TwinConnected;
 
         if (targetGene == null)
         {
@@ -65,7 +67,7 @@ public class Comp_TwinLink : CompAbilityEffect
             return base.ExtraLabelMouseAttachment(target);
         }
         
-        var targetGene = (Gene_TwinConnected)targetPawn?.genes?.GetGene(Genes40kDefOf.BEWH_PrimarchSpecificGeneXX);
+        var targetGene = targetPawn.genes?.GetGene(Genes40kDefOf.BEWH_PrimarchSpecificGeneXX) as Gene_TwinConnected;
         
         if (targetGene == null)
         {

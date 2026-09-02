@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using RimWorld.Planet;
 using Verse;
 
 namespace Genes40k;
@@ -13,6 +14,14 @@ public class Gene_LivingSaint : Gene
             return;
         }
             
-        pawn.Corpse.DeSpawn();
+        if (pawn.Corpse is { Spawned: true })
+        {
+            pawn.Corpse.DeSpawn();
+        }
+
+        if (!pawn.Spawned && !pawn.Discarded && !Find.WorldPawns.Contains(pawn))
+        {
+            Find.WorldPawns.PassToWorld(pawn, PawnDiscardDecideMode.KeepForever);
+        }
     }
 }

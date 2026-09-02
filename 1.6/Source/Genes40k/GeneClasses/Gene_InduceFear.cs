@@ -2,7 +2,6 @@
 using System.Linq;
 using RimWorld;
 using Verse;
-using Random = System.Random;
 
 namespace Genes40k;
 
@@ -11,6 +10,9 @@ public class Gene_InduceFear : Gene
     private const int tickInterval = 625;
     private const float effectRadius = 7.9f;
     private const int chanceToFear = 50;
+
+    private DefModExtension_GeneInducedFear cachedDefMod;
+    private DefModExtension_GeneInducedFear DefMod => cachedDefMod ??= def.GetModExtension<DefModExtension_GeneInducedFear>();
         
     public override void Tick()
     {
@@ -36,13 +38,15 @@ public class Gene_InduceFear : Gene
         
     private void AffectPawns(Pawn p, List<Pawn> pawns)
     {
-        if (pawns.NullOrEmpty())
+        var defMod = DefMod;
+
+        if (pawns.NullOrEmpty() || defMod == null)
         {
             return;
         }
         foreach (var otherPawn in pawns)
         {
-            if (otherPawn == null || p == otherPawn || !p.RaceProps.Humanlike || otherPawn.Faction == Faction.OfPlayer || !otherPawn.Faction.HostileTo(Faction.OfPlayer))
+            if (otherPawn == null || p == otherPawn || !p.RaceProps.Humanlike || otherPawn.Faction == null || otherPawn.Faction == Faction.OfPlayer || !otherPawn.Faction.HostileTo(Faction.OfPlayer))
             {
                 continue;
             }
@@ -52,22 +56,19 @@ public class Gene_InduceFear : Gene
                 continue;
             }
 
-            var defMod = def.GetModExtension<DefModExtension_GeneInducedFear>();
-                
             if (otherPawn.genes != null && otherPawn.genes.GenesListForReading.Any(gene => defMod.genesCausesImmunityToFear.Contains(gene.def)))
             {
                 continue;
             }
                 
-            if (!otherPawn.story.traits.allTraits.NullOrEmpty() && defMod.traitCausesImmunityToFear.Any(traitData => otherPawn.story.traits.HasTrait(traitData.traitDef)))
+            var traits = otherPawn.story?.traits;
+
+            if (traits != null && !traits.allTraits.NullOrEmpty() && defMod.traitCausesImmunityToFear.Any(traitData => traits.HasTrait(traitData.traitDef)))
             {
                 continue;
             }
 
-            var random = new Random();
-            var randomRoll = random.Next(0, 100);
-                
-            if (randomRoll > chanceToFear)
+            if (!Rand.Chance(chanceToFear / 100f))
             {
                 continue;
             }
