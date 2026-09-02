@@ -49,8 +49,7 @@ public class GameComponent_LivingSaint : GameComponent
         {
             chance = 200;
         }
-        var rand = new Random();
-        if (rand.Next(0, 100) <= chance)
+        if (Rand.Chance(chance / 100f))
         {
             SpawnSaint();
         }

@@ -39,7 +39,10 @@ public class Ability_IronCircle: Ability
         
     public override bool GizmoDisabled(out string reason)
     {
-        var comp = (CompProperties_AbilitySummonMechsForCaster)def.comps.First(properties => properties is CompProperties_AbilitySummonMechsForCaster);
+        if (def.comps?.OfType<CompProperties_AbilitySummonMechsForCaster>().FirstOrDefault() is not { } comp)
+        {
+            return base.GizmoDisabled(out reason);
+        }
             
         var amountToSpawn = comp.amount;
             

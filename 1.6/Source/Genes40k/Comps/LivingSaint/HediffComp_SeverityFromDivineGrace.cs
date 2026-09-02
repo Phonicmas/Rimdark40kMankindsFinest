@@ -34,10 +34,42 @@ public class HediffComp_SeverityFromDivineGrace : HediffComp
             return;
         }
             
-        if (Props.divineGracePerHour != 0)
+        if (Props.divineGracePerHour != 0 && !AnyOtherOverchargingHediff())
         {
             DivineGrace.isOvercharging = false;
         }
+    }
+
+    /// <summary>
+    /// True while another hediff on this pawn is also draining divine grace, so the flag is only
+    /// cleared by the last one to be removed.
+    /// </summary>
+    private bool AnyOtherOverchargingHediff()
+    {
+        var hediffs = Pawn.health?.hediffSet?.hediffs;
+
+        if (hediffs == null)
+        {
+            return false;
+        }
+
+        foreach (var hediff in hediffs)
+        {
+            if (hediff == parent || hediff is not HediffWithComps hediffWithComps || hediffWithComps.comps == null)
+            {
+                continue;
+            }
+
+            foreach (var comp in hediffWithComps.comps)
+            {
+                if (comp is HediffComp_SeverityFromDivineGrace graceComp && graceComp.Props.divineGracePerHour != 0)
+                {
+                    return true;
+                }
+            }
+        }
+
+        return false;
     }
 
     public override void CompPostTick(ref float severityAdjustment)

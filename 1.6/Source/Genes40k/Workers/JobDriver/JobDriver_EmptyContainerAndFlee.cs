@@ -30,7 +30,12 @@ public class JobDriver_WaitAndExit : JobDriver
             yield return Toils_General.Wait(waitTicks/5);
         }
         
-        RCellFinder.TryFindRandomExitSpot(pawn, out var spot);
+        if (!RCellFinder.TryFindRandomExitSpot(pawn, out var spot))
+        {
+            EndJobWith(JobCondition.Incompletable);
+            yield break;
+        }
+
         yield return Toils_Goto.GotoCell(spot, PathEndMode.OnCell);
         yield return Toils_General.Do(() => pawn.ExitMap(false, pawn.Rotation));
     }

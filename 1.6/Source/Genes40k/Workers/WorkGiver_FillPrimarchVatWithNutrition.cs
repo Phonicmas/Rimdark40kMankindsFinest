@@ -68,12 +68,14 @@ public class WorkGiver_FillPrimarchVatWithNutrition : WorkGiver_Scanner
 
     private static ThingCount FindNutrition(Pawn pawn, Building_PrimarchGrowthVat vat)
     {
+        var nutritionNeeded = vat.NutritionNeeded;
+
         var thing = GenClosest.ClosestThingReachable(pawn.Position, pawn.Map, ThingRequest.ForDef(Genes40kDefOf.BEWH_RawGestationalSlurry), PathEndMode.ClosestTouch, TraverseParms.For(pawn), 9999f, Validator);
         if (thing == null)
         {
             return default;
         }
-        var b = Mathf.CeilToInt(vat.NutritionNeeded / thing.GetStatValue(StatDefOf.Nutrition));
+        var b = Mathf.CeilToInt(nutritionNeeded / thing.GetStatValue(StatDefOf.Nutrition));
         
         return new ThingCount(thing, Mathf.Min(thing.stackCount, b));
         bool Validator(Thing x)
@@ -87,7 +89,7 @@ public class WorkGiver_FillPrimarchVatWithNutrition : WorkGiver_Scanner
                 return false;
             }
                 
-            return !(x.def.GetStatValueAbstract(StatDefOf.Nutrition) > vat.NutritionNeeded);
+            return !(x.def.GetStatValueAbstract(StatDefOf.Nutrition) > nutritionNeeded);
         }
     }
 }

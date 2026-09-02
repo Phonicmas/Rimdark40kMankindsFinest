@@ -1,20 +1,18 @@
-﻿using System.Collections.Generic;
-using Verse;
+﻿using Verse;
 using Verse.AI;
 
 namespace Genes40k;
 
-public class JobDriver_CarryPrimarchEmbryoToVat : JobDriver
+public class JobDriver_CarryPrimarchEmbryoToVat : JobDriver_CarryThingToBuilding
 {
-    private const int Duration = 200;
-
     private bool inserted;
 
-    // FIX: hard casts threw / mis-typed when the target had gone away or was a
-    // stale duplicate left behind by the old save bug. "as" + null checks instead.
-    private Building_PrimarchGrowthVat PrimarchGrowthVat => job.GetTarget(TargetIndex.A).Thing as Building_PrimarchGrowthVat;
+    //"as" rather than a hard cast: the target can have gone away or be a stale duplicate.
+    private Building_PrimarchGrowthVat PrimarchGrowthVat => Building as Building_PrimarchGrowthVat;
 
-    private PrimarchEmbryo Embryo => job.GetTarget(TargetIndex.B).Thing as PrimarchEmbryo;
+    private PrimarchEmbryo Embryo => CarriedThing as PrimarchEmbryo;
+
+    protected override string ArrivalToilLabel => "InsertPrimarchEmbryo";
 
     public override void ExposeData()
     {
@@ -22,36 +20,17 @@ public class JobDriver_CarryPrimarchEmbryoToVat : JobDriver
         Scribe_Values.Look(ref inserted, "inserted", false);
     }
 
-    public override bool TryMakePreToilReservations(bool errorOnFailed)
+    protected override bool TargetsValid()
     {
-        var vat = PrimarchGrowthVat;
         var embryo = Embryo;
 
-        if (vat == null || embryo == null || embryo.Destroyed || !embryo.Spawned)
-        {
-            return false;
-        }
-
-        if (!pawn.Reserve(vat, job, 1, 1, null, errorOnFailed))
-        {
-            return false;
-        }
-
-        if (!pawn.Reserve(embryo, job, 1, 1, null, errorOnFailed))
-        {
-            return false;
-        }
-
-        return true;
+        return PrimarchGrowthVat != null && embryo != null && !embryo.Destroyed && embryo.Spawned;
     }
 
-    protected override IEnumerable<Toil> MakeNewToils()
+    protected override void AddExtraFailConditions()
     {
-        this.FailOnDespawnedNullOrForbidden(TargetIndex.A);
-        this.FailOnBurningImmobile(TargetIndex.A);
-
-        // FIX: bail out cleanly if the vat was started, already filled, or the
-        // embryo vanished mid-job, instead of running to the end and no-opping.
+        //Bail out cleanly if the vat was started, already filled, or the embryo vanished mid-job,
+        //instead of running to the end and no-opping.
         this.FailOn(() =>
         {
             if (inserted)
@@ -62,46 +41,25 @@ public class JobDriver_CarryPrimarchEmbryoToVat : JobDriver
             var vat = PrimarchGrowthVat;
             return vat == null || vat.Working || vat.ContainedEmbryo != null || Embryo == null || Embryo.Destroyed;
         });
+    }
 
-        job.count = 1;
+    protected override Toil GotoBuildingToil()
+    {
+        return base.GotoBuildingToil().FailOnDestroyedNullOrForbidden(TargetIndex.B);
+    }
 
-        var reservedPrimarchEmbryo = Toils_Reserve.Reserve(TargetIndex.B, 1, 1);
-        yield return reservedPrimarchEmbryo;
+    protected override void OnArrived()
+    {
+        var vat = PrimarchGrowthVat;
+        var embryo = Embryo;
 
-        yield return Toils_Goto.GotoThing(TargetIndex.B, PathEndMode.ClosestTouch)
-            .FailOnDespawnedNullOrForbidden(TargetIndex.B)
-            .FailOnSomeonePhysicallyInteracting(TargetIndex.B);
-
-        yield return Toils_Haul.StartCarryThing(TargetIndex.B)
-            .FailOnDestroyedNullOrForbidden(TargetIndex.B);
-
-        yield return Toils_Haul.CheckForGetOpportunityDuplicate(reservedPrimarchEmbryo, TargetIndex.B, TargetIndex.None, takeFromValidStorage: true);
-
-        yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.Touch)
-            .FailOnDestroyedNullOrForbidden(TargetIndex.B);
-
-        yield return Toils_General.Wait(Duration)
-            .FailOnDestroyedNullOrForbidden(TargetIndex.B)
-            .FailOnDestroyedNullOrForbidden(TargetIndex.A)
-            .FailOnCannotTouch(TargetIndex.A, PathEndMode.Touch)
-            .WithProgressBarToilDelay(TargetIndex.A);
-
-        var toil = ToilMaker.MakeToil("InsertPrimarchEmbryo");
-        toil.initAction = delegate
+        if (vat == null || embryo == null || embryo.Destroyed)
         {
-            var vat = PrimarchGrowthVat;
-            var embryo = Embryo;
+            EndJobWith(JobCondition.Incompletable);
+            return;
+        }
 
-            if (vat == null || embryo == null || embryo.Destroyed)
-            {
-                EndJobWith(JobCondition.Incompletable);
-                return;
-            }
-
-            inserted = true;
-            vat.InsertEmbryo(embryo);
-        };
-        toil.defaultCompleteMode = ToilCompleteMode.Instant;
-        yield return toil;
+        inserted = true;
+        vat.InsertEmbryo(embryo);
     }
 }

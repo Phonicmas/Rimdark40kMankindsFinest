@@ -17,7 +17,7 @@ public class Building_DecorativeFlag : Building
         drawColorTwo = ModSettings?.CurrentlySelectedPreset.secondaryColour ?? Color.white;
         originalColorTwo = drawColorTwo;
 
-        flagInsigniaFilePath = ModSettings?.CurrentlySelectedPreset.relatedChapterIcon.iconPath ?? originalFlagInsigniaFilePath;
+        flagInsigniaFilePath = ModSettings?.CurrentlySelectedPreset?.relatedChapterIcon?.iconPath ?? originalFlagInsigniaFilePath;
 
         currentlySelectedPreset = ModSettings?.CurrentlySelectedPreset == ModSettings?.CustomPreset ? null : ModSettings?.CurrentlySelectedPreset;
     }

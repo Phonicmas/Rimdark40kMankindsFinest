@@ -153,7 +153,7 @@ public class PrimarchEmbryo : GeneSetHolderBase
     {
         foreach (var gizmo in base.GetGizmos())
         {
-            if (gizmo.ToString().Contains("InspectGenes".Translate() + "..."))
+            if (gizmo is Command_Action { defaultLabel: not null } command && command.defaultLabel.Contains("InspectGenes".Translate()))
             {
                 continue;
             }

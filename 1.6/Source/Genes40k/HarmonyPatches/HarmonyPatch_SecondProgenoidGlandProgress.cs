@@ -9,14 +9,12 @@ public class SecondProgenoidGlandProgress
 {
     public static void Postfix(ref string __result, Corpse __instance)
     {
-        if (__instance.InnerPawn.genes == null || !__instance.InnerPawn.genes.HasActiveGene(Genes40kDefOf.BEWH_ProgenoidGlands))
+        if (__instance.InnerPawn?.genes?.GetGene(Genes40kDefOf.BEWH_ProgenoidGlands) is not Gene_ProgenoidGlands { Active: true } progenoidGlands)
         {
             return;
         }
             
         var stringBuilder = new StringBuilder(__result);
-
-        var progenoidGlands = (Gene_ProgenoidGlands)__instance.InnerPawn.genes.GetGene(Genes40kDefOf.BEWH_ProgenoidGlands);
 
         stringBuilder.AppendLine("\n");
 

@@ -13,7 +13,11 @@ public class IncidentWorker_LegionMaterialHeist  : IncidentWorker
 		{
 			return false;
 		}
-		var map = (Map)parms.target;
+		if (parms.target is not Map map || GameComp == null)
+		{
+			return false;
+		}
+
 		if (ModsConfig.BiotechActive && map.GameConditionManager.ConditionIsActive(GameConditionDefOf.NoxiousHaze))
 		{
 			return false;
@@ -29,7 +33,11 @@ public class IncidentWorker_LegionMaterialHeist  : IncidentWorker
 
 	protected override bool TryExecuteWorker(IncidentParms parms)
 	{
-		var map = (Map)parms.target;
+		if (parms.target is not Map map || GameComp == null)
+		{
+			return false;
+		}
+
 		if (!TryFindEntryCell(map, out var cell))
 		{
 			return false;

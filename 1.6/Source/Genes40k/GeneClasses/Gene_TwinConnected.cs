@@ -6,7 +6,6 @@ public class Gene_TwinConnected : Gene
 {
     private Pawn twin = null;
     public Pawn Twin => twin;
-    private bool twinSet = false;
         
     public void SetTwin(Pawn twinPawn)
     {
@@ -17,6 +16,5 @@ public class Gene_TwinConnected : Gene
     {
         base.ExposeData();
         Scribe_References.Look(ref twin, "twin");
-        Scribe_Values.Look(ref twinSet, "twinSet");
     }
 }

@@ -22,8 +22,6 @@ public class CompAbilityEffect_GeneseedHarvest : CompAbilityEffect
             return;
         }
             
-        var random = new Random();
-
         var caster = parent.pawn;
 
         var chance = 0;
@@ -36,7 +34,7 @@ public class CompAbilityEffect_GeneseedHarvest : CompAbilityEffect
         chance += caster.equipment.AllEquipmentListForReading.Where(equipment => equipment.def.HasModExtension<DefModExtension_GeneseedHarvest>()).Sum(equipment => equipment.def.GetModExtension<DefModExtension_GeneseedHarvest>().chanceOffset);
 
 
-        if (random.Next(0, 100) > chance)
+        if (!Rand.Chance(chance / 100f))
         {
             var failLetter = LetterMaker.MakeLetter("BEWH.MankindsFinest.SpaceMarine.GeneseedExtractionFail".Translate(), "BEWH.MankindsFinest.SpaceMarine.GeneseedExtractionFailDesc".Translate(corpse.InnerPawn), LetterDefOf.NegativeEvent, pawn);
             Find.LetterStack.ReceiveLetter(failLetter);
@@ -50,7 +48,11 @@ public class CompAbilityEffect_GeneseedHarvest : CompAbilityEffect
 
     public override bool Valid(LocalTargetInfo target, bool throwMessages = false)
     {
-        base.Valid(target, throwMessages);
+        if (!base.Valid(target, throwMessages))
+        {
+            return false;
+        }
+
         if (target.Thing is not Corpse corpse)
         {
             return false;

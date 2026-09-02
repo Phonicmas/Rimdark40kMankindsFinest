@@ -30,7 +30,7 @@ public class CompAbilityEffect_SummonMechsForCaster : CompAbilityEffect
 
             var pos = caster.Position.RandomAdjacentCell8Way();
 
-            if (!Props.trySpawnHere.NullOrEmpty())
+            if (!Props.trySpawnHere.NullOrEmpty() && i < Props.trySpawnHere.Count)
             {
                 pos = caster.Position + Props.trySpawnHere[i];
             }
@@ -46,7 +46,10 @@ public class CompAbilityEffect_SummonMechsForCaster : CompAbilityEffect
                 
             caster.relations.AddDirectRelation(PawnRelationDefOf.Overseer, mechToSummon);
                 
-            mechToSummon.drafter.Drafted = true;
+            if (mechToSummon.drafter != null)
+            {
+                mechToSummon.drafter.Drafted = true;
+            }
         }
     }
 }

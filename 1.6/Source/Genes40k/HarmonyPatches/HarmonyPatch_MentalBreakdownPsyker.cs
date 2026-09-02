@@ -43,17 +43,21 @@ public class MentalBreakdownPsyker
             def = Genes40kDefOf.BEWH_NaturalBornX,
         };
         var sendLetter = true;
-        var rand = new Random();
-        var roll = rand.Next(1, 100);
-        roll += (int)pawn.GetStatValue(StatDefOf.PsychicSensitivity);
+        var roll = Rand.RangeInclusive(1, 99) + (int)pawn.GetStatValue(StatDefOf.PsychicSensitivity);
 
         letter.Label = roll >= 90 ? "BEWH.MankindsFinest.Event.PerilsOfTheWarpLetter".Translate() : "BEWH.MankindsFinest.Event.PsychicPhenomenaLetter".Translate();
             
         switch (roll)
         {
-            case 100:
+            case >= 100:
+                var deathMap = pawn.MapHeld;
+                var deathCell = pawn.PositionHeld;
+                var deathSensitivity = pawn.GetStatValue(StatDefOf.PsychicSensitivity);
                 pawn.Kill(null);
-                GenExplosion.DoExplosion(pawn.Corpse.Position, pawn.Corpse.Map, pawn.GetStatValue(StatDefOf.PsychicSensitivity) * 5, Genes40kDefOf.BEWH_WarpEnergy, pawn, damAmount: (int)(pawn.GetStatValue(StatDefOf.PsychicSensitivity) * 100), armorPenetration: 10f);
+                if (deathMap != null)
+                {
+                    GenExplosion.DoExplosion(deathCell, deathMap, deathSensitivity * 5, Genes40kDefOf.BEWH_WarpEnergy, pawn, damAmount: (int)(deathSensitivity * 100), armorPenetration: 10f);
+                }
                 letter.Text = "BEWH.MankindsFinest.Event.Annihilation".Translate(pawn.Named("PAWN"));
                 break;
             case >= 99:
@@ -61,7 +65,10 @@ public class MentalBreakdownPsyker
                 letter.Text = "BEWH.MankindsFinest.Event.DaemonHost".Translate(pawn.Named("PAWN"));
                 break;
             case >= 95:
-                GenExplosion.DoExplosion(pawn.Position, pawn.Map, pawn.GetStatValue(StatDefOf.PsychicSensitivity) * 5, Genes40kDefOf.BEWH_WarpEnergy, pawn);
+                if (pawn.Map != null)
+                {
+                    GenExplosion.DoExplosion(pawn.Position, pawn.Map, pawn.GetStatValue(StatDefOf.PsychicSensitivity) * 5, Genes40kDefOf.BEWH_WarpEnergy, pawn);
+                }
                 letter.Text = "BEWH.MankindsFinest.Event.UncontrollablePowers".Translate(pawn.Named("PAWN"));
                 break;
             case >= 90:
@@ -80,11 +87,12 @@ public class MentalBreakdownPsyker
                 letter.Text = "BEWH.MankindsFinest.Event.BloodRain".Translate();
                 break;
             case >= 30:
-                var t = GenRadial.RadialCellsAround(pawn.Position, 8, true);
-                foreach (var c in t)
+                if (pawn.Map != null)
                 {
-                    var plant = c.GetPlant(pawn.Map);
-                    plant?.Kill();
+                    foreach (var c in GenRadial.RadialCellsAround(pawn.Position, 8, true))
+                    {
+                        c.GetPlant(pawn.Map)?.Kill();
+                    }
                 }
                 letter.Text = "BEWH.MankindsFinest.Event.PlantRot".Translate(pawn.Named("PAWN"));
                 break;
@@ -100,9 +108,13 @@ public class MentalBreakdownPsyker
     
     private static void SummonDaemons(Pawn pawn)
     {
-        var rand = new Random(); 
+        if (pawn.Map == null)
+        {
+            return;
+        }
 
-        var randNum = rand.Next(1, (int)pawn.GetStatValue(StatDefOf.PsychicSensitivity));
+        var maxDaemons = Math.Max((int)pawn.GetStatValue(StatDefOf.PsychicSensitivity), 2);
+        var randNum = Rand.RangeInclusive(1, maxDaemons - 1);
 
         //Make sort of portal first, then spawn.
         for (var i = 0; i < randNum; i++)

@@ -9,7 +9,7 @@ namespace Genes40k;
 
 public class ITab_ContentsGeneticStorage : ITab_ContentsBase
 {
-	public override IList<Thing> container => GeneticStorage?.slotGroup?.HeldThings.ToList() != null ? GeneticStorage.slotGroup.HeldThings.ToList() : null;
+	public override IList<Thing> container => GeneticStorage?.slotGroup?.HeldThings?.ToList();
 
 	public override bool IsVisible => SelThing != null && base.IsVisible;
 

@@ -76,6 +76,10 @@ public class Ability_RaiseBastion : VEF.Abilities.Ability
             select intVec2;
     }
         
+    private const int MaxDisplacementSteps = 8;
+
+    private const int MaxItemSearchCells = 30;
+
     public override void Cast(params GlobalTargetInfo[] targets)
     {
         base.Cast(targets);
@@ -83,74 +87,180 @@ public class Ability_RaiseBastion : VEF.Abilities.Ability
         {
             var globalTargetInfo = targets[i];
             var map = globalTargetInfo.Map;
-            var target = (globalTargetInfo.HasThing ? new LocalTargetInfo(globalTargetInfo.Thing) : new LocalTargetInfo(globalTargetInfo.Cell));
-                
-            var totalAffectedCells = TotalAffectedCells(target, map,
-                affectCellsBarricade.Concat(affectCellsWalls).Concat(affectCellsTurrets));
 
-            var affectedCells = totalAffectedCells.ToList();
-                
-            var list = new List<Thing>();
-            list.AddRange(affectedCells.SelectMany(c => from t in c.GetThingList(map) where t.def.category == ThingCategory.Item select t));
-                
-            foreach (var item in list)
+            if (map == null)
             {
-                item.DeSpawn();
+                continue;
             }
-                
-            var list2 = new List<Plant>();
-            list2.AddRange(affectedCells.Where(c => c.GetPlant(map) != null).Select(c=> c.GetPlant(map)));
-                
-            foreach (var plant in list2)
+
+            var target = globalTargetInfo.HasThing ? new LocalTargetInfo(globalTargetInfo.Thing) : new LocalTargetInfo(globalTargetInfo.Cell);
+
+            var wallCells = TotalAffectedCells(target, map, affectCellsWalls).ToList();
+            var barricadeCells = TotalAffectedCells(target, map, affectCellsBarricade).ToList();
+            var turretCells = TotalAffectedCells(target, map, affectCellsTurrets).ToList();
+
+            var structureCells = new HashSet<IntVec3>(wallCells);
+            structureCells.UnionWith(barricadeCells);
+            structureCells.UnionWith(turretCells);
+
+            //Cells still holding something that could not be moved clear. Nothing is built on these,
+            //so the bastion never closes on top of a pawn and never destroys an item it cannot place.
+            var blockedCells = new HashSet<IntVec3>();
+
+            DisplacePawns(target.Cell, map, structureCells, blockedCells);
+            DisplaceItems(map, structureCells, blockedCells);
+
+            foreach (var cell in structureCells)
             {
-                plant.Destroy();
-            }
-                
-            foreach (var item2 in TotalAffectedCells(target, map, affectCellsWalls))
-            {
-                var wall = GenSpawn.Spawn(Genes40kDefOf.BEWH_RaisedWall, item2, map);
-                wall.SetFactionDirect(Faction.OfPlayer);
-                FleckMaker.ThrowDustPuffThick(item2.ToVector3Shifted(), map, Rand.Range(1.5f, 3f), CompAbilityEffect_Wallraise.DustColor);
-            }
-                
-            foreach (var item2 in TotalAffectedCells(target, map, affectCellsBarricade))
-            {
-                var barricade = GenSpawn.Spawn(Genes40kDefOf.BEWH_RaisedBarricade, item2, map);
-                barricade.SetFactionDirect(Faction.OfPlayer);
-                FleckMaker.ThrowDustPuffThick(item2.ToVector3Shifted(), map, Rand.Range(1.5f, 3f), CompAbilityEffect_Wallraise.DustColor);
-            }
-                
-            foreach (var item2 in TotalAffectedCells(target, map, affectCellsTurrets))
-            {
-                var turret = GenSpawn.Spawn(Genes40kDefOf.BEWH_RaisedTurret, item2, map);
-                turret.SetFactionDirect(Faction.OfPlayer);
-                FleckMaker.ThrowDustPuffThick(item2.ToVector3Shifted(), map, Rand.Range(1.5f, 3f), CompAbilityEffect_Wallraise.DustColor);
-            }
-                
-            foreach (var item3 in list)
-            {
-                var intVec = IntVec3.Invalid;
-                for (var j = 0; j < 9; j++)
+                if (blockedCells.Contains(cell))
                 {
-                    var intVec2 = item3.Position + GenRadial.RadialPattern[j];
-                    if (intVec2.InBounds(map) && intVec2.Walkable(map) && map.thingGrid.ThingsListAtFast(intVec2).Count <= 0)
-                    {
-                        intVec = intVec2;
-                        break;
-                    }
+                    continue;
                 }
-                if (intVec != IntVec3.Invalid)
+
+                cell.GetPlant(map)?.Destroy();
+            }
+
+            SpawnStructures(wallCells, Genes40kDefOf.BEWH_RaisedWall, map, blockedCells);
+            SpawnStructures(barricadeCells, Genes40kDefOf.BEWH_RaisedBarricade, map, blockedCells);
+            SpawnStructures(turretCells, Genes40kDefOf.BEWH_RaisedTurret, map, blockedCells);
+        }
+    }
+
+    private static void SpawnStructures(List<IntVec3> cells, ThingDef structureDef, Map map, HashSet<IntVec3> blockedCells)
+    {
+        foreach (var cell in cells)
+        {
+            if (blockedCells.Contains(cell))
+            {
+                continue;
+            }
+
+            var structure = GenSpawn.Spawn(structureDef, cell, map);
+            structure.SetFactionDirect(Faction.OfPlayer);
+            FleckMaker.ThrowDustPuffThick(cell.ToVector3Shifted(), map, Rand.Range(1.5f, 3f), CompAbilityEffect_Wallraise.DustColor);
+        }
+    }
+
+    /// <summary>
+    /// Clears pawns off the footprint before anything is built: anyone not hostile to the caster is
+    /// pushed in towards the centre of the bastion, hostiles are pushed out of it.
+    /// </summary>
+    private void DisplacePawns(IntVec3 centre, Map map, HashSet<IntVec3> structureCells, HashSet<IntVec3> blockedCells)
+    {
+        var casterFaction = pawn.Faction;
+
+        foreach (var cell in structureCells)
+        {
+            foreach (var thing in cell.GetThingList(map).ToList())
+            {
+                if (thing is not Pawn otherPawn)
                 {
-                    GenSpawn.Spawn(item3, intVec, map);
+                    continue;
                 }
-                else
+
+                var towardsCentre = casterFaction == null || !otherPawn.HostileTo(casterFaction);
+
+                if (!TryFindPawnCell(otherPawn.Position, centre, towardsCentre, map, structureCells, out var destination))
                 {
-                    GenPlace.TryPlaceThing(item3, item3.Position, map, ThingPlaceMode.Near);
+                    blockedCells.Add(cell);
+                    continue;
                 }
+
+                otherPawn.Position = destination;
+                otherPawn.Notify_Teleported(false);
             }
         }
     }
-        
+
+    private static bool TryFindPawnCell(IntVec3 from, IntVec3 centre, bool towardsCentre, Map map, HashSet<IntVec3> structureCells, out IntVec3 result)
+    {
+        result = IntVec3.Invalid;
+
+        var offset = towardsCentre ? centre - from : from - centre;
+
+        if (offset == IntVec3.Zero)
+        {
+            offset = IntVec3.North;
+        }
+
+        var step = new IntVec3(Mathf.Clamp(offset.x, -1, 1), 0, Mathf.Clamp(offset.z, -1, 1));
+
+        var candidate = from;
+
+        for (var i = 0; i < MaxDisplacementSteps; i++)
+        {
+            candidate += step;
+
+            if (!candidate.InBounds(map))
+            {
+                return false;
+            }
+
+            if (structureCells.Contains(candidate) || !candidate.Standable(map))
+            {
+                continue;
+            }
+
+            result = candidate;
+            return true;
+        }
+
+        return false;
+    }
+
+    /// <summary>
+    /// Moves loose items clear of the footprint. The item is only despawned once a destination is
+    /// known, so unlike the previous behaviour a failed move can never leave it in limbo.
+    /// </summary>
+    private static void DisplaceItems(Map map, HashSet<IntVec3> structureCells, HashSet<IntVec3> blockedCells)
+    {
+        foreach (var cell in structureCells)
+        {
+            foreach (var thing in cell.GetThingList(map).ToList())
+            {
+                if (thing.def.category != ThingCategory.Item)
+                {
+                    continue;
+                }
+
+                if (!TryFindItemCell(thing.Position, map, structureCells, out var destination))
+                {
+                    blockedCells.Add(cell);
+                    continue;
+                }
+
+                thing.DeSpawn();
+                GenSpawn.Spawn(thing, destination, map);
+            }
+        }
+    }
+
+    private static bool TryFindItemCell(IntVec3 from, Map map, HashSet<IntVec3> structureCells, out IntVec3 result)
+    {
+        var searchCells = Mathf.Min(MaxItemSearchCells, GenRadial.RadialPattern.Length);
+
+        for (var i = 0; i < searchCells; i++)
+        {
+            var candidate = from + GenRadial.RadialPattern[i];
+
+            if (!candidate.InBounds(map) || structureCells.Contains(candidate) || !candidate.Walkable(map))
+            {
+                continue;
+            }
+
+            if (candidate.GetThingList(map).Any(t => t.def.category == ThingCategory.Item))
+            {
+                continue;
+            }
+
+            result = candidate;
+            return true;
+        }
+
+        result = IntVec3.Invalid;
+        return false;
+    }
+
     public override void DrawHighlight(LocalTargetInfo target)
     {
         base.DrawHighlight(target);
@@ -167,6 +277,6 @@ public class Ability_RaiseBastion : VEF.Abilities.Ability
             }
             return false;
         }
-        return true;
+        return base.ValidateTarget(target, showMessages);
     }
 }

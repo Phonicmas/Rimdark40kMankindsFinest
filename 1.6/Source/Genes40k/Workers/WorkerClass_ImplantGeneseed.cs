@@ -84,8 +84,7 @@ public class WorkerClass_ImplantGeneseed : Recipe_Surgery
 
         var failChance = Genes40kUtils.GetGeneseedImplantationSuccessChance(pawn, geneseedVial);
             
-        var rand = new Random();
-        if (rand.Next(0, 100) < failChance)
+        if (Rand.Chance(failChance / 100f))
         {
             pawn.Kill(null);
             return;

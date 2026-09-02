@@ -11,9 +11,8 @@ public class Ability_PsychicEmp : VEF.Abilities.Ability
     {
         foreach (var item in GenRadial.RadialDistinctThingsAround(pawn.Position, pawn.Map, GetRadiusForPawn(), useCenter: true))
         {
-            if (item.HasComp<CompGlower>() && item.def.PlaceWorkers.Any(p => p is PlaceWorker_GlowRadius))
+            if (item.HasComp<CompGlower>() && item.def.PlaceWorkers?.Any(p => p is PlaceWorker_GlowRadius) == true)
             {
-                item.TryGetComp<CompGlower>();
                 item.Kill();
             }
             else if (item is Pawn otherPawn && !otherPawn.Dead)

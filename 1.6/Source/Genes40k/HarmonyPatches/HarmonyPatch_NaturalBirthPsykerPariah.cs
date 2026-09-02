@@ -62,8 +62,7 @@ public static class NaturalBirthPsykerPariah
         }
         
         var unnaturalChance = modSettings.psykerPariahBirthChance;
-        var rand = new Random();
-        if (rand.Next(0, 100) > unnaturalChance)
+        if (!Rand.Chance(unnaturalChance / 100f))
         {
             return;
         }

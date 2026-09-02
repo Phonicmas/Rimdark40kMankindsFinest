@@ -12,6 +12,17 @@ public class Gene_UnstableOrgans : Gene
     private static readonly IntRange attemptOrganDecayRange = new (600000, 1800000);
     
     private int tickInterval = attemptOrganDecayRange.RandomInRange;
+
+    public override void ExposeData()
+    {
+        base.ExposeData();
+        Scribe_Values.Look(ref tickInterval, "tickInterval", 0);
+
+        if (Scribe.mode == LoadSaveMode.PostLoadInit && tickInterval <= 0)
+        {
+            tickInterval = attemptOrganDecayRange.RandomInRange;
+        }
+    }
     
     public override void TickInterval(int delta)
     {
@@ -30,8 +41,7 @@ public class Gene_UnstableOrgans : Gene
             }
         }
 
-        var rand = new Random();
-        if (chanceToIgnore > rand.Next(0, 100))
+        if (Rand.Chance(chanceToIgnore / 100f))
         {
             return;
         }

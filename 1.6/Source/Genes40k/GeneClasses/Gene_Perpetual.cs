@@ -44,9 +44,10 @@ public class Gene_Perpetual : Gene
         //Heal other injuries
         if (pawn.IsHashIntervalTick(PermanentInjuryInterval))
         {
-            foreach (var hediff in pawn.health.hediffSet.hediffs)
+            var permanentHediffs = pawn.health.hediffSet.hediffs;
+            for (var num = permanentHediffs.Count - 1; num >= 0; num--)
             {
-                if (hediff is Hediff_Injury hediff_Injury && hediff_Injury.IsPermanent() && !hediff_Injury.CanHealNaturally())
+                if (permanentHediffs[num] is Hediff_Injury hediff_Injury && hediff_Injury.IsPermanent() && !hediff_Injury.CanHealNaturally())
                 {
                     hediff_Injury.Heal(HealPermanentRange.RandomInRange * perpetualTier);
                 }
@@ -97,7 +98,7 @@ public class Gene_Perpetual : Gene
         
     public override void PostAdd()
     {
-        defMod = def.GetModExtension<DefModExtension_PerpetualGene>();
+        defMod = def.GetModExtension<DefModExtension_PerpetualGene>() ?? defMod;
         base.PostAdd();
     }
 
@@ -123,7 +124,7 @@ public class Gene_Perpetual : Gene
         Scribe_Values.Look(ref DontAddToPerpetualTracker, "DontAddToPerpetualTracker");
         if (Scribe.mode == LoadSaveMode.PostLoadInit)
         {
-            defMod = def.GetModExtension<DefModExtension_PerpetualGene>();
+            defMod = def.GetModExtension<DefModExtension_PerpetualGene>() ?? defMod;
         }
     }
 }

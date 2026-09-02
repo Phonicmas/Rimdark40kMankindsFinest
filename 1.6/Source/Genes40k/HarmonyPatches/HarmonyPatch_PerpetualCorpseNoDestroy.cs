@@ -16,7 +16,7 @@ public class PerpetualCorpseNoDestroy
         
         if (ModsConfig.IsActive("SmashPhil.VehicleFramework"))
         {
-            if (__instance.GetType().Name == "VehiclePawn")
+            if (__instance.InnerPawn.GetType().Name == "VehiclePawn")
             {
                 return true;
             }

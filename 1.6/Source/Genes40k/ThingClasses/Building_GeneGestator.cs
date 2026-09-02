@@ -366,7 +366,7 @@ public class Building_GeneGestator : Building
 
                         defaultLabel = "BEWH.MankindsFinest.GeneGestator.SelectMatrix".Translate() + "...",
                         defaultDesc = "BEWH.MankindsFinest.GeneGestator.SelectMatrixDesc".Translate(), 
-                        icon = selectedMatrix == null ? MatrixSelectionTex : selectedMatrix.uiIcon
+                        icon = MatrixSelectionTex
                     };
 
                     var gestatablesAvailable = new List<ThingDef>();

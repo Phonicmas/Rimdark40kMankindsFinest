@@ -9,34 +9,18 @@ public class ProgenoidGlandProgress
 {
     public static void Postfix(ref string __result, Pawn __instance)
     {
-        if (__instance.genes == null || !__instance.genes.HasActiveGene(Genes40kDefOf.BEWH_ProgenoidGlands))
+        var line = Genes40kUtils.ProgenoidProgressLine(__instance);
+
+        if (line == null)
         {
             return;
         }
-            
+
         var stringBuilder = new StringBuilder(__result);
 
-        var progenoidGlands = (Gene_ProgenoidGlands)__instance.genes.GetGene(Genes40kDefOf.BEWH_ProgenoidGlands);
-
         stringBuilder.AppendLine("\n");
-            
-        if (progenoidGlands.FirstProgenoidGlandHarvested)
-        {
-            stringBuilder.AppendLine("BEWH.MankindsFinest.SpaceMarine.FirstGeneseedsHarvested".Translate());
-        }
-        else
-        {
-            var secondProgenoid = !progenoidGlands.SecondProgenoidGlandHarvested
-                ? " " + (string)"BEWH.MankindsFinest.SpaceMarine.SecondGeneseedsHarvestableUponDeath".Translate()
-                : string.Empty;
+        stringBuilder.AppendLine(line);
 
-            float ticksLeft = progenoidGlands.TicksUntilHarvestable;
-            stringBuilder.AppendLine(ticksLeft > 0
-                ? "BEWH.MankindsFinest.SpaceMarine.FirstGeneseedsHarvestableIn".Translate((ticksLeft / 60000).ToString("0.00"), secondProgenoid)
-                : "BEWH.MankindsFinest.SpaceMarine.FirstGeneseedsHarvestable".Translate());
-                
-        }
-            
         __result = stringBuilder.ToString().TrimEndNewlines();
     }
 }

@@ -39,7 +39,10 @@ public class Ability_SteelRain : VEF.Abilities.Ability
             var possibleCells = GenRadial.RadialCellsAround(globalTargetInfo.Cell, GetRadiusForPawn(), useCenter: true).Where(c => c.InBounds(pawn.Map) && !c.Fogged(pawn.Map)).ToList();
 
             var cellsToSpawn = new List<IntVec3>();
-            var initialCell = possibleCells.Where(c => c.GetEdifice(pawn.Map) == null).RandomElement();
+            if (!possibleCells.Where(c => c.GetEdifice(pawn.Map) == null).TryRandomElement(out var initialCell))
+            {
+                continue;
+            }
                 
             cellsToSpawn.Add(initialCell);
             possibleCells.Remove(initialCell);
@@ -47,7 +50,10 @@ public class Ability_SteelRain : VEF.Abilities.Ability
             defMod = def.GetModExtension<DefModExtension_DropPod>();
             for (var i = 0; i < defMod.dropPodAmount-1; i++)
             {
-                var spawnCell = possibleCells.Where(c => cellsToSpawn.All(c2 => c2.DistanceTo(c) > 5) && c.GetEdifice(pawn.Map) == null).RandomElement();
+                if (!possibleCells.Where(c => cellsToSpawn.All(c2 => c2.DistanceTo(c) > 5) && c.GetEdifice(pawn.Map) == null).TryRandomElement(out var spawnCell))
+                {
+                    break;
+                }
                 cellsToSpawn.Add(spawnCell);
                 possibleCells.Remove(spawnCell);
             }
@@ -63,6 +69,23 @@ public class Ability_SteelRain : VEF.Abilities.Ability
         }
         
         var faction = Find.FactionManager.FirstFactionOfDef(defMod.fromFaction);
+
+        if (faction == null)
+        {
+            return;
+        }
+
+        var offworldMarine = Find.FactionManager.FirstFactionOfDef(Genes40kDefOf.BEWH_OffworldMarinesFaction);
+
+        if (offworldMarine != null)
+        {
+            var goodwill = offworldMarine.PlayerGoodwill;
+            if (goodwill < 0f)
+            {
+                Faction.OfPlayer.TryAffectGoodwillWith(offworldMarine, Math.Abs(goodwill), canSendMessage: false, canSendHostilityLetter: false, HistoryEventDefOf.PeaceTalksSuccess);
+            }
+        }
+
         foreach (var cell in cellsToSpawn)
         {
             var innerThing = (Building_DropDrop)ThingMaker.MakeThing(defMod.innerThing);
@@ -77,7 +100,11 @@ public class Ability_SteelRain : VEF.Abilities.Ability
             {
                 var spawnPawn = PawnGenerator.GeneratePawn(Genes40kDefOf.BEWH_FirstbornPawn, faction);
                 var chapter = defMod.chapterColour ?? Genes40kUtils.SetupChapterForPawn(spawnPawn, !defMod.usePlayerColours);
-                drawColor = chapter.primaryColour;
+
+                if (chapter != null)
+                {
+                    drawColor = chapter.primaryColour;
+                }
                     
                 pawnsToSpawn.Add(spawnPawn);
             }
@@ -89,21 +116,15 @@ public class Ability_SteelRain : VEF.Abilities.Ability
                     apparel.GetComp<CompBiocodable>().CodeFor(pawnToSpawn);
                 }
 
-                if (pawnToSpawn.equipment.Primary.HasComp<CompBiocodable>())
+                if (pawnToSpawn.equipment?.Primary?.TryGetComp<CompBiocodable>() is { } primaryBiocodable)
                 {
-                    pawnToSpawn.equipment.Primary.GetComp<CompBiocodable>().CodeFor(pawnToSpawn);
+                    primaryBiocodable.CodeFor(pawnToSpawn);
                 }
             }
             
             innerThing.DrawColor = drawColor;
             innerThing.marinesToSpawn = pawnsToSpawn;
-            
-            var offworldMarine = Find.FactionManager.FirstFactionOfDef(Genes40kDefOf.BEWH_OffworldMarinesFaction);
-            var goodwill = offworldMarine.PlayerGoodwill;
-            if (goodwill < 0f)
-            {
-                Faction.OfPlayer.TryAffectGoodwillWith(offworldMarine, Math.Abs(goodwill), canSendMessage: false, canSendHostilityLetter: false, HistoryEventDefOf.PeaceTalksSuccess);
-            }
+
             var skyfaller = SkyfallerMaker.SpawnSkyfaller(defMod.skyFaller, innerThing, cell, pawn.Map);
             skyfaller.DrawColor = drawColor;
         }

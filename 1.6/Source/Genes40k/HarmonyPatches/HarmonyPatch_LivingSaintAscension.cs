@@ -31,11 +31,6 @@ public class LivingSaintAscension
             return;
         }
             
-        if (__instance == null)
-        {
-            return;
-        }
-
         if (!Genes40kUtils.ModSettings.livingSaintMale && __instance.gender == Gender.Male)
         {
             return;
@@ -110,12 +105,9 @@ public class LivingSaintAscension
             traitAddChance = -200f;
         }
 
-        var rand = new Random();
         var resurrectionChance = baseChance + skillAddChance + traitAddChance;
 
-        const int chanceMax = 100;
-
-        if (rand.Next(0, chanceMax) > resurrectionChance)
+        if (!Rand.Chance(resurrectionChance / 100f))
         {
             return;
         }

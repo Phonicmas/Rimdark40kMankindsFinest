@@ -24,7 +24,10 @@ public class PerpetualNoDestroy
         {
             if (__instance.GetType().Name == "VehiclePawn")
             {
-                GenLeaving.DoLeavingsFor(__instance, __instance.Map, mode);
+                if (__instance.Spawned)
+                {
+                    GenLeaving.DoLeavingsFor(__instance, __instance.Map, mode);
+                }
                 mode = DestroyMode.Vanish;
                 return true;
             }

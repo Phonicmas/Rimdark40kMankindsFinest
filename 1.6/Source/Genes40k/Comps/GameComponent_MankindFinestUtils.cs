@@ -56,12 +56,14 @@ public class GameComponent_MankindFinestUtils : GameComponent
             chapterColours.Remove(currentChapterColour);
         }
 
-        return chapterColours.RandomElement();
+        return chapterColours.TryRandomElement(out var chapterColour) ? chapterColour : currentChapterColour;
     }
 
     public override void ExposeData()
     {
         base.ExposeData();
         Scribe_Values.Look(ref currentTick, "currentTick");
+        Scribe_Values.Look(ref useNewRandomChapter, "useNewRandomChapter", true);
+        Scribe_Defs.Look(ref currentChapterColour, "currentChapterColour");
     }
 }

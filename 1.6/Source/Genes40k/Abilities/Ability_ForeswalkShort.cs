@@ -99,7 +99,10 @@ public class Ability_ForeswalkShort : VEF.Abilities.Ability
 
 			var targetCell = targets[1].Cell;
 			var targetMap = targets[1].Map;
-			CellFinder.TryFindRandomSpawnCellForPawnNear(targetCell, targetMap, out var result);
+			if (!CellFinder.TryFindRandomSpawnCellForPawnNear(targetCell, targetMap, out var result))
+			{
+				result = targetCell;
+			}
 			GenSpawn.Spawn(pawn2, result, targetMap);
 			if (pawn2.drafter != null && pawn2.IsColonistPlayerControlled)
 			{

@@ -54,6 +54,12 @@ public class WorkerClass_LegionMaterialCreation : Recipe_Surgery
         var gene = pawn.genes.GenesListForReading.First(gene => gene.def.HasModExtension<DefModExtension_PrimarchMaterial>());
         var legionMaterial = gene.def.GetModExtension<DefModExtension_PrimarchMaterial>().relatedMaterial;
         
-        GenSpawn.Spawn(legionMaterial, billDoer.Position, billDoer.Map);
+        var dropCell = billDoer?.Position ?? pawn.PositionHeld;
+        var dropMap = billDoer?.Map ?? pawn.MapHeld;
+
+        if (dropMap != null)
+        {
+            GenSpawn.Spawn(legionMaterial, dropCell, dropMap);
+        }
     }
 }

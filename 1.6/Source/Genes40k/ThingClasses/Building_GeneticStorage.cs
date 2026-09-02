@@ -95,7 +95,7 @@ public class Building_GeneticStorage : Building_Storage
     public override void Notify_LostThing(Thing newItem)
     {
         UnhideItem(newItem);
-        base.Notify_ReceivedThing(newItem);
+        base.Notify_LostThing(newItem);
     }
 
     private void UnhideItem(Thing item)

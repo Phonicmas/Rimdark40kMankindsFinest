@@ -34,7 +34,7 @@ public class Comp_LifespanDropItem : ThingComp
             result = "LifespanExpiry".Translate() + " " + num.ToStringTicksToPeriod().Colorize(ColoredText.DateTimeColor);
             if (!text.NullOrEmpty())
             {
-                result = "\n" + text;
+                result += "\n" + text;
             }
         }
         return result;

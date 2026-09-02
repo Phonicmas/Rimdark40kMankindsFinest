@@ -10,13 +10,18 @@ public class CompChapterColorWithShoulderDecoration : CompChapterColor
 
     [Unsaved]
     private CompRankInfo rankInfoComp = null;
+    [Unsaved]
+    private Pawn rankInfoWearer = null;
     private CompRankInfo RankInfoComp
     {
         get
         {
-            if (rankInfoComp == null && Wearer != null)
+            //Keyed on the wearer so moving the armour to another pawn does not keep showing the
+            //previous owner's rank.
+            if (rankInfoWearer != Wearer)
             {
-                rankInfoComp = Wearer.GetComp<CompRankInfo>();
+                rankInfoWearer = Wearer;
+                rankInfoComp = Wearer?.GetComp<CompRankInfo>();
             }
 
             return rankInfoComp;
@@ -42,15 +47,15 @@ public class CompChapterColorWithShoulderDecoration : CompChapterColor
             //When pawn ranks up their icon does not auto get correct colour!!
             
             var highestRankDef = RankInfoComp.HighestRankDef(true, Genes40kDefOf.BEWH_AstartesRankCategory) ?? RankInfoComp.HighestRankDef(false, Genes40kDefOf.BEWH_AstartesRankCategory);
-            return ((ChapterRankDef)highestRankDef)?.unlocksRankIcon;
+            return (highestRankDef as ChapterRankDef)?.unlocksRankIcon;
         }
         set
         {
             if (value != null && value.setsNull)
             {
                 rightShoulder = new ShoulderIconSettings();
-                var highestRankDef = RankInfoComp.HighestRankDef(true, Genes40kDefOf.BEWH_AstartesRankCategory) ?? RankInfoComp.HighestRankDef(false, Genes40kDefOf.BEWH_AstartesRankCategory);
-                rightShoulder.Color = ((ChapterRankDef)highestRankDef)?.unlocksRankIcon?.defaultColour ?? Color.white;
+                var highestRankDef = RankInfoComp?.HighestRankDef(true, Genes40kDefOf.BEWH_AstartesRankCategory) ?? RankInfoComp?.HighestRankDef(false, Genes40kDefOf.BEWH_AstartesRankCategory);
+                rightShoulder.Color = (highestRankDef as ChapterRankDef)?.unlocksRankIcon?.defaultColour ?? Color.white;
             }
             else
             {

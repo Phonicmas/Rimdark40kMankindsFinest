@@ -11,9 +11,9 @@ public class StockGenerator_TagSangprimusMaterialNoDupe : StockGenerator
     [NoTranslate]
     public string tradeTag;
 
-    private IntRange thingDefCountRange = IntRange.One;
+    public IntRange thingDefCountRange = IntRange.One;
 
-    private List<ThingDef> excludedThingDefs = new();
+    public List<ThingDef> excludedThingDefs = new();
 
     public override IEnumerable<Thing> GenerateThings(PlanetTile forTile, Faction faction = null)
     {

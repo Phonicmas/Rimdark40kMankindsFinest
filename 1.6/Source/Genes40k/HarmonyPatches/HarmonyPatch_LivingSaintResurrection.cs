@@ -7,9 +7,9 @@ namespace Genes40k;
 [HarmonyPatch(typeof(IncidentWorker), "TryExecute")]
 public class LivingSaintResurrection
 {
-    public static void Prefix(IncidentWorker __instance)
+    public static void Postfix(IncidentWorker __instance, bool __result)
     {
-        if (!Genes40kUtils.ModSettings.livingSaintSystem)
+        if (!__result || !Genes40kUtils.ModSettings.livingSaintSystem)
         {
             return;
         }

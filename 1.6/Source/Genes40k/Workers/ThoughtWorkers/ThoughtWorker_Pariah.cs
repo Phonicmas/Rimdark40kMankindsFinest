@@ -12,19 +12,28 @@ public class ThoughtWorker_Pariah : ThoughtWorker
             return false;
         }
 
-        if (other.genes == null)
+        if (other.genes == null || pawn?.genes == null)
+        {
+            return false;
+        }
+
+        var thoughtPariah = def.GetModExtension<DefModExtension_Pariah>();
+
+        if (thoughtPariah == null)
         {
             return false;
         }
             
         foreach (var gene in other.genes.GenesListForReading)
         {
-            if (!gene.def.HasModExtension<DefModExtension_Pariah>() || !def.HasModExtension<DefModExtension_Pariah>())
+            var genePariah = gene.def.GetModExtension<DefModExtension_Pariah>();
+
+            if (genePariah == null)
             {
                 continue;
             }
                 
-            if (gene.def.GetModExtension<DefModExtension_Pariah>().pariahGene == def.GetModExtension<DefModExtension_Pariah>().pariahGene)
+            if (genePariah.pariahGene == thoughtPariah.pariahGene)
             {
                 return !pawn.IsPariah() && !pawn.genes.HasActiveGene(Genes40kDefOf.BEWH_MnemosyneMindshield);
             }

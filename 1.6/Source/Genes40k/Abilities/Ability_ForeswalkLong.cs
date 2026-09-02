@@ -103,7 +103,6 @@ public class Ability_ForeswalkLong : VEF.Abilities.Ability
 				{
 					MakeStaticFleck(CasterPawn.DrawPos, CasterPawn.Map, FleckDefOf.PsycastSkipFlashEntry, def.castFleckScaleWithRadius ? GetRadiusForPawn() : def.castFleckScale, def.castFleckSpeed);
 				}
-				_ = Caster.Map;
 				FleckMaker.ThrowSmoke(pawnToSkip.DrawPos, pawnToSkip.Map, 1f);
 				FleckMaker.ThrowDustPuffThick(pawnToSkip.DrawPos, pawnToSkip.Map, 2f, new Color(1f, 1f, 1f, 2.5f));
 			}
@@ -138,7 +137,10 @@ public class Ability_ForeswalkLong : VEF.Abilities.Ability
 					pawnToSkip.ExitMap(allowedToJoinOrCreateCaravan: false, Rot4.Invalid);
 					pawnToSkip.teleporting = false;
 				}
-				CellFinder.TryFindRandomSpawnCellForPawnNear(targetCell, targetMap, out var result, 4, (IntVec3 cell) => cell != targetCell && cell.GetRoom(targetMap) == targetCell.GetRoom(targetMap));
+				if (!CellFinder.TryFindRandomSpawnCellForPawnNear(targetCell, targetMap, out var result, 4, (IntVec3 cell) => cell != targetCell && cell.GetRoom(targetMap) == targetCell.GetRoom(targetMap)))
+				{
+					result = targetCell;
+				}
 				GenSpawn.Spawn(pawnToSkip, result, targetMap);
 				if (pawnToSkip.drafter != null && pawnToSkip.IsColonistPlayerControlled)
 				{

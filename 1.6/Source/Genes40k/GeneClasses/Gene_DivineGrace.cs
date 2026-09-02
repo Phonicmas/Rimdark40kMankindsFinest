@@ -104,16 +104,6 @@ public class Gene_DivineGrace : Gene_Resource, IGeneResourceDrain
         }
     }
 
-    public void KilledPawn(Pawn killedPawn)
-    {
-        var divineDrain = 10f;
-        if (killedPawn.kindDef != null)
-        {
-            divineDrain = killedPawn.kindDef.combatPower / 10;
-        }
-        Value -= divineDrain;
-    }
-
     public override void SetTargetValuePct(float val)
     {
         targetValue = Mathf.Clamp(val * Max, 0f, Max - MaxLevelOffset);

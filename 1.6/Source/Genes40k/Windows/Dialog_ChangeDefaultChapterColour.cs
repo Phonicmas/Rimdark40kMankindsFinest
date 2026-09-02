@@ -76,14 +76,14 @@ public class Dialog_ChangeDefaultChapterColour : Window
     private void TertiaryColorBox(Rect tertiaryColorRect)
     {
         Widgets.DrawMenuSection(tertiaryColorRect.ContractedBy(-1));
-        Widgets.DrawRectFast(tertiaryColorRect, currentlySelectedPreset.tertiaryColour.Value);
+        Widgets.DrawRectFast(tertiaryColorRect, currentlySelectedPreset.tertiaryColour ?? currentlySelectedPreset.secondaryColour);
         Text.Anchor = TextAnchor.MiddleCenter;
         Widgets.Label(tertiaryColorRect, "BEWH.Framework.Customization.TertiaryColor".Translate());
         TooltipHandler.TipRegion(tertiaryColorRect, "BEWH.Framework.Customization.ChooseCustomColour".Translate());
         Text.Anchor = TextAnchor.UpperLeft;
         if (Widgets.ButtonInvisible(tertiaryColorRect))
         {
-            Find.WindowStack.Add( new Dialog_ColourPicker( currentlySelectedPreset.tertiaryColour.Value, ( newColour ) =>
+            Find.WindowStack.Add( new Dialog_ColourPicker( currentlySelectedPreset.tertiaryColour ?? currentlySelectedPreset.secondaryColour, ( newColour ) =>
             {
                 settings.CustomPreset.tertiaryColour = newColour;
                 settings.CustomPreset.primaryColour = currentlySelectedPreset.primaryColour;

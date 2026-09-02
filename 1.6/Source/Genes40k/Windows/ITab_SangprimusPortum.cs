@@ -76,11 +76,11 @@ public class ITab_SangprimusPortum : ITab
 				}
 				if (materialPair.Value.chapter != null)
 				{
-					ThingRow(materialPair.Value.chapter, width, ref curY, 0, materialPair.Value.chapter.GetModExtension<DefModExtension_ChapterMaterial>().shownMaterialName, singleEntity);
+					ThingRow(materialPair.Value.chapter, width, ref curY, 0, materialPair.Value.chapter.GetModExtension<DefModExtension_ChapterMaterial>()?.shownMaterialName ?? materialPair.Value.chapter.label, singleEntity);
 				}
 				if (materialPair.Value.primarch != null)
 				{
-					ThingRow(materialPair.Value.primarch, width, ref curY, offset, materialPair.Value.primarch.GetModExtension<DefModExtension_PrimarchMaterial>().shownMaterialName, singleEntity);
+					ThingRow(materialPair.Value.primarch, width, ref curY, offset, materialPair.Value.primarch.GetModExtension<DefModExtension_PrimarchMaterial>()?.shownMaterialName ?? materialPair.Value.primarch.label, singleEntity);
 				}
 	            
 				curY += 28f;

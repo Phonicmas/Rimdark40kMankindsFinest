@@ -9,7 +9,7 @@ namespace Genes40k;
 [HarmonyPatch(typeof(Verb_CastAbility), "ValidateTarget")]
 public class BlockedPsycasting
 {
-    public static void Postfix(ref bool __result, Verb_CastAbility __instance, Thing ___caster)
+    public static void Postfix(ref bool __result, Verb_CastAbility __instance, Thing ___caster, bool showMessages)
     {
         if (__instance.ability is not Psycast || __instance.ability.def.category != Genes40kDefOf.Psychic || ___caster is not Pawn pawn)
         {
@@ -21,22 +21,17 @@ public class BlockedPsycasting
             return;
         }
             
-        var blockingHediffs = new List<HediffDef> { Genes40kDefOf.BEWH_DeniedWitch, Genes40kDefOf.BEWH_PsychicConnectionSevered };
-            
-        for (var i = 0; i < blockingHediffs.Count; i++)
+        if (pawn.health == null)
         {
-            var hediff = blockingHediffs[i];
-            if (pawn.health != null && pawn.health.hediffSet.HasHediff(hediff))
-            {
-                break;
-            }
-            if (i + 1 == blockingHediffs.Count)
-            {
-                return;
-            }
+            return;
+        }
+
+        if (!pawn.health.hediffSet.HasHediff(Genes40kDefOf.BEWH_DeniedWitch) && !pawn.health.hediffSet.HasHediff(Genes40kDefOf.BEWH_PsychicConnectionSevered))
+        {
+            return;
         }
             
-        if (pawn.Faction != null && pawn.Faction == Faction.OfPlayer)
+        if (showMessages && pawn.Faction != null && pawn.Faction == Faction.OfPlayer)
         {
             Messages.Message("BEWH.MankindsFinest.Ability.DeniedWitch".Translate(pawn), pawn, MessageTypeDefOf.NeutralEvent);
         }

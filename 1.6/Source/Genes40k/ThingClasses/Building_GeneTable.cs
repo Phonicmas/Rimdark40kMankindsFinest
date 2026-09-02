@@ -59,7 +59,7 @@ public class Building_GeneTable : Building_WorkTable
             return;
         }
 
-        var psysens = workingPawn.GetStatValue(StatDefOf.PsychicSensitivity);
+        var psysens = Math.Max(workingPawn.GetStatValue(StatDefOf.PsychicSensitivity), 0.01f);
             
         if (ModsConfig.RoyaltyActive)
         {

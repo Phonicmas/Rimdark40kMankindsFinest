@@ -7,7 +7,7 @@ namespace Genes40k;
 
 public class WorkGiver_CarryMatrixToGeneGestator : WorkGiver_Scanner
 {
-    private static readonly string NoGeneMatrix = "BEWH.MankindsFinest.GeneGestator.ContainsNoGeneMatrix".Translate();
+    private static string NoGeneMatrix => "BEWH.MankindsFinest.GeneGestator.ContainsNoGeneMatrix".Translate();
 
     public override ThingRequest PotentialWorkThingRequest => ThingRequest.ForDef(Genes40kDefOf.BEWH_GeneseedGestator);
 
@@ -39,9 +39,14 @@ public class WorkGiver_CarryMatrixToGeneGestator : WorkGiver_Scanner
 
     public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
     {
-        var building_GeneGestator = (Building_GeneGestator)t;
+        if (t is not Building_GeneGestator building_GeneGestator)
+        {
+            return null;
+        }
+
         var thing = FindGeneMatrix(pawn, building_GeneGestator);
-        return JobMaker.MakeJob(Genes40kDefOf.BEWH_CarryMatrixToGeneGestator, t, thing);
+
+        return thing == null ? null : JobMaker.MakeJob(Genes40kDefOf.BEWH_CarryMatrixToGeneGestator, t, thing);
     }
 
     private static Thing FindGeneMatrix(Pawn pawn, Building_GeneGestator gestator)

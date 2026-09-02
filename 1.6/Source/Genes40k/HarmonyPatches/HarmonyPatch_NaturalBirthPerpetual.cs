@@ -51,8 +51,7 @@ public static class NaturalBirthPerpetual
         }
         
         var unnaturalChance = modSettings.perpetualBirthChance;
-        var rand = new Random();
-        if (rand.Next(0, 100) > unnaturalChance)
+        if (!Rand.Chance(unnaturalChance / 100f))
         {
             return;
         }

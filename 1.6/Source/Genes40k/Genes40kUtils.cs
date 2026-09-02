@@ -18,9 +18,6 @@ public static class Genes40kUtils
     private static Genes40kModSettings modSettings = null;
     public static Genes40kModSettings ModSettings => modSettings ??= LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>();
 
-    private static List<ShoulderIconDef> rightShoulderIconDef = null;
-    public static List<ShoulderIconDef> RightShoulderIconDef => rightShoulderIconDef ??= DefDatabase<ShoulderIconDef>.AllDefsListForReading.Where(rightShoulderDef => rightShoulderDef.rightShoulder).ToList();
-        
     private static List<ShoulderIconDef> leftShoulderIconDef = null;
     public static List<ShoulderIconDef> LeftShoulderIconDef => leftShoulderIconDef ??= DefDatabase<ShoulderIconDef>.AllDefsListForReading.Where(leftShoulderDef => leftShoulderDef.leftShoulder).ToList();
     
@@ -196,6 +193,34 @@ public static class Genes40kUtils
         }
 
         return null;
+    }
+
+    /// <summary>
+    /// The progenoid gland readout for this pawn, or null when they have no active gland gene.
+    /// Shared by the inspect-string patch and the RimHUD integration; the caller supplies its own
+    /// separator, since only the inspect string needs one.
+    /// </summary>
+    public static string ProgenoidProgressLine(Pawn pawn)
+    {
+        if (pawn?.genes?.GetGene(Genes40kDefOf.BEWH_ProgenoidGlands) is not Gene_ProgenoidGlands { Active: true } progenoidGlands)
+        {
+            return null;
+        }
+
+        if (progenoidGlands.FirstProgenoidGlandHarvested)
+        {
+            return "BEWH.MankindsFinest.SpaceMarine.FirstGeneseedsHarvested".Translate();
+        }
+
+        var secondProgenoid = !progenoidGlands.SecondProgenoidGlandHarvested
+            ? " " + (string)"BEWH.MankindsFinest.SpaceMarine.SecondGeneseedsHarvestableUponDeath".Translate()
+            : string.Empty;
+
+        float ticksLeft = progenoidGlands.TicksUntilHarvestable;
+
+        return ticksLeft > 0
+            ? "BEWH.MankindsFinest.SpaceMarine.FirstGeneseedsHarvestableIn".Translate((ticksLeft / 60000).ToString("0.00"), secondProgenoid)
+            : "BEWH.MankindsFinest.SpaceMarine.FirstGeneseedsHarvestable".Translate();
     }
 
     public static bool HasGene(this Pawn_GeneTracker geneTracker, GeneDef geneDef)
