@@ -112,7 +112,12 @@ public class PrimarchEmbryo : GeneSetHolderBase
         }
         
         birthGenes = PregnancyUtility.GetInheritedGeneSet(father, Mother);
-        geneSet = birthGenes;
+
+        geneSet = new GeneSet();
+        foreach (var gene in birthGenes.GenesListForReading)
+        {
+            geneSet.AddGene(gene);
+        }
 
         foreach (var gene in Genes40kUtils.PrimarchGenes)
         {
@@ -127,13 +132,13 @@ public class PrimarchEmbryo : GeneSetHolderBase
         this.mother = mother;
         this.father = father;
         this.primarchGenes = primarchGenes;
-        this.birthGenes = birthGenes;
+        this.birthGenes = birthGenes ?? PregnancyUtility.GetInheritedGeneSet(father, Mother);
         this.iconDef = iconDef;
         this.xenotype = xenotype;
 
-        birthGenes ??= PregnancyUtility.GetInheritedGeneSet(father, Mother);
-        
-        foreach (var gene in birthGenes.GenesListForReading)
+        geneSet ??= new GeneSet();
+
+        foreach (var gene in this.birthGenes.GenesListForReading)
         {
             geneSet.AddGene(gene);
         }
@@ -207,15 +212,5 @@ public class PrimarchEmbryo : GeneSetHolderBase
         }
             
         geneSet ??= new GeneSet();
-
-        if (birthGenes == null)
-        {
-            return;
-        }
-            
-        foreach (var gene in birthGenes.GenesListForReading)
-        {
-            geneSet.AddGene(gene);
-        }
     }
 }

@@ -76,6 +76,8 @@ public class Building_DropDrop : Building_TurretGun
         var lordJob = new LordJob_AssistColony(Faction, Position + positions.First().ToIntVec3());
         lord = LordMaker.MakeNewLord(Faction, lordJob, Map, pawns);
         lord.inSignalLeave = LeaveSignal;
+
+        marinesToSpawn.Clear();
     }
     
     public override void Destroy(DestroyMode mode = DestroyMode.Vanish)
@@ -88,7 +90,12 @@ public class Building_DropDrop : Building_TurretGun
     {
         base.ExposeData();
         Scribe_Values.Look(ref hasDoneThing, "hasSpawnedMarines");
-        Scribe_Collections.Look(ref marinesToSpawn, "MarinesToSpawn");
+        Scribe_Collections.Look(ref marinesToSpawn, "MarinesToSpawn", LookMode.Deep);
         Scribe_References.Look(ref lord, "lord");
+
+        if (Scribe.mode == LoadSaveMode.PostLoadInit)
+        {
+            marinesToSpawn ??= [];
+        }
     }
 }

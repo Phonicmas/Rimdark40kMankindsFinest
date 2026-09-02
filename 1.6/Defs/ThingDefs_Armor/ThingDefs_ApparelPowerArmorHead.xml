@@ -46,14 +46,6 @@
                 <decorativeType>Head</decorativeType>
             </li>
         </comps>
-        <modExtensions>
-            <li Class="Core40k.DefModExtension_AvailableDrawerTabDefs">
-                <tabDefs>
-                    <li>BEWH_ArmorColoring</li>
-                    <li>BEWH_ArmorDecoration</li>
-                </tabDefs>
-            </li>
-        </modExtensions>
     </ThingDef>
 
     <!-- MK 10-->
@@ -100,14 +92,6 @@
                 <decorativeType>Head</decorativeType>
             </li>
         </comps>
-        <modExtensions>
-            <li Class="Core40k.DefModExtension_AvailableDrawerTabDefs">
-                <tabDefs>
-                    <li>BEWH_ArmorColoring</li>
-                    <li>BEWH_ArmorDecoration</li>
-                </tabDefs>
-            </li>
-        </modExtensions>
     </ThingDef>
 
     <!-- MK 10 Chaplain-->
@@ -153,14 +137,6 @@
                 <decorativeType>Head</decorativeType>
             </li>
         </comps>
-        <modExtensions>
-            <li Class="Core40k.DefModExtension_AvailableDrawerTabDefs">
-                <tabDefs>
-                    <li>BEWH_ArmorColoring</li>
-                    <li>BEWH_ArmorDecoration</li>
-                </tabDefs>
-            </li>
-        </modExtensions>
     </ThingDef>
 
     <!-- MK 1 Thunder Warrior-->
@@ -214,14 +190,6 @@
                 </decorations>
             </li>
         </comps>
-        <modExtensions>
-            <li Class="Core40k.DefModExtension_AvailableDrawerTabDefs">
-                <tabDefs>
-                    <li>BEWH_ArmorColoring</li>
-                    <li>BEWH_ArmorDecoration</li>
-                </tabDefs>
-            </li>
-        </modExtensions>
     </ThingDef>
 
 </Defs>

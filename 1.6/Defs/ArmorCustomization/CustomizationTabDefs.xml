@@ -5,8 +5,13 @@
         <defName>BEWH_AstartesShoulderIcon</defName>
         <label>Shoulder Icons</label>
         <description>Selection of shoulder pad icons.</description>
-        <sortOrder>1</sortOrder>
         <tabDrawerClass>Genes40k.ShoulderPadIconTab</tabDrawerClass>
+        <workerClass>Core40k.CustomizationTabWorker_Comp</workerClass>
+        <requiredComps>
+            <li>Genes40k.CompChapterColorWithShoulderDecoration</li>
+        </requiredComps>
+        <targetKind>Apparel</targetKind>
+        <sortOrder>1</sortOrder>
     </Core40k.CustomizationTabDef>
 
 </Defs>

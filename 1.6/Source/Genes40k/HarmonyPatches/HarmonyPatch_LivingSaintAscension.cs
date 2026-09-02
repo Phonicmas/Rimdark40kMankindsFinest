@@ -154,9 +154,10 @@ public class LivingSaintAscension
         lSPistol.TryGetComp<CompQuality>().SetQuality(QualityCategory.Legendary, ArtGenerationContext.Outsider);
         lSPistol.TryGetComp<CompMultiColor>().InitialSetup();
 
-        if (__instance.equipment.PrimaryEq != null)
+        var oldPrimary = __instance.equipment.Primary;
+        if (oldPrimary != null && !__instance.equipment.TryTransferEquipmentToContainer(oldPrimary, __instance.inventory.innerContainer))
         {
-            __instance.equipment.TryTransferEquipmentToContainer(__instance.equipment.PrimaryEq.parent, __instance.equipment.GetDirectlyHeldThings());
+            __instance.equipment.TryDropEquipment(oldPrimary, out _, __instance.PositionHeld);
         }
 
         if (shootingSkill > meleeSkill)

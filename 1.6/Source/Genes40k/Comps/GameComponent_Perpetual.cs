@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using RimWorld.Planet;
 using System.Collections.Generic;
 using System.Linq;
 using Verse;
@@ -9,6 +10,9 @@ public class GameComponent_Perpetual : GameComponent
 {
     private Dictionary<Pawn ,int> perpetuals = new ();
     public Dictionary<Pawn ,int> Perpetuals => perpetuals;
+
+    private List<Pawn> perpetualsKeysWorkingList;
+    private List<int> perpetualsValuesWorkingList;
         
     private const int CheckInterval = 4000;
     private int currentTick;
@@ -19,6 +23,31 @@ public class GameComponent_Perpetual : GameComponent
 
     public override void GameComponentTick()
     {
+        if (perpetuals.Count > 0)
+        {
+            List<Pawn> unrecoverable = null;
+
+            foreach (var trackedPawn in perpetuals.Keys)
+            {
+                if (trackedPawn.Destroyed || trackedPawn.Discarded)
+                {
+                    unrecoverable ??= new List<Pawn>();
+                    unrecoverable.Add(trackedPawn);
+                    continue;
+                }
+
+                KeepPawnForResurrection(trackedPawn);
+            }
+
+            if (unrecoverable != null)
+            {
+                foreach (var lostPawn in unrecoverable)
+                {
+                    perpetuals.Remove(lostPawn);
+                }
+            }
+        }
+
         if (currentTick != CheckInterval)
         {
             currentTick++;  
@@ -86,6 +115,23 @@ public class GameComponent_Perpetual : GameComponent
         {
             perpetuals.Add(pawn, resurrectIn);
         }
+
+        KeepPawnForResurrection(pawn);
+    }
+
+    private static void KeepPawnForResurrection(Pawn pawn)
+    {
+        if (pawn == null || pawn.Spawned || pawn.Discarded)
+        {
+            return;
+        }
+
+        if (Find.WorldPawns.Contains(pawn))
+        {
+            return;
+        }
+
+        Find.WorldPawns.PassToWorld(pawn, PawnDiscardDecideMode.KeepForever);
     }
         
     public void RemovePerpetual(Pawn pawn)
@@ -96,7 +142,12 @@ public class GameComponent_Perpetual : GameComponent
     public override void ExposeData()
     {
         base.ExposeData();
-        Scribe_Collections.Look(ref perpetuals, "perpetuals", LookMode.Deep);
+        Scribe_Collections.Look(ref perpetuals, "perpetuals", LookMode.Reference, LookMode.Value, ref perpetualsKeysWorkingList, ref perpetualsValuesWorkingList);
         Scribe_Values.Look(ref currentTick, "currentTick");
+
+        if (Scribe.mode == LoadSaveMode.PostLoadInit)
+        {
+            perpetuals ??= new Dictionary<Pawn, int>();
+        }
     }
 }

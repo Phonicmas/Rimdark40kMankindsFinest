@@ -20,7 +20,7 @@ public class Building_GeneGestator : Building
 
     private bool doWork = false;
     private float totalTime = 0;
-    private float TotalTimeAdjusted => totalTime * (Genes40kUtils.ModSettings.matrixGestationTimeFactor/100f);
+    private float TotalTimeAdjusted => totalTime * (Mathf.Max(Genes40kUtils.ModSettings.matrixGestationTimeFactor, 1)/100f);
     private float progressInt = 0;
     public bool InProgress => TotalTimeAdjusted - progressInt > 0;
     public bool Finished => TotalTimeAdjusted - progressInt <= 0 && containedMatrix != null;
@@ -43,11 +43,17 @@ public class Building_GeneGestator : Building
     public void AddGeneMatrix(Thing geneMatrix)
     {
         var singleGeneMatrix = geneMatrix.stackCount > 1 ? geneMatrix.SplitOff(1) : geneMatrix;
+
+        if (singleGeneMatrix.Spawned)
+        {
+            singleGeneMatrix.DeSpawn();
+        }
+        singleGeneMatrix.holdingOwner?.Remove(singleGeneMatrix);
+
         containedMatrix = singleGeneMatrix;
             
         totalTime = containedMatrix.def.GetModExtension<DefModExtension_GeneMatrix>().ticksToGestate;
         progressInt = 0;
-        singleGeneMatrix.Destroy();
         selectedMatrix = null;
     }
 
@@ -72,10 +78,7 @@ public class Building_GeneGestator : Building
             progressBar = null;
         }
 
-        if (mode == DestroyMode.Deconstruct)
-        {
-            TryDropContainedMatrix();
-        }
+        TryDropContainedMatrix();
         
         base.DeSpawn(mode);
     }
@@ -155,6 +158,10 @@ public class Building_GeneGestator : Building
         }
         doWork = false;
         selectedMatrix = null;
+        if (containedMatrix is { Destroyed: false })
+        {
+            containedMatrix.Destroy();
+        }
         containedMatrix = null;
         selectedMaterial = null;
     }
@@ -165,7 +172,13 @@ public class Building_GeneGestator : Building
         {
             return;
         }
-        GenSpawn.Spawn(containedMatrix.def, InteractionCell, Map);
+
+        if (!containedMatrix.Destroyed && Spawned)
+        {
+            GenPlace.TryPlaceThing(containedMatrix, InteractionCell, Map, ThingPlaceMode.Near);
+        }
+
+        containedMatrix = null;
     }
     public override string GetInspectString()
     {
@@ -372,8 +385,7 @@ public class Building_GeneGestator : Building
                                     return;
                                 }
                                 
-                                GenPlace.TryPlaceThing(containedMatrix, InteractionCell, Map, ThingPlaceMode.Direct);
-                                containedMatrix = null;
+                                TryDropContainedMatrix();
                             });
 
                             var doesNotHaveMatrix = Map.listerThings.ThingsOfDef(matrix).NullOrEmpty();

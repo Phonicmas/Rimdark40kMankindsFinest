@@ -164,13 +164,6 @@
                     </li>
                 </maskExpansions>
             </li>
-            <li Class="Core40k.DefModExtension_AvailableDrawerTabDefs">
-                <tabDefs>
-                    <li>BEWH_ArmorColoring</li>
-                    <li>BEWH_AstartesShoulderIcon</li>
-                    <li>BEWH_ArmorDecoration</li>
-                </tabDefs>
-            </li>
         </modExtensions>
     </ThingDef>
 
@@ -285,13 +278,6 @@
                     </li>
                 </maskExpansions>
             </li>
-            <li Class="Core40k.DefModExtension_AvailableDrawerTabDefs">
-                <tabDefs>
-                    <li>BEWH_ArmorColoring</li>
-                    <li>BEWH_AstartesShoulderIcon</li>
-                    <li>BEWH_ArmorDecoration</li>
-                </tabDefs>
-            </li>
         </modExtensions>
     </ThingDef>
 
@@ -390,13 +376,6 @@
                 <hideBodyGraphic>true</hideBodyGraphic>
             </li>
             <li Class="Core40k.DefModExtension_TextureFlags" />
-            <li Class="Core40k.DefModExtension_AvailableDrawerTabDefs">
-                <tabDefs>
-                    <li>BEWH_ArmorColoring</li>
-                    <li>BEWH_AstartesShoulderIcon</li>
-                    <li>BEWH_ArmorDecoration</li>
-                </tabDefs>
-            </li>
         </modExtensions>
     </ThingDef>
 
@@ -489,12 +468,6 @@
                 <hideBodyGraphic>true</hideBodyGraphic>
             </li>
             <li Class="Core40k.DefModExtension_TextureFlags" />
-            <li Class="Core40k.DefModExtension_AvailableDrawerTabDefs">
-                <tabDefs>
-                    <li>BEWH_ArmorColoring</li>
-                    <li>BEWH_ArmorDecoration</li>
-                </tabDefs>
-            </li>
         </modExtensions>
     </ThingDef>
 
@@ -593,12 +566,6 @@
                 <hideBodyGraphic>true</hideBodyGraphic>
             </li>
             <li Class="Core40k.DefModExtension_TextureFlags" />
-            <li Class="Core40k.DefModExtension_AvailableDrawerTabDefs">
-                <tabDefs>
-                    <li>BEWH_ArmorColoring</li>
-                    <li>BEWH_ArmorDecoration</li>
-                </tabDefs>
-            </li>
         </modExtensions>
     </ThingDef>
 

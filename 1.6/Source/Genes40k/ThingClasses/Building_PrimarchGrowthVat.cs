@@ -916,6 +916,29 @@ public class Building_PrimarchGrowthVat : Building, IStoreSettingsParent, IThing
     {
     }
 
+    public override void DeSpawn(DestroyMode mode = DestroyMode.Vanish)
+    {
+        EjectContentsOnRemoval();
+        base.DeSpawn(mode);
+    }
+
+    private void EjectContentsOnRemoval()
+    {
+        if (!Spawned)
+        {
+            return;
+        }
+
+        nutritionContainer?.TryDropAll(Position, Map, ThingPlaceMode.Near);
+
+        if (containedEmbryo is { Destroyed: false })
+        {
+            GenPlace.TryPlaceThing(containedEmbryo, Position, Map, ThingPlaceMode.Near);
+        }
+
+        containedEmbryo = null;
+    }
+
     public void GetChildHolders(List<IThingHolder> outChildren)
     {
         ThingOwnerUtility.AppendThingHoldersFromThings(outChildren, GetDirectlyHeldThings());

@@ -12,12 +12,32 @@ public class ShoulderPadIconTab : CustomizerTabDrawer
     private List<ShoulderIconDef> rightShoulderIcons = [];
     private List<ShoulderIconDef> leftShoulderIcons = [];
 
+    private CompChapterColorWithShoulderDecoration chapterColorComp = null;
+
     private const int RowAmount = 6;
 
     private static float listScrollViewHeight = 0f;
 
+    public override IEnumerable<CompGraphicParent> Comps
+    {
+        get
+        {
+            if (chapterColorComp != null)
+            {
+                yield return chapterColorComp;
+            }
+        }
+    }
+
     public override void Setup(Pawn pawn)
     {
+        chapterColorComp = pawn.apparel?.WornApparel
+            .FirstOrDefault(a => a.HasComp<CompChapterColorWithShoulderDecoration>())?
+            .GetComp<CompChapterColorWithShoulderDecoration>();
+
+        leftShoulderIcons.Clear();
+        rightShoulderIcons.Clear();
+
         var allShoulderIcons = DefDatabase<ShoulderIconDef>.AllDefsListForReading;
         foreach (var shoulderIcon in allShoulderIcons.Where(shoulderIcon => shoulderIcon.HasRequirements(pawn, out var reason)))
         {
@@ -37,7 +57,10 @@ public class ShoulderPadIconTab : CustomizerTabDrawer
         
     public override void DrawTab(Rect rect, Pawn pawn, ref Vector2 apparelColorScrollPosition)
     {            
-        var chapterColorComp = pawn.apparel.WornApparel.First(a => a.HasComp<CompChapterColorWithShoulderDecoration>()).GetComp<CompChapterColorWithShoulderDecoration>();
+        if (chapterColorComp == null)
+        {
+            return;
+        }
             
         GUI.BeginGroup(rect);
         var outRect = new Rect(0f, 0f, rect.width, rect.height);

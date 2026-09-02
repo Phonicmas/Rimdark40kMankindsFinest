@@ -50,7 +50,7 @@ public class ModSettingTab_Geneseed : ModSettingTab
         //Matrix gestation time factor
         listingStandard.GapLine(36);
         scrollViewHeight += ListingHeightIncreaseGap;
-        genes40KModSettings.matrixGestationTimeFactor = (int)listingStandard.SliderLabeled("BEWH.MankindsFinest.ModSettings.MatrixGestationFactor".Translate(genes40KModSettings.matrixGestationTimeFactor), genes40KModSettings.matrixGestationTimeFactor, 0, 200, tooltip: "BEWH.MankindsFinest.ModSettings.MatrixGestationFactorDesc".Translate());
+        genes40KModSettings.matrixGestationTimeFactor = (int)listingStandard.SliderLabeled("BEWH.MankindsFinest.ModSettings.MatrixGestationFactor".Translate(genes40KModSettings.matrixGestationTimeFactor), genes40KModSettings.matrixGestationTimeFactor, 1, 200, tooltip: "BEWH.MankindsFinest.ModSettings.MatrixGestationFactorDesc".Translate());
         scrollViewHeight += ListingHeightIncrease;
         
         scrollViewHeight += ListingHeightIncrease;

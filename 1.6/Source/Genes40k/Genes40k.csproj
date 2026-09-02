@@ -85,8 +85,7 @@
     <Compile Include="ChapterApparelMultiColor\CompChapterColorWithShoulderDecoration.cs" />
     <Compile Include="ChapterApparelMultiColor\CompProperties_ChapterColor.cs" />
     <Compile Include="ChapterApparelMultiColor\CompProperties_ChapterColorWithShoulderDecoration.cs" />
-    <Compile Include="ChapterApparelMultiColor\HarmonyPatch_OutfitStandBackpack.cs" />
-    <Compile Include="ChapterApparelMultiColor\HarmonyPatch_OutfitStandShoulder.cs" />
+    <Compile Include="ChapterApparelMultiColor\OutfitStandDrawProvider_ShoulderIcons.cs" />
     <Compile Include="ChapterApparelMultiColor\PawnRenderNodeWorker_AttachmentShoulderChapterIcon.cs" />
     <Compile Include="ChapterApparelMultiColor\PawnRenderNodeWorker_AttachmentShoulderRankIcon.cs" />
     <Compile Include="ChapterApparelMultiColor\PawnRenderNodeWorker_LivingSaintAttachmentBody.cs" />

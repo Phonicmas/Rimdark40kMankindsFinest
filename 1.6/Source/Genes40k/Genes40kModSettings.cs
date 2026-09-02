@@ -81,15 +81,15 @@ public class Genes40kModSettings : ModSettings
         Scribe_Values.Look(ref implantationSuccessOffset, "implantationSuccessOffset", 0);
         Scribe_Values.Look(ref implantationCapOffset, "implantationCapOffset", 0);
         
-        Scribe_Values.Look(ref matrixGestationTimeFactor, "matrixGestationTimeFactor", 0);
+        Scribe_Values.Look(ref matrixGestationTimeFactor, "matrixGestationTimeFactor", 100);
         
         Scribe_Values.Look(ref allowFemalePrimarchBirths, "allowFemalePrimarchBirths", false);
         
         Scribe_Values.Look(ref psychicCrafting, "psychicCrafting", true);
             
-        Scribe_Values.Look(ref chapterColorOne, "chapterColorOne");
-        Scribe_Values.Look(ref chapterColorTwo, "chapterColorTwo");
-        Scribe_Values.Look(ref chapterColorThree, "chapterColorThree");
+        Scribe_Values.Look(ref chapterColorOne, "chapterColorOne", Genes40kDefOf.BEWH_ChapterColourXIII.primaryColour);
+        Scribe_Values.Look(ref chapterColorTwo, "chapterColorTwo", Genes40kDefOf.BEWH_ChapterColourXIII.secondaryColour);
+        Scribe_Values.Look(ref chapterColorThree, "chapterColorThree", Genes40kDefOf.BEWH_ChapterColourXIII.secondaryColour);
         Scribe_Defs.Look(ref chapterShoulderIcon, "chapterShoulderIcon");
         Scribe_Values.Look(ref chapterShoulderIconColor, "chapterShoulderIconColor");
         

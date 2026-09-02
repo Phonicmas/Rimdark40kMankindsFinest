@@ -196,7 +196,7 @@ public class Dialog_ChangeDefaultChapterColour : Window
             
             var curY = customIconName.yMax + gap;
 
-            if (settings.CurrentlySelectedPreset.relatedChapterIcon != null && settings.CurrentlySelectedPreset.relatedChapterIcon.useColour)
+            if (settings.CustomPreset.relatedChapterIcon != null && settings.CustomPreset.relatedChapterIcon.useColour)
             {
                 var customIconColour = new Rect(customIconName)
                 {
@@ -206,12 +206,12 @@ public class Dialog_ChangeDefaultChapterColour : Window
                 Widgets.DrawMenuSection(customIconColour);
                 customIconColour = customIconColour.ContractedBy(1);
                 
-                Widgets.DrawRectFast(customIconColour, settings.CurrentlySelectedPreset.chapterIconColour);
+                Widgets.DrawRectFast(customIconColour, settings.CustomPreset.chapterIconColour);
                 if (Widgets.ButtonInvisible(customIconColour))
                 {
-                    Find.WindowStack.Add( new Dialog_ColourPicker( settings.CurrentlySelectedPreset.chapterIconColour, ( newColour ) =>
+                    Find.WindowStack.Add( new Dialog_ColourPicker( settings.CustomPreset.chapterIconColour, ( newColour ) =>
                     {
-                        settings.CurrentlySelectedPreset.chapterIconColour = newColour;
+                        settings.CustomPreset.chapterIconColour = newColour;
                         settings.chapterShoulderIconColor = newColour;
                     } ) );
                 }
