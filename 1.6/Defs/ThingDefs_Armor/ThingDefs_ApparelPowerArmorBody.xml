@@ -136,7 +136,9 @@
         </apparel>
         <comps>
             <li Class="Genes40k.CompProperties_ChapterColorWithShoulderDecoration" />
-            <li Class="Core40k.CompProperties_Decorative" />
+            <li Class="Core40k.CompProperties_Decorative">
+                <drawRenderNodesOnGround>true</drawRenderNodesOnGround>
+            </li>
         </comps>
         <modExtensions>
             <li Class="Core40k.DefModExtension_ForcesBodyType">
@@ -250,7 +252,9 @@
         </apparel>
         <comps>
             <li Class="Genes40k.CompProperties_ChapterColorWithShoulderDecoration" />
-            <li Class="Core40k.CompProperties_Decorative" />
+            <li Class="Core40k.CompProperties_Decorative">
+                <drawRenderNodesOnGround>true</drawRenderNodesOnGround>
+            </li>
         </comps>
         <modExtensions>
             <li Class="Core40k.DefModExtension_ForcesBodyType">
@@ -368,6 +372,7 @@
             </li>
             <li Class="Core40k.CompProperties_Decorative">
                 <decorativeType>Body</decorativeType>
+                <drawRenderNodesOnGround>true</drawRenderNodesOnGround>
             </li>
         </comps>
         <modExtensions>
@@ -456,6 +461,7 @@
             </li>
             <li Class="Core40k.CompProperties_Decorative">
                 <decorativeType>Body</decorativeType>
+                <drawRenderNodesOnGround>true</drawRenderNodesOnGround>
                 <decorations>
                     <li>BEWH_LivingSaintWings_1</li>
                     <li>BEWH_LivingSaintHalo_2</li>
@@ -558,6 +564,7 @@
             </li>
             <li Class="Core40k.CompProperties_Decorative">
                 <decorativeType>Body</decorativeType>
+                <drawRenderNodesOnGround>true</drawRenderNodesOnGround>
             </li>
         </comps>
         <modExtensions>
