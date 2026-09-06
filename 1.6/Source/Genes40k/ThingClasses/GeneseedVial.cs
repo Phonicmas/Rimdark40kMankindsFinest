@@ -208,6 +208,32 @@ public class GeneseedVial : ThingWithComps
         }
     }
 
+    /// <summary>
+    /// Only vials carrying the same chapter gene and texture may merge; stack mods raise stackLimit above 1.
+    /// </summary>
+    public override bool CanStackWith(Thing other)
+    {
+        if (!base.CanStackWith(other) || other is not GeneseedVial vial)
+        {
+            return false;
+        }
+
+        return extraGeneFromMaterial == vial.extraGeneFromMaterial
+               && newGeneseedVialTexture == vial.newGeneseedVialTexture;
+    }
+
+    public override Thing SplitOff(int count)
+    {
+        var piece = base.SplitOff(count);
+        if (piece != this && piece is GeneseedVial vial)
+        {
+            vial.extraGeneFromMaterial = extraGeneFromMaterial;
+            vial.newGeneseedVialTexture = newGeneseedVialTexture;
+        }
+
+        return piece;
+    }
+
     public override void ExposeData()
     {
         base.ExposeData();

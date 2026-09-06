@@ -203,6 +203,11 @@ public class PrimarchEmbryo : GeneSetHolderBase
         }
     }
 
+    public override bool CanStackWith(Thing other)
+    {
+        return false;
+    }
+
     public override void ExposeData()
     {
         base.ExposeData();
