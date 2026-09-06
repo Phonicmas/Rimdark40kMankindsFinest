@@ -16,11 +16,6 @@ public class ProgenoidGlandProgress
             return;
         }
 
-        var stringBuilder = new StringBuilder(__result);
-
-        stringBuilder.AppendLine("\n");
-        stringBuilder.AppendLine(line);
-
-        __result = stringBuilder.ToString().TrimEndNewlines();
+        __result = (__result + "\n\n" + line).TrimEndNewlines();
     }
 }

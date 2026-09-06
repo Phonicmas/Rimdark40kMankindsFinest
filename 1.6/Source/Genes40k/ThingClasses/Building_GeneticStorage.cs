@@ -28,24 +28,59 @@ public class Building_GeneticStorage : Building_Storage
             ShaderDatabase.DefaultShader, def.graphicData.drawSize, Color.white, Color.white,
             DefaultGraphic.data);
         
+    [Unsaved]
+    private bool countsDirty = true;
+    [Unsaved]
+    private int storedCount;
+    [Unsaved]
+    private int maximumItems;
+    [Unsaved]
+    private string countLabel;
+    [Unsaved]
+    private bool? isSangprimusPortum;
+
+    private bool IsSangprimusPortum => isSangprimusPortum ??= def.HasModExtension<DefModExtension_SangprimusPortum>();
+
+    /// <summary>
+    /// Stored/maximum counts are only recomputed after something enters or leaves the storage.
+    /// </summary>
+    private void RefreshCounts()
+    {
+        if (!countsDirty)
+        {
+            return;
+        }
+
+        countsDirty = false;
+        storedCount = slotGroup?.HeldThings.Count() ?? 0;
+        maximumItems = def.building.maxItemsInCell * AllSlotCells().Count();
+        countLabel = storedCount + "/" + maximumItems;
+    }
+
     public override Graphic Graphic
     {
         get
         {
-            var storedAmount = slotGroup.HeldThings.Count();
-            var maximumItems = def.building.maxItemsInCell * AllSlotCells().Count();
+            RefreshCounts();
+
             if (DefMod.halfFullGraphic.NullOrEmpty())
             {
-                return storedAmount == maximumItems ? FullGraphic : DefaultGraphic;
+                return storedCount == maximumItems ? FullGraphic : DefaultGraphic;
             }
-                
-            var filledPercent = (float)storedAmount / maximumItems;
+
+            var filledPercent = (float)storedCount / maximumItems;
             if (filledPercent < 0.5f)
             {
                 return DefaultGraphic;
             }
             return filledPercent < 1 ? HalfFullGraphic : FullGraphic;
         }
+    }
+
+    public override void SpawnSetup(Map map, bool respawningAfterLoad)
+    {
+        base.SpawnSetup(map, respawningAfterLoad);
+        countsDirty = true;
     }
 
     public override void Destroy(DestroyMode mode = DestroyMode.Vanish)
@@ -77,6 +112,7 @@ public class Building_GeneticStorage : Building_Storage
 
     public override void Notify_ReceivedThing(Thing newItem)
     {
+        countsDirty = true;
         switch (newItem)
         {
             case GeneseedVial geneseedVial:
@@ -94,6 +130,7 @@ public class Building_GeneticStorage : Building_Storage
 
     public override void Notify_LostThing(Thing newItem)
     {
+        countsDirty = true;
         UnhideItem(newItem);
         base.Notify_LostThing(newItem);
     }
@@ -116,14 +153,12 @@ public class Building_GeneticStorage : Building_Storage
         
     public override void DrawGUIOverlay()
     {
-        if (def.HasModExtension<DefModExtension_SangprimusPortum>())
+        if (IsSangprimusPortum)
         {
             return;
         }
-            
-        var storedAmount = slotGroup.HeldThings.Count();
-        var maximumItems = def.building.maxItemsInCell * AllSlotCells().Count();
-                
-        GenMapUI.DrawThingLabel(this, storedAmount + "/" + maximumItems);
+
+        RefreshCounts();
+        GenMapUI.DrawThingLabel(this, countLabel);
     }
 }

@@ -8,53 +8,77 @@ namespace Genes40k;
 
 public class WorkGiver_DoBillPsychic : WorkGiver_DoBill
 {
-    private GameComponent_UnlockedMaterials GameComp => Current.Game?.GetComponent<GameComponent_UnlockedMaterials>();
+    private GameComponent_UnlockedMaterials GameComp => GameComponent_UnlockedMaterials.Instance;
+    private static readonly List<Bill> tmpOriginalBills = new();
+    private static readonly List<Bill> tmpBlockedBills = new();
+
     public override Job JobOnThing(Pawn pawn, Thing thing, bool forced = false)
     {
         if (thing is not Building_GeneTable building_GeneTable)
         {
             return null;
         }
-        
-        var orgBills = new List<Bill>();
-        orgBills.AddRange(building_GeneTable.billStack.Bills);
-        
-        var billAddPost = new List<Bill>();
 
-        foreach (var bill in building_GeneTable.billStack.Bills)
+        var bills = building_GeneTable.billStack.Bills;
+        var gameComp = GameComp;
+        float? psychicSensitivity = null;
+
+        tmpBlockedBills.Clear();
+
+        foreach (var bill in bills)
         {
-            if (bill.recipe.HasModExtension<DefModExtension_GeneMatrixRecipe>() && bill.recipe.GetModExtension<DefModExtension_GeneMatrixRecipe>().drainsUserWhenMaking)
+            var matrixDefMod = bill.recipe.GetModExtension<DefModExtension_GeneMatrixRecipe>();
+
+            if (matrixDefMod != null && matrixDefMod.drainsUserWhenMaking)
             {
-                if (pawn.GetStatValue(StatDefOf.PsychicSensitivity) <= 0)
+                psychicSensitivity ??= pawn.GetStatValue(StatDefOf.PsychicSensitivity);
+
+                if (psychicSensitivity <= 0)
                 {
-                    billAddPost.Add(bill);
-                    JobFailReason.Is("BEWH.MankindsFinest.GeneManupulationTable.PsychicSensitivityRequired".Translate(bill.recipe.products.First().Label), bill.Label);
+                    tmpBlockedBills.Add(bill);
+                    JobFailReason.Is("BEWH.MankindsFinest.GeneManupulationTable.PsychicSensitivityRequired".Translate(ProductLabel(bill)), bill.Label);
                     continue;
                 }
             }
 
-            if (bill.recipe.HasModExtension<DefModExtension_LegionMaterialCreation>())
-            {
-                var defMod = bill.recipe.GetModExtension<DefModExtension_LegionMaterialCreation>();
+            var materialDefMod = bill.recipe.GetModExtension<DefModExtension_LegionMaterialCreation>();
 
-                if (!GameComp.HasMaterial(defMod.requiredLegionMaterial))
-                {
-                    billAddPost.Add(bill);
-                    JobFailReason.Is("BEWH.MankindsFinest.GeneManupulationTable.MissingLegionMaterial".Translate(bill.recipe.products.First().Label, defMod.requiredLegionMaterial.label), bill.Label);
-                }
+            if (materialDefMod != null && (gameComp == null || !gameComp.HasMaterial(materialDefMod.requiredLegionMaterial)))
+            {
+                tmpBlockedBills.Add(bill);
+                JobFailReason.Is("BEWH.MankindsFinest.GeneManupulationTable.MissingLegionMaterial".Translate(ProductLabel(bill), materialDefMod.requiredLegionMaterial.label), bill.Label);
             }
         }
 
-        foreach (var bill in billAddPost)
+        if (tmpBlockedBills.Count == 0)
         {
-            building_GeneTable.billStack.Bills.Remove(bill);
+            return base.JobOnThing(pawn, thing, forced);
         }
-        
-        var job = base.JobOnThing(pawn, thing, forced);
 
-        building_GeneTable.billStack.Bills.RemoveRange(0, building_GeneTable.billStack.Bills.Count);
-        building_GeneTable.billStack.Bills.AddRange(orgBills);
+        tmpOriginalBills.Clear();
+        tmpOriginalBills.AddRange(bills);
 
-        return job;
+        foreach (var bill in tmpBlockedBills)
+        {
+            bills.Remove(bill);
+        }
+
+        try
+        {
+            return base.JobOnThing(pawn, thing, forced);
+        }
+        finally
+        {
+            bills.Clear();
+            bills.AddRange(tmpOriginalBills);
+            tmpOriginalBills.Clear();
+            tmpBlockedBills.Clear();
+        }
+    }
+
+    private static string ProductLabel(Bill bill)
+    {
+        var products = bill.recipe.products;
+        return products.NullOrEmpty() ? bill.recipe.label : products[0].Label;
     }
 }

@@ -34,6 +34,7 @@
             </li>
             <li Class="Genes40k.DefModExtension_Psyker">
                 <naturalBornSelectionWeight>60</naturalBornSelectionWeight>
+                <tier>1</tier>
             </li>
         </modExtensions>
     </GeneDef>
@@ -71,6 +72,7 @@
             </li>
             <li Class="Genes40k.DefModExtension_Psyker">
                 <naturalBornSelectionWeight>40</naturalBornSelectionWeight>
+                <tier>2</tier>
             </li>
         </modExtensions>
     </GeneDef>
@@ -108,6 +110,7 @@
             </li>
             <li Class="Genes40k.DefModExtension_Psyker">
                 <naturalBornSelectionWeight>12</naturalBornSelectionWeight>
+                <tier>3</tier>
             </li>
         </modExtensions>
     </GeneDef>
@@ -146,6 +149,7 @@
             </li>
             <li Class="Genes40k.DefModExtension_Psyker">
                 <naturalBornSelectionWeight>4</naturalBornSelectionWeight>
+                <tier>4</tier>
             </li>
         </modExtensions>
     </GeneDef>
@@ -184,6 +188,7 @@
             </li>
             <li Class="Genes40k.DefModExtension_Psyker">
                 <naturalBornSelectionWeight>1</naturalBornSelectionWeight>
+                <tier>5</tier>
             </li>
         </modExtensions>
     </GeneDef>

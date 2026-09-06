@@ -32,23 +32,6 @@ public class Building_DecorativeFlag : Building
 
     public ChapterColourDef currentlySelectedPreset;
     
-    public override Graphic Graphic => GetGraphic();
-    private Graphic GetGraphic()
-    {
-        var graphicData = def.graphicData;
-        
-        var shader = ShaderDatabase.CutoutComplex;
-        if (graphicData.shaderType != null)
-        {
-            shader = graphicData.shaderType.Shader;
-        }
-
-        //Respect whatever graphicClass the def asks for, Graphic_Multi gives us _north/_east/_south/_west banners.
-        var graphicClass = graphicData.graphicClass ?? typeof(Graphic_Single);
-        
-        return GraphicDatabase.Get(graphicClass, graphicData.texPath, shader, graphicData.drawSize, DrawColor, DrawColorTwo, graphicData, graphicData.shaderParameters, graphicData.maskPath);
-    }
-    
     private static readonly CachedTexture EditFlagIcon = new ("UI/Gizmos/BEWH_CogIcon");
 
     private static readonly DefModExtension_DecorativeFlag DefaultFlagExtension = new DefModExtension_DecorativeFlag();

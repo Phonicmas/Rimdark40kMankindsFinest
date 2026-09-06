@@ -9,21 +9,44 @@ public class Gene_Psyker : Gene_GiveVEFAbility
     public override void PostAdd()
     {
         base.PostAdd();
-        
-        var psykerGenes = pawn.genes.GenesListForReading.Where(gene => gene is Gene_Psyker).ToList();
 
-        var genesToRemove = psykerGenes.Where(psykerGene => psykerGene.def.displayOrderInCategory < def.displayOrderInCategory);
+        var otherPsykerGenes = pawn.genes.GenesListForReading.Where(gene => gene is Gene_Psyker && gene != this).ToList();
+        var removeSelf = false;
 
-        var removeSelf = psykerGenes.Count(psykerGene => psykerGene.def.displayOrderInCategory > def.displayOrderInCategory) >= 1;
-            
-        foreach (var gene in genesToRemove)
+        foreach (var gene in otherPsykerGenes)
         {
-            pawn.genes.RemoveGene(gene);
+            var comparison = CompareTier(gene.def, def);
+
+            if (comparison > 0)
+            {
+                removeSelf = true;
+            }
+            else if (comparison < 0 || gene.def != def)
+            {
+                pawn.genes.RemoveGene(gene);
+            }
         }
 
         if (removeSelf)
         {
             pawn.genes.RemoveGene(this);
         }
+    }
+
+    /// <summary>
+    /// Orders two psyker genes by DefModExtension_Psyker.tier. If either has no tier set, both fall back
+    /// to displayOrderInCategory so genes from other mods keep their old ordering.
+    /// </summary>
+    private static int CompareTier(GeneDef a, GeneDef b)
+    {
+        var tierA = a.GetModExtension<DefModExtension_Psyker>()?.tier ?? 0;
+        var tierB = b.GetModExtension<DefModExtension_Psyker>()?.tier ?? 0;
+
+        if (tierA > 0 && tierB > 0)
+        {
+            return tierA.CompareTo(tierB);
+        }
+
+        return a.displayOrderInCategory.CompareTo(b.displayOrderInCategory);
     }
 }

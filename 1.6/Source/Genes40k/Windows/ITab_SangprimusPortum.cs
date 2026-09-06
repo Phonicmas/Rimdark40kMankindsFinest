@@ -8,7 +8,7 @@ namespace Genes40k;
 
 public class ITab_SangprimusPortum : ITab
 {
-	private GameComponent_UnlockedMaterials GameComp => Current.Game?.GetComponent<GameComponent_UnlockedMaterials>();
+	private GameComponent_UnlockedMaterials GameComp => GameComponent_UnlockedMaterials.Instance;
 	private SortedList<int, (ThingDef chapter, ThingDef primarch)> AllMaterials => GameComp?.AllMaterialsPaired ?? new SortedList<int, (ThingDef chapter, ThingDef primarch)>();
 
 	public override bool IsVisible => SelThing != null && base.IsVisible;
@@ -26,6 +26,50 @@ public class ITab_SangprimusPortum : ITab
 	private readonly string containedItemsKey;
         
 	private float lastDrawnHeight;
+
+	private static readonly Dictionary<ThingDef, string> rowLabels = new();
+	private static readonly Dictionary<ThingDef, string> rowTooltips = new();
+	private static LoadedLanguage rowStringsLanguage;
+
+	private static void EnsureRowStringLanguage()
+	{
+		if (rowStringsLanguage == LanguageDatabase.activeLanguage)
+		{
+			return;
+		}
+
+		rowLabels.Clear();
+		rowTooltips.Clear();
+		rowStringsLanguage = LanguageDatabase.activeLanguage;
+	}
+
+	private static string RowLabel(ThingDef thingDef, bool chapter)
+	{
+		EnsureRowStringLanguage();
+
+		if (!rowLabels.TryGetValue(thingDef, out var label))
+		{
+			label = chapter
+				? thingDef.GetModExtension<DefModExtension_ChapterMaterial>()?.shownMaterialName ?? thingDef.label
+				: thingDef.GetModExtension<DefModExtension_PrimarchMaterial>()?.shownMaterialName ?? thingDef.label;
+			rowLabels.Add(thingDef, label);
+		}
+
+		return label;
+	}
+
+	private static string RowTooltip(ThingDef thingDef)
+	{
+		EnsureRowStringLanguage();
+
+		if (!rowTooltips.TryGetValue(thingDef, out var tooltip))
+		{
+			tooltip = thingDef.description + "\n\n" + "BEWH.MankindsFinest.Containers.SangprimusPortumMoreInfo".Translate();
+			rowTooltips.Add(thingDef, tooltip);
+		}
+
+		return tooltip;
+	}
         
 	private Vector2 scrollPosition;
         
@@ -76,11 +120,11 @@ public class ITab_SangprimusPortum : ITab
 				}
 				if (materialPair.Value.chapter != null)
 				{
-					ThingRow(materialPair.Value.chapter, width, ref curY, 0, materialPair.Value.chapter.GetModExtension<DefModExtension_ChapterMaterial>()?.shownMaterialName ?? materialPair.Value.chapter.label, singleEntity);
+					ThingRow(materialPair.Value.chapter, width, ref curY, 0, RowLabel(materialPair.Value.chapter, true), singleEntity);
 				}
 				if (materialPair.Value.primarch != null)
 				{
-					ThingRow(materialPair.Value.primarch, width, ref curY, offset, materialPair.Value.primarch.GetModExtension<DefModExtension_PrimarchMaterial>()?.shownMaterialName ?? materialPair.Value.primarch.label, singleEntity);
+					ThingRow(materialPair.Value.primarch, width, ref curY, offset, RowLabel(materialPair.Value.primarch, false), singleEntity);
 				}
 	            
 				curY += 28f;
@@ -126,6 +170,6 @@ public class ITab_SangprimusPortum : ITab
 		{
 			Find.WindowStack.Add(new Dialog_InfoCard(thingDef));
 		}
-		TooltipHandler.TipRegion(rect, thingDef.description + "\n\n" + "BEWH.MankindsFinest.Containers.SangprimusPortumMoreInfo".Translate());
+		TooltipHandler.TipRegion(rect, RowTooltip(thingDef));
 	}
 }

@@ -10,7 +10,7 @@ public class Building_SangprimusPortum : Building, IThingHolder
 {
     private ThingOwner innerContainer;
 
-    private GameComponent_UnlockedMaterials GameComp => Current.Game?.GetComponent<GameComponent_UnlockedMaterials>();
+    private GameComponent_UnlockedMaterials GameComp => GameComponent_UnlockedMaterials.Instance;
     private bool gameCompChangeDone = false;
     
     public Building_SangprimusPortum()

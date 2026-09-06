@@ -57,7 +57,7 @@ public class WorkGiver_CarryMaterialToSangprimus : WorkGiver_Scanner
     /// </summary>
     private static Thing FindMaterial(Pawn pawn, bool forced)
     {
-        var gameComp = Current.Game?.GetComponent<GameComponent_UnlockedMaterials>();
+        var gameComp = GameComponent_UnlockedMaterials.Instance;
 
         if (gameComp == null)
         {

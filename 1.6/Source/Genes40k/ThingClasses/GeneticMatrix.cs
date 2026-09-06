@@ -8,16 +8,24 @@ public class GeneticMatrix : ThingWithComps
 {
     private bool invisible = false;
         
-    public override Graphic Graphic
+    public override void Print(SectionLayer layer)
     {
-        get
+        if (invisible)
         {
-            var graphic = DefaultGraphic.GetCopy(def.graphicData.drawSize, null);
-                
-            graphic.drawSize = !invisible ? def.graphicData.drawSize : Vector2.zero;
-                
-            return graphic;
+            return;
         }
+
+        base.Print(layer);
+    }
+
+    protected override void DrawAt(Vector3 drawLoc, bool flip = false)
+    {
+        if (invisible)
+        {
+            return;
+        }
+
+        base.DrawAt(drawLoc, flip);
     }
 
     public void ChangeVisibility(bool newValue)

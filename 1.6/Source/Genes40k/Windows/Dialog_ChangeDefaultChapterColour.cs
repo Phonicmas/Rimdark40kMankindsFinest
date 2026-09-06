@@ -14,7 +14,29 @@ public class Dialog_ChangeDefaultChapterColour : Window
     private List<ChapterColourDef> chapterColours;
 
     private ChapterColourDef currentlySelectedPreset;
-    private Texture2D CurrentlySelectedIconTexture => ContentFinder<Texture2D>.Get(currentlySelectedPreset.relatedChapterIcon.iconPath);
+    private Texture2D cachedIconTexture;
+    private string cachedIconPath;
+
+    private Texture2D CurrentlySelectedIconTexture
+    {
+        get
+        {
+            var path = currentlySelectedPreset?.relatedChapterIcon?.iconPath;
+
+            if (path.NullOrEmpty())
+            {
+                return null;
+            }
+
+            if (cachedIconPath != path)
+            {
+                cachedIconPath = path;
+                cachedIconTexture = ContentFinder<Texture2D>.Get(path);
+            }
+
+            return cachedIconTexture;
+        }
+    }
         
     public override Vector2 InitialSize => new (900f, 700f);
 
@@ -297,7 +319,11 @@ public class Dialog_ChangeDefaultChapterColour : Window
             };
             
             GUI.DrawTexture(iconRect, Command.BGTexShrunk);
-            GUI.DrawTexture(iconRect, CurrentlySelectedIconTexture);
+            var selectedIconTexture = CurrentlySelectedIconTexture;
+            if (selectedIconTexture != null)
+            {
+                GUI.DrawTexture(iconRect, selectedIconTexture);
+            }
         }
         
         if (Widgets.ButtonText(new Rect(inRect.xMax - CloseButSize.x, inRect.yMax - CloseButSize.y, CloseButSize.x, CloseButSize.y), "Accept".Translate()))

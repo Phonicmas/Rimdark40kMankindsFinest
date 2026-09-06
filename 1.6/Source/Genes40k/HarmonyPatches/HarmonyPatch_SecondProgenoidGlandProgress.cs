@@ -14,14 +14,10 @@ public class SecondProgenoidGlandProgress
             return;
         }
             
-        var stringBuilder = new StringBuilder(__result);
-
-        stringBuilder.AppendLine("\n");
-
-        stringBuilder.AppendLine(progenoidGlands.SecondProgenoidGlandHarvested
+        var line = progenoidGlands.SecondProgenoidGlandHarvested
             ? "BEWH.MankindsFinest.SpaceMarine.SecondGeneseedsHarvested".Translate()
-            : "BEWH.MankindsFinest.SpaceMarine.SecondGeneseedsHarvestable".Translate());
+            : "BEWH.MankindsFinest.SpaceMarine.SecondGeneseedsHarvestable".Translate();
 
-        __result = stringBuilder.ToString().TrimEndNewlines();
+        __result = (__result + "\n\n" + line).Trim();
     }
 }

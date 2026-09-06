@@ -22,18 +22,28 @@ public class GeneseedVial : ThingWithComps
 
     [Unsaved]
     private Graphic cachednewGeneseedVialTexture;
-    private Graphic NewGeneseedVialTexture => cachednewGeneseedVialTexture ??= GraphicDatabase.Get<Graphic_Single>(newGeneseedVialTexture, def.graphicData.shaderType.Shader);
+    private Graphic NewGeneseedVialTexture => cachednewGeneseedVialTexture ??= GraphicDatabase.Get<Graphic_Single>(newGeneseedVialTexture, def.graphicData.shaderType.Shader, def.graphicData.drawSize, Color.white);
 
-    public override Graphic Graphic
+    public override Graphic Graphic => newGeneseedVialTexture != null ? NewGeneseedVialTexture : DefaultGraphic;
+
+    public override void Print(SectionLayer layer)
     {
-        get
+        if (invisible)
         {
-            var graphic = (newGeneseedVialTexture != null ? NewGeneseedVialTexture : DefaultGraphic).GetCopy(def.graphicData.drawSize, null);
-                
-            graphic.drawSize = !invisible ? def.graphicData.drawSize : Vector2.zero;
-
-            return graphic;
+            return;
         }
+
+        base.Print(layer);
+    }
+
+    protected override void DrawAt(Vector3 drawLoc, bool flip = false)
+    {
+        if (invisible)
+        {
+            return;
+        }
+
+        base.DrawAt(drawLoc, flip);
     }
     
     private bool invisible = false;
@@ -70,6 +80,13 @@ public class GeneseedVial : ThingWithComps
         }
     }
 
+    [Unsaved]
+    private string cachedLabelNoCount;
+    [Unsaved]
+    private string cachedLabelXenotypeName;
+    [Unsaved]
+    private LoadedLanguage cachedLabelLanguage;
+
     public override string LabelNoCount
     {
         get
@@ -78,7 +95,15 @@ public class GeneseedVial : ThingWithComps
             {
                 return base.LabelNoCount;
             }
-            return "BEWH.MankindsFinest.GeneseedVial.NamedGeneseedVial".Translate(xenotypeName.Named("NAME"));
+
+            if (cachedLabelNoCount == null || cachedLabelXenotypeName != xenotypeName || cachedLabelLanguage != LanguageDatabase.activeLanguage)
+            {
+                cachedLabelXenotypeName = xenotypeName;
+                cachedLabelLanguage = LanguageDatabase.activeLanguage;
+                cachedLabelNoCount = "BEWH.MankindsFinest.GeneseedVial.NamedGeneseedVial".Translate(xenotypeName.Named("NAME"));
+            }
+
+            return cachedLabelNoCount;
         }
     }
 

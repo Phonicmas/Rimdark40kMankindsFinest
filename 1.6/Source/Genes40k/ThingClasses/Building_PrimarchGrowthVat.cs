@@ -18,7 +18,9 @@ public class Building_PrimarchGrowthVat : Building, IStoreSettingsParent, IThing
     private static readonly Texture2D EjectEmbryoIcon = ContentFinder<Texture2D>.Get("UI/Gizmos/BEWH_EjectPrimarchEmbryo");
     private static readonly Texture2D InsertEmbryoIcon = ContentFinder<Texture2D>.Get("UI/Gizmos/BEWH_InsertPrimarchEmbryo");
     
-    private DefModExtension_PrimarchVatTexture DefModTexture => def.GetModExtension<DefModExtension_PrimarchVatTexture>();
+    [Unsaved(false)]
+    private DefModExtension_PrimarchVatTexture cachedDefModTexture;
+    private DefModExtension_PrimarchVatTexture DefModTexture => cachedDefModTexture ??= def.GetModExtension<DefModExtension_PrimarchVatTexture>();
     [Unsaved(false)]
     private Graphic fetusEarlyStageGraphic;
     private Graphic FetusEarlyStage => fetusEarlyStageGraphic ??= GraphicDatabase.Get<Graphic_Single>(DefModTexture.earlyFetusTexture, ShaderDatabase.Cutout, DefModTexture.earlyFetusSize, Color.white);
@@ -626,18 +628,15 @@ public class Building_PrimarchGrowthVat : Building, IStoreSettingsParent, IThing
             loc.y += 1f / 52f;
             loc.z += Mathf.PingPong(Find.TickManager.TicksGame * def.building.formingMechBobSpeed, def.building.formingMechYBobDistance);
                 
-            if (EmbryoGestationTicksRemaining > EmbryoLateStageGraphicTicksRemaining)
-            {
-                FetusEarlyStage.drawSize = DefModTexture.earlyFetusSize * Mathf.Lerp(FetusMinSize, FetusMaxSize, EmbryoGestationPct);
-                loc += DefModTexture.earlyFetusOffset;
-                FetusEarlyStage.DrawFromDef(loc, Rot4.North, null);
-            }
-            else
-            {
-                FetusLateStage.drawSize = DefModTexture.lateFetusSize * Mathf.Lerp(FetusMinSize, FetusMaxSize, EmbryoGestationPct);
-                loc += DefModTexture.lateFetusOffset;
-                FetusLateStage.DrawFromDef(loc, Rot4.North, null);
-            }
+            var texture = DefModTexture;
+            var early = EmbryoGestationTicksRemaining > EmbryoLateStageGraphicTicksRemaining;
+            var fetusGraphic = early ? FetusEarlyStage : FetusLateStage;
+            var fetusSize = (early ? texture.earlyFetusSize : texture.lateFetusSize) * Mathf.Lerp(FetusMinSize, FetusMaxSize, EmbryoGestationPct);
+            loc += early ? texture.earlyFetusOffset : texture.lateFetusOffset;
+
+            //Scaled through the matrix so the GraphicDatabase-owned graphic is never mutated.
+            var fetusMatrix = Matrix4x4.TRS(loc, Quaternion.identity, new Vector3(fetusSize.x, 1f, fetusSize.y));
+            Graphics.DrawMesh(MeshPool.plane10, fetusMatrix, fetusGraphic.MatSingle, 0);
         }
 
         topGraphic ??= def.building.mechGestatorTopGraphic.GraphicColoredFor(this);

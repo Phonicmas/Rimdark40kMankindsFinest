@@ -17,7 +17,27 @@ public class Dialog_ChangeFlagColour : Window
     private string currentlySelectedIcon;
 
     //Empty means no insignia is selected, a FlagIconDef with setsNull picked.
-    private Texture2D CurrentlySelectedIconTexture => currentlySelectedIcon.NullOrEmpty() ? null : ContentFinder<Texture2D>.Get(currentlySelectedIcon);
+    private Texture2D cachedIconTexture;
+    private string cachedIconPath;
+
+    private Texture2D CurrentlySelectedIconTexture
+    {
+        get
+        {
+            if (currentlySelectedIcon.NullOrEmpty())
+            {
+                return null;
+            }
+
+            if (cachedIconPath != currentlySelectedIcon)
+            {
+                cachedIconPath = currentlySelectedIcon;
+                cachedIconTexture = ContentFinder<Texture2D>.Get(currentlySelectedIcon);
+            }
+
+            return cachedIconTexture;
+        }
+    }
 
     private readonly Building_DecorativeFlag decoFlag;
     

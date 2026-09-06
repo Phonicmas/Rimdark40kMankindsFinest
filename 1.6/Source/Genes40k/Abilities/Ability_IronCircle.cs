@@ -37,21 +37,42 @@ public class Ability_IronCircle: Ability
         Initialize();
     }
         
+    private static List<Pawn> tmpMechsInAssignedOrder = new();
+
+    private CompProperties_AbilitySummonMechsForCaster summonProps;
+    private bool summonPropsResolved;
+
+    private CompProperties_AbilitySummonMechsForCaster SummonProps
+    {
+        get
+        {
+            if (!summonPropsResolved && def != null)
+            {
+                summonProps = def.comps?.OfType<CompProperties_AbilitySummonMechsForCaster>().FirstOrDefault();
+                summonPropsResolved = true;
+            }
+
+            return summonProps;
+        }
+    }
+
     public override bool GizmoDisabled(out string reason)
     {
-        if (def.comps?.OfType<CompProperties_AbilitySummonMechsForCaster>().FirstOrDefault() is not { } comp)
+        var comp = SummonProps;
+
+        if (comp == null)
         {
             return base.GizmoDisabled(out reason);
         }
-            
+
         var amountToSpawn = comp.amount;
-            
+
         if (comp.cannotHaveMoreThanAmount)
         {
-            var tmpMechsInAssignedOrder = new List<Pawn>();
-                
+            tmpMechsInAssignedOrder.Clear();
             MechanitorUtility.GetMechsInAssignedOrder(pawn, ref tmpMechsInAssignedOrder);
             amountToSpawn -= tmpMechsInAssignedOrder.Count;
+            tmpMechsInAssignedOrder.Clear();
         }
 
         if (amountToSpawn < 1)

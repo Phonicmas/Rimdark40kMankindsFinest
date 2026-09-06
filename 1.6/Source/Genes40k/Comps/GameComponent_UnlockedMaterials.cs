@@ -6,6 +6,33 @@ namespace Genes40k;
 
 public class GameComponent_UnlockedMaterials : GameComponent
 {
+    private static GameComponent_UnlockedMaterials instance;
+    private static Game instanceGame;
+
+    /// <summary>
+    /// The current game's component, looked up once per game instead of scanning Game.components per call.
+    /// </summary>
+    public static GameComponent_UnlockedMaterials Instance
+    {
+        get
+        {
+            var game = Current.Game;
+
+            if (game == null)
+            {
+                return null;
+            }
+
+            if (instance == null || instanceGame != game)
+            {
+                instance = game.GetComponent<GameComponent_UnlockedMaterials>();
+                instanceGame = game;
+            }
+
+            return instance;
+        }
+    }
+
     private Genes40kModSettings modSettings = null;
     private Genes40kModSettings ModSettings => modSettings ??= LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>();
 

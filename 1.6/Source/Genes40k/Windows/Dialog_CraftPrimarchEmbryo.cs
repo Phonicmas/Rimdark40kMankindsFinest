@@ -14,7 +14,10 @@ public class Dialog_CraftPrimarchEmbryo : Window
     private GeneseedVial chosenGeneseedVial = null;
     private HumanEmbryo chosenEmbryo = null;
     private Pawn chosenPawn = null;
-    private List<Pawn> playerPawnWithSkills = new();
+    private readonly List<Pawn> playerPawnWithSkills = new();
+
+    private const int PawnRefreshFrames = 60;
+    private int lastPawnRefreshFrame = -1;
 
     private readonly RecipeDef recipe = Genes40kDefOf.BEWH_MakePrimarchEmbryo;
 
@@ -23,6 +26,31 @@ public class Dialog_CraftPrimarchEmbryo : Window
         closeOnClickedOutside = true;
         this.map = map;
         this.geneTable = geneTable;
+    }
+
+    public override void PreOpen()
+    {
+        base.PreOpen();
+        RefreshPawnsWithSkills();
+    }
+
+    /// <summary>
+    /// Filters the map's free colonists by the recipe's skill requirements. Refreshed on open and
+    /// every PawnRefreshFrames frames rather than every frame.
+    /// </summary>
+    private void RefreshPawnsWithSkills()
+    {
+        playerPawnWithSkills.Clear();
+
+        foreach (var pawn in map.mapPawns.FreeColonistsSpawned)
+        {
+            if (recipe.PawnSatisfiesSkillRequirements(pawn))
+            {
+                playerPawnWithSkills.Add(pawn);
+            }
+        }
+
+        lastPawnRefreshFrame = Time.frameCount;
     }
 
     public override void DoWindowContents(Rect inRect)
@@ -220,7 +248,10 @@ public class Dialog_CraftPrimarchEmbryo : Window
             
         GUI.DrawTexture(pawnIconRect, Command.BGTexShrunk);
         var playerPawns = map.mapPawns.FreeColonistsSpawned;
-        playerPawnWithSkills = playerPawns.Where(pawn => recipe.PawnSatisfiesSkillRequirements(pawn)).ToList();
+        if (Time.frameCount - lastPawnRefreshFrame >= PawnRefreshFrames)
+        {
+            RefreshPawnsWithSkills();
+        }
         if (chosenPawn != null)
         {
             Widgets.ThingIcon(pawnIconRect, chosenPawn);
@@ -274,7 +305,7 @@ public class Dialog_CraftPrimarchEmbryo : Window
         {
             if (chosenPawn == null)
             {
-                chosenPawn = playerPawnWithSkills.First();
+                chosenPawn = playerPawnWithSkills[0];
             }
                 
             toolTipPawn = chosenPawn.NameFullColored.CapitalizeFirst();

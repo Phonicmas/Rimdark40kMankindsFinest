@@ -10,6 +10,23 @@ namespace Genes40k;
 [HarmonyPatch(typeof(TransferableUIUtility), "DoExtraIcons")]
 public static class ChapterMaterialCheckboxedPatch
 {
+    private static string cachedTooltip;
+    private static LoadedLanguage cachedTooltipLanguage;
+
+    private static string Tooltip
+    {
+        get
+        {
+            if (cachedTooltip == null || cachedTooltipLanguage != LanguageDatabase.activeLanguage)
+            {
+                cachedTooltipLanguage = LanguageDatabase.activeLanguage;
+                cachedTooltip = "BEWH.MankindsFinest.Other.AlreadyUnlocked".Translate();
+            }
+
+            return cachedTooltip;
+        }
+    }
+
     public static void Postfix(Transferable trad, Rect rect, ref float curX)
     {
         if (trad.AnyThing is not GeneMaterialExtra materialExtra)
@@ -17,7 +34,7 @@ public static class ChapterMaterialCheckboxedPatch
             return;
         }
 
-        var gameComp = Current.Game?.GetComponent<GameComponent_UnlockedMaterials>();
+        var gameComp = GameComponent_UnlockedMaterials.Instance;
 
         if (gameComp == null || !gameComp.HasMaterial(materialExtra.def))
         {
@@ -26,7 +43,7 @@ public static class ChapterMaterialCheckboxedPatch
         
         var iconRect = new Rect(curX - 24f, (rect.height - 24f) / 2f, 24f, 24f);
         GUI.DrawTexture(iconRect, Widgets.GetCheckboxTexture(true));
-        TooltipHandler.TipRegion(iconRect, "BEWH.MankindsFinest.Other.AlreadyUnlocked".Translate());
+        TooltipHandler.TipRegion(iconRect, Tooltip);
         curX -= 24f;
     }
 }

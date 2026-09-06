@@ -17,6 +17,8 @@ public class Gene_DivineGrace : Gene_Resource, IGeneResourceDrain
 
     private const int HediffCheckInterval = 60;
 
+    private const float OverloadEpsilon = 0.001f;
+
     private const int RadianceInterval = 250;
 
     private const float RadianceRadius = 10f;
@@ -84,6 +86,14 @@ public class Gene_DivineGrace : Gene_Resource, IGeneResourceDrain
 
     private void ChangeDivineGraceAmount(float amount, bool checkHediffs)
     {
+        //A gain landing on an already-full saint is the burst that pushes them past the cap.
+        if (amount > 0f && Value >= Max - OverloadEpsilon && !pawn.health.hediffSet.HasHediff(Genes40kDefOf.BEWH_LivingSaintHolyAscension))
+        {
+            isOvercharging = true;
+            overloadGrace = true;
+            checkHediffs = true;
+        }
+
         Value += amount;
 
         if (Value > MinLevelForAlert)

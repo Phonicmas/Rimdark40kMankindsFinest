@@ -5,7 +5,7 @@ namespace Genes40k;
 
 public class IncidentWorker_LegionMaterialHeist  : IncidentWorker
 {
-	private GameComponent_UnlockedMaterials GameComp => Current.Game?.GetComponent<GameComponent_UnlockedMaterials>();
+	private GameComponent_UnlockedMaterials GameComp => GameComponent_UnlockedMaterials.Instance;
 	
 	protected override bool CanFireNowSub(IncidentParms parms)
 	{

@@ -8,6 +8,8 @@ namespace Genes40k;
 [HarmonyPatch(typeof(MechanitorUtility), "CanControlMech")]
 public class DomitarMechExclusivePatch
 {
+    private static List<Pawn> tmpMechsInAssignedOrder = new();
+
     public static void Postfix(ref AcceptanceReport __result, Pawn pawn, Pawn mech)
     {
         if (!__result)
@@ -15,12 +17,18 @@ public class DomitarMechExclusivePatch
             return;
         }
 
-        if (!mech.def.HasModExtension<DefModExtension_ExclusiveMech>() || pawn.genes == null)
+        if (pawn.genes == null)
         {
             return;
         }
 
         var defMod = mech.def.GetModExtension<DefModExtension_ExclusiveMech>();
+
+        if (defMod == null)
+        {
+            return;
+        }
+
         var requiredGene = defMod.requiredGeneToControl;
 
         if (requiredGene != null && !pawn.genes.HasActiveGene(requiredGene))
@@ -28,12 +36,21 @@ public class DomitarMechExclusivePatch
             __result = "BEWH.MankindsFinest.Ability.PawnDoesNotHaveGeneToControl".Translate(pawn, requiredGene.label);
             return;
         }
-            
-        var tmpMechsInAssignedOrder = new List<Pawn>();
 
+        tmpMechsInAssignedOrder.Clear();
         MechanitorUtility.GetMechsInAssignedOrder(pawn, ref tmpMechsInAssignedOrder);
 
-        var pawnHasAmount = Enumerable.Count(tmpMechsInAssignedOrder, controlledMech => controlledMech.def == mech.def);
+        var pawnHasAmount = 0;
+
+        for (var i = 0; i < tmpMechsInAssignedOrder.Count; i++)
+        {
+            if (tmpMechsInAssignedOrder[i].def == mech.def)
+            {
+                pawnHasAmount++;
+            }
+        }
+
+        tmpMechsInAssignedOrder.Clear();
 
         if (pawnHasAmount >= defMod.totalAmountAllowedToHave)
         {
