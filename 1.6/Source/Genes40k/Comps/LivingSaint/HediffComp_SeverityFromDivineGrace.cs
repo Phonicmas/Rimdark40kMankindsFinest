@@ -84,7 +84,7 @@ public class HediffComp_SeverityFromDivineGrace : HediffComp
                 
         if (Props.divineGracePerHour != 0)
         {
-            DivineGrace.ChangeDivineGraceAmount(Props.divineGracePerHour / 2500f);
+            DivineGrace.ChangeDivineGraceAmountPeriodic(Props.divineGracePerHour / 2500f);
         }
     }
 }

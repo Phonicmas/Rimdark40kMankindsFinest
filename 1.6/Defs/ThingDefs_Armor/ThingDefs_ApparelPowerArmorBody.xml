@@ -1,56 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-    <ThingDef Name="BEWH_PowerArmorBase_ChapterColour" ParentName="BEWH_PowerArmorBase" Abstract="True">
-        <apparel>
-            <renderNodeProperties>
-                <!-- Left shoulder pad/legion icon -->
-                <li>
-                    <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentShoulderChapterIcon</workerClass>
-                    <nodeClass>Genes40k.PawnRenderNode_AttachmentShoulderChapterIcon</nodeClass>
-                    <texPath>Things/Armor/Imperium/PowerArmor/CommonIcons/BEWH_None</texPath>
-                    <shaderTypeDef>Cutout</shaderTypeDef>
-                    <parentTagDef>Body</parentTagDef>
-                    <drawData>
-                        <dataEast>
-                            <layer>76</layer>
-                        </dataEast>
-                        <dataWest>
-                            <layer>76</layer>
-                        </dataWest>
-                        <dataNorth>
-                            <layer>94</layer>
-                        </dataNorth>
-                        <dataSouth>
-                            <layer>65</layer>
-                        </dataSouth>
-                    </drawData>
-                </li>
-                <!-- Right shoulder pad/rank icon -->
-                <li>
-                    <workerClass>Genes40k.PawnRenderNodeWorker_AttachmentShoulderRankIcon</workerClass>
-                    <nodeClass>Genes40k.PawnRenderNode_AttachmentShoulderRankIcon</nodeClass>
-                    <texPath>Things/Armor/Imperium/PowerArmor/CommonIcons/BEWH_None</texPath>
-                    <shaderTypeDef>Cutout</shaderTypeDef>
-                    <parentTagDef>Body</parentTagDef>
-                    <drawData>
-                        <dataEast>
-                            <layer>76</layer>
-                        </dataEast>
-                        <dataWest>
-                            <layer>76</layer>
-                        </dataWest>
-                        <dataNorth>
-                            <layer>94</layer>
-                        </dataNorth>
-                        <dataSouth>
-                            <layer>65</layer>
-                        </dataSouth>
-                    </drawData>
-                </li>
-            </renderNodeProperties>
-        </apparel>
-    </ThingDef>
+    <!-- Chapter-coloured armours carry their shoulder icons as framework decorations, placed by the Shoulder Icons tab. REMOVE AT SOME POINT -->
+    <ThingDef Name="BEWH_PowerArmorBase_ChapterColour" ParentName="BEWH_PowerArmorBase" Abstract="True" />
 
     <!-- ===== IMPERIUM ===== -->
     <!-- MK 7 -->

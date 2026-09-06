@@ -184,6 +184,7 @@ public static class Genes40kDefOf
         
     //ShoulderIconDefs
     public static ShoulderIconDef BEWH_ShoulderNone;
+    public static ShoulderIconDef BEWH_FollowRankUp;
         
     //PawnKindDefs
     public static PawnKindDef BEWH_FirstbornPawn;

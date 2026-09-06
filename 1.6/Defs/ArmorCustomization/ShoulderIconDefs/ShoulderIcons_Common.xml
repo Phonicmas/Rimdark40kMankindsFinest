@@ -1,8 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
+    <!-- Shared base: a shoulder icon is a framework decoration authored for the right shoulder, drawn mirrored on the left. -->
+    <Genes40k.ShoulderIconDef Name="BEWH_ShoulderIconBase" Abstract="True">
+        <defaultShowRotation>
+            <li>North</li>
+            <li>South</li>
+            <li>East</li>
+        </defaultShowRotation>
+        <drawData>
+            <dataNorth>
+                <layer>94</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>65</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>76</layer>
+            </dataEast>
+            <dataWest>
+                <layer>76</layer>
+                <flip>true</flip>
+            </dataWest>
+        </drawData>
+        <workAmount>0</workAmount>
+    </Genes40k.ShoulderIconDef>
+
     <!-- None -->
-    <Genes40k.ShoulderIconDef>
+    <Genes40k.ShoulderIconDef ParentName="BEWH_ShoulderIconBase">
         <defName>BEWH_ShoulderNone</defName>
         <label>None</label>
         <description>No icon.</description>
@@ -11,6 +36,7 @@
         <sortOrder>0</sortOrder>
         <leftShoulder>true</leftShoulder>
         <rightShoulder>true</rightShoulder>
+        <setsNull>true</setsNull>
     </Genes40k.ShoulderIconDef>
     
 </Defs>

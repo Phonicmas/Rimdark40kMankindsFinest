@@ -196,7 +196,7 @@ public class Dialog_ChangeDefaultChapterColour : Window
             
             var curY = customIconName.yMax + gap;
 
-            if (settings.CustomPreset.relatedChapterIcon != null && settings.CustomPreset.relatedChapterIcon.useColour)
+            if (settings.CustomPreset.relatedChapterIcon != null && settings.CustomPreset.relatedChapterIcon.colourable)
             {
                 var customIconColour = new Rect(customIconName)
                 {
@@ -263,7 +263,7 @@ public class Dialog_ChangeDefaultChapterColour : Window
                 GUI.color = Color.white;
                 GUI.DrawTexture(iconRect, shoulderIcons[i].Icon);
                 
-                if (shoulderIcons[i].useColour)
+                if (shoulderIcons[i].colourable)
                 {
                     var flippedIconRect = new Rect(new Vector2(position.x + 7f, position.y + 5f), smallIconSize);
                     GUI.DrawTexture(flippedIconRect, Genes40kUtils.PaintableIcon.Texture);

@@ -20,6 +20,9 @@ public static class Genes40kUtils
 
     private static List<ShoulderIconDef> leftShoulderIconDef = null;
     public static List<ShoulderIconDef> LeftShoulderIconDef => leftShoulderIconDef ??= DefDatabase<ShoulderIconDef>.AllDefsListForReading.Where(leftShoulderDef => leftShoulderDef.leftShoulder).ToList();
+
+    private static List<ThingDef> geneMaterialDefs = null;
+    public static List<ThingDef> GeneMaterialDefs => geneMaterialDefs ??= DefDatabase<ThingDef>.AllDefsListForReading.Where(def => def.thingClass != null && typeof(GeneMaterialExtra).IsAssignableFrom(def.thingClass)).ToList();
     
     public static readonly Texture2D MindShieldIcon = ContentFinder<Texture2D>.Get("UI/Abilities/BEWH_MindShield");
     public static readonly Texture2D PermaDeathPerpetualIcon = ContentFinder<Texture2D>.Get("UI/Abilities/BEWH_PerpetrualPermaDeath");
@@ -112,6 +115,9 @@ public static class Genes40kUtils
         }
     }
         
+    private static HashSet<HediffDef> pariahHediffDefs = null;
+    public static HashSet<HediffDef> PariahHediffDefs => pariahHediffDefs ??= new HashSet<HediffDef>(DefDatabase<HediffDef>.AllDefsListForReading.Where(def => def.HasModExtension<DefModExtension_Pariah>()));
+
     private static List<GeneDef> pariahGenes = null;
     public static List<GeneDef> PariahGenes{
         get
@@ -139,11 +145,39 @@ public static class Genes40kUtils
         Genes40kDefOf.BEWH_FirstbornPhaseOne,
         Genes40kDefOf.BEWH_FirstbornPhaseTwo,
         Genes40kDefOf.BEWH_FirstbornPhaseThree,
-                
+
         Genes40kDefOf.BEWH_PrimarisPhaseOne,
         Genes40kDefOf.BEWH_PrimarisPhaseTwo,
         Genes40kDefOf.BEWH_PrimarisPhaseThree,
     };
+
+    private static HashSet<HediffDef> developmentPhaseSet = null;
+    private static HashSet<HediffDef> DevelopmentPhaseSet => developmentPhaseSet ??= new HashSet<HediffDef>(DevelopmentPhases);
+
+    private const int MaxCachedGeneSets = 32;
+
+    private static readonly Dictionary<List<GeneDef>, HashSet<GeneDef>> geneSetCache = new();
+
+    private static readonly HashSet<GeneDef> tmpMatchedGenes = new();
+
+    /// <summary>
+    /// The gene lists above are cached statics, so a set keyed on the list instance is built once per list.
+    /// </summary>
+    private static HashSet<GeneDef> SetFor(List<GeneDef> geneDefs)
+    {
+        if (!geneSetCache.TryGetValue(geneDefs, out var set))
+        {
+            if (geneSetCache.Count >= MaxCachedGeneSets)
+            {
+                geneSetCache.Clear();
+            }
+
+            set = new HashSet<GeneDef>(geneDefs);
+            geneSetCache.Add(geneDefs, set);
+        }
+
+        return set;
+    }
         
     private static Dictionary<GeneDef, GeneDef> chapterGeneToPrimarchGene = null;
     private static Dictionary<GeneDef, GeneDef> ChapterGeneToPrimarchGene
@@ -249,15 +283,44 @@ public static class Genes40kUtils
             return false;
         }
 
-        foreach (var geneDef in geneDefs)
+        var required = SetFor(geneDefs);
+        tmpMatchedGenes.Clear();
+
+        foreach (var gene in geneTracker.GenesListForReading)
         {
-            if (!geneTracker.HasGene(geneDef))
+            if (required.Contains(gene.def))
             {
-                return false;
+                tmpMatchedGenes.Add(gene.def);
             }
         }
 
-        return true;
+        var result = tmpMatchedGenes.Count == required.Count;
+        tmpMatchedGenes.Clear();
+        return result;
+    }
+
+    /// <summary>
+    /// True if the pawn has an active gene whose def is in the list. One pass over the pawn's genes
+    /// instead of one HasActiveGene scan per listed def.
+    /// </summary>
+    public static bool HasAnyActiveGeneOf(this Pawn_GeneTracker geneTracker, List<GeneDef> geneDefs)
+    {
+        if (geneTracker == null || geneDefs.NullOrEmpty())
+        {
+            return false;
+        }
+
+        var set = SetFor(geneDefs);
+
+        foreach (var gene in geneTracker.GenesListForReading)
+        {
+            if (gene.Active && set.Contains(gene.def))
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
         
     public static bool IsThunderWarrior(this Pawn pawn)
@@ -293,22 +356,39 @@ public static class Genes40kUtils
         
     public static bool IsPsyker(this Pawn pawn)
     {
-        return Enumerable.Any(PsykerGenes, gene => pawn.genes.HasActiveGene(gene));
+        return pawn.genes.HasAnyActiveGeneOf(PsykerGenes);
     }
 
     public static bool IsPariah(this Pawn pawn)
     {
-        return Enumerable.Any(PariahGenes, gene => pawn.genes.HasActiveGene(gene));
+        return pawn.genes.HasAnyActiveGeneOf(PariahGenes);
     }
-        
+
     public static bool IsLivingSaint(this Pawn pawn)
     {
-        return Enumerable.Any(LivingSaintGenes, gene => pawn.genes.HasActiveGene(gene));
+        return pawn.genes.HasAnyActiveGeneOf(LivingSaintGenes);
     }
 
     public static bool UndergoingPhaseDevelopment(this Pawn pawn)
     {
-        return Enumerable.Any(DevelopmentPhases, hediff => pawn.health.hediffSet.HasHediff(hediff));
+        var hediffs = pawn.health?.hediffSet?.hediffs;
+
+        if (hediffs == null)
+        {
+            return false;
+        }
+
+        var phases = DevelopmentPhaseSet;
+
+        foreach (var hediff in hediffs)
+        {
+            if (phases.Contains(hediff.def))
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
         
     public static void OffsetDivineGrace(Pawn pawn, float offset)
@@ -416,7 +496,8 @@ public static class Genes40kUtils
 
                 if (comp is CompChapterColorWithShoulderDecoration compExtended)
                 {
-                    compExtended.LeftShoulderIcon = shoulderIconDef;
+                    compExtended.SetChapterIcon(shoulderIconDef);
+                    compExtended.DecorativeComp?.SetOriginalDecorations();
                 }
             }
         }
@@ -678,9 +759,13 @@ public static class Genes40kUtils
         return text;
     }
 
+    private static bool? alteredCarbonActive;
+
     public static bool PawnHasAlteredCarbonStack(this Pawn pawn)
     {
-        if (ModLister.GetActiveModWithIdentifier("hlx.UltratechAlteredCarbon") == null)
+        alteredCarbonActive ??= ModLister.GetActiveModWithIdentifier("hlx.UltratechAlteredCarbon") != null;
+
+        if (!alteredCarbonActive.Value)
         {
             return false;
         }

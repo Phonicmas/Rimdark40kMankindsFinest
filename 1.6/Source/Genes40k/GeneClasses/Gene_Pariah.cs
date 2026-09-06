@@ -1,4 +1,5 @@
-﻿using RimWorld.Planet;
+﻿using RimWorld;
+using RimWorld.Planet;
 using System.Collections.Generic;
 using Verse;
 
@@ -8,6 +9,11 @@ public class Gene_Pariah : Gene
 {
     private const int tickInterval = 501;
 
+    private static readonly List<Pawn> tmpAffectedPawns = new();
+
+    private DefModExtension_Pariah cachedDefMod;
+    private DefModExtension_Pariah DefMod => cachedDefMod ??= def.GetModExtension<DefModExtension_Pariah>();
+
     public override void Tick()
     {
         base.Tick();
@@ -15,34 +21,70 @@ public class Gene_Pariah : Gene
         {
             return;
         }
-        if (pawn.Spawned)
+
+        var defMod = DefMod;
+
+        if (defMod == null)
         {
-            var pawnsT = (List<Pawn>)pawn.Map.mapPawns.AllPawnsSpawned;
-            var pawns = pawnsT.FindAll(x => pawn.Position.DistanceTo(x.Position) <= def.GetModExtension<DefModExtension_Pariah>().radius);
-            AffectPawns(pawn, pawns);
             return;
         }
+
+        if (pawn.Spawned)
+        {
+            var position = pawn.Position;
+            var radiusSquared = defMod.radius * defMod.radius;
+            var spawned = pawn.Map.mapPawns.AllPawnsSpawned;
+
+            tmpAffectedPawns.Clear();
+
+            for (var i = 0; i < spawned.Count; i++)
+            {
+                if ((spawned[i].Position - position).LengthHorizontalSquared <= radiusSquared)
+                {
+                    tmpAffectedPawns.Add(spawned[i]);
+                }
+            }
+
+            AffectPawns(pawn, tmpAffectedPawns, defMod);
+            tmpAffectedPawns.Clear();
+            return;
+        }
+
         var caravan = pawn.GetCaravan();
         if (caravan != null)
         {
-            AffectPawns(pawn, caravan.pawns.InnerListForReading);
+            AffectPawns(pawn, caravan.pawns.InnerListForReading, defMod);
         }
     }
 
-    private void AffectPawns(Pawn p, List<Pawn> pawns)
+    private static void AffectPawns(Pawn p, List<Pawn> pawns, DefModExtension_Pariah defMod)
     {
         if (pawns.NullOrEmpty())
         {
             return;
         }
+
+        var pariahHediffDefs = Genes40kUtils.PariahHediffDefs;
+
         foreach (var affectedPawn in pawns)
         {
             if (affectedPawn == null || p == affectedPawn || !p.RaceProps.Humanlike || affectedPawn.needs?.mood?.thoughts == null || affectedPawn.genes == null || Genes40kUtils.IsPariah(affectedPawn))
             {
                 continue;
             }
-            var defMod = def.GetModExtension<DefModExtension_Pariah>();
-            var hediff = affectedPawn.health.hediffSet.hediffs.Find(x => x.def.HasModExtension<DefModExtension_Pariah>());
+
+            Hediff hediff = null;
+            var hediffs = affectedPawn.health.hediffSet.hediffs;
+
+            for (var i = 0; i < hediffs.Count; i++)
+            {
+                if (pariahHediffDefs.Contains(hediffs[i].def))
+                {
+                    hediff = hediffs[i];
+                    break;
+                }
+            }
+
             if (hediff != null)
             {
                 if (hediff.Severity < defMod.tier)
@@ -65,7 +107,7 @@ public class Gene_Pariah : Gene
             }
             else
             {
-                if (affectedPawn.Faction.IsPlayer)
+                if (affectedPawn.Faction == Faction.OfPlayer)
                 {
                     affectedPawn.health.AddHediff(Genes40kDefOf.BEWH_PariahEffecter);
                 }
@@ -73,7 +115,6 @@ public class Gene_Pariah : Gene
                 {
                     affectedPawn.health.AddHediff(Genes40kDefOf.BEWH_PariahEffecterEnemies);
                 }
-                
             }
         }
     }

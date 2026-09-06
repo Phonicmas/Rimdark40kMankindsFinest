@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using ColourPicker;
 using Core40k;
 using UnityEngine;
@@ -13,6 +12,7 @@ public class ShoulderPadIconTab : CustomizerTabDrawer
     private List<ShoulderIconDef> leftShoulderIcons = [];
 
     private CompChapterColorWithShoulderDecoration chapterColorComp = null;
+    private CompDecorative decorativeComp = null;
 
     private const int RowAmount = 6;
 
@@ -26,21 +26,55 @@ public class ShoulderPadIconTab : CustomizerTabDrawer
             {
                 yield return chapterColorComp;
             }
+            if (decorativeComp != null)
+            {
+                yield return decorativeComp;
+            }
         }
     }
 
     public override void Setup(Pawn pawn)
     {
-        chapterColorComp = pawn.apparel?.WornApparel
-            .FirstOrDefault(a => a.HasComp<CompChapterColorWithShoulderDecoration>())?
-            .GetComp<CompChapterColorWithShoulderDecoration>();
-
+        chapterColorComp = null;
+        decorativeComp = null;
         leftShoulderIcons.Clear();
         rightShoulderIcons.Clear();
 
-        var allShoulderIcons = DefDatabase<ShoulderIconDef>.AllDefsListForReading;
-        foreach (var shoulderIcon in allShoulderIcons.Where(shoulderIcon => shoulderIcon.HasRequirements(pawn, out var reason)))
+        if (pawn.apparel != null)
         {
+            foreach (var apparel in pawn.apparel.WornApparel)
+            {
+                var comp = apparel.GetComp<CompChapterColorWithShoulderDecoration>();
+                if (comp == null)
+                {
+                    continue;
+                }
+
+                chapterColorComp = comp;
+                decorativeComp = comp.DecorativeComp;
+                break;
+            }
+        }
+
+        if (chapterColorComp == null)
+        {
+            return;
+        }
+
+        //Catch up on any rank change first so opening the dialog never counts as an edit.
+        chapterColorComp.SyncRankIcon(pawn);
+        chapterColorComp.BeginEditing();
+        decorativeComp?.SetOriginals();
+        chapterColorComp.SetOriginals();
+
+        var allShoulderIcons = DefDatabase<ShoulderIconDef>.AllDefsListForReading;
+        foreach (var shoulderIcon in allShoulderIcons)
+        {
+            if (!shoulderIcon.HasRequirements(pawn, out _))
+            {
+                continue;
+            }
+
             if (shoulderIcon.leftShoulder)
             {
                 leftShoulderIcons.Add(shoulderIcon);
@@ -54,10 +88,84 @@ public class ShoulderPadIconTab : CustomizerTabDrawer
         rightShoulderIcons.SortBy(def => def.sortOrder);
         leftShoulderIcons.SortBy(def => def.sortOrder);
     }
+
+    private bool IsSelected(ShoulderIconDef def, bool chapterSlot)
+    {
+        var fitted = chapterSlot ? chapterColorComp.ChapterIcon : chapterColorComp.RankIcon;
+        if (!def.setsNull)
+        {
+            return fitted == def;
+        }
+
+        if (def == Genes40kDefOf.BEWH_FollowRankUp)
+        {
+            return !chapterSlot && chapterColorComp.FollowRank;
+        }
+
+        return fitted == null && (chapterSlot || !chapterColorComp.FollowRank);
+    }
+
+    private void DrawColourBox(ref float curY, Vector2 position, float width, bool chapterSlot)
+    {
+        var fitted = chapterSlot ? chapterColorComp.ChapterIcon : chapterColorComp.RankIcon;
+        if (fitted is not { colourable: true })
+        {
+            return;
+        }
+
+        var colourRect = new Rect(position, new Vector2(width, 50f)).ContractedBy(5);
+        Widgets.DrawMenuSection(colourRect);
+        colourRect = colourRect.ContractedBy(1);
+
+        Widgets.DrawRectFast(colourRect, chapterColorComp.SlotColour(chapterSlot));
+        if (Widgets.ButtonInvisible(colourRect))
+        {
+            Find.WindowStack.Add(new Dialog_ColourPicker(chapterColorComp.SlotColour(chapterSlot), newColour =>
+            {
+                chapterColorComp.SetSlotColour(chapterSlot, newColour);
+            }));
+        }
+
+        curY = colourRect.yMax;
+    }
+
+    private void DrawIcon(Rect iconRect, Vector2 position, Vector2 smallIconSize, ShoulderIconDef def, bool chapterSlot)
+    {
+        if (IsSelected(def, chapterSlot))
+        {
+            Widgets.DrawStrongHighlight(iconRect.ExpandedBy(3f));
+        }
+
+        var color = Mouse.IsOver(iconRect) ? GenUI.MouseoverColor : Color.white;
+        GUI.color = color;
+        GUI.DrawTexture(iconRect, Command.BGTexShrunk);
+        GUI.color = Color.white;
+        GUI.DrawTexture(iconRect, def.Icon);
+
+        if (def.colourable)
+        {
+            var paintableIconRect = new Rect(new Vector2(position.x + 7f, position.y + 5f), smallIconSize);
+            GUI.DrawTexture(paintableIconRect, Genes40kUtils.PaintableIcon.Texture);
+        }
+
+        TooltipHandler.TipRegion(iconRect, def.label);
+
+        if (Widgets.ButtonInvisible(iconRect))
+        {
+            if (chapterSlot)
+            {
+                chapterColorComp.SetChapterIcon(def);
+            }
+            else
+            {
+                chapterColorComp.SetRankIcon(def);
+            }
+        }
+    }
         
     public override void DrawTab(Rect rect, Pawn pawn, ref Vector2 apparelColorScrollPosition)
     {            
-        if (chapterColorComp == null)
+        if (chapterColorComp == null || decorativeComp == null)
         {
             return;
         }
@@ -73,7 +181,7 @@ public class ShoulderPadIconTab : CustomizerTabDrawer
         flipRect.x += flipRect.width;
         if (Widgets.ButtonText(flipRect, "BEWH.MankindsFinest.ShoulderIcon.Flip".Translate()))
         {
-            chapterColorComp.FlipShoulderIcons = !chapterColorComp.FlipShoulderIcons;
+            chapterColorComp.SwapShoulderIcons();
         }
 
         var curY = flipRect.yMax + 5f;
@@ -93,7 +201,12 @@ public class ShoulderPadIconTab : CustomizerTabDrawer
         resetChapterIconRect.x = nameRect.xMin - resetChapterIconRect.width - nameRect.width/20;
         if (Widgets.ButtonText(resetChapterIconRect, "BEWH.MankindsFinest.ShoulderIcon.ResetToDefault".Translate()))
         {
-            chapterColorComp.LeftShoulderIcon = LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>().CurrentlySelectedPreset.relatedChapterIcon;
+            var settings = Genes40kUtils.ModSettings;
+            chapterColorComp.SetChapterIcon(settings.CurrentlySelectedPreset?.relatedChapterIcon);
+            if (settings.chapterShoulderIconColor != null && chapterColorComp.ChapterIcon is { colourable: true })
+            {
+                chapterColorComp.SetSlotColour(true, settings.chapterShoulderIconColor.Value);
+            }
         }
             
         var iconSize = new Vector2(viewRect.width/RowAmount, viewRect.width/RowAmount);
@@ -103,28 +216,8 @@ public class ShoulderPadIconTab : CustomizerTabDrawer
         var curX = position.x;
         curY = position.y;
         
-        //Right icon colour selection if possible.
-        if (chapterColorComp.LeftShoulderIcon != null && chapterColorComp.LeftShoulderIcon.useColour)
-        {
-            var tertiaryColourRect = new Rect(position, new Vector2(viewRect.width, 50f)).ContractedBy(5);
-            Widgets.DrawMenuSection(tertiaryColourRect);
-            tertiaryColourRect = tertiaryColourRect.ContractedBy(1);
-                
-            Widgets.DrawRectFast(tertiaryColourRect, chapterColorComp.LeftShoulderIconColour);
-            if (Widgets.ButtonInvisible(tertiaryColourRect))
-            {
-                Find.WindowStack.Add( new Dialog_ColourPicker( chapterColorComp.LeftShoulderIconColour, ( newColour ) =>
-                {
-                    chapterColorComp.LeftShoulderIconColour = newColour;
-                } ) );
-            }
-
-            curY = tertiaryColourRect.yMax;
-        }
-        else if (chapterColorComp.LeftShoulderIconColour != Color.white)
-        {
-            chapterColorComp.LeftShoulderIconColour = Color.white;
-        }
+        //Left icon colour selection if possible.
+        DrawColourBox(ref curY, position, viewRect.width, chapterSlot: true);
             
         //Left icon selection
         for (var i = 0; i < leftShoulderIcons.Count; i++)
@@ -145,30 +238,8 @@ public class ShoulderPadIconTab : CustomizerTabDrawer
             }
                 
             iconRect = iconRect.ContractedBy(5f);
-                    
-            if (chapterColorComp.LeftShoulderIcon == leftShoulderIcons[i])
-            {
-                Widgets.DrawStrongHighlight(iconRect.ExpandedBy(3f));
-            }
-                
-            var color = Mouse.IsOver(iconRect) ? GenUI.MouseoverColor : Color.white;
-            GUI.color = color;
-            GUI.DrawTexture(iconRect, Command.BGTexShrunk);
-            GUI.color = Color.white;
-            GUI.DrawTexture(iconRect, leftShoulderIcons[i].Icon);
-            
-            if (leftShoulderIcons[i].useColour)
-            {
-                var flippedIconRect = new Rect(new Vector2(position.x + 7f, position.y + 5f), smallIconSize);
-                GUI.DrawTexture(flippedIconRect, Genes40kUtils.PaintableIcon.Texture);
-            }
-            
-            TooltipHandler.TipRegion(iconRect, leftShoulderIcons[i].label);
 
-            if (Widgets.ButtonInvisible(iconRect))
-            {
-                chapterColorComp.LeftShoulderIcon = leftShoulderIcons[i];
-            }
+            DrawIcon(iconRect, position, smallIconSize, leftShoulderIcons[i], chapterSlot: true);
         }
 
         curY += 34f;
@@ -189,7 +260,7 @@ public class ShoulderPadIconTab : CustomizerTabDrawer
         resetRankIconRect.x = nameRect.xMin - resetRankIconRect.width - nameRect.width/20;
         if (Widgets.ButtonText(resetRankIconRect, "BEWH.MankindsFinest.ShoulderIcon.ResetToDefault".Translate()))
         {
-            chapterColorComp.RightShoulderIcon = null;
+            chapterColorComp.SetRankIcon(Genes40kDefOf.BEWH_FollowRankUp);
         }
 
         position = new Vector2(viewRect.x, resetRankIconRect.yMax);
@@ -198,27 +269,7 @@ public class ShoulderPadIconTab : CustomizerTabDrawer
         curY = position.y;
             
         //Right icon colour selection if possible.
-        if (chapterColorComp.RightShoulderIcon != null && chapterColorComp.RightShoulderIcon.useColour)
-        {
-            var tertiaryColourRect = new Rect(position, new Vector2(viewRect.width, 50f)).ContractedBy(5);
-            Widgets.DrawMenuSection(tertiaryColourRect);
-            tertiaryColourRect = tertiaryColourRect.ContractedBy(1);
-                
-            Widgets.DrawRectFast(tertiaryColourRect, chapterColorComp.RightShoulderIconColour);
-            if (Widgets.ButtonInvisible(tertiaryColourRect))
-            {
-                Find.WindowStack.Add( new Dialog_ColourPicker( chapterColorComp.RightShoulderIconColour, ( newColour ) =>
-                {
-                    chapterColorComp.RightShoulderIconColour = newColour;
-                } ) );
-            }
-
-            curY = tertiaryColourRect.yMax;
-        }
-        else if (chapterColorComp.RightShoulderIconColour != Color.white)
-        {
-            chapterColorComp.RightShoulderIconColour = Color.white;
-        }
+        DrawColourBox(ref curY, position, viewRect.width, chapterSlot: false);
                 
         //Right Shoulder Icons
         for (var i = 0; i < rightShoulderIcons.Count; i++)
@@ -235,30 +286,8 @@ public class ShoulderPadIconTab : CustomizerTabDrawer
             }
                 
             iconRect = iconRect.ContractedBy(5f);
-             
-            if (chapterColorComp.RightShoulderIcon == rightShoulderIcons[i])
-            {
-                Widgets.DrawStrongHighlight(iconRect.ExpandedBy(3f));
-            }
-            
-            var color = Mouse.IsOver(iconRect) ? GenUI.MouseoverColor : Color.white;
-            GUI.color = color;
-            GUI.DrawTexture(iconRect, Command.BGTexShrunk);
-            GUI.color = Color.white;
-            GUI.DrawTexture(iconRect, rightShoulderIcons[i].Icon);
-            
-            if (rightShoulderIcons[i].useColour)
-            {
-                var flippedIconRect = new Rect(new Vector2(position.x + 7f, position.y + 5f), smallIconSize);
-                GUI.DrawTexture(flippedIconRect, Genes40kUtils.PaintableIcon.Texture);
-            }
-                
-            TooltipHandler.TipRegion(iconRect, rightShoulderIcons[i].label);
 
-            if (Widgets.ButtonInvisible(iconRect))
-            {
-                chapterColorComp.RightShoulderIcon = rightShoulderIcons[i];
-            }
+            DrawIcon(iconRect, position, smallIconSize, rightShoulderIcons[i], chapterSlot: false);
         }
 
         listScrollViewHeight = position.y + iconSize.y + 10f;
@@ -269,15 +298,28 @@ public class ShoulderPadIconTab : CustomizerTabDrawer
     
     public override void OnClose(Pawn pawn, bool closeOnCancel, bool closeOnClickedOutside)
     {
-            
+        OnReset(pawn);
+        chapterColorComp?.EndEditing();
     }
     
     public override void OnReset(Pawn pawn)
     {
-        var apparels = pawn.apparel.WornApparel.Where(a => a.HasComp<CompChapterColorWithShoulderDecoration>()).ToList();
-        foreach (var apparel in apparels)
+        if (pawn.apparel == null)
         {
-            apparel.GetComp<CompChapterColorWithShoulderDecoration>().Reset();
+            return;
+        }
+
+        foreach (var apparel in pawn.apparel.WornApparel)
+        {
+            var comp = apparel.GetComp<CompChapterColorWithShoulderDecoration>();
+            if (comp == null)
+            {
+                continue;
+            }
+
+            //The chapter comp first: the rank slot state has to be back before the entries are.
+            comp.Reset();
+            comp.DecorativeComp?.Reset();
         }
     }
 }

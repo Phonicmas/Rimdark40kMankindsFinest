@@ -85,15 +85,8 @@
     <Compile Include="ChapterApparelMultiColor\CompChapterColorWithShoulderDecoration.cs" />
     <Compile Include="ChapterApparelMultiColor\CompProperties_ChapterColor.cs" />
     <Compile Include="ChapterApparelMultiColor\CompProperties_ChapterColorWithShoulderDecoration.cs" />
-    <Compile Include="ChapterApparelMultiColor\OutfitStandDrawProvider_ShoulderIcons.cs" />
-    <Compile Include="ChapterApparelMultiColor\PawnRenderNodeWorker_AttachmentShoulderIcon.cs" />
-    <Compile Include="ChapterApparelMultiColor\PawnRenderNodeWorker_AttachmentShoulderChapterIcon.cs" />
-    <Compile Include="ChapterApparelMultiColor\PawnRenderNodeWorker_AttachmentShoulderRankIcon.cs" />
     <Compile Include="ChapterApparelMultiColor\PawnRenderNodeWorker_LivingSaintAttachmentBody.cs" />
     <Compile Include="ChapterApparelMultiColor\PawnRenderNodeWorker_LivingSaintAttachmentHead.cs" />
-    <Compile Include="ChapterApparelMultiColor\PawnRenderNode_AttachmentShoulderIcon.cs" />
-    <Compile Include="ChapterApparelMultiColor\PawnRenderNode_AttachmentShoulderChapterIcon.cs" />
-    <Compile Include="ChapterApparelMultiColor\PawnRenderNode_AttachmentShoulderRankIcon.cs" />
     <Compile Include="ChapterApparelMultiColor\ShoulderIconDef.cs" />
     <Compile Include="ChapterApparelMultiColor\ShoulderIconSettings.cs" />
     <Compile Include="ChapterApparelMultiColor\ShoulderPadIconTab.cs" />
@@ -144,7 +137,6 @@
     <Compile Include="DefModExtensions\DefModExtension_BaseMaterial.cs" />
     <Compile Include="DefModExtensions\DefModExtension_OrganDecayResistance.cs" />
     <Compile Include="DefModExtensions\DefModExtension_PlaceBanner.cs" />
-    <Compile Include="DefModExtensions\DefModExtension_ShoulderFlippedData.cs" />
     <Compile Include="DefModExtensions\DefModExtension_SpawnAsChapter.cs" />
     <Compile Include="DefModExtensions\DefModExtension_ThoughtXenophobiaWhitelist.cs" />
     <Compile Include="DefModExtensions\DefModExtension_DecorativeFlag.cs" />
@@ -189,7 +181,6 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_SerfBuffOnSpawn.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_SerfGainTrait.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_SpaceMarineChapterSpawn.cs" />
-    <Compile Include="HarmonyPatches\HarmonyPatch_UpdateRankIconOnRankUp.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_ZealousFuryStopMentalBreak.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_ZealousFuryStopMentalState.cs" />
     <Compile Include="Hediffs\Hediff_Serf.cs" />
